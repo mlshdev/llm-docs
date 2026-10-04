@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewcontroller/navigationcontroller
 
 # navigationController (Swift)
@@ -30,7 +30,7 @@ If the view controller or one of its ancestors is a child of a navigation contro
 - [parent](parent.md): The parent view controller of the recipient.
 - [splitViewController](splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [tabBarController](tabbarcontroller.md): The nearest ancestor in the view controller hierarchy that is a tab bar controller.
-- [arrangementViewController](arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.
+- [arrangementViewController](arrangementviewcontroller.md): The nearest ancestor arrangement view controller.
 
 # navigationController (Objective-C)
 
@@ -61,4 +61,4 @@ If the view controller or one of its ancestors is a child of a navigation contro
 - [parentViewController](parent.md): The parent view controller of the recipient.
 - [splitViewController](splitviewcontroller.md): The nearest ancestor in the view controller hierarchy that is a split view controller.
 - [tabBarController](tabbarcontroller.md): The nearest ancestor in the view controller hierarchy that is a tab bar controller.
-- [arrangementViewController](arrangementviewcontroller.md): Beta. The nearest ancestor arrangement view controller.
+- [arrangementViewController](arrangementviewcontroller.md): The nearest ancestor arrangement view controller.

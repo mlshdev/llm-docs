@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uikeycommand/init(title:image:action:input:modifierflags:propertylist:alternates:discoverabilitytitle:attributes:state:)
 
 # init(title:image:action:input:modifierFlags:propertyList:alternates:discoverabilityTitle:attributes:state:)

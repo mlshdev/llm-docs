@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitabbar
 
 # UITabBar (Swift)
@@ -173,7 +173,7 @@ For design guidance, see [Human Interface Guidelines](https://developer.apple.co
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UITabGroup](uitabgroup.md): An object that manages a collection of tab objects.
 - [UIPageViewController](uipageviewcontroller.md): A container view controller that manages navigation between pages of content, where a subview controller manages each page.
-- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): A view controller that presents its container view controllers through an arrangement.
 
 # UITabBar (Objective-C)
 
@@ -316,4 +316,4 @@ For design guidance, see [Human Interface Guidelines](https://developer.apple.co
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UITabGroup](uitabgroup.md): An object that manages a collection of tab objects.
 - [UIPageViewController](uipageviewcontroller.md): A container view controller that manages navigation between pages of content, where a subview controller manages each page.
-- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): A view controller that presents its container view controllers through an arrangement.

@@ -32,6 +32,8 @@ If the window already has a presented sheet, this method queues the specified sh
 
 If the window has no presented sheets, this method displays the specified sheet, makes it key, and returns control to the caller. While the sheet remains visible, most events targeted at the receiver are prohibited.  The runloop does not enter any special mode to accomplish this.
 
+The sheet’s window never displays a title, regardless of its [title](title.md) string, its [titleVisibility](titlevisibility-swift.property.md) value, or whether its style mask includes the [titled](stylemask-swift.struct/titled.md) flag.
+
 ## See Also
 
 ### Managing Sheets
@@ -70,6 +72,8 @@ Starts a document-modal session and presents—or queues for presentation—a sh
 If the window already has a presented sheet, this method queues the specified sheet for presentation after the current sheet is dismissed and then returns control to the caller.
 
 If the window has no presented sheets, this method displays the specified sheet, makes it key, and returns control to the caller. While the sheet remains visible, most events targeted at the receiver are prohibited.  The runloop does not enter any special mode to accomplish this.
+
+The sheet’s window never displays a title, regardless of its [title](title.md) string, its [titleVisibility](titlevisibility-swift.property.md) value, or whether its style mask includes the [NSWindowStyleMaskTitled](stylemask-swift.struct/titled.md) flag.
 
 ## See Also
 

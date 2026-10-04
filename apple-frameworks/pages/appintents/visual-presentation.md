@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/visual-presentation
 
 # Visual presentation
@@ -33,7 +33,7 @@ Your app’s interface contains important context about what a person is doing, 
 ### Scene support
 
 - [Directing app intents to your app’s scenes](directing-app-intents-to-your-apps-scenes.md): Direct app intents to a specific SwiftUI or UIKit scene and use the app intent to configure the content of the scene.
-- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom identifier for an app intent.
+- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom content identifier for an app intent.
 - [UISceneAppIntent](uisceneappintent.md): An interface you use to direct an app intent to a specific scene in your UIKit app.
 - [AppIntentSceneDelegate](appintentscenedelegate.md): The interface a UIKit scene delegate uses to receive an app intent and configure the scene’s views.
 

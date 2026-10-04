@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/input-events
 
 # Input events
@@ -111,9 +111,9 @@ For design guidance, see [Inputs](https://developer.apple.com/design/human-inter
 
 ### Responding to hinge angle changes
 
-- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Beta. Adds an action to perform when the hinge context of the view hierarchy changes.
-- [DeviceHingeContext](devicehingecontext.md): Beta. A type describing the context of hinges on the device.
-- [DeviceHinge](devicehinge.md): Beta. A type encapsulating the state of a single hinge.
+- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Adds an action to perform when the hinge context of the view hierarchy changes.
+- [DeviceHingeContext](devicehingecontext.md): A type describing the context of hinges on the device.
+- [DeviceHinge](devicehinge.md): A type encapsulating the state of a single hinge.
 
 ### Interacting with the Digital Crown
 

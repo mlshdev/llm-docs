@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/viewpoint-swift.func
 
 # viewpoint
@@ -28,3 +28,21 @@ Depending on context, this may include direction, position, or both values. On v
 > **Note**
 
 > Reads from shared uniform Viewpoint
+
+## See Also
+
+### Utility nodes
+
+- [graph](graph.md): A set of nodes that provide graph-wide information, such as time and coordinate-space transforms, usable in any stage.
+- [group](group.md): A set of nodes for querying the group of the current particle. Available only when the simulation uses a grouped or strips element grouping.
+- [texture](texture.md): A set of nodes for the texture stage that sample and generate texture data.
+- [random](random.md): A set of nodes that generate pseudo-random scalars and vectors.
+- [matrix4x4f](matrix4x4f.md): A set of nodes that transform positions and directions with single-precision 4×4 matrices.
+- [matrix4x4h](matrix4x4h.md): A set of nodes that transform positions and directions with half-precision 4×4 matrices.
+- [element_integrate](element_integrate.md)
+- [texture_sample](texture_sample.md)
+- [texture_sample1d](texture_sample1d.md)
+- [orient_to_velocity](orient_to_velocity.md): Orient the particle by setting its `axisY` to the velocity’s current direction.
+- [gridDebugCells](griddebugcells.md)
+- [gridFromPoints](gridfrompoints.md)
+- [spawn_demo](spawn_demo.md)

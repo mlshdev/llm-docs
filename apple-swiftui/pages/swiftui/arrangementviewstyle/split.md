@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyle/split
 
 # split
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 An arrangement view style that places the primary and secondary views side by side along one or more axes.
 
@@ -27,5 +27,5 @@ Constrain which axes the split supports using [axes(\_:)](../splitarrangementvie
 
 ### Getting arrangement view styles
 
-- [automatic](automatic.md): Beta. Conforms when `Self` is `AutomaticArrangementViewStyle`. The default arrangement view style.
-- [overlay](overlay.md): Beta. Conforms when `Self` is `OverlayArrangementViewStyle`. An arrangement view style that layers the primary view over the secondary view in z-order.
+- [automatic](automatic.md): Conforms when `Self` is `AutomaticArrangementViewStyle`. The default arrangement view style.
+- [overlay](overlay.md): Conforms when `Self` is `OverlayArrangementViewStyle`. An arrangement view style that layers the primary view over the secondary view in z-order.

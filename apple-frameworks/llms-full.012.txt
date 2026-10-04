@@ -1,10 +1,1324 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
+# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
-Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
-Captured at: 2026-09-27T18:07:10.128Z
+Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
+Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
+Captured at: 2026-10-04T18:39:03.048Z
 Volume 12
+
+# Document: timeRange
+
+Source path: documentation/avfoundation/avmutablecaption/timerange
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaption/timerange
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# timeRange (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The time range over which the system presents the caption.
+
+## Declaration
+
+```swift
+var timeRange: CMTimeRange { get set }
+```
+
+## See Also
+
+### Configuring text and timing
+
+- [text](text.md): The caption text.
+
+# timeRange (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The time range over which the system presents the caption.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) CMTimeRange timeRange;
+```
+
+## See Also
+
+### Configuring text and timing
+
+- [text](text.md): The caption text.
+
+# Document: AVMutableCaptionRegion
+
+Source path: documentation/avfoundation/avmutablecaptionregion
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion
+Description: Framework: AVFoundation Kind: Class Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# AVMutableCaptionRegion (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+A mutable caption region subclass that you use to create new caption regions.
+
+## Declaration
+
+```swift
+class AVMutableCaptionRegion
+```
+
+## Topics
+
+### Creating a caption region
+
+- [init()](avmutablecaptionregion/init%28%29.md): Creates a caption region.
+- [init(identifier:)](avmutablecaptionregion/init%28identifier_%29.md): Creates a caption region that has an identifier.
+
+### Configuring the region
+
+- [origin](avmutablecaptionregion/origin.md): The region’s top-left position.
+- [size](avmutablecaptionregion/size.md): The height and width of the region.
+- [displayAlignment](avmutablecaptionregion/displayalignment.md): The alignment of lines for the region.
+- [scroll](avmutablecaptionregion/scroll.md): The scroll mode of the region.
+- [writingMode](avmutablecaptionregion/writingmode.md): The block and inline progression direction of the region.
+
+## Relationships
+
+### Inherits From
+
+- [AVCaptionRegion](avcaptionregion.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](../foundation/nscoding.md)
+- [NSCopying](../foundation/nscopying.md)
+- [NSMutableCopying](../foundation/nsmutablecopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSSecureCoding](../foundation/nssecurecoding.md)
+
+## See Also
+
+### Regions
+
+- [AVCaptionRegion](avcaptionregion.md): An object that represents the region in which the system presents a caption.
+
+# AVMutableCaptionRegion (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+A mutable caption region subclass that you use to create new caption regions.
+
+## Declaration
+
+```objectivec
+@interface AVMutableCaptionRegion : AVCaptionRegion
+```
+
+## Topics
+
+### Creating a caption region
+
+- [init](avmutablecaptionregion/init%28%29.md): Creates a caption region.
+- [initWithIdentifier:](avmutablecaptionregion/init%28identifier_%29.md): Creates a caption region that has an identifier.
+
+### Configuring the region
+
+- [origin](avmutablecaptionregion/origin.md): The region’s top-left position.
+- [size](avmutablecaptionregion/size.md): The height and width of the region.
+- [displayAlignment](avmutablecaptionregion/displayalignment.md): The alignment of lines for the region.
+- [scroll](avmutablecaptionregion/scroll.md): The scroll mode of the region.
+- [writingMode](avmutablecaptionregion/writingmode.md): The block and inline progression direction of the region.
+
+## Relationships
+
+### Inherits From
+
+- [AVCaptionRegion](avcaptionregion.md)
+
+## See Also
+
+### Regions
+
+- [AVCaptionRegion](avcaptionregion.md): An object that represents the region in which the system presents a caption.
+
+# Document: displayAlignment
+
+Source path: documentation/avfoundation/avmutablecaptionregion/displayalignment
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/displayalignment
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# displayAlignment (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The alignment of lines for the region.
+
+## Declaration
+
+```swift
+var displayAlignment: AVCaptionRegion.DisplayAlignment { get set }
+```
+
+## See Also
+
+### Configuring the region
+
+- [origin](origin.md): The region’s top-left position.
+- [size](size.md): The height and width of the region.
+- [scroll](scroll.md): The scroll mode of the region.
+- [writingMode](writingmode.md): The block and inline progression direction of the region.
+
+# displayAlignment (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The alignment of lines for the region.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) AVCaptionRegionDisplayAlignment displayAlignment;
+```
+
+## See Also
+
+### Configuring the region
+
+- [origin](origin.md): The region’s top-left position.
+- [size](size.md): The height and width of the region.
+- [scroll](scroll.md): The scroll mode of the region.
+- [writingMode](writingmode.md): The block and inline progression direction of the region.
+
+# Document: init()
+
+Source path: documentation/avfoundation/avmutablecaptionregion/init()
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/init()
+Description: Framework: AVFoundation Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# init() (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+Creates a caption region.
+
+## Declaration
+
+```swift
+init()
+```
+
+## See Also
+
+### Creating a caption region
+
+- [init(identifier:)](init%28identifier_%29.md): Creates a caption region that has an identifier.
+
+# init (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+Creates a caption region.
+
+## Declaration
+
+```objectivec
+- (instancetype) init;
+```
+
+## See Also
+
+### Creating a caption region
+
+- [initWithIdentifier:](init%28identifier_%29.md): Creates a caption region that has an identifier.
+
+# Document: init(identifier:)
+
+Source path: documentation/avfoundation/avmutablecaptionregion/init(identifier:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/init(identifier:)
+Description: Framework: AVFoundation Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# init(identifier:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+Creates a caption region that has an identifier.
+
+## Declaration
+
+```swift
+init(identifier: String)
+```
+
+## Parameters
+
+- `identifier`: The identifier of the caption region.
+
+## See Also
+
+### Creating a caption region
+
+- [init()](init%28%29.md): Creates a caption region.
+
+# initWithIdentifier: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+Creates a caption region that has an identifier.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithIdentifier:(NSString *) identifier;
+```
+
+## Parameters
+
+- `identifier`: The identifier of the caption region.
+
+## See Also
+
+### Creating a caption region
+
+- [init](init%28%29.md): Creates a caption region.
+
+# Document: origin
+
+Source path: documentation/avfoundation/avmutablecaptionregion/origin
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/origin
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# origin (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The region’s top-left position.
+
+## Declaration
+
+```swift
+var origin: AVCaptionPoint { get set }
+```
+
+## See Also
+
+### Configuring the region
+
+- [size](size.md): The height and width of the region.
+- [displayAlignment](displayalignment.md): The alignment of lines for the region.
+- [scroll](scroll.md): The scroll mode of the region.
+- [writingMode](writingmode.md): The block and inline progression direction of the region.
+
+# origin (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The region’s top-left position.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) AVCaptionPoint origin;
+```
+
+## See Also
+
+### Configuring the region
+
+- [size](size.md): The height and width of the region.
+- [displayAlignment](displayalignment.md): The alignment of lines for the region.
+- [scroll](scroll.md): The scroll mode of the region.
+- [writingMode](writingmode.md): The block and inline progression direction of the region.
+
+# Document: scroll
+
+Source path: documentation/avfoundation/avmutablecaptionregion/scroll
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/scroll
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# scroll (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The scroll mode of the region.
+
+## Declaration
+
+```swift
+var scroll: AVCaptionRegion.Scroll { get set }
+```
+
+## See Also
+
+### Configuring the region
+
+- [origin](origin.md): The region’s top-left position.
+- [size](size.md): The height and width of the region.
+- [displayAlignment](displayalignment.md): The alignment of lines for the region.
+- [writingMode](writingmode.md): The block and inline progression direction of the region.
+
+# scroll (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The scroll mode of the region.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) AVCaptionRegionScroll scroll;
+```
+
+## See Also
+
+### Configuring the region
+
+- [origin](origin.md): The region’s top-left position.
+- [size](size.md): The height and width of the region.
+- [displayAlignment](displayalignment.md): The alignment of lines for the region.
+- [writingMode](writingmode.md): The block and inline progression direction of the region.
+
+# Document: size
+
+Source path: documentation/avfoundation/avmutablecaptionregion/size
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/size
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# size (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The height and width of the region.
+
+## Declaration
+
+```swift
+var size: AVCaptionSize { get set }
+```
+
+## See Also
+
+### Configuring the region
+
+- [origin](origin.md): The region’s top-left position.
+- [displayAlignment](displayalignment.md): The alignment of lines for the region.
+- [scroll](scroll.md): The scroll mode of the region.
+- [writingMode](writingmode.md): The block and inline progression direction of the region.
+
+# size (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The height and width of the region.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) AVCaptionSize size;
+```
+
+## See Also
+
+### Configuring the region
+
+- [origin](origin.md): The region’s top-left position.
+- [displayAlignment](displayalignment.md): The alignment of lines for the region.
+- [scroll](scroll.md): The scroll mode of the region.
+- [writingMode](writingmode.md): The block and inline progression direction of the region.
+
+# Document: writingMode
+
+Source path: documentation/avfoundation/avmutablecaptionregion/writingmode
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/writingmode
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+# writingMode (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The block and inline progression direction of the region.
+
+## Declaration
+
+```swift
+var writingMode: AVCaptionRegion.WritingMode { get set }
+```
+
+## See Also
+
+### Configuring the region
+
+- [origin](origin.md): The region’s top-left position.
+- [size](size.md): The height and width of the region.
+- [displayAlignment](displayalignment.md): The alignment of lines for the region.
+- [scroll](scroll.md): The scroll mode of the region.
+
+# writingMode (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
+
+The block and inline progression direction of the region.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) AVCaptionRegionWritingMode writingMode;
+```
+
+## See Also
+
+### Configuring the region
+
+- [origin](origin.md): The region’s top-left position.
+- [size](size.md): The height and width of the region.
+- [displayAlignment](displayalignment.md): The alignment of lines for the region.
+- [scroll](scroll.md): The scroll mode of the region.
+
+# Document: AVMutableComposition
+
+Source path: documentation/avfoundation/avmutablecomposition
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition
+Description: Framework: AVFoundation Kind: Class Availability: iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+# AVMutableComposition (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+An object that you use to create a new composition from existing assets.
+
+## Declaration
+
+```swift
+class AVMutableComposition
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this object to add and remove composition tracks, and add, remove, and scale their time ranges. You can make an immutable snapshot of a mutable composition for playback and inspection as follows:
+
+```swift
+// Use a mutable composition object you create.
+let mutableComposition = AVMutableComposition()
+        
+guard let composition = mutableComposition.copy() as? AVComposition else { return }
+        
+// Create a player item to inspect and play the composition.
+let playerItem = AVPlayerItem(asset: composition)
+```
+
+## Topics
+
+### Creating a composition
+
+- [init(urlAssetInitializationOptions:)](avmutablecomposition/init%28urlassetinitializationoptions_%29-rh4y.md): Creates a mutable composition that uses the specified initialization options.
+
+### Loading tracks
+
+- [tracks](avpartialasyncproperty/tracks-92p4a.md): Conforms when `Root` inherits `AVMutableComposition`. The tracks that a composition contains.
+- [loadTrack(withTrackID:completionHandler:)](avmutablecomposition/loadtrack%28withtrackid_completionhandler_%29.md): Loads a track that contains the specified identifier.
+- [loadTracks(withMediaType:completionHandler:)](avmutablecomposition/loadtracks%28withmediatype_completionhandler_%29.md): Loads tracks that contain media of a specified type.
+- [loadTracks(withMediaCharacteristic:completionHandler:)](avmutablecomposition/loadtracks%28withmediacharacteristic_completionhandler_%29.md): Loads tracks that contain media of a specified characteristic.
+
+### Accessing tracks
+
+Prefer loading tracks asynchronously using the methods in Loading Tracks.
+
+- [tracks](avmutablecomposition/tracks.md): The tracks that a composition contains.
+- [track(withTrackID:)](avmutablecomposition/track%28withtrackid_%29.md): Returns a track that contains the specified identifier.
+- [tracks(withMediaType:)](avmutablecomposition/tracks%28withmediatype_%29.md): Returns tracks that contain media of a specified type.
+- [tracks(withMediaCharacteristic:)](avmutablecomposition/tracks%28withmediacharacteristic_%29.md): Returns tracks that contain media of a specified characteristic.
+
+### Managing composition tracks
+
+- [mutableTrack(compatibleWith:)](avmutablecomposition/mutabletrack%28compatiblewith_%29.md): Returns a composition track into which you can insert any time range of the specified asset track.
+- [addMutableTrack(withMediaType:preferredTrackID:)](avmutablecomposition/addmutabletrack%28withmediatype_preferredtrackid_%29.md): Adds an empty track to a composition.
+- [removeTrack(\_:)](avmutablecomposition/removetrack%28__%29.md): Removes a specified track from the composition.
+
+### Managing Cinematic tracks
+
+- [addTracks(for:preferredStartingTrackID:)](avmutablecomposition/addtracks%28for_preferredstartingtrackid_%29.md)
+
+### Managing time ranges
+
+- [removeTimeRange(\_:)](avmutablecomposition/removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
+- [scaleTimeRange(\_:toDuration:)](avmutablecomposition/scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
+- [insertEmptyTimeRange(\_:)](avmutablecomposition/insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
+- [insertTimeRange(\_:of:at:completionHandler:)](avmutablecomposition/inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
+- [insertTimeRange(\_:of:at:)](avmutablecomposition/inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
+
+### Configuring video size
+
+- [naturalSize](avmutablecomposition/naturalsize.md): The encoded or authored size of the visual portion of the asset.
+
+### Instance methods
+
+- [insertTimeRange(\_:of:at:isolation:)](avmutablecomposition/inserttimerange%28__of_at_isolation_%29.md)
+
+### Initializers
+
+- [init(URLAssetInitializationOptions:)](avmutablecomposition/init%28urlassetinitializationoptions_%29-6codz.md)
+
+## Relationships
+
+### Inherits From
+
+- [AVComposition](avcomposition.md)
+
+### Conforms To
+
+- [AVAsynchronousKeyValueLoading](avasynchronouskeyvalueloading.md)
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSMutableCopying](../foundation/nsmutablecopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Mutable compositions
+
+- [AVMutableCompositionTrack](avmutablecompositiontrack.md): A mutable track in a composition that you use to insert, remove, and scale track segments without affecting their low-level representation.
+
+# AVMutableComposition (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+An object that you use to create a new composition from existing assets.
+
+## Declaration
+
+```objectivec
+@interface AVMutableComposition : AVComposition
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this object to add and remove composition tracks, and add, remove, and scale their time ranges. You can make an immutable snapshot of a mutable composition for playback and inspection as follows:
+
+```swift
+// Use a mutable composition object you create.
+let mutableComposition = AVMutableComposition()
+        
+guard let composition = mutableComposition.copy() as? AVComposition else { return }
+        
+// Create a player item to inspect and play the composition.
+let playerItem = AVPlayerItem(asset: composition)
+```
+
+## Topics
+
+### Creating a composition
+
+- [composition](avmutablecomposition/composition.md): Returns a new mutable composition.
+- [compositionWithURLAssetInitializationOptions:](avmutablecomposition/init%28urlassetinitializationoptions_%29-rh4y.md): Creates a mutable composition that uses the specified initialization options.
+
+### Loading tracks
+
+- [loadTrackWithTrackID:completionHandler:](avmutablecomposition/loadtrack%28withtrackid_completionhandler_%29.md): Loads a track that contains the specified identifier.
+- [loadTracksWithMediaType:completionHandler:](avmutablecomposition/loadtracks%28withmediatype_completionhandler_%29.md): Loads tracks that contain media of a specified type.
+- [loadTracksWithMediaCharacteristic:completionHandler:](avmutablecomposition/loadtracks%28withmediacharacteristic_completionhandler_%29.md): Loads tracks that contain media of a specified characteristic.
+
+### Accessing tracks
+
+Prefer loading tracks asynchronously using the methods in Loading Tracks.
+
+- [tracks](avmutablecomposition/tracks.md): The tracks that a composition contains.
+- [trackWithTrackID:](avmutablecomposition/track%28withtrackid_%29.md): Returns a track that contains the specified identifier.
+- [tracksWithMediaType:](avmutablecomposition/tracks%28withmediatype_%29.md): Returns tracks that contain media of a specified type.
+- [tracksWithMediaCharacteristic:](avmutablecomposition/tracks%28withmediacharacteristic_%29.md): Returns tracks that contain media of a specified characteristic.
+
+### Managing composition tracks
+
+- [mutableTrackCompatibleWithTrack:](avmutablecomposition/mutabletrack%28compatiblewith_%29.md): Returns a composition track into which you can insert any time range of the specified asset track.
+- [addMutableTrackWithMediaType:preferredTrackID:](avmutablecomposition/addmutabletrack%28withmediatype_preferredtrackid_%29.md): Adds an empty track to a composition.
+- [removeTrack:](avmutablecomposition/removetrack%28__%29.md): Removes a specified track from the composition.
+
+### Managing Cinematic tracks
+
+- [addTracksForCinematicAssetInfo:preferredStartingTrackID:](avmutablecomposition/addtracksforcinematicassetinfo_preferredstartingtrackid_.md): Adds a group of empty tracks associated with a cinematic asset to a mutable composition.
+
+### Managing time ranges
+
+- [removeTimeRange:](avmutablecomposition/removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
+- [scaleTimeRange:toDuration:](avmutablecomposition/scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
+- [insertEmptyTimeRange:](avmutablecomposition/insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
+- [insertTimeRange:ofAsset:atTime:completionHandler:](avmutablecomposition/inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
+- [insertTimeRange:ofAsset:atTime:error:](avmutablecomposition/inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
+
+### Configuring video size
+
+- [naturalSize](avmutablecomposition/naturalsize.md): The encoded or authored size of the visual portion of the asset.
+
+## Relationships
+
+### Inherits From
+
+- [AVComposition](avcomposition.md)
+
+## See Also
+
+### Mutable compositions
+
+- [AVMutableCompositionTrack](avmutablecompositiontrack.md): A mutable track in a composition that you use to insert, remove, and scale track segments without affecting their low-level representation.
+
+# Document: AVMutableComposition
+
+Source path: documentation/avfoundation/avmutablecomposition-async-properties
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition-async-properties
+Description: Framework: AVFoundation Kind: API Collection
+
+# AVMutableComposition (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** API Collection
+
+Asynchronous properties for mutable compositions.
+
+## Topics
+
+### Loading tracks
+
+- [tracks](avpartialasyncproperty/tracks-92p4a.md): Conforms when `Root` inherits `AVMutableComposition`. The tracks that a composition contains.
+
+## See Also
+
+### Loading properties
+
+- [AVAsset](avasset-async-properties.md): Asynchronous properties for assets.
+- [AVAssetTrack](avassettrack-async-properties.md): Asynchronous properties for asset tracks.
+- [AVURLAsset](avurlasset-async-properties.md): Asynchronous properties for URL assets.
+- [AVFragmentedAsset](avfragmentedasset-async-properties.md): Asynchronous properties for fragmented assets.
+- [AVMetadataItem](avmetadataitem-async-properties.md): Asynchronous properties for metadata items.
+- [AVComposition](avcomposition-async-properties.md): Asynchronous properties for compositions.
+- [AVMovie](avmovie-async-properties.md): Asynchronous properties for movies.
+- [AVMutableMovie](avmutablemovie-async-properties.md): Asynchronous properties for mutable movies.
+- [AVFragmentedMovie](avfragmentedmovie-async-properties.md): Asynchronous properties for fragmented movies.
+
+# AVMutableComposition (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** API Collection
+
+Asynchronous properties for mutable compositions.
+
+## See Also
+
+### Loading properties
+
+- [AVAsset](avasset-async-properties.md): Asynchronous properties for assets.
+- [AVAssetTrack](avassettrack-async-properties.md): Asynchronous properties for asset tracks.
+- [AVURLAsset](avurlasset-async-properties.md): Asynchronous properties for URL assets.
+- [AVFragmentedAsset](avfragmentedasset-async-properties.md): Asynchronous properties for fragmented assets.
+- [AVMetadataItem](avmetadataitem-async-properties.md): Asynchronous properties for metadata items.
+- [AVComposition](avcomposition-async-properties.md): Asynchronous properties for compositions.
+- [AVMovie](avmovie-async-properties.md): Asynchronous properties for movies.
+- [AVMutableMovie](avmutablemovie-async-properties.md): Asynchronous properties for mutable movies.
+- [AVFragmentedMovie](avfragmentedmovie-async-properties.md): Asynchronous properties for fragmented movies.
+
+# Document: addMutableTrack(withMediaType:preferredTrackID:)
+
+Source path: documentation/avfoundation/avmutablecomposition/addmutabletrack(withmediatype:preferredtrackid:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/addmutabletrack(withmediatype:preferredtrackid:)
+Description: Framework: AVFoundation Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+# addMutableTrack(withMediaType:preferredTrackID:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Adds an empty track to a composition.
+
+## Declaration
+
+```swift
+func addMutableTrack(withMediaType mediaType: AVMediaType, preferredTrackID: CMPersistentTrackID) -> AVMutableCompositionTrack?
+```
+
+## Parameters
+
+- `mediaType`: The media type of the new track.
+- `preferredTrackID`: The preferred track ID for the new track. The system generates a unique ID if the value you specify isn’t available. If you don’t need to specify a preferred track ID, pass [kCMPersistentTrackID_Invalid](../../coremedia/kcmpersistenttrackid_invalid.md), and the system generates an appropriate identifier.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new mutable composition track.
+
+## See Also
+
+### Managing composition tracks
+
+- [mutableTrack(compatibleWith:)](mutabletrack%28compatiblewith_%29.md): Returns a composition track into which you can insert any time range of the specified asset track.
+- [removeTrack(\_:)](removetrack%28__%29.md): Removes a specified track from the composition.
+
+# addMutableTrackWithMediaType:preferredTrackID: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Adds an empty track to a composition.
+
+## Declaration
+
+```objectivec
+- (AVMutableCompositionTrack *) addMutableTrackWithMediaType:(AVMediaType) mediaType preferredTrackID:(CMPersistentTrackID) preferredTrackID;
+```
+
+## Parameters
+
+- `mediaType`: The media type of the new track.
+- `preferredTrackID`: The preferred track ID for the new track. The system generates a unique ID if the value you specify isn’t available. If you don’t need to specify a preferred track ID, pass [kCMPersistentTrackID_Invalid](../../coremedia/kcmpersistenttrackid_invalid.md), and the system generates an appropriate identifier.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new mutable composition track.
+
+## See Also
+
+### Managing composition tracks
+
+- [mutableTrackCompatibleWithTrack:](mutabletrack%28compatiblewith_%29.md): Returns a composition track into which you can insert any time range of the specified asset track.
+- [removeTrack:](removetrack%28__%29.md): Removes a specified track from the composition.
+
+# Document: addTracks(for:preferredStartingTrackID:)
+
+Source path: documentation/avfoundation/avmutablecomposition/addtracks(for:preferredstartingtrackid:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/addtracks(for:preferredstartingtrackid:)
+Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
+
+# addTracks(for:preferredStartingTrackID:)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
+
+## Declaration
+
+```swift
+func addTracks(for cinematicAssetInfo: CNAssetInfo, preferredStartingTrackID: CMPersistentTrackID) -> CNCompositionInfo
+```
+
+# Document: addTracksForCinematicAssetInfo:preferredStartingTrackID:
+
+Source path: documentation/avfoundation/avmutablecomposition/addtracksforcinematicassetinfo:preferredstartingtrackid:
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/addtracksforcinematicassetinfo:preferredstartingtrackid:
+Description: Interface language: Objective-C
+
+# addTracksForCinematicAssetInfo:preferredStartingTrackID:
+
+**Interface language:** Objective-C
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
+
+Adds a group of empty tracks associated with a cinematic asset to a mutable composition.
+
+## Declaration
+
+```objectivec
+- (CNCompositionInfo *) addTracksForCinematicAssetInfo:(CNAssetInfo *) assetInfo preferredStartingTrackID:(CMPersistentTrackID) preferredStartingTrackID;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+Information about the composition tracks added to the mutable composition. Be sure to call insertTimeRange on the result to specify at least one time range of cinematic asset you’d like in the composition.
+
+# Document: composition
+
+Source path: documentation/avfoundation/avmutablecomposition/composition
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/composition
+Description: Interface language: Objective-C
+
+# composition
+
+**Interface language:** Objective-C
+
+**Framework:** AVFoundation  
+**Kind:** Type Method  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Returns a new mutable composition.
+
+## Declaration
+
+```objectivec
++ (instancetype) composition;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A mutable composition.
+
+## See Also
+
+### Creating a composition
+
+- [compositionWithURLAssetInitializationOptions:](init%28urlassetinitializationoptions_%29-rh4y.md): Creates a mutable composition that uses the specified initialization options.
+
+# Document: init(URLAssetInitializationOptions:)
+
+Source path: documentation/avfoundation/avmutablecomposition/init(urlassetinitializationoptions:)-6codz
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/init(urlassetinitializationoptions:)-6codz
+Description: Framework: AVFoundation Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+# init(URLAssetInitializationOptions:)
+
+**Framework:** AVFoundation  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+## Declaration
+
+```swift
+convenience init(URLAssetInitializationOptions: [String : Any]? = nil)
+```
+
+# Document: init(urlAssetInitializationOptions:)
+
+Source path: documentation/avfoundation/avmutablecomposition/init(urlassetinitializationoptions:)-rh4y
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/init(urlassetinitializationoptions:)-rh4y
+Description: Framework: AVFoundation Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+# init(urlAssetInitializationOptions:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates a mutable composition that uses the specified initialization options.
+
+## Declaration
+
+```swift
+convenience init(urlAssetInitializationOptions URLAssetInitializationOptions: [String : Any]? = nil)
+```
+
+## Parameters
+
+- `URLAssetInitializationOptions`: The initialization options to use to create the composition.
+
+# compositionWithURLAssetInitializationOptions: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Type Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates a mutable composition that uses the specified initialization options.
+
+## Declaration
+
+```objectivec
++ (instancetype) compositionWithURLAssetInitializationOptions:(NSDictionary<NSString *,id> *) URLAssetInitializationOptions;
+```
+
+## Parameters
+
+- `URLAssetInitializationOptions`: The initialization options to use to create the composition.
+
+## See Also
+
+### Creating a composition
+
+- [composition](composition.md): Returns a new mutable composition.
+
+# Document: insertEmptyTimeRange(_:)
+
+Source path: documentation/avfoundation/avmutablecomposition/insertemptytimerange(_:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/insertemptytimerange(_:)
+Description: Framework: AVFoundation Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+# insertEmptyTimeRange(\_:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Adds or extends an empty time range within all tracks of the composition.
+
+## Declaration
+
+```swift
+func insertEmptyTimeRange(_ timeRange: CMTimeRange)
+```
+
+## Parameters
+
+- `timeRange`: The empty time range to insert.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Inserting an empty time range pushes out existing content by the time range’s duration. Use this method to reserve a time range in the composition for a subsequently created track to present its media.
+
+## See Also
+
+### Managing time ranges
+
+- [removeTimeRange(\_:)](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
+- [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
+- [insertTimeRange(\_:of:at:completionHandler:)](inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
+- [insertTimeRange(\_:of:at:)](inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
+
+# insertEmptyTimeRange: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Adds or extends an empty time range within all tracks of the composition.
+
+## Declaration
+
+```objectivec
+- (void) insertEmptyTimeRange:(CMTimeRange) timeRange;
+```
+
+## Parameters
+
+- `timeRange`: The empty time range to insert.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Inserting an empty time range pushes out existing content by the time range’s duration. Use this method to reserve a time range in the composition for a subsequently created track to present its media.
+
+## See Also
+
+### Managing time ranges
+
+- [removeTimeRange:](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
+- [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
+- [insertTimeRange:ofAsset:atTime:completionHandler:](inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
+- [insertTimeRange:ofAsset:atTime:error:](inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
+
+# Document: insertTimeRange(_:of:at:)
+
+Source path: documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:)
+Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 4.0+ (deprecated in 18.0) · iPadOS 4.0+ (deprecated in 18.0) · Mac Catalyst 13.1+ (deprecated in 18.0) · macOS 10.7+ (deprecated in 15.0) · tvOS 9.0+ (depr…
+
+# insertTimeRange(\_:of:at:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 4.0+ (deprecated in 18.0) · iPadOS 4.0+ (deprecated in 18.0) · Mac Catalyst 13.1+ (deprecated in 18.0) · macOS 10.7+ (deprecated in 15.0) · tvOS 9.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 1.0+ (deprecated in 11.0)
+
+Inserts all the tracks within a given time range of a specified asset into the composition.
+
+> Use [insertTimeRange(\_:of:at:isolation:)](inserttimerange%28__of_at_isolation_%29.md) instead.
+
+## Declaration
+
+```swift
+func insertTimeRange(_ timeRange: CMTimeRange, of asset: AVAsset, at startTime: CMTime) throws
+```
+
+## Parameters
+
+- `timeRange`: The time range of the asset to be inserted.
+- `asset`: An asset that contains the tracks to be inserted.
+- `startTime`: The time at which the inserted tracks should be presented by the receiver.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method may add new tracks to ensure that all tracks of the asset are represented in the inserted time range.
+
+Existing content at the specified start time is pushed out by the duration of the time range.
+
+Media data for the inserted time range is presented at its natural duration; you can scale it to a different duration using [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md).
+
+## See Also
+
+### Managing time ranges
+
+- [removeTimeRange(\_:)](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
+- [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
+- [insertEmptyTimeRange(\_:)](insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
+- [insertTimeRange(\_:of:at:completionHandler:)](inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
+
+# insertTimeRange:ofAsset:atTime:error: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 4.0+ (deprecated in 18.0) · iPadOS 4.0+ (deprecated in 18.0) · Mac Catalyst 13.1+ (deprecated in 18.0) · macOS 10.7+ (deprecated in 15.0) · tvOS 9.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 1.0+ (deprecated in 11.0)
+
+Inserts all the tracks within a given time range of a specified asset into the composition.
+
+> Use [insertTimeRange(\_:of:at:isolation:)](inserttimerange%28__of_at_isolation_%29.md) instead.
+
+## Declaration
+
+```objectivec
+- (BOOL) insertTimeRange:(CMTimeRange) timeRange ofAsset:(AVAsset *) asset atTime:(CMTime) startTime error:(NSError **) outError;
+```
+
+## Parameters
+
+- `timeRange`: The time range of the asset to be inserted.
+- `asset`: An asset that contains the tracks to be inserted.
+- `startTime`: The time at which the inserted tracks should be presented by the receiver.
+- `outError`: If the insertion was not successful, on return contains an `NSError` object that describes the problem.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[true](https://developer.apple.com/documentation/swift/true) if the insertion was successful, otherwise [false](https://developer.apple.com/documentation/swift/false).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method may add new tracks to ensure that all tracks of the asset are represented in the inserted time range.
+
+Existing content at the specified start time is pushed out by the duration of the time range.
+
+Media data for the inserted time range is presented at its natural duration; you can scale it to a different duration using [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md).
+
+## See Also
+
+### Managing time ranges
+
+- [removeTimeRange:](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
+- [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
+- [insertEmptyTimeRange:](insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
+- [insertTimeRange:ofAsset:atTime:completionHandler:](inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
+
+# Document: insertTimeRange(_:of:at:completionHandler:)
+
+Source path: documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:completionhandler:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:completionhandler:)
+Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 16.0+ (deprecated in 18.0) · iPadOS 16.0+ (deprecated in 18.0) · Mac Catalyst 16.0+ (deprecated in 18.0) · macOS 13.0+ (deprecated in 15.0) · tvOS 16.0+ (d…
+
+# insertTimeRange(\_:of:at:completionHandler:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ (deprecated in 18.0) · iPadOS 16.0+ (deprecated in 18.0) · Mac Catalyst 16.0+ (deprecated in 18.0) · macOS 13.0+ (deprecated in 15.0) · tvOS 16.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 9.0+ (deprecated in 11.0)
+
+Inserts all tracks of an asset for a time range into a composition.
+
+> Use [insertTimeRange(\_:of:at:isolation:)](inserttimerange%28__of_at_isolation_%29.md) instead.
+
+## Declaration
+
+```swift
+func insertTimeRange(_ timeRange: CMTimeRange, of asset: AVAsset, at startTime: CMTime, completionHandler: @escaping @Sendable ((any Error)?) -> Void)
+```
+
+## Parameters
+
+- `timeRange`: The time range of the asset’s tracks to insert into the composition.
+- `asset`: The source asset that contains the tracks to insert.
+- `startTime`: A time in the composition to present the inserted tracks.
+- `completionHandler`: A callback the system invokes when the insertion is complete. If an error occurs, the system passes the callback an error object that describes the failure.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If necessary, a composition adds new tracks to ensure that it inserts all tracks in the source asset for the time range. Inserting a time range pushes out existing content at the specified start time by the time range’s duration.
+
+The composition presents the media data for the inserted time range at its natural duration and rate. You can scale it to a different duration, which changes the presentation rate, by calling [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md).
+
+## See Also
+
+### Managing time ranges
+
+- [removeTimeRange(\_:)](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
+- [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
+- [insertEmptyTimeRange(\_:)](insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
+- [insertTimeRange(\_:of:at:)](inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
+
+# insertTimeRange:ofAsset:atTime:completionHandler: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Inserts all tracks of an asset for a time range into a composition.
+
+## Declaration
+
+```objectivec
+- (void) insertTimeRange:(CMTimeRange) timeRange ofAsset:(AVAsset *) asset atTime:(CMTime) startTime completionHandler:(void (^)(NSError *error)) completionHandler;
+```
+
+## Parameters
+
+- `timeRange`: The time range of the asset’s tracks to insert into the composition.
+- `asset`: The source asset that contains the tracks to insert.
+- `startTime`: A time in the composition to present the inserted tracks.
+- `completionHandler`: A callback the system invokes when the insertion is complete. If an error occurs, the system passes the callback an error object that describes the failure.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If necessary, a composition adds new tracks to ensure that it inserts all tracks in the source asset for the time range. Inserting a time range pushes out existing content at the specified start time by the time range’s duration.
+
+The composition presents the media data for the inserted time range at its natural duration and rate. You can scale it to a different duration, which changes the presentation rate, by calling [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md).
+
+## See Also
+
+### Managing time ranges
+
+- [removeTimeRange:](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
+- [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
+- [insertEmptyTimeRange:](insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
+- [insertTimeRange:ofAsset:atTime:error:](inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
+
+# Document: insertTimeRange(_:of:at:isolation:)
+
+Source path: documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:isolation:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:isolation:)
+Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+# insertTimeRange(\_:of:at:isolation:)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+## Declaration
+
+```swift
+@backDeployed(before: macOS 15, iOS 18, tvOS 18, watchOS 11, visionOS 2)
+final func insertTimeRange(_ timeRange: CMTimeRange, of asset: AVAsset, at time: CMTime, isolation: isolated (any Actor)? = #isolation) async throws
+```
+
+# Document: loadTrack(withTrackID:completionHandler:)
+
+Source path: documentation/avfoundation/avmutablecomposition/loadtrack(withtrackid:completionhandler:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/loadtrack(withtrackid:completionhandler:)
+Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+# loadTrack(withTrackID:completionHandler:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Loads a track that contains the specified identifier.
+
+## Declaration
+
+```swift
+func loadTrack(withTrackID trackID: CMPersistentTrackID, completionHandler: @escaping @Sendable (AVMutableCompositionTrack?, (any Error)?) -> Void)
+```
+
+```swift
+func loadTrack(withTrackID trackID: CMPersistentTrackID) async throws -> AVMutableCompositionTrack?
+```
+
+## Parameters
+
+- `trackID`: The identifier of the track to load.
+- `completionHandler`: A callback that the system invokes after it finishes the loading request. It passes the completion handler the following parameters:
+
+  - **track**: The loaded track, or `nil` if no track with the specified identifier exists or if an error occurs.
+  - **error**: An error object if the request fails; otherwise, `nil`.
+
+## See Also
+
+### Loading tracks
+
+- [tracks](../avpartialasyncproperty/tracks-92p4a.md): Conforms when `Root` inherits `AVMutableComposition`. The tracks that a composition contains.
+- [loadTracks(withMediaType:completionHandler:)](loadtracks%28withmediatype_completionhandler_%29.md): Loads tracks that contain media of a specified type.
+- [loadTracks(withMediaCharacteristic:completionHandler:)](loadtracks%28withmediacharacteristic_completionhandler_%29.md): Loads tracks that contain media of a specified characteristic.
+
+# loadTrackWithTrackID:completionHandler: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Loads a track that contains the specified identifier.
+
+## Declaration
+
+```objectivec
+- (void) loadTrackWithTrackID:(CMPersistentTrackID) trackID completionHandler:(void (^)(AVMutableCompositionTrack *, NSError *)) completionHandler;
+```
+
+## Parameters
+
+- `trackID`: The identifier of the track to load.
+- `completionHandler`: A callback that the system invokes after it finishes the loading request. It passes the completion handler the following parameters:
+
+  - **track**: The loaded track, or `nil` if no track with the specified identifier exists or if an error occurs.
+  - **error**: An error object if the request fails; otherwise, `nil`.
+
+## See Also
+
+### Loading tracks
+
+- [loadTracksWithMediaType:completionHandler:](loadtracks%28withmediatype_completionhandler_%29.md): Loads tracks that contain media of a specified type.
+- [loadTracksWithMediaCharacteristic:completionHandler:](loadtracks%28withmediacharacteristic_completionhandler_%29.md): Loads tracks that contain media of a specified characteristic.
 
 # Document: loadTracks(withMediaCharacteristic:completionHandler:)
 
@@ -112549,13 +113863,13 @@ AVAudioSessionRouteSelectionNone
 
 Source path: documentation/avkit/avcapturedevicedescriptor
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor
-Description: Framework: AVKit Kind: Class Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Class Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # AVCaptureDeviceDescriptor (Swift)
 
 **Framework:** AVKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 An object that identifies a capture device and is safe to pass between actors.
 
@@ -112581,14 +113895,14 @@ You don’t create `AVCaptureDeviceDescriptor` objects directly. An [AVCaptureDe
 
 ### Identifying the device
 
-- [uniqueID](avcapturedevicedescriptor/uniqueid.md): Beta. An identifier that uniquely identifies the device’s camera.
-- [localizedName](avcapturedevicedescriptor/localizedname.md): Beta. A name for the camera that’s suitable for display in your interface.
+- [uniqueID](avcapturedevicedescriptor/uniqueid.md): An identifier that uniquely identifies the device’s camera.
+- [localizedName](avcapturedevicedescriptor/localizedname.md): A name for the camera that’s suitable for display in your interface.
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](avcapturedevicedescriptor/devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [mediaTypes](avcapturedevicedescriptor/mediatypes.md): Beta. The kinds of media the camera captures.
-- [position](avcapturedevicedescriptor/position.md): Beta. The physical position of the camera on the device.
+- [deviceType](avcapturedevicedescriptor/devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [mediaTypes](avcapturedevicedescriptor/mediatypes.md): The kinds of media the camera captures.
+- [position](avcapturedevicedescriptor/position.md): The physical position of the camera on the device.
 
 ## Relationships
 
@@ -112612,14 +113926,14 @@ You don’t create `AVCaptureDeviceDescriptor` objects directly. An [AVCaptureDe
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
 
 # AVCaptureDeviceDescriptor (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 An object that identifies a capture device and is safe to pass between actors.
 
@@ -112645,14 +113959,14 @@ You don’t create `AVCaptureDeviceDescriptor` objects directly. An [AVCaptureDe
 
 ### Identifying the device
 
-- [uniqueID](avcapturedevicedescriptor/uniqueid.md): Beta. An identifier that uniquely identifies the device’s camera.
-- [localizedName](avcapturedevicedescriptor/localizedname.md): Beta. A name for the camera that’s suitable for display in your interface.
+- [uniqueID](avcapturedevicedescriptor/uniqueid.md): An identifier that uniquely identifies the device’s camera.
+- [localizedName](avcapturedevicedescriptor/localizedname.md): A name for the camera that’s suitable for display in your interface.
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](avcapturedevicedescriptor/devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [mediaTypes](avcapturedevicedescriptor/mediatypes.md): Beta. The kinds of media the camera captures.
-- [position](avcapturedevicedescriptor/position.md): Beta. The physical position of the camera on the device.
+- [deviceType](avcapturedevicedescriptor/devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [mediaTypes](avcapturedevicedescriptor/mediatypes.md): The kinds of media the camera captures.
+- [position](avcapturedevicedescriptor/position.md): The physical position of the camera on the device.
 
 ## Relationships
 
@@ -112665,20 +113979,20 @@ You don’t create `AVCaptureDeviceDescriptor` objects directly. An [AVCaptureDe
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
 
 # Document: deviceType
 
 Source path: documentation/avkit/avcapturedevicedescriptor/devicetype
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor/devicetype
-Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # deviceType (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The kind of camera, such as a wide-angle or telephoto camera.
 
@@ -112698,14 +114012,14 @@ This value matches the doc://com.apple.documentation/documentation/avfoundation/
 
 ### Inspecting the device’s characteristics
 
-- [mediaTypes](mediatypes.md): Beta. The kinds of media the camera captures.
-- [position](position.md): Beta. The physical position of the camera on the device.
+- [mediaTypes](mediatypes.md): The kinds of media the camera captures.
+- [position](position.md): The physical position of the camera on the device.
 
 # deviceType (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 The kind of camera, such as a wide-angle or telephoto camera.
 
@@ -112725,20 +114039,20 @@ This value matches the doc://com.apple.documentation/documentation/avfoundation/
 
 ### Inspecting the device’s characteristics
 
-- [mediaTypes](mediatypes.md): Beta. The kinds of media the camera captures.
-- [position](position.md): Beta. The physical position of the camera on the device.
+- [mediaTypes](mediatypes.md): The kinds of media the camera captures.
+- [position](position.md): The physical position of the camera on the device.
 
 # Document: localizedName
 
 Source path: documentation/avkit/avcapturedevicedescriptor/localizedname
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor/localizedname
-Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # localizedName (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 A name for the camera that’s suitable for display in your interface.
 
@@ -112758,13 +114072,13 @@ This value matches the [localizedName](../../avfoundation/avcapturedevice/locali
 
 ### Identifying the device
 
-- [uniqueID](uniqueid.md): Beta. An identifier that uniquely identifies the device’s camera.
+- [uniqueID](uniqueid.md): An identifier that uniquely identifies the device’s camera.
 
 # localizedName (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 A name for the camera that’s suitable for display in your interface.
 
@@ -112784,19 +114098,19 @@ This value matches the [localizedName](../../avfoundation/avcapturedevice/locali
 
 ### Identifying the device
 
-- [uniqueID](uniqueid.md): Beta. An identifier that uniquely identifies the device’s camera.
+- [uniqueID](uniqueid.md): An identifier that uniquely identifies the device’s camera.
 
 # Document: mediaTypes
 
 Source path: documentation/avkit/avcapturedevicedescriptor/mediatypes
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor/mediatypes
-Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # mediaTypes (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The kinds of media the camera captures.
 
@@ -112816,14 +114130,14 @@ The set of [AVMediaType](../../avfoundation/avmediatype.md) values the camera su
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [position](position.md): Beta. The physical position of the camera on the device.
+- [deviceType](devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [position](position.md): The physical position of the camera on the device.
 
 # mediaTypes (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 The kinds of media the camera captures.
 
@@ -112843,20 +114157,20 @@ The set of [AVMediaType](../../avfoundation/avmediatype.md) values the camera su
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [position](position.md): Beta. The physical position of the camera on the device.
+- [deviceType](devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [position](position.md): The physical position of the camera on the device.
 
 # Document: position
 
 Source path: documentation/avkit/avcapturedevicedescriptor/position
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor/position
-Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # position (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The physical position of the camera on the device.
 
@@ -112876,14 +114190,14 @@ This value matches the [position](../../avfoundation/avcapturedevice/position-sw
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [mediaTypes](mediatypes.md): Beta. The kinds of media the camera captures.
+- [deviceType](devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [mediaTypes](mediatypes.md): The kinds of media the camera captures.
 
 # position (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 The physical position of the camera on the device.
 
@@ -112903,20 +114217,20 @@ This value matches the [position](../../avfoundation/avcapturedevice/position-sw
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [mediaTypes](mediatypes.md): Beta. The kinds of media the camera captures.
+- [deviceType](devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [mediaTypes](mediatypes.md): The kinds of media the camera captures.
 
 # Document: uniqueID
 
 Source path: documentation/avkit/avcapturedevicedescriptor/uniqueid
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor/uniqueid
-Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # uniqueID (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 An identifier that uniquely identifies the device’s camera.
 
@@ -112936,13 +114250,13 @@ This value matches the [uniqueID](../../avfoundation/avcapturedevice/uniqueid.md
 
 ### Identifying the device
 
-- [localizedName](localizedname.md): Beta. A name for the camera that’s suitable for display in your interface.
+- [localizedName](localizedname.md): A name for the camera that’s suitable for display in your interface.
 
 # uniqueID (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 An identifier that uniquely identifies the device’s camera.
 
@@ -112962,19 +114276,19 @@ This value matches the [uniqueID](../../avfoundation/avcapturedevice/uniqueid.md
 
 ### Identifying the device
 
-- [localizedName](localizedname.md): Beta. A name for the camera that’s suitable for display in your interface.
+- [localizedName](localizedname.md): A name for the camera that’s suitable for display in your interface.
 
 # Document: AVCaptureDeviceDirectionCoordinator
 
 Source path: documentation/avkit/avcapturedevicedirectioncoordinator
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedirectioncoordinator
-Description: Framework: AVKit Kind: Class Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Class Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # AVCaptureDeviceDirectionCoordinator (Swift)
 
 **Framework:** AVKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 An object that tracks the direction each camera faces in relation to a view.
 
@@ -113031,11 +114345,11 @@ The map names each camera with an [AVCaptureDeviceDescriptor](avcapturedevicedes
 
 ### Creating a coordinator
 
-- [init(view:deviceTypes:changeHandler:)](avcapturedevicedirectioncoordinator/init%28view_devicetypes_changehandler_%29.md): Beta. Creates a coordinator that reports the direction cameras face in relation to the specified view.
+- [init(view:deviceTypes:changeHandler:)](avcapturedevicedirectioncoordinator/init%28view_devicetypes_changehandler_%29.md): Creates a coordinator that reports the direction cameras face in relation to the specified view.
 
 ### Reading the camera directions
 
-- [deviceDirections](avcapturedevicedirectioncoordinator/devicedirections.md): Beta. The current direction of each camera the coordinator monitors, in relation to its view.
+- [deviceDirections](avcapturedevicedirectioncoordinator/devicedirections.md): The current direction of each camera the coordinator monitors, in relation to its view.
 
 ## Relationships
 
@@ -113057,14 +114371,14 @@ The map names each camera with an [AVCaptureDeviceDescriptor](avcapturedevicedes
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
-- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): Beta. An object that identifies a capture device and is safe to pass between actors.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): An object that identifies a capture device and is safe to pass between actors.
 
 # AVCaptureDeviceDirectionCoordinator (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 An object that tracks the direction each camera faces in relation to a view.
 
@@ -113121,11 +114435,11 @@ The map names each camera with an [AVCaptureDeviceDescriptor](avcapturedevicedes
 
 ### Creating a coordinator
 
-- [initWithView:deviceTypes:changeHandler:](avcapturedevicedirectioncoordinator/init%28view_devicetypes_changehandler_%29.md): Beta. Creates a coordinator that reports the direction cameras face in relation to the specified view.
+- [initWithView:deviceTypes:changeHandler:](avcapturedevicedirectioncoordinator/init%28view_devicetypes_changehandler_%29.md): Creates a coordinator that reports the direction cameras face in relation to the specified view.
 
 ### Reading the camera directions
 
-- [deviceDirections](avcapturedevicedirectioncoordinator/devicedirections.md): Beta. The current direction of each camera the coordinator monitors, in relation to its view.
+- [deviceDirections](avcapturedevicedirectioncoordinator/devicedirections.md): The current direction of each camera the coordinator monitors, in relation to its view.
 
 ## Relationships
 
@@ -113138,20 +114452,20 @@ The map names each camera with an [AVCaptureDeviceDescriptor](avcapturedevicedes
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
-- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): Beta. An object that identifies a capture device and is safe to pass between actors.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): An object that identifies a capture device and is safe to pass between actors.
 
 # Document: deviceDirections
 
 Source path: documentation/avkit/avcapturedevicedirectioncoordinator/devicedirections
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedirectioncoordinator/devicedirections
-Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # deviceDirections (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The current direction of each camera the coordinator monitors, in relation to its view.
 
@@ -113179,7 +114493,7 @@ The map groups the device types you passed at initialization by the direction th
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 The current direction of each camera the coordinator monitors, in relation to its view.
 
@@ -113207,13 +114521,13 @@ The map groups the device types you passed at initialization by the direction th
 
 Source path: documentation/avkit/avcapturedevicedirectioncoordinator/init(view:devicetypes:changehandler:)
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedirectioncoordinator/init(view:devicetypes:changehandler:)
-Description: Framework: AVKit Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # init(view:deviceTypes:changeHandler:) (Swift)
 
 **Framework:** AVKit  
 **Kind:** Initializer  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 Creates a coordinator that reports the direction cameras face in relation to the specified view.
 
@@ -113241,7 +114555,7 @@ init(view: UIView, deviceTypes: [AVCaptureDevice.DeviceType], changeHandler: ((A
 
 **Framework:** AVKit  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 Creates a coordinator that reports the direction cameras face in relation to the specified view.
 
@@ -113269,13 +114583,13 @@ Creates a coordinator that reports the direction cameras face in relation to the
 
 Source path: documentation/avkit/avcapturedevicedirectionmap
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedirectionmap
-Description: Framework: AVKit Kind: Class Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Class Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # AVCaptureDeviceDirectionMap (Swift)
 
 **Framework:** AVKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 An object that groups the cameras a coordinator tracks by the direction they face.
 
@@ -113305,8 +114619,8 @@ A map groups the device types you gave the coordinator into two arrays, using th
 
 ### Reading the camera directions
 
-- [forwardFacingDeviceDescriptors](avcapturedevicedirectionmap/forwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face the same direction as the view.
-- [backwardFacingDeviceDescriptors](avcapturedevicedirectionmap/backwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face away from the view.
+- [forwardFacingDeviceDescriptors](avcapturedevicedirectionmap/forwardfacingdevicedescriptors.md): Descriptions of the capture devices that face the same direction as the view.
+- [backwardFacingDeviceDescriptors](avcapturedevicedirectionmap/backwardfacingdevicedescriptors.md): Descriptions of the capture devices that face away from the view.
 
 ## Relationships
 
@@ -113330,14 +114644,14 @@ A map groups the device types you gave the coordinator into two arrays, using th
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): Beta. An object that identifies a capture device and is safe to pass between actors.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): An object that identifies a capture device and is safe to pass between actors.
 
 # AVCaptureDeviceDirectionMap (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 An object that groups the cameras a coordinator tracks by the direction they face.
 
@@ -113367,8 +114681,8 @@ A map groups the device types you gave the coordinator into two arrays, using th
 
 ### Reading the camera directions
 
-- [forwardFacingDeviceDescriptors](avcapturedevicedirectionmap/forwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face the same direction as the view.
-- [backwardFacingDeviceDescriptors](avcapturedevicedirectionmap/backwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face away from the view.
+- [forwardFacingDeviceDescriptors](avcapturedevicedirectionmap/forwardfacingdevicedescriptors.md): Descriptions of the capture devices that face the same direction as the view.
+- [backwardFacingDeviceDescriptors](avcapturedevicedirectionmap/backwardfacingdevicedescriptors.md): Descriptions of the capture devices that face away from the view.
 
 ## Relationships
 
@@ -113381,20 +114695,20 @@ A map groups the device types you gave the coordinator into two arrays, using th
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): Beta. An object that identifies a capture device and is safe to pass between actors.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): An object that identifies a capture device and is safe to pass between actors.
 
 # Document: backwardFacingDeviceDescriptors
 
 Source path: documentation/avkit/avcapturedevicedirectionmap/backwardfacingdevicedescriptors
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedirectionmap/backwardfacingdevicedescriptors
-Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # backwardFacingDeviceDescriptors (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 Descriptions of the capture devices that face away from the view.
 
@@ -113418,13 +114732,13 @@ These devices capture the scene behind the view. Each [AVCaptureDeviceDescriptor
 
 ### Reading the camera directions
 
-- [forwardFacingDeviceDescriptors](forwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face the same direction as the view.
+- [forwardFacingDeviceDescriptors](forwardfacingdevicedescriptors.md): Descriptions of the capture devices that face the same direction as the view.
 
 # backwardFacingDeviceDescriptors (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 Descriptions of the capture devices that face away from the view.
 
@@ -113448,19 +114762,19 @@ These devices capture the scene behind the view. Each [AVCaptureDeviceDescriptor
 
 ### Reading the camera directions
 
-- [forwardFacingDeviceDescriptors](forwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face the same direction as the view.
+- [forwardFacingDeviceDescriptors](forwardfacingdevicedescriptors.md): Descriptions of the capture devices that face the same direction as the view.
 
 # Document: forwardFacingDeviceDescriptors
 
 Source path: documentation/avkit/avcapturedevicedirectionmap/forwardfacingdevicedescriptors
 Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedirectionmap/forwardfacingdevicedescriptors
-Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: AVKit Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # forwardFacingDeviceDescriptors (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 Descriptions of the capture devices that face the same direction as the view.
 
@@ -113484,13 +114798,13 @@ These devices capture the scene in front of the view. Each [AVCaptureDeviceDescr
 
 ### Reading the camera directions
 
-- [backwardFacingDeviceDescriptors](backwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face away from the view.
+- [backwardFacingDeviceDescriptors](backwardfacingdevicedescriptors.md): Descriptions of the capture devices that face away from the view.
 
 # forwardFacingDeviceDescriptors (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 Descriptions of the capture devices that face the same direction as the view.
 
@@ -113514,7 +114828,7 @@ These devices capture the scene in front of the view. Each [AVCaptureDeviceDescr
 
 ### Reading the camera directions
 
-- [backwardFacingDeviceDescriptors](backwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face away from the view.
+- [backwardFacingDeviceDescriptors](backwardfacingdevicedescriptors.md): Descriptions of the capture devices that face away from the view.
 
 # Document: AVCaptureEvent
 
@@ -116722,8 +118036,6 @@ Subclass this class to define the user interface for your content proposal.
 - [NSCoding](../foundation/nscoding.md)
 - [NSExtensionRequestHandling](../foundation/nsextensionrequesthandling.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UIAppearanceContainer](../uikit/uiappearancecontainer.md)
 - [UIContentContainer](../uikit/uicontentcontainer.md)
@@ -117390,6 +118702,8 @@ To respond to the various outcome events from the picker, your app needs to impl
 - [NSCoding](../foundation/nscoding.md)
 - [NSExtensionRequestHandling](../foundation/nsextensionrequesthandling.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UIAppearanceContainer](../uikit/uiappearancecontainer.md)
 - [UIContentContainer](../uikit/uicontentcontainer.md)
@@ -123630,9 +124944,9 @@ For information about building a camera app, see [Capture setup](../avfoundation
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
-- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): Beta. An object that identifies a capture device and is safe to pass between actors.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): An object that identifies a capture device and is safe to pass between actors.
 
 ### Audio input selection
 
@@ -148096,9 +149410,9 @@ Ask a coordinator for the direction a camera faces instead of inferring it from 
 
 ### Camera facing direction
 
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
-- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): Beta. An object that identifies a capture device and is safe to pass between actors.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): An object that identifies a capture device and is safe to pass between actors.
 
 # Choosing a camera by the direction it faces (Objective-C)
 
@@ -148350,9 +149664,9 @@ Ask a coordinator for the direction a camera faces instead of inferring it from 
 
 ### Camera facing direction
 
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
-- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): Beta. An object that identifies a capture device and is safe to pass between actors.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): An object that identifies a capture device and is safe to pass between actors.
 
 # Document: Creating a multiview video playback experience in visionOS
 
@@ -153813,6 +155127,10 @@ Alternatively, you can manage and host asset downloads yourself using the low-le
 - [BAErrorCode](backgroundassets/baerrorcode.md)
 - [AssetPackManager.LocalAvailabilityError](backgroundassets/assetpackmanager/localavailabilityerror.md): An error that provides information about local asset pack availability, distinguishing between successes and failures.
 
+### Enumerations
+
+- [SizeCalculationMethod](backgroundassets/sizecalculationmethod.md): Beta. Methods for calculating a file’s size.
+
 # Background Assets (Objective-C)
 
 **Framework:** Background Assets  
@@ -153904,6 +155222,10 @@ Alternatively, you can manage and host asset downloads yourself using the low-le
 
 - [BAFailuresErrorKey](backgroundassets/bafailureserrorkey.md): The `-[NSError userInfo]` key for the set of asset packs the local availability of which the system couldn’t ensure and their respective associated underlying errors.
 - [BASuccessesErrorKey](backgroundassets/basuccesseserrorkey.md): The `-[NSError userInfo]` key for the set of asset packs the local availability of which the system successfully ensured.
+
+### Enumerations
+
+- [BASizeCalculationMethod](backgroundassets/sizecalculationmethod.md): Beta. Methods for calculating a file’s size.
 
 # Document: AssetPack
 
@@ -154506,6 +155828,11 @@ The first time that your code refers to the shared manager, Background Assets co
 ### Handling errors
 
 - [AssetPackManager.LocalAvailabilityError](assetpackmanager/localavailabilityerror.md): An error that provides information about local asset pack availability, distinguishing between successes and failures.
+
+### Instance Methods
+
+- [localSize(ofAssetPackWithID:calculationMethod:)](assetpackmanager/localsize%28ofassetpackwithid_calculationmethod_%29.md): Beta. Calculates a locally available asset pack’s installation size.
+- [localVersion(ofAssetPackWithID:)](assetpackmanager/localversion%28ofassetpackwithid_%29.md): Beta. Returns a locally available asset pack’s version number.
 
 ## Relationships
 
@@ -155469,6 +156796,47 @@ var locallyAvailableLanguages: [Locale.Language] { get async }
 - [resolvedLanguage](resolvedlanguage.md): The language that best matches current preferences and for which the system automatically makes localized asset packs available locally.
 - [reconcilePreferredLanguages()](reconcilepreferredlanguages%28%29.md): Reconciles the set of locally available asset packs with the current preferred languages.
 
+# Document: localSize(ofAssetPackWithID:calculationMethod:)
+
+Source path: documentation/backgroundassets/assetpackmanager/localsize(ofassetpackwithid:calculationmethod:)
+Canonical documentation: https://developer.apple.com/documentation/backgroundassets/assetpackmanager/localsize(ofassetpackwithid:calculationmethod:)
+Description: Framework: Background Assets Kind: Instance Method Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+# localSize(ofAssetPackWithID:calculationMethod:)
+
+**Framework:** Background Assets  
+**Kind:** Instance Method  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+Calculates a locally available asset pack’s installation size.
+
+## Declaration
+
+```swift
+func localSize(ofAssetPackWithID assetPackID: String, calculationMethod: SizeCalculationMethod) async throws -> Int64
+```
+
+## Parameters
+
+- `assetPackID`: The asset pack’s ID.
+- `calculationMethod`: The method to use to calculate the asset pack’s installation size.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The asset pack’s installation size in bytes.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This is different than the download size, which could be smaller. Calculating the size of an asset pack that contains many files can take a long time.
+
+> **Throws**
+
+> [ManagedBackgroundAssetsError.assetPackNotFound(withID:)](../managedbackgroundassetserror/assetpacknotfound%28withid_%29.md) when no asset pack with the specified ID is available locally.
+
 # Document: localStatus(ofAssetPackWithID:)
 
 Source path: documentation/backgroundassets/assetpackmanager/localstatus(ofassetpackwithid:)
@@ -155524,6 +156892,44 @@ Because this method doesn’t communicate with the server, it can’t determine 
 - [remove(assetPackWithID:)](remove%28assetpackwithid_%29.md): Removes the specified asset pack from the device.
 - [status(ofAssetPackWithID:)](status%28ofassetpackwithid_%29.md): Deprecated. Checks an asset pack’s status.
 - [ensureLocalAvailability(of:)](ensurelocalavailability%28of_%29.md): Deprecated. Ensures that the specified asset pack is available locally, performing a download if necessary.
+
+# Document: localVersion(ofAssetPackWithID:)
+
+Source path: documentation/backgroundassets/assetpackmanager/localversion(ofassetpackwithid:)
+Canonical documentation: https://developer.apple.com/documentation/backgroundassets/assetpackmanager/localversion(ofassetpackwithid:)
+Description: Framework: Background Assets Kind: Instance Method Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+# localVersion(ofAssetPackWithID:)
+
+**Framework:** Background Assets  
+**Kind:** Instance Method  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+Returns a locally available asset pack’s version number.
+
+## Declaration
+
+```swift
+nonisolated func localVersion(ofAssetPackWithID assetPackID: String) throws -> Int
+```
+
+## Parameters
+
+- `assetPackID`: The asset pack’s ID.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The asset pack’s version number.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Throws**
+
+> [ManagedBackgroundAssetsError.assetPackNotFound(withID:)](../managedbackgroundassetserror/assetpacknotfound%28withid_%29.md) when no asset pack with the specified ID is available locally.
 
 # Document: manifest
 
@@ -157164,6 +158570,11 @@ The first time that your code refers to the shared manager, Background Assets co
 - [resolvedLanguage](baassetpackmanager/resolvedlanguage.md): The language asset packs that are localized for which the system automatically makes available locally, represented as a BCP-47 identifier.
 - [reconcilePreferredLanguagesWithCompletionHandler:](baassetpackmanager/reconcilepreferredlanguageswithcompletionhandler_.md): Reconciles the set of locally available asset packs with the current preferred languages.
 
+### Instance Methods
+
+- [getLocalSizeOfAssetPackWithIdentifier:calculationMethod:completionHandler:](baassetpackmanager/getlocalsizeofassetpackwithidentifier_calculationmethod_completionhandler_.md): Beta. Calculates a locally available asset pack’s installation size.
+- [localVersionOfAssetPackWithIdentifier:error:](baassetpackmanager/localversionofassetpackwithidentifier_error_.md): Beta. Returns a locally available asset pack’s version number.
+
 ## Relationships
 
 ### Inherits From
@@ -157862,6 +159273,40 @@ Gets the languages used by asset packs that are localized and are available loca
 - [resolvedLanguage](resolvedlanguage.md): The language asset packs that are localized for which the system automatically makes available locally, represented as a BCP-47 identifier.
 - [reconcilePreferredLanguagesWithCompletionHandler:](reconcilepreferredlanguageswithcompletionhandler_.md): Reconciles the set of locally available asset packs with the current preferred languages.
 
+# Document: getLocalSizeOfAssetPackWithIdentifier:calculationMethod:completionHandler:
+
+Source path: documentation/backgroundassets/baassetpackmanager/getlocalsizeofassetpackwithidentifier:calculationmethod:completionhandler:
+Canonical documentation: https://developer.apple.com/documentation/backgroundassets/baassetpackmanager/getlocalsizeofassetpackwithidentifier:calculationmethod:completionhandler:
+Description: Interface language: Objective-C
+
+# getLocalSizeOfAssetPackWithIdentifier:calculationMethod:completionHandler:
+
+**Interface language:** Objective-C
+
+**Framework:** Background Assets  
+**Kind:** Instance Method  
+**Availability:** macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+Calculates a locally available asset pack’s installation size.
+
+## Declaration
+
+```objectivec
+- (void) getLocalSizeOfAssetPackWithIdentifier:(NSString *) assetPackIdentifier calculationMethod:(BASizeCalculationMethod) calculationMethod completionHandler:(void (^)(long long size, NSError *error)) completionHandler;
+```
+
+## Parameters
+
+- `assetPackIdentifier`: The asset pack’s identifier.
+- `calculationMethod`: The method to use to calculate the asset pack’s installation size.
+- `completionHandler`: A block that receives the asset pack’s installation size in bytes or an error if one occurs. If the asset pack isn’t available locally, then the `error` parameter will point to an `NSError` object with [BAManagedErrorCodeAssetPackNotFound](../bamanagederrorcode/bamanagederrorcodeassetpacknotfound.md) as its code.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This is different than the download size, which could be smaller. Calculating the size of an asset pack that contains many files can take a long time.
+
 # Document: getLocalStatusOfAssetPackWithIdentifier:completionHandler:
 
 Source path: documentation/backgroundassets/baassetpackmanager/getlocalstatusofassetpackwithidentifier:completionhandler:
@@ -158056,6 +159501,39 @@ This method doesn’t automatically trigger any downloads, updates, or removals.
 - [getLocalStatusOfAssetPackWithIdentifier:completionHandler:](getlocalstatusofassetpackwithidentifier_completionhandler_.md): Gets an asset pack’s local status.
 - [removeAssetPackWithIdentifier:completionHandler:](removeassetpackwithidentifier_completionhandler_.md): Removes the specified asset pack from the device.
 - [getStatusOfAssetPackWithIdentifier:completionHandler:](getstatusofassetpackwithidentifier_completionhandler_.md): Deprecated. Gets an asset pack’s status.
+
+# Document: localVersionOfAssetPackWithIdentifier:error:
+
+Source path: documentation/backgroundassets/baassetpackmanager/localversionofassetpackwithidentifier:error:
+Canonical documentation: https://developer.apple.com/documentation/backgroundassets/baassetpackmanager/localversionofassetpackwithidentifier:error:
+Description: Interface language: Objective-C
+
+# localVersionOfAssetPackWithIdentifier:error:
+
+**Interface language:** Objective-C
+
+**Framework:** Background Assets  
+**Kind:** Instance Method  
+**Availability:** macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+Returns a locally available asset pack’s version number.
+
+## Declaration
+
+```objectivec
+- (NSInteger) localVersionOfAssetPackWithIdentifier:(NSString *) assetPackIdentifier error:(NSError **) error;
+```
+
+## Parameters
+
+- `assetPackIdentifier`: The asset pack’s identifier.
+- `error`: A pointer to an error that will be set if an error occurs. If the asset pack isn’t available locally, then `error` will point to an `NSError` object with [BAManagedErrorCodeAssetPackNotFound](../bamanagederrorcode/bamanagederrorcodeassetpacknotfound.md) as its code.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The asset pack’s version number. A return value of `-1` indicates that an error occurred.
 
 # Document: reconcilePreferredLanguagesWithCompletionHandler:
 
@@ -165879,6 +167357,182 @@ For simplicity, this example doesn’t include a user interface. In a real-world
 - [Downloading Apple-hosted asset packs](downloading-apple-hosted-asset-packs.md): Configure your project and write the code to download asset packs hosted by Apple.
 - [Testing asset packs locally](testing-asset-packs-locally.md): Test your system-managed asset packs using a mock server on your Mac.
 
+# Document: SizeCalculationMethod
+
+Source path: documentation/backgroundassets/sizecalculationmethod
+Canonical documentation: https://developer.apple.com/documentation/backgroundassets/sizecalculationmethod
+Description: Framework: Background Assets Kind: Enumeration Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+# SizeCalculationMethod (Swift)
+
+**Framework:** Background Assets  
+**Kind:** Enumeration  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+Methods for calculating a file’s size.
+
+## Declaration
+
+```swift
+enum SizeCalculationMethod
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [SizeCalculationMethod.allocated](sizecalculationmethod/allocated.md): Beta. A calculation method that counts the number of bytes that the file system allocated for a file.
+- [SizeCalculationMethod.logical](sizecalculationmethod/logical.md): Beta. A calculation method that counts the number of bytes in a file.
+
+### Initializers
+
+- [init(rawValue:)](sizecalculationmethod/init%28rawvalue_%29.md): Beta.
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+# BASizeCalculationMethod (Objective-C)
+
+**Framework:** Background Assets  
+**Kind:** Enumeration  
+**Availability:** macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+Methods for calculating a file’s size.
+
+## Declaration
+
+```objectivec
+enum BASizeCalculationMethod : NSInteger;
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [BASizeCalculationMethodAllocated](sizecalculationmethod/allocated.md): Beta. A calculation method that counts the number of bytes that the file system allocated for a file.
+- [BASizeCalculationMethodLogical](sizecalculationmethod/logical.md): Beta. A calculation method that counts the number of bytes in a file.
+
+# Document: SizeCalculationMethod.allocated
+
+Source path: documentation/backgroundassets/sizecalculationmethod/allocated
+Canonical documentation: https://developer.apple.com/documentation/backgroundassets/sizecalculationmethod/allocated
+Description: Framework: Background Assets Kind: Case Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+# SizeCalculationMethod.allocated (Swift)
+
+**Framework:** Background Assets  
+**Kind:** Case  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+A calculation method that counts the number of bytes that the file system allocated for a file.
+
+## Declaration
+
+```swift
+case allocated
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The result of an “allocated” size calculation for a file roughly corresponds to the number of bytes that would newly be made available if the file were removed.
+
+# BASizeCalculationMethodAllocated (Objective-C)
+
+**Framework:** Background Assets  
+**Kind:** Enumeration Case  
+**Availability:** macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+A calculation method that counts the number of bytes that the file system allocated for a file.
+
+## Declaration
+
+```objectivec
+BASizeCalculationMethodAllocated
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The result of an “allocated” size calculation for a file roughly corresponds to the number of bytes that would newly be made available if the file were removed.
+
+# Document: init(rawValue:)
+
+Source path: documentation/backgroundassets/sizecalculationmethod/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/backgroundassets/sizecalculationmethod/init(rawvalue:)
+Description: Framework: Background Assets Kind: Initializer Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+# init(rawValue:)
+
+**Framework:** Background Assets  
+**Kind:** Initializer  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+## Declaration
+
+```swift
+init?(rawValue: Int)
+```
+
+# Document: SizeCalculationMethod.logical
+
+Source path: documentation/backgroundassets/sizecalculationmethod/logical
+Canonical documentation: https://developer.apple.com/documentation/backgroundassets/sizecalculationmethod/logical
+Description: Framework: Background Assets Kind: Case Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+# SizeCalculationMethod.logical (Swift)
+
+**Framework:** Background Assets  
+**Kind:** Case  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+A calculation method that counts the number of bytes in a file.
+
+## Declaration
+
+```swift
+case logical
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The result of a “logical” size calculation for a file may be greater or less than the actual number of bytes that a file takes up on disk due to file-system features like alignment or compression.
+
+# BASizeCalculationMethodLogical (Objective-C)
+
+**Framework:** Background Assets  
+**Kind:** Enumeration Case  
+**Availability:** macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta
+
+A calculation method that counts the number of bytes in a file.
+
+## Declaration
+
+```objectivec
+BASizeCalculationMethodLogical
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The result of a “logical” size calculation for a file may be greater or less than the actual number of bytes that a file takes up on disk due to file-system features like alignment or compression.
+
 # Document: Testing asset packs locally
 
 Source path: documentation/backgroundassets/testing-asset-packs-locally
@@ -171068,1441 +172722,3 @@ bool isFUASupported;
 - [minSegmentAlignment](minsegmentalignment.md): The minimum alignment of the data buffer sent to read-write calls.
 - [numOfAddressBits](numofaddressbits.md): The number of bits used to address blocks on the device.
 - [isUnmapSupported](isunmapsupported.md): A Boolean value that indicates whether the device supports unmapping to reclaim storage.
-
-# Document: isUnmapSupported
-
-Source path: documentation/blockstoragedevicedriverkit/deviceparams/isunmapsupported
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/deviceparams/isunmapsupported
-Description: Interface language: Objective-C
-
-# isUnmapSupported
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 21.0+
-
-A Boolean value that indicates whether the device supports unmapping to reclaim storage.
-
-## Declaration
-
-```objectivec
-bool isUnmapSupported;
-```
-
-## See Also
-
-### Accessing Device Parameters
-
-- [numOfBlocks](numofblocks.md): The number of blocks on the device.
-- [blockSize](blocksize.md): The size of a block on the device.
-- [maxIOSize](maxiosize.md): The maximum amount of data per I/O call.
-- [numOfOutstandingIOs](numofoutstandingios.md): The upper limit to the number of requests sent to the device.
-- [maxNumOfUnmapRegions](maxnumofunmapregions.md): The maximum number of regions supported by an unmap call.
-- [minSegmentAlignment](minsegmentalignment.md): The minimum alignment of the data buffer sent to read-write calls.
-- [numOfAddressBits](numofaddressbits.md): The number of bits used to address blocks on the device.
-- [isFUASupported](isfuasupported.md): A Boolean value that indicates whether the device supports forced unit access (FUA).
-
-# Document: maxIOSize
-
-Source path: documentation/blockstoragedevicedriverkit/deviceparams/maxiosize
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/deviceparams/maxiosize
-Description: Interface language: Objective-C
-
-# maxIOSize
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 21.0+
-
-The maximum amount of data per I/O call.
-
-## Declaration
-
-```objectivec
-uint32_t maxIOSize;
-```
-
-## See Also
-
-### Accessing Device Parameters
-
-- [numOfBlocks](numofblocks.md): The number of blocks on the device.
-- [blockSize](blocksize.md): The size of a block on the device.
-- [numOfOutstandingIOs](numofoutstandingios.md): The upper limit to the number of requests sent to the device.
-- [maxNumOfUnmapRegions](maxnumofunmapregions.md): The maximum number of regions supported by an unmap call.
-- [minSegmentAlignment](minsegmentalignment.md): The minimum alignment of the data buffer sent to read-write calls.
-- [numOfAddressBits](numofaddressbits.md): The number of bits used to address blocks on the device.
-- [isUnmapSupported](isunmapsupported.md): A Boolean value that indicates whether the device supports unmapping to reclaim storage.
-- [isFUASupported](isfuasupported.md): A Boolean value that indicates whether the device supports forced unit access (FUA).
-
-# Document: maxNumOfUnmapRegions
-
-Source path: documentation/blockstoragedevicedriverkit/deviceparams/maxnumofunmapregions
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/deviceparams/maxnumofunmapregions
-Description: Interface language: Objective-C
-
-# maxNumOfUnmapRegions
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 21.0+
-
-The maximum number of regions supported by an unmap call.
-
-## Declaration
-
-```objectivec
-uint32_t maxNumOfUnmapRegions;
-```
-
-## See Also
-
-### Accessing Device Parameters
-
-- [numOfBlocks](numofblocks.md): The number of blocks on the device.
-- [blockSize](blocksize.md): The size of a block on the device.
-- [maxIOSize](maxiosize.md): The maximum amount of data per I/O call.
-- [numOfOutstandingIOs](numofoutstandingios.md): The upper limit to the number of requests sent to the device.
-- [minSegmentAlignment](minsegmentalignment.md): The minimum alignment of the data buffer sent to read-write calls.
-- [numOfAddressBits](numofaddressbits.md): The number of bits used to address blocks on the device.
-- [isUnmapSupported](isunmapsupported.md): A Boolean value that indicates whether the device supports unmapping to reclaim storage.
-- [isFUASupported](isfuasupported.md): A Boolean value that indicates whether the device supports forced unit access (FUA).
-
-# Document: minSegmentAlignment
-
-Source path: documentation/blockstoragedevicedriverkit/deviceparams/minsegmentalignment
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/deviceparams/minsegmentalignment
-Description: Interface language: Objective-C
-
-# minSegmentAlignment
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 21.0+
-
-The minimum alignment of the data buffer sent to read-write calls.
-
-## Declaration
-
-```objectivec
-uint32_t minSegmentAlignment;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This minimum affects the `dmaAddr` parameter of the [DoAsyncReadWrite](../iouserblockstoragedevice/doasyncreadwrite.md) function.
-
-## See Also
-
-### Accessing Device Parameters
-
-- [numOfBlocks](numofblocks.md): The number of blocks on the device.
-- [blockSize](blocksize.md): The size of a block on the device.
-- [maxIOSize](maxiosize.md): The maximum amount of data per I/O call.
-- [numOfOutstandingIOs](numofoutstandingios.md): The upper limit to the number of requests sent to the device.
-- [maxNumOfUnmapRegions](maxnumofunmapregions.md): The maximum number of regions supported by an unmap call.
-- [numOfAddressBits](numofaddressbits.md): The number of bits used to address blocks on the device.
-- [isUnmapSupported](isunmapsupported.md): A Boolean value that indicates whether the device supports unmapping to reclaim storage.
-- [isFUASupported](isfuasupported.md): A Boolean value that indicates whether the device supports forced unit access (FUA).
-
-# Document: numOfAddressBits
-
-Source path: documentation/blockstoragedevicedriverkit/deviceparams/numofaddressbits
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/deviceparams/numofaddressbits
-Description: Interface language: Objective-C
-
-# numOfAddressBits
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 21.0+
-
-The number of bits used to address blocks on the device.
-
-## Declaration
-
-```objectivec
-uint8_t numOfAddressBits;
-```
-
-## See Also
-
-### Accessing Device Parameters
-
-- [numOfBlocks](numofblocks.md): The number of blocks on the device.
-- [blockSize](blocksize.md): The size of a block on the device.
-- [maxIOSize](maxiosize.md): The maximum amount of data per I/O call.
-- [numOfOutstandingIOs](numofoutstandingios.md): The upper limit to the number of requests sent to the device.
-- [maxNumOfUnmapRegions](maxnumofunmapregions.md): The maximum number of regions supported by an unmap call.
-- [minSegmentAlignment](minsegmentalignment.md): The minimum alignment of the data buffer sent to read-write calls.
-- [isUnmapSupported](isunmapsupported.md): A Boolean value that indicates whether the device supports unmapping to reclaim storage.
-- [isFUASupported](isfuasupported.md): A Boolean value that indicates whether the device supports forced unit access (FUA).
-
-# Document: numOfBlocks
-
-Source path: documentation/blockstoragedevicedriverkit/deviceparams/numofblocks
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/deviceparams/numofblocks
-Description: Interface language: Objective-C
-
-# numOfBlocks
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 21.0+
-
-The number of blocks on the device.
-
-## Declaration
-
-```objectivec
-uint64_t numOfBlocks;
-```
-
-## See Also
-
-### Accessing Device Parameters
-
-- [blockSize](blocksize.md): The size of a block on the device.
-- [maxIOSize](maxiosize.md): The maximum amount of data per I/O call.
-- [numOfOutstandingIOs](numofoutstandingios.md): The upper limit to the number of requests sent to the device.
-- [maxNumOfUnmapRegions](maxnumofunmapregions.md): The maximum number of regions supported by an unmap call.
-- [minSegmentAlignment](minsegmentalignment.md): The minimum alignment of the data buffer sent to read-write calls.
-- [numOfAddressBits](numofaddressbits.md): The number of bits used to address blocks on the device.
-- [isUnmapSupported](isunmapsupported.md): A Boolean value that indicates whether the device supports unmapping to reclaim storage.
-- [isFUASupported](isfuasupported.md): A Boolean value that indicates whether the device supports forced unit access (FUA).
-
-# Document: numOfOutstandingIOs
-
-Source path: documentation/blockstoragedevicedriverkit/deviceparams/numofoutstandingios
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/deviceparams/numofoutstandingios
-Description: Interface language: Objective-C
-
-# numOfOutstandingIOs
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 21.0+
-
-The upper limit to the number of requests sent to the device.
-
-## Declaration
-
-```objectivec
-uint32_t numOfOutstandingIOs;
-```
-
-## See Also
-
-### Accessing Device Parameters
-
-- [numOfBlocks](numofblocks.md): The number of blocks on the device.
-- [blockSize](blocksize.md): The size of a block on the device.
-- [maxIOSize](maxiosize.md): The maximum amount of data per I/O call.
-- [maxNumOfUnmapRegions](maxnumofunmapregions.md): The maximum number of regions supported by an unmap call.
-- [minSegmentAlignment](minsegmentalignment.md): The minimum alignment of the data buffer sent to read-write calls.
-- [numOfAddressBits](numofaddressbits.md): The number of bits used to address blocks on the device.
-- [isUnmapSupported](isunmapsupported.md): A Boolean value that indicates whether the device supports unmapping to reclaim storage.
-- [isFUASupported](isfuasupported.md): A Boolean value that indicates whether the device supports forced unit access (FUA).
-
-# Document: DeviceString
-
-Source path: documentation/blockstoragedevicedriverkit/devicestring
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/devicestring
-Description: Interface language: Objective-C
-
-# DeviceString
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Structure  
-**Availability:** DriverKit 21.0+
-
-A type that represents a string of character data from the device.
-
-## Declaration
-
-```objectivec
-struct DeviceString;
-```
-
-## Topics
-
-### Accessing String Data
-
-- [data](devicestring/data.md): The string’s character data.
-
-## See Also
-
-### Reporting Device Metadata
-
-- [GetVendorString](iouserblockstoragedevice/getvendorstring.md): Gets a string that identifies the vendor in response to a call from the framework.
-- [GetProductString](iouserblockstoragedevice/getproductstring.md): Gets a string that identifies the product in response to a call from the framework.
-- [GetRevisionString](iouserblockstoragedevice/getrevisionstring.md): Gets a string that identifies the current revision in response to a call from the framework.
-- [GetAdditionalInfoString](iouserblockstoragedevice/getadditionalinfostring.md): Gets a string that provides additional information in response to a call from the framework.
-- [GetDeviceParams](iouserblockstoragedevice/getdeviceparams.md): Gets device parameters in response to a call from the framework.
-- [DeviceParams](deviceparams.md): A structure that represents hardware-specific properties of the block storage device.
-
-# Document: data
-
-Source path: documentation/blockstoragedevicedriverkit/devicestring/data
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/devicestring/data
-Description: Interface language: Objective-C
-
-# data
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Property  
-**Availability:** DriverKit 21.0+
-
-The string’s character data.
-
-## Declaration
-
-```objectivec
-char data[256];
-```
-
-# Document: IOUserBlockStorageDevice
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice
-Description: Interface language: Objective-C
-
-# IOUserBlockStorageDevice
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Class  
-**Availability:** DriverKit 21.0+
-
-A DriverKit provider object that manages communications with a block storage device.
-
-## Declaration
-
-```objectivec
-class IOUserBlockStorageDevice;
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Implement your driver by subclassing this class and overriding all C++ pure virtual methods.
-
-<a id="Specifying-the-Drivers-Personality-Information"></a>
-
-### Specifying the Driver’s Personality Information
-
-When you subclass `IOUserBlockStorageDevice`, update the [IOKitPersonalities](../bundleresources/information-property-list/iokitpersonalities.md) key of your driver extension’s `Info.plist` file with information to match your driver to the correct hardware. For this class, always include the keys and values in the following table:
-
-| Key | Value |
-| --- | --- |
-| IOClass | `IOUserBlockStorageDevice` |
-| IOUserClass | The name of your custom dext class |
-| CFBundleIdentifierKernel | `com.apple.iokit.IOStorageFamily` |
-
-## Topics
-
-### Running the Service
-
-Override these functions from the base [DriverKit](../driverkit.md) framework in your driver class.
-
-- [init](iouserblockstoragedevice/init.md): Handles the basic initialization of the service.
-- [Start](iouserblockstoragedevice/start.md): Starts the current service and associates it with the specified provider.
-- [Stop](iouserblockstoragedevice/stop.md): Stops the service associated with the specified provider.
-- [free](iouserblockstoragedevice/free.md): Performs any final cleanup for the service.
-
-### Reporting Device Metadata
-
-- [GetVendorString](iouserblockstoragedevice/getvendorstring.md): Gets a string that identifies the vendor in response to a call from the framework.
-- [GetProductString](iouserblockstoragedevice/getproductstring.md): Gets a string that identifies the product in response to a call from the framework.
-- [GetRevisionString](iouserblockstoragedevice/getrevisionstring.md): Gets a string that identifies the current revision in response to a call from the framework.
-- [GetAdditionalInfoString](iouserblockstoragedevice/getadditionalinfostring.md): Gets a string that provides additional information in response to a call from the framework.
-- [DeviceString](devicestring.md): A type that represents a string of character data from the device.
-- [GetDeviceParams](iouserblockstoragedevice/getdeviceparams.md): Gets device parameters in response to a call from the framework.
-- [DeviceParams](deviceparams.md): A structure that represents hardware-specific properties of the block storage device.
-
-### Reporting Device Capabilities
-
-- [ReportEjectability](iouserblockstoragedevice/reportejectability.md): Returns a Boolean value that indicates whether the media is ejectable, in response to a call from the framework.
-- [ReportRemovability](iouserblockstoragedevice/reportremovability.md): Returns a Boolean value that indicates whether the media is removable, in response to a call from the framework.
-- [ReportWriteProtection](iouserblockstoragedevice/reportwriteprotection.md): Returns a Boolean value that indicates whether the media is write protected, in response to a call from the framework.
-
-### Accessing the Device
-
-- [DoAsyncUnmap](iouserblockstoragedevice/doasyncunmap.md): Sends an asynchronous request to the dext to reclaim storage by unmapping.
-- [BlockRange](blockrange.md): A structure that represents a range of blocks.
-- [DoAsyncSynchronize](iouserblockstoragedevice/doasyncsynchronize.md): Forces the hardware buffer to flush data blocks to the media.
-- [DoAsyncEjectMedia](iouserblockstoragedevice/doasyncejectmedia.md): Ejects the media.
-- [Complete](iouserblockstoragedevice/complete.md): Indicates that the dext completed an asynchronous call.
-- [DoAsyncReadWrite](iouserblockstoragedevice/doasyncreadwrite.md): Starts an asynchronous read or write operation.
-- [IOUserStorageOptions](iouserstorageoptions.md): Options that affect the performance of read-write operations.
-- [CompleteIO](iouserblockstoragedevice/completeio.md): Indicates that the dext completed an asynchronous read-write call.
-
-### Instance Methods
-
-- [DoAsyncUnmapPriv](iouserblockstoragedevice/doasyncunmappriv.md)
-- [RegisterDext](iouserblockstoragedevice/registerdext.md)
-
-## Relationships
-
-### Inherits From
-
-- [IOService](../driverkit/ioservice.md)
-
-# Document: Complete
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/complete
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/complete
-Description: Interface language: Objective-C
-
-# Complete
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Indicates that the dext completed an asynchronous call.
-
-## Declaration
-
-```objectivec
-virtual void Complete(uint32_t requestID, kern_return_t status);
-```
-
-## Parameters
-
-- `requestID`: An opaque identifier, originally provided in the corresponding `DoAsync…` call.
-- `status`: The status of the request.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The dext calls this method to indicate completion of an asynchronous call to methods like [DoAsyncUnmap](doasyncunmap.md), [DoAsyncSynchronize](doasyncsynchronize.md), or [DoAsyncEjectMedia](doasyncejectmedia.md). Use the `requestID` parameter to determine which call resulted in this callback.
-
-## See Also
-
-### Accessing the Device
-
-- [DoAsyncUnmap](doasyncunmap.md): Sends an asynchronous request to the dext to reclaim storage by unmapping.
-- [BlockRange](../blockrange.md): A structure that represents a range of blocks.
-- [DoAsyncSynchronize](doasyncsynchronize.md): Forces the hardware buffer to flush data blocks to the media.
-- [DoAsyncEjectMedia](doasyncejectmedia.md): Ejects the media.
-- [DoAsyncReadWrite](doasyncreadwrite.md): Starts an asynchronous read or write operation.
-- [IOUserStorageOptions](../iouserstorageoptions.md): Options that affect the performance of read-write operations.
-- [CompleteIO](completeio.md): Indicates that the dext completed an asynchronous read-write call.
-
-# Document: CompleteIO
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/completeio
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/completeio
-Description: Interface language: Objective-C
-
-# CompleteIO
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Indicates that the dext completed an asynchronous read-write call.
-
-## Declaration
-
-```objectivec
-virtual void CompleteIO(uint32_t requestID, uint64_t bytesTransferred, kern_return_t IOStatus);
-```
-
-## Parameters
-
-- `requestID`: An opaque identifier, originally provided in the corresponding [DoAsyncReadWrite](doasyncreadwrite.md) call.
-- `bytesTransferred`: The number of bytes transferred.
-- `IOStatus`: The status of the request.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The dext calls this method to indicate completion of an asynchronous read-write call. Use the `requestID` parameter to determine which [DoAsyncReadWrite](doasyncreadwrite.md) call resulted in this callback.
-
-## See Also
-
-### Accessing the Device
-
-- [DoAsyncUnmap](doasyncunmap.md): Sends an asynchronous request to the dext to reclaim storage by unmapping.
-- [BlockRange](../blockrange.md): A structure that represents a range of blocks.
-- [DoAsyncSynchronize](doasyncsynchronize.md): Forces the hardware buffer to flush data blocks to the media.
-- [DoAsyncEjectMedia](doasyncejectmedia.md): Ejects the media.
-- [Complete](complete.md): Indicates that the dext completed an asynchronous call.
-- [DoAsyncReadWrite](doasyncreadwrite.md): Starts an asynchronous read or write operation.
-- [IOUserStorageOptions](../iouserstorageoptions.md): Options that affect the performance of read-write operations.
-
-# Document: DoAsyncEjectMedia
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncejectmedia
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncejectmedia
-Description: Interface language: Objective-C
-
-# DoAsyncEjectMedia
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Ejects the media.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t DoAsyncEjectMedia(uint32_t requestID);
-```
-
-## Parameters
-
-- `requestID`: An opaque identifier. After the dext completes the request, it calls [Complete](complete.md) and sends this value as a parameter.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the eject result. [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) indicates success. For error definitions, see [IOKit Constants](../../iokit/iokit_constants.md).
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When the eject operation completes, the dext calls your [Complete](complete.md) method with the results of the operation.
-
-## See Also
-
-### Accessing the Device
-
-- [DoAsyncUnmap](doasyncunmap.md): Sends an asynchronous request to the dext to reclaim storage by unmapping.
-- [BlockRange](../blockrange.md): A structure that represents a range of blocks.
-- [DoAsyncSynchronize](doasyncsynchronize.md): Forces the hardware buffer to flush data blocks to the media.
-- [Complete](complete.md): Indicates that the dext completed an asynchronous call.
-- [DoAsyncReadWrite](doasyncreadwrite.md): Starts an asynchronous read or write operation.
-- [IOUserStorageOptions](../iouserstorageoptions.md): Options that affect the performance of read-write operations.
-- [CompleteIO](completeio.md): Indicates that the dext completed an asynchronous read-write call.
-
-# Document: DoAsyncReadWrite
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncreadwrite
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncreadwrite
-Description: Interface language: Objective-C
-
-# DoAsyncReadWrite
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Starts an asynchronous read or write operation.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t DoAsyncReadWrite(bool isRead, uint32_t requestID, uint64_t dmaAddr, uint64_t size, uint64_t lba, uint64_t numOfBlocks, IOUserStorageOptions options);
-```
-
-## Parameters
-
-- `requestID`: An opaque identifier. After the dext completes the request, it calls [CompleteIO](completeio.md) and sends this value as a parameter.
-- `dmaAddr`: The DMA address of the data buffer.
-- `size`: The size of the data buffer.
-- `lba`: The start logical block number.
-- `numOfBlocks`: The number of blocks to read or write.
-- `options`: Data transfer options. These can be any combination of `kIOUserStorage…` values (defined in [IOUserStorageOptions](../iouserstorageoptions.md)) combined together with the logical `OR` operator.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the result of the read/write operation. [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) indicates success. For error definitions, see [IOKit Constants](../../iokit/iokit_constants.md).
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When the read or write operation completes, the dext calls your [CompleteIO](completeio.md) method with the results of the operation.
-
-## See Also
-
-### Accessing the Device
-
-- [DoAsyncUnmap](doasyncunmap.md): Sends an asynchronous request to the dext to reclaim storage by unmapping.
-- [BlockRange](../blockrange.md): A structure that represents a range of blocks.
-- [DoAsyncSynchronize](doasyncsynchronize.md): Forces the hardware buffer to flush data blocks to the media.
-- [DoAsyncEjectMedia](doasyncejectmedia.md): Ejects the media.
-- [Complete](complete.md): Indicates that the dext completed an asynchronous call.
-- [IOUserStorageOptions](../iouserstorageoptions.md): Options that affect the performance of read-write operations.
-- [CompleteIO](completeio.md): Indicates that the dext completed an asynchronous read-write call.
-
-# Document: DoAsyncSynchronize
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncsynchronize
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncsynchronize
-Description: Interface language: Objective-C
-
-# DoAsyncSynchronize
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Forces the hardware buffer to flush data blocks to the media.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t DoAsyncSynchronize(uint32_t requestID, uint64_t lba, uint64_t numOfBlocks);
-```
-
-## Parameters
-
-- `requestID`: An opaque identifier. After the dext completes the request, it calls [Complete](complete.md) and sends this value as a parameter.
-- `lba`: The logical block number of the first block to synchronize.
-- `numOfBlocks`: The number of blocks to synchronize.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the synchronize result. [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) indicates success. For error definitions, see [IOKit Constants](../../iokit/iokit_constants.md).
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When the synchronize operation completes, the dext calls your [Complete](complete.md) method with the results of the operation.
-
-## See Also
-
-### Accessing the Device
-
-- [DoAsyncUnmap](doasyncunmap.md): Sends an asynchronous request to the dext to reclaim storage by unmapping.
-- [BlockRange](../blockrange.md): A structure that represents a range of blocks.
-- [DoAsyncEjectMedia](doasyncejectmedia.md): Ejects the media.
-- [Complete](complete.md): Indicates that the dext completed an asynchronous call.
-- [DoAsyncReadWrite](doasyncreadwrite.md): Starts an asynchronous read or write operation.
-- [IOUserStorageOptions](../iouserstorageoptions.md): Options that affect the performance of read-write operations.
-- [CompleteIO](completeio.md): Indicates that the dext completed an asynchronous read-write call.
-
-# Document: DoAsyncUnmap
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncunmap
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncunmap
-Description: Interface language: Objective-C
-
-# DoAsyncUnmap
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Sends an asynchronous request to the dext to reclaim storage by unmapping.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t DoAsyncUnmap(uint32_t requestID, IOMemoryDescriptor *buffer, uint32_t numOfRanges);
-```
-
-## Parameters
-
-- `requestID`: An opaque identifier. After the dext completes the request, it calls [Complete](complete.md) and sends this value as a parameter.
-- `buffer`: A memory buffer containing the block ranges to unmap.
-- `numOfRanges`: The number of ranges in `buffer`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the unmap result. [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) indicates success. For error definitions, see [IOKit Constants](../../iokit/iokit_constants.md).
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When the unmap operation completes, the dext calls your [Complete](complete.md) method with the results of the operation.
-
-## See Also
-
-### Accessing the Device
-
-- [BlockRange](../blockrange.md): A structure that represents a range of blocks.
-- [DoAsyncSynchronize](doasyncsynchronize.md): Forces the hardware buffer to flush data blocks to the media.
-- [DoAsyncEjectMedia](doasyncejectmedia.md): Ejects the media.
-- [Complete](complete.md): Indicates that the dext completed an asynchronous call.
-- [DoAsyncReadWrite](doasyncreadwrite.md): Starts an asynchronous read or write operation.
-- [IOUserStorageOptions](../iouserstorageoptions.md): Options that affect the performance of read-write operations.
-- [CompleteIO](completeio.md): Indicates that the dext completed an asynchronous read-write call.
-
-# Document: DoAsyncUnmapPriv
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncunmappriv
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncunmappriv
-Description: Interface language: Objective-C
-
-# DoAsyncUnmapPriv
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-## Declaration
-
-```objectivec
-virtual kern_return_t DoAsyncUnmapPriv(uint32_t requestID, struct BlockRange *ranges, uint32_t numOfRanges);
-```
-
-## See Also
-
-### Instance Methods
-
-- [RegisterDext](registerdext.md)
-
-# Document: free
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/free
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/free
-Description: Interface language: Objective-C
-
-# free
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Performs any final cleanup for the service.
-
-## Declaration
-
-```objectivec
-virtual void free();
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method to perform tasks such as deallocating any allocated memory. The system calls this method at some point after it calls your service’s [Stop](stop.md) method.
-
-Always call `super` at the end of your custom implementation.
-
-## See Also
-
-### Running the Service
-
-- [init](init.md): Handles the basic initialization of the service.
-- [Start](start.md): Starts the current service and associates it with the specified provider.
-- [Stop](stop.md): Stops the service associated with the specified provider.
-
-# Document: GetAdditionalInfoString
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getadditionalinfostring
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getadditionalinfostring
-Description: Interface language: Objective-C
-
-# GetAdditionalInfoString
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Gets a string that provides additional information in response to a call from the framework.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t GetAdditionalInfoString(struct DeviceString *additionalInfo);
-```
-
-## Parameters
-
-- `additionalInfo`: An in/out [DeviceString](../devicestring.md) parameter. On output, populate this structure with the additional info string.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the get-additional-info result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-## See Also
-
-### Reporting Device Metadata
-
-- [GetVendorString](getvendorstring.md): Gets a string that identifies the vendor in response to a call from the framework.
-- [GetProductString](getproductstring.md): Gets a string that identifies the product in response to a call from the framework.
-- [GetRevisionString](getrevisionstring.md): Gets a string that identifies the current revision in response to a call from the framework.
-- [DeviceString](../devicestring.md): A type that represents a string of character data from the device.
-- [GetDeviceParams](getdeviceparams.md): Gets device parameters in response to a call from the framework.
-- [DeviceParams](../deviceparams.md): A structure that represents hardware-specific properties of the block storage device.
-
-# Document: GetDeviceParams
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getdeviceparams
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getdeviceparams
-Description: Interface language: Objective-C
-
-# GetDeviceParams
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Gets device parameters in response to a call from the framework.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t GetDeviceParams(struct DeviceParams *deviceParams);
-```
-
-## Parameters
-
-- `deviceParams`: An in/out [DeviceParams](../deviceparams.md) parameter. On output, populate this structure with the device’s parameter data.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the get-device-params result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-## See Also
-
-### Reporting Device Metadata
-
-- [GetVendorString](getvendorstring.md): Gets a string that identifies the vendor in response to a call from the framework.
-- [GetProductString](getproductstring.md): Gets a string that identifies the product in response to a call from the framework.
-- [GetRevisionString](getrevisionstring.md): Gets a string that identifies the current revision in response to a call from the framework.
-- [GetAdditionalInfoString](getadditionalinfostring.md): Gets a string that provides additional information in response to a call from the framework.
-- [DeviceString](../devicestring.md): A type that represents a string of character data from the device.
-- [DeviceParams](../deviceparams.md): A structure that represents hardware-specific properties of the block storage device.
-
-# Document: GetProductString
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getproductstring
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getproductstring
-Description: Interface language: Objective-C
-
-# GetProductString
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Gets a string that identifies the product in response to a call from the framework.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t GetProductString(struct DeviceString *product);
-```
-
-## Parameters
-
-- `product`: An in/out [DeviceString](../devicestring.md) parameter. On output, populate this structure with the product string.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the get-product-string result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-## See Also
-
-### Reporting Device Metadata
-
-- [GetVendorString](getvendorstring.md): Gets a string that identifies the vendor in response to a call from the framework.
-- [GetRevisionString](getrevisionstring.md): Gets a string that identifies the current revision in response to a call from the framework.
-- [GetAdditionalInfoString](getadditionalinfostring.md): Gets a string that provides additional information in response to a call from the framework.
-- [DeviceString](../devicestring.md): A type that represents a string of character data from the device.
-- [GetDeviceParams](getdeviceparams.md): Gets device parameters in response to a call from the framework.
-- [DeviceParams](../deviceparams.md): A structure that represents hardware-specific properties of the block storage device.
-
-# Document: GetRevisionString
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getrevisionstring
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getrevisionstring
-Description: Interface language: Objective-C
-
-# GetRevisionString
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Gets a string that identifies the current revision in response to a call from the framework.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t GetRevisionString(struct DeviceString *revision);
-```
-
-## Parameters
-
-- `revision`: An in/out [DeviceString](../devicestring.md) parameter. On output, populate this structure with the revision string.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the get-revision-string result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-## See Also
-
-### Reporting Device Metadata
-
-- [GetVendorString](getvendorstring.md): Gets a string that identifies the vendor in response to a call from the framework.
-- [GetProductString](getproductstring.md): Gets a string that identifies the product in response to a call from the framework.
-- [GetAdditionalInfoString](getadditionalinfostring.md): Gets a string that provides additional information in response to a call from the framework.
-- [DeviceString](../devicestring.md): A type that represents a string of character data from the device.
-- [GetDeviceParams](getdeviceparams.md): Gets device parameters in response to a call from the framework.
-- [DeviceParams](../deviceparams.md): A structure that represents hardware-specific properties of the block storage device.
-
-# Document: GetVendorString
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getvendorstring
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/getvendorstring
-Description: Interface language: Objective-C
-
-# GetVendorString
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Gets a string that identifies the vendor in response to a call from the framework.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t GetVendorString(struct DeviceString *vendor);
-```
-
-## Parameters
-
-- `vendor`: An in/out [DeviceString](../devicestring.md) parameter. On output, populate this structure with the vendor string.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the get-vendor-string result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-## See Also
-
-### Reporting Device Metadata
-
-- [GetProductString](getproductstring.md): Gets a string that identifies the product in response to a call from the framework.
-- [GetRevisionString](getrevisionstring.md): Gets a string that identifies the current revision in response to a call from the framework.
-- [GetAdditionalInfoString](getadditionalinfostring.md): Gets a string that provides additional information in response to a call from the framework.
-- [DeviceString](../devicestring.md): A type that represents a string of character data from the device.
-- [GetDeviceParams](getdeviceparams.md): Gets device parameters in response to a call from the framework.
-- [DeviceParams](../deviceparams.md): A structure that represents hardware-specific properties of the block storage device.
-
-# Document: init
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/init
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/init
-Description: Interface language: Objective-C
-
-# init
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Handles the basic initialization of the service.
-
-## Declaration
-
-```objectivec
-virtual bool init();
-```
-
-<a id="return-value"></a>
-
-## Return Value
-
-Returns `true` if initialization was successful, or `false` if an error occurred.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The system calls this method shortly after it instantiates your custom `IOUserBlockStorageDevice` subclass, and before it calls the [Start](start.md) method of your service. Limit the work you do in this method to simple tasks that must occur before your service starts. For example, use this method to allocate memory for your `ivars` structure.
-
-Always call `super` early in your implementation of this method.
-
-## See Also
-
-### Running the Service
-
-- [Start](start.md): Starts the current service and associates it with the specified provider.
-- [Stop](stop.md): Stops the service associated with the specified provider.
-- [free](free.md): Performs any final cleanup for the service.
-
-# Document: RegisterDext
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/registerdext
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/registerdext
-Description: Interface language: Objective-C
-
-# RegisterDext
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-## Declaration
-
-```objectivec
-virtual kern_return_t RegisterDext();
-```
-
-## See Also
-
-### Instance Methods
-
-- [DoAsyncUnmapPriv](doasyncunmappriv.md)
-
-# Document: ReportEjectability
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/reportejectability
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/reportejectability
-Description: Interface language: Objective-C
-
-# ReportEjectability
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Returns a Boolean value that indicates whether the media is ejectable, in response to a call from the framework.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t ReportEjectability(bool *isEjectable);
-```
-
-## Parameters
-
-- `isEjectable`: An in/out Boolean parameter. On output, set this to `true` if the hardware supports ejecting the media.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the report-ejectability result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-## See Also
-
-### Reporting Device Capabilities
-
-- [ReportRemovability](reportremovability.md): Returns a Boolean value that indicates whether the media is removable, in response to a call from the framework.
-- [ReportWriteProtection](reportwriteprotection.md): Returns a Boolean value that indicates whether the media is write protected, in response to a call from the framework.
-
-# Document: ReportRemovability
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/reportremovability
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/reportremovability
-Description: Interface language: Objective-C
-
-# ReportRemovability
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Returns a Boolean value that indicates whether the media is removable, in response to a call from the framework.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t ReportRemovability(bool *isRemovable);
-```
-
-## Parameters
-
-- `isRemovable`: An in/out Boolean parameter. On output, set this to `true` if the hardware supports removable media.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the report-removability result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-## See Also
-
-### Reporting Device Capabilities
-
-- [ReportEjectability](reportejectability.md): Returns a Boolean value that indicates whether the media is ejectable, in response to a call from the framework.
-- [ReportWriteProtection](reportwriteprotection.md): Returns a Boolean value that indicates whether the media is write protected, in response to a call from the framework.
-
-# Document: ReportWriteProtection
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/reportwriteprotection
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/reportwriteprotection
-Description: Interface language: Objective-C
-
-# ReportWriteProtection
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Returns a Boolean value that indicates whether the media is write protected, in response to a call from the framework.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t ReportWriteProtection(bool *isWriteProtected);
-```
-
-## Parameters
-
-- `isWriteProtected`: An in/out Boolean parameter. On output, set this to `true` if the media is write-protected.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the report-write-protection result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-## See Also
-
-### Reporting Device Capabilities
-
-- [ReportEjectability](reportejectability.md): Returns a Boolean value that indicates whether the media is ejectable, in response to a call from the framework.
-- [ReportRemovability](reportremovability.md): Returns a Boolean value that indicates whether the media is removable, in response to a call from the framework.
-
-# Document: Start
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/start
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/start
-Description: Interface language: Objective-C
-
-# Start
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Starts the current service and associates it with the specified provider.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t Start(IOService *provider);
-```
-
-## Parameters
-
-- `provider`: The provider object that matches the current service. Cast this object to the class you expect. The system retains this object for the duration of your `Start` method. The system continues to retain the object if your service starts successfully, releasing it only after calling your service’s [Stop](stop.md) method.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the service-starting result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-After successfully matching the specified `provider` to your driver’s service, the system instantiates your service object and calls this method. Use this method to configure your driver’s data structures and setup the associated hardware. You might also store a reference to the `provider` object for later use. After configuring your driver, call the [RegisterService](../../driverkit/ioservice/registerservice.md) method to let the system know your service is running.
-
-Always call `super` early in your implementation of this method.
-
-## See Also
-
-### Running the Service
-
-- [init](init.md): Handles the basic initialization of the service.
-- [Stop](stop.md): Stops the service associated with the specified provider.
-- [free](free.md): Performs any final cleanup for the service.
-
-# Document: Stop
-
-Source path: documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/stop
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/stop
-Description: Interface language: Objective-C
-
-# Stop
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Instance Method  
-**Availability:** DriverKit 21.0+
-
-Stops the service associated with the specified provider.
-
-## Declaration
-
-```objectivec
-virtual kern_return_t Stop(IOService *provider);
-```
-
-## Parameters
-
-- `provider`: The provider associated with the current service. This object is the same one that the system previously passed to your service’s [Start](start.md) method.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A value that indicates the service-stopping result. Return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) to inidicate success. To indicate a failure, see [IOKit Constants](../../iokit/iokit_constants.md) for error definitions.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Before terminating the object in `provider`, the system calls this method to stop the service associated with that object. Use your implementation of this method to stop all activity and put your driver in a quiescent state. If your driver has any in-progress asynchronous tasks, cancel those tasks and wait for DriverKit to call the associated cancellation handler before calling the `super` version of this method.
-
-Call `super` at the end of your implementation. After calling `super`, it’s a programmer error to access the provider object.
-
-Don’t use this method to release your `ivars` structure; use the [free](free.md) method instead.
-
-## See Also
-
-### Running the Service
-
-- [init](init.md): Handles the basic initialization of the service.
-- [Start](start.md): Starts the current service and associates it with the specified provider.
-- [free](free.md): Performs any final cleanup for the service.
-
-# Document: IOUserStorageOptions
-
-Source path: documentation/blockstoragedevicedriverkit/iouserstorageoptions
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserstorageoptions
-Description: Interface language: Objective-C
-
-# IOUserStorageOptions
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Type Alias  
-**Availability:** DriverKit 21.0+
-
-Options that affect the performance of read-write operations.
-
-## Declaration
-
-```objectivec
-typedef uint32_t IOUserStorageOptions;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use these options with the [DoAsyncReadWrite](iouserblockstoragedevice/doasyncreadwrite.md) function.
-
-## Topics
-
-### Storage Options
-
-- [kIOUserStorageOptionNone](kiouserstorageoptionnone.md): A value that defines no options.
-- [kIOUserStorageOptionForceUnitAccess](kiouserstorageoptionforceunitaccess.md): An option to use Force Unit Access (FUA).
-
-## See Also
-
-### Accessing the Device
-
-- [DoAsyncUnmap](iouserblockstoragedevice/doasyncunmap.md): Sends an asynchronous request to the dext to reclaim storage by unmapping.
-- [BlockRange](blockrange.md): A structure that represents a range of blocks.
-- [DoAsyncSynchronize](iouserblockstoragedevice/doasyncsynchronize.md): Forces the hardware buffer to flush data blocks to the media.
-- [DoAsyncEjectMedia](iouserblockstoragedevice/doasyncejectmedia.md): Ejects the media.
-- [Complete](iouserblockstoragedevice/complete.md): Indicates that the dext completed an asynchronous call.
-- [DoAsyncReadWrite](iouserblockstoragedevice/doasyncreadwrite.md): Starts an asynchronous read or write operation.
-- [CompleteIO](iouserblockstoragedevice/completeio.md): Indicates that the dext completed an asynchronous read-write call.
-
-# Document: kIOUserStorageOptionForceUnitAccess
-
-Source path: documentation/blockstoragedevicedriverkit/kiouserstorageoptionforceunitaccess
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/kiouserstorageoptionforceunitaccess
-Description: Interface language: Objective-C
-
-# kIOUserStorageOptionForceUnitAccess
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 21.0+
-
-An option to use Force Unit Access (FUA).
-
-## Declaration
-
-```objectivec
-#define kIOUserStorageOptionForceUnitAccess
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This option tells the storage stack to force a request to access the media.
-
-## See Also
-
-### Storage Options
-
-- [kIOUserStorageOptionNone](kiouserstorageoptionnone.md): A value that defines no options.
-
-# Document: kIOUserStorageOptionNone
-
-Source path: documentation/blockstoragedevicedriverkit/kiouserstorageoptionnone
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/kiouserstorageoptionnone
-Description: Interface language: Objective-C
-
-# kIOUserStorageOptionNone
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 21.0+
-
-A value that defines no options.
-
-## Declaration
-
-```objectivec
-#define kIOUserStorageOptionNone
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This value equals `0x0000`.
-
-## See Also
-
-### Storage Options
-
-- [kIOUserStorageOptionForceUnitAccess](kiouserstorageoptionforceunitaccess.md): An option to use Force Unit Access (FUA).
-
-# Document: kMaxDeviceStringLength
-
-Source path: documentation/blockstoragedevicedriverkit/kmaxdevicestringlength
-Canonical documentation: https://developer.apple.com/documentation/blockstoragedevicedriverkit/kmaxdevicestringlength
-Description: Interface language: Objective-C
-
-# kMaxDeviceStringLength
-
-**Interface language:** Objective-C
-
-**Framework:** BlockStorageDeviceDriverKit  
-**Kind:** Macro  
-**Availability:** DriverKit 21.0+
-
-## Declaration
-
-```objectivec
-#define kMaxDeviceStringLength
-```
-
-# Document: Bundle Resources
-
-Source path: documentation/bundleresources
-Canonical documentation: https://developer.apple.com/documentation/bundleresources
-Description: Interface languages: Swift, Objective-C
-
-# Bundle Resources
-
-**Interface languages:** Swift, Objective-C
-
-**Framework:** Bundle Resources  
-**Kind:** Framework  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 2.0+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-Resources located in an app, framework, or plugin bundle.
-
-<a id="overview"></a>
-
-## Overview
-
-A *bundle* is a directory with a standardized hierarchical structure that holds executable code and the resources used by that code. The bundle contains resources for you to access at runtime, such as images, audio files, user interface files, and property lists.
-
-## Topics
-
-### Property Lists
-
-- [Entitlements](bundleresources/entitlements.md): Key-value pairs that grant an executable permission to use a service or technology.
-- [Information Property List](bundleresources/information-property-list.md): A resource containing key-value pairs that identify and configure a bundle.
-- [Privacy manifest files](bundleresources/privacy-manifest-files.md): Describe the data your app or third-party SDK collects and the required reasons APIs it uses.
-
-### Structure
-
-- [Placing content in a bundle](bundleresources/placing-content-in-a-bundle.md): Place bundle content in the correct location based on its type.
-
-### Universal links service
-
-- [applinks](bundleresources/applinks.md): The root object for a universal links service definition.

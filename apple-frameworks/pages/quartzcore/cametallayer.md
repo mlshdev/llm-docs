@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/quartzcore/cametallayer
 
 # CAMetalLayer (Swift)
@@ -49,7 +49,7 @@ Call the layer’s [nextDrawable()](cametallayer/nextdrawable%28%29.md) method t
 
 ```objc
 CAMetalLayer *metalLayer = (CAMetalLayer*)self.layer;
-id<CAMetalDrawable> *drawable = [metalLayer nextDrawable];
+id<CAMetalDrawable> drawable = [metalLayer nextDrawable];
 
 MTLRenderPassDescriptor *renderPassDescriptor
                                = [MTLRenderPassDescriptor renderPassDescriptor];
@@ -222,7 +222,7 @@ Call the layer’s [nextDrawable](cametallayer/nextdrawable%28%29.md) method to 
 
 ```objc
 CAMetalLayer *metalLayer = (CAMetalLayer*)self.layer;
-id<CAMetalDrawable> *drawable = [metalLayer nextDrawable];
+id<CAMetalDrawable> drawable = [metalLayer nextDrawable];
 
 MTLRenderPassDescriptor *renderPassDescriptor
                                = [MTLRenderPassDescriptor renderPassDescriptor];

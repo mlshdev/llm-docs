@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/error
 
 # Error
@@ -44,7 +44,10 @@ Check `details` when you need to pinpoint exactly which part of the request was 
   "details": [
     {
       "code": "FIELD_REQUIRED",
-      "message": "campaign.name is required and was not provided for AwayFinder campaign creation."
+      "message": "campaign.name is required and was not provided for AwayFinder campaign creation.",
+      "info": {
+        "field": "campaign.name"
+      }
     }
   ]
 }
@@ -56,3 +59,4 @@ Check `details` when you need to pinpoint exactly which part of the request was 
 
 - [ErrorDetail](errordetail.md): Field-level or request-level detail for a specific part of a failed API request.
 - [ErrorResponse](errorresponse.md): Certain endpoints return this envelope, which wraps an `Error` object, when a request fails.
+- [Info](info.md): Additional context that supplements an error detail’s message, varying by endpoint and error type.

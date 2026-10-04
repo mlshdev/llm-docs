@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxtemporalscalerdescriptor/isreactivemasktextureenabled
 
 # isReactiveMaskTextureEnabled (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 27.1+
 
 A Boolean value that indicates whether a temporal scaler you create with the descriptor applies a reactive mask.
 
@@ -35,7 +35,7 @@ var isReactiveMaskTextureEnabled: Bool { get set }
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 27.1+
 
 A Boolean value that indicates whether a temporal scaler you create with the descriptor applies a reactive mask.
 

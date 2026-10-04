@@ -1,9 +1,9 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
+# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
-Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
-Captured at: 2026-09-27T18:07:10.128Z
+Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
+Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
+Captured at: 2026-10-04T18:39:03.048Z
 Volume 5
 
 # Document: Audio graphs
@@ -30853,8 +30853,8 @@ func ABGroupAddMember(_ group: ABGroupRef!, _ personToAdd: ABPersonRef!) -> Bool
 ## Parameters
 
 - `group`: The group you wish to add `person` to.
-- `person`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 - `personToAdd`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
+- `person`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 
 <a id="return-value"></a>
 
@@ -30901,8 +30901,8 @@ extern bool ABGroupAddMember(ABGroupRef group, ABPersonRef personToAdd);
 ## Parameters
 
 - `group`: The group you wish to add `person` to.
-- `person`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 - `personToAdd`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
+- `person`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 
 <a id="return-value"></a>
 
@@ -31976,8 +31976,8 @@ func ABGroupRemoveMember(_ group: ABGroupRef!, _ personToRemove: ABPersonRef!) -
 ## Parameters
 
 - `group`: The group that you wish to remove `person` from.
-- `member`: The person that you wish to remove from group.
 - `personToRemove`: The member that you wish to remove from `group`.
+- `member`: The person that you wish to remove from group.
 
 <a id="return-value"></a>
 
@@ -43478,6 +43478,8 @@ class ABPersonView
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
 - [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
 - [NSUserInterfaceItemIdentification](https://developer.apple.com/documentation/appkit/nsuserinterfaceitemidentification)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 
@@ -84988,7 +84990,7 @@ Define app entities for core types and concepts that you want to make available 
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
@@ -86281,6 +86283,7 @@ The `.notes` domain defines app schemas that provide a structured representation
 
 - **[createNote](appschema/notesintent/createnote.md)**: An intent that creates notes when people say phrases like “Create a note called meeting notes.”
 - **[updateNote](appschema/notesintent/updatenote.md)**: An intent that updates notes when people say phrases like “Rename this note to taxes.” or “Move this note to my work folder.”
+- **[appendText](appschema/notesintent/appendtext.md)**: An intent that adds text to an existing note when people say phrases like “Add this item to the wishlist note.”
 
 > **Tip**
 
@@ -86294,6 +86297,7 @@ For more information about making your app’s actions available to Apple Intell
 
 - [createNote](appschema/notesintent/createnote.md): An intent schema that creates a new note.
 - [updateNote](appschema/notesintent/updatenote.md): An intent schema that updates a note.
+- [appendText](appschema/notesintent/appendtext.md): An intent schema that adds text to the end of an existing note.
 - [AppSchema.NotesIntent](appschema/notesintent.md): Identifies intent schemas in the notes domain.
 
 ### Content and parameter types
@@ -86794,7 +86798,7 @@ The `.system` domain defines app schemas that provide a structured representatio
 
 Unlike other domains that target a specific app category, the `.system` domain applies broadly. Any app that enables searching or opening content can adopt these schemas.
 
-- **[search](appschema/systemintent/search.md)**: An intent that searches in your app when people say phrases like “Find bicycle.” or “Search for mountains.”
+- **[searchInApp](appschema/systemintent/searchinapp.md)**: An intent that searches in your app when people say phrases like “Find bicycle.” or “Search for bicycle.”
 - **[open](appschema/systemintent/open.md)**: An intent that opens content in your app when people say phrases like “Open my screenshot.png file.”
 
 > **Tip**
@@ -86808,7 +86812,7 @@ For more information about making your app’s actions available to Apple Intell
 ### Actions
 
 - [open](appschema/systemintent/open.md): An intent schema that opens an item in the application.
-- [search](appschema/systemintent/search.md): Deprecated. An intent schema that navigates to search results.
+- [searchInApp](appschema/systemintent/searchinapp.md): An intent schema that navigates to search results.
 - [AppSchema.SystemIntent](appschema/systemintent.md): Identifies intent schemas in the system domain.
 
 ## See Also
@@ -87694,7 +87698,7 @@ It is up to you whether you want to conform to the `AppEntity` protocol directly
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
@@ -91884,7 +91888,7 @@ protocol AppIntentSceneDelegate : UISceneDelegate
 
 ## Overview
 
-Adopt this protocol in your UIKit scene delegate objects to receive incoming app intents and configure your interface in response. When an app intent needs to run in the foreground, the system picks one of your app’s scenes to display. It then uses this protocol to deliver the app intent to the scene so you can configure the scene accordingly. For example, you might update the scene’s views to display an entity or other content referenced by the app intent. The system delivers the app intent to your scene code before it runs the app intent’s [perform()](appintent/perform%28%29.md) method. If your scene delegate doesn’t implement this protocol, the system gives your app intent an opportunity to configure the scene through the [UISceneAppIntent](uisceneappintent.md) protocol.
+Adopt this protocol in your UIKit scene delegate object to receive incoming app intents and configure your interface in response. When an app intent needs to run in the foreground, the system picks one of your app’s scenes to display. It then uses this protocol to deliver the app intent to the scene so you can configure the scene accordingly. For example, you might update the scene’s views to display an entity or other content referenced by the app intent. The system delivers the app intent to your scene code before it runs the app intent’s [perform()](appintent/perform%28%29.md) method. If your scene delegate doesn’t implement this protocol, the system gives your app intent an opportunity to configure the scene through the [UISceneAppIntent](uisceneappintent.md) protocol.
 
 For more information about how to use app intents to configure your app’s interface, see [Directing app intents to your app’s scenes](directing-app-intents-to-your-apps-scenes.md).
 
@@ -91892,7 +91896,7 @@ For more information about how to use app intents to configure your app’s inte
 
 ### Incorporating the app intent
 
-- [scene(\_:willPerformAppIntent:)](appintentscenedelegate/scene%28__willperformappintent_%29.md): Asks the scene delegate to prepare the scene for the specified app intent.
+- [scene(\_:willPerformAppIntent:)](appintentscenedelegate/scene%28__willperformappintent_%29.md): Tells the scene delegate to prepare the scene for the specified app intent.
 
 ## Relationships
 
@@ -91906,7 +91910,7 @@ For more information about how to use app intents to configure your app’s inte
 ### Scene support
 
 - [Directing app intents to your app’s scenes](directing-app-intents-to-your-apps-scenes.md): Direct app intents to a specific SwiftUI or UIKit scene and use the app intent to configure the content of the scene.
-- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom identifier for an app intent.
+- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom content identifier for an app intent.
 - [UISceneAppIntent](uisceneappintent.md): An interface you use to direct an app intent to a specific scene in your UIKit app.
 
 # Document: scene(_:willPerformAppIntent:)
@@ -91921,7 +91925,7 @@ Description: Framework: AppIntents Kind: Instance Method Availability: iOS 26.0+
 **Kind:** Instance Method  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-Asks the scene delegate to prepare the scene for the specified app intent.
+Tells the scene delegate to prepare the scene for the specified app intent.
 
 ## Declaration
 
@@ -105599,6 +105603,7 @@ protocol NotesIntent : AppSchema.Kind
 
 - [createNote](notesintent/createnote.md): An intent schema that creates a new note.
 - [updateNote](notesintent/updatenote.md): An intent schema that updates a note.
+- [appendText](notesintent/appendtext.md): An intent schema that adds text to the end of an existing note.
 
 # Document: appendText
 
@@ -105646,6 +105651,14 @@ The schema supports the following system experiences:
 - Shortcuts
 
 For more information about the App Intents framework and the experiences it supports, see [Getting started with the App Intents framework](../../getting-started-with-the-app-intents-framework.md).
+
+## See Also
+
+### Actions
+
+- [createNote](createnote.md): An intent schema that creates a new note.
+- [updateNote](updatenote.md): An intent schema that updates a note.
+- [AppSchema.NotesIntent](../notesintent.md): Identifies intent schemas in the notes domain.
 
 # Document: createNote
 
@@ -105702,6 +105715,7 @@ For more information about the App Intents framework and the experiences it supp
 ### Actions
 
 - [updateNote](updatenote.md): An intent schema that updates a note.
+- [appendText](appendtext.md): An intent schema that adds text to the end of an existing note.
 - [AppSchema.NotesIntent](../notesintent.md): Identifies intent schemas in the notes domain.
 
 # Document: updateNote
@@ -105759,6 +105773,7 @@ For more information about the App Intents framework and the experiences it supp
 ### Actions
 
 - [createNote](createnote.md): An intent schema that creates a new note.
+- [appendText](appendtext.md): An intent schema that adds text to the end of an existing note.
 - [AppSchema.NotesIntent](../notesintent.md): Identifies intent schemas in the notes domain.
 
 # Document: AppSchema.PhoneEntity
@@ -112864,7 +112879,7 @@ protocol SystemIntent : AppSchema.Kind
 ### Actions
 
 - [open](systemintent/open.md): An intent schema that opens an item in the application.
-- [search](systemintent/search.md): Deprecated. An intent schema that navigates to search results.
+- [searchInApp](systemintent/searchinapp.md): An intent schema that navigates to search results.
 
 # Document: open
 
@@ -112916,7 +112931,7 @@ For more information about the App Intents framework and the experiences it supp
 
 ### Actions
 
-- [search](search.md): Deprecated. An intent schema that navigates to search results.
+- [searchInApp](searchinapp.md): An intent schema that navigates to search results.
 - [AppSchema.SystemIntent](../systemintent.md): Identifies intent schemas in the system domain.
 
 # Document: search
@@ -112969,13 +112984,6 @@ The schema supports the following system experiences:
 
 For more information about the App Intents framework and the experiences it supports, see [Getting started with the App Intents framework](../../getting-started-with-the-app-intents-framework.md).
 
-## See Also
-
-### Actions
-
-- [open](open.md): An intent schema that opens an item in the application.
-- [AppSchema.SystemIntent](../systemintent.md): Identifies intent schemas in the system domain.
-
 # Document: searchInApp
 
 Source path: documentation/appintents/appschema/systemintent/searchinapp
@@ -113023,6 +113031,13 @@ The schema supports the following system experiences:
 - Shortcuts
 
 For more information about the App Intents framework and the experiences it supports, see [Getting started with the App Intents framework](../../getting-started-with-the-app-intents-framework.md).
+
+## See Also
+
+### Actions
+
+- [open](open.md): An intent schema that opens an item in the application.
+- [AppSchema.SystemIntent](../systemintent.md): Identifies intent schemas in the system domain.
 
 # Document: AppSchema.VisualIntelligenceIntent
 
@@ -117928,7 +117943,7 @@ extension Reaction {
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValueCasesProviding](appunionvaluecasesproviding.md): A protocol for the cases enumeration of an `AppUnionValue`.
@@ -118064,7 +118079,7 @@ This protocol is automatically conformed to by the `Cases` enum generated by the
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
@@ -133892,7 +133907,7 @@ The system provides an additional way to configure scenes in UIKit apps. If you 
 
 ### Scene support
 
-- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom identifier for an app intent.
+- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom content identifier for an app intent.
 - [UISceneAppIntent](uisceneappintent.md): An interface you use to direct an app intent to a specific scene in your UIKit app.
 - [AppIntentSceneDelegate](appintentscenedelegate.md): The interface a UIKit scene delegate uses to receive an app intent and configure the scene’s views.
 
@@ -172831,32 +172846,3 @@ A result builder that allows you to declaratively describe the comparators for a
 - [init(\_:comparators:)](entityqueryproperty/init%28__comparators_%29.md): Initializes a EntityQueryProperty that applies to entity property at the provided keyPath.
 - [init(\_:entityProvider:comparators:)](entityqueryproperty/init%28__entityprovider_comparators_%29.md): Initializes a EntityQueryProperty that applies to entity property at the provided keyPath.
 - [EntityQueryProperty.QueryComparators](entityqueryproperty/querycomparators.md): A type alias for the type that represents a collection of query comparators.
-
-# Document: buildBlock(_:)
-
-Source path: documentation/appintents/entityquerycomparatorsbuilder/buildblock(_:)
-Canonical documentation: https://developer.apple.com/documentation/appintents/entityquerycomparatorsbuilder/buildblock(_:)
-Description: Framework: App Intents Kind: Type Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
-
-# buildBlock(\_:)
-
-**Framework:** App Intents  
-**Kind:** Type Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
-
-## Declaration
-
-```swift
-static func buildBlock(_ components: AnyEntityQueryComparator<Entity, Subject, Property, PropertyType, ComparatorMappingType>...) -> [AnyEntityQueryComparator<Entity, Subject, Property, PropertyType, ComparatorMappingType>]
-```
-
-## See Also
-
-### Building query comparators
-
-- [AnyEntityQueryComparator](../anyentityquerycomparator.md): A type that erases the type information of the underlying query comparator.
-- [buildExpression(\_:)](buildexpression%28__%29-4g6f9.md)
-- [buildExpression(\_:)](buildexpression%28__%29-5tlbq.md)
-- [buildExpression(\_:)](buildexpression%28__%29-6v6cj.md)
-- [buildExpression(\_:)](buildexpression%28__%29-8jx4k.md)
-- [EntityQueryComparator](../entityquerycomparator.md): The base class for all concrete entity query comparators.

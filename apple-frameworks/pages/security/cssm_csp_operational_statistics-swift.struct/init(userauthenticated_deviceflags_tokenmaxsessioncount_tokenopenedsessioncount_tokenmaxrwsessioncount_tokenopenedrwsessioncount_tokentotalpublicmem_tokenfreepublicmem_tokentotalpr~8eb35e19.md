@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/security/cssm_csp_operational_statistics-swift.struct/init(userauthenticated:deviceflags:tokenmaxsessioncount:tokenopenedsessioncount:tokenmaxrwsessioncount:tokenopenedrwsessioncount:tokentotalpublicmem:tokenfreepublicmem:tokentotalprivatemem:tokenfreeprivatemem:)
 
 # init(UserAuthenticated:DeviceFlags:TokenMaxSessionCount:TokenOpenedSessionCount:TokenMaxRWSessionCount:TokenOpenedRWSessionCount:TokenTotalPublicMem:TokenFreePublicMem:TokenTotalPrivateMem:TokenFreePrivateMem:)

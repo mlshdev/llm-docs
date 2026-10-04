@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/scsiuserparalleltask
 
 # SCSIUserParallelTask
@@ -19,7 +19,7 @@ typedef struct SCSIUserParallelTask { ... } SCSIUserParallelTask;
 
 ## Topics
 
-### Task Properties
+### Task properties
 
 - [version](scsiuserparalleltask/version.md): The version of the parallel task structure currently in use.
 - [SCSIUserParallelTaskVersion](scsiuserparalleltaskversion.md): Constants that represent versions of the user parallel task structure.
@@ -44,7 +44,7 @@ typedef struct SCSIUserParallelTask { ... } SCSIUserParallelTask;
 
 ## See Also
 
-### Managing Tasks
+### Managing tasks
 
 - [UserProcessParallelTask](iouserscsiparallelinterfacecontroller/userprocessparalleltask.md): Processes a parallel task in response to a call from the framework.
 - [ParallelTaskCompletion](iouserscsiparallelinterfacecontroller/paralleltaskcompletion.md): Indicates to the system that the extension has completed an asynchronous request.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/productpagelocaledetails
 
 # ProductPageLocaleDetails
@@ -26,7 +26,7 @@ object ProductPageLocaleDetails
 - `subTitle` — `string`: The app subtitle for the locale.
 - `promotionalText` — `string`: The promotional text for the locale. Max 170 characters.
 - `shortDescription` — `string`: A short description for the locale. Max 4000 characters.
-- `deviceClasses` — `[string]`: Supported device classes. Use to verify targeting compatibility when configuring ad groups with device-class targeting. Possible values: `IPHONE`, `IPAD`.
+- `deviceClasses` — `[string]`: Supported device classes. Use to verify targeting compatibility when configuring ad groups with device-class targeting.
   **Allowed values:** `IPHONE`, `IPAD`
 - `assetsByDevice` — `ProductPageLocaleDetails.AssetsByDevice`: Map of device type (for example, `iphone_6_5`, `iphone_6_7`) to a [DeviceAssetGroup](deviceassetgroup.md) object. Keys are specific device type strings, not limited to the values in `deviceClasses`.
 - `productPageId` — `string`: The parent product page identifier (ASC product page ID).

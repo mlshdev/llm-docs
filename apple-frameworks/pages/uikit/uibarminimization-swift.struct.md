@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uibarminimization-swift.struct
 
 # UIBarMinimization
@@ -49,3 +49,4 @@ struct UIBarMinimization
 - [UITabBarItem](uitabbaritem.md): An object that describes an item in a tab bar.
 - [UIBarPositioning](uibarpositioning.md): A set of methods for defining the positioning of bars in iOS apps.
 - [UIBarPositioningDelegate](uibarpositioningdelegate.md): A set of methods that support the positioning of a bar that conforms to the [UIBarPositioning](uibarpositioning.md) protocol.
+- [UIVerticalBarEdge](uiverticalbaredge.md): The edge where the system places the vertical bar.

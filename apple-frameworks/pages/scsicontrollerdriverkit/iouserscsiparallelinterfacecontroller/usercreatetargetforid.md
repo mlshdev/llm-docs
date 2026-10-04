@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/usercreatetargetforid
 
 # UserCreateTargetForID
@@ -76,9 +76,13 @@ IMPL ( MyCustomService, UserStartController )
 
 This implementation ensures [UserStartController](userstartcontroller.md) calls the event handler asynchronously, which frees up the default dispatch queue for subsequent calls.
 
+> **Note**
+
+> The system calls this method on the queue named `AuxiliaryQueue` that your [IOUserSCSIParallelInterfaceController](../iouserscsiparallelinterfacecontroller.md) creates.
+
 ## See Also
 
-### Managing Targets
+### Managing targets
 
 - [UserInitializeTargetForID](userinitializetargetforid.md): Initializes a target device in response to a call from the framework.
 - [UserDestroyTargetForID](userdestroytargetforid.md): Destroys the specified target.

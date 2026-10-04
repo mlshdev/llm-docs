@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/computenodegraph/libraryreference
 
 # ComputeNodeGraph.LibraryReference
@@ -38,3 +38,14 @@ Use `addLibrary(_:bundle:)` rather than constructing this type directly.
 
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Graph definition and assembly
+
+- [ComputeNodeGraph](../computenodegraph.md)
+- [ComputeNodeGraph.Assembly](assembly.md): Fully assembled configuration of compute graph nodes.
+- [ComputeNodeGraph.Pipelines](pipelines.md): Fully-compiled shaders for a compute graph.
+- [ComputeNodeGraph.PipelinesDescriptor](pipelinesdescriptor.md): Specifies the configuration used to compile a set of compute pipelines for a compute graph effect.
+- [ComputeNodeGraph.NodeDefinition](nodedefinition.md)
+- [ComputeNodeGraph.Library](library.md): A class defining a library of node definitions that can be added to a ComputeNodeGraph

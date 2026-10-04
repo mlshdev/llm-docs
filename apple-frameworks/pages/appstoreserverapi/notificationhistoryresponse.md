@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/notificationhistoryresponse
 
 # NotificationHistoryResponse
@@ -46,7 +46,7 @@ The notification history response contains a maximum of 20 notification history 
 ### Data types
 
 - [paginationToken](paginationtoken.md): A pagination token that you return to the endpoint on a subsequent call to receive the next set of results.
-- [hasMore](hasmore.md): A Boolean value indicating whether the App Store has more transaction data.
+- [hasMore](hasmore.md): A Boolean value indicating whether the App Store has more data to return.
 
 ## See Also
 

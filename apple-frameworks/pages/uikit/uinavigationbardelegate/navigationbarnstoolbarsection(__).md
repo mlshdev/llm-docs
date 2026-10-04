@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uinavigationbardelegate/navigationbarnstoolbarsection(_:)
 
 # navigationBarNSToolbarSection(\_:) (Swift)
@@ -31,6 +31,10 @@ An [NSToolbar](https://developer.apple.com/documentation/appkit/nstoolbar) secti
 
 The system calls this method to determine how to render your [UINavigationBar](../uinavigationbar.md) when you build your app with Mac Catalyst.
 
+> **Note**
+
+>  Not every navigation item property is supported in every toolbar section. For more information, see [Display content in a toolbar on Mac](../uinavigationitem/title.md#Display-content-in-a-toolbar-on-Mac).
+
 # navigationBarNSToolbarSection: (Objective-C)
 
 **Framework:** UIKit  
@@ -60,3 +64,7 @@ An [NSToolbar](https://developer.apple.com/documentation/appkit/nstoolbar) secti
 ## Discussion
 
 The system calls this method to determine how to render your [UINavigationBar](../uinavigationbar.md) when you build your app with Mac Catalyst.
+
+> **Note**
+
+>  Not every navigation item property is supported in every toolbar section. For more information, see [Display content in a toolbar on Mac](../uinavigationitem/title.md#Display-content-in-a-toolbar-on-Mac).

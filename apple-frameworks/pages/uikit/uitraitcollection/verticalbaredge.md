@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitcollection/verticalbaredge
 
 # verticalBarEdge (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The edge where the system places the vertical bar.
 
@@ -45,7 +45,7 @@ This property reflects the system’s preferred edge regardless of whether a ver
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The edge where the system places the vertical bar.
 

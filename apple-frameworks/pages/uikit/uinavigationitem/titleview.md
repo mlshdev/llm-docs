@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uinavigationitem/titleview
 
 # titleView (Swift)
@@ -24,6 +24,10 @@ If this property value is `nil`, the navigation item’s title is displayed in t
 Custom views can contain buttons. Use the [init(type:)](../uibutton/init%28type_%29.md) method in [UIButton](../uibutton.md) class to add buttons to your custom view in the style of the navigation bar. Custom title views are centered on the navigation bar and may be resized to fit.
 
 The default value is `nil`.
+
+> **Note**
+
+>  `NSToolbar` doesn’t support a custom title view when the system displays the navigation bar’s content in a toolbar for an app built with Mac Catalyst. For more information, see [Display content in a toolbar on Mac](title.md#Display-content-in-a-toolbar-on-Mac).
 
 ## See Also
 
@@ -67,6 +71,10 @@ If this property value is `nil`, the navigation item’s title is displayed in t
 Custom views can contain buttons. Use the [buttonWithType:](../uibutton/init%28type_%29.md) method in [UIButton](../uibutton.md) class to add buttons to your custom view in the style of the navigation bar. Custom title views are centered on the navigation bar and may be resized to fit.
 
 The default value is `nil`.
+
+> **Note**
+
+>  `NSToolbar` doesn’t support a custom title view when the system displays the navigation bar’s content in a toolbar for an app built with Mac Catalyst. For more information, see [Display content in a toolbar on Mac](title.md#Display-content-in-a-toolbar-on-Mac).
 
 ## See Also
 

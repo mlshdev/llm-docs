@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor
 
 # AVCaptureDeviceDescriptor (Swift)
 
 **Framework:** AVKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 An object that identifies a capture device and is safe to pass between actors.
 
@@ -31,14 +31,14 @@ You don’t create `AVCaptureDeviceDescriptor` objects directly. An [AVCaptureDe
 
 ### Identifying the device
 
-- [uniqueID](avcapturedevicedescriptor/uniqueid.md): Beta. An identifier that uniquely identifies the device’s camera.
-- [localizedName](avcapturedevicedescriptor/localizedname.md): Beta. A name for the camera that’s suitable for display in your interface.
+- [uniqueID](avcapturedevicedescriptor/uniqueid.md): An identifier that uniquely identifies the device’s camera.
+- [localizedName](avcapturedevicedescriptor/localizedname.md): A name for the camera that’s suitable for display in your interface.
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](avcapturedevicedescriptor/devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [mediaTypes](avcapturedevicedescriptor/mediatypes.md): Beta. The kinds of media the camera captures.
-- [position](avcapturedevicedescriptor/position.md): Beta. The physical position of the camera on the device.
+- [deviceType](avcapturedevicedescriptor/devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [mediaTypes](avcapturedevicedescriptor/mediatypes.md): The kinds of media the camera captures.
+- [position](avcapturedevicedescriptor/position.md): The physical position of the camera on the device.
 
 ## Relationships
 
@@ -62,14 +62,14 @@ You don’t create `AVCaptureDeviceDescriptor` objects directly. An [AVCaptureDe
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
 
 # AVCaptureDeviceDescriptor (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 An object that identifies a capture device and is safe to pass between actors.
 
@@ -95,14 +95,14 @@ You don’t create `AVCaptureDeviceDescriptor` objects directly. An [AVCaptureDe
 
 ### Identifying the device
 
-- [uniqueID](avcapturedevicedescriptor/uniqueid.md): Beta. An identifier that uniquely identifies the device’s camera.
-- [localizedName](avcapturedevicedescriptor/localizedname.md): Beta. A name for the camera that’s suitable for display in your interface.
+- [uniqueID](avcapturedevicedescriptor/uniqueid.md): An identifier that uniquely identifies the device’s camera.
+- [localizedName](avcapturedevicedescriptor/localizedname.md): A name for the camera that’s suitable for display in your interface.
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](avcapturedevicedescriptor/devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [mediaTypes](avcapturedevicedescriptor/mediatypes.md): Beta. The kinds of media the camera captures.
-- [position](avcapturedevicedescriptor/position.md): Beta. The physical position of the camera on the device.
+- [deviceType](avcapturedevicedescriptor/devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [mediaTypes](avcapturedevicedescriptor/mediatypes.md): The kinds of media the camera captures.
+- [position](avcapturedevicedescriptor/position.md): The physical position of the camera on the device.
 
 ## Relationships
 
@@ -115,5 +115,5 @@ You don’t create `AVCaptureDeviceDescriptor` objects directly. An [AVCaptureDe
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.

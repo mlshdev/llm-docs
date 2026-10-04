@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
-  "generatorDigest": "c54d2498a828148e36b8e195c831e4787be42562b2d7e56602c99776d6d23f79",
+  "generatorDigest": "49104766a0640dc41819f01ac0b013701e87719823cb5f7bf8fa1add3776472a",
   "project": "apple-watchos",
   "title": "Apple watchOS",
   "homepage": "https://developer.apple.com/watchos/",
@@ -9,7 +9,7 @@
   "tag": "snapshot-a3a5c01bb2da",
   "snapshotDigest": "a3a5c01bb2daa6e5b05b5f912615fe697fc6a01a5d070c58d528670dcc2bc090",
   "contentDigest": "969d356ee45d18f331ae9e63dc5d3d9e1c8d1e118e170d2545729c62d2ffbec0",
-  "capturedAt": "2026-09-27T18:07:09.723Z",
+  "capturedAt": "2026-10-04T18:39:02.632Z",
   "documentCount": 821,
   "indexComplete": false,
   "corpusVolumes": [
@@ -17,13 +17,13 @@
       "name": "llms-full.txt",
       "byteLength": 3053981,
       "documentCount": 821,
-      "sha256": "28cb1a175708a5dd731e3a18c37973b3cda54e75540320550a45fb7b8cf6178e"
+      "sha256": "dd329c3e6fc2dc8d1664106a677a075c3efe063c6b2bcc40cdf20ec132aea6f1"
     }
   ],
-  "outputDigest": "6fa281aac1c236afedb105ad4cb9e924083fcab559492f45cceaf5e70d5db115",
+  "outputDigest": "2aaa1441c3966a8ff7098c674847d337ec6f0c418540f7a5b4246d14026daf5f",
   "notes": [
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
-    "3 frameworks in this catalog, captured at 2026-09-27T18:07:09.723Z.",
+    "3 frameworks in this catalog, captured at 2026-10-04T18:39:02.632Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
     "Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."

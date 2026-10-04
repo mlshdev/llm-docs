@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/scsitype00inparameters
 
 # SCSIType00InParameters
@@ -35,5 +35,5 @@ This type contains all the fields from [SCSIDeviceInParameters](scsideviceinpara
 
 - [UserSendCDB](iouserscsiperipheraldevicetype00/usersendcdb.md): Sends a vendor-specific Command Descriptor Block (CDB) to the device.
 - [SCSIType00OutParameters](scsitype00outparameters.md): Parameters for commands to send to the external SCSI device.
-- [SCSIType00OutVersion](scsitype00outversion.md): Constants that represent versions of the type 00 outbound interface.
-- [SCSIType00InVersion](scsitype00inversion.md): Constants that represent versions of the type 00 inbound interface.
+- [SCSIType00OutVersion](scsitype00outversion.md): Constants that represent versions of the Type00 outbound interface.
+- [SCSIType00InVersion](scsitype00inversion.md): Constants that represent versions of the Type00 inbound interface.

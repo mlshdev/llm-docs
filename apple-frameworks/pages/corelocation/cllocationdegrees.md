@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corelocation/cllocationdegrees
 
 # CLLocationDegrees (Swift)
@@ -24,6 +24,7 @@ typealias CLLocationDegrees = Double
 - [dismissHeadingCalibrationDisplay()](cllocationmanager/dismissheadingcalibrationdisplay%28%29.md): Dismisses the heading calibration view from the screen immediately.
 - [headingFilter](cllocationmanager/headingfilter.md): The minimum angular change in degrees required to generate new heading events.
 - [kCLHeadingFilterNone](kclheadingfilternone.md): A constant indicating that all header values should be reported.
+- [headingBody](cllocationmanager/headingbody.md): A physical body or view that defines the reference orientation for heading calculations.
 - [headingOrientation](cllocationmanager/headingorientation.md): Deprecated. The device orientation to use when computing heading values.
 - [CLDeviceOrientation](cldeviceorientation.md): Constants indicating the physical orientation of the device.
 
@@ -50,5 +51,6 @@ typedef double CLLocationDegrees;
 - [dismissHeadingCalibrationDisplay](cllocationmanager/dismissheadingcalibrationdisplay%28%29.md): Dismisses the heading calibration view from the screen immediately.
 - [headingFilter](cllocationmanager/headingfilter.md): The minimum angular change in degrees required to generate new heading events.
 - [kCLHeadingFilterNone](kclheadingfilternone.md): A constant indicating that all header values should be reported.
+- [headingBody](cllocationmanager/headingbody.md): A physical body or view that defines the reference orientation for heading calculations.
 - [headingOrientation](cllocationmanager/headingorientation.md): Deprecated. The device orientation to use when computing heading values.
 - [CLDeviceOrientation](cldeviceorientation.md): Constants indicating the physical orientation of the device.

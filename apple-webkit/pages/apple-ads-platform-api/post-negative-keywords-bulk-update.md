@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/post-negative-keywords-bulk-update
 
 # Bulk Update Negative Keywords
@@ -129,3 +129,4 @@ POST /v1/negative-keywords/bulk-update
 ### Negative Keywords
 
 - [Bulk Create Negative Keywords](post-negative-keywords-bulk-create.md): Create multiple negative keywords in a single request.
+- [Bulk Delete Negative Keywords](post-negative-keywords-bulk-delete.md): Delete multiple negative keywords in a single request.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/naturallanguage/nlembedding/enumerateneighborsforstring:maximumcount:maximumdistance:distancetype:usingblock:
 
 # enumerateNeighborsForString:maximumCount:maximumDistance:distanceType:usingBlock:
@@ -21,6 +21,7 @@ Passes the nearest strings, within a radius of a string in the vocabulary, to a 
 
 - `string`: A string in the embedding vocabulary.
 - `maxCount`: The largest number of times the method calls `block`.
+- `maxDistance`: The largest distance a neighbor can be from `string`.
 - `distanceType`: A means of calculating distance that determines which formula the method uses to evaluate a neighbor’s distance from `string`.
 - `block`: A block with the following parameters:
 

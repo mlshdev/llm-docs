@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/reportingkeyword
 
 # ReportingKeyword
@@ -24,9 +24,9 @@ object ReportingKeyword
 - `adAccountId` — `int64`: The identifier of the ad account that owns the keyword.
 - `deleted` — `boolean`: `true` if the keyword has been deleted.
 - `text` — `string`: The keyword text.
-- `status` — `string`: Possible values: `ENABLED`, `PAUSED`.
-  **Allowed values:** `ENABLED`, `PAUSED`
-- `matchType` — `string`: Possible values: `BROAD`, `EXACT`.
+- `status` — `string`: The keyword’s status at the time captured in the report.
+  **Allowed values:** `ENABLED`, `PAUSED`, `DELETED`
+- `matchType` — `string`: The keyword’s match type.
   **Allowed values:** `BROAD`, `EXACT`
 - `bid` — `Money`: See [Money](money.md) for details.
 - `adGroupId` — `int64`: The identifier of the ad group that owns the keyword.

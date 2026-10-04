@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/errordetail
 
 # ErrorDetail
@@ -21,6 +21,7 @@ object ErrorDetail
 
 - `code` — `string` (required): A machine-readable code identifying the specific violation, such as `FIELD_REQUIRED` for a missing required field or `INVALID_VALUE` for a field that failed validation.
 - `message` — `string`: A human-readable description of this specific violation, such as which field was missing or invalid and why.
+- `info` — `Info`: Additional context that supplements `message`, such as the field name, the invalid value, or acceptable alternatives. Content varies by endpoint and error type. See [Info](info.md).
 
 <a id="Discussion"></a>
 
@@ -35,7 +36,10 @@ The `ErrorDetail` provides field-level or request-level granularity for a specif
 ```json
 {
   "code": "FIELD_REQUIRED",
-  "message": "campaign.name is required and was not provided for AwayFinder campaign creation."
+  "message": "campaign.name is required and was not provided for AwayFinder campaign creation.",
+  "info": {
+    "field": "campaign.name"
+  }
 }
 ```
 
@@ -45,3 +49,4 @@ The `ErrorDetail` provides field-level or request-level granularity for a specif
 
 - [Error](error.md): The standard error envelope that the API returns when a request fails.
 - [ErrorResponse](errorresponse.md): Certain endpoints return this envelope, which wraps an `Error` object, when a request fails.
+- [Info](info.md): Additional context that supplements an error detail’s message, varying by endpoint and error type.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nialgorithmconvergencestatus-2fnve/reason
 
 # NIAlgorithmConvergenceStatus.Reason
@@ -48,3 +48,10 @@ At runtime, the app needs to check the status in the `convergence` object provid
 - [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+
+## See Also
+
+### Coaching the user
+
+- [session(\_:didUpdateAlgorithmConvergence:for:)](../nisessiondelegate/session%28__didupdatealgorithmconvergence_for_%29.md): Provides recommended actions the user can take to facilitate the framework’s Camera Assistance.
+- [NIAlgorithmConvergenceStatus](../nialgorithmconvergencestatus-2fnve.md): The possible states of Camera Assistance.

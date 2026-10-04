@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/identifying-rate-limits
 
 # Identifying rate limits
@@ -26,6 +26,8 @@ The following table lists the rate limits for each endpoint in the production en
 | [Get Transaction History](get-transaction-history.md) | 50 |
 | [Get Transaction History V1](get-transaction-history-v1.md) | 50 |
 | [Get All Subscription Statuses](get-all-subscription-statuses.md) | 50 |
+| [Get Customer Groups](get-customer-groups.md) | 50 |
+| [Get Group Members](get-group-members.md) | 50 |
 | [Send Consumption Information](send-consumption-information.md) | 50 |
 | [Send Consumption Information V1](send-consumption-information-v1.md) | 50 |
 | [Get Notification History](get-notification-history.md) | 50 |

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/nstextlist/markerformat-swift.struct
 
 # NSTextList.MarkerFormat (Swift)
@@ -64,6 +64,7 @@ Select a marker symbol to apply to your list elements in your text list, then se
 
 - [markerFormat](markerformat-swift.property.md): Returns the marker format string used by the receiver.
 - [marker(forItemNumber:)](marker%28foritemnumber_%29.md): Returns the computed value for a specific ordinal position in the list.
+- [includesTextListMarkers](includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the text content.
 
 # NSTextListMarkerFormat (Objective-C)
 
@@ -113,3 +114,4 @@ Select a marker symbol to apply to your list elements in your text list, then se
 
 - [markerFormat](markerformat-swift.property.md): Returns the marker format string used by the receiver.
 - [markerForItemNumber:](marker%28foritemnumber_%29.md): Returns the computed value for a specific ordinal position in the list.
+- [includesTextListMarkers](includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the text content.

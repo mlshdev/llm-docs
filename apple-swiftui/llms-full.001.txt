@@ -1,9 +1,9 @@
-# Apple SwiftUI snapshot-8b55d19a707e: full documentation
+# Apple SwiftUI snapshot-8247613c923d: full documentation
 
 Source: https://developer.apple.com/documentation/swiftui
-Catalog snapshot: 8b55d19a707ef89040e675038f5d9370df5025b13779e4c7d74995445f93294d
-Content digest: af6870304bfe66f126acaccc9d5b2922f7e585e382e3bcd46dff2e79583a42cb
-Captured at: 2026-09-16T18:21:42.082Z
+Catalog snapshot: 8247613c923d5f641b343d378c87950d13b1d1852255e25aee94a110e1fadd7a
+Content digest: f5f7b95015d610437509960cc99e4ad0a8f3e4e94d5e8eb1ecfd889b36d2ede5
+Captured at: 2026-10-04T18:39:02.464Z
 Volume 1
 
 # Document: SwiftUI
@@ -6425,8 +6425,8 @@ Alert scenes present themselves in the center of the current display, and don’
 ```swift
 @main
 struct MyApp: App {
-    @State var showLoginAlert = true
-    @State var loggedIn = false
+    @State private var showLoginAlert = true
+    @State private var loggedIn = false
 
     var body: some Scene {
         Window("Welcome User Window", id:"WelcomeWindow") {
@@ -16063,13 +16063,13 @@ var wrappedValue: Value { get nonmutating set }
 
 Source path: documentation/swiftui/arrangementview
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementview
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ArrangementView
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
 
@@ -16125,13 +16125,13 @@ The split arrangement adapts its axis based on the available size and size class
 
 ### Creating an arrangement view
 
-- [init(primary:secondary:)](arrangementview/init%28primary_secondary_%29.md): Beta. Creates an arrangement view with a primary and secondary view.
-- [init(\_:)](arrangementview/init%28__%29.md): Beta. Conforms when `Primary` is `ArrangementViewStyleConfiguration.Primary` and `Secondary` is `ArrangementViewStyleConfiguration.Secondary`. Creates an arrangement view from a style configuration.
-- [ArrangementViewStyleConfiguration](arrangementviewstyleconfiguration.md): Beta. The properties of an arrangement view used to create its custom style.
+- [init(primary:secondary:)](arrangementview/init%28primary_secondary_%29.md): Creates an arrangement view with a primary and secondary view.
+- [init(\_:)](arrangementview/init%28__%29.md): Conforms when `Primary` is `ArrangementViewStyleConfiguration.Primary` and `Secondary` is `ArrangementViewStyleConfiguration.Secondary`. Creates an arrangement view from a style configuration.
+- [ArrangementViewStyleConfiguration](arrangementviewstyleconfiguration.md): The properties of an arrangement view used to create its custom style.
 
 ### Configuring an arrangement view
 
-- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
+- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
 
 ## Relationships
 
@@ -16143,25 +16143,25 @@ The split arrangement adapts its axis based on the available size and size class
 
 ### Dynamically arranging a primary and secondary view
 
-- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [ArrangementViewStyle](arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 # Document: init(_:)
 
 Source path: documentation/swiftui/arrangementview/init(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementview/init(_:)
-Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # init(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Creates an arrangement view from a style configuration.
 
@@ -16175,20 +16175,20 @@ nonisolated init(_ configuration: ArrangementViewStyleConfiguration)
 
 ### Creating an arrangement view
 
-- [init(primary:secondary:)](init%28primary_secondary_%29.md): Beta. Creates an arrangement view with a primary and secondary view.
-- [ArrangementViewStyleConfiguration](../arrangementviewstyleconfiguration.md): Beta. The properties of an arrangement view used to create its custom style.
+- [init(primary:secondary:)](init%28primary_secondary_%29.md): Creates an arrangement view with a primary and secondary view.
+- [ArrangementViewStyleConfiguration](../arrangementviewstyleconfiguration.md): The properties of an arrangement view used to create its custom style.
 
 # Document: init(primary:secondary:)
 
 Source path: documentation/swiftui/arrangementview/init(primary:secondary:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementview/init(primary:secondary:)
-Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # init(primary:secondary:)
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Creates an arrangement view with a primary and secondary view.
 
@@ -16207,20 +16207,20 @@ nonisolated init(@ContentBuilder primary: () -> Primary, @ContentBuilder seconda
 
 ### Creating an arrangement view
 
-- [init(\_:)](init%28__%29.md): Beta. Conforms when `Primary` is `ArrangementViewStyleConfiguration.Primary` and `Secondary` is `ArrangementViewStyleConfiguration.Secondary`. Creates an arrangement view from a style configuration.
-- [ArrangementViewStyleConfiguration](../arrangementviewstyleconfiguration.md): Beta. The properties of an arrangement view used to create its custom style.
+- [init(\_:)](init%28__%29.md): Conforms when `Primary` is `ArrangementViewStyleConfiguration.Primary` and `Secondary` is `ArrangementViewStyleConfiguration.Secondary`. Creates an arrangement view from a style configuration.
+- [ArrangementViewStyleConfiguration](../arrangementviewstyleconfiguration.md): The properties of an arrangement view used to create its custom style.
 
 # Document: ArrangementViewStyle
 
 Source path: documentation/swiftui/arrangementviewstyle
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyle
-Description: Framework: SwiftUI Kind: Protocol Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Protocol Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ArrangementViewStyle
 
 **Framework:** SwiftUI  
 **Kind:** Protocol  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A style that configures an `ArrangementView` with an arrangement.
 
@@ -16234,21 +16234,21 @@ A style that configures an `ArrangementView` with an arrangement.
 
 ### Getting arrangement view styles
 
-- [automatic](arrangementviewstyle/automatic.md): Beta. Conforms when `Self` is `AutomaticArrangementViewStyle`. The default arrangement view style.
-- [overlay](arrangementviewstyle/overlay.md): Beta. Conforms when `Self` is `OverlayArrangementViewStyle`. An arrangement view style that layers the primary view over the secondary view in z-order.
-- [split](arrangementviewstyle/split.md): Beta. Conforms when `Self` is `SplitArrangementViewStyle`. An arrangement view style that places the primary and secondary views side by side along one or more axes.
+- [automatic](arrangementviewstyle/automatic.md): Conforms when `Self` is `AutomaticArrangementViewStyle`. The default arrangement view style.
+- [overlay](arrangementviewstyle/overlay.md): Conforms when `Self` is `OverlayArrangementViewStyle`. An arrangement view style that layers the primary view over the secondary view in z-order.
+- [split](arrangementviewstyle/split.md): Conforms when `Self` is `SplitArrangementViewStyle`. An arrangement view style that places the primary and secondary views side by side along one or more axes.
 
 ### Creating a view using an arrangement view style
 
-- [makeBody(configuration:)](arrangementviewstyle/makebody%28configuration_%29.md): Beta. Creates a view for the arrangement view style from the configuration.
-- [Body](arrangementviewstyle/body.md): Beta.
-- [ArrangementViewStyle.Configuration](arrangementviewstyle/configuration.md): Beta. The configuration used to create the arrangement view style.
+- [makeBody(configuration:)](arrangementviewstyle/makebody%28configuration_%29.md): Creates a view for the arrangement view style from the configuration.
+- [Body](arrangementviewstyle/body.md)
+- [ArrangementViewStyle.Configuration](arrangementviewstyle/configuration.md): The configuration used to create the arrangement view style.
 
 ### Supporting Types
 
-- [AutomaticArrangementViewStyle](automaticarrangementviewstyle.md): Beta. The default arrangement view style.
-- [OverlayArrangementViewStyle](overlayarrangementviewstyle.md): Beta. An arrangement view style which overlays views.
-- [SplitArrangementViewStyle](splitarrangementviewstyle.md): Beta. An arrangement view style which splits views.
+- [AutomaticArrangementViewStyle](automaticarrangementviewstyle.md): The default arrangement view style.
+- [OverlayArrangementViewStyle](overlayarrangementviewstyle.md): An arrangement view style which overlays views.
+- [SplitArrangementViewStyle](splitarrangementviewstyle.md): An arrangement view style which splits views.
 
 ## Relationships
 
@@ -16262,25 +16262,25 @@ A style that configures an `ArrangementView` with an arrangement.
 
 ### Dynamically arranging a primary and secondary view
 
-- [ArrangementView](arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
-- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [ArrangementView](arrangementview.md): A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 # Document: automatic
 
 Source path: documentation/swiftui/arrangementviewstyle/automatic
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyle/automatic
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # automatic
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The default arrangement view style.
 
@@ -16300,20 +16300,20 @@ Using this style, the arrangement view resolves to a [SplitArrangementViewStyle]
 
 ### Getting arrangement view styles
 
-- [overlay](overlay.md): Beta. Conforms when `Self` is `OverlayArrangementViewStyle`. An arrangement view style that layers the primary view over the secondary view in z-order.
-- [split](split.md): Beta. Conforms when `Self` is `SplitArrangementViewStyle`. An arrangement view style that places the primary and secondary views side by side along one or more axes.
+- [overlay](overlay.md): Conforms when `Self` is `OverlayArrangementViewStyle`. An arrangement view style that layers the primary view over the secondary view in z-order.
+- [split](split.md): Conforms when `Self` is `SplitArrangementViewStyle`. An arrangement view style that places the primary and secondary views side by side along one or more axes.
 
 # Document: Body
 
 Source path: documentation/swiftui/arrangementviewstyle/body
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyle/body
-Description: Framework: SwiftUI Kind: Associated Type Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Associated Type Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # Body
 
 **Framework:** SwiftUI  
 **Kind:** Associated Type  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 ## Declaration
 
@@ -16325,20 +16325,20 @@ associatedtype Body : View
 
 ### Creating a view using an arrangement view style
 
-- [makeBody(configuration:)](makebody%28configuration_%29.md): Beta. Creates a view for the arrangement view style from the configuration.
-- [ArrangementViewStyle.Configuration](configuration.md): Beta. The configuration used to create the arrangement view style.
+- [makeBody(configuration:)](makebody%28configuration_%29.md): Creates a view for the arrangement view style from the configuration.
+- [ArrangementViewStyle.Configuration](configuration.md): The configuration used to create the arrangement view style.
 
 # Document: ArrangementViewStyle.Configuration
 
 Source path: documentation/swiftui/arrangementviewstyle/configuration
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyle/configuration
-Description: Framework: SwiftUI Kind: Type Alias Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Alias Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ArrangementViewStyle.Configuration
 
 **Framework:** SwiftUI  
 **Kind:** Type Alias  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The configuration used to create the arrangement view style.
 
@@ -16352,20 +16352,20 @@ typealias Configuration = ArrangementViewStyleConfiguration
 
 ### Creating a view using an arrangement view style
 
-- [makeBody(configuration:)](makebody%28configuration_%29.md): Beta. Creates a view for the arrangement view style from the configuration.
-- [Body](body.md): Beta.
+- [makeBody(configuration:)](makebody%28configuration_%29.md): Creates a view for the arrangement view style from the configuration.
+- [Body](body.md)
 
 # Document: makeBody(configuration:)
 
 Source path: documentation/swiftui/arrangementviewstyle/makebody(configuration:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyle/makebody(configuration:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # makeBody(configuration:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Creates a view for the arrangement view style from the configuration.
 
@@ -16379,20 +16379,20 @@ Creates a view for the arrangement view style from the configuration.
 
 ### Creating a view using an arrangement view style
 
-- [Body](body.md): Beta.
-- [ArrangementViewStyle.Configuration](configuration.md): Beta. The configuration used to create the arrangement view style.
+- [Body](body.md)
+- [ArrangementViewStyle.Configuration](configuration.md): The configuration used to create the arrangement view style.
 
 # Document: overlay
 
 Source path: documentation/swiftui/arrangementviewstyle/overlay
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyle/overlay
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # overlay
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 An arrangement view style that layers the primary view over the secondary view in z-order.
 
@@ -16406,20 +16406,20 @@ An arrangement view style that layers the primary view over the secondary view i
 
 ### Getting arrangement view styles
 
-- [automatic](automatic.md): Beta. Conforms when `Self` is `AutomaticArrangementViewStyle`. The default arrangement view style.
-- [split](split.md): Beta. Conforms when `Self` is `SplitArrangementViewStyle`. An arrangement view style that places the primary and secondary views side by side along one or more axes.
+- [automatic](automatic.md): Conforms when `Self` is `AutomaticArrangementViewStyle`. The default arrangement view style.
+- [split](split.md): Conforms when `Self` is `SplitArrangementViewStyle`. An arrangement view style that places the primary and secondary views side by side along one or more axes.
 
 # Document: split
 
 Source path: documentation/swiftui/arrangementviewstyle/split
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyle/split
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # split
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 An arrangement view style that places the primary and secondary views side by side along one or more axes.
 
@@ -16441,20 +16441,20 @@ Constrain which axes the split supports using [axes(\_:)](../splitarrangementvie
 
 ### Getting arrangement view styles
 
-- [automatic](automatic.md): Beta. Conforms when `Self` is `AutomaticArrangementViewStyle`. The default arrangement view style.
-- [overlay](overlay.md): Beta. Conforms when `Self` is `OverlayArrangementViewStyle`. An arrangement view style that layers the primary view over the secondary view in z-order.
+- [automatic](automatic.md): Conforms when `Self` is `AutomaticArrangementViewStyle`. The default arrangement view style.
+- [overlay](overlay.md): Conforms when `Self` is `OverlayArrangementViewStyle`. An arrangement view style that layers the primary view over the secondary view in z-order.
 
 # Document: ArrangementViewStyleConfiguration
 
 Source path: documentation/swiftui/arrangementviewstyleconfiguration
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyleconfiguration
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ArrangementViewStyleConfiguration
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The properties of an arrangement view used to create its custom style.
 
@@ -16468,32 +16468,32 @@ struct ArrangementViewStyleConfiguration
 
 ### Structures
 
-- [ArrangementViewStyleConfiguration.Primary](arrangementviewstyleconfiguration/primary-swift.struct.md): Beta. A type-erased view of the primary content of an arrangement view.
-- [ArrangementViewStyleConfiguration.Secondary](arrangementviewstyleconfiguration/secondary-swift.struct.md): Beta. A type-erased view of the secondary content of an arrangement view.
+- [ArrangementViewStyleConfiguration.Primary](arrangementviewstyleconfiguration/primary-swift.struct.md): A type-erased view of the primary content of an arrangement view.
+- [ArrangementViewStyleConfiguration.Secondary](arrangementviewstyleconfiguration/secondary-swift.struct.md): A type-erased view of the secondary content of an arrangement view.
 
 ### Instance Properties
 
-- [primary](arrangementviewstyleconfiguration/primary-swift.property.md): Beta. The primary view of the arrangement.
-- [secondary](arrangementviewstyleconfiguration/secondary-swift.property.md): Beta. The secondary view of the arrangement.
+- [primary](arrangementviewstyleconfiguration/primary-swift.property.md): The primary view of the arrangement.
+- [secondary](arrangementviewstyleconfiguration/secondary-swift.property.md): The secondary view of the arrangement.
 
 ## See Also
 
 ### Creating an arrangement view
 
-- [init(primary:secondary:)](arrangementview/init%28primary_secondary_%29.md): Beta. Creates an arrangement view with a primary and secondary view.
-- [init(\_:)](arrangementview/init%28__%29.md): Beta. Conforms when `Primary` is `ArrangementViewStyleConfiguration.Primary` and `Secondary` is `ArrangementViewStyleConfiguration.Secondary`. Creates an arrangement view from a style configuration.
+- [init(primary:secondary:)](arrangementview/init%28primary_secondary_%29.md): Creates an arrangement view with a primary and secondary view.
+- [init(\_:)](arrangementview/init%28__%29.md): Conforms when `Primary` is `ArrangementViewStyleConfiguration.Primary` and `Secondary` is `ArrangementViewStyleConfiguration.Secondary`. Creates an arrangement view from a style configuration.
 
 # Document: primary
 
 Source path: documentation/swiftui/arrangementviewstyleconfiguration/primary-swift.property
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyleconfiguration/primary-swift.property
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # primary
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The primary view of the arrangement.
 
@@ -16507,13 +16507,13 @@ var primary: ArrangementViewStyleConfiguration.Primary { get }
 
 Source path: documentation/swiftui/arrangementviewstyleconfiguration/primary-swift.struct
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyleconfiguration/primary-swift.struct
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ArrangementViewStyleConfiguration.Primary
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A type-erased view of the primary content of an arrangement view.
 
@@ -16535,13 +16535,13 @@ A type-erased view of the primary content of an arrangement view.
 
 Source path: documentation/swiftui/arrangementviewstyleconfiguration/secondary-swift.property
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyleconfiguration/secondary-swift.property
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # secondary
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The secondary view of the arrangement.
 
@@ -16555,13 +16555,13 @@ var secondary: ArrangementViewStyleConfiguration.Secondary { get }
 
 Source path: documentation/swiftui/arrangementviewstyleconfiguration/secondary-swift.struct
 Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementviewstyleconfiguration/secondary-swift.struct
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ArrangementViewStyleConfiguration.Secondary
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A type-erased view of the secondary content of an arrangement view.
 
@@ -17884,7 +17884,7 @@ Use this type e.g. with drag and drop APIs or to create a [fileExporter(isPresen
 struct RichTextEditorView: View {
     @State private var text: AttributedString = ""
     @Environment(\.self) private var environment
-    @State var fileExporterIsPresented: Bool = false
+    @State private var fileExporterIsPresented: Bool = false
 
     var body: some View {
         TextEditor(text: $text)
@@ -18416,8 +18416,8 @@ This is frequently used to represent selection of text in a `TextEditor`. The fo
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: AttributedString = ""
-    @State var selection = AttributedTextSelection()
+    @State private var text: AttributedString = ""
+    @State private var selection = AttributedTextSelection()
 
     var body: some View {
         VStack {
@@ -18442,8 +18442,8 @@ You can also use the [textSelectionAffinity(\_:)](view/textselectionaffinity%28_
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: AttributedString = ""
-    @State var selection = AttributedTextSelection()
+    @State private var text: AttributedString = ""
+    @State private var selection = AttributedTextSelection()
 
     var body: some View {
         VStack {
@@ -19141,13 +19141,13 @@ When this constrain function accesses `container.foregroundColor`, the system es
 
 Source path: documentation/swiftui/automaticarrangementviewstyle
 Canonical documentation: https://developer.apple.com/documentation/swiftui/automaticarrangementviewstyle
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # AutomaticArrangementViewStyle
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The default arrangement view style.
 
@@ -19167,7 +19167,7 @@ Using this style, the arrangement view resolves to a [SplitArrangementViewStyle]
 
 ### Initializers
 
-- [init()](automaticarrangementviewstyle/init%28%29.md): Beta.
+- [init()](automaticarrangementviewstyle/init%28%29.md)
 
 ## Relationships
 
@@ -19179,20 +19179,20 @@ Using this style, the arrangement view resolves to a [SplitArrangementViewStyle]
 
 ### Supporting Types
 
-- [OverlayArrangementViewStyle](overlayarrangementviewstyle.md): Beta. An arrangement view style which overlays views.
-- [SplitArrangementViewStyle](splitarrangementviewstyle.md): Beta. An arrangement view style which splits views.
+- [OverlayArrangementViewStyle](overlayarrangementviewstyle.md): An arrangement view style which overlays views.
+- [SplitArrangementViewStyle](splitarrangementviewstyle.md): An arrangement view style which splits views.
 
 # Document: init()
 
 Source path: documentation/swiftui/automaticarrangementviewstyle/init()
 Canonical documentation: https://developer.apple.com/documentation/swiftui/automaticarrangementviewstyle/init()
-Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # init()
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 ## Declaration
 
@@ -41697,8 +41697,8 @@ You don’t typically use `CoordinateSpace` directly. Instead, use the static pr
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpaceProtocol](coordinatespaceprotocol.md): A frame of reference within the layout system.
@@ -41911,8 +41911,8 @@ You don’t typically create types conforming to this protocol yourself. Instead
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -44821,7 +44821,7 @@ protocol CustomizableToolbarContent : ToolbarContent where Self.Body : Customiza
 
 ### Customizing behaviors
 
-- [axisBehavior(\_:)](customizabletoolbarcontent/axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
+- [axisBehavior(\_:)](customizabletoolbarcontent/axisbehavior%28__%29.md): The bar axis behavior of the toolbar item.
 - [customizationBehavior(\_:)](customizabletoolbarcontent/customizationbehavior%28__%29.md): Configures the customization behavior of customizable toolbar content.
 
 ### Setting visibility
@@ -44873,13 +44873,13 @@ protocol CustomizableToolbarContent : ToolbarContent where Self.Body : Customiza
 
 Source path: documentation/swiftui/customizabletoolbarcontent/axisbehavior(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/axisbehavior(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # axisBehavior(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The bar axis behavior of the toolbar item.
 
@@ -45035,7 +45035,7 @@ ContentView()
 
 ### Customizing behaviors
 
-- [axisBehavior(\_:)](axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
+- [axisBehavior(\_:)](axisbehavior%28__%29.md): The bar axis behavior of the toolbar item.
 
 # Document: defaultCustomization()
 
@@ -48968,13 +48968,13 @@ You can override the default value that this method returns for a particular gui
 
 Source path: documentation/swiftui/devicehinge
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # DeviceHinge
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A type encapsulating the state of a single hinge.
 
@@ -49016,9 +49016,9 @@ In the example above, the current angle and status of the hinge will be displaye
 
 ### Getting hinge information
 
-- [angle](devicehinge/angle.md): Beta. Current angle of the hinge.
-- [status](devicehinge/status-swift.property.md): Beta. Current status of the hinge.
-- [DeviceHinge.Status](devicehinge/status-swift.struct.md): Beta. The status of an individual hinge.
+- [angle](devicehinge/angle.md): Current angle of the hinge.
+- [status](devicehinge/status-swift.property.md): Current status of the hinge.
+- [DeviceHinge.Status](devicehinge/status-swift.struct.md): The status of an individual hinge.
 
 ## Relationships
 
@@ -49033,20 +49033,20 @@ In the example above, the current angle and status of the hinge will be displaye
 
 ### Responding to hinge angle changes
 
-- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Beta. Adds an action to perform when the hinge context of the view hierarchy changes.
-- [DeviceHingeContext](devicehingecontext.md): Beta. A type describing the context of hinges on the device.
+- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Adds an action to perform when the hinge context of the view hierarchy changes.
+- [DeviceHingeContext](devicehingecontext.md): A type describing the context of hinges on the device.
 
 # Document: angle
 
 Source path: documentation/swiftui/devicehinge/angle
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge/angle
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # angle
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Current angle of the hinge.
 
@@ -49060,20 +49060,20 @@ var angle: Angle
 
 ### Getting hinge information
 
-- [status](status-swift.property.md): Beta. Current status of the hinge.
-- [DeviceHinge.Status](status-swift.struct.md): Beta. The status of an individual hinge.
+- [status](status-swift.property.md): Current status of the hinge.
+- [DeviceHinge.Status](status-swift.struct.md): The status of an individual hinge.
 
 # Document: status
 
 Source path: documentation/swiftui/devicehinge/status-swift.property
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge/status-swift.property
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # status
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Current status of the hinge.
 
@@ -49087,20 +49087,20 @@ var status: DeviceHinge.Status
 
 ### Getting hinge information
 
-- [angle](angle.md): Beta. Current angle of the hinge.
-- [DeviceHinge.Status](status-swift.struct.md): Beta. The status of an individual hinge.
+- [angle](angle.md): Current angle of the hinge.
+- [DeviceHinge.Status](status-swift.struct.md): The status of an individual hinge.
 
 # Document: DeviceHinge.Status
 
 Source path: documentation/swiftui/devicehinge/status-swift.struct
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge/status-swift.struct
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # DeviceHinge.Status
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The status of an individual hinge.
 
@@ -49114,9 +49114,9 @@ struct Status
 
 ### Getting hinge status
 
-- [closed](status-swift.struct/closed.md): Beta. The hinge is closed.
-- [fullyOpen](status-swift.struct/fullyopen.md): Beta. The hinge is open as far as the device allows.
-- [partiallyOpen](status-swift.struct/partiallyopen.md): Beta. The hinge is partially open.
+- [closed](status-swift.struct/closed.md): The hinge is closed.
+- [fullyOpen](status-swift.struct/fullyopen.md): The hinge is open as far as the device allows.
+- [partiallyOpen](status-swift.struct/partiallyopen.md): The hinge is partially open.
 
 ## Relationships
 
@@ -49131,20 +49131,20 @@ struct Status
 
 ### Getting hinge information
 
-- [angle](angle.md): Beta. Current angle of the hinge.
-- [status](status-swift.property.md): Beta. Current status of the hinge.
+- [angle](angle.md): Current angle of the hinge.
+- [status](status-swift.property.md): Current status of the hinge.
 
 # Document: closed
 
 Source path: documentation/swiftui/devicehinge/status-swift.struct/closed
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge/status-swift.struct/closed
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # closed
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The hinge is closed.
 
@@ -49158,20 +49158,20 @@ static var closed: DeviceHinge.Status { get }
 
 ### Getting hinge status
 
-- [fullyOpen](fullyopen.md): Beta. The hinge is open as far as the device allows.
-- [partiallyOpen](partiallyopen.md): Beta. The hinge is partially open.
+- [fullyOpen](fullyopen.md): The hinge is open as far as the device allows.
+- [partiallyOpen](partiallyopen.md): The hinge is partially open.
 
 # Document: fullyOpen
 
 Source path: documentation/swiftui/devicehinge/status-swift.struct/fullyopen
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge/status-swift.struct/fullyopen
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # fullyOpen
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The hinge is open as far as the device allows.
 
@@ -49185,20 +49185,20 @@ static var fullyOpen: DeviceHinge.Status { get }
 
 ### Getting hinge status
 
-- [closed](closed.md): Beta. The hinge is closed.
-- [partiallyOpen](partiallyopen.md): Beta. The hinge is partially open.
+- [closed](closed.md): The hinge is closed.
+- [partiallyOpen](partiallyopen.md): The hinge is partially open.
 
 # Document: partiallyOpen
 
 Source path: documentation/swiftui/devicehinge/status-swift.struct/partiallyopen
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge/status-swift.struct/partiallyopen
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # partiallyOpen
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The hinge is partially open.
 
@@ -49212,20 +49212,20 @@ static var partiallyOpen: DeviceHinge.Status { get }
 
 ### Getting hinge status
 
-- [closed](closed.md): Beta. The hinge is closed.
-- [fullyOpen](fullyopen.md): Beta. The hinge is open as far as the device allows.
+- [closed](closed.md): The hinge is closed.
+- [fullyOpen](fullyopen.md): The hinge is open as far as the device allows.
 
 # Document: DeviceHingeContext
 
 Source path: documentation/swiftui/devicehingecontext
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehingecontext
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # DeviceHingeContext
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A type describing the context of hinges on the device.
 
@@ -49245,7 +49245,7 @@ You use this type with the `View/onHingeChange(_:)` view modifier.
 
 ### Getting hinge context information
 
-- [hinge](devicehingecontext/hinge.md): Beta. The current hinge of the device.
+- [hinge](devicehingecontext/hinge.md): The current hinge of the device.
 
 ## Relationships
 
@@ -49259,20 +49259,20 @@ You use this type with the `View/onHingeChange(_:)` view modifier.
 
 ### Responding to hinge angle changes
 
-- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Beta. Adds an action to perform when the hinge context of the view hierarchy changes.
-- [DeviceHinge](devicehinge.md): Beta. A type encapsulating the state of a single hinge.
+- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Adds an action to perform when the hinge context of the view hierarchy changes.
+- [DeviceHinge](devicehinge.md): A type encapsulating the state of a single hinge.
 
 # Document: hinge
 
 Source path: documentation/swiftui/devicehingecontext/hinge
 Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehingecontext/hinge
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # hinge
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The current hinge of the device.
 
@@ -54289,6 +54289,7 @@ SwiftUI supports standard behaviors people expect from a document-based app, app
 ### Opening a document programmatically
 
 - [newDocument](environmentvalues/newdocument.md): An action in the environment that presents a new document.
+- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [openDocument](environmentvalues/opendocument.md): An action in the environment that presents an existing document.
 - [OpenDocumentAction](opendocumentaction.md): An action that presents an existing document.
 
@@ -54320,7 +54321,6 @@ SwiftUI supports standard behaviors people expect from a document-based app, app
 - [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
 - [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
 - [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.
 - [ReferenceFileDocumentConfiguration](referencefiledocumentconfiguration.md): Deprecated. The properties of an open reference file document.
 
@@ -56677,8 +56677,8 @@ For design guidance, see [Materials](https://developer.apple.com/design/human-in
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -58612,7 +58612,7 @@ This value can be `nil`, if the container was unable to determine a placement fo
 
 ```swift
 struct ContentView: View {
-    @State var contacts: [Contact] = []
+    @State private var contacts: [Contact] = []
 
     var body: some View {
         VStack {
@@ -58692,7 +58692,7 @@ This value can be `nil`, if the container was unable to determine a placement fo
 
 ```swift
 struct ContentView: View {
-    @State var accounts: [Account] = []
+    @State private var accounts: [Account] = []
 
     var body: some View {
         VStack {
@@ -65608,8 +65608,8 @@ Clients of your value then access the value in the usual way, reading it with th
 
 ### Arrangement views
 
-- [overlayArrangementZIndex](environmentvalues/overlayarrangementzindex.md): Beta. The z-index for a view within an overlay arrangement view.
-- [splitArrangementAxis](environmentvalues/splitarrangementaxis.md): Beta. The axis of the split for a view within a split arrangement view.
+- [overlayArrangementZIndex](environmentvalues/overlayarrangementzindex.md): The z-index for a view within an overlay arrangement view.
+- [splitArrangementAxis](environmentvalues/splitarrangementaxis.md): The axis of the split for a view within a split arrangement view.
 
 ### Authentication
 
@@ -65644,7 +65644,7 @@ Clients of your value then access the value in the usual way, reading it with th
 - [materialActiveAppearance](environmentvalues/materialactiveappearance.md): The behavior materials should use for their active state, defaulting to `automatic`.
 - [TabBarPlacement](tabbarplacement.md): A placement for tabs in a tab view.
 - [toolbarLabelStyle](environmentvalues/toolbarlabelstyle.md): The label style to apply to controls within a toolbar.
-- [toolbarVerticalEdge](environmentvalues/toolbarverticaledge.md): Beta. This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
+- [toolbarVerticalEdge](environmentvalues/toolbarverticaledge.md): This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
 
 ### Global objects
 
@@ -66608,7 +66608,7 @@ This is bridged with `UITraitCollection.activeAppearance` for UIKit hosted conte
 - [materialActiveAppearance](materialactiveappearance.md): The behavior materials should use for their active state, defaulting to `automatic`.
 - [TabBarPlacement](../tabbarplacement.md): A placement for tabs in a tab view.
 - [toolbarLabelStyle](toolbarlabelstyle.md): The label style to apply to controls within a toolbar.
-- [toolbarVerticalEdge](toolbarverticaledge.md): Beta. This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
+- [toolbarVerticalEdge](toolbarverticaledge.md): This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
 
 # Document: askPermission
 
@@ -70096,6 +70096,7 @@ The above example assumes that you define a `TextDocument` that conforms to the 
 
 ### Opening a document programmatically
 
+- [NewDocumentAction](../newdocumentaction.md): An action that presents a new document.
 - [openDocument](opendocument.md): An action in the environment that presents an existing document.
 - [OpenDocumentAction](../opendocumentaction.md): An action that presents an existing document.
 
@@ -70155,6 +70156,7 @@ To present an existing document, your app must define a [DocumentGroup](../docum
 ### Opening a document programmatically
 
 - [newDocument](newdocument.md): An action in the environment that presents a new document.
+- [NewDocumentAction](../newdocumentaction.md): An action that presents a new document.
 - [OpenDocumentAction](../opendocumentaction.md): An action that presents an existing document.
 
 # Document: openImmersiveSpace
@@ -70455,13 +70457,13 @@ Use the other two options to target a `WindowGroup` and provide a value to prese
 
 Source path: documentation/swiftui/environmentvalues/overlayarrangementzindex
 Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues/overlayarrangementzindex
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # overlayArrangementZIndex
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The z-index for a view within an overlay arrangement view.
 
@@ -70492,7 +70494,7 @@ struct PlayerView: View {
 
 ### Arrangement views
 
-- [splitArrangementAxis](splitarrangementaxis.md): Beta. The axis of the split for a view within a split arrangement view.
+- [splitArrangementAxis](splitarrangementaxis.md): The axis of the split for a view within a split arrangement view.
 
 # Document: physicalMetrics
 
@@ -71600,13 +71602,13 @@ var sizeCategory: ContentSizeCategory { get set }
 
 Source path: documentation/swiftui/environmentvalues/splitarrangementaxis
 Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues/splitarrangementaxis
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # splitArrangementAxis
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The axis of the split for a view within a split arrangement view.
 
@@ -71642,7 +71644,7 @@ struct DetailsView: View {
 
 ### Arrangement views
 
-- [overlayArrangementZIndex](overlayarrangementzindex.md): Beta. The z-index for a view within an overlay arrangement view.
+- [overlayArrangementZIndex](overlayarrangementzindex.md): The z-index for a view within an overlay arrangement view.
 
 # Document: springLoadingBehavior
 
@@ -72329,13 +72331,13 @@ The default is `nil` for items outside the window toolbar.
 
 Source path: documentation/swiftui/environmentvalues/toolbarverticaledge
 Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues/toolbarverticaledge
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # toolbarVerticalEdge
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
 
@@ -75304,7 +75306,6 @@ Ensure that types that conform to this protocol are `Sendable`. In particular, S
 - [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
 - [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
 - [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.
 - [ReferenceFileDocumentConfiguration](referencefiledocumentconfiguration.md): Deprecated. The properties of an open reference file document.
 
@@ -75692,7 +75693,6 @@ You receive an instance of this structure when you create a [DocumentGroup](docu
 - [FileDocument](filedocument.md): Deprecated. A type that you use to serialize documents to and from file.
 - [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
 - [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.
 - [ReferenceFileDocumentConfiguration](referencefiledocumentconfiguration.md): Deprecated. The properties of an open reference file document.
 
@@ -75901,7 +75901,6 @@ struct FileDocumentReadConfiguration
 - [FileDocument](filedocument.md): Deprecated. A type that you use to serialize documents to and from file.
 - [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
 - [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.
 - [ReferenceFileDocumentConfiguration](referencefiledocumentconfiguration.md): Deprecated. The properties of an open reference file document.
 
@@ -75997,7 +75996,6 @@ struct FileDocumentWriteConfiguration
 - [FileDocument](filedocument.md): Deprecated. A type that you use to serialize documents to and from file.
 - [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
 - [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
-- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.
 - [ReferenceFileDocumentConfiguration](referencefiledocumentconfiguration.md): Deprecated. The properties of an open reference file document.
 
@@ -76757,8 +76755,8 @@ For example, the following shows a minimal find navigator implementation driven 
 
 ```swift
 struct FindNavigatorDrivenTextInput: View {
-    @State var text: String = ""
-    @State var showFindNavigator = false
+    @State private var text: String = ""
+    @State private var showFindNavigator = false
     @Environment(\.findContext) var findContext
     var body: some View {
         MyTextInputView(text: $text)
@@ -85745,10 +85743,10 @@ struct GeometryProxy
 
 ### Inspecting reserved regions
 
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
-- [ReservedRegion.Kind](reservedregion/kind-swift.struct.md): Beta. A kind of reserved region.
-- [ReservedRegion.QueryOptions](reservedregion/queryoptions.md): Beta. Options for querying reserved regions.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
+- [ReservedRegion.Kind](reservedregion/kind-swift.struct.md): A kind of reserved region.
+- [ReservedRegion.QueryOptions](reservedregion/queryoptions.md): Options for querying reserved regions.
 
 ## See Also
 
@@ -85756,8 +85754,8 @@ struct GeometryProxy
 
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -86021,13 +86019,13 @@ func frame(in coordinateSpace: some CoordinateSpaceProtocol) -> CGRect
 
 Source path: documentation/swiftui/geometryproxy/reservedregions(kind:options:layoutdirectionbehavior:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/geometryproxy/reservedregions(kind:options:layoutdirectionbehavior:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # reservedRegions(kind:options:layoutDirectionBehavior:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Returns an array of reserved regions that match the selection options you specify.
 
@@ -86077,7 +86075,7 @@ There may be cases when you need to make more manual adjustments for the frames 
 - [GeometryReader](../geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](../geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](../geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [ReservedRegion](../reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [ReservedRegion](../reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](../geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](../view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](../coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -86270,8 +86268,8 @@ You can use a proxy for anchor resolution.
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
 - [CoordinateSpaceProtocol](coordinatespaceprotocol.md): A frame of reference within the layout system.
@@ -86563,8 +86561,8 @@ This view returns a flexible preferred size to its parent layout.
 
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -86667,8 +86665,8 @@ This container differs from [GeometryReader](geometryreader.md) in that it also 
 
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -105803,9 +105801,9 @@ For design guidance, see [Inputs](https://developer.apple.com/design/human-inter
 
 ### Responding to hinge angle changes
 
-- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Beta. Adds an action to perform when the hinge context of the view hierarchy changes.
-- [DeviceHingeContext](devicehingecontext.md): Beta. A type describing the context of hinges on the device.
-- [DeviceHinge](devicehinge.md): Beta. A type encapsulating the state of a single hinge.
+- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Adds an action to perform when the hinge context of the view hierarchy changes.
+- [DeviceHingeContext](devicehingecontext.md): A type describing the context of hinges on the device.
+- [DeviceHinge](devicehinge.md): A type encapsulating the state of a single hinge.
 
 ### Interacting with the Digital Crown
 
@@ -106463,7 +106461,7 @@ nonisolated struct InspectorCommands
 These commands are optional and can be explicitly requested by passing a value of this type to the [commands(content:)](scene/commands%28content_%29.md) modifier:
 
 ```swift
-@State var presented = true
+@State private var presented = true
 WindowGroup {
     MainView()
         .inspector(isPresented: $presented) {
@@ -112298,14 +112296,14 @@ To fine-tune the position, alignment, and other elements of a layout that you bu
 
 ### Dynamically arranging a primary and secondary view
 
-- [ArrangementView](arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
-- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [ArrangementViewStyle](arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [ArrangementView](arrangementview.md): A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 ### Layering views
 
@@ -125883,9 +125881,9 @@ Rewrite this as a navigation stack that takes a path input:
 var body: some View {
     NavigationStack(path: $path) {
         List {
-            NavigationLink("Purple", value: .purple)
-            NavigationLink("Pink", value: .pink)
-            NavigationLink("Orange", value: .orange)
+            NavigationLink("Purple", value: Color.purple)
+            NavigationLink("Pink", value: Color.pink)
+            NavigationLink("Orange", value: Color.orange)
         }
         .navigationDestination(for: Color.self) { color in
             ColorDetail(color: color)
@@ -132567,14 +132565,11 @@ The above example assumes that you define a `TextDocument` that conforms to the 
 
 ## See Also
 
-### Deprecated
+### Opening a document programmatically
 
-- [FileDocument](filedocument.md): Deprecated. A type that you use to serialize documents to and from file.
-- [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
-- [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
-- [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.
-- [ReferenceFileDocumentConfiguration](referencefiledocumentconfiguration.md): Deprecated. The properties of an open reference file document.
+- [newDocument](environmentvalues/newdocument.md): An action in the environment that presents a new document.
+- [openDocument](environmentvalues/opendocument.md): An action in the environment that presents an existing document.
+- [OpenDocumentAction](opendocumentaction.md): An action that presents an existing document.
 
 # Document: callAsFunction(_:)
 
@@ -139706,6 +139701,7 @@ To present an existing document, your app must define a [DocumentGroup](document
 ### Opening a document programmatically
 
 - [newDocument](environmentvalues/newdocument.md): An action in the environment that presents a new document.
+- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [openDocument](environmentvalues/opendocument.md): An action in the environment that presents an existing document.
 
 # Document: callAsFunction(at:)
@@ -141620,13 +141616,13 @@ nonisolated struct OutlineSubgroupChildren
 
 Source path: documentation/swiftui/overlayarrangementviewstyle
 Canonical documentation: https://developer.apple.com/documentation/swiftui/overlayarrangementviewstyle
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # OverlayArrangementViewStyle
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 An arrangement view style which overlays views.
 
@@ -141640,11 +141636,11 @@ nonisolated struct OverlayArrangementViewStyle
 
 ### Creating an overlay arrangement view style
 
-- [init()](overlayarrangementviewstyle/init%28%29.md): Beta.
+- [init()](overlayarrangementviewstyle/init%28%29.md)
 
 ### Specifying overlay arrangement axes
 
-- [axes(\_:)](overlayarrangementviewstyle/axes%28__%29.md): Beta. Creates an overlay arrangement that supports laying out its views along the given axes.
+- [axes(\_:)](overlayarrangementviewstyle/axes%28__%29.md): Creates an overlay arrangement that supports laying out its views along the given axes.
 
 ## Relationships
 
@@ -141656,20 +141652,20 @@ nonisolated struct OverlayArrangementViewStyle
 
 ### Supporting Types
 
-- [AutomaticArrangementViewStyle](automaticarrangementviewstyle.md): Beta. The default arrangement view style.
-- [SplitArrangementViewStyle](splitarrangementviewstyle.md): Beta. An arrangement view style which splits views.
+- [AutomaticArrangementViewStyle](automaticarrangementviewstyle.md): The default arrangement view style.
+- [SplitArrangementViewStyle](splitarrangementviewstyle.md): An arrangement view style which splits views.
 
 # Document: axes(_:)
 
 Source path: documentation/swiftui/overlayarrangementviewstyle/axes(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/overlayarrangementviewstyle/axes(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # axes(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Creates an overlay arrangement that supports laying out its views along the given axes.
 
@@ -141683,13 +141679,13 @@ nonisolated func axes(_ axes: Axis.Set) -> OverlayArrangementViewStyle
 
 Source path: documentation/swiftui/overlayarrangementviewstyle/init()
 Canonical documentation: https://developer.apple.com/documentation/swiftui/overlayarrangementviewstyle/init()
-Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # init()
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 ## Declaration
 
@@ -146261,8 +146257,8 @@ struct ContentView: View {
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -146386,8 +146382,8 @@ To obtain measurements that are accurate to the user’s surroundings, use the [
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -159068,7 +159064,6 @@ final class PDFDocument: ReferenceFileDocument {
 - [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
 - [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
 - [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [ReferenceFileDocumentConfiguration](referencefiledocumentconfiguration.md): Deprecated. The properties of an open reference file document.
 
 # Document: fileWrapper(snapshot:configuration:)
@@ -159493,7 +159488,6 @@ You receive an instance of this structure when you create a [DocumentGroup](docu
 - [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
 - [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
 - [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.
 
 # Document: $document
@@ -161026,13 +161020,13 @@ In that example, reordering is disabled when `isSaving` is `true`. When the mode
 
 Source path: documentation/swiftui/reservedregion
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ReservedRegion
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A region within a view’s coordinate space that another entity reserves.
 
@@ -161079,17 +161073,17 @@ There may be cases when you need to make more manual adjustments for the frames 
 
 ### Getting region details
 
-- [id](reservedregion/id-swift.property.md): Beta. The identifier of the region.
-- [ReservedRegion.ID](reservedregion/id-swift.struct.md): Beta. An identifier for a reserved region.
-- [frame](reservedregion/frame.md): Beta. The rect of the region in the view’s coordinate space, including the margins.
-- [isActive](reservedregion/isactive.md): Beta. Whether the region is active.
-- [kind](reservedregion/kind-swift.property.md): Beta. The kind of the region.
-- [ReservedRegion.Kind](reservedregion/kind-swift.struct.md): Beta. A kind of reserved region.
-- [margins](reservedregion/margins.md): Beta. The margins included in the frame around the rect for interactive content.
+- [id](reservedregion/id-swift.property.md): The identifier of the region.
+- [ReservedRegion.ID](reservedregion/id-swift.struct.md): An identifier for a reserved region.
+- [frame](reservedregion/frame.md): The rect of the region in the view’s coordinate space, including the margins.
+- [isActive](reservedregion/isactive.md): Whether the region is active.
+- [kind](reservedregion/kind-swift.property.md): The kind of the region.
+- [ReservedRegion.Kind](reservedregion/kind-swift.struct.md): A kind of reserved region.
+- [margins](reservedregion/margins.md): The margins included in the frame around the rect for interactive content.
 
 ### Querying reserved regions
 
-- [ReservedRegion.QueryOptions](reservedregion/queryoptions.md): Beta. Options for querying reserved regions.
+- [ReservedRegion.QueryOptions](reservedregion/queryoptions.md): Options for querying reserved regions.
 
 ### Default Implementations
 
@@ -161117,7 +161111,7 @@ There may be cases when you need to make more manual adjustments for the frames 
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
@@ -161129,13 +161123,13 @@ There may be cases when you need to make more manual adjustments for the frames 
 
 Source path: documentation/swiftui/reservedregion/frame
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/frame
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # frame
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The rect of the region in the view’s coordinate space, including the margins.
 
@@ -161149,24 +161143,24 @@ var frame: CGRect { get }
 
 ### Getting region details
 
-- [id](id-swift.property.md): Beta. The identifier of the region.
-- [ReservedRegion.ID](id-swift.struct.md): Beta. An identifier for a reserved region.
-- [isActive](isactive.md): Beta. Whether the region is active.
-- [kind](kind-swift.property.md): Beta. The kind of the region.
-- [ReservedRegion.Kind](kind-swift.struct.md): Beta. A kind of reserved region.
-- [margins](margins.md): Beta. The margins included in the frame around the rect for interactive content.
+- [id](id-swift.property.md): The identifier of the region.
+- [ReservedRegion.ID](id-swift.struct.md): An identifier for a reserved region.
+- [isActive](isactive.md): Whether the region is active.
+- [kind](kind-swift.property.md): The kind of the region.
+- [ReservedRegion.Kind](kind-swift.struct.md): A kind of reserved region.
+- [margins](margins.md): The margins included in the frame around the rect for interactive content.
 
 # Document: id
 
 Source path: documentation/swiftui/reservedregion/id-swift.property
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/id-swift.property
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # id
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The identifier of the region.
 
@@ -161180,24 +161174,24 @@ var id: ReservedRegion.ID { get }
 
 ### Getting region details
 
-- [ReservedRegion.ID](id-swift.struct.md): Beta. An identifier for a reserved region.
-- [frame](frame.md): Beta. The rect of the region in the view’s coordinate space, including the margins.
-- [isActive](isactive.md): Beta. Whether the region is active.
-- [kind](kind-swift.property.md): Beta. The kind of the region.
-- [ReservedRegion.Kind](kind-swift.struct.md): Beta. A kind of reserved region.
-- [margins](margins.md): Beta. The margins included in the frame around the rect for interactive content.
+- [ReservedRegion.ID](id-swift.struct.md): An identifier for a reserved region.
+- [frame](frame.md): The rect of the region in the view’s coordinate space, including the margins.
+- [isActive](isactive.md): Whether the region is active.
+- [kind](kind-swift.property.md): The kind of the region.
+- [ReservedRegion.Kind](kind-swift.struct.md): A kind of reserved region.
+- [margins](margins.md): The margins included in the frame around the rect for interactive content.
 
 # Document: ReservedRegion.ID
 
 Source path: documentation/swiftui/reservedregion/id-swift.struct
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/id-swift.struct
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ReservedRegion.ID
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 An identifier for a reserved region.
 
@@ -161225,12 +161219,12 @@ struct ID
 
 ### Getting region details
 
-- [id](id-swift.property.md): Beta. The identifier of the region.
-- [frame](frame.md): Beta. The rect of the region in the view’s coordinate space, including the margins.
-- [isActive](isactive.md): Beta. Whether the region is active.
-- [kind](kind-swift.property.md): Beta. The kind of the region.
-- [ReservedRegion.Kind](kind-swift.struct.md): Beta. A kind of reserved region.
-- [margins](margins.md): Beta. The margins included in the frame around the rect for interactive content.
+- [id](id-swift.property.md): The identifier of the region.
+- [frame](frame.md): The rect of the region in the view’s coordinate space, including the margins.
+- [isActive](isactive.md): Whether the region is active.
+- [kind](kind-swift.property.md): The kind of the region.
+- [ReservedRegion.Kind](kind-swift.struct.md): A kind of reserved region.
+- [margins](margins.md): The margins included in the frame around the rect for interactive content.
 
 # Document: Identifiable Implementations
 
@@ -161247,19 +161241,19 @@ Description: Framework: SwiftUI Kind: API Collection
 
 ### Structures
 
-- [ReservedRegion.ID](id-swift.struct.md): Beta. An identifier for a reserved region.
+- [ReservedRegion.ID](id-swift.struct.md): An identifier for a reserved region.
 
 # Document: isActive
 
 Source path: documentation/swiftui/reservedregion/isactive
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/isactive
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # isActive
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Whether the region is active.
 
@@ -161273,24 +161267,24 @@ var isActive: Bool { get }
 
 ### Getting region details
 
-- [id](id-swift.property.md): Beta. The identifier of the region.
-- [ReservedRegion.ID](id-swift.struct.md): Beta. An identifier for a reserved region.
-- [frame](frame.md): Beta. The rect of the region in the view’s coordinate space, including the margins.
-- [kind](kind-swift.property.md): Beta. The kind of the region.
-- [ReservedRegion.Kind](kind-swift.struct.md): Beta. A kind of reserved region.
-- [margins](margins.md): Beta. The margins included in the frame around the rect for interactive content.
+- [id](id-swift.property.md): The identifier of the region.
+- [ReservedRegion.ID](id-swift.struct.md): An identifier for a reserved region.
+- [frame](frame.md): The rect of the region in the view’s coordinate space, including the margins.
+- [kind](kind-swift.property.md): The kind of the region.
+- [ReservedRegion.Kind](kind-swift.struct.md): A kind of reserved region.
+- [margins](margins.md): The margins included in the frame around the rect for interactive content.
 
 # Document: kind
 
 Source path: documentation/swiftui/reservedregion/kind-swift.property
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/kind-swift.property
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # kind
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The kind of the region.
 
@@ -161304,24 +161298,24 @@ var kind: ReservedRegion.Kind { get }
 
 ### Getting region details
 
-- [id](id-swift.property.md): Beta. The identifier of the region.
-- [ReservedRegion.ID](id-swift.struct.md): Beta. An identifier for a reserved region.
-- [frame](frame.md): Beta. The rect of the region in the view’s coordinate space, including the margins.
-- [isActive](isactive.md): Beta. Whether the region is active.
-- [ReservedRegion.Kind](kind-swift.struct.md): Beta. A kind of reserved region.
-- [margins](margins.md): Beta. The margins included in the frame around the rect for interactive content.
+- [id](id-swift.property.md): The identifier of the region.
+- [ReservedRegion.ID](id-swift.struct.md): An identifier for a reserved region.
+- [frame](frame.md): The rect of the region in the view’s coordinate space, including the margins.
+- [isActive](isactive.md): Whether the region is active.
+- [ReservedRegion.Kind](kind-swift.struct.md): A kind of reserved region.
+- [margins](margins.md): The margins included in the frame around the rect for interactive content.
 
 # Document: ReservedRegion.Kind
 
 Source path: documentation/swiftui/reservedregion/kind-swift.struct
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/kind-swift.struct
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ReservedRegion.Kind
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A kind of reserved region.
 
@@ -161335,8 +161329,8 @@ struct Kind
 
 ### Getting reserved region kinds
 
-- [division](kind-swift.struct/division.md): Beta. A region where content should split into two separate regions.
-- [occlusion](kind-swift.struct/occlusion.md): Beta. A region that is occluded by an element.
+- [division](kind-swift.struct/division.md): A region where content should split into two separate regions.
+- [occlusion](kind-swift.struct/occlusion.md): A region that is occluded by an element.
 
 ## Relationships
 
@@ -161356,21 +161350,21 @@ struct Kind
 
 ### Inspecting reserved regions
 
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](../reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
-- [ReservedRegion.QueryOptions](queryoptions.md): Beta. Options for querying reserved regions.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](../reservedregion.md): A region within a view’s coordinate space that another entity reserves.
+- [ReservedRegion.QueryOptions](queryoptions.md): Options for querying reserved regions.
 
 # Document: division
 
 Source path: documentation/swiftui/reservedregion/kind-swift.struct/division
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/kind-swift.struct/division
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # division
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A region where content should split into two separate regions.
 
@@ -161384,19 +161378,19 @@ static var division: ReservedRegion.Kind { get }
 
 ### Getting reserved region kinds
 
-- [occlusion](occlusion.md): Beta. A region that is occluded by an element.
+- [occlusion](occlusion.md): A region that is occluded by an element.
 
 # Document: occlusion
 
 Source path: documentation/swiftui/reservedregion/kind-swift.struct/occlusion
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/kind-swift.struct/occlusion
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # occlusion
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A region that is occluded by an element.
 
@@ -161410,19 +161404,19 @@ static var occlusion: ReservedRegion.Kind { get }
 
 ### Getting reserved region kinds
 
-- [division](division.md): Beta. A region where content should split into two separate regions.
+- [division](division.md): A region where content should split into two separate regions.
 
 # Document: margins
 
 Source path: documentation/swiftui/reservedregion/margins
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/margins
-Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # margins
 
 **Framework:** SwiftUI  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The margins included in the frame around the rect for interactive content.
 
@@ -161436,24 +161430,24 @@ var margins: EdgeInsets { get }
 
 ### Getting region details
 
-- [id](id-swift.property.md): Beta. The identifier of the region.
-- [ReservedRegion.ID](id-swift.struct.md): Beta. An identifier for a reserved region.
-- [frame](frame.md): Beta. The rect of the region in the view’s coordinate space, including the margins.
-- [isActive](isactive.md): Beta. Whether the region is active.
-- [kind](kind-swift.property.md): Beta. The kind of the region.
-- [ReservedRegion.Kind](kind-swift.struct.md): Beta. A kind of reserved region.
+- [id](id-swift.property.md): The identifier of the region.
+- [ReservedRegion.ID](id-swift.struct.md): An identifier for a reserved region.
+- [frame](frame.md): The rect of the region in the view’s coordinate space, including the margins.
+- [isActive](isactive.md): Whether the region is active.
+- [kind](kind-swift.property.md): The kind of the region.
+- [ReservedRegion.Kind](kind-swift.struct.md): A kind of reserved region.
 
 # Document: ReservedRegion.QueryOptions
 
 Source path: documentation/swiftui/reservedregion/queryoptions
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/queryoptions
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ReservedRegion.QueryOptions
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Options for querying reserved regions.
 
@@ -161467,7 +161461,7 @@ Options for querying reserved regions.
 
 ### Getting query options
 
-- [includeInactive](queryoptions/includeinactive.md): Beta. Include inactive reserved regions.
+- [includeInactive](queryoptions/includeinactive.md): Include inactive reserved regions.
 
 ## Relationships
 
@@ -161488,21 +161482,21 @@ Options for querying reserved regions.
 
 ### Inspecting reserved regions
 
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](../reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
-- [ReservedRegion.Kind](kind-swift.struct.md): Beta. A kind of reserved region.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](../reservedregion.md): A region within a view’s coordinate space that another entity reserves.
+- [ReservedRegion.Kind](kind-swift.struct.md): A kind of reserved region.
 
 # Document: includeInactive
 
 Source path: documentation/swiftui/reservedregion/queryoptions/includeinactive
 Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/queryoptions/includeinactive
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # includeInactive
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Include inactive reserved regions.
 
@@ -190596,7 +190590,7 @@ Use a gesture of this type to track multiple simultaneous spatial events and gai
 
 ```swift
 struct ParticlePlayground: View {
-    @State var model = ParticlesModel()
+    @State private var model = ParticlesModel()
 
     var body: some View {
         Canvas { context, size in
@@ -191134,13 +191128,13 @@ var location3D: Point3D { get }
 
 Source path: documentation/swiftui/splitarrangementviewstyle
 Canonical documentation: https://developer.apple.com/documentation/swiftui/splitarrangementviewstyle
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # SplitArrangementViewStyle
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 An arrangement view style which splits views.
 
@@ -191154,11 +191148,11 @@ nonisolated struct SplitArrangementViewStyle
 
 ### Creating a split arrangement view style
 
-- [init()](splitarrangementviewstyle/init%28%29.md): Beta.
+- [init()](splitarrangementviewstyle/init%28%29.md)
 
 ### Specifying split arrangement axes
 
-- [axes(\_:)](splitarrangementviewstyle/axes%28__%29.md): Beta. Creates a split arrangement that supports the given axes.
+- [axes(\_:)](splitarrangementviewstyle/axes%28__%29.md): Creates a split arrangement that supports the given axes.
 
 ## Relationships
 
@@ -191170,20 +191164,20 @@ nonisolated struct SplitArrangementViewStyle
 
 ### Supporting Types
 
-- [AutomaticArrangementViewStyle](automaticarrangementviewstyle.md): Beta. The default arrangement view style.
-- [OverlayArrangementViewStyle](overlayarrangementviewstyle.md): Beta. An arrangement view style which overlays views.
+- [AutomaticArrangementViewStyle](automaticarrangementviewstyle.md): The default arrangement view style.
+- [OverlayArrangementViewStyle](overlayarrangementviewstyle.md): An arrangement view style which overlays views.
 
 # Document: axes(_:)
 
 Source path: documentation/swiftui/splitarrangementviewstyle/axes(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/splitarrangementviewstyle/axes(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # axes(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Creates a split arrangement that supports the given axes.
 
@@ -191216,13 +191210,13 @@ ArrangementView {
 
 Source path: documentation/swiftui/splitarrangementviewstyle/init()
 Canonical documentation: https://developer.apple.com/documentation/swiftui/splitarrangementviewstyle/init()
-Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Initializer Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # init()
 
 **Framework:** SwiftUI  
 **Kind:** Initializer  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 ## Declaration
 
@@ -192992,31 +192986,3 @@ Use [stack](navigationviewstyle/stack.md) to construct this style.
 - [DefaultNavigationViewStyle](defaultnavigationviewstyle.md): Deprecated. The default navigation view style.
 - [ColumnNavigationViewStyle](columnnavigationviewstyle.md): Deprecated. A navigation view style represented by a series of views in columns.
 - [DoubleColumnNavigationViewStyle](doublecolumnnavigationviewstyle.md): Deprecated. A navigation view style represented by a primary view stack that navigates to a detail view.
-
-# Document: init()
-
-Source path: documentation/swiftui/stacknavigationviewstyle/init()
-Canonical documentation: https://developer.apple.com/documentation/swiftui/stacknavigationviewstyle/init()
-Description: Framework: SwiftUI Kind: Initializer Availability: iOS 13.0+ (deprecated in 27.2) · iPadOS 13.0+ (deprecated in 27.2) · Mac Catalyst 13.0+ (deprecated in 27.2) · tvOS 13.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecat…
-
-# init()
-
-**Framework:** SwiftUI  
-**Kind:** Initializer  
-**Availability:** iOS 13.0+ (deprecated in 27.2) · iPadOS 13.0+ (deprecated in 27.2) · Mac Catalyst 13.0+ (deprecated in 27.2) · tvOS 13.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 7.0+ (deprecated in 27.2)
-
-Creates a navigation view style represented by a view stack that only shows a single top view at a time.
-
-> Replace a styled [NavigationView](../navigationview.md) with a [NavigationStack](../navigationstack.md) or [NavigationSplitView](../navigationsplitview.md). For more information, see [Migrating to new navigation types](../migrating-to-new-navigation-types.md).
-
-## Declaration
-
-```swift
-init()
-```
-
-<a id="discussion"></a>
-
-## Discussion
-
-Use [stack](../navigationviewstyle/stack.md) to construct this style.

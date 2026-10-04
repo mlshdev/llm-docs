@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-4fca00e84bae; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes
 
 # Technotes
@@ -15,6 +15,8 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 
 ### Latest
 
+- [TN3214: Validating the fonts you ship in your app](technotes/tn3214-validating-the-fonts-you-ship-in-your-app.md): Understand the App Store’s font validation, reproduce the check, and fix any issues it reports.
+- [TN3137: On Mac keychain APIs and implementations](technotes/tn3137-on-mac-keychains.md): Learn how the keychain on macOS differs from other Apple platforms.
 - [TN3189: Managing Mail background traffic load](technotes/tn3189-managing-mail-background-traffic-load.md): Identify iOS Mail background traffic and manage its impact on your IMAP server.
 - [TN3213: Moving from Multipeer Connectivity to Network framework](technotes/tn3213-moving-from-multipeer-connectivity-to-network-framework.md): Learn how to migrate your Multipeer Connectivity app to Network framework.
 - [TN3210: Optimizing your app for iPhone Mirroring](technotes/tn3210-optimizing-your-app-for-iphone-mirroring.md): Test your app and improve compatibility with iPhone Mirroring.
@@ -70,7 +72,6 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 - [TN3147: Migrating to the latest notarization tool](technotes/tn3147-migrating-to-the-latest-notarization-tool.md): Migrate your notarization workflows to `notarytool` from the deprecated `altool`.
 - [TN3145: HDR video metadata](technotes/tn3145-hdr-video-metadata.md): Learn about the usage and requirements of “Ambient Viewing Environment” metadata with HLG and / or Dolby Vision™ Profile 8.4 playback.
 - [TN3133: Packaging a Metal renderer](technotes/tn3133-packaging-a-renderer.md): Distribute a Metal renderer in a Swift package.
-- [TN3137: On Mac keychain APIs and implementations](technotes/tn3137-on-mac-keychains.md): Learn how the keychain on macOS differs from other Apple platforms.
 - [TN3136: AVAudioConverter - performing sample rate conversions](technotes/tn3136-avaudioconverter-performing-sample-rate-conversions.md): Use AVAudioConverter to perform sample rate conversions between PCM audio buffers.
 - [TN3135: Low-level networking on watchOS](technotes/tn3135-low-level-networking-on-watchos.md): Learn about the supported use cases for low-level networking on watchOS.
 - [TN3128: Starting SharePlay without an existing FaceTime call](technotes/tn3128-starting-shareplay-without-an-existing-facetime-call.md): Use the share sheet or group activity sharing controller to start SharePlay directly from your app without an existing FaceTime call.

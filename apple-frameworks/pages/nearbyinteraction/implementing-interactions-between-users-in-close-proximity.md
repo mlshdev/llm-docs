@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/implementing-interactions-between-users-in-close-proximity
 
 # Implementing interactions between users in close proximity
@@ -24,11 +24,3 @@ Enable devices to access relative positioning information.
 ### Configure the Sample Code Project
 
 Before you run the sample code project in Xcode, set the run destination to a device with an Ultra Wideband chip or iOS Simulator. You can run the sample app on two devices that have an Ultra Wideband chip, or on multiple iOS Simulators.
-
-## See Also
-
-### Phone interaction
-
-- [Discovering peers with Multipeer Connectivity](discovering-peers-with-multipeer-connectivity.md): Exchange discovery tokens over the local network.
-- [Extending advanced direction finding and ranging](extending-advanced-direction-finding-and-ranging.md): Extend your app’s direction finding capabilities with data from Ultra Wideband devices.
-- [NINearbyPeerConfiguration](ninearbypeerconfiguration.md): A configuration that enables interaction between iPhone or Apple Watch devices.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/openintent
 
 # OpenIntent
@@ -31,7 +31,7 @@ Use this protocol to create an app intent that opens the app and displays a spec
 
 > **Note**
 
-> The [URLRepresentableIntent](urlrepresentableintent.md) protocol provides a default implementation of the `AppIntents/perform()` method. If your app intent supports this protocol, or if the [target](openintent/target.md) parameter contains a type with a URL representation, you don’t need to implement that method. The default `AppIntents/perform()` method opens the item using your app’s URL support.
+> If your app intent type implements the [URLRepresentableIntent](urlrepresentableintent.md) protocol, or if the [target](openintent/target.md) parameter contains a type with a URL representation, provide an implementation of your [perform()](appintent/perform%28%29.md) method that returns a result and does nothing else. When a URL is present, the system opens the item using your app’s URL support instead.
 
 The system automatically brings your app to the foreground to run this app intent. If your app intent adopts the [TargetContentProvidingIntent](targetcontentprovidingintent.md) or [UISceneAppIntent](uisceneappintent.md) protocol, the system also directs the app intent to one of your app’s scenes first so you can configure the scene’s views. If your app intent type doesn’t support these protocols, use your [perform()](appintent/perform%28%29.md) method implementation to update your app’s interface and display the item.
 

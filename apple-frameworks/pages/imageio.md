@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/imageio
 
 # Image I/O (Swift)
@@ -113,7 +113,6 @@ For more information, see [Image I/O Programming Guide](https://developer.apple.
 - [kCGImagePropertyPVREncoder](imageio/kcgimagepropertypvrencoder.md)
 - [kCGImageProviderPreferredTileHeight](imageio/kcgimageproviderpreferredtileheight.md)
 - [kCGImageProviderPreferredTileWidth](imageio/kcgimageproviderpreferredtilewidth.md)
-- [kCGImageSourceAllowableTypes](imageio/kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.
 - [kCGImageSourceGenerateImageSpecificLumaScaling](imageio/kcgimagesourcegenerateimagespecificlumascaling.md)
 - [kCGImageSourcePrioritizeQuality](imageio/kcgimagesourceprioritizequality.md): A Boolean value that indicates whether to prioritize image quality over decode speed.
 
@@ -229,6 +228,5 @@ For more information, see [Image I/O Programming Guide](https://developer.apple.
 - [kCGImagePropertyPVREncoder](imageio/kcgimagepropertypvrencoder.md)
 - [kCGImageProviderPreferredTileHeight](imageio/kcgimageproviderpreferredtileheight.md)
 - [kCGImageProviderPreferredTileWidth](imageio/kcgimageproviderpreferredtilewidth.md)
-- [kCGImageSourceAllowableTypes](imageio/kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.
 - [kCGImageSourceGenerateImageSpecificLumaScaling](imageio/kcgimagesourcegenerateimagespecificlumascaling.md)
 - [kCGImageSourcePrioritizeQuality](imageio/kcgimagesourceprioritizequality.md): A Boolean value that indicates whether to prioritize image quality over decode speed.

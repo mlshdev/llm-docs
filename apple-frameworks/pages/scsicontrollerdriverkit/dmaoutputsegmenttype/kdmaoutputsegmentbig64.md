@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/dmaoutputsegmenttype/kdmaoutputsegmentbig64
 
 # kDMAOutputSegmentBig64
@@ -19,7 +19,7 @@ kDMAOutputSegmentBig64
 
 ## See Also
 
-### Segment Types
+### Segment types
 
 - [kDMAOutputSegmentBig32](kdmaoutputsegmentbig32.md): A constant representing big-endian 32-bit DMA segments.
 - [kDMAOutputSegmentHost32](kdmaoutputsegmenthost32.md): A constant representing 32-bit DMA segments with host-native endianness.

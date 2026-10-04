@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/timerange
 
 # TimeRange
@@ -24,7 +24,7 @@ object TimeRange
 - `timeZone` — `string`: The time zone for the report date range. The default is ORTZ (org timezone). Both ORTZ and UTC are supported for all reports except search term-level, which only supports ORTZ.
   **Default:** `ORTZ`  
   **Allowed values:** `UTC`, `ORTZ`
-- `granularity` — `string`: Time period breakdown for granularMetrics in the response. When specified, the response includes granularMetrics broken down by this period. Possible values: `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`. HOURLY granularity is not supported for ad-level or search term-level reports.
+- `granularity` — `string`: Time period breakdown for granularMetrics in the response. When specified, the response includes granularMetrics broken down by this period. HOURLY granularity is not supported for ad-level or search term-level reports.
   **Allowed values:** `MONTHLY`, `WEEKLY`, `DAILY`, `HOURLY`
 
 <a id="Discussion"></a>

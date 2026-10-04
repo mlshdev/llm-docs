@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/migrating-to-new-navigation-types
 
 # Migrating to new navigation types
@@ -127,9 +127,9 @@ Rewrite this as a navigation stack that takes a path input:
 var body: some View {
     NavigationStack(path: $path) {
         List {
-            NavigationLink("Purple", value: .purple)
-            NavigationLink("Pink", value: .pink)
-            NavigationLink("Orange", value: .orange)
+            NavigationLink("Purple", value: Color.purple)
+            NavigationLink("Pink", value: Color.pink)
+            NavigationLink("Orange", value: Color.orange)
         }
         .navigationDestination(for: Color.self) { color in
             ColorDetail(color: color)

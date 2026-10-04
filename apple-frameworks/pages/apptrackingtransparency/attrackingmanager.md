@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager
 
 # ATTrackingManager (Swift)
@@ -23,14 +23,14 @@ This class presents an authorization request UI that asks a person for permissio
 
 > **Important**
 
-> In the European Union, you can use [requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:)](attrackingmanager/requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md) to add an optional Additional Information button to the prompt, which provides more details to assist people in their decision-making. The authorization Ul is a full-page sheet that supports rich-text formatting.
+> In the European Union, you can use [requestTrackingAuthorization(preferExpandedInterface:additionalInformationAction:completionHandler:)](attrackingmanager/requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md) to add an optional Additional Information button to the prompt, which provides more details to assist people in their decision-making. The authorization Ul is a full-page sheet that supports rich-text formatting.
 
 ## Topics
 
 ### Requesting authorization
 
 - [requestTrackingAuthorization(completionHandler:)](attrackingmanager/requesttrackingauthorization%28completionhandler_%29.md): Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
-- [requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:)](attrackingmanager/requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
+- [requestTrackingAuthorization(preferExpandedInterface:additionalInformationAction:completionHandler:)](attrackingmanager/requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
 
 ### Determining tracking authorization status
 
@@ -80,14 +80,14 @@ This class presents an authorization request UI that asks a person for permissio
 
 > **Important**
 
-> In the European Union, you can use [requestTrackingAuthorizationUsingExpandedInterface:additionalInformationAction:completionHandler:](attrackingmanager/requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md) to add an optional Additional Information button to the prompt, which provides more details to assist people in their decision-making. The authorization Ul is a full-page sheet that supports rich-text formatting.
+> In the European Union, you can use [requestTrackingAuthorizationPreferExpandedInterface:additionalInformationAction:completionHandler:](attrackingmanager/requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md) to add an optional Additional Information button to the prompt, which provides more details to assist people in their decision-making. The authorization Ul is a full-page sheet that supports rich-text formatting.
 
 ## Topics
 
 ### Requesting authorization
 
 - [requestTrackingAuthorizationWithCompletionHandler:](attrackingmanager/requesttrackingauthorization%28completionhandler_%29.md): Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
-- [requestTrackingAuthorizationUsingExpandedInterface:additionalInformationAction:completionHandler:](attrackingmanager/requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
+- [requestTrackingAuthorizationPreferExpandedInterface:additionalInformationAction:completionHandler:](attrackingmanager/requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
 
 ### Determining tracking authorization status
 

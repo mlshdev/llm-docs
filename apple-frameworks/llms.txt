@@ -1,11 +1,11 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114
+# Apple cross-platform frameworks snapshot-9afb9b6c8001
 
-> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/technologies](https://developer.apple.com/documentation/technologies) and pinned to catalog snapshot `df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800` captured at 2026-09-27T18:07:10.128Z.
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/technologies](https://developer.apple.com/documentation/technologies) and pinned to catalog snapshot `9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c` captured at 2026-10-04T18:39:03.048Z.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple cross-platform frameworks snapshot-df12c7e37114.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple cross-platform frameworks snapshot-9afb9b6c8001.
 - [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
 - Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
-- 269 frameworks in this catalog, captured at 2026-09-27T18:07:10.128Z.
+- 269 frameworks in this catalog, captured at 2026-10-04T18:39:03.048Z.
 - Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
 - Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.
 - Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
@@ -27,10 +27,10 @@
 - [Address Book](pages/addressbook.md): 676 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
 - [Advanced Commerce API](pages/advancedcommerceapi.md): 205 pages. Platforms: Advanced Commerce API.
 - [App Data Transfer](pages/appdatatransfer.md): 17 pages. Platforms: App Data Transfer.
-- [App Intents](pages/appintents.md): 4447 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [App Intents](pages/appintents.md): 4449 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
 - [App License Delivery SDK](pages/applicensedeliverysdk.md): 51 pages.
 - [App Store Receipts](pages/appstorereceipts.md): 25 pages. Platforms: App Store Receipts.
-- [App Store Server API](pages/appstoreserverapi.md): 258 pages. Platforms: App Store Server API.
+- [App Store Server API](pages/appstoreserverapi.md): 275 pages. Platforms: App Store Server API.
 - [App Store Server Notifications](pages/appstoreservernotifications.md): 134 pages. Platforms: App Store Server Notifications.
 - [App Tracking Transparency](pages/apptrackingtransparency.md): 13 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [Apple Ads](pages/apple_ads.md): 253 pages. Platforms: Apple Ads.
@@ -50,13 +50,13 @@
 - [Audio Toolbox](pages/audiotoolbox.md): 3731 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [Audio Unit](pages/audiounit.md): 2 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [AudioDriverKit](pages/audiodriverkit.md): 535 pages. Platforms: DriverKit.
-- [Authentication Services](pages/authenticationservices.md): 1453 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Authentication Services](pages/authenticationservices.md): 1454 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
 - [Automatic Assessment Configuration](pages/automaticassessmentconfiguration.md): 156 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
 - [Automatic Sign-In API](pages/automaticsigninapi.md): 5 pages. Platforms: Automatic Sign-In API.
-- [Background Assets](pages/backgroundassets.md): 245 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Background Assets](pages/backgroundassets.md): 253 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [Background Tasks](pages/backgroundtasks.md): 64 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS.
 - [BlockStorageDeviceDriverKit](pages/blockstoragedevicedriverkit.md): 41 pages. Platforms: DriverKit.
-- [Bundle Resources](pages/bundleresources.md): 912 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Bundle Resources](pages/bundleresources.md): 918 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
 - [CFNetwork](pages/cfnetwork.md): 419 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
 - [CallKit](pages/callkit.md): 284 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
 - [Cinematic](pages/cinematic.md): 400 pages. Platforms: iOS, iPadOS, macOS, tvOS.
@@ -108,7 +108,7 @@
 - [DeviceDiscoveryUI](pages/devicediscoveryui.md): 25 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS.
 - [Dispatch](pages/dispatch.md): 612 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
 - [DriverKit](pages/driverkit.md): 2962 pages. Platforms: DriverKit, iOS, iPadOS, Mac Catalyst, macOS.
-- [Evaluations](pages/evaluations.md): 344 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS, Xcode.
+- [Evaluations](pages/evaluations.md): 345 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS, Xcode.
 - [EventKit](pages/eventkit.md): 425 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
 - [EventKit UI](pages/eventkitui.md): 55 pages. Platforms: iOS, iPadOS, Mac Catalyst, visionOS.
 - [ExtensionFoundation](pages/extensionfoundation.md): 97 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
@@ -206,7 +206,7 @@
 - [Retention Messaging API](pages/retentionmessaging.md): 108 pages. Platforms: Retention Messaging API.
 - [Roster API](pages/rosterapi.md): 21 pages. Platforms: Roster API.
 - [SCSIControllerDriverKit](pages/scsicontrollerdriverkit.md): 96 pages. Platforms: DriverKit.
-- [SCSIPeripheralsDriverKit](pages/scsiperipheralsdriverkit.md): 76 pages. Platforms: DriverKit.
+- [SCSIPeripheralsDriverKit](pages/scsiperipheralsdriverkit.md): 74 pages. Platforms: DriverKit.
 - [SKAdNetwork for Web Ads](pages/skadnetworkforwebads.md): 7 pages. Platforms: SKAdNetwork for Web Ads.
 - [SMS and Call Reporting](pages/identitylookup.md): 129 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
 - [Safari Services](pages/safariservices.md): 280 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
@@ -246,12 +246,12 @@
 - [TVUIKit](pages/tvuikit.md): 168 pages. Platforms: tvOS.
 - [TabletopKit](pages/tabletopkit.md): 654 pages. Platforms: visionOS.
 - [TabularData](pages/tabulardata.md): 844 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
-- [Technology Overviews](pages/technologyoverviews.md): 46 pages.
+- [Technology Overviews](pages/technologyoverviews.md): 48 pages.
 - [ThreadNetwork](pages/threadnetwork.md): 29 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
 - [TipKit](pages/tipkit.md): 190 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
 - [Touch Controller](pages/touchcontroller.md): 279 pages. Platforms: iOS, iPadOS, Mac Catalyst, visionOS.
 - [Translation](pages/translation.md): 70 pages. Platforms: iOS, iPadOS, macOS.
-- [UIKit](pages/uikit.md): 12790 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS, watchOS.
+- [UIKit](pages/uikit.md): 12789 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS, watchOS.
 - [USBDriverKit](pages/usbdriverkit.md): 946 pages. Platforms: DriverKit.
 - [USBSerialDriverKit](pages/usbserialdriverkit.md): 15 pages. Platforms: DriverKit.
 - [USD](pages/usd.md): 85 pages.

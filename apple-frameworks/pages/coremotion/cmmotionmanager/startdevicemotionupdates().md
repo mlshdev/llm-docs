@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremotion/cmmotionmanager/startdevicemotionupdates()
 
 # startDeviceMotionUpdates() (Swift)
@@ -23,8 +23,9 @@ You can get the latest device-motion data through the [deviceMotion](devicemotio
 
 ## See Also
 
-### Managing Device Motion Updates
+### Managing device motion updates
 
+- [deviceMotionBody](devicemotionbody.md): A physical body or view that defines the coordinate system for device-motion data.
 - [showsDeviceMovementDisplay](showsdevicemovementdisplay.md): Controls whether the device-movement display is shown.
 - [deviceMotionUpdateInterval](devicemotionupdateinterval.md): The interval, in seconds, for providing device-motion updates to the block handler.
 - [startDeviceMotionUpdates(using:to:withHandler:)](startdevicemotionupdates%28using_to_withhandler_%29.md): Starts device-motion updates on an operation queue and using a specified reference frame and block handler.
@@ -56,8 +57,9 @@ You can get the latest device-motion data through the [deviceMotion](devicemotio
 
 ## See Also
 
-### Managing Device Motion Updates
+### Managing device motion updates
 
+- [deviceMotionBody](devicemotionbody.md): A physical body or view that defines the coordinate system for device-motion data.
 - [showsDeviceMovementDisplay](showsdevicemovementdisplay.md): Controls whether the device-movement display is shown.
 - [deviceMotionUpdateInterval](devicemotionupdateinterval.md): The interval, in seconds, for providing device-motion updates to the block handler.
 - [startDeviceMotionUpdatesUsingReferenceFrame:toQueue:withHandler:](startdevicemotionupdates%28using_to_withhandler_%29.md): Starts device-motion updates on an operation queue and using a specified reference frame and block handler.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/implementing-spatial-interactions-with-third-party-accessories
 
 # Implementing spatial interactions with third-party accessories
@@ -24,10 +24,3 @@ Establish a connection with a nearby accessory to receive periodic measurements 
 ### Configure the Sample Code Project
 
 Set the run destination to an iPhone that contains an Ultra Wideband chip. The sample app interacts with an accessory you partner with or develop using the [Nearby Interaction Accessory Protocol Specification](https://developer.apple.com/nearby-interaction).
-
-## See Also
-
-### Third-party accessories
-
-- [NINearbyAccessoryConfiguration](ninearbyaccessoryconfiguration.md): A configuration that enables interaction between iPhone and third-party accessories.
-- [NIMotionActivityState](nimotionactivitystate.md): Motion states for a nearby accessory.

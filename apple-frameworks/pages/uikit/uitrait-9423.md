@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitrait-9423
 
 # UITrait
@@ -28,3 +28,4 @@ The type of a trait serves as a key to uniquely identify a trait in a trait coll
 - [Providing data to the view hierarchy with custom traits](providing-data-to-the-view-hierarchy-with-custom-traits.md): Share data that needs to flow hierarchically across multiple levels of your view hierarchy.
 - [UIMutableTraits](uimutabletraits-13ja5.md): A mutable container of traits.
 - [UITraitDefinition](uitraitdefinition-64c15.md): A type representing a trait in a trait collection.
+- [UITraitBridgedEnvironmentKey](uitraitbridgedenvironmentkey.md)

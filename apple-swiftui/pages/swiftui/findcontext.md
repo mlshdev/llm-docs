@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/findcontext
 
 # FindContext
@@ -25,8 +25,8 @@ For example, the following shows a minimal find navigator implementation driven 
 
 ```swift
 struct FindNavigatorDrivenTextInput: View {
-    @State var text: String = ""
-    @State var showFindNavigator = false
+    @State private var text: String = ""
+    @State private var showFindNavigator = false
     @Environment(\.findContext) var findContext
     var body: some View {
         MyTextInputView(text: $text)

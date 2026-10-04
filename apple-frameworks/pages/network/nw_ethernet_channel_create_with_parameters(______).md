@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/network/nw_ethernet_channel_create_with_parameters(_:_:_:)
 
 # nw_ethernet_channel_create_with_parameters(\_:\_:\_:) (Swift)

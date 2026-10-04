@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/campaigntargetingupdate/supplyplacement-data.dictionary
 
 # CampaignTargetingUpdate.SupplyPlacement
@@ -38,3 +38,7 @@ The `supplyPlacement` field is **include-only**; setting `exclude` has no effect
 | `MAPS_SEARCH_HOME` | `MAPS` | Apple Maps Search home |
 
 Uses the [TargetingDataUpdate](../targetingdataupdate.md) `include`/`exclude` shape.
+
+> **Note**
+
+> Omitting `supplyPlacement` here leaves the campaign’s current placement(s) unchanged; it doesn’t switch targeting to every placement. Unlike at create time, there’s no way to widen an existing single-placement `MAPS` campaign to target both `MAPS_SEARCH_RESULTS` and `MAPS_SEARCH_HOME` via update. See [CampaignTargetingCreate.SupplyPlacement](../campaigntargetingcreate/supplyplacement-data.dictionary.md) for the create-time behavior.

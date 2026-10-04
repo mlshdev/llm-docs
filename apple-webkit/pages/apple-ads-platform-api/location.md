@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/location
 
 # Location
@@ -21,7 +21,7 @@ object Location
 
 - `id` — `string` (required): ID of the location. Read-only.
 - `brandId` — `string`: Associated brand identifier. Read-only.
-- `status` — `string`: Possible values: `OPEN`, `CLOSED`, `MOVED`, `TEMPORARILY_CLOSED`, `OPENING_SOON`. Read-only.
+- `status` — `string`: The location’s operational state. Read-only.
   **Allowed values:** `OPEN`, `OPENING_SOON`, `CLOSED`, `MOVED`, `TEMPORARILY_CLOSED`
 - `name` — `string`: The location’s display name. Read-only.
 - `categories` — `[string]`: Category identifiers (first is primary). Read-only.

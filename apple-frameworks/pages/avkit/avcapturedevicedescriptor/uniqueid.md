@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor/uniqueid
 
 # uniqueID (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 An identifier that uniquely identifies the device’s camera.
 
@@ -25,13 +25,13 @@ This value matches the [uniqueID](../../avfoundation/avcapturedevice/uniqueid.md
 
 ### Identifying the device
 
-- [localizedName](localizedname.md): Beta. A name for the camera that’s suitable for display in your interface.
+- [localizedName](localizedname.md): A name for the camera that’s suitable for display in your interface.
 
 # uniqueID (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 An identifier that uniquely identifies the device’s camera.
 
@@ -51,4 +51,4 @@ This value matches the [uniqueID](../../avfoundation/avcapturedevice/uniqueid.md
 
 ### Identifying the device
 
-- [localizedName](localizedname.md): Beta. A name for the camera that’s suitable for display in your interface.
+- [localizedName](localizedname.md): A name for the camera that’s suitable for display in your interface.

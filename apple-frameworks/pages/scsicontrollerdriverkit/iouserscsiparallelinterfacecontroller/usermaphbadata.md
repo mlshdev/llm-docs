@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/usermaphbadata
 
 # UserMapHBAData
@@ -31,9 +31,9 @@ A value that indicates the result of memory-mapping the data. [kIOReturnSuccess]
 
 ## Discussion
 
-The driver extension class should override this function and memory-map and prepare any host bus adapter (HBA)-specific task data for direct memory access (DMA). The framework calls this method for every `SCSIParallelTask` immediately after creating the task in the kernel. The driver extension class should also set a unique task ID. The framework uses this ID to uniquely identify the corresponding `SCSIParallelTask` in the kernel.
+The framework calls this method for every `SCSIParallelTask` immediately after creating the task in the kernel. The driver extension class should override this function to memory-map and prepare any host bus adapter (HBA)-specific task data for direct memory access (DMA), and set a unique task ID. The framework uses this ID to uniquely identify the corresponding `SCSIParallelTask` in the kernel.
 
-The following listing shows an example of implementing [UserMapHBAData](usermaphbadata.md). It starts by creating an [IOBufferMemoryDescriptor](../../driverkit/iobuffermemorydescriptor.md) for the controller’s specific data structure. It also maps memory to the dext’s memory space. Then the example adds the task to its own task data list, and sets the `uniqueTaskID` in-out variable to a newly-incremented unique ID. This allows the kernel to associate this task with its corresponding [SCSIParallelTaskIdentifier](https://developer.apple.com/documentation/kernel/scsiparalleltaskidentifier).
+The following listing shows an example of implementing [UserMapHBAData](usermaphbadata.md). It starts by creating an [IOBufferMemoryDescriptor](../../driverkit/iobuffermemorydescriptor.md) for the controller’s specific data structure. It also maps memory to the dext’s memory space. Then the example adds the task to its own task data list, and sets the `uniqueTaskID` in-out variable to a newly incremented unique ID. This allows the kernel to associate this task with its corresponding [SCSIParallelTaskIdentifier](https://developer.apple.com/documentation/kernel/scsiparalleltaskidentifier).
 
 ```objc
 kern_return_t
@@ -58,9 +58,15 @@ IMPL ( ExampleSCSIDext, UserMapHBAData )
 
 It’s important to perform preprocessing like memory mapping early — before serving I/O — because doing so on the I/O path can affect performance. For example, calling an API like [CreateMapping](../../driverkit/iomemorydescriptor/createmapping.md) in the I/O path can cause additional RPC overhead.
 
+The framework uses `taskID` to uniquely identify the corresponding `SCSIParallelTask` in the kernel. The `taskID`  also appears in the [SCSIUserParallelTask](../scsiuserparalleltask.md) and the [fControllerTaskIdentifier](../scsiuserparallelresponse/fcontrollertaskidentifier.md) member of the [SCSIUserParallelResponse](../scsiuserparallelresponse.md) structure while interfacing with the dext class.
+
+> **Note**
+
+> The framework reserves the `taskID` value `0` for its own use; don’t use it in your dext.
+
 ## See Also
 
-### Managing Host Bus Adapters
+### Managing host bus adapters
 
 - [UserReportInitiatorIdentifier](userreportinitiatoridentifier.md): Gets the SCSI device identifier for the host bus adapter (HBA) in response to a call from the framework.
 - [UserReportHighestSupportedDeviceID](userreporthighestsupporteddeviceid.md): Gets the highest supported SCSI device identifier in response to a call from the framework.

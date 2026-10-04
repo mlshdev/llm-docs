@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/appschema/systemintent/searchinapp
 
 # searchInApp
@@ -42,3 +42,10 @@ The schema supports the following system experiences:
 - Shortcuts
 
 For more information about the App Intents framework and the experiences it supports, see [Getting started with the App Intents framework](../../getting-started-with-the-app-intents-framework.md).
+
+## See Also
+
+### Actions
+
+- [open](open.md): An intent schema that opens an item in the application.
+- [AppSchema.SystemIntent](../systemintent.md): Identifies intent schemas in the system domain.

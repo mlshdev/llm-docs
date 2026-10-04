@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-4fca00e84bae; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3158-resolving-xcode-15-device-connection-issues
 
 # TN3158: Resolving Xcode 15 device connection issues

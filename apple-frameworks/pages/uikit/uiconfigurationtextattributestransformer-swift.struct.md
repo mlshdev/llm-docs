@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiconfigurationtextattributestransformer-swift.struct
 
 # UIConfigurationTextAttributesTransformer
@@ -43,19 +43,3 @@ let transformer = UIConfigurationTextAttributesTransformer { incoming in
 ### Calling a text transformer
 
 - [callAsFunction(\_:)](uiconfigurationtextattributestransformer-swift.struct/callasfunction%28__%29.md): Calls the transform closure of the text attributes transformer.
-
-## See Also
-
-### Configuring titles
-
-- [title](uibutton/configuration-swift.struct/title.md): The text of the title label the button displays.
-- [subtitle](uibutton/configuration-swift.struct/subtitle.md): The text the subtitle label of the button displays.
-- [attributedTitle](uibutton/configuration-swift.struct/attributedtitle.md): The text and style attributes for the button’s title label.
-- [attributedSubtitle](uibutton/configuration-swift.struct/attributedsubtitle.md): The text and style attributes for the button’s subtitle label.
-- [titleTextAttributesTransformer](uibutton/configuration-swift.struct/titletextattributestransformer.md): A structure to update the attributed title when the button state changes.
-- [subtitleTextAttributesTransformer](uibutton/configuration-swift.struct/subtitletextattributestransformer.md): A structure to update the attributed subtitle when the button state changes.
-- [titlePadding](uibutton/configuration-swift.struct/titlepadding.md): The distance between the title and subtitle labels.
-- [titleAlignment](uibutton/configuration-swift.struct/titlealignment-swift.property.md): The text alignment the button uses to lay out the title and subtitle.
-- [UIButton.Configuration.TitleAlignment](uibutton/configuration-swift.struct/titlealignment-swift.enum.md): Specifies how to align a button’s title and subtitle.
-- [titleLineBreakMode](uibutton/configuration-swift.struct/titlelinebreakmode.md): The line break mode the button uses to lay out the button’s title.
-- [subtitleLineBreakMode](uibutton/configuration-swift.struct/subtitlelinebreakmode.md): The line break mode the button uses to lay out the button’s subtitle.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/social/slcomposeviewcontroller
 
 # SLComposeViewController (Swift)
@@ -67,8 +67,6 @@ You can set a handler—using the [completionHandler](slcomposeviewcontroller/co
 - [NSExtensionRequestHandling](../foundation/nsextensionrequesthandling.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UIAppearanceContainer](../uikit/uiappearancecontainer.md)
 - [UIContentContainer](../uikit/uicontentcontainer.md)

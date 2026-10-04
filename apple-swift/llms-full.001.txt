@@ -3,7 +3,7 @@
 Source: https://developer.apple.com/documentation/swift
 Catalog snapshot: 3cd4d1098779f6b6fc16e524bcbb296cd3ca44b5de1a8f9d83171d61b7b63adb
 Content digest: cb3ffbf838cd5f0be6ae77f16fdae59481730abbd878246936617c12df1785d3
-Captured at: 2026-09-27T18:07:09.584Z
+Captured at: 2026-10-04T18:39:02.454Z
 Volume 1
 
 # Document: Distributed

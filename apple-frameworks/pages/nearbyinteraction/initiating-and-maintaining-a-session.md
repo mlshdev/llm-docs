@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/initiating-and-maintaining-a-session
 
 # Initiating and maintaining a session (Swift)
@@ -166,12 +166,6 @@ In iOS 16, Camera Assistance ([isCameraAssistanceEnabled](ninearbypeerconfigurat
 
 To use Camera Assistance in an interaction session, ensure the device supports the feature first by checking the value of [supportsCameraAssistance](nidevicecapability/supportscameraassistance.md).
 
-## See Also
-
-### Setup
-
-- [NISession](nisession.md): An object that identifies a unique connection between two peer devices.
-
 # Initiating and maintaining a session (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -336,9 +330,3 @@ In iOS 16, Camera Assistance ([cameraAssistanceEnabled](ninearbypeerconfiguratio
 >  Camera Assistance provides a [direction](ninearbyobject/direction-4qh5w.md) outside of the narrow line of sight only after first encountering the peer device once within the narrow line of sight.
 
 To use Camera Assistance in an interaction session, ensure the device supports the feature first by checking the value of [supportsCameraAssistance](nidevicecapability/supportscameraassistance.md).
-
-## See Also
-
-### Setup
-
-- [NISession](nisession.md): An object that identifies a unique connection between two peer devices.

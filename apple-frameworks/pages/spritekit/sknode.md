@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/spritekit/sknode
 
 # SKNode (Swift)
@@ -253,8 +253,6 @@ Set the values that make a node unique to a shader.
 - [NSStandardKeyBindingResponding](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
 - [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UICoordinateSpace](../uikit/uicoordinatespace.md)
 - [UIFocusEnvironment](../uikit/uifocusenvironment.md)

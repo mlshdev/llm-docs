@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/bundleresources/information-property-list/uiapplicationscenemanifest/cpsupportsdashboardnavigationscene
 
 # CPSupportsDashboardNavigationScene
@@ -28,3 +28,4 @@ For more information, see [Displaying Content in CarPlay](https://developer.appl
 ### CarPlay
 
 - [CPSupportsInstrumentClusterNavigationScene](cpsupportsinstrumentclusternavigationscene.md): A Boolean value that indicates whether your app supports displaying navigation content in the CarPlay Instrument Cluster.
+- [CPInstrumentClusterNavigationSceneOptions](cpinstrumentclusternavigationsceneoptions.md): A dictionary of options that indicates your app’s level of support for the CarPlay instrument cluster.

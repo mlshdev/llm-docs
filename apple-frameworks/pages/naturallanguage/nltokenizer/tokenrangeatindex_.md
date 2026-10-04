@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/naturallanguage/nltokenizer/tokenrangeatindex:
 
 # tokenRangeAtIndex:
@@ -16,6 +16,10 @@ Finds the range of the token at the given index.
 ```objectivec
 - (NSRange) tokenRangeAtIndex:(NSUInteger) characterIndex;
 ```
+
+## Parameters
+
+- `characterIndex`: The location in the string that is of interest.
 
 <a id="return-value"></a>
 

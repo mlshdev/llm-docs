@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/widgetkit/adding-refinements-and-configuration-to-controls
 
 # Adding refinements and configuration to controls (Swift)
@@ -44,6 +44,32 @@ struct TimerToggle: ControlWidget {
 }
 ```
 
+<a id="Set-your-controls-tint-color"></a>
+
+### Set your control’s tint color
+
+Choose a tint color that matches your app’s brand. Apply the [tint(\_:)](https://developer.apple.com/documentation/swiftui/controlwidgettemplate/tint%28_:%29) modifier to the control’s template to set a custom tint color.
+
+By default, a control’s tint color is set to the Global Accent Color you specify for your widget extension’s target. If you don’t specify one there, the tint color falls back to the Global Accent Color you specify for your app’s target. If you specify neither, the control uses the system’s default tint color. For each target, Xcode adds the Global Accent Color to its Info.plist as the [NSAccentColorName](../bundleresources/information-property-list/nsaccentcolorname.md) key. Set this value using the target’s **Global Accent Color Name** build setting instead of editing the Info.plist directly.
+
+For guidance on choosing a tint color, see [Human Interface Guidelines \> Controls](https://developer.apple.com/design/human-interface-guidelines/controls) and [Human Interface Guidelines \> Branding](https://developer.apple.com/design/human-interface-guidelines/branding).
+
+```swift
+struct GarageDoorOpener: ControlWidget {
+	var body: some ControlWidgetConfiguration {
+		StaticControlConfiguration(...) {
+			ControlWidgetToggle(...) {
+				Label(
+					isOpen ? "Open" : "Closed",
+					systemImage: isOpen ? "door.open" : "door.closed"
+				)
+			}
+			.tint(.orange)
+		}
+	}
+}
+```
+
 <a id="Enforce-security-and-privacy-for-controls"></a>
 
 ### Enforce security and privacy for controls
@@ -65,7 +91,7 @@ Use the [privacySensitive(\_:)](https://developer.apple.com/documentation/swiftu
 The following code adds the `privacySensitive()` modifier to a control toggle. The modifier redacts the state and information in the control that displays whether a door is open or closed:
 
 ```swift
-struct DoorOpener: ControlWidget {
+struct GarageDoorOpener: ControlWidget {
 	var body: some ControlWidgetConfiguration {
 		StaticControlConfiguration(...) {
 			ControlWidgetToggle(...) {
@@ -344,6 +370,32 @@ struct TimerToggle: ControlWidget {
 }
 ```
 
+<a id="Set-your-controls-tint-color"></a>
+
+### Set your control’s tint color
+
+Choose a tint color that matches your app’s brand. Apply the [tint(\_:)](https://developer.apple.com/documentation/swiftui/controlwidgettemplate/tint%28_:%29) modifier to the control’s template to set a custom tint color.
+
+By default, a control’s tint color is set to the Global Accent Color you specify for your widget extension’s target. If you don’t specify one there, the tint color falls back to the Global Accent Color you specify for your app’s target. If you specify neither, the control uses the system’s default tint color. For each target, Xcode adds the Global Accent Color to its Info.plist as the [NSAccentColorName](../bundleresources/information-property-list/nsaccentcolorname.md) key. Set this value using the target’s **Global Accent Color Name** build setting instead of editing the Info.plist directly.
+
+For guidance on choosing a tint color, see [Human Interface Guidelines \> Controls](https://developer.apple.com/design/human-interface-guidelines/controls) and [Human Interface Guidelines \> Branding](https://developer.apple.com/design/human-interface-guidelines/branding).
+
+```swift
+struct GarageDoorOpener: ControlWidget {
+	var body: some ControlWidgetConfiguration {
+		StaticControlConfiguration(...) {
+			ControlWidgetToggle(...) {
+				Label(
+					isOpen ? "Open" : "Closed",
+					systemImage: isOpen ? "door.open" : "door.closed"
+				)
+			}
+			.tint(.orange)
+		}
+	}
+}
+```
+
 <a id="Enforce-security-and-privacy-for-controls"></a>
 
 ### Enforce security and privacy for controls
@@ -365,7 +417,7 @@ Use the [privacySensitive(\_:)](https://developer.apple.com/documentation/swiftu
 The following code adds the `privacySensitive()` modifier to a control toggle. The modifier redacts the state and information in the control that displays whether a door is open or closed:
 
 ```swift
-struct DoorOpener: ControlWidget {
+struct GarageDoorOpener: ControlWidget {
 	var body: some ControlWidgetConfiguration {
 		StaticControlConfiguration(...) {
 			ControlWidgetToggle(...) {

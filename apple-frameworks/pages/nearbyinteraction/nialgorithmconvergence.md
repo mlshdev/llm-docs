@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nialgorithmconvergence
 
 # NIAlgorithmConvergence (Swift)
@@ -51,14 +51,6 @@ To listen for the convergence status, implement [session(\_:didUpdateAlgorithmCo
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
 - [NSSecureCoding](../foundation/nssecurecoding.md)
 
-## See Also
-
-### Camera assistance
-
-- [Finding devices with precision](finding-devices-with-precision.md): Leverage the spatial awareness of ARKit and Apple Ultra Wideband Chips in your app to guide users to a nearby device.
-- [NIAlgorithmConvergenceStatus](nialgorithmconvergencestatus-2fnve.md): The possible states of Camera Assistance.
-- [Algorithm Convergence Status](algorithm-convergence-status.md): The possible Objective-C states of Camera Assistance.
-
 # NIAlgorithmConvergence (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -101,11 +93,3 @@ To listen for the convergence status, implement [session:didUpdateAlgorithmConve
 
 - [NSCopying](../foundation/nscopying.md)
 - [NSSecureCoding](../foundation/nssecurecoding.md)
-
-## See Also
-
-### Camera assistance
-
-- [Finding devices with precision](finding-devices-with-precision.md): Leverage the spatial awareness of ARKit and Apple Ultra Wideband Chips in your app to guide users to a nearby device.
-- [NIAlgorithmConvergenceStatus](nialgorithmconvergencestatus-2fbmj.md): Expose algorithm state to make it possible for apps to coach users.
-- [Algorithm Convergence Status](algorithm-convergence-status.md): The possible Objective-C states of Camera Assistance.

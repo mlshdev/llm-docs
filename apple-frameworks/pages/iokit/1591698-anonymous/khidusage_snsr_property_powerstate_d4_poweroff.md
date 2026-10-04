@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/iokit/1591698-anonymous/khidusage_snsr_property_powerstate_d4_poweroff
 
 # kHIDUsage_Snsr_Property_PowerState_D4_PowerOff

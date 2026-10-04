@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/updates/xcode
 
 # Xcode updates
@@ -14,6 +14,12 @@ Learn about important changes to Xcode.
 
 Browse notable changes in [Xcode](https://developer.apple.com/documentation/xcode).
 
+<a id="September-2026"></a>
+
+## September 2026
+
+- Start using the new JSON project configuration file format that’s version-control-friendly, human-readable, and editable by coding intelligence agents. For more information, see [Updating your Xcode project configuration file format](https://developer.apple.com/documentation/xcode/updating-your-xcode-project-configuration-file-format).
+
 <a id="June-2026"></a>
 
 ## June 2026
@@ -24,7 +30,7 @@ The latest version of Xcode includes the following new features.
 
 ### Projects and workspaces
 
-- Create common projects more quickly, such as a SwiftUI app and a Swift playground, customize the toolbar, and apply themes to your workspace or specific projects using the new Appearance settings. Edit Markdown files with the new visual editor. For more information, see [What’s new in Xcode](https://developer.apple.com/videos/play/wwdc2026/258/).
+- Create common projects more quickly, such as a SwiftUI app and a Swift playground, customize the toolbar, and apply themes to your workspace or specific projects using the new Appearance settings. Edit Markdown files with the new visual editor. For more information, see [Customizing your workspace using themes](https://developer.apple.com/documentation/xcode/customizing-your-workspace-using-themes) and [What’s new in Xcode](https://developer.apple.com/videos/play/wwdc2026/258/).
 
 <a id="Coding-intelligence"></a>
 

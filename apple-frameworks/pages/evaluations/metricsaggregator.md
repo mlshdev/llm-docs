@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/evaluations/metricsaggregator
 
 # MetricsAggregator
@@ -18,6 +18,7 @@ struct MetricsAggregator
 ## Mentioned In
 
 - [Designing effective evaluations](designing-effective-evaluations.md)
+- [Evaluating language model responses](evaluating-language-model-responses.md)
 - [Scoring with model-judge evaluators](scoring-with-model-as-judge-evaluators.md)
 
 <a id="overview"></a>

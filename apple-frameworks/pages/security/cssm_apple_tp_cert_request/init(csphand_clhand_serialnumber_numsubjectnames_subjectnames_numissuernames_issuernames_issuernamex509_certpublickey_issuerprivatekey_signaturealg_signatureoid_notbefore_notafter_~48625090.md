@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/security/cssm_apple_tp_cert_request/init(csphand:clhand:serialnumber:numsubjectnames:subjectnames:numissuernames:issuernames:issuernamex509:certpublickey:issuerprivatekey:signaturealg:signatureoid:notbefore:notafter:numextensions:extensions:challengestring:)
 
 # init(cspHand:clHand:serialNumber:numSubjectNames:subjectNames:numIssuerNames:issuerNames:issuerNameX509:certPublicKey:issuerPrivateKey:signatureAlg:signatureOid:notBefore:notAfter:numExtensions:extensions:challengeString:)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues
 
 # EnvironmentValues
@@ -115,8 +115,8 @@ Clients of your value then access the value in the usual way, reading it with th
 
 ### Arrangement views
 
-- [overlayArrangementZIndex](environmentvalues/overlayarrangementzindex.md): Beta. The z-index for a view within an overlay arrangement view.
-- [splitArrangementAxis](environmentvalues/splitarrangementaxis.md): Beta. The axis of the split for a view within a split arrangement view.
+- [overlayArrangementZIndex](environmentvalues/overlayarrangementzindex.md): The z-index for a view within an overlay arrangement view.
+- [splitArrangementAxis](environmentvalues/splitarrangementaxis.md): The axis of the split for a view within a split arrangement view.
 
 ### Authentication
 
@@ -151,7 +151,7 @@ Clients of your value then access the value in the usual way, reading it with th
 - [materialActiveAppearance](environmentvalues/materialactiveappearance.md): The behavior materials should use for their active state, defaulting to `automatic`.
 - [TabBarPlacement](tabbarplacement.md): A placement for tabs in a tab view.
 - [toolbarLabelStyle](environmentvalues/toolbarlabelstyle.md): The label style to apply to controls within a toolbar.
-- [toolbarVerticalEdge](environmentvalues/toolbarverticaledge.md): Beta. This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
+- [toolbarVerticalEdge](environmentvalues/toolbarverticaledge.md): This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
 
 ### Global objects
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/view/onvolumeviewpointchange(updatestrategy:initial:_:)
 
 # onVolumeViewpointChange(updateStrategy:initial:\_:)
@@ -30,7 +30,7 @@ Use the provided [Viewpoint3D](../viewpoint3d.md) to update the content of the v
 
 ```swift
 struct RobotContentView: View {
-    @State var robotRotation: Rotation3D = .identity
+    @State private var robotRotation: Rotation3D = .identity
 
     var body: some View {
         Model3D(named: "robot")
@@ -54,8 +54,9 @@ To determine if the volume is being viewed from an unsupported viewpoint, provid
 
 ```swift
 struct ContentView: View {
-    @State var showingMoveToFrontSign = false
-    @State var moveToFrontSignViewpoint: Viewpoint3D = .standard
+    @State private var showingMoveToFrontSign = false
+    @State private var moveToFrontSignViewpoint: Viewpoint3D =
+        .standard
 
     let supportedViewpoints = [SquareAzimuth.front]
 

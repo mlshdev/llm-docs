@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiview
 
 # UIView (Swift)
@@ -362,16 +362,16 @@ Lay out views manually if your app doesn’t use Auto Layout.
 ### Accessing insets and layout guides
 
 - [UIView.LayoutRegion](uiview/layoutregion.md)
-- [bar(onEdge:extent:)](uiview/layoutregion/bar%28onedge_extent_%29-2tj1g.md): Beta.
-- [bar(onEdge:extent:)](uiview/layoutregion/bar%28onedge_extent_%29-8rmhq.md): Beta.
+- [bar(onEdge:extent:)](uiview/layoutregion/bar%28onedge_extent_%29-2tj1g.md)
+- [bar(onEdge:extent:)](uiview/layoutregion/bar%28onedge_extent_%29-8rmhq.md)
 - [directionalEdgeInsets(for:)](uiview/directionaledgeinsets%28for_%29.md)
 - [edgeInsets(for:)](uiview/edgeinsets%28for_%29.md)
 - [layoutGuide(for:)](uiview/layoutguide%28for_%29.md)
 
 ### Inspecting reserved regions
 
-- [UIView.ReservedRegion](uiview/reservedregion.md): Beta. A region within a view’s coordinate space that another entity occupies.
-- [reservedRegions(kind:options:)](uiview/reservedregions%28kind_options_%29.md): Beta. Returns the reserved regions of a given kind and options.
+- [UIView.ReservedRegion](uiview/reservedregion.md): A region within a view’s coordinate space that another entity occupies.
+- [reservedRegions(kind:options:)](uiview/reservedregions%28kind_options_%29.md): Returns the reserved regions of a given kind and options.
 
 ### Adjusting the user interface
 
@@ -504,8 +504,8 @@ Lay out views manually if your app doesn’t use Auto Layout.
 
 ### Sensor coordinate orientation
 
-- [CLBodyIdentifiable](../corelocation/clbodyidentifiable.md)
-- [CMBodyIdentifiable](../coremotion/cmbodyidentifiable.md)
+- [CLBodyIdentifiable](../corelocation/clbodyidentifiable.md): A type that identifies a physical body or view for heading calculations.
+- [CMBodyIdentifiable](../coremotion/cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.
 
 ### Constants
 
@@ -532,7 +532,7 @@ Lay out views manually if your app doesn’t use Auto Layout.
 
 ### Instance Properties
 
-- [appEntityUIElementProvider](uiview/appentityuielementprovider.md): return AppEntityUIElement( identifier: EntityIdentifier( for: PhotoModel.self, identifier: photo.id ), bounds: photo.frame, state: State(isSelected: photo.isSelected) ) } } } }
+- [appEntityUIElementProvider](uiview/appentityuielementprovider.md): A closure that provides app entity identifiers to make custom view content discoverable by Apple Intelligence and Siri when it appears onscreen.
 
 ### Instance Methods
 
@@ -991,9 +991,9 @@ Lay out views manually if your app doesn’t use Auto Layout.
 
 ### Inspecting reserved regions
 
-- [UIViewReservedRegion](uiviewreservedregion.md): Beta. A region within a view’s coordinate space that another entity occupies.
-- [reservedRegionsOfKind:](uiview/reservedregionsofkind_.md): Beta. Returns the reserved regions of a given kind.
-- [reservedRegionsOfKind:options:](uiview/reservedregionsofkind_options_.md): Beta. Returns the reserved regions of a given kind and options.
+- [UIViewReservedRegion](uiviewreservedregion.md): A region within a view’s coordinate space that another entity occupies.
+- [reservedRegionsOfKind:](uiview/reservedregionsofkind_.md): Returns the reserved regions of a given kind.
+- [reservedRegionsOfKind:options:](uiview/reservedregionsofkind_options_.md): Returns the reserved regions of a given kind and options.
 
 ### Adjusting the user interface
 
@@ -1120,8 +1120,8 @@ Lay out views manually if your app doesn’t use Auto Layout.
 
 ### Sensor coordinate orientation
 
-- [CLBodyIdentifiable](../corelocation/clbodyidentifiable.md)
-- [CMBodyIdentifiable](../coremotion/cmbodyidentifiable.md)
+- [CLBodyIdentifiable](../corelocation/clbodyidentifiable.md): A type that identifies a physical body or view for heading calculations.
+- [CMBodyIdentifiable](../coremotion/cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.
 
 ### Constants
 

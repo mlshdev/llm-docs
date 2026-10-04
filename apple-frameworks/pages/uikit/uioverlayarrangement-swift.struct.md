@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uioverlayarrangement-swift.struct
 
 # UIOverlayArrangement
 
 **Framework:** UIKit  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ beta · tvOS 27.1+ · visionOS 27.1+
 
 An arrangement that overlays views.
 
@@ -19,11 +19,11 @@ struct UIOverlayArrangement
 
 ### Creating an overlay arrangement
 
-- [init()](uioverlayarrangement-swift.struct/init%28%29.md): Beta. Creates an overlay arrangement.
+- [init()](uioverlayarrangement-swift.struct/init%28%29.md): Creates an overlay arrangement.
 
 ### Configuring the arrangement
 
-- [axes(\_:)](uioverlayarrangement-swift.struct/axes%28__%29.md): Beta. Sets the supported axes of the arrangement.
+- [axes(\_:)](uioverlayarrangement-swift.struct/axes%28__%29.md): Sets the supported axes of the arrangement.
 
 ## Relationships
 
@@ -37,6 +37,6 @@ struct UIOverlayArrangement
 
 ### Configuring the arrangement
 
-- [UIArrangementViewController.Arrangement](uiarrangementviewcontroller/arrangement.md): Beta. A type that describes how an arrangement view controller lays out its view controllers.
-- [UISplitArrangement](uisplitarrangement-swift.struct.md): Beta. An arrangement that splits views.
-- [updateArrangement(\_:animated:)](uiarrangementviewcontroller/updatearrangement%28__animated_%29.md): Beta. Updates the arrangement of the view controller.
+- [UIArrangementViewController.Arrangement](uiarrangementviewcontroller/arrangement.md): A type that describes how an arrangement view controller lays out its view controllers.
+- [UISplitArrangement](uisplitarrangement-swift.struct.md): An arrangement that splits views.
+- [updateArrangement(\_:animated:)](uiarrangementviewcontroller/updatearrangement%28__animated_%29.md): Updates the arrangement of the view controller.

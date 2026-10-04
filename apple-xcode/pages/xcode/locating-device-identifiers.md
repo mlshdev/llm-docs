@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-4fca00e84bae; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/locating-device-identifiers
 
 # Locating device identifiers
@@ -23,7 +23,7 @@ For iOS, iPadOS, tvOS, visionOS, and watchOS devices, you can use Device Hub to 
 
 1. Select the device in the sidebar.
 2. In the inspector, click Info in the toolbar.
-3. Under Hardware Properties, copy the device ID that appears in the UDID field.
+3. Copy the device ID that appears in the UDID field.
 
 ![A screenshot of Device Hub showing a physical device selected in the sidebar on the left, an iPhone device mirrored in the canvas in the middle, and the device ID shown in the Info inspector on the right.](https://developer.apple.com/images/com.apple.Xcode/locating-device-id-device-hub@2x.png)
 

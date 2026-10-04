@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/traits-and-the-trait-environment
 
 # Traits and the trait environment (Swift)
@@ -56,6 +56,12 @@ Avoid using custom traits in cases where you can directly set properties on a vi
 - [UIMutableTraits](uimutabletraits-13ja5.md): A mutable container of traits.
 - [UITrait](uitrait-9423.md): A type representing a trait in a trait collection.
 - [UITraitDefinition](uitraitdefinition-64c15.md): A type representing a trait in a trait collection.
+- [UITraitBridgedEnvironmentKey](uitraitbridgedenvironmentkey.md)
+
+### System traits
+
+- [UITraitNavigationTitleAlignment](uitraitnavigationtitlealignment-swift.struct.md): Beta.
+- [UITraitSystemPrefersReducedResourceUsage](uitraitsystemprefersreducedresourceusage-swift.struct.md)
 
 ## See Also
 

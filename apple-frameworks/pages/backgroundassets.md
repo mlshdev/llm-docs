@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/backgroundassets
 
 # Background Assets (Swift)
@@ -80,6 +80,10 @@ Alternatively, you can manage and host asset downloads yourself using the low-le
 - [BAErrorDomain](backgroundassets/baerrordomain.md)
 - [BAErrorCode](backgroundassets/baerrorcode.md)
 - [AssetPackManager.LocalAvailabilityError](backgroundassets/assetpackmanager/localavailabilityerror.md): An error that provides information about local asset pack availability, distinguishing between successes and failures.
+
+### Enumerations
+
+- [SizeCalculationMethod](backgroundassets/sizecalculationmethod.md): Beta. Methods for calculating a file’s size.
 
 # Background Assets (Objective-C)
 
@@ -172,3 +176,7 @@ Alternatively, you can manage and host asset downloads yourself using the low-le
 
 - [BAFailuresErrorKey](backgroundassets/bafailureserrorkey.md): The `-[NSError userInfo]` key for the set of asset packs the local availability of which the system couldn’t ensure and their respective associated underlying errors.
 - [BASuccessesErrorKey](backgroundassets/basuccesseserrorkey.md): The `-[NSError userInfo]` key for the set of asset packs the local availability of which the system successfully ensured.
+
+### Enumerations
+
+- [BASizeCalculationMethod](backgroundassets/sizecalculationmethod.md): Beta. Methods for calculating a file’s size.

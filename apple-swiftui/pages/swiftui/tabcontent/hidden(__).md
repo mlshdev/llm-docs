@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/tabcontent/hidden(_:)
 
 # hidden(\_:)
@@ -34,9 +34,11 @@ The following example shows a `TabView` with 4 tabs in compact and 5 tabs in reg
 struct BrowseTabExample: View {
     @Environment(\.horizontalSizeClass) var sizeClass
 
-    @State var selection: MusicTab = .listenNow
-    @State var browseTabPath: [MusicTab] = []
-    @State var playlists = [Playlist("All Playlists"), Playlist("Running")]
+    @State private var selection: MusicTab = .listenNow
+    @State private var browseTabPath: [MusicTab] = []
+    @State private var playlists = [
+        Playlist("All Playlists"), Playlist("Running"),
+    ]
 
     var body: some View {
             TabView(selection: $selection) {

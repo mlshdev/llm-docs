@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/imageio/kcgimagesourcetypeidentifierhint
 
 # kCGImageSourceTypeIdentifierHint (Swift)
@@ -33,6 +33,7 @@ The value of this key is a [CFString](../corefoundation/cfstring.md) object. Add
 - [kCGImageSourceThumbnailMaxPixelSize](kcgimagesourcethumbnailmaxpixelsize.md): The maximum width and height of a thumbnail image, specified in pixels.
 - [kCGImageSourceCreateThumbnailWithTransform](kcgimagesourcecreatethumbnailwithtransform.md): A Boolean value that indicates whether to rotate and scale the thumbnail image to match the image’s orientation and aspect ratio.
 - [kCGImageSourceSubsampleFactor](kcgimagesourcesubsamplefactor.md): The factor by which to scale down any returned images.
+- [kCGImageSourceAllowableTypes](kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.
 
 # kCGImageSourceTypeIdentifierHint (Objective-C)
 
@@ -66,3 +67,4 @@ The value of this key is a [CFStringRef](../corefoundation/cfstring.md) object. 
 - [kCGImageSourceThumbnailMaxPixelSize](kcgimagesourcethumbnailmaxpixelsize.md): The maximum width and height of a thumbnail image, specified in pixels.
 - [kCGImageSourceCreateThumbnailWithTransform](kcgimagesourcecreatethumbnailwithtransform.md): A Boolean value that indicates whether to rotate and scale the thumbnail image to match the image’s orientation and aspect ratio.
 - [kCGImageSourceSubsampleFactor](kcgimagesourcesubsamplefactor.md): The factor by which to scale down any returned images.
+- [kCGImageSourceAllowableTypes](kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.

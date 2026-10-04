@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/dailycaprecommendation
 
 # DailyCapRecommendation
@@ -21,6 +21,7 @@ object DailyCapRecommendation
 
 - `id` — `string`: Unique identifier for the recommendation. Read-only.
 - `recommendationType` — `RecommendationCategory`: The recommendation category. Value: `DAILYCAP`. Read-only.
+- `adAccountId` — `int64`: The ad account this recommendation belongs to. Read-only.
 - `promotedObjectId` — `string`: The ID of the promoted object. For `APPSTORE_APP`, this is the app Adam ID. For `BUSINESS_BRAND`, this is the brand ID. Read-only.
 - `promotedObjectType` — `PromotedObjectType`: The type of the promoted object. Read-only.
 - `campaignId` — `int64`: The campaign the recommendation is for. Read-only.
@@ -60,6 +61,7 @@ When a campaign frequently exhausts its daily budget, `DailyCapRecommendation` p
 {
   "id": "rec-budget-001",
   "recommendationType": "DAILYCAP",
+  "adAccountId": 123456789,
   "promotedObjectId": "123456789",
   "promotedObjectType": "APPSTORE_APP",
   "campaignId": 987654321,

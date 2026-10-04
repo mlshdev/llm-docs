@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/widgetkit/adding-interactivity-to-widgets-and-live-activities
 
 # Adding interactivity to widgets and Live Activities (Swift)
@@ -188,6 +188,30 @@ struct TodoItemView: View {
     }
 }
 ```
+
+`ToggleTodoIntent(todo.id)` pre-populates the intent’s parameter directly instead of waiting for the system to resolve it. To support intent parameter pre-population, add a custom initializer to your app intent that assigns the incoming value to your `@Parameter` property, in addition to `init()`, as follows:
+
+```swift
+struct ToggleTodoIntent: AppIntent {
+    static var title: LocalizedStringResource = "Toggle To Do"
+
+    @Parameter(title: "To Do ID")
+    var todoID: String
+
+    init() {}
+
+    init(_ todoID: String) {
+        self.todoID = todoID
+    }
+
+    func perform() async throws -> some IntentResult {
+        // Mark the to-do item as complete.
+        return .result()
+    }
+}
+```
+
+Because `@Parameter` wraps a regular stored property, you can set its value directly in your own initializer instead of relying on the system to resolve it.
 
 > **Note**
 
@@ -403,6 +427,30 @@ struct TodoItemView: View {
     }
 }
 ```
+
+`ToggleTodoIntent(todo.id)` pre-populates the intent’s parameter directly instead of waiting for the system to resolve it. To support intent parameter pre-population, add a custom initializer to your app intent that assigns the incoming value to your `@Parameter` property, in addition to `init()`, as follows:
+
+```swift
+struct ToggleTodoIntent: AppIntent {
+    static var title: LocalizedStringResource = "Toggle To Do"
+
+    @Parameter(title: "To Do ID")
+    var todoID: String
+
+    init() {}
+
+    init(_ todoID: String) {
+        self.todoID = todoID
+    }
+
+    func perform() async throws -> some IntentResult {
+        // Mark the to-do item as complete.
+        return .result()
+    }
+}
+```
+
+Because `@Parameter` wraps a regular stored property, you can set its value directly in your own initializer instead of relying on the system to resolve it.
 
 > **Note**
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uibarbuttonitem
 
 # UIBarButtonItem (Swift)
@@ -142,8 +142,8 @@ In general, specify a value for the normal state so that other states without a 
 
 - [hidesSharedBackground](uibarbuttonitem/hidessharedbackground.md): A boolean value indicating whether the background this item may share with other items in the bar should be hidden.
 - [sharesBackground](uibarbuttonitem/sharesbackground.md): A boolean value indicating whether this bar button item can share a background with other items in a navigation bar or a toolbar.
-- [axisBehavior](uibarbuttonitem/axisbehavior-swift.property.md): Beta. The bar axis behavior of the item.
-- [UIBarButtonItem.AxisBehavior](uibarbuttonitem/axisbehavior-swift.enum.md): Beta.
+- [axisBehavior](uibarbuttonitem/axisbehavior-swift.property.md): The bar axis behavior of the item.
+- [UIBarButtonItem.AxisBehavior](uibarbuttonitem/axisbehavior-swift.enum.md)
 
 ### Instance Properties
 
@@ -190,6 +190,7 @@ In general, specify a value for the normal state so that other states without a 
 - [UIBarPositioning](uibarpositioning.md): A set of methods for defining the positioning of bars in iOS apps.
 - [UIBarPositioningDelegate](uibarpositioningdelegate.md): A set of methods that support the positioning of a bar that conforms to the [UIBarPositioning](uibarpositioning.md) protocol.
 - [UIBarMinimization](uibarminimization-swift.struct.md)
+- [UIVerticalBarEdge](uiverticalbaredge.md): The edge where the system places the vertical bar.
 
 # UIBarButtonItem (Objective-C)
 
@@ -340,8 +341,8 @@ In general, specify a value for the normal state so that other states without a 
 
 - [hidesSharedBackground](uibarbuttonitem/hidessharedbackground.md): A boolean value indicating whether the background this item may share with other items in the bar should be hidden.
 - [sharesBackground](uibarbuttonitem/sharesbackground.md): A boolean value indicating whether this bar button item can share a background with other items in a navigation bar or a toolbar.
-- [axisBehavior](uibarbuttonitem/axisbehavior-swift.property.md): Beta. The bar axis behavior of the item.
-- [UIBarButtonItemAxisBehavior](uibarbuttonitem/axisbehavior-swift.enum.md): Beta.
+- [axisBehavior](uibarbuttonitem/axisbehavior-swift.property.md): The bar axis behavior of the item.
+- [UIBarButtonItemAxisBehavior](uibarbuttonitem/axisbehavior-swift.enum.md)
 
 ### Instance Properties
 
@@ -375,3 +376,4 @@ In general, specify a value for the normal state so that other states without a 
 - [UITabBarItem](uitabbaritem.md): An object that describes an item in a tab bar.
 - [UIBarPositioning](uibarpositioning.md): A set of methods for defining the positioning of bars in iOS apps.
 - [UIBarPositioningDelegate](uibarpositioningdelegate.md): A set of methods that support the positioning of a bar that conforms to the [UIBarPositioning](uibarpositioning.md) protocol.
+- [UIVerticalBarEdge](uiverticalbaredge.md): The edge where the system places the vertical bar.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/view/inspector(ispresented:content:)
 
 # inspector(isPresented:content:)
@@ -29,7 +29,7 @@ Apply this modifier to declare an inspector with a context-dependent presentatio
 
 ```swift
 struct ShapeEditor: View {
-    @State var presented: Bool = false
+    @State private var presented: Bool = false
     var body: some View {
         MyEditorView()
             .inspector(isPresented: $presented) {

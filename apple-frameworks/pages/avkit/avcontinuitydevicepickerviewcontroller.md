@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avkit/avcontinuitydevicepickerviewcontroller
 
 # AVContinuityDevicePickerViewController (Swift)
@@ -57,6 +57,8 @@ To respond to the various outcome events from the picker, your app needs to impl
 - [NSCoding](../foundation/nscoding.md)
 - [NSExtensionRequestHandling](../foundation/nsextensionrequesthandling.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UIAppearanceContainer](../uikit/uiappearancecontainer.md)
 - [UIContentContainer](../uikit/uicontentcontainer.md)

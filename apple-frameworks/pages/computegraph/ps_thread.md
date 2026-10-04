@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/ps_thread
 
 # PS_THREAD
@@ -14,18 +14,3 @@
 ```objectivec
 #define PS_THREAD
 ```
-
-## See Also
-
-### C macros
-
-- [PS_API](ps_api.md)
-- [PS_AVAILABILE](ps_availabile.md)
-- [PS_DEPRECATED](ps_deprecated.md)
-- [PS_ALWAYS_INLINE](ps_always_inline.md)
-- [PS_CONSTANT](ps_constant.md)
-- [PS_DEVICE](ps_device.md)
-- [PS_THREADGROUP](ps_threadgroup.md)
-- [PS_ENUM](ps_enum.md)
-- [PS_INTERNAL](ps_internal.md)
-- [ps_binding_type](ps_binding_type.md)

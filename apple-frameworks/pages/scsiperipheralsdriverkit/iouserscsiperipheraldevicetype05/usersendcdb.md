@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/iouserscsiperipheraldevicetype05/usersendcdb
 
 # UserSendCDB
@@ -39,6 +39,6 @@ Call this method to deliver vendor-specific 16-byte commands to the external dri
 ### Sending commands to the device
 
 - [SCSIType05OutParameters](../scsitype05outparameters.md): Parameters for commands to send to the external SCSI device.
-- [SCSIType05OutVersion](../scsitype05outversion.md): Constants that represent versions of the type 05 outbound interface.
+- [SCSIType05OutVersion](../scsitype05outversion.md): Constants that represent versions of the Type05 outbound interface.
 - [SCSIType05InParameters](../scsitype05inparameters.md): Parameters for responses from the external SCSI device.
-- [SCSIType05InVersion](../scsitype05inversion.md): Constants that represent versions of the type 05 inbound interface.
+- [SCSIType05InVersion](../scsitype05inversion.md): Constants that represent versions of the Type05 inbound interface.

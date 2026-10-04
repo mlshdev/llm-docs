@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiarrangementviewcontroller/viewcontroller(for:)
 
 # viewController(for:)
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ beta · tvOS 27.1+ · visionOS 27.1+
 
 The view controller in the arrangement for the provided placement.
 
@@ -23,6 +23,6 @@ The view controller in the arrangement for the provided placement.
 
 ### Managing arrangement view controllers
 
-- [UIArrangementViewController.ViewPlacement](viewplacement.md): Beta. A placement of a view controller within an arrangement view controller.
-- [setViewController(\_:for:animated:)](setviewcontroller%28__for_animated_%29.md): Beta. Sets the view controller in the arrangement for a specific placement.
-- [placement(for:)](placement%28for_%29.md): Beta. Returns the placement for the provided view controller in the arrangement.
+- [UIArrangementViewController.ViewPlacement](viewplacement.md): A placement of a view controller within an arrangement view controller.
+- [setViewController(\_:for:animated:)](setviewcontroller%28__for_animated_%29.md): Sets the view controller in the arrangement for a specific placement.
+- [placement(for:)](placement%28for_%29.md): Returns the placement for the provided view controller in the arrangement.

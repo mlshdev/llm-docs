@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/app-schema-domain-notes
 
 # Notes
@@ -16,6 +16,7 @@ The `.notes` domain defines app schemas that provide a structured representation
 
 - **[createNote](appschema/notesintent/createnote.md)**: An intent that creates notes when people say phrases like “Create a note called meeting notes.”
 - **[updateNote](appschema/notesintent/updatenote.md)**: An intent that updates notes when people say phrases like “Rename this note to taxes.” or “Move this note to my work folder.”
+- **[appendText](appschema/notesintent/appendtext.md)**: An intent that adds text to an existing note when people say phrases like “Add this item to the wishlist note.”
 
 > **Tip**
 
@@ -29,6 +30,7 @@ For more information about making your app’s actions available to Apple Intell
 
 - [createNote](appschema/notesintent/createnote.md): An intent schema that creates a new note.
 - [updateNote](appschema/notesintent/updatenote.md): An intent schema that updates a note.
+- [appendText](appschema/notesintent/appendtext.md): An intent schema that adds text to the end of an existing note.
 - [AppSchema.NotesIntent](appschema/notesintent.md): Identifies intent schemas in the notes domain.
 
 ### Content and parameter types

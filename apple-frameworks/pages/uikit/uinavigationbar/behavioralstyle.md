@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uinavigationbar/behavioralstyle
 
 # behavioralStyle (Swift)
@@ -25,7 +25,7 @@ var behavioralStyle: UIBehavioralStyle { get }
 
 Use this property to determine the actual behavior style when the [preferredBehavioralStyle](preferredbehavioralstyle.md) is [UIBehavioralStyle.automatic](../uibehavioralstyle/automatic.md).
 
-When the value of this property is [UIBehavioralStyle.mac](../uibehavioralstyle/mac.md), [NSToolbar](https://developer.apple.com/documentation/appkit/nstoolbar) hosts the navigation bar’s content when you build your app with Mac Catalyst.
+When the value of this property is [UIBehavioralStyle.mac](../uibehavioralstyle/mac.md), [NSToolbar](https://developer.apple.com/documentation/appkit/nstoolbar) displays the navigation bar’s content when you build your app with Mac Catalyst. Not every navigation item property is supported in every toolbar section. For more information, see [Display content in a toolbar on Mac](../uinavigationitem/title.md#Display-content-in-a-toolbar-on-Mac).
 
 ## See Also
 
@@ -59,7 +59,7 @@ The behavioral style of the navigation bar.
 
 Use this property to determine the actual behavior style when the [preferredBehavioralStyle](preferredbehavioralstyle.md) is [UIBehavioralStyleAutomatic](../uibehavioralstyle/automatic.md).
 
-When the value of this property is [UIBehavioralStyleMac](../uibehavioralstyle/mac.md), [NSToolbar](https://developer.apple.com/documentation/appkit/nstoolbar) hosts the navigation bar’s content when you build your app with Mac Catalyst.
+When the value of this property is [UIBehavioralStyleMac](../uibehavioralstyle/mac.md), [NSToolbar](https://developer.apple.com/documentation/appkit/nstoolbar) displays the navigation bar’s content when you build your app with Mac Catalyst. Not every navigation item property is supported in every toolbar section. For more information, see [Display content in a toolbar on Mac](../uinavigationitem/title.md#Display-content-in-a-toolbar-on-Mac).
 
 ## See Also
 

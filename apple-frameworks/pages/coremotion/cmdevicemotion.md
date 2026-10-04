@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremotion/cmdevicemotion
 
 # CMDeviceMotion (Swift)
@@ -84,6 +84,7 @@ The accelerometer measures the sum of two acceleration vectors: gravity and user
 - [CMAttitude](cmattitude.md): The device’s orientation relative to a known frame of reference at a point in time.
 - [CMAttitudeReferenceFrame](cmattitudereferenceframe.md): Constants that indicate the frame of reference for attitude-related motion data.
 - [CMHeadphoneMotionManager](cmheadphonemotionmanager.md): An object that starts and manages headphone motion services.
+- [CMBodyIdentifiable](cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.
 
 # CMDeviceMotion (Objective-C)
 
@@ -156,3 +157,4 @@ The accelerometer measures the sum of two acceleration vectors: gravity and user
 - [CMAttitude](cmattitude.md): The device’s orientation relative to a known frame of reference at a point in time.
 - [CMAttitudeReferenceFrame](cmattitudereferenceframe.md): Constants that indicate the frame of reference for attitude-related motion data.
 - [CMHeadphoneMotionManager](cmheadphonemotionmanager.md): An object that starts and manages headphone motion services.
+- [CMBodyIdentifiable](cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.

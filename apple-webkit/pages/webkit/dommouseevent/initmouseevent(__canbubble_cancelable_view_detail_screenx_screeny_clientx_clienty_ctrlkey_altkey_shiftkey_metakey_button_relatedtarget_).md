@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/webkit/dommouseevent/initmouseevent(_:canbubble:cancelable:view:detail:screenx:screeny:clientx:clienty:ctrlkey:altkey:shiftkey:metakey:button:relatedtarget:)
 
 # initMouseEvent(\_:canBubble:cancelable:view:detail:screenX:screenY:clientX:clientY:ctrlKey:altKey:shiftKey:metaKey:button:relatedTarget:) (Swift)

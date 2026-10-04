@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/foundation/nscalendar/date(era:yearforweekofyear:weekofyear:weekday:hour:minute:second:nanosecond:)
 
 # date(era:yearForWeekOfYear:weekOfYear:weekday:hour:minute:second:nanosecond:) (Swift)

@@ -2,8 +2,8 @@
 
 Source: https://developer.apple.com/macos/
 Catalog snapshot: 0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d
-Content digest: ec427c6239650887b82e5cacb977fcdddd983ad9801ba5ba438444988e4f778c
-Captured at: 2026-09-27T18:07:09.722Z
+Content digest: 14bed8000201559feea98994c1c1775c7d24cc3f228675df96cb28953e4bdfaf
+Captured at: 2026-10-04T18:39:02.631Z
 Volume 13
 
 # Document: clock_reply_subsystem

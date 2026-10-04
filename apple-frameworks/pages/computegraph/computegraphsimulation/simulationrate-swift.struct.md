@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/computegraphsimulation/simulationrate-swift.struct
 
 # ComputeGraphSimulation.SimulationRate
@@ -42,3 +42,12 @@ struct SimulationRate
 - [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Running a simulation
+
+- [ComputeGraphSimulation](../computegraphsimulation.md): A simulation of particles, which use a single pipeline.
+- [ElementSpawnParameters](../elementspawnparameters.md): Parameters used to configure the initial state of a particle when it’s spawned in the simulation.
+- [ElementGrouping](../elementgrouping.md): An enumeration of how elements are grouped.
+- [Sorting](../sorting.md): An enumeration of sorting modes.

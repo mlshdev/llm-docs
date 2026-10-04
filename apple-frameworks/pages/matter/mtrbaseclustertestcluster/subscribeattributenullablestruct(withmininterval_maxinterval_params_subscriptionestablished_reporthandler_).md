@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclustertestcluster/subscribeattributenullablestruct(withmininterval:maxinterval:params:subscriptionestablished:reporthandler:)
 
 # subscribeAttributeNullableStruct(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:) (Swift)

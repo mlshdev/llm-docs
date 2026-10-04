@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uihingeinteraction/update/hinge
 
 # hinge (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The current hinge state for the interaction, or `nil` when the interaction leaves a hierarchy that provides hinge updates.
 
@@ -19,7 +19,7 @@ The current hinge state for the interaction, or `nil` when the interaction leave
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The current hinge state for the interaction, or `nil` when the interaction leaves a hierarchy that provides hinge updates.
 

@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uihingeinteraction
 
 # UIHingeInteraction (Swift)
 
 **Framework:** UIKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 An interaction for observing the hinge state associated with the view’s hierarchy.
 
@@ -48,15 +48,15 @@ In the example above, the current angle and status of the hinge are displayed as
 
 ### Creating a hinge interaction
 
-- [init(updateHandler:)](uihingeinteraction/init%28updatehandler_%29.md): Beta. Creates a new hinge interaction with the provided update handler.
+- [init(updateHandler:)](uihingeinteraction/init%28updatehandler_%29.md): Creates a new hinge interaction with the provided update handler.
 
 ### Configuring the interaction
 
-- [isEnabled](uihingeinteraction/isenabled.md): Beta. Whether the interaction is enabled.
+- [isEnabled](uihingeinteraction/isenabled.md): Whether the interaction is enabled.
 
 ### Getting hinge updates
 
-- [UIHingeInteraction.Update](uihingeinteraction/update.md): Beta. An update for a `UIHingeInteraction`
+- [UIHingeInteraction.Update](uihingeinteraction/update.md): An update for a `UIHingeInteraction`
 
 ## Relationships
 
@@ -81,13 +81,13 @@ In the example above, the current angle and status of the hinge are displayed as
 
 - [UIDevice](uidevice.md): A representation of the current device.
 - [UIStatusBarManager](uistatusbarmanager.md): An object that describes the configuration of the status bar.
-- [UIHinge](uihinge.md): Beta. An object encapsulating the state of a single hinge.
+- [UIHinge](uihinge.md): An object encapsulating the state of a single hinge.
 
 # UIHingeInteraction (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 An interaction for observing the hinge state associated with the view’s hierarchy.
 
@@ -130,15 +130,15 @@ In the example above, the current angle and status of the hinge are displayed as
 
 ### Creating a hinge interaction
 
-- [initWithUpdateHandler:](uihingeinteraction/init%28updatehandler_%29.md): Beta. Creates a new hinge interaction with the provided update handler.
+- [initWithUpdateHandler:](uihingeinteraction/init%28updatehandler_%29.md): Creates a new hinge interaction with the provided update handler.
 
 ### Configuring the interaction
 
-- [enabled](uihingeinteraction/isenabled.md): Beta. Whether the interaction is enabled.
+- [enabled](uihingeinteraction/isenabled.md): Whether the interaction is enabled.
 
 ### Getting hinge updates
 
-- [UIHingeInteractionUpdate](uihingeinteraction/update.md): Beta. An update for a `UIHingeInteraction`
+- [UIHingeInteractionUpdate](uihingeinteraction/update.md): An update for a `UIHingeInteraction`
 
 ## Relationships
 
@@ -156,4 +156,4 @@ In the example above, the current angle and status of the hinge are displayed as
 
 - [UIDevice](uidevice.md): A representation of the current device.
 - [UIStatusBarManager](uistatusbarmanager.md): An object that describes the configuration of the status bar.
-- [UIHinge](uihinge.md): Beta. An object encapsulating the state of a single hinge.
+- [UIHinge](uihinge.md): An object encapsulating the state of a single hinge.

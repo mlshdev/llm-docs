@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/musicunderstanding/create-visuals-using-musicunderstanding-analysis-results
 
 # Creating visuals with Music Understanding analysis results
@@ -17,4 +17,4 @@ The Music Understanding Lab sample project builds an app for macOS, iOS, and iPa
 
 > **Note**
 
-> This sample code project is associated with WWDC26 session 253: [Meet the Music Understanding framework](https://developer.apple.com/videos/play/wwdc26/253/).
+> This sample code project is associated with WWDC26 session 253: [Meet the Music Understanding framework](https://developer.apple.com/videos/play/wwdc2026/253/).

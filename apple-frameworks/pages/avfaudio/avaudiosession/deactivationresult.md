@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/deactivationresult
 
 # AVAudioSession.DeactivationResult
@@ -14,6 +14,10 @@ Type-safe representation of audio session deactivation results.
 ```swift
 enum DeactivationResult
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 <a id="overview"></a>
 

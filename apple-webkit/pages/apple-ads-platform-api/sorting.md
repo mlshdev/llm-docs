@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/sorting
 
 # Sorting
@@ -20,7 +20,7 @@ object Sorting
 ## Properties
 
 - `field` — `string`: The name of the field to sort on (for example, localSpend, impressions).
-- `order` — `string`: The sort direction for the specified field. Possible values: `ASC` (lowest to highest), `DESC` (highest to lowest).
+- `order` — `string`: The sort direction for the specified field, ascending (`ASC`) or descending (`DESC`).
   **Allowed values:** `ASC`, `DESC`
 
 <a id="Discussion"></a>

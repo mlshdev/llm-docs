@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/useraborttaskrequest
 
 # UserAbortTaskRequest
@@ -32,7 +32,7 @@ This method doesn’t clear previously established conditions, such as `MODE SEL
 
 ## See Also
 
-### Performing SCSI Standard Task Management
+### Performing SCSI standard task management
 
 - [UserAbortTaskSetRequest](useraborttasksetrequest.md): Aborts all tasks in a logical unit.
 - [UserClearACARequest](userclearacarequest.md): Removes an autocontingent allegiance (ACA) attribute from a logical unit’s task set.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller
 
 # IOUserSCSIParallelInterfaceController
@@ -23,22 +23,15 @@ class IOUserSCSIParallelInterfaceController;
 
 Implement your driver by subclassing this class and overriding all pure virtual methods.
 
-<a id="Specifying-the-Drivers-Personality-Information"></a>
+The DriverKit framework starts the `Default` dispatch queue. The system expects your dext to create two additional dispatch queues, named `AuxiliaryQueue` and `InterruptQueue`. The [UserCreateTargetForID](iouserscsiparallelinterfacecontroller/usercreatetargetforid.md) method uses the `AuxiliaryQueue` to avoid deadlock during start and initialization.
 
-### Specifying the Driver’s Personality Information
+The framework invokes the dext class’s [Start](../driverkit/ioservice/start.md) and other methods to initialize the SCSI controller. Because these calls occur during DriverKit’s matching, it’s important to complete them quickly, to prevent keeping `IORegsitry` in a busy state for a long time. In some cases, probing the media may take a long time and delay the initialization, especially when working with HDDs. Defer these tasks if they take a long time to complete.
 
-When you subclass `IOUserSCSIParallelInterfaceController`, update the [IOKitPersonalities](../bundleresources/information-property-list/iokitpersonalities.md) key of your driver extension’s `Info.plist` file with information to match your driver to appropriate hardware. For this class, always include the keys and values in the following table:
+The framework provides the [UserReportHBAConstraints](iouserscsiparallelinterfacecontroller/userreporthbaconstraints.md) API to report controller I/O constraints. Make sure your dext reports these constraints accurately — particularly all mandatory keys — during initialization. This helps prevent intermittent failures, such as controller firmware buffer overflows.
 
-| Key | Value |
-| --- | --- |
-| IOClass | `IOUserSCSIParallelInterfaceController` |
-| IOUserClass | The name of your custom dext class. |
-| IOProviderClass | `IOPCIDevice` |
-| CFBundleIdentifierKernel | `com.apple.iokit.IOSCSIParallelFamily` |
+<a id="Support-power-capabilities"></a>
 
-<a id="Supporting-Power-Capabilities"></a>
-
-### Supporting Power Capabilities
+## Support power capabilities
 
 IOUserSCSIParallelInterfaceController supports the following power capabilities:
 
@@ -71,29 +64,30 @@ IMPL ( ExampleSCSIDext, SetPowerState )
 }
 ```
 
-The hypothetical driver in this example still needs to acknowledge the power state change when it’s appropriate. For example, it could ensure a rescan has brought up all its targets, and then call `SetPowerState ( powerState, SUPERDISPATCH );`.
+The hypothetical driver in this example still needs to acknowledge the power state change when it’s appropriate. For example, it can ensure a rescan brought up all its targets, and then call `SetPowerState ( powerState, SUPERDISPATCH );`.
 
 ## Topics
 
-### Managing Controllers
+### Managing controllers
 
 - [UserInitializeController](iouserscsiparallelinterfacecontroller/userinitializecontroller.md): Initializes the controller in response to a call from the framework.
 - [UserStartController](iouserscsiparallelinterfacecontroller/userstartcontroller.md): Starts the controller in response to a call from the framework.
 
-### Managing Tasks
+### Managing tasks
 
 - [UserProcessParallelTask](iouserscsiparallelinterfacecontroller/userprocessparalleltask.md): Processes a parallel task in response to a call from the framework.
 - [SCSIUserParallelTask](scsiuserparalleltask.md): The properties of a parallel task to perform.
 - [ParallelTaskCompletion](iouserscsiparallelinterfacecontroller/paralleltaskcompletion.md): Indicates to the system that the extension has completed an asynchronous request.
 - [SCSIUserParallelResponse](scsiuserparallelresponse.md): The properties of a completed request.
 
-### Managing Bundled Parallel Tasks
+### Managing bundled parallel tasks
 
 - [UserProcessBundledParallelTasks](iouserscsiparallelinterfacecontroller/userprocessbundledparalleltasks.md): Processes one or more parallel tasks in response to a call from the framework.
 - [UserMapBundledParallelTaskCommandAndResponseBuffers](iouserscsiparallelinterfacecontroller/usermapbundledparalleltaskcommandandresponsebuffers.md): Maps the shared command and response buffers in the dext address space in response to a call from the framework.
 - [BundledParallelTaskCompletion](iouserscsiparallelinterfacecontroller/bundledparalleltaskcompletion.md): Indicates to the system that the extension completed a bundled asynchronous request.
+- [kMaxBundledParallelTasks](kmaxbundledparalleltasks.md)
 
-### Managing Targets
+### Managing targets
 
 - [UserInitializeTargetForID](iouserscsiparallelinterfacecontroller/userinitializetargetforid.md): Initializes a target device in response to a call from the framework.
 - [UserCreateTargetForID](iouserscsiparallelinterfacecontroller/usercreatetargetforid.md): Creates the specified target.
@@ -102,7 +96,7 @@ The hypothetical driver in this example still needs to acknowledge the power sta
 - [UserSetTargetProperties](iouserscsiparallelinterfacecontroller/usersettargetproperties.md): Sets properties on the target.
 - [UserRemoveTargetProperties](iouserscsiparallelinterfacecontroller/userremovetargetproperties.md): Removes properties from a target.
 
-### Performing SCSI Standard Task Management
+### Performing SCSI standard task management
 
 - [UserAbortTaskRequest](iouserscsiparallelinterfacecontroller/useraborttaskrequest.md): Aborts a single task.
 - [UserAbortTaskSetRequest](iouserscsiparallelinterfacecontroller/useraborttasksetrequest.md): Aborts all tasks in a logical unit.
@@ -111,7 +105,7 @@ The hypothetical driver in this example still needs to acknowledge the power sta
 - [UserLogicalUnitResetRequest](iouserscsiparallelinterfacecontroller/userlogicalunitresetrequest.md): Resets a logical unit.
 - [UserTargetResetRequest](iouserscsiparallelinterfacecontroller/usertargetresetrequest.md): Resets a target.
 
-### Managing Host Bus Adapters
+### Managing host bus adapters
 
 - [UserReportInitiatorIdentifier](iouserscsiparallelinterfacecontroller/userreportinitiatoridentifier.md): Gets the SCSI device identifier for the host bus adapter (HBA) in response to a call from the framework.
 - [UserReportHighestSupportedDeviceID](iouserscsiparallelinterfacecontroller/userreporthighestsupporteddeviceid.md): Gets the highest supported SCSI device identifier in response to a call from the framework.
@@ -127,19 +121,22 @@ The hypothetical driver in this example still needs to acknowledge the power sta
 - [UserRemoveHBAProperties](iouserscsiparallelinterfacecontroller/userremovehbaproperties.md): Removes properties from a host bus adapter in response to a call from the framework.
 - [UserReportHBAConstraints](iouserscsiparallelinterfacecontroller/userreporthbaconstraints.md): Reports the I/O constraints for this controller.
 
-### Managing Direct Memory Access
+### Managing direct memory access
 
 - [UserGetDMASpecification](iouserscsiparallelinterfacecontroller/usergetdmaspecification.md): Gets the controller-specific direct memory access (DMA) specification in response to a call from the framework.
 - [DMAOutputSegmentType](dmaoutputsegmenttype.md): The size and endianness that the system uses for direct memory access (DMA).
 
-### Supporting SCSI Power States
+### Supporting SCSI power states
 
 - [kIOServicePowerCapabilityPause](kioservicepowercapabilitypause.md): A PCIe-specific power state for halting transactions while reallocating resources.
 
-### Instance Methods
+### Handling media changes
 
-- [UserCallMediaParametersHaveChanged](iouserscsiparallelinterfacecontroller/usercallmediaparametershavechanged.md)
-- [UserGetDataBuffer](iouserscsiparallelinterfacecontroller/usergetdatabuffer.md)
+- [UserCallMediaParametersHaveChanged](iouserscsiparallelinterfacecontroller/usercallmediaparametershavechanged.md): Indicates to the system that the media parameters changed.
+
+### Accessing data buffers
+
+- [UserGetDataBuffer](iouserscsiparallelinterfacecontroller/usergetdatabuffer.md): Gets the data buffer associated with a particular I/O request.
 
 ## Relationships
 

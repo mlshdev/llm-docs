@@ -3,7 +3,7 @@
 Source: https://developer.apple.com/watchos/
 Catalog snapshot: a3a5c01bb2daa6e5b05b5f912615fe697fc6a01a5d070c58d528670dcc2bc090
 Content digest: 969d356ee45d18f331ae9e63dc5d3d9e1c8d1e118e170d2545729c62d2ffbec0
-Captured at: 2026-09-27T18:07:09.723Z
+Captured at: 2026-10-04T18:39:02.632Z
 
 # Document: WatchKit
 

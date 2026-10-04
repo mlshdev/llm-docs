@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/userprocessbundledparalleltasks
 
 # UserProcessBundledParallelTasks
@@ -21,7 +21,7 @@ virtual void UserProcessBundledParallelTasks(const uint16_t parallelRequestSlotI
 
 - `parallelRequestSlotIndices`: Indices of shared command buffer slots for the tasks to process. Entries from zero to `(parallelRequestSlotIndicesCount - 1)` have valid indices.
 - `parallelRequestSlotIndicesCount`: The number of tasks to process.
-- `completion`: An [OSAction](../../driverkit/osaction.md) object that the dext class uses to complete the request.
+- `completion`: An [OSAction](../../driverkit/osaction.md) object that the dext class uses to complete the request. The dext class needs to retain the `OSAction` object until all parallel tasks indicated by the callback complete and acknowledge completion to the framework by calling [BundledParallelTaskCompletion](bundledparalleltaskcompletion.md).
 
 <a id="discussion"></a>
 
@@ -35,7 +35,8 @@ The framework only calls this method when the dext has successfully mapped comma
 
 ## See Also
 
-### Managing Bundled Parallel Tasks
+### Managing bundled parallel tasks
 
 - [UserMapBundledParallelTaskCommandAndResponseBuffers](usermapbundledparalleltaskcommandandresponsebuffers.md): Maps the shared command and response buffers in the dext address space in response to a call from the framework.
 - [BundledParallelTaskCompletion](bundledparalleltaskcompletion.md): Indicates to the system that the extension completed a bundled asynchronous request.
+- [kMaxBundledParallelTasks](../kmaxbundledparalleltasks.md)

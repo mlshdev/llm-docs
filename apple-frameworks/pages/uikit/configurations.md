@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/configurations
 
 # Configurations (Swift)
@@ -49,6 +49,10 @@ There are two types of configurations:
 ### Color transformers
 
 - [UIConfigurationColorTransformer](uiconfigurationcolortransformer-swift.struct.md): A transformer that generates a modified output color from an input color.
+
+### Text attributes transformers
+
+- [UIConfigurationTextAttributesTransformer](uiconfigurationtextattributestransformer-swift.struct.md): Defines a text transformation that can affect the visual appearance of a string.
 
 # Configurations (Objective-C)
 
@@ -102,3 +106,7 @@ There are two types of configurations:
 ### Color transformers
 
 - [UIConfigurationColorTransformer](uiconfigurationcolortransformer-c.typealias.md): Generates a modified output color from an input color.
+
+### Text attributes transformers
+
+- [UIConfigurationTextAttributesTransformer](uiconfigurationtextattributestransformer-c.typealias.md): Defines a text transformation that can affect the visual appearance of a string.

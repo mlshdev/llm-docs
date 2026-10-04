@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/automaticarrangementviewstyle
 
 # AutomaticArrangementViewStyle
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The default arrangement view style.
 
@@ -25,7 +25,7 @@ Using this style, the arrangement view resolves to a [SplitArrangementViewStyle]
 
 ### Initializers
 
-- [init()](automaticarrangementviewstyle/init%28%29.md): Beta.
+- [init()](automaticarrangementviewstyle/init%28%29.md)
 
 ## Relationships
 
@@ -37,5 +37,5 @@ Using this style, the arrangement view resolves to a [SplitArrangementViewStyle]
 
 ### Supporting Types
 
-- [OverlayArrangementViewStyle](overlayarrangementviewstyle.md): Beta. An arrangement view style which overlays views.
-- [SplitArrangementViewStyle](splitarrangementviewstyle.md): Beta. An arrangement view style which splits views.
+- [OverlayArrangementViewStyle](overlayarrangementviewstyle.md): An arrangement view style which overlays views.
+- [SplitArrangementViewStyle](splitarrangementviewstyle.md): An arrangement view style which splits views.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/backgroundassets/assetpackmanager
 
 # AssetPackManager
@@ -79,6 +79,11 @@ The first time that your code refers to the shared manager, Background Assets co
 ### Handling errors
 
 - [AssetPackManager.LocalAvailabilityError](assetpackmanager/localavailabilityerror.md): An error that provides information about local asset pack availability, distinguishing between successes and failures.
+
+### Instance Methods
+
+- [localSize(ofAssetPackWithID:calculationMethod:)](assetpackmanager/localsize%28ofassetpackwithid_calculationmethod_%29.md): Beta. Calculates a locally available asset pack’s installation size.
+- [localVersion(ofAssetPackWithID:)](assetpackmanager/localversion%28ofassetpackwithid_%29.md): Beta. Returns a locally available asset pack’s version number.
 
 ## Relationships
 

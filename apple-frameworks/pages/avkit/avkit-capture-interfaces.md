@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avkit/avkit-capture-interfaces
 
 # Capture interfaces
@@ -31,9 +31,9 @@ For information about building a camera app, see [Capture setup](../avfoundation
 ### Camera facing direction
 
 - [Choosing a camera by the direction it faces](choosing-a-camera-by-the-direction-it-faces.md): Find out which way each camera faces, and follow the change as someone opens and closes the device.
-- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): Beta. An object that tracks the direction each camera faces in relation to a view.
-- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): Beta. An object that groups the cameras a coordinator tracks by the direction they face.
-- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): Beta. An object that identifies a capture device and is safe to pass between actors.
+- [AVCaptureDeviceDirectionCoordinator](avcapturedevicedirectioncoordinator.md): An object that tracks the direction each camera faces in relation to a view.
+- [AVCaptureDeviceDirectionMap](avcapturedevicedirectionmap.md): An object that groups the cameras a coordinator tracks by the direction they face.
+- [AVCaptureDeviceDescriptor](avcapturedevicedescriptor.md): An object that identifies a capture device and is safe to pass between actors.
 
 ### Audio input selection
 

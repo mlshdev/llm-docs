@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nialgorithmconvergencestatus-2fbmj
 
 # NIAlgorithmConvergenceStatus
@@ -24,11 +24,3 @@ enum NIAlgorithmConvergenceStatus : NSInteger;
 - [NIAlgorithmConvergenceStatusConverged](nialgorithmconvergencestatus-2fbmj/nialgorithmconvergencestatusconverged.md): A status that indicates the framework’s Camera Assistance feature is operational.
 - [NIAlgorithmConvergenceStatusNotConverged](nialgorithmconvergencestatus-2fbmj/nialgorithmconvergencestatusnotconverged.md): A status that indicates the framework’s Camera Assistance feature requires action from the user.
 - [NIAlgorithmConvergenceStatusUnknown](nialgorithmconvergencestatus-2fbmj/nialgorithmconvergencestatusunknown.md): An indication that the framework is unsure of the Camera Assistance status.
-
-## See Also
-
-### Camera assistance
-
-- [Finding devices with precision](finding-devices-with-precision.md): Leverage the spatial awareness of ARKit and Apple Ultra Wideband Chips in your app to guide users to a nearby device.
-- [NIAlgorithmConvergence](nialgorithmconvergence.md): An object that provides the state and reason for user coaching recommendations.
-- [Algorithm Convergence Status](algorithm-convergence-status.md): The possible Objective-C states of Camera Assistance.

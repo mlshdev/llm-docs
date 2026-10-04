@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/computenodegraph/topology
 
 # ComputeNodeGraph.Topology
@@ -44,3 +44,13 @@ Set on an output stage via the `topology` property. The output’s topology dete
 - [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Geometry and simulation inputs
+
+- [CoordinateSpace](../coordinatespace.md): Simulation coordinate space, controlling how positions and orientations are stored.
+- [ComputeNodeGraph.StructureLayout](structurelayout.md)
+- [StripOrientation](../striporientation.md): An enumeration that specifies how a strip should be oriented.
+- [Viewpoint](../viewpoint-swift.struct.md): Camera viewpoint parameters in 3D space.
+- [MouseParams](../mouseparams.md): Parameters describing mouse interaction in 3D space.

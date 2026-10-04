@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalcompressionbehavior
 
 # ToolbarVerticalCompressionBehavior
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
 
@@ -25,9 +25,9 @@ Use this with the [toolbarVerticalCompressionBehavior(\_:)](view/toolbarvertical
 
 ### Getting compression behavior options
 
-- [automatic](toolbarverticalcompressionbehavior/automatic.md): Beta. The automatic compression behavior.
-- [prefersTabBar](toolbarverticalcompressionbehavior/preferstabbar.md): Beta. A compression behavior that prefers keeping the tab bar visible.
-- [prefersToolbarItems](toolbarverticalcompressionbehavior/preferstoolbaritems.md): Beta. A compression behavior that prefers keeping toolbar items visible.
+- [automatic](toolbarverticalcompressionbehavior/automatic.md): The automatic compression behavior.
+- [prefersTabBar](toolbarverticalcompressionbehavior/preferstabbar.md): A compression behavior that prefers keeping the tab bar visible.
+- [prefersToolbarItems](toolbarverticalcompressionbehavior/preferstoolbaritems.md): A compression behavior that prefers keeping toolbar items visible.
 
 ## Relationships
 
@@ -42,6 +42,6 @@ Use this with the [toolbarVerticalCompressionBehavior(\_:)](view/toolbarvertical
 
 ### Configuring vertical toolbar behavior
 
-- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
-- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
+- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Sets the behavior for the vertical bar.
+- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): A behavior that determines whether the vertical bar is used.
+- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Sets how bars should compress when different types of toolbars are hosted together and space is constrained.

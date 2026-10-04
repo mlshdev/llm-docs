@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedirectionmap/backwardfacingdevicedescriptors
 
 # backwardFacingDeviceDescriptors (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 Descriptions of the capture devices that face away from the view.
 
@@ -29,13 +29,13 @@ These devices capture the scene behind the view. Each [AVCaptureDeviceDescriptor
 
 ### Reading the camera directions
 
-- [forwardFacingDeviceDescriptors](forwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face the same direction as the view.
+- [forwardFacingDeviceDescriptors](forwardfacingdevicedescriptors.md): Descriptions of the capture devices that face the same direction as the view.
 
 # backwardFacingDeviceDescriptors (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 Descriptions of the capture devices that face away from the view.
 
@@ -59,4 +59,4 @@ These devices capture the scene behind the view. Each [AVCaptureDeviceDescriptor
 
 ### Reading the camera directions
 
-- [forwardFacingDeviceDescriptors](forwardfacingdevicedescriptors.md): Beta. Descriptions of the capture devices that face the same direction as the view.
+- [forwardFacingDeviceDescriptors](forwardfacingdevicedescriptors.md): Descriptions of the capture devices that face the same direction as the view.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/view-layout
 
 # View layout (Swift)
@@ -46,8 +46,8 @@ When you design your app’s interface, you position views and other interface e
 
 ### Reserved regions
 
-- [UIView.ReservedRegion](uiview/reservedregion.md): Beta. A region within a view’s coordinate space that another entity occupies.
-- [reservedRegions(kind:options:)](uiview/reservedregions%28kind_options_%29.md): Beta. Returns the reserved regions of a given kind and options.
+- [UIView.ReservedRegion](uiview/reservedregion.md): A region within a view’s coordinate space that another entity occupies.
+- [reservedRegions(kind:options:)](uiview/reservedregions%28kind_options_%29.md): Returns the reserved regions of a given kind and options.
 
 ### Anchors
 

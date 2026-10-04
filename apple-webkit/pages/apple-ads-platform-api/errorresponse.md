@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/errorresponse
 
 # ErrorResponse
@@ -41,7 +41,10 @@ A `429` status indicates the caller has exceeded its request quota. See [Applyin
     "details": [
       {
         "code": "MISSING_REQUIRED_FIELD",
-        "message": "The field 'name' is required for campaign AwayFinder Summer Launch."
+        "message": "The field 'name' is required for campaign AwayFinder Summer Launch.",
+        "info": {
+          "field": "name"
+        }
       }
     ]
   }
@@ -54,3 +57,4 @@ A `429` status indicates the caller has exceeded its request quota. See [Applyin
 
 - [Error](error.md): The standard error envelope that the API returns when a request fails.
 - [ErrorDetail](errordetail.md): Field-level or request-level detail for a specific part of a failed API request.
+- [Info](info.md): Additional context that supplements an error detail’s message, varying by endpoint and error type.

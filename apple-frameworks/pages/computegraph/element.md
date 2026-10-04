@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/element
 
 # element
@@ -25,16 +25,10 @@ A set of nodes for reading and writing the current element within a particle sim
 
 ## See Also
 
-### Built-in nodes
+### Simulation-stage nodes
 
-- [emitter](emitter.md): A set of nodes usable in the emission stage of a simulation, which control how often and how many elements to spawn.
-- [force](force.md): Apply physics forces including gravity, drag, noise, and twist.
-- [initialize](initialize.md): Nodes usable within the initialization stage of an element.
-- [output](output.md): Nodes usable within the output stage of an element. You can use these nodes to change the appearance of an element without making modifications to the element itself.
-- [module](module.md): Mutate per-particle state with operations such as setPosition, addPosition, setVelocity, setColor, setSize, and setLifetime.
-- [graph](graph.md): A set of nodes usable in any stage within a ComputeGraph.
-- [group](group.md): Nodes for querying the group for a current particle. Requires a system whose simulation stage is configured as either `strips` or `grouped`.
-- [texture](texture.md): Nodes usable within the texture stage, for generating textures.
-- [random](random.md): Nodes for generating pseudo-random numbers.
-- [matrix4x4f](matrix4x4f.md): Transform positions and directions using matrix4x4f.
-- [matrix4x4h](matrix4x4h.md): Transform positions and directions using matrix4x4h.
+- [emitter](emitter.md): A set of nodes for the emission stage that control how often and how many elements a simulation spawns.
+- [initialize](initialize.md): A set of nodes for the initialization stage that set an element’s starting state.
+- [module](module.md): A set of nodes that mutate per-particle state, including position, velocity, color, size, and lifetime.
+- [output](output.md): A set of nodes for the output stage that adjust an element’s appearance without modifying its underlying state.
+- [force](force.md): A set of nodes that apply physics forces to particles, including gravity, drag, noise, and twist.

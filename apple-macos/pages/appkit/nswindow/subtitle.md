@@ -21,6 +21,10 @@ var subtitle: String { get set }
 
 When this property is an empty string, the system removes the subtitle from the window layout.
 
+> **Note**
+
+>  When you present a window as a sheet, the window never displays this subtitle, regardless of its value.
+
 ## See Also
 
 ### Managing Titles
@@ -50,6 +54,10 @@ A secondary line of text that appears in the title bar of the window.
 ## Discussion
 
 When this property is an empty string, the system removes the subtitle from the window layout.
+
+> **Note**
+
+>  When you present a window as a sheet, the window never displays this subtitle, regardless of its value.
 
 ## See Also
 

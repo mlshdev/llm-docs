@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitsystemprefersreducedresourceusage-swift.struct
 
 # UITraitSystemPrefersReducedResourceUsage
@@ -18,3 +18,9 @@ struct UITraitSystemPrefersReducedResourceUsage
 ### Conforms To
 
 - [UITraitDefinition](uitraitdefinition-64c15.md)
+
+## See Also
+
+### System traits
+
+- [UITraitNavigationTitleAlignment](uitraitnavigationtitlealignment-swift.struct.md): Beta.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewreservedregion/active
 
 # active
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 Whether the region is currently active.
 
@@ -21,9 +21,9 @@ Whether the region is currently active.
 
 ### Getting region details
 
-- [frame](frame.md): Beta. The rect of the region in the view’s coordinate space, including the margins.
-- [kind](kind.md): Beta. The kind of the region.
-- [UIViewReservedRegionKind](../uiviewreservedregionkind.md): Beta. A kind of reserved region.
-- [identifier](identifier.md): Beta. The identifier of the region.
-- [UIViewReservedRegionIdentifier](../uiviewreservedregionidentifier.md): Beta. An identifier of a reserved region.
-- [margins](margins.md): Beta. The margins included in the frame around the reserved rect for interactive content.
+- [frame](frame.md): The rect of the region in the view’s coordinate space, including the margins.
+- [kind](kind.md): The kind of the region.
+- [UIViewReservedRegionKind](../uiviewreservedregionkind.md): A kind of reserved region.
+- [identifier](identifier.md): The identifier of the region.
+- [UIViewReservedRegionIdentifier](../uiviewreservedregionidentifier.md): An identifier of a reserved region.
+- [margins](margins.md): The margins included in the frame around the reserved rect for interactive content.

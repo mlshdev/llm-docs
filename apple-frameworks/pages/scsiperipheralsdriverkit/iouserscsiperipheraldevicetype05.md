@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/iouserscsiperipheraldevicetype05
 
 # IOUserSCSIPeripheralDeviceType05
@@ -9,7 +9,7 @@
 **Kind:** Class  
 **Availability:** DriverKit 22.0+
 
-A DriverKit provider object that works with type 05 devices, those that use SCSI Multimedia Commands (SMC).
+A DriverKit provider object that works with Type05 devices, those that use SCSI Multimedia Commands (SMC).
 
 ## Declaration
 
@@ -36,9 +36,9 @@ Use the functions in [SCSI commands](scsi-commands.md) to populate Command Descr
 
 - [UserSendCDB](iouserscsiperipheraldevicetype05/usersendcdb.md): Sends a vendor-specific Command Descriptor Block (CDB) to the device.
 - [SCSIType05OutParameters](scsitype05outparameters.md): Parameters for commands to send to the external SCSI device.
-- [SCSIType05OutVersion](scsitype05outversion.md): Constants that represent versions of the type 05 outbound interface.
+- [SCSIType05OutVersion](scsitype05outversion.md): Constants that represent versions of the Type05 outbound interface.
 - [SCSIType05InParameters](scsitype05inparameters.md): Parameters for responses from the external SCSI device.
-- [SCSIType05InVersion](scsitype05inversion.md): Constants that represent versions of the type 05 inbound interface.
+- [SCSIType05InVersion](scsitype05inversion.md): Constants that represent versions of the Type05 inbound interface.
 
 ### Suspending and resuming services
 
@@ -59,4 +59,5 @@ Use the functions in [SCSI commands](scsi-commands.md) to populate Command Descr
 
 ### Driver interfaces
 
-- [IOUserSCSIPeripheralDeviceType00](iouserscsiperipheraldevicetype00.md): A DriverKit provider object that works with type 00 devices, those that use SCSI Block Commands (SBC).
+- [IOUserSCSIPeripheralDeviceType00](iouserscsiperipheraldevicetype00.md): A DriverKit provider object that works with Type00 devices, those that use SCSI Block Commands (SBC).
+- [IOUserSCSIPeripheralDeviceType07](iouserscsiperipheraldevicetype07.md): A DriverKit provider object that works with Type07 devices, those that use extended SCSI Block Commands (SBC) for optical memory devices.

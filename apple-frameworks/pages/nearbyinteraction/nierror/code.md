@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nierror/code
 
 # NIError.Code (Swift)
@@ -53,10 +53,18 @@ This enumeration uses [session(\_:didInvalidateWith:)](../nisessiondelegate/sess
 
 ## See Also
 
-### Errors
+### Identifying an error cause
 
-- [NIError](../nierror.md): An error Nearby Interaction reports.
-- [NIErrorDomain](../nierrordomain.md): A unique error domain for Nearby Interaction.
+- [activeSessionsLimitExceeded](activesessionslimitexceeded.md): An error code that indicates that the app reached the maximum number of sessions.
+- [invalidConfiguration](invalidconfiguration.md): An error code that indicates that the nearby-interaction configuration isn’t valid.
+- [resourceUsageTimeout](resourceusagetimeout.md): An error code that indicates that the framework timed out the session.
+- [sessionFailed](sessionfailed.md): An error code that indicates that the session failed.
+- [unsupportedPlatform](unsupportedplatform.md): An error code that indicates that the framework doesn’t support the device platform.
+- [userDidNotAllow](userdidnotallow.md): An error code that indicates that the user declined the request to share their relative position with nearby devices.
+- [invalidARConfiguration](invalidarconfiguration.md): An error that indicates the framework can’t begin Camera Assistance.
+- [activeExtendedDistanceSessionsLimitExceeded](activeextendeddistancesessionslimitexceeded.md): An error code that indicates that the device exceeds the available number of active extended distance sessions.
+- [incompatiblePeerDevice](incompatiblepeerdevice.md): An error that indicates the peer device isn’t compatible with this Nearby Interaction session instance.
+- [accessoryPeerDeviceUnavailable](accessorypeerdeviceunavailable.md): An error that indicates the peer Bluetooth accessory isn’t connected or paired.
 
 # NIErrorCode (Objective-C)
 
@@ -92,9 +100,3 @@ This enumeration uses [session:didInvalidateWithError:](../nisessiondelegate/ses
 - [NIErrorCodeAccessoryPeerDeviceUnavailable](code/accessorypeerdeviceunavailable.md): An error that indicates the peer Bluetooth accessory isn’t connected or paired.
 - [NIErrorCodeIncompatiblePeerDevice](code/incompatiblepeerdevice.md): An error that indicates the peer device isn’t compatible with this Nearby Interaction session instance.
 - [NIErrorCodeActiveExtendedDistanceSessionsLimitExceeded](code/activeextendeddistancesessionslimitexceeded.md): An error that indicates the device exceeds the available number of active extended distance sessions.
-
-## See Also
-
-### Errors
-
-- [NIErrorDomain](../nierrordomain.md): A unique error domain for Nearby Interaction.

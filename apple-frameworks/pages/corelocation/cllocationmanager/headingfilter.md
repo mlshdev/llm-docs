@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corelocation/cllocationmanager/headingfilter
 
 # headingFilter (Swift)
@@ -30,6 +30,7 @@ The angular distance is measured relative to the last delivered heading event. U
 - [dismissHeadingCalibrationDisplay()](dismissheadingcalibrationdisplay%28%29.md): Dismisses the heading calibration view from the screen immediately.
 - [kCLHeadingFilterNone](../kclheadingfilternone.md): A constant indicating that all header values should be reported.
 - [CLLocationDegrees](../cllocationdegrees.md): A latitude or longitude value specified in degrees.
+- [headingBody](headingbody.md): A physical body or view that defines the reference orientation for heading calculations.
 - [headingOrientation](headingorientation.md): Deprecated. The device orientation to use when computing heading values.
 - [CLDeviceOrientation](../cldeviceorientation.md): Constants indicating the physical orientation of the device.
 
@@ -62,5 +63,6 @@ The angular distance is measured relative to the last delivered heading event. U
 - [dismissHeadingCalibrationDisplay](dismissheadingcalibrationdisplay%28%29.md): Dismisses the heading calibration view from the screen immediately.
 - [kCLHeadingFilterNone](../kclheadingfilternone.md): A constant indicating that all header values should be reported.
 - [CLLocationDegrees](../cllocationdegrees.md): A latitude or longitude value specified in degrees.
+- [headingBody](headingbody.md): A physical body or view that defines the reference orientation for heading calculations.
 - [headingOrientation](headingorientation.md): Deprecated. The device orientation to use when computing heading values.
 - [CLDeviceOrientation](../cldeviceorientation.md): Constants indicating the physical orientation of the device.

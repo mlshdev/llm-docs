@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/get-brand-ad-reports
 
 # Ads Report (Brands)
@@ -65,10 +65,10 @@ Ad reports follow the standard date range rules per granularity, except `HOURLY`
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | **Not supported** for the `AD` entity. Use `DAILY` as the finest granularity. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 

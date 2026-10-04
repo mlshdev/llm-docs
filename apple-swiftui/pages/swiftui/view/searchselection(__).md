@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/view/searchselection(_:)
 
 # searchSelection(\_:)
@@ -32,8 +32,8 @@ The following example creates a search interface that selects all of the text on
 
 ```swift
 struct ContentView: View {
-    @State var text = "Hello, world!"
-    @State var selection: TextSelection?
+    @State private var text = "Hello, world!"
+    @State private var selection: TextSelection?
     @FocusState var focused
 
     var body: some View {

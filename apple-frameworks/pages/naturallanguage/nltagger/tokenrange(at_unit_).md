@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/naturallanguage/nltagger/tokenrange(at:unit:)
 
 # tokenRange(at:unit:)
@@ -17,6 +17,7 @@ Returns the range of the linguistic unit containing the specified character inde
 
 ## Parameters
 
+- `index`: The character index to begin examination.
 - `unit`: The linguistic unit. For possible values, see [NLTokenUnit](../nltokenunit.md).
 
 <a id="return-value"></a>

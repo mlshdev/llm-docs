@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/scsiuserparallelresponse/fcontrollertaskidentifier
 
 # fControllerTaskIdentifier
@@ -17,9 +17,15 @@ A unique identifier for a task.
 uint64_t fControllerTaskIdentifier;
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Your dext class creates task identifiers when the framework invokes [UserMapHBAData](../iouserscsiparallelinterfacecontroller/usermaphbadata.md) for each parallel task.
+
 ## See Also
 
-### Response Properties
+### Response properties
 
 - [version](version.md): The version of the parallel response structure currently in use.
 - [SCSIUserParallelResponseVersion](../scsiuserparallelresponseversion.md): Constants that represent versions of the user parallel task structure.

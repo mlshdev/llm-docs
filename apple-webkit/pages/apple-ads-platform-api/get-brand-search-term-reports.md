@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/get-brand-search-term-reports
 
 # Search Terms Report (Brands)
@@ -74,14 +74,14 @@ The following dimensions are **not** supported for the `SEARCHTERM` entity under
 - `supplyPlacement`
 - `locationId`
 
-Granularity constraints follow the same date range rules as other Apple Maps reports, except `HOURLY` isn’t available for search terms.
+Date range requirements vary by granularity: `DAILY` is capped at a 90-day span, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively. `HOURLY` isn’t available for search terms.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | **Not supported** for the `SEARCHTERM` entity. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -456,13 +456,13 @@ POST /v1/reports/business-brands/searchterms/query
 
 **Brands, Weekly**
 
-Retrieve weekly search term metrics for a campaign. Weekly granularity requires the end date to be at least 14 days in the past.
+Retrieve weekly search term metrics for a campaign. Weekly granularity requires the date range to span at least 14 days.
 
 <a id="Request"></a>
 
 ### Request
 
-Filters by `campaignId` with no `groupBy` dimension and uses weekly granularity over a 2-month window. The end date is more than 14 days in the past as required by weekly reporting.
+Filters by `campaignId` with no `groupBy` dimension and uses weekly granularity over a 2-month window, well over the 14-day minimum required for weekly reporting.
 
 ```json
 POST /v1/reports/business-brands/searchterms/query

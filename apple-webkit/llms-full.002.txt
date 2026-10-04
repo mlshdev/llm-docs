@@ -1,10 +1,970 @@
-# Apple WebKit and Safari snapshot-33695ec62253: full documentation
+# Apple WebKit and Safari snapshot-f22abf4916e5: full documentation
 
 Source: https://developer.apple.com/documentation/webkit
-Catalog snapshot: 33695ec62253d7c27ab92cec13d777a7a1ab7c195e074c2faaa71df986300bb8
-Content digest: 98d5355b9314806fc6d4eada2ecb2a93176a5f08e3e4ac247a479ef447e7b53a
-Captured at: 2026-09-27T18:07:09.617Z
+Catalog snapshot: f22abf4916e5b2883ca54c03e9bfadb5e433da91e20aef1eeabdf5d3c0573721
+Content digest: beac2fd89a021eee1d72dbf403dfcb52f58089a1faaa58b19ce47f2de5dc3c0c
+Captured at: 2026-10-04T18:39:02.493Z
 Volume 2
+
+# Document: BetaBuildLocalization
+
+Source path: documentation/appstoreconnectapi/betabuildlocalization
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization
+Description: Interface language: Data
+
+# BetaBuildLocalization
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
+
+## Declaration
+
+```
+object BetaBuildLocalization
+```
+
+## Properties
+
+- `attributes` — `BetaBuildLocalization.Attributes`: The resource’s attributes.
+- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
+- `relationships` — `BetaBuildLocalization.Relationships`: Navigational links to related data and included resource types and IDs.
+- `type` — `string` (required): The resource type.
+  **Allowed values:** `betaBuildLocalizations`
+- `links` — `ResourceLinks`: Navigational links that include the self-link.
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalization.Attributes](betabuildlocalization/attributes-data.dictionary.md): Attributes that describe a Beta Build Localizations resource.
+- [BetaBuildLocalization.Relationships](betabuildlocalization/relationships-data.dictionary.md): The relationships you include in the request and those on which you can operate.
+
+## See Also
+
+### Objects
+
+- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
+- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
+- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
+- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
+- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
+- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
+
+# Document: BetaBuildLocalization.Attributes
+
+Source path: documentation/appstoreconnectapi/betabuildlocalization/attributes-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization/attributes-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalization.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+Attributes that describe a Beta Build Localizations resource.
+
+## Declaration
+
+```
+object BetaBuildLocalization.Attributes
+```
+
+## Properties
+
+- `locale` — `string`: The specified locale. To learn more, see [Managing metadata in your app by using locale shortcodes](../managing-metadata-in-your-app-by-using-locale-shortcodes.md).
+- `whatsNew` — `string`: A field that describes changes and additions to a build and indicates features you would like your users to test.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Table 1 lists allowed locale values.
+
+| `da` | Danish |
+| --- | --- |
+| `de-DE` | German |
+| `el` | Greek |
+| `en-AU` | English (Australia) |
+| `en-CA` | English (Canada) |
+| `en-GB` | English (U.K.) |
+| `en-US` | English (U.S.) |
+| `es-ES` | Spanish (Spain) |
+| `es-MX` | Spanish (Mexico) |
+| `fi` | Finnish |
+| `fr-CA` | French (Canada) |
+| `fr-FR` | French |
+| `id` | Indonesian |
+| `it` | Italian |
+| `ja` | Japanese |
+| `ko` | Korean |
+| `ms` | Malay |
+| `nl-NL` | Dutch |
+| `no` | Norwegian |
+| `pt-BR` | Portuguese (Brazil) |
+| `pt-PT` | Portuguese (Portugal) |
+| `ru` | Russian |
+| `sv` | Swedish |
+| `th` | Thai |
+| `tr` | Turkish |
+| `vi` | Vietnamese |
+| `zh-Hans` | Chinese (Simplified) |
+| `zh-Hant` | Chinese (Traditional) |
+
+## See Also
+
+### Related Documentation
+
+- [Beta Build Localizations](../beta-build-localizations.md): Beta test information about builds, specific to a locale.
+
+### Objects
+
+- [BetaBuildLocalization.Relationships](relationships-data.dictionary.md): The relationships you include in the request and those on which you can operate.
+
+# Document: BetaBuildLocalization.Relationships
+
+Source path: documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalization.Relationships
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The relationships you include in the request and those on which you can operate.
+
+## Declaration
+
+```
+object BetaBuildLocalization.Relationships
+```
+
+## Properties
+
+- `build` — `BetaBuildLocalization.Relationships.Build`:
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalization.Relationships.Build](relationships-data.dictionary/build-data.dictionary.md): The data and links that describe the relationship between the resources.
+
+## See Also
+
+### Objects
+
+- [BetaBuildLocalization.Attributes](attributes-data.dictionary.md): Attributes that describe a Beta Build Localizations resource.
+
+# Document: BetaBuildLocalization.Relationships.Build
+
+Source path: documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary/build-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary/build-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalization.Relationships.Build
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The data and links that describe the relationship between the resources.
+
+## Declaration
+
+```
+object BetaBuildLocalization.Relationships.Build
+```
+
+## Properties
+
+- `data` — `BetaBuildLocalization.Relationships.Build.Data`:
+- `links` — `RelationshipLinks`:
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalization.Relationships.Build.Data](build-data.dictionary/data-data.dictionary.md): The type and ID of a related resource.
+
+# Document: BetaBuildLocalization.Relationships.Build.Data
+
+Source path: documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary/build-data.dictionary/data-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary/build-data.dictionary/data-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalization.Relationships.Build.Data
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The type and ID of a related resource.
+
+## Declaration
+
+```
+object BetaBuildLocalization.Relationships.Build.Data
+```
+
+## Properties
+
+- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
+- `type` — `string` (required): The resource type.
+  **Allowed values:** `builds`
+
+# Document: BetaBuildLocalizationBuildLinkageResponse
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationbuildlinkageresponse
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationbuildlinkageresponse
+Description: Interface language: Data
+
+# BetaBuildLocalizationBuildLinkageResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.6+
+
+## Declaration
+
+```
+object BetaBuildLocalizationBuildLinkageResponse
+```
+
+## Properties
+
+- `data` — `BetaBuildLocalizationBuildLinkageResponse.Data` (required):
+- `links` — `DocumentLinks` (required):
+
+## Topics
+
+### Dictionaries
+
+- [BetaBuildLocalizationBuildLinkageResponse.Data](betabuildlocalizationbuildlinkageresponse/data-data.dictionary.md)
+
+## See Also
+
+### Objects
+
+- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
+- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
+- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
+- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
+- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
+- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
+
+# Document: BetaBuildLocalizationBuildLinkageResponse.Data
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationbuildlinkageresponse/data-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationbuildlinkageresponse/data-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalizationBuildLinkageResponse.Data
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.6+
+
+## Declaration
+
+```
+object BetaBuildLocalizationBuildLinkageResponse.Data
+```
+
+## Properties
+
+- `id` — `string` (required):
+- `type` — `string` (required): **Allowed values:** `builds`
+
+# Document: BetaBuildLocalizationCreateRequest
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest
+Description: Interface language: Data
+
+# BetaBuildLocalizationCreateRequest
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The request body you use to create a Beta Build Localization.
+
+## Declaration
+
+```
+object BetaBuildLocalizationCreateRequest
+```
+
+## Properties
+
+- `data` — `BetaBuildLocalizationCreateRequest.Data` (required): The resource data.
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalizationCreateRequest.Data](betabuildlocalizationcreaterequest/data-data.dictionary.md): The data element of the request body.
+
+## See Also
+
+### Objects
+
+- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
+- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
+- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
+- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
+- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
+- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
+
+# Document: BetaBuildLocalizationCreateRequest.Data
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalizationCreateRequest.Data
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The data element of the request body.
+
+## Declaration
+
+```
+object BetaBuildLocalizationCreateRequest.Data
+```
+
+## Properties
+
+- `attributes` — `BetaBuildLocalizationCreateRequest.Data.Attributes` (required): The resource’s attributes.
+- `relationships` — `BetaBuildLocalizationCreateRequest.Data.Relationships` (required): Navigational links to related data and included resource types and IDs.
+- `type` — `string` (required): The resource type.
+  **Allowed values:** `betaBuildLocalizations`
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalizationCreateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes that you set that describe the new resource.
+- [BetaBuildLocalizationCreateRequest.Data.Relationships](data-data.dictionary/relationships-data.dictionary.md): The relationships to other resources that you can set with this request.
+
+# Document: BetaBuildLocalizationCreateRequest.Data.Attributes
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/attributes-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/attributes-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalizationCreateRequest.Data.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+Attributes that you set that describe the new resource.
+
+## Declaration
+
+```
+object BetaBuildLocalizationCreateRequest.Data.Attributes
+```
+
+## Properties
+
+- `locale` — `string` (required): The specified locale. To learn more, see [Managing metadata in your app by using locale shortcodes](../../managing-metadata-in-your-app-by-using-locale-shortcodes.md).
+- `whatsNew` — `string`: A field that describes changes and additions to a build and indicates features you would like your users to test.
+
+## See Also
+
+### Related Documentation
+
+- [Beta Build Localizations](../../beta-build-localizations.md): Beta test information about builds, specific to a locale.
+
+### Objects
+
+- [BetaBuildLocalizationCreateRequest.Data.Relationships](relationships-data.dictionary.md): The relationships to other resources that you can set with this request.
+
+# Document: BetaBuildLocalizationCreateRequest.Data.Relationships
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalizationCreateRequest.Data.Relationships
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The relationships to other resources that you can set with this request.
+
+## Declaration
+
+```
+object BetaBuildLocalizationCreateRequest.Data.Relationships
+```
+
+## Properties
+
+- `build` — `BetaBuildLocalizationCreateRequest.Data.Relationships.Build` (required):
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalizationCreateRequest.Data.Relationships.Build](relationships-data.dictionary/build-data.dictionary.md): The relationships to other resources that you can set with this request.
+
+## See Also
+
+### Objects
+
+- [BetaBuildLocalizationCreateRequest.Data.Attributes](attributes-data.dictionary.md): Attributes that you set that describe the new resource.
+
+# Document: BetaBuildLocalizationCreateRequest.Data.Relationships.Build
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalizationCreateRequest.Data.Relationships.Build
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The relationships to other resources that you can set with this request.
+
+## Declaration
+
+```
+object BetaBuildLocalizationCreateRequest.Data.Relationships.Build
+```
+
+## Properties
+
+- `data` — `BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data` (required):
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data](build-data.dictionary/data-data.dictionary.md): The type and ID of the resource that you’re relating with the resource you’re creating.
+
+# Document: BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary/data-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary/data-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The type and ID of the resource that you’re relating with the resource you’re creating.
+
+## Declaration
+
+```
+object BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data
+```
+
+## Properties
+
+- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
+- `type` — `string` (required): The resource type.
+  **Allowed values:** `builds`
+
+# Document: BetaBuildLocalizationResponse
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationresponse
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationresponse
+Description: Interface language: Data
+
+# BetaBuildLocalizationResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The response body for endpoints that create, read, or modify localized TestFlight build metadata.
+
+## Declaration
+
+```
+object BetaBuildLocalizationResponse
+```
+
+## Properties
+
+- `data` — `BetaBuildLocalization` (required): The resource data.
+- `links` — `DocumentLinks` (required): Navigational links that include the self-link.
+- `included` — `[Build]`:
+
+## See Also
+
+### Related Documentation
+
+- [Create a beta build localization](post-v1-betabuildlocalizations.md): Create localized What’s New text for a build.
+
+### Objects
+
+- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
+- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
+- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
+- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
+- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
+- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
+
+# Document: BetaBuildLocalizationsResponse
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationsresponse
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationsresponse
+Description: Interface language: Data
+
+# BetaBuildLocalizationsResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The response body for endpoints that list localized TestFlight build metadata entries.
+
+## Declaration
+
+```
+object BetaBuildLocalizationsResponse
+```
+
+## Properties
+
+- `data` — `[BetaBuildLocalization]` (required): The resource data.
+- `included` — `[Build]`:
+- `links` — `PagedDocumentLinks` (required): Navigational links that include the self-link.
+- `meta` — `PagingInformation`: Paging information.
+
+## See Also
+
+### Related Documentation
+
+- [List beta build localizations](get-v1-betabuildlocalizations.md): Find and list beta build localizations currently associated with apps.
+
+### Objects
+
+- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
+- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
+- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
+- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
+- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
+- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
+
+# Document: BetaBuildLocalizationsWithoutIncludesResponse
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationswithoutincludesresponse
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationswithoutincludesresponse
+Description: Interface language: Data
+
+# BetaBuildLocalizationsWithoutIncludesResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.0+
+
+A response containing a list of TestFlight build localizations, without related resources.
+
+## Declaration
+
+```
+object BetaBuildLocalizationsWithoutIncludesResponse
+```
+
+## Properties
+
+- `data` — `[BetaBuildLocalization]` (required):
+- `links` — `PagedDocumentLinks` (required):
+- `meta` — `PagingInformation`:
+
+## See Also
+
+### Objects
+
+- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
+- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
+- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
+- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
+- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
+- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
+
+# Document: BetaBuildLocalizationUpdateRequest
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationupdaterequest
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationupdaterequest
+Description: Interface language: Data
+
+# BetaBuildLocalizationUpdateRequest
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The request body you use to update a Beta Build Localization.
+
+## Declaration
+
+```
+object BetaBuildLocalizationUpdateRequest
+```
+
+## Properties
+
+- `data` — `BetaBuildLocalizationUpdateRequest.Data` (required): The resource data.
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalizationUpdateRequest.Data](betabuildlocalizationupdaterequest/data-data.dictionary.md): The data element of the request body.
+
+## See Also
+
+### Objects
+
+- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
+- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
+- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
+- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
+- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
+- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
+
+# Document: BetaBuildLocalizationUpdateRequest.Data
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationupdaterequest/data-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationupdaterequest/data-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalizationUpdateRequest.Data
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The data element of the request body.
+
+## Declaration
+
+```
+object BetaBuildLocalizationUpdateRequest.Data
+```
+
+## Properties
+
+- `attributes` — `BetaBuildLocalizationUpdateRequest.Data.Attributes`: The resource’s attributes.
+- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
+- `type` — `string` (required): The resource type.
+  **Allowed values:** `betaBuildLocalizations`
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalizationUpdateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes whose values you’re changing as part of the update request.
+
+# Document: BetaBuildLocalizationUpdateRequest.Data.Attributes
+
+Source path: documentation/appstoreconnectapi/betabuildlocalizationupdaterequest/data-data.dictionary/attributes-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationupdaterequest/data-data.dictionary/attributes-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildLocalizationUpdateRequest.Data.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+Attributes whose values you’re changing as part of the update request.
+
+## Declaration
+
+```
+object BetaBuildLocalizationUpdateRequest.Data.Attributes
+```
+
+## Properties
+
+- `whatsNew` — `string`: A field that describes changes and additions to a build and indicates features you would like your users to test.
+
+## See Also
+
+### Related Documentation
+
+- [Beta Build Localizations](../../beta-build-localizations.md): Beta test information about builds, specific to a locale.
+
+# Document: BetaBuildUsagesV1MetricResponse
+
+Source path: documentation/appstoreconnectapi/betabuildusagesv1metricresponse
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildusagesv1metricresponse
+Description: Interface language: Data
+
+# BetaBuildUsagesV1MetricResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.1+
+
+A response that contains one or more beta build metric resources.
+
+## Declaration
+
+```
+object BetaBuildUsagesV1MetricResponse
+```
+
+## Properties
+
+- `data` — `[BetaBuildUsagesV1MetricResponse.Data]` (required):
+- `links` — `PagedDocumentLinks` (required):
+- `meta` — `PagingInformation`:
+
+## Topics
+
+### Objects
+
+- [BetaBuildUsagesV1MetricResponse.Data](betabuildusagesv1metricresponse/data-data.dictionary.md): The request body you use to update a beta build usages v1metric response.
+
+## See Also
+
+### Objects and data types
+
+- [Build](build.md): A processed binary uploaded to App Store Connect, ready for TestFlight distribution or App Store submission.
+- [BuildResponse](buildresponse.md): The response body for endpoints that read or modify a single build.
+- [BuildWithoutIncludesResponse](buildwithoutincludesresponse.md): A response containing a single build, without related resources.
+- [BuildsResponse](buildsresponse.md): The response body for endpoints that list builds.
+- [BuildsWithoutIncludesResponse](buildswithoutincludesresponse.md): A response containing a list of builds, without related resources.
+- [BuildUpdateRequest](buildupdaterequest.md): The request body you use to update a Build.
+- [BuildAppEncryptionDeclarationLinkageRequest](buildappencryptiondeclarationlinkagerequest.md): The request body you use to attach an app encryption declaration to a build.
+- [BuildAppEncryptionDeclarationLinkageResponse](buildappencryptiondeclarationlinkageresponse.md): A response body that contains the ID of a single related resource.
+- [BuildIndividualTestersLinkagesRequest](buildindividualtesterslinkagesrequest.md): A request body you use to add or remove a build from multiple beta groups.
+- [BuildIndividualTestersLinkagesResponse](buildindividualtesterslinkagesresponse.md): A response body that contains a list of related resource IDs.
+- [BuildBetaGroupsLinkagesRequest](buildbetagroupslinkagesrequest.md): A request body you use to add or remove beta groups from a build.
+- [ImageAsset](imageasset.md): An image asset, including its height, width, and template URL.
+- [BuildAppLinkageResponse](buildapplinkageresponse.md)
+- [BuildAppStoreVersionLinkageResponse](buildappstoreversionlinkageresponse.md)
+- [BuildBetaAppReviewSubmissionLinkageResponse](buildbetaappreviewsubmissionlinkageresponse.md)
+
+# Document: BetaBuildUsagesV1MetricResponse.Data
+
+Source path: documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildUsagesV1MetricResponse.Data
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.1+
+
+The request body you use to update a beta build usages v1metric response.
+
+## Declaration
+
+```
+object BetaBuildUsagesV1MetricResponse.Data
+```
+
+## Properties
+
+- `dataPoints` — `[BetaBuildUsagesV1MetricResponse.Data.DataPoints]`:
+
+## Topics
+
+### Objects
+
+- [BetaBuildUsagesV1MetricResponse.Data.DataPoints](data-data.dictionary/datapoints-data.dictionary.md): The time-series data points for the beta build usage metric, each containing install and crash counts.
+
+# Document: BetaBuildUsagesV1MetricResponse.Data.DataPoints
+
+Source path: documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary/datapoints-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary/datapoints-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildUsagesV1MetricResponse.Data.DataPoints
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.1+
+
+The time-series data points for the beta build usage metric, each containing install and crash counts.
+
+## Declaration
+
+```
+object BetaBuildUsagesV1MetricResponse.Data.DataPoints
+```
+
+## Properties
+
+- `end` — `date-time`:
+- `start` — `date-time`:
+- `values` — `BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values`:
+
+## Topics
+
+### Objects
+
+- [BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values](datapoints-data.dictionary/values-data.dictionary.md): The install and crash count values within a single data point of the beta build usage metric.
+
+# Document: BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values
+
+Source path: documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary/datapoints-data.dictionary/values-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary/datapoints-data.dictionary/values-data.dictionary
+Description: Interface language: Data
+
+# BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.1+
+
+The install and crash count values within a single data point of the beta build usage metric.
+
+## Declaration
+
+```
+object BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values
+```
+
+## Properties
+
+- `crashCount` — `integer`:
+- `feedbackCount` — `integer`:
+- `installCount` — `integer`:
+- `inviteCount` — `integer`:
+- `sessionCount` — `integer`:
+
+# Document: BetaCrashLog
+
+Source path: documentation/appstoreconnectapi/betacrashlog
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betacrashlog
+Description: Interface language: Data
+
+# BetaCrashLog
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 4.0+
+
+The crash log details from a TestFlight tester’s device, including the stack trace and metadata captured at the time of the crash.
+
+## Declaration
+
+```
+object BetaCrashLog
+```
+
+## Properties
+
+- `attributes` — `BetaCrashLog.Attributes`:
+- `id` — `string` (required):
+- `links` — `ResourceLinks`:
+- `type` — `string` (required): **Allowed values:** `betaCrashLogs`
+
+## Topics
+
+### Dictionaries
+
+- [BetaCrashLog.Attributes](betacrashlog/attributes-data.dictionary.md): Attributes that describe a beta crash log resource.
+
+## See Also
+
+### Objects
+
+- [BetaCrashLogResponse](betacrashlogresponse.md): A response containing a single crash log from a TestFlight tester’s device.
+- [BetaFeedbackCrashSubmission](betafeedbackcrashsubmission.md): A crash report submitted by a TestFlight beta tester, linked to the build, bundle, and tester that produced it.
+- [BetaFeedbackCrashSubmissionResponse](betafeedbackcrashsubmissionresponse.md): A response containing a single crash report submitted by a TestFlight beta tester.
+- [BetaFeedbackCrashSubmissionsResponse](betafeedbackcrashsubmissionsresponse.md): A response containing a list of crash reports submitted by TestFlight beta testers.
+- [BetaFeedbackCrashSubmissionCrashLogLinkageResponse](betafeedbackcrashsubmissioncrashloglinkageresponse.md): A response containing the resource identifier of the crash log linked to a crash feedback submission.
+- [DeviceConnectionType](deviceconnectiontype.md): A string that represents the ways a device was connected for a specific crash.
+
+# Document: BetaCrashLog.Attributes
+
+Source path: documentation/appstoreconnectapi/betacrashlog/attributes-data.dictionary
+Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betacrashlog/attributes-data.dictionary
+Description: Interface language: Data
+
+# BetaCrashLog.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 4.0+
+
+Attributes that describe a beta crash log resource.
+
+## Declaration
+
+```
+object BetaCrashLog.Attributes
+```
+
+## Properties
+
+- `logText` — `string`:
 
 # Document: BetaCrashLogResponse
 
@@ -96358,7 +97318,7 @@ GET https://api.appstoreconnect.apple.com/v1/apps/{id}/appPricePoints
 
 ## Response Codes
 
-- `200` OK — `csv`:
+- `200` OK — `AppPricePointsV3Response`:
 - `400` Bad Request — `ErrorResponse`:
 - `401` Unauthorized — `ErrorResponse`:
 - `403` Forbidden — `ErrorResponse`:
@@ -130411,7 +131371,7 @@ GET https://api.appstoreconnect.apple.com/v1/nominations
 
 ## Response Codes
 
-- `200` OK — `NominationsResponse`:
+- `200` OK — `csv`:
 - `400` Bad Request — `ErrorResponse`:
 - `401` Unauthorized — `ErrorResponse`:
 - `403` Forbidden — `ErrorResponse`:
@@ -134441,7 +135401,7 @@ GET https://api.appstoreconnect.apple.com/v1/subscriptionPricePoints/{id}/adjust
 
 ## Response Codes
 
-- `200` OK — `csv`: The request completed successfully.
+- `200` OK — `SubscriptionPricePointsResponse`: The request completed successfully.
 - `400` Bad Request — `ErrorResponse`: An error occurred with your request.
 - `401` Unauthorized — `ErrorResponse`: Authentication failed.
 - `403` Forbidden — `ErrorResponse`: Request not authorized.
@@ -135157,7 +136117,7 @@ GET https://api.appstoreconnect.apple.com/v1/subscriptions/{id}/pricePoints
 
 ## Response Codes
 
-- `200` OK — `SubscriptionPricePointsResponse`:
+- `200` OK — `csv`:
 - `400` Bad Request — `ErrorResponse`:
 - `401` Unauthorized — `ErrorResponse`:
 - `403` Forbidden — `ErrorResponse`:
@@ -142311,7 +143271,7 @@ GET https://api.appstoreconnect.apple.com/v3/appPricePoints/{id}/equalizations
 
 ## Response Codes
 
-- `200` OK — `csv`:
+- `200` OK — `AppPricePointsV3Response`:
 - `400` Bad Request — `ErrorResponse`:
 - `401` Unauthorized — `ErrorResponse`:
 - `403` Forbidden — `ErrorResponse`:
@@ -189946,889 +190906,3 @@ object ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExper
 
 - `id` — `string` (required):
 - `type` — `string` (required): **Allowed values:** `appStoreVersionExperiments`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/appstoreversionexperimentv2-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/appstoreversionexperimentv2-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 2.4+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2.Data`:
-
-## Topics
-
-### Objects
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2.Data](appstoreversionexperimentv2-data.dictionary/data-data.dictionary.md): The request body you use to create a review submission item.
-
-## See Also
-
-### Objects
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppCustomProductPageVersion](appcustomproductpageversion-data.dictionary.md)
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppEvent](appevent-data.dictionary.md)
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersion](appstoreversion-data.dictionary.md)
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperiment](appstoreversionexperiment-data.dictionary.md)
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission](reviewsubmission-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/appstoreversionexperimentv2-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/appstoreversionexperimentv2-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 2.4+
-
-The request body you use to create a review submission item.
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `appStoreVersionExperiments`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/backgroundassetversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/backgroundassetversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion.Data](backgroundassetversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/backgroundassetversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/backgroundassetversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `backgroundAssetVersions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterachievementversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterachievementversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion.Data](gamecenterachievementversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterachievementversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterachievementversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `gameCenterAchievementVersions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenteractivityversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenteractivityversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion.Data](gamecenteractivityversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenteractivityversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenteractivityversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `gameCenterActivityVersions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterChallengeVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterchallengeversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterchallengeversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterChallengeVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterChallengeVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterChallengeVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterChallengeVersion.Data](gamecenterchallengeversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterChallengeVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterchallengeversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterchallengeversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterChallengeVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterChallengeVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `gameCenterChallengeVersions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardSetVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboardsetversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboardsetversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardSetVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardSetVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardSetVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardSetVersion.Data](gamecenterleaderboardsetversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardSetVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboardsetversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboardsetversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardSetVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardSetVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `gameCenterLeaderboardSetVersions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboardversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboardversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardVersion.Data](gamecenterleaderboardversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboardversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/gamecenterleaderboardversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterLeaderboardVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `gameCenterLeaderboardVersions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/inapppurchaseversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/inapppurchaseversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion.Data](inapppurchaseversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/inapppurchaseversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/inapppurchaseversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `inAppPurchaseVersions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/reviewsubmission-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/reviewsubmission-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.7+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission.Data` (required):
-
-## Topics
-
-### Objects
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission.Data](reviewsubmission-data.dictionary/data-data.dictionary.md): The request body you use to create a review submission item.
-
-## See Also
-
-### Objects
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppCustomProductPageVersion](appcustomproductpageversion-data.dictionary.md)
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppEvent](appevent-data.dictionary.md)
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersion](appstoreversion-data.dictionary.md)
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperiment](appstoreversionexperiment-data.dictionary.md)
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppStoreVersionExperimentV2](appstoreversionexperimentv2-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/reviewsubmission-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/reviewsubmission-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.7+
-
-The request body you use to create a review submission item.
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.ReviewSubmission.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `reviewSubmissions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/subscriptiongroupversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/subscriptiongroupversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion.Data](subscriptiongroupversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/subscriptiongroupversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/subscriptiongroupversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `subscriptionGroupVersions`
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/subscriptionversion-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/subscriptionversion-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion.Data`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion.Data](subscriptionversion-data.dictionary/data-data.dictionary.md)
-
-# Document: ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/subscriptionversion-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary/subscriptionversion-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `subscriptionVersions`
-
-# Document: ReviewSubmissionItemResponse
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemresponse
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemresponse
-Description: Interface language: Data
-
-# ReviewSubmissionItemResponse
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.7+
-
-The response body for endpoints that create, read, or modify a single review submission item.
-
-## Declaration
-
-```
-object ReviewSubmissionItemResponse
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItem` (required):
-- `included` — `[*]`: **Allowed types:** `AppCustomProductPageVersion`, `AppEvent`, `AppStoreVersionExperiment`, `AppStoreVersion`, `BackgroundAssetVersion`, `GameCenterAchievementVersionV2`, `GameCenterActivityVersion`, `GameCenterChallengeVersion`, `GameCenterLeaderboardSetVersionV2`, `GameCenterLeaderboardVersionV2`, `InAppPurchaseVersion`, `SubscriptionGroupVersion`, `SubscriptionVersion`
-- `links` — `DocumentLinks` (required):
-
-## See Also
-
-### Objects
-
-- [ReviewSubmissionItemCreateRequest](reviewsubmissionitemcreaterequest.md): The request body you use to create a review submission item.
-- [ReviewSubmissionItemUpdateRequest](reviewsubmissionitemupdaterequest.md): The request body you use to update a review submission item update request.
-- [ReviewSubmissionItemsResponse](reviewsubmissionitemsresponse.md): The response body for endpoints that list items in a review submission.
-
-# Document: ReviewSubmissionItemsLinkagesResponse
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemslinkagesresponse
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemslinkagesresponse
-Description: Interface language: Data
-
-# ReviewSubmissionItemsLinkagesResponse
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 4.1+
-
-A response containing the resource identifiers of items included in a review submission.
-
-## Declaration
-
-```
-object ReviewSubmissionItemsLinkagesResponse
-```
-
-## Properties
-
-- `data` — `[ReviewSubmissionItemsLinkagesResponse.Data]` (required):
-- `links` — `PagedDocumentLinks` (required):
-- `meta` — `PagingInformation`:
-
-## Topics
-
-### Dictionaries
-
-- [ReviewSubmissionItemsLinkagesResponse.Data](reviewsubmissionitemslinkagesresponse/data-data.dictionary.md): The data element of the response body.
-
-## See Also
-
-### Related Documentation
-
-- [ReviewSubmission](reviewsubmission.md): A formal submission to App Store review grouping one or more items — app versions, In-App Purchases, or events — for simultaneous review.
-- [ReviewSubmissionItem](reviewsubmissionitem.md): An individual reviewable item — such as an app version, In-App Purchase, or App Clip — included in a review submission.
-- [ReviewSubmissionUpdateRequest](reviewsubmissionupdaterequest.md): The request body you use to update a review submission update request.
-- [ReviewSubmissionCreateRequest](reviewsubmissioncreaterequest.md): The request body for creating a review submission for an App Store version or associated items.
-- [ReviewSubmissionResponse](reviewsubmissionresponse.md): The response body for endpoints that create, read, or modify a single review submission.
-- [ReviewSubmissionsResponse](reviewsubmissionsresponse.md): The response body for endpoints that list review submissions for an app.
-- [AppReviewSubmissionsLinkagesResponse](appreviewsubmissionslinkagesresponse.md): A response containing the resource identifiers of review submissions associated with an app.
-
-### Objects
-
-- [ReviewSubmission](reviewsubmission.md): A formal submission to App Store review grouping one or more items — app versions, In-App Purchases, or events — for simultaneous review.
-- [ReviewSubmissionItem](reviewsubmissionitem.md): An individual reviewable item — such as an app version, In-App Purchase, or App Clip — included in a review submission.
-- [ReviewSubmissionUpdateRequest](reviewsubmissionupdaterequest.md): The request body you use to update a review submission update request.
-- [ReviewSubmissionCreateRequest](reviewsubmissioncreaterequest.md): The request body for creating a review submission for an App Store version or associated items.
-- [ReviewSubmissionResponse](reviewsubmissionresponse.md): The response body for endpoints that create, read, or modify a single review submission.
-- [ReviewSubmissionsResponse](reviewsubmissionsresponse.md): The response body for endpoints that list review submissions for an app.
-- [AppReviewSubmissionsLinkagesResponse](appreviewsubmissionslinkagesresponse.md): A response containing the resource identifiers of review submissions associated with an app.
-
-# Document: ReviewSubmissionItemsLinkagesResponse.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemslinkagesresponse/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemslinkagesresponse/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemsLinkagesResponse.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 4.1+
-
-The data element of the response body.
-
-## Declaration
-
-```
-object ReviewSubmissionItemsLinkagesResponse.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `reviewSubmissionItems`
-
-# Document: ReviewSubmissionItemsResponse
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemsresponse
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemsresponse
-Description: Interface language: Data
-
-# ReviewSubmissionItemsResponse
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.7+
-
-The response body for endpoints that list items in a review submission.
-
-## Declaration
-
-```
-object ReviewSubmissionItemsResponse
-```
-
-## Properties
-
-- `data` — `[ReviewSubmissionItem]` (required):
-- `included` — `[*]`: **Allowed types:** `AppCustomProductPageVersion`, `AppEvent`, `AppStoreVersionExperiment`, `AppStoreVersion`, `BackgroundAssetVersion`, `GameCenterAchievementVersionV2`, `GameCenterActivityVersion`, `GameCenterChallengeVersion`, `GameCenterLeaderboardSetVersionV2`, `GameCenterLeaderboardVersionV2`, `InAppPurchaseVersion`, `SubscriptionGroupVersion`, `SubscriptionVersion`
-- `links` — `PagedDocumentLinks` (required):
-- `meta` — `PagingInformation`:
-
-## See Also
-
-### Objects
-
-- [ReviewSubmissionItemCreateRequest](reviewsubmissionitemcreaterequest.md): The request body you use to create a review submission item.
-- [ReviewSubmissionItemUpdateRequest](reviewsubmissionitemupdaterequest.md): The request body you use to update a review submission item update request.
-- [ReviewSubmissionItemResponse](reviewsubmissionitemresponse.md): The response body for endpoints that create, read, or modify a single review submission item.
-
-# Document: ReviewSubmissionItemUpdateRequest
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemupdaterequest
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemupdaterequest
-Description: Interface language: Data
-
-# ReviewSubmissionItemUpdateRequest
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.7+
-
-The request body you use to update a review submission item update request.
-
-## Declaration
-
-```
-object ReviewSubmissionItemUpdateRequest
-```
-
-## Properties
-
-- `data` — `ReviewSubmissionItemUpdateRequest.Data` (required):
-
-## Topics
-
-### Objects
-
-- [ReviewSubmissionItemUpdateRequest.Data](reviewsubmissionitemupdaterequest/data-data.dictionary.md): The request body you use to update a review submission item update request.
-
-## See Also
-
-### Objects
-
-- [ReviewSubmissionItemCreateRequest](reviewsubmissionitemcreaterequest.md): The request body you use to create a review submission item.
-- [ReviewSubmissionItemsResponse](reviewsubmissionitemsresponse.md): The response body for endpoints that list items in a review submission.
-- [ReviewSubmissionItemResponse](reviewsubmissionitemresponse.md): The response body for endpoints that create, read, or modify a single review submission item.
-
-# Document: ReviewSubmissionItemUpdateRequest.Data
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemupdaterequest/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemupdaterequest/data-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemUpdateRequest.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.7+
-
-The request body you use to update a review submission item update request.
-
-## Declaration
-
-```
-object ReviewSubmissionItemUpdateRequest.Data
-```
-
-## Properties
-
-- `attributes` — `ReviewSubmissionItemUpdateRequest.Data.Attributes`:
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `reviewSubmissionItems`
-
-## Topics
-
-### Objects
-
-- [ReviewSubmissionItemUpdateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes that describe a review submission item update request resource.
-
-# Document: ReviewSubmissionItemUpdateRequest.Data.Attributes
-
-Source path: documentation/appstoreconnectapi/reviewsubmissionitemupdaterequest/data-data.dictionary/attributes-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemupdaterequest/data-data.dictionary/attributes-data.dictionary
-Description: Interface language: Data
-
-# ReviewSubmissionItemUpdateRequest.Data.Attributes
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.7+
-
-Attributes that describe a review submission item update request resource.
-
-## Declaration
-
-```
-object ReviewSubmissionItemUpdateRequest.Data.Attributes
-```
-
-## Properties
-
-- `removed` — `boolean`:
-- `resolved` — `boolean`:

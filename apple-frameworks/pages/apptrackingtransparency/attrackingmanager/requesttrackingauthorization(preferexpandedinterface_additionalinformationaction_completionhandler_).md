@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
-> Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/requesttrackingauthorization(usingexpandedinterface:additionalinformationaction:completionhandler:)
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/requesttrackingauthorization(preferexpandedinterface:additionalinformationaction:completionhandler:)
 
-# requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:) (Swift)
+# requestTrackingAuthorization(preferExpandedInterface:additionalInformationAction:completionHandler:) (Swift)
 
 **Framework:** App Tracking Transparency  
 **Kind:** Type Method  
@@ -12,11 +12,11 @@ Presents a modal UI that asks someone for permission to access data that your ap
 ## Declaration
 
 ```swift
-class func requestTrackingAuthorization(usingExpandedInterface preferExpandedInterface: Bool, additionalInformationAction: (() -> Void)?, completionHandler completion: @escaping @Sendable (ATTrackingManager.AuthorizationStatus) -> Void)
+class func requestTrackingAuthorization(preferExpandedInterface: Bool, additionalInformationAction: (() -> Void)?, completionHandler completion: @escaping @Sendable (ATTrackingManager.AuthorizationStatus) -> Void)
 ```
 
 ```swift
-class func requestTrackingAuthorization(usingExpandedInterface preferExpandedInterface: Bool, additionalInformationAction: (() -> Void)?) async -> ATTrackingManager.AuthorizationStatus
+class func requestTrackingAuthorization(preferExpandedInterface: Bool, additionalInformationAction: (() -> Void)?) async -> ATTrackingManager.AuthorizationStatus
 ```
 
 ## Parameters
@@ -88,7 +88,7 @@ To use this method, add the [NSUserTrackingUsageDescription](../../bundleresourc
 - [requestTrackingAuthorization(completionHandler:)](requesttrackingauthorization%28completionhandler_%29.md): Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
 - [NSUserTrackingMarkdownUsageDescription](../../bundleresources/information-property-list/nsusertrackingmarkdownusagedescription.md): Beta. A message that explains the purpose for accessing data that an application can use to track a person or device.
 
-# requestTrackingAuthorizationUsingExpandedInterface:additionalInformationAction:completionHandler: (Objective-C)
+# requestTrackingAuthorizationPreferExpandedInterface:additionalInformationAction:completionHandler: (Objective-C)
 
 **Framework:** App Tracking Transparency  
 **Kind:** Type Method  
@@ -99,7 +99,7 @@ Presents a modal UI that asks someone for permission to access data that your ap
 ## Declaration
 
 ```objectivec
-+ (void) requestTrackingAuthorizationUsingExpandedInterface:(BOOL) preferExpandedInterface additionalInformationAction:(void (^)()) additionalInformationAction completionHandler:(void (^)(ATTrackingManagerAuthorizationStatus status)) completion;
++ (void) requestTrackingAuthorizationPreferExpandedInterface:(BOOL) preferExpandedInterface additionalInformationAction:(void (^)()) additionalInformationAction completionHandler:(void (^)(ATTrackingManagerAuthorizationStatus status)) completion;
 ```
 
 ## Parameters

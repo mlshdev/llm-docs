@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/ninearbypeerconfiguration
 
 # NINearbyPeerConfiguration (Swift)
@@ -73,14 +73,6 @@ In iOS 16, you can combine the visual spatial power of ARKit with the radio sens
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
 - [NSSecureCoding](../foundation/nssecurecoding.md)
 
-## See Also
-
-### Phone interaction
-
-- [Implementing interactions between users in close proximity](implementing-interactions-between-users-in-close-proximity.md): Enable devices to access relative positioning information.
-- [Discovering peers with Multipeer Connectivity](discovering-peers-with-multipeer-connectivity.md): Exchange discovery tokens over the local network.
-- [Extending advanced direction finding and ranging](extending-advanced-direction-finding-and-ranging.md): Extend your app’s direction finding capabilities with data from Ultra Wideband devices.
-
 # NINearbyPeerConfiguration (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -140,11 +132,3 @@ In iOS 16, you can combine the visual spatial power of ARKit with the radio sens
 ### Inherits From
 
 - [NIConfiguration](niconfiguration.md)
-
-## See Also
-
-### Phone interaction
-
-- [Implementing interactions between users in close proximity](implementing-interactions-between-users-in-close-proximity.md): Enable devices to access relative positioning information.
-- [Discovering peers with Multipeer Connectivity](discovering-peers-with-multipeer-connectivity.md): Exchange discovery tokens over the local network.
-- [Extending advanced direction finding and ranging](extending-advanced-direction-finding-and-ranging.md): Extend your app’s direction finding capabilities with data from Ultra Wideband devices.

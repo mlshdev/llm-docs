@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/indexedentity
 
 # IndexedEntity
@@ -62,7 +62,7 @@ For more information about adding entities to your app’s Spotlight index, see 
 - [FileEntity](fileentity.md): An entity that refers to a document or other file.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.

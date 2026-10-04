@@ -32,6 +32,8 @@ This method displays the sheet—on top of the window’s current sheet, if one 
 
 If the window already has a sheet when this method runs, the existing sheet is temporarily disabled while the critical sheet is presented. When the critical sheet is dismissed, the previously presented sheet continues its standard operation.
 
+The sheet’s window never displays a title, regardless of its [title](title.md) string, its [titleVisibility](titlevisibility-swift.property.md) value, or whether its style mask includes the [titled](stylemask-swift.struct/titled.md) flag.
+
 ## See Also
 
 ### Managing Sheets
@@ -70,6 +72,8 @@ Starts a document-modal session and presents the specified critical sheet.
 This method displays the sheet—on top of the window’s current sheet, if one exists—makes it key and returns control to the caller. While the sheet remains visible, most events targeted at the receiver are prohibited. The runloop does not enter any special mode to accomplish this.
 
 If the window already has a sheet when this method runs, the existing sheet is temporarily disabled while the critical sheet is presented. When the critical sheet is dismissed, the previously presented sheet continues its standard operation.
+
+The sheet’s window never displays a title, regardless of its [title](title.md) string, its [titleVisibility](titlevisibility-swift.property.md) value, or whether its style mask includes the [NSWindowStyleMaskTitled](stylemask-swift.struct/titled.md) flag.
 
 ## See Also
 

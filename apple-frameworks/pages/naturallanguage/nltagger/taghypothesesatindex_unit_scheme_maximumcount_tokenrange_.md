@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/naturallanguage/nltagger/taghypothesesatindex:unit:scheme:maximumcount:tokenrange:
 
 # tagHypothesesAtIndex:unit:scheme:maximumCount:tokenRange:
@@ -19,6 +19,7 @@ Finds multiple possible tags for a given linguistic unit, for a single scheme, a
 
 ## Parameters
 
+- `characterIndex`: The character index to begin examination.
 - `unit`: The linguistic unit. See [NLTokenUnit](../nltokenunit.md) for possible values.
 - `scheme`: The tag scheme. See [NLTagScheme](../nltagscheme.md) for possible values. Not all tag schemes produce more than one prediction.
 - `maximumCount`: The maximum number of tag predictions to return.

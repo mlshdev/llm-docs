@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfoundation/avplannedvideosegmentwritingrequest/createresumablecompressionsessionwithallocator:width:height:codectype:encoderspecification:sourceimagebufferattributes:compresseddataallocator:outputcallback:outputcallbackrefcon:returningerror:
 
 # createResumableCompressionSessionWithAllocator:width:height:codecType:encoderSpecification:sourceImageBufferAttributes:compressedDataAllocator:outputCallback:outputCallbackRefCon:returningError:

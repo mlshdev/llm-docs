@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/computegraphsimulation
 
 # ComputeGraphSimulation
@@ -64,3 +64,12 @@ This class is independent of the output, which makes for simpler testing.
 - [setUserResources(\_:)](computegraphsimulation/setuserresources%28__%29.md): Sets additional resources for residency on all command buffers used by this simulation, replacing any previously added resources.
 - [spawn(elements:in:using:)](computegraphsimulation/spawn%28elements_in_using_%29.md): Spawns new elements into the simulation with the given initial parameters.
 - [texture(at:)](computegraphsimulation/texture%28at_%29.md)
+
+## See Also
+
+### Running a simulation
+
+- [ElementSpawnParameters](elementspawnparameters.md): Parameters used to configure the initial state of a particle when it’s spawned in the simulation.
+- [ElementGrouping](elementgrouping.md): An enumeration of how elements are grouped.
+- [ComputeGraphSimulation.SimulationRate](computegraphsimulation/simulationrate-swift.struct.md): Specifies the rate and mode for simulation.
+- [Sorting](sorting.md): An enumeration of sorting modes.

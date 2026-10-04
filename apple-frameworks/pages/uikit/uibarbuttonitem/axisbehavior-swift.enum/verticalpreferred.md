@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uibarbuttonitem/axisbehavior-swift.enum/verticalpreferred
 
 # UIBarButtonItem.AxisBehavior.verticalPreferred (Swift)
 
 **Framework:** UIKit  
 **Kind:** Case  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present
 
@@ -19,14 +19,14 @@ case verticalPreferred
 
 ### Choosing an orientation behavior
 
-- [UIBarButtonItem.AxisBehavior.automatic](automatic.md): Beta. The automatic behavior. The system infers the supported axes based on the contents of the item.
-- [UIBarButtonItem.AxisBehavior.horizontalOnly](horizontalonly.md): Beta. The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
+- [UIBarButtonItem.AxisBehavior.automatic](automatic.md): The automatic behavior. The system infers the supported axes based on the contents of the item.
+- [UIBarButtonItem.AxisBehavior.horizontalOnly](horizontalonly.md): The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
 
 # UIBarButtonItemAxisBehaviorVerticalPreferred (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Enumeration Case  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present
 
@@ -40,5 +40,5 @@ UIBarButtonItemAxisBehaviorVerticalPreferred
 
 ### Choosing an orientation behavior
 
-- [UIBarButtonItemAxisBehaviorAutomatic](automatic.md): Beta. The automatic behavior. The system infers the supported axes based on the contents of the item.
-- [UIBarButtonItemAxisBehaviorHorizontalOnly](horizontalonly.md): Beta. The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
+- [UIBarButtonItemAxisBehaviorAutomatic](automatic.md): The automatic behavior. The system infers the supported axes based on the contents of the item.
+- [UIBarButtonItemAxisBehaviorHorizontalOnly](horizontalonly.md): The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.

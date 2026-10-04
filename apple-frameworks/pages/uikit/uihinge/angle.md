@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uihinge/angle
 
 # angle (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The current angle of the hinge, in radians.
 
@@ -25,14 +25,14 @@ The rate and granularity of angle updates are system policy and can change based
 
 ### Getting the hinge state
 
-- [status](status-swift.property.md): Beta. The current status of the hinge
-- [UIHinge.Status](status-swift.enum.md): Beta. The status of an individual hinge
+- [status](status-swift.property.md): The current status of the hinge
+- [UIHinge.Status](status-swift.enum.md): The status of an individual hinge
 
 # angle (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The current angle of the hinge, in radians.
 
@@ -52,5 +52,5 @@ The rate and granularity of angle updates are system policy and can change based
 
 ### Getting the hinge state
 
-- [status](status-swift.property.md): Beta. The current status of the hinge
-- [UIHingeStatus](status-swift.enum.md): Beta. The status of an individual hinge
+- [status](status-swift.property.md): The current status of the hinge
+- [UIHingeStatus](status-swift.enum.md): The status of an individual hinge

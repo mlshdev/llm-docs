@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/app-schema-domain-system-and-in-app-search
 
 # System and in-app search
@@ -16,7 +16,7 @@ The `.system` domain defines app schemas that provide a structured representatio
 
 Unlike other domains that target a specific app category, the `.system` domain applies broadly. Any app that enables searching or opening content can adopt these schemas.
 
-- **[search](appschema/systemintent/search.md)**: An intent that searches in your app when people say phrases like “Find bicycle.” or “Search for mountains.”
+- **[searchInApp](appschema/systemintent/searchinapp.md)**: An intent that searches in your app when people say phrases like “Find bicycle.” or “Search for bicycle.”
 - **[open](appschema/systemintent/open.md)**: An intent that opens content in your app when people say phrases like “Open my screenshot.png file.”
 
 > **Tip**
@@ -30,7 +30,7 @@ For more information about making your app’s actions available to Apple Intell
 ### Actions
 
 - [open](appschema/systemintent/open.md): An intent schema that opens an item in the application.
-- [search](appschema/systemintent/search.md): Deprecated. An intent schema that navigates to search results.
+- [searchInApp](appschema/systemintent/searchinapp.md): An intent schema that navigates to search results.
 - [AppSchema.SystemIntent](appschema/systemintent.md): Identifies intent schemas in the system domain.
 
 ## See Also

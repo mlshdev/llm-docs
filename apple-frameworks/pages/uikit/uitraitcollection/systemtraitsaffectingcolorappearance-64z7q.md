@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitcollection/systemtraitsaffectingcolorappearance-64z7q
 
 # systemTraitsAffectingColorAppearance
@@ -22,4 +22,4 @@ static var systemTraitsAffectingColorAppearance: [UITrait] { get }
 ### Getting related traits
 
 - [systemTraitsAffectingImageLookup](systemtraitsaffectingimagelookup-4jv5.md)
-- [systemTraitsAffectingVerticalBarEdge](systemtraitsaffectingverticalbaredge-475st.md): Beta. The system traits that affect the value of `verticalBarEdge`.
+- [systemTraitsAffectingVerticalBarEdge](systemtraitsaffectingverticalbaredge-475st.md): The system traits that affect the value of `verticalBarEdge`.

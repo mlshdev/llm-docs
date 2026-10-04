@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/cryptokit/hpke/ciphersuite/xwingmlkem768x25519_sha256_aes_gcm_256
 
 # XWingMLKEM768X25519_SHA256_AES_GCM_256

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/app-store-server-api-changelog
 
 # App Store Server API changelog
@@ -15,6 +15,19 @@ Learn about new features and updates in the App Store Server API.
 ## Overview
 
 Use this changelog to learn about feature updates, deprecations, and removals for the App Store Server API.
+
+<a id="122-20260928"></a>
+
+### 1.22 - 2026/09/28
+
+**New features**
+
+- Added the [Get Customer Groups](get-customer-groups.md) and [Get Group Members](get-group-members.md) endpoints, and the [GetCustomerGroupsResponse](getcustomergroupsresponse.md) and [GetGroupMembersResponse](getgroupmembersresponse.md) data types, to support multiseat purchases, which let organizations and groups buy your subscriptions in bulk. These endpoints are only available in the sandbox environment.
+- Added the [GroupEntry](groupentry.md), [GroupMemberEntry](groupmemberentry.md), and [RoleEntry](roleentry.md) data types, and the [groupId](groupid.md), [groupType](grouptype.md), [role](role.md), and [limit](limit.md) fields.
+- Added the `ASSIGNED` value to [inAppOwnershipType](inappownershiptype.md), and the `ASSIGNMENT_REVOKE` value to [revocationType](revocationtype.md).
+- Added the [storeType](storetype.md) field to the [JWSAppTransactionDecodedPayload](jwsapptransactiondecodedpayload.md).
+- The [quantity](quantity.md) field also reports the number of seats for a subscription that a customer buys as a multiseat purchase.
+- Added the [GroupNotFoundError](groupnotfounderror.md), [InvalidGroupIdError](invalidgroupiderror.md), [InvalidLimitError](invalidlimiterror.md), [InvalidAssignedTransactionNotSupportedError](invalidassignedtransactionnotsupportederror.md), and [AssignedSubscriptionExtensionIneligibleError](assignedsubscriptionextensionineligibleerror.md) error codes.
 
 <a id="Server-update-20260505"></a>
 

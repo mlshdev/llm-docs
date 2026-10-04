@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corelocation/clheading
 
 # CLHeading (Swift)
@@ -73,6 +73,7 @@ Typically, you don’t create instances of this class yourself, nor do you subcl
 ### Compass headings
 
 - [Getting heading and course information](getting-heading-and-course-information.md): Use a device’s orientation and course information for navigation.
+- [CLBodyIdentifiable](clbodyidentifiable.md): A type that identifies a physical body or view for heading calculations.
 
 # CLHeading (Objective-C)
 
@@ -135,3 +136,4 @@ Typically, you don’t create instances of this class yourself, nor do you subcl
 ### Compass headings
 
 - [Getting heading and course information](getting-heading-and-course-information.md): Use a device’s orientation and course information for navigation.
+- [CLBodyIdentifiable](clbodyidentifiable.md): A type that identifies a physical body or view for heading calculations.

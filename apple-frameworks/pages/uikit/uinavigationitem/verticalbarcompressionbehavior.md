@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uinavigationitem/verticalbarcompressionbehavior
 
 # verticalBarCompressionBehavior (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
 
@@ -25,13 +25,13 @@ The default value is `UIVerticalBarCompressionBehaviorAutomatic`.
 
 ### Configuring bars on the vertical axis
 
-- [UIVerticalBarCompressionBehavior](../uiverticalbarcompressionbehavior.md): Beta. How bars compress when different types of bars are hosted together and space is constrained.
+- [UIVerticalBarCompressionBehavior](../uiverticalbarcompressionbehavior.md): How bars compress when different types of bars are hosted together and space is constrained.
 
 # verticalBarCompressionBehavior (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
 
@@ -51,4 +51,4 @@ The default value is `UIVerticalBarCompressionBehaviorAutomatic`.
 
 ### Configuring bars on the vertical axis
 
-- [UIVerticalBarCompressionBehavior](../uiverticalbarcompressionbehavior.md): Beta. How bars compress when different types of bars are hosted together and space is constrained.
+- [UIVerticalBarCompressionBehavior](../uiverticalbarcompressionbehavior.md): How bars compress when different types of bars are hosted together and space is constrained.

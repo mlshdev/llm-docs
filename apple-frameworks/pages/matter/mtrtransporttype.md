@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/matter/mtrtransporttype
 
 # MTRTransportType (Swift)
@@ -22,7 +22,7 @@ enum MTRTransportType
 - [MTRTransportType.UDP](mtrtransporttype/udp.md)
 - [MTRTransportType.undefined](mtrtransporttype/undefined.md)
 - [MTRTransportType.NFC](mtrtransporttype/nfc.md)
-- [MTRTransportType.proxy](mtrtransporttype/proxy.md)
+- [MTRTransportType.proxy](mtrtransporttype/proxy.md): Beta.
 - [MTRTransportType.threadMeshcop](mtrtransporttype/threadmeshcop.md)
 - [MTRTransportType.wiFiPAF](mtrtransporttype/wifipaf.md)
 
@@ -62,6 +62,6 @@ enum MTRTransportType : uint8_t;
 - [MTRTransportTypeUDP](mtrtransporttype/udp.md)
 - [MTRTransportTypeUndefined](mtrtransporttype/undefined.md)
 - [MTRTransportTypeNFC](mtrtransporttype/nfc.md)
-- [MTRTransportTypeProxy](mtrtransporttype/proxy.md)
+- [MTRTransportTypeProxy](mtrtransporttype/proxy.md): Beta.
 - [MTRTransportTypeThreadMeshcop](mtrtransporttype/threadmeshcop.md)
 - [MTRTransportTypeWiFiPAF](mtrtransporttype/wifipaf.md)

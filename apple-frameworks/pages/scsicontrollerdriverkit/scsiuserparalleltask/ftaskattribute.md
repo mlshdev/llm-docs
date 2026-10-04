@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/scsiuserparalleltask/ftaskattribute
 
 # fTaskAttribute
@@ -19,7 +19,7 @@ SCSITaskAttribute fTaskAttribute;
 
 ## See Also
 
-### Task Properties
+### Task properties
 
 - [version](version.md): The version of the parallel task structure currently in use.
 - [SCSIUserParallelTaskVersion](../scsiuserparalleltaskversion.md): Constants that represent versions of the user parallel task structure.

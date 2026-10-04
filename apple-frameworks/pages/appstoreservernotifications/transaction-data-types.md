@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications/transaction-data-types
 
 # Transaction data types
@@ -41,7 +41,7 @@ Refer to these data types for decoded transaction and renewal information payloa
 - [productId](productid.md): The product identifier of the In-App Purchase.
 - [type](type.md): The product type of the In-App Purchase.
 - [subscriptionGroupIdentifier](subscriptiongroupidentifier.md): The identifier of the subscription group that the subscription belongs to.
-- [quantity](quantity.md): The number of purchased consumable products.
+- [quantity](quantity.md): The number of products or seats the customer purchased.
 
 ### Product price and currency
 
@@ -72,7 +72,7 @@ Refer to these data types for decoded transaction and renewal information payloa
 - [isInBillingRetryPeriod](isinbillingretryperiod.md): A Boolean value that indicates whether the App Store is attempting to automatically renew a subscription that expired due to a billing issue.
 - [gracePeriodExpiresDate](graceperiodexpiresdate.md): The time when the billing grace period for a subscription renewal expires.
 
-### Subscripton renewal and expiration
+### Subscription renewal and expiration
 
 - [autoRenewStatus](autorenewstatus.md): The renewal status for an auto-renewable subscription.
 - [autoRenewProductId](autorenewproductid.md): The identifier of the product that renews at the next billing period.
@@ -98,9 +98,9 @@ Refer to these data types for decoded transaction and renewal information payloa
 - [commitmentRenewalDate](commitmentrenewaldate.md)
 - [commitmentRenewalPrice](commitmentrenewalprice.md)
 
-### Family Sharing
+### Transaction ownership
 
-- [inAppOwnershipType](inappownershiptype.md): A string that describes whether the transaction was purchased by the customer, or is available to them through Family Sharing.
+- [inAppOwnershipType](inappownershiptype.md): A string that describes whether the transaction was purchased by the customer, or is available to them through Family Sharing, an organization, or a group.
 
 ### Price increase status
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/campaigntargetingupdate/supplysource-data.dictionary
 
 # CampaignTargetingUpdate.SupplySource
@@ -19,14 +19,14 @@ object CampaignTargetingUpdate.SupplySource
 
 ## Properties
 
-- `include` — `[string]`: Supply sources to include in targeting. Omit to leave unchanged. Mutable.
-- `exclude` — `[string]`: Not supported at the campaign level. Has no effect if set. Mutable.
+- `include` — `[string]`: Supply sources to include in targeting. Don’t set on update; the campaign’s `supplySource` can’t be changed after creation.
+- `exclude` — `[string]`: Not supported at the campaign level. Has no effect if set.
 
 <a id="Discussion"></a>
 
 ## Discussion
 
-The `supplySource` field is **include-only**; setting `exclude` has no effect. Omit to leave unchanged. Valid values:
+The `supplySource` field is fixed at creation and can’t be changed by update. Including this field in an update request is unsupported, even when the value matches the campaign’s current `supplySource`. Valid values:
 
 | Value | Ad channel |
 | --- | --- |

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitextgrammarcheckingtype/default
 
 # UITextGrammarCheckingType.default (Swift)
@@ -13,6 +13,13 @@
 case `default`
 ```
 
+## See Also
+
+### Getting the grammar-checking behaviors
+
+- [UITextGrammarCheckingType.no](no.md)
+- [UITextGrammarCheckingType.yes](yes.md)
+
 # UITextGrammarCheckingTypeDefault (Objective-C)
 
 **Framework:** UIKit  
@@ -24,3 +31,10 @@ case `default`
 ```objectivec
 UITextGrammarCheckingTypeDefault
 ```
+
+## See Also
+
+### Getting the grammar-checking behaviors
+
+- [UITextGrammarCheckingTypeNo](no.md)
+- [UITextGrammarCheckingTypeYes](yes.md)

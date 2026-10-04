@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uisplitarrangementdimension
 
 # UISplitArrangementDimension
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 A dimension for a view within a split arrangement.
 
@@ -21,10 +21,10 @@ A dimension for a view within a split arrangement.
 
 ### Getting a dimension
 
-- [automaticDimension](uisplitarrangementdimension/automaticdimension.md): Beta. The automatic dimension for a split arrangement.
-- [intrinsicDimension](uisplitarrangementdimension/intrinsicdimension.md): Beta. The intrinsic dimension for a split arrangement based on intrinsic content size.
-- [absoluteDimension:](uisplitarrangementdimension/absolutedimension_.md): Beta. An absolute dimension for a split arrangement.
-- [fractionalDimension:](uisplitarrangementdimension/fractionaldimension_.md): Beta. A fractional dimension for a split arrangement.
+- [automaticDimension](uisplitarrangementdimension/automaticdimension.md): The automatic dimension for a split arrangement.
+- [intrinsicDimension](uisplitarrangementdimension/intrinsicdimension.md): The intrinsic dimension for a split arrangement based on intrinsic content size.
+- [absoluteDimension:](uisplitarrangementdimension/absolutedimension_.md): An absolute dimension for a split arrangement.
+- [fractionalDimension:](uisplitarrangementdimension/fractionaldimension_.md): A fractional dimension for a split arrangement.
 
 ## Relationships
 
@@ -40,6 +40,6 @@ A dimension for a view within a split arrangement.
 
 ### Getting the dimensions
 
-- [minimum](uisplitarrangementdimensionrange/minimum.md): Beta. The minimum dimension for the view.
-- [preferred](uisplitarrangementdimensionrange/preferred.md): Beta. The preferred dimension for the view.
-- [maximum](uisplitarrangementdimensionrange/maximum.md): Beta. The maximum dimension for the view.
+- [minimum](uisplitarrangementdimensionrange/minimum.md): The minimum dimension for the view.
+- [preferred](uisplitarrangementdimensionrange/preferred.md): The preferred dimension for the view.
+- [maximum](uisplitarrangementdimensionrange/maximum.md): The maximum dimension for the view.

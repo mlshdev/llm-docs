@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremotion/cmattitude
 
 # CMAttitude (Swift)
@@ -77,6 +77,7 @@ The `CMAttitude` class offers three different mathematical representations of at
 - [CMDeviceMotion](cmdevicemotion.md): Encapsulated measurements of the attitude, rotation rate, and acceleration of a device.
 - [CMAttitudeReferenceFrame](cmattitudereferenceframe.md): Constants that indicate the frame of reference for attitude-related motion data.
 - [CMHeadphoneMotionManager](cmheadphonemotionmanager.md): An object that starts and manages headphone motion services.
+- [CMBodyIdentifiable](cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.
 
 # CMAttitude (Objective-C)
 
@@ -143,3 +144,4 @@ The `CMAttitude` class offers three different mathematical representations of at
 - [CMDeviceMotion](cmdevicemotion.md): Encapsulated measurements of the attitude, rotation rate, and acceleration of a device.
 - [CMAttitudeReferenceFrame](cmattitudereferenceframe.md): Constants that indicate the frame of reference for attitude-related motion data.
 - [CMHeadphoneMotionManager](cmheadphonemotionmanager.md): An object that starts and manages headphone motion services.
+- [CMBodyIdentifiable](cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.

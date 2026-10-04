@@ -1,0 +1,44 @@
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/storetype
+
+# storeType
+
+**Interface language:** Data
+
+**Framework:** App Store Server API  
+**Kind:** Type  
+**Availability:** App Store Server API 1.22+
+
+A string that describes the store the customer obtained the app from.
+
+## Declaration
+
+```
+string storeType
+```
+
+## Possible Values
+
+- `CONSUMER`: The customer obtained the app from the App Store.
+
+## Mentioned In
+
+- [App Store Server API changelog](app-store-server-api-changelog.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This field appears in the [JWSAppTransactionDecodedPayload](jwsapptransactiondecodedpayload.md). The only possible value is `CONSUMER`.
+
+For the full set of values, see [AppTransaction.StoreType](../storekit/apptransaction/storetype-swift.struct.md) in StoreKit.
+
+## See Also
+
+### App information
+
+- [appAppleId](appappleid.md): The unique identifier of an app in the App Store.
+- [bundleId](bundleid.md): The bundle identifier of an app.
+- [originalApplicationVersion](originalapplicationversion.md): The app version that the customer originally purchased from the App Store.
+- [originalPlatform](originalplatform.md): The platform on which a customer originally purchases an app.
+- [preorderDate](preorderdate.md): The date a customer places an order for the app before it’s available in the App Store, expressed in UNIX time, in milliseconds.

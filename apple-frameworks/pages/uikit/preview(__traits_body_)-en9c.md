@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/preview(_:traits:body:)-en9c
 
 # Preview(\_:traits:body:)
@@ -18,4 +18,6 @@
 ### Macros
 
 - [Preview(\_:traits:body:)](preview%28__traits_body_%29-c7kr.md)
+- [Preview(\_:traits:arguments:body:)](preview%28__traits_arguments_body_%29-6gm4c.md)
+- [Preview(\_:traits:arguments:body:)](preview%28__traits_arguments_body_%29-7cbjv.md)
 - [UIKIT_HAS_UIFOUNDATION_SYMBOLS](uikit_has_uifoundation_symbols.md)

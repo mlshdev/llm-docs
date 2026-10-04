@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiarrangementviewcontrollerviewplacement/uiarrangementviewcontrollerviewplacementprimary
 
 # UIArrangementViewControllerViewPlacementPrimary
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Enumeration Case  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The primary placement in the arrangement.
 
@@ -21,5 +21,5 @@ UIArrangementViewControllerViewPlacementPrimary
 
 ### Specifying a view placement
 
-- [UIArrangementViewControllerViewPlacementNone](uiarrangementviewcontrollerviewplacementnone.md): Beta. A value that indicates the view controller has no placement in the arrangement.
-- [UIArrangementViewControllerViewPlacementSecondary](uiarrangementviewcontrollerviewplacementsecondary.md): Beta. The secondary placement in the arrangement.
+- [UIArrangementViewControllerViewPlacementNone](uiarrangementviewcontrollerviewplacementnone.md): A value that indicates the view controller has no placement in the arrangement.
+- [UIArrangementViewControllerViewPlacementSecondary](uiarrangementviewcontrollerviewplacementsecondary.md): The secondary placement in the arrangement.

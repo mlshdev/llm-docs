@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/originalplatform
 
 # originalPlatform
@@ -32,3 +32,4 @@ string originalPlatform
 - [bundleId](bundleid.md): The bundle identifier of an app.
 - [originalApplicationVersion](originalapplicationversion.md): The app version that the customer originally purchased from the App Store.
 - [preorderDate](preorderdate.md): The date a customer places an order for the app before it’s available in the App Store, expressed in UNIX time, in milliseconds.
+- [storeType](storetype.md): A string that describes the store the customer obtained the app from.

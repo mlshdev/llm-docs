@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/configuring-and-displaying-symbol-images-in-your-ui
 
 # Configuring and displaying symbol images in your UI (Swift)
@@ -23,7 +23,7 @@ Although symbols are images, they support many traits you associate with text. I
 
 The system provides a collection of standard symbol images for you, including images for folders, the trash can, favorite items, and many more. Symbol images also adapt to the current trait environment, reducing the work required to support different sized interfaces. To browse the available symbol images, use the SF Symbols app, which you can download from [Apple Design Resources](https://developer.apple.com/design/resources/).
 
-You can also create symbol image files for your app’s custom iconography, as described in [Creating custom symbol images for your app](creating-custom-symbol-images-for-your-app.md).
+You can also create symbol image files for your app’s custom iconography, as described in [Creating custom symbols](../technologyoverviews/custom-sf-symbols.md).
 
 <a id="Load-a-symbol-image"></a>
 
@@ -281,7 +281,7 @@ Although symbols are images, they support many traits you associate with text. I
 
 The system provides a collection of standard symbol images for you, including images for folders, the trash can, favorite items, and many more. Symbol images also adapt to the current trait environment, reducing the work required to support different sized interfaces. To browse the available symbol images, use the SF Symbols app, which you can download from [Apple Design Resources](https://developer.apple.com/design/resources/).
 
-You can also create symbol image files for your app’s custom iconography, as described in [Creating custom symbol images for your app](creating-custom-symbol-images-for-your-app.md).
+You can also create symbol image files for your app’s custom iconography, as described in [Creating custom symbols](../technologyoverviews/custom-sf-symbols.md).
 
 <a id="Load-a-symbol-image"></a>
 

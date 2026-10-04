@@ -54,8 +54,6 @@ The base view of a navigation app does not receive tap or drag events.
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIAccessibilityIdentification](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearance](https://developer.apple.com/documentation/uikit/uiappearance)

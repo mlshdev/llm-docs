@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/userremovetargetproperties
 
 # UserRemoveTargetProperties
@@ -36,7 +36,7 @@ Your driver extension calls this method to remove the specified properties from 
 
 ## See Also
 
-### Managing Targets
+### Managing targets
 
 - [UserInitializeTargetForID](userinitializetargetforid.md): Initializes a target device in response to a call from the framework.
 - [UserCreateTargetForID](usercreatetargetforid.md): Creates the specified target.

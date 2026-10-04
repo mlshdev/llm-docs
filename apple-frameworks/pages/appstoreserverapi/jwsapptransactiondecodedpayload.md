@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/jwsapptransactiondecodedpayload
 
 # JWSAppTransactionDecodedPayload
@@ -28,6 +28,11 @@ object JWSAppTransactionDecodedPayload
 - `preorderDate` — `preorderDate`: The date the customer placed an order for the app before it’s available in the App Store.
 - `receiptCreationDate` — `receiptCreationDate`: The date that the App Store signed the JWS app transaction.
 - `receiptType` — `environment`: The server environment, production or sandbox, that signed the app transaction.
+- `storeType` — `storeType`: The store the customer obtained the app from.
+
+## Mentioned In
+
+- [App Store Server API changelog](app-store-server-api-changelog.md)
 
 <a id="Discussion"></a>
 

@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalcompressionbehavior/preferstabbar
 
 # prefersTabBar
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 A compression behavior that prefers keeping the tab bar visible.
 
@@ -25,5 +25,5 @@ Toolbar items will compress before tab bar items when space is constrained.
 
 ### Getting compression behavior options
 
-- [automatic](automatic.md): Beta. The automatic compression behavior.
-- [prefersToolbarItems](preferstoolbaritems.md): Beta. A compression behavior that prefers keeping toolbar items visible.
+- [automatic](automatic.md): The automatic compression behavior.
+- [prefersToolbarItems](preferstoolbaritems.md): A compression behavior that prefers keeping toolbar items visible.

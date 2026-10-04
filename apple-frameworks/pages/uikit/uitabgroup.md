@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitabgroup
 
 # UITabGroup (Swift)
@@ -95,7 +95,7 @@ Use tab groups to create a rich hierarchy of tab items. On iPad, the system disp
 - [UITabAccessory](uitabaccessory.md)
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UIPageViewController](uipageviewcontroller.md): A container view controller that manages navigation between pages of content, where a subview controller manages each page.
-- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): A view controller that presents its container view controllers through an arrangement.
 
 # UITabGroup (Objective-C)
 
@@ -177,4 +177,4 @@ Use tab groups to create a rich hierarchy of tab items. On iPad, the system disp
 - [UITabAccessory](uitabaccessory.md)
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UIPageViewController](uipageviewcontroller.md): A container view controller that manages navigation between pages of content, where a subview controller manages each page.
-- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): A view controller that presents its container view controllers through an arrangement.

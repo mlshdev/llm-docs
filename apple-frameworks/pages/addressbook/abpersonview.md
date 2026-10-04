@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/addressbook/abpersonview
 
 # ABPersonView (Swift)
@@ -55,6 +55,8 @@ class ABPersonView
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
 - [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
 - [NSUserInterfaceItemIdentification](https://developer.apple.com/documentation/appkit/nsuserinterfaceitemidentification)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

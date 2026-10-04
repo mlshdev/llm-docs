@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiverticalbarcompressionbehavior/preferstabbar
 
 # UIVerticalBarCompressionBehavior.prefersTabBar (Swift)
 
 **Framework:** UIKit  
 **Kind:** Case  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 A compression behavior that prefers keeping the tab bar visible.
 
@@ -25,14 +25,14 @@ Bar items will compress before the tab bar when space is constrained.
 
 ### Specifying a compression behavior
 
-- [UIVerticalBarCompressionBehavior.automatic](automatic.md): Beta. The automatic compression behavior.
-- [UIVerticalBarCompressionBehavior.prefersBarItems](prefersbaritems.md): Beta. A compression behavior that prefers keeping bar items visible.
+- [UIVerticalBarCompressionBehavior.automatic](automatic.md): The automatic compression behavior.
+- [UIVerticalBarCompressionBehavior.prefersBarItems](prefersbaritems.md): A compression behavior that prefers keeping bar items visible.
 
 # UIVerticalBarCompressionBehaviorPrefersTabBar (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Enumeration Case  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 A compression behavior that prefers keeping the tab bar visible.
 
@@ -52,5 +52,5 @@ Bar items will compress before the tab bar when space is constrained.
 
 ### Specifying a compression behavior
 
-- [UIVerticalBarCompressionBehaviorAutomatic](automatic.md): Beta. The automatic compression behavior.
-- [UIVerticalBarCompressionBehaviorPrefersBarItems](prefersbaritems.md): Beta. A compression behavior that prefers keeping bar items visible.
+- [UIVerticalBarCompressionBehaviorAutomatic](automatic.md): The automatic compression behavior.
+- [UIVerticalBarCompressionBehaviorPrefersBarItems](prefersbaritems.md): A compression behavior that prefers keeping bar items visible.

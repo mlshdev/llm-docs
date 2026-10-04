@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/mlcompute/mlcompute_enum_available_starting_but_deprecated
 
 # MLCOMPUTE_ENUM_AVAILABLE_STARTING_BUT_DEPRECATED

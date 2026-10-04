@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/imageio/kcgimagesourcethumbnailmaxpixelsize
 
 # kCGImageSourceThumbnailMaxPixelSize (Swift)
@@ -33,6 +33,7 @@ If this key is not specified, the width and height of a thumbnail is not limited
 - [kCGImageSourceCreateThumbnailFromImageAlways](kcgimagesourcecreatethumbnailfromimagealways.md): A Boolean value that indicates whether to always create a thumbnail image.
 - [kCGImageSourceCreateThumbnailWithTransform](kcgimagesourcecreatethumbnailwithtransform.md): A Boolean value that indicates whether to rotate and scale the thumbnail image to match the image’s orientation and aspect ratio.
 - [kCGImageSourceSubsampleFactor](kcgimagesourcesubsamplefactor.md): The factor by which to scale down any returned images.
+- [kCGImageSourceAllowableTypes](kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.
 
 # kCGImageSourceThumbnailMaxPixelSize (Objective-C)
 
@@ -66,3 +67,4 @@ If this key is not specified, the width and height of a thumbnail is not limited
 - [kCGImageSourceCreateThumbnailFromImageAlways](kcgimagesourcecreatethumbnailfromimagealways.md): A Boolean value that indicates whether to always create a thumbnail image.
 - [kCGImageSourceCreateThumbnailWithTransform](kcgimagesourcecreatethumbnailwithtransform.md): A Boolean value that indicates whether to rotate and scale the thumbnail image to match the image’s orientation and aspect ratio.
 - [kCGImageSourceSubsampleFactor](kcgimagesourcesubsamplefactor.md): The factor by which to scale down any returned images.
+- [kCGImageSourceAllowableTypes](kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.

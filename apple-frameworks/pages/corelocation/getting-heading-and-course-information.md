@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corelocation/getting-heading-and-course-information
 
 # Getting heading and course information (Swift)
@@ -41,6 +41,7 @@ Course information is included automatically in [CLLocation](cllocation.md) obje
 ### Compass headings
 
 - [CLHeading](clheading.md): The orientation of the user’s device, relative to true or magnetic north.
+- [CLBodyIdentifiable](clbodyidentifiable.md): A type that identifies a physical body or view for heading calculations.
 
 # Getting heading and course information (Objective-C)
 
@@ -82,3 +83,4 @@ Course information is included automatically in [CLLocation](cllocation.md) obje
 ### Compass headings
 
 - [CLHeading](clheading.md): The orientation of the user’s device, relative to true or magnetic north.
+- [CLBodyIdentifiable](clbodyidentifiable.md): A type that identifies a physical body or view for heading calculations.

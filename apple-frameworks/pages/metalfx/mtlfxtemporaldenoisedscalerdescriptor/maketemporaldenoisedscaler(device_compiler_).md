@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxtemporaldenoisedscalerdescriptor/maketemporaldenoisedscaler(device:compiler:)
 
 # makeTemporalDenoisedScaler(device:compiler:) (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 26.0+ · tvOS 18.0+
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 26.0+ · tvOS 27.1+
 
 Creates a denoiser scaler instance for a Metal device.
 
@@ -30,7 +30,7 @@ func makeTemporalDenoisedScaler(device: any MTLDevice, compiler: any MTL4Compile
 
 **Framework:** MetalFX  
 **Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 26.0+ · tvOS 18.0+
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 26.0+ · tvOS 27.1+
 
 Creates a denoiser scaler instance for a Metal device.
 

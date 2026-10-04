@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/apptransactiondoesnotexisterror
 
 # AppTransactionDoesNotExistError
@@ -19,7 +19,7 @@ object AppTransactionDoesNotExistError
 
 ## Properties
 
-- `errorCode` — `number`: **Allowed values:** `4040019`
+- `errorCode` — `int64`: **Allowed values:** `4040019`
 - `errorMessage` — `string`: **Allowed values:** `No AppTransaction exists for the customer.`
 
 ## See Also
@@ -30,14 +30,14 @@ object AppTransactionDoesNotExistError
 - [AdvancedCommerceTransactionNotSupportedError](advancedcommercetransactionnotsupportederror.md): An error that indicates Advanced Commerce API transactions are not supported by the endpoint.
 - [AppNotFoundError](appnotfounderror.md): An error that indicates the app wasn’t found.
 - [AppTransactionIdNotSupportedError](apptransactionidnotsupportederror.md): An error that indicates the endpoint doesn’t support an app transaction ID.
+- [AssignedSubscriptionExtensionIneligibleError](assignedsubscriptionextensionineligibleerror.md): An error that indicates a subscription isn’t eligible for a renewal date extension because the customer has access through an organization or group.
 - [FamilySharedSubscriptionExtensionIneligibleError](familysharedsubscriptionextensionineligibleerror.md): An error that indicates a subscription isn’t directly eligible for a renewal date extension because the customer obtained it through Family Sharing.
 - [FamilyTransactionNotSupportedError](familytransactionnotsupportederror.md): An error that indicates the transaction is for a product the customer obtains through Family Sharing, which the endpoint doesn’t support.
 - [GeneralInternalError](generalinternalerror.md): An error that indicates a general internal error.
 - [GeneralBadRequestError](generalbadrequesterror.md): An error that indicates an invalid request.
 - [InvalidAppAccountTokenUUIDError](invalidappaccounttokenuuiderror.md): An error that indicates the app account token value is not a valid UUID.
 - [InvalidAppIdentifierError](invalidappidentifiererror.md): An error that indicates an invalid app identifier.
+- [InvalidAssignedTransactionNotSupportedError](invalidassignedtransactionnotsupportederror.md): An error that indicates the transaction is one that an organization or group assigns to the customer, which the endpoint doesn’t support.
 - [InvalidEmptyStorefrontCountryCodeListError](invalidemptystorefrontcountrycodelisterror.md): An error that indicates a required storefront country code is empty.
 - [InvalidExtendByDaysError](invalidextendbydayserror.md): An error that indicates an invalid extend-by-days value.
 - [InvalidExtendReasonCodeError](invalidextendreasoncodeerror.md): An error that indicates an invalid reason code.
-- [InvalidOriginalTransactionIdError](invalidoriginaltransactioniderror.md): An error that indicates an invalid original transaction identifier.
-- [InvalidRefundPreferenceError](invalidrefundpreferenceerror.md): An error that indicates an invalid refund preference value.

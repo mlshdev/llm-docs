@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge/status-swift.struct/closed
 
 # closed
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The hinge is closed.
 
@@ -19,5 +19,5 @@ static var closed: DeviceHinge.Status { get }
 
 ### Getting hinge status
 
-- [fullyOpen](fullyopen.md): Beta. The hinge is open as far as the device allows.
-- [partiallyOpen](partiallyopen.md): Beta. The hinge is partially open.
+- [fullyOpen](fullyopen.md): The hinge is open as far as the device allows.
+- [partiallyOpen](partiallyopen.md): The hinge is partially open.

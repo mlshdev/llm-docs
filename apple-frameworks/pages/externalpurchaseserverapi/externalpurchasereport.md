@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/externalpurchaseserverapi/externalpurchasereport
 
 # ExternalPurchaseReport
@@ -60,6 +60,15 @@ A line item represents each transaction for the token identified by the `externa
 - [OneTimeBuyLineItem](onetimebuylineitem.md), for one-time charges
 - [RefundLineItem](refundlineitem.md), for refunds
 - [SubscriptionBuyLineItem](subscriptionbuylineitem.md), for auto-renewable subscription events and transactions
+
+> **Note**
+
+> If you operate a marketplace in the EU and your marketplace qualifies for the small marketplace operator CTC waiver, you need to denote transactions covered by that waiver by adding `SMO` to the start of these specific fields:
+>
+> - For `OneTimeBuyLineItem` items, start the `productIdentifier` field with “SMO-”.
+> - For `SubscriptionBuyLineItem` items, start the `productIdentifier` field with “SMO-”.
+>
+> For more information, see [Operating an alternative app marketplace in the EU](https://developer.apple.com/support/alternative-app-marketplace-in-the-eu/).
 
 Include as many line items as there are transactions that apply to the token. If your system completes new transactions after you successfully submit a report for a token, send a new report for the token with the new transactions.
 

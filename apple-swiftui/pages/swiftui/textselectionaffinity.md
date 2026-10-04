@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/textselectionaffinity
 
 # TextSelectionAffinity
@@ -32,8 +32,8 @@ You can configure the selection affinity on a given hierarchy by using the [text
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: String = ""
-    @State var selection: TextSelection? = nil
+    @State private var text: String = ""
+    @State private var selection: TextSelection? = nil
 
     var body: some View {
         VStack {

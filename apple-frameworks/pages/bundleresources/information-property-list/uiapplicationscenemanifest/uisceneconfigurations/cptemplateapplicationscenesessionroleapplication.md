@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/bundleresources/information-property-list/uiapplicationscenemanifest/uisceneconfigurations/cptemplateapplicationscenesessionroleapplication
 
 # CPTemplateApplicationSceneSessionRoleApplication
@@ -32,7 +32,7 @@ For more information, see [Displaying Content in CarPlay](https://developer.appl
 ### Scene objects
 
 - [UISceneClassName](cptemplateapplicationscenesessionroleapplication/uisceneclassname.md): The name of the scene class you want UIKit to instantiate.
-- [UISceneDelegateClassName](cptemplateapplicationscenesessionroleapplication/uiscenedelegateclassname.md): The name of the app-specific class you want UIKit to instantiate and use as the scene delegate object.
+- [UISceneDelegateClassName](cptemplateapplicationscenesessionroleapplication/uiscenedelegateclassname.md): The name of the app-specific class you want UIKit to instantiate and use as the delegate of your app’s main scene.
 
 ## See Also
 

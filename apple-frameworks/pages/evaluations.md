@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/evaluations
 
 # Evaluations
@@ -24,6 +24,14 @@ With the Evaluations framework, you can:
 - Catch regressions before they ship.
 
 The framework evaluates your intelligence-powered features against the metrics you define, from simple pass or fail checks to detailed scoring with model-judge patterns. It aggregates the results into summaries that show you which approach performs best and where individual responses fall short. The framework works with any model available through [Foundation Models](foundationmodels.md), including on-device, Private Cloud Compute, and other models.
+
+<a id="Whats-new"></a>
+
+### What’s new
+
+- [Meet the Evaluations framework](https://developer.apple.com/videos/play/wwdc2026/298): Learn how to evaluate model-driven experiences using the Evaluations framework. In a probabilistic world, unit tests alone won’t suffice. Discover how to define metrics, automatically grade outputs, and aggregate statistics to ensure your AI-powered features perform reliably across Apple’s platforms.
+- [Improve your prompts by hill-climbing with Evaluations](https://developer.apple.com/videos/play/wwdc2026/335): Learn comparative evaluation techniques to guide your prompt engineering and select the right model for your app. Explore how to baseline performance, expand your evaluation strategy, and convert results to JSON for integration with other tools. Discover when to apply different prompting strategies and how to iteratively refine prompts for best results.
+- [Create robust evaluations for agentic apps](https://developer.apple.com/videos/play/wwdc2026/299): Learn how to leverage advanced features of the Evaluations framework to build robust evaluations for your app. Explore evaluating flows with tool calling and dynamic conditions, and how to define what correct behavior means for your use case. Discover how to generate synthetic data, use judges effectively, and validate your datasets for reliable results.
 
 ## Topics
 

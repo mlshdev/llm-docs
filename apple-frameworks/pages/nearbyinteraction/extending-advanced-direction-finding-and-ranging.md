@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/extending-advanced-direction-finding-and-ranging
 
 # Extending advanced direction finding and ranging (Swift)
@@ -175,12 +175,6 @@ If both sides support EDM, they can run [NISession](nisession.md) with the confi
 - [Initiating and maintaining a session](initiating-and-maintaining-a-session.md): Measure the relative position of a nearby device and coach the user to sustain interaction.
 - [Finding devices with precision](finding-devices-with-precision.md): Leverage the spatial awareness of ARKit and Apple Ultra Wideband Chips in your app to guide users to a nearby device.
 
-### Phone interaction
-
-- [Implementing interactions between users in close proximity](implementing-interactions-between-users-in-close-proximity.md): Enable devices to access relative positioning information.
-- [Discovering peers with Multipeer Connectivity](discovering-peers-with-multipeer-connectivity.md): Exchange discovery tokens over the local network.
-- [NINearbyPeerConfiguration](ninearbypeerconfiguration.md): A configuration that enables interaction between iPhone or Apple Watch devices.
-
 # Extending advanced direction finding and ranging (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -354,9 +348,3 @@ If both sides support EDM, they can run [NISession](nisession.md) with the confi
 
 - [Initiating and maintaining a session](initiating-and-maintaining-a-session.md): Measure the relative position of a nearby device and coach the user to sustain interaction.
 - [Finding devices with precision](finding-devices-with-precision.md): Leverage the spatial awareness of ARKit and Apple Ultra Wideband Chips in your app to guide users to a nearby device.
-
-### Phone interaction
-
-- [Implementing interactions between users in close proximity](implementing-interactions-between-users-in-close-proximity.md): Enable devices to access relative positioning information.
-- [Discovering peers with Multipeer Connectivity](discovering-peers-with-multipeer-connectivity.md): Exchange discovery tokens over the local network.
-- [NINearbyPeerConfiguration](ninearbypeerconfiguration.md): A configuration that enables interaction between iPhone or Apple Watch devices.

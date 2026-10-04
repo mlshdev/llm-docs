@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/naturallanguage/nltagger/tag(at:unit:scheme:)
 
 # tag(at:unit:scheme:)
@@ -17,8 +17,9 @@ Finds a tag for a given linguistic unit, for a single scheme, at the specified c
 
 ## Parameters
 
-- `unit`: The linguistic unit. See [NLTokenUnit](../nltokenunit.md) for possible values.
-- `scheme`: The tag scheme. See [NLTagScheme](../nltagscheme.md) for possible values.
+- `index`: The index for the tag.
+- `unit`: The linguistic unit.
+- `scheme`: The tag scheme.
 
 <a id="return-value"></a>
 

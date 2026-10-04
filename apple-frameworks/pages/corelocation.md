@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corelocation
 
 # Core Location (Swift)
@@ -92,6 +92,7 @@ Determine the device’s orientation relative to magnetic or true north.
 
 - [Getting heading and course information](corelocation/getting-heading-and-course-information.md): Use a device’s orientation and course information for navigation.
 - [CLHeading](corelocation/clheading.md): The orientation of the user’s device, relative to true or magnetic north.
+- [CLBodyIdentifiable](corelocation/clbodyidentifiable.md): A type that identifies a physical body or view for heading calculations.
 
 ### Geocoding
 
@@ -122,10 +123,6 @@ Determine the device’s orientation relative to magnetic or true north.
 
 - [Core Location Constants](corelocation/core-location-constants.md): This document describes the constants found in the Core Location framework.
 - [Core Location Functions](corelocation/core-location-functions.md): The Core Location framework provides functions to help you work with coordinate values.
-
-### Protocols
-
-- [CLBodyIdentifiable](corelocation/clbodyidentifiable.md)
 
 # Core Location (Objective-C)
 
@@ -220,6 +217,7 @@ Determine the device’s orientation relative to magnetic or true north.
 
 - [Getting heading and course information](corelocation/getting-heading-and-course-information.md): Use a device’s orientation and course information for navigation.
 - [CLHeading](corelocation/clheading.md): The orientation of the user’s device, relative to true or magnetic north.
+- [CLBodyIdentifiable](corelocation/clbodyidentifiable.md): A type that identifies a physical body or view for heading calculations.
 
 ### Geocoding
 
@@ -248,10 +246,6 @@ Determine the device’s orientation relative to magnetic or true north.
 
 - [Core Location Constants](corelocation/core-location-constants.md): This document describes the constants found in the Core Location framework.
 - [Core Location Functions](corelocation/core-location-functions.md): The Core Location framework provides functions to help you work with coordinate values.
-
-### Protocols
-
-- [CLBodyIdentifiable](corelocation/clbodyidentifiable.md)
 
 ### Macros
 

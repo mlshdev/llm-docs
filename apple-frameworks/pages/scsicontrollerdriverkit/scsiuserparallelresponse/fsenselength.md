@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/scsiuserparallelresponse/fsenselength
 
 # fSenseLength
@@ -25,7 +25,7 @@ This value is the length of valid data that the [fSenseBuffer](fsensebuffer.md) 
 
 ## See Also
 
-### Response Properties
+### Response properties
 
 - [version](version.md): The version of the parallel response structure currently in use.
 - [SCSIUserParallelResponseVersion](../scsiuserparallelresponseversion.md): Constants that represent versions of the user parallel task structure.

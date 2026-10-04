@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/mapkit/mkoverlayview
 
 # MKOverlayView (Swift)
@@ -58,8 +58,6 @@ The implementation of your [drawMapRect:zoomScale:inContext:](mkoverlayview/draw
 - [NSCoding](../foundation/nscoding.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIAccessibilityIdentification](../uikit/uiaccessibilityidentification.md)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UIAppearance](../uikit/uiappearance.md)

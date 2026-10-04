@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/evaluations/evaluationsubject
 
 # EvaluationSubject
@@ -52,4 +52,4 @@ struct MySubject<Value: Codable>: EvaluationSubject {
 - [Subject](evaluation/subject.md): The type of subject the system under test produces.
 - [subject(from:)](evaluation/subject%28from_%29.md): Produces the subject of evaluation from a given sample.
 - [ModelSubject](modelsubject.md): The subject type for language model evaluations.
-- [name](evaluation/name.md): The default name, taken from the type name.
+- [name](evaluation/name.md): The evaluation’s name in results. Defaults to the type name; override for a custom one.

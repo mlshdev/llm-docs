@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/view/workoutpreview(_:ispresented:)
 
 # workoutPreview(\_:isPresented:)
 
 **Framework:** WorkoutKit  
 **Kind:** Instance Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · macOS 15.0+ · watchOS 11.0+
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · watchOS 11.0+
 
 Presents a preview of the workout contents as a modal sheet
 

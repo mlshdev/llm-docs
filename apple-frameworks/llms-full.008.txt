@@ -1,10 +1,1462 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
+# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
-Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
-Captured at: 2026-09-27T18:07:10.128Z
+Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
+Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
+Captured at: 2026-10-04T18:39:03.048Z
 Volume 8
+
+# Document: Create
+
+Source path: documentation/audiodriverkit/iouseraudiostream/create
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/create
+Description: Interface language: Objective-C
+
+# Create
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Static Method  
+**Availability:** DriverKit 21.0+
+
+Allocates and initializes an instance of the audio stream class.
+
+## Declaration
+
+```objectivec
+static OSSharedPtr<IOUserAudioStream> Create(IOUserAudioDriver *in_driver, IOUserAudioStreamDirection in_direction, IOMemoryDescriptor *in_io_memory_descriptor);
+```
+
+## Parameters
+
+- `in_driver`: The [IOUserAudioDriver](../iouseraudiodriver.md) that owns this object.
+- `in_direction`: A `IOUserAudioStreamDirection` for the stream’s direction: input or output.
+- `in_io_memory_descriptor`: A pointer to a [IOMemoryDescriptor](../../driverkit/iomemorydescriptor.md). The stream maps the descriptor’s buffer to the host for doing audio I/O.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A poiner to an [IOUserAudioStream](../iouseraudiostream.md), if allocation and initialization succeeded.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you subclass [IOUserAudioStream](../iouseraudiostream.md) to override this class’ behavior, don’t use [Create](create.md) to allocate and initialize the custom subclass.
+
+## See Also
+
+### Creating an Audio Stream
+
+- [init](init.md): Initializes an instance of the audio stream class.
+- [IOUserAudioDriver](../iouseraudiodriver.md): A DriverKit provider object that manages communications with an audio device.
+
+# Document: DeviceSampleRateChanged
+
+Source path: documentation/audiodriverkit/iouseraudiostream/devicesampleratechanged
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/devicesampleratechanged
+Description: Interface language: Objective-C
+
+# DeviceSampleRateChanged
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Updates stream formats, in response to the owning audio device changing its sample rate.
+
+## Declaration
+
+```objectivec
+kern_return_t DeviceSampleRateChanged(double in_sample_rate);
+```
+
+## Parameters
+
+- `in_sample_rate`: The new sample rate.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method goes through all the available stream formats and selects the closet format with the matching sample rate.
+
+Calling this method results in a call to the stream’s [HandleChangeCurrentStreamFormat](handlechangecurrentstreamformat.md) to update its format.
+
+## See Also
+
+### Supporting Sample Rate Changes
+
+- [HandleChangeSampleRate](../iouseraudiodevice/handlechangesamplerate.md): Tells the device the sample rate is changing.
+
+# Document: free
+
+Source path: documentation/audiodriverkit/iouseraudiostream/free
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/free
+Description: Interface language: Objective-C
+
+# free
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Frees the audio stream.
+
+## Declaration
+
+```objectivec
+virtual void free();
+```
+
+# Document: GetAvailableStreamFormats
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getavailablestreamformats
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getavailablestreamformats
+Description: Interface language: Objective-C
+
+# GetAvailableStreamFormats
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Returns the available stream formats as an array of audio stream basic descriptions.
+
+## Declaration
+
+```objectivec
+size_t GetAvailableStreamFormats(IOUserAudioStreamBasicDescription *out_formats, size_t in_num_formats);
+```
+
+## Parameters
+
+- `out_formats`: A pointer to a buffer of type `IOUserAudioStreamBasicDescription`, with a size of `in_num_formats`. On return, this buffer contains the available formats.
+- `in_num_formats`: The size of the `out_formats` buffer.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The number of descriptions populated in the `out_formats` buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Working with Stream Formats
+
+- [SetCurrentStreamFormat](setcurrentstreamformat.md): Sets the current stream format to a given audio stream basic description.
+- [GetCurrentStreamFormat](getcurrentstreamformat.md): Returns the current stream format, as an audio stream basic description.
+- [SetAvailableStreamFormats](setavailablestreamformats.md): Sets the available stream formats to an array of audio stream basic descriptions.
+- [GetNumberAvailableStreamFormats](getnumberavailablestreamformats.md): Returns the number of available stream formats.
+- [IOUserAudioStreamBasicDescription](../audiodriverkit/iouseraudiostreambasicdescription.md): A structure that encapsulates all of the information for describing the basic format properties of a stream of audio data.
+- [GetStreamDirection](getstreamdirection.md): Gets the direction of the stream: input or output.
+- [IOUserAudioStreamDirection](../audiodriverkit/iouseraudiostreamdirection.md): A type representing the direction of audio flow.
+- [SetStreamIsActive](setstreamisactive.md): Sets a Boolean value that indicates whether the stream is active and doing I/O.
+- [GetStreamIsActive](getstreamisactive.md): Gets a value that indicates whether the stream is active and doing I/O.
+
+# Document: GetBaseClassID
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getbaseclassid
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getbaseclassid
+Description: Interface language: Objective-C
+
+# GetBaseClassID
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Gets the audio class identifier of the base class object.
+
+## Declaration
+
+```objectivec
+virtual IOUserAudioClassID GetBaseClassID();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The audio class identifier of the base class object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method overrides the base class [IOUserAudioObject](../iouseraudioobject.md).
+
+## See Also
+
+### Getting Information About the Class
+
+- [GetClassID](getclassid.md): Gets the audio class identifier of the object.
+- [IOUserAudioClassID](../audiodriverkit/iouseraudioclassid.md): An identifier for the type of audio object.
+
+# Document: GetClassID
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getclassid
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getclassid
+Description: Interface language: Objective-C
+
+# GetClassID
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Gets the audio class identifier of the object.
+
+## Declaration
+
+```objectivec
+virtual IOUserAudioClassID GetClassID();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The audio class identifier of the object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method overrides the base class [IOUserAudioObject](../iouseraudioobject.md).
+
+## See Also
+
+### Getting Information About the Class
+
+- [GetBaseClassID](getbaseclassid.md): Gets the audio class identifier of the base class object.
+- [IOUserAudioClassID](../audiodriverkit/iouseraudioclassid.md): An identifier for the type of audio object.
+
+# Document: GetCurrentStreamFormat
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getcurrentstreamformat
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getcurrentstreamformat
+Description: Interface language: Objective-C
+
+# GetCurrentStreamFormat
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Returns the current stream format, as an audio stream basic description.
+
+## Declaration
+
+```objectivec
+IOUserAudioStreamBasicDescription GetCurrentStreamFormat();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The current stream format, as an `IOUserAudioStreamBasicDescription`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Working with Stream Formats
+
+- [SetCurrentStreamFormat](setcurrentstreamformat.md): Sets the current stream format to a given audio stream basic description.
+- [SetAvailableStreamFormats](setavailablestreamformats.md): Sets the available stream formats to an array of audio stream basic descriptions.
+- [GetAvailableStreamFormats](getavailablestreamformats.md): Returns the available stream formats as an array of audio stream basic descriptions.
+- [GetNumberAvailableStreamFormats](getnumberavailablestreamformats.md): Returns the number of available stream formats.
+- [IOUserAudioStreamBasicDescription](../audiodriverkit/iouseraudiostreambasicdescription.md): A structure that encapsulates all of the information for describing the basic format properties of a stream of audio data.
+- [GetStreamDirection](getstreamdirection.md): Gets the direction of the stream: input or output.
+- [IOUserAudioStreamDirection](../audiodriverkit/iouseraudiostreamdirection.md): A type representing the direction of audio flow.
+- [SetStreamIsActive](setstreamisactive.md): Sets a Boolean value that indicates whether the stream is active and doing I/O.
+- [GetStreamIsActive](getstreamisactive.md): Gets a value that indicates whether the stream is active and doing I/O.
+
+# Document: GetIOMemoryDescriptor
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getiomemorydescriptor
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getiomemorydescriptor
+Description: Interface language: Objective-C
+
+# GetIOMemoryDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Gets the memory descriptor the stream uses for I/O.
+
+## Declaration
+
+```objectivec
+OSSharedPtr<IOMemoryDescriptor> GetIOMemoryDescriptor();
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This is the value provided to the stream’s initializer, or updated later by a call to [SetIOMemoryDescriptor](setiomemorydescriptor.md).
+
+## See Also
+
+### Working with Memory Descriptors
+
+- [SetIOMemoryDescriptor](setiomemorydescriptor.md): Sets the memory descriptor the stream uses for I/O.
+
+# Document: GetLatency
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getlatency
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getlatency
+Description: Interface language: Objective-C
+
+# GetLatency
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+## Declaration
+
+```objectivec
+uint32_t GetLatency();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns uint32_t
+
+<a id="discussion"></a>
+
+## Discussion
+
+Get the latency of the stream in sample frames.
+
+Getting the value will be synchronized using the work queue created by the object.
+
+# Document: GetNumberAvailableStreamFormats
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getnumberavailablestreamformats
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getnumberavailablestreamformats
+Description: Interface language: Objective-C
+
+# GetNumberAvailableStreamFormats
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Returns the number of available stream formats.
+
+## Declaration
+
+```objectivec
+size_t GetNumberAvailableStreamFormats();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The number of available stream formats, as a [size_t](https://developer.apple.com/documentation/kernel/size_t).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Working with Stream Formats
+
+- [SetCurrentStreamFormat](setcurrentstreamformat.md): Sets the current stream format to a given audio stream basic description.
+- [GetCurrentStreamFormat](getcurrentstreamformat.md): Returns the current stream format, as an audio stream basic description.
+- [SetAvailableStreamFormats](setavailablestreamformats.md): Sets the available stream formats to an array of audio stream basic descriptions.
+- [GetAvailableStreamFormats](getavailablestreamformats.md): Returns the available stream formats as an array of audio stream basic descriptions.
+- [IOUserAudioStreamBasicDescription](../audiodriverkit/iouseraudiostreambasicdescription.md): A structure that encapsulates all of the information for describing the basic format properties of a stream of audio data.
+- [GetStreamDirection](getstreamdirection.md): Gets the direction of the stream: input or output.
+- [IOUserAudioStreamDirection](../audiodriverkit/iouseraudiostreamdirection.md): A type representing the direction of audio flow.
+- [SetStreamIsActive](setstreamisactive.md): Sets a Boolean value that indicates whether the stream is active and doing I/O.
+- [GetStreamIsActive](getstreamisactive.md): Gets a value that indicates whether the stream is active and doing I/O.
+
+# Document: GetStartingChannel
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getstartingchannel
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getstartingchannel
+Description: Interface language: Objective-C
+
+# GetStartingChannel
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+## Declaration
+
+```objectivec
+uint32_t GetStartingChannel();
+```
+
+# Document: GetStreamDirection
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getstreamdirection
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getstreamdirection
+Description: Interface language: Objective-C
+
+# GetStreamDirection
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Gets the direction of the stream: input or output.
+
+## Declaration
+
+```objectivec
+IOUserAudioStreamDirection GetStreamDirection();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The direction of the stream, as a `IOUserAudioStreamDirection` value.
+
+## See Also
+
+### Working with Stream Formats
+
+- [SetCurrentStreamFormat](setcurrentstreamformat.md): Sets the current stream format to a given audio stream basic description.
+- [GetCurrentStreamFormat](getcurrentstreamformat.md): Returns the current stream format, as an audio stream basic description.
+- [SetAvailableStreamFormats](setavailablestreamformats.md): Sets the available stream formats to an array of audio stream basic descriptions.
+- [GetAvailableStreamFormats](getavailablestreamformats.md): Returns the available stream formats as an array of audio stream basic descriptions.
+- [GetNumberAvailableStreamFormats](getnumberavailablestreamformats.md): Returns the number of available stream formats.
+- [IOUserAudioStreamBasicDescription](../audiodriverkit/iouseraudiostreambasicdescription.md): A structure that encapsulates all of the information for describing the basic format properties of a stream of audio data.
+- [IOUserAudioStreamDirection](../audiodriverkit/iouseraudiostreamdirection.md): A type representing the direction of audio flow.
+- [SetStreamIsActive](setstreamisactive.md): Sets a Boolean value that indicates whether the stream is active and doing I/O.
+- [GetStreamIsActive](getstreamisactive.md): Gets a value that indicates whether the stream is active and doing I/O.
+
+# Document: GetStreamIsActive
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getstreamisactive
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getstreamisactive
+Description: Interface language: Objective-C
+
+# GetStreamIsActive
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Gets a value that indicates whether the stream is active and doing I/O.
+
+## Declaration
+
+```objectivec
+bool GetStreamIsActive();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+`true` if the stream is enabled and performing I/O; `false` otherwise.
+
+## See Also
+
+### Working with Stream Formats
+
+- [SetCurrentStreamFormat](setcurrentstreamformat.md): Sets the current stream format to a given audio stream basic description.
+- [GetCurrentStreamFormat](getcurrentstreamformat.md): Returns the current stream format, as an audio stream basic description.
+- [SetAvailableStreamFormats](setavailablestreamformats.md): Sets the available stream formats to an array of audio stream basic descriptions.
+- [GetAvailableStreamFormats](getavailablestreamformats.md): Returns the available stream formats as an array of audio stream basic descriptions.
+- [GetNumberAvailableStreamFormats](getnumberavailablestreamformats.md): Returns the number of available stream formats.
+- [IOUserAudioStreamBasicDescription](../audiodriverkit/iouseraudiostreambasicdescription.md): A structure that encapsulates all of the information for describing the basic format properties of a stream of audio data.
+- [GetStreamDirection](getstreamdirection.md): Gets the direction of the stream: input or output.
+- [IOUserAudioStreamDirection](../audiodriverkit/iouseraudiostreamdirection.md): A type representing the direction of audio flow.
+- [SetStreamIsActive](setstreamisactive.md): Sets a Boolean value that indicates whether the stream is active and doing I/O.
+
+# Document: GetTerminalType
+
+Source path: documentation/audiodriverkit/iouseraudiostream/getterminaltype
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/getterminaltype
+Description: Interface language: Objective-C
+
+# GetTerminalType
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Gets the terminal type of the stream.
+
+## Declaration
+
+```objectivec
+IOUserAudioStreamTerminalType GetTerminalType();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The stream’s terminal type.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Working with Stream Terminals
+
+- [SetTerminalType](setterminaltype.md): Sets the terminal type of the stream.
+- [IOUserAudioStreamTerminalType](../audiodriverkit/iouseraudiostreamterminaltype.md): Constants that describe the terminal type of an audio stream.
+
+# Document: HandleChangeCurrentStreamFormat
+
+Source path: documentation/audiodriverkit/iouseraudiostream/handlechangecurrentstreamformat
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/handlechangecurrentstreamformat
+Description: Interface language: Objective-C
+
+# HandleChangeCurrentStreamFormat
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Tells the stream the format is changing.
+
+## Declaration
+
+```objectivec
+virtual kern_return_t HandleChangeCurrentStreamFormat(const IOUserAudioStreamBasicDescription *in_format);
+```
+
+## Parameters
+
+- `in_format`: The stream format to set, if possible, as an `IOUserAudioStreamBasicDescription`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default implementation calls [SetCurrentStreamFormat](setcurrentstreamformat.md) and returns [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md). Subclass and override this method to handle changes to the stream format and return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) upon success.
+
+## See Also
+
+### Managing Stream Changes
+
+- [HandleChangeStreamIsActive](handlechangestreamisactive.md): Tells the stream the activity state is changing.
+- [DeviceSampleRateChanged](devicesampleratechanged.md): Updates stream formats, in response to the owning audio device changing its sample rate.
+
+# Document: HandleChangeStreamIsActive
+
+Source path: documentation/audiodriverkit/iouseraudiostream/handlechangestreamisactive
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/handlechangestreamisactive
+Description: Interface language: Objective-C
+
+# HandleChangeStreamIsActive
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Tells the stream the activity state is changing.
+
+## Declaration
+
+```objectivec
+virtual kern_return_t HandleChangeStreamIsActive(bool in_is_active);
+```
+
+## Parameters
+
+- `in_is_active`: `true` if the stream is to become active; otherwise, `false`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default implementation calls [SetStreamIsActive](setstreamisactive.md) and returns [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md). Subclass and override this method to handle changes to the stream format and return [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) upon success.
+
+## See Also
+
+### Managing Stream Changes
+
+- [HandleChangeCurrentStreamFormat](handlechangecurrentstreamformat.md): Tells the stream the format is changing.
+- [DeviceSampleRateChanged](devicesampleratechanged.md): Updates stream formats, in response to the owning audio device changing its sample rate.
+
+# Document: init
+
+Source path: documentation/audiodriverkit/iouseraudiostream/init
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/init
+Description: Interface language: Objective-C
+
+# init
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Initializes an instance of the audio stream class.
+
+## Declaration
+
+```objectivec
+virtual bool init(IOUserAudioDriver *in_driver, IOUserAudioStreamDirection in_direction, IOMemoryDescriptor *in_io_memory_descriptor);
+```
+
+## Parameters
+
+- `in_driver`: The [IOUserAudioDriver](../iouseraudiodriver.md) that owns this object.
+- `in_direction`: A `IOUserAudioStreamDirection` for the stream’s direction: input or output.
+- `in_io_memory_descriptor`: A pointer to a [IOMemoryDescriptor](../../driverkit/iomemorydescriptor.md). The stream maps the descriptor’s buffer to the Host for doing audio I/O.
+
+<a id="return-value"></a>
+
+## Return Value
+
+`true` if initialization succeeded; `false` otherwise.
+
+## See Also
+
+### Creating an Audio Stream
+
+- [Create](create.md): Allocates and initializes an instance of the audio stream class.
+- [IOUserAudioDriver](../iouseraudiodriver.md): A DriverKit provider object that manages communications with an audio device.
+
+# Document: SetAvailableStreamFormats
+
+Source path: documentation/audiodriverkit/iouseraudiostream/setavailablestreamformats
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/setavailablestreamformats
+Description: Interface language: Objective-C
+
+# SetAvailableStreamFormats
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Sets the available stream formats to an array of audio stream basic descriptions.
+
+## Declaration
+
+```objectivec
+kern_return_t SetAvailableStreamFormats(const IOUserAudioStreamBasicDescription *in_formats, uint32_t in_num_formats);
+```
+
+## Parameters
+
+- `in_formats`: A pointer to a buffer of `IOUserAudioStreamBasicDescription` instances, with a size of `in_num_formats`.
+- `in_num_formats`: The number of stream descriptions in `in_formats`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If successful, changing the available formats sends a notification to the host to update the object state.
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Working with Stream Formats
+
+- [SetCurrentStreamFormat](setcurrentstreamformat.md): Sets the current stream format to a given audio stream basic description.
+- [GetCurrentStreamFormat](getcurrentstreamformat.md): Returns the current stream format, as an audio stream basic description.
+- [GetAvailableStreamFormats](getavailablestreamformats.md): Returns the available stream formats as an array of audio stream basic descriptions.
+- [GetNumberAvailableStreamFormats](getnumberavailablestreamformats.md): Returns the number of available stream formats.
+- [IOUserAudioStreamBasicDescription](../audiodriverkit/iouseraudiostreambasicdescription.md): A structure that encapsulates all of the information for describing the basic format properties of a stream of audio data.
+- [GetStreamDirection](getstreamdirection.md): Gets the direction of the stream: input or output.
+- [IOUserAudioStreamDirection](../audiodriverkit/iouseraudiostreamdirection.md): A type representing the direction of audio flow.
+- [SetStreamIsActive](setstreamisactive.md): Sets a Boolean value that indicates whether the stream is active and doing I/O.
+- [GetStreamIsActive](getstreamisactive.md): Gets a value that indicates whether the stream is active and doing I/O.
+
+# Document: SetCurrentStreamFormat
+
+Source path: documentation/audiodriverkit/iouseraudiostream/setcurrentstreamformat
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/setcurrentstreamformat
+Description: Interface language: Objective-C
+
+# SetCurrentStreamFormat
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Sets the current stream format to a given audio stream basic description.
+
+## Declaration
+
+```objectivec
+kern_return_t SetCurrentStreamFormat(const IOUserAudioStreamBasicDescription *in_format);
+```
+
+## Parameters
+
+- `in_format`: A pointer to an `IOIUserAudioStreamBasicDescription` to use as the new format.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If successful, changing the format sends a notification to the host to update the object state.
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Working with Stream Formats
+
+- [GetCurrentStreamFormat](getcurrentstreamformat.md): Returns the current stream format, as an audio stream basic description.
+- [SetAvailableStreamFormats](setavailablestreamformats.md): Sets the available stream formats to an array of audio stream basic descriptions.
+- [GetAvailableStreamFormats](getavailablestreamformats.md): Returns the available stream formats as an array of audio stream basic descriptions.
+- [GetNumberAvailableStreamFormats](getnumberavailablestreamformats.md): Returns the number of available stream formats.
+- [IOUserAudioStreamBasicDescription](../audiodriverkit/iouseraudiostreambasicdescription.md): A structure that encapsulates all of the information for describing the basic format properties of a stream of audio data.
+- [GetStreamDirection](getstreamdirection.md): Gets the direction of the stream: input or output.
+- [IOUserAudioStreamDirection](../audiodriverkit/iouseraudiostreamdirection.md): A type representing the direction of audio flow.
+- [SetStreamIsActive](setstreamisactive.md): Sets a Boolean value that indicates whether the stream is active and doing I/O.
+- [GetStreamIsActive](getstreamisactive.md): Gets a value that indicates whether the stream is active and doing I/O.
+
+# Document: SetIOMemoryDescriptor
+
+Source path: documentation/audiodriverkit/iouseraudiostream/setiomemorydescriptor
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/setiomemorydescriptor
+Description: Interface language: Objective-C
+
+# SetIOMemoryDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Sets the memory descriptor the stream uses for I/O.
+
+## Declaration
+
+```objectivec
+kern_return_t SetIOMemoryDescriptor(IOMemoryDescriptor *in_io_memory_descriptor);
+```
+
+## See Also
+
+### Working with Memory Descriptors
+
+- [GetIOMemoryDescriptor](getiomemorydescriptor.md): Gets the memory descriptor the stream uses for I/O.
+
+# Document: SetLatency
+
+Source path: documentation/audiodriverkit/iouseraudiostream/setlatency
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/setlatency
+Description: Interface language: Objective-C
+
+# SetLatency
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+## Declaration
+
+```objectivec
+kern_return_t SetLatency(uint32_t in_latency);
+```
+
+## Parameters
+
+- `in_latency`: uint32_t latency value to set. Value is in sample frames.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns kern_return_t.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Set the latency of the stream in sample frames.
+
+Drivers can change the latency of the stream dynamically.  A notification will be sent to the host to update the object state if successful. Setting the value will be synchronized using the work queue created by the object.
+
+# Document: SetStartingChannel
+
+Source path: documentation/audiodriverkit/iouseraudiostream/setstartingchannel
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/setstartingchannel
+Description: Interface language: Objective-C
+
+# SetStartingChannel
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+## Declaration
+
+```objectivec
+kern_return_t SetStartingChannel(uint32_t in_starting_channel);
+```
+
+# Document: SetStreamIsActive
+
+Source path: documentation/audiodriverkit/iouseraudiostream/setstreamisactive
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/setstreamisactive
+Description: Interface language: Objective-C
+
+# SetStreamIsActive
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Sets a Boolean value that indicates whether the stream is active and doing I/O.
+
+## Declaration
+
+```objectivec
+kern_return_t SetStreamIsActive(bool in_is_active);
+```
+
+## Parameters
+
+- `in_is_active`: `true` if the stream is enabled and performing I/O; otherwise, `false`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If successful, changing the stream’s activity state sends a notification to the host to update the object state.
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Working with Stream Formats
+
+- [SetCurrentStreamFormat](setcurrentstreamformat.md): Sets the current stream format to a given audio stream basic description.
+- [GetCurrentStreamFormat](getcurrentstreamformat.md): Returns the current stream format, as an audio stream basic description.
+- [SetAvailableStreamFormats](setavailablestreamformats.md): Sets the available stream formats to an array of audio stream basic descriptions.
+- [GetAvailableStreamFormats](getavailablestreamformats.md): Returns the available stream formats as an array of audio stream basic descriptions.
+- [GetNumberAvailableStreamFormats](getnumberavailablestreamformats.md): Returns the number of available stream formats.
+- [IOUserAudioStreamBasicDescription](../audiodriverkit/iouseraudiostreambasicdescription.md): A structure that encapsulates all of the information for describing the basic format properties of a stream of audio data.
+- [GetStreamDirection](getstreamdirection.md): Gets the direction of the stream: input or output.
+- [IOUserAudioStreamDirection](../audiodriverkit/iouseraudiostreamdirection.md): A type representing the direction of audio flow.
+- [GetStreamIsActive](getstreamisactive.md): Gets a value that indicates whether the stream is active and doing I/O.
+
+# Document: SetTerminalType
+
+Source path: documentation/audiodriverkit/iouseraudiostream/setterminaltype
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/setterminaltype
+Description: Interface language: Objective-C
+
+# SetTerminalType
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Sets the terminal type of the stream.
+
+## Declaration
+
+```objectivec
+kern_return_t SetTerminalType(IOUserAudioStreamTerminalType in_terminal_type);
+```
+
+## Parameters
+
+- `in_terminal_type`: The [IOUserAudioStreamTerminalType](../audiodriverkit/iouseraudiostreamterminaltype.md) to set.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If successful, changing the available formats sends a notification to the host to update the object state.
+
+## See Also
+
+### Working with Stream Terminals
+
+- [GetTerminalType](getterminaltype.md): Gets the terminal type of the stream.
+- [IOUserAudioStreamTerminalType](../audiodriverkit/iouseraudiostreamterminaltype.md): Constants that describe the terminal type of an audio stream.
+
+# Document: StartIO
+
+Source path: documentation/audiodriverkit/iouseraudiostream/startio
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/startio
+Description: Interface language: Objective-C
+
+# StartIO
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Tells the stream to start I/O.
+
+## Declaration
+
+```objectivec
+virtual kern_return_t StartIO(IOUserAudioStartStopFlags in_flags);
+```
+
+## Parameters
+
+- `in_flags`: A `IOUserAudioStartStopFlag` to indicate I/O startup behavior.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default implementation always returns [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md).
+
+Subclass and override this method to handle hardware-specific tasks during I/O startup, then call the superclass to update the I/O state. The framework expects this call to always succeed or fail. The hardware can take as long as it needs in this call, provided it always either succeeds or fails.
+
+## See Also
+
+### Performing I/O
+
+- [StopIO](stopio.md): Tells the stream to stop I/O.
+- [IOUserAudioStartStopFlags](../audiodriverkit/iouseraudiostartstopflags.md): Values that indicate I/O starts or stops.
+
+# Document: StopIO
+
+Source path: documentation/audiodriverkit/iouseraudiostream/stopio
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/iouseraudiostream/stopio
+Description: Interface language: Objective-C
+
+# StopIO
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Tells the stream to stop I/O.
+
+## Declaration
+
+```objectivec
+virtual kern_return_t StopIO(IOUserAudioStartStopFlags in_flags);
+```
+
+## Parameters
+
+- `in_flags`: A `IOUserAudioStartStopFlag` to indicate I/O shutdown behavior.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default implementation always returns [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md).
+
+Subclass and override this method to handle hardware-specific tasks during I/O shutdown, then call the superclass to update the I/O state. The framework expects this call to always succeed or fail.
+
+## See Also
+
+### Performing I/O
+
+- [StartIO](startio.md): Tells the stream to start I/O.
+- [IOUserAudioStartStopFlags](../audiodriverkit/iouseraudiostartstopflags.md): Values that indicate I/O starts or stops.
+
+# Document: kIOUserAudioDriverUserClientType
+
+Source path: documentation/audiodriverkit/kiouseraudiodriveruserclienttype
+Canonical documentation: https://developer.apple.com/documentation/audiodriverkit/kiouseraudiodriveruserclienttype
+Description: Interface language: Objective-C
+
+# kIOUserAudioDriverUserClientType
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit 21.0+
+
+## Declaration
+
+```objectivec
+#define kIOUserAudioDriverUserClientType
+```
+
+# Document: Audio Toolbox
+
+Source path: documentation/audiotoolbox
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox
+Description: Framework: Audio Toolbox Kind: Framework Availability: iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+
+
+# Audio Toolbox (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Framework  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+
+
+Record or play audio, convert formats, parse audio streams, and configure your audio session.
+
+<a id="overview"></a>
+
+## Overview
+
+The AudioToolbox framework provides interfaces for recording, playback, and stream parsing. In iOS, the framework provides additional interfaces for managing audio sessions.
+
+## Topics
+
+### Essentials
+
+- [Porting your audio code to Apple silicon](apple-silicon/porting-your-audio-code-to-apple-silicon.md): Eliminate issues in your audio-specific code when running on Apple silicon Mac computers.
+
+### Audio Units
+
+- [Generating spatial audio from a multichannel audio stream](audiotoolbox/generating-spatial-audio-from-a-multichannel-audio-stream.md): Convert 8-channel audio to 2-channel spatial audio by using a spatial mixer audio unit.
+- [Audio Unit v3 Plug-Ins](audiotoolbox/audio-unit-v3-plug-ins.md): Deliver custom audio effects, instruments, and other audio behaviors using an Audio Unit v3 app extension.
+- [Audio Components](audiotoolbox/audio-components.md): Find, load, and configure audio components, such as Audio Units and audio codecs.
+- [Audio Unit v2 (C) API](audiotoolbox/audio-unit-v2-c-api.md): Configure an Audio Unit and prepare it to render audio.
+- [Audio Unit Properties](audiotoolbox/audio-unit-properties.md): Obtain information about the built-in mixers, equalizers, filters, effects, and other Audio Unit app extensions.
+- [Audio Unit Voice I/O](audiotoolbox/audio-unit-voice-i-o.md): Configure system voice processing and respond to speech events.
+
+### Playback and Recording
+
+- [Audio Queue Services](audiotoolbox/audio-queue-services.md): Connect to audio hardware and manage the recording or playback process.
+- [Audio Services](audiotoolbox/audio-services.md): Play short sounds or trigger a vibration effect on iOS devices with the appropriate hardware.
+- [Music Player](audiotoolbox/music-player.md): Create and play a sequence of tracks, and manage aspects of playback in response to standard events.
+- [Anchoring sound to a window or volume](audiotoolbox/spatializing-sound-from-a-uiscene.md): Provide unique app experiences by attaching sounds to windows and volumes in 3D space.
+
+### Audio Files and Formats
+
+- [Audio Format Services](audiotoolbox/audio-format-services.md): Access information about audio formats and codecs.
+- [Audio File Services](audiotoolbox/audio-file-services.md): Read or write a variety of audio data to or from disk or a memory buffer.
+- [Extended Audio File Services](audiotoolbox/extended-audio-file-services.md): Read and write compressed files and linear PCM audio files using a simplified interface.
+- [Audio File Stream Services](audiotoolbox/audio-file-stream-services.md): Parse streamed audio files as the data arrives on the user’s computer.
+- [Audio File Components](audiotoolbox/audio-file-components.md): Get information about audio file formats, and about files containing audio data.
+- [Core Audio File Format](audiotoolbox/core-audio-file-format.md): Parse the structure of Core Audio files.
+
+### Utilities
+
+- [Analyzing audio performance with Instruments](audiotoolbox/analyzing-audio-performance-with-instruments.md): Ensure a smooth and immersive audio experience in your apps using Audio System Trace.
+- [Audio Converter Services](audiotoolbox/audio-converter-services.md): Convert between linear PCM audio formats, and between linear PCM and compressed formats.
+- [Audio Session Support](audiotoolbox/audio-session-support.md): Describe the properties that you associate with audio sessions and audio routes.
+- [Audio Toolbox Debugging](audiotoolbox/audio-toolbox-debugging.md): Obtain the internal state of Core Audio objects during the development and debugging of your code.
+- [Workgroup Management](audiotoolbox/workgroup-management.md): Coordinate the activity of custom real-time audio threads with those of the system and other processes.
+- [Audio Codec](audiotoolbox/audio-codec.md): Translate audio data from one format to another.
+- [Clock Utilities](audiotoolbox/clock-utilities.md): Manage time-related information associated with audio playback.
+
+### Deprecated
+
+- [Deprecated Symbols](audiotoolbox/deprecated-symbols.md): Review unsupported symbols and their replacements.
+
+### Reference
+
+- [AudioToolbox Structures](audiotoolbox/audiotoolbox-structures.md)
+- [AudioToolbox Enumerations](audiotoolbox/audiotoolbox-enumerations.md)
+- [AudioToolbox Constants](audiotoolbox/audiotoolbox-constants.md)
+- [AudioToolbox Functions](audiotoolbox/audiotoolbox-functions.md)
+- [AudioToolbox Data Types](audiotoolbox/audiotoolbox-data-types.md)
+
+### Macros
+
+- [Macros](audiotoolbox/audiotoolbox-macros.md)
+
+### Protocols
+
+- [SpatialAudioExperience](audiotoolbox/spatialaudioexperience.md): Configure an audio stream for spatial computing.
+
+### Structures
+
+- [AutomaticSpatialAudio](audiotoolbox/automaticspatialaudio.md): A spatial audio experience determined by the system.
+- [BypassedSpatialAudio](audiotoolbox/bypassedspatialaudio.md): An experience in which the system does not apply spatial processing to the audio stream.
+- [FixedSpatialAudio](audiotoolbox/fixedspatialaudio.md): A spatial experience that does not take user motion into account.
+- [HeadTrackedSpatialAudio](audiotoolbox/headtrackedspatialaudio.md): A spatial experience that takes user motion into account.
+
+### Variables
+
+- [kAUAudioMixParameter_RemixAmount](audiotoolbox/kauaudiomixparameter_remixamount.md)
+- [kAUAudioMixParameter_Style](audiotoolbox/kauaudiomixparameter_style.md)
+- [kAUAudioMixProperty_EnableSpatialization](audiotoolbox/kauaudiomixproperty_enablespatialization.md)
+- [kAUAudioMixProperty_SpatialAudioMixMetadata](audiotoolbox/kauaudiomixproperty_spatialaudiomixmetadata.md)
+- [kAudioCodecContentSource_AV_Spatial_Live](audiotoolbox/kaudiocodeccontentsource_av_spatial_live.md)
+- [kAudioCodecContentSource_AV_Spatial_Offline](audiotoolbox/kaudiocodeccontentsource_av_spatial_offline.md)
+- [kAudioCodecContentSource_AV_Traditional_Live](audiotoolbox/kaudiocodeccontentsource_av_traditional_live.md)
+- [kAudioCodecContentSource_AV_Traditional_Offline](audiotoolbox/kaudiocodeccontentsource_av_traditional_offline.md)
+- [kAudioCodecContentSource_AppleAV_Spatial_Live](audiotoolbox/kaudiocodeccontentsource_appleav_spatial_live.md)
+- [kAudioCodecContentSource_AppleAV_Spatial_Offline](audiotoolbox/kaudiocodeccontentsource_appleav_spatial_offline.md)
+- [kAudioCodecContentSource_AppleAV_Traditional_Live](audiotoolbox/kaudiocodeccontentsource_appleav_traditional_live.md)
+- [kAudioCodecContentSource_AppleAV_Traditional_Offline](audiotoolbox/kaudiocodeccontentsource_appleav_traditional_offline.md)
+- [kAudioCodecContentSource_AppleCapture_Spatial](audiotoolbox/kaudiocodeccontentsource_applecapture_spatial.md)
+- [kAudioCodecContentSource_AppleCapture_Spatial_Enhanced](audiotoolbox/kaudiocodeccontentsource_applecapture_spatial_enhanced.md)
+- [kAudioCodecContentSource_AppleCapture_Traditional](audiotoolbox/kaudiocodeccontentsource_applecapture_traditional.md)
+- [kAudioCodecContentSource_AppleMusic_Spatial](audiotoolbox/kaudiocodeccontentsource_applemusic_spatial.md)
+- [kAudioCodecContentSource_AppleMusic_Traditional](audiotoolbox/kaudiocodeccontentsource_applemusic_traditional.md)
+- [kAudioCodecContentSource_ApplePassthrough](audiotoolbox/kaudiocodeccontentsource_applepassthrough.md)
+- [kAudioCodecContentSource_Capture_Spatial](audiotoolbox/kaudiocodeccontentsource_capture_spatial.md)
+- [kAudioCodecContentSource_Capture_Spatial_Enhanced](audiotoolbox/kaudiocodeccontentsource_capture_spatial_enhanced.md)
+- [kAudioCodecContentSource_Capture_Traditional](audiotoolbox/kaudiocodeccontentsource_capture_traditional.md)
+- [kAudioCodecContentSource_Music_Spatial](audiotoolbox/kaudiocodeccontentsource_music_spatial.md)
+- [kAudioCodecContentSource_Music_Traditional](audiotoolbox/kaudiocodeccontentsource_music_traditional.md)
+- [kAudioCodecContentSource_Passthrough](audiotoolbox/kaudiocodeccontentsource_passthrough.md)
+- [kAudioCodecContentSource_Reserved](audiotoolbox/kaudiocodeccontentsource_reserved.md)
+- [kAudioCodecContentSource_Unspecified](audiotoolbox/kaudiocodeccontentsource_unspecified.md)
+- [kAudioCodecDynamicRangeControlConfiguration_Capture](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_capture.md)
+- [kAudioCodecDynamicRangeControlConfiguration_Movie](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_movie.md)
+- [kAudioCodecDynamicRangeControlConfiguration_Music](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_music.md)
+- [kAudioCodecDynamicRangeControlConfiguration_None](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_none.md)
+- [kAudioCodecDynamicRangeControlConfiguration_Speech](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_speech.md)
+- [kAudioCodecPropertyASPFrequency](audiotoolbox/kaudiocodecpropertyaspfrequency.md)
+- [kAudioCodecPropertyContentSource](audiotoolbox/kaudiocodecpropertycontentsource.md)
+- [kAudioCodecPropertyDynamicRangeControlConfiguration](audiotoolbox/kaudiocodecpropertydynamicrangecontrolconfiguration.md)
+- [kAudioConverterPropertyChannelMixMap](audiotoolbox/kaudioconverterpropertychannelmixmap.md)
+- [kAudioConverterPropertyPerformDownmix](audiotoolbox/kaudioconverterpropertyperformdownmix.md)
+- [kAudioUnitErr_MultipleVoiceProcessors](audiotoolbox/kaudiouniterr_multiplevoiceprocessors.md)
+- [kAudioUnitSubType_AUAudioMix](audiotoolbox/kaudiounitsubtype_auaudiomix.md)
+- [kReverb2Param_LegacyMode](audiotoolbox/kreverb2param_legacymode.md)
+
+### Functions
+
+- [AudioConverterFillComplexBufferRealtimeSafe(\_:\_:\_:\_:\_:\_:)](audiotoolbox/audioconverterfillcomplexbufferrealtimesafe%28____________%29.md)
+- [AudioConverterFillComplexBufferWithPacketDependencies(\_:\_:\_:\_:\_:\_:\_:)](audiotoolbox/audioconverterfillcomplexbufferwithpacketdependencies%28______________%29.md)
+- [AudioFileWritePacketsWithDependencies(\_:\_:\_:\_:\_:\_:\_:\_:)](audiotoolbox/audiofilewritepacketswithdependencies%28________________%29.md)
+- [AudioServicesPlayAlertSound(\_:spatialExperience:)](audiotoolbox/audioservicesplayalertsound%28__spatialexperience_%29.md): Play an alert sound with the provided spatial audio experience.
+- [AudioServicesPlaySystemSound(\_:spatialExperience:)](audiotoolbox/audioservicesplaysystemsound%28__spatialexperience_%29.md): Play a system sound with the provided spatial audio experience.
+
+### Type Aliases
+
+- [AudioConverterComplexInputDataProcRealtimeSafe](audiotoolbox/audioconvertercomplexinputdataprocrealtimesafe.md)
+
+### Enumerations
+
+- [AUAudioMixRenderingStyle](audiotoolbox/auaudiomixrenderingstyle.md)
+- [SpatialAudioExperiences](audiotoolbox/spatialaudioexperiences.md)
+
+# Audio Toolbox (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Framework  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+
+
+Record or play audio, convert formats, parse audio streams, and configure your audio session.
+
+<a id="overview"></a>
+
+## Overview
+
+The AudioToolbox framework provides interfaces for recording, playback, and stream parsing. In iOS, the framework provides additional interfaces for managing audio sessions.
+
+## Topics
+
+### Essentials
+
+- [Porting your audio code to Apple silicon](apple-silicon/porting-your-audio-code-to-apple-silicon.md): Eliminate issues in your audio-specific code when running on Apple silicon Mac computers.
+
+### Audio Units
+
+- [Generating spatial audio from a multichannel audio stream](audiotoolbox/generating-spatial-audio-from-a-multichannel-audio-stream.md): Convert 8-channel audio to 2-channel spatial audio by using a spatial mixer audio unit.
+- [Audio Unit v3 Plug-Ins](audiotoolbox/audio-unit-v3-plug-ins.md): Deliver custom audio effects, instruments, and other audio behaviors using an Audio Unit v3 app extension.
+- [Audio Components](audiotoolbox/audio-components.md): Find, load, and configure audio components, such as Audio Units and audio codecs.
+- [Audio Unit v2 (C) API](audiotoolbox/audio-unit-v2-c-api.md): Configure an Audio Unit and prepare it to render audio.
+- [Audio Unit Properties](audiotoolbox/audio-unit-properties.md): Obtain information about the built-in mixers, equalizers, filters, effects, and other Audio Unit app extensions.
+- [Audio Unit Voice I/O](audiotoolbox/audio-unit-voice-i-o.md): Configure system voice processing and respond to speech events.
+
+### Playback and Recording
+
+- [Audio Queue Services](audiotoolbox/audio-queue-services.md): Connect to audio hardware and manage the recording or playback process.
+- [Audio Services](audiotoolbox/audio-services.md): Play short sounds or trigger a vibration effect on iOS devices with the appropriate hardware.
+- [Music Player](audiotoolbox/music-player.md): Create and play a sequence of tracks, and manage aspects of playback in response to standard events.
+- [Anchoring sound to a window or volume](audiotoolbox/spatializing-sound-from-a-uiscene.md): Provide unique app experiences by attaching sounds to windows and volumes in 3D space.
+
+### Audio Files and Formats
+
+- [Audio Format Services](audiotoolbox/audio-format-services.md): Access information about audio formats and codecs.
+- [Audio File Services](audiotoolbox/audio-file-services.md): Read or write a variety of audio data to or from disk or a memory buffer.
+- [Extended Audio File Services](audiotoolbox/extended-audio-file-services.md): Read and write compressed files and linear PCM audio files using a simplified interface.
+- [Audio File Stream Services](audiotoolbox/audio-file-stream-services.md): Parse streamed audio files as the data arrives on the user’s computer.
+- [Audio File Components](audiotoolbox/audio-file-components.md): Get information about audio file formats, and about files containing audio data.
+- [Core Audio File Format](audiotoolbox/core-audio-file-format.md): Parse the structure of Core Audio files.
+
+### Utilities
+
+- [Analyzing audio performance with Instruments](audiotoolbox/analyzing-audio-performance-with-instruments.md): Ensure a smooth and immersive audio experience in your apps using Audio System Trace.
+- [Audio Converter Services](audiotoolbox/audio-converter-services.md): Convert between linear PCM audio formats, and between linear PCM and compressed formats.
+- [Audio Session Support](audiotoolbox/audio-session-support.md): Describe the properties that you associate with audio sessions and audio routes.
+- [Audio Toolbox Debugging](audiotoolbox/audio-toolbox-debugging.md): Obtain the internal state of Core Audio objects during the development and debugging of your code.
+- [Workgroup Management](audiotoolbox/workgroup-management.md): Coordinate the activity of custom real-time audio threads with those of the system and other processes.
+- [Audio Codec](audiotoolbox/audio-codec.md): Translate audio data from one format to another.
+- [Clock Utilities](audiotoolbox/clock-utilities.md): Manage time-related information associated with audio playback.
+
+### Deprecated
+
+- [Deprecated Symbols](audiotoolbox/deprecated-symbols.md): Review unsupported symbols and their replacements.
+
+### Reference
+
+- [AudioToolbox Structures](audiotoolbox/audiotoolbox-structures.md)
+- [AudioToolbox Enumerations](audiotoolbox/audiotoolbox-enumerations.md)
+- [AudioToolbox Constants](audiotoolbox/audiotoolbox-constants.md)
+- [AudioToolbox Functions](audiotoolbox/audiotoolbox-functions.md)
+- [AudioToolbox Data Types](audiotoolbox/audiotoolbox-data-types.md)
+
+### Macros
+
+- [Macros](audiotoolbox/audiotoolbox-macros.md)
+- [AudioToolbox_AUAudioUnit_h](audiotoolbox/audiotoolbox_auaudiounit_h.md)
+- [AudioToolbox_AUHeadTrackingBinauralRenderer_h](audiotoolbox/audiotoolbox_auheadtrackingbinauralrenderer_h.md)
+- [AudioToolbox_AUParameters_h](audiotoolbox/audiotoolbox_auparameters_h.md)
+- [AudioToolbox_AudioUnitProperties_h](audiotoolbox/audiotoolbox_audiounitproperties_h.md)
+- [AudioUnit_AUComponent_h](audiotoolbox/audiounit_aucomponent_h.md)
+- [AudioUnit_AudioCodec_h](audiotoolbox/audiounit_audiocodec_h.md)
+- [AudioUnit_AudioComponent_h](audiotoolbox/audiounit_audiocomponent_h.md)
+- [CASpatialAudioExperience_h](audiotoolbox/caspatialaudioexperience_h.md)
+
+### Classes
+
+- [CAAnchoringStrategy](audiotoolbox/caanchoringstrategy.md): The center of a head-tracked spatial experience.
+- [CAAutomaticAnchoringStrategy](audiotoolbox/caautomaticanchoringstrategy.md): A system-defined anchoring strategy.
+- [CAAutomaticSpatialAudio](audiotoolbox/caautomaticspatialaudio.md): A spatial audio experience determined by the system.
+- [CABypassedSpatialAudio](audiotoolbox/cabypassedspatialaudio.md): An experience in which the system does not apply spatial processing to the audio stream.
+- [CAFixedSpatialAudio](audiotoolbox/cafixedspatialaudio.md): A spatial experience that does not take user motion into account.
+- [CAFrontAnchoringStrategy](audiotoolbox/cafrontanchoringstrategy.md): Anchor to the front of the user’s space.
+- [CAHeadTrackedSpatialAudio](audiotoolbox/caheadtrackedspatialaudio.md): A spatial experience that takes user motion into account.
+- [CASceneAnchoringStrategy](audiotoolbox/casceneanchoringstrategy.md): Anchor to the visual center of a particular UIScene.
+- [CASpatialAudioExperience](audiotoolbox/caspatialaudioexperience.md): Configure an audio stream for spatial computing.
+
+### Variables
+
+- [kAudioServicesDetailIntendedSpatialExperience](audiotoolbox/kaudioservicesdetailintendedspatialexperience.md)
+
+### Functions
+
+- [AudioConverterFillComplexBufferRealtimeSafe](audiotoolbox/audioconverterfillcomplexbufferrealtimesafe%28____________%29.md)
+- [AudioConverterFillComplexBufferWithPacketDependencies](audiotoolbox/audioconverterfillcomplexbufferwithpacketdependencies%28______________%29.md)
+- [AudioFileWritePacketsWithDependencies](audiotoolbox/audiofilewritepacketswithdependencies%28________________%29.md)
+- [AudioServicesPlayAlertSoundWithDetails](audiotoolbox/audioservicesplayalertsoundwithdetails.md)
+- [AudioServicesPlaySystemSoundWithDetails](audiotoolbox/audioservicesplaysystemsoundwithdetails.md)
+
+### Enumeration Cases
+
+- [kAUAudioMixParameter_RemixAmount](audiotoolbox/kauaudiomixparameter_remixamount.md)
+- [kAUAudioMixParameter_Style](audiotoolbox/kauaudiomixparameter_style.md)
+- [kAUAudioMixProperty_EnableSpatialization](audiotoolbox/kauaudiomixproperty_enablespatialization.md)
+- [kAUAudioMixProperty_SpatialAudioMixMetadata](audiotoolbox/kauaudiomixproperty_spatialaudiomixmetadata.md)
+- [kAudioCodecContentSource_AV_Spatial_Live](audiotoolbox/kaudiocodeccontentsource_av_spatial_live.md)
+- [kAudioCodecContentSource_AV_Spatial_Offline](audiotoolbox/kaudiocodeccontentsource_av_spatial_offline.md)
+- [kAudioCodecContentSource_AV_Traditional_Live](audiotoolbox/kaudiocodeccontentsource_av_traditional_live.md)
+- [kAudioCodecContentSource_AV_Traditional_Offline](audiotoolbox/kaudiocodeccontentsource_av_traditional_offline.md)
+- [kAudioCodecContentSource_AppleAV_Spatial_Live](audiotoolbox/kaudiocodeccontentsource_appleav_spatial_live.md)
+- [kAudioCodecContentSource_AppleAV_Spatial_Offline](audiotoolbox/kaudiocodeccontentsource_appleav_spatial_offline.md)
+- [kAudioCodecContentSource_AppleAV_Traditional_Live](audiotoolbox/kaudiocodeccontentsource_appleav_traditional_live.md)
+- [kAudioCodecContentSource_AppleAV_Traditional_Offline](audiotoolbox/kaudiocodeccontentsource_appleav_traditional_offline.md)
+- [kAudioCodecContentSource_AppleCapture_Spatial](audiotoolbox/kaudiocodeccontentsource_applecapture_spatial.md)
+- [kAudioCodecContentSource_AppleCapture_Spatial_Enhanced](audiotoolbox/kaudiocodeccontentsource_applecapture_spatial_enhanced.md)
+- [kAudioCodecContentSource_AppleCapture_Traditional](audiotoolbox/kaudiocodeccontentsource_applecapture_traditional.md)
+- [kAudioCodecContentSource_AppleMusic_Spatial](audiotoolbox/kaudiocodeccontentsource_applemusic_spatial.md)
+- [kAudioCodecContentSource_AppleMusic_Traditional](audiotoolbox/kaudiocodeccontentsource_applemusic_traditional.md)
+- [kAudioCodecContentSource_ApplePassthrough](audiotoolbox/kaudiocodeccontentsource_applepassthrough.md)
+- [kAudioCodecContentSource_Capture_Spatial](audiotoolbox/kaudiocodeccontentsource_capture_spatial.md)
+- [kAudioCodecContentSource_Capture_Spatial_Enhanced](audiotoolbox/kaudiocodeccontentsource_capture_spatial_enhanced.md)
+- [kAudioCodecContentSource_Capture_Traditional](audiotoolbox/kaudiocodeccontentsource_capture_traditional.md)
+- [kAudioCodecContentSource_Music_Spatial](audiotoolbox/kaudiocodeccontentsource_music_spatial.md)
+- [kAudioCodecContentSource_Music_Traditional](audiotoolbox/kaudiocodeccontentsource_music_traditional.md)
+- [kAudioCodecContentSource_Passthrough](audiotoolbox/kaudiocodeccontentsource_passthrough.md)
+- [kAudioCodecContentSource_Reserved](audiotoolbox/kaudiocodeccontentsource_reserved.md)
+- [kAudioCodecContentSource_Unspecified](audiotoolbox/kaudiocodeccontentsource_unspecified.md)
+- [kAudioCodecDynamicRangeControlConfiguration_Capture](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_capture.md)
+- [kAudioCodecDynamicRangeControlConfiguration_Movie](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_movie.md)
+- [kAudioCodecDynamicRangeControlConfiguration_Music](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_music.md)
+- [kAudioCodecDynamicRangeControlConfiguration_None](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_none.md)
+- [kAudioCodecDynamicRangeControlConfiguration_Speech](audiotoolbox/kaudiocodecdynamicrangecontrolconfiguration_speech.md)
+- [kAudioCodecPropertyASPFrequency](audiotoolbox/kaudiocodecpropertyaspfrequency.md)
+- [kAudioCodecPropertyContentSource](audiotoolbox/kaudiocodecpropertycontentsource.md)
+- [kAudioCodecPropertyDynamicRangeControlConfiguration](audiotoolbox/kaudiocodecpropertydynamicrangecontrolconfiguration.md)
+- [kAudioConverterPropertyChannelMixMap](audiotoolbox/kaudioconverterpropertychannelmixmap.md)
+- [kAudioConverterPropertyPerformDownmix](audiotoolbox/kaudioconverterpropertyperformdownmix.md)
+- [kAudioOutputUnitProperty_IntendedSpatialExperience](audiotoolbox/kaudiooutputunitproperty_intendedspatialexperience.md)
+- [kAudioQueueProperty_IntendedSpatialExperience](audiotoolbox/kaudioqueueproperty_intendedspatialexperience.md)
+- [kAudioUnitErr_MultipleVoiceProcessors](audiotoolbox/kaudiouniterr_multiplevoiceprocessors.md)
+- [kAudioUnitSubType_AUAudioMix](audiotoolbox/kaudiounitsubtype_auaudiomix.md)
+- [kReverb2Param_LegacyMode](audiotoolbox/kreverb2param_legacymode.md)
+
+### Type Aliases
+
+- [AudioConverterComplexInputDataProcRealtimeSafe](audiotoolbox/audioconvertercomplexinputdataprocrealtimesafe.md)
+
+### Enumerations
+
+- [AUAudioMixRenderingStyle](audiotoolbox/auaudiomixrenderingstyle.md)
+- [CASoundStageSize](audiotoolbox/casoundstagesize.md): Configure the distribution of audio channels in 3D space.
+
+# Document: AUEventSampleTime
+
+Source path: documentation/audiotoolbox/1387633-aueventsampletime
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/1387633-aueventsampletime
+Description: Interface languages: Swift, Objective-C
+
+# AUEventSampleTime
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Audio Toolbox  
+**Kind:** API Collection
+
+Expresses time as a sample count.
+
+<a id="overview"></a>
+
+## Overview
+
+Callers of the [AUScheduleParameterBlock](auscheduleparameterblock.md) and [AUScheduleMIDIEventBlock](auschedulemidieventblock.md) blocks can pass the `AUEventSampleTimeImmediate` value to indicate that the event should be rendered as soon as possible (in the next cycle). A caller may also add a small (less than 4096) sample frame offset to this constant.
+
+> **Note**
+
+>  The base [AUAudioUnit](auaudiounit.md) implementation translates the `AUEventSampleTimeImmediate` constant to a true [AUEventSampleTime](aueventsampletime.md) value. Subclasses will not see this value.
+
+## Topics
+
+### Constants
+
+- [AUEventSampleTimeImmediate](aueventsampletimeimmediate.md)
+
+## See Also
+
+### Enumerations
+
+- [Audio Unit Types](1584142-audio_unit_types.md): The defined types of audio processing plug-ins known as audio units.
+- [Inter-App Audio Unit Types](1619501-inter-app-audio-unit-types.md)
+- [Audio Unit Manufacturer Identifier](1584143-audio_unit_manufacturer_identifi.md): The Apple audio unit manufacturer code.
+- [Audio Unit Output Subtypes](1584148-audio-unit-output-subtypes.md)
+- [I/O Audio Unit Subtypes](1619485-i-o-audio-unit-subtypes.md)
+- [Converter Audio Unit Subtypes](1584145-converter_audio_unit_subtypes.md): Audio data format converter audio unit subtypes for audio units provided by Apple.
+- [Reserved Audio Unit Clump Identifier](1533986-reserved_audio_unit_clump_identi.md): Reserved for system use.
+- [Offline Audio Unit Properties](1534054-offline_audio_unit_properties.md): Properties for audio units that perform offline processing—that is, processing in a nonplayback, nonrealtime mode.
+- [MIDI Audio Unit Parameters](1389613-midi_audio_unit_parameters.md): Parameters for instrument units.
+- [General Audio Unit Function Selectors](1584140-general_audio_unit_function_sele.md): General audio unit component selectors that correspond to functions in the audio unit API.
+- [Generator Audio Unit Subtypes](1619493-generator_audio_unit_subtypes.md): Audio units that serve as sound sources.
+- [Input/Output Audio Unit Subtypes](1584139-input_output_audio_unit_subtypes.md): Input/output audio unit subtypes for audio units provided by Apple.
+- [Audio Unit Panner Subtypes](1584151-audio-unit-panner-subtypes.md)
+- [Audio Unit Player Subtypes](1584155-audio-unit-player-subtypes.md)
+- [Audio Unit Pitch Subtypes](1584152-audio-unit-pitch-subtypes.md)
 
 # Document: Peak Limiter Unit Parameters
 
@@ -160095,1517 +161547,3 @@ var kAudioUnitConfigurationInfo_SupportedChannelLayoutTags: String { get }
 - [kAudioUnitConfigurationInfo_IconURL](kaudiounitconfigurationinfo_iconurl.md)
 - [kAudioUnitConfigurationInfo_InitialInputs](kaudiounitconfigurationinfo_initialinputs.md)
 - [kAudioUnitConfigurationInfo_InitialOutputs](kaudiounitconfigurationinfo_initialoutputs.md)
-
-# Document: kAudioUnitErr_CannotDoInCurrentContext
-
-Source path: documentation/audiotoolbox/kaudiouniterr_cannotdoincurrentcontext
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_cannotdoincurrentcontext
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_CannotDoInCurrentContext (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_CannotDoInCurrentContext: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_CannotDoInCurrentContext (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_CannotDoInCurrentContext
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_ComponentManagerNotSupported
-
-Source path: documentation/audiotoolbox/kaudiouniterr_componentmanagernotsupported
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_componentmanagernotsupported
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_ComponentManagerNotSupported (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_ComponentManagerNotSupported: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# kAudioUnitErr_ComponentManagerNotSupported (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_ComponentManagerNotSupported
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# Document: kAudioUnitErr_ExtensionNotFound
-
-Source path: documentation/audiotoolbox/kaudiouniterr_extensionnotfound
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_extensionnotfound
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_ExtensionNotFound (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_ExtensionNotFound: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# kAudioUnitErr_ExtensionNotFound (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_ExtensionNotFound
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# Document: kAudioUnitErr_FailedInitialization
-
-Source path: documentation/audiotoolbox/kaudiouniterr_failedinitialization
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_failedinitialization
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_FailedInitialization (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_FailedInitialization: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_FailedInitialization (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_FailedInitialization
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_FileNotSpecified
-
-Source path: documentation/audiotoolbox/kaudiouniterr_filenotspecified
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_filenotspecified
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_FileNotSpecified (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_FileNotSpecified: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_FileNotSpecified (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_FileNotSpecified
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_FormatNotSupported
-
-Source path: documentation/audiotoolbox/kaudiouniterr_formatnotsupported
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_formatnotsupported
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_FormatNotSupported (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_FormatNotSupported: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_FormatNotSupported (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_FormatNotSupported
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_IllegalInstrument
-
-Source path: documentation/audiotoolbox/kaudiouniterr_illegalinstrument
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_illegalinstrument
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_IllegalInstrument (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_IllegalInstrument: OSStatus { get }
-```
-
-## See Also
-
-### Constants
-
-- [kAudioUnitErr_InstrumentTypeNotFound](kaudiouniterr_instrumenttypenotfound.md): Deprecated.
-
-# kAudioUnitErr_IllegalInstrument (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_IllegalInstrument
-```
-
-## See Also
-
-### Constants
-
-- [kAudioUnitErr_InstrumentTypeNotFound](kaudiouniterr_instrumenttypenotfound.md): Deprecated.
-
-# Document: kAudioUnitErr_Initialized
-
-Source path: documentation/audiotoolbox/kaudiouniterr_initialized
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_initialized
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_Initialized (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_Initialized: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_Initialized (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_Initialized
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_InstrumentTypeNotFound
-
-Source path: documentation/audiotoolbox/kaudiouniterr_instrumenttypenotfound
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_instrumenttypenotfound
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InstrumentTypeNotFound (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InstrumentTypeNotFound: OSStatus { get }
-```
-
-## See Also
-
-### Constants
-
-- [kAudioUnitErr_IllegalInstrument](kaudiouniterr_illegalinstrument.md): Deprecated.
-
-# kAudioUnitErr_InstrumentTypeNotFound (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InstrumentTypeNotFound
-```
-
-## See Also
-
-### Constants
-
-- [kAudioUnitErr_IllegalInstrument](kaudiouniterr_illegalinstrument.md): Deprecated.
-
-# Document: kAudioUnitErr_InvalidElement
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidelement
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidelement
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidElement (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidElement: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_InvalidElement (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidElement
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_InvalidFile
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidfile
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidfile
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidFile (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidFile: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_InvalidFile (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidFile
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_InvalidFilePath
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidfilepath
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidfilepath
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidFilePath (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidFilePath: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# kAudioUnitErr_InvalidFilePath (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidFilePath
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# Document: kAudioUnitErr_InvalidOfflineRender
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidofflinerender
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidofflinerender
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidOfflineRender (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidOfflineRender: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_InvalidOfflineRender (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidOfflineRender
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_InvalidParameter
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidparameter
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidparameter
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidParameter (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidParameter: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_InvalidParameter (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidParameter
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_InvalidParameterValue
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidparametervalue
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidparametervalue
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidParameterValue (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidParameterValue: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# kAudioUnitErr_InvalidParameterValue (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidParameterValue
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# Document: kAudioUnitErr_InvalidProperty
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidproperty
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidproperty
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidProperty (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidProperty: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_InvalidProperty (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidProperty
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_InvalidPropertyValue
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidpropertyvalue
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidpropertyvalue
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidPropertyValue (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidPropertyValue: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_InvalidPropertyValue (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidPropertyValue
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_InvalidScope
-
-Source path: documentation/audiotoolbox/kaudiouniterr_invalidscope
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidscope
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_InvalidScope (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_InvalidScope: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_InvalidScope (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_InvalidScope
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_MIDIOutputBufferFull
-
-Source path: documentation/audiotoolbox/kaudiouniterr_midioutputbufferfull
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_midioutputbufferfull
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_MIDIOutputBufferFull (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_MIDIOutputBufferFull: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# kAudioUnitErr_MIDIOutputBufferFull (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_MIDIOutputBufferFull
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# Document: kAudioUnitErr_MissingKey
-
-Source path: documentation/audiotoolbox/kaudiouniterr_missingkey
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_missingkey
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_MissingKey (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_MissingKey: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# kAudioUnitErr_MissingKey (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_MissingKey
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-
-# Document: kAudioUnitErr_MultipleVoiceProcessors
-
-Source path: documentation/audiotoolbox/kaudiouniterr_multiplevoiceprocessors
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_multiplevoiceprocessors
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_MultipleVoiceProcessors (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_MultipleVoiceProcessors: OSStatus { get }
-```
-
-# kAudioUnitErr_MultipleVoiceProcessors (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_MultipleVoiceProcessors
-```
-
-# Document: kAudioUnitErr_NoConnection
-
-Source path: documentation/audiotoolbox/kaudiouniterr_noconnection
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_noconnection
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_NoConnection (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_NoConnection: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_NoConnection (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_NoConnection
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# Document: kAudioUnitErr_PropertyNotInUse
-
-Source path: documentation/audiotoolbox/kaudiouniterr_propertynotinuse
-Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_propertynotinuse
-Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-# kAudioUnitErr_PropertyNotInUse (Swift)
-
-**Framework:** Audio Toolbox  
-**Kind:** Global Variable  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```swift
-var kAudioUnitErr_PropertyNotInUse: OSStatus { get }
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
-
-# kAudioUnitErr_PropertyNotInUse (Objective-C)
-
-**Framework:** Audio Toolbox  
-**Kind:** Enumeration Case  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-kAudioUnitErr_PropertyNotInUse
-```
-
-## See Also
-
-### Errors
-
-- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
-- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
-- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
-- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
-- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
-- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
-- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
-- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
-- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
-- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
-- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
-- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
-- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
-- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
-- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)

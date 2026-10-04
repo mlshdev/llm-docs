@@ -2,9 +2,235 @@
 
 Source: https://developer.apple.com/macos/
 Catalog snapshot: 0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d
-Content digest: ec427c6239650887b82e5cacb977fcdddd983ad9801ba5ba438444988e4f778c
-Captured at: 2026-09-27T18:07:09.722Z
+Content digest: 14bed8000201559feea98994c1c1775c7d24cc3f228675df96cb28953e4bdfaf
+Captured at: 2026-10-04T18:39:02.631Z
 Volume 6
+
+# Document: fillColor
+
+Source path: documentation/appkit/nsworkspace/desktopimageoptionkey/fillcolor
+Canonical documentation: https://developer.apple.com/documentation/appkit/nsworkspace/desktopimageoptionkey/fillcolor
+Description: Framework: AppKit Kind: Type Property Availability: macOS 10.6+
+
+# fillColor (Swift)
+
+**Framework:** AppKit  
+**Kind:** Type Property  
+**Availability:** macOS 10.6+
+
+A key that contains the behavior to use when filling the empty space around the image.
+
+## Declaration
+
+```swift
+static let fillColor: NSWorkspace.DesktopImageOptionKey
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value is the [NSColor](../../nscolor.md) object to use when filling any empty space around the image. If you don’t specify this key, the workspace object uses a default color. Currently, the system supports only colors that use or can be converted to use the [calibratedRGB](../../nscolorspacename/calibratedrgb.md) color space. The system also ignores any alpha value in the color you specify.
+
+## See Also
+
+### Option Keys
+
+- [imageScaling](imagescaling.md): A key that contains the behavior to use when scaling the image.
+- [allowClipping](allowclipping.md): A key that contains the behavior to use when clipping the image.
+
+# NSWorkspaceDesktopImageFillColorKey (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Global Variable  
+**Availability:** macOS 10.6+
+
+A key that contains the behavior to use when filling the empty space around the image.
+
+## Declaration
+
+```objectivec
+extern NSWorkspaceDesktopImageOptionKey const NSWorkspaceDesktopImageFillColorKey;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value is the [NSColor](../../nscolor.md) object to use when filling any empty space around the image. If you don’t specify this key, the workspace object uses a default color. Currently, the system supports only colors that use or can be converted to use the [NSCalibratedRGBColorSpace](../../nscolorspacename/calibratedrgb.md) color space. The system also ignores any alpha value in the color you specify.
+
+## See Also
+
+### Option Keys
+
+- [NSWorkspaceDesktopImageScalingKey](imagescaling.md): A key that contains the behavior to use when scaling the image.
+- [NSWorkspaceDesktopImageAllowClippingKey](allowclipping.md): A key that contains the behavior to use when clipping the image.
+
+# Document: imageScaling
+
+Source path: documentation/appkit/nsworkspace/desktopimageoptionkey/imagescaling
+Canonical documentation: https://developer.apple.com/documentation/appkit/nsworkspace/desktopimageoptionkey/imagescaling
+Description: Framework: AppKit Kind: Type Property Availability: macOS 10.6+
+
+# imageScaling (Swift)
+
+**Framework:** AppKit  
+**Kind:** Type Property  
+**Availability:** macOS 10.6+
+
+A key that contains the behavior to use when scaling the image.
+
+## Declaration
+
+```swift
+static let imageScaling: NSWorkspace.DesktopImageOptionKey
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value is an [NSNumber](https://developer.apple.com/documentation/foundation/nsnumber) object that contains an [NSImageScaling](../../nsimagescaling.md) constant as declared in [NSCell](../../nscell.md). If you don’t include this key, the workspace object uses [NSImageScaling.scaleProportionallyUpOrDown](../../nsimagescaling/scaleproportionallyupordown.md). [NSImageScaling.scaleProportionallyDown](../../nsimagescaling/scaleproportionallydown.md) isn’t supported.
+
+## See Also
+
+### Option Keys
+
+- [allowClipping](allowclipping.md): A key that contains the behavior to use when clipping the image.
+- [fillColor](fillcolor.md): A key that contains the behavior to use when filling the empty space around the image.
+
+# NSWorkspaceDesktopImageScalingKey (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Global Variable  
+**Availability:** macOS 10.6+
+
+A key that contains the behavior to use when scaling the image.
+
+## Declaration
+
+```objectivec
+extern NSWorkspaceDesktopImageOptionKey const NSWorkspaceDesktopImageScalingKey;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value is an [NSNumber](https://developer.apple.com/documentation/foundation/nsnumber) object that contains an [NSImageScaling](../../nsimagescaling.md) constant as declared in [NSCell](../../nscell.md). If you don’t include this key, the workspace object uses [NSImageScaleProportionallyUpOrDown](../../nsimagescaling/scaleproportionallyupordown.md). [NSImageScaleProportionallyDown](../../nsimagescaling/scaleproportionallydown.md) isn’t supported.
+
+## See Also
+
+### Option Keys
+
+- [NSWorkspaceDesktopImageAllowClippingKey](allowclipping.md): A key that contains the behavior to use when clipping the image.
+- [NSWorkspaceDesktopImageFillColorKey](fillcolor.md): A key that contains the behavior to use when filling the empty space around the image.
+
+# Document: init(rawValue:)
+
+Source path: documentation/appkit/nsworkspace/desktopimageoptionkey/init(rawvalue:)
+Canonical documentation: https://developer.apple.com/documentation/appkit/nsworkspace/desktopimageoptionkey/init(rawvalue:)
+Description: Framework: AppKit Kind: Initializer Availability: macOS
+
+# init(rawValue:)
+
+**Framework:** AppKit  
+**Kind:** Initializer  
+**Availability:** macOS
+
+Initializes an option key using the specified raw value.
+
+## Declaration
+
+```swift
+init(rawValue: String)
+```
+
+## Parameters
+
+- `rawValue`: The raw string of the desktop image option key.
+
+# Document: desktopImageOptions(for:)
+
+Source path: documentation/appkit/nsworkspace/desktopimageoptions(for:)
+Canonical documentation: https://developer.apple.com/documentation/appkit/nsworkspace/desktopimageoptions(for:)
+Description: Framework: AppKit Kind: Instance Method Availability: macOS 10.6+
+
+# desktopImageOptions(for:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.6+
+
+Returns the desktop image options for the given screen.
+
+## Declaration
+
+```swift
+func desktopImageOptions(for screen: NSScreen) -> [NSWorkspace.DesktopImageOptionKey : Any]?
+```
+
+## Parameters
+
+- `screen`: The screen for which to get the desktop image options.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A dictionary containing the keys found in [NSWorkspace.DesktopImageOptionKey](desktopimageoptionkey.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You must call this method from your app’s main thread.
+
+## See Also
+
+### Managing the Desktop Image
+
+- [desktopImageURL(for:)](desktopimageurl%28for_%29.md): Returns the URL for the desktop image for the given screen.
+- [setDesktopImageURL(\_:for:options:)](setdesktopimageurl%28__for_options_%29.md): Sets the desktop image for the given screen to the image at the specified URL.
+- [NSWorkspace.DesktopImageOptionKey](desktopimageoptionkey.md): Keys that indicate how to display a new desktop image.
+
+# desktopImageOptionsForScreen: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.6+
+
+Returns the desktop image options for the given screen.
+
+## Declaration
+
+```objectivec
+- (NSDictionary<NSString *,id> *) desktopImageOptionsForScreen:(NSScreen *) screen;
+```
+
+## Parameters
+
+- `screen`: The screen for which to get the desktop image options.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A dictionary containing the keys found in [NSWorkspaceDesktopImageOptionKey](desktopimageoptionkey.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You must call this method from your app’s main thread.
+
+## See Also
+
+### Managing the Desktop Image
+
+- [desktopImageURLForScreen:](desktopimageurl%28for_%29.md): Returns the URL for the desktop image for the given screen.
+- [setDesktopImageURL:forScreen:options:error:](setdesktopimageurl%28__for_options_%29.md): Sets the desktop image for the given screen to the image at the specified URL.
+- [NSWorkspaceDesktopImageOptionKey](desktopimageoptionkey.md): Keys that indicate how to display a new desktop image.
 
 # Document: desktopImageURL(for:)
 

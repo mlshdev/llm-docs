@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/appschema/notesintent
 
 # AppSchema.NotesIntent
@@ -39,3 +39,4 @@ protocol NotesIntent : AppSchema.Kind
 
 - [createNote](notesintent/createnote.md): An intent schema that creates a new note.
 - [updateNote](notesintent/updatenote.md): An intent schema that updates a note.
+- [appendText](notesintent/appendtext.md): An intent schema that adds text to the end of an existing note.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/didbecomeinactivenotification
 
 # didBecomeInactiveNotification (Swift)
@@ -14,6 +14,10 @@ Notification sent when the audio session becomes inactive.
 ```swift
 class let didBecomeInactiveNotification: NSNotification.Name
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 <a id="discussion"></a>
 
@@ -43,6 +47,10 @@ Notification sent when the audio session becomes inactive.
 ```objectivec
 extern NSNotificationName const AVAudioSessionDidBecomeInactiveNotification;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 <a id="discussion"></a>
 

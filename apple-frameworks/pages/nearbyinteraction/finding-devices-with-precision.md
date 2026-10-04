@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/finding-devices-with-precision
 
 # Finding devices with precision (Swift)
@@ -260,14 +260,6 @@ class MeasurementQualityEstimator {
 }
 ```
 
-## See Also
-
-### Camera assistance
-
-- [NIAlgorithmConvergence](nialgorithmconvergence.md): An object that provides the state and reason for user coaching recommendations.
-- [NIAlgorithmConvergenceStatus](nialgorithmconvergencestatus-2fnve.md): The possible states of Camera Assistance.
-- [Algorithm Convergence Status](algorithm-convergence-status.md): The possible Objective-C states of Camera Assistance.
-
 # Finding devices with precision (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -526,11 +518,3 @@ class MeasurementQualityEstimator {
     }
 }
 ```
-
-## See Also
-
-### Camera assistance
-
-- [NIAlgorithmConvergence](nialgorithmconvergence.md): An object that provides the state and reason for user coaching recommendations.
-- [NIAlgorithmConvergenceStatus](nialgorithmconvergencestatus-2fbmj.md): Expose algorithm state to make it possible for apps to coach users.
-- [Algorithm Convergence Status](algorithm-convergence-status.md): The possible Objective-C states of Camera Assistance.

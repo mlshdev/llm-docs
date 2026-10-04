@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/sparsegmresoptions/init(reporterror:variant:nvec:maxiterations:atol:rtol:reportstatus:)
 
 # init(reportError:variant:nvec:maxIterations:atol:rtol:reportStatus:)

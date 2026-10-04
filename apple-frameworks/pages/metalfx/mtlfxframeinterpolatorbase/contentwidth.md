@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxframeinterpolatorbase/contentwidth
 
 # contentWidth (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.1+
 
 The width, in pixels, of the content region within the input textures to process.
 
@@ -25,7 +25,7 @@ Use this property together with [contentHeight](contentheight.md) to specify a s
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.1+
 
 The width, in pixels, of the content region within the input textures to process.
 

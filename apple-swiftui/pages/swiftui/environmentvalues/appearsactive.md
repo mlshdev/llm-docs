@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues/appearsactive
 
 # appearsActive
@@ -69,4 +69,4 @@ This is bridged with `UITraitCollection.activeAppearance` for UIKit hosted conte
 - [materialActiveAppearance](materialactiveappearance.md): The behavior materials should use for their active state, defaulting to `automatic`.
 - [TabBarPlacement](../tabbarplacement.md): A placement for tabs in a tab view.
 - [toolbarLabelStyle](toolbarlabelstyle.md): The label style to apply to controls within a toolbar.
-- [toolbarVerticalEdge](toolbarverticaledge.md): Beta. This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.
+- [toolbarVerticalEdge](toolbarverticaledge.md): This value reflects the system’s preferred edge for the vertical bar in the current context, regardless of whether a vertical bar is currently visible. Use it to position custom bars or other UI relative to the system’s bar placement.

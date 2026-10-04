@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/error-codes
 
 # Error codes
@@ -19,12 +19,14 @@ Understand the error codes that App Store Server API responses return.
 - [AppNotFoundError](appnotfounderror.md): An error that indicates the app wasn’t found.
 - [AppTransactionDoesNotExistError](apptransactiondoesnotexisterror.md): An error response that indicates an app transaction doesn’t exist for the specified customer.
 - [AppTransactionIdNotSupportedError](apptransactionidnotsupportederror.md): An error that indicates the endpoint doesn’t support an app transaction ID.
+- [AssignedSubscriptionExtensionIneligibleError](assignedsubscriptionextensionineligibleerror.md): An error that indicates a subscription isn’t eligible for a renewal date extension because the customer has access through an organization or group.
 - [FamilySharedSubscriptionExtensionIneligibleError](familysharedsubscriptionextensionineligibleerror.md): An error that indicates a subscription isn’t directly eligible for a renewal date extension because the customer obtained it through Family Sharing.
 - [FamilyTransactionNotSupportedError](familytransactionnotsupportederror.md): An error that indicates the transaction is for a product the customer obtains through Family Sharing, which the endpoint doesn’t support.
 - [GeneralInternalError](generalinternalerror.md): An error that indicates a general internal error.
 - [GeneralBadRequestError](generalbadrequesterror.md): An error that indicates an invalid request.
 - [InvalidAppAccountTokenUUIDError](invalidappaccounttokenuuiderror.md): An error that indicates the app account token value is not a valid UUID.
 - [InvalidAppIdentifierError](invalidappidentifiererror.md): An error that indicates an invalid app identifier.
+- [InvalidAssignedTransactionNotSupportedError](invalidassignedtransactionnotsupportederror.md): An error that indicates the transaction is one that an organization or group assigns to the customer, which the endpoint doesn’t support.
 - [InvalidEmptyStorefrontCountryCodeListError](invalidemptystorefrontcountrycodelisterror.md): An error that indicates a required storefront country code is empty.
 - [InvalidExtendByDaysError](invalidextendbydayserror.md): An error that indicates an invalid extend-by-days value.
 - [InvalidExtendReasonCodeError](invalidextendreasoncodeerror.md): An error that indicates an invalid reason code.
@@ -69,6 +71,12 @@ Understand the error codes that App Store Server API responses return.
 - [InvalidUserStatusError](invaliduserstatuserror.md): An error that indicates the value in the user status field is invalid.
 - [InvalidTransactionNotConsumableError](invalidtransactionnotconsumableerror.md): Deprecated. An error that indicates the transaction identifier doesn’t represent a consumable In-App Purchase.
 - [UndeliveredConsumptionPercentageNonZeroError](undeliveredconsumptionpercentagenonzeroerror.md): An error that indicates the consumption percentage must be zero for the provided delivery status.
+
+### Group membership errors
+
+- [GroupNotFoundError](groupnotfounderror.md): An error that indicates the group wasn’t found.
+- [InvalidGroupIdError](invalidgroupiderror.md): An error that indicates the group identifier is invalid.
+- [InvalidLimitError](invalidlimiterror.md): An error that indicates the request limit is invalid.
 
 ### Notification test and history errors
 

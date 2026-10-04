@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremedia/kcmmpeg2videoprofile_xdcam_ex_720p60_vbr35
 
 # kCMMPEG2VideoProfile_XDCAM_EX_720p60_VBR35 (Swift)

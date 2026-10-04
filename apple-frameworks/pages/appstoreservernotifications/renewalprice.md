@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications/renewalprice
 
 # renewalPrice
@@ -33,7 +33,7 @@ To determine the storefront, use the [storefront](storefront.md) value in the tr
 
 ## See Also
 
-### Subscripton renewal and expiration
+### Subscription renewal and expiration
 
 - [autoRenewStatus](autorenewstatus.md): The renewal status for an auto-renewable subscription.
 - [autoRenewProductId](autorenewproductid.md): The identifier of the product that renews at the next billing period.

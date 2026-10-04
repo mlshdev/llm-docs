@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitbridgedenvironmentkey
 
 # UITraitBridgedEnvironmentKey
@@ -15,9 +15,12 @@ protocol UITraitBridgedEnvironmentKey : EnvironmentKey
 
 ## Topics
 
-### Type Methods
+### Reading trait values
 
 - [read(from:)](uitraitbridgedenvironmentkey/read%28from_%29.md)
+
+### Writing trait values
+
 - [write(to:value:)](uitraitbridgedenvironmentkey/write%28to_value_%29.md)
 
 ## Relationships
@@ -25,3 +28,12 @@ protocol UITraitBridgedEnvironmentKey : EnvironmentKey
 ### Inherits From
 
 - [EnvironmentKey](https://developer.apple.com/documentation/swiftui/environmentkey)
+
+## See Also
+
+### Custom traits
+
+- [Providing data to the view hierarchy with custom traits](providing-data-to-the-view-hierarchy-with-custom-traits.md): Share data that needs to flow hierarchically across multiple levels of your view hierarchy.
+- [UIMutableTraits](uimutabletraits-13ja5.md): A mutable container of traits.
+- [UITrait](uitrait-9423.md): A type representing a trait in a trait collection.
+- [UITraitDefinition](uitraitdefinition-64c15.md): A type representing a trait in a trait collection.

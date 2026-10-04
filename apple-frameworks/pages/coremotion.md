@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremotion
 
 # Core Motion (Swift)
@@ -39,6 +39,7 @@ Access acceleration, attitude, rotation, and magnetic field data that is adjuste
 - [CMAttitude](coremotion/cmattitude.md): The device’s orientation relative to a known frame of reference at a point in time.
 - [CMAttitudeReferenceFrame](coremotion/cmattitudereferenceframe.md): Constants that indicate the frame of reference for attitude-related motion data.
 - [CMHeadphoneMotionManager](coremotion/cmheadphonemotionmanager.md): An object that starts and manages headphone motion services.
+- [CMBodyIdentifiable](coremotion/cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.
 
 ### Accelerometers
 
@@ -133,10 +134,6 @@ Access recorded motion events to help you analyze movement patterns.
 
 - [CMRecordedDeviceMotion](coremotion/cmrecordeddevicemotion.md)
 
-### Protocols
-
-- [CMBodyIdentifiable](coremotion/cmbodyidentifiable.md)
-
 # Core Motion (Objective-C)
 
 **Framework:** Core Motion  
@@ -175,6 +172,7 @@ Access acceleration, attitude, rotation, and magnetic field data that is adjuste
 - [CMAttitude](coremotion/cmattitude.md): The device’s orientation relative to a known frame of reference at a point in time.
 - [CMAttitudeReferenceFrame](coremotion/cmattitudereferenceframe.md): Constants that indicate the frame of reference for attitude-related motion data.
 - [CMHeadphoneMotionManager](coremotion/cmheadphonemotionmanager.md): An object that starts and manages headphone motion services.
+- [CMBodyIdentifiable](coremotion/cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.
 
 ### Accelerometers
 
@@ -267,10 +265,6 @@ Access recorded motion events to help you analyze movement patterns.
 ### Classes
 
 - [CMRecordedDeviceMotion](coremotion/cmrecordeddevicemotion.md)
-
-### Protocols
-
-- [CMBodyIdentifiable](coremotion/cmbodyidentifiable.md)
 
 ### Macros
 

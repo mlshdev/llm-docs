@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/inspectorcommands
 
 # InspectorCommands
@@ -24,7 +24,7 @@ nonisolated struct InspectorCommands
 These commands are optional and can be explicitly requested by passing a value of this type to the [commands(content:)](scene/commands%28content_%29.md) modifier:
 
 ```swift
-@State var presented = true
+@State private var presented = true
 WindowGroup {
     MainView()
         .inspector(isPresented: $presented) {

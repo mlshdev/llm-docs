@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/security/cssmoid_hybrid_composite_mldsa87_rsa3072_withsha512_draft_13
 
 # CSSMOID_HYBRID_COMPOSITE_MLDSA87_RSA3072_WithSHA512_draft_13

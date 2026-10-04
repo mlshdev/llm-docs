@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxspatialscalerdescriptor/makespatialscaler(device:compiler:)
 
 # makeSpatialScaler(device:compiler:) (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Method  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 27.1+ · visionOS 26.0+
 
 Creates a spatial scaler instance for a Metal device.
 
@@ -30,7 +30,7 @@ func makeSpatialScaler(device: any MTLDevice, compiler: any MTL4Compiler) -> (an
 
 **Framework:** MetalFX  
 **Kind:** Instance Method  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 27.1+ · visionOS 26.0+
 
 Creates a spatial scaler instance for a Metal device.
 

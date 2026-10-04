@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/post-keywords-bulk-update
 
 # Bulk Update Keywords
@@ -171,3 +171,4 @@ Raise bids on two keywords and pause a third.
 ### Keywords
 
 - [Bulk Create Keywords](post-keywords-bulk-create.md): Creates multiple keywords in a single request.
+- [Bulk Delete Keywords](post-keywords-bulk-delete.md): Soft-deletes multiple keywords in a single request.

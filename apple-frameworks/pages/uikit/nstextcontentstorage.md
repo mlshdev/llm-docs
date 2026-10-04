@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/nstextcontentstorage
 
 # NSTextContentStorage (Swift)
@@ -47,9 +47,9 @@ TextKit uses the abstract [NSTextLocation](nstextlocation.md) protocol to identi
 - [textElement(for:)](nstextcontentstorage/textelement%28for_%29.md): Returns the text element corresponding to object’s attributed string.
 - [attributedString(for:)](nstextcontentstorage/attributedstring%28for_%29.md): Returns a new attributed string for the text element.
 
-### Instance Properties
+### Working with markers
 
-- [includesTextListMarkers](nstextcontentstorage/includestextlistmarkers.md): When `true`, `NSTextContentStorage` assumes the paragraph with `NSTextList` includes the text list marker string.
+- [includesTextListMarkers](nstextcontentstorage/includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the text content.
 
 ## Relationships
 
@@ -126,13 +126,13 @@ TextKit uses the abstract [NSTextLocation](nstextlocation.md) protocol to identi
 - [textElementForAttributedString:](nstextcontentstorage/textelement%28for_%29.md): Returns the text element corresponding to object’s attributed string.
 - [attributedStringForTextElement:](nstextcontentstorage/attributedstring%28for_%29.md): Returns a new attributed string for the text element.
 
+### Working with markers
+
+- [includesTextListMarkers](nstextcontentstorage/includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the text content.
+
 ### Notifications
 
 - [NSTextContentStorageUnsupportedAttributeAddedNotification](nstextcontentstorageunsupportedattributeaddednotification.md): Posted by `NSTextContentStorage` when a text attribute unsupported by `NSTextContentStorage` is added to the underlying text storage.
-
-### Instance Properties
-
-- [includesTextListMarkers](nstextcontentstorage/includestextlistmarkers.md): When `true`, `NSTextContentStorage` assumes the paragraph with `NSTextList` includes the text list marker string.
 
 ## Relationships
 

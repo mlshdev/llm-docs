@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uinavigationitem
 
 # UINavigationItem (Swift)
@@ -39,7 +39,7 @@ When specifying buttons for a navigation item, you must use [UIBarButtonItem](ui
 ### Configuring the title
 
 - [title](uinavigationitem/title.md): The navigation item’s title that displays in the navigation bar.
-- [attributedTitle](uinavigationitem/attributedtitle-25fxb.md)
+- [attributedTitle](uinavigationitem/attributedtitle-25fxb.md): An attributed string that the system renders as the title in the navigation bar.
 - [largeTitle](uinavigationitem/largetitle.md): String to be used as the large title.
 - [largeTitleDisplayMode](uinavigationitem/largetitledisplaymode-swift.property.md): The mode for displaying the title of the navigation bar.
 - [UINavigationItem.LargeTitleDisplayMode](uinavigationitem/largetitledisplaymode-swift.enum.md): Constants that indicate how to size the title of this item.
@@ -86,8 +86,8 @@ When specifying buttons for a navigation item, you must use [UIBarButtonItem](ui
 
 ### Configuring bars on the vertical axis
 
-- [verticalBarCompressionBehavior](uinavigationitem/verticalbarcompressionbehavior.md): Beta. When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
-- [UIVerticalBarCompressionBehavior](uiverticalbarcompressionbehavior.md): Beta. How bars compress when different types of bars are hosted together and space is constrained.
+- [verticalBarCompressionBehavior](uinavigationitem/verticalbarcompressionbehavior.md): When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
+- [UIVerticalBarCompressionBehavior](uiverticalbarcompressionbehavior.md): How bars compress when different types of bars are hosted together and space is constrained.
 
 ### Getting and setting properties
 
@@ -174,7 +174,7 @@ When specifying buttons for a navigation item, you must use [UIBarButtonItem](ui
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UITabGroup](uitabgroup.md): An object that manages a collection of tab objects.
 - [UIPageViewController](uipageviewcontroller.md): A container view controller that manages navigation between pages of content, where a subview controller manages each page.
-- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): A view controller that presents its container view controllers through an arrangement.
 
 # UINavigationItem (Objective-C)
 
@@ -261,8 +261,8 @@ When specifying buttons for a navigation item, you must use [UIBarButtonItem](ui
 
 ### Configuring bars on the vertical axis
 
-- [verticalBarCompressionBehavior](uinavigationitem/verticalbarcompressionbehavior.md): Beta. When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
-- [UIVerticalBarCompressionBehavior](uiverticalbarcompressionbehavior.md): Beta. How bars compress when different types of bars are hosted together and space is constrained.
+- [verticalBarCompressionBehavior](uinavigationitem/verticalbarcompressionbehavior.md): When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
+- [UIVerticalBarCompressionBehavior](uiverticalbarcompressionbehavior.md): How bars compress when different types of bars are hosted together and space is constrained.
 
 ### Getting and setting properties
 
@@ -338,4 +338,4 @@ When specifying buttons for a navigation item, you must use [UIBarButtonItem](ui
 - [UISearchTab](uisearchtab.md): A tab subclass that represents the system’s search tab.
 - [UITabGroup](uitabgroup.md): An object that manages a collection of tab objects.
 - [UIPageViewController](uipageviewcontroller.md): A container view controller that manages navigation between pages of content, where a subview controller manages each page.
-- [UIArrangementViewController](uiarrangementviewcontroller.md): Beta. A view controller that presents its container view controllers through an arrangement.
+- [UIArrangementViewController](uiarrangementviewcontroller.md): A view controller that presents its container view controllers through an arrangement.

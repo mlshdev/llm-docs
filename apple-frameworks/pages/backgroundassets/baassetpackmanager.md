@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/backgroundassets/baassetpackmanager
 
 # BAAssetPackManager
@@ -76,6 +76,11 @@ The first time that your code refers to the shared manager, Background Assets co
 - [getLocallyAvailableLanguagesWithCompletionHandler:](baassetpackmanager/getlocallyavailablelanguageswithcompletionhandler_.md): Gets the languages used by asset packs that are localized and are available locally.
 - [resolvedLanguage](baassetpackmanager/resolvedlanguage.md): The language asset packs that are localized for which the system automatically makes available locally, represented as a BCP-47 identifier.
 - [reconcilePreferredLanguagesWithCompletionHandler:](baassetpackmanager/reconcilepreferredlanguageswithcompletionhandler_.md): Reconciles the set of locally available asset packs with the current preferred languages.
+
+### Instance Methods
+
+- [getLocalSizeOfAssetPackWithIdentifier:calculationMethod:completionHandler:](baassetpackmanager/getlocalsizeofassetpackwithidentifier_calculationmethod_completionhandler_.md): Beta. Calculates a locally available asset pack’s installation size.
+- [localVersionOfAssetPackWithIdentifier:error:](baassetpackmanager/localversionofassetpackwithidentifier_error_.md): Beta. Returns a locally available asset pack’s version number.
 
 ## Relationships
 

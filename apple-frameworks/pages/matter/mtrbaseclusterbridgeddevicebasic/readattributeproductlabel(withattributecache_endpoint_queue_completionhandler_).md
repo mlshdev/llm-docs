@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclusterbridgeddevicebasic/readattributeproductlabel(withattributecache:endpoint:queue:completionhandler:)
 
 # readAttributeProductLabel(withAttributeCache:endpoint:queue:completionHandler:) (Swift)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-4fca00e84bae; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/command-line-tools
 
 # Command-line tools
@@ -24,6 +24,10 @@ You can use command-line tools to perform some actions in Terminal without runni
 - [Locating a missing debug symbol file](locating-a-missing-debug-symbol-file.md): Find the debug symbol file (`.dSYM`) required to decode the hexadecimal address from a crash report.
 - [Resetting access to protected resources in macOS](resetting-access-to-protected-resources-in-macos.md): Use Terminal to remove your app’s authorization access to protected resources during testing.
 - [Acquiring operating system symbol information](acquiring-operating-system-symbol-information.md): Download symbols for Apple system frameworks using Xcode or Terminal.
+
+### Devices
+
+- [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md): Manage simulated and physical devices from the command line.
 
 ## See Also
 

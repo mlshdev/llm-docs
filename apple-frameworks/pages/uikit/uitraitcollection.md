@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitcollection
 
 # UITraitCollection (Swift)
@@ -55,7 +55,7 @@ For information on creating custom traits, see [Providing data to the view hiera
 
 - [systemTraitsAffectingColorAppearance](uitraitcollection/systemtraitsaffectingcolorappearance-64z7q.md)
 - [systemTraitsAffectingImageLookup](uitraitcollection/systemtraitsaffectingimagelookup-4jv5.md)
-- [systemTraitsAffectingVerticalBarEdge](uitraitcollection/systemtraitsaffectingverticalbaredge-475st.md): Beta. The system traits that affect the value of `verticalBarEdge`.
+- [systemTraitsAffectingVerticalBarEdge](uitraitcollection/systemtraitsaffectingverticalbaredge-475st.md): The system traits that affect the value of `verticalBarEdge`.
 
 ### Modifying traits
 
@@ -109,8 +109,8 @@ For information on creating custom traits, see [Providing data to the view hiera
 - [UINSToolbarItemPresentationSize](uinstoolbaritempresentationsize.md): Constants that specify the presentation size of a toolbar item in an AppKit toolbar.
 - [hdrHeadroomUsageLimit](uitraitcollection/hdrheadroomusagelimit.md): If HDR headroom should be used for the current UI configuration. Headroom usage is disabled in certain UI configurations, such as when all an application’s windows are in the background.
 - [UIHDRHeadroomUsageLimit](uihdrheadroomusagelimit.md)
-- [verticalBarEdge](uitraitcollection/verticalbaredge.md): Beta. The edge where the system places the vertical bar.
-- [UIVerticalBarEdge](uiverticalbaredge.md): Beta. The edge where the system places the vertical bar.
+- [verticalBarEdge](uitraitcollection/verticalbaredge.md): The edge where the system places the vertical bar.
+- [UIVerticalBarEdge](uiverticalbaredge.md): The edge where the system places the vertical bar.
 
 ### Retrieving the force touch capability traits
 
@@ -323,7 +323,7 @@ For information on creating custom traits, see [Providing data to the view hiera
 
 - [systemTraitsAffectingColorAppearance](uitraitcollection/systemtraitsaffectingcolorappearance-18zhm.md)
 - [systemTraitsAffectingImageLookup](uitraitcollection/systemtraitsaffectingimagelookup-640w8.md)
-- [systemTraitsAffectingVerticalBarEdge](uitraitcollection/systemtraitsaffectingverticalbaredge-8k87m.md): Beta. The system traits that affect the value of `verticalBarEdge`.
+- [systemTraitsAffectingVerticalBarEdge](uitraitcollection/systemtraitsaffectingverticalbaredge-8k87m.md): The system traits that affect the value of `verticalBarEdge`.
 
 ### Modifying traits
 
@@ -373,8 +373,8 @@ For information on creating custom traits, see [Providing data to the view hiera
 - [UINSToolbarItemPresentationSize](uinstoolbaritempresentationsize.md): Constants that specify the presentation size of a toolbar item in an AppKit toolbar.
 - [hdrHeadroomUsageLimit](uitraitcollection/hdrheadroomusagelimit.md): If HDR headroom should be used for the current UI configuration. Headroom usage is disabled in certain UI configurations, such as when all an application’s windows are in the background.
 - [UIHDRHeadroomUsageLimit](uihdrheadroomusagelimit.md)
-- [verticalBarEdge](uitraitcollection/verticalbaredge.md): Beta. The edge where the system places the vertical bar.
-- [UIVerticalBarEdge](uiverticalbaredge.md): Beta. The edge where the system places the vertical bar.
+- [verticalBarEdge](uitraitcollection/verticalbaredge.md): The edge where the system places the vertical bar.
+- [UIVerticalBarEdge](uiverticalbaredge.md): The edge where the system places the vertical bar.
 
 ### Retrieving the force touch capability traits
 

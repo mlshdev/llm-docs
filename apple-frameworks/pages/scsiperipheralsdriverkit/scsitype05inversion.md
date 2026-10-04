@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/scsitype05inversion
 
 # SCSIType05InVersion
@@ -9,7 +9,7 @@
 **Kind:** Enumeration  
 **Availability:** DriverKit 22.0+
 
-Constants that represent versions of the type 05 inbound interface.
+Constants that represent versions of the Type05 inbound interface.
 
 ## Declaration
 
@@ -21,7 +21,7 @@ typedef enum SCSIType05InVersion : unsigned int { ... } SCSIType05InVersion;
 
 ### Versions
 
-- [kScsiType05InCurrentVersion1](scsitype05inversion/kscsitype05incurrentversion1.md): Version 1 of the type 05 inbound interface.
+- [kScsiType05InCurrentVersion1](scsitype05inversion/kscsitype05incurrentversion1.md): Version 1 of the Type05 inbound interface.
 
 ## See Also
 
@@ -29,5 +29,5 @@ typedef enum SCSIType05InVersion : unsigned int { ... } SCSIType05InVersion;
 
 - [UserSendCDB](iouserscsiperipheraldevicetype05/usersendcdb.md): Sends a vendor-specific Command Descriptor Block (CDB) to the device.
 - [SCSIType05OutParameters](scsitype05outparameters.md): Parameters for commands to send to the external SCSI device.
-- [SCSIType05OutVersion](scsitype05outversion.md): Constants that represent versions of the type 05 outbound interface.
+- [SCSIType05OutVersion](scsitype05outversion.md): Constants that represent versions of the Type05 outbound interface.
 - [SCSIType05InParameters](scsitype05inparameters.md): Parameters for responses from the external SCSI device.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/group
 
 # group
@@ -7,7 +7,7 @@
 **Kind:** Namespace  
 **Availability:** macOS · Reality Composer Pro
 
-Nodes for querying the group for a current particle. Requires a system whose simulation stage is configured as either `strips` or `grouped`.
+A set of nodes for querying the group of the current particle. Available only when the simulation uses a grouped or strips element grouping.
 
 ## Topics
 
@@ -21,16 +21,18 @@ Nodes for querying the group for a current particle. Requires a system whose sim
 
 ## See Also
 
-### Built-in nodes
+### Utility nodes
 
-- [element](element.md): A set of nodes for reading and writing the current element within a particle simulation.
-- [emitter](emitter.md): A set of nodes usable in the emission stage of a simulation, which control how often and how many elements to spawn.
-- [force](force.md): Apply physics forces including gravity, drag, noise, and twist.
-- [initialize](initialize.md): Nodes usable within the initialization stage of an element.
-- [output](output.md): Nodes usable within the output stage of an element. You can use these nodes to change the appearance of an element without making modifications to the element itself.
-- [module](module.md): Mutate per-particle state with operations such as setPosition, addPosition, setVelocity, setColor, setSize, and setLifetime.
-- [graph](graph.md): A set of nodes usable in any stage within a ComputeGraph.
-- [texture](texture.md): Nodes usable within the texture stage, for generating textures.
-- [random](random.md): Nodes for generating pseudo-random numbers.
-- [matrix4x4f](matrix4x4f.md): Transform positions and directions using matrix4x4f.
-- [matrix4x4h](matrix4x4h.md): Transform positions and directions using matrix4x4h.
+- [graph](graph.md): A set of nodes that provide graph-wide information, such as time and coordinate-space transforms, usable in any stage.
+- [texture](texture.md): A set of nodes for the texture stage that sample and generate texture data.
+- [random](random.md): A set of nodes that generate pseudo-random scalars and vectors.
+- [matrix4x4f](matrix4x4f.md): A set of nodes that transform positions and directions with single-precision 4×4 matrices.
+- [matrix4x4h](matrix4x4h.md): A set of nodes that transform positions and directions with half-precision 4×4 matrices.
+- [viewpoint](viewpoint-swift.func.md): Returns the current viewpoint, if one is provided.
+- [element_integrate](element_integrate.md)
+- [texture_sample](texture_sample.md)
+- [texture_sample1d](texture_sample1d.md)
+- [orient_to_velocity](orient_to_velocity.md): Orient the particle by setting its `axisY` to the velocity’s current direction.
+- [gridDebugCells](griddebugcells.md)
+- [gridFromPoints](gridfrompoints.md)
+- [spawn_demo](spawn_demo.md)

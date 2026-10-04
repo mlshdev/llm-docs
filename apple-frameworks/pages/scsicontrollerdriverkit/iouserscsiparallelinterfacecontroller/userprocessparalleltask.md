@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/userprocessparalleltask
 
 # UserProcessParallelTask
@@ -68,7 +68,7 @@ IMPL ( ExampleSCSIDext, UserProcessParallelTask )
 
 ## See Also
 
-### Managing Tasks
+### Managing tasks
 
 - [SCSIUserParallelTask](../scsiuserparalleltask.md): The properties of a parallel task to perform.
 - [ParallelTaskCompletion](paralleltaskcompletion.md): Indicates to the system that the extension has completed an asynchronous request.

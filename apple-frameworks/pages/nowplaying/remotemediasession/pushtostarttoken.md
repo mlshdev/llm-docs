@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nowplaying/remotemediasession/pushtostarttoken
 
 # pushToStartToken
@@ -28,3 +28,7 @@ The push token for a [RemoteMediaSession](../remotemediasession.md) may change o
 > **Note**
 
 > When you receive an updated push token, transmit it securely to your server (for example, over HTTPS) and invalidate the outdated token promptly so it cannot be reused.
+
+> **Note**
+
+> The system provisions tokens asynchronously, so this property will be `nil` until provisioning completes. Use [pushToStartTokenUpdates](pushtostarttokenupdates.md) to receive tokens as soon as they become available.

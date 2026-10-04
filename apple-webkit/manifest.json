@@ -1,59 +1,59 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
-  "generatorDigest": "c54d2498a828148e36b8e195c831e4787be42562b2d7e56602c99776d6d23f79",
+  "generatorDigest": "49104766a0640dc41819f01ac0b013701e87719823cb5f7bf8fa1add3776472a",
   "project": "apple-webkit",
   "title": "Apple WebKit and Safari",
   "homepage": "https://developer.apple.com/documentation/webkit",
   "catalog": "webkit",
-  "tag": "snapshot-33695ec62253",
-  "snapshotDigest": "33695ec62253d7c27ab92cec13d777a7a1ab7c195e074c2faaa71df986300bb8",
-  "contentDigest": "98d5355b9314806fc6d4eada2ecb2a93176a5f08e3e4ac247a479ef447e7b53a",
-  "capturedAt": "2026-09-27T18:07:09.617Z",
-  "documentCount": 18748,
+  "tag": "snapshot-f22abf4916e5",
+  "snapshotDigest": "f22abf4916e5b2883ca54c03e9bfadb5e433da91e20aef1eeabdf5d3c0573721",
+  "contentDigest": "beac2fd89a021eee1d72dbf403dfcb52f58089a1faaa58b19ce47f2de5dc3c0c",
+  "capturedAt": "2026-10-04T18:39:02.493Z",
+  "documentCount": 18758,
   "indexComplete": false,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 1136,
       "documentCount": 0,
-      "sha256": "9b374d87c5785c88ee287077b76805263aae136a17ba42e71d624bac6ec98af9"
+      "sha256": "f17a538400cd884b73a452355dc78f9d9f4256520ea4708d6dff967b948e10e7"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8388156,
-      "documentCount": 3192,
-      "sha256": "e26f1b722ee2c27573d24eea9f183eebfd2f26c961e63219b0f67831a92c918c"
+      "byteLength": 8388371,
+      "documentCount": 3177,
+      "sha256": "fbdaa0b569a9bf3bb2cb506c91bd68fe40ec58ff2614e92eb1e230d88c483743"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8387968,
-      "documentCount": 3850,
-      "sha256": "72b69fc67547608ade33ed651f0032962dfba8d395a3a99c1f0f1e31bbd6e486"
+      "byteLength": 8388226,
+      "documentCount": 3846,
+      "sha256": "663add8ff9734b4663377358384612167b3255cb524f2983a9a63f767299f745"
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 8386966,
-      "documentCount": 4718,
-      "sha256": "31be4032dd74c564e5c9c20bb8345560a44e353336cae9edd485fee70b1a82b3"
+      "byteLength": 8386444,
+      "documentCount": 4705,
+      "sha256": "f75f2788fbc5ea35ad2a96b0dbf0fd62a3b092c30224aec4906d5423e075db45"
     },
     {
       "name": "llms-full.004.txt",
-      "byteLength": 8386251,
-      "documentCount": 5968,
-      "sha256": "15f29d5fa712e0ebdb858dfe1a66e90a532349495620f5d7276c5c52499c4b9b"
+      "byteLength": 8382032,
+      "documentCount": 6007,
+      "sha256": "243f0a8d5471135ae1b33ebef372089c7b3fa91b3393b41490f0b646317195a2"
     },
     {
       "name": "llms-full.005.txt",
-      "byteLength": 7920458,
-      "documentCount": 1020,
-      "sha256": "e0984fc6e5bfee95cfdd485f3aa7b20a924e5793b10e872b4b1c3ad2bce13f3e"
+      "byteLength": 7966403,
+      "documentCount": 1023,
+      "sha256": "c5977a2780f5fe84a224a13c117526bf59c2fe745f5e11d72aa5b16474c69e69"
     }
   ],
-  "outputDigest": "b0217a8c1609e1e8d09dad4a36aad26d796cd56f4f4de79a398ced567dc5f2e0",
+  "outputDigest": "4cdd3dc090fefecca68d2acf4210f77e81c3d1d7e843f690282981418cb38abb",
   "notes": [
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
-    "25 frameworks in this catalog, captured at 2026-09-27T18:07:09.617Z.",
+    "25 frameworks in this catalog, captured at 2026-10-04T18:39:02.493Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
     "Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."

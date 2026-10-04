@@ -1,9 +1,9 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
+# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
-Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
-Captured at: 2026-09-27T18:07:10.128Z
+Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
+Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
+Captured at: 2026-10-04T18:39:03.048Z
 Volume 4
 
 # Document: vImageAffineWarpD_ARGB16S(_:_:_:_:_:_:)

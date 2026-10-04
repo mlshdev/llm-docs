@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftdata/historyobserver/init(historytokens:observedmodels:authors:modelcontainer:isolation:)
 
 # init(historyTokens:observedModels:authors:modelContainer:isolation:)
@@ -17,7 +17,7 @@ convenience init(historyTokens: [String : any HistoryToken]? = nil, observedMode
 
 ## Parameters
 
-- `historyTokens`: The initial history tokens keyed by store identifier. When `nil`, the observer starts with an empty token set and captures tokens from the first notification for each store.
+- `historyTokens`: The initial history tokens keyed by store identifier. When `nil`, the observer captures the current position for each store immediately, so that only transactions from this point forward are reported.
 - `observedModels`: The model types to filter for. When empty (the default), the observer responds to changes for any model.
 - `authors`: The transaction authors to filter for. When empty (the default), the observer responds to changes from any author.
 - `modelContainer`: The model container to observe.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/appdetails
 
 # AppDetails
@@ -25,7 +25,7 @@ object AppDetails
 - `primaryLanguage` — `string`: Primary language of the app (BCP-47 code, for example, `"en-US"`).
 - `primaryGenre` — `string`: The primary App Store genre category (for example, `">Mobile Software Applications>Music"`).
 - `secondaryGenre` — `string`: The secondary App Store genre category, if assigned.
-- `deviceClasses` — `[string]`: Device families supported by the app. Possible values: `IPHONE`, `IPAD`.
+- `deviceClasses` — `[string]`: Device families supported by the app.
   **Allowed values:** `IPHONE`, `IPAD`
 - `iconPictureUrl` — `uri`: URL of the app’s icon image.
 - `isPreorder` — `boolean`: Whether the app is currently available as a pre-order.

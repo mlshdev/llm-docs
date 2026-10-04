@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/errormessage
 
 # ErrorMessage
@@ -19,7 +19,7 @@ object ErrorMessage
 
 ## Properties
 
-- `code` — `string`: A machine-readable error code identifying the failure type. Possible values: `BAD_REQUEST`, `NOT_FOUND`, `NOT_AUTHED`. Read-only.
+- `code` — `string`: A machine-readable error code identifying the failure type. Read-only.
   **Allowed values:** `BAD_REQUEST`, `NOT_FOUND`, `NOT_AUTHED`
 - `message` — `string`: A human-readable description of the error. Read-only.
 - `details` — `[ErrorMessage.Details]`: An array of additional error detail objects providing field-level context. Each object in the array contains `code` and `message` fields identifying the specific validation failure, and may include an `info` object (string-to-string map) with additional structured context. Read-only.

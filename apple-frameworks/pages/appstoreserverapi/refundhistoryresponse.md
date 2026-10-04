@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/refundhistoryresponse
 
 # RefundHistoryResponse
@@ -43,7 +43,7 @@ Consider storing the `revision` token from the last page of results with other c
 
 ### Response data types
 
-- [hasMore](hasmore.md): A Boolean value indicating whether the App Store has more transaction data.
+- [hasMore](hasmore.md): A Boolean value indicating whether the App Store has more data to return.
 - [revision](revision.md): A token you use in a query to request the next set of transactions for the customer.
 - [JWSTransaction](jwstransaction.md): Transaction information signed by the App Store, in JSON Web Signature (JWS) Compact Serialization format.
 

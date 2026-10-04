@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nisession
 
 # NISession (Swift)
@@ -81,12 +81,6 @@ For more information, see [Initiating and maintaining a session](initiating-and-
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
 
-## See Also
-
-### Setup
-
-- [Initiating and maintaining a session](initiating-and-maintaining-a-session.md): Measure the relative position of a nearby device and coach the user to sustain interaction.
-
 # NISession (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -158,9 +152,3 @@ For more information, see [Initiating and maintaining a session](initiating-and-
 ### Inherits From
 
 - [NSObject](../objectivec/nsobject-swift.class.md)
-
-## See Also
-
-### Setup
-
-- [Initiating and maintaining a session](initiating-and-maintaining-a-session.md): Measure the relative position of a nearby device and coach the user to sustain interaction.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/resumptioncontext
 
 # AVAudioSession.ResumptionContext (Swift)
@@ -14,6 +14,10 @@ An object that provides context when resumption becomes available.
 ```swift
 class ResumptionContext
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 ## Topics
 
@@ -60,6 +64,10 @@ An object that provides context when resumption becomes available.
 ```objectivec
 @interface AVAudioSessionResumptionContext : NSObject
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 ## Topics
 

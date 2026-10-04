@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns
 
 # Sending notification requests to APNs
@@ -131,6 +131,9 @@ DATA
 
 The `apns-push-type` header field has the following valid values. The descriptions below describe when and how to use these values. Send an `apns-push-type` header with each push. Recent and upcoming features may not work if this header is missing. See the table above to determine if this header is required or optional.
 
+- **`accessory`**: The push type for a paired accessory’s response to an iOS device over the internet. Set the `apns-topic` header field to your app’s bundle ID with `.push-type.accessory` appended to the end. For more information, see [Responding to forwarded notifications](https://developer.apple.com/documentation/accessorynotifications/responding-to-forwarded-notifications).
+
+  The `accessory` push type is available on iOS only.
 - **`alert`**: The push type for notifications that trigger a user interaction—for example, an alert, badge, or sound. If you set this push type, the `apns-topic` header field must use your app’s bundle ID as the topic. For more information, refer to [Generating a remote notification](generating-a-remote-notification.md).
 
   If the notification requires immediate action from the user, set notification priority to `10`; otherwise use `5`.

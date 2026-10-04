@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/newdocumentaction
 
 # NewDocumentAction
@@ -56,11 +56,8 @@ The above example assumes that you define a `TextDocument` that conforms to the 
 
 ## See Also
 
-### Deprecated
+### Opening a document programmatically
 
-- [FileDocument](filedocument.md): Deprecated. A type that you use to serialize documents to and from file.
-- [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
-- [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
-- [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.
-- [ReferenceFileDocumentConfiguration](referencefiledocumentconfiguration.md): Deprecated. The properties of an open reference file document.
+- [newDocument](environmentvalues/newdocument.md): An action in the environment that presents a new document.
+- [openDocument](environmentvalues/opendocument.md): An action in the environment that presents an existing document.
+- [OpenDocumentAction](opendocumentaction.md): An action that presents an existing document.

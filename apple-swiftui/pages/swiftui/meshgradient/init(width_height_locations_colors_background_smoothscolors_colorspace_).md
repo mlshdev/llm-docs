@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/meshgradient/init(width:height:locations:colors:background:smoothscolors:colorspace:)
 
 # init(width:height:locations:colors:background:smoothsColors:colorSpace:)

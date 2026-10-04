@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/leveraging-touch-input-for-drawing-apps
 
 # Leveraging touch input for drawing apps (Swift)
@@ -317,8 +317,6 @@ let pencilInteraction = UIPencilInteraction()
 pencilInteraction.delegate = self
 view.addInteraction(pencilInteraction)
 ```
-
-For additional information on supporting touch input in drawing apps and Apple Pencil, watch the WWDC 2016 session video [Leveraging Touch Input on iOS](https://developer.apple.com/videos/play/wwdc2016/220) and the Tech Talks session video [Designing for iPad Pro and Apple Pencil](https://developer.apple.com/videos/play/tech-talks/804/).
 
 ## See Also
 
@@ -646,8 +644,6 @@ let pencilInteraction = UIPencilInteraction()
 pencilInteraction.delegate = self
 view.addInteraction(pencilInteraction)
 ```
-
-For additional information on supporting touch input in drawing apps and Apple Pencil, watch the WWDC 2016 session video [Leveraging Touch Input on iOS](https://developer.apple.com/videos/play/wwdc2016/220) and the Tech Talks session video [Designing for iPad Pro and Apple Pencil](https://developer.apple.com/videos/play/tech-talks/804/).
 
 ## See Also
 

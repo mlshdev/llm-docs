@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uihinge
 
 # UIHinge (Swift)
 
 **Framework:** UIKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 An object encapsulating the state of a single hinge.
 
@@ -48,9 +48,9 @@ In the example above, the current angle and status of the hinge are displayed as
 
 ### Getting the hinge state
 
-- [angle](uihinge/angle.md): Beta. The current angle of the hinge, in radians.
-- [status](uihinge/status-swift.property.md): Beta. The current status of the hinge
-- [UIHinge.Status](uihinge/status-swift.enum.md): Beta. The status of an individual hinge
+- [angle](uihinge/angle.md): The current angle of the hinge, in radians.
+- [status](uihinge/status-swift.property.md): The current status of the hinge
+- [UIHinge.Status](uihinge/status-swift.enum.md): The status of an individual hinge
 
 ## Relationships
 
@@ -75,13 +75,13 @@ In the example above, the current angle and status of the hinge are displayed as
 
 - [UIDevice](uidevice.md): A representation of the current device.
 - [UIStatusBarManager](uistatusbarmanager.md): An object that describes the configuration of the status bar.
-- [UIHingeInteraction](uihingeinteraction.md): Beta. An interaction for observing the hinge state associated with the view’s hierarchy.
+- [UIHingeInteraction](uihingeinteraction.md): An interaction for observing the hinge state associated with the view’s hierarchy.
 
 # UIHinge (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 An object encapsulating the state of a single hinge.
 
@@ -124,9 +124,9 @@ In the example above, the current angle and status of the hinge are displayed as
 
 ### Getting the hinge state
 
-- [angle](uihinge/angle.md): Beta. The current angle of the hinge, in radians.
-- [status](uihinge/status-swift.property.md): Beta. The current status of the hinge
-- [UIHingeStatus](uihinge/status-swift.enum.md): Beta. The status of an individual hinge
+- [angle](uihinge/angle.md): The current angle of the hinge, in radians.
+- [status](uihinge/status-swift.property.md): The current status of the hinge
+- [UIHingeStatus](uihinge/status-swift.enum.md): The status of an individual hinge
 
 ## Relationships
 
@@ -144,4 +144,4 @@ In the example above, the current angle and status of the hinge are displayed as
 
 - [UIDevice](uidevice.md): A representation of the current device.
 - [UIStatusBarManager](uistatusbarmanager.md): An object that describes the configuration of the status bar.
-- [UIHingeInteraction](uihingeinteraction.md): Beta. An interaction for observing the hinge state associated with the view’s hierarchy.
+- [UIHingeInteraction](uihingeinteraction.md): An interaction for observing the hinge state associated with the view’s hierarchy.

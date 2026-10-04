@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiarrangementviewcontroller/viewcontrollerforplacement:
 
 # viewControllerForPlacement:
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The view controller in the arrangement for the provided placement.
 
@@ -25,7 +25,7 @@ The view controller in the arrangement for the provided placement.
 
 ### Managing arrangement view controllers
 
-- [UIArrangementViewControllerViewPlacement](../uiarrangementviewcontrollerviewplacement.md): Beta. A placement of a view within an arrangement view controller. Use this type to define placement for container views within the arrangement view controller.
-- [setViewController:forPlacement:](setviewcontroller_forplacement_.md): Beta. Sets the view controller in the arrangement for a specific placement.
-- [setViewController:forPlacement:animated:](setviewcontroller_forplacement_animated_.md): Beta. Sets the view controller in the arrangement for a specific placement.
-- [placementForViewController:](placementforviewcontroller_.md): Beta. The placement for the provided view controller in the arrangement. Will return `UIArrangementViewControllerViewPlacementNone` if the provided view controller is not a view controller provided to the arrangement view controller with an explicit placement.
+- [UIArrangementViewControllerViewPlacement](../uiarrangementviewcontrollerviewplacement.md): A placement of a view within an arrangement view controller. Use this type to define placement for container views within the arrangement view controller.
+- [setViewController:forPlacement:](setviewcontroller_forplacement_.md): Sets the view controller in the arrangement for a specific placement.
+- [setViewController:forPlacement:animated:](setviewcontroller_forplacement_animated_.md): Sets the view controller in the arrangement for a specific placement.
+- [placementForViewController:](placementforviewcontroller_.md): The placement for the provided view controller in the arrangement. Will return `UIArrangementViewControllerViewPlacementNone` if the provided view controller is not a view controller provided to the arrangement view controller with an explicit placement.

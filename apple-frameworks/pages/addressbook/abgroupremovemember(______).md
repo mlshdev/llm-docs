@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/addressbook/abgroupremovemember(_:_:_:)
 
 # ABGroupRemoveMember(\_:\_:\_:) (Swift)
@@ -24,8 +24,8 @@ func ABGroupRemoveMember(_ group: ABGroupRef!, _ personToRemove: ABPersonRef!) -
 ## Parameters
 
 - `group`: The group that you wish to remove `person` from.
-- `member`: The person that you wish to remove from group.
 - `personToRemove`: The member that you wish to remove from `group`.
+- `member`: The person that you wish to remove from group.
 
 <a id="return-value"></a>
 

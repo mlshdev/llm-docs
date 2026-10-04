@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/evaluations/evaluation/inputcolumn
 
 # inputColumn
@@ -14,6 +14,10 @@ A typed column descriptor for the input samples in the detailed DataFrame.
 ```swift
 var inputColumn: ResultColumn<Self.Sample> { get }
 ```
+
+## Mentioned In
+
+- [Evaluating language model responses](../evaluating-language-model-responses.md)
 
 ## See Also
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nierror
 
 # NIError
@@ -51,10 +51,3 @@ Implement the [session(\_:didInvalidateWith:)](nisessiondelegate/session%28__did
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Errors
-
-- [NIError.Code](nierror/code.md): Codes that identify errors in Nearby Interaction.
-- [NIErrorDomain](nierrordomain.md): A unique error domain for Nearby Interaction.

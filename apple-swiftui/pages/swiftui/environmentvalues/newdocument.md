@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/environmentvalues/newdocument
 
 # newDocument
@@ -43,5 +43,6 @@ The above example assumes that you define a `TextDocument` that conforms to the 
 
 ### Opening a document programmatically
 
+- [NewDocumentAction](../newdocumentaction.md): An action that presents a new document.
 - [openDocument](opendocument.md): An action in the environment that presents an existing document.
 - [OpenDocumentAction](../opendocumentaction.md): An action that presents an existing document.

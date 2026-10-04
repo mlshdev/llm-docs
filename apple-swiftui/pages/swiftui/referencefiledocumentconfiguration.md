@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/referencefiledocumentconfiguration
 
 # ReferenceFileDocumentConfiguration
@@ -43,5 +43,4 @@ You receive an instance of this structure when you create a [DocumentGroup](docu
 - [FileDocumentConfiguration](filedocumentconfiguration.md): Deprecated. The properties of an open file document.
 - [FileDocumentReadConfiguration](filedocumentreadconfiguration.md): Deprecated. The configuration for reading file contents.
 - [FileDocumentWriteConfiguration](filedocumentwriteconfiguration.md): Deprecated. The configuration for serializing file contents.
-- [NewDocumentAction](newdocumentaction.md): An action that presents a new document.
 - [ReferenceFileDocument](referencefiledocument.md): Deprecated. A type that you use to serialize reference type documents to and from file.

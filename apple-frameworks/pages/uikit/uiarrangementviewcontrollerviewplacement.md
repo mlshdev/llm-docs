@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiarrangementviewcontrollerviewplacement
 
 # UIArrangementViewControllerViewPlacement
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Enumeration  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 A placement of a view within an arrangement view controller. Use this type to define placement for container views within the arrangement view controller.
 
@@ -21,15 +21,15 @@ enum UIArrangementViewControllerViewPlacement : NSInteger;
 
 ### Specifying a view placement
 
-- [UIArrangementViewControllerViewPlacementNone](uiarrangementviewcontrollerviewplacement/uiarrangementviewcontrollerviewplacementnone.md): Beta. A value that indicates the view controller has no placement in the arrangement.
-- [UIArrangementViewControllerViewPlacementPrimary](uiarrangementviewcontrollerviewplacement/uiarrangementviewcontrollerviewplacementprimary.md): Beta. The primary placement in the arrangement.
-- [UIArrangementViewControllerViewPlacementSecondary](uiarrangementviewcontrollerviewplacement/uiarrangementviewcontrollerviewplacementsecondary.md): Beta. The secondary placement in the arrangement.
+- [UIArrangementViewControllerViewPlacementNone](uiarrangementviewcontrollerviewplacement/uiarrangementviewcontrollerviewplacementnone.md): A value that indicates the view controller has no placement in the arrangement.
+- [UIArrangementViewControllerViewPlacementPrimary](uiarrangementviewcontrollerviewplacement/uiarrangementviewcontrollerviewplacementprimary.md): The primary placement in the arrangement.
+- [UIArrangementViewControllerViewPlacementSecondary](uiarrangementviewcontrollerviewplacement/uiarrangementviewcontrollerviewplacementsecondary.md): The secondary placement in the arrangement.
 
 ## See Also
 
 ### Managing arrangement view controllers
 
-- [viewControllerForPlacement:](uiarrangementviewcontroller/viewcontrollerforplacement_.md): Beta. The view controller in the arrangement for the provided placement.
-- [setViewController:forPlacement:](uiarrangementviewcontroller/setviewcontroller_forplacement_.md): Beta. Sets the view controller in the arrangement for a specific placement.
-- [setViewController:forPlacement:animated:](uiarrangementviewcontroller/setviewcontroller_forplacement_animated_.md): Beta. Sets the view controller in the arrangement for a specific placement.
-- [placementForViewController:](uiarrangementviewcontroller/placementforviewcontroller_.md): Beta. The placement for the provided view controller in the arrangement. Will return `UIArrangementViewControllerViewPlacementNone` if the provided view controller is not a view controller provided to the arrangement view controller with an explicit placement.
+- [viewControllerForPlacement:](uiarrangementviewcontroller/viewcontrollerforplacement_.md): The view controller in the arrangement for the provided placement.
+- [setViewController:forPlacement:](uiarrangementviewcontroller/setviewcontroller_forplacement_.md): Sets the view controller in the arrangement for a specific placement.
+- [setViewController:forPlacement:animated:](uiarrangementviewcontroller/setviewcontroller_forplacement_animated_.md): Sets the view controller in the arrangement for a specific placement.
+- [placementForViewController:](uiarrangementviewcontroller/placementforviewcontroller_.md): The placement for the provided view controller in the arrangement. Will return `UIArrangementViewControllerViewPlacementNone` if the provided view controller is not a view controller provided to the arrangement view controller with an explicit placement.

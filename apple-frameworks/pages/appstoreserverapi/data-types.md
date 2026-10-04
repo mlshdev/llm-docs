@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/data-types
 
 # Data types
@@ -34,6 +34,7 @@ Refer to these data types for decoded transaction and renewal information payloa
 - [originalApplicationVersion](originalapplicationversion.md): The app version that the customer originally purchased from the App Store.
 - [originalPlatform](originalplatform.md): The platform on which a customer originally purchases an app.
 - [preorderDate](preorderdate.md): The date a customer places an order for the app before it’s available in the App Store, expressed in UNIX time, in milliseconds.
+- [storeType](storetype.md): A string that describes the store the customer obtained the app from.
 
 ### Account information
 
@@ -44,7 +45,7 @@ Refer to these data types for decoded transaction and renewal information payloa
 - [productId](productid.md): The unique identifier of the product.
 - [type](type.md): The type of In-App Purchase products you can offer in your app.
 - [subscriptionGroupIdentifier](subscriptiongroupidentifier.md): The identifier of the subscription group that the subscription belongs to.
-- [quantity](quantity.md): The number of purchased consumable products.
+- [quantity](quantity.md): The number of products or seats the customer purchased.
 
 ### Product price and currency
 
@@ -102,9 +103,19 @@ Refer to these data types for decoded transaction and renewal information payloa
 - [commitmentRenewalDate](commitmentrenewaldate.md)
 - [commitmentRenewalPrice](commitmentrenewalprice.md)
 
-### Family Sharing
+### Group membership
 
-- [inAppOwnershipType](inappownershiptype.md): A string that describes whether the transaction was purchased by the customer, or is available to them through Family Sharing.
+- [GroupEntry](groupentry.md): The identifier, type, and per-product roles for a group that a customer belongs to.
+- [GroupMemberEntry](groupmemberentry.md): A customer that belongs to a group.
+- [RoleEntry](roleentry.md): A customer’s role for a single product within a group.
+- [groupId](groupid.md): The unique identifier of a group, within the scope of your app.
+- [groupType](grouptype.md): A string that describes the kind of multiseat purchase a customer’s access comes from.
+- [role](role.md): A string that identifies a customer’s role for a product within a group.
+- [limit](limit.md): The maximum number of group members to return in a single response.
+
+### Transaction ownership
+
+- [inAppOwnershipType](inappownershiptype.md): A string that describes whether the transaction was purchased by the customer, or is available to them through Family Sharing, an organization, or a group.
 
 ### Price increase status
 

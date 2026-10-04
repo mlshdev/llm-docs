@@ -2,9 +2,95 @@
 
 Source: https://developer.apple.com/macos/
 Catalog snapshot: 0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d
-Content digest: ec427c6239650887b82e5cacb977fcdddd983ad9801ba5ba438444988e4f778c
-Captured at: 2026-09-27T18:07:09.722Z
+Content digest: 14bed8000201559feea98994c1c1775c7d24cc3f228675df96cb28953e4bdfaf
+Captured at: 2026-10-04T18:39:02.631Z
 Volume 4
+
+# Document: altersStateOfSelectedItem
+
+Source path: documentation/appkit/nspopupbuttoncell/altersstateofselecteditem
+Canonical documentation: https://developer.apple.com/documentation/appkit/nspopupbuttoncell/altersstateofselecteditem
+Description: Framework: AppKit Kind: Instance Property Availability: macOS
+
+# altersStateOfSelectedItem (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+A Boolean value that indicates if the pop-up button links the state of the selected menu item to the current selection.
+
+## Declaration
+
+```swift
+var altersStateOfSelectedItem: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [true](https://developer.apple.com/documentation/swift/true) (which is the default value), the state of the selected item is set to [NSOnState](../nsonstate.md). When the value of this property is [false](https://developer.apple.com/documentation/swift/false), the items in the menu are left alone. When you change the value of this property, the state of the currently selected item is updated appropriately.
+
+Note that this property affects only pop-up buttons (it is ignored for pull-down menus).
+
+## See Also
+
+### Related Documentation
+
+- [selectItem(at:)](selectitem%28at_%29.md): Selects the item in the menu at the specified index.
+- [select(\_:)](select%28__%29.md): Selects the specified menu item.
+- [selectedItem](selecteditem.md): The menu item last selected by the user.
+- [selectItem(withTitle:)](selectitem%28withtitle_%29.md): Selects the item with the specified title.
+
+### Accessing menu attributes
+
+- [menu](menu.md): The pop-up button’s associated menu.
+- [pullsDown](pullsdown.md): A Boolean value that indicates the behavior of the button’s menu.
+- [autoenablesItems](autoenablesitems.md): A Boolean value that indicates if the button automatically enables and disables its items every time a user event occurs.
+- [preferredEdge](preferrededge.md): The edge of the cell from which the menu should pop out when screen conditions are restrictive.
+- [usesItemFromMenu](usesitemfrommenu.md): A Boolean value that indicates if the control uses an item from the menu for its own title.
+- [arrowPosition](arrowposition.md): The position of the arrow displayed on the button.
+
+# altersStateOfSelectedItem (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+A Boolean value that indicates if the pop-up button links the state of the selected menu item to the current selection.
+
+## Declaration
+
+```objectivec
+@property BOOL altersStateOfSelectedItem;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [true](https://developer.apple.com/documentation/swift/true) (which is the default value), the state of the selected item is set to [NSOnState](../nsonstate.md). When the value of this property is [false](https://developer.apple.com/documentation/swift/false), the items in the menu are left alone. When you change the value of this property, the state of the currently selected item is updated appropriately.
+
+Note that this property affects only pop-up buttons (it is ignored for pull-down menus).
+
+## See Also
+
+### Related Documentation
+
+- [selectItemAtIndex:](selectitem%28at_%29.md): Selects the item in the menu at the specified index.
+- [selectItem:](select%28__%29.md): Selects the specified menu item.
+- [selectedItem](selecteditem.md): The menu item last selected by the user.
+- [selectItemWithTitle:](selectitem%28withtitle_%29.md): Selects the item with the specified title.
+
+### Accessing menu attributes
+
+- [menu](menu.md): The pop-up button’s associated menu.
+- [pullsDown](pullsdown.md): A Boolean value that indicates the behavior of the button’s menu.
+- [autoenablesItems](autoenablesitems.md): A Boolean value that indicates if the button automatically enables and disables its items every time a user event occurs.
+- [preferredEdge](preferrededge.md): The edge of the cell from which the menu should pop out when screen conditions are restrictive.
+- [usesItemFromMenu](usesitemfrommenu.md): A Boolean value that indicates if the control uses an item from the menu for its own title.
+- [arrowPosition](arrowposition.md): The position of the arrow displayed on the button.
 
 # Document: arrowPosition
 
@@ -196526,119 +196612,3 @@ The character index, measured from the start of the receiver’s text storage, o
 ### Character coordinates
 
 - [firstRectForCharacterRange:](firstrectforcharacterrange_.md): Deprecated. Returns the first frame rectangle for characters in the given range, in screen coordinates.
-
-# Document: conversationIdentifier
-
-Source path: documentation/appkit/nstextinput/conversationidentifier
-Canonical documentation: https://developer.apple.com/documentation/appkit/nstextinput/conversationidentifier
-Description: Interface language: Objective-C
-
-# conversationIdentifier
-
-**Interface language:** Objective-C
-
-**Framework:** AppKit  
-**Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 10.6)
-
-Returns a number used to identify the receiver’s context to the input server.
-
-## Declaration
-
-```objectivec
-- (NSInteger) conversationIdentifier;
-```
-
-<a id="return-value"></a>
-
-## Return Value
-
-The identifying number of the receiver.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Each text view within an application should return a unique identifier (typically its address). However, multiple text views sharing the same text storage must all return the same identifier.
-
-# Document: doCommandBySelector:
-
-Source path: documentation/appkit/nstextinput/docommandbyselector:
-Canonical documentation: https://developer.apple.com/documentation/appkit/nstextinput/docommandbyselector:
-Description: Interface language: Objective-C
-
-# doCommandBySelector:
-
-**Interface language:** Objective-C
-
-**Framework:** AppKit  
-**Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 10.6)
-
-Invokes the given selector if possible.
-
-## Declaration
-
-```objectivec
-- (void) doCommandBySelector:(SEL) selector;
-```
-
-## Parameters
-
-- `selector`: The selector to be invoked.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If `selector` cannot be invoked, then [doCommandBySelector:](docommandbyselector_.md) should not pass this message up the responder chain. `NSResponder` also implements this method, and it does forward uninvokable commands up the responder chain, but a text view should not. A text view implementing the [NSTextInput](../nstextinput.md) protocol inherits from `NSView`, which inherits from `NSResponder`, so your implementation of this method will override the one in `NSResponder`. It should not call `super`.
-
-## See Also
-
-### Related Documentation
-
-- [interpretKeyEvents:](../nsresponder/interpretkeyevents%28__%29.md): Handles a series of key events.
-
-# Document: firstRectForCharacterRange:
-
-Source path: documentation/appkit/nstextinput/firstrectforcharacterrange:
-Canonical documentation: https://developer.apple.com/documentation/appkit/nstextinput/firstrectforcharacterrange:
-Description: Interface language: Objective-C
-
-# firstRectForCharacterRange:
-
-**Interface language:** Objective-C
-
-**Framework:** AppKit  
-**Kind:** Instance Method  
-**Availability:** macOS 10.0+ (deprecated in 10.6)
-
-Returns the first frame rectangle for characters in the given range, in screen coordinates.
-
-## Declaration
-
-```objectivec
-- (NSRect) firstRectForCharacterRange:(NSRange) range;
-```
-
-## Parameters
-
-- `range`: The character range whose frame is returned.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The frame rectangle for the given range of characters.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If `theRange` spans multiple lines of text in the text view, the rectangle returned is the one for the characters in the first line. If the length of `theRange` is 0 (as it would be if there is nothing selected at the insertion point), the rectangle coincides with the insertion point, and its width is 0.
-
-## See Also
-
-### Character coordinates
-
-- [characterIndexForPoint:](characterindexforpoint_.md): Deprecated. Returns the index of the character whose frame rectangle includes the given point.

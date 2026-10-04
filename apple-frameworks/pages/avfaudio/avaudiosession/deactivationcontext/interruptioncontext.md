@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/deactivationcontext/interruptioncontext
 
 # interruptionContext (Swift)
@@ -14,6 +14,10 @@ Context about the interruption that caused deactivation.
 ```swift
 var interruptionContext: AVAudioSession.InterruptionContext? { get }
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
 
 <a id="discussion"></a>
 
@@ -40,6 +44,10 @@ Context about the interruption that caused deactivation.
 ```objectivec
 @property (nonatomic, readonly, nullable) AVAudioSessionInterruptionContext * interruptionContext;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
 
 <a id="discussion"></a>
 

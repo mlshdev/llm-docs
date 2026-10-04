@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/calling-apple-ads-platform-api
 
 # Calling the Apple Ads Platform API
@@ -295,7 +295,10 @@ A detailed error message example:
     "details": [
       {
         "code": "DUPLICATE_NAME",
-        "message": "AdGroup name already exists under this Campaign."
+        "message": "AdGroup name already exists under this Campaign.",
+        "info": {
+          "field": "name"
+        }
       }
     ]
   }
@@ -333,6 +336,7 @@ Every response, successful or not, includes a set of `RateLimit-*` headers you c
 - [Error](error.md): The standard error envelope that the API returns when a request fails.
 - [ErrorDetail](errordetail.md): Field-level or request-level detail for a specific part of a failed API request.
 - [ErrorResponse](errorresponse.md): Certain endpoints return this envelope, which wraps an `Error` object, when a request fails.
+- [Info](info.md): Additional context that supplements an error detail’s message, varying by endpoint and error type.
 
 ## See Also
 

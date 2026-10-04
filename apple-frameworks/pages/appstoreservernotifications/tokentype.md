@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications/tokentype
 
 # tokenType
@@ -21,6 +21,7 @@ string tokenType
 
 - `ACQUISITION`: A token type that indicates an initial acquisition.
 - `SERVICES`: A token type that indicates usage of App Store services.
+- `CORE_TECHNOLOGY`: A token type an app receives from the MarketplaceKit  [token(for:)](https://developer.apple.com/documentation/marketplacekit/transactionreporting/token%28for:%29) API.
 
 ## Mentioned In
 

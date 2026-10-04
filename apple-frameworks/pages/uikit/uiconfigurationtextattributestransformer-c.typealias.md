@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiconfigurationtextattributestransformer-c.typealias
 
 # UIConfigurationTextAttributesTransformer
@@ -32,19 +32,3 @@ transformer = ^(NSDictionary<NSAttributedStringKey, id> *incoming) {
     return outgoing;
 };
 ```
-
-## See Also
-
-### Configuring titles
-
-- [title](uibuttonconfiguration/title.md): The text of the title label the button displays.
-- [subtitle](uibuttonconfiguration/subtitle.md): The text the subtitle label of the button displays.
-- [attributedTitle](uibuttonconfiguration/attributedtitle.md): The text and style attributes for the button’s title label.
-- [attributedSubtitle](uibuttonconfiguration/attributedsubtitle.md): The text and style attributes for the button’s subtitle label.
-- [titleTextAttributesTransformer](uibuttonconfiguration/titletextattributestransformer.md): A transformer to update the attributed title when the button state changes.
-- [subtitleTextAttributesTransformer](uibuttonconfiguration/subtitletextattributestransformer.md): A transformer to update the attributed subtitle when the button state changes.
-- [titlePadding](uibuttonconfiguration/titlepadding.md): The distance between the title and subtitle labels.
-- [titleAlignment](uibuttonconfiguration/titlealignment.md): The text alignment the button uses to lay out the title and subtitle.
-- [UIButtonConfigurationTitleAlignment](uibuttonconfigurationtitlealignment.md): Specifies how to align a button’s title and subtitle.
-- [titleLineBreakMode](uibuttonconfiguration/titlelinebreakmode.md): The line break mode the button uses to lay out the button’s title.
-- [subtitleLineBreakMode](uibuttonconfiguration/subtitlelinebreakmode.md): The line break mode the button uses to lay out the button’s subtitle.

@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedirectioncoordinator/init(view:devicetypes:changehandler:)
 
 # init(view:deviceTypes:changeHandler:) (Swift)
 
 **Framework:** AVKit  
 **Kind:** Initializer  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 Creates a coordinator that reports the direction cameras face in relation to the specified view.
 
@@ -33,7 +33,7 @@ init(view: UIView, deviceTypes: [AVCaptureDevice.DeviceType], changeHandler: ((A
 
 **Framework:** AVKit  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 Creates a coordinator that reports the direction cameras face in relation to the specified view.
 

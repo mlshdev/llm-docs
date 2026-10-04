@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/visionos/building-spatial-experiences-for-business-apps-with-enterprise-apis
 
 # Building spatial experiences for business apps with enterprise APIs for visionOS
@@ -17,7 +17,7 @@ Grant enhanced sensor access and increased platform control to your visionOS app
 
 You can use the entitlements that enterprise APIs for visionOS offer to create even more powerful enterprise solutions and spatial experiences for your visionOS app. The enterprise APIs for visionOS consist of two distinct categories.
 
-The first category of APIs provides enhanced sensor access and improves the visual capabilities of Apple Vision Pro.
+The first category of APIs provides enhanced sensor access and improves the visual capabilities of Apple Vision Pro, including:
 
 - **[Main camera access](../bundleresources/entitlements/com.apple.developer.arkit.main-camera-access.allow.md)**: Capture input data from the forward-facing main camera.
 - **[Camera Region access](../bundleresources/entitlements/com.apple.developer.arkit.camera-region.allow.md)**: Capture input data from a specific spatial region in the person’s view for the app to process or display.
@@ -25,7 +25,7 @@ The first category of APIs provides enhanced sensor access and improves the visu
 - **[Passthrough in screen capture](../bundleresources/entitlements/com.apple.developer.screen-capture.include-passthrough.md)**: Access a composite feed of what an Apple Vision Pro wearer is seeing (physical world and digital content).
 - **[Spatial barcode and QR code scanning](../bundleresources/entitlements/com.apple.developer.arkit.barcode-detection.allow.md)**: Scan barcodes and QR codes with the ability to decode contents and locate spatial positions.
 
-The second category focuses on platform control to help you get the most out of visionOS.
+The second category focuses on platform control to help you get the most out of visionOS, including:
 
 - **[App-Protected Content](../bundleresources/entitlements/com.apple.developer.protected-content.md)**: Prohibit content captures (screenshots, screen recordings, AirPlay, and SharePlay) of a view.
 - **[Object-tracking parameter adjustment](../bundleresources/entitlements/com.apple.developer.arkit.object-tracking-parameter-adjustment.allow.md)**: Optimize known object detection and tracking using configurable parameters.
@@ -41,7 +41,7 @@ The second category focuses on platform control to help you get the most out of 
 
 ### Request the entitlements
 
-If you’re interested in using the enterprise APIs for visionOS in your app, the Account Holder of your Apple Developer Program and/or Apple Developer Enterprise Program can submit an [entitlement request](https://developer.apple.com/go/?id=69613ca716fe11ef8ec848df370857f4).
+If you’re interested in using the enterprise APIs for visionOS in your app, the Account Holder of your organization’s Apple Developer Program or Apple Developer Enterprise Program membership can submit a [request for an enterprise API license and entitlements](https://developer.apple.com/go/?id=69613ca716fe11ef8ec848df370857f4). If you enrolled as an individual, you can’t request an enterprise API license.
 
 To be eligible, your app needs to:
 
@@ -50,15 +50,15 @@ To be eligible, your app needs to:
 
 Enterprise APIs for visionOS are eligible for business use only. You can distribute apps that you develop with the enterprise APIs for visionOS privately as proprietary in-house apps or custom apps using Apple Business Manager. For more information on distributing custom apps, see [Set distribution methods](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/set-distribution-methods).
 
-You can also request access to the entitlements for *Development Only* purposes. With this access, you can build and run apps on your registered test devices with development provisioning profiles.
+The Account Holder can also request access to the entitlements for *Development Only* purposes. With this access, you can build and run apps on your registered test devices with development provisioning profiles. A Development Only license applies at the team level and works across your team’s apps, whereas a distribution license applies to a single App ID.
 
 <a id="Configure-your-apps-Xcode-project"></a>
 
 ### Configure your app’s Xcode project
 
-To use entitlements, you need to include both the entitlement file and a corresponding license file in your app. After Apple approves your app for one or more entitlements, you receive a license file, along with additional instructions.
+To use entitlements, you need to include both the entitlement file and a corresponding license file in your app.
 
-You add the license file to your app’s Xcode project. Placing the license file within your project and adding it to your build target allows Xcode to compile it within your app and then validate it when checking your entitlements.
+The Account Holder and developers on the team can download the license file from the Services tab of Certificates, Identifiers & Profiles in the developer account. If no license appears there, check with the Account Holder, who receives an email after Apple approves the request. Add the license file to your app’s Xcode project.
 
 > **Note**
 

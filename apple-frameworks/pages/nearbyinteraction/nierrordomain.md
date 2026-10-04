@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nierrordomain
 
 # NIErrorDomain (Swift)
@@ -21,13 +21,6 @@ let NIErrorDomain: String
 
 For more information on Core Foundation error domains, see [Error domains](../corefoundation/error-domains.md).
 
-## See Also
-
-### Errors
-
-- [NIError](nierror.md): An error Nearby Interaction reports.
-- [NIError.Code](nierror/code.md): Codes that identify errors in Nearby Interaction.
-
 # NIErrorDomain (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -47,9 +40,3 @@ extern NSErrorDomain const NIErrorDomain;
 ## Discussion
 
 For more information on Core Foundation error domains, see [Error domains](../corefoundation/error-domains.md).
-
-## See Also
-
-### Errors
-
-- [NIErrorCode](nierror/code.md): Codes that identify errors in Nearby Interaction.

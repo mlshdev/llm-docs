@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uibarbuttonitem/sharesbackground
 
 # sharesBackground (Swift)
@@ -28,8 +28,8 @@ This property is ignored if the item is in a `UIBarButtonItemGroup` with more th
 ### Customizing placement in a toolbar
 
 - [hidesSharedBackground](hidessharedbackground.md): A boolean value indicating whether the background this item may share with other items in the bar should be hidden.
-- [axisBehavior](axisbehavior-swift.property.md): Beta. The bar axis behavior of the item.
-- [UIBarButtonItem.AxisBehavior](axisbehavior-swift.enum.md): Beta.
+- [axisBehavior](axisbehavior-swift.property.md): The bar axis behavior of the item.
+- [UIBarButtonItem.AxisBehavior](axisbehavior-swift.enum.md)
 
 # sharesBackground (Objective-C)
 
@@ -58,5 +58,5 @@ This property is ignored if the item is in a `UIBarButtonItemGroup` with more th
 ### Customizing placement in a toolbar
 
 - [hidesSharedBackground](hidessharedbackground.md): A boolean value indicating whether the background this item may share with other items in the bar should be hidden.
-- [axisBehavior](axisbehavior-swift.property.md): Beta. The bar axis behavior of the item.
-- [UIBarButtonItemAxisBehavior](axisbehavior-swift.enum.md): Beta.
+- [axisBehavior](axisbehavior-swift.property.md): The bar axis behavior of the item.
+- [UIBarButtonItemAxisBehavior](axisbehavior-swift.enum.md)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/scsiuserparalleltaskversion
 
 # SCSIUserParallelTaskVersion
@@ -25,7 +25,7 @@ typedef enum SCSIUserParallelTaskVersion : unsigned int { ... } SCSIUserParallel
 
 ## See Also
 
-### Task Properties
+### Task properties
 
 - [version](scsiuserparalleltask/version.md): The version of the parallel task structure currently in use.
 - [fTargetID](scsiuserparalleltask/ftargetid.md): An identifier that represents a SCSI target device.

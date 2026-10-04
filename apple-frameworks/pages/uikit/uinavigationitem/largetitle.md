@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uinavigationitem/largetitle
 
 # largeTitle (Swift)
@@ -26,7 +26,7 @@ When `nil`, the navigation bar will use the navigation item’s current title.
 ### Configuring the title
 
 - [title](title.md): The navigation item’s title that displays in the navigation bar.
-- [attributedTitle](attributedtitle-25fxb.md)
+- [attributedTitle](attributedtitle-25fxb.md): An attributed string that the system renders as the title in the navigation bar.
 - [largeTitleDisplayMode](largetitledisplaymode-swift.property.md): The mode for displaying the title of the navigation bar.
 - [UINavigationItem.LargeTitleDisplayMode](largetitledisplaymode-swift.enum.md): Constants that indicate how to size the title of this item.
 

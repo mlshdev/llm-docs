@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/deactivationcontext/source
 
 # source (Swift)
@@ -14,6 +14,10 @@ The source of the audio session deactivation.
 ```swift
 var source: AVAudioSession.DeactivationSource { get }
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
 
 ## See Also
 
@@ -34,6 +38,10 @@ The source of the audio session deactivation.
 ```objectivec
 @property (nonatomic, readonly) AVAudioSessionDeactivationSource source;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
 
 ## See Also
 

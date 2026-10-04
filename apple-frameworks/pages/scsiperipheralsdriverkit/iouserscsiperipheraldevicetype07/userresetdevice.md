@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/iouserscsiperipheraldevicetype07/userresetdevice
 
 # UserResetDevice
@@ -9,18 +9,26 @@
 **Kind:** Instance Method  
 **Availability:** DriverKit 22.0+
 
+Performs a bus reset of the external drive.
+
 ## Declaration
 
 ```objectivec
 virtual kern_return_t UserResetDevice(SCSIServiceResponse *response);
 ```
 
+## Parameters
+
+- `response`: A pointer to a [SCSIServiceResponse](../../iokit/scsiserviceresponse.md) instance. On return, the framework populates this reference with the response from the protocol driver.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A value that indicates the result of the bus reset. [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) indicates success. For error definitions, see [IOKit Constants](../../iokit/iokit_constants.md).
+
 ## See Also
 
-### Instance Methods
+### Managing the device
 
-- [UserDetermineDeviceCharacteristics](userdeterminedevicecharacteristics.md)
-- [UserReportMediumBlockSize](userreportmediumblocksize.md)
-- [UserResumeServices](userresumeservices.md)
-- [UserSendCDB](usersendcdb.md)
-- [UserSuspendServices](usersuspendservices.md)
+- [UserDetermineDeviceCharacteristics](userdeterminedevicecharacteristics.md): Performs enumeration-time initializations in response to a call from the framework.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/iouserscsiperipheraldevicetype07/userresumeservices
 
 # UserResumeServices
@@ -9,18 +9,28 @@
 **Kind:** Instance Method  
 **Availability:** DriverKit 22.0+
 
+Resumes normal services after a suspension.
+
 ## Declaration
 
 ```objectivec
 virtual kern_return_t UserResumeServices();
 ```
 
+<a id="return-value"></a>
+
+## Return Value
+
+A value that indicates the result of the resume request. [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) indicates success. For error definitions, see [IOKit Constants](../../iokit/iokit_constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Call this method when the dext finishes using its window of exclusivity from a previous [UserSuspendServices](usersuspendservices.md) call so file systems can continue communicating with the drive.
+
 ## See Also
 
-### Instance Methods
+### Suspending and resuming services
 
-- [UserDetermineDeviceCharacteristics](userdeterminedevicecharacteristics.md)
-- [UserReportMediumBlockSize](userreportmediumblocksize.md)
-- [UserResetDevice](userresetdevice.md)
-- [UserSendCDB](usersendcdb.md)
-- [UserSuspendServices](usersuspendservices.md)
+- [UserSuspendServices](usersuspendservices.md): Suspends services and allows the dext to communicate with the external drive.

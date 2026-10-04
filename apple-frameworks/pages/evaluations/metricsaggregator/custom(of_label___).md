@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/evaluations/metricsaggregator/custom(of:label:_:)
 
 # custom(of:label:\_:)
@@ -20,3 +20,7 @@ mutating func custom(of metric: Metric, label: String, _ body: ([Double]) -> Dou
 - `metric`: The metric to aggregate.
 - `label`: The label for this statistic in the aggregated results.
 - `body`: A closure that receives the metric’s values and returns a computed statistic.
+
+## Mentioned In
+
+- [Evaluating language model responses](../evaluating-language-model-responses.md)

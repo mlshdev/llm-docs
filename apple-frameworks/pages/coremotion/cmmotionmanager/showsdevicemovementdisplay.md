@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremotion/cmmotionmanager/showsdevicemovementdisplay
 
 # showsDeviceMovementDisplay (Swift)
@@ -23,8 +23,9 @@ When a device requires movement (for example, to calibrate the compass), the val
 
 ## See Also
 
-### Managing Device Motion Updates
+### Managing device motion updates
 
+- [deviceMotionBody](devicemotionbody.md): A physical body or view that defines the coordinate system for device-motion data.
 - [deviceMotionUpdateInterval](devicemotionupdateinterval.md): The interval, in seconds, for providing device-motion updates to the block handler.
 - [startDeviceMotionUpdates(using:to:withHandler:)](startdevicemotionupdates%28using_to_withhandler_%29.md): Starts device-motion updates on an operation queue and using a specified reference frame and block handler.
 - [startDeviceMotionUpdates(to:withHandler:)](startdevicemotionupdates%28to_withhandler_%29.md): Starts device-motion updates on an operation queue and using a specified block handler.
@@ -56,8 +57,9 @@ When a device requires movement (for example, to calibrate the compass), the val
 
 ## See Also
 
-### Managing Device Motion Updates
+### Managing device motion updates
 
+- [deviceMotionBody](devicemotionbody.md): A physical body or view that defines the coordinate system for device-motion data.
 - [deviceMotionUpdateInterval](devicemotionupdateinterval.md): The interval, in seconds, for providing device-motion updates to the block handler.
 - [startDeviceMotionUpdatesUsingReferenceFrame:toQueue:withHandler:](startdevicemotionupdates%28using_to_withhandler_%29.md): Starts device-motion updates on an operation queue and using a specified reference frame and block handler.
 - [startDeviceMotionUpdatesToQueue:withHandler:](startdevicemotionupdates%28to_withhandler_%29.md): Starts device-motion updates on an operation queue and using a specified block handler.

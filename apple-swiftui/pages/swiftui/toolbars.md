@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbars
 
 # Toolbars
@@ -104,10 +104,10 @@ For design guidance, see [Toolbars](https://developer.apple.com/design/human-int
 
 ### Configuring vertical toolbar behavior
 
-- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
-- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
-- [ToolbarVerticalCompressionBehavior](toolbarverticalcompressionbehavior.md): Beta. A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
+- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Sets the behavior for the vertical bar.
+- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): A behavior that determines whether the vertical bar is used.
+- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
+- [ToolbarVerticalCompressionBehavior](toolbarverticalcompressionbehavior.md): A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
 
 ## See Also
 

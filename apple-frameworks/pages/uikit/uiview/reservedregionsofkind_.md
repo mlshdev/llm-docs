@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/reservedregionsofkind:
 
 # reservedRegionsOfKind:
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 Returns the reserved regions of a given kind.
 
@@ -21,5 +21,5 @@ Returns the reserved regions of a given kind.
 
 ### Inspecting reserved regions
 
-- [UIViewReservedRegion](../uiviewreservedregion.md): Beta. A region within a view’s coordinate space that another entity occupies.
-- [reservedRegionsOfKind:options:](reservedregionsofkind_options_.md): Beta. Returns the reserved regions of a given kind and options.
+- [UIViewReservedRegion](../uiviewreservedregion.md): A region within a view’s coordinate space that another entity occupies.
+- [reservedRegionsOfKind:options:](reservedregionsofkind_options_.md): Returns the reserved regions of a given kind and options.

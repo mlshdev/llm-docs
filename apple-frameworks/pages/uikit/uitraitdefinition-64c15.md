@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitraitdefinition-64c15
 
 # UITraitDefinition
@@ -108,3 +108,4 @@ Traits defined in Swift aren’t automatically bridged to Objective-C. If you ne
 - [Providing data to the view hierarchy with custom traits](providing-data-to-the-view-hierarchy-with-custom-traits.md): Share data that needs to flow hierarchically across multiple levels of your view hierarchy.
 - [UIMutableTraits](uimutabletraits-13ja5.md): A mutable container of traits.
 - [UITrait](uitrait-9423.md): A type representing a trait in a trait collection.
+- [UITraitBridgedEnvironmentKey](uitraitbridgedenvironmentkey.md)

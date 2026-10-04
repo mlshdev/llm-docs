@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api
 
 # Apple Ads Platform API
@@ -108,7 +108,7 @@ New to the API? Start with the workflow guides. [Advertising Your App on the App
 
 ### Bulk Operations
 
-- [Bulk Operations Endpoints](apple-ads-platform-api/bulk-operations-endpoints.md): Create and update keywords and negative keywords in bulk.
+- [Bulk Operations Endpoints](apple-ads-platform-api/bulk-operations-endpoints.md): Create, update, and delete keywords and negative keywords in bulk through these endpoints.
 - [Bulk Data Objects](apple-ads-platform-api/bulk-data-objects.md): Use these objects to build bulk keyword and negative keyword requests and read their responses.
 
 ### Budget Orders

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarcontent
 
 # ToolbarContent
@@ -44,8 +44,8 @@ extension MyCustomType: Transition {
 
 ### Customizing behaviors
 
-- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
-- [ToolbarItemAxisBehavior](toolbaritemaxisbehavior.md): Beta. Describes the bar axis behavior of a toolbar item.
+- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): The bar axis behavior of the toolbar item.
+- [ToolbarItemAxisBehavior](toolbaritemaxisbehavior.md): Describes the bar axis behavior of a toolbar item.
 
 ### Setting visibility
 

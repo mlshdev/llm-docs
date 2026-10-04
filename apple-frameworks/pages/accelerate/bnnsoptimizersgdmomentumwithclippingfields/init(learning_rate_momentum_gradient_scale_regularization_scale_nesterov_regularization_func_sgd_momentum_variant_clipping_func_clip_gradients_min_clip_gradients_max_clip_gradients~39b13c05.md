@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/bnnsoptimizersgdmomentumwithclippingfields/init(learning_rate:momentum:gradient_scale:regularization_scale:nesterov:regularization_func:sgd_momentum_variant:clipping_func:clip_gradients_min:clip_gradients_max:clip_gradients_max_norm:clip_gradients_use_norm:)
 
 # init(learning_rate:momentum:gradient_scale:regularization_scale:nesterov:regularization_func:sgd_momentum_variant:clipping_func:clip_gradients_min:clip_gradients_max:clip_gradients_max_norm:clip_gradients_use_norm:)

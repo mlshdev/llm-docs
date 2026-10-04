@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxtemporalscalerdescriptor/supportedinputcontentmaxscale(device:)
 
 # supportedInputContentMaxScale(device:) (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Type Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 27.1+
 
 Returns the largest temporal scaling factor the device supports as a floating-point value.
 
@@ -30,7 +30,7 @@ class func supportedInputContentMaxScale(device: any MTLDevice) -> Float
 
 **Framework:** MetalFX  
 **Kind:** Type Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 27.1+
 
 Returns the largest temporal scaling factor the device supports as a floating-point value.
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/look-up-order-id
 
 # Look Up Order ID
@@ -14,7 +14,7 @@ Get a customer’s in-app purchases from a receipt using the order ID.
 ## URL
 
 ```http
-GET https://api.storekit.apple.com/inApps/v1/lookup/{orderId}
+GET https://api.storekit.apple.com/inApps/inApps/v1/lookup/{orderId}
 ```
 
 ## Path Parameters

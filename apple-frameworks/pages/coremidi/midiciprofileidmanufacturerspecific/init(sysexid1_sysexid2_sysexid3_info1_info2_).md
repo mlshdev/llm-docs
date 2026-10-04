@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremidi/midiciprofileidmanufacturerspecific/init(sysexid1:sysexid2:sysexid3:info1:info2:)
 
 # init(sysExID1:sysExID2:sysExID3:info1:info2:)

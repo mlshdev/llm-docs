@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewreservedregionkind
 
 # UIViewReservedRegionKind
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 A kind of reserved region.
 
@@ -21,8 +21,8 @@ A kind of reserved region.
 
 ### Specifying a reserved region
 
-- [divisionRegionKind](uiviewreservedregionkind/divisionregionkind.md): Beta. A region where an element should divide into two separate regions.
-- [occlusionRegionKind](uiviewreservedregionkind/occlusionregionkind.md): Beta. A region that is occluded by an element.
+- [divisionRegionKind](uiviewreservedregionkind/divisionregionkind.md): A region where an element should divide into two separate regions.
+- [occlusionRegionKind](uiviewreservedregionkind/occlusionregionkind.md): A region that is occluded by an element.
 
 ## Relationships
 
@@ -38,9 +38,9 @@ A kind of reserved region.
 
 ### Getting region details
 
-- [frame](uiviewreservedregion/frame.md): Beta. The rect of the region in the view’s coordinate space, including the margins.
-- [active](uiviewreservedregion/active.md): Beta. Whether the region is currently active.
-- [kind](uiviewreservedregion/kind.md): Beta. The kind of the region.
-- [identifier](uiviewreservedregion/identifier.md): Beta. The identifier of the region.
-- [UIViewReservedRegionIdentifier](uiviewreservedregionidentifier.md): Beta. An identifier of a reserved region.
-- [margins](uiviewreservedregion/margins.md): Beta. The margins included in the frame around the reserved rect for interactive content.
+- [frame](uiviewreservedregion/frame.md): The rect of the region in the view’s coordinate space, including the margins.
+- [active](uiviewreservedregion/active.md): Whether the region is currently active.
+- [kind](uiviewreservedregion/kind.md): The kind of the region.
+- [identifier](uiviewreservedregion/identifier.md): The identifier of the region.
+- [UIViewReservedRegionIdentifier](uiviewreservedregionidentifier.md): An identifier of a reserved region.
+- [margins](uiviewreservedregion/margins.md): The margins included in the frame around the reserved rect for interactive content.

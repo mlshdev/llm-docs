@@ -1,10 +1,38 @@
-# Apple SwiftUI snapshot-8b55d19a707e: full documentation
+# Apple SwiftUI snapshot-8247613c923d: full documentation
 
 Source: https://developer.apple.com/documentation/swiftui
-Catalog snapshot: 8b55d19a707ef89040e675038f5d9370df5025b13779e4c7d74995445f93294d
-Content digest: af6870304bfe66f126acaccc9d5b2922f7e585e382e3bcd46dff2e79583a42cb
-Captured at: 2026-09-16T18:21:42.082Z
+Catalog snapshot: 8247613c923d5f641b343d378c87950d13b1d1852255e25aee94a110e1fadd7a
+Content digest: f5f7b95015d610437509960cc99e4ad0a8f3e4e94d5e8eb1ecfd889b36d2ede5
+Captured at: 2026-10-04T18:39:02.464Z
 Volume 2
+
+# Document: init()
+
+Source path: documentation/swiftui/stacknavigationviewstyle/init()
+Canonical documentation: https://developer.apple.com/documentation/swiftui/stacknavigationviewstyle/init()
+Description: Framework: SwiftUI Kind: Initializer Availability: iOS 13.0+ (deprecated in 27.2) · iPadOS 13.0+ (deprecated in 27.2) · Mac Catalyst 13.0+ (deprecated in 27.2) · tvOS 13.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecat…
+
+# init()
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ (deprecated in 27.2) · iPadOS 13.0+ (deprecated in 27.2) · Mac Catalyst 13.0+ (deprecated in 27.2) · tvOS 13.0+ (deprecated in 27.2) · visionOS 1.0+ (deprecated in 27.2) · watchOS 7.0+ (deprecated in 27.2)
+
+Creates a navigation view style represented by a view stack that only shows a single top view at a time.
+
+> Replace a styled [NavigationView](../navigationview.md) with a [NavigationStack](../navigationstack.md) or [NavigationSplitView](../navigationsplitview.md). For more information, see [Migrating to new navigation types](../migrating-to-new-navigation-types.md).
+
+## Declaration
+
+```swift
+init()
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use [stack](../navigationviewstyle/stack.md) to construct this style.
 
 # Document: State
 
@@ -8883,9 +8911,11 @@ The following example shows a `TabView` with 4 tabs in compact and 5 tabs in reg
 struct BrowseTabExample: View {
     @Environment(\.horizontalSizeClass) var sizeClass
 
-    @State var selection: MusicTab = .listenNow
-    @State var browseTabPath: [MusicTab] = []
-    @State var playlists = [Playlist("All Playlists"), Playlist("Running")]
+    @State private var selection: MusicTab = .listenNow
+    @State private var browseTabPath: [MusicTab] = []
+    @State private var playlists = [
+        Playlist("All Playlists"), Playlist("Running"),
+    ]
 
     var body: some View {
             TabView(selection: $selection) {
@@ -15804,9 +15834,11 @@ The following example shows a `TabView` with 4 tabs in compact and 5 tabs in reg
 struct BrowseTabExample: View {
     @Environment(\.horizontalSizeClass) var sizeClass
 
-    @State var selection: MusicTab = .listenNow
-    @State var browseTabPath: [MusicTab] = []
-    @State var playlists = [Playlist("All Playlists"), Playlist("Running")]
+    @State private var selection: MusicTab = .listenNow
+    @State private var browseTabPath: [MusicTab] = []
+    @State private var playlists = [
+        Playlist("All Playlists"), Playlist("Running"),
+    ]
 
     var body: some View {
             TabView(selection: $selection) {
@@ -25633,8 +25665,8 @@ This is frequently used to represent selection of text in a `TextField` or `Text
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: String = ""
-    @State var selection: TextSelection? = nil
+    @State private var text: String = ""
+    @State private var selection: TextSelection? = nil
 
     var body: some View {
         VStack {
@@ -25659,8 +25691,8 @@ You can also use the [textSelectionAffinity(\_:)](view/textselectionaffinity%28_
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: String = ""
-    @State var selection: TextSelection? = nil
+    @State private var text: String = ""
+    @State private var selection: TextSelection? = nil
 
     var body: some View {
         VStack {
@@ -25967,8 +25999,8 @@ You can configure the selection affinity on a given hierarchy by using the [text
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: String = ""
-    @State var selection: TextSelection? = nil
+    @State private var text: String = ""
+    @State private var selection: TextSelection? = nil
 
     var body: some View {
         VStack {
@@ -29166,8 +29198,8 @@ extension MyCustomType: Transition {
 
 ### Customizing behaviors
 
-- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
-- [ToolbarItemAxisBehavior](toolbaritemaxisbehavior.md): Beta. Describes the bar axis behavior of a toolbar item.
+- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): The bar axis behavior of the toolbar item.
+- [ToolbarItemAxisBehavior](toolbaritemaxisbehavior.md): Describes the bar axis behavior of a toolbar item.
 
 ### Setting visibility
 
@@ -29220,13 +29252,13 @@ extension MyCustomType: Transition {
 
 Source path: documentation/swiftui/toolbarcontent/axisbehavior(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarcontent/axisbehavior(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # axisBehavior(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The bar axis behavior of the toolbar item.
 
@@ -29264,7 +29296,7 @@ If both horizontal & vertical bars are present and the item is `.verticalPreferr
 
 ### Customizing behaviors
 
-- [ToolbarItemAxisBehavior](../toolbaritemaxisbehavior.md): Beta. Describes the bar axis behavior of a toolbar item.
+- [ToolbarItemAxisBehavior](../toolbaritemaxisbehavior.md): Describes the bar axis behavior of a toolbar item.
 
 # Document: Body
 
@@ -30600,13 +30632,13 @@ nonisolated init(placement: ToolbarItemPlacement = .automatic, @ContentBuilder c
 
 Source path: documentation/swiftui/toolbaritemaxisbehavior
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbaritemaxisbehavior
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ToolbarItemAxisBehavior
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Describes the bar axis behavior of a toolbar item.
 
@@ -30626,9 +30658,9 @@ Use this with the [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md) mo
 
 ### Getting behavior options
 
-- [automatic](toolbaritemaxisbehavior/automatic.md): Beta. The automatic axis behavior.
-- [horizontalOnly](toolbaritemaxisbehavior/horizontalonly.md): Beta. The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
-- [verticalPreferred](toolbaritemaxisbehavior/verticalpreferred.md): Beta. The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
+- [automatic](toolbaritemaxisbehavior/automatic.md): The automatic axis behavior.
+- [horizontalOnly](toolbaritemaxisbehavior/horizontalonly.md): The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
+- [verticalPreferred](toolbaritemaxisbehavior/verticalpreferred.md): The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
 
 ## Relationships
 
@@ -30643,19 +30675,19 @@ Use this with the [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md) mo
 
 ### Customizing behaviors
 
-- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
+- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): The bar axis behavior of the toolbar item.
 
 # Document: automatic
 
 Source path: documentation/swiftui/toolbaritemaxisbehavior/automatic
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbaritemaxisbehavior/automatic
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # automatic
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The automatic axis behavior.
 
@@ -30675,20 +30707,20 @@ The system infers the supported axes based on the content type of the item. Imag
 
 ### Getting behavior options
 
-- [horizontalOnly](horizontalonly.md): Beta. The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
-- [verticalPreferred](verticalpreferred.md): Beta. The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
+- [horizontalOnly](horizontalonly.md): The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
+- [verticalPreferred](verticalpreferred.md): The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
 
 # Document: horizontalOnly
 
 Source path: documentation/swiftui/toolbaritemaxisbehavior/horizontalonly
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbaritemaxisbehavior/horizontalonly
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # horizontalOnly
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
 
@@ -30702,20 +30734,20 @@ static let horizontalOnly: ToolbarItemAxisBehavior
 
 ### Getting behavior options
 
-- [automatic](automatic.md): Beta. The automatic axis behavior.
-- [verticalPreferred](verticalpreferred.md): Beta. The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
+- [automatic](automatic.md): The automatic axis behavior.
+- [verticalPreferred](verticalpreferred.md): The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
 
 # Document: verticalPreferred
 
 Source path: documentation/swiftui/toolbaritemaxisbehavior/verticalpreferred
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbaritemaxisbehavior/verticalpreferred
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # verticalPreferred
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
 
@@ -30729,8 +30761,8 @@ static let verticalPreferred: ToolbarItemAxisBehavior
 
 ### Getting behavior options
 
-- [automatic](automatic.md): Beta. The automatic axis behavior.
-- [horizontalOnly](horizontalonly.md): Beta. The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
+- [automatic](automatic.md): The automatic axis behavior.
+- [horizontalOnly](horizontalonly.md): The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
 
 # Document: ToolbarItemGroup
 
@@ -33452,10 +33484,10 @@ For design guidance, see [Toolbars](https://developer.apple.com/design/human-int
 
 ### Configuring vertical toolbar behavior
 
-- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
-- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
-- [ToolbarVerticalCompressionBehavior](toolbarverticalcompressionbehavior.md): Beta. A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
+- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Sets the behavior for the vertical bar.
+- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): A behavior that determines whether the vertical bar is used.
+- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
+- [ToolbarVerticalCompressionBehavior](toolbarverticalcompressionbehavior.md): A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
 
 ## See Also
 
@@ -33880,13 +33912,13 @@ nonisolated init(@ContentBuilder content: () -> Content)
 
 Source path: documentation/swiftui/toolbarverticalbehavior
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalbehavior
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ToolbarVerticalBehavior
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A behavior that determines whether the vertical bar is used.
 
@@ -33900,8 +33932,8 @@ struct ToolbarVerticalBehavior
 
 ### Getting behavior options
 
-- [automatic](toolbarverticalbehavior/automatic.md): Beta. The system determines whether the vertical bar is rendered.
-- [disabled](toolbarverticalbehavior/disabled.md): Beta. The vertical bar is disabled.
+- [automatic](toolbarverticalbehavior/automatic.md): The system determines whether the vertical bar is rendered.
+- [disabled](toolbarverticalbehavior/disabled.md): The vertical bar is disabled.
 
 ## Relationships
 
@@ -33916,21 +33948,21 @@ struct ToolbarVerticalBehavior
 
 ### Configuring vertical toolbar behavior
 
-- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
-- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
-- [ToolbarVerticalCompressionBehavior](toolbarverticalcompressionbehavior.md): Beta. A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
+- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Sets the behavior for the vertical bar.
+- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
+- [ToolbarVerticalCompressionBehavior](toolbarverticalcompressionbehavior.md): A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
 
 # Document: automatic
 
 Source path: documentation/swiftui/toolbarverticalbehavior/automatic
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalbehavior/automatic
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # automatic
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The system determines whether the vertical bar is rendered.
 
@@ -33944,19 +33976,19 @@ static let automatic: ToolbarVerticalBehavior
 
 ### Getting behavior options
 
-- [disabled](disabled.md): Beta. The vertical bar is disabled.
+- [disabled](disabled.md): The vertical bar is disabled.
 
 # Document: disabled
 
 Source path: documentation/swiftui/toolbarverticalbehavior/disabled
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalbehavior/disabled
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # disabled
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The vertical bar is disabled.
 
@@ -33976,19 +34008,19 @@ Bar content falls back to the standard horizontal top and bottom bars, and the v
 
 ### Getting behavior options
 
-- [automatic](automatic.md): Beta. The system determines whether the vertical bar is rendered.
+- [automatic](automatic.md): The system determines whether the vertical bar is rendered.
 
 # Document: ToolbarVerticalCompressionBehavior
 
 Source path: documentation/swiftui/toolbarverticalcompressionbehavior
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalcompressionbehavior
-Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Structure Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # ToolbarVerticalCompressionBehavior
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
 
@@ -34008,9 +34040,9 @@ Use this with the [toolbarVerticalCompressionBehavior(\_:)](view/toolbarvertical
 
 ### Getting compression behavior options
 
-- [automatic](toolbarverticalcompressionbehavior/automatic.md): Beta. The automatic compression behavior.
-- [prefersTabBar](toolbarverticalcompressionbehavior/preferstabbar.md): Beta. A compression behavior that prefers keeping the tab bar visible.
-- [prefersToolbarItems](toolbarverticalcompressionbehavior/preferstoolbaritems.md): Beta. A compression behavior that prefers keeping toolbar items visible.
+- [automatic](toolbarverticalcompressionbehavior/automatic.md): The automatic compression behavior.
+- [prefersTabBar](toolbarverticalcompressionbehavior/preferstabbar.md): A compression behavior that prefers keeping the tab bar visible.
+- [prefersToolbarItems](toolbarverticalcompressionbehavior/preferstoolbaritems.md): A compression behavior that prefers keeping toolbar items visible.
 
 ## Relationships
 
@@ -34025,21 +34057,21 @@ Use this with the [toolbarVerticalCompressionBehavior(\_:)](view/toolbarvertical
 
 ### Configuring vertical toolbar behavior
 
-- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
-- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
+- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Sets the behavior for the vertical bar.
+- [ToolbarVerticalBehavior](toolbarverticalbehavior.md): A behavior that determines whether the vertical bar is used.
+- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
 
 # Document: automatic
 
 Source path: documentation/swiftui/toolbarverticalcompressionbehavior/automatic
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalcompressionbehavior/automatic
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # automatic
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The automatic compression behavior.
 
@@ -34059,20 +34091,20 @@ On iOS, this behavior prefers the tab bar.
 
 ### Getting compression behavior options
 
-- [prefersTabBar](preferstabbar.md): Beta. A compression behavior that prefers keeping the tab bar visible.
-- [prefersToolbarItems](preferstoolbaritems.md): Beta. A compression behavior that prefers keeping toolbar items visible.
+- [prefersTabBar](preferstabbar.md): A compression behavior that prefers keeping the tab bar visible.
+- [prefersToolbarItems](preferstoolbaritems.md): A compression behavior that prefers keeping toolbar items visible.
 
 # Document: prefersTabBar
 
 Source path: documentation/swiftui/toolbarverticalcompressionbehavior/preferstabbar
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalcompressionbehavior/preferstabbar
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # prefersTabBar
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 A compression behavior that prefers keeping the tab bar visible.
 
@@ -34092,20 +34124,20 @@ Toolbar items will compress before tab bar items when space is constrained.
 
 ### Getting compression behavior options
 
-- [automatic](automatic.md): Beta. The automatic compression behavior.
-- [prefersToolbarItems](preferstoolbaritems.md): Beta. A compression behavior that prefers keeping toolbar items visible.
+- [automatic](automatic.md): The automatic compression behavior.
+- [prefersToolbarItems](preferstoolbaritems.md): A compression behavior that prefers keeping toolbar items visible.
 
 # Document: prefersToolbarItems
 
 Source path: documentation/swiftui/toolbarverticalcompressionbehavior/preferstoolbaritems
 Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbarverticalcompressionbehavior/preferstoolbaritems
-Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Type Property Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 # prefersToolbarItems
 
 **Framework:** SwiftUI  
 **Kind:** Type Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 A compression behavior that prefers keeping toolbar items visible.
 
@@ -34125,8 +34157,8 @@ The tab bar will compress before toolbar items when space is constrained.
 
 ### Getting compression behavior options
 
-- [automatic](automatic.md): Beta. The automatic compression behavior.
-- [prefersTabBar](preferstabbar.md): Beta. A compression behavior that prefers keeping the tab bar visible.
+- [automatic](automatic.md): The automatic compression behavior.
+- [prefersTabBar](preferstabbar.md): A compression behavior that prefers keeping the tab bar visible.
 
 # Document: TouchBar
 
@@ -47932,8 +47964,8 @@ For information about toolbars, see [Toolbars](toolbars.md).
 - [toolbarMinimizationSafeAreaAdjustment(\_:for:)](view/toolbarminimizationsafeareaadjustment%28__for_%29.md): Sets the safe area adjustment for the specified bars during minimization.
 - [toolbarTitleMenu(content:)](view/toolbartitlemenu%28content_%29.md): Configure the title menu of a toolbar.
 - [toolbarTitleDisplayMode(\_:)](view/toolbartitledisplaymode%28__%29.md): Configures the toolbar title display mode for this view.
-- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
-- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
+- [toolbarVerticalBehavior(\_:)](view/toolbarverticalbehavior%28__%29.md): Sets the behavior for the vertical bar.
+- [toolbarVerticalCompressionBehavior(\_:)](view/toolbarverticalcompressionbehavior%28__%29.md): Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
 - [ornament(visibility:attachmentAnchor:contentAlignment:ornament:)](view/ornament%28visibility_attachmentanchor_contentalignment_ornament_%29.md): Presents an ornament.
 
 ### Context menus
@@ -48862,7 +48894,7 @@ For more information, see [Drag and drop](drag-and-drop.md).
 
 ### Hinge
 
-- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Beta. Adds an action to perform when the hinge context of the view hierarchy changes.
+- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Adds an action to perform when the hinge context of the view hierarchy changes.
 
 ### Digital Crown
 
@@ -49054,12 +49086,12 @@ To get started arranging views, see [Layout fundamentals](layout-fundamentals.md
 
 ### Arrangement views
 
-- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 ### Layer order
 
@@ -55582,13 +55614,13 @@ When `isPresented` is true, the system will run `configuration` to determine how
 
 Source path: documentation/swiftui/view/arrangementviewstyle(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/arrangementviewstyle(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # arrangementViewStyle(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Sets the style for arrangement views within this view.
 
@@ -55618,13 +55650,13 @@ ArrangementView {
 
 ### Dynamically arranging a primary and secondary view
 
-- [ArrangementView](../arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
-- [ArrangementViewStyle](../arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [ArrangementView](../arrangementview.md): A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [ArrangementViewStyle](../arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 # Document: aspectRatio(_:contentMode:)
 
@@ -63861,8 +63893,8 @@ The `circle` view has an attached [DragGesture](../draggesture.md) that targets 
 - [GeometryReader](../geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](../geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](../geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](../reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](../reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](../geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [CoordinateSpace](../coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
 - [CoordinateSpaceProtocol](../coordinatespaceprotocol.md): A frame of reference within the layout system.
@@ -76016,7 +76048,7 @@ Apply this modifier to declare an inspector with a context-dependent presentatio
 
 ```swift
 struct ShapeEditor: View {
-    @State var presented: Bool = false
+    @State private var presented: Bool = false
     var body: some View {
         MyEditorView()
             .inspector(isPresented: $presented) {
@@ -84504,13 +84536,13 @@ Returns a new view that arranges to call `action(value)` whenever the value comp
 
 Source path: documentation/swiftui/view/onhingechange(isenabled:_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/onhingechange(isenabled:_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # onHingeChange(isEnabled:\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Adds an action to perform when the hinge context of the view hierarchy changes.
 
@@ -84553,8 +84585,8 @@ In the example above, the current angle and status of the hinge will be displaye
 
 ### Responding to hinge angle changes
 
-- [DeviceHingeContext](../devicehingecontext.md): Beta. A type describing the context of hinges on the device.
-- [DeviceHinge](../devicehinge.md): Beta. A type encapsulating the state of a single hinge.
+- [DeviceHingeContext](../devicehingecontext.md): A type describing the context of hinges on the device.
+- [DeviceHinge](../devicehinge.md): A type encapsulating the state of a single hinge.
 
 # Document: onHover(perform:)
 
@@ -86286,7 +86318,7 @@ Use this modifier to be informed when the view has crossed the provided threshol
 
 ```swift
 struct VideoPlayer: View {
-    @State var playing: Bool
+    @State private var playing = false
 
     var body: some View {
         Group {
@@ -86657,7 +86689,7 @@ Use the provided [Viewpoint3D](../viewpoint3d.md) to update the content of the v
 
 ```swift
 struct RobotContentView: View {
-    @State var robotRotation: Rotation3D = .identity
+    @State private var robotRotation: Rotation3D = .identity
 
     var body: some View {
         Model3D(named: "robot")
@@ -86681,8 +86713,9 @@ To determine if the volume is being viewed from an unsupported viewpoint, provid
 
 ```swift
 struct ContentView: View {
-    @State var showingMoveToFrontSign = false
-    @State var moveToFrontSignViewpoint: Viewpoint3D = .standard
+    @State private var showingMoveToFrontSign = false
+    @State private var moveToFrontSignViewpoint: Viewpoint3D =
+        .standard
 
     let supportedViewpoints = [SquareAzimuth.front]
 
@@ -87308,13 +87341,13 @@ If you want to specify a [ShapeStyle](../shapestyle.md) like a [Color](../color.
 
 Source path: documentation/swiftui/view/overlayarrangementedge(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/overlayarrangementedge(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # overlayArrangementEdge(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
 
@@ -87350,13 +87383,13 @@ var body: some View {
 
 ### Dynamically arranging a primary and secondary view
 
-- [ArrangementView](../arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
-- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [ArrangementViewStyle](../arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [ArrangementView](../arrangementview.md): A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](../arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 # Document: overlayPreferenceValue(_:_:)
 
@@ -95946,8 +95979,8 @@ The following example creates a search interface that selects all of the text on
 
 ```swift
 struct ContentView: View {
-    @State var text = "Hello, world!"
-    @State var selection: TextSelection?
+    @State private var text = "Hello, world!"
+    @State private var selection: TextSelection?
     @FocusState var focused
 
     var body: some View {
@@ -97464,13 +97497,13 @@ Use this modifier when you want VoiceOver to speak text as individual letters, c
 
 Source path: documentation/swiftui/view/splitarrangementfixedlayoutsize(horizontal:vertical:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/splitarrangementfixedlayoutsize(horizontal:vertical:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # splitArrangementFixedLayoutSize(horizontal:vertical:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
 
@@ -97504,25 +97537,25 @@ ArrangementView {
 
 ### Dynamically arranging a primary and secondary view
 
-- [ArrangementView](../arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
-- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [ArrangementViewStyle](../arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [ArrangementView](../arrangementview.md): A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](../arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 # Document: splitArrangementLayoutRatio(_:)
 
 Source path: documentation/swiftui/view/splitarrangementlayoutratio(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/splitarrangementlayoutratio(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # splitArrangementLayoutRatio(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
 
@@ -97557,25 +97590,25 @@ ArrangementView {
 
 ### Dynamically arranging a primary and secondary view
 
-- [ArrangementView](../arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
-- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [ArrangementViewStyle](../arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [ArrangementView](../arrangementview.md): A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](../arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 # Document: splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)
 
 Source path: documentation/swiftui/view/splitarrangementlayoutratio(minhorizontal:idealhorizontal:maxhorizontal:minvertical:idealvertical:maxvertical:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/splitarrangementlayoutratio(minhorizontal:idealhorizontal:maxhorizontal:minvertical:idealvertical:maxvertical:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
 
@@ -97617,25 +97650,25 @@ ArrangementView {
 
 ### Dynamically arranging a primary and secondary view
 
-- [ArrangementView](../arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
-- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [ArrangementViewStyle](../arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [ArrangementView](../arrangementview.md): A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](../arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.
 
 # Document: splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)
 
 Source path: documentation/swiftui/view/splitarrangementlayoutsize(minwidth:idealwidth:maxwidth:minheight:idealheight:maxheight:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/splitarrangementlayoutsize(minwidth:idealwidth:maxwidth:minheight:idealheight:maxheight:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Sets the size constraints for an arrangement view in a split style.
 
@@ -97678,13 +97711,13 @@ ArrangementView {
 
 ### Dynamically arranging a primary and secondary view
 
-- [ArrangementView](../arrangementview.md): Beta. A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
-- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [ArrangementViewStyle](../arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [ArrangementView](../arrangementview.md): A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
+- [arrangementViewStyle(\_:)](arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](../arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
 
 # Document: springLoadingBehavior(_:)
 
@@ -101937,8 +101970,8 @@ The following example shows how you would specify a specific selection affinity 
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: String = ""
-    @State var selection: TextSelection? = nil
+    @State private var text: String = ""
+    @State private var selection: TextSelection? = nil
 
     var body: some View {
         VStack {
@@ -103639,13 +103672,13 @@ In iOS and iPadOS, this will construct a menu that can be presented by tapping t
 
 Source path: documentation/swiftui/view/toolbarverticalbehavior(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/toolbarverticalbehavior(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # toolbarVerticalBehavior(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Sets the behavior for the vertical bar.
 
@@ -103689,21 +103722,21 @@ TabView {
 
 ### Configuring vertical toolbar behavior
 
-- [ToolbarVerticalBehavior](../toolbarverticalbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [toolbarVerticalCompressionBehavior(\_:)](toolbarverticalcompressionbehavior%28__%29.md): Beta. Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
-- [ToolbarVerticalCompressionBehavior](../toolbarverticalcompressionbehavior.md): Beta. A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
+- [ToolbarVerticalBehavior](../toolbarverticalbehavior.md): A behavior that determines whether the vertical bar is used.
+- [toolbarVerticalCompressionBehavior(\_:)](toolbarverticalcompressionbehavior%28__%29.md): Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
+- [ToolbarVerticalCompressionBehavior](../toolbarverticalcompressionbehavior.md): A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
 
 # Document: toolbarVerticalCompressionBehavior(_:)
 
 Source path: documentation/swiftui/view/toolbarverticalcompressionbehavior(_:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/toolbarverticalcompressionbehavior(_:)
-Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta
+Description: Framework: SwiftUI Kind: Instance Method Availability: iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 # toolbarVerticalCompressionBehavior(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
 
@@ -103745,9 +103778,9 @@ struct ContentView: View {
 
 ### Configuring vertical toolbar behavior
 
-- [toolbarVerticalBehavior(\_:)](toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
-- [ToolbarVerticalBehavior](../toolbarverticalbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [ToolbarVerticalCompressionBehavior](../toolbarverticalcompressionbehavior.md): Beta. A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
+- [toolbarVerticalBehavior(\_:)](toolbarverticalbehavior%28__%29.md): Sets the behavior for the vertical bar.
+- [ToolbarVerticalBehavior](../toolbarverticalbehavior.md): A behavior that determines whether the vertical bar is used.
+- [ToolbarVerticalCompressionBehavior](../toolbarverticalcompressionbehavior.md): A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
 
 # Document: toolbarVisibility(_:for:)
 
@@ -104415,7 +104448,7 @@ The following code implements these animations:
 
 ```swift
 struct TransactionExample: View {
-    @State var flag = false
+    @State private var flag = false
 
     var body: some View {
         VStack(spacing: 50) {
@@ -106880,13 +106913,13 @@ struct RootView: View {
 
 Source path: documentation/swiftui/view/workoutpreview(_:ispresented:)
 Canonical documentation: https://developer.apple.com/documentation/swiftui/view/workoutpreview(_:ispresented:)
-Description: Framework: WorkoutKit Kind: Instance Method Availability: iOS 17.0+ · iPadOS 17.0+ · macOS 15.0+ · watchOS 11.0+
+Description: Framework: WorkoutKit Kind: Instance Method Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · watchOS 11.0+
 
 # workoutPreview(\_:isPresented:)
 
 **Framework:** WorkoutKit  
 **Kind:** Instance Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · macOS 15.0+ · watchOS 11.0+
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · watchOS 11.0+
 
 Presents a preview of the workout contents as a modal sheet
 

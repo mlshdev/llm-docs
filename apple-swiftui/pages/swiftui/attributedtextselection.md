@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/attributedtextselection
 
 # AttributedTextSelection
@@ -25,8 +25,8 @@ This is frequently used to represent selection of text in a `TextEditor`. The fo
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: AttributedString = ""
-    @State var selection = AttributedTextSelection()
+    @State private var text: AttributedString = ""
+    @State private var selection = AttributedTextSelection()
 
     var body: some View {
         VStack {
@@ -51,8 +51,8 @@ You can also use the [textSelectionAffinity(\_:)](view/textselectionaffinity%28_
 
 ```swift
 struct SuggestionTextEditor: View {
-    @State var text: AttributedString = ""
-    @State var selection = AttributedTextSelection()
+    @State private var text: AttributedString = ""
+    @State private var selection = AttributedTextSelection()
 
     var body: some View {
         VStack {

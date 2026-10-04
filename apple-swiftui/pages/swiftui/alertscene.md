@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/alertscene
 
 # AlertScene
@@ -24,8 +24,8 @@ Alert scenes present themselves in the center of the current display, and don’
 ```swift
 @main
 struct MyApp: App {
-    @State var showLoginAlert = true
-    @State var loggedIn = false
+    @State private var showLoginAlert = true
+    @State private var loggedIn = false
 
     var body: some Scene {
         Window("Welcome User Window", id:"WelcomeWindow") {

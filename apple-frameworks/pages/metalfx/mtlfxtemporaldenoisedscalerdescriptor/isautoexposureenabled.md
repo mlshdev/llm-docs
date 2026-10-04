@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxtemporaldenoisedscalerdescriptor/isautoexposureenabled
 
 # isAutoExposureEnabled (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 26.0+ · tvOS 18.0+
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 26.0+ · tvOS 27.1+
 
 A Boolean value that indicates whether MetalFX calculates the exposure for each frame.
 
@@ -31,7 +31,7 @@ This property’s default value is [false](https://developer.apple.com/documenta
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 26.0+ · tvOS 18.0+
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 26.0+ · tvOS 27.1+
 
 A Boolean value that indicates whether MetalFX calculates the exposure for each frame.
 

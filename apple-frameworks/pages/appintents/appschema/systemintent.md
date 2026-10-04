@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/appschema/systemintent
 
 # AppSchema.SystemIntent
@@ -38,4 +38,4 @@ protocol SystemIntent : AppSchema.Kind
 ### Actions
 
 - [open](systemintent/open.md): An intent schema that opens an item in the application.
-- [search](systemintent/search.md): Deprecated. An intent schema that navigates to search results.
+- [searchInApp](systemintent/searchinapp.md): An intent schema that navigates to search results.

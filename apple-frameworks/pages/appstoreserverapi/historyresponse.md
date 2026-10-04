@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/historyresponse
 
 # HistoryResponse
@@ -47,7 +47,7 @@ If a customer upgrades a subscription or the App Store revokes an in-app purchas
 - [appAppleId](appappleid.md): The unique identifier of an app in the App Store.
 - [bundleId](bundleid.md): The bundle identifier of an app.
 - [environment](environment.md): The server environment, either sandbox or production.
-- [hasMore](hasmore.md): A Boolean value indicating whether the App Store has more transaction data.
+- [hasMore](hasmore.md): A Boolean value indicating whether the App Store has more data to return.
 - [revision](revision.md): A token you use in a query to request the next set of transactions for the customer.
 - [JWSTransaction](jwstransaction.md): Transaction information signed by the App Store, in JSON Web Signature (JWS) Compact Serialization format.
 

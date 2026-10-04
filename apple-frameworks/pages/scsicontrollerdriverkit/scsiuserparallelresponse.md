@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/scsiuserparallelresponse
 
 # SCSIUserParallelResponse
@@ -19,7 +19,7 @@ typedef struct SCSIUserParallelResponse { ... } SCSIUserParallelResponse;
 
 ## Topics
 
-### Response Properties
+### Response properties
 
 - [version](scsiuserparallelresponse/version.md): The version of the parallel response structure currently in use.
 - [SCSIUserParallelResponseVersion](scsiuserparallelresponseversion.md): Constants that represent versions of the user parallel task structure.
@@ -38,7 +38,7 @@ typedef struct SCSIUserParallelResponse { ... } SCSIUserParallelResponse;
 
 ## See Also
 
-### Managing Tasks
+### Managing tasks
 
 - [UserProcessParallelTask](iouserscsiparallelinterfacecontroller/userprocessparalleltask.md): Processes a parallel task in response to a call from the framework.
 - [SCSIUserParallelTask](scsiuserparalleltask.md): The properties of a parallel task to perform.

@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avkit/avcapturedevicedescriptor/position
 
 # position (Swift)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+
 
 The physical position of the camera on the device.
 
@@ -25,14 +25,14 @@ This value matches the [position](../../avfoundation/avcapturedevice/position-sw
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [mediaTypes](mediatypes.md): Beta. The kinds of media the camera captures.
+- [deviceType](devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [mediaTypes](mediatypes.md): The kinds of media the camera captures.
 
 # position (Objective-C)
 
 **Framework:** AVKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** Mac Catalyst 27.1+
 
 The physical position of the camera on the device.
 
@@ -52,5 +52,5 @@ This value matches the [position](../../avfoundation/avcapturedevice/position-sw
 
 ### Inspecting the device’s characteristics
 
-- [deviceType](devicetype.md): Beta. The kind of camera, such as a wide-angle or telephoto camera.
-- [mediaTypes](mediatypes.md): Beta. The kinds of media the camera captures.
+- [deviceType](devicetype.md): The kind of camera, such as a wide-angle or telephoto camera.
+- [mediaTypes](mediatypes.md): The kinds of media the camera captures.

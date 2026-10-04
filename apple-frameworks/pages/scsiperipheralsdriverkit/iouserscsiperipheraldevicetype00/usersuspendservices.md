@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/iouserscsiperipheraldevicetype00/usersuspendservices
 
 # UserSuspendServices
@@ -32,6 +32,10 @@ This method allows the dext to try to obtain a clear window to communicate with 
 This call expects you to unmount existing volumes upstream of this drive before invoking this API. You can use the [Disk Arbitration](https://developer.apple.com/documentation/diskarbitration) APIs to programmatically unmount any such volumes.
 
 To prevent power state transitions during this window, you can optionally acquire a power assertion before invoking this API.
+
+> **Note**
+
+> Make sure your dext obtains exclusive access to the drive using this API before sending any vendor-specific commands using [UserSendCDB](usersendcdb.md).
 
 ## See Also
 

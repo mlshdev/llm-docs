@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uibarpositioningdelegate
 
 # UIBarPositioningDelegate (Swift)
@@ -54,6 +54,7 @@ Navigation bars, toolbars, and search bars all have delegates that support the [
 - [UITabBarItem](uitabbaritem.md): An object that describes an item in a tab bar.
 - [UIBarPositioning](uibarpositioning.md): A set of methods for defining the positioning of bars in iOS apps.
 - [UIBarMinimization](uibarminimization-swift.struct.md)
+- [UIVerticalBarEdge](uiverticalbaredge.md): The edge where the system places the vertical bar.
 
 # UIBarPositioningDelegate (Objective-C)
 
@@ -107,3 +108,4 @@ Navigation bars, toolbars, and search bars all have delegates that support the [
 - [UITabBar](uitabbar.md): A control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app.
 - [UITabBarItem](uitabbaritem.md): An object that describes an item in a tab bar.
 - [UIBarPositioning](uibarpositioning.md): A set of methods for defining the positioning of bars in iOS apps.
+- [UIVerticalBarEdge](uiverticalbaredge.md): The edge where the system places the vertical bar.

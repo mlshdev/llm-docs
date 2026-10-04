@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxframeinterpolatorbase/shouldresethistory
 
 # shouldResetHistory (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 27.1+
 
 A Boolean property indicating whether to reset history.
 
@@ -27,7 +27,7 @@ When you set this property to [false](https://developer.apple.com/documentation/
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 27.1+
 
 A Boolean property indicating whether to reset history.
 

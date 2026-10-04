@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uinavigationbar/nstoolbarsection
 
 # UINavigationBar.NSToolbarSection (Swift)
@@ -14,6 +14,12 @@ Constants that determine how the system hosts the navigation bar in an AppKit to
 ```swift
 enum NSToolbarSection
 ```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Not every navigation item property is supported in every toolbar section. For more information, see [Display content in a toolbar on Mac](../uinavigationitem/title.md#Display-content-in-a-toolbar-on-Mac).
 
 ## Topics
 
@@ -60,6 +66,12 @@ Constants that determine how the system hosts the navigation bar in an AppKit to
 ```objectivec
 enum UINavigationBarNSToolbarSection : NSInteger;
 ```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Not every navigation item property is supported in every toolbar section. For more information, see [Display content in a toolbar on Mac](../uinavigationitem/title.md#Display-content-in-a-toolbar-on-Mac).
 
 ## Topics
 

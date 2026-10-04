@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/queryoptions
 
 # ReservedRegion.QueryOptions
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Options for querying reserved regions.
 
@@ -19,7 +19,7 @@ Options for querying reserved regions.
 
 ### Getting query options
 
-- [includeInactive](queryoptions/includeinactive.md): Beta. Include inactive reserved regions.
+- [includeInactive](queryoptions/includeinactive.md): Include inactive reserved regions.
 
 ## Relationships
 
@@ -40,6 +40,6 @@ Options for querying reserved regions.
 
 ### Inspecting reserved regions
 
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](../reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
-- [ReservedRegion.Kind](kind-swift.struct.md): Beta. A kind of reserved region.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](../reservedregion.md): A region within a view’s coordinate space that another entity reserves.
+- [ReservedRegion.Kind](kind-swift.struct.md): A kind of reserved region.

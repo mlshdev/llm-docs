@@ -1,11 +1,11 @@
 # Apple macOS snapshot-0513df389cc7
 
-> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/macos/](https://developer.apple.com/macos/) and pinned to catalog snapshot `0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d` captured at 2026-09-27T18:07:09.722Z.
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/macos/](https://developer.apple.com/macos/) and pinned to catalog snapshot `0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d` captured at 2026-10-04T18:39:02.631Z.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Apple macOS snapshot-0513df389cc7.
 - [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
 - Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
-- 39 frameworks in this catalog, captured at 2026-09-27T18:07:09.722Z.
+- 39 frameworks in this catalog, captured at 2026-10-04T18:39:02.631Z.
 - Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
 - Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.
 - Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
@@ -66,18 +66,18 @@ These frameworks are available on macOS but are published by another project in 
 - [AdServices](../apple-frameworks/pages/adservices.md): 15 pages.
 - [AdSupport](../apple-frameworks/pages/adsupport.md): 5 pages.
 - [Address Book](../apple-frameworks/pages/addressbook.md): 676 pages.
-- [App Intents](../apple-frameworks/pages/appintents.md): 4447 pages.
+- [App Intents](../apple-frameworks/pages/appintents.md): 4449 pages.
 - [App Intents Testing](../apple-xcode/pages/appintentstesting.md): 119 pages.
 - [App Tracking Transparency](../apple-frameworks/pages/apptrackingtransparency.md): 13 pages.
 - [Apple Archive](../apple-frameworks/pages/applearchive.md): 653 pages.
 - [Apple CryptoKit](../apple-frameworks/pages/cryptokit.md): 705 pages.
 - [Audio Toolbox](../apple-frameworks/pages/audiotoolbox.md): 3731 pages.
 - [Audio Unit](../apple-frameworks/pages/audiounit.md): 2 pages.
-- [Authentication Services](../apple-frameworks/pages/authenticationservices.md): 1453 pages.
+- [Authentication Services](../apple-frameworks/pages/authenticationservices.md): 1454 pages.
 - [Automatic Assessment Configuration](../apple-frameworks/pages/automaticassessmentconfiguration.md): 156 pages.
 - [Automator](../apple-xcode/pages/automator.md): 165 pages.
-- [Background Assets](../apple-frameworks/pages/backgroundassets.md): 245 pages.
-- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 912 pages.
+- [Background Assets](../apple-frameworks/pages/backgroundassets.md): 253 pages.
+- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 918 pages.
 - [CFNetwork](../apple-frameworks/pages/cfnetwork.md): 419 pages.
 - [CallKit](../apple-frameworks/pages/callkit.md): 284 pages.
 - [Cinematic](../apple-frameworks/pages/cinematic.md): 400 pages.
@@ -124,7 +124,7 @@ These frameworks are available on macOS but are published by another project in 
 - [Dispatch](../apple-frameworks/pages/dispatch.md): 612 pages.
 - [Distributed](../apple-swift/pages/distributed.md): 93 pages.
 - [DriverKit](../apple-frameworks/pages/driverkit.md): 2962 pages.
-- [Evaluations](../apple-frameworks/pages/evaluations.md): 344 pages.
+- [Evaluations](../apple-frameworks/pages/evaluations.md): 345 pages.
 - [EventKit](../apple-frameworks/pages/eventkit.md): 425 pages.
 - [ExtensionFoundation](../apple-frameworks/pages/extensionfoundation.md): 97 pages.
 - [ExtensionKit](../apple-frameworks/pages/extensionkit.md): 39 pages.

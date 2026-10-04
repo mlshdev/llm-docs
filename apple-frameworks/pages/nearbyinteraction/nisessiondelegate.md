@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nisessiondelegate
 
 # NISessionDelegate (Swift)
@@ -63,12 +63,6 @@ Assign a delegate that Nearby Interaction can use to notify your app of importan
 
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
 
-## See Also
-
-### Periodic updates
-
-- [NINearbyObject](ninearbyobject.md): Location information for a peer device in an interaction session.
-
 # NISessionDelegate (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -128,9 +122,3 @@ Assign a delegate that Nearby Interaction can use to notify your app of importan
 ### Inherits From
 
 - [NSObject](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Periodic updates
-
-- [NINearbyObject](ninearbyobject.md): Location information for a peer device in an interaction session.

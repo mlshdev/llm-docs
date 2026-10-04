@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/edgeinsets(for:)
 
 # edgeInsets(for:)
@@ -18,7 +18,7 @@
 ### Accessing insets and layout guides
 
 - [UIView.LayoutRegion](layoutregion.md)
-- [bar(onEdge:extent:)](layoutregion/bar%28onedge_extent_%29-2tj1g.md): Beta.
-- [bar(onEdge:extent:)](layoutregion/bar%28onedge_extent_%29-8rmhq.md): Beta.
+- [bar(onEdge:extent:)](layoutregion/bar%28onedge_extent_%29-2tj1g.md)
+- [bar(onEdge:extent:)](layoutregion/bar%28onedge_extent_%29-8rmhq.md)
 - [directionalEdgeInsets(for:)](directionaledgeinsets%28for_%29.md)
 - [layoutGuide(for:)](layoutguide%28for_%29.md)

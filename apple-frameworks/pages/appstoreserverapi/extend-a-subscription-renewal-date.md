@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/extend-a-subscription-renewal-date
 
 # Extend a Subscription Renewal Date
@@ -40,7 +40,7 @@ The request body containing subscription-renewal-extension data.
 - `200` OK — `ExtendRenewalDateResponse`: Request succeeded.
 - `400` Bad Request — `(InvalidOriginalTransactionIdError | InvalidExtendByDaysError | InvalidExtendReasonCodeError | InvalidRequestIdentifierError)`: The request is invalid and can’t be accepted.
 - `401` Unauthorized: The JSON Web Token (JWT) in the authorization header is invalid. For more information, see [Generating JSON Web Tokens for API requests](generating-json-web-tokens-for-api-requests.md).
-- `403` Forbidden — `(SubscriptionExtensionIneligibleError | SubscriptionMaxExtensionError | FamilySharedSubscriptionExtensionIneligibleError)`: The request is invalid and can’t be accepted.
+- `403` Forbidden — `(SubscriptionExtensionIneligibleError | SubscriptionMaxExtensionError | FamilySharedSubscriptionExtensionIneligibleError | AssignedSubscriptionExtensionIneligibleError)`: The request is invalid and can’t be accepted.
 - `404` Not Found — `OriginalTransactionIdNotFoundError`: The request is invalid and can’t be accepted.
 - `429` — `RateLimitExceededError`: The request exceeded the rate limit.
 - `500` Internal Server Error — `(GeneralInternalError | GeneralInternalRetryableError)`: The request failed. This may be due to a temporary outage. Check the specific error message for further information.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uitextgrammarcheckingtype
 
 # UITextGrammarCheckingType (Swift)
@@ -15,7 +15,7 @@ enum UITextGrammarCheckingType
 
 ## Topics
 
-### Enumeration Cases
+### Getting the grammar-checking behaviors
 
 - [UITextGrammarCheckingType.default](uitextgrammarcheckingtype/default.md)
 - [UITextGrammarCheckingType.no](uitextgrammarcheckingtype/no.md)
@@ -36,6 +36,12 @@ enum UITextGrammarCheckingType
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
+## See Also
+
+### Spell checking
+
+- [UITextChecker](uitextchecker.md): An object to check a string (usually the text of a document) for misspelled words.
+
 # UITextGrammarCheckingType (Objective-C)
 
 **Framework:** UIKit  
@@ -50,8 +56,14 @@ enum UITextGrammarCheckingType : NSInteger;
 
 ## Topics
 
-### Enumeration Cases
+### Getting the grammar-checking behaviors
 
 - [UITextGrammarCheckingTypeDefault](uitextgrammarcheckingtype/default.md)
 - [UITextGrammarCheckingTypeNo](uitextgrammarcheckingtype/no.md)
 - [UITextGrammarCheckingTypeYes](uitextgrammarcheckingtype/yes.md)
+
+## See Also
+
+### Spell checking
+
+- [UITextChecker](uitextchecker.md): An object to check a string (usually the text of a document) for misspelled words.

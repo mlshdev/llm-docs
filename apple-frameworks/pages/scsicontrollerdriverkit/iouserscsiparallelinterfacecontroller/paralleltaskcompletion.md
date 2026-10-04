@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/paralleltaskcompletion
 
 # ParallelTaskCompletion
@@ -30,7 +30,7 @@ Your driver extension class invokes this method to complete an asynchronous requ
 
 ## See Also
 
-### Managing Tasks
+### Managing tasks
 
 - [UserProcessParallelTask](userprocessparalleltask.md): Processes a parallel task in response to a call from the framework.
 - [SCSIUserParallelTask](../scsiuserparalleltask.md): The properties of a parallel task to perform.

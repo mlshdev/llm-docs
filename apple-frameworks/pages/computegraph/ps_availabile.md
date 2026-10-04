@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/ps_availabile
 
 # PS_AVAILABILE
@@ -14,18 +14,3 @@
 ```objectivec
 #define PS_AVAILABILE(X)
 ```
-
-## See Also
-
-### C macros
-
-- [PS_API](ps_api.md)
-- [PS_DEPRECATED](ps_deprecated.md)
-- [PS_ALWAYS_INLINE](ps_always_inline.md)
-- [PS_CONSTANT](ps_constant.md)
-- [PS_DEVICE](ps_device.md)
-- [PS_THREAD](ps_thread.md)
-- [PS_THREADGROUP](ps_threadgroup.md)
-- [PS_ENUM](ps_enum.md)
-- [PS_INTERNAL](ps_internal.md)
-- [ps_binding_type](ps_binding_type.md)

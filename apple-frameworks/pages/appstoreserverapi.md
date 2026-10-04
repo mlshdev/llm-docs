@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi
 
 # App Store Server API
@@ -33,6 +33,7 @@ This API provides the following functionality:
 - **Subscription renewal date extensions.** Call [Extend a Subscription Renewal Date](appstoreserverapi/extend-a-subscription-renewal-date.md) and related endpoints to compensate your customers for temporary service outages, canceled events, or interruptions to live-streamed events by extending the renewal date of their paid, active subscription. For more information, see [Extending the renewal date for auto-renewable subscriptions](appstoreserverapi/extending-the-renewal-date-for-auto-renewable-subscriptions.md).
 - **Order information lookup.** Call [Look Up Order ID](appstoreserverapi/look-up-order-id.md) to get In-App Purchase information based on a customer’s order ID, found on the App Store receipt that customers receive in email.
 - **App transaction information and setting an app account token.** Call [Get App Transaction Info](appstoreserverapi/get-app-transaction-info.md) to get details about the customer’s purchase of your app, such as the original purchase date and version. Use [Set App Account Token](appstoreserverapi/set-app-account-token.md) to set an app account token when your customer makes an In-App Purchase outside your app, or to update its value.
+- **Multiseat purchases.** Call [Get Customer Groups](appstoreserverapi/get-customer-groups.md) to find out whether a customer has access to your app through an organization or group, and what role they hold. Call [Get Group Members](appstoreserverapi/get-group-members.md) to list that group’s members. These endpoints are only available in the sandbox environment.
 
 Your server must support the Transport Layer Security (TLS) protocol 1.2 or later to use the App Store Server API.
 
@@ -107,6 +108,13 @@ If you don’t have environment information, follow these steps:
 
 - [Get All Subscription Statuses](appstoreserverapi/get-all-subscription-statuses.md): Get the statuses for all of a customer’s auto-renewable subscriptions in your app.
 - [StatusResponse](appstoreserverapi/statusresponse.md): A response that contains status information for all of a customer’s auto-renewable subscriptions in your app.
+
+### Multiseat purchases
+
+- [Get Customer Groups](appstoreserverapi/get-customer-groups.md): Get the groups that a customer belongs to, and their role in each group.
+- [GetCustomerGroupsResponse](appstoreserverapi/getcustomergroupsresponse.md): A response that contains the groups a customer belongs to, and their role in each group.
+- [Get Group Members](appstoreserverapi/get-group-members.md): Get a paginated list of the customers that belong to a group.
+- [GetGroupMembersResponse](appstoreserverapi/getgroupmembersresponse.md): A response that contains a page of the customers that belong to a group.
 
 ### App Account Token
 

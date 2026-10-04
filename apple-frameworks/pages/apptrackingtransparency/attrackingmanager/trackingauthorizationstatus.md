@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/trackingauthorizationstatus
 
 # trackingAuthorizationStatus (Swift)
@@ -24,7 +24,7 @@ Check this property to determine whether your app has permission to access app-r
 If the status is [ATTrackingManager.AuthorizationStatus.notDetermined](authorizationstatus/notdetermined.md), call one of the tracking-request methods to present the tracking-authorization prompt and ask the person for permission:
 
 - [requestTrackingAuthorization(completionHandler:)](requesttrackingauthorization%28completionhandler_%29.md)
-- [requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:)](requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md)
+- [requestTrackingAuthorization(preferExpandedInterface:additionalInformationAction:completionHandler:)](requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md)
 
 This property returns [ATTrackingManager.AuthorizationStatus.restricted](authorizationstatus/restricted.md) when the system restricts tracking for the device, regardless of whether your app has presented the prompt.
 
@@ -57,7 +57,7 @@ Check this property to determine whether your app has permission to access app-r
 If the status is [ATTrackingManagerAuthorizationStatusNotDetermined](authorizationstatus/notdetermined.md), call one of the tracking-request methods to present the tracking-authorization prompt and ask the person for permission:
 
 - [requestTrackingAuthorizationWithCompletionHandler:](requesttrackingauthorization%28completionhandler_%29.md)
-- [requestTrackingAuthorizationUsingExpandedInterface:additionalInformationAction:completionHandler:](requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md)
+- [requestTrackingAuthorizationPreferExpandedInterface:additionalInformationAction:completionHandler:](requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md)
 
 This property returns [ATTrackingManagerAuthorizationStatusRestricted](authorizationstatus/restricted.md) when the system restricts tracking for the device, regardless of whether your app has presented the prompt.
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/iouserscsiperipheraldevicetype07/userreportmediumblocksize
 
 # UserReportMediumBlockSize
@@ -9,18 +9,26 @@
 **Kind:** Instance Method  
 **Availability:** DriverKit 22.0+
 
+Provides a report on the external device’s block size.
+
 ## Declaration
 
 ```objectivec
 virtual kern_return_t UserReportMediumBlockSize(UInt64 *blockSize);
 ```
 
-## See Also
+## Parameters
 
-### Instance Methods
+- `blockSize`: On return, the external device’s block size.
 
-- [UserDetermineDeviceCharacteristics](userdeterminedevicecharacteristics.md)
-- [UserResetDevice](userresetdevice.md)
-- [UserResumeServices](userresumeservices.md)
-- [UserSendCDB](usersendcdb.md)
-- [UserSuspendServices](usersuspendservices.md)
+<a id="return-value"></a>
+
+## Return Value
+
+A value that indicates the result of the report request. [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) indicates success. For error definitions, see [IOKit Constants](../../iokit/iokit_constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This call populates `blockSize` with the granularity of the block size, such as 512 bytes or 4096 bytes (4 KB).

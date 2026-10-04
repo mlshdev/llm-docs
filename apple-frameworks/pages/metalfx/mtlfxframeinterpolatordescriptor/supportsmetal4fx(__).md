@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxframeinterpolatordescriptor/supportsmetal4fx(_:)
 
 # supportsMetal4FX(\_:) (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Type Method  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 27.1+
 
 Queries whether a Metal device supports frame interpolation compatible with a Metal 4 command buffer.
 
@@ -29,7 +29,7 @@ class func supportsMetal4FX(_ device: any MTLDevice) -> Bool
 
 **Framework:** MetalFX  
 **Kind:** Type Method  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 27.1+
 
 Queries whether a Metal device supports frame interpolation compatible with a Metal 4 command buffer.
 

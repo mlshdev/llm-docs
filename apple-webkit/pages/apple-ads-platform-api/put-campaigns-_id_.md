@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/put-campaigns-_id_
 
 # Update a Campaign
@@ -46,6 +46,8 @@ Type: `CampaignUpdate`
 ## Discussion
 
 This endpoint updates an existing campaign. It changes only the fields included in the request body. Omitted fields retain their current values. The `promotedObjectType` and `promotedObjectId` fields are **not** part of the `CampaignUpdate` schema. They’re immutable after campaign creation, so this endpoint can’t change them.
+
+For Apple Maps campaigns, `targeting.supplyPlacement` follows the same omit-to-leave-unchanged rule as every other update field. Omitting it doesn’t expand targeting to every placement. A campaign created with a single Maps placement (`MAPS_SEARCH_RESULTS` or `MAPS_SEARCH_HOME`) can’t be widened to target both placements through this endpoint. See [CampaignTargetingCreate.SupplyPlacement](campaigntargetingcreate/supplyplacement-data.dictionary.md) for how to set up both placements at create time instead.
 
 <a id="Payload-Examples"></a>
 

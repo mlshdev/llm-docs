@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/scsiuserparallelresponseversion
 
 # SCSIUserParallelResponseVersion
@@ -25,7 +25,7 @@ typedef enum SCSIUserParallelResponseVersion : unsigned int { ... } SCSIUserPara
 
 ## See Also
 
-### Response Properties
+### Response properties
 
 - [version](scsiuserparallelresponse/version.md): The version of the parallel response structure currently in use.
 - [fTargetID](scsiuserparallelresponse/ftargetid.md): An identifier that represents a SCSI target device.

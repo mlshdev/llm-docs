@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/algorithm-convergence-status
 
 # Algorithm Convergence Status (Swift)
@@ -18,14 +18,6 @@ When the app enables Camera Assistance by setting [isCameraAssistanceEnabled](ni
 
 ### Status
 
-- [NIAlgorithmConvergenceStatus](nialgorithmconvergencestatus-2fnve.md): The possible states of Camera Assistance.
-
-## See Also
-
-### Camera assistance
-
-- [Finding devices with precision](finding-devices-with-precision.md): Leverage the spatial awareness of ARKit and Apple Ultra Wideband Chips in your app to guide users to a nearby device.
-- [NIAlgorithmConvergence](nialgorithmconvergence.md): An object that provides the state and reason for user coaching recommendations.
 - [NIAlgorithmConvergenceStatus](nialgorithmconvergencestatus-2fnve.md): The possible states of Camera Assistance.
 
 # Algorithm Convergence Status (Objective-C)
@@ -54,11 +46,3 @@ When the app enables Camera Assistance by setting [cameraAssistanceEnabled](nine
 
 - [NIAlgorithmConvergenceStatusReason](nialgorithmconvergencestatusreason.md): The possible reasons for the framework’s Camera Assistance status.
 - [NIAlgorithmConvergenceStatusReasonDescription](nialgorithmconvergencestatusreasondescription.md): A human-readable description for a particular convergence status reason.
-
-## See Also
-
-### Camera assistance
-
-- [Finding devices with precision](finding-devices-with-precision.md): Leverage the spatial awareness of ARKit and Apple Ultra Wideband Chips in your app to guide users to a nearby device.
-- [NIAlgorithmConvergence](nialgorithmconvergence.md): An object that provides the state and reason for user coaching recommendations.
-- [NIAlgorithmConvergenceStatus](nialgorithmconvergencestatus-2fbmj.md): Expose algorithm state to make it possible for apps to coach users.

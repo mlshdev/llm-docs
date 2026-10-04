@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/impressionsharetimerange
 
 # ImpressionShareTimeRange
@@ -23,7 +23,7 @@ object ImpressionShareTimeRange
 - `end` — `date` (required): End date in YYYY-MM-DD format.
 - `timeZone` — `string`: Timezone. Fixed to `UTC`. Not user-configurable. Default: `"UTC"`.
   **Allowed values:** `UTC`
-- `granularity` — `string` (required): Aggregation period. `DAILY` aggregates per day, with a maximum window of 30 days (inclusive), and populates the `day` field (not the `week` field) in each row. `WEEKLY_SUN_SAT` aggregates per Sunday-to-Saturday week, with a maximum window of 4 weeks, and populates the `week` field (not the `day` field) with the Sunday start date. The `start` date must be a Sunday. Possible values: `DAILY`, `WEEKLY_SUN_SAT`.
+- `granularity` — `string` (required): Aggregation period. `DAILY` aggregates per day, with a maximum window of 30 days (inclusive), and populates the `day` field (not the `week` field) in each row. `WEEKLY_SUN_SAT` aggregates per Sunday-to-Saturday week, with a maximum window of 4 weeks, and populates the `week` field (not the `day` field) with the Sunday start date. The `start` date must be a Sunday.
   **Allowed values:** `DAILY`, `WEEKLY_SUN_SAT`
 
 <a id="Discussion"></a>

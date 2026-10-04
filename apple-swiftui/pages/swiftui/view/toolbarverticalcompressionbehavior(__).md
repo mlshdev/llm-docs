@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/view/toolbarverticalcompressionbehavior(_:)
 
 # toolbarVerticalCompressionBehavior(\_:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Sets how bars should compress when different types of toolbars are hosted together and space is constrained.
 
@@ -47,6 +47,6 @@ struct ContentView: View {
 
 ### Configuring vertical toolbar behavior
 
-- [toolbarVerticalBehavior(\_:)](toolbarverticalbehavior%28__%29.md): Beta. Sets the behavior for the vertical bar.
-- [ToolbarVerticalBehavior](../toolbarverticalbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [ToolbarVerticalCompressionBehavior](../toolbarverticalcompressionbehavior.md): Beta. A behavior that determines how bars compress when the system places different types of bars together and space is constrained.
+- [toolbarVerticalBehavior(\_:)](toolbarverticalbehavior%28__%29.md): Sets the behavior for the vertical bar.
+- [ToolbarVerticalBehavior](../toolbarverticalbehavior.md): A behavior that determines whether the vertical bar is used.
+- [ToolbarVerticalCompressionBehavior](../toolbarverticalcompressionbehavior.md): A behavior that determines how bars compress when the system places different types of bars together and space is constrained.

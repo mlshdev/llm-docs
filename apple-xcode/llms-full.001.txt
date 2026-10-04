@@ -1,9 +1,9 @@
-# Apple Xcode and developer tools snapshot-d045c48ba442: full documentation
+# Apple Xcode and developer tools snapshot-4fca00e84bae: full documentation
 
 Source: https://developer.apple.com/documentation/xcode
-Catalog snapshot: d045c48ba442d76db23b56957be941c7cd95580126c6f823a089d10201c74287
-Content digest: 03a8128db62b106d74bec4fd1eb7d9a8b1c1b58cfa6a53e4ff370efb063a4594
-Captured at: 2026-09-19T05:14:28.744Z
+Catalog snapshot: 4fca00e84bae9217beada8f61d8eb44bfcd4978650125b133ae059131660af4f
+Content digest: f0ae4387bb364a5818de2647531622ae1d41631cac9a4423b442f779c19cd8b3
+Captured at: 2026-10-04T18:39:02.500Z
 Volume 1
 
 # Document: Analytics Reports
@@ -94772,6 +94772,8 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 
 ### Latest
 
+- [TN3214: Validating the fonts you ship in your app](technotes/tn3214-validating-the-fonts-you-ship-in-your-app.md): Understand the App Store’s font validation, reproduce the check, and fix any issues it reports.
+- [TN3137: On Mac keychain APIs and implementations](technotes/tn3137-on-mac-keychains.md): Learn how the keychain on macOS differs from other Apple platforms.
 - [TN3189: Managing Mail background traffic load](technotes/tn3189-managing-mail-background-traffic-load.md): Identify iOS Mail background traffic and manage its impact on your IMAP server.
 - [TN3213: Moving from Multipeer Connectivity to Network framework](technotes/tn3213-moving-from-multipeer-connectivity-to-network-framework.md): Learn how to migrate your Multipeer Connectivity app to Network framework.
 - [TN3210: Optimizing your app for iPhone Mirroring](technotes/tn3210-optimizing-your-app-for-iphone-mirroring.md): Test your app and improve compatibility with iPhone Mirroring.
@@ -94827,7 +94829,6 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 - [TN3147: Migrating to the latest notarization tool](technotes/tn3147-migrating-to-the-latest-notarization-tool.md): Migrate your notarization workflows to `notarytool` from the deprecated `altool`.
 - [TN3145: HDR video metadata](technotes/tn3145-hdr-video-metadata.md): Learn about the usage and requirements of “Ambient Viewing Environment” metadata with HLG and / or Dolby Vision™ Profile 8.4 playback.
 - [TN3133: Packaging a Metal renderer](technotes/tn3133-packaging-a-renderer.md): Distribute a Metal renderer in a Swift package.
-- [TN3137: On Mac keychain APIs and implementations](technotes/tn3137-on-mac-keychains.md): Learn how the keychain on macOS differs from other Apple platforms.
 - [TN3136: AVAudioConverter - performing sample rate conversions](technotes/tn3136-avaudioconverter-performing-sample-rate-conversions.md): Use AVAudioConverter to perform sample rate conversions between PCM audio buffers.
 - [TN3135: Low-level networking on watchOS](technotes/tn3135-low-level-networking-on-watchos.md): Learn about the supported use cases for low-level networking on watchOS.
 - [TN3128: Starting SharePlay without an existing FaceTime call](technotes/tn3128-starting-shareplay-without-an-existing-facetime-call.md): Use the share sheet or group activity sharing controller to start SharePlay directly from your app without an existing FaceTime call.
@@ -99369,6 +99370,10 @@ Each user gets exactly one data protection keychain.  The system selects the cor
 
 File-based keychains are stored, as the name suggests, in files.  Every context has a keychain search list and a default keychain.  In a user context the search list includes a per-user *login* keychain and a single *System* keychain, with the former being the default.  In the system context the search list includes just the *System* keychain, which is also the default keychain.
 
+> **Important**
+
+> Starting in macOS 26.4 a keychain file might not be a standalone item.  For more details see [Backing up a file-based keychain](tn3137-on-mac-keychains.md#Backing-up-a-file-based-keychain).
+
 When using the SecItem API to target the file-based keychain:
 
 - [SecItemAdd(\_:\_:)](https://developer.apple.com/documentation/security/secitemadd%28_:_:%29) adds the item to the default keychain.  Use [kSecUseKeychain](https://developer.apple.com/documentation/security/ksecusekeychain) to override this.
@@ -99409,10 +99414,48 @@ Keychain Access sometimes fails to reflect changes made to the keychain by other
 
 The keychain support in the `security` command-line tool is primarily focused on the file-based keychain.
 
+<a id="Backing-up-a-file-based-keychain"></a>
+
+## Backing up a file-based keychain
+
+Historically each file-based keychain was a standalone file.  You could, for example, copy a keychain file from one Mac to another and still use it, as long as you knew the keychain password.
+
+In macOS 26.4 and later that’s no longer the case.  A keychain file might reference a protected entropy file.  To unlock such a keychain you need both the keychain password and the protected entropy file.
+
+> **Warning**
+
+> The location, name, and format of these protected entropy files are not considered API.  Don’t encode details about these files into your product.
+
+These protected entropy files are stored in `/var/db/SystemKeys`.  If you’re creating a backup product, make sure to back up that directory.  Without it, the keychain files that you back up might be useless.
+
+> **Important**
+
+> To reiterate, these files are not considered API.  The following describes a number of implementation details.  These could change at any time.  It’s fine to use these implementation details for development and debugging, but don’t rely on them in your product.
+
+In some cases you might want to work with a protected entropy file directly.  For example, if you’re investigating a keychain problem on one Mac, you might want to copy the keychain file to a different Mac to further your investigation.  If the keychain file references a protected entropy file, copy that file as well as the keychain file itself.  You can put the keychain file wherever you want on the destination Mac, but you must put the protected entropy file in `/var/db/SystemKeys` for it to be effective.
+
+The `/var/db/SystemKeys` directory is not directly accessible, even when running as root, so you can’t copy a protected entropy file in the normal way.  To access it, disable System Integrity Protection (SIP).  For instructions on how to do that, see [Disabling and Enabling System Integrity Protection](https://developer.apple.com/documentation/security/disabling-and-enabling-system-integrity-protection).
+
+The `/var/db/SystemKeys` directory will likely contain numerous protected entropy files.  To identify the correct one, dump the keychain’s salt:
+
+```shell
+% security show-keychain-info -s ~/Library/Keychains/login.keychain-db 
+Keychain … salt=A4A00624947FFA299D3127962B4600494EBF5A74
+```
+
+So this keychain’s protected entropy file is `/var/db/SystemKeys/A4A00624947FFA299D3127962B4600494EBF5A74`.  If you copy `~/Library/Keychains/login.keychain-db` to a different Mac, copy that file as well so that you can unlock the keychain.
+
+> **Note**
+
+> Every keychain file has salt, but not every keychain file has an associated protected entropy file.  If there’s no file with that name, this keychain file doesn’t reference a protected entropy file.
+
+macOS logs information about protected entropy files to the system log in the `dp_login` category (that’s the *category*, not the *subsystem*).  To see these log entries, monitor the system log for entries with that category.  To learn more about the system log, see [Logging](https://developer.apple.com/documentation/os/logging).
+
 <a id="Revision-History"></a>
 
 ## Revision History
 
+- **2026-09-24** Added the [Backing up a file-based keychain](tn3137-on-mac-keychains.md#Backing-up-a-file-based-keychain) section.
 - **2022-11-01** Republished as TN3137.  Made significant editorial changes.
 - **2021-12-10** First published as ”On Mac Keychains” on Apple Developer Forums.
 
@@ -110689,6 +110732,222 @@ Within [MCSessionDelegate](https://developer.apple.com/documentation/multipeerco
 - **2026-07-14** Republished as TN3213.  Updated to use the latest Network framework API and to focus on QUIC.
 - **2025-03-07** First published as ”Moving from Multipeer Connectivity to Network Framework” on the Apple Developer Forums
 
+# Document: TN3214: Validating the fonts you ship in your app
+
+Source path: documentation/technotes/tn3214-validating-the-fonts-you-ship-in-your-app
+Canonical documentation: https://developer.apple.com/documentation/technotes/tn3214-validating-the-fonts-you-ship-in-your-app
+Description: Kind: Technote
+
+# TN3214: Validating the fonts you ship in your app
+
+**Kind:** Technote
+
+Understand the App Store’s font validation, reproduce the check, and fix any issues it reports.
+
+<a id="Overview"></a>
+
+## Overview
+
+The App Store validates every font in your app’s payload, and a font can fail that check even though it renders fine on your Mac or device.
+
+This happens because a font file stores its outlines, metrics, character mappings, and names as binary tables. Tools that generate, subset, or convert fonts can update one part of a table without updating a related part to match. For example, removing glyphs but leaving the old count in place, or moving data without adjusting the offset that points to it.
+
+A font parser that never touches the broken data can still render the font without issue. But the same file can fail elsewhere: it can cause visible failures in your app, or make the font parser read past the end of the table, which can crash your app or expose unrelated memory.
+
+macOS includes `FontValidator`, the tool [Font Book](https://support.apple.com/guide/font-book/install-and-validate-fonts-fntbk1000/mac) and the App Store’s validation both use to read a font file and report what it finds.
+
+This technote covers what it checks, how to run the same check on your Mac, and how to resolve each kind of failure it reports.
+
+<a id="Understand-what-the-App-Store-checks"></a>
+
+## Understand what the App Store checks
+
+During app ingestion, the App Store validates every font in your app’s payload at one of two levels, based on how your app uses its fonts. If your app only uses a font to display text, it just needs to be readable, so validation uses `minimum`, which allows a font file format that the target OS (macOS, iOS, tvOS, visionOS, or watchOS) can’t install. If your app requests the [Install fonts capability](../xcode/configuring-custom-fonts.md), each font needs to be in a file format the OS can install, so validation uses `strict`.
+
+> **Note**
+
+> If your app bundles or redistributes a font licensed to Apple, the font will fail validation even at `minimum`.
+
+A font that passes at `minimum` can still return an error at `strict`. If you’re adding the Install fonts capability to an app you already shipped, validate against `strict` first.
+
+Here are the font file formats each platform can and can’t install:
+
+**Accepted formats:**
+
+- macOS: `.ttf`, `.otf`, `.ttc`, `.otc`, `.dfont` or font suitcase (legacy Mac font containers), LWFN (classic Mac OS Type 1 font), Type 1 housed in an sfnt.
+- iOS, tvOS, visionOS, watchOS: `.ttf`, `.otf`, `.ttc`, `.otc`.
+
+**Rejected formats (on all platforms):**
+
+- `.woff`, `.woff2`, `.pfa`, `.pfb`, bare CFF/CFF2, bitmap-only.
+
+`.woff` and `.woff2` are web-delivery containers, and `.pfa`/`.pfb` are PostScript Type 1 files. None of these are installable font formats on any Apple platform.
+
+> **Important**
+
+> - Starting October 1, 2026, the App Store will reject asset pack uploads that bundle or redistribute a font Apple designs or licenses.
+> - Starting October 1, 2027, the App Store will reject app uploads that bundle or redistribute a font Apple designs or licenses.
+> - The App Store will reject font provider or WidgetKit apps that contain a font that fails `strict` validation.
+
+<a id="Reproduce-the-check-on-your-Mac"></a>
+
+## Reproduce the check on your Mac
+
+This technote describes `FontValidator` 3.5 or later, which ships with macOS 27.2 and later. Run the tool with `-version` to see which one you have. Earlier versions don’t accept these options, lack some of the capabilities this technote describes, and might report more findings than the App Store acts on. If you have an earlier version, update to macOS 27.2 or later.
+
+macOS includes `FontValidator`, but it isn’t on your `PATH`. Run it using its full path:
+
+```bash
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/FontValidator \
+    -progress -platform iOS -level strict -reportType full -appleFonts MyApp.app
+```
+
+The command above is similar to the one the App Store runs. You can adjust the following:
+
+- `-platform`: The platform your app targets. For example: `macOS`, `iOS`, `tvOS`, `visionOS`, or `watchOS`.
+- `-level`: Use `strict` if your app requests the Fonts capability, or `minimum` if it doesn’t.
+- `-reportType`: Controls how much detail the report includes:
+
+  - `summary`: Includes the result, the `max_code`, and whether the format is installable.
+  - `detailed`: Adds each finding’s code and messages.
+  - `full`: Adds the warnings and the font’s format.
+
+Use the `full` report type when you’re diagnosing why the App Store rejected a font.
+
+For the last argument, give `FontValidator` one or more paths to scan — the `.app` bundle you built, your project’s source folder, or individual font files. It searches recursively through any directory you point it at, including inside app and framework bundles, so it finds every font without you having to list each one.
+
+> **Note**
+
+> If your app stores fonts in an asset catalog, validate your project sources instead of the `.app` bundle you built. Xcode compiles the catalog into a binary resource file that `FontValidator` can’t read. If it delivers fonts in an asset pack, point `FontValidator` at the font files in your asset pack sources instead, since they ship separately from the app bundle.
+
+`FontValidator` has the following command-line behaviors:
+
+- It matches option values exactly, and they’re case-sensitive. For example, `-level strict` works, but `-level Strict` is an error.
+- Option names are more flexible. For example: `-reportType`, `-report-type`, and `-report_type` all refer to the same option.
+- It writes the JSON report to standard output. You can add `-reportOutput report.json` to send it to a file, or `-onlyFailures` to list only the files that failed.
+- Its exit status tells you the outcome: `0` for success, `255` when one or more files failed, and `252` if you mistyped an option.
+- For the full list of options and codes, run `-help`.
+
+<a id="Read-the-report"></a>
+
+## Read the report
+
+`FontValidator` writes its findings as JSON. Here’s an example, with what each key means explained below:
+
+```json
+{
+  "Failures" : 1,
+  "FilesProcessed" : 1,
+  "FontFiles" : 1,
+  "Details" : [
+    {
+      "path" : "MyApp.app/Contents/Resources/MyAppBrandingFont.woff2",
+      "result" : false,
+      "fonts" : [
+        {
+          "issues" : [
+            {
+              "issue" : "Font not supported by platform",
+              "code" : -102,
+              "messages" : [
+                "'woff': The woff2_TrueTypeMemoryFontKind format is not one the target platform will install."
+              ]
+            }
+          ],
+          "format" : "woff2_TrueTypeMemoryFontKind",
+          "fontname" : "MyAppBrandingFont",
+          "warnings" : [
+
+          ]
+        }
+      ],
+      "max_code" : -102,
+      "os_installable" : false,
+      "format" : "woff2_TrueTypeMemoryFontKind"
+    }
+  ]
+}
+```
+
+- `result`: A value of `false` means the file failed and the App Store won’t accept it. Don’t infer the `result` from a `code`, since the same code can appear in both a pass and a failure.
+- `issue`: Names the rule that found the problem.
+- `messages`: Describes what it found. For a few findings, such as a bundled Apple font, the rule name alone fully describes the issue and there’s no message.
+- `max_code`: The most severe issue found in the file.
+- `os_installable`: Says whether the file’s format is one the platform installs, regardless of the level you validated at.
+- `code`: Describes what kind of finding it is, and takes one of the following values:
+
+| Code | Meaning |
+| --- | --- |
+| `0` | No issues found. |
+| `-101` | The font violates the font specification in a way that fails validation. |
+| `-102` | The font’s format isn’t one the platform installs or its data lives only in the resource fork. |
+| `-103` | An Apple-designed font. |
+| `-104` | A font licensed to Apple. |
+| `-201` | A failure this level relaxed. Address it, because a parser could have a memory-safety problem here. |
+| `-202` | A failure this level relaxed. It’s a specification violation with no memory-safety concern. |
+| `-301` | A warning. |
+
+<a id="Fix-the-issue"></a>
+
+## Fix the issue
+
+Each finding names one of the codes above. Look up the one that matches your report below.
+
+<a id="101-The-font-violates-the-specification"></a>
+
+### -101: The font violates the specification
+
+Fonts that reach this are almost always the output of a tool that rewrote part of the file without updating the rest. The most common shapes are:
+
+| Rule | Issue | Cause |
+| --- | --- | --- |
+| `'sfnt' required tables` | A required table is missing. | Subsetting removed too much. |
+| `'cmap' table usability` | No subtable usable as a Unicode encoding. | An icon-font generator. |
+| `'name' table usability` | No PostScript, full, family, or style name. | A subsetter kept only some name records. |
+| `'name' table usability` | Text isn’t valid in the encoding its own record declares. | UTF-8 written into a UTF-16 record. |
+| `'glyf' table structure` | A `'loca'` offset points past the end of `'glyf'`. | A truncated `'glyf'`/`'loca'` pair. |
+| `'glyf' table instructions` | A point-flag repeat count overruns the glyph’s point count. | A hand-rolled outline writer. |
+| `'post' table usability` | The glyph-name pool runs past the end of the table. | A subsetter trimmed the glyph count but not the names. |
+| `'head' table structure` | The table is too short, or `indexToLocFormat` is neither 0 nor 1. | A long `'loca'` written with the short format declared. |
+| Font basic parsability | Two tables overlap, or a table offset or length is out of bounds. | A tool patched one table without re-laying out the file. |
+
+Most of these are bookkeeping errors that a font tool recomputes for you. To fix them, open and re-save the font in a font editor or another font-development tool. Re-saving rebuilds the table directory, offsets, lengths, and checksums.
+
+Re-run the validator on the result. If the same finding still appears after re-saving, the defect is in the font’s actual content rather than its layout. Regenerate the font from source with a current version of your font editor, or go back to your font vendor with the message text from the report.
+
+<a id="102-The-target-platform-doesnt-accept-this-font"></a>
+
+### -102: The target platform doesn’t accept this font
+
+This code has two distinct causes, and the message in the report tells you which one applies.
+
+When the font’s format isn’t installable, you likely shipped a web font or legacy desktop font in your app bundle. See the accepted and rejected formats above. How you fix it depends on the format:
+
+- `.woff`/`.woff2`: Convert the font to an installable format. These are compressed wrappers around an ordinary font, so converting back is lossless. Many font editors and font-development tools export the wrapped `.ttf` or `.otf` directly. Ship that file instead. If your app requests the Fonts capability, remove the web font from your bundle after you’ve shipped the installable version. Don’t just rename the file extension: the validator identifies formats by content, so it still rejects a `.woff2` file renamed to `.ttf`.
+- `.pfa`/`.pfb`: Ask your font vendor for an OpenType version instead of converting it yourself. Unlike a `.woff`/`.woff2` wrapper, Type 1 outlines don’t convert losslessly, so a self-converted font can render differently.
+
+This same format requirement applies to font collections: if a single font file bundles multiple styles together, such as Regular, Bold, and Italic, every style inside it must also be in an installable format.
+
+macOS stores a resource fork as the `com.apple.ResourceFork` extended attribute. A font stored this way works on macOS but the file becomes empty if a copy operation drops its extended attributes. For example, copying the file to a platform that doesn’t support resource forks removes the attribute. Unlike a format rejection, this error makes the font fail at every validation level. It fails your submission whether or not you request the Fonts capability, and it applies only when your app targets iOS, tvOS, visionOS, or watchOS.
+
+To fix this, re-save the font as an ordinary data-fork `.ttf` or `.otf` file.
+
+<a id="103-and-104-The-app-redistributes-a-font-Apple-designs-or-licenses"></a>
+
+### -103 and -104: The app redistributes a font Apple designs or licenses
+
+Your app can’t redistribute fonts Apple designs, such as the San Francisco and New York families, or fonts Apple licenses from a third party. They’re already present on the device or available for download. Remove the bundled copies and access these fonts directly through the system font APIs. For more information, see [Fonts](https://developer.apple.com/documentation/technologyoverviews/fonts) in the Technology Overviews.
+
+`FontValidator` identifies a font Apple designs or fonts licensed to Apple by content markers in the file. Sharing a name with one of these fonts, such as your own build of a face you licensed independently, doesn’t trigger this error.
+
+`FontValidator` reports these findings at every level, so your submission fails whether or not your app requests the Fonts capability.
+
+<a id="Revision-History"></a>
+
+## Revision History
+
+- **2026-10-01** First published.
+
 # Document: Swift Testing
 
 Source path: documentation/testing
@@ -121342,7 +121601,7 @@ For information about Xcode Cloud releases, see [Xcode Cloud release notes](http
 
 ### Xcode 27
 
-- [Xcode 27.2 Beta Release Notes](xcode-release-notes/xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.2 Beta 2 Release Notes](xcode-release-notes/xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.1 Beta Release Notes](xcode-release-notes/xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-release-notes/xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
@@ -132460,7 +132719,7 @@ Xcode 14 includes Swift 5.7 and SDKs for iOS 16, iPadOS 16, tvOS 16, watchOS 9, 
 - Simplify an app icon with a single 1024x1024 image that is automatically resized for its target. Choose the Single Size option in the app icon’s Attributes inspector in the asset catalog. You can still override individual sizes with the All Sizes option. (18475136) (FB5503050)
 - You can now paste copied images from the Finder directly into the asset catalog outline. (58980721)
 - You can now double-click an image slot to show the open file panel and choose a replacement asset. (81365822)
-- You can specify the default rendering mode for custom symbols in an Asset Catalog. Set the Render As attribute to automatic, template, multicolor, or hierarchical. The system then uses the default rendering mode for the symbol, unless you explicitly override it. For more information on custom symbols, see [Creating custom symbol images for your app](https://developer.apple.com/documentation/uikit/creating-custom-symbol-images-for-your-app). (84513859)
+- You can specify the default rendering mode for custom symbols in an Asset Catalog. Set the Render As attribute to automatic, template, multicolor, or hierarchical. The system then uses the default rendering mode for the symbol, unless you explicitly override it. For more information on custom symbols, see [Creating custom symbols](https://developer.apple.com/documentation/technologyoverviews/custom-sf-symbols). (84513859)
 
 <a id="Resolved-Issues"></a>
 
@@ -143144,7 +143403,7 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode 27
 
-- [Xcode 27.2 Beta Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.2 Beta 2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.1 Beta Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 # Document: Xcode 27.1 Beta Release Notes
@@ -143208,16 +143467,16 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode 27
 
-- [Xcode 27.2 Beta Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.2 Beta 2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: Xcode 27.2 Beta Release Notes
+# Document: Xcode 27.2 Beta 2 Release Notes
 
 Source path: documentation/xcode-release-notes/xcode-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-27_2-release-notes
 Description: Kind: Article
 
-# Xcode 27.2 Beta Release Notes
+# Xcode 27.2 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -143227,7 +143486,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-Xcode 27.2 beta includes Swift 6.4 and SDKs for iOS 27.2, iPadOS 27.2, tvOS 27.2, watchOS 27.2, macOS 27.2, and visionOS 27.2. Xcode 27.2 beta supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.2 beta requires a Mac running macOS Tahoe 26.6 or later.
+Xcode 27.2 beta 2 includes Swift 6.4 and SDKs for iOS 27.2, iPadOS 27.2, tvOS 27.2, watchOS 27.2, macOS 27.2, and visionOS 27.2. Xcode 27.2 beta 2 supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.2 beta 2 requires a Mac running macOS Tahoe 26.6 or later.
 
 > **Important**
 
@@ -143243,45 +143502,82 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 #### Known Issues
 
-- Xcode may crash when using code completion on macOS 27.2 beta. (186939138)
+- Screenshots and recordings in iPhone Duo may be black for up to a few minutes after booting the device. (187146039)
+- Cloning a 27.2 simulator device may encounter an issue due to incorrect file permissions. (188407822) (FB24939277)
 
-  **Workaround:** Turn off enhanced code completion ranking with the following preference:
-  `defaults write com.apple.dt.Xcode CodeCompletionAssetsToLoad /dev/null`
+<a id="Coding-Assistant"></a>
+
+### Coding Assistant
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Added a GetCodeCoverage MCP tool that reports code coverage from the most recent test result, optionally filtered by target or file. (181141715)
 
 <a id="Device-Hub"></a>
 
 ### Device Hub
 
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Keyboard and mouse inputs to simulators for OS versions before iOS 18.0, tvOS 18.0, watchOS 11.0, and visionOS 2.0 are not accepted. (181945323)
+- Fixed: After disconnecting a physical device from Device Hub when “Simulate Hardware Keyboard” was in use, the device may remain in “hardware keyboard” mode for up to 2 minutes. This will cause the software keyboard to not appear when selecting a text field. (182553164)
+- Fixed an issue where Device Hub stopped sending touch and button input to a connected device after a period of inactivity. (182695157) (FB23873443)
+- Fixed: Device Hub now supports input to iOS 17 Simulator Devices. (187484157)
+
 <a id="Known-Issues"></a>
 
 #### Known Issues
 
-- Keyboard and mouse inputs to simulators for OS versions before iOS 18.0, tvOS 18.0, watchOS 11.0, and visionOS 2.0 are not accepted. (181945323)
-- After disconnecting a physical device from Device Hub when “Simulate Hardware Keyboard” was in use, the device may remain in “hardware keyboard” mode for up to 2 minutes. This will cause the software keyboard to not appear when selecting a text field. (182553164)
+- Fixed an issue where modifier keys such as Shift, Control, Option, and Command were not sent to the correct device when more than one device window was open. (177181719)
+- VoiceOver, the Accessibility Inspector, and other accessibility tools cannot convey screen content on an iPhone Duo within Device Hub. (187148389)
+- Selecting a Vision Pro Simulator in Device Hub may cause Device Hub to quit unexpectedly if a visionOS runtime is not available. (188313956)
 
-  **Workaround:** Wait 2 minutes for the condition to clear.
+  **Workaround:** Install the corresponding visionOS runtime from within Xcode or delete the simulator device.
+- The Device-\>Simulate Memory Warning menu item does not work. (188326513)
 
-<a id="Previews"></a>
+<a id="Devices"></a>
 
-### Previews
+### Devices
 
 <a id="Resolved-Issues"></a>
 
 #### Resolved Issues
 
-- Fixed an occasional issue where selecting a preview from a preview group’s thumbnail grid on macOS would fail to 1-up the right preview. (183475595)
-- Fixed: A clearer error is now shown when the selected platform does not support a preview’s content. (185436582)
-- Fixed: The RenderPreview MCP tool now returns the list of available render destinations, and lets the caller specify which destination to use for rendering. (186442676)
+- Fixed: Holding Escape does not dismiss keyboard capture mode. (187880316)
 
-<a id="Previews--Playgrounds"></a>
+<a id="Mac-Catalyst"></a>
 
-### Previews & Playgrounds
+### Mac Catalyst
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Projects that use APIs specific to iOS 27.1 show compile errors when building for Mac Catalyst (“undeclared identifier”, “not found”, “has no member”, “cannot find”, etc). (185924957)
+
+  **Workaround:** Use build-time conditionals like `#if !targetEnvironment(macCatalyst)` (Swift) or `#if !TARGET_OS_MACCATALYST` (ObjC) to isolate affected code.
+
+<a id="Previews"></a>
+
+### Previews
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- The canvas overrides picker now includes a Display group for previewing content on a device’s alternative display. (182598534)
 
 <a id="Resolved-Issues"></a>
 
 #### Resolved Issues
 
 - Fixed: A clearer error with recovery steps is now shown when previews fail because another user account on this Mac owns the Previews JIT directory. (184564292)
+- Fixed an issue where previews could fail in source files that use Windows-style (CRLF) line endings. (186255376)
+- Fixed: The RenderPreview MCP tool now returns the list of available render destinations, and lets the caller specify which destination to use for rendering. (186442676)
 
 <a id="Project-Format"></a>
 
@@ -143291,7 +143587,7 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 #### New Features
 
-- Xcode now supports a JSON-based project format (.xcproj) that’s more readable, merge-friendly, and easier for coding agents to edit. Enable it in the file inspector. Projects using .xcproj also open in earlier versions of Xcode 27. Learn more in [Updating your Xcode project configuration file format](https://developer.apple.com/documentation/xcode/updating-your-xcode-project-configuration-file-format). (184661114)
+- Xcode now supports a JSON-based project format (.xcproj) that’s more readable, merge-friendly, and easier for coding agents to edit. Enable it in the File inspector. Projects using .xcproj also open in earlier versions of Xcode 27. Learn more in [Updating your Xcode project configuration file format](https://developer.apple.com/documentation/xcode/updating-your-xcode-project-configuration-file-format). (184661114)
 
 <a id="SDK"></a>
 
@@ -143307,11 +143603,35 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Simulator
 
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Some simulator runtimes are not completely deleted when removed, re-appearing after a reboot. (141290052) (FB16083602)
+
 <a id="Known-Issues"></a>
 
 #### Known Issues
 
-- Some simulator runtimes are not completely deleted when removed, re-appearing after a reboot. (141290052) (FB16083602)
+- Device Hub support for CarPlay requires devices to be physically connected via USB cable (not over the network).  iOS Simulator is not supported for CarPlay. (179494052) (FB23101450)
+- If a simulator runtime is re-installed after being deleted, it may still show up as unavailable in Xcode (187950199)
+
+  **Workaround:** `killall -9 com.apple.CoreSimulator.CoreSimulatorService`
+
+<a id="Updates-in-Xcode-272-Beta"></a>
+
+## Updates in Xcode 27.2 Beta
+
+<a id="Previews"></a>
+
+### Previews
+
+<a id="Resolved-Issues-in-Xcode-272-Beta"></a>
+
+#### Resolved Issues in Xcode 27.2 Beta
+
+- Fixed an occasional issue where selecting a preview from a preview group’s thumbnail grid on macOS would fail to 1-up the right preview. (183475595)
+- Fixed: A clearer error is now shown when the selected platform does not support a preview’s content. (185436582)
 
 ## See Also
 
@@ -144403,7 +144723,7 @@ let image = NSImage(named: "ImageName")
 
 ### Images
 
-- [Creating custom symbol images for your app](https://developer.apple.com/documentation/uikit/creating-custom-symbol-images-for-your-app): Create, organize, and annotate symbol images using SF Symbols.
+- [Creating custom symbols](https://developer.apple.com/documentation/technologyoverviews/custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
 
 # Document: Adding package dependencies to your app
 
@@ -148480,7 +148800,7 @@ Xcode also provides interactive editors for certain types of assets, like partic
 ### Images
 
 - [Adding images to your Xcode project](adding-images-to-your-xcode-project.md): Import images into your project, manage their appearances and variations, and load them at runtime.
-- [Creating custom symbol images for your app](https://developer.apple.com/documentation/uikit/creating-custom-symbol-images-for-your-app): Create, organize, and annotate symbol images using SF Symbols.
+- [Creating custom symbols](https://developer.apple.com/documentation/technologyoverviews/custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
 
 ### Colors
 
@@ -155594,6 +155914,7 @@ To record a video of your app, run your app on a simulated device in Device Hub 
 - [Configuring the environment of a simulated device](configuring-the-environment-of-a-simulated-device.md): Modify the settings of a simulated device.
 - [Interacting with your app in Device Hub](interacting-with-your-app-in-device-hub.md): Use Device Hub to control interactions with your apps on simulated and physical devices.
 - [Interacting with your visionOS app in Device Hub](interacting-with-your-visionos-app-in-device-hub.md): Use Device Hub to navigate spaces and control interactions with your visionOS apps running on simulated visionOS devices.
+- [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md): Manage simulated and physical devices from the command line.
 
 # Document: Changing the bundle identifier
 
@@ -155895,6 +156216,10 @@ You can use command-line tools to perform some actions in Terminal without runni
 - [Locating a missing debug symbol file](locating-a-missing-debug-symbol-file.md): Find the debug symbol file (`.dSYM`) required to decode the hexadecimal address from a crash report.
 - [Resetting access to protected resources in macOS](resetting-access-to-protected-resources-in-macos.md): Use Terminal to remove your app’s authorization access to protected resources during testing.
 - [Acquiring operating system symbol information](acquiring-operating-system-symbol-information.md): Download symbols for Apple system frameworks using Xcode or Terminal.
+
+### Devices
+
+- [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md): Manage simulated and physical devices from the command line.
 
 ## See Also
 
@@ -157979,6 +158304,7 @@ To reset a simulated device (erase all contents and settings), shut down the dev
 - [Interacting with your app in Device Hub](interacting-with-your-app-in-device-hub.md): Use Device Hub to control interactions with your apps on simulated and physical devices.
 - [Interacting with your visionOS app in Device Hub](interacting-with-your-visionos-app-in-device-hub.md): Use Device Hub to navigate spaces and control interactions with your visionOS apps running on simulated visionOS devices.
 - [Capturing screenshots and videos from devices](capturing-screenshots-and-videos-from-devices.md): Record interactions and capture screenshots of your app for sharing, review, or App Store submission.
+- [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md): Manage simulated and physical devices from the command line.
 
 # Document: Configuring the hardened runtime
 
@@ -161833,182 +162159,3 @@ Enhanced security extensions use the same compiler and runtime security features
 - [Enabling enhanced security for your app](enabling-enhanced-security-for-your-app.md): Detect out-of-bounds memory access, use of freed memory, and other potential vulnerabilities.
 - [Adopting type-aware memory allocation](adopting-type-aware-memory-allocation.md): Reduce the opportunities to treat pointers as data in your code.
 - [Conforming to Mach IPC security restrictions](conforming-to-mach-ipc-security-restrictions.md): Avoid crashes and potentially insecure situations associated with Mach messages.
-
-# Document: Creating screenshots of your app for localizers
-
-Source path: documentation/xcode/creating-screenshots-of-your-app-for-localizers
-Canonical documentation: https://developer.apple.com/documentation/xcode/creating-screenshots-of-your-app-for-localizers
-Description: Kind: Article
-
-# Creating screenshots of your app for localizers
-
-**Kind:** Article
-
-Share screenshots of your app with localizers to provide context for translation.
-
-<a id="Overview"></a>
-
-## Overview
-
-When running UI tests of your localizations, you can generate screenshots to include in the exported localization folders that you give to localizers. The screenshots provide context for the localizable strings and resources in the interface. You can generate screenshots from your project’s test plans or Test scheme.
-
-To include the screenshots in the Xcode Localization Catalog (a folder with a `.xcloc` file extension), see [Exporting localizations](exporting-localizations.md).
-
-<a id="Create-a-test-plan"></a>
-
-### Create a test plan
-
-If you add many localizations to your project, test plans are ideal for generating screenshots because you can create a configuration for each. A test plan (a file with a `.xctestplan` file extension) specifies which tests to run and how to run them one or more times.
-
-You can use an existing test plan or create a new one. To add a test plan, choose Product \> Test Plan \> New Test Plan in Xcode. Enter a name for the test plan and click Create.
-
-If you want to convert your project from using schemes to test plans, choose Product \> Scheme \> Convert Scheme to use Test Plans, select “Create Test Plan from scheme”, then click Convert. In the next dialog, you can change the name of the test plan, then click Save. The test plan appears in the editor area.
-
-<a id="Add-localization-configurations"></a>
-
-### Add localization configurations
-
-Add a configuration for each localization to your test plan. In the Project navigator, select the test plan, then click Configurations. On the left, click the Add button (+) at the bottom. Select the new configuration that appears and enter a name for the localization.
-
-Edit the configuration file for the localization test. Under Localization, set the Application Language and Application Region settings to the corresponding language and region for the localization. Under UI Testing, switch Localization Screenshots from Off to On.
-
-![Screenshot of the project editor with a test plan selected in the navigator and a configuration called Right-to-Left selected in the detail area, showing the location of the Application Language and Application Region under Localization.](https://developer.apple.com/images/com.apple.Xcode/creating-screenshots-of-your-app-for-localizers-1@2x.png)
-
-<a id="Run-tests-to-generate-screenshots"></a>
-
-### Run tests to generate screenshots
-
-Next time you run your tests (choose Product \> Test), Xcode saves the screenshots for each localization to disk. In the Test navigator, next to every screenshot, Xcode includes a property list (Localizable Strings Info) that maps the strings to the frame where the string appears in the screenshot. The property list includes the string IDs (that appear in the exported XLIFF file) and frame locations.
-
-<a id="Generate-screenshots-using-schemes"></a>
-
-### Generate screenshots using schemes
-
-Alternatively, if you don’t use test plans, you can make similar edits to the Test scheme to generate screenshots. In Xcode, choose Product \> Scheme \> Edit Scheme, click the Test scheme, then click Options. Choose the language and region from the pop-up menus, then select “Gather screenshots for localization.”
-
-## See Also
-
-### Translation and adaptation
-
-- [Exporting localizations](exporting-localizations.md): Provide the localizable files from your project to localizers.
-- [Editing XLIFF and string catalog files](editing-xliff-and-string-catalog-files.md): Translate or adapt the localizable files for a language and region that you export from your project.
-- [Importing localizations](importing-localizations.md): Import the files that you translate or adapt for a language and region into your project.
-- [Locking views in storyboard and XIB files](locking-views-in-storyboard-and-xib-files.md): Prevent changes to your Interface Builder files while localizing human-facing strings.
-
-# Document: Creating width and device variants of strings
-
-Source path: documentation/xcode/creating-width-and-device-variants-of-strings
-Canonical documentation: https://developer.apple.com/documentation/xcode/creating-width-and-device-variants-of-strings
-Description: Kind: Article
-
-# Creating width and device variants of strings
-
-**Kind:** Article
-
-Change a localized string for different interface widths and devices.
-
-<a id="Overview"></a>
-
-## Overview
-
-> **Important**
-
-> In Xcode 15 and later, use Dynamic Type instead of width variants and string catalogs to create device variants. For more information, see [Supporting multiple languages in your app](supporting-multiple-languages-in-your-app.md) and  [Localizing and varying text with a string catalog](localizing-and-varying-text-with-a-string-catalog.md).
-
-You can use a `.stringsdict` file to provide variants of a string for different view widths and for different devices. For example, display a different string for an iOS device in landscape or in portrait mode, or display a different string when your iPad app built with Mac Catalyst runs on a Mac.
-
-A `.stringsdict` file is a property list that defines plural, width, and device variants of localizable strings. The `.stringsdict` file contains a dictionary of key-value pairs where the values are either a plural, width, or device rule.
-
-The key for a rule is the string that you pass to [Text](https://developer.apple.com/documentation/swiftui/text) structures, the [NSLocalizedString](https://developer.apple.com/documentation/foundation/nslocalizedstring) macro, and similar APIs in your code. The rule can be a plural, width, or device rule that determines which formatted string the macro returns.
-
-To create plural variants for formatted strings that contain amounts, see [Localizing strings that contain plurals](localizing-strings-that-contain-plurals.md).
-
-<a id="Add-a-strings-dictionary-file-to-your-project"></a>
-
-### Add a strings dictionary file to your project
-
-To add a `.stringsdict` file to your project, choose File \> New \> File from Template. In the sheet that appears, select the platform, enter `strings` in the Filter field, select Stringsdict File, and click Next. In the dialog that appears, enter a name for the file, choose a location, and click Create.
-
-<a id="Provide-string-variants-for-different-widths"></a>
-
-### Provide string variants for different widths
-
-A *width rule* specifies variants for different available widths in the user interface. It contains a single dictionary with a single key-value pair. The key in the dictionary is `NSStringVariableWidthRuleType` and the value is another dictionary with key-value pairs for each variant. The key for a variant is a width and the value is a string.
-
-In the following `.stringsdict` file, for the `hello` string in the code, the width variations are `1`, `22`, and `53`, and the values are `Hi`, `Hello`, and `Greetings and Salutations`:
-
-```other
-<plist version="1.0">
-    <dict>
-        <key>hello</key>
-        <dict>
-            <key>NSStringVariableWidthRuleType</key>
-            <dict>
-                <key>1</key>
-                <string>Hi</string>
-                <key>22</key>
-                <string>Hello</string>
-                <key>53</key>
-                <string>Greetings and Salutations</string>
-            </dict>
-        </dict>
-    </dict>
-</plist>
-
-```
-
-For [UILabel](https://developer.apple.com/documentation/uikit/uilabel) objects, the width is in em units that fit across the app window; otherwise, the width doesn’t have an associated unit.
-
-The width rule defines variants for a range of widths:
-
-- If the width is between two numerically sequential keys, the API returns the variant with the smaller key.
-- If the width is less than all keys, the API returns the variant for the smallest key.
-
-In the code above, if the width is `2`, the macro returns `Hi`. If the width is `52`, the macro returns `Hello`.
-
-To get a variant for a specific width in your code, see the [variantFittingPresentationWidth(\_:)](https://developer.apple.com/documentation/foundation/nsstring/variantfittingpresentationwidth%28_:%29) method.
-
-<a id="Provide-device-specific-string-variants"></a>
-
-### Provide device-specific string variants
-
-A *device rule* specifies a different string depending on the device. For example, your universal app may present different instructions to the user when running on an iOS device than when running on a Mac.
-
-A device rule contains a single dictionary with a single key-value pair. The key is `NSStringDeviceSpecificRuleType` and the value is a dictionary with the following optional key-value pairs:
-
-| Key | Description |
-| --- | --- |
-| appletv | The string to use on Apple TV. |
-| applevision | The string to use on Apple Vision Pro. |
-| applewatch | The string to use on Apple Watch. |
-| ipad | The string to use on iPad. |
-| iphone | The string to use on iPhone. |
-| ipod | The string to use on iPod. |
-| mac | The string to use on Mac. |
-
-In the following `.stringsdict` file, when you pass `UserInstructions` as the string in your code, it returns `Tap here` when the app runs on an iPhone, `Click here` when it runs on a Mac, and `Press here` when it runs on an Apple TV:
-
-```other
-<plist version="1.0">
-<dict>
-    <key>UserInstructions</key>
-    <dict>
-        <key>NSStringDeviceSpecificRuleType</key>
-        <dict>
-            <key>iphone</key>
-            <string>Tap here</string>
-            <key>mac</key>
-            <string>Click here</string>
-            <key>appletv</key>
-            <string>Press here</string>
-        </dict>
-    </dict>
-</dict>
-</plist>
-```
-
-## See Also
-
-### Legacy localization techniques
-
-- [Localizing strings that contain plurals](localizing-strings-that-contain-plurals.md): Use a strings dictionary file to ensure correct localization of strings that contain language plurals.

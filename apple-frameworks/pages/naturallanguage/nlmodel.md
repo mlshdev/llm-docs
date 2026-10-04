@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/naturallanguage/nlmodel
 
 # NLModel (Swift)
@@ -21,7 +21,7 @@ class NLModel
 
 With [Natural Language](../naturallanguage.md), you can create text classifier ([MLTextClassifier](../createml/mltextclassifier.md)) or word tagger ([MLWordTagger](../createml/mlwordtagger.md)) models. Use [NLModel](nlmodel.md) to integrate those models into your app. This integration ensures that your tokenization and tagger configurations are identical when you train your model and use it in your app.
 
-If you create a text classifier as described in doc:creating-a-text-classifier-model, you can integrate that model into your app and use it to make predictions like this:
+If you create a text classifier as described in [Creating a text classifier model](../createml/creating-a-text-classifier-model.md), you can integrate that model into your app and use it to make predictions like this:
 
 ```swift
 let text = "I am very happy."
@@ -45,7 +45,7 @@ do {
 }
 ```
 
-If you create a custom word tagger as described in doc:creating-a-word-tagger-model, you can integrate that model into your app and generate tags for new text input like this:
+If you create a custom word tagger as described in [Creating a word tagger model](../createml/creating-a-word-tagger-model.md), you can integrate that model into your app and generate tags for new text input like this:
 
 ```swift
 let text = "The iPad is my favorite Apple product."
@@ -143,7 +143,7 @@ A custom model trained to classify or tag natural language text.
 
 With [Natural Language](../naturallanguage.md), you can create text classifier ([MLTextClassifier](../createml/mltextclassifier.md)) or word tagger ([MLWordTagger](../createml/mlwordtagger.md)) models. Use [NLModel](nlmodel.md) to integrate those models into your app. This integration ensures that your tokenization and tagger configurations are identical when you train your model and use it in your app.
 
-If you create a text classifier as described in doc:creating-a-text-classifier-model, you can integrate that model into your app and use it to make predictions like this:
+If you create a text classifier as described in [Creating a text classifier model](../createml/creating-a-text-classifier-model.md), you can integrate that model into your app and use it to make predictions like this:
 
 ```swift
 let text = "I am very happy."
@@ -167,7 +167,7 @@ do {
 }
 ```
 
-If you create a custom word tagger as described in doc:creating-a-word-tagger-model, you can integrate that model into your app and generate tags for new text input like this:
+If you create a custom word tagger as described in [Creating a word tagger model](../createml/creating-a-word-tagger-model.md), you can integrate that model into your app and generate tags for new text input like this:
 
 ```swift
 let text = "The iPad is my favorite Apple product."

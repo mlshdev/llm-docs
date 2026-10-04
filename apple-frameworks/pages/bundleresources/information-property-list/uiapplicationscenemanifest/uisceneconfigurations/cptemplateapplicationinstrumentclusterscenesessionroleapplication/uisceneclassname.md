@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/bundleresources/information-property-list/uiapplicationscenemanifest/uisceneconfigurations/cptemplateapplicationinstrumentclusterscenesessionroleapplication/uisceneclassname
 
 # UISceneClassName
@@ -29,4 +29,4 @@ CarPlay doesn’t support custom classes. Omit this key or specify [CPTemplateAp
 
 ### Scene objects
 
-- [UISceneDelegateClassName](uiscenedelegateclassname.md): The name of the app-specific class you want UIKit to instantiate and use as the scene delegate object.
+- [UISceneDelegateClassName](uiscenedelegateclassname.md): The name of the app-specific class you want UIKit to instantiate and use as the delegate for your app’s instrument cluster scene.

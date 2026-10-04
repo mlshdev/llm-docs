@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nimotionactivitystate
 
 # NIMotionActivityState (Swift)
@@ -46,10 +46,9 @@ Ranging accuracy improves when the framework knows whether the accessory is movi
 
 ## See Also
 
-### Third-party accessories
+### Providing accessory state information
 
-- [Implementing spatial interactions with third-party accessories](implementing-spatial-interactions-with-third-party-accessories.md): Establish a connection with a nearby accessory to receive periodic measurements of its distance from the user.
-- [NINearbyAccessoryConfiguration](ninearbyaccessoryconfiguration.md): A configuration that enables interaction between iPhone and third-party accessories.
+- [updateMotionState(\_:forObjectWithToken:)](nisession/updatemotionstate%28__forobjectwithtoken_%29.md): Notifies the session of an accessory’s motion state change.
 
 # NIMotionActivityState (Objective-C)
 
@@ -81,7 +80,6 @@ Ranging accuracy improves when the framework knows whether the accessory is movi
 
 ## See Also
 
-### Third-party accessories
+### Providing accessory state information
 
-- [Implementing spatial interactions with third-party accessories](implementing-spatial-interactions-with-third-party-accessories.md): Establish a connection with a nearby accessory to receive periodic measurements of its distance from the user.
-- [NINearbyAccessoryConfiguration](ninearbyaccessoryconfiguration.md): A configuration that enables interaction between iPhone and third-party accessories.
+- [updateMotionState:forObjectWithToken:](nisession/updatemotionstate%28__forobjectwithtoken_%29.md): Notifies the session of an accessory’s motion state change.

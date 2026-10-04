@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxframeinterpolatordescriptor/makeframeinterpolator(device:compiler:)
 
 # makeFrameInterpolator(device:compiler:) (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Method  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 27.1+
 
 Creates a frame interpolator instance for a Metal device.
 
@@ -30,7 +30,7 @@ func makeFrameInterpolator(device: any MTLDevice, compiler: any MTL4Compiler) ->
 
 **Framework:** MetalFX  
 **Kind:** Instance Method  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 27.1+
 
 Creates a frame interpolator instance for a Metal device.
 

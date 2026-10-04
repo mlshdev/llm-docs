@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiviewcontroller/childforpreferredverticalbarbehavior
 
 # childForPreferredVerticalBarBehavior (Swift)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 Which child view controller, if any, should control the vertical bar behavior.
 
@@ -25,15 +25,15 @@ Return a child to defer the configuration to it, or `nil` to use the configurati
 
 ### Configuring bars on the vertical axis
 
-- [preferredVerticalBarBehavior](preferredverticalbarbehavior.md): Beta. The vertical bar behavior that this view controller prefers.
-- [UIVerticalBarBehavior](../uiverticalbarbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [setNeedsUpdateOfVerticalBarConfiguration()](setneedsupdateofverticalbarconfiguration%28%29.md): Beta. Signals to the system that the preferred vertical bar configuration, such as its behavior, has changed.
+- [preferredVerticalBarBehavior](preferredverticalbarbehavior.md): The vertical bar behavior that this view controller prefers.
+- [UIVerticalBarBehavior](../uiverticalbarbehavior.md): A behavior that determines whether the vertical bar is used.
+- [setNeedsUpdateOfVerticalBarConfiguration()](setneedsupdateofverticalbarconfiguration%28%29.md): Signals to the system that the preferred vertical bar configuration, such as its behavior, has changed.
 
 # childViewControllerForPreferredVerticalBarBehavior (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 Which child view controller, if any, should control the vertical bar behavior.
 
@@ -53,6 +53,6 @@ Return a child to defer the configuration to it, or `nil` to use the configurati
 
 ### Configuring bars on the vertical axis
 
-- [preferredVerticalBarBehavior](preferredverticalbarbehavior.md): Beta. The vertical bar behavior that this view controller prefers.
-- [UIVerticalBarBehavior](../uiverticalbarbehavior.md): Beta. A behavior that determines whether the vertical bar is used.
-- [setNeedsUpdateOfVerticalBarConfiguration](setneedsupdateofverticalbarconfiguration%28%29.md): Beta. Signals to the system that the preferred vertical bar configuration, such as its behavior, has changed.
+- [preferredVerticalBarBehavior](preferredverticalbarbehavior.md): The vertical bar behavior that this view controller prefers.
+- [UIVerticalBarBehavior](../uiverticalbarbehavior.md): A behavior that determines whether the vertical bar is used.
+- [setNeedsUpdateOfVerticalBarConfiguration](setneedsupdateofverticalbarconfiguration%28%29.md): Signals to the system that the preferred vertical bar configuration, such as its behavior, has changed.

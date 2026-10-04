@@ -1,9 +1,9 @@
-# Apple WebKit and Safari snapshot-33695ec62253: full documentation
+# Apple WebKit and Safari snapshot-f22abf4916e5: full documentation
 
 Source: https://developer.apple.com/documentation/webkit
-Catalog snapshot: 33695ec62253d7c27ab92cec13d777a7a1ab7c195e074c2faaa71df986300bb8
-Content digest: 98d5355b9314806fc6d4eada2ecb2a93176a5f08e3e4ac247a479ef447e7b53a
-Captured at: 2026-09-27T18:07:09.617Z
+Catalog snapshot: f22abf4916e5b2883ca54c03e9bfadb5e433da91e20aef1eeabdf5d3c0573721
+Content digest: beac2fd89a021eee1d72dbf403dfcb52f58089a1faaa58b19ce47f2de5dc3c0c
+Captured at: 2026-10-04T18:39:02.493Z
 Volume 1
 
 # Document: Apple Ads Platform API
@@ -119,7 +119,7 @@ New to the API? Start with the workflow guides. [Advertising Your App on the App
 
 ### Bulk Operations
 
-- [Bulk Operations Endpoints](apple-ads-platform-api/bulk-operations-endpoints.md): Create and update keywords and negative keywords in bulk.
+- [Bulk Operations Endpoints](apple-ads-platform-api/bulk-operations-endpoints.md): Create, update, and delete keywords and negative keywords in bulk through these endpoints.
 - [Bulk Data Objects](apple-ads-platform-api/bulk-data-objects.md): Use these objects to build bulk keyword and negative keyword requests and read their responses.
 
 ### Budget Orders
@@ -6418,7 +6418,7 @@ object AppDetails
 - `primaryLanguage` — `string`: Primary language of the app (BCP-47 code, for example, `"en-US"`).
 - `primaryGenre` — `string`: The primary App Store genre category (for example, `">Mobile Software Applications>Music"`).
 - `secondaryGenre` — `string`: The secondary App Store genre category, if assigned.
-- `deviceClasses` — `[string]`: Device families supported by the app. Possible values: `IPHONE`, `IPAD`.
+- `deviceClasses` — `[string]`: Device families supported by the app.
   **Allowed values:** `IPHONE`, `IPAD`
 - `iconPictureUrl` — `uri`: URL of the app’s icon image.
 - `isPreorder` — `boolean`: Whether the app is currently available as a pre-order.
@@ -10108,7 +10108,7 @@ object AppsReportingRequest
 - `sorting` — `[Sorting]`: Sort entities in ascending or descending order. The default behavior is to sort by ID, ascending. See [Sorting](sorting.md) for details.
 - `filters` — `[Filter]`: Filter field conditions for the report. `campaignId` is a required filter for every apps report request. See [Filter](filter.md) for details.
 - `fields` — `[string]`: A list of field names to return in the response. If you omit this field, the response includes all fields.
-- `groupBy` — `[string]`: Groups responses by selected dimensions. `KEYWORD` and `SEARCHTERM` entities exclude `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`. The `AD` entity also excludes `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`, supporting only `countryOrRegion`.
+- `groupBy` — `[string]`: Groups responses by selected dimensions. Supported values for APPS: `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`, `countryOrRegion`. Note: `KEYWORD` and `SEARCHTERM` entities exclude `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`. The `AD` entity also excludes `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`, supporting only `countryOrRegion`.
   **Allowed values:** `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`, `countryOrRegion`
 - `timeRange` — `TimeRange`: The date range, timezone, and granularity for report data. Defines the start and end dates for the reporting period. See [TimeRange](timerange.md) for details.
 - `options` — `AppsOptions`: Options to include additional rows in the report (for example, GRAND_TOTAL, EMPTY_METRICS). You can’t combine `EMPTY_METRICS` with `groupBy`. See [AppsOptions](appsoptions.md) for details.
@@ -12684,14 +12684,14 @@ The `BaseBulkRequest` object is the common base type extended by all typed bulk 
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: BidStrategy
 
@@ -13731,7 +13731,7 @@ Follow these steps, in order, to launch an Apple Maps campaign once your brand a
    - Create a group with [Create Location Group](create-location-group.md), supplying `name`, `brandId`, `adAccountId`, `groupType` (`STATIC` or `DYNAMIC`), and the Apple Maps location IDs for `STATIC` groups.
    - To look up valid location IDs, use [Query for Locations](query-locations.md), filtering by country, name, or status.
    - Groups with `groupType: DYNAMIC` start in `systemStatus: PENDING` while Apple Ads evaluates the rules. Wait for `systemStatus: VALID` before referencing the group in ad group targeting.
-4. **Choose placements and markets.** Set the campaign’s `targeting` to a `supplySource` of `MAPS`, one or both Apple Maps placements (`MAPS_SEARCH_RESULTS` for Search results, `MAPS_SEARCH_HOME` for Search home), and a `countryOrRegion` list that includes only the markets where your brand is eligible. You can combine both placements in one campaign, or create separate campaigns per placement for independent budget control and reporting. All three targeting dimensions remain mutable after you create the campaign.
+4. **Choose placements and markets.** Set the campaign’s `targeting` to a `supplySource` of `MAPS`, one or both Apple Maps placements (`MAPS_SEARCH_RESULTS` for Search results, `MAPS_SEARCH_HOME` for Search home), and a `countryOrRegion` list that includes only the markets where your brand is eligible. You can combine both placements in one campaign, or create separate campaigns per placement for independent budget control and reporting. `supplyPlacement` and `countryOrRegion` remain mutable after you create the campaign, but `supplySource` is fixed at creation.
 5. **Create a creative.** A creative assembles an asset, promotional text, and the tap destination (always the Apple Maps place card) into the ad unit shown on Apple Maps. Apple Ads may review creatives before they can serve. To monitor approval status, use [Query Ad Creatives](post-creatives-query.md). If Apple Ads rejects a creative or brand entity, query rejection reason details with [Query Rejection Reasons for Brands](query-policy-assignments-%28rejection-reasons%29-for-external-consumers.md).
 6. **Create a campaign.** Create the campaign with a POST to `/v1/campaigns`.
 
@@ -16819,9 +16819,9 @@ object BrandsReportingKeyword
 - `adAccountId` — `int64`: The identifier of the ad account that owns the keyword.
 - `deleted` — `boolean`: `true` if the keyword has been deleted.
 - `text` — `string`: The keyword text.
-- `status` — `string`: Possible values: `ENABLED`, `PAUSED`.
-  **Allowed values:** `ENABLED`, `PAUSED`
-- `matchType` — `string`: Match type for the keyword in Maps campaigns. Possible values: `PHRASE`, `CATEGORY`.
+- `status` — `string`: The keyword’s status at the time captured in the report.
+  **Allowed values:** `ENABLED`, `PAUSED`, `DELETED`
+- `matchType` — `string`: Match type for the keyword in Maps campaigns.
   **Allowed values:** `PHRASE`, `CATEGORY`
 - `bid` — `Money`: See [Money](money.md) for details.
 - `adGroupId` — `int64`: The identifier of the ad group that owns the keyword.
@@ -17752,27 +17752,34 @@ Use these objects to build bulk keyword and negative keyword requests and read t
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 - [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
 - [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
+- [BulkEntityDeleteIdLong](bulkentitydeleteidlong.md): The `data` payload for a bulk delete item, containing the identifier of the entity to remove.
 - [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
 - [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
 - [BulkNegativeKeywordCreate](bulknegativekeywordcreate.md): The `data` payload for a single negative-keyword-create item within a bulk create request.
 - [BulkNegativeKeywordUpdate](bulknegativekeywordupdate.md): The `data` payload for a single negative-keyword-update item within a bulk update request, identifying the record by `id`.
 - [BulkOperationRequestItem](bulkoperationrequestitem.md): Base item wrapper for bulk operation requests, carrying only the client-supplied `correlationId`.
 - [KeywordCreateBulkRequestItem](keywordcreatebulkrequestitem.md): A single item in a keyword bulk-create request.
+- [KeywordDeleteBulkRequestItem](keyworddeletebulkrequestitem.md): A single item in a keyword bulk-delete request.
 - [KeywordUpdateBulkRequestItem](keywordupdatebulkrequestitem.md): A single item in a keyword bulk-update request.
 - [NegativeKeywordCreateBulkRequestItem](negativekeywordcreatebulkrequestitem.md): A single item in a negative-keyword bulk-create request.
+- [NegativeKeywordDeleteBulkRequestItem](negativekeyworddeletebulkrequestitem.md): A single item in a negative-keyword bulk-delete request.
 - [NegativeKeywordUpdateBulkRequestItem](negativekeywordupdatebulkrequestitem.md): A single item in a negative-keyword bulk-update request.
 
 ## See Also
 
 ### Bulk Operations
 
-- [Bulk Operations Endpoints](bulk-operations-endpoints.md): Create and update keywords and negative keywords in bulk.
+- [Bulk Operations Endpoints](bulk-operations-endpoints.md): Create, update, and delete keywords and negative keywords in bulk through these endpoints.
 
 # Document: Bulk Operations Endpoints
 
@@ -17788,15 +17795,7 @@ Description: Interface language: Data
 **Kind:** API Collection  
 **Availability:** Apple Ads Platform API 1.0+
 
-Create and update keywords and negative keywords in bulk.
-
-<a id="overview"></a>
-
-## Overview
-
-> **Note**
-
-> Bulk delete endpoints for keywords and negative keywords are coming soon. To delete a keyword or negative keyword today, use the single-item [Delete a Keyword](delete-keywords-_id_.md) and [Delete a Negative Keyword](delete-negative-keywords-_id_.md) endpoints.
+Create, update, and delete keywords and negative keywords in bulk through these endpoints.
 
 <a id="Overview"></a>
 
@@ -17810,23 +17809,24 @@ Set `allowPartialSuccess: true` in the request to use partial success semantics.
 
 ## Find Bulk Endpoints
 
-Each entity that supports bulk operations exposes create and update endpoints at the following paths:
+Each entity that supports bulk operations exposes create, update, and delete endpoints at the following paths:
 
-| Entity | Bulk Create | Bulk Update |
-| --- | --- | --- |
-| Keywords | `POST /v1/keywords/bulk-create` | `POST /v1/keywords/bulk-update` |
-| Negative Keywords | `POST /v1/negative-keywords/bulk-create` | `POST /v1/negative-keywords/bulk-update` |
+| Entity | Bulk Create | Bulk Update | Bulk Delete |
+| --- | --- | --- | --- |
+| Keywords | `POST /v1/keywords/bulk-create` | `POST /v1/keywords/bulk-update` | `POST /v1/keywords/bulk-delete` |
+| Negative Keywords | `POST /v1/negative-keywords/bulk-create` | `POST /v1/negative-keywords/bulk-update` | `POST /v1/negative-keywords/bulk-delete` |
 
-<a id="Create-and-Update"></a>
+<a id="Create-Update-and-Delete"></a>
 
-### Create and Update
+### Create, Update, and Delete
 
-To create or update items in bulk, send a POST request to the entity’s bulk endpoint with an `items` array; the endpoint you call determines the shape of each item’s `data` object:
+To create, update, or delete items in bulk, send a POST request to the entity’s bulk endpoint with an `items` array; the endpoint you call determines the shape of each item’s `data` object:
 
 | Operation | Description |
 | --- | --- |
 | **Create** | Send the array to `/bulk-create`. Each item’s `data` contains the create payload. The response’s `result` array includes one entry per item with a `success` flag and per-item error details on failure. |
 | **Update** | Send the array to `/bulk-update`. Each item’s `data` must include the entity’s `id` plus only the fields you want to change; omitted fields retain their current values. |
+| **Delete** | Send the array to `/bulk-delete`. Each item’s `data` must include the entity’s `id`. Bulk delete soft-deletes entities: a deleted keyword stops serving immediately, and a deleted negative keyword stops suppressing matching terms immediately. The response doesn’t include the deleted entity, just each item’s success status. |
 
 <a id="Handle-Errors"></a>
 
@@ -17840,7 +17840,7 @@ The response reports bulk-level validation failures (such as sending more items 
 
 ### Choose Between Bulk and Single-Item Endpoints
 
-Prefer bulk endpoints when creating or updating more than a handful of keywords or negative keywords at once, such as rolling out a new keyword list across many ad groups or pausing a large negative keyword list in one pass. A bulk request counts as a single call against your rate limit regardless of how many items it carries, so batching changes into bulk requests is the most effective way to stay under the limits described in [Applying Rate Limits](rate-limits.md) during large-scale operations.
+Prefer bulk endpoints when creating, updating, or deleting more than a handful of keywords or negative keywords at once, such as rolling out a new keyword list across many ad groups or pausing a large negative keyword list in one pass. A bulk request counts as a single call against your rate limit regardless of how many items it carries, so batching changes into bulk requests is the most effective way to stay under the limits described in [Applying Rate Limits](rate-limits.md) during large-scale operations.
 
 Use the single-item endpoints for one-off changes, such as adjusting a single keyword’s bid, where there’s no batch to build. The single-item response shape is also simpler to handle in application code, since it returns a single `Error` object instead of a per-item `result` array keyed by `correlationId`.
 
@@ -17850,17 +17850,63 @@ Use the single-item endpoints for one-off changes, such as adjusting a single ke
 
 - [Bulk Create Keywords](post-keywords-bulk-create.md): Creates multiple keywords in a single request.
 - [Bulk Update Keywords](post-keywords-bulk-update.md): Updates multiple keywords in a single request.
+- [Bulk Delete Keywords](post-keywords-bulk-delete.md): Soft-deletes multiple keywords in a single request.
 
 ### Negative Keywords
 
 - [Bulk Create Negative Keywords](post-negative-keywords-bulk-create.md): Create multiple negative keywords in a single request.
 - [Bulk Update Negative Keywords](post-negative-keywords-bulk-update.md): Update multiple negative keywords in a single request.
+- [Bulk Delete Negative Keywords](post-negative-keywords-bulk-delete.md): Delete multiple negative keywords in a single request.
 
 ## See Also
 
 ### Bulk Operations
 
 - [Bulk Data Objects](bulk-data-objects.md): Use these objects to build bulk keyword and negative keyword requests and read their responses.
+
+# Document: BulkEntityDeleteIdLong
+
+Source path: documentation/apple-ads-platform-api/bulkentitydeleteidlong
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/bulkentitydeleteidlong
+Description: Interface language: Data
+
+# BulkEntityDeleteIdLong
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+The `data` payload for a bulk delete item, containing the identifier of the entity to remove.
+
+## Declaration
+
+```
+object BulkEntityDeleteIdLong
+```
+
+## Properties
+
+- `id` — `int64` (required): Entity ID (integer) for the delete operation.
+
+## See Also
+
+- [BaseBulkRequest](basebulkrequest.md): Base type for all bulk operation requests.
+- [BulkOperationRequest](bulkoperationrequest.md): Container for a bulk operation request.
+- [BulkItemResult](bulkitemresult.md): The base result envelope for a single item in a bulk operation response.
+- [BulkItemResultKeyword](bulkitemresultkeyword.md): A bulk operation result item that includes the affected Keyword entity.
+- [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
+- [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
+- [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
+- [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
+- [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
+- [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
+- [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
+- [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: BulkItemResult
 
@@ -17890,7 +17936,7 @@ object BulkItemResult
 - `operation` — `string`: The operation performed on this item: `CREATE`, `UPDATE`, or `DELETE`. Read-only.
 - `success` — `boolean`: Whether this individual item operation succeeded. Read-only.
 - `error` — `Error`: Per-item error details when this item failed. Null on success. See [Error](error.md). Read-only.
-- `result` — `Response.Result`: The response payload. Type depends on the specific response subtype. See [Response.Result](response/result-data.dictionary.md). Absent when the request fails.
+- `result` — `Response.Result`: The response payload. Type depends on the specific response subtype. See [Response.Result](response/result-data.dictionary.md). Absent on failure, and for all bulk delete responses.
 
 <a id="Discussion"></a>
 
@@ -17926,14 +17972,14 @@ When `allowPartialSuccess` is `true` in the request, inspect `success` on each e
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: BulkItemResultKeyword
 
@@ -17969,7 +18015,7 @@ object BulkItemResultKeyword
 
 ## Discussion
 
-The `BulkItemResultKeyword` object extends [BulkItemResult](bulkitemresult.md) with a typed `result` field containing the `Keyword` object the operation created or updated. This type appears as array items in `KeywordCreateBulkResponse` and `KeywordUpdateBulkResponse`.
+The `BulkItemResultKeyword` object extends [BulkItemResult](bulkitemresult.md) with a typed `result` field containing the `Keyword` object the operation created or updated. Used by `KeywordCreateBulkResponse` and `KeywordUpdateBulkResponse`; bulk delete doesn’t return the entity (see [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md)).
 
 On success, `result` contains the full `Keyword` entity as it exists after the operation. On failure, `success` is `false` and `error` carries per-item details.
 
@@ -18010,14 +18056,14 @@ On success, `result` contains the full `Keyword` entity as it exists after the o
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: BulkItemResultNegativeKeyword
 
@@ -18053,7 +18099,7 @@ object BulkItemResultNegativeKeyword
 
 ## Discussion
 
-The `BulkItemResultNegativeKeyword` object extends [BulkItemResult](bulkitemresult.md) with a typed `result` field containing the `NegativeKeyword` object the operation created or updated. This type appears as array items in `NegativeKeywordCreateBulkResponse` and `NegativeKeywordUpdateBulkResponse`.
+The `BulkItemResultNegativeKeyword` object extends [BulkItemResult](bulkitemresult.md) with a typed `result` field containing the `NegativeKeyword` object the operation created or updated. Used by `NegativeKeywordCreateBulkResponse` and `NegativeKeywordUpdateBulkResponse`; bulk delete doesn’t return the entity (see [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md)).
 
 On success, `result` contains the full `NegativeKeyword` entity as it exists after the operation. On failure, `success` is `false` and `error` carries per-item details.
 
@@ -18090,14 +18136,14 @@ On success, `result` contains the full `NegativeKeyword` entity as it exists aft
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: BulkKeywordCreate
 
@@ -18151,13 +18197,13 @@ object BulkKeywordCreate
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: BulkKeywordCreate.Bid
 
@@ -18332,13 +18378,13 @@ object BulkKeywordUpdate
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: BulkKeywordUpdate.Bid
 
@@ -18466,13 +18512,13 @@ object BulkNegativeKeywordCreate
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: BulkNegativeKeywordCreate.MatchType
 
@@ -18605,13 +18651,13 @@ object BulkNegativeKeywordUpdate
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: BulkNegativeKeywordUpdate.Status
 
@@ -18716,14 +18762,14 @@ The `BulkOperationRequest` object is the generic request container for bulk crea
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: BulkOperationRequestItem
 
@@ -18761,13 +18807,13 @@ object BulkOperationRequestItem
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: BulkResponse
 
@@ -18829,14 +18875,14 @@ When `allowPartialSuccess` is `true` in the request, individual item failures ap
 - [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: BusinessCategory
 
@@ -19368,7 +19414,10 @@ A detailed error message example:
     "details": [
       {
         "code": "DUPLICATE_NAME",
-        "message": "AdGroup name already exists under this Campaign."
+        "message": "AdGroup name already exists under this Campaign.",
+        "info": {
+          "field": "name"
+        }
       }
     ]
   }
@@ -19406,6 +19455,7 @@ Every response, successful or not, includes a set of `RateLimit-*` headers you c
 - [Error](error.md): The standard error envelope that the API returns when a request fails.
 - [ErrorDetail](errordetail.md): Field-level or request-level detail for a specific part of a failed API request.
 - [ErrorResponse](errorresponse.md): Certain endpoints return this envelope, which wraps an `Error` object, when a request fails.
+- [Info](info.md): Additional context that supplements an error detail’s message, varying by endpoint and error type.
 
 ## See Also
 
@@ -20155,7 +20205,7 @@ object Campaign.Targeting
 
 ## Properties
 
-- `supplySource` — `CampaignTargeting.SupplySource`: The supply source(s) where ads are eligible to appear. Possible values: `APPSTORE`, `MAPS`. See [TargetingData](../targetingdata.md) for details. Mutable.
+- `supplySource` — `CampaignTargeting.SupplySource`: The supply source(s) where ads are eligible to appear. Possible values: `APPSTORE`, `MAPS`. See [TargetingData](../targetingdata.md) for details. Fixed at creation.
 - `supplyPlacement` — `CampaignTargeting.SupplyPlacement`: The specific placements within a supply source. Possible values: `APPSTORE_SEARCH_RESULTS`, `APPSTORE_SEARCH_TAB`, `APPSTORE_TODAY_TAB`, `APPSTORE_PRODUCT_PAGES`, `MAPS_SEARCH_RESULTS`, `MAPS_SEARCH_HOME`. See [CampaignTargeting.SupplyPlacement](../campaigntargeting/supplyplacement-data.dictionary.md) for the supply source each placement belongs to. See [TargetingData](../targetingdata.md) for details. Mutable.
 - `countryOrRegion` — `CampaignTargeting.CountryOrRegion`: The countries or regions where the campaign serves ads. Uses ISO 3166-1 alpha-2 country codes. See [TargetingData](../targetingdata.md) for details. Mutable.
 
@@ -20953,6 +21003,8 @@ The following table compares how App Store and Apple Maps campaigns differ:
 | Creative source | App Store product page (no upload required) | Brand assets uploaded via the Assets API |
 | Bid strategy options | `MANUAL_CPT`, `MAX_CONVERSIONS` | `MAX_ENGAGEMENTS`, `MANUAL_CPT`, `MANUAL_CPM` |
 
+To target both `MAPS_SEARCH_RESULTS` and `MAPS_SEARCH_HOME` on an Apple Maps campaign, omit `supplyPlacement` from `targeting` entirely rather than listing both values in `include`. See [CampaignTargetingCreate.SupplyPlacement](campaigntargetingcreate/supplyplacement-data.dictionary.md) for details.
+
 An ad account’s `productFeatures` gate which campaign type it can create. An account authorized with `APPSTORE_APP_MANUAL` can only create App Store campaigns, and an account authorized with `BUSINESS_BRAND_MANUAL` can only create Apple Maps campaigns. See [ProductFeatures](productfeatures.md) for details.
 
 <a id="Promote-Apps"></a>
@@ -21314,7 +21366,7 @@ object CampaignTargeting
 
 ## Properties
 
-- `supplySource` — `CampaignTargeting.SupplySource`: The supply source(s) where ads are eligible to appear. Possible values: `APPSTORE`, `MAPS`. See [TargetingData](targetingdata.md) for details. Mutable.
+- `supplySource` — `CampaignTargeting.SupplySource`: The supply source(s) where ads are eligible to appear. Possible values: `APPSTORE`, `MAPS`. See [TargetingData](targetingdata.md) for details. Fixed at creation.
 - `supplyPlacement` — `CampaignTargeting.SupplyPlacement`: The specific placements within a supply source. Possible values: `APPSTORE_SEARCH_RESULTS`, `APPSTORE_SEARCH_TAB`, `APPSTORE_TODAY_TAB`, `APPSTORE_PRODUCT_PAGES`, `MAPS_SEARCH_RESULTS`, `MAPS_SEARCH_HOME`. See [CampaignTargeting.SupplyPlacement](campaigntargeting/supplyplacement-data.dictionary.md) for the supply source each placement belongs to. See [TargetingData](targetingdata.md) for details. Mutable.
 - `countryOrRegion` — `CampaignTargeting.CountryOrRegion`: The countries or regions where the campaign serves ads. Uses ISO 3166-1 alpha-2 country codes. See [TargetingData](targetingdata.md) for details. Mutable.
 
@@ -21324,7 +21376,7 @@ object CampaignTargeting
 
 The `CampaignTargeting` object defines where a campaign is eligible to serve ads, using three `TargetingData` fields: `supplySource`, `supplyPlacement`, and `countryOrRegion`.
 
-The `supplySource`, `supplyPlacement`, and `countryOrRegion` fields are all include-only at the campaign level: the `exclude` array isn’t supported for any of the three dimensions. Use [CampaignTargetingCreate](campaigntargetingcreate.md) to supply these values when creating a new campaign. Once the campaign exists, all three dimensions remain mutable via [CampaignTargetingUpdate](campaigntargetingupdate.md). After campaign-level targeting is in place, [AdGroupTargeting](adgrouptargeting.md) provides further audience and delivery refinements at the ad group level.
+The `supplySource`, `supplyPlacement`, and `countryOrRegion` fields are all include-only at the campaign level: the `exclude` array isn’t supported for any of the three dimensions. Use [CampaignTargetingCreate](campaigntargetingcreate.md) to supply these values when creating a new campaign. Once the campaign exists, `supplyPlacement` and `countryOrRegion` remain mutable via [CampaignTargetingUpdate](campaigntargetingupdate.md), but `supplySource` is fixed at creation and can’t be changed afterward. After campaign-level targeting is in place, [AdGroupTargeting](adgrouptargeting.md) provides further audience and delivery refinements at the ad group level.
 
 <a id="Example"></a>
 
@@ -21663,6 +21715,10 @@ The `supplyPlacement` field is **include-only**; setting `exclude` has no effect
 
 Uses the [TargetingDataCreate](../targetingdatacreate.md) `include`/`exclude` shape.
 
+> **Note**
+
+> To target both `MAPS_SEARCH_RESULTS` and `MAPS_SEARCH_HOME`, omit `supplyPlacement` from `targeting` entirely rather than listing both values in `include`. Listing multiple `MAPS` placement values together is rejected. Choose this at create time. A campaign created with a single placement can’t be widened to target both placements later through [CampaignTargetingUpdate.SupplyPlacement](../campaigntargetingupdate/supplyplacement-data.dictionary.md), since omitting the field on update leaves the current placement unchanged instead of expanding it. Widening to both placements requires creating a new campaign.
+
 # Document: CampaignTargetingCreate.SupplySource
 
 Source path: documentation/apple-ads-platform-api/campaigntargetingcreate/supplysource-data.dictionary
@@ -21727,7 +21783,7 @@ object CampaignTargetingUpdate
 
 ## Properties
 
-- `supplySource` — `CampaignTargetingUpdate.SupplySource`: The supply source(s) where ads are eligible to appear. Omit to leave unchanged. See [TargetingDataUpdate](targetingdataupdate.md).
+- `supplySource` — `CampaignTargetingUpdate.SupplySource`: The supply source(s) where ads are eligible to appear. Fixed at creation. Don’t include this field in an update request, since doing so is unsupported regardless of the value sent.
 - `supplyPlacement` — `CampaignTargetingUpdate.SupplyPlacement`: The specific placements within a supply source. Omit to leave unchanged. See [TargetingDataUpdate](targetingdataupdate.md).
 - `countryOrRegion` — `CampaignTargetingUpdate.CountryOrRegion`: The countries or regions where the campaign serves ads. Omit to leave unchanged. See [TargetingDataUpdate](targetingdataupdate.md).
 
@@ -21735,7 +21791,11 @@ object CampaignTargetingUpdate
 
 ## Discussion
 
-The `CampaignTargetingUpdate` object is the update-time counterpart to [CampaignTargeting](campaigntargeting.md). The `supplySource`, `supplyPlacement`, and `countryOrRegion` fields are all optional and nullable. Only the fields you supply are changed, and any omitted field retains its current value. Each field uses a [TargetingDataUpdate](targetingdataupdate.md) object to express `include`/`exclude` changes for that dimension.
+The `CampaignTargetingUpdate` object is the update-time counterpart to [CampaignTargeting](campaigntargeting.md). `supplyPlacement` and `countryOrRegion` are optional and nullable; only the fields you supply are changed, and any omitted field retains its current value. `supplySource` is immutable after campaign creation: including it in an update request, even with its current unchanged value, is unsupported. Each updatable field uses a [TargetingDataUpdate](targetingdataupdate.md) object to express `include`/`exclude` changes for that dimension.
+
+> **Note**
+
+> For `supplyPlacement`, omitting the field leaves the current placement(s) unchanged rather than switching targeting to every placement. An Apple Maps campaign created with a single `MAPS` placement can’t be widened to target both `MAPS_SEARCH_RESULTS` and `MAPS_SEARCH_HOME` via update. That requires creating a new campaign without `supplyPlacement` set. See [CampaignTargetingCreate.SupplyPlacement](campaigntargetingcreate/supplyplacement-data.dictionary.md).
 
 <a id="Example"></a>
 
@@ -21743,10 +21803,6 @@ The `CampaignTargetingUpdate` object is the update-time counterpart to [Campaign
 
 ```json
 {
-  "supplySource": {
-    "include": ["APPSTORE"],
-    "exclude": null
-  },
   "supplyPlacement": {
     "include": ["APPSTORE_SEARCH_RESULTS", "APPSTORE_TODAY_TAB"],
     "exclude": null
@@ -21862,6 +21918,10 @@ The `supplyPlacement` field is **include-only**; setting `exclude` has no effect
 
 Uses the [TargetingDataUpdate](../targetingdataupdate.md) `include`/`exclude` shape.
 
+> **Note**
+
+> Omitting `supplyPlacement` here leaves the campaign’s current placement(s) unchanged; it doesn’t switch targeting to every placement. Unlike at create time, there’s no way to widen an existing single-placement `MAPS` campaign to target both `MAPS_SEARCH_RESULTS` and `MAPS_SEARCH_HOME` via update. See [CampaignTargetingCreate.SupplyPlacement](../campaigntargetingcreate/supplyplacement-data.dictionary.md) for the create-time behavior.
+
 # Document: CampaignTargetingUpdate.SupplySource
 
 Source path: documentation/apple-ads-platform-api/campaigntargetingupdate/supplysource-data.dictionary
@@ -21886,14 +21946,14 @@ object CampaignTargetingUpdate.SupplySource
 
 ## Properties
 
-- `include` — `[string]`: Supply sources to include in targeting. Omit to leave unchanged. Mutable.
-- `exclude` — `[string]`: Not supported at the campaign level. Has no effect if set. Mutable.
+- `include` — `[string]`: Supply sources to include in targeting. Don’t set on update; the campaign’s `supplySource` can’t be changed after creation.
+- `exclude` — `[string]`: Not supported at the campaign level. Has no effect if set.
 
 <a id="Discussion"></a>
 
 ## Discussion
 
-The `supplySource` field is **include-only**; setting `exclude` has no effect. Omit to leave unchanged. Valid values:
+The `supplySource` field is fixed at creation and can’t be changed by update. Including this field in an update request is unsupported, even when the value matches the campaign’s current `supplySource`. Valid values:
 
 | Value | Ad channel |
 | --- | --- |
@@ -22219,7 +22279,7 @@ object CampaignUpdate.Targeting
 
 ## Properties
 
-- `supplySource` — `CampaignTargetingUpdate.SupplySource`: The supply source(s) where ads are eligible to appear. Omit to leave unchanged. See [TargetingDataUpdate](../targetingdataupdate.md).
+- `supplySource` — `CampaignTargetingUpdate.SupplySource`: The supply source(s) where ads are eligible to appear. Fixed at creation. Don’t include this field in an update request, since doing so is unsupported regardless of the value sent.
 - `supplyPlacement` — `CampaignTargetingUpdate.SupplyPlacement`: The specific placements within a supply source. Omit to leave unchanged. See [TargetingDataUpdate](../targetingdataupdate.md).
 - `countryOrRegion` — `CampaignTargetingUpdate.CountryOrRegion`: The countries or regions where the campaign serves ads. Omit to leave unchanged. See [TargetingDataUpdate](../targetingdataupdate.md).
 
@@ -22227,7 +22287,7 @@ object CampaignUpdate.Targeting
 
 ## Discussion
 
-Omit a field to leave its current value unchanged.
+Omit `supplyPlacement` or `countryOrRegion` to leave its current value unchanged. `supplySource` is fixed at creation; don’t include it in an update request.
 
 See [CampaignTargetingUpdate](../campaigntargetingupdate.md) for the full field reference.
 
@@ -24224,7 +24284,7 @@ object CreativeRejectionReason
 - `reasonType` — `string`: Type of rejection reason. Read-only.
 - `reasonCode` — `string`: Code for the specific rejection reason. Read-only.
 - `comment` — `string`: Additional context for the rejection. Nullable. Read-only.
-- `reasonLevel` — `string`: The level at which the rejection applies. Possible values: `DEFAULT_PRODUCT_PAGE`, `DEFAULT_PRODUCT_PAGE_LOCALE`, `CUSTOM_PRODUCT_PAGE`, `CUSTOM_PRODUCT_PAGE_LOCALE`. Read-only.
+- `reasonLevel` — `string`: The level at which the rejection applies. Read-only.
   **Allowed values:** `DEFAULT_PRODUCT_PAGE`, `DEFAULT_PRODUCT_PAGE_LOCALE`, `CUSTOM_PRODUCT_PAGE`, `CUSTOM_PRODUCT_PAGE_LOCALE`
 
 <a id="Discussion"></a>
@@ -25219,6 +25279,7 @@ object DailyCapRecommendation
 
 - `id` — `string`: Unique identifier for the recommendation. Read-only.
 - `recommendationType` — `RecommendationCategory`: The recommendation category. Value: `DAILYCAP`. Read-only.
+- `adAccountId` — `int64`: The ad account this recommendation belongs to. Read-only.
 - `promotedObjectId` — `string`: The ID of the promoted object. For `APPSTORE_APP`, this is the app Adam ID. For `BUSINESS_BRAND`, this is the brand ID. Read-only.
 - `promotedObjectType` — `PromotedObjectType`: The type of the promoted object. Read-only.
 - `campaignId` — `int64`: The campaign the recommendation is for. Read-only.
@@ -25258,6 +25319,7 @@ When a campaign frequently exhausts its daily budget, `DailyCapRecommendation` p
 {
   "id": "rec-budget-001",
   "recommendationType": "DAILYCAP",
+  "adAccountId": 123456789,
   "promotedObjectId": "123456789",
   "promotedObjectType": "APPSTORE_APP",
   "campaignId": 987654321,
@@ -27896,7 +27958,10 @@ Check `details` when you need to pinpoint exactly which part of the request was 
   "details": [
     {
       "code": "FIELD_REQUIRED",
-      "message": "campaign.name is required and was not provided for AwayFinder campaign creation."
+      "message": "campaign.name is required and was not provided for AwayFinder campaign creation.",
+      "info": {
+        "field": "campaign.name"
+      }
     }
   ]
 }
@@ -27908,6 +27973,7 @@ Check `details` when you need to pinpoint exactly which part of the request was 
 
 - [ErrorDetail](errordetail.md): Field-level or request-level detail for a specific part of a failed API request.
 - [ErrorResponse](errorresponse.md): Certain endpoints return this envelope, which wraps an `Error` object, when a request fails.
+- [Info](info.md): Additional context that supplements an error detail’s message, varying by endpoint and error type.
 
 # Document: ErrorDetail
 
@@ -27935,6 +28001,7 @@ object ErrorDetail
 
 - `code` — `string` (required): A machine-readable code identifying the specific violation, such as `FIELD_REQUIRED` for a missing required field or `INVALID_VALUE` for a field that failed validation.
 - `message` — `string`: A human-readable description of this specific violation, such as which field was missing or invalid and why.
+- `info` — `Info`: Additional context that supplements `message`, such as the field name, the invalid value, or acceptable alternatives. Content varies by endpoint and error type. See [Info](info.md).
 
 <a id="Discussion"></a>
 
@@ -27949,7 +28016,10 @@ The `ErrorDetail` provides field-level or request-level granularity for a specif
 ```json
 {
   "code": "FIELD_REQUIRED",
-  "message": "campaign.name is required and was not provided for AwayFinder campaign creation."
+  "message": "campaign.name is required and was not provided for AwayFinder campaign creation.",
+  "info": {
+    "field": "campaign.name"
+  }
 }
 ```
 
@@ -27959,6 +28029,7 @@ The `ErrorDetail` provides field-level or request-level granularity for a specif
 
 - [Error](error.md): The standard error envelope that the API returns when a request fails.
 - [ErrorResponse](errorresponse.md): Certain endpoints return this envelope, which wraps an `Error` object, when a request fails.
+- [Info](info.md): Additional context that supplements an error detail’s message, varying by endpoint and error type.
 
 # Document: ErrorMessage
 
@@ -27984,7 +28055,7 @@ object ErrorMessage
 
 ## Properties
 
-- `code` — `string`: A machine-readable error code identifying the failure type. Possible values: `BAD_REQUEST`, `NOT_FOUND`, `NOT_AUTHED`. Read-only.
+- `code` — `string`: A machine-readable error code identifying the failure type. Read-only.
   **Allowed values:** `BAD_REQUEST`, `NOT_FOUND`, `NOT_AUTHED`
 - `message` — `string`: A human-readable description of the error. Read-only.
 - `details` — `[ErrorMessage.Details]`: An array of additional error detail objects providing field-level context. Each object in the array contains `code` and `message` fields identifying the specific validation failure, and may include an `info` object (string-to-string map) with additional structured context. Read-only.
@@ -28174,7 +28245,10 @@ A `429` status indicates the caller has exceeded its request quota. See [Applyin
     "details": [
       {
         "code": "MISSING_REQUIRED_FIELD",
-        "message": "The field 'name' is required for campaign AwayFinder Summer Launch."
+        "message": "The field 'name' is required for campaign AwayFinder Summer Launch.",
+        "info": {
+          "field": "name"
+        }
       }
     ]
   }
@@ -28187,6 +28261,7 @@ A `429` status indicates the caller has exceeded its request quota. See [Applyin
 
 - [Error](error.md): The standard error envelope that the API returns when a request fails.
 - [ErrorDetail](errordetail.md): Field-level or request-level detail for a specific part of a failed API request.
+- [Info](info.md): Additional context that supplements an error detail’s message, varying by endpoint and error type.
 
 # Document: Filter
 
@@ -29843,7 +29918,7 @@ Type: `AppsReportingRequest`
 
 Ad group reports return one row per ad group. Each row contains a `metadata` object with ad group identifiers (including `campaignId`), `totalMetrics` aggregated over the full date range, and a `granularMetrics` array broken down by the selected `granularity`.
 
-Every apps report request requires a `campaignId` filter; optionally add `adGroupId` in the `filters` array to scope results further. Use `groupBy` to split metrics along a dimension: each dimension value produces its own row within the ad group’s result.
+Filter by the required `campaignId` in the `filters` array, optionally narrowed further by `adGroupId`. Use `groupBy` to split metrics along a dimension: each dimension value produces its own row within the ad group’s result.
 
 See [Filter](filter.md) for the full set of supported comparison operators.
 
@@ -29859,22 +29934,22 @@ See [AppsReportingRequest](appsreportingrequest.md).
 
 `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`, `countryOrRegion`
 
-Granularity constraints follow the usual date range rules, from a 7-day span limit for `HOURLY` to a 90-day-old end date for `MONTHLY`.
+Date range requirements vary by granularity: `HOURLY` and `DAILY` are capped at 7-day and 90-day spans respectively, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | Date range must span 7 days or less, and the start date must be within the last 365 days. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
-Filtering by `campaignId`, selecting a timezone of `ORTZ` or `UTC`, and narrowing the `fields` array all help keep ad group report responses manageable.
+Selecting a timezone of `ORTZ` or `UTC` and narrowing the `fields` array also help keep ad group report responses manageable.
 
 | Constraint | Detail |
 | --- | --- |
-| Filter by `campaignId` | Recommended to scope results and reduce response size. |
+| Filter by `campaignId` | Required to scope results and reduce response size. |
 | Timezone | Use `ORTZ` (reporting timezone) or `UTC`. |
 | Fields selection | Use the `fields` array to request only specific metric columns. |
 
@@ -30042,7 +30117,7 @@ Type: `AppsReportingRequest`
 
 Ad reports return one row per ad. Each row contains a `metadata` object with ad identifiers (including `campaignId` and `adGroupId`), `totalMetrics` aggregated over the full date range, and a `granularMetrics` array broken down by the selected `granularity`.
 
-Every apps report request requires a `campaignId` filter; optionally add `adGroupId` in the `filters` array to scope results to a specific ad group.
+Filter by the required `campaignId` in the `filters` array, optionally narrowed further by `adGroupId`.
 
 See [Filter](filter.md) for the full set of supported comparison operators.
 
@@ -30058,16 +30133,16 @@ See [AppsReportingRequest](appsreportingrequest.md).
 
 `countryOrRegion`
 
-The `AD` entity supports only the `countryOrRegion` groupBy dimension. `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, and `locality` are **not** supported.
+The `AD` entity supports only the `countryOrRegion` groupBy dimension. `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, and `locality` are not supported.
 
 Ad reports follow the standard date range rules per granularity, except `HOURLY` isn’t available at the ad level.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | **Not supported** for the `AD` entity. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -30090,7 +30165,7 @@ Retrieve daily ad metrics for a specific ad group, grouped by country or region.
 
 ### Request
 
-Filters by `campaignId` and `adGroupId` and groups results by `countryOrRegion`, returning daily ad-level metrics for a 31-day window in the account’s reporting timezone.
+Filters by `campaignId`, narrowed to a specific ad group with `adGroupId`, and groups results by `countryOrRegion`, returning daily ad-level metrics for a 31-day window in the account’s reporting timezone.
 
 ```json
 POST /v1/reports/apps/ads/query
@@ -30379,14 +30454,14 @@ See [AppsReportingRequest](appsreportingrequest.md).
 
 `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`, `countryOrRegion`
 
-Granularity constraints follow the usual date range rules, from a 7-day span limit for `HOURLY` to a 90-day-old end date for `MONTHLY`.
+Date range requirements vary by granularity: `HOURLY` and `DAILY` are capped at 7-day and 90-day spans respectively, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | Date range must span 7 days or less, and the start date must be within the last 365 days. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -30669,7 +30744,7 @@ Type: `AppsReportingRequest`
 
 Keyword performance reports return one row per keyword. Each row contains a `metadata` object with keyword identifiers (including `campaignId`, `adGroupId`, `text`, and `matchType`), `totalMetrics` aggregated over the full date range, and a `granularMetrics` array broken down by the selected `granularity`. Rows may also include an optional `insights` object whose `bidRecommendation` field surfaces a recommended bid for the keyword.
 
-Every apps report request requires a `campaignId` filter; optionally add `adGroupId` in the `filters` array to scope results further. Use `groupBy` to split metrics along a dimension.
+Filter by the required `campaignId` in the `filters` array, optionally narrowed further by `adGroupId`. Use `groupBy` to split metrics along a dimension.
 
 See [Filter](filter.md) for the full set of supported comparison operators.
 
@@ -30687,22 +30762,22 @@ See [AppsReportingRequest](appsreportingrequest.md).
 
 The following dimensions are **not** supported for the `KEYWORD` entity: `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`.
 
-Granularity constraints follow the usual date range rules, from a 7-day span limit for `HOURLY` to a 90-day-old end date for `MONTHLY`.
+Date range requirements vary by granularity: `HOURLY` and `DAILY` are capped at 7-day and 90-day spans respectively, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | Date range must span 7 days or less, and the start date must be within the last 365 days. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
-Always filter keyword reports by `adGroupId` or `campaignId` to avoid retrieving every keyword in the account.
+Always filter keyword reports by the required `campaignId`, optionally narrowed further by `adGroupId`.
 
 | Constraint | Detail |
 | --- | --- |
-| Filter scope | Always filter by `adGroupId` or `campaignId` to avoid retrieving all keywords across the account. |
+| Filter by `campaignId` | Required to scope results and avoid retrieving all keywords across the account. |
 
 <a id="Payload-Examples"></a>
 
@@ -30716,7 +30791,7 @@ Retrieve daily keyword metrics for all keywords in a specific ad group.
 
 ### Request
 
-Filters by `adGroupId` with no `groupBy` dimension, returning daily keyword metrics aggregated across all devices and countries for January 2025.
+Filters by `campaignId`, narrowed to a specific ad group with `adGroupId`, with no `groupBy` dimension, returning daily keyword metrics aggregated across all devices and countries for January 2025.
 
 ```json
 POST /v1/reports/apps/keywords/query
@@ -30727,6 +30802,11 @@ POST /v1/reports/apps/keywords/query
    "pageSize": 20
  },
  "filters": [
+   {
+     "field": "campaignId",
+     "operator": "EQUALS",
+     "value": "444555666"
+   },
    {
      "field": "adGroupId",
      "operator": "EQUALS",
@@ -30818,7 +30898,7 @@ Retrieve keyword metrics grouped by country to see which App Store countries or 
 
 ### Request
 
-Filters by `adGroupId` and groups results by `countryOrRegion`, returning daily keyword metrics split by App Store country or region for January 2025.
+Filters by `campaignId`, narrowed to a specific ad group with `adGroupId`, and groups results by `countryOrRegion`, returning daily keyword metrics split by App Store country or region for January 2025.
 
 ```json
 POST /v1/reports/apps/keywords/query
@@ -30829,6 +30909,11 @@ POST /v1/reports/apps/keywords/query
    "pageSize": 20
  },
  "filters": [
+   {
+     "field": "campaignId",
+     "operator": "EQUALS",
+     "value": "444555666"
+   },
    {
      "field": "adGroupId",
      "operator": "EQUALS",
@@ -30972,7 +31057,7 @@ Use search term data to:
 - Identify irrelevant queries to exclude as negative keywords with [Create a Negative Keyword](post-negative-keywords.md).
 - Understand match expansion breadth for BROAD-match keywords.
 
-Every apps report request requires a `campaignId` filter; optionally add `adGroupId` in the `filters` array to scope results further.
+Filter by the required `campaignId` in the `filters` array, optionally narrowed further by `adGroupId`.
 
 See [Filter](filter.md) for the full set of supported comparison operators.
 
@@ -30990,14 +31075,14 @@ See [AppsReportingRequest](appsreportingrequest.md).
 
 The following dimensions are **not** supported for the `SEARCHTERM` entity: `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`.
 
-Search term reports follow the usual granularity rules, except `HOURLY` isn’t available for this entity.
+Date range requirements vary by granularity: `DAILY` is capped at a 90-day span, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively. `HOURLY` isn’t available for this entity.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | **Not supported** for the `SEARCHTERM` entity. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -31022,7 +31107,7 @@ Retrieve daily search term metrics for all keywords in a specific ad group. Resu
 
 ### Request
 
-Filters by `adGroupId` with no `groupBy` dimension, returning daily search term metrics for all matched queries in January 2025 using the account’s reporting timezone.
+Filters by `campaignId`, narrowed to a specific ad group with `adGroupId`, with no `groupBy` dimension, returning daily search term metrics for all matched queries in January 2025 using the account’s reporting timezone.
 
 ```json
 POST /v1/reports/apps/searchterms/query
@@ -31033,6 +31118,11 @@ POST /v1/reports/apps/searchterms/query
    "pageSize": 20
  },
  "filters": [
+   {
+     "field": "campaignId",
+     "operator": "EQUALS",
+     "value": "444555666"
+   },
    {
      "field": "adGroupId",
      "operator": "EQUALS",
@@ -31196,13 +31286,13 @@ POST /v1/reports/apps/searchterms/query
 
 **Weekly**
 
-Retrieve weekly search term metrics for a campaign. Weekly granularity requires the end date to be at least 14 days in the past.
+Retrieve weekly search term metrics for a campaign. Weekly granularity requires the date range to span at least 14 days.
 
 <a id="Request"></a>
 
 ### Request
 
-Filters by `campaignId` with no `groupBy` dimension and uses weekly granularity over a 2-month window. The end date is more than 14 days in the past as required by weekly reporting.
+Filters by `campaignId` with no `groupBy` dimension and uses weekly granularity over a 2-month window, well over the 14-day minimum required for weekly reporting.
 
 ```json
 POST /v1/reports/apps/searchterms/query
@@ -31489,14 +31579,14 @@ The `groupBy` array supports three dimensions for ad groups: device class, busin
 | `locationId` | Break down metrics per business location. |
 | `supplyPlacement` | Break down metrics by ad placement. |
 
-Each granularity value comes with its own date range restrictions, from a 7-day span limit for `HOURLY` to a 90-day-old end date for `MONTHLY`.
+Date range requirements vary by granularity: `HOURLY` and `DAILY` are capped at 7-day and 90-day spans respectively, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | Date range must span 7 days or less, and the start date must be within the last 365 days. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -31914,10 +32004,10 @@ Ad reports follow the standard date range rules per granularity, except `HOURLY`
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | **Not supported** for the `AD` entity. Use `DAILY` as the finest granularity. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -32406,14 +32496,14 @@ The following metrics are available for brand campaign reports, covering spend, 
 | `actionsPerTap` | Actions divided by taps |
 | `actionsPerImpression` | Actions divided by impressions |
 
-Granularity constraints follow the usual date range rules, from a 7-day span limit for `HOURLY` to a 90-day-old end date for `MONTHLY`.
+Date range requirements vary by granularity: `HOURLY` and `DAILY` are capped at 7-day and 90-day spans respectively, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | Date range must span 7 days or less, and the start date must be within the last 365 days. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -32851,14 +32941,14 @@ Apple Maps keyword reports support a reduced set of `groupBy` dimensions. Neithe
 
 The `supplyPlacement` and `locationId` fields are **not** supported for the `KEYWORD` entity under `business-brands`.
 
-Granularity constraints mirror other Apple Maps entities, with a 7-day span limit for `HOURLY` and lookback windows ranging up to 90 days for `MONTHLY`.
+Date range requirements vary by granularity: `HOURLY` and `DAILY` are capped at 7-day and 90-day spans respectively, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | Date range must span 7 days or less, and the start date must be within the last 365 days. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -33158,14 +33248,14 @@ The following dimensions are **not** supported for the `SEARCHTERM` entity under
 - `supplyPlacement`
 - `locationId`
 
-Granularity constraints follow the same date range rules as other Apple Maps reports, except `HOURLY` isn’t available for search terms.
+Date range requirements vary by granularity: `DAILY` is capped at a 90-day span, while `WEEKLY` and `MONTHLY` require spans of at least 14 and 90 days respectively. `HOURLY` isn’t available for search terms.
 
 | Granularity | Constraint |
 | --- | --- |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `DAILY` | Date range must span 90 days or less. |
 | `HOURLY` | **Not supported** for the `SEARCHTERM` entity. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
 
@@ -33540,13 +33630,13 @@ POST /v1/reports/business-brands/searchterms/query
 
 **Brands, Weekly**
 
-Retrieve weekly search term metrics for a campaign. Weekly granularity requires the end date to be at least 14 days in the past.
+Retrieve weekly search term metrics for a campaign. Weekly granularity requires the date range to span at least 14 days.
 
 <a id="Request"></a>
 
 ### Request
 
-Filters by `campaignId` with no `groupBy` dimension and uses weekly granularity over a 2-month window. The end date is more than 14 days in the past as required by weekly reporting.
+Filters by `campaignId` with no `groupBy` dimension and uses weekly granularity over a 2-month window, well over the 14-day minimum required for weekly reporting.
 
 ```json
 POST /v1/reports/business-brands/searchterms/query
@@ -36501,7 +36591,7 @@ object ImpressionShareTimeRange
 - `end` — `date` (required): End date in YYYY-MM-DD format.
 - `timeZone` — `string`: Timezone. Fixed to `UTC`. Not user-configurable. Default: `"UTC"`.
   **Allowed values:** `UTC`
-- `granularity` — `string` (required): Aggregation period. `DAILY` aggregates per day, with a maximum window of 30 days (inclusive), and populates the `day` field (not the `week` field) in each row. `WEEKLY_SUN_SAT` aggregates per Sunday-to-Saturday week, with a maximum window of 4 weeks, and populates the `week` field (not the `day` field) with the Sunday start date. The `start` date must be a Sunday. Possible values: `DAILY`, `WEEKLY_SUN_SAT`.
+- `granularity` — `string` (required): Aggregation period. `DAILY` aggregates per day, with a maximum window of 30 days (inclusive), and populates the `day` field (not the `week` field) in each row. `WEEKLY_SUN_SAT` aggregates per Sunday-to-Saturday week, with a maximum window of 4 weeks, and populates the `week` field (not the `day` field) with the Sunday start date. The `start` date must be a Sunday.
   **Allowed values:** `DAILY`, `WEEKLY_SUN_SAT`
 
 <a id="Discussion"></a>
@@ -36609,6 +36699,42 @@ The `IncludeExclude` object is a shared targeting wrapper used by [BrandsTargeti
 - [LocationGroupResponse](locationgroupresponse.md): The response object returned by the Get Location Group endpoint.
 - [LocationGroupQueryResponse](locationgroupqueryresponse.md): The response object returned by the Query Location Groups endpoint.
 - [LocationQueryResponse](locationqueryresponse.md): The paginated response envelope returned by the Query Locations endpoint.
+
+# Document: Info
+
+Source path: documentation/apple-ads-platform-api/info
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/info
+Description: Interface language: Data
+
+# Info
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+Additional context that supplements an error detail’s message, varying by endpoint and error type.
+
+## Declaration
+
+```
+object Info
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+`Info` supplements an [ErrorDetail](errordetail.md)’s `message` with structured context, such as the field name, the invalid value, or acceptable alternatives. Its shape depends on the endpoint and the specific error condition, so it carries no fixed set of properties.
+
+## See Also
+
+### Error Responses
+
+- [Error](error.md): The standard error envelope that the API returns when a request fails.
+- [ErrorDetail](errordetail.md): Field-level or request-level detail for a specific part of a failed API request.
+- [ErrorResponse](errorresponse.md): Certain endpoints return this envelope, which wraps an `Error` object, when a request fails.
 
 # Document: Insights Data Objects
 
@@ -37280,7 +37406,7 @@ With a campaign running and data flowing, you’re ready to optimize in the foll
 - To act on automated suggestions, use [Query Daily Budget Recommendations](query-daily-budget-recommendations.md).
 - To understand how often your ads win auctions versus competitors, use [Impression Share Query](query-app-impression-share-data.md).
 - To identify trending search terms in your category, use [Search Term Popularity Query](query-app-search-term-popularity-data.md).
-- Scale keyword changes with [Bulk Update Keywords](post-keywords-bulk-update.md). To remove a keyword, use the single-item [Delete a Keyword](delete-keywords-_id_.md) endpoint. When looping over many campaigns or ad groups, watch the rate-limit headers described in [Applying Rate Limits](rate-limits.md) and back off before hitting a `429`.
+- Scale keyword changes with [Bulk Update Keywords](post-keywords-bulk-update.md), and scale removals with [Bulk Delete Keywords](post-keywords-bulk-delete.md). To remove a single keyword, use [Delete a Keyword](delete-keywords-_id_.md) instead. When looping over many campaigns or ad groups, watch the rate-limit headers described in [Applying Rate Limits](rate-limits.md) and back off before hitting a `429`.
 
 ## See Also
 
@@ -37413,7 +37539,7 @@ Apple Maps campaigns support two placements:
 | `MAPS_SEARCH_RESULTS` | Search results | Reaches people after they search for something specific and supports radius targeting at the ad group level. See [AdGroupTargeting](adgrouptargeting.md). |
 | `MAPS_SEARCH_HOME` | Search home | Reaches people at the top of the Suggested Places list, before they search. |
 
-You can include both placement values in a single campaign, or create separate campaigns per placement for independent budget control and reporting. The brand you identified earlier includes a `countryOrRegion` field indicating the markets where the brand is eligible. Set `countryOrRegion.include` to the subset of those markets this campaign should target, like this:
+To target both placements in a single campaign, omit `supplyPlacement` from `targeting` entirely: `supplySource: MAPS` alone covers both `MAPS_SEARCH_RESULTS` and `MAPS_SEARCH_HOME`. Listing both values together in `supplyPlacement.include` is rejected. See [CampaignTargetingCreate.SupplyPlacement](campaigntargetingcreate/supplyplacement-data.dictionary.md) for details. Alternatively, create separate single-placement campaigns for independent budget control and reporting. The brand you identified earlier includes a `countryOrRegion` field indicating the markets where the brand is eligible. Set `countryOrRegion.include` to the subset of those markets this campaign should target, like this:
 
 ```json
 "targeting":
@@ -37436,7 +37562,7 @@ You can include both placement values in a single campaign, or create separate c
 }
 ```
 
-After creation, all three dimensions remain mutable and you can update them via [CampaignTargeting](campaigntargeting.md).
+After creation, `supplyPlacement` and `countryOrRegion` remain mutable and you can update them via [CampaignTargetingUpdate](campaigntargetingupdate.md), but `supplySource` is fixed at creation and can’t be changed afterward.
 
 <a id="Create-an-Apple-Maps-Campaign"></a>
 
@@ -38059,14 +38185,14 @@ The `KeywordCreateBulkRequest` object allows creating multiple keywords in a sin
 - [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: KeywordCreateBulkRequestItem
 
@@ -38131,13 +38257,13 @@ The `data` object accepts only the fields defined on [BulkKeywordCreate](bulkkey
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: KeywordCreateBulkResponse
 
@@ -38213,14 +38339,218 @@ The `KeywordCreateBulkResponse` object is the response envelope returned by the 
 - [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
+
+# Document: KeywordDeleteBulkRequest
+
+Source path: documentation/apple-ads-platform-api/keyworddeletebulkrequest
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/keyworddeletebulkrequest
+Description: Interface language: Data
+
+# KeywordDeleteBulkRequest
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+A bulk request to delete multiple Keyword objects by their identifiers.
+
+## Declaration
+
+```
+object KeywordDeleteBulkRequest
+```
+
+## Properties
+
+- `allowPartialSuccess` — `boolean`: If `true`, allows some operations in the batch to succeed while others fail.
+- `items` — `[KeywordDeleteBulkRequestItem]`: Array of bulk item objects specifying which keywords to delete. Each item’s `data` field contains the identifier of the keyword to delete.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+`KeywordDeleteBulkRequest` allows deleting multiple keywords in a single API call.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "allowPartialSuccess": true,
+  "items": [
+    {
+      "correlationId": 0,
+      "data": {
+        "id": 888999000
+      }
+    },
+    {
+      "correlationId": 1,
+      "data": {
+        "id": 888999001
+      }
+    }
+  ]
+}
+```
+
+## See Also
+
+- [BaseBulkRequest](basebulkrequest.md): Base type for all bulk operation requests.
+- [BulkOperationRequest](bulkoperationrequest.md): Container for a bulk operation request.
+- [BulkItemResult](bulkitemresult.md): The base result envelope for a single item in a bulk operation response.
+- [BulkItemResultKeyword](bulkitemresultkeyword.md): A bulk operation result item that includes the affected Keyword entity.
+- [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
+- [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
+- [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
+- [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
+- [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
+- [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
+- [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
+- [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
+
+# Document: KeywordDeleteBulkRequestItem
+
+Source path: documentation/apple-ads-platform-api/keyworddeletebulkrequestitem
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/keyworddeletebulkrequestitem
+Description: Interface language: Data
+
+# KeywordDeleteBulkRequestItem
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+A single item in a keyword bulk-delete request.
+
+## Declaration
+
+```
+object KeywordDeleteBulkRequestItem
+```
+
+## Properties
+
+- `correlationId` — `int64`: Client-supplied identifier used to correlate this item with its result in the response.
+- `data` — `BulkEntityDeleteIdLong`: The identifier of the keyword to delete. See [BulkEntityDeleteIdLong](bulkentitydeleteidlong.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "correlationId": 0,
+  "data": {
+    "id": 888999000
+  }
+}
+```
+
+## See Also
+
+- [BaseBulkRequest](basebulkrequest.md): Base type for all bulk operation requests.
+- [BulkOperationRequest](bulkoperationrequest.md): Container for a bulk operation request.
+- [BulkItemResult](bulkitemresult.md): The base result envelope for a single item in a bulk operation response.
+- [BulkItemResultKeyword](bulkitemresultkeyword.md): A bulk operation result item that includes the affected Keyword entity.
+- [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
+- [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
+- [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
+- [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
+- [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
+- [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
+- [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
+- [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+
+# Document: KeywordDeleteBulkResponse
+
+Source path: documentation/apple-ads-platform-api/keyworddeletebulkresponse
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/keyworddeletebulkresponse
+Description: Interface language: Data
+
+# KeywordDeleteBulkResponse
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+The response from a bulk Keyword deletion request.
+
+## Declaration
+
+```
+object KeywordDeleteBulkResponse
+```
+
+## Properties
+
+- `result` — `[BulkItemResult]`: Per-item deletion results, one entry per request item. See [BulkItemResult](bulkitemresult.md). Read-only.
+- `error` — `Error`: See [Error](error.md). Read-only.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+`KeywordDeleteBulkResponse` is the response envelope returned by the bulk keyword deletion endpoint. It doesn’t return the deleted `Keyword`, only whether each item succeeded. The response populates `error` only when the system rejects the overall request before processing any items.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "result": [
+    {
+      "correlationId": 0,
+      "operation": "DELETE",
+      "success": true
+    }
+  ]
+}
+```
+
+## See Also
+
+- [BaseBulkRequest](basebulkrequest.md): Base type for all bulk operation requests.
+- [BulkOperationRequest](bulkoperationrequest.md): Container for a bulk operation request.
+- [BulkItemResult](bulkitemresult.md): The base result envelope for a single item in a bulk operation response.
+- [BulkItemResultKeyword](bulkitemresultkeyword.md): A bulk operation result item that includes the affected Keyword entity.
+- [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
+- [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
+- [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
+- [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
+- [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
+- [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
+- [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: KeywordDisplayStatus
 
@@ -39000,13 +39330,13 @@ The `KeywordUpdateBulkRequest` object allows updating multiple keywords in a sin
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: KeywordUpdateBulkRequestItem
 
@@ -39069,13 +39399,13 @@ The `data` object accepts only the fields defined on [BulkKeywordUpdate](bulkkey
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: KeywordUpdateBulkResponse
 
@@ -39164,13 +39494,13 @@ The bulk keyword update endpoint returns `KeywordUpdateBulkResponse` as its resp
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: LegacyAppLimitedStatusReasonDetails
 
@@ -39409,7 +39739,7 @@ object Location
 
 - `id` — `string` (required): ID of the location. Read-only.
 - `brandId` — `string`: Associated brand identifier. Read-only.
-- `status` — `string`: Possible values: `OPEN`, `CLOSED`, `MOVED`, `TEMPORARILY_CLOSED`, `OPENING_SOON`. Read-only.
+- `status` — `string`: The location’s operational state. Read-only.
   **Allowed values:** `OPEN`, `OPENING_SOON`, `CLOSED`, `MOVED`, `TEMPORARILY_CLOSED`
 - `name` — `string`: The location’s display name. Read-only.
 - `categories` — `[string]`: Category identifiers (first is primary). Read-only.
@@ -39572,7 +39902,6 @@ A location group object exposes the following fields:
 | `adAccountId` | string | The ad account that owns this location group. |
 | `groupType` | string | Type of location grouping: `STATIC` or `DYNAMIC`. |
 | `systemStatus` | string | System-managed status: `VALID`, `INVALID`, `PENDING`, or `DELETED`. **Read-only.** You can’t update or delete groups with `INVALID` or `PENDING` status. |
-| `query` | string | RSQL query generated from `rules` for `DYNAMIC` groups. **Read-only.** |
 | `rules` | array | Rule objects defining membership criteria for `DYNAMIC` groups. |
 | `locationIds` | array of strings | Location IDs included in the group (`STATIC` groups). |
 | `isAllLocationsGroup` | boolean | `true` for the system-created “All Locations” group for a brand. **Read-only.** |
@@ -39712,8 +40041,7 @@ object LocationGroup
 - `systemStatus` — `string`: System-managed status. Values: `PENDING`, `VALID`, `INVALID`, `DELETED`. Read-only.
   **Allowed values:** `PENDING`, `VALID`, `INVALID`, `DELETED`
 - `rules` — `[Rule]`: Array of [Rule](rule.md) objects defining membership criteria for `DYNAMIC` groups.
-- `query` — `string`: RSQL query string generated from `rules` for `DYNAMIC` groups. Generated by the server. Don’t set directly. Read-only.
-- `locationIds` — `[string]`: Array of location IDs for `STATIC` groups.
+- `locationIds` — `[string]`: Array of location IDs in the group. For `STATIC` groups, this is the list you supply. For `DYNAMIC` groups, this is the system-resolved membership from evaluating `rules`. Read-only for `DYNAMIC` groups.
 - `isAllLocationsGroup` — `boolean`: `true` for the system-created “All Locations” group for a brand. Read-only.
 - `description` — `string`: Optional description of the location group.
 - `groupTotal` — `int64` (required): Total number of locations in the group. Read-only.
@@ -39747,11 +40075,14 @@ The `LocationGroup` object is a targeting unit that bundles one or more brand lo
       "value": ["California", "Oregon", "Washington"]
     }
   ],
-  "query": "administrativeArea==California,Oregon,Washington",
-  "locationIds": [],
+  "locationIds": [
+    "5764607523034238001",
+    "5764607523034238002",
+    "5764607523034238003"
+  ],
   "isAllLocationsGroup": false,
   "description": "All AwayFinder locations on the West Coast",
-  "groupTotal": 42,
+  "groupTotal": 3,
   "eligibility": {
     "status": "ELIGIBLE"
   },
@@ -41112,13 +41443,13 @@ The `NegativeKeywordCreateBulkRequest` object allows creating multiple negative 
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
 
 # Document: NegativeKeywordCreateBulkRequestItem
 
@@ -41180,13 +41511,13 @@ The `data` object accepts only the fields defined on [BulkNegativeKeywordCreate]
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: NegativeKeywordCreateBulkResponse
 
@@ -41259,13 +41590,219 @@ The bulk negative keyword creation endpoint returns `NegativeKeywordCreateBulkRe
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
+
+# Document: NegativeKeywordDeleteBulkRequest
+
+Source path: documentation/apple-ads-platform-api/negativekeyworddeletebulkrequest
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/negativekeyworddeletebulkrequest
+Description: Interface language: Data
+
+# NegativeKeywordDeleteBulkRequest
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+A bulk request to delete multiple negative keywords by their identifiers.
+
+## Declaration
+
+```
+object NegativeKeywordDeleteBulkRequest
+```
+
+## Properties
+
+- `allowPartialSuccess` — `boolean`: If `true`, allows some operations in the batch to succeed while others fail.
+- `items` — `[NegativeKeywordDeleteBulkRequestItem]`: Array of bulk item objects specifying which negative keywords to delete. Each item’s `data` field contains the identifier of the negative keyword to delete.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+`NegativeKeywordDeleteBulkRequest` allows deleting multiple negative keywords in a single API call.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "allowPartialSuccess": true,
+  "items": [
+    {
+      "correlationId": 123456789,
+      "data": {
+        "id": 555666777
+      }
+    },
+    {
+      "correlationId": 987654321,
+      "data": {
+        "id": 555666778
+      }
+    }
+  ]
+}
+```
+
+## See Also
+
+- [BaseBulkRequest](basebulkrequest.md): Base type for all bulk operation requests.
+- [BulkOperationRequest](bulkoperationrequest.md): Container for a bulk operation request.
+- [BulkItemResult](bulkitemresult.md): The base result envelope for a single item in a bulk operation response.
+- [BulkItemResultKeyword](bulkitemresultkeyword.md): A bulk operation result item that includes the affected Keyword entity.
+- [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
+- [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
+- [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
+- [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
+- [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
+- [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
+- [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
+- [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.
+
+# Document: NegativeKeywordDeleteBulkRequestItem
+
+Source path: documentation/apple-ads-platform-api/negativekeyworddeletebulkrequestitem
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/negativekeyworddeletebulkrequestitem
+Description: Interface language: Data
+
+# NegativeKeywordDeleteBulkRequestItem
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+A single item in a negative-keyword bulk-delete request.
+
+## Declaration
+
+```
+object NegativeKeywordDeleteBulkRequestItem
+```
+
+## Properties
+
+- `correlationId` — `int64`: Client-supplied identifier used to correlate this item with its result in the response.
+- `data` — `BulkEntityDeleteIdLong`: The identifier of the negative keyword to delete. See [BulkEntityDeleteIdLong](bulkentitydeleteidlong.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "correlationId": 123456789,
+  "data": {
+    "id": 555666777
+  }
+}
+```
+
+## See Also
+
+- [BaseBulkRequest](basebulkrequest.md): Base type for all bulk operation requests.
+- [BulkOperationRequest](bulkoperationrequest.md): Container for a bulk operation request.
+- [BulkItemResult](bulkitemresult.md): The base result envelope for a single item in a bulk operation response.
+- [BulkItemResultKeyword](bulkitemresultkeyword.md): A bulk operation result item that includes the affected Keyword entity.
+- [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
+- [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
+- [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
+- [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
+- [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
+- [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
+- [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
+- [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+
+# Document: NegativeKeywordDeleteBulkResponse
+
+Source path: documentation/apple-ads-platform-api/negativekeyworddeletebulkresponse
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/negativekeyworddeletebulkresponse
+Description: Interface language: Data
+
+# NegativeKeywordDeleteBulkResponse
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+The response from a bulk negative keyword deletion request.
+
+## Declaration
+
+```
+object NegativeKeywordDeleteBulkResponse
+```
+
+## Properties
+
+- `result` — `[BulkItemResult]`: Per-item deletion results, one entry per request item. See [BulkItemResult](bulkitemresult.md). Read-only.
+- `error` — `Error`: Structured error details if the overall request was rejected before any items were processed, not for per-item failures. See [Error](error.md). Read-only.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The API returns `NegativeKeywordDeleteBulkResponse` after a bulk negative keyword deletion request. It doesn’t return the deleted `NegativeKeyword`, only whether each item succeeded.
+
+To confirm that all targeted negative keywords were removed, use this response before re-querying to validate the updated state.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "result": [
+    {
+      "correlationId": 0,
+      "operation": "DELETE",
+      "success": true
+    }
+  ]
+}
+```
+
+## See Also
+
+- [BaseBulkRequest](basebulkrequest.md): Base type for all bulk operation requests.
+- [BulkOperationRequest](bulkoperationrequest.md): Container for a bulk operation request.
+- [BulkItemResult](bulkitemresult.md): The base result envelope for a single item in a bulk operation response.
+- [BulkItemResultKeyword](bulkitemresultkeyword.md): A bulk operation result item that includes the affected Keyword entity.
+- [BulkItemResultNegativeKeyword](bulkitemresultnegativekeyword.md): A bulk operation result item that includes the affected NegativeKeyword entity.
+- [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
+- [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
+- [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
+- [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
+- [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
+- [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
+- [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: NegativeKeywordQueryResponse
 
@@ -41612,13 +42149,13 @@ The `NegativeKeywordUpdateBulkRequest` object allows updating multiple negative 
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: NegativeKeywordUpdateBulkRequestItem
 
@@ -41677,13 +42214,13 @@ The `data` object accepts only the fields defined on [BulkNegativeKeywordUpdate]
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: NegativeKeywordUpdateBulkResponse
 
@@ -41756,13 +42293,13 @@ The bulk negative keyword update endpoint returns `NegativeKeywordUpdateBulkResp
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
 
 # Document: Org
 
@@ -44093,6 +44630,8 @@ The `promotedObjectType` field determines which kind of object `promotedObjectId
 
 Within `bidStrategy`, `bidStrategyType` and `bidStrategyGoal` are both required and must correspond per the pairings in [BidStrategy](bidstrategy.md) (for example, `MAX_CONVERSIONS` → `INSTALL`, `MANUAL_CPT` → `TAP`). Omitting either field, or sending a goal that doesn’t match the type, returns an error.
 
+For Apple Maps campaigns, decide the placement targeting at create time. Targeting both `MAPS_SEARCH_RESULTS` and `MAPS_SEARCH_HOME` requires omitting `supplyPlacement` from `targeting` entirely, and this choice can’t be widened later through an update. A campaign created with a single Maps placement stays limited to that placement. See [CampaignTargetingCreate.SupplyPlacement](campaigntargetingcreate/supplyplacement-data.dictionary.md) for details.
+
 <a id="Payload-Examples"></a>
 
 ## Payload Examples
@@ -44587,6 +45126,98 @@ POST /v1/campaigns
      "supplyPlacement": {
        "include": [
          "MAPS_SEARCH_HOME"
+       ]
+     }
+   },
+   "bidStrategy": {
+     "bidStrategyType": "MAX_ENGAGEMENTS",
+     "bidStrategyGoal": "TAP"
+   },
+   "creationTime": "2025-01-10T08:00:00.000",
+   "modificationTime": "2025-01-10T08:00:00.000",
+   "deleted": false,
+   "paymentModel": "PAYG",
+   "systemStatus": "RUNNING",
+   "systemStatusReasons": [],
+   "systemStatusLimitingReasons": [],
+   "displayStatus": "RUNNING",
+   "regulationResponses": []
+ }
+}
+```
+
+**Apple Maps — Both placements**
+
+An Apple Maps campaign targeting both the Maps Search results and Maps Search home placements.
+
+> **Note**
+
+> Listing both `MAPS_SEARCH_RESULTS` and `MAPS_SEARCH_HOME` together in `supplyPlacement.include` is rejected. To target both placements, omit `supplyPlacement` from `targeting` entirely; `supplySource: MAPS` alone targets every placement under that supply source.
+
+<a id="Request"></a>
+
+### Request
+
+Creates an Apple Maps campaign that targets both placements by omitting `supplyPlacement` from `targeting`.
+
+```json
+POST /v1/campaigns
+
+{
+ "name": "AwayFinder Apple Maps Campaign",
+ "adAccountId": 123456789,
+ "startTime": "2025-09-01T00:00:00.000",
+ "endTime": "2025-12-31T23:59:59.000",
+ "status": "ENABLED",
+ "billingEvent": "TAPS",
+ "promotedObjectType": "BUSINESS_BRAND",
+ "promotedObjectId": "987654321",
+ "dailyBudget": {
+   "value": {
+     "amount": "900.00",
+     "currency": "USD"
+   }
+ },
+ "targeting": {
+   "supplySource": {
+     "include": [
+       "MAPS"
+     ]
+   }
+ },
+ "bidStrategy": {
+   "bidStrategyType": "MAX_ENGAGEMENTS",
+   "bidStrategyGoal": "TAP"
+ }
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": {
+   "id": 444555670,
+   "name": "AwayFinder Apple Maps Campaign",
+   "adAccountId": 123456789,
+   "promotedObjectType": "BUSINESS_BRAND",
+   "promotedObjectId": "987654321",
+   "status": "ENABLED",
+   "billingEvent": "TAPS",
+   "startTime": "2025-09-01T00:00:00.000",
+   "endTime": "2025-12-31T23:59:59.000",
+   "dailyBudget": {
+     "value": {
+       "amount": "900.00",
+       "currency": "USD"
+     }
+   },
+   "targeting": {
+     "supplySource": {
+       "include": [
+         "MAPS"
        ]
      }
    },
@@ -46218,6 +46849,116 @@ Create three keywords with different match types.
 ### Keywords
 
 - [Bulk Update Keywords](post-keywords-bulk-update.md): Updates multiple keywords in a single request.
+- [Bulk Delete Keywords](post-keywords-bulk-delete.md): Soft-deletes multiple keywords in a single request.
+
+# Document: Bulk Delete Keywords
+
+Source path: documentation/apple-ads-platform-api/post-keywords-bulk-delete
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/post-keywords-bulk-delete
+Description: Interface language: Data
+
+# Bulk Delete Keywords
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+Soft-deletes multiple keywords in a single request.
+
+## URL
+
+```http
+POST https://api.ads.apple.com/v1/keywords/bulk-delete
+```
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `KeywordDeleteBulkRequest`
+
+## Response Codes
+
+- `200` OK — `KeywordDeleteBulkResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` Too Many Requests — `ErrorResponse`:
+- `500` Internal Server Error — `ErrorResponse`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This endpoint soft-deletes multiple keywords in a single request. Each item in the `items` array specifies the `id` of a keyword to delete. The system marks deleted keywords `deleted: true`, and they stop serving. The response doesn’t include the deleted keyword, just each item’s success status.
+
+To stop a keyword from serving temporarily, set `status: PAUSED` with the bulk update endpoint instead.
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+**Bulk Delete**
+
+<a id="Request"></a>
+
+### Request
+
+Soft-delete two keywords.
+
+```json
+{
+ "items": [
+   {
+     "correlationId": 0,
+     "data": {
+       "id": 888999000
+     }
+   },
+   {
+     "correlationId": 1,
+     "data": {
+       "id": 888999001
+     }
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": [
+   {
+     "correlationId": 0,
+     "operation": "DELETE",
+     "success": true
+   },
+   {
+     "correlationId": 1,
+     "operation": "DELETE",
+     "success": true
+   }
+ ]
+}
+```
+
+## See Also
+
+### Keywords
+
+- [Bulk Create Keywords](post-keywords-bulk-create.md): Creates multiple keywords in a single request.
+- [Bulk Update Keywords](post-keywords-bulk-update.md): Updates multiple keywords in a single request.
 
 # Document: Bulk Update Keywords
 
@@ -46395,6 +47136,7 @@ Raise bids on two keywords and pause a third.
 ### Keywords
 
 - [Bulk Create Keywords](post-keywords-bulk-create.md): Creates multiple keywords in a single request.
+- [Bulk Delete Keywords](post-keywords-bulk-delete.md): Soft-deletes multiple keywords in a single request.
 
 # Document: Query Keywords
 
@@ -47106,6 +47848,120 @@ POST /v1/negative-keywords/bulk-create
 ### Negative Keywords
 
 - [Bulk Update Negative Keywords](post-negative-keywords-bulk-update.md): Update multiple negative keywords in a single request.
+- [Bulk Delete Negative Keywords](post-negative-keywords-bulk-delete.md): Delete multiple negative keywords in a single request.
+
+# Document: Bulk Delete Negative Keywords
+
+Source path: documentation/apple-ads-platform-api/post-negative-keywords-bulk-delete
+Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/post-negative-keywords-bulk-delete
+Description: Interface language: Data
+
+# Bulk Delete Negative Keywords
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+ · apple-ads-platform-api 1.0+
+
+Delete multiple negative keywords in a single request.
+
+## URL
+
+```http
+POST https://api.ads.apple.com/v1/negative-keywords/bulk-delete
+```
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `NegativeKeywordDeleteBulkRequest`
+
+## Response Codes
+
+- `200` OK — `NegativeKeywordDeleteBulkResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` Too Many Requests — `ErrorResponse`:
+- `500` Internal Server Error — `ErrorResponse`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Deletes multiple negative keywords in a single API call. The request body contains an `items` array where each item specifies the `correlationId` and a `data` object with the `id` of the negative keyword to delete. The API processes each deletion independently.
+
+When `allowPartialSuccess: true` is set in the request, this endpoint uses partial success semantics: if some items fail (for example, an ID that does not exist), the API still processes the successful deletions. When omitted or `false`, any single item failure rejects the entire batch. The response includes a per-item result with each item’s `correlationId`, success status, and any error details for failures; it doesn’t include the deleted negative keyword.
+
+Once deleted, the negative keyword no longer suppresses those search terms for any ad groups or campaigns that referenced it.
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+**Bulk Delete**
+
+<a id="Request"></a>
+
+### Request
+
+Delete two negative keywords by ID in a single request. Each item in `items` maps to a result in the response by `correlationId`.
+
+```json
+POST /v1/negative-keywords/bulk-delete
+
+{
+ "items": [
+   {
+     "correlationId": 0,
+     "data": {
+       "id": 777888999
+     }
+   },
+   {
+     "correlationId": 1,
+     "data": {
+       "id": 777888998
+     }
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": [
+   {
+     "correlationId": 0,
+     "operation": "DELETE",
+     "success": true
+   },
+   {
+     "correlationId": 1,
+     "operation": "DELETE",
+     "success": true
+   }
+ ]
+}
+```
+
+## See Also
+
+### Negative Keywords
+
+- [Bulk Create Negative Keywords](post-negative-keywords-bulk-create.md): Create multiple negative keywords in a single request.
+- [Bulk Update Negative Keywords](post-negative-keywords-bulk-update.md): Update multiple negative keywords in a single request.
 
 # Document: Bulk Update Negative Keywords
 
@@ -47241,6 +48097,7 @@ POST /v1/negative-keywords/bulk-update
 ### Negative Keywords
 
 - [Bulk Create Negative Keywords](post-negative-keywords-bulk-create.md): Create multiple negative keywords in a single request.
+- [Bulk Delete Negative Keywords](post-negative-keywords-bulk-delete.md): Delete multiple negative keywords in a single request.
 
 # Document: Query Negative Keywords
 
@@ -48394,7 +49251,7 @@ object ProductPageLocaleDetails
 - `subTitle` — `string`: The app subtitle for the locale.
 - `promotionalText` — `string`: The promotional text for the locale. Max 170 characters.
 - `shortDescription` — `string`: A short description for the locale. Max 4000 characters.
-- `deviceClasses` — `[string]`: Supported device classes. Use to verify targeting compatibility when configuring ad groups with device-class targeting. Possible values: `IPHONE`, `IPAD`.
+- `deviceClasses` — `[string]`: Supported device classes. Use to verify targeting compatibility when configuring ad groups with device-class targeting.
   **Allowed values:** `IPHONE`, `IPAD`
 - `assetsByDevice` — `ProductPageLocaleDetails.AssetsByDevice`: Map of device type (for example, `iphone_6_5`, `iphone_6_7`) to a [DeviceAssetGroup](deviceassetgroup.md) object. Keys are specific device type strings, not limited to the values in `deviceClasses`.
 - `productPageId` — `string`: The parent product page identifier (ASC product page ID).
@@ -49396,6 +50253,8 @@ Type: `CampaignUpdate`
 ## Discussion
 
 This endpoint updates an existing campaign. It changes only the fields included in the request body. Omitted fields retain their current values. The `promotedObjectType` and `promotedObjectId` fields are **not** part of the `CampaignUpdate` schema. They’re immutable after campaign creation, so this endpoint can’t change them.
+
+For Apple Maps campaigns, `targeting.supplyPlacement` follows the same omit-to-leave-unchanged rule as every other update field. Omitting it doesn’t expand targeting to every placement. A campaign created with a single Maps placement (`MAPS_SEARCH_RESULTS` or `MAPS_SEARCH_HOME`) can’t be widened to target both placements through this endpoint. See [CampaignTargetingCreate.SupplyPlacement](campaigntargetingcreate/supplyplacement-data.dictionary.md) for how to set up both placements at create time instead.
 
 <a id="Payload-Examples"></a>
 
@@ -52321,6 +53180,7 @@ POST /v1/recommendations/daily-budgets/query
    {
      "id": "rec-budget-001",
      "recommendationType": "DAILYCAP",
+     "adAccountId": 19522997,
      "promotedObjectId": "123456",
      "promotedObjectType": "APPSTORE_APP",
      "campaignId": 789012,
@@ -52420,6 +53280,7 @@ POST /v1/recommendations/daily-budgets/query
    {
      "id": "a1b2c3d4-e5f6-47a8-9b0c-d1e2f3a4b5c6",
      "recommendationType": "SDAILYCAP",
+     "adAccountId": 123456789,
      "promotedObjectId": "1234567890123456789",
      "promotedObjectType": "BUSINESS_BRAND",
      "campaignId": 900123456,
@@ -52457,6 +53318,7 @@ POST /v1/recommendations/daily-budgets/query
    {
      "id": "b2c3d4e5-f6a7-48b9-0c1d-e2f3a4b5c6d7",
      "recommendationType": "SDAILYCAP",
+     "adAccountId": 123456789,
      "promotedObjectId": "1234567890123456789",
      "promotedObjectType": "BUSINESS_BRAND",
      "campaignId": 900123457,
@@ -58654,9 +59516,9 @@ object ReportingKeyword
 - `adAccountId` — `int64`: The identifier of the ad account that owns the keyword.
 - `deleted` — `boolean`: `true` if the keyword has been deleted.
 - `text` — `string`: The keyword text.
-- `status` — `string`: Possible values: `ENABLED`, `PAUSED`.
-  **Allowed values:** `ENABLED`, `PAUSED`
-- `matchType` — `string`: Possible values: `BROAD`, `EXACT`.
+- `status` — `string`: The keyword’s status at the time captured in the report.
+  **Allowed values:** `ENABLED`, `PAUSED`, `DELETED`
+- `matchType` — `string`: The keyword’s match type.
   **Allowed values:** `BROAD`, `EXACT`
 - `bid` — `Money`: See [Money](money.md) for details.
 - `adGroupId` — `int64`: The identifier of the ad group that owns the keyword.
@@ -59063,9 +59925,9 @@ Granularity is an optional time-series breakdown that applies to `granularMetric
 | Granularity | Constraint |
 | --- | --- |
 | `HOURLY` | Date range must span 7 days or less, and `start` must fall within the last 365 days. Ad-level and search term-level reports don’t support it. |
-| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
-| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
-| `MONTHLY` | End date must be at least 90 days in the past. |
+| `DAILY` | Date range must span 90 days or less. |
+| `WEEKLY` | Date range must span at least 14 days. |
+| `MONTHLY` | Date range must span at least 90 days. |
 
 To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there’s no `granularMetrics` breakdown to compute.
 
@@ -60520,7 +61382,7 @@ object SearchTermPopularityTimeRange
 - `end` — `string` (required): The end date of the range, in `YYYY-MM-DD` format.
 - `timeZone` — `string`: Timezone. Fixed to `UTC`. Not user-configurable. Default: `"UTC"`.
   **Allowed values:** `UTC`
-- `granularity` — `string` (required): Aggregation period. `WEEKLY_SUN_SAT` uses fixed Sunday–Saturday weeks and is generated Mondays at 07:00 UTC for the preceding Sunday through Saturday week, with a rolling retention of 65 weeks. `MONTHLY` uses calendar months and is refreshed on the 5th of each month UTC for the prior calendar month, with a rolling retention of 15 months. Possible values: `WEEKLY_SUN_SAT`, `MONTHLY`.
+- `granularity` — `string` (required): Aggregation period. `WEEKLY_SUN_SAT` uses fixed Sunday–Saturday weeks and is generated Mondays at 07:00 UTC for the preceding Sunday through Saturday week, with a rolling retention of 65 weeks. `MONTHLY` uses calendar months and is refreshed on the 5th of each month UTC for the prior calendar month, with a rolling retention of 15 months.
   **Allowed values:** `WEEKLY_SUN_SAT`, `MONTHLY`
 
 <a id="Discussion"></a>
@@ -60589,7 +61451,7 @@ object SharedBudget
 - `startTime` — `date-time`: The start date and time for this budget. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC (for example, `2026-06-07T00:00:00.000`). Must be tomorrow or later (midnight UTC). Today is rejected. Mutable.
 - `endTime` — `date-time`: The end date and time for this budget. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC. Must be after `startTime`. Omit for an open-ended budget. Mutable.
 - `value` — `Money`: The budget amount as a Money object with amount and ISO 4217 currency code. See [Money](money.md). Mutable.
-- `adAccountIds` — `[int64]`: The ad account IDs this budget order applies to. Exactly one allowed at creation. Mutable.
+- `adAccountIds` — `[int64]`: The ad account IDs this budget order applies to. At least one ID is required. Mutable.
 - `orgId` — `int64`: The identifier of the organization that owns this budget order. Read-only.
 - `systemStatus` — `SharedBudget.SystemStatus`: Current system status of this budget order. See [BudgetSystemStatus](budgetsystemstatus.md). Read-only.
 - `systemStatusReasons` — `[SharedBudget.SystemStatusReasons]`: Status reasons applied based on system factors. Values: `CANCELED`, `CAMPAIGN_BUDGET_UNASSIGNED`, `DELETED_BY_USER`, `EXHAUSTED`, `PROCESSING`, `SCHEDULE_EXPIRED`, `SCHEDULE_PENDING`. Read-only.
@@ -60974,7 +61836,7 @@ object SharedBudgetCreate
 - `startTime` — `date-time` (required): The date and time the budget becomes active. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC (for example, `2026-06-07T00:00:00.000`). Must be tomorrow or later (midnight UTC). Today is rejected.
 - `endTime` — `date-time`: The date and time the budget expires. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC. Must be after `startTime`. Omit for an open-ended budget.
 - `value` — `Money` (required): The total budget amount as a `Money` object with `amount` and ISO 4217 `currency` code. See [Money](money.md).
-- `adAccountIds` — `[int64]` (required): The ad account IDs that can draw from this budget. Exactly one ID is allowed at creation. The API rejects requests that send more than one ID.
+- `adAccountIds` — `[int64]` (required): The ad account IDs that can draw from this budget. At least one ID is required.
 - `invoiceDetail` — `SharedBudgetCreate.InvoiceDetail` (required): Billing contact details. See [InvoiceDetail](invoicedetail.md).
 
 <a id="Discussion"></a>
@@ -61267,7 +62129,7 @@ object SharedBudgetUpdate
 - `startTime` — `date-time`: Updated budget start date and time. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC (for example, `2026-07-01T00:00:00.000`). Must be tomorrow or later (midnight UTC). Today is rejected.
 - `endTime` — `date-time`: Updated budget end date and time. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC. Set to `null` to remove an expiration date, making the budget open-ended.
 - `value` — `Money`: Updated budget amount. Specify `amount` and `currency`. See [Money](money.md).
-- `adAccountIds` — `[int64]`: The ad account ID this budget order applies to. Exactly one ID is allowed, the same single-ID constraint as at creation. The API rejects requests that send more than one ID. Mutable.
+- `adAccountIds` — `[int64]`: The ad account IDs this budget order applies to. At least one ID is required. Mutable.
 - `invoiceDetail` — `SharedBudgetUpdate.InvoiceDetail`: Updated billing contact details. See [InvoiceDetail](invoicedetail.md).
 
 <a id="Discussion"></a>
@@ -61381,7 +62243,7 @@ object Sorting
 ## Properties
 
 - `field` — `string`: The name of the field to sort on (for example, localSpend, impressions).
-- `order` — `string`: The sort direction for the specified field. Possible values: `ASC` (lowest to highest), `DESC` (highest to lowest).
+- `order` — `string`: The sort direction for the specified field, ascending (`ASC`) or descending (`DESC`).
   **Allowed values:** `ASC`, `DESC`
 
 <a id="Discussion"></a>
@@ -62128,7 +62990,7 @@ object TimeRange
 - `timeZone` — `string`: The time zone for the report date range. The default is ORTZ (org timezone). Both ORTZ and UTC are supported for all reports except search term-level, which only supports ORTZ.
   **Default:** `ORTZ`  
   **Allowed values:** `UTC`, `ORTZ`
-- `granularity` — `string`: Time period breakdown for granularMetrics in the response. When specified, the response includes granularMetrics broken down by this period. Possible values: `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`. HOURLY granularity is not supported for ad-level or search term-level reports.
+- `granularity` — `string`: Time period breakdown for granularMetrics in the response. When specified, the response includes granularMetrics broken down by this period. HOURLY granularity is not supported for ad-level or search term-level reports.
   **Allowed values:** `MONTHLY`, `WEEKLY`, `DAILY`, `HOURLY`
 
 <a id="Discussion"></a>
@@ -195424,963 +196286,3 @@ object BetaAppReviewSubmissionWithoutIncludesResponse
 - [BetaAppReviewSubmissionsResponse](betaappreviewsubmissionsresponse.md): The response body for endpoints that list beta app review submissions.
 - [BetaReviewState](betareviewstate.md): String that indicates the review state of a beta app.
 - [BetaAppReviewSubmissionBuildLinkageResponse](betaappreviewsubmissionbuildlinkageresponse.md)
-
-# Document: BetaBuildLocalization
-
-Source path: documentation/appstoreconnectapi/betabuildlocalization
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization
-Description: Interface language: Data
-
-# BetaBuildLocalization
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
-
-## Declaration
-
-```
-object BetaBuildLocalization
-```
-
-## Properties
-
-- `attributes` — `BetaBuildLocalization.Attributes`: The resource’s attributes.
-- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
-- `relationships` — `BetaBuildLocalization.Relationships`: Navigational links to related data and included resource types and IDs.
-- `type` — `string` (required): The resource type.
-  **Allowed values:** `betaBuildLocalizations`
-- `links` — `ResourceLinks`: Navigational links that include the self-link.
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalization.Attributes](betabuildlocalization/attributes-data.dictionary.md): Attributes that describe a Beta Build Localizations resource.
-- [BetaBuildLocalization.Relationships](betabuildlocalization/relationships-data.dictionary.md): The relationships you include in the request and those on which you can operate.
-
-## See Also
-
-### Objects
-
-- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
-- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
-- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
-- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
-- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
-- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
-
-# Document: BetaBuildLocalization.Attributes
-
-Source path: documentation/appstoreconnectapi/betabuildlocalization/attributes-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization/attributes-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalization.Attributes
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-Attributes that describe a Beta Build Localizations resource.
-
-## Declaration
-
-```
-object BetaBuildLocalization.Attributes
-```
-
-## Properties
-
-- `locale` — `string`: The specified locale. To learn more, see [Managing metadata in your app by using locale shortcodes](../managing-metadata-in-your-app-by-using-locale-shortcodes.md).
-- `whatsNew` — `string`: A field that describes changes and additions to a build and indicates features you would like your users to test.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Table 1 lists allowed locale values.
-
-| `da` | Danish |
-| --- | --- |
-| `de-DE` | German |
-| `el` | Greek |
-| `en-AU` | English (Australia) |
-| `en-CA` | English (Canada) |
-| `en-GB` | English (U.K.) |
-| `en-US` | English (U.S.) |
-| `es-ES` | Spanish (Spain) |
-| `es-MX` | Spanish (Mexico) |
-| `fi` | Finnish |
-| `fr-CA` | French (Canada) |
-| `fr-FR` | French |
-| `id` | Indonesian |
-| `it` | Italian |
-| `ja` | Japanese |
-| `ko` | Korean |
-| `ms` | Malay |
-| `nl-NL` | Dutch |
-| `no` | Norwegian |
-| `pt-BR` | Portuguese (Brazil) |
-| `pt-PT` | Portuguese (Portugal) |
-| `ru` | Russian |
-| `sv` | Swedish |
-| `th` | Thai |
-| `tr` | Turkish |
-| `vi` | Vietnamese |
-| `zh-Hans` | Chinese (Simplified) |
-| `zh-Hant` | Chinese (Traditional) |
-
-## See Also
-
-### Related Documentation
-
-- [Beta Build Localizations](../beta-build-localizations.md): Beta test information about builds, specific to a locale.
-
-### Objects
-
-- [BetaBuildLocalization.Relationships](relationships-data.dictionary.md): The relationships you include in the request and those on which you can operate.
-
-# Document: BetaBuildLocalization.Relationships
-
-Source path: documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalization.Relationships
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The relationships you include in the request and those on which you can operate.
-
-## Declaration
-
-```
-object BetaBuildLocalization.Relationships
-```
-
-## Properties
-
-- `build` — `BetaBuildLocalization.Relationships.Build`:
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalization.Relationships.Build](relationships-data.dictionary/build-data.dictionary.md): The data and links that describe the relationship between the resources.
-
-## See Also
-
-### Objects
-
-- [BetaBuildLocalization.Attributes](attributes-data.dictionary.md): Attributes that describe a Beta Build Localizations resource.
-
-# Document: BetaBuildLocalization.Relationships.Build
-
-Source path: documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary/build-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary/build-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalization.Relationships.Build
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The data and links that describe the relationship between the resources.
-
-## Declaration
-
-```
-object BetaBuildLocalization.Relationships.Build
-```
-
-## Properties
-
-- `data` — `BetaBuildLocalization.Relationships.Build.Data`:
-- `links` — `RelationshipLinks`:
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalization.Relationships.Build.Data](build-data.dictionary/data-data.dictionary.md): The type and ID of a related resource.
-
-# Document: BetaBuildLocalization.Relationships.Build.Data
-
-Source path: documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary/build-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalization/relationships-data.dictionary/build-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalization.Relationships.Build.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The type and ID of a related resource.
-
-## Declaration
-
-```
-object BetaBuildLocalization.Relationships.Build.Data
-```
-
-## Properties
-
-- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
-- `type` — `string` (required): The resource type.
-  **Allowed values:** `builds`
-
-# Document: BetaBuildLocalizationBuildLinkageResponse
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationbuildlinkageresponse
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationbuildlinkageresponse
-Description: Interface language: Data
-
-# BetaBuildLocalizationBuildLinkageResponse
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object BetaBuildLocalizationBuildLinkageResponse
-```
-
-## Properties
-
-- `data` — `BetaBuildLocalizationBuildLinkageResponse.Data` (required):
-- `links` — `DocumentLinks` (required):
-
-## Topics
-
-### Dictionaries
-
-- [BetaBuildLocalizationBuildLinkageResponse.Data](betabuildlocalizationbuildlinkageresponse/data-data.dictionary.md)
-
-## See Also
-
-### Objects
-
-- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
-- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
-- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
-- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
-- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
-- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
-
-# Document: BetaBuildLocalizationBuildLinkageResponse.Data
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationbuildlinkageresponse/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationbuildlinkageresponse/data-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalizationBuildLinkageResponse.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.6+
-
-## Declaration
-
-```
-object BetaBuildLocalizationBuildLinkageResponse.Data
-```
-
-## Properties
-
-- `id` — `string` (required):
-- `type` — `string` (required): **Allowed values:** `builds`
-
-# Document: BetaBuildLocalizationCreateRequest
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest
-Description: Interface language: Data
-
-# BetaBuildLocalizationCreateRequest
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The request body you use to create a Beta Build Localization.
-
-## Declaration
-
-```
-object BetaBuildLocalizationCreateRequest
-```
-
-## Properties
-
-- `data` — `BetaBuildLocalizationCreateRequest.Data` (required): The resource data.
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalizationCreateRequest.Data](betabuildlocalizationcreaterequest/data-data.dictionary.md): The data element of the request body.
-
-## See Also
-
-### Objects
-
-- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
-- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
-- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
-- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
-- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
-- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
-
-# Document: BetaBuildLocalizationCreateRequest.Data
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalizationCreateRequest.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The data element of the request body.
-
-## Declaration
-
-```
-object BetaBuildLocalizationCreateRequest.Data
-```
-
-## Properties
-
-- `attributes` — `BetaBuildLocalizationCreateRequest.Data.Attributes` (required): The resource’s attributes.
-- `relationships` — `BetaBuildLocalizationCreateRequest.Data.Relationships` (required): Navigational links to related data and included resource types and IDs.
-- `type` — `string` (required): The resource type.
-  **Allowed values:** `betaBuildLocalizations`
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalizationCreateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes that you set that describe the new resource.
-- [BetaBuildLocalizationCreateRequest.Data.Relationships](data-data.dictionary/relationships-data.dictionary.md): The relationships to other resources that you can set with this request.
-
-# Document: BetaBuildLocalizationCreateRequest.Data.Attributes
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/attributes-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/attributes-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalizationCreateRequest.Data.Attributes
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-Attributes that you set that describe the new resource.
-
-## Declaration
-
-```
-object BetaBuildLocalizationCreateRequest.Data.Attributes
-```
-
-## Properties
-
-- `locale` — `string` (required): The specified locale. To learn more, see [Managing metadata in your app by using locale shortcodes](../../managing-metadata-in-your-app-by-using-locale-shortcodes.md).
-- `whatsNew` — `string`: A field that describes changes and additions to a build and indicates features you would like your users to test.
-
-## See Also
-
-### Related Documentation
-
-- [Beta Build Localizations](../../beta-build-localizations.md): Beta test information about builds, specific to a locale.
-
-### Objects
-
-- [BetaBuildLocalizationCreateRequest.Data.Relationships](relationships-data.dictionary.md): The relationships to other resources that you can set with this request.
-
-# Document: BetaBuildLocalizationCreateRequest.Data.Relationships
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalizationCreateRequest.Data.Relationships
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The relationships to other resources that you can set with this request.
-
-## Declaration
-
-```
-object BetaBuildLocalizationCreateRequest.Data.Relationships
-```
-
-## Properties
-
-- `build` — `BetaBuildLocalizationCreateRequest.Data.Relationships.Build` (required):
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalizationCreateRequest.Data.Relationships.Build](relationships-data.dictionary/build-data.dictionary.md): The relationships to other resources that you can set with this request.
-
-## See Also
-
-### Objects
-
-- [BetaBuildLocalizationCreateRequest.Data.Attributes](attributes-data.dictionary.md): Attributes that you set that describe the new resource.
-
-# Document: BetaBuildLocalizationCreateRequest.Data.Relationships.Build
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalizationCreateRequest.Data.Relationships.Build
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The relationships to other resources that you can set with this request.
-
-## Declaration
-
-```
-object BetaBuildLocalizationCreateRequest.Data.Relationships.Build
-```
-
-## Properties
-
-- `data` — `BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data` (required):
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data](build-data.dictionary/data-data.dictionary.md): The type and ID of the resource that you’re relating with the resource you’re creating.
-
-# Document: BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary/data-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The type and ID of the resource that you’re relating with the resource you’re creating.
-
-## Declaration
-
-```
-object BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data
-```
-
-## Properties
-
-- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
-- `type` — `string` (required): The resource type.
-  **Allowed values:** `builds`
-
-# Document: BetaBuildLocalizationResponse
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationresponse
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationresponse
-Description: Interface language: Data
-
-# BetaBuildLocalizationResponse
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The response body for endpoints that create, read, or modify localized TestFlight build metadata.
-
-## Declaration
-
-```
-object BetaBuildLocalizationResponse
-```
-
-## Properties
-
-- `data` — `BetaBuildLocalization` (required): The resource data.
-- `links` — `DocumentLinks` (required): Navigational links that include the self-link.
-- `included` — `[Build]`:
-
-## See Also
-
-### Related Documentation
-
-- [Create a beta build localization](post-v1-betabuildlocalizations.md): Create localized What’s New text for a build.
-
-### Objects
-
-- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
-- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
-- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
-- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
-- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
-- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
-
-# Document: BetaBuildLocalizationsResponse
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationsresponse
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationsresponse
-Description: Interface language: Data
-
-# BetaBuildLocalizationsResponse
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The response body for endpoints that list localized TestFlight build metadata entries.
-
-## Declaration
-
-```
-object BetaBuildLocalizationsResponse
-```
-
-## Properties
-
-- `data` — `[BetaBuildLocalization]` (required): The resource data.
-- `included` — `[Build]`:
-- `links` — `PagedDocumentLinks` (required): Navigational links that include the self-link.
-- `meta` — `PagingInformation`: Paging information.
-
-## See Also
-
-### Related Documentation
-
-- [List beta build localizations](get-v1-betabuildlocalizations.md): Find and list beta build localizations currently associated with apps.
-
-### Objects
-
-- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
-- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
-- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
-- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
-- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
-- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
-
-# Document: BetaBuildLocalizationsWithoutIncludesResponse
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationswithoutincludesresponse
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationswithoutincludesresponse
-Description: Interface language: Data
-
-# BetaBuildLocalizationsWithoutIncludesResponse
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.0+
-
-A response containing a list of TestFlight build localizations, without related resources.
-
-## Declaration
-
-```
-object BetaBuildLocalizationsWithoutIncludesResponse
-```
-
-## Properties
-
-- `data` — `[BetaBuildLocalization]` (required):
-- `links` — `PagedDocumentLinks` (required):
-- `meta` — `PagingInformation`:
-
-## See Also
-
-### Objects
-
-- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
-- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
-- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
-- [BetaBuildLocalizationUpdateRequest](betabuildlocalizationupdaterequest.md): The request body you use to update a Beta Build Localization.
-- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
-- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
-
-# Document: BetaBuildLocalizationUpdateRequest
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationupdaterequest
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationupdaterequest
-Description: Interface language: Data
-
-# BetaBuildLocalizationUpdateRequest
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The request body you use to update a Beta Build Localization.
-
-## Declaration
-
-```
-object BetaBuildLocalizationUpdateRequest
-```
-
-## Properties
-
-- `data` — `BetaBuildLocalizationUpdateRequest.Data` (required): The resource data.
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalizationUpdateRequest.Data](betabuildlocalizationupdaterequest/data-data.dictionary.md): The data element of the request body.
-
-## See Also
-
-### Objects
-
-- [BetaBuildLocalization](betabuildlocalization.md): The localized ‘What’s New’ text shown to TestFlight testers in a specific language for a build.
-- [BetaBuildLocalizationResponse](betabuildlocalizationresponse.md): The response body for endpoints that create, read, or modify localized TestFlight build metadata.
-- [BetaBuildLocalizationsWithoutIncludesResponse](betabuildlocalizationswithoutincludesresponse.md): A response containing a list of TestFlight build localizations, without related resources.
-- [BetaBuildLocalizationCreateRequest](betabuildlocalizationcreaterequest.md): The request body you use to create a Beta Build Localization.
-- [BetaBuildLocalizationsResponse](betabuildlocalizationsresponse.md): The response body for endpoints that list localized TestFlight build metadata entries.
-- [BetaBuildLocalizationBuildLinkageResponse](betabuildlocalizationbuildlinkageresponse.md)
-
-# Document: BetaBuildLocalizationUpdateRequest.Data
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationupdaterequest/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationupdaterequest/data-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalizationUpdateRequest.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-The data element of the request body.
-
-## Declaration
-
-```
-object BetaBuildLocalizationUpdateRequest.Data
-```
-
-## Properties
-
-- `attributes` — `BetaBuildLocalizationUpdateRequest.Data.Attributes`: The resource’s attributes.
-- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
-- `type` — `string` (required): The resource type.
-  **Allowed values:** `betaBuildLocalizations`
-
-## Topics
-
-### Objects
-
-- [BetaBuildLocalizationUpdateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes whose values you’re changing as part of the update request.
-
-# Document: BetaBuildLocalizationUpdateRequest.Data.Attributes
-
-Source path: documentation/appstoreconnectapi/betabuildlocalizationupdaterequest/data-data.dictionary/attributes-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationupdaterequest/data-data.dictionary/attributes-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildLocalizationUpdateRequest.Data.Attributes
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 1.0+
-
-Attributes whose values you’re changing as part of the update request.
-
-## Declaration
-
-```
-object BetaBuildLocalizationUpdateRequest.Data.Attributes
-```
-
-## Properties
-
-- `whatsNew` — `string`: A field that describes changes and additions to a build and indicates features you would like your users to test.
-
-## See Also
-
-### Related Documentation
-
-- [Beta Build Localizations](../../beta-build-localizations.md): Beta test information about builds, specific to a locale.
-
-# Document: BetaBuildUsagesV1MetricResponse
-
-Source path: documentation/appstoreconnectapi/betabuildusagesv1metricresponse
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildusagesv1metricresponse
-Description: Interface language: Data
-
-# BetaBuildUsagesV1MetricResponse
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.1+
-
-A response that contains one or more beta build metric resources.
-
-## Declaration
-
-```
-object BetaBuildUsagesV1MetricResponse
-```
-
-## Properties
-
-- `data` — `[BetaBuildUsagesV1MetricResponse.Data]` (required):
-- `links` — `PagedDocumentLinks` (required):
-- `meta` — `PagingInformation`:
-
-## Topics
-
-### Objects
-
-- [BetaBuildUsagesV1MetricResponse.Data](betabuildusagesv1metricresponse/data-data.dictionary.md): The request body you use to update a beta build usages v1metric response.
-
-## See Also
-
-### Objects and data types
-
-- [Build](build.md): A processed binary uploaded to App Store Connect, ready for TestFlight distribution or App Store submission.
-- [BuildResponse](buildresponse.md): The response body for endpoints that read or modify a single build.
-- [BuildWithoutIncludesResponse](buildwithoutincludesresponse.md): A response containing a single build, without related resources.
-- [BuildsResponse](buildsresponse.md): The response body for endpoints that list builds.
-- [BuildsWithoutIncludesResponse](buildswithoutincludesresponse.md): A response containing a list of builds, without related resources.
-- [BuildUpdateRequest](buildupdaterequest.md): The request body you use to update a Build.
-- [BuildAppEncryptionDeclarationLinkageRequest](buildappencryptiondeclarationlinkagerequest.md): The request body you use to attach an app encryption declaration to a build.
-- [BuildAppEncryptionDeclarationLinkageResponse](buildappencryptiondeclarationlinkageresponse.md): A response body that contains the ID of a single related resource.
-- [BuildIndividualTestersLinkagesRequest](buildindividualtesterslinkagesrequest.md): A request body you use to add or remove a build from multiple beta groups.
-- [BuildIndividualTestersLinkagesResponse](buildindividualtesterslinkagesresponse.md): A response body that contains a list of related resource IDs.
-- [BuildBetaGroupsLinkagesRequest](buildbetagroupslinkagesrequest.md): A request body you use to add or remove beta groups from a build.
-- [ImageAsset](imageasset.md): An image asset, including its height, width, and template URL.
-- [BuildAppLinkageResponse](buildapplinkageresponse.md)
-- [BuildAppStoreVersionLinkageResponse](buildappstoreversionlinkageresponse.md)
-- [BuildBetaAppReviewSubmissionLinkageResponse](buildbetaappreviewsubmissionlinkageresponse.md)
-
-# Document: BetaBuildUsagesV1MetricResponse.Data
-
-Source path: documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildUsagesV1MetricResponse.Data
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.1+
-
-The request body you use to update a beta build usages v1metric response.
-
-## Declaration
-
-```
-object BetaBuildUsagesV1MetricResponse.Data
-```
-
-## Properties
-
-- `dataPoints` — `[BetaBuildUsagesV1MetricResponse.Data.DataPoints]`:
-
-## Topics
-
-### Objects
-
-- [BetaBuildUsagesV1MetricResponse.Data.DataPoints](data-data.dictionary/datapoints-data.dictionary.md): The time-series data points for the beta build usage metric, each containing install and crash counts.
-
-# Document: BetaBuildUsagesV1MetricResponse.Data.DataPoints
-
-Source path: documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary/datapoints-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary/datapoints-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildUsagesV1MetricResponse.Data.DataPoints
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.1+
-
-The time-series data points for the beta build usage metric, each containing install and crash counts.
-
-## Declaration
-
-```
-object BetaBuildUsagesV1MetricResponse.Data.DataPoints
-```
-
-## Properties
-
-- `end` — `date-time`:
-- `start` — `date-time`:
-- `values` — `BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values`:
-
-## Topics
-
-### Objects
-
-- [BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values](datapoints-data.dictionary/values-data.dictionary.md): The install and crash count values within a single data point of the beta build usage metric.
-
-# Document: BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values
-
-Source path: documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary/datapoints-data.dictionary/values-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betabuildusagesv1metricresponse/data-data.dictionary/datapoints-data.dictionary/values-data.dictionary
-Description: Interface language: Data
-
-# BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 3.1+
-
-The install and crash count values within a single data point of the beta build usage metric.
-
-## Declaration
-
-```
-object BetaBuildUsagesV1MetricResponse.Data.DataPoints.Values
-```
-
-## Properties
-
-- `crashCount` — `integer`:
-- `feedbackCount` — `integer`:
-- `installCount` — `integer`:
-- `inviteCount` — `integer`:
-- `sessionCount` — `integer`:
-
-# Document: BetaCrashLog
-
-Source path: documentation/appstoreconnectapi/betacrashlog
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betacrashlog
-Description: Interface language: Data
-
-# BetaCrashLog
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 4.0+
-
-The crash log details from a TestFlight tester’s device, including the stack trace and metadata captured at the time of the crash.
-
-## Declaration
-
-```
-object BetaCrashLog
-```
-
-## Properties
-
-- `attributes` — `BetaCrashLog.Attributes`:
-- `id` — `string` (required):
-- `links` — `ResourceLinks`:
-- `type` — `string` (required): **Allowed values:** `betaCrashLogs`
-
-## Topics
-
-### Dictionaries
-
-- [BetaCrashLog.Attributes](betacrashlog/attributes-data.dictionary.md): Attributes that describe a beta crash log resource.
-
-## See Also
-
-### Objects
-
-- [BetaCrashLogResponse](betacrashlogresponse.md): A response containing a single crash log from a TestFlight tester’s device.
-- [BetaFeedbackCrashSubmission](betafeedbackcrashsubmission.md): A crash report submitted by a TestFlight beta tester, linked to the build, bundle, and tester that produced it.
-- [BetaFeedbackCrashSubmissionResponse](betafeedbackcrashsubmissionresponse.md): A response containing a single crash report submitted by a TestFlight beta tester.
-- [BetaFeedbackCrashSubmissionsResponse](betafeedbackcrashsubmissionsresponse.md): A response containing a list of crash reports submitted by TestFlight beta testers.
-- [BetaFeedbackCrashSubmissionCrashLogLinkageResponse](betafeedbackcrashsubmissioncrashloglinkageresponse.md): A response containing the resource identifier of the crash log linked to a crash feedback submission.
-- [DeviceConnectionType](deviceconnectiontype.md): A string that represents the ways a device was connected for a specific crash.
-
-# Document: BetaCrashLog.Attributes
-
-Source path: documentation/appstoreconnectapi/betacrashlog/attributes-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/betacrashlog/attributes-data.dictionary
-Description: Interface language: Data
-
-# BetaCrashLog.Attributes
-
-**Interface language:** Data
-
-**Framework:** App Store Connect API  
-**Kind:** Object  
-**Availability:** App Store Connect API 4.0+
-
-Attributes that describe a beta crash log resource.
-
-## Declaration
-
-```
-object BetaCrashLog.Attributes
-```
-
-## Properties
-
-- `logText` — `string`:

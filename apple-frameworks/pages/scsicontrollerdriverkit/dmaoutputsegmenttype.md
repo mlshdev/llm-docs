@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/dmaoutputsegmenttype
 
 # DMAOutputSegmentType
@@ -19,7 +19,7 @@ typedef enum DMAOutputSegmentType : uint16_t { ... } DMAOutputSegmentType;
 
 ## Topics
 
-### Segment Types
+### Segment types
 
 - [kDMAOutputSegmentBig32](dmaoutputsegmenttype/kdmaoutputsegmentbig32.md): A constant representing big-endian 32-bit DMA segments.
 - [kDMAOutputSegmentBig64](dmaoutputsegmenttype/kdmaoutputsegmentbig64.md): A constant representing big-endian 64-bit DMA segments.
@@ -30,6 +30,6 @@ typedef enum DMAOutputSegmentType : uint16_t { ... } DMAOutputSegmentType;
 
 ## See Also
 
-### Managing Direct Memory Access
+### Managing direct memory access
 
 - [UserGetDMASpecification](iouserscsiparallelinterfacecontroller/usergetdmaspecification.md): Gets the controller-specific direct memory access (DMA) specification in response to a call from the framework.

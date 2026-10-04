@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/userinitializetargetforid
 
 # UserInitializeTargetForID
@@ -35,7 +35,7 @@ The host bus adapter (HBA) can use this method to probe the target or do anythin
 
 ## See Also
 
-### Managing Targets
+### Managing targets
 
 - [UserCreateTargetForID](usercreatetargetforid.md): Creates the specified target.
 - [UserDestroyTargetForID](userdestroytargetforid.md): Destroys the specified target.

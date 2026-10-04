@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/vimageconvert_argb8888to420yp8_cb8_cr8(_:_:_:_:_:_:_:)
 
 # vImageConvert_ARGB8888To420Yp8_Cb8_Cr8(\_:\_:\_:\_:\_:\_:\_:) (Swift)

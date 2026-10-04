@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/bundleresources/information-property-list/cfbundleicons/cfbundleprimaryicon/cfbundlesymbolname
 
 # CFBundleSymbolName
@@ -36,4 +36,4 @@ In the Finder sidebar, it looks like this:
 
 ![A screenshot of Finder, showing the flame.fill SF Symbol in the sidebar.](https://developer.apple.com/images/com.apple.bundleresources/media-3922503@2x.png)
 
-To create a custom symbol for your app, see [Creating custom symbol images for your app](../../../../uikit/creating-custom-symbol-images-for-your-app.md).
+To create a custom symbol for your app, see [Creating custom symbols](../../../../technologyoverviews/custom-sf-symbols.md).

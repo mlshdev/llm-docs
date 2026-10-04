@@ -1,10 +1,189 @@
-# Apple Xcode and developer tools snapshot-d045c48ba442: full documentation
+# Apple Xcode and developer tools snapshot-4fca00e84bae: full documentation
 
 Source: https://developer.apple.com/documentation/xcode
-Catalog snapshot: d045c48ba442d76db23b56957be941c7cd95580126c6f823a089d10201c74287
-Content digest: 03a8128db62b106d74bec4fd1eb7d9a8b1c1b58cfa6a53e4ff370efb063a4594
-Captured at: 2026-09-19T05:14:28.744Z
+Catalog snapshot: 4fca00e84bae9217beada8f61d8eb44bfcd4978650125b133ae059131660af4f
+Content digest: f0ae4387bb364a5818de2647531622ae1d41631cac9a4423b442f779c19cd8b3
+Captured at: 2026-10-04T18:39:02.500Z
 Volume 2
+
+# Document: Creating screenshots of your app for localizers
+
+Source path: documentation/xcode/creating-screenshots-of-your-app-for-localizers
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-screenshots-of-your-app-for-localizers
+Description: Kind: Article
+
+# Creating screenshots of your app for localizers
+
+**Kind:** Article
+
+Share screenshots of your app with localizers to provide context for translation.
+
+<a id="Overview"></a>
+
+## Overview
+
+When running UI tests of your localizations, you can generate screenshots to include in the exported localization folders that you give to localizers. The screenshots provide context for the localizable strings and resources in the interface. You can generate screenshots from your project’s test plans or Test scheme.
+
+To include the screenshots in the Xcode Localization Catalog (a folder with a `.xcloc` file extension), see [Exporting localizations](exporting-localizations.md).
+
+<a id="Create-a-test-plan"></a>
+
+### Create a test plan
+
+If you add many localizations to your project, test plans are ideal for generating screenshots because you can create a configuration for each. A test plan (a file with a `.xctestplan` file extension) specifies which tests to run and how to run them one or more times.
+
+You can use an existing test plan or create a new one. To add a test plan, choose Product \> Test Plan \> New Test Plan in Xcode. Enter a name for the test plan and click Create.
+
+If you want to convert your project from using schemes to test plans, choose Product \> Scheme \> Convert Scheme to use Test Plans, select “Create Test Plan from scheme”, then click Convert. In the next dialog, you can change the name of the test plan, then click Save. The test plan appears in the editor area.
+
+<a id="Add-localization-configurations"></a>
+
+### Add localization configurations
+
+Add a configuration for each localization to your test plan. In the Project navigator, select the test plan, then click Configurations. On the left, click the Add button (+) at the bottom. Select the new configuration that appears and enter a name for the localization.
+
+Edit the configuration file for the localization test. Under Localization, set the Application Language and Application Region settings to the corresponding language and region for the localization. Under UI Testing, switch Localization Screenshots from Off to On.
+
+![Screenshot of the project editor with a test plan selected in the navigator and a configuration called Right-to-Left selected in the detail area, showing the location of the Application Language and Application Region under Localization.](https://developer.apple.com/images/com.apple.Xcode/creating-screenshots-of-your-app-for-localizers-1@2x.png)
+
+<a id="Run-tests-to-generate-screenshots"></a>
+
+### Run tests to generate screenshots
+
+Next time you run your tests (choose Product \> Test), Xcode saves the screenshots for each localization to disk. In the Test navigator, next to every screenshot, Xcode includes a property list (Localizable Strings Info) that maps the strings to the frame where the string appears in the screenshot. The property list includes the string IDs (that appear in the exported XLIFF file) and frame locations.
+
+<a id="Generate-screenshots-using-schemes"></a>
+
+### Generate screenshots using schemes
+
+Alternatively, if you don’t use test plans, you can make similar edits to the Test scheme to generate screenshots. In Xcode, choose Product \> Scheme \> Edit Scheme, click the Test scheme, then click Options. Choose the language and region from the pop-up menus, then select “Gather screenshots for localization.”
+
+## See Also
+
+### Translation and adaptation
+
+- [Exporting localizations](exporting-localizations.md): Provide the localizable files from your project to localizers.
+- [Editing XLIFF and string catalog files](editing-xliff-and-string-catalog-files.md): Translate or adapt the localizable files for a language and region that you export from your project.
+- [Importing localizations](importing-localizations.md): Import the files that you translate or adapt for a language and region into your project.
+- [Locking views in storyboard and XIB files](locking-views-in-storyboard-and-xib-files.md): Prevent changes to your Interface Builder files while localizing human-facing strings.
+
+# Document: Creating width and device variants of strings
+
+Source path: documentation/xcode/creating-width-and-device-variants-of-strings
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-width-and-device-variants-of-strings
+Description: Kind: Article
+
+# Creating width and device variants of strings
+
+**Kind:** Article
+
+Change a localized string for different interface widths and devices.
+
+<a id="Overview"></a>
+
+## Overview
+
+> **Important**
+
+> In Xcode 15 and later, use Dynamic Type instead of width variants and string catalogs to create device variants. For more information, see [Supporting multiple languages in your app](supporting-multiple-languages-in-your-app.md) and  [Localizing and varying text with a string catalog](localizing-and-varying-text-with-a-string-catalog.md).
+
+You can use a `.stringsdict` file to provide variants of a string for different view widths and for different devices. For example, display a different string for an iOS device in landscape or in portrait mode, or display a different string when your iPad app built with Mac Catalyst runs on a Mac.
+
+A `.stringsdict` file is a property list that defines plural, width, and device variants of localizable strings. The `.stringsdict` file contains a dictionary of key-value pairs where the values are either a plural, width, or device rule.
+
+The key for a rule is the string that you pass to [Text](https://developer.apple.com/documentation/swiftui/text) structures, the [NSLocalizedString](https://developer.apple.com/documentation/foundation/nslocalizedstring) macro, and similar APIs in your code. The rule can be a plural, width, or device rule that determines which formatted string the macro returns.
+
+To create plural variants for formatted strings that contain amounts, see [Localizing strings that contain plurals](localizing-strings-that-contain-plurals.md).
+
+<a id="Add-a-strings-dictionary-file-to-your-project"></a>
+
+### Add a strings dictionary file to your project
+
+To add a `.stringsdict` file to your project, choose File \> New \> File from Template. In the sheet that appears, select the platform, enter `strings` in the Filter field, select Stringsdict File, and click Next. In the dialog that appears, enter a name for the file, choose a location, and click Create.
+
+<a id="Provide-string-variants-for-different-widths"></a>
+
+### Provide string variants for different widths
+
+A *width rule* specifies variants for different available widths in the user interface. It contains a single dictionary with a single key-value pair. The key in the dictionary is `NSStringVariableWidthRuleType` and the value is another dictionary with key-value pairs for each variant. The key for a variant is a width and the value is a string.
+
+In the following `.stringsdict` file, for the `hello` string in the code, the width variations are `1`, `22`, and `53`, and the values are `Hi`, `Hello`, and `Greetings and Salutations`:
+
+```other
+<plist version="1.0">
+    <dict>
+        <key>hello</key>
+        <dict>
+            <key>NSStringVariableWidthRuleType</key>
+            <dict>
+                <key>1</key>
+                <string>Hi</string>
+                <key>22</key>
+                <string>Hello</string>
+                <key>53</key>
+                <string>Greetings and Salutations</string>
+            </dict>
+        </dict>
+    </dict>
+</plist>
+
+```
+
+For [UILabel](https://developer.apple.com/documentation/uikit/uilabel) objects, the width is in em units that fit across the app window; otherwise, the width doesn’t have an associated unit.
+
+The width rule defines variants for a range of widths:
+
+- If the width is between two numerically sequential keys, the API returns the variant with the smaller key.
+- If the width is less than all keys, the API returns the variant for the smallest key.
+
+In the code above, if the width is `2`, the macro returns `Hi`. If the width is `52`, the macro returns `Hello`.
+
+To get a variant for a specific width in your code, see the [variantFittingPresentationWidth(\_:)](https://developer.apple.com/documentation/foundation/nsstring/variantfittingpresentationwidth%28_:%29) method.
+
+<a id="Provide-device-specific-string-variants"></a>
+
+### Provide device-specific string variants
+
+A *device rule* specifies a different string depending on the device. For example, your universal app may present different instructions to the user when running on an iOS device than when running on a Mac.
+
+A device rule contains a single dictionary with a single key-value pair. The key is `NSStringDeviceSpecificRuleType` and the value is a dictionary with the following optional key-value pairs:
+
+| Key | Description |
+| --- | --- |
+| appletv | The string to use on Apple TV. |
+| applevision | The string to use on Apple Vision Pro. |
+| applewatch | The string to use on Apple Watch. |
+| ipad | The string to use on iPad. |
+| iphone | The string to use on iPhone. |
+| ipod | The string to use on iPod. |
+| mac | The string to use on Mac. |
+
+In the following `.stringsdict` file, when you pass `UserInstructions` as the string in your code, it returns `Tap here` when the app runs on an iPhone, `Click here` when it runs on a Mac, and `Press here` when it runs on an Apple TV:
+
+```other
+<plist version="1.0">
+<dict>
+    <key>UserInstructions</key>
+    <dict>
+        <key>NSStringDeviceSpecificRuleType</key>
+        <dict>
+            <key>iphone</key>
+            <string>Tap here</string>
+            <key>mac</key>
+            <string>Click here</string>
+            <key>appletv</key>
+            <string>Press here</string>
+        </dict>
+    </dict>
+</dict>
+</plist>
+```
+
+## See Also
+
+### Legacy localization techniques
+
+- [Localizing strings that contain plurals](localizing-strings-that-contain-plurals.md): Use a strings dictionary file to ensure correct localization of strings that contain language plurals.
 
 # Document: Creating your app icon using Icon Composer
 
@@ -1855,6 +2034,7 @@ To manage your simulated and physical devices, select a device in the sidebar to
 - [Interacting with your app in Device Hub](interacting-with-your-app-in-device-hub.md): Use Device Hub to control interactions with your apps on simulated and physical devices.
 - [Interacting with your visionOS app in Device Hub](interacting-with-your-visionos-app-in-device-hub.md): Use Device Hub to navigate spaces and control interactions with your visionOS apps running on simulated visionOS devices.
 - [Capturing screenshots and videos from devices](capturing-screenshots-and-videos-from-devices.md): Record interactions and capture screenshots of your app for sharing, review, or App Store submission.
+- [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md): Manage simulated and physical devices from the command line.
 
 ### Device details
 
@@ -2195,13 +2375,11 @@ Identifying potential issues during development saves testing time later and imp
 - Main Thread Checker—This tool verifies that system APIs that must run on the main thread actually do run on that thread.
 - Undefined Behavior Sanitizer—The UBSan tool detects divide-by-zero errors, attempts to access memory using a misaligned pointer, and other undefined behaviors.
 
-These are LLVM-based tools that add specific checks to your code. You enable them at build time using the Xcode scheme editor. Select the appropriate scheme for your project and choose Product \> Scheme \> Edit Scheme to display the scheme editor. Select the Run or Test schemes, navigate to the Diagnostics section, and select the sanitizers you want to run.
+These are LLVM-based tools that add specific checks to your code. To enable them for the Run action, select the appropriate scheme for your project and choose Product \> Scheme \> Edit Scheme to display the scheme editor. Select the Run action, navigate to the Diagnostics section, and select the sanitizers you want to run. To enable them for the Test action, set the `Address Sanitizer`, `Thread Sanitizer`, `Undefined Behavior Sanitizer`, and `Main Thread Checker` values in the active test plan’s configuration instead. Test your app with sanitizer tools enabled to catch otherwise difficult to catch bugs. Use a comprehensive set of unit tests, and use additional integration and UI tests to exercise additional code at runtime. For more information, see [Improving code assessment by organizing tests into test plans](organizing-tests-to-improve-feedback.md) and [Testing](testing.md).
 
 > **Note**
 
 > The sanitizer tools support all C-based languages. The tools also support the Swift language, with the exception of the Undefined Behavior Sanitizer tool, which supports only C-based languages.
-
-Test your app with sanitizer tools enabled to catch otherwise difficult to catch bugs. Test your code using a comprehensive set of unit tests, and use additional integration and UI tests to exercise additional code at runtime. The `Address Sanitizer`, `Thread Sanitizer`, `Undefined Behavior Sanitizer`, and `Main Thread Checker` values of a test plan configuration enable these sanitizers during test runs, see [Improving code assessment by organizing tests into test plans](organizing-tests-to-improve-feedback.md).  For more information about testing your code, see [Testing](testing.md).
 
 <a id="Locate-memory-corruption-issues-in-your-code"></a>
 
@@ -4570,7 +4748,7 @@ Detect out-of-bounds memory access, use of freed memory, and other potential vul
 
 ## Overview
 
-People’s devices can contain a large amount of sensitive data that an attacker might want to use for malicious purposes. If your app contains any security vulnerabilities, an attacker may exploit the vulnerabilities to access or modify the data in your app, extension, App Clip, or device driver.
+People’s devices can contain a large amount of sensitive data that an attacker might want to use for malicious purposes. If your app contains any security vulnerabilities, an attacker might exploit the vulnerabilities to access or modify the data in your app, extension, or device driver.
 
 Adopt the Enhanced Security capability in your Xcode project to enable a collection of build settings and entitlements designed to mitigate certain common vulnerabilities in your app. Review the behavior of your app with these settings enabled, and fix any problems that Xcode and the system report.
 
@@ -4578,13 +4756,13 @@ Adopt the Enhanced Security capability in your Xcode project to enable a collect
 
 >  The Enhanced Security capability enables security checks that can impact the performance and stability of an app that isn’t designed and built with security in mind. Review your app’s threat model, and only adopt the Enhanced Security capability if the protections it enables align with your app’s security goals. Test your app thoroughly to ensure that you address all situations in which Enhanced Security mitigations could lead to your app crashing.
 
-Enhanced Security compiler settings and runtime checks are available for apps and extensions built for iOS, iPadOS, macOS, and visionOS; App Clips in iOS; and DriverKit extensions in iPadOS and macOS. Additionally, you can create Enhanced Security helper extensions on iOS, iPadOS, and macOS to which the system provides further protections; for more information, see [Creating enhanced security helper extensions](creating-enhanced-security-helper-extensions.md).
+Enhanced Security compiler settings and runtime checks are available for apps and extensions built for iOS, iPadOS, macOS, watchOS, and visionOS; and DriverKit extensions in iPadOS and macOS. Additionally, you can create Enhanced Security helper extensions on iOS, iPadOS, macOS, and watchOS to which the system provides further protections; for more information, see [Creating enhanced security helper extensions](creating-enhanced-security-helper-extensions.md).
 
 <a id="Adopt-the-Enhanced-Security-capability"></a>
 
 ### Adopt the Enhanced Security capability
 
-Navigate to the Signing and Capabilities editor for your Xcode target, and click the Add Capability button. From the list of capabilities, select Enhanced Security. After you add the Enhanced Security capability to your target, use the checkboxes in the Enhanced Security capability of the Signing and Capabilities editor to adopt specific hardening features. Additionally, click Enable Build Settings to add security-related build settings to all targets in your project, which turns on certain hardening features.
+Navigate to the Signing and Capabilities editor for your Xcode target, and click the Add Capability button. From the list of capabilities, select Enhanced Security. After you add the Enhanced Security capability to your target, use the checkboxes in the Enhanced Security capability of the Signing and Capabilities editor to adopt specific hardening features. Additionally, select Enable Enhanced Security for All Targets in your project, which turns on certain hardening features including pointer authentication. For more information, see [Preparing your app to work with pointer authentication](https://developer.apple.com/documentation/security/preparing-your-app-to-work-with-pointer-authentication).
 
 The sections below describe the individual entitlements and build settings that comprise Enhanced Security, and the steps you can take to adopt the hardening features in your code. Additionally, the sections describe how you can turn off any individual hardening setting, in case you need to do so while you prepare your code to support the additional protections.
 
@@ -4596,15 +4774,13 @@ The sections below describe the individual entitlements and build settings that 
 
 ### Prepare your app for pointer authentication
 
-The Enhanced Security capability includes additional runtime platform restrictions, which Xcode enables by default for your app when you adopt the capability by setting the `ENABLE_POINTER_AUTHENTICATION` build setting to `Yes`. With these additional runtime platform restrictions enabled, Xcode builds your app for the `arm64e` architecture and enables *pointer authentication*.
+The Enhanced Security capability includes additional runtime platform restrictions, which Xcode enables by default for your app. When you adopt the capability by clicking the Enable Enhanced Security for All Targets checkbox, Xcode enables the `ENABLE_POINTER_AUTHENTICATION` build setting. With these additional runtime platform restrictions enabled, Xcode builds your app for the `arm64e` architecture and enables *pointer authentication*, where the system generates signature metadata for pointers that your app creates by allocating memory or constructing C++ objects.
 
-When you enable pointer authentication, the system generates signature metadata for pointers that your app creates by allocating memory or constructing C++ objects. Then the system validates that the signatures are unchanged when your app accesses the memory addressed by those pointers. If the signature for a pointer isn’t valid, the system encounters an exception and crashes your app. Doing so helps to protect against an attacker overwriting memory in your app to compromise the app’s control flow.
+When you enable pointer authentication, the system validates that the signatures are unchanged when your app accesses the memory addressed by those pointers. If the signature for a pointer isn’t valid, the system encounters an exception and crashes your app. Doing so helps to protect against an attacker overwriting memory in your app to compromise the app’s control flow.
 
 To adopt pointer authentication, use the `__ptrauth` type qualifier to instruct the compiler to generate pointer authentication protection for variables in your code that store data and function pointers.
 
 When a variable uses pointer authentication, the system throws an error if you overwrite its value with a raw pointer in your code, or copy its value to another variable that uses a different pointer authentication schema. If your app does either of these, the system encounters an exception and crashes your app. Instead, sign the pointer before storing it, re-signing it for a different use if necessary. For more information, see [Improving control flow integrity with pointer authentication](https://developer.apple.com/documentation/apple-silicon/improving-control-flow-integrity-with-pointer-authentication).
-
-If you need to turn off pointer authentication for your target, uncheck the Authenticate Pointers checkbox in the Signing and Capabilities editor, or set the `ENABLE_POINTER_AUTHENTICATION` build setting to `No`.
 
 <a id="Adopt-typed-allocator-support"></a>
 
@@ -4639,6 +4815,24 @@ You can also enable the [com.apple.security.hardened-process.checked-allocations
 When you enable the Enhanced Security capability for your target, Xcode sets the `CLANG_ENABLE_STACK_ZERO_INIT` build setting to `Yes`. This build setting configures the compiler to initialize automatic variables in your code with zeroes. Doing so helps to protect against particular types of use-after-free vulnerability, because your app zeroes out previous values in stack memory before it reuses them for other variables.
 
 If you need to turn off zero-initialization of stack variables for your target, set the `CLANG_ENABLE_STACK_ZERO_INIT` build setting to `No`.
+
+<a id="Adopt-pointer-arithmetic-overflow-checking"></a>
+
+### Adopt pointer-arithmetic overflow checking
+
+Your app can take advantage of an additional level of memory protection by adopting the [Check for Overflow of Pointer Arithmetic](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.hardened-process.checked-allocations.enforce-checked-pointer-arithmetic-overflow) entitlement that the `arm64e.x1` architecture slice supports. This is an additional level of pointer checking in addition to the memory integrity enforcement described above — adopting memory integrity enforcement is a prerequisite for adopting the Check for Overflow of Pointer Arithmetic entitlement. For more information, see [Build settings reference](build-settings-reference.md).
+
+To test your app with pointer-arithmetic overflow checking, you need to use specific hardware with arm64e.x1 support. For more information, see [Improving control flow integrity with pointer authentication](https://developer.apple.com/documentation/apple-silicon/improving-control-flow-integrity-with-pointer-authentication). Note that simulators cannot test this behavior.
+
+To adopt this capability:
+
+- Navigate to the Signing and Capabilities editor for your Xcode target.
+- Select Check for Overflow of Pointer Arithmetic under Memory Safety.
+- Click Enable Hardware-Checked Pointer Arithmetic Slice for All Targets in the Signing and Capabilities editor to enable this capability.
+
+> **Note**
+
+> The Xcode build system surfaces a build configuration warning if the `com.apple.security.hardened-process.checked-allocations.enforce-checked-pointer-arithmetic-overflow` entitlement is present but a target dependency for the project doesn’t enable `HARDWARE_CHECKED_POINTER_ARITHMETIC_SLICE`.
 
 <a id="Address-security-related-compiler-warnings"></a>
 
@@ -8823,6 +9017,184 @@ If you don’t need to represent negative numbers, another option is to use unsi
 - [Invalid shift](invalid-shift.md): Detects invalid and overflowing shifts.
 - [Invalid variable-length array](invalid-variable-length-array.md): Detects negative array bounds.
 
+# Document: Interacting with devices using the command line
+
+Source path: documentation/xcode/interacting-with-devices-using-the-command-line
+Canonical documentation: https://developer.apple.com/documentation/xcode/interacting-with-devices-using-the-command-line
+Description: Kind: Article
+
+# Interacting with devices using the command line
+
+**Kind:** Article
+
+Manage simulated and physical devices from the command line.
+
+<a id="Overview"></a>
+
+## Overview
+
+You can manage physical and simulated devices using the `devicectl` command-line tool in Terminal without running Xcode. For example, use the `devicectl` command-line tool to automate common tasks when managing multiple test devices.
+
+If you use `devicectl` in scripts or to automate managing devices, you can use the `--json-output` option with subcommands that create a JSON file with the command results. The JSON file format is versioned and backward compatible with previous releases, although some fields may appear deprecated in the file. In contrast, don’t rely on or parse the Terminal output from these commands, because the output may not be consistent in each release.
+
+For complete `devicectl` documentation, enter `devicectl help` or `devicectl help <subcommand>` in Terminal (optionally, `devicectl --help`). For example, for descriptions of the `device copy to` subcommand options, enter:
+
+```shell
+% devicectl help device copy to
+```
+
+Before using `devicectl`, start the simulated devices and pair the physical devices you want to use.
+
+<a id="Start-simulated-devices"></a>
+
+## Start simulated devices
+
+To start simulated devices, use the `simctl` command. To install `simctl` and other command-line tools, see [Installing the command-line tools](installing-the-command-line-tools.md). After you install `simctl`, enter `xcrun simctl help` in Terminal to learn more.
+
+Alternatively, use Device Hub to start simulators. Select the simulated device you want to use in the sidebar and click Start in the canvas.
+
+<a id="Pair-physical-devices"></a>
+
+## Pair physical devices
+
+To pair physical devices that you connect to your Mac with a cable, enter this command:
+
+```shell
+% devicectl manage pair
+```
+
+To use Device Hub to pair physical devices with your Mac, either wirelessly or with a cable, see [Managing your simulated and physical devices in Device Hub](managing-your-simulated-and-physical-devices-in-device-hub.md).
+
+Whether you use the command line or Device Hub to pair physical devices, unlock the device before entering `devicectl` commands.
+
+<a id="Specify-devices-in-subcommands"></a>
+
+## Specify devices in subcommands
+
+You pass the device to subcommands by adding the `--device` option followed by the UUID, ECID, UDID, or name for the device.
+
+To get devices and identifiers you use in subsequent commands, enter the `devicectl list devices` or `devicectl device info details` command in Terminal.
+
+Alternatively, you can find most of these properties in the Device Hub inspector. Select the physical device in the sidebar, click the Info button in the far right of the toolbar, and then click the Info tab below. If the identifier doesn’t appear below, click Edit Visibility to see more properties.
+
+To find device identifiers using other methods, see [Locating device identifiers](locating-device-identifiers.md).
+
+<a id="Get-information-about-devices"></a>
+
+## Get information about devices
+
+Use the `devicectl device info` command and subcommands to get additional information about devices. For example, use this command to find out whether a device is locked:
+
+```shell
+% devicectl device info lockState --device <uuid|ecid|udid|name>
+```
+
+Use this command to get more hardware details and metadata about a device:
+
+```shell
+% devicectl device info details --device <uuid|ecid|udid|name>
+```
+
+<a id="Install-apps-on-devices"></a>
+
+## Install apps on devices
+
+Use the `devicectl device install app` subcommand to install your app on the device:
+
+```shell
+% devicectl device install app --device <uuid|ecid|udid|name> <path>
+```
+
+If you build your app in Xcode, you can get the path to your app using the Project navigator. Under Products, Control-click the app and choose Show in Finder, or, as a shortcut, choose Open Terminal at Location from the contextual menu.
+
+<a id="Launch-apps-on-devices"></a>
+
+## Launch apps on devices
+
+You can launch an app on a simulated or physical device using its bundle ID or using the path to the app:
+
+```shell
+% devicectl device process launch --device <uuid|ecid|udid|name> <bundle-identifier-or-path>
+```
+
+For example, pass `com.example.MyApp` as the bundle ID or `.../MyApp.app` with the `.app` extension as the path.
+
+For other ways to launch apps, enter `devicectl help device process launch` in Terminal. For example, use the `--environment-variables` option to pass environment variables to the app.
+
+<a id="Pass-file-locations-to-subcommands"></a>
+
+## Pass file locations to subcommands
+
+You provide file locations to subcommands that access the file system, such as `devicectl device info files` and `devicectl device copy`, as described below.
+
+You can only read or write in domains (preset file locations) where you have permissions on the device. You specify the domain where files reside by adding the `--domain-type` option followed by one of these values: `appDataContainer`, `appGroupDataContainer`, `systemCrashLogs`, or `temporary`.
+
+If necessary, provide a domain-specific identifier by adding the `--domain-identifier` option. For example, if you pass `appDataContainer` as the `--domain-type` value, pass the app’s bundle ID as the `--domain-identifier` value:
+
+```shell
+--domain-type appDataContainer --domain-identifier <bundle ID>
+```
+
+For the `temporary` domain, the identifier can be any nonempty string that allows you to disambiguate your temporary files from those of another client.
+
+In addition, you may need to pass credentials using the `--user` option.
+
+<a id="List-files-on-devices"></a>
+
+## List files on devices
+
+Use the `devicectl device info files` subcommand to return a list of files in a location on a device:
+
+```shell
+% devicectl device info files --device <uuid|ecid|udid|name> --domain-type <domain>
+```
+
+For example, to list all the crash reports, pass `systemCrashLogs` as the `--domain-type` parameter:
+
+```shell
+% devicectl device info files --device <uuid|ecid|udid|name> --domain-type systemCrashLogs
+```
+
+Then, use the `devicectl device copy from` command below to copy a crash log in the output to your Mac.
+
+<a id="Transfer-files-to-and-from-devices"></a>
+
+## Transfer files to and from devices
+
+Use the `devicectl device copy` subcommand to transfer files to and from physical devices that you pair with your Mac. You transfer files to and from specific file system locations where you have permissions.
+
+To transfer files from your Mac to a device, use the `devicectl device copy to` subcommand, and to transfer files from a device to your Mac, use the `devicectl device copy from` subcommand. To specify the source and destination file paths, use the `--source` and `--destination` options.
+
+For example, this command copies a file on your Mac to a location on the device:
+
+```shell
+% devicectl device copy to --device <uuid|ecid|udid|name> --source <filename> --destination <filename> --domain-type <domain>
+```
+
+This command copies a file on the device to your Mac:
+
+```shell
+% devicectl device copy from --device <uuid|ecid|udid|name> --source <filename> --destination <filename> --domain-type <domain> --domain-identifier <identifier>
+```
+
+<a id="Mount-devices-on-your-Mac"></a>
+
+## Mount devices on your Mac
+
+Instead of transferring files, you can browse the files of all physical and started simulated devices that your Mac knows about on a single shared volume or mount point, or get the mount point for a single device using `devicectl`.
+
+The path to the default single mount point for all devices is `~/Library/Developer/CoreDevice/DeviceFS` (which appears as `Devices` in Finder). To get the path to a specific device folder, use the `devicectl device info mountpoint` subcommand:
+
+```shell
+% devicectl device info mountpoint --device <uuid|ecid|udid|name>
+```
+
+A device mount point contains one or more of these domain-specific subfolders: `AppDataContainers`, `AppGroupContainers`, `DiagnosticReports`, and `Temporary`. The device files are mostly read-only with limited write access depending on the subfolder, such as `AppDataContainers` and `AppGroupContainers`.
+
+> **Note**
+
+> Physical device mount points also appear in Finder under Locations in the sidebar with the device name.
+
 # Document: Interacting with previews in the canvas
 
 Source path: documentation/xcode/interacting-with-previews-in-the-canvas
@@ -8949,7 +9321,7 @@ You use similar controls on your Mac to interact with your app on a simulated an
 
 When you launch your app on a simulated device, Device Hub opens to show the device screen in a compact window. When you launch your app on a physical device, Xcode runs it on the device. To interact with the device in Device Hub, select the device in the sidebar and click View Screen in the canvas area.
 
-Device Hub surrounds the screen content with a bezel that resembles the target device. In visionOS, it displays a synthetic space to mimic the experience someone would have when they wear the device. Each device bezel and space has specific controls to support interactions.
+Device Hub surrounds the screen content with a bezel that resembles the target device. In visionOS, it displays a synthetic space to mimic the experience someone would have when they wear the device. Each device bezel and space has specific controls to support interactions. To show or hide bezels in the canvas, choose View \> Show Bezels or View \> Hide Bezels.
 
 ![A screenshot of Device Hub showing an iOS simulator in compact view running a sample code app.](https://developer.apple.com/images/com.apple.Xcode/running-app-in-ios-simulator@2x.png)
 
@@ -8968,6 +9340,7 @@ Use your Mac’s pointer, trackpad or Magic Mouse, keyboard, menu items, and but
 | Touch and hold | Click and hold. |
 | Drag and drop | Click and hold until the drag item appears, then drag the item to the target. |
 | Activate Siri | Hold the Sleep/Wake button on the device bezel or choose Controls \> Siri. |
+| Shake the device | Choose Controls \> Shake. |
 | Rotate the simulator to the left | Click the rotate button under the device bezel or choose Controls \> Rotate Left. |
 | Rotate the simulator to the right | Option-click the rotate button under the device bezel or choose Controls \> Rotate Right. |
 | Set the orientation of the device | Choose an orientation from the Device \> Orientation submenu. Face Up and Face Down do not rotate the simulator. |
@@ -9019,6 +9392,12 @@ Use the pointer, keyboard, and menu items to make gestures on a simulated tvOS d
 | Trigger the action for the current focus | Press the Return key. |
 | Move up one level in the navigation hierarchy | Press the Escape key. |
 
+<a id="Slow-down-animations-to-diagnose-problems"></a>
+
+### Slow down animations to diagnose problems
+
+You can slow down the rate of animations to help identify any layout, logic, or performance issues that interfere with smooth animations. To turn on or off slow animations, choose Device \> Slow Animations.
+
 <a id="Handle-camera-and-microphone-access-conflicts-on-physical-devices"></a>
 
 ## Handle camera and microphone access conflicts on physical devices
@@ -9038,6 +9417,7 @@ If you launch higher-priority apps on the device that access the camera or micro
 - [Configuring the environment of a simulated device](configuring-the-environment-of-a-simulated-device.md): Modify the settings of a simulated device.
 - [Interacting with your visionOS app in Device Hub](interacting-with-your-visionos-app-in-device-hub.md): Use Device Hub to navigate spaces and control interactions with your visionOS apps running on simulated visionOS devices.
 - [Capturing screenshots and videos from devices](capturing-screenshots-and-videos-from-devices.md): Record interactions and capture screenshots of your app for sharing, review, or App Store submission.
+- [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md): Manage simulated and physical devices from the command line.
 
 # Document: Interacting with your visionOS app in Device Hub
 
@@ -9151,6 +9531,7 @@ Launch and test your app’s SharePlay experiences in a simulator using FaceTime
 - [Configuring the environment of a simulated device](configuring-the-environment-of-a-simulated-device.md): Modify the settings of a simulated device.
 - [Interacting with your app in Device Hub](interacting-with-your-app-in-device-hub.md): Use Device Hub to control interactions with your apps on simulated and physical devices.
 - [Capturing screenshots and videos from devices](capturing-screenshots-and-videos-from-devices.md): Record interactions and capture screenshots of your app for sharing, review, or App Store submission.
+- [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md): Manage simulated and physical devices from the command line.
 
 # Document: Interpreting the JSON format of a crash report
 
@@ -11131,7 +11512,7 @@ For iOS, iPadOS, tvOS, visionOS, and watchOS devices, you can use Device Hub to 
 
 1. Select the device in the sidebar.
 2. In the inspector, click Info in the toolbar.
-3. Under Hardware Properties, copy the device ID that appears in the UDID field.
+3. Copy the device ID that appears in the UDID field.
 
 ![A screenshot of Device Hub showing a physical device selected in the sidebar on the left, an iPhone device mirrored in the canvas in the middle, and the device ID shown in the Info inspector on the right.](https://developer.apple.com/images/com.apple.Xcode/locating-device-id-device-hub@2x.png)
 
@@ -11776,6 +12157,8 @@ You can add simulators for specific platforms and operating system versions that
 To add a simulator with a specific configuration, click the Add Device button (+) at the top of the sidebar and choose a device under Simulators from the pop-up menu. In the dialog, optionally enter a name for the simulator, choose the operating system version and model, and click Create. The simulator appears under Available in the sidebar.
 
 ![A screenshot of dialog that appears when you choose a simulator from the Add Device pop-up menu.](https://developer.apple.com/images/com.apple.Xcode/add-additional-simulators@2x.png)
+
+If the operating system version you want to use doesn’t appear in the dialog, see [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md) to install the platform support first.
 
 To remove a simulator from Device Hub, Control-click it in the sidebar and choose Remove.
 
@@ -22161,7 +22544,7 @@ Configure your Xcode project to use the JSON project configuration file format t
 
 An Xcode project file with a `.xcodeproj` extension contains a project configuration file along with other files specific to your project. In previous Xcode releases, a project configuration file is a property list file with a `.pbxproj` extension. In Xcode 27.2 and later, the default project configuration file is a smaller, hierarchical, self-describing JSON file with a `.xcproj` extension. Xcode 27 and later supports both file formats so you can choose the format you prefer. For projects you created using earlier releases, you can switch to the new JSON file format.
 
-The open source JSON file format makes verifying project configuration changes easier when committing the project configuration file to your source code repository because changes in the comparison view correspond to your actions in Xcode. Additionally, merge conflicts are less likely because the JSON file format isolates configuration changes. The JSON file format also makes it easier for coding intelligence agents to edit the file for you.
+The open source JSON file format ([xcode-project-format](https://github.com/apple/xcode-project-format)) makes verifying project configuration changes easier when committing the project configuration file to your source code repository because changes in the comparison view correspond to your actions in Xcode. Additionally, merge conflicts are less likely because the JSON file format isolates configuration changes. The JSON file format also makes it easier for coding intelligence agents to edit the file for you. For more information on the open source JSON file format, see [XcodeProjectFormat](https://swiftpackageindex.com/apple/xcode-project-format/0.1.0/documentation/xcodeprojectformat).
 
 For more information on creating projects, see [Creating an Xcode project for an app](creating-an-xcode-project-for-an-app.md). For more information on using agents, see [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md).
 

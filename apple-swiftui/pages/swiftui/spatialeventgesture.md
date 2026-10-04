@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/spatialeventgesture
 
 # SpatialEventGesture
@@ -23,7 +23,7 @@ Use a gesture of this type to track multiple simultaneous spatial events and gai
 
 ```swift
 struct ParticlePlayground: View {
-    @State var model = ParticlesModel()
+    @State private var model = ParticlesModel()
 
     var body: some View {
         Canvas { context, size in

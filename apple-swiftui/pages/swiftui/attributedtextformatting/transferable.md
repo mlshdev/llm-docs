@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/attributedtextformatting/transferable
 
 # AttributedTextFormatting.Transferable
@@ -25,7 +25,7 @@ Use this type e.g. with drag and drop APIs or to create a [fileExporter(isPresen
 struct RichTextEditorView: View {
     @State private var text: AttributedString = ""
     @Environment(\.self) private var environment
-    @State var fileExporterIsPresented: Bool = false
+    @State private var fileExporterIsPresented: Bool = false
 
     var body: some View {
         TextEditor(text: $text)

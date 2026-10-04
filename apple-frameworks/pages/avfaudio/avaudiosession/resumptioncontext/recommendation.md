@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/resumptioncontext/recommendation
 
 # recommendation (Swift)
@@ -15,6 +15,10 @@ The system’s recommendation on whether to resume playback.
 var recommendation: AVAudioSession.ResumptionRecommendation { get }
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
+
 # recommendation (Objective-C)
 
 **Framework:** AVFAudio  
@@ -28,3 +32,7 @@ The system’s recommendation on whether to resume playback.
 ```objectivec
 @property (nonatomic, readonly) AVAudioSessionResumptionRecommendation recommendation;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)

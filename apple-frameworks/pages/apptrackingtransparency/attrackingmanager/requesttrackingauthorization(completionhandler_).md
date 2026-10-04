@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/requesttrackingauthorization(completionhandler:)
 
 # requestTrackingAuthorization(completionHandler:) (Swift)
@@ -59,7 +59,7 @@ In France, Germany, Italy, Poland, and Romania, the full-page sheet displays the
 
 ### Authorization requests
 
-- [requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:)](requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
+- [requestTrackingAuthorization(preferExpandedInterface:additionalInformationAction:completionHandler:)](requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
 - [NSUserTrackingMarkdownUsageDescription](../../bundleresources/information-property-list/nsusertrackingmarkdownusagedescription.md): Beta. A message that explains the purpose for accessing data that an application can use to track a person or device.
 
 # requestTrackingAuthorizationWithCompletionHandler: (Objective-C)
@@ -116,5 +116,5 @@ In France, Germany, Italy, Poland, and Romania, the full-page sheet displays the
 
 ### Authorization requests
 
-- [requestTrackingAuthorizationUsingExpandedInterface:additionalInformationAction:completionHandler:](requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
+- [requestTrackingAuthorizationPreferExpandedInterface:additionalInformationAction:completionHandler:](requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md): Beta. Presents a modal UI that asks someone for permission to access data that your app can use to track a person or device.
 - [NSUserTrackingMarkdownUsageDescription](../../bundleresources/information-property-list/nsusertrackingmarkdownusagedescription.md): Beta. A message that explains the purpose for accessing data that an application can use to track a person or device.

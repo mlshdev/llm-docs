@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corelocation/cldeviceorientation
 
 # CLDeviceOrientation (Swift)
@@ -52,6 +52,7 @@ enum CLDeviceOrientation
 - [headingFilter](cllocationmanager/headingfilter.md): The minimum angular change in degrees required to generate new heading events.
 - [kCLHeadingFilterNone](kclheadingfilternone.md): A constant indicating that all header values should be reported.
 - [CLLocationDegrees](cllocationdegrees.md): A latitude or longitude value specified in degrees.
+- [headingBody](cllocationmanager/headingbody.md): A physical body or view that defines the reference orientation for heading calculations.
 - [headingOrientation](cllocationmanager/headingorientation.md): Deprecated. The device orientation to use when computing heading values.
 
 # CLDeviceOrientation (Objective-C)
@@ -90,4 +91,5 @@ enum CLDeviceOrientation : int;
 - [headingFilter](cllocationmanager/headingfilter.md): The minimum angular change in degrees required to generate new heading events.
 - [kCLHeadingFilterNone](kclheadingfilternone.md): A constant indicating that all header values should be reported.
 - [CLLocationDegrees](cllocationdegrees.md): A latitude or longitude value specified in degrees.
+- [headingBody](cllocationmanager/headingbody.md): A physical body or view that defines the reference orientation for heading calculations.
 - [headingOrientation](cllocationmanager/headingorientation.md): Deprecated. The device orientation to use when computing heading values.

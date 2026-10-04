@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/ninearbyaccessoryconfiguration
 
 # NINearbyAccessoryConfiguration (Swift)
@@ -102,13 +102,6 @@ In iOS 16, you can combine the visual-spatial power of ARKit with the radio sens
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
 - [NSSecureCoding](../foundation/nssecurecoding.md)
 
-## See Also
-
-### Third-party accessories
-
-- [Implementing spatial interactions with third-party accessories](implementing-spatial-interactions-with-third-party-accessories.md): Establish a connection with a nearby accessory to receive periodic measurements of its distance from the user.
-- [NIMotionActivityState](nimotionactivitystate.md): Motion states for a nearby accessory.
-
 # NINearbyAccessoryConfiguration (Objective-C)
 
 **Framework:** Nearby Interaction  
@@ -197,10 +190,3 @@ In iOS 16, you can combine the visual-spatial power of ARKit with the radio sens
 ### Inherits From
 
 - [NIConfiguration](niconfiguration.md)
-
-## See Also
-
-### Third-party accessories
-
-- [Implementing spatial interactions with third-party accessories](implementing-spatial-interactions-with-third-party-accessories.md): Establish a connection with a nearby accessory to receive periodic measurements of its distance from the user.
-- [NIMotionActivityState](nimotionactivitystate.md): Motion states for a nearby accessory.

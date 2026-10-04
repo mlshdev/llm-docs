@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/imageio/kcgimagesourcecreatethumbnailwithtransform
 
 # kCGImageSourceCreateThumbnailWithTransform (Swift)
@@ -33,6 +33,7 @@ The value of this key must be a CFBoolean value. The default value is [kCFBoolea
 - [kCGImageSourceCreateThumbnailFromImageAlways](kcgimagesourcecreatethumbnailfromimagealways.md): A Boolean value that indicates whether to always create a thumbnail image.
 - [kCGImageSourceThumbnailMaxPixelSize](kcgimagesourcethumbnailmaxpixelsize.md): The maximum width and height of a thumbnail image, specified in pixels.
 - [kCGImageSourceSubsampleFactor](kcgimagesourcesubsamplefactor.md): The factor by which to scale down any returned images.
+- [kCGImageSourceAllowableTypes](kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.
 
 # kCGImageSourceCreateThumbnailWithTransform (Objective-C)
 
@@ -66,3 +67,4 @@ The value of this key must be a CFBoolean value. The default value is [kCFBoolea
 - [kCGImageSourceCreateThumbnailFromImageAlways](kcgimagesourcecreatethumbnailfromimagealways.md): A Boolean value that indicates whether to always create a thumbnail image.
 - [kCGImageSourceThumbnailMaxPixelSize](kcgimagesourcethumbnailmaxpixelsize.md): The maximum width and height of a thumbnail image, specified in pixels.
 - [kCGImageSourceSubsampleFactor](kcgimagesourcesubsamplefactor.md): The factor by which to scale down any returned images.
+- [kCGImageSourceAllowableTypes](kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.

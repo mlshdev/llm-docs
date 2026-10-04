@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications
 
 # App Store Server Notifications
@@ -43,7 +43,7 @@ Use the notification type, along with the transaction and subscription renewal i
 
 A [notificationType](appstoreservernotifications/notificationtype.md) of `EXTERNAL_PURCHASE_TOKEN` with an `UNREPORTED` [subtype](appstoreservernotifications/subtype.md) indicates that Apple generated an external purchase token for your app but hasn’t received a report for the token. The notification includes the token in the [externalPurchaseToken](appstoreservernotifications/externalpurchasetoken.md) field of the [responseBodyV2DecodedPayload](appstoreservernotifications/responsebodyv2decodedpayload.md). Use the token information to report it to Apple, including if you don’t recognize the token in your system. To report tokens, with or without associated transactions, call the [External Purchase Server API](externalpurchaseserverapi.md)’s [Send External Purchase Report](externalpurchaseserverapi/send-external-purchase-report.md) endpoint.
 
-For more information about token reporting requirements, see [Using alternative payment options on the App Store in the European Union](https://developer.apple.com/support/apps-using-alternative-payment-providers-in-the-eu/).
+For more information about token reporting requirements in the EU, Brazil, and Japan, see [Using alternative payment options on the App Store in the European Union](https://developer.apple.com/support/apps-using-alternative-payment-providers-in-the-eu/), [Using alternative payment options on the App Store in Brazil](https://developer.apple.com/support/payment-options-on-the-app-store-in-brazil/), and [Using alternative payment options on the App Store in Japan](https://developer.apple.com/support/payment-options-on-the-app-store-in-japan/).
 
 <a id="Test-your-server-setup"></a>
 

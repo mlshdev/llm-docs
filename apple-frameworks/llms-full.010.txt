@@ -1,10 +1,1069 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
+# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
-Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
-Captured at: 2026-09-27T18:07:10.128Z
+Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
+Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
+Captured at: 2026-10-04T18:39:03.048Z
 Volume 10
+
+# Document: isPlaying
+
+Source path: documentation/avfaudio/avaudiosequencer/isplaying
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/isplaying
+Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# isPlaying (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A Boolean value that indicates whether the sequencer’s player is in a playing state.
+
+## Declaration
+
+```swift
+var isPlaying: Bool { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This value returns [true](https://developer.apple.com/documentation/swift/true) if the sequencer’s player is in a started state. The framework considers it to be playing until it explicitly stops, including when playing past the end of the events in a sequence.
+
+## See Also
+
+### Getting Sequence Properties
+
+- [rate](rate.md): The playback rate of the sequencer’s player.
+- [tracks](tracks.md): An array that contains all the tracks in the sequence.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
+- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
+- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# playing (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A Boolean value that indicates whether the sequencer’s player is in a playing state.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, getter=isPlaying) BOOL playing;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This value returns [true](https://developer.apple.com/documentation/swift/true) if the sequencer’s player is in a started state. The framework considers it to be playing until it explicitly stops, including when playing past the end of the events in a sequence.
+
+## See Also
+
+### Getting Sequence Properties
+
+- [rate](rate.md): The playback rate of the sequencer’s player.
+- [tracks](tracks.md): An array that contains all the tracks in the sequence.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
+- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
+- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# Document: load(from:options:)
+
+Source path: documentation/avfaudio/avaudiosequencer/load(from:options:)-8o58w
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/load(from:options:)-8o58w
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# load(from:options:) (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Parses the data and adds its events to the sequence.
+
+## Declaration
+
+```swift
+func load(from data: Data, options: AVMusicSequenceLoadOptions = []) throws
+```
+
+## Parameters
+
+- `data`: The data to load from.
+- `options`: Determines how the contents map to the tracks inside the sequence.
+
+## See Also
+
+### Managing Sequence Load Options
+
+- [load(from:options:)](load%28from_options_%29-9kb6m.md): Loads the file the URL references and adds the events to the sequence.
+- [AVMusicSequenceLoadOptions](../avmusicsequenceloadoptions.md): A structure that defines whether data on different MIDI channels map to multiple tracks, or whether the framework preserves the tracks as they are.
+
+# loadFromData:options:error: (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Parses the data and adds its events to the sequence.
+
+## Declaration
+
+```objectivec
+- (BOOL) loadFromData:(NSData *) data options:(AVMusicSequenceLoadOptions) options error:(NSError **) outError;
+```
+
+## Parameters
+
+- `data`: The data to load from.
+- `options`: Determines how the contents map to the tracks inside the sequence.
+- `outError`: On input, a pointer to an error object. If an error occurs, the framework sets the pointer to an [NSError](../../foundation/nserror.md) object that describes the error. If you don’t want error information, pass in `nil`.
+
+## See Also
+
+### Managing Sequence Load Options
+
+- [loadFromURL:options:error:](load%28from_options_%29-9kb6m.md): Loads the file the URL references and adds the events to the sequence.
+- [AVMusicSequenceLoadOptions](../avmusicsequenceloadoptions.md): A structure that defines whether data on different MIDI channels map to multiple tracks, or whether the framework preserves the tracks as they are.
+
+# Document: load(from:options:)
+
+Source path: documentation/avfaudio/avaudiosequencer/load(from:options:)-9kb6m
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/load(from:options:)-9kb6m
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# load(from:options:) (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Loads the file the URL references and adds the events to the sequence.
+
+## Declaration
+
+```swift
+func load(from fileURL: URL, options: AVMusicSequenceLoadOptions = []) throws
+```
+
+## Parameters
+
+- `fileURL`: The URL to the file.
+- `options`: Determines how the contents map to the tracks inside the sequence.
+
+## See Also
+
+### Managing Sequence Load Options
+
+- [load(from:options:)](load%28from_options_%29-8o58w.md): Parses the data and adds its events to the sequence.
+- [AVMusicSequenceLoadOptions](../avmusicsequenceloadoptions.md): A structure that defines whether data on different MIDI channels map to multiple tracks, or whether the framework preserves the tracks as they are.
+
+# loadFromURL:options:error: (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Loads the file the URL references and adds the events to the sequence.
+
+## Declaration
+
+```objectivec
+- (BOOL) loadFromURL:(NSURL *) fileURL options:(AVMusicSequenceLoadOptions) options error:(NSError **) outError;
+```
+
+## Parameters
+
+- `fileURL`: The URL to the file.
+- `options`: Determines how the contents map to the tracks inside the sequence.
+- `outError`: On input, a pointer to an error object. If an error occurs, the framework sets the pointer to an [NSError](../../foundation/nserror.md) object that describes the error. If you don’t want error information, pass in `nil`.
+
+## See Also
+
+### Managing Sequence Load Options
+
+- [loadFromData:options:error:](load%28from_options_%29-8o58w.md): Parses the data and adds its events to the sequence.
+- [AVMusicSequenceLoadOptions](../avmusicsequenceloadoptions.md): A structure that defines whether data on different MIDI channels map to multiple tracks, or whether the framework preserves the tracks as they are.
+
+# Document: prepareToPlay()
+
+Source path: documentation/avfaudio/avaudiosequencer/preparetoplay()
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/preparetoplay()
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# prepareToPlay() (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Gets ready to play the sequence by prerolling all events.
+
+## Declaration
+
+```swift
+func prepareToPlay()
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The framework invokes this method automatically on play if you don’t call it, but it may delay startup.
+
+## See Also
+
+### Operating an Audio Sequencer
+
+- [start()](start%28%29.md): Starts the sequencer’s player.
+- [stop()](stop%28%29.md): Stops the sequencer’s player.
+
+# prepareToPlay (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Gets ready to play the sequence by prerolling all events.
+
+## Declaration
+
+```objectivec
+- (void) prepareToPlay;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The framework invokes this method automatically on play if you don’t call it, but it may delay startup.
+
+## See Also
+
+### Operating an Audio Sequencer
+
+- [startAndReturnError:](start%28%29.md): Starts the sequencer’s player.
+- [stop](stop%28%29.md): Stops the sequencer’s player.
+
+# Document: rate
+
+Source path: documentation/avfaudio/avaudiosequencer/rate
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/rate
+Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# rate (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The playback rate of the sequencer’s player.
+
+## Declaration
+
+```swift
+var rate: Float { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default playback rate is `1.0`, and must be greater than `0.0`.
+
+## See Also
+
+### Getting Sequence Properties
+
+- [isPlaying](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
+- [tracks](tracks.md): An array that contains all the tracks in the sequence.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
+- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
+- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# rate (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The playback rate of the sequencer’s player.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) float rate;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default playback rate is `1.0`, and must be greater than `0.0`.
+
+## See Also
+
+### Getting Sequence Properties
+
+- [playing](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
+- [tracks](tracks.md): An array that contains all the tracks in the sequence.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
+- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
+- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# Document: removeTrack(_:)
+
+Source path: documentation/avfaudio/avaudiosequencer/removetrack(_:)
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/removetrack(_:)
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# removeTrack(\_:) (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Removes the music track from the sequencer.
+
+## Declaration
+
+```swift
+func removeTrack(_ track: AVMusicTrack) -> Bool
+```
+
+## Parameters
+
+- `track`: The music track to remove.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A Boolean value that indicates whether the call succeeds.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method doesn’t destroy the method track since you can reuse it.
+
+## See Also
+
+### Handling Music Tracks
+
+- [AVMusicTrack](../avmusictrack.md): A collection of music events that you can offset, set to a muted state, modify independently from other track events, and send to a specified destination.
+- [createAndAppendTrack()](createandappendtrack%28%29.md): Creates a new music track and appends it to the sequencer’s list.
+- [reverseEvents()](reverseevents%28%29.md): Reverses the order of all events in all music tracks, including the tempo track.
+- [AVMusicTrackLoopCount](../avmusictrackloopcount.md): Options that define the number of times a track loops.
+
+# removeTrack: (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Removes the music track from the sequencer.
+
+## Declaration
+
+```objectivec
+- (BOOL) removeTrack:(AVMusicTrack *) track;
+```
+
+## Parameters
+
+- `track`: The music track to remove.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A Boolean value that indicates whether the call succeeds.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method doesn’t destroy the method track since you can reuse it.
+
+## See Also
+
+### Handling Music Tracks
+
+- [AVMusicTrack](../avmusictrack.md): A collection of music events that you can offset, set to a muted state, modify independently from other track events, and send to a specified destination.
+- [createAndAppendTrack](createandappendtrack%28%29.md): Creates a new music track and appends it to the sequencer’s list.
+- [reverseEvents](reverseevents%28%29.md): Reverses the order of all events in all music tracks, including the tempo track.
+- [AVMusicTrackLoopCount](../avmusictrackloopcount.md): Options that define the number of times a track loops.
+
+# Document: reverseEvents()
+
+Source path: documentation/avfaudio/avaudiosequencer/reverseevents()
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/reverseevents()
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# reverseEvents() (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Reverses the order of all events in all music tracks, including the tempo track.
+
+## Declaration
+
+```swift
+func reverseEvents()
+```
+
+## See Also
+
+### Handling Music Tracks
+
+- [AVMusicTrack](../avmusictrack.md): A collection of music events that you can offset, set to a muted state, modify independently from other track events, and send to a specified destination.
+- [createAndAppendTrack()](createandappendtrack%28%29.md): Creates a new music track and appends it to the sequencer’s list.
+- [removeTrack(\_:)](removetrack%28__%29.md): Removes the music track from the sequencer.
+- [AVMusicTrackLoopCount](../avmusictrackloopcount.md): Options that define the number of times a track loops.
+
+# reverseEvents (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Reverses the order of all events in all music tracks, including the tempo track.
+
+## Declaration
+
+```objectivec
+- (void) reverseEvents;
+```
+
+## See Also
+
+### Handling Music Tracks
+
+- [AVMusicTrack](../avmusictrack.md): A collection of music events that you can offset, set to a muted state, modify independently from other track events, and send to a specified destination.
+- [createAndAppendTrack](createandappendtrack%28%29.md): Creates a new music track and appends it to the sequencer’s list.
+- [removeTrack:](removetrack%28__%29.md): Removes the music track from the sequencer.
+- [AVMusicTrackLoopCount](../avmusictrackloopcount.md): Options that define the number of times a track loops.
+
+# Document: seconds(forBeats:)
+
+Source path: documentation/avfaudio/avaudiosequencer/seconds(forbeats:)
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/seconds(forbeats:)
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# seconds(forBeats:) (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Gets the time for the specified beat position (timestamp) in the track, in seconds.
+
+## Declaration
+
+```swift
+func seconds(forBeats beats: AVMusicTimeStamp) -> TimeInterval
+```
+
+## Parameters
+
+- `beats`: The timestamp for the beat position.
+
+## See Also
+
+### Managing Time Stamps
+
+- [AVMusicTimeStamp](../avmusictimestamp.md): A fractional number of beats.
+- [hostTime(forBeats:error:)](hosttime%28forbeats_error_%29.md): Gets the host time the sequence plays at the specified position.
+
+# secondsForBeats: (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Gets the time for the specified beat position (timestamp) in the track, in seconds.
+
+## Declaration
+
+```objectivec
+- (NSTimeInterval) secondsForBeats:(AVMusicTimeStamp) beats;
+```
+
+## Parameters
+
+- `beats`: The timestamp for the beat position.
+
+## See Also
+
+### Managing Time Stamps
+
+- [AVMusicTimeStamp](../avmusictimestamp.md): A fractional number of beats.
+- [hostTimeForBeats:error:](hosttime%28forbeats_error_%29.md): Gets the host time the sequence plays at the specified position.
+
+# Document: setUserCallback(_:)
+
+Source path: documentation/avfaudio/avaudiosequencer/setusercallback(_:)
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/setusercallback(_:)
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# setUserCallback(\_:) (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Adds a callback that the sequencer calls each time it encounters a user event during playback.
+
+## Declaration
+
+```swift
+func setUserCallback(_ userCallback: AVAudioSequencerUserCallback?)
+```
+
+## Parameters
+
+- `userCallback`: The user callback that the system calls.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system calls the same callback for events that occur on any track in the sequencer. Set the callback to `nil` to disable it.
+
+## See Also
+
+### Setting the User Callback
+
+- [AVAudioSequencerUserCallback](../avaudiosequencerusercallback.md): A callback the sequencer calls asynchronously during playback when it encounters a user event.
+
+# setUserCallback: (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Adds a callback that the sequencer calls each time it encounters a user event during playback.
+
+## Declaration
+
+```objectivec
+- (void) setUserCallback:(AVAudioSequencerUserCallback) userCallback;
+```
+
+## Parameters
+
+- `userCallback`: The user callback that the system calls.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system calls the same callback for events that occur on any track in the sequencer. Set the callback to `nil` to disable it.
+
+## See Also
+
+### Setting the User Callback
+
+- [AVAudioSequencerUserCallback](../avaudiosequencerusercallback.md): A callback the sequencer calls asynchronously during playback when it encounters a user event.
+
+# Document: start()
+
+Source path: documentation/avfaudio/avaudiosequencer/start()
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/start()
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# start() (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Starts the sequencer’s player.
+
+## Declaration
+
+```swift
+func start() throws
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you don’t call [prepareToPlay()](preparetoplay%28%29.md), the framework calls it and then starts the player.
+
+## See Also
+
+### Operating an Audio Sequencer
+
+- [prepareToPlay()](preparetoplay%28%29.md): Gets ready to play the sequence by prerolling all events.
+- [stop()](stop%28%29.md): Stops the sequencer’s player.
+
+# startAndReturnError: (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Starts the sequencer’s player.
+
+## Declaration
+
+```objectivec
+- (BOOL) startAndReturnError:(NSError **) outError;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you don’t call [prepareToPlay](preparetoplay%28%29.md), the framework calls it and then starts the player.
+
+## See Also
+
+### Operating an Audio Sequencer
+
+- [prepareToPlay](preparetoplay%28%29.md): Gets ready to play the sequence by prerolling all events.
+- [stop](stop%28%29.md): Stops the sequencer’s player.
+
+# Document: stop()
+
+Source path: documentation/avfaudio/avaudiosequencer/stop()
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/stop()
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# stop() (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Stops the sequencer’s player.
+
+## Declaration
+
+```swift
+func stop()
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Stopping the player leaves it in an unprerolled state, but stores the playback position so that a subsequent call to [start()](start%28%29.md) resumes where it stops. This action doesn’t stop an audio engine you associate with it.
+
+## See Also
+
+### Operating an Audio Sequencer
+
+- [prepareToPlay()](preparetoplay%28%29.md): Gets ready to play the sequence by prerolling all events.
+- [start()](start%28%29.md): Starts the sequencer’s player.
+
+# stop (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Stops the sequencer’s player.
+
+## Declaration
+
+```objectivec
+- (void) stop;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Stopping the player leaves it in an unprerolled state, but stores the playback position so that a subsequent call to [startAndReturnError:](start%28%29.md) resumes where it stops. This action doesn’t stop an audio engine you associate with it.
+
+## See Also
+
+### Operating an Audio Sequencer
+
+- [prepareToPlay](preparetoplay%28%29.md): Gets ready to play the sequence by prerolling all events.
+- [startAndReturnError:](start%28%29.md): Starts the sequencer’s player.
+
+# Document: tempoTrack
+
+Source path: documentation/avfaudio/avaudiosequencer/tempotrack
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/tempotrack
+Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# tempoTrack (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The track that contains tempo information about the sequence.
+
+## Declaration
+
+```swift
+var tempoTrack: AVMusicTrack { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Each sequence has a single tempo track. The framework places all tempo events into this track along with other appropriate events, such as the time signature from a MIDI file.
+
+You can edit the tempo track like any other track. The framework ignores nontempo events in the track.
+
+## See Also
+
+### Getting Sequence Properties
+
+- [isPlaying](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
+- [rate](rate.md): The playback rate of the sequencer’s player.
+- [tracks](tracks.md): An array that contains all the tracks in the sequence.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
+- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# tempoTrack (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The track that contains tempo information about the sequence.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) AVMusicTrack * tempoTrack;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Each sequence has a single tempo track. The framework places all tempo events into this track along with other appropriate events, such as the time signature from a MIDI file.
+
+You can edit the tempo track like any other track. The framework ignores nontempo events in the track.
+
+## See Also
+
+### Getting Sequence Properties
+
+- [playing](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
+- [rate](rate.md): The playback rate of the sequencer’s player.
+- [tracks](tracks.md): An array that contains all the tracks in the sequence.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
+- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# Document: tracks
+
+Source path: documentation/avfaudio/avaudiosequencer/tracks
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/tracks
+Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# tracks (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+An array that contains all the tracks in the sequence.
+
+## Declaration
+
+```swift
+var tracks: [AVMusicTrack] { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The track indices start at `0`, and don’t include the tempo track.
+
+## See Also
+
+### Getting Sequence Properties
+
+- [isPlaying](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
+- [rate](rate.md): The playback rate of the sequencer’s player.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
+- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
+- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# tracks (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+An array that contains all the tracks in the sequence.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSArray<AVMusicTrack *> * tracks;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The track indices start at `0`, and don’t include the tempo track.
+
+## See Also
+
+### Getting Sequence Properties
+
+- [playing](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
+- [rate](rate.md): The playback rate of the sequencer’s player.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
+- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
+- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# Document: userInfo
+
+Source path: documentation/avfaudio/avaudiosequencer/userinfo
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/userinfo
+Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# userInfo (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A dictionary that contains metadata from a sequence.
+
+## Declaration
+
+```swift
+var userInfo: [String : Any] { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property contains one or more of the values from [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md).
+
+## See Also
+
+### Getting Sequence Properties
+
+- [isPlaying](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
+- [rate](rate.md): The playback rate of the sequencer’s player.
+- [tracks](tracks.md): An array that contains all the tracks in the sequence.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
+- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# userInfo (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A dictionary that contains metadata from a sequence.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSDictionary<NSString *,id> * userInfo;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property contains one or more of the values from [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md).
+
+## See Also
+
+### Getting Sequence Properties
+
+- [playing](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
+- [rate](rate.md): The playback rate of the sequencer’s player.
+- [tracks](tracks.md): An array that contains all the tracks in the sequence.
+- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
+- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
+- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
+- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
+- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
+- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
+
+# Document: write(to:smpteResolution:replaceExisting:)
+
+Source path: documentation/avfaudio/avaudiosequencer/write(to:smpteresolution:replaceexisting:)
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/write(to:smpteresolution:replaceexisting:)
+Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+# write(to:smpteResolution:replaceExisting:) (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Creates and writes a MIDI file from the events in the sequence.
+
+## Declaration
+
+```swift
+func write(to fileURL: URL, smpteResolution resolution: Int, replaceExisting replace: Bool) throws
+```
+
+## Parameters
+
+- `fileURL`: The URL of the file you want to write to.
+- `resolution`: The relationship between tick and quarter note for saving to a Standard MIDI File. Passing zero uses the default value set using the tempo track.
+- `replace`: When `true`, the framework overwrites an existing file at `fileURL`. Otherwise, the call fails with a permission error if a file at the specified path exists.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The framework writes only MIDI events when writing to the MIDI file. MIDI files are normally beat-based, but can also have an SMPTE (or real-time, rather than beat time) representation. The relationship between tick and quarter note for saving to a Standard MIDI File is the current value for the tempo track.
+
+# writeToURL:SMPTEResolution:replaceExisting:error: (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Creates and writes a MIDI file from the events in the sequence.
+
+## Declaration
+
+```objectivec
+- (BOOL) writeToURL:(NSURL *) fileURL SMPTEResolution:(NSInteger) resolution replaceExisting:(BOOL) replace error:(NSError **) outError;
+```
+
+## Parameters
+
+- `fileURL`: The URL of the file you want to write to.
+- `resolution`: The relationship between tick and quarter note for saving to a Standard MIDI File. Passing zero uses the default value set using the tempo track.
+- `replace`: When `true`, the framework overwrites an existing file at `fileURL`. Otherwise, the call fails with a permission error if a file at the specified path exists.
+- `outError`: On input, a pointer to an error object. If an error occurs, the framework sets the pointer to an [NSError](../../foundation/nserror.md) object that describes the error. If you don’t want error information, pass in `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The framework writes only MIDI events when writing to the MIDI file. MIDI files are normally beat-based, but can also have an SMPTE (or real-time, rather than beat time) representation. The relationship between tick and quarter note for saving to a Standard MIDI File is the current value for the tempo track.
+
+# Document: AVAudioSequencerUserCallback
+
+Source path: documentation/avfaudio/avaudiosequencerusercallback
+Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencerusercallback
+Description: Framework: AVFAudio Kind: Type Alias Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+# AVAudioSequencerUserCallback (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Type Alias  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A callback the sequencer calls asynchronously during playback when it encounters a user event.
+
+## Declaration
+
+```swift
+typealias AVAudioSequencerUserCallback = (AVMusicTrack, Data, AVMusicTimeStamp) -> Void
+```
+
+## Parameters
+
+- `track`: The track that contains the user event.
+- `userData`: The data used to initialize the user event.
+- `timeStamp`: The beat location of the event.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The sequencer delivers this callback asynchronously to the rendering thread on an internal queue. The `userData` this returns is unique to each [AVMusicUserEvent](avmusicuserevent.md) instance.
+
+## See Also
+
+### Setting the User Callback
+
+- [setUserCallback(\_:)](avaudiosequencer/setusercallback%28__%29.md): Adds a callback that the sequencer calls each time it encounters a user event during playback.
+
+# AVAudioSequencerUserCallback (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Type Alias  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A callback the sequencer calls asynchronously during playback when it encounters a user event.
+
+## Declaration
+
+```objectivec
+typedef void (^)(AVMusicTrack *, NSData *, double) AVAudioSequencerUserCallback;
+```
+
+## Parameters
+
+- `track`: The track that contains the user event.
+- `userData`: The data used to initialize the user event.
+- `timeStamp`: The beat location of the event.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The sequencer delivers this callback asynchronously to the rendering thread on an internal queue. The `userData` this returns is unique to each [AVMusicUserEvent](avmusicuserevent.md) instance.
+
+## See Also
+
+### Setting the User Callback
+
+- [setUserCallback:](avaudiosequencer/setusercallback%28__%29.md): Adds a callback that the sequencer calls each time it encounters a user event during playback.
 
 # Document: AVAudioSession
 
@@ -3430,6 +4489,10 @@ An object that describes why and how the audio session deactivated.
 class DeactivationContext
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
+
 ## Topics
 
 ### Getting the deactivation details
@@ -3477,6 +4540,10 @@ An object that describes why and how the audio session deactivated.
 @interface AVAudioSessionDeactivationContext : NSObject
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
+
 ## Topics
 
 ### Getting the deactivation details
@@ -3519,6 +4586,10 @@ Context about the interruption that caused deactivation.
 var interruptionContext: AVAudioSession.InterruptionContext? { get }
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
+
 <a id="discussion"></a>
 
 ## Discussion
@@ -3544,6 +4615,10 @@ Context about the interruption that caused deactivation.
 ```objectivec
 @property (nonatomic, readonly, nullable) AVAudioSessionInterruptionContext * interruptionContext;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
 
 <a id="discussion"></a>
 
@@ -3577,6 +4652,10 @@ The source of the audio session deactivation.
 var source: AVAudioSession.DeactivationSource { get }
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
+
 ## See Also
 
 ### Getting the deactivation details
@@ -3596,6 +4675,10 @@ The source of the audio session deactivation.
 ```objectivec
 @property (nonatomic, readonly) AVAudioSessionDeactivationSource source;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
 
 ## See Also
 
@@ -3623,6 +4706,10 @@ Keys for [didBecomeInactiveNotification](didbecomeinactivenotification.md) Value
 class let deactivationContextKey: String
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
+
 ## See Also
 
 ### Observing activation lifecycle
@@ -3645,6 +4732,10 @@ Keys for [AVAudioSessionDidBecomeInactiveNotification](didbecomeinactivenotifica
 ```objectivec
 extern NSString * const AVAudioSessionDeactivationContextKey;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 ## See Also
 
@@ -3674,6 +4765,10 @@ Type-safe representation of audio session deactivation results.
 ```swift
 enum DeactivationResult
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 <a id="overview"></a>
 
@@ -4053,6 +5148,10 @@ Notification sent when the audio session becomes active.
 class let didBecomeActiveNotification: NSNotification.Name
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
+
 <a id="discussion"></a>
 
 ## Discussion
@@ -4081,6 +5180,10 @@ Notification sent when the audio session becomes active.
 ```objectivec
 extern NSNotificationName const AVAudioSessionDidBecomeActiveNotification;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 <a id="discussion"></a>
 
@@ -4114,6 +5217,10 @@ Description: Framework: AVFAudio Kind: Structure Availability: iOS 27.0+ · iPad
 ```swift
 struct DidBecomeInactiveMessage
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 ## Topics
 
@@ -4174,6 +5281,10 @@ Notification sent when the audio session becomes inactive.
 class let didBecomeInactiveNotification: NSNotification.Name
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
+
 <a id="discussion"></a>
 
 ## Discussion
@@ -4202,6 +5313,10 @@ Notification sent when the audio session becomes inactive.
 ```objectivec
 extern NSNotificationName const AVAudioSessionDidBecomeInactiveNotification;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 <a id="discussion"></a>
 
@@ -14167,6 +15282,10 @@ An object that provides context when resumption becomes available.
 class ResumptionContext
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
+
 ## Topics
 
 ### Getting the recommendation
@@ -14213,6 +15332,10 @@ An object that provides context when resumption becomes available.
 @interface AVAudioSessionResumptionContext : NSObject
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
+
 ## Topics
 
 ### Getting the recommendation
@@ -14254,6 +15377,10 @@ The system’s recommendation on whether to resume playback.
 var recommendation: AVAudioSession.ResumptionRecommendation { get }
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
+
 # recommendation (Objective-C)
 
 **Framework:** AVFAudio  
@@ -14267,6 +15394,10 @@ The system’s recommendation on whether to resume playback.
 ```objectivec
 @property (nonatomic, readonly) AVAudioSessionResumptionRecommendation recommendation;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../../handling-audio-interruptions.md)
 
 # Document: resumptionContextKey
 
@@ -14287,6 +15418,10 @@ Keys for [resumptionRecommendationNotification](resumptionrecommendationnotifica
 ```swift
 class let resumptionContextKey: String
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 ## See Also
 
@@ -14310,6 +15445,10 @@ Keys for [AVAudioSessionResumptionRecommendationNotification](resumptionrecommen
 ```objectivec
 extern NSString * const AVAudioSessionResumptionContextKey;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 ## See Also
 
@@ -14580,6 +15719,10 @@ Notification sent when the system provides a resumption recommendation.
 class let resumptionRecommendationNotification: NSNotification.Name
 ```
 
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
+
 <a id="discussion"></a>
 
 ## Discussion
@@ -14608,6 +15751,10 @@ Notification sent when the system provides a resumption recommendation.
 ```objectivec
 extern NSNotificationName const AVAudioSessionResumptionRecommendationNotification;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 <a id="discussion"></a>
 
@@ -61813,24 +62960,128 @@ Observe audio session notifications to ensure that your app responds appropriate
 
 ## Overview
 
-Interruptions are a common part of the iOS and watchOS user experiences. For example, consider the scenario of receiving a phone call while you’re watching a movie in the TV app on your iPhone. In this case, the movie’s audio fades out, playback pauses, and the sound of the call’s ringtone fades in. If you decline the call, control returns to the TV app, and playback begins again as the movie’s audio fades in.
+Interruptions are a common part of the iOS, tvOS, visionOS, and watchOS user experiences. For example, consider the scenario of receiving a phone call while you’re watching a movie in the TV app on your iPhone. In this case, the movie’s audio fades out, playback pauses, and the sound of the call’s ringtone fades in. If you decline the call, control returns to the TV app, and playback begins again as the movie’s audio fades in.
 
 At the center of this behavior is your app’s audio session. As interruptions begin and end, the audio session notifies any registered observers so they can take appropriate action. For example, [AVPlayer](../avfoundation/avplayer.md) monitors your app’s audio session and automatically pauses playback in response to interruption events. You can monitor these changes by key-value observing the player’s [timeControlStatus](../avfoundation/avplayer/timecontrolstatus-swift.property.md) property, and update your user interface as necessary when the player pauses and resumes playback.
 
 <a id="Customize-the-interruption-behavior"></a>
 
-### Customize the interruption behavior
+## Customize the interruption behavior
 
 Most apps rely on the system’s default interruption behavior. However, [AVAudioSession](avaudiosession.md) provides ways to customize the default behavior to better accommodate your app’s needs:
 
 - Recent iPad models provide a feature that mutes the built-in microphone at the hardware level when the user closes the device’s Smart Folio cover. If your app plays and records audio, you may want to continue playback even if the system mutes the microphone. You can disable the default interruption behavior by setting the [overrideMutedMicrophoneInterruption](avaudiosession/categoryoptions-swift.struct/overridemutedmicrophoneinterruption.md) option when configuring your audio session.
 - System alerts, such as receiving an incoming phone call, interrupt the active audio session. If you prefer that the system not interrupt your app’s audio session in these cases, you can indicate this preference by setting a value for the [setPrefersNoInterruptionsFromSystemAlerts(\_:)](avaudiosession/setprefersnointerruptionsfromsystemalerts%28__%29.md) method.
 
-<a id="Observe-audio-session-interruptions"></a>
+<a id="Adopt-the-lifecycle-notifications"></a>
 
-### Observe audio session interruptions
+## Adopt the lifecycle notifications
 
-You can directly observe interruption notifications that [AVAudioSession](avaudiosession.md) posts. This might be useful if you want to know when the system pauses playback due to an interruption or another reason, such as a route change. To respond to audio interruptions, observe notifications of type [interruptionNotification](avaudiosession/interruptionnotification.md).
+In iOS 27, tvOS 27, visionOS 27, and watchOS 27 and later, [AVAudioSession](avaudiosession.md) posts a set of life-cycle notifications that model interruptions as deactivation and resumption events rather than as begin and end signals. Adopt these notifications for new code because they represent the interrupted-versus-active state directly and don’t get out of sync when the system can’t deliver an end event.
+
+The audio session posts three life-cycle notifications:
+
+- [didBecomeActiveNotification](avaudiosession/didbecomeactivenotification.md) — Sent when the session becomes active.
+- [didBecomeInactiveNotification](avaudiosession/didbecomeinactivenotification.md) — Sent when the session becomes inactive. The user-information dictionary contains an [AVAudioSession.DeactivationContext](avaudiosession/deactivationcontext.md) object under the [deactivationContextKey](avaudiosession/deactivationcontextkey.md) key that identifies what caused the deactivation.
+- [resumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md) — Sent when the system suggests whether to resume playback after an interruption ends. The user-information dictionary contains an [AVAudioSession.ResumptionContext](avaudiosession/resumptioncontext.md) object under the [resumptionContextKey](avaudiosession/resumptioncontextkey.md) key.
+
+The system posts these notifications on the main queue.
+
+<a id="Handle-a-deactivation"></a>
+
+## Handle a deactivation
+
+To respond to an interruption, observe [didBecomeInactiveNotification](avaudiosession/didbecomeinactivenotification.md) and inspect the [AVAudioSession.DeactivationContext](avaudiosession/deactivationcontext.md) in the user-information dictionary. The context’s [source](avaudiosession/deactivationcontext/source.md) property indicates whether your app or the system initiated the deactivation. When the system initiates it, [interruptionContext](avaudiosession/deactivationcontext/interruptioncontext.md) describes the interruption.
+
+```swift
+func observeDeactivations() async {
+    let session = AVAudioSession.sharedInstance()
+    for await notification in NotificationCenter.default.notifications(
+        named: AVAudioSession.didBecomeInactiveNotification,
+        object: session
+    ) {
+        guard let context = notification.userInfo?[AVAudioSession.deactivationContextKey]
+                as? AVAudioSession.DeactivationContext else {
+            continue
+        }
+
+        switch context.source {
+        case .app:
+            // Your app requested the deactivation.
+            break
+        case .system:
+            // The system interrupted the session. Pause playback and update the UI.
+            let reason = context.interruptionContext?.reason
+            _ = reason
+        @unknown default:
+            break
+        }
+    }
+}
+```
+
+Swift observers that adopt the [NotificationCenter.MainActorMessage](../foundation/notificationcenter/mainactormessage.md) protocol’s type-safe message API receive an [AVAudioSession.DidBecomeInactiveMessage](avaudiosession/didbecomeinactivemessage.md) value with an [AVAudioSession.DeactivationResult](avaudiosession/deactivationresult.md) enumeration that pattern-matches on the two possible outcomes:
+
+```swift
+let session = AVAudioSession.sharedInstance()
+
+NotificationCenter.default.addObserver(of: session, for: .didBecomeInactive) { message in
+    switch message.deactivationResult {
+    case .appDeactivated:
+        // Your app requested the deactivation.
+        break
+    case .systemInterruption(let context):
+        // The system interrupted the session; inspect `context.reason`.
+        _ = context.reason
+    @unknown default:
+        break
+    }
+}
+```
+
+<a id="Respond-to-a-resumption-recommendation"></a>
+
+## Respond to a resumption recommendation
+
+After a system interruption ends, or some cases when activation was rejected, [AVAudioSession](avaudiosession.md) posts [resumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md) with an [AVAudioSession.ResumptionContext](avaudiosession/resumptioncontext.md) value in the user-information dictionary. Read the context’s [recommendation](avaudiosession/resumptioncontext/recommendation.md) property and either play/resume playback or leave the session paused.
+
+```swift
+func observeResumption() async {
+    let session = AVAudioSession.sharedInstance()
+    for await notification in NotificationCenter.default.notifications(
+        named: AVAudioSession.resumptionRecommendationNotification,
+        object: session
+    ) {
+        guard let context = notification.userInfo?[AVAudioSession.resumptionContextKey]
+                as? AVAudioSession.ResumptionContext else {
+            continue
+        }
+
+        switch context.recommendation {
+        case .shouldResume:
+            // Re-activate the audio session, then resume playback.
+            do {
+                _ = try await session.activate()
+            } catch {
+                // Handle activation error.
+            }
+        case .shouldNotResume:
+            // Leave playback paused.
+            break
+        @unknown default:
+            break
+        }
+    }
+}
+```
+
+Unlike the legacy interruption notification, [resumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md) isn’t tied to the interrupting app’s end-of-interruption signal, so your app doesn’t stay stuck in an interrupted state if that signal never arrives.
+
+<a id="Observe-the-legacy-interruption-notification"></a>
+
+## Observe the legacy interruption notification
+
+When deploying to iOS 26, tvOS 26, visionOS 26, or watchOS 26 and earlier, observe [interruptionNotification](avaudiosession/interruptionnotification.md) directly. In later releases, the system deprecates this notification, its user-information keys, and the associated enumerations in favor of life-cycle notifications.
 
 ```swift
 func observeInterruptions() async {
@@ -61847,10 +63098,6 @@ func handleInterruption(notification: Notification) {
     // To implement.
 }
 ```
-
-<a id="Handle-audio-session-interruptions"></a>
-
-### Handle audio session interruptions
 
 The posted [Notification](../foundation/notification.md) object contains a populated user-information dictionary that provides the details of the interruption. You determine the type of interruption by retrieving the [AVAudioSession.InterruptionType](avaudiosession/interruptiontype.md) value from the [userInfo](../foundation/notification/userinfo.md) dictionary. The interruption type indicates whether the interruption is beginning or ending.
 
@@ -61909,24 +63156,128 @@ Observe audio session notifications to ensure that your app responds appropriate
 
 ## Overview
 
-Interruptions are a common part of the iOS and watchOS user experiences. For example, consider the scenario of receiving a phone call while you’re watching a movie in the TV app on your iPhone. In this case, the movie’s audio fades out, playback pauses, and the sound of the call’s ringtone fades in. If you decline the call, control returns to the TV app, and playback begins again as the movie’s audio fades in.
+Interruptions are a common part of the iOS, tvOS, visionOS, and watchOS user experiences. For example, consider the scenario of receiving a phone call while you’re watching a movie in the TV app on your iPhone. In this case, the movie’s audio fades out, playback pauses, and the sound of the call’s ringtone fades in. If you decline the call, control returns to the TV app, and playback begins again as the movie’s audio fades in.
 
 At the center of this behavior is your app’s audio session. As interruptions begin and end, the audio session notifies any registered observers so they can take appropriate action. For example, [AVPlayer](../avfoundation/avplayer.md) monitors your app’s audio session and automatically pauses playback in response to interruption events. You can monitor these changes by key-value observing the player’s [timeControlStatus](../avfoundation/avplayer/timecontrolstatus-swift.property.md) property, and update your user interface as necessary when the player pauses and resumes playback.
 
 <a id="Customize-the-interruption-behavior"></a>
 
-### Customize the interruption behavior
+## Customize the interruption behavior
 
 Most apps rely on the system’s default interruption behavior. However, [AVAudioSession](avaudiosession.md) provides ways to customize the default behavior to better accommodate your app’s needs:
 
 - Recent iPad models provide a feature that mutes the built-in microphone at the hardware level when the user closes the device’s Smart Folio cover. If your app plays and records audio, you may want to continue playback even if the system mutes the microphone. You can disable the default interruption behavior by setting the [AVAudioSessionCategoryOptionOverrideMutedMicrophoneInterruption](avaudiosession/categoryoptions-swift.struct/overridemutedmicrophoneinterruption.md) option when configuring your audio session.
 - System alerts, such as receiving an incoming phone call, interrupt the active audio session. If you prefer that the system not interrupt your app’s audio session in these cases, you can indicate this preference by setting a value for the [setPrefersNoInterruptionsFromSystemAlerts:error:](avaudiosession/setprefersnointerruptionsfromsystemalerts%28__%29.md) method.
 
-<a id="Observe-audio-session-interruptions"></a>
+<a id="Adopt-the-lifecycle-notifications"></a>
 
-### Observe audio session interruptions
+## Adopt the lifecycle notifications
 
-You can directly observe interruption notifications that [AVAudioSession](avaudiosession.md) posts. This might be useful if you want to know when the system pauses playback due to an interruption or another reason, such as a route change. To respond to audio interruptions, observe notifications of type [AVAudioSessionInterruptionNotification](avaudiosession/interruptionnotification.md).
+In iOS 27, tvOS 27, visionOS 27, and watchOS 27 and later, [AVAudioSession](avaudiosession.md) posts a set of life-cycle notifications that model interruptions as deactivation and resumption events rather than as begin and end signals. Adopt these notifications for new code because they represent the interrupted-versus-active state directly and don’t get out of sync when the system can’t deliver an end event.
+
+The audio session posts three life-cycle notifications:
+
+- [AVAudioSessionDidBecomeActiveNotification](avaudiosession/didbecomeactivenotification.md) — Sent when the session becomes active.
+- [AVAudioSessionDidBecomeInactiveNotification](avaudiosession/didbecomeinactivenotification.md) — Sent when the session becomes inactive. The user-information dictionary contains an [AVAudioSessionDeactivationContext](avaudiosession/deactivationcontext.md) object under the [AVAudioSessionDeactivationContextKey](avaudiosession/deactivationcontextkey.md) key that identifies what caused the deactivation.
+- [AVAudioSessionResumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md) — Sent when the system suggests whether to resume playback after an interruption ends. The user-information dictionary contains an [AVAudioSessionResumptionContext](avaudiosession/resumptioncontext.md) object under the [AVAudioSessionResumptionContextKey](avaudiosession/resumptioncontextkey.md) key.
+
+The system posts these notifications on the main queue.
+
+<a id="Handle-a-deactivation"></a>
+
+## Handle a deactivation
+
+To respond to an interruption, observe [AVAudioSessionDidBecomeInactiveNotification](avaudiosession/didbecomeinactivenotification.md) and inspect the [AVAudioSessionDeactivationContext](avaudiosession/deactivationcontext.md) in the user-information dictionary. The context’s [source](avaudiosession/deactivationcontext/source.md) property indicates whether your app or the system initiated the deactivation. When the system initiates it, [interruptionContext](avaudiosession/deactivationcontext/interruptioncontext.md) describes the interruption.
+
+```swift
+func observeDeactivations() async {
+    let session = AVAudioSession.sharedInstance()
+    for await notification in NotificationCenter.default.notifications(
+        named: AVAudioSession.didBecomeInactiveNotification,
+        object: session
+    ) {
+        guard let context = notification.userInfo?[AVAudioSession.deactivationContextKey]
+                as? AVAudioSession.DeactivationContext else {
+            continue
+        }
+
+        switch context.source {
+        case .app:
+            // Your app requested the deactivation.
+            break
+        case .system:
+            // The system interrupted the session. Pause playback and update the UI.
+            let reason = context.interruptionContext?.reason
+            _ = reason
+        @unknown default:
+            break
+        }
+    }
+}
+```
+
+Swift observers that adopt the [NotificationCenter.MainActorMessage](../foundation/notificationcenter/mainactormessage.md) protocol’s type-safe message API receive an [AVAudioSession.DidBecomeInactiveMessage](avaudiosession/didbecomeinactivemessage.md) value with an [AVAudioSession.DeactivationResult](avaudiosession/deactivationresult.md) enumeration that pattern-matches on the two possible outcomes:
+
+```swift
+let session = AVAudioSession.sharedInstance()
+
+NotificationCenter.default.addObserver(of: session, for: .didBecomeInactive) { message in
+    switch message.deactivationResult {
+    case .appDeactivated:
+        // Your app requested the deactivation.
+        break
+    case .systemInterruption(let context):
+        // The system interrupted the session; inspect `context.reason`.
+        _ = context.reason
+    @unknown default:
+        break
+    }
+}
+```
+
+<a id="Respond-to-a-resumption-recommendation"></a>
+
+## Respond to a resumption recommendation
+
+After a system interruption ends, or some cases when activation was rejected, [AVAudioSession](avaudiosession.md) posts [AVAudioSessionResumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md) with an [AVAudioSessionResumptionContext](avaudiosession/resumptioncontext.md) value in the user-information dictionary. Read the context’s [recommendation](avaudiosession/resumptioncontext/recommendation.md) property and either play/resume playback or leave the session paused.
+
+```swift
+func observeResumption() async {
+    let session = AVAudioSession.sharedInstance()
+    for await notification in NotificationCenter.default.notifications(
+        named: AVAudioSession.resumptionRecommendationNotification,
+        object: session
+    ) {
+        guard let context = notification.userInfo?[AVAudioSession.resumptionContextKey]
+                as? AVAudioSession.ResumptionContext else {
+            continue
+        }
+
+        switch context.recommendation {
+        case .shouldResume:
+            // Re-activate the audio session, then resume playback.
+            do {
+                _ = try await session.activate()
+            } catch {
+                // Handle activation error.
+            }
+        case .shouldNotResume:
+            // Leave playback paused.
+            break
+        @unknown default:
+            break
+        }
+    }
+}
+```
+
+Unlike the legacy interruption notification, [AVAudioSessionResumptionRecommendationNotification](avaudiosession/resumptionrecommendationnotification.md) isn’t tied to the interrupting app’s end-of-interruption signal, so your app doesn’t stay stuck in an interrupted state if that signal never arrives.
+
+<a id="Observe-the-legacy-interruption-notification"></a>
+
+## Observe the legacy interruption notification
+
+When deploying to iOS 26, tvOS 26, visionOS 26, or watchOS 26 and earlier, observe [AVAudioSessionInterruptionNotification](avaudiosession/interruptionnotification.md) directly. In later releases, the system deprecates this notification, its user-information keys, and the associated enumerations in favor of life-cycle notifications.
 
 ```swift
 func observeInterruptions() async {
@@ -61943,10 +63294,6 @@ func handleInterruption(notification: Notification) {
     // To implement.
 }
 ```
-
-<a id="Handle-audio-session-interruptions"></a>
-
-### Handle audio session interruptions
 
 The posted [Notification](../foundation/notification.md) object contains a populated user-information dictionary that provides the details of the interruption. You determine the type of interruption by retrieving the [AVAudioSessionInterruptionType](avaudiosession/interruptiontype.md) value from the [userInfo](../foundation/notification/userinfo.md) dictionary. The interruption type indicates whether the interruption is beginning or ending.
 
@@ -176391,853 +177738,3 @@ If you requested a preview image by specifying the [previewPhotoFormat](../avcap
 ### Accessing preview photo data
 
 - [embeddedThumbnailPhotoFormat](embeddedthumbnailphotoformat.md): A dictionary describing the data format for a preview-sized image accompanying the captured photo.
-
-# Document: resolvedSettings
-
-Source path: documentation/avfoundation/avcapturephoto/resolvedsettings
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/resolvedsettings
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
-
-# resolvedSettings (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
-
-The settings object that was used to request this photo capture.
-
-## Declaration
-
-```swift
-var resolvedSettings: AVCaptureResolvedPhotoSettings { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-To determine which [capturePhoto(with:delegate:)](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) call produced this photo capture result, match this [AVCaptureResolvedPhotoSettings](../avcaptureresolvedphotosettings.md) object’s [uniqueID](../avcaptureresolvedphotosettings/uniqueid.md) value to the [uniqueID](../avcapturephotosettings/uniqueid.md) property of the photo settings object you requested capture with. You can also use this object to find out which values the photo output has chosen for automatic settings.
-
-## See Also
-
-### Resolving photo capture requests
-
-- [photoCount](photocount.md): The 1-based index of this photo capture relative to other results from the same capture request.
-- [timestamp](timestamp.md): The time at which the image was captured.
-
-# resolvedSettings (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
-
-The settings object that was used to request this photo capture.
-
-## Declaration
-
-```objectivec
-@property (readonly) AVCaptureResolvedPhotoSettings * resolvedSettings;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-To determine which [capturePhotoWithSettings:delegate:](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) call produced this photo capture result, match this [AVCaptureResolvedPhotoSettings](../avcaptureresolvedphotosettings.md) object’s [uniqueID](../avcaptureresolvedphotosettings/uniqueid.md) value to the [uniqueID](../avcapturephotosettings/uniqueid.md) property of the photo settings object you requested capture with. You can also use this object to find out which values the photo output has chosen for automatic settings.
-
-## See Also
-
-### Resolving photo capture requests
-
-- [photoCount](photocount.md): The 1-based index of this photo capture relative to other results from the same capture request.
-- [timestamp](timestamp.md): The time at which the image was captured.
-
-# Document: semanticSegmentationMatte(for:)
-
-Source path: documentation/avfoundation/avcapturephoto/semanticsegmentationmatte(for:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/semanticsegmentationmatte(for:)
-Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-# semanticSegmentationMatte(for:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-Retrieves the semantic segmentation matte associated with this photo.
-
-## Declaration
-
-```swift
-func semanticSegmentationMatte(for semanticSegmentationMatteType: AVSemanticSegmentationMatte.MatteType) -> AVSemanticSegmentationMatte?
-```
-
-## Parameters
-
-- `semanticSegmentationMatteType`: The type of semantic segmentation matte to retrieve from the photo.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An instance of [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md), or `nil` of you didn’t request semantic segmentation matte delivery or if no mattes of the specified type were found.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If you requested one or more semantic segmentation mattes by calling [enabledSemanticSegmentationMatteTypes](../avcapturephotosettings/enabledsemanticsegmentationmattetypes.md) with a nonempty array of types, this property offers access to the resulting [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md) objects.
-
-> **Note**
-
->  Semantic segmentation mattes are only embedded in the photo’s internal file format container if you set [embedsSemanticSegmentationMattesInPhoto](../avcapturephotosettings/embedssemanticsegmentationmattesinphoto.md) to [true](https://developer.apple.com/documentation/swift/true).
-
-# semanticSegmentationMatteForType: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-Retrieves the semantic segmentation matte associated with this photo.
-
-## Declaration
-
-```objectivec
-- (AVSemanticSegmentationMatte *) semanticSegmentationMatteForType:(AVSemanticSegmentationMatteType) semanticSegmentationMatteType;
-```
-
-## Parameters
-
-- `semanticSegmentationMatteType`: The type of semantic segmentation matte to retrieve from the photo.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An instance of [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md), or `nil` of you didn’t request semantic segmentation matte delivery or if no mattes of the specified type were found.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If you requested one or more semantic segmentation mattes by calling [enabledSemanticSegmentationMatteTypes](../avcapturephotosettings/enabledsemanticsegmentationmattetypes.md) with a nonempty array of types, this property offers access to the resulting [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md) objects.
-
-> **Note**
-
->  Semantic segmentation mattes are only embedded in the photo’s internal file format container if you set [embedsSemanticSegmentationMattesInPhoto](../avcapturephotosettings/embedssemanticsegmentationmattesinphoto.md) to [true](https://developer.apple.com/documentation/swift/true).
-
-# Document: sequenceCount
-
-Source path: documentation/avfoundation/avcapturephoto/sequencecount
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/sequencecount
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-# sequenceCount (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-The 1-based index of this photo in a bracketed capture sequence.
-
-## Declaration
-
-```swift
-var sequenceCount: Int { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If this photo is part of a bracketed capture (requested with the [AVCapturePhotoBracketSettings](../avcapturephotobracketsettings.md) class), this property indicates the current result’s count in the sequence, starting with `1` for the first result.
-
-If this photo is not part of a bracketed capture, this property’s value is `0`.
-
-## See Also
-
-### Examining bracketed capture information
-
-- [bracketSettings](bracketsettings.md): The variations available for bracketed capture settings for this photo.
-- [lensStabilizationStatus](lensstabilizationstatus.md): Information about the use of lens stabilization during bracketed photo capture.
-- [AVCaptureDevice.LensStabilizationStatus](../avcapturedevice/lensstabilizationstatus.md): Constants that indicate the status of optical image stabilization hardware during a bracketed photo capture.
-
-# sequenceCount (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-The 1-based index of this photo in a bracketed capture sequence.
-
-## Declaration
-
-```objectivec
-@property (readonly) NSInteger sequenceCount;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If this photo is part of a bracketed capture (requested with the [AVCapturePhotoBracketSettings](../avcapturephotobracketsettings.md) class), this property indicates the current result’s count in the sequence, starting with `1` for the first result.
-
-If this photo is not part of a bracketed capture, this property’s value is `0`.
-
-## See Also
-
-### Examining bracketed capture information
-
-- [bracketSettings](bracketsettings.md): The variations available for bracketed capture settings for this photo.
-- [lensStabilizationStatus](lensstabilizationstatus.md): Information about the use of lens stabilization during bracketed photo capture.
-- [AVCaptureLensStabilizationStatus](../avcapturedevice/lensstabilizationstatus.md): Constants that indicate the status of optical image stabilization hardware during a bracketed photo capture.
-
-# Document: sourceDeviceType
-
-Source path: documentation/avfoundation/avcapturephoto/sourcedevicetype
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/sourcedevicetype
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-# sourceDeviceType (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-The type of device that captured the photo.
-
-## Declaration
-
-```swift
-var sourceDeviceType: AVCaptureDevice.DeviceType? { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When you capture dual photos with a [builtInDualCamera](../avcapturedevice/devicetype-swift.struct/builtindualcamera.md) device and the [isDualCameraDualPhotoDeliveryEnabled](../avcapturephotosettings/isdualcameradualphotodeliveryenabled.md) setting, use this property to determine which of the two resulting photo objects is from the [builtInWideAngleCamera](../avcapturedevice/devicetype-swift.struct/builtinwideanglecamera.md) or [builtInTelephotoCamera](../avcapturedevice/devicetype-swift.struct/builtintelephotocamera.md) device.
-
-For all other captures, this property’s value is equal to the [deviceType](../avcapturedevice/devicetype-swift.property.md) property of the capture device to which the photo output is connected.
-
-This property’s value can be `nil` if the [AVCapturePhoto](../avcapturephoto.md) object did not come from an [AVCaptureDevice](../avcapturedevice.md) capture.
-
-## See Also
-
-### Accessing photo metadata
-
-- [depthData](depthdata.md): Depth or disparity map data captured with the photo.
-- [cameraCalibrationData](cameracalibrationdata.md): Calibration information for the camera device that captured the photo.
-- [metadata](metadata.md): A dictionary of metadata describing the captured image.
-- [portraitEffectsMatte](portraiteffectsmatte.md): The portrait effects matte captured with the photo.
-
-# sourceDeviceType (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-The type of device that captured the photo.
-
-## Declaration
-
-```objectivec
-@property (readonly, nullable) AVCaptureDeviceType sourceDeviceType;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When you capture dual photos with a [AVCaptureDeviceTypeBuiltInDualCamera](../avcapturedevice/devicetype-swift.struct/builtindualcamera.md) device and the [dualCameraDualPhotoDeliveryEnabled](../avcapturephotosettings/isdualcameradualphotodeliveryenabled.md) setting, use this property to determine which of the two resulting photo objects is from the [AVCaptureDeviceTypeBuiltInWideAngleCamera](../avcapturedevice/devicetype-swift.struct/builtinwideanglecamera.md) or [AVCaptureDeviceTypeBuiltInTelephotoCamera](../avcapturedevice/devicetype-swift.struct/builtintelephotocamera.md) device.
-
-For all other captures, this property’s value is equal to the [deviceType](../avcapturedevice/devicetype-swift.property.md) property of the capture device to which the photo output is connected.
-
-This property’s value can be `nil` if the [AVCapturePhoto](../avcapturephoto.md) object did not come from an [AVCaptureDevice](../avcapturedevice.md) capture.
-
-## See Also
-
-### Accessing photo metadata
-
-- [depthData](depthdata.md): Depth or disparity map data captured with the photo.
-- [cameraCalibrationData](cameracalibrationdata.md): Calibration information for the camera device that captured the photo.
-- [metadata](metadata.md): A dictionary of metadata describing the captured image.
-- [portraitEffectsMatte](portraiteffectsmatte.md): The portrait effects matte captured with the photo.
-
-# Document: timestamp
-
-Source path: documentation/avfoundation/avcapturephoto/timestamp
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/timestamp
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
-
-# timestamp (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
-
-The time at which the image was captured.
-
-## Declaration
-
-```swift
-var timestamp: CMTime { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This timestamp is always synchronized to the [masterClock](../avcapturesession/masterclock.md) time of the [AVCaptureSession](../avcapturesession.md) object to which the photo output is connected.
-
-## See Also
-
-### Resolving photo capture requests
-
-- [resolvedSettings](resolvedsettings.md): The settings object that was used to request this photo capture.
-- [photoCount](photocount.md): The 1-based index of this photo capture relative to other results from the same capture request.
-
-# timestamp (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
-
-The time at which the image was captured.
-
-## Declaration
-
-```objectivec
-@property (readonly) CMTime timestamp;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This timestamp is always synchronized to the [masterClock](../avcapturesession/masterclock.md) time of the [AVCaptureSession](../avcapturesession.md) object to which the photo output is connected.
-
-## See Also
-
-### Resolving photo capture requests
-
-- [resolvedSettings](resolvedsettings.md): The settings object that was used to request this photo capture.
-- [photoCount](photocount.md): The 1-based index of this photo capture relative to other results from the same capture request.
-
-# Document: AVCapturePhotoBracketSettings
-
-Source path: documentation/avfoundation/avcapturephotobracketsettings
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephotobracketsettings
-Description: Framework: AVFoundation Kind: Class Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-# AVCapturePhotoBracketSettings (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Class  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-A specification of the features and settings to use for a photo capture request that captures multiple images with varied settings.
-
-## Declaration
-
-```swift
-class AVCapturePhotoBracketSettings
-```
-
-## Mentioned In
-
-- [Capturing a bracketed photo sequence](capturing-a-bracketed-photo-sequence.md)
-
-<a id="overview"></a>
-
-## Overview
-
-To take a bracketed capture, you create and configure an [AVCapturePhotoBracketSettings](avcapturephotobracketsettings.md) object, using [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) objects to describe the individual captures in the bracket, and then pass it to the [AVCapturePhotoOutput](avcapturephotooutput.md) [capturePhoto(with:delegate:)](avcapturephotooutput/capturephoto%28with_delegate_%29.md) method.
-
-To request a bracketed capture, follow these steps:
-
-1. Create an array of [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) objects describing the number of images to capture in the bracket and the variations on capture settings between them.
-2. Create a bracketed photo settings object with the [init(rawPixelFormatType:processedFormat:bracketedSettings:)](avcapturephotobracketsettings/init%28rawpixelformattype_processedformat_bracketedsettings_%29.md) initializer, passing the array of bracketed still image settings, along with the processed format (such as JPEG) or RAW format to capture images in.
-3. Configure other settings to share across all images in the bracket, such as the [isLensStabilizationEnabled](avcapturephotobracketsettings/islensstabilizationenabled.md) property and certain inherited properties.
-
-> **Important**
-
->  Bracketed capture supports only the [isHighResolutionPhotoEnabled](avcapturephotosettings/ishighresolutionphotoenabled.md) and [previewPhotoFormat](avcapturephotosettings/previewphotoformat.md) settings defined by the [AVCapturePhotoSettings](avcapturephotosettings.md) superclass. Bracketed capture does not support flash, auto stabilization, or Live Photos—attempting to set any of the corresponding properties raises an exception.
-
-4. Initiate capture by passing the bracketed photo settings object to your photo output’s [capturePhoto(with:delegate:)](avcapturephotooutput/capturephoto%28with_delegate_%29.md) method, along with a delegate object to receive messages about the progress and results of the capture.
-
-> **Tip**
-
->  Capturing a multiple-image bracket may require allocation of additional resources. See the [setPreparedPhotoSettingsArray(\_:completionHandler:)](avcapturephotooutput/setpreparedphotosettingsarray%28__completionhandler_%29.md) method.
-
-5. The photo output calls your delegate’s [photoOutput(\_:didFinishProcessingPhoto:previewPhoto:resolvedSettings:bracketSettings:error:)](avcapturephotocapturedelegate/photooutput%28__didfinishprocessingphoto_previewphoto_resolvedsettings_bracketsettings_error_%29.md) or [photoOutput(\_:didFinishProcessingRawPhoto:previewPhoto:resolvedSettings:bracketSettings:error:)](avcapturephotocapturedelegate/photooutput%28__didfinishprocessingrawphoto_previewphoto_resolvedsettings_bracketsettings_error_%29.md) methods many times corresponding to the number of captures in the bracket. Each call provides the [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) object indicating which capture in the bracket the captured image corresponds to.
-
-The following code example illustrates capturing a bracket of three RAW images with varying exposure value settings.
-
-Listing 1. Capturing a Multi-Exposure Bracket
-
-**Swift**
-
-```swift
-func captureRAWAutoExposureBracket() {
-    guard myCapturePhotoOutput.maxBracketedCapturePhotoCount >= 3 else { return }
-    
-    // Specify a 3-shot bracket, where exposure compensation varies between each shot.
-    let makeSettings = AVCaptureAutoExposureBracketedStillImageSettings.autoExposureSettingsWithExposureTargetBias
-    let bracketedStillImageSettings = [-2, 0, 2].map { makeSettings(Float($0))! }
-    let rawFormat = myCapturePhotoOutput.availableRawPhotoCVPixelFormatTypes.first!.unsignedIntValue as OSType
-    
-    let settings = AVCapturePhotoBracketSettings(format: nil, rawPixelFormatType: rawFormat, bracketedSettings: bracketedStillImageSettings)
-    settings.lensStabilizationEnabled = myCapturePhotoOutput.lensStabilizationDuringBracketedCaptureSupported
-    
-    myCapturePhotoOutput.capturePhotoWithSettings(settings, delegate: self)
-    // Three RAW photos will be delivered.
-}
-```
-
-**Objective-C**
-
-```objc
-- (void)captureRAWAutoExposureBracket {
-    if ( myCapturePhotoOutput.maxBracketedCapturePhotoCount < 3 ) { return; }
- 
-    // Specify a 3-shot bracket, where exposure compensation varies between each shot.
-    NSArray *bracketedStillImageSettings = @[ [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:-2.],
-                              [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:0.],
-                              [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:2.] ];
-     OSType rawFormat = [[myCapturePhotoOutput.availableRawPhotoCVPixelFormatTypes firstObject] intValue];
- 
-    AVCapturePhotoBracketSettings *settings = [[AVCapturePhotoBracketSettings alloc] initWithFormat:nil rawPixelFormatType:rawFormat bracketedSettings:bracketedStillImageSettings];
-    settings.lensStabilizationEnabled = myCapturePhotoOutput.isLensStabilizationDuringBracketedCaptureSupported;
- 
-    [myCapturePhotoOutput capturePhotoWithSettings:settings delegate:self];
-    // Three RAW photos will be delivered to the delegate.
-}
-```
-
-## Topics
-
-### Creating a bracket settings object
-
-- [init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:)](avcapturephotobracketsettings/init%28rawpixelformattype_rawfiletype_processedformat_processedfiletype_bracketedsettings_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
-- [init(rawPixelFormatType:processedFormat:bracketedSettings:)](avcapturephotobracketsettings/init%28rawpixelformattype_processedformat_bracketedsettings_%29.md): Creates a photo settings object for the specified bracket of captures, in the specified formats.
-
-### Working with bracketed settings
-
-- [bracketedSettings](avcapturephotobracketsettings/bracketedsettings.md): An array describing the number of and settings for images to produce in a bracketed capture.
-- [isLensStabilizationEnabled](avcapturephotobracketsettings/islensstabilizationenabled.md): A Boolean value that specifies whether to stabilize the lens for the duration of the bracketed capture.
-
-### Bracketed settings types
-
-- [AVCaptureAutoExposureBracketedStillImageSettings](avcaptureautoexposurebracketedstillimagesettings.md): A configuration for defining bracketed photo captures in terms of bias relative to automatic exposure.
-- [AVCaptureManualExposureBracketedStillImageSettings](avcapturemanualexposurebracketedstillimagesettings.md): A configuration for defining bracketed photo captures in terms of specific exposure and ISO values.
-- [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md): The abstract superclass for bracketed photo capture settings.
-
-## Relationships
-
-### Inherits From
-
-- [AVCapturePhotoSettings](avcapturephotosettings.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Photo settings
-
-- [AVCapturePhotoSettings](avcapturephotosettings.md): A specification of the features and settings to use for a single photo capture request.
-- [AVCaptureResolvedPhotoSettings](avcaptureresolvedphotosettings.md): A description of the features and settings in use for an in-progress or complete photo capture request.
-
-# AVCapturePhotoBracketSettings (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Class  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-A specification of the features and settings to use for a photo capture request that captures multiple images with varied settings.
-
-## Declaration
-
-```objectivec
-@interface AVCapturePhotoBracketSettings : AVCapturePhotoSettings
-```
-
-## Mentioned In
-
-- [Capturing a bracketed photo sequence](capturing-a-bracketed-photo-sequence.md)
-
-<a id="overview"></a>
-
-## Overview
-
-To take a bracketed capture, you create and configure an [AVCapturePhotoBracketSettings](avcapturephotobracketsettings.md) object, using [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) objects to describe the individual captures in the bracket, and then pass it to the [AVCapturePhotoOutput](avcapturephotooutput.md) [capturePhotoWithSettings:delegate:](avcapturephotooutput/capturephoto%28with_delegate_%29.md) method.
-
-To request a bracketed capture, follow these steps:
-
-1. Create an array of [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) objects describing the number of images to capture in the bracket and the variations on capture settings between them.
-2. Create a bracketed photo settings object with the [photoBracketSettingsWithRawPixelFormatType:processedFormat:bracketedSettings:](avcapturephotobracketsettings/init%28rawpixelformattype_processedformat_bracketedsettings_%29.md) initializer, passing the array of bracketed still image settings, along with the processed format (such as JPEG) or RAW format to capture images in.
-3. Configure other settings to share across all images in the bracket, such as the [lensStabilizationEnabled](avcapturephotobracketsettings/islensstabilizationenabled.md) property and certain inherited properties.
-
-> **Important**
-
->  Bracketed capture supports only the [highResolutionPhotoEnabled](avcapturephotosettings/ishighresolutionphotoenabled.md) and [previewPhotoFormat](avcapturephotosettings/previewphotoformat.md) settings defined by the [AVCapturePhotoSettings](avcapturephotosettings.md) superclass. Bracketed capture does not support flash, auto stabilization, or Live Photos—attempting to set any of the corresponding properties raises an exception.
-
-4. Initiate capture by passing the bracketed photo settings object to your photo output’s [capturePhotoWithSettings:delegate:](avcapturephotooutput/capturephoto%28with_delegate_%29.md) method, along with a delegate object to receive messages about the progress and results of the capture.
-
-> **Tip**
-
->  Capturing a multiple-image bracket may require allocation of additional resources. See the [setPreparedPhotoSettingsArray:completionHandler:](avcapturephotooutput/setpreparedphotosettingsarray%28__completionhandler_%29.md) method.
-
-5. The photo output calls your delegate’s [captureOutput:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:](avcapturephotocapturedelegate/photooutput%28__didfinishprocessingphoto_previewphoto_resolvedsettings_bracketsettings_error_%29.md) or [captureOutput:didFinishProcessingRawPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:](avcapturephotocapturedelegate/photooutput%28__didfinishprocessingrawphoto_previewphoto_resolvedsettings_bracketsettings_error_%29.md) methods many times corresponding to the number of captures in the bracket. Each call provides the [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) object indicating which capture in the bracket the captured image corresponds to.
-
-The following code example illustrates capturing a bracket of three RAW images with varying exposure value settings.
-
-Listing 1. Capturing a Multi-Exposure Bracket
-
-**Swift**
-
-```swift
-func captureRAWAutoExposureBracket() {
-    guard myCapturePhotoOutput.maxBracketedCapturePhotoCount >= 3 else { return }
-    
-    // Specify a 3-shot bracket, where exposure compensation varies between each shot.
-    let makeSettings = AVCaptureAutoExposureBracketedStillImageSettings.autoExposureSettingsWithExposureTargetBias
-    let bracketedStillImageSettings = [-2, 0, 2].map { makeSettings(Float($0))! }
-    let rawFormat = myCapturePhotoOutput.availableRawPhotoCVPixelFormatTypes.first!.unsignedIntValue as OSType
-    
-    let settings = AVCapturePhotoBracketSettings(format: nil, rawPixelFormatType: rawFormat, bracketedSettings: bracketedStillImageSettings)
-    settings.lensStabilizationEnabled = myCapturePhotoOutput.lensStabilizationDuringBracketedCaptureSupported
-    
-    myCapturePhotoOutput.capturePhotoWithSettings(settings, delegate: self)
-    // Three RAW photos will be delivered.
-}
-```
-
-**Objective-C**
-
-```objc
-- (void)captureRAWAutoExposureBracket {
-    if ( myCapturePhotoOutput.maxBracketedCapturePhotoCount < 3 ) { return; }
- 
-    // Specify a 3-shot bracket, where exposure compensation varies between each shot.
-    NSArray *bracketedStillImageSettings = @[ [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:-2.],
-                              [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:0.],
-                              [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:2.] ];
-     OSType rawFormat = [[myCapturePhotoOutput.availableRawPhotoCVPixelFormatTypes firstObject] intValue];
- 
-    AVCapturePhotoBracketSettings *settings = [[AVCapturePhotoBracketSettings alloc] initWithFormat:nil rawPixelFormatType:rawFormat bracketedSettings:bracketedStillImageSettings];
-    settings.lensStabilizationEnabled = myCapturePhotoOutput.isLensStabilizationDuringBracketedCaptureSupported;
- 
-    [myCapturePhotoOutput capturePhotoWithSettings:settings delegate:self];
-    // Three RAW photos will be delivered to the delegate.
-}
-```
-
-## Topics
-
-### Creating a bracket settings object
-
-- [photoBracketSettingsWithRawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:](avcapturephotobracketsettings/init%28rawpixelformattype_rawfiletype_processedformat_processedfiletype_bracketedsettings_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
-- [photoBracketSettingsWithRawPixelFormatType:processedFormat:bracketedSettings:](avcapturephotobracketsettings/init%28rawpixelformattype_processedformat_bracketedsettings_%29.md): Creates a photo settings object for the specified bracket of captures, in the specified formats.
-
-### Working with bracketed settings
-
-- [bracketedSettings](avcapturephotobracketsettings/bracketedsettings.md): An array describing the number of and settings for images to produce in a bracketed capture.
-- [lensStabilizationEnabled](avcapturephotobracketsettings/islensstabilizationenabled.md): A Boolean value that specifies whether to stabilize the lens for the duration of the bracketed capture.
-
-### Bracketed settings types
-
-- [AVCaptureAutoExposureBracketedStillImageSettings](avcaptureautoexposurebracketedstillimagesettings.md): A configuration for defining bracketed photo captures in terms of bias relative to automatic exposure.
-- [AVCaptureManualExposureBracketedStillImageSettings](avcapturemanualexposurebracketedstillimagesettings.md): A configuration for defining bracketed photo captures in terms of specific exposure and ISO values.
-- [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md): The abstract superclass for bracketed photo capture settings.
-
-## Relationships
-
-### Inherits From
-
-- [AVCapturePhotoSettings](avcapturephotosettings.md)
-
-## See Also
-
-### Photo settings
-
-- [AVCapturePhotoSettings](avcapturephotosettings.md): A specification of the features and settings to use for a single photo capture request.
-- [AVCaptureResolvedPhotoSettings](avcaptureresolvedphotosettings.md): A description of the features and settings in use for an in-progress or complete photo capture request.
-
-# Document: bracketedSettings
-
-Source path: documentation/avfoundation/avcapturephotobracketsettings/bracketedsettings
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephotobracketsettings/bracketedsettings
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-# bracketedSettings (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-An array describing the number of and settings for images to produce in a bracketed capture.
-
-## Declaration
-
-```swift
-var bracketedSettings: [AVCaptureBracketedStillImageSettings] { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This array is read-only. You provide this array of bracket settings when creating a settings object with the `init(format:rawPixelFormatType:bracketedSettings:)` initializer.
-
-## See Also
-
-### Working with bracketed settings
-
-- [isLensStabilizationEnabled](islensstabilizationenabled.md): A Boolean value that specifies whether to stabilize the lens for the duration of the bracketed capture.
-
-# bracketedSettings (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-An array describing the number of and settings for images to produce in a bracketed capture.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) NSArray<__kindof AVCaptureBracketedStillImageSettings *> * bracketedSettings;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This array is read-only. You provide this array of bracket settings when creating a settings object with the `init(format:rawPixelFormatType:bracketedSettings:)` initializer.
-
-## See Also
-
-### Working with bracketed settings
-
-- [lensStabilizationEnabled](islensstabilizationenabled.md): A Boolean value that specifies whether to stabilize the lens for the duration of the bracketed capture.
-
-# Document: init(rawPixelFormatType:processedFormat:bracketedSettings:)
-
-Source path: documentation/avfoundation/avcapturephotobracketsettings/init(rawpixelformattype:processedformat:bracketedsettings:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephotobracketsettings/init(rawpixelformattype:processedformat:bracketedsettings:)
-Description: Framework: AVFoundation Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-# init(rawPixelFormatType:processedFormat:bracketedSettings:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Initializer  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-Creates a photo settings object for the specified bracket of captures, in the specified formats.
-
-## Declaration
-
-```swift
-convenience init(rawPixelFormatType: OSType, processedFormat: [String : Any]?, bracketedSettings: [AVCaptureBracketedStillImageSettings])
-```
-
-## Parameters
-
-- `rawPixelFormatType`: The pixel format type for capture in a Bayer RAW format. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
-- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`) for capturing images in a processed format.
-
-  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the format dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
-
-  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the format dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
-- `bracketedSettings`: An array of either [AVCaptureManualExposureBracketedStillImageSettings](../avcapturemanualexposurebracketedstillimagesettings.md) or [AVCaptureAutoExposureBracketedStillImageSettings](../avcaptureautoexposurebracketedstillimagesettings.md) objects, each of which describes the variation in camera settings to use for one image in the bracketed capture.
-
-  The number of image settings objects in this array must be greater than zero and less than or equal to the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. All image settings objects in this array must be the same type. Calling this initializer with an invalid number or combination of image settings objects raises an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new photo settings object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-To request bracketed image capture, create an array of [AVCaptureBracketedStillImageSettings](../avcapturebracketedstillimagesettings.md) objects, each of which describes a variation in capture settings to use for one exposure in the bracket, and pass that array for the `bracketedSettings` parameter. The number of bracketed settings objects in that array determines the number of exposures in the capture bracket.
-
-To capture only in RAW format, pass `nil` for the `processedFormat` parameter. To capture only in a processed format, pass zero for the `rawPixelFormatType` parameter. Passing both `nil` for the `processedFormat` parameter and zero for the `rawPixelFormatType` parameter is equivalent to requesting JPEG-only delivery.
-
-Requesting either or both formats adds requirements for other photo settings: see the [format](../avcapturephotosettings/format.md) property for processed format requirements and the [rawPhotoPixelFormatType](../avcapturephotosettings/rawphotopixelformattype.md) property for RAW format requirements. Additionally, the number of still image settings objects in this array must be no greater than the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. The capture output validates these requirements when you call the [capturePhoto(with:delegate:)](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your your settings and delegate do not meet these requirements, that method raises an exception.
-
-## See Also
-
-### Creating a bracket settings object
-
-- [init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:)](init%28rawpixelformattype_rawfiletype_processedformat_processedfiletype_bracketedsettings_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
-
-# photoBracketSettingsWithRawPixelFormatType:processedFormat:bracketedSettings: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-Creates a photo settings object for the specified bracket of captures, in the specified formats.
-
-## Declaration
-
-```objectivec
-+ (instancetype) photoBracketSettingsWithRawPixelFormatType:(OSType) rawPixelFormatType processedFormat:(NSDictionary<NSString *,id> *) processedFormat bracketedSettings:(NSArray<__kindof AVCaptureBracketedStillImageSettings *> *) bracketedSettings;
-```
-
-## Parameters
-
-- `rawPixelFormatType`: The pixel format type for capture in a Bayer RAW format. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
-- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`) for capturing images in a processed format.
-
-  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the format dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
-
-  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the format dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
-- `bracketedSettings`: An array of either [AVCaptureManualExposureBracketedStillImageSettings](../avcapturemanualexposurebracketedstillimagesettings.md) or [AVCaptureAutoExposureBracketedStillImageSettings](../avcaptureautoexposurebracketedstillimagesettings.md) objects, each of which describes the variation in camera settings to use for one image in the bracketed capture.
-
-  The number of image settings objects in this array must be greater than zero and less than or equal to the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. All image settings objects in this array must be the same type. Calling this initializer with an invalid number or combination of image settings objects raises an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new photo settings object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-To request bracketed image capture, create an array of [AVCaptureBracketedStillImageSettings](../avcapturebracketedstillimagesettings.md) objects, each of which describes a variation in capture settings to use for one exposure in the bracket, and pass that array for the `bracketedSettings` parameter. The number of bracketed settings objects in that array determines the number of exposures in the capture bracket.
-
-To capture only in RAW format, pass `nil` for the `processedFormat` parameter. To capture only in a processed format, pass zero for the `rawPixelFormatType` parameter. Passing both `nil` for the `processedFormat` parameter and zero for the `rawPixelFormatType` parameter is equivalent to requesting JPEG-only delivery.
-
-Requesting either or both formats adds requirements for other photo settings: see the [format](../avcapturephotosettings/format.md) property for processed format requirements and the [rawPhotoPixelFormatType](../avcapturephotosettings/rawphotopixelformattype.md) property for RAW format requirements. Additionally, the number of still image settings objects in this array must be no greater than the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. The capture output validates these requirements when you call the [capturePhotoWithSettings:delegate:](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your your settings and delegate do not meet these requirements, that method raises an exception.
-
-## See Also
-
-### Creating a bracket settings object
-
-- [photoBracketSettingsWithRawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:](init%28rawpixelformattype_rawfiletype_processedformat_processedfiletype_bracketedsettings_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
-
-# Document: init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:)
-
-Source path: documentation/avfoundation/avcapturephotobracketsettings/init(rawpixelformattype:rawfiletype:processedformat:processedfiletype:bracketedsettings:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephotobracketsettings/init(rawpixelformattype:rawfiletype:processedformat:processedfiletype:bracketedsettings:)
-Description: Framework: AVFoundation Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-# init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Initializer  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-Creates a photo settings object for capture in both RAW format and a processed format.
-
-## Declaration
-
-```swift
-convenience init(rawPixelFormatType: OSType, rawFileType: AVFileType?, processedFormat: [String : Any]?, processedFileType: AVFileType?, bracketedSettings: [AVCaptureBracketedStillImageSettings])
-```
-
-## Parameters
-
-- `rawPixelFormatType`: The Bayer RAW pixel format type to use for capture. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
-- `rawFileType`: The container file format for eventual output of the RAW image.
-
-  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `rawPixelFormatType` parameter.
-- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`).
-
-  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the `format` dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
-
-  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the `format` dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
-- `processedFileType`: The container file format for eventual output of the processed image.
-
-  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `processedFormat` parameter.
-- `bracketedSettings`: An array of either [AVCaptureManualExposureBracketedStillImageSettings](../avcapturemanualexposurebracketedstillimagesettings.md) or [AVCaptureAutoExposureBracketedStillImageSettings](../avcaptureautoexposurebracketedstillimagesettings.md) objects, each of which describes the variation in camera settings to use for one image in the bracketed capture.
-
-  The number of image settings objects in this array must be greater than zero and less than or equal to the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. All image settings objects in this array must be the same type. Calling this initializer with an invalid number or combination of image settings objects raises an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new photo settings object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this initializer to capture an image in both RAW format and a processed format (such as JPEG). For RAW-only capture, use the [init(rawPixelFormatType:)](../avcapturephotosettings/init%28rawpixelformattype_%29.md) initializer instead.
-
-Requesting both formats adds requirements for other photo settings: see the [format](../avcapturephotosettings/format.md) property for processed format requirements and the [rawPhotoPixelFormatType](../avcapturephotosettings/rawphotopixelformattype.md) property for RAW format requirements. The capture output validates these requirements when you call the [capturePhoto(with:delegate:)](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your settings and delegate do not meet these requirements, that method raises an exception.
-
-## See Also
-
-### Creating a bracket settings object
-
-- [init(rawPixelFormatType:processedFormat:bracketedSettings:)](init%28rawpixelformattype_processedformat_bracketedsettings_%29.md): Creates a photo settings object for the specified bracket of captures, in the specified formats.
-
-# photoBracketSettingsWithRawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
-
-Creates a photo settings object for capture in both RAW format and a processed format.
-
-## Declaration
-
-```objectivec
-+ (instancetype) photoBracketSettingsWithRawPixelFormatType:(OSType) rawPixelFormatType rawFileType:(AVFileType) rawFileType processedFormat:(NSDictionary<NSString *,id> *) processedFormat processedFileType:(AVFileType) processedFileType bracketedSettings:(NSArray<AVCaptureBracketedStillImageSettings *> *) bracketedSettings;
-```
-
-## Parameters
-
-- `rawPixelFormatType`: The Bayer RAW pixel format type to use for capture. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
-- `rawFileType`: The container file format for eventual output of the RAW image.
-
-  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `rawPixelFormatType` parameter.
-- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`).
-
-  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the `format` dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
-
-  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the `format` dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
-- `processedFileType`: The container file format for eventual output of the processed image.
-
-  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `processedFormat` parameter.
-- `bracketedSettings`: An array of either [AVCaptureManualExposureBracketedStillImageSettings](../avcapturemanualexposurebracketedstillimagesettings.md) or [AVCaptureAutoExposureBracketedStillImageSettings](../avcaptureautoexposurebracketedstillimagesettings.md) objects, each of which describes the variation in camera settings to use for one image in the bracketed capture.
-
-  The number of image settings objects in this array must be greater than zero and less than or equal to the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. All image settings objects in this array must be the same type. Calling this initializer with an invalid number or combination of image settings objects raises an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new photo settings object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this initializer to capture an image in both RAW format and a processed format (such as JPEG). For RAW-only capture, use the [photoSettingsWithRawPixelFormatType:](../avcapturephotosettings/init%28rawpixelformattype_%29.md) initializer instead.
-
-Requesting both formats adds requirements for other photo settings: see the [format](../avcapturephotosettings/format.md) property for processed format requirements and the [rawPhotoPixelFormatType](../avcapturephotosettings/rawphotopixelformattype.md) property for RAW format requirements. The capture output validates these requirements when you call the [capturePhotoWithSettings:delegate:](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your settings and delegate do not meet these requirements, that method raises an exception.
-
-## See Also
-
-### Creating a bracket settings object
-
-- [photoBracketSettingsWithRawPixelFormatType:processedFormat:bracketedSettings:](init%28rawpixelformattype_processedformat_bracketedsettings_%29.md): Creates a photo settings object for the specified bracket of captures, in the specified formats.

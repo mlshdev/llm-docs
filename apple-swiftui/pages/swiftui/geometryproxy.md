@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/geometryproxy
 
 # GeometryProxy
@@ -31,10 +31,10 @@ struct GeometryProxy
 
 ### Inspecting reserved regions
 
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
-- [ReservedRegion.Kind](reservedregion/kind-swift.struct.md): Beta. A kind of reserved region.
-- [ReservedRegion.QueryOptions](reservedregion/queryoptions.md): Beta. Options for querying reserved regions.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
+- [ReservedRegion.Kind](reservedregion/kind-swift.struct.md): A kind of reserved region.
+- [ReservedRegion.QueryOptions](reservedregion/queryoptions.md): Options for querying reserved regions.
 
 ## See Also
 
@@ -42,8 +42,8 @@ struct GeometryProxy
 
 - [GeometryReader](geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.

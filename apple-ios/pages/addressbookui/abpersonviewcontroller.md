@@ -68,8 +68,6 @@ The `ABPersonViewController` class does not support subclassing.
 - [NSExtensionRequestHandling](https://developer.apple.com/documentation/foundation/nsextensionrequesthandling)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearanceContainer](https://developer.apple.com/documentation/uikit/uiappearancecontainer)
 - [UIContentContainer](https://developer.apple.com/documentation/uikit/uicontentcontainer)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiarrangementviewcontroller/stateforplacement:
 
 # stateForPlacement:
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 Returns the arrangement view state for a placement.
 
@@ -25,4 +25,4 @@ Returns the arrangement view state for a placement.
 
 ### Getting view state
 
-- [UIArrangementViewState](../uiarrangementviewstate.md): Beta. The state of a view within an arrangement.
+- [UIArrangementViewState](../uiarrangementviewstate.md): The state of a view within an arrangement.

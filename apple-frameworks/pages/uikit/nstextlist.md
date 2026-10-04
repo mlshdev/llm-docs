@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/nstextlist
 
 # NSTextList (Swift)
@@ -27,6 +27,20 @@ The methods implementing this are [textLists](nsparagraphstyle/textlists.md) on 
 
 In addition, [NSAttributedString](../foundation/nsattributedstring.md) has convenience methods for lists, such as [range(of:at:)](../foundation/nsattributedstring/range%28of_at_%29-6um0x.md), which determines the range covered by a list, and [itemNumber(in:at:)](../foundation/nsattributedstring/itemnumber%28in_at_%29.md), which determines the ordinal position within a list of a particular item.
 
+The text that makes up a text list can include list markers, such as the following example:
+
+```text
+- List item one.
+- List item two.
+```
+
+Or, the text that makes up the text list can omit the list markers, such as the following example:
+
+```text
+List item one.
+List item two.
+```
+
 ## Topics
 
 ### Creating a text list
@@ -40,6 +54,7 @@ In addition, [NSAttributedString](../foundation/nsattributedstring.md) has conve
 - [markerFormat](nstextlist/markerformat-swift.property.md): Returns the marker format string used by the receiver.
 - [NSTextList.MarkerFormat](nstextlist/markerformat-swift.struct.md): Constants that describe marker symbols you can apply to list elements in text lists.
 - [marker(forItemNumber:)](nstextlist/marker%28foritemnumber_%29.md): Returns the computed value for a specific ordinal position in the list.
+- [includesTextListMarkers](nstextlist/includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the text content.
 
 ### Getting list options
 
@@ -56,10 +71,6 @@ In addition, [NSAttributedString](../foundation/nsattributedstring.md) has conve
 The following constant specifies an option mask used with [init(markerFormat:options:)](nstextlist/init%28markerformat_options_%29.md).
 
 - [prependEnclosingMarker](nstextlist/options/prependenclosingmarker.md): Specifies that a nested list should include the marker for its enclosing superlist before its own marker.
-
-### Type Properties
-
-- [includesTextListMarkers](nstextlist/includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the contents.
 
 ## Relationships
 
@@ -114,6 +125,20 @@ The methods implementing this are [textLists](nsparagraphstyle/textlists.md) on 
 
 In addition, [NSAttributedString](../foundation/nsattributedstring.md) has convenience methods for lists, such as [rangeOfTextList:atIndex:](../foundation/nsattributedstring/range%28of_at_%29-6um0x.md), which determines the range covered by a list, and [itemNumberInTextList:atIndex:](../foundation/nsattributedstring/itemnumber%28in_at_%29.md), which determines the ordinal position within a list of a particular item.
 
+The text that makes up a text list can include list markers, such as the following example:
+
+```text
+- List item one.
+- List item two.
+```
+
+Or, the text that makes up the text list can omit the list markers, such as the following example:
+
+```text
+List item one.
+List item two.
+```
+
 ## Topics
 
 ### Creating a text list
@@ -127,6 +152,7 @@ In addition, [NSAttributedString](../foundation/nsattributedstring.md) has conve
 - [markerFormat](nstextlist/markerformat-swift.property.md): Returns the marker format string used by the receiver.
 - [NSTextListMarkerFormat](nstextlist/markerformat-swift.struct.md): Constants that describe marker symbols you can apply to list elements in text lists.
 - [markerForItemNumber:](nstextlist/marker%28foritemnumber_%29.md): Returns the computed value for a specific ordinal position in the list.
+- [includesTextListMarkers](nstextlist/includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the text content.
 
 ### Getting list options
 
@@ -143,10 +169,6 @@ In addition, [NSAttributedString](../foundation/nsattributedstring.md) has conve
 The following constant specifies an option mask used with [initWithMarkerFormat:options:](nstextlist/init%28markerformat_options_%29.md).
 
 - [NSTextListPrependEnclosingMarker](nstextlist/options/prependenclosingmarker.md): Specifies that a nested list should include the marker for its enclosing superlist before its own marker.
-
-### Type Properties
-
-- [includesTextListMarkers](nstextlist/includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the contents.
 
 ## Relationships
 

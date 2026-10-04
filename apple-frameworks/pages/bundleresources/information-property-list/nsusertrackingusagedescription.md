@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/bundleresources/information-property-list/nsusertrackingusagedescription
 
 # NSUserTrackingUsageDescription (Swift)
@@ -24,7 +24,7 @@ This key is required. Your app crashes if it attempts to use the [App Tracking T
 The system displays this key’s string in a modal UI when your app requests authorization to access app-related data that the app can use to track the person or the device by calling either method:
 
 - [requestTrackingAuthorization(completionHandler:)](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28completionhandler_%29.md)
-- [requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:)](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md)
+- [requestTrackingAuthorization(preferExpandedInterface:additionalInformationAction:completionHandler:)](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md)
 
 > **Important**
 
@@ -68,7 +68,7 @@ This key is required. Your app crashes if it attempts to use the [App Tracking T
 The system displays this key’s string in a modal UI when your app requests authorization to access app-related data that the app can use to track the person or the device by calling either method:
 
 - [requestTrackingAuthorizationWithCompletionHandler:](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28completionhandler_%29.md)
-- [requestTrackingAuthorizationUsingExpandedInterface:additionalInformationAction:completionHandler:](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md)
+- [requestTrackingAuthorizationPreferExpandedInterface:additionalInformationAction:completionHandler:](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md)
 
 > **Important**
 

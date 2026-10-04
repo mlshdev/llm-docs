@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/preorderdate
 
 # preorderDate
@@ -31,3 +31,4 @@ For more information, see [JWSAppTransactionDecodedPayload](jwsapptransactiondec
 - [bundleId](bundleid.md): The bundle identifier of an app.
 - [originalApplicationVersion](originalapplicationversion.md): The app version that the customer originally purchased from the App Store.
 - [originalPlatform](originalplatform.md): The platform on which a customer originally purchases an app.
+- [storeType](storetype.md): A string that describes the store the customer obtained the app from.

@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/reservedregion
 
 # UIView.ReservedRegion
 
 **Framework:** UIKit  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ beta · tvOS 27.1+ · visionOS 27.1+
 
 A region within a view’s coordinate space that another entity occupies.
 
@@ -32,15 +32,15 @@ Read reserved regions using the [reservedRegions(kind:options:)](reservedregions
 
 ### Getting region details
 
-- [frame](reservedregion/frame.md): Beta. The rectangle of the region in the view’s coordinate space, including the margins.
-- [isActive](reservedregion/isactive.md): Beta. A Boolean value that indicates whether the region is currently active.
-- [kind](reservedregion/kind-swift.property.md): Beta. The kind of the region.
-- [UIView.ReservedRegion.Kind](reservedregion/kind-swift.struct.md): Beta. A kind of reserved region.
-- [margins](reservedregion/margins.md): Beta. The margins included in the frame around the reserved region for interactive content.
+- [frame](reservedregion/frame.md): The rectangle of the region in the view’s coordinate space, including the margins.
+- [isActive](reservedregion/isactive.md): A Boolean value that indicates whether the region is currently active.
+- [kind](reservedregion/kind-swift.property.md): The kind of the region.
+- [UIView.ReservedRegion.Kind](reservedregion/kind-swift.struct.md): A kind of reserved region.
+- [margins](reservedregion/margins.md): The margins included in the frame around the reserved region for interactive content.
 
 ### Querying reserved regions
 
-- [UIView.ReservedRegion.QueryOptions](reservedregion/queryoptions.md): Beta. Options for querying reserved regions.
+- [UIView.ReservedRegion.QueryOptions](reservedregion/queryoptions.md): Options for querying reserved regions.
 
 ## Relationships
 
@@ -54,4 +54,4 @@ Read reserved regions using the [reservedRegions(kind:options:)](reservedregions
 
 ### Reserved regions
 
-- [reservedRegions(kind:options:)](reservedregions%28kind_options_%29.md): Beta. Returns the reserved regions of a given kind and options.
+- [reservedRegions(kind:options:)](reservedregions%28kind_options_%29.md): Returns the reserved regions of a given kind and options.

@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxtemporalscalerdescriptor/maketemporalscaler(device:)
 
 # makeTemporalScaler(device:) (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 27.1+
 
 Creates a temporal scaler instance from this descriptor’s current property values.
 
@@ -23,7 +23,7 @@ func makeTemporalScaler(device: any MTLDevice) -> (any MTLFXTemporalScaler)?
 
 **Framework:** MetalFX  
 **Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 27.1+
 
 Creates a temporal scaler instance from this descriptor’s current property values.
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/appschema/notesintent/appendtext
 
 # appendText
@@ -41,3 +41,11 @@ The schema supports the following system experiences:
 - Shortcuts
 
 For more information about the App Intents framework and the experiences it supports, see [Getting started with the App Intents framework](../../getting-started-with-the-app-intents-framework.md).
+
+## See Also
+
+### Actions
+
+- [createNote](createnote.md): An intent schema that creates a new note.
+- [updateNote](updatenote.md): An intent schema that updates a note.
+- [AppSchema.NotesIntent](../notesintent.md): Identifies intent schemas in the notes domain.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/externalpurchaseserverapi
 
 # External Purchase Server API
@@ -15,12 +15,9 @@ Send and manage reports you send to Apple for tokens you receive when your app p
 
 ## Overview
 
-Call this REST API from your server to report external purchase tokens and your customers’ transactions related to the tokens. Use this API if your app uses [External Purchase](storekit/external-purchase.md) API and provides alternative payment options for digital goods and services, using any of the following:
+Call this REST API from your server to report external purchase tokens and your customers’ transactions related to the tokens. Use this API if your app uses the [External Purchase](storekit/external-purchase.md) API or [MarketplaceKit](https://developer.apple.com/documentation/marketplacekit) and receives external purchase tokens.
 
-- *Payment Service Providers (PSP)*: An alternative payment processor that lets customers complete transactions within your app.
-- *Linking out to purchase*: Directing customers to complete a transaction for digital goods and services on your external website, or a distribution channel of your choice.
-
-Report all tokens, including those that didn’t result in a transaction, and report the transactions associated with the tokens. For more information on the reporting requirements, including scope and report timing expectations, see the [Commission, transaction reports, and payments](https://developer.apple.com/support/apps-using-alternative-payment-providers-in-the-eu#commission-reports-and-payments) section of the article Using alternative payment options on the App Store in the European Union.
+Report all tokens, including those that didn’t result in a transaction, and report the transactions associated with the tokens. For more information on the reporting requirements, see [Reporting tokens and transactions to Apple](https://developer.apple.com/go/?id=reporting-transactions).
 
 <a id="Authorize-your-API-calls"></a>
 

@@ -171,52 +171,52 @@
       "sourceCommit": "1b588389b488eb9f8a9cb8ad5ca3073c7661f073"
     },
     "apple-swift": {
-      "tag": "snapshot-5915b24a1311",
-      "snapshotDigest": "5915b24a13116058563ec2085adb7610a331e7e4aea596f8d2f1f1b39a6e0f1c",
-      "capturedAt": "2026-09-16T18:21:42.073Z",
-      "contentDigest": "8b137be1ef278f1d522a4d88c557c8c07b458d20c03cd9e5596b61253f263486"
+      "tag": "snapshot-3cd4d1098779",
+      "snapshotDigest": "3cd4d1098779f6b6fc16e524bcbb296cd3ca44b5de1a8f9d83171d61b7b63adb",
+      "capturedAt": "2026-10-04T18:39:02.454Z",
+      "contentDigest": "cb3ffbf838cd5f0be6ae77f16fdae59481730abbd878246936617c12df1785d3"
     },
     "apple-swiftui": {
-      "tag": "snapshot-8b55d19a707e",
-      "snapshotDigest": "8b55d19a707ef89040e675038f5d9370df5025b13779e4c7d74995445f93294d",
-      "capturedAt": "2026-09-16T18:21:42.082Z",
-      "contentDigest": "af6870304bfe66f126acaccc9d5b2922f7e585e382e3bcd46dff2e79583a42cb"
+      "tag": "snapshot-8247613c923d",
+      "snapshotDigest": "8247613c923d5f641b343d378c87950d13b1d1852255e25aee94a110e1fadd7a",
+      "capturedAt": "2026-10-04T18:39:02.464Z",
+      "contentDigest": "f5f7b95015d610437509960cc99e4ad0a8f3e4e94d5e8eb1ecfd889b36d2ede5"
     },
     "apple-webkit": {
-      "tag": "snapshot-a0a4b8d281c3",
-      "snapshotDigest": "a0a4b8d281c3f7aea28b686494365f12c4270621bbf6d43cdea12ffe295fbfab",
-      "capturedAt": "2026-09-17T18:22:51.558Z",
-      "contentDigest": "734bf10815a2acca72e71faa3a510eace5521c5201527ea636458dac7a773b04"
+      "tag": "snapshot-f22abf4916e5",
+      "snapshotDigest": "f22abf4916e5b2883ca54c03e9bfadb5e433da91e20aef1eeabdf5d3c0573721",
+      "capturedAt": "2026-10-04T18:39:02.493Z",
+      "contentDigest": "beac2fd89a021eee1d72dbf403dfcb52f58089a1faaa58b19ce47f2de5dc3c0c"
     },
     "apple-xcode": {
-      "tag": "snapshot-d045c48ba442",
-      "snapshotDigest": "d045c48ba442d76db23b56957be941c7cd95580126c6f823a089d10201c74287",
-      "capturedAt": "2026-09-19T05:14:28.744Z",
-      "contentDigest": "03a8128db62b106d74bec4fd1eb7d9a8b1c1b58cfa6a53e4ff370efb063a4594"
+      "tag": "snapshot-4fca00e84bae",
+      "snapshotDigest": "4fca00e84bae9217beada8f61d8eb44bfcd4978650125b133ae059131660af4f",
+      "capturedAt": "2026-10-04T18:39:02.500Z",
+      "contentDigest": "f0ae4387bb364a5818de2647531622ae1d41631cac9a4423b442f779c19cd8b3"
     },
     "apple-ios": {
-      "tag": "snapshot-6a8f7b178c0a",
-      "snapshotDigest": "6a8f7b178c0a4a818fcf6807848b91d84ce5b7ebf4360d1e5a64f101b6da66de",
-      "capturedAt": "2026-09-19T05:14:28.746Z",
-      "contentDigest": "316c0df8708ef0a335d681b88668361f39778065c0705c8c1aeea8adfdab1067"
+      "tag": "snapshot-d0d1b2f13e0d",
+      "snapshotDigest": "d0d1b2f13e0dda7c6d6bed81d67f484e5f0b9662600743bf08baa771840f0378",
+      "capturedAt": "2026-10-04T18:39:02.517Z",
+      "contentDigest": "7f10371886380e2ed40d3ce2c375a595970165d547c289aebb1ac5ef48bb8217"
     },
     "apple-macos": {
-      "tag": "snapshot-dddbaaa5d689",
-      "snapshotDigest": "dddbaaa5d68938b78e25cd7258d52d42bee99da54bada6dfdcdac6d27ed6d784",
-      "capturedAt": "2026-09-19T05:14:28.772Z",
-      "contentDigest": "b46afb0276671af8bc9a785353506dd6e354ab37bfecc3472e56a0b846339d6c"
+      "tag": "snapshot-0513df389cc7",
+      "snapshotDigest": "0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d",
+      "capturedAt": "2026-10-04T18:39:02.631Z",
+      "contentDigest": "14bed8000201559feea98994c1c1775c7d24cc3f228675df96cb28953e4bdfaf"
     },
     "apple-watchos": {
-      "tag": "snapshot-4bff84466040",
-      "snapshotDigest": "4bff8446604017f7d50029c94e521f55e311ea5e5ac9b46cdfb847f859b3bc1c",
-      "capturedAt": "2026-09-16T18:21:42.211Z",
-      "contentDigest": "bdfe1621bbc2d42c8cb4a682bb7e57f9bfa7a7a59f6b911797e34642e4791127"
+      "tag": "snapshot-a3a5c01bb2da",
+      "snapshotDigest": "a3a5c01bb2daa6e5b05b5f912615fe697fc6a01a5d070c58d528670dcc2bc090",
+      "capturedAt": "2026-10-04T18:39:02.632Z",
+      "contentDigest": "969d356ee45d18f331ae9e63dc5d3d9e1c8d1e118e170d2545729c62d2ffbec0"
     },
     "apple-frameworks": {
-      "tag": "snapshot-c3455ae26d89",
-      "snapshotDigest": "c3455ae26d89932c4fa447dd99026b3810a5013964701f339182f5b53206ca72",
-      "capturedAt": "2026-09-19T05:14:28.876Z",
-      "contentDigest": "0388b7ab442b90eeed9c4a018ab680d8215846174680f55c9609225e65bb7160"
+      "tag": "snapshot-9afb9b6c8001",
+      "snapshotDigest": "9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c",
+      "capturedAt": "2026-10-04T18:39:03.048Z",
+      "contentDigest": "d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e"
     }
   }
 }

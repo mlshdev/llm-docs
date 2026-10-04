@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/metalfx/mtlfxtemporalscalerbase/inputheight
 
 # inputHeight (Swift)
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS · visionOS 1.0+
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 27.1+ · visionOS 1.0+
 
 The height, in pixels, of the input color texture for this scaler.
 
@@ -19,7 +19,7 @@ var inputHeight: Int { get }
 
 **Framework:** MetalFX  
 **Kind:** Instance Property  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS · visionOS 1.0+
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 27.1+ · visionOS 1.0+
 
 The height, in pixels, of the input color texture for this scaler.
 

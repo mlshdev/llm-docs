@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/userreporthbaconstraints
 
 # UserReportHBAConstraints
@@ -44,11 +44,15 @@ The valid keys for the `constraints` dictionary are as follows:
 | `kIOMinimumHBADataAlignmentMaskKey` | Yes |
 | `kIOHierarchicalLogicalUnitSupportKey` | No |
 
+Make sure your dext reports these constraints accurately — particularly all mandatory keys — during initialization. This helps prevent intermittent failures, such as controller firmware buffer overflows.
+
 Subclasses must call this method from the dext before [UserInitializeController](userinitializecontroller.md) returns.
+
+If the controller has global transfer limits, set the properties [kIOMaximumByteCountReadKey](../../driverkit/kiomaximumbytecountreadkey.md) and [kIOMaximumByteCountWriteKey](../../driverkit/kiomaximumbytecountwritekey.md) on the dext, using the [SetProperties](../../driverkit/ioservice/setproperties.md) method inherited from [IOService](../../driverkit/ioservice.md). The `UserReportHBAConstraints` method doesn’t currently support these properties.
 
 ## See Also
 
-### Managing Host Bus Adapters
+### Managing host bus adapters
 
 - [UserReportInitiatorIdentifier](userreportinitiatoridentifier.md): Gets the SCSI device identifier for the host bus adapter (HBA) in response to a call from the framework.
 - [UserReportHighestSupportedDeviceID](userreporthighestsupporteddeviceid.md): Gets the highest supported SCSI device identifier in response to a call from the framework.

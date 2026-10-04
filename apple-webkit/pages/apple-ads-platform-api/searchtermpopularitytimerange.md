@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/searchtermpopularitytimerange
 
 # SearchTermPopularityTimeRange
@@ -23,7 +23,7 @@ object SearchTermPopularityTimeRange
 - `end` — `string` (required): The end date of the range, in `YYYY-MM-DD` format.
 - `timeZone` — `string`: Timezone. Fixed to `UTC`. Not user-configurable. Default: `"UTC"`.
   **Allowed values:** `UTC`
-- `granularity` — `string` (required): Aggregation period. `WEEKLY_SUN_SAT` uses fixed Sunday–Saturday weeks and is generated Mondays at 07:00 UTC for the preceding Sunday through Saturday week, with a rolling retention of 65 weeks. `MONTHLY` uses calendar months and is refreshed on the 5th of each month UTC for the prior calendar month, with a rolling retention of 15 months. Possible values: `WEEKLY_SUN_SAT`, `MONTHLY`.
+- `granularity` — `string` (required): Aggregation period. `WEEKLY_SUN_SAT` uses fixed Sunday–Saturday weeks and is generated Mondays at 07:00 UTC for the preceding Sunday through Saturday week, with a rolling retention of 65 weeks. `MONTHLY` uses calendar months and is refreshed on the 5th of each month UTC for the prior calendar month, with a rolling retention of 15 months.
   **Allowed values:** `WEEKLY_SUN_SAT`, `MONTHLY`
 
 <a id="Discussion"></a>

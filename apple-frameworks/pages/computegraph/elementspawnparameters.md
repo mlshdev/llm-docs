@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/elementspawnparameters
 
 # ElementSpawnParameters
@@ -58,7 +58,9 @@ let params = ElementSpawnParameters(
 
 ## See Also
 
-### Elements and particles
+### Running a simulation
 
+- [ComputeGraphSimulation](computegraphsimulation.md): A simulation of particles, which use a single pipeline.
 - [ElementGrouping](elementgrouping.md): An enumeration of how elements are grouped.
+- [ComputeGraphSimulation.SimulationRate](computegraphsimulation/simulationrate-swift.struct.md): Specifies the rate and mode for simulation.
 - [Sorting](sorting.md): An enumeration of sorting modes.

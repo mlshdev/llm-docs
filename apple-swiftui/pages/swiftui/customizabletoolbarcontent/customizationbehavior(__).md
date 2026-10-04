@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/customizabletoolbarcontent/customizationbehavior(_:)
 
 # customizationBehavior(\_:)
@@ -71,4 +71,4 @@ ContentView()
 
 ### Customizing behaviors
 
-- [axisBehavior(\_:)](axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
+- [axisBehavior(\_:)](axisbehavior%28__%29.md): The bar axis behavior of the toolbar item.

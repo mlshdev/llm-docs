@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uikit-macros
 
 # UIKit macros (Swift)
@@ -14,6 +14,8 @@ Macros that UIKit defines.
 
 - [Preview(\_:traits:body:)](preview%28__traits_body_%29-c7kr.md)
 - [Preview(\_:traits:body:)](preview%28__traits_body_%29-en9c.md)
+- [Preview(\_:traits:arguments:body:)](preview%28__traits_arguments_body_%29-6gm4c.md)
+- [Preview(\_:traits:arguments:body:)](preview%28__traits_arguments_body_%29-7cbjv.md)
 - [UIKIT_HAS_UIFOUNDATION_SYMBOLS](uikit_has_uifoundation_symbols.md)
 
 ## See Also

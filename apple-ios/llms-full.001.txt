@@ -2,8 +2,8 @@
 
 Source: https://developer.apple.com/ios/
 Catalog snapshot: d0d1b2f13e0dda7c6d6bed81d67f484e5f0b9662600743bf08baa771840f0378
-Content digest: 389660c763e1ce396dda974d54f5268621a1de23bcebb625192122aebc78e52e
-Captured at: 2026-09-27T18:07:09.630Z
+Content digest: 7f10371886380e2ed40d3ce2c375a595970165d547c289aebb1ac5ef48bb8217
+Captured at: 2026-10-04T18:39:02.517Z
 Volume 1
 
 # Document: Accessory Live Activities
@@ -31612,8 +31612,6 @@ The `ABPersonViewController` class does not support subclassing.
 - [NSExtensionRequestHandling](https://developer.apple.com/documentation/foundation/nsextensionrequesthandling)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearanceContainer](https://developer.apple.com/documentation/uikit/uiappearancecontainer)
 - [UIContentContainer](https://developer.apple.com/documentation/uikit/uicontentcontainer)
@@ -138275,8 +138273,6 @@ The base view of a navigation app does not receive tap or drag events.
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIAccessibilityIdentification](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearance](https://developer.apple.com/documentation/uikit/uiappearance)

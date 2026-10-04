@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsiperipheralsdriverkit/iouserscsiperipheraldevicetype07/userdeterminedevicecharacteristics
 
 # UserDetermineDeviceCharacteristics
@@ -9,18 +9,26 @@
 **Kind:** Instance Method  
 **Availability:** DriverKit 22.0+
 
+Performs enumeration-time initializations in response to a call from the framework.
+
 ## Declaration
 
 ```objectivec
 virtual kern_return_t UserDetermineDeviceCharacteristics(bool *result);
 ```
 
+## Parameters
+
+- `result`: On return, this value is `true` if initialization succeeds; otherwise, it’s `false`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The kernel calls this user space method at enumeration time. Use this callback to perform any initializations your DriverKit extension (dext) needs to perform.
+
 ## See Also
 
-### Instance Methods
+### Managing the device
 
-- [UserReportMediumBlockSize](userreportmediumblocksize.md)
-- [UserResetDevice](userresetdevice.md)
-- [UserResumeServices](userresumeservices.md)
-- [UserSendCDB](usersendcdb.md)
-- [UserSuspendServices](usersuspendservices.md)
+- [UserResetDevice](userresetdevice.md): Performs a bus reset of the external drive.

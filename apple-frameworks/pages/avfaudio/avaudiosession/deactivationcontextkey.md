@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosession/deactivationcontextkey
 
 # deactivationContextKey (Swift)
@@ -14,6 +14,10 @@ Keys for [didBecomeInactiveNotification](didbecomeinactivenotification.md) Value
 ```swift
 class let deactivationContextKey: String
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 ## See Also
 
@@ -37,6 +41,10 @@ Keys for [AVAudioSessionDidBecomeInactiveNotification](didbecomeinactivenotifica
 ```objectivec
 extern NSString * const AVAudioSessionDeactivationContextKey;
 ```
+
+## Mentioned In
+
+- [Handling audio interruptions](../handling-audio-interruptions.md)
 
 ## See Also
 

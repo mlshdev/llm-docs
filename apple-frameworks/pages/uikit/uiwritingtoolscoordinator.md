@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiwritingtoolscoordinator
 
 # UIWritingToolsCoordinator (Swift)
@@ -78,9 +78,9 @@ When defining the delegate, choose an object from your app that has access to yo
 - [UIWritingToolsCoordinator.TextReplacementReason](uiwritingtoolscoordinator/textreplacementreason.md): Options that indicate whether Writing Tools is animating changes to your view’s text.
 - [UIWritingToolsCoordinator.TextAnimation](uiwritingtoolscoordinator/textanimation.md): The types of animations that Writing Tools performs during an interactive update of your view.
 
-### Instance Properties
+### Working with markers
 
-- [includesTextListMarkers](uiwritingtoolscoordinator/includestextlistmarkers.md)
+- [includesTextListMarkers](uiwritingtoolscoordinator/includestextlistmarkers.md): A Boolean value that indicates whether Writing Tools includes text list markers in the text list paragraph content.
 
 ### Instance Methods
 
@@ -195,9 +195,9 @@ When defining the delegate, choose an object from your app that has access to yo
 - [UIWritingToolsCoordinatorTextReplacementReason](uiwritingtoolscoordinator/textreplacementreason.md): Options that indicate whether Writing Tools is animating changes to your view’s text.
 - [UIWritingToolsCoordinatorTextAnimation](uiwritingtoolscoordinator/textanimation.md): The types of animations that Writing Tools performs during an interactive update of your view.
 
-### Instance Properties
+### Working with markers
 
-- [includesTextListMarkers](uiwritingtoolscoordinator/includestextlistmarkers.md)
+- [includesTextListMarkers](uiwritingtoolscoordinator/includestextlistmarkers.md): A Boolean value that indicates whether Writing Tools includes text list markers in the text list paragraph content.
 
 ### Instance Methods
 

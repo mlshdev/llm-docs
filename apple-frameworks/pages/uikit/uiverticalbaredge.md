@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiverticalbaredge
 
 # UIVerticalBarEdge (Swift)
 
 **Framework:** UIKit  
 **Kind:** Enumeration  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The edge where the system places the vertical bar.
 
@@ -17,15 +17,15 @@ enum UIVerticalBarEdge
 
 ## Topics
 
-### Getting the edge values
+### Getting the vertical bar edges
 
-- [UIVerticalBarEdge.leading](uiverticalbaredge/leading.md): Beta. The vertical bar is on the leading edge.
-- [UIVerticalBarEdge.trailing](uiverticalbaredge/trailing.md): Beta. The vertical bar is on the trailing edge.
-- [UIVerticalBarEdge.unspecified](uiverticalbaredge/unspecified.md): Beta. The system has no preferred edge for the vertical bar.
+- [UIVerticalBarEdge.leading](uiverticalbaredge/leading.md): The vertical bar is on the leading edge.
+- [UIVerticalBarEdge.trailing](uiverticalbaredge/trailing.md): The vertical bar is on the trailing edge.
+- [UIVerticalBarEdge.unspecified](uiverticalbaredge/unspecified.md): The system has no preferred edge for the vertical bar.
 
-### Initializers
+### Creating a vertical bar edge
 
-- [init(rawValue:)](uiverticalbaredge/init%28rawvalue_%29.md): Beta.
+- [init(rawValue:)](uiverticalbaredge/init%28rawvalue_%29.md)
 
 ## Relationships
 
@@ -40,29 +40,26 @@ enum UIVerticalBarEdge
 
 ## See Also
 
-### Retrieving interface-related traits
+### Bars
 
-- [userInterfaceStyle](uitraitcollection/userinterfacestyle.md): The style associated with the user interface.
-- [UIUserInterfaceStyle](uiuserinterfacestyle.md): Constants that indicate the interface style for the app.
-- [userInterfaceIdiom](uitraitcollection/userinterfaceidiom.md): The user interface idiom of the trait collection.
-- [UIUserInterfaceIdiom](uiuserinterfaceidiom.md): Constants that indicate the interface type for the device or an object that has a trait environment, such as a view and view controller.
-- [userInterfaceLevel](uitraitcollection/userinterfacelevel.md): The elevation level of the interface.
-- [UIUserInterfaceLevel](uiuserinterfacelevel.md): Constants that indicate the visual level for content in the window.
-- [layoutDirection](uitraitcollection/layoutdirection.md): The layout direction associated with the current environment.
-- [UITraitEnvironmentLayoutDirection](uitraitenvironmentlayoutdirection.md): Constants that indicate the layout direction associated with the current environment.
-- [resolvesNaturalAlignmentWithBaseWritingDirection](uitraitcollection/resolvesnaturalalignmentwithbasewritingdirection-58wlh.md)
-- [accessibilityContrast](uitraitcollection/accessibilitycontrast.md): The accessibility contrast associated with the current environment.
-- [UIAccessibilityContrast](uiaccessibilitycontrast.md): Constants that indicate the accessibility contrast setting.
-- [legibilityWeight](uitraitcollection/legibilityweight.md): The font weight to apply to text.
-- [UILegibilityWeight](uilegibilityweight.md): Constants that indicate the weight to apply to text in your interface.
-- [activeAppearance](uitraitcollection/activeappearance.md): A property that indicates whether a scene has an active appearance.
-- [UIUserInterfaceActiveAppearance](uiuserinterfaceactiveappearance.md): Constants that indicate whether the user interface has an active appearance.
+- [UIBarItem](uibaritem.md): An abstract superclass for items that you can add to a bar that appears at the bottom of the screen.
+- [UIBarButtonItem](uibarbuttonitem.md): A specialized button for placement on a toolbar, navigation bar, or shortcuts bar.
+- [UIBarButtonItemGroup](uibarbuttonitemgroup.md): A group of one or more bar button items for placement on a navigation bar or shortcuts bar.
+- [UIBarButtonItemVisibilityPriority](uibarbuttonitemvisibilitypriority.md)
+- [UINavigationBar](uinavigationbar.md): Navigational controls that display in a bar along the top of the screen, usually in conjunction with a navigation controller.
+- [UISearchBar](uisearchbar.md): A specialized view for receiving search-related information from the user.
+- [UIToolbar](uitoolbar.md): A control that displays one or more buttons along an edge of your interface.
+- [UITabBar](uitabbar.md): A control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app.
+- [UITabBarItem](uitabbaritem.md): An object that describes an item in a tab bar.
+- [UIBarPositioning](uibarpositioning.md): A set of methods for defining the positioning of bars in iOS apps.
+- [UIBarPositioningDelegate](uibarpositioningdelegate.md): A set of methods that support the positioning of a bar that conforms to the [UIBarPositioning](uibarpositioning.md) protocol.
+- [UIBarMinimization](uibarminimization-swift.struct.md)
 
 # UIVerticalBarEdge (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Enumeration  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The edge where the system places the vertical bar.
 
@@ -74,28 +71,24 @@ enum UIVerticalBarEdge : NSInteger;
 
 ## Topics
 
-### Getting the edge values
+### Getting the vertical bar edges
 
-- [UIVerticalBarEdgeLeading](uiverticalbaredge/leading.md): Beta. The vertical bar is on the leading edge.
-- [UIVerticalBarEdgeTrailing](uiverticalbaredge/trailing.md): Beta. The vertical bar is on the trailing edge.
-- [UIVerticalBarEdgeUnspecified](uiverticalbaredge/unspecified.md): Beta. The system has no preferred edge for the vertical bar.
+- [UIVerticalBarEdgeLeading](uiverticalbaredge/leading.md): The vertical bar is on the leading edge.
+- [UIVerticalBarEdgeTrailing](uiverticalbaredge/trailing.md): The vertical bar is on the trailing edge.
+- [UIVerticalBarEdgeUnspecified](uiverticalbaredge/unspecified.md): The system has no preferred edge for the vertical bar.
 
 ## See Also
 
-### Retrieving interface-related traits
+### Bars
 
-- [userInterfaceStyle](uitraitcollection/userinterfacestyle.md): The style associated with the user interface.
-- [UIUserInterfaceStyle](uiuserinterfacestyle.md): Constants that indicate the interface style for the app.
-- [userInterfaceIdiom](uitraitcollection/userinterfaceidiom.md): The user interface idiom of the trait collection.
-- [UIUserInterfaceIdiom](uiuserinterfaceidiom.md): Constants that indicate the interface type for the device or an object that has a trait environment, such as a view and view controller.
-- [userInterfaceLevel](uitraitcollection/userinterfacelevel.md): The elevation level of the interface.
-- [UIUserInterfaceLevel](uiuserinterfacelevel.md): Constants that indicate the visual level for content in the window.
-- [layoutDirection](uitraitcollection/layoutdirection.md): The layout direction associated with the current environment.
-- [UITraitEnvironmentLayoutDirection](uitraitenvironmentlayoutdirection.md): Constants that indicate the layout direction associated with the current environment.
-- [resolvesNaturalAlignmentWithBaseWritingDirection](uitraitcollection/resolvesnaturalalignmentwithbasewritingdirection-97osy.md): Specifies the behavior for resolving `NSTextAlignment.natural` to the visual alignment.
-- [accessibilityContrast](uitraitcollection/accessibilitycontrast.md): The accessibility contrast associated with the current environment.
-- [UIAccessibilityContrast](uiaccessibilitycontrast.md): Constants that indicate the accessibility contrast setting.
-- [legibilityWeight](uitraitcollection/legibilityweight.md): The font weight to apply to text.
-- [UILegibilityWeight](uilegibilityweight.md): Constants that indicate the weight to apply to text in your interface.
-- [activeAppearance](uitraitcollection/activeappearance.md): A property that indicates whether a scene has an active appearance.
-- [UIUserInterfaceActiveAppearance](uiuserinterfaceactiveappearance.md): Constants that indicate whether the user interface has an active appearance.
+- [UIBarItem](uibaritem.md): An abstract superclass for items that you can add to a bar that appears at the bottom of the screen.
+- [UIBarButtonItem](uibarbuttonitem.md): A specialized button for placement on a toolbar, navigation bar, or shortcuts bar.
+- [UIBarButtonItemGroup](uibarbuttonitemgroup.md): A group of one or more bar button items for placement on a navigation bar or shortcuts bar.
+- [UIBarButtonItemVisibilityPriority](uibarbuttonitemvisibilitypriority.md)
+- [UINavigationBar](uinavigationbar.md): Navigational controls that display in a bar along the top of the screen, usually in conjunction with a navigation controller.
+- [UISearchBar](uisearchbar.md): A specialized view for receiving search-related information from the user.
+- [UIToolbar](uitoolbar.md): A control that displays one or more buttons along an edge of your interface.
+- [UITabBar](uitabbar.md): A control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app.
+- [UITabBarItem](uitabbaritem.md): An object that describes an item in a tab bar.
+- [UIBarPositioning](uibarpositioning.md): A set of methods for defining the positioning of bars in iOS apps.
+- [UIBarPositioningDelegate](uibarpositioningdelegate.md): A set of methods that support the positioning of a bar that conforms to the [UIBarPositioning](uibarpositioning.md) protocol.

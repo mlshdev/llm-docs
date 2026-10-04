@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiscenesession/role-swift.struct
 
 # UISceneSession.Role (Swift)
@@ -25,7 +25,7 @@ struct Role
 
 - [windowApplication](role-swift.struct/windowapplication.md): A scene that displays interactive windows on the device’s built-in display or an externally connected display.
 - [windowAssistiveAccessApplication](role-swift.struct/windowassistiveaccessapplication.md)
-- [windowCameraCaptureAccessory](role-swift.struct/windowcameracaptureaccessory.md): Beta. A session role for scenes that present content during camera capture.
+- [windowCameraCaptureAccessory](role-swift.struct/windowcameracaptureaccessory.md): A session role for scenes that present content during camera capture.
 - [windowExternalDisplay](role-swift.struct/windowexternaldisplay.md): Deprecated. A scene that displays noninteractive windows on an externally connected display.
 - [windowExternalDisplayNonInteractive](role-swift.struct/windowexternaldisplaynoninteractive.md): A scene that displays noninteractive windows on an externally connected display.
 - [carTemplateApplication](role-swift.struct/cartemplateapplication.md): A scene that displays interactive content on a CarPlay-enabled vehicle screen.
@@ -82,7 +82,7 @@ typedef NSString * UISceneSessionRole;
 
 - [UIWindowSceneSessionRoleApplication](role-swift.struct/windowapplication.md): A scene that displays interactive windows on the device’s built-in display or an externally connected display.
 - [UIWindowSceneSessionRoleAssistiveAccessApplication](role-swift.struct/windowassistiveaccessapplication.md)
-- [UIWindowSceneSessionRoleCameraCaptureAccessory](role-swift.struct/windowcameracaptureaccessory.md): Beta. A session role for scenes that present content during camera capture.
+- [UIWindowSceneSessionRoleCameraCaptureAccessory](role-swift.struct/windowcameracaptureaccessory.md): A session role for scenes that present content during camera capture.
 - [UIWindowSceneSessionRoleExternalDisplay](role-swift.struct/windowexternaldisplay.md): Deprecated. A scene that displays noninteractive windows on an externally connected display.
 - [UIWindowSceneSessionRoleExternalDisplayNonInteractive](role-swift.struct/windowexternaldisplaynoninteractive.md): A scene that displays noninteractive windows on an externally connected display.
 - [CPTemplateApplicationSceneSessionRoleApplication](https://developer.apple.com/documentation/carplay/cptemplateapplicationscenesessionroleapplication)

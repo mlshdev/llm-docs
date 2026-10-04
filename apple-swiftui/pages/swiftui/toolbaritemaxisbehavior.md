@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/toolbaritemaxisbehavior
 
 # ToolbarItemAxisBehavior
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Describes the bar axis behavior of a toolbar item.
 
@@ -25,9 +25,9 @@ Use this with the [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md) mo
 
 ### Getting behavior options
 
-- [automatic](toolbaritemaxisbehavior/automatic.md): Beta. The automatic axis behavior.
-- [horizontalOnly](toolbaritemaxisbehavior/horizontalonly.md): Beta. The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
-- [verticalPreferred](toolbaritemaxisbehavior/verticalpreferred.md): Beta. The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
+- [automatic](toolbaritemaxisbehavior/automatic.md): The automatic axis behavior.
+- [horizontalOnly](toolbaritemaxisbehavior/horizontalonly.md): The item only supports horizontal bars. If an item only supports horizontal bars and no horizontal bars are present, the item is not shown.
+- [verticalPreferred](toolbaritemaxisbehavior/verticalpreferred.md): The item supports both horizontal and vertical bars, and prefers a vertical placement when both horizontal and vertical bars are present.
 
 ## Relationships
 
@@ -42,4 +42,4 @@ Use this with the [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md) mo
 
 ### Customizing behaviors
 
-- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): Beta. The bar axis behavior of the toolbar item.
+- [axisBehavior(\_:)](toolbarcontent/axisbehavior%28__%29.md): The bar axis behavior of the toolbar item.

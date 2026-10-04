@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/devicehinge
 
 # DeviceHinge
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A type encapsulating the state of a single hinge.
 
@@ -47,9 +47,9 @@ In the example above, the current angle and status of the hinge will be displaye
 
 ### Getting hinge information
 
-- [angle](devicehinge/angle.md): Beta. Current angle of the hinge.
-- [status](devicehinge/status-swift.property.md): Beta. Current status of the hinge.
-- [DeviceHinge.Status](devicehinge/status-swift.struct.md): Beta. The status of an individual hinge.
+- [angle](devicehinge/angle.md): Current angle of the hinge.
+- [status](devicehinge/status-swift.property.md): Current status of the hinge.
+- [DeviceHinge.Status](devicehinge/status-swift.struct.md): The status of an individual hinge.
 
 ## Relationships
 
@@ -64,5 +64,5 @@ In the example above, the current angle and status of the hinge will be displaye
 
 ### Responding to hinge angle changes
 
-- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Beta. Adds an action to perform when the hinge context of the view hierarchy changes.
-- [DeviceHingeContext](devicehingecontext.md): Beta. A type describing the context of hinges on the device.
+- [onHingeChange(isEnabled:\_:)](view/onhingechange%28isenabled___%29.md): Adds an action to perform when the hinge context of the view hierarchy changes.
+- [DeviceHingeContext](devicehingecontext.md): A type describing the context of hinges on the device.

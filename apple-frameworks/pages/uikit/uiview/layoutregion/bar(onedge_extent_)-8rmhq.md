@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiview/layoutregion/bar(onedge:extent:)-8rmhq
 
 # bar(onEdge:extent:)
 
 **Framework:** UIKit  
 **Kind:** Type Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ beta · tvOS 27.1+ · visionOS 27.1+
 
 ## Declaration
 
@@ -18,7 +18,7 @@ static func bar(onEdge edge: UIRectEdge, extent: CGFloat) -> UIView.LayoutRegion
 ### Accessing insets and layout guides
 
 - [UIView.LayoutRegion](../layoutregion.md)
-- [bar(onEdge:extent:)](bar%28onedge_extent_%29-2tj1g.md): Beta.
+- [bar(onEdge:extent:)](bar%28onedge_extent_%29-2tj1g.md)
 - [directionalEdgeInsets(for:)](../directionaledgeinsets%28for_%29.md)
 - [edgeInsets(for:)](../edgeinsets%28for_%29.md)
 - [layoutGuide(for:)](../layoutguide%28for_%29.md)

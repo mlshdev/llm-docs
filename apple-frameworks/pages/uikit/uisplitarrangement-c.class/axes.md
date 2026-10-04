@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uisplitarrangement-c.class/axes
 
 # axes
@@ -7,7 +7,7 @@
 
 **Framework:** UIKit  
 **Kind:** Instance Property  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 The axes of the arrangement.
 
@@ -21,6 +21,6 @@ The axes of the arrangement.
 
 ### Configuring the arrangement
 
-- [defaultViewProperties](defaultviewproperties.md): Beta. Returns the default properties for a view in the split arrangement.
-- [setViewProperties:forPlacement:](setviewproperties_forplacement_.md): Beta. Sets the view properties in the split arrangement for a specific placement.
-- [UISplitArrangementViewProperties](../uisplitarrangementviewproperties.md): Beta. The view properties for a split arrangement view.
+- [defaultViewProperties](defaultviewproperties.md): Returns the default properties for a view in the split arrangement.
+- [setViewProperties:forPlacement:](setviewproperties_forplacement_.md): Sets the view properties in the split arrangement for a specific placement.
+- [UISplitArrangementViewProperties](../uisplitarrangementviewproperties.md): The view properties for a split arrangement view.

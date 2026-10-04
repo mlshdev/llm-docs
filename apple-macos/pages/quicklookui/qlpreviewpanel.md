@@ -91,6 +91,8 @@ A controlling object also implements `beginPreviewPanelControl(_:)` and `endPrev
 - [NSUserActivityRestoring](../appkit/nsuseractivityrestoring.md)
 - [NSUserInterfaceItemIdentification](../appkit/nsuserinterfaceitemidentification.md)
 - [NSUserInterfaceValidations](../appkit/nsuserinterfacevalidations.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

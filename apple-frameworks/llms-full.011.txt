@@ -1,10 +1,860 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
+# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
-Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
-Captured at: 2026-09-27T18:07:10.128Z
+Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
+Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
+Captured at: 2026-10-04T18:39:03.048Z
 Volume 11
+
+# Document: resolvedSettings
+
+Source path: documentation/avfoundation/avcapturephoto/resolvedsettings
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/resolvedsettings
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
+
+# resolvedSettings (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
+
+The settings object that was used to request this photo capture.
+
+## Declaration
+
+```swift
+var resolvedSettings: AVCaptureResolvedPhotoSettings { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To determine which [capturePhoto(with:delegate:)](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) call produced this photo capture result, match this [AVCaptureResolvedPhotoSettings](../avcaptureresolvedphotosettings.md) object’s [uniqueID](../avcaptureresolvedphotosettings/uniqueid.md) value to the [uniqueID](../avcapturephotosettings/uniqueid.md) property of the photo settings object you requested capture with. You can also use this object to find out which values the photo output has chosen for automatic settings.
+
+## See Also
+
+### Resolving photo capture requests
+
+- [photoCount](photocount.md): The 1-based index of this photo capture relative to other results from the same capture request.
+- [timestamp](timestamp.md): The time at which the image was captured.
+
+# resolvedSettings (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
+
+The settings object that was used to request this photo capture.
+
+## Declaration
+
+```objectivec
+@property (readonly) AVCaptureResolvedPhotoSettings * resolvedSettings;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To determine which [capturePhotoWithSettings:delegate:](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) call produced this photo capture result, match this [AVCaptureResolvedPhotoSettings](../avcaptureresolvedphotosettings.md) object’s [uniqueID](../avcaptureresolvedphotosettings/uniqueid.md) value to the [uniqueID](../avcapturephotosettings/uniqueid.md) property of the photo settings object you requested capture with. You can also use this object to find out which values the photo output has chosen for automatic settings.
+
+## See Also
+
+### Resolving photo capture requests
+
+- [photoCount](photocount.md): The 1-based index of this photo capture relative to other results from the same capture request.
+- [timestamp](timestamp.md): The time at which the image was captured.
+
+# Document: semanticSegmentationMatte(for:)
+
+Source path: documentation/avfoundation/avcapturephoto/semanticsegmentationmatte(for:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/semanticsegmentationmatte(for:)
+Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+# semanticSegmentationMatte(for:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Retrieves the semantic segmentation matte associated with this photo.
+
+## Declaration
+
+```swift
+func semanticSegmentationMatte(for semanticSegmentationMatteType: AVSemanticSegmentationMatte.MatteType) -> AVSemanticSegmentationMatte?
+```
+
+## Parameters
+
+- `semanticSegmentationMatteType`: The type of semantic segmentation matte to retrieve from the photo.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An instance of [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md), or `nil` of you didn’t request semantic segmentation matte delivery or if no mattes of the specified type were found.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you requested one or more semantic segmentation mattes by calling [enabledSemanticSegmentationMatteTypes](../avcapturephotosettings/enabledsemanticsegmentationmattetypes.md) with a nonempty array of types, this property offers access to the resulting [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md) objects.
+
+> **Note**
+
+>  Semantic segmentation mattes are only embedded in the photo’s internal file format container if you set [embedsSemanticSegmentationMattesInPhoto](../avcapturephotosettings/embedssemanticsegmentationmattesinphoto.md) to [true](https://developer.apple.com/documentation/swift/true).
+
+# semanticSegmentationMatteForType: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Retrieves the semantic segmentation matte associated with this photo.
+
+## Declaration
+
+```objectivec
+- (AVSemanticSegmentationMatte *) semanticSegmentationMatteForType:(AVSemanticSegmentationMatteType) semanticSegmentationMatteType;
+```
+
+## Parameters
+
+- `semanticSegmentationMatteType`: The type of semantic segmentation matte to retrieve from the photo.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An instance of [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md), or `nil` of you didn’t request semantic segmentation matte delivery or if no mattes of the specified type were found.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you requested one or more semantic segmentation mattes by calling [enabledSemanticSegmentationMatteTypes](../avcapturephotosettings/enabledsemanticsegmentationmattetypes.md) with a nonempty array of types, this property offers access to the resulting [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md) objects.
+
+> **Note**
+
+>  Semantic segmentation mattes are only embedded in the photo’s internal file format container if you set [embedsSemanticSegmentationMattesInPhoto](../avcapturephotosettings/embedssemanticsegmentationmattesinphoto.md) to [true](https://developer.apple.com/documentation/swift/true).
+
+# Document: sequenceCount
+
+Source path: documentation/avfoundation/avcapturephoto/sequencecount
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/sequencecount
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+# sequenceCount (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+The 1-based index of this photo in a bracketed capture sequence.
+
+## Declaration
+
+```swift
+var sequenceCount: Int { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If this photo is part of a bracketed capture (requested with the [AVCapturePhotoBracketSettings](../avcapturephotobracketsettings.md) class), this property indicates the current result’s count in the sequence, starting with `1` for the first result.
+
+If this photo is not part of a bracketed capture, this property’s value is `0`.
+
+## See Also
+
+### Examining bracketed capture information
+
+- [bracketSettings](bracketsettings.md): The variations available for bracketed capture settings for this photo.
+- [lensStabilizationStatus](lensstabilizationstatus.md): Information about the use of lens stabilization during bracketed photo capture.
+- [AVCaptureDevice.LensStabilizationStatus](../avcapturedevice/lensstabilizationstatus.md): Constants that indicate the status of optical image stabilization hardware during a bracketed photo capture.
+
+# sequenceCount (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+The 1-based index of this photo in a bracketed capture sequence.
+
+## Declaration
+
+```objectivec
+@property (readonly) NSInteger sequenceCount;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If this photo is part of a bracketed capture (requested with the [AVCapturePhotoBracketSettings](../avcapturephotobracketsettings.md) class), this property indicates the current result’s count in the sequence, starting with `1` for the first result.
+
+If this photo is not part of a bracketed capture, this property’s value is `0`.
+
+## See Also
+
+### Examining bracketed capture information
+
+- [bracketSettings](bracketsettings.md): The variations available for bracketed capture settings for this photo.
+- [lensStabilizationStatus](lensstabilizationstatus.md): Information about the use of lens stabilization during bracketed photo capture.
+- [AVCaptureLensStabilizationStatus](../avcapturedevice/lensstabilizationstatus.md): Constants that indicate the status of optical image stabilization hardware during a bracketed photo capture.
+
+# Document: sourceDeviceType
+
+Source path: documentation/avfoundation/avcapturephoto/sourcedevicetype
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/sourcedevicetype
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+# sourceDeviceType (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+The type of device that captured the photo.
+
+## Declaration
+
+```swift
+var sourceDeviceType: AVCaptureDevice.DeviceType? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When you capture dual photos with a [builtInDualCamera](../avcapturedevice/devicetype-swift.struct/builtindualcamera.md) device and the [isDualCameraDualPhotoDeliveryEnabled](../avcapturephotosettings/isdualcameradualphotodeliveryenabled.md) setting, use this property to determine which of the two resulting photo objects is from the [builtInWideAngleCamera](../avcapturedevice/devicetype-swift.struct/builtinwideanglecamera.md) or [builtInTelephotoCamera](../avcapturedevice/devicetype-swift.struct/builtintelephotocamera.md) device.
+
+For all other captures, this property’s value is equal to the [deviceType](../avcapturedevice/devicetype-swift.property.md) property of the capture device to which the photo output is connected.
+
+This property’s value can be `nil` if the [AVCapturePhoto](../avcapturephoto.md) object did not come from an [AVCaptureDevice](../avcapturedevice.md) capture.
+
+## See Also
+
+### Accessing photo metadata
+
+- [depthData](depthdata.md): Depth or disparity map data captured with the photo.
+- [cameraCalibrationData](cameracalibrationdata.md): Calibration information for the camera device that captured the photo.
+- [metadata](metadata.md): A dictionary of metadata describing the captured image.
+- [portraitEffectsMatte](portraiteffectsmatte.md): The portrait effects matte captured with the photo.
+
+# sourceDeviceType (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+The type of device that captured the photo.
+
+## Declaration
+
+```objectivec
+@property (readonly, nullable) AVCaptureDeviceType sourceDeviceType;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When you capture dual photos with a [AVCaptureDeviceTypeBuiltInDualCamera](../avcapturedevice/devicetype-swift.struct/builtindualcamera.md) device and the [dualCameraDualPhotoDeliveryEnabled](../avcapturephotosettings/isdualcameradualphotodeliveryenabled.md) setting, use this property to determine which of the two resulting photo objects is from the [AVCaptureDeviceTypeBuiltInWideAngleCamera](../avcapturedevice/devicetype-swift.struct/builtinwideanglecamera.md) or [AVCaptureDeviceTypeBuiltInTelephotoCamera](../avcapturedevice/devicetype-swift.struct/builtintelephotocamera.md) device.
+
+For all other captures, this property’s value is equal to the [deviceType](../avcapturedevice/devicetype-swift.property.md) property of the capture device to which the photo output is connected.
+
+This property’s value can be `nil` if the [AVCapturePhoto](../avcapturephoto.md) object did not come from an [AVCaptureDevice](../avcapturedevice.md) capture.
+
+## See Also
+
+### Accessing photo metadata
+
+- [depthData](depthdata.md): Depth or disparity map data captured with the photo.
+- [cameraCalibrationData](cameracalibrationdata.md): Calibration information for the camera device that captured the photo.
+- [metadata](metadata.md): A dictionary of metadata describing the captured image.
+- [portraitEffectsMatte](portraiteffectsmatte.md): The portrait effects matte captured with the photo.
+
+# Document: timestamp
+
+Source path: documentation/avfoundation/avcapturephoto/timestamp
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephoto/timestamp
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
+
+# timestamp (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
+
+The time at which the image was captured.
+
+## Declaration
+
+```swift
+var timestamp: CMTime { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This timestamp is always synchronized to the [masterClock](../avcapturesession/masterclock.md) time of the [AVCaptureSession](../avcapturesession.md) object to which the photo output is connected.
+
+## See Also
+
+### Resolving photo capture requests
+
+- [resolvedSettings](resolvedsettings.md): The settings object that was used to request this photo capture.
+- [photoCount](photocount.md): The 1-based index of this photo capture relative to other results from the same capture request.
+
+# timestamp (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
+
+The time at which the image was captured.
+
+## Declaration
+
+```objectivec
+@property (readonly) CMTime timestamp;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This timestamp is always synchronized to the [masterClock](../avcapturesession/masterclock.md) time of the [AVCaptureSession](../avcapturesession.md) object to which the photo output is connected.
+
+## See Also
+
+### Resolving photo capture requests
+
+- [resolvedSettings](resolvedsettings.md): The settings object that was used to request this photo capture.
+- [photoCount](photocount.md): The 1-based index of this photo capture relative to other results from the same capture request.
+
+# Document: AVCapturePhotoBracketSettings
+
+Source path: documentation/avfoundation/avcapturephotobracketsettings
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephotobracketsettings
+Description: Framework: AVFoundation Kind: Class Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+# AVCapturePhotoBracketSettings (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+A specification of the features and settings to use for a photo capture request that captures multiple images with varied settings.
+
+## Declaration
+
+```swift
+class AVCapturePhotoBracketSettings
+```
+
+## Mentioned In
+
+- [Capturing a bracketed photo sequence](capturing-a-bracketed-photo-sequence.md)
+
+<a id="overview"></a>
+
+## Overview
+
+To take a bracketed capture, you create and configure an [AVCapturePhotoBracketSettings](avcapturephotobracketsettings.md) object, using [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) objects to describe the individual captures in the bracket, and then pass it to the [AVCapturePhotoOutput](avcapturephotooutput.md) [capturePhoto(with:delegate:)](avcapturephotooutput/capturephoto%28with_delegate_%29.md) method.
+
+To request a bracketed capture, follow these steps:
+
+1. Create an array of [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) objects describing the number of images to capture in the bracket and the variations on capture settings between them.
+2. Create a bracketed photo settings object with the [init(rawPixelFormatType:processedFormat:bracketedSettings:)](avcapturephotobracketsettings/init%28rawpixelformattype_processedformat_bracketedsettings_%29.md) initializer, passing the array of bracketed still image settings, along with the processed format (such as JPEG) or RAW format to capture images in.
+3. Configure other settings to share across all images in the bracket, such as the [isLensStabilizationEnabled](avcapturephotobracketsettings/islensstabilizationenabled.md) property and certain inherited properties.
+
+> **Important**
+
+>  Bracketed capture supports only the [isHighResolutionPhotoEnabled](avcapturephotosettings/ishighresolutionphotoenabled.md) and [previewPhotoFormat](avcapturephotosettings/previewphotoformat.md) settings defined by the [AVCapturePhotoSettings](avcapturephotosettings.md) superclass. Bracketed capture does not support flash, auto stabilization, or Live Photos—attempting to set any of the corresponding properties raises an exception.
+
+4. Initiate capture by passing the bracketed photo settings object to your photo output’s [capturePhoto(with:delegate:)](avcapturephotooutput/capturephoto%28with_delegate_%29.md) method, along with a delegate object to receive messages about the progress and results of the capture.
+
+> **Tip**
+
+>  Capturing a multiple-image bracket may require allocation of additional resources. See the [setPreparedPhotoSettingsArray(\_:completionHandler:)](avcapturephotooutput/setpreparedphotosettingsarray%28__completionhandler_%29.md) method.
+
+5. The photo output calls your delegate’s [photoOutput(\_:didFinishProcessingPhoto:previewPhoto:resolvedSettings:bracketSettings:error:)](avcapturephotocapturedelegate/photooutput%28__didfinishprocessingphoto_previewphoto_resolvedsettings_bracketsettings_error_%29.md) or [photoOutput(\_:didFinishProcessingRawPhoto:previewPhoto:resolvedSettings:bracketSettings:error:)](avcapturephotocapturedelegate/photooutput%28__didfinishprocessingrawphoto_previewphoto_resolvedsettings_bracketsettings_error_%29.md) methods many times corresponding to the number of captures in the bracket. Each call provides the [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) object indicating which capture in the bracket the captured image corresponds to.
+
+The following code example illustrates capturing a bracket of three RAW images with varying exposure value settings.
+
+Listing 1. Capturing a Multi-Exposure Bracket
+
+**Swift**
+
+```swift
+func captureRAWAutoExposureBracket() {
+    guard myCapturePhotoOutput.maxBracketedCapturePhotoCount >= 3 else { return }
+    
+    // Specify a 3-shot bracket, where exposure compensation varies between each shot.
+    let makeSettings = AVCaptureAutoExposureBracketedStillImageSettings.autoExposureSettingsWithExposureTargetBias
+    let bracketedStillImageSettings = [-2, 0, 2].map { makeSettings(Float($0))! }
+    let rawFormat = myCapturePhotoOutput.availableRawPhotoCVPixelFormatTypes.first!.unsignedIntValue as OSType
+    
+    let settings = AVCapturePhotoBracketSettings(format: nil, rawPixelFormatType: rawFormat, bracketedSettings: bracketedStillImageSettings)
+    settings.lensStabilizationEnabled = myCapturePhotoOutput.lensStabilizationDuringBracketedCaptureSupported
+    
+    myCapturePhotoOutput.capturePhotoWithSettings(settings, delegate: self)
+    // Three RAW photos will be delivered.
+}
+```
+
+**Objective-C**
+
+```objc
+- (void)captureRAWAutoExposureBracket {
+    if ( myCapturePhotoOutput.maxBracketedCapturePhotoCount < 3 ) { return; }
+ 
+    // Specify a 3-shot bracket, where exposure compensation varies between each shot.
+    NSArray *bracketedStillImageSettings = @[ [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:-2.],
+                              [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:0.],
+                              [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:2.] ];
+     OSType rawFormat = [[myCapturePhotoOutput.availableRawPhotoCVPixelFormatTypes firstObject] intValue];
+ 
+    AVCapturePhotoBracketSettings *settings = [[AVCapturePhotoBracketSettings alloc] initWithFormat:nil rawPixelFormatType:rawFormat bracketedSettings:bracketedStillImageSettings];
+    settings.lensStabilizationEnabled = myCapturePhotoOutput.isLensStabilizationDuringBracketedCaptureSupported;
+ 
+    [myCapturePhotoOutput capturePhotoWithSettings:settings delegate:self];
+    // Three RAW photos will be delivered to the delegate.
+}
+```
+
+## Topics
+
+### Creating a bracket settings object
+
+- [init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:)](avcapturephotobracketsettings/init%28rawpixelformattype_rawfiletype_processedformat_processedfiletype_bracketedsettings_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
+- [init(rawPixelFormatType:processedFormat:bracketedSettings:)](avcapturephotobracketsettings/init%28rawpixelformattype_processedformat_bracketedsettings_%29.md): Creates a photo settings object for the specified bracket of captures, in the specified formats.
+
+### Working with bracketed settings
+
+- [bracketedSettings](avcapturephotobracketsettings/bracketedsettings.md): An array describing the number of and settings for images to produce in a bracketed capture.
+- [isLensStabilizationEnabled](avcapturephotobracketsettings/islensstabilizationenabled.md): A Boolean value that specifies whether to stabilize the lens for the duration of the bracketed capture.
+
+### Bracketed settings types
+
+- [AVCaptureAutoExposureBracketedStillImageSettings](avcaptureautoexposurebracketedstillimagesettings.md): A configuration for defining bracketed photo captures in terms of bias relative to automatic exposure.
+- [AVCaptureManualExposureBracketedStillImageSettings](avcapturemanualexposurebracketedstillimagesettings.md): A configuration for defining bracketed photo captures in terms of specific exposure and ISO values.
+- [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md): The abstract superclass for bracketed photo capture settings.
+
+## Relationships
+
+### Inherits From
+
+- [AVCapturePhotoSettings](avcapturephotosettings.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Photo settings
+
+- [AVCapturePhotoSettings](avcapturephotosettings.md): A specification of the features and settings to use for a single photo capture request.
+- [AVCaptureResolvedPhotoSettings](avcaptureresolvedphotosettings.md): A description of the features and settings in use for an in-progress or complete photo capture request.
+
+# AVCapturePhotoBracketSettings (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+A specification of the features and settings to use for a photo capture request that captures multiple images with varied settings.
+
+## Declaration
+
+```objectivec
+@interface AVCapturePhotoBracketSettings : AVCapturePhotoSettings
+```
+
+## Mentioned In
+
+- [Capturing a bracketed photo sequence](capturing-a-bracketed-photo-sequence.md)
+
+<a id="overview"></a>
+
+## Overview
+
+To take a bracketed capture, you create and configure an [AVCapturePhotoBracketSettings](avcapturephotobracketsettings.md) object, using [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) objects to describe the individual captures in the bracket, and then pass it to the [AVCapturePhotoOutput](avcapturephotooutput.md) [capturePhotoWithSettings:delegate:](avcapturephotooutput/capturephoto%28with_delegate_%29.md) method.
+
+To request a bracketed capture, follow these steps:
+
+1. Create an array of [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) objects describing the number of images to capture in the bracket and the variations on capture settings between them.
+2. Create a bracketed photo settings object with the [photoBracketSettingsWithRawPixelFormatType:processedFormat:bracketedSettings:](avcapturephotobracketsettings/init%28rawpixelformattype_processedformat_bracketedsettings_%29.md) initializer, passing the array of bracketed still image settings, along with the processed format (such as JPEG) or RAW format to capture images in.
+3. Configure other settings to share across all images in the bracket, such as the [lensStabilizationEnabled](avcapturephotobracketsettings/islensstabilizationenabled.md) property and certain inherited properties.
+
+> **Important**
+
+>  Bracketed capture supports only the [highResolutionPhotoEnabled](avcapturephotosettings/ishighresolutionphotoenabled.md) and [previewPhotoFormat](avcapturephotosettings/previewphotoformat.md) settings defined by the [AVCapturePhotoSettings](avcapturephotosettings.md) superclass. Bracketed capture does not support flash, auto stabilization, or Live Photos—attempting to set any of the corresponding properties raises an exception.
+
+4. Initiate capture by passing the bracketed photo settings object to your photo output’s [capturePhotoWithSettings:delegate:](avcapturephotooutput/capturephoto%28with_delegate_%29.md) method, along with a delegate object to receive messages about the progress and results of the capture.
+
+> **Tip**
+
+>  Capturing a multiple-image bracket may require allocation of additional resources. See the [setPreparedPhotoSettingsArray:completionHandler:](avcapturephotooutput/setpreparedphotosettingsarray%28__completionhandler_%29.md) method.
+
+5. The photo output calls your delegate’s [captureOutput:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:](avcapturephotocapturedelegate/photooutput%28__didfinishprocessingphoto_previewphoto_resolvedsettings_bracketsettings_error_%29.md) or [captureOutput:didFinishProcessingRawPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:](avcapturephotocapturedelegate/photooutput%28__didfinishprocessingrawphoto_previewphoto_resolvedsettings_bracketsettings_error_%29.md) methods many times corresponding to the number of captures in the bracket. Each call provides the [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md) object indicating which capture in the bracket the captured image corresponds to.
+
+The following code example illustrates capturing a bracket of three RAW images with varying exposure value settings.
+
+Listing 1. Capturing a Multi-Exposure Bracket
+
+**Swift**
+
+```swift
+func captureRAWAutoExposureBracket() {
+    guard myCapturePhotoOutput.maxBracketedCapturePhotoCount >= 3 else { return }
+    
+    // Specify a 3-shot bracket, where exposure compensation varies between each shot.
+    let makeSettings = AVCaptureAutoExposureBracketedStillImageSettings.autoExposureSettingsWithExposureTargetBias
+    let bracketedStillImageSettings = [-2, 0, 2].map { makeSettings(Float($0))! }
+    let rawFormat = myCapturePhotoOutput.availableRawPhotoCVPixelFormatTypes.first!.unsignedIntValue as OSType
+    
+    let settings = AVCapturePhotoBracketSettings(format: nil, rawPixelFormatType: rawFormat, bracketedSettings: bracketedStillImageSettings)
+    settings.lensStabilizationEnabled = myCapturePhotoOutput.lensStabilizationDuringBracketedCaptureSupported
+    
+    myCapturePhotoOutput.capturePhotoWithSettings(settings, delegate: self)
+    // Three RAW photos will be delivered.
+}
+```
+
+**Objective-C**
+
+```objc
+- (void)captureRAWAutoExposureBracket {
+    if ( myCapturePhotoOutput.maxBracketedCapturePhotoCount < 3 ) { return; }
+ 
+    // Specify a 3-shot bracket, where exposure compensation varies between each shot.
+    NSArray *bracketedStillImageSettings = @[ [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:-2.],
+                              [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:0.],
+                              [AVCaptureAutoExposureBracketedStillImageSettings autoExposureSettingsWithExposureTargetBias:2.] ];
+     OSType rawFormat = [[myCapturePhotoOutput.availableRawPhotoCVPixelFormatTypes firstObject] intValue];
+ 
+    AVCapturePhotoBracketSettings *settings = [[AVCapturePhotoBracketSettings alloc] initWithFormat:nil rawPixelFormatType:rawFormat bracketedSettings:bracketedStillImageSettings];
+    settings.lensStabilizationEnabled = myCapturePhotoOutput.isLensStabilizationDuringBracketedCaptureSupported;
+ 
+    [myCapturePhotoOutput capturePhotoWithSettings:settings delegate:self];
+    // Three RAW photos will be delivered to the delegate.
+}
+```
+
+## Topics
+
+### Creating a bracket settings object
+
+- [photoBracketSettingsWithRawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:](avcapturephotobracketsettings/init%28rawpixelformattype_rawfiletype_processedformat_processedfiletype_bracketedsettings_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
+- [photoBracketSettingsWithRawPixelFormatType:processedFormat:bracketedSettings:](avcapturephotobracketsettings/init%28rawpixelformattype_processedformat_bracketedsettings_%29.md): Creates a photo settings object for the specified bracket of captures, in the specified formats.
+
+### Working with bracketed settings
+
+- [bracketedSettings](avcapturephotobracketsettings/bracketedsettings.md): An array describing the number of and settings for images to produce in a bracketed capture.
+- [lensStabilizationEnabled](avcapturephotobracketsettings/islensstabilizationenabled.md): A Boolean value that specifies whether to stabilize the lens for the duration of the bracketed capture.
+
+### Bracketed settings types
+
+- [AVCaptureAutoExposureBracketedStillImageSettings](avcaptureautoexposurebracketedstillimagesettings.md): A configuration for defining bracketed photo captures in terms of bias relative to automatic exposure.
+- [AVCaptureManualExposureBracketedStillImageSettings](avcapturemanualexposurebracketedstillimagesettings.md): A configuration for defining bracketed photo captures in terms of specific exposure and ISO values.
+- [AVCaptureBracketedStillImageSettings](avcapturebracketedstillimagesettings.md): The abstract superclass for bracketed photo capture settings.
+
+## Relationships
+
+### Inherits From
+
+- [AVCapturePhotoSettings](avcapturephotosettings.md)
+
+## See Also
+
+### Photo settings
+
+- [AVCapturePhotoSettings](avcapturephotosettings.md): A specification of the features and settings to use for a single photo capture request.
+- [AVCaptureResolvedPhotoSettings](avcaptureresolvedphotosettings.md): A description of the features and settings in use for an in-progress or complete photo capture request.
+
+# Document: bracketedSettings
+
+Source path: documentation/avfoundation/avcapturephotobracketsettings/bracketedsettings
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephotobracketsettings/bracketedsettings
+Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+# bracketedSettings (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+An array describing the number of and settings for images to produce in a bracketed capture.
+
+## Declaration
+
+```swift
+var bracketedSettings: [AVCaptureBracketedStillImageSettings] { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This array is read-only. You provide this array of bracket settings when creating a settings object with the `init(format:rawPixelFormatType:bracketedSettings:)` initializer.
+
+## See Also
+
+### Working with bracketed settings
+
+- [isLensStabilizationEnabled](islensstabilizationenabled.md): A Boolean value that specifies whether to stabilize the lens for the duration of the bracketed capture.
+
+# bracketedSettings (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+An array describing the number of and settings for images to produce in a bracketed capture.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSArray<__kindof AVCaptureBracketedStillImageSettings *> * bracketedSettings;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This array is read-only. You provide this array of bracket settings when creating a settings object with the `init(format:rawPixelFormatType:bracketedSettings:)` initializer.
+
+## See Also
+
+### Working with bracketed settings
+
+- [lensStabilizationEnabled](islensstabilizationenabled.md): A Boolean value that specifies whether to stabilize the lens for the duration of the bracketed capture.
+
+# Document: init(rawPixelFormatType:processedFormat:bracketedSettings:)
+
+Source path: documentation/avfoundation/avcapturephotobracketsettings/init(rawpixelformattype:processedformat:bracketedsettings:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephotobracketsettings/init(rawpixelformattype:processedformat:bracketedsettings:)
+Description: Framework: AVFoundation Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+# init(rawPixelFormatType:processedFormat:bracketedSettings:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Creates a photo settings object for the specified bracket of captures, in the specified formats.
+
+## Declaration
+
+```swift
+convenience init(rawPixelFormatType: OSType, processedFormat: [String : Any]?, bracketedSettings: [AVCaptureBracketedStillImageSettings])
+```
+
+## Parameters
+
+- `rawPixelFormatType`: The pixel format type for capture in a Bayer RAW format. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
+- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`) for capturing images in a processed format.
+
+  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the format dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
+
+  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the format dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
+- `bracketedSettings`: An array of either [AVCaptureManualExposureBracketedStillImageSettings](../avcapturemanualexposurebracketedstillimagesettings.md) or [AVCaptureAutoExposureBracketedStillImageSettings](../avcaptureautoexposurebracketedstillimagesettings.md) objects, each of which describes the variation in camera settings to use for one image in the bracketed capture.
+
+  The number of image settings objects in this array must be greater than zero and less than or equal to the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. All image settings objects in this array must be the same type. Calling this initializer with an invalid number or combination of image settings objects raises an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new photo settings object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To request bracketed image capture, create an array of [AVCaptureBracketedStillImageSettings](../avcapturebracketedstillimagesettings.md) objects, each of which describes a variation in capture settings to use for one exposure in the bracket, and pass that array for the `bracketedSettings` parameter. The number of bracketed settings objects in that array determines the number of exposures in the capture bracket.
+
+To capture only in RAW format, pass `nil` for the `processedFormat` parameter. To capture only in a processed format, pass zero for the `rawPixelFormatType` parameter. Passing both `nil` for the `processedFormat` parameter and zero for the `rawPixelFormatType` parameter is equivalent to requesting JPEG-only delivery.
+
+Requesting either or both formats adds requirements for other photo settings: see the [format](../avcapturephotosettings/format.md) property for processed format requirements and the [rawPhotoPixelFormatType](../avcapturephotosettings/rawphotopixelformattype.md) property for RAW format requirements. Additionally, the number of still image settings objects in this array must be no greater than the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. The capture output validates these requirements when you call the [capturePhoto(with:delegate:)](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your your settings and delegate do not meet these requirements, that method raises an exception.
+
+## See Also
+
+### Creating a bracket settings object
+
+- [init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:)](init%28rawpixelformattype_rawfiletype_processedformat_processedfiletype_bracketedsettings_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
+
+# photoBracketSettingsWithRawPixelFormatType:processedFormat:bracketedSettings: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Creates a photo settings object for the specified bracket of captures, in the specified formats.
+
+## Declaration
+
+```objectivec
++ (instancetype) photoBracketSettingsWithRawPixelFormatType:(OSType) rawPixelFormatType processedFormat:(NSDictionary<NSString *,id> *) processedFormat bracketedSettings:(NSArray<__kindof AVCaptureBracketedStillImageSettings *> *) bracketedSettings;
+```
+
+## Parameters
+
+- `rawPixelFormatType`: The pixel format type for capture in a Bayer RAW format. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
+- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`) for capturing images in a processed format.
+
+  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the format dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
+
+  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the format dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
+- `bracketedSettings`: An array of either [AVCaptureManualExposureBracketedStillImageSettings](../avcapturemanualexposurebracketedstillimagesettings.md) or [AVCaptureAutoExposureBracketedStillImageSettings](../avcaptureautoexposurebracketedstillimagesettings.md) objects, each of which describes the variation in camera settings to use for one image in the bracketed capture.
+
+  The number of image settings objects in this array must be greater than zero and less than or equal to the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. All image settings objects in this array must be the same type. Calling this initializer with an invalid number or combination of image settings objects raises an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new photo settings object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To request bracketed image capture, create an array of [AVCaptureBracketedStillImageSettings](../avcapturebracketedstillimagesettings.md) objects, each of which describes a variation in capture settings to use for one exposure in the bracket, and pass that array for the `bracketedSettings` parameter. The number of bracketed settings objects in that array determines the number of exposures in the capture bracket.
+
+To capture only in RAW format, pass `nil` for the `processedFormat` parameter. To capture only in a processed format, pass zero for the `rawPixelFormatType` parameter. Passing both `nil` for the `processedFormat` parameter and zero for the `rawPixelFormatType` parameter is equivalent to requesting JPEG-only delivery.
+
+Requesting either or both formats adds requirements for other photo settings: see the [format](../avcapturephotosettings/format.md) property for processed format requirements and the [rawPhotoPixelFormatType](../avcapturephotosettings/rawphotopixelformattype.md) property for RAW format requirements. Additionally, the number of still image settings objects in this array must be no greater than the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. The capture output validates these requirements when you call the [capturePhotoWithSettings:delegate:](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your your settings and delegate do not meet these requirements, that method raises an exception.
+
+## See Also
+
+### Creating a bracket settings object
+
+- [photoBracketSettingsWithRawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:](init%28rawpixelformattype_rawfiletype_processedformat_processedfiletype_bracketedsettings_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
+
+# Document: init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:)
+
+Source path: documentation/avfoundation/avcapturephotobracketsettings/init(rawpixelformattype:rawfiletype:processedformat:processedfiletype:bracketedsettings:)
+Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturephotobracketsettings/init(rawpixelformattype:rawfiletype:processedformat:processedfiletype:bracketedsettings:)
+Description: Framework: AVFoundation Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+# init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Creates a photo settings object for capture in both RAW format and a processed format.
+
+## Declaration
+
+```swift
+convenience init(rawPixelFormatType: OSType, rawFileType: AVFileType?, processedFormat: [String : Any]?, processedFileType: AVFileType?, bracketedSettings: [AVCaptureBracketedStillImageSettings])
+```
+
+## Parameters
+
+- `rawPixelFormatType`: The Bayer RAW pixel format type to use for capture. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
+- `rawFileType`: The container file format for eventual output of the RAW image.
+
+  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `rawPixelFormatType` parameter.
+- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`).
+
+  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the `format` dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
+
+  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the `format` dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
+- `processedFileType`: The container file format for eventual output of the processed image.
+
+  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `processedFormat` parameter.
+- `bracketedSettings`: An array of either [AVCaptureManualExposureBracketedStillImageSettings](../avcapturemanualexposurebracketedstillimagesettings.md) or [AVCaptureAutoExposureBracketedStillImageSettings](../avcaptureautoexposurebracketedstillimagesettings.md) objects, each of which describes the variation in camera settings to use for one image in the bracketed capture.
+
+  The number of image settings objects in this array must be greater than zero and less than or equal to the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. All image settings objects in this array must be the same type. Calling this initializer with an invalid number or combination of image settings objects raises an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new photo settings object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this initializer to capture an image in both RAW format and a processed format (such as JPEG). For RAW-only capture, use the [init(rawPixelFormatType:)](../avcapturephotosettings/init%28rawpixelformattype_%29.md) initializer instead.
+
+Requesting both formats adds requirements for other photo settings: see the [format](../avcapturephotosettings/format.md) property for processed format requirements and the [rawPhotoPixelFormatType](../avcapturephotosettings/rawphotopixelformattype.md) property for RAW format requirements. The capture output validates these requirements when you call the [capturePhoto(with:delegate:)](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your settings and delegate do not meet these requirements, that method raises an exception.
+
+## See Also
+
+### Creating a bracket settings object
+
+- [init(rawPixelFormatType:processedFormat:bracketedSettings:)](init%28rawpixelformattype_processedformat_bracketedsettings_%29.md): Creates a photo settings object for the specified bracket of captures, in the specified formats.
+
+# photoBracketSettingsWithRawPixelFormatType:rawFileType:processedFormat:processedFileType:bracketedSettings: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Creates a photo settings object for capture in both RAW format and a processed format.
+
+## Declaration
+
+```objectivec
++ (instancetype) photoBracketSettingsWithRawPixelFormatType:(OSType) rawPixelFormatType rawFileType:(AVFileType) rawFileType processedFormat:(NSDictionary<NSString *,id> *) processedFormat processedFileType:(AVFileType) processedFileType bracketedSettings:(NSArray<AVCaptureBracketedStillImageSettings *> *) bracketedSettings;
+```
+
+## Parameters
+
+- `rawPixelFormatType`: The Bayer RAW pixel format type to use for capture. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
+- `rawFileType`: The container file format for eventual output of the RAW image.
+
+  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `rawPixelFormatType` parameter.
+- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`).
+
+  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the `format` dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
+
+  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the `format` dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
+- `processedFileType`: The container file format for eventual output of the processed image.
+
+  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `processedFormat` parameter.
+- `bracketedSettings`: An array of either [AVCaptureManualExposureBracketedStillImageSettings](../avcapturemanualexposurebracketedstillimagesettings.md) or [AVCaptureAutoExposureBracketedStillImageSettings](../avcaptureautoexposurebracketedstillimagesettings.md) objects, each of which describes the variation in camera settings to use for one image in the bracketed capture.
+
+  The number of image settings objects in this array must be greater than zero and less than or equal to the [maxBracketedCapturePhotoCount](../avcapturephotooutput/maxbracketedcapturephotocount.md) value of your photo output. All image settings objects in this array must be the same type. Calling this initializer with an invalid number or combination of image settings objects raises an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new photo settings object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this initializer to capture an image in both RAW format and a processed format (such as JPEG). For RAW-only capture, use the [photoSettingsWithRawPixelFormatType:](../avcapturephotosettings/init%28rawpixelformattype_%29.md) initializer instead.
+
+Requesting both formats adds requirements for other photo settings: see the [format](../avcapturephotosettings/format.md) property for processed format requirements and the [rawPhotoPixelFormatType](../avcapturephotosettings/rawphotopixelformattype.md) property for RAW format requirements. The capture output validates these requirements when you call the [capturePhotoWithSettings:delegate:](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your settings and delegate do not meet these requirements, that method raises an exception.
+
+## See Also
+
+### Creating a bracket settings object
+
+- [photoBracketSettingsWithRawPixelFormatType:processedFormat:bracketedSettings:](init%28rawpixelformattype_processedformat_bracketedsettings_%29.md): Creates a photo settings object for the specified bracket of captures, in the specified formats.
 
 # Document: isLensStabilizationEnabled
 
@@ -142696,1317 +143546,3 @@ The alignment of the caption text.
 ### Configuring alignment
 
 - [AVCaptionTextAlignment](../avcaption/textalignment-swift.enum.md): Text alignment options for a caption.
-
-# Document: timeRange
-
-Source path: documentation/avfoundation/avmutablecaption/timerange
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaption/timerange
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# timeRange (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The time range over which the system presents the caption.
-
-## Declaration
-
-```swift
-var timeRange: CMTimeRange { get set }
-```
-
-## See Also
-
-### Configuring text and timing
-
-- [text](text.md): The caption text.
-
-# timeRange (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The time range over which the system presents the caption.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) CMTimeRange timeRange;
-```
-
-## See Also
-
-### Configuring text and timing
-
-- [text](text.md): The caption text.
-
-# Document: AVMutableCaptionRegion
-
-Source path: documentation/avfoundation/avmutablecaptionregion
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion
-Description: Framework: AVFoundation Kind: Class Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# AVMutableCaptionRegion (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Class  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-A mutable caption region subclass that you use to create new caption regions.
-
-## Declaration
-
-```swift
-class AVMutableCaptionRegion
-```
-
-## Topics
-
-### Creating a caption region
-
-- [init()](avmutablecaptionregion/init%28%29.md): Creates a caption region.
-- [init(identifier:)](avmutablecaptionregion/init%28identifier_%29.md): Creates a caption region that has an identifier.
-
-### Configuring the region
-
-- [origin](avmutablecaptionregion/origin.md): The region’s top-left position.
-- [size](avmutablecaptionregion/size.md): The height and width of the region.
-- [displayAlignment](avmutablecaptionregion/displayalignment.md): The alignment of lines for the region.
-- [scroll](avmutablecaptionregion/scroll.md): The scroll mode of the region.
-- [writingMode](avmutablecaptionregion/writingmode.md): The block and inline progression direction of the region.
-
-## Relationships
-
-### Inherits From
-
-- [AVCaptionRegion](avcaptionregion.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCoding](../foundation/nscoding.md)
-- [NSCopying](../foundation/nscopying.md)
-- [NSMutableCopying](../foundation/nsmutablecopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-- [NSSecureCoding](../foundation/nssecurecoding.md)
-
-## See Also
-
-### Regions
-
-- [AVCaptionRegion](avcaptionregion.md): An object that represents the region in which the system presents a caption.
-
-# AVMutableCaptionRegion (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Class  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-A mutable caption region subclass that you use to create new caption regions.
-
-## Declaration
-
-```objectivec
-@interface AVMutableCaptionRegion : AVCaptionRegion
-```
-
-## Topics
-
-### Creating a caption region
-
-- [init](avmutablecaptionregion/init%28%29.md): Creates a caption region.
-- [initWithIdentifier:](avmutablecaptionregion/init%28identifier_%29.md): Creates a caption region that has an identifier.
-
-### Configuring the region
-
-- [origin](avmutablecaptionregion/origin.md): The region’s top-left position.
-- [size](avmutablecaptionregion/size.md): The height and width of the region.
-- [displayAlignment](avmutablecaptionregion/displayalignment.md): The alignment of lines for the region.
-- [scroll](avmutablecaptionregion/scroll.md): The scroll mode of the region.
-- [writingMode](avmutablecaptionregion/writingmode.md): The block and inline progression direction of the region.
-
-## Relationships
-
-### Inherits From
-
-- [AVCaptionRegion](avcaptionregion.md)
-
-## See Also
-
-### Regions
-
-- [AVCaptionRegion](avcaptionregion.md): An object that represents the region in which the system presents a caption.
-
-# Document: displayAlignment
-
-Source path: documentation/avfoundation/avmutablecaptionregion/displayalignment
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/displayalignment
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# displayAlignment (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The alignment of lines for the region.
-
-## Declaration
-
-```swift
-var displayAlignment: AVCaptionRegion.DisplayAlignment { get set }
-```
-
-## See Also
-
-### Configuring the region
-
-- [origin](origin.md): The region’s top-left position.
-- [size](size.md): The height and width of the region.
-- [scroll](scroll.md): The scroll mode of the region.
-- [writingMode](writingmode.md): The block and inline progression direction of the region.
-
-# displayAlignment (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The alignment of lines for the region.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) AVCaptionRegionDisplayAlignment displayAlignment;
-```
-
-## See Also
-
-### Configuring the region
-
-- [origin](origin.md): The region’s top-left position.
-- [size](size.md): The height and width of the region.
-- [scroll](scroll.md): The scroll mode of the region.
-- [writingMode](writingmode.md): The block and inline progression direction of the region.
-
-# Document: init()
-
-Source path: documentation/avfoundation/avmutablecaptionregion/init()
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/init()
-Description: Framework: AVFoundation Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# init() (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-Creates a caption region.
-
-## Declaration
-
-```swift
-init()
-```
-
-## See Also
-
-### Creating a caption region
-
-- [init(identifier:)](init%28identifier_%29.md): Creates a caption region that has an identifier.
-
-# init (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-Creates a caption region.
-
-## Declaration
-
-```objectivec
-- (instancetype) init;
-```
-
-## See Also
-
-### Creating a caption region
-
-- [initWithIdentifier:](init%28identifier_%29.md): Creates a caption region that has an identifier.
-
-# Document: init(identifier:)
-
-Source path: documentation/avfoundation/avmutablecaptionregion/init(identifier:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/init(identifier:)
-Description: Framework: AVFoundation Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# init(identifier:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-Creates a caption region that has an identifier.
-
-## Declaration
-
-```swift
-init(identifier: String)
-```
-
-## Parameters
-
-- `identifier`: The identifier of the caption region.
-
-## See Also
-
-### Creating a caption region
-
-- [init()](init%28%29.md): Creates a caption region.
-
-# initWithIdentifier: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-Creates a caption region that has an identifier.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithIdentifier:(NSString *) identifier;
-```
-
-## Parameters
-
-- `identifier`: The identifier of the caption region.
-
-## See Also
-
-### Creating a caption region
-
-- [init](init%28%29.md): Creates a caption region.
-
-# Document: origin
-
-Source path: documentation/avfoundation/avmutablecaptionregion/origin
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/origin
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# origin (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The region’s top-left position.
-
-## Declaration
-
-```swift
-var origin: AVCaptionPoint { get set }
-```
-
-## See Also
-
-### Configuring the region
-
-- [size](size.md): The height and width of the region.
-- [displayAlignment](displayalignment.md): The alignment of lines for the region.
-- [scroll](scroll.md): The scroll mode of the region.
-- [writingMode](writingmode.md): The block and inline progression direction of the region.
-
-# origin (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The region’s top-left position.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) AVCaptionPoint origin;
-```
-
-## See Also
-
-### Configuring the region
-
-- [size](size.md): The height and width of the region.
-- [displayAlignment](displayalignment.md): The alignment of lines for the region.
-- [scroll](scroll.md): The scroll mode of the region.
-- [writingMode](writingmode.md): The block and inline progression direction of the region.
-
-# Document: scroll
-
-Source path: documentation/avfoundation/avmutablecaptionregion/scroll
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/scroll
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# scroll (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The scroll mode of the region.
-
-## Declaration
-
-```swift
-var scroll: AVCaptionRegion.Scroll { get set }
-```
-
-## See Also
-
-### Configuring the region
-
-- [origin](origin.md): The region’s top-left position.
-- [size](size.md): The height and width of the region.
-- [displayAlignment](displayalignment.md): The alignment of lines for the region.
-- [writingMode](writingmode.md): The block and inline progression direction of the region.
-
-# scroll (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The scroll mode of the region.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) AVCaptionRegionScroll scroll;
-```
-
-## See Also
-
-### Configuring the region
-
-- [origin](origin.md): The region’s top-left position.
-- [size](size.md): The height and width of the region.
-- [displayAlignment](displayalignment.md): The alignment of lines for the region.
-- [writingMode](writingmode.md): The block and inline progression direction of the region.
-
-# Document: size
-
-Source path: documentation/avfoundation/avmutablecaptionregion/size
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/size
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# size (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The height and width of the region.
-
-## Declaration
-
-```swift
-var size: AVCaptionSize { get set }
-```
-
-## See Also
-
-### Configuring the region
-
-- [origin](origin.md): The region’s top-left position.
-- [displayAlignment](displayalignment.md): The alignment of lines for the region.
-- [scroll](scroll.md): The scroll mode of the region.
-- [writingMode](writingmode.md): The block and inline progression direction of the region.
-
-# size (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The height and width of the region.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) AVCaptionSize size;
-```
-
-## See Also
-
-### Configuring the region
-
-- [origin](origin.md): The region’s top-left position.
-- [displayAlignment](displayalignment.md): The alignment of lines for the region.
-- [scroll](scroll.md): The scroll mode of the region.
-- [writingMode](writingmode.md): The block and inline progression direction of the region.
-
-# Document: writingMode
-
-Source path: documentation/avfoundation/avmutablecaptionregion/writingmode
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecaptionregion/writingmode
-Description: Framework: AVFoundation Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-# writingMode (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The block and inline progression direction of the region.
-
-## Declaration
-
-```swift
-var writingMode: AVCaptionRegion.WritingMode { get set }
-```
-
-## See Also
-
-### Configuring the region
-
-- [origin](origin.md): The region’s top-left position.
-- [size](size.md): The height and width of the region.
-- [displayAlignment](displayalignment.md): The alignment of lines for the region.
-- [scroll](scroll.md): The scroll mode of the region.
-
-# writingMode (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 15.0+ · macOS 12.0+
-
-The block and inline progression direction of the region.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, assign) AVCaptionRegionWritingMode writingMode;
-```
-
-## See Also
-
-### Configuring the region
-
-- [origin](origin.md): The region’s top-left position.
-- [size](size.md): The height and width of the region.
-- [displayAlignment](displayalignment.md): The alignment of lines for the region.
-- [scroll](scroll.md): The scroll mode of the region.
-
-# Document: AVMutableComposition
-
-Source path: documentation/avfoundation/avmutablecomposition
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition
-Description: Framework: AVFoundation Kind: Class Availability: iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
-
-# AVMutableComposition (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Class  
-**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
-
-An object that you use to create a new composition from existing assets.
-
-## Declaration
-
-```swift
-class AVMutableComposition
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Use this object to add and remove composition tracks, and add, remove, and scale their time ranges. You can make an immutable snapshot of a mutable composition for playback and inspection as follows:
-
-```swift
-// Use a mutable composition object you create.
-let mutableComposition = AVMutableComposition()
-        
-guard let composition = mutableComposition.copy() as? AVComposition else { return }
-        
-// Create a player item to inspect and play the composition.
-let playerItem = AVPlayerItem(asset: composition)
-```
-
-## Topics
-
-### Creating a composition
-
-- [init(urlAssetInitializationOptions:)](avmutablecomposition/init%28urlassetinitializationoptions_%29-rh4y.md): Creates a mutable composition that uses the specified initialization options.
-
-### Loading tracks
-
-- [tracks](avpartialasyncproperty/tracks-92p4a.md): Conforms when `Root` inherits `AVMutableComposition`. The tracks that a composition contains.
-- [loadTrack(withTrackID:completionHandler:)](avmutablecomposition/loadtrack%28withtrackid_completionhandler_%29.md): Loads a track that contains the specified identifier.
-- [loadTracks(withMediaType:completionHandler:)](avmutablecomposition/loadtracks%28withmediatype_completionhandler_%29.md): Loads tracks that contain media of a specified type.
-- [loadTracks(withMediaCharacteristic:completionHandler:)](avmutablecomposition/loadtracks%28withmediacharacteristic_completionhandler_%29.md): Loads tracks that contain media of a specified characteristic.
-
-### Accessing tracks
-
-Prefer loading tracks asynchronously using the methods in Loading Tracks.
-
-- [tracks](avmutablecomposition/tracks.md): The tracks that a composition contains.
-- [track(withTrackID:)](avmutablecomposition/track%28withtrackid_%29.md): Returns a track that contains the specified identifier.
-- [tracks(withMediaType:)](avmutablecomposition/tracks%28withmediatype_%29.md): Returns tracks that contain media of a specified type.
-- [tracks(withMediaCharacteristic:)](avmutablecomposition/tracks%28withmediacharacteristic_%29.md): Returns tracks that contain media of a specified characteristic.
-
-### Managing composition tracks
-
-- [mutableTrack(compatibleWith:)](avmutablecomposition/mutabletrack%28compatiblewith_%29.md): Returns a composition track into which you can insert any time range of the specified asset track.
-- [addMutableTrack(withMediaType:preferredTrackID:)](avmutablecomposition/addmutabletrack%28withmediatype_preferredtrackid_%29.md): Adds an empty track to a composition.
-- [removeTrack(\_:)](avmutablecomposition/removetrack%28__%29.md): Removes a specified track from the composition.
-
-### Managing Cinematic tracks
-
-- [addTracks(for:preferredStartingTrackID:)](avmutablecomposition/addtracks%28for_preferredstartingtrackid_%29.md)
-
-### Managing time ranges
-
-- [removeTimeRange(\_:)](avmutablecomposition/removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
-- [scaleTimeRange(\_:toDuration:)](avmutablecomposition/scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
-- [insertEmptyTimeRange(\_:)](avmutablecomposition/insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
-- [insertTimeRange(\_:of:at:completionHandler:)](avmutablecomposition/inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
-- [insertTimeRange(\_:of:at:)](avmutablecomposition/inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
-
-### Configuring video size
-
-- [naturalSize](avmutablecomposition/naturalsize.md): The encoded or authored size of the visual portion of the asset.
-
-### Instance methods
-
-- [insertTimeRange(\_:of:at:isolation:)](avmutablecomposition/inserttimerange%28__of_at_isolation_%29.md)
-
-### Initializers
-
-- [init(URLAssetInitializationOptions:)](avmutablecomposition/init%28urlassetinitializationoptions_%29-6codz.md)
-
-## Relationships
-
-### Inherits From
-
-- [AVComposition](avcomposition.md)
-
-### Conforms To
-
-- [AVAsynchronousKeyValueLoading](avasynchronouskeyvalueloading.md)
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCopying](../foundation/nscopying.md)
-- [NSMutableCopying](../foundation/nsmutablecopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Mutable compositions
-
-- [AVMutableCompositionTrack](avmutablecompositiontrack.md): A mutable track in a composition that you use to insert, remove, and scale track segments without affecting their low-level representation.
-
-# AVMutableComposition (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Class  
-**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
-
-An object that you use to create a new composition from existing assets.
-
-## Declaration
-
-```objectivec
-@interface AVMutableComposition : AVComposition
-```
-
-<a id="overview"></a>
-
-## Overview
-
-Use this object to add and remove composition tracks, and add, remove, and scale their time ranges. You can make an immutable snapshot of a mutable composition for playback and inspection as follows:
-
-```swift
-// Use a mutable composition object you create.
-let mutableComposition = AVMutableComposition()
-        
-guard let composition = mutableComposition.copy() as? AVComposition else { return }
-        
-// Create a player item to inspect and play the composition.
-let playerItem = AVPlayerItem(asset: composition)
-```
-
-## Topics
-
-### Creating a composition
-
-- [composition](avmutablecomposition/composition.md): Returns a new mutable composition.
-- [compositionWithURLAssetInitializationOptions:](avmutablecomposition/init%28urlassetinitializationoptions_%29-rh4y.md): Creates a mutable composition that uses the specified initialization options.
-
-### Loading tracks
-
-- [loadTrackWithTrackID:completionHandler:](avmutablecomposition/loadtrack%28withtrackid_completionhandler_%29.md): Loads a track that contains the specified identifier.
-- [loadTracksWithMediaType:completionHandler:](avmutablecomposition/loadtracks%28withmediatype_completionhandler_%29.md): Loads tracks that contain media of a specified type.
-- [loadTracksWithMediaCharacteristic:completionHandler:](avmutablecomposition/loadtracks%28withmediacharacteristic_completionhandler_%29.md): Loads tracks that contain media of a specified characteristic.
-
-### Accessing tracks
-
-Prefer loading tracks asynchronously using the methods in Loading Tracks.
-
-- [tracks](avmutablecomposition/tracks.md): The tracks that a composition contains.
-- [trackWithTrackID:](avmutablecomposition/track%28withtrackid_%29.md): Returns a track that contains the specified identifier.
-- [tracksWithMediaType:](avmutablecomposition/tracks%28withmediatype_%29.md): Returns tracks that contain media of a specified type.
-- [tracksWithMediaCharacteristic:](avmutablecomposition/tracks%28withmediacharacteristic_%29.md): Returns tracks that contain media of a specified characteristic.
-
-### Managing composition tracks
-
-- [mutableTrackCompatibleWithTrack:](avmutablecomposition/mutabletrack%28compatiblewith_%29.md): Returns a composition track into which you can insert any time range of the specified asset track.
-- [addMutableTrackWithMediaType:preferredTrackID:](avmutablecomposition/addmutabletrack%28withmediatype_preferredtrackid_%29.md): Adds an empty track to a composition.
-- [removeTrack:](avmutablecomposition/removetrack%28__%29.md): Removes a specified track from the composition.
-
-### Managing Cinematic tracks
-
-- [addTracksForCinematicAssetInfo:preferredStartingTrackID:](avmutablecomposition/addtracksforcinematicassetinfo_preferredstartingtrackid_.md): Adds a group of empty tracks associated with a cinematic asset to a mutable composition.
-
-### Managing time ranges
-
-- [removeTimeRange:](avmutablecomposition/removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
-- [scaleTimeRange:toDuration:](avmutablecomposition/scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
-- [insertEmptyTimeRange:](avmutablecomposition/insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
-- [insertTimeRange:ofAsset:atTime:completionHandler:](avmutablecomposition/inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
-- [insertTimeRange:ofAsset:atTime:error:](avmutablecomposition/inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
-
-### Configuring video size
-
-- [naturalSize](avmutablecomposition/naturalsize.md): The encoded or authored size of the visual portion of the asset.
-
-## Relationships
-
-### Inherits From
-
-- [AVComposition](avcomposition.md)
-
-## See Also
-
-### Mutable compositions
-
-- [AVMutableCompositionTrack](avmutablecompositiontrack.md): A mutable track in a composition that you use to insert, remove, and scale track segments without affecting their low-level representation.
-
-# Document: AVMutableComposition
-
-Source path: documentation/avfoundation/avmutablecomposition-async-properties
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition-async-properties
-Description: Framework: AVFoundation Kind: API Collection
-
-# AVMutableComposition (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** API Collection
-
-Asynchronous properties for mutable compositions.
-
-## Topics
-
-### Loading tracks
-
-- [tracks](avpartialasyncproperty/tracks-92p4a.md): Conforms when `Root` inherits `AVMutableComposition`. The tracks that a composition contains.
-
-## See Also
-
-### Loading properties
-
-- [AVAsset](avasset-async-properties.md): Asynchronous properties for assets.
-- [AVAssetTrack](avassettrack-async-properties.md): Asynchronous properties for asset tracks.
-- [AVURLAsset](avurlasset-async-properties.md): Asynchronous properties for URL assets.
-- [AVFragmentedAsset](avfragmentedasset-async-properties.md): Asynchronous properties for fragmented assets.
-- [AVMetadataItem](avmetadataitem-async-properties.md): Asynchronous properties for metadata items.
-- [AVComposition](avcomposition-async-properties.md): Asynchronous properties for compositions.
-- [AVMovie](avmovie-async-properties.md): Asynchronous properties for movies.
-- [AVMutableMovie](avmutablemovie-async-properties.md): Asynchronous properties for mutable movies.
-- [AVFragmentedMovie](avfragmentedmovie-async-properties.md): Asynchronous properties for fragmented movies.
-
-# AVMutableComposition (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** API Collection
-
-Asynchronous properties for mutable compositions.
-
-## See Also
-
-### Loading properties
-
-- [AVAsset](avasset-async-properties.md): Asynchronous properties for assets.
-- [AVAssetTrack](avassettrack-async-properties.md): Asynchronous properties for asset tracks.
-- [AVURLAsset](avurlasset-async-properties.md): Asynchronous properties for URL assets.
-- [AVFragmentedAsset](avfragmentedasset-async-properties.md): Asynchronous properties for fragmented assets.
-- [AVMetadataItem](avmetadataitem-async-properties.md): Asynchronous properties for metadata items.
-- [AVComposition](avcomposition-async-properties.md): Asynchronous properties for compositions.
-- [AVMovie](avmovie-async-properties.md): Asynchronous properties for movies.
-- [AVMutableMovie](avmutablemovie-async-properties.md): Asynchronous properties for mutable movies.
-- [AVFragmentedMovie](avfragmentedmovie-async-properties.md): Asynchronous properties for fragmented movies.
-
-# Document: addMutableTrack(withMediaType:preferredTrackID:)
-
-Source path: documentation/avfoundation/avmutablecomposition/addmutabletrack(withmediatype:preferredtrackid:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/addmutabletrack(withmediatype:preferredtrackid:)
-Description: Framework: AVFoundation Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# addMutableTrack(withMediaType:preferredTrackID:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds an empty track to a composition.
-
-## Declaration
-
-```swift
-func addMutableTrack(withMediaType mediaType: AVMediaType, preferredTrackID: CMPersistentTrackID) -> AVMutableCompositionTrack?
-```
-
-## Parameters
-
-- `mediaType`: The media type of the new track.
-- `preferredTrackID`: The preferred track ID for the new track. The system generates a unique ID if the value you specify isn’t available. If you don’t need to specify a preferred track ID, pass [kCMPersistentTrackID_Invalid](../../coremedia/kcmpersistenttrackid_invalid.md), and the system generates an appropriate identifier.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new mutable composition track.
-
-## See Also
-
-### Managing composition tracks
-
-- [mutableTrack(compatibleWith:)](mutabletrack%28compatiblewith_%29.md): Returns a composition track into which you can insert any time range of the specified asset track.
-- [removeTrack(\_:)](removetrack%28__%29.md): Removes a specified track from the composition.
-
-# addMutableTrackWithMediaType:preferredTrackID: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds an empty track to a composition.
-
-## Declaration
-
-```objectivec
-- (AVMutableCompositionTrack *) addMutableTrackWithMediaType:(AVMediaType) mediaType preferredTrackID:(CMPersistentTrackID) preferredTrackID;
-```
-
-## Parameters
-
-- `mediaType`: The media type of the new track.
-- `preferredTrackID`: The preferred track ID for the new track. The system generates a unique ID if the value you specify isn’t available. If you don’t need to specify a preferred track ID, pass [kCMPersistentTrackID_Invalid](../../coremedia/kcmpersistenttrackid_invalid.md), and the system generates an appropriate identifier.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new mutable composition track.
-
-## See Also
-
-### Managing composition tracks
-
-- [mutableTrackCompatibleWithTrack:](mutabletrack%28compatiblewith_%29.md): Returns a composition track into which you can insert any time range of the specified asset track.
-- [removeTrack:](removetrack%28__%29.md): Removes a specified track from the composition.
-
-# Document: addTracks(for:preferredStartingTrackID:)
-
-Source path: documentation/avfoundation/avmutablecomposition/addtracks(for:preferredstartingtrackid:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/addtracks(for:preferredstartingtrackid:)
-Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
-
-# addTracks(for:preferredStartingTrackID:)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
-
-## Declaration
-
-```swift
-func addTracks(for cinematicAssetInfo: CNAssetInfo, preferredStartingTrackID: CMPersistentTrackID) -> CNCompositionInfo
-```
-
-# Document: addTracksForCinematicAssetInfo:preferredStartingTrackID:
-
-Source path: documentation/avfoundation/avmutablecomposition/addtracksforcinematicassetinfo:preferredstartingtrackid:
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/addtracksforcinematicassetinfo:preferredstartingtrackid:
-Description: Interface language: Objective-C
-
-# addTracksForCinematicAssetInfo:preferredStartingTrackID:
-
-**Interface language:** Objective-C
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+
-
-Adds a group of empty tracks associated with a cinematic asset to a mutable composition.
-
-## Declaration
-
-```objectivec
-- (CNCompositionInfo *) addTracksForCinematicAssetInfo:(CNAssetInfo *) assetInfo preferredStartingTrackID:(CMPersistentTrackID) preferredStartingTrackID;
-```
-
-<a id="return-value"></a>
-
-## Return Value
-
-Information about the composition tracks added to the mutable composition. Be sure to call insertTimeRange on the result to specify at least one time range of cinematic asset you’d like in the composition.
-
-# Document: composition
-
-Source path: documentation/avfoundation/avmutablecomposition/composition
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/composition
-Description: Interface language: Objective-C
-
-# composition
-
-**Interface language:** Objective-C
-
-**Framework:** AVFoundation  
-**Kind:** Type Method  
-**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
-
-Returns a new mutable composition.
-
-## Declaration
-
-```objectivec
-+ (instancetype) composition;
-```
-
-<a id="return-value"></a>
-
-## Return Value
-
-A mutable composition.
-
-## See Also
-
-### Creating a composition
-
-- [compositionWithURLAssetInitializationOptions:](init%28urlassetinitializationoptions_%29-rh4y.md): Creates a mutable composition that uses the specified initialization options.
-
-# Document: init(URLAssetInitializationOptions:)
-
-Source path: documentation/avfoundation/avmutablecomposition/init(urlassetinitializationoptions:)-6codz
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/init(urlassetinitializationoptions:)-6codz
-Description: Framework: AVFoundation Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-# init(URLAssetInitializationOptions:)
-
-**Framework:** AVFoundation  
-**Kind:** Initializer  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-## Declaration
-
-```swift
-convenience init(URLAssetInitializationOptions: [String : Any]? = nil)
-```
-
-# Document: init(urlAssetInitializationOptions:)
-
-Source path: documentation/avfoundation/avmutablecomposition/init(urlassetinitializationoptions:)-rh4y
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/init(urlassetinitializationoptions:)-rh4y
-Description: Framework: AVFoundation Kind: Initializer Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-# init(urlAssetInitializationOptions:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Initializer  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-Creates a mutable composition that uses the specified initialization options.
-
-## Declaration
-
-```swift
-convenience init(urlAssetInitializationOptions URLAssetInitializationOptions: [String : Any]? = nil)
-```
-
-## Parameters
-
-- `URLAssetInitializationOptions`: The initialization options to use to create the composition.
-
-# compositionWithURLAssetInitializationOptions: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Type Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-Creates a mutable composition that uses the specified initialization options.
-
-## Declaration
-
-```objectivec
-+ (instancetype) compositionWithURLAssetInitializationOptions:(NSDictionary<NSString *,id> *) URLAssetInitializationOptions;
-```
-
-## Parameters
-
-- `URLAssetInitializationOptions`: The initialization options to use to create the composition.
-
-## See Also
-
-### Creating a composition
-
-- [composition](composition.md): Returns a new mutable composition.
-
-# Document: insertEmptyTimeRange(_:)
-
-Source path: documentation/avfoundation/avmutablecomposition/insertemptytimerange(_:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/insertemptytimerange(_:)
-Description: Framework: AVFoundation Kind: Instance Method Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-# insertEmptyTimeRange(\_:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds or extends an empty time range within all tracks of the composition.
-
-## Declaration
-
-```swift
-func insertEmptyTimeRange(_ timeRange: CMTimeRange)
-```
-
-## Parameters
-
-- `timeRange`: The empty time range to insert.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Inserting an empty time range pushes out existing content by the time range’s duration. Use this method to reserve a time range in the composition for a subsequently created track to present its media.
-
-## See Also
-
-### Managing time ranges
-
-- [removeTimeRange(\_:)](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
-- [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
-- [insertTimeRange(\_:of:at:completionHandler:)](inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
-- [insertTimeRange(\_:of:at:)](inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
-
-# insertEmptyTimeRange: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Adds or extends an empty time range within all tracks of the composition.
-
-## Declaration
-
-```objectivec
-- (void) insertEmptyTimeRange:(CMTimeRange) timeRange;
-```
-
-## Parameters
-
-- `timeRange`: The empty time range to insert.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Inserting an empty time range pushes out existing content by the time range’s duration. Use this method to reserve a time range in the composition for a subsequently created track to present its media.
-
-## See Also
-
-### Managing time ranges
-
-- [removeTimeRange:](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
-- [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
-- [insertTimeRange:ofAsset:atTime:completionHandler:](inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
-- [insertTimeRange:ofAsset:atTime:error:](inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
-
-# Document: insertTimeRange(_:of:at:)
-
-Source path: documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:)
-Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 4.0+ (deprecated in 18.0) · iPadOS 4.0+ (deprecated in 18.0) · Mac Catalyst 13.1+ (deprecated in 18.0) · macOS 10.7+ (deprecated in 15.0) · tvOS 9.0+ (depr…
-
-# insertTimeRange(\_:of:at:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 4.0+ (deprecated in 18.0) · iPadOS 4.0+ (deprecated in 18.0) · Mac Catalyst 13.1+ (deprecated in 18.0) · macOS 10.7+ (deprecated in 15.0) · tvOS 9.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 1.0+ (deprecated in 11.0)
-
-Inserts all the tracks within a given time range of a specified asset into the composition.
-
-> Use [insertTimeRange(\_:of:at:isolation:)](inserttimerange%28__of_at_isolation_%29.md) instead.
-
-## Declaration
-
-```swift
-func insertTimeRange(_ timeRange: CMTimeRange, of asset: AVAsset, at startTime: CMTime) throws
-```
-
-## Parameters
-
-- `timeRange`: The time range of the asset to be inserted.
-- `asset`: An asset that contains the tracks to be inserted.
-- `startTime`: The time at which the inserted tracks should be presented by the receiver.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method may add new tracks to ensure that all tracks of the asset are represented in the inserted time range.
-
-Existing content at the specified start time is pushed out by the duration of the time range.
-
-Media data for the inserted time range is presented at its natural duration; you can scale it to a different duration using [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md).
-
-## See Also
-
-### Managing time ranges
-
-- [removeTimeRange(\_:)](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
-- [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
-- [insertEmptyTimeRange(\_:)](insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
-- [insertTimeRange(\_:of:at:completionHandler:)](inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
-
-# insertTimeRange:ofAsset:atTime:error: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 4.0+ (deprecated in 18.0) · iPadOS 4.0+ (deprecated in 18.0) · Mac Catalyst 13.1+ (deprecated in 18.0) · macOS 10.7+ (deprecated in 15.0) · tvOS 9.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 1.0+ (deprecated in 11.0)
-
-Inserts all the tracks within a given time range of a specified asset into the composition.
-
-> Use [insertTimeRange(\_:of:at:isolation:)](inserttimerange%28__of_at_isolation_%29.md) instead.
-
-## Declaration
-
-```objectivec
-- (BOOL) insertTimeRange:(CMTimeRange) timeRange ofAsset:(AVAsset *) asset atTime:(CMTime) startTime error:(NSError **) outError;
-```
-
-## Parameters
-
-- `timeRange`: The time range of the asset to be inserted.
-- `asset`: An asset that contains the tracks to be inserted.
-- `startTime`: The time at which the inserted tracks should be presented by the receiver.
-- `outError`: If the insertion was not successful, on return contains an `NSError` object that describes the problem.
-
-<a id="return-value"></a>
-
-## Return Value
-
-[true](https://developer.apple.com/documentation/swift/true) if the insertion was successful, otherwise [false](https://developer.apple.com/documentation/swift/false).
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method may add new tracks to ensure that all tracks of the asset are represented in the inserted time range.
-
-Existing content at the specified start time is pushed out by the duration of the time range.
-
-Media data for the inserted time range is presented at its natural duration; you can scale it to a different duration using [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md).
-
-## See Also
-
-### Managing time ranges
-
-- [removeTimeRange:](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
-- [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
-- [insertEmptyTimeRange:](insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
-- [insertTimeRange:ofAsset:atTime:completionHandler:](inserttimerange%28__of_at_completionhandler_%29.md): Deprecated. Inserts all tracks of an asset for a time range into a composition.
-
-# Document: insertTimeRange(_:of:at:completionHandler:)
-
-Source path: documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:completionhandler:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:completionhandler:)
-Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 16.0+ (deprecated in 18.0) · iPadOS 16.0+ (deprecated in 18.0) · Mac Catalyst 16.0+ (deprecated in 18.0) · macOS 13.0+ (deprecated in 15.0) · tvOS 16.0+ (d…
-
-# insertTimeRange(\_:of:at:completionHandler:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 16.0+ (deprecated in 18.0) · iPadOS 16.0+ (deprecated in 18.0) · Mac Catalyst 16.0+ (deprecated in 18.0) · macOS 13.0+ (deprecated in 15.0) · tvOS 16.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 9.0+ (deprecated in 11.0)
-
-Inserts all tracks of an asset for a time range into a composition.
-
-> Use [insertTimeRange(\_:of:at:isolation:)](inserttimerange%28__of_at_isolation_%29.md) instead.
-
-## Declaration
-
-```swift
-func insertTimeRange(_ timeRange: CMTimeRange, of asset: AVAsset, at startTime: CMTime, completionHandler: @escaping @Sendable ((any Error)?) -> Void)
-```
-
-## Parameters
-
-- `timeRange`: The time range of the asset’s tracks to insert into the composition.
-- `asset`: The source asset that contains the tracks to insert.
-- `startTime`: A time in the composition to present the inserted tracks.
-- `completionHandler`: A callback the system invokes when the insertion is complete. If an error occurs, the system passes the callback an error object that describes the failure.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If necessary, a composition adds new tracks to ensure that it inserts all tracks in the source asset for the time range. Inserting a time range pushes out existing content at the specified start time by the time range’s duration.
-
-The composition presents the media data for the inserted time range at its natural duration and rate. You can scale it to a different duration, which changes the presentation rate, by calling [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md).
-
-## See Also
-
-### Managing time ranges
-
-- [removeTimeRange(\_:)](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
-- [scaleTimeRange(\_:toDuration:)](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
-- [insertEmptyTimeRange(\_:)](insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
-- [insertTimeRange(\_:of:at:)](inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
-
-# insertTimeRange:ofAsset:atTime:completionHandler: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
-
-Inserts all tracks of an asset for a time range into a composition.
-
-## Declaration
-
-```objectivec
-- (void) insertTimeRange:(CMTimeRange) timeRange ofAsset:(AVAsset *) asset atTime:(CMTime) startTime completionHandler:(void (^)(NSError *error)) completionHandler;
-```
-
-## Parameters
-
-- `timeRange`: The time range of the asset’s tracks to insert into the composition.
-- `asset`: The source asset that contains the tracks to insert.
-- `startTime`: A time in the composition to present the inserted tracks.
-- `completionHandler`: A callback the system invokes when the insertion is complete. If an error occurs, the system passes the callback an error object that describes the failure.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If necessary, a composition adds new tracks to ensure that it inserts all tracks in the source asset for the time range. Inserting a time range pushes out existing content at the specified start time by the time range’s duration.
-
-The composition presents the media data for the inserted time range at its natural duration and rate. You can scale it to a different duration, which changes the presentation rate, by calling [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md).
-
-## See Also
-
-### Managing time ranges
-
-- [removeTimeRange:](removetimerange%28__%29.md): Removes a specified time range from all tracks of the composition.
-- [scaleTimeRange:toDuration:](scaletimerange%28__toduration_%29.md): Changes the duration of all tracks in a given time range.
-- [insertEmptyTimeRange:](insertemptytimerange%28__%29.md): Adds or extends an empty time range within all tracks of the composition.
-- [insertTimeRange:ofAsset:atTime:error:](inserttimerange%28__of_at_%29.md): Deprecated. Inserts all the tracks within a given time range of a specified asset into the composition.
-
-# Document: insertTimeRange(_:of:at:isolation:)
-
-Source path: documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:isolation:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/inserttimerange(_:of:at:isolation:)
-Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
-
-# insertTimeRange(\_:of:at:isolation:)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
-
-## Declaration
-
-```swift
-@backDeployed(before: macOS 15, iOS 18, tvOS 18, watchOS 11, visionOS 2)
-final func insertTimeRange(_ timeRange: CMTimeRange, of asset: AVAsset, at time: CMTime, isolation: isolated (any Actor)? = #isolation) async throws
-```
-
-# Document: loadTrack(withTrackID:completionHandler:)
-
-Source path: documentation/avfoundation/avmutablecomposition/loadtrack(withtrackid:completionhandler:)
-Canonical documentation: https://developer.apple.com/documentation/avfoundation/avmutablecomposition/loadtrack(withtrackid:completionhandler:)
-Description: Framework: AVFoundation Kind: Instance Method Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
-
-# loadTrack(withTrackID:completionHandler:) (Swift)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
-
-Loads a track that contains the specified identifier.
-
-## Declaration
-
-```swift
-func loadTrack(withTrackID trackID: CMPersistentTrackID, completionHandler: @escaping @Sendable (AVMutableCompositionTrack?, (any Error)?) -> Void)
-```
-
-```swift
-func loadTrack(withTrackID trackID: CMPersistentTrackID) async throws -> AVMutableCompositionTrack?
-```
-
-## Parameters
-
-- `trackID`: The identifier of the track to load.
-- `completionHandler`: A callback that the system invokes after it finishes the loading request. It passes the completion handler the following parameters:
-
-  - **track**: The loaded track, or `nil` if no track with the specified identifier exists or if an error occurs.
-  - **error**: An error object if the request fails; otherwise, `nil`.
-
-## See Also
-
-### Loading tracks
-
-- [tracks](../avpartialasyncproperty/tracks-92p4a.md): Conforms when `Root` inherits `AVMutableComposition`. The tracks that a composition contains.
-- [loadTracks(withMediaType:completionHandler:)](loadtracks%28withmediatype_completionhandler_%29.md): Loads tracks that contain media of a specified type.
-- [loadTracks(withMediaCharacteristic:completionHandler:)](loadtracks%28withmediacharacteristic_completionhandler_%29.md): Loads tracks that contain media of a specified characteristic.
-
-# loadTrackWithTrackID:completionHandler: (Objective-C)
-
-**Framework:** AVFoundation  
-**Kind:** Instance Method  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
-
-Loads a track that contains the specified identifier.
-
-## Declaration
-
-```objectivec
-- (void) loadTrackWithTrackID:(CMPersistentTrackID) trackID completionHandler:(void (^)(AVMutableCompositionTrack *, NSError *)) completionHandler;
-```
-
-## Parameters
-
-- `trackID`: The identifier of the track to load.
-- `completionHandler`: A callback that the system invokes after it finishes the loading request. It passes the completion handler the following parameters:
-
-  - **track**: The loaded track, or `nil` if no track with the specified identifier exists or if an error occurs.
-  - **error**: An error object if the request fails; otherwise, `nil`.
-
-## See Also
-
-### Loading tracks
-
-- [loadTracksWithMediaType:completionHandler:](loadtracks%28withmediatype_completionhandler_%29.md): Loads tracks that contain media of a specified type.
-- [loadTracksWithMediaCharacteristic:completionHandler:](loadtracks%28withmediacharacteristic_completionhandler_%29.md): Loads tracks that contain media of a specified characteristic.

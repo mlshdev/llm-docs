@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/campaign/targeting-data.dictionary
 
 # Campaign.Targeting
@@ -19,7 +19,7 @@ object Campaign.Targeting
 
 ## Properties
 
-- `supplySource` — `CampaignTargeting.SupplySource`: The supply source(s) where ads are eligible to appear. Possible values: `APPSTORE`, `MAPS`. See [TargetingData](../targetingdata.md) for details. Mutable.
+- `supplySource` — `CampaignTargeting.SupplySource`: The supply source(s) where ads are eligible to appear. Possible values: `APPSTORE`, `MAPS`. See [TargetingData](../targetingdata.md) for details. Fixed at creation.
 - `supplyPlacement` — `CampaignTargeting.SupplyPlacement`: The specific placements within a supply source. Possible values: `APPSTORE_SEARCH_RESULTS`, `APPSTORE_SEARCH_TAB`, `APPSTORE_TODAY_TAB`, `APPSTORE_PRODUCT_PAGES`, `MAPS_SEARCH_RESULTS`, `MAPS_SEARCH_HOME`. See [CampaignTargeting.SupplyPlacement](../campaigntargeting/supplyplacement-data.dictionary.md) for the supply source each placement belongs to. See [TargetingData](../targetingdata.md) for details. Mutable.
 - `countryOrRegion` — `CampaignTargeting.CountryOrRegion`: The countries or regions where the campaign serves ads. Uses ISO 3166-1 alpha-2 country codes. See [TargetingData](../targetingdata.md) for details. Mutable.
 

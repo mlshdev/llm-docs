@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/computegraph/computenodegraph/swizzlechannels
 
 # ComputeNodeGraph.SwizzleChannels
@@ -42,3 +42,10 @@ struct SwizzleChannels
 - [Escapable](https://developer.apple.com/documentation/swift/escapable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Graph resources
+
+- [ComputeNodeGraph.SamplerSettings](samplersettings.md)
+- [AddressSpace](../addressspace.md): A GPU memory address space.

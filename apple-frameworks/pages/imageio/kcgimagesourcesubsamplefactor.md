@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/imageio/kcgimagesourcesubsamplefactor
 
 # kCGImageSourceSubsampleFactor (Swift)
@@ -35,6 +35,7 @@ Image sources support this option only for JPEG, HEIF, TIFF, and PNG images.
 - [kCGImageSourceCreateThumbnailFromImageAlways](kcgimagesourcecreatethumbnailfromimagealways.md): A Boolean value that indicates whether to always create a thumbnail image.
 - [kCGImageSourceThumbnailMaxPixelSize](kcgimagesourcethumbnailmaxpixelsize.md): The maximum width and height of a thumbnail image, specified in pixels.
 - [kCGImageSourceCreateThumbnailWithTransform](kcgimagesourcecreatethumbnailwithtransform.md): A Boolean value that indicates whether to rotate and scale the thumbnail image to match the image’s orientation and aspect ratio.
+- [kCGImageSourceAllowableTypes](kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.
 
 # kCGImageSourceSubsampleFactor (Objective-C)
 
@@ -70,3 +71,4 @@ Image sources support this option only for JPEG, HEIF, TIFF, and PNG images.
 - [kCGImageSourceCreateThumbnailFromImageAlways](kcgimagesourcecreatethumbnailfromimagealways.md): A Boolean value that indicates whether to always create a thumbnail image.
 - [kCGImageSourceThumbnailMaxPixelSize](kcgimagesourcethumbnailmaxpixelsize.md): The maximum width and height of a thumbnail image, specified in pixels.
 - [kCGImageSourceCreateThumbnailWithTransform](kcgimagesourcecreatethumbnailwithtransform.md): A Boolean value that indicates whether to rotate and scale the thumbnail image to match the image’s orientation and aspect ratio.
+- [kCGImageSourceAllowableTypes](kcgimagesourceallowabletypes.md): Option key for restricting which image formats can be decoded.

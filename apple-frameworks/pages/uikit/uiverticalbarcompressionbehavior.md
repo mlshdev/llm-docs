@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiverticalbarcompressionbehavior
 
 # UIVerticalBarCompressionBehavior (Swift)
 
 **Framework:** UIKit  
 **Kind:** Enumeration  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 How bars compress when different types of bars are hosted together and space is constrained.
 
@@ -19,13 +19,13 @@ enum UIVerticalBarCompressionBehavior
 
 ### Specifying a compression behavior
 
-- [UIVerticalBarCompressionBehavior.automatic](uiverticalbarcompressionbehavior/automatic.md): Beta. The automatic compression behavior.
-- [UIVerticalBarCompressionBehavior.prefersBarItems](uiverticalbarcompressionbehavior/prefersbaritems.md): Beta. A compression behavior that prefers keeping bar items visible.
-- [UIVerticalBarCompressionBehavior.prefersTabBar](uiverticalbarcompressionbehavior/preferstabbar.md): Beta. A compression behavior that prefers keeping the tab bar visible.
+- [UIVerticalBarCompressionBehavior.automatic](uiverticalbarcompressionbehavior/automatic.md): The automatic compression behavior.
+- [UIVerticalBarCompressionBehavior.prefersBarItems](uiverticalbarcompressionbehavior/prefersbaritems.md): A compression behavior that prefers keeping bar items visible.
+- [UIVerticalBarCompressionBehavior.prefersTabBar](uiverticalbarcompressionbehavior/preferstabbar.md): A compression behavior that prefers keeping the tab bar visible.
 
 ### Initializers
 
-- [init(rawValue:)](uiverticalbarcompressionbehavior/init%28rawvalue_%29.md): Beta.
+- [init(rawValue:)](uiverticalbarcompressionbehavior/init%28rawvalue_%29.md)
 
 ## Relationships
 
@@ -42,13 +42,13 @@ enum UIVerticalBarCompressionBehavior
 
 ### Configuring bars on the vertical axis
 
-- [verticalBarCompressionBehavior](uinavigationitem/verticalbarcompressionbehavior.md): Beta. When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
+- [verticalBarCompressionBehavior](uinavigationitem/verticalbarcompressionbehavior.md): When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
 
 # UIVerticalBarCompressionBehavior (Objective-C)
 
 **Framework:** UIKit  
 **Kind:** Enumeration  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 How bars compress when different types of bars are hosted together and space is constrained.
 
@@ -62,12 +62,12 @@ enum UIVerticalBarCompressionBehavior : NSInteger;
 
 ### Specifying a compression behavior
 
-- [UIVerticalBarCompressionBehaviorAutomatic](uiverticalbarcompressionbehavior/automatic.md): Beta. The automatic compression behavior.
-- [UIVerticalBarCompressionBehaviorPrefersBarItems](uiverticalbarcompressionbehavior/prefersbaritems.md): Beta. A compression behavior that prefers keeping bar items visible.
-- [UIVerticalBarCompressionBehaviorPrefersTabBar](uiverticalbarcompressionbehavior/preferstabbar.md): Beta. A compression behavior that prefers keeping the tab bar visible.
+- [UIVerticalBarCompressionBehaviorAutomatic](uiverticalbarcompressionbehavior/automatic.md): The automatic compression behavior.
+- [UIVerticalBarCompressionBehaviorPrefersBarItems](uiverticalbarcompressionbehavior/prefersbaritems.md): A compression behavior that prefers keeping bar items visible.
+- [UIVerticalBarCompressionBehaviorPrefersTabBar](uiverticalbarcompressionbehavior/preferstabbar.md): A compression behavior that prefers keeping the tab bar visible.
 
 ## See Also
 
 ### Configuring bars on the vertical axis
 
-- [verticalBarCompressionBehavior](uinavigationitem/verticalbarcompressionbehavior.md): Beta. When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.
+- [verticalBarCompressionBehavior](uinavigationitem/verticalbarcompressionbehavior.md): When the tab bar and navigation/toolbar items are both rendered together in the vertical bar, this property controls which items compress first.

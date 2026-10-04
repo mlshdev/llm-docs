@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/nstextcontentstorage/includestextlistmarkers
 
 # includesTextListMarkers (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-When `true`, `NSTextContentStorage` assumes the paragraph with `NSTextList` includes the text list marker string.
+A Boolean value that indicates whether TextKit includes text list markers in the text content.
 
 ## Declaration
 
@@ -15,11 +15,13 @@ When `true`, `NSTextContentStorage` assumes the paragraph with `NSTextList` incl
 var includesTextListMarkers: Bool { get set }
 ```
 
-<a id="discussion"></a>
+<a id="Overview"></a>
 
-## Discussion
+## Overview
 
-Utilizes `NSTextList.includesTextListMarkers` as the default value.
+When [true](https://developer.apple.com/documentation/swift/true), [NSTextContentStorage](../nstextcontentstorage.md) assumes that a paragraph with an [NSTextList](../nstextlist.md) includes the text list marker string.
+
+This uses [includesTextListMarkers](../nstextlist/includestextlistmarkers.md) to get a default value.
 
 # includesTextListMarkers (Objective-C)
 
@@ -27,7 +29,7 @@ Utilizes `NSTextList.includesTextListMarkers` as the default value.
 **Kind:** Instance Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-When `true`, `NSTextContentStorage` assumes the paragraph with `NSTextList` includes the text list marker string.
+A Boolean value that indicates whether TextKit includes text list markers in the text content.
 
 ## Declaration
 
@@ -35,8 +37,10 @@ When `true`, `NSTextContentStorage` assumes the paragraph with `NSTextList` incl
 @property BOOL includesTextListMarkers;
 ```
 
-<a id="discussion"></a>
+<a id="Overview"></a>
 
-## Discussion
+## Overview
 
-Utilizes `NSTextList.includesTextListMarkers` as the default value.
+When [true](https://developer.apple.com/documentation/swift/true), [NSTextContentStorage](../nstextcontentstorage.md) assumes that a paragraph with an [NSTextList](../nstextlist.md) includes the text list marker string.
+
+This uses [includesTextListMarkers](../nstextlist/includestextlistmarkers.md) to get a default value.

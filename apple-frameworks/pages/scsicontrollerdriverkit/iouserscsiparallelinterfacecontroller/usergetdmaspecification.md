@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/usergetdmaspecification
 
 # UserGetDMASpecification
@@ -32,6 +32,6 @@ A value that indicates the result of getting the DMA specification. [kIOReturnSu
 
 ## See Also
 
-### Managing Direct Memory Access
+### Managing direct memory access
 
 - [DMAOutputSegmentType](../dmaoutputsegmenttype.md): The size and endianness that the system uses for direct memory access (DMA).

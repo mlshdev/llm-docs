@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/view/coordinatespace(_:)
 
 # coordinateSpace(\_:)
@@ -68,8 +68,8 @@ The `circle` view has an attached [DragGesture](../draggesture.md) that targets 
 - [GeometryReader](../geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](../geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](../geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](../reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](../reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](../geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [CoordinateSpace](../coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.
 - [CoordinateSpaceProtocol](../coordinatespaceprotocol.md): A frame of reference within the layout system.

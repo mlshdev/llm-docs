@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremotion/cmheadphonemotionmanager
 
 # CMHeadphoneMotionManager (Swift)
@@ -86,6 +86,7 @@ To interpret attitude data, you need to know the orientation of the device’s c
 - [CMDeviceMotion](cmdevicemotion.md): Encapsulated measurements of the attitude, rotation rate, and acceleration of a device.
 - [CMAttitude](cmattitude.md): The device’s orientation relative to a known frame of reference at a point in time.
 - [CMAttitudeReferenceFrame](cmattitudereferenceframe.md): Constants that indicate the frame of reference for attitude-related motion data.
+- [CMBodyIdentifiable](cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.
 
 # CMHeadphoneMotionManager (Objective-C)
 
@@ -163,3 +164,4 @@ To interpret attitude data, you need to know the orientation of the device’s c
 - [CMDeviceMotion](cmdevicemotion.md): Encapsulated measurements of the attitude, rotation rate, and acceleration of a device.
 - [CMAttitude](cmattitude.md): The device’s orientation relative to a known frame of reference at a point in time.
 - [CMAttitudeReferenceFrame](cmattitudereferenceframe.md): Constants that indicate the frame of reference for attitude-related motion data.
+- [CMBodyIdentifiable](cmbodyidentifiable.md): A type that identifies a physical body or view for device-motion calculations.

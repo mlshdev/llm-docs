@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/geometryproxy/reservedregions(kind:options:layoutdirectionbehavior:)
 
 # reservedRegions(kind:options:layoutDirectionBehavior:)
 
 **Framework:** SwiftUI  
 **Kind:** Instance Method  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 Returns an array of reserved regions that match the selection options you specify.
 
@@ -55,7 +55,7 @@ There may be cases when you need to make more manual adjustments for the frames 
 - [GeometryReader](../geometryreader.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryReader3D](../geometryreader3d.md): A container view that defines its content as a function of its own size and coordinate space.
 - [GeometryProxy](../geometryproxy.md): A proxy for access to the size and coordinate space (for anchor resolution) of the container view.
-- [ReservedRegion](../reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
+- [ReservedRegion](../reservedregion.md): A region within a view’s coordinate space that another entity reserves.
 - [GeometryProxy3D](../geometryproxy3d.md): A proxy for access to the size and coordinate space of the container view.
 - [coordinateSpace(\_:)](../view/coordinatespace%28__%29.md): Assigns a name to the view’s coordinate space, so other code can operate on dimensions like points and sizes relative to the named space.
 - [CoordinateSpace](../coordinatespace.md): A resolved coordinate space created by the coordinate space protocol.

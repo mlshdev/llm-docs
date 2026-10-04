@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/coremotion/cmmotionmanager/startdevicemotionupdates(using:to:withhandler:)
 
 # startDeviceMotionUpdates(using:to:withHandler:) (Swift)
@@ -29,8 +29,9 @@ You must call [stopDeviceMotionUpdates()](stopdevicemotionupdates%28%29.md) when
 
 ## See Also
 
-### Managing Device Motion Updates
+### Managing device motion updates
 
+- [deviceMotionBody](devicemotionbody.md): A physical body or view that defines the coordinate system for device-motion data.
 - [showsDeviceMovementDisplay](showsdevicemovementdisplay.md): Controls whether the device-movement display is shown.
 - [deviceMotionUpdateInterval](devicemotionupdateinterval.md): The interval, in seconds, for providing device-motion updates to the block handler.
 - [startDeviceMotionUpdates(to:withHandler:)](startdevicemotionupdates%28to_withhandler_%29.md): Starts device-motion updates on an operation queue and using a specified block handler.
@@ -68,8 +69,9 @@ You must call [stopDeviceMotionUpdates](stopdevicemotionupdates%28%29.md) when y
 
 ## See Also
 
-### Managing Device Motion Updates
+### Managing device motion updates
 
+- [deviceMotionBody](devicemotionbody.md): A physical body or view that defines the coordinate system for device-motion data.
 - [showsDeviceMovementDisplay](showsdevicemovementdisplay.md): Controls whether the device-movement display is shown.
 - [deviceMotionUpdateInterval](devicemotionupdateinterval.md): The interval, in seconds, for providing device-motion updates to the block handler.
 - [startDeviceMotionUpdatesToQueue:withHandler:](startdevicemotionupdates%28to_withhandler_%29.md): Starts device-motion updates on an operation queue and using a specified block handler.

@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/arrangementview
 
 # ArrangementView
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A view that arranges primary and secondary content using an adaptive layout that responds to the environment.
 
@@ -61,13 +61,13 @@ The split arrangement adapts its axis based on the available size and size class
 
 ### Creating an arrangement view
 
-- [init(primary:secondary:)](arrangementview/init%28primary_secondary_%29.md): Beta. Creates an arrangement view with a primary and secondary view.
-- [init(\_:)](arrangementview/init%28__%29.md): Beta. Conforms when `Primary` is `ArrangementViewStyleConfiguration.Primary` and `Secondary` is `ArrangementViewStyleConfiguration.Secondary`. Creates an arrangement view from a style configuration.
-- [ArrangementViewStyleConfiguration](arrangementviewstyleconfiguration.md): Beta. The properties of an arrangement view used to create its custom style.
+- [init(primary:secondary:)](arrangementview/init%28primary_secondary_%29.md): Creates an arrangement view with a primary and secondary view.
+- [init(\_:)](arrangementview/init%28__%29.md): Conforms when `Primary` is `ArrangementViewStyleConfiguration.Primary` and `Secondary` is `ArrangementViewStyleConfiguration.Secondary`. Creates an arrangement view from a style configuration.
+- [ArrangementViewStyleConfiguration](arrangementviewstyleconfiguration.md): The properties of an arrangement view used to create its custom style.
 
 ### Configuring an arrangement view
 
-- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
+- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
 
 ## Relationships
 
@@ -79,10 +79,10 @@ The split arrangement adapts its axis based on the available size and size class
 
 ### Dynamically arranging a primary and secondary view
 
-- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Beta. Sets the style for arrangement views within this view.
-- [ArrangementViewStyle](arrangementviewstyle.md): Beta. A style that configures an `ArrangementView` with an arrangement.
-- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): Beta. The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
-- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Beta. Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
-- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Beta. Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Beta. Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
-- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Beta. Sets the size constraints for an arrangement view in a split style.
+- [arrangementViewStyle(\_:)](view/arrangementviewstyle%28__%29.md): Sets the style for arrangement views within this view.
+- [ArrangementViewStyle](arrangementviewstyle.md): A style that configures an `ArrangementView` with an arrangement.
+- [overlayArrangementEdge(\_:)](view/overlayarrangementedge%28__%29.md): The horizontal edge a view in an overlay arrangement occupies when the arrangement transitions to a horizontal layout.
+- [splitArrangementFixedLayoutSize(horizontal:vertical:)](view/splitarrangementfixedlayoutsize%28horizontal_vertical_%29.md): Sets the preferred size constraint for an arrangement view in a split style to the ideal size of the view within its container. The arrangement view will prefer this size, but may resize to a smaller size depending on the priority of the view.
+- [splitArrangementLayoutRatio(\_:)](view/splitarrangementlayoutratio%28__%29.md): Sets the preferred size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutRatio(minHorizontal:idealHorizontal:maxHorizontal:minVertical:idealVertical:maxVertical:)](view/splitarrangementlayoutratio%28minhorizontal_idealhorizontal_maxhorizontal_minvertical_idealvertical_maxvertical_%29.md): Sets the size ratio for an arrangement view in a split style. Use this modifier when you want to customize the size of the view compared to its other views in the split layout.
+- [splitArrangementLayoutSize(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:)](view/splitarrangementlayoutsize%28minwidth_idealwidth_maxwidth_minheight_idealheight_maxheight_%29.md): Sets the size constraints for an arrangement view in a split style.

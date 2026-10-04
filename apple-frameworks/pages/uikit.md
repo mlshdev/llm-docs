@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit
 
 # UIKit (Swift)
@@ -105,25 +105,6 @@ Avoid using deprecated classes and protocols in your apps.
 - [UIKit Constants](uikit/uikit-constants.md): This document describes constants that are used throughout the UIKit framework.
 - [UIKit Data Types](uikit/uikit-data-types.md): The UIKit framework defines data types that are used in multiple places throughout the framework.
 - [UIKit Functions](uikit/uikit-functions.md): The UIKit framework defines a number of functions, many of them used in graphics and drawing operations.
-
-### Protocols
-
-- [UITraitBridgedEnvironmentKey](uikit/uitraitbridgedenvironmentkey.md)
-
-### Structures
-
-- [UIConfigurationTextAttributesTransformer](uikit/uiconfigurationtextattributestransformer-swift.struct.md): Defines a text transformation that can affect the visual appearance of a string.
-- [UITraitNavigationTitleAlignment](uikit/uitraitnavigationtitlealignment-swift.struct.md): Beta.
-- [UITraitSystemPrefersReducedResourceUsage](uikit/uitraitsystemprefersreducedresourceusage-swift.struct.md)
-
-### Macros
-
-- [Preview(\_:traits:arguments:body:)](uikit/preview%28__traits_arguments_body_%29-6gm4c.md)
-- [Preview(\_:traits:arguments:body:)](uikit/preview%28__traits_arguments_body_%29-7cbjv.md)
-
-### Enumerations
-
-- [UITextGrammarCheckingType](uikit/uitextgrammarcheckingtype.md)
 
 # UIKit (Objective-C)
 
@@ -253,5 +234,4 @@ Avoid using deprecated classes and protocols in your apps.
 - [UINavigationItemTitleAlignment](uikit/uinavigationitem/titlealignment-swift.enum.md): Beta.
 - [UISheetPresentationControllerPlacement](uikit/uisheetpresentationcontroller/placement.md)
 - [UITabBarControllerSidebarPlacement](uikit/uitabbarcontroller/sidebar-swift.class/placement.md)
-- [UITextGrammarCheckingType](uikit/uitextgrammarcheckingtype.md)
 - [UIWritingToolsCoordinatorTextDecoration](uikit/uiwritingtoolscoordinator/textdecoration.md): Use the `UIWritingToolsCoordinator.TextDecoration` constants to determine the type of decoration to be applied to a preview for grammar animation. The grammar animation needs previews of the text of the issue in two forms, without and with the grammar indication underline applied. If you use grammar animation, you must implement the delegate method [writingToolsCoordinator:requestsPreviewForTextAnimation:ofRange:inContext:textDecoration:completion:](uikit/uiwritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator%28__requestspreviewfor_of_in_textdecoration_completion_%29.md) to provide both forms of previews, based on the specified decoration.

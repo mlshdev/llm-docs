@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/appintentscenedelegate/scene(_:willperformappintent:)
 
 # scene(\_:willPerformAppIntent:)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-Asks the scene delegate to prepare the scene for the specified app intent.
+Tells the scene delegate to prepare the scene for the specified app intent.
 
 ## Declaration
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/bulkitemresultnegativekeyword
 
 # BulkItemResultNegativeKeyword
@@ -29,7 +29,7 @@ object BulkItemResultNegativeKeyword
 
 ## Discussion
 
-The `BulkItemResultNegativeKeyword` object extends [BulkItemResult](bulkitemresult.md) with a typed `result` field containing the `NegativeKeyword` object the operation created or updated. This type appears as array items in `NegativeKeywordCreateBulkResponse` and `NegativeKeywordUpdateBulkResponse`.
+The `BulkItemResultNegativeKeyword` object extends [BulkItemResult](bulkitemresult.md) with a typed `result` field containing the `NegativeKeyword` object the operation created or updated. Used by `NegativeKeywordCreateBulkResponse` and `NegativeKeywordUpdateBulkResponse`; bulk delete doesn’t return the entity (see [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md)).
 
 On success, `result` contains the full `NegativeKeyword` entity as it exists after the operation. On failure, `success` is `false` and `error` carries per-item details.
 
@@ -66,11 +66,11 @@ On success, `result` contains the full `NegativeKeyword` entity as it exists aft
 - [BulkResponse](bulkresponse.md): The generic response envelope returned by all bulk operations.
 - [KeywordCreateBulkRequest](keywordcreatebulkrequest.md): A bulk request to create multiple Keyword objects.
 - [KeywordCreateBulkResponse](keywordcreatebulkresponse.md): The response from a bulk Keyword creation request, containing results for each item.
+- [KeywordDeleteBulkRequest](keyworddeletebulkrequest.md): A bulk request to delete multiple Keyword objects by their identifiers.
+- [KeywordDeleteBulkResponse](keyworddeletebulkresponse.md): The response from a bulk Keyword deletion request.
 - [KeywordUpdateBulkRequest](keywordupdatebulkrequest.md): A bulk request to update multiple Keyword objects.
 - [KeywordUpdateBulkResponse](keywordupdatebulkresponse.md): The response from a bulk Keyword update request, containing results for each item.
 - [NegativeKeywordCreateBulkRequest](negativekeywordcreatebulkrequest.md): A bulk request to create multiple negative keywords.
 - [NegativeKeywordCreateBulkResponse](negativekeywordcreatebulkresponse.md): The response from a bulk negative keyword creation request, containing results for each item.
-- [NegativeKeywordUpdateBulkRequest](negativekeywordupdatebulkrequest.md): A bulk request to update multiple negative keywords.
-- [NegativeKeywordUpdateBulkResponse](negativekeywordupdatebulkresponse.md): The response from a bulk negative keyword update request, containing results for each item.
-- [BulkKeywordCreate](bulkkeywordcreate.md): The `data` payload for a single keyword-create item within a bulk create request.
-- [BulkKeywordUpdate](bulkkeywordupdate.md): The payload for a single keyword-update.
+- [NegativeKeywordDeleteBulkRequest](negativekeyworddeletebulkrequest.md): A bulk request to delete multiple negative keywords by their identifiers.
+- [NegativeKeywordDeleteBulkResponse](negativekeyworddeletebulkresponse.md): The response from a bulk negative keyword deletion request.

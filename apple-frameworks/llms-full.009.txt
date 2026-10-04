@@ -1,10 +1,1524 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
+# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
-Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
-Captured at: 2026-09-27T18:07:10.128Z
+Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
+Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
+Captured at: 2026-10-04T18:39:03.048Z
 Volume 9
+
+# Document: kAudioUnitErr_CannotDoInCurrentContext
+
+Source path: documentation/audiotoolbox/kaudiouniterr_cannotdoincurrentcontext
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_cannotdoincurrentcontext
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_CannotDoInCurrentContext (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_CannotDoInCurrentContext: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_CannotDoInCurrentContext (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_CannotDoInCurrentContext
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_ComponentManagerNotSupported
+
+Source path: documentation/audiotoolbox/kaudiouniterr_componentmanagernotsupported
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_componentmanagernotsupported
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_ComponentManagerNotSupported (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_ComponentManagerNotSupported: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# kAudioUnitErr_ComponentManagerNotSupported (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_ComponentManagerNotSupported
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# Document: kAudioUnitErr_ExtensionNotFound
+
+Source path: documentation/audiotoolbox/kaudiouniterr_extensionnotfound
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_extensionnotfound
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_ExtensionNotFound (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_ExtensionNotFound: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# kAudioUnitErr_ExtensionNotFound (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_ExtensionNotFound
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# Document: kAudioUnitErr_FailedInitialization
+
+Source path: documentation/audiotoolbox/kaudiouniterr_failedinitialization
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_failedinitialization
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_FailedInitialization (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_FailedInitialization: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_FailedInitialization (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_FailedInitialization
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_FileNotSpecified
+
+Source path: documentation/audiotoolbox/kaudiouniterr_filenotspecified
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_filenotspecified
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_FileNotSpecified (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_FileNotSpecified: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_FileNotSpecified (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_FileNotSpecified
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_FormatNotSupported
+
+Source path: documentation/audiotoolbox/kaudiouniterr_formatnotsupported
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_formatnotsupported
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_FormatNotSupported (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_FormatNotSupported: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_FormatNotSupported (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_FormatNotSupported
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_IllegalInstrument
+
+Source path: documentation/audiotoolbox/kaudiouniterr_illegalinstrument
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_illegalinstrument
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_IllegalInstrument (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_IllegalInstrument: OSStatus { get }
+```
+
+## See Also
+
+### Constants
+
+- [kAudioUnitErr_InstrumentTypeNotFound](kaudiouniterr_instrumenttypenotfound.md): Deprecated.
+
+# kAudioUnitErr_IllegalInstrument (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_IllegalInstrument
+```
+
+## See Also
+
+### Constants
+
+- [kAudioUnitErr_InstrumentTypeNotFound](kaudiouniterr_instrumenttypenotfound.md): Deprecated.
+
+# Document: kAudioUnitErr_Initialized
+
+Source path: documentation/audiotoolbox/kaudiouniterr_initialized
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_initialized
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_Initialized (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_Initialized: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_Initialized (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_Initialized
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_InstrumentTypeNotFound
+
+Source path: documentation/audiotoolbox/kaudiouniterr_instrumenttypenotfound
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_instrumenttypenotfound
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InstrumentTypeNotFound (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InstrumentTypeNotFound: OSStatus { get }
+```
+
+## See Also
+
+### Constants
+
+- [kAudioUnitErr_IllegalInstrument](kaudiouniterr_illegalinstrument.md): Deprecated.
+
+# kAudioUnitErr_InstrumentTypeNotFound (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InstrumentTypeNotFound
+```
+
+## See Also
+
+### Constants
+
+- [kAudioUnitErr_IllegalInstrument](kaudiouniterr_illegalinstrument.md): Deprecated.
+
+# Document: kAudioUnitErr_InvalidElement
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidelement
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidelement
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidElement (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidElement: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_InvalidElement (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidElement
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_InvalidFile
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidfile
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidfile
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidFile (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidFile: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_InvalidFile (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidFile
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_InvalidFilePath
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidfilepath
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidfilepath
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidFilePath (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidFilePath: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# kAudioUnitErr_InvalidFilePath (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidFilePath
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# Document: kAudioUnitErr_InvalidOfflineRender
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidofflinerender
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidofflinerender
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidOfflineRender (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidOfflineRender: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_InvalidOfflineRender (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidOfflineRender
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_InvalidParameter
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidparameter
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidparameter
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidParameter (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidParameter: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_InvalidParameter (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidParameter
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_InvalidParameterValue
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidparametervalue
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidparametervalue
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidParameterValue (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidParameterValue: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# kAudioUnitErr_InvalidParameterValue (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidParameterValue
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# Document: kAudioUnitErr_InvalidProperty
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidproperty
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidproperty
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidProperty (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidProperty: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_InvalidProperty (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidProperty
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_InvalidPropertyValue
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidpropertyvalue
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidpropertyvalue
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidPropertyValue (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidPropertyValue: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_InvalidPropertyValue (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidPropertyValue
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_InvalidScope
+
+Source path: documentation/audiotoolbox/kaudiouniterr_invalidscope
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_invalidscope
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_InvalidScope (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_InvalidScope: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_InvalidScope (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_InvalidScope
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_MIDIOutputBufferFull
+
+Source path: documentation/audiotoolbox/kaudiouniterr_midioutputbufferfull
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_midioutputbufferfull
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_MIDIOutputBufferFull (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_MIDIOutputBufferFull: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# kAudioUnitErr_MIDIOutputBufferFull (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_MIDIOutputBufferFull
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# Document: kAudioUnitErr_MissingKey
+
+Source path: documentation/audiotoolbox/kaudiouniterr_missingkey
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_missingkey
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_MissingKey (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_MissingKey: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# kAudioUnitErr_MissingKey (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_MissingKey
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+
+# Document: kAudioUnitErr_MultipleVoiceProcessors
+
+Source path: documentation/audiotoolbox/kaudiouniterr_multiplevoiceprocessors
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_multiplevoiceprocessors
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_MultipleVoiceProcessors (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_MultipleVoiceProcessors: OSStatus { get }
+```
+
+# kAudioUnitErr_MultipleVoiceProcessors (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_MultipleVoiceProcessors
+```
+
+# Document: kAudioUnitErr_NoConnection
+
+Source path: documentation/audiotoolbox/kaudiouniterr_noconnection
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_noconnection
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_NoConnection (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_NoConnection: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_NoConnection (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_NoConnection
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_PropertyNotInUse](kaudiouniterr_propertynotinuse.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# Document: kAudioUnitErr_PropertyNotInUse
+
+Source path: documentation/audiotoolbox/kaudiouniterr_propertynotinuse
+Canonical documentation: https://developer.apple.com/documentation/audiotoolbox/kaudiouniterr_propertynotinuse
+Description: Framework: Audio Toolbox Kind: Global Variable Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+# kAudioUnitErr_PropertyNotInUse (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```swift
+var kAudioUnitErr_PropertyNotInUse: OSStatus { get }
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
+
+# kAudioUnitErr_PropertyNotInUse (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+kAudioUnitErr_PropertyNotInUse
+```
+
+## See Also
+
+### Errors
+
+- [kAudioComponentErr_InstanceInvalidated](kaudiocomponenterr_instanceinvalidated.md)
+- [kAudioUnitErr_CannotDoInCurrentContext](kaudiouniterr_cannotdoincurrentcontext.md)
+- [kAudioUnitErr_FailedInitialization](kaudiouniterr_failedinitialization.md)
+- [kAudioUnitErr_FileNotSpecified](kaudiouniterr_filenotspecified.md)
+- [kAudioUnitErr_FormatNotSupported](kaudiouniterr_formatnotsupported.md)
+- [kAudioUnitErr_Initialized](kaudiouniterr_initialized.md)
+- [kAudioUnitErr_InvalidElement](kaudiouniterr_invalidelement.md)
+- [kAudioUnitErr_InvalidFile](kaudiouniterr_invalidfile.md)
+- [kAudioUnitErr_InvalidOfflineRender](kaudiouniterr_invalidofflinerender.md)
+- [kAudioUnitErr_InvalidParameter](kaudiouniterr_invalidparameter.md)
+- [kAudioUnitErr_InvalidProperty](kaudiouniterr_invalidproperty.md)
+- [kAudioUnitErr_InvalidPropertyValue](kaudiouniterr_invalidpropertyvalue.md)
+- [kAudioUnitErr_InvalidScope](kaudiouniterr_invalidscope.md)
+- [kAudioUnitErr_NoConnection](kaudiouniterr_noconnection.md)
+- [kAudioUnitErr_PropertyNotWritable](kaudiouniterr_propertynotwritable.md)
 
 # Document: kAudioUnitErr_PropertyNotWritable
 
@@ -76883,6 +78397,7 @@ This class provides login configuration information for platform single sign-on.
 - [loginRequestEncryptionAlgorithm](asauthorizationproviderextensionloginconfiguration/loginrequestencryptionalgorithm.md)
 - [loginRequestHPKEPreSharedKey](asauthorizationproviderextensionloginconfiguration/loginrequesthpkepresharedkey.md)
 - [loginRequestHPKEPreSharedKeyID](asauthorizationproviderextensionloginconfiguration/loginrequesthpkepresharedkeyid.md)
+- [serverNonceExpirationTime](asauthorizationproviderextensionloginconfiguration/servernonceexpirationtime.md): Beta.
 
 ### Instance Methods
 
@@ -77025,6 +78540,7 @@ This class provides login configuration information for platform single sign-on.
 - [loginRequestEncryptionAlgorithm](asauthorizationproviderextensionloginconfiguration/loginrequestencryptionalgorithm.md)
 - [loginRequestHPKEPreSharedKey](asauthorizationproviderextensionloginconfiguration/loginrequesthpkepresharedkey.md)
 - [loginRequestHPKEPreSharedKeyID](asauthorizationproviderextensionloginconfiguration/loginrequesthpkepresharedkeyid.md)
+- [serverNonceExpirationTime](asauthorizationproviderextensionloginconfiguration/servernonceexpirationtime.md): Beta.
 
 ### Instance Methods
 
@@ -80527,6 +82043,48 @@ The default value is `request_nonce`.
 - [customNonceRequestValues](customnoncerequestvalues.md): Custom values to add to the server nonce POST request body.
 - [nonceEndpointURL](nonceendpointurl.md): The URL to retrieve a one-time use value from the server.
 - [nonceResponseKeypath](nonceresponsekeypath.md): The keypath in the response that contains the one-time use value.
+
+# Document: serverNonceExpirationTime
+
+Source path: documentation/authenticationservices/asauthorizationproviderextensionloginconfiguration/servernonceexpirationtime
+Canonical documentation: https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionloginconfiguration/servernonceexpirationtime
+Description: Framework: Authentication Services Kind: Instance Property Availability: macOS 27.2+ beta
+
+# serverNonceExpirationTime (Swift)
+
+**Framework:** Authentication Services  
+**Kind:** Instance Property  
+**Availability:** macOS 27.2+ beta
+
+## Declaration
+
+```swift
+@NSCopying var serverNonceExpirationTime: NSNumber { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The expiration time for a server nonce.
+
+# serverNonceExpirationTime (Objective-C)
+
+**Framework:** Authentication Services  
+**Kind:** Instance Property  
+**Availability:** macOS 27.2+ beta
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) NSNumber * serverNonceExpirationTime;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The expiration time for a server nonce.
 
 # Document: setCustomAssertionRequestBodyClaims(_:)
 
@@ -181669,1062 +183227,3 @@ Creates an audio sequencer that the framework attaches to an audio engine instan
 ### Creating an Audio Sequencer
 
 - [init](init%28%29.md): Creates an audio sequencer object.
-
-# Document: isPlaying
-
-Source path: documentation/avfaudio/avaudiosequencer/isplaying
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/isplaying
-Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# isPlaying (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-A Boolean value that indicates whether the sequencer’s player is in a playing state.
-
-## Declaration
-
-```swift
-var isPlaying: Bool { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This value returns [true](https://developer.apple.com/documentation/swift/true) if the sequencer’s player is in a started state. The framework considers it to be playing until it explicitly stops, including when playing past the end of the events in a sequence.
-
-## See Also
-
-### Getting Sequence Properties
-
-- [rate](rate.md): The playback rate of the sequencer’s player.
-- [tracks](tracks.md): An array that contains all the tracks in the sequence.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
-- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
-- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# playing (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-A Boolean value that indicates whether the sequencer’s player is in a playing state.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly, getter=isPlaying) BOOL playing;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This value returns [true](https://developer.apple.com/documentation/swift/true) if the sequencer’s player is in a started state. The framework considers it to be playing until it explicitly stops, including when playing past the end of the events in a sequence.
-
-## See Also
-
-### Getting Sequence Properties
-
-- [rate](rate.md): The playback rate of the sequencer’s player.
-- [tracks](tracks.md): An array that contains all the tracks in the sequence.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
-- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
-- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# Document: load(from:options:)
-
-Source path: documentation/avfaudio/avaudiosequencer/load(from:options:)-8o58w
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/load(from:options:)-8o58w
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# load(from:options:) (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Parses the data and adds its events to the sequence.
-
-## Declaration
-
-```swift
-func load(from data: Data, options: AVMusicSequenceLoadOptions = []) throws
-```
-
-## Parameters
-
-- `data`: The data to load from.
-- `options`: Determines how the contents map to the tracks inside the sequence.
-
-## See Also
-
-### Managing Sequence Load Options
-
-- [load(from:options:)](load%28from_options_%29-9kb6m.md): Loads the file the URL references and adds the events to the sequence.
-- [AVMusicSequenceLoadOptions](../avmusicsequenceloadoptions.md): A structure that defines whether data on different MIDI channels map to multiple tracks, or whether the framework preserves the tracks as they are.
-
-# loadFromData:options:error: (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Parses the data and adds its events to the sequence.
-
-## Declaration
-
-```objectivec
-- (BOOL) loadFromData:(NSData *) data options:(AVMusicSequenceLoadOptions) options error:(NSError **) outError;
-```
-
-## Parameters
-
-- `data`: The data to load from.
-- `options`: Determines how the contents map to the tracks inside the sequence.
-- `outError`: On input, a pointer to an error object. If an error occurs, the framework sets the pointer to an [NSError](../../foundation/nserror.md) object that describes the error. If you don’t want error information, pass in `nil`.
-
-## See Also
-
-### Managing Sequence Load Options
-
-- [loadFromURL:options:error:](load%28from_options_%29-9kb6m.md): Loads the file the URL references and adds the events to the sequence.
-- [AVMusicSequenceLoadOptions](../avmusicsequenceloadoptions.md): A structure that defines whether data on different MIDI channels map to multiple tracks, or whether the framework preserves the tracks as they are.
-
-# Document: load(from:options:)
-
-Source path: documentation/avfaudio/avaudiosequencer/load(from:options:)-9kb6m
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/load(from:options:)-9kb6m
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# load(from:options:) (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Loads the file the URL references and adds the events to the sequence.
-
-## Declaration
-
-```swift
-func load(from fileURL: URL, options: AVMusicSequenceLoadOptions = []) throws
-```
-
-## Parameters
-
-- `fileURL`: The URL to the file.
-- `options`: Determines how the contents map to the tracks inside the sequence.
-
-## See Also
-
-### Managing Sequence Load Options
-
-- [load(from:options:)](load%28from_options_%29-8o58w.md): Parses the data and adds its events to the sequence.
-- [AVMusicSequenceLoadOptions](../avmusicsequenceloadoptions.md): A structure that defines whether data on different MIDI channels map to multiple tracks, or whether the framework preserves the tracks as they are.
-
-# loadFromURL:options:error: (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Loads the file the URL references and adds the events to the sequence.
-
-## Declaration
-
-```objectivec
-- (BOOL) loadFromURL:(NSURL *) fileURL options:(AVMusicSequenceLoadOptions) options error:(NSError **) outError;
-```
-
-## Parameters
-
-- `fileURL`: The URL to the file.
-- `options`: Determines how the contents map to the tracks inside the sequence.
-- `outError`: On input, a pointer to an error object. If an error occurs, the framework sets the pointer to an [NSError](../../foundation/nserror.md) object that describes the error. If you don’t want error information, pass in `nil`.
-
-## See Also
-
-### Managing Sequence Load Options
-
-- [loadFromData:options:error:](load%28from_options_%29-8o58w.md): Parses the data and adds its events to the sequence.
-- [AVMusicSequenceLoadOptions](../avmusicsequenceloadoptions.md): A structure that defines whether data on different MIDI channels map to multiple tracks, or whether the framework preserves the tracks as they are.
-
-# Document: prepareToPlay()
-
-Source path: documentation/avfaudio/avaudiosequencer/preparetoplay()
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/preparetoplay()
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# prepareToPlay() (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Gets ready to play the sequence by prerolling all events.
-
-## Declaration
-
-```swift
-func prepareToPlay()
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The framework invokes this method automatically on play if you don’t call it, but it may delay startup.
-
-## See Also
-
-### Operating an Audio Sequencer
-
-- [start()](start%28%29.md): Starts the sequencer’s player.
-- [stop()](stop%28%29.md): Stops the sequencer’s player.
-
-# prepareToPlay (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Gets ready to play the sequence by prerolling all events.
-
-## Declaration
-
-```objectivec
-- (void) prepareToPlay;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The framework invokes this method automatically on play if you don’t call it, but it may delay startup.
-
-## See Also
-
-### Operating an Audio Sequencer
-
-- [startAndReturnError:](start%28%29.md): Starts the sequencer’s player.
-- [stop](stop%28%29.md): Stops the sequencer’s player.
-
-# Document: rate
-
-Source path: documentation/avfaudio/avaudiosequencer/rate
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/rate
-Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# rate (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The playback rate of the sequencer’s player.
-
-## Declaration
-
-```swift
-var rate: Float { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The default playback rate is `1.0`, and must be greater than `0.0`.
-
-## See Also
-
-### Getting Sequence Properties
-
-- [isPlaying](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
-- [tracks](tracks.md): An array that contains all the tracks in the sequence.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
-- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
-- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# rate (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The playback rate of the sequencer’s player.
-
-## Declaration
-
-```objectivec
-@property (nonatomic) float rate;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The default playback rate is `1.0`, and must be greater than `0.0`.
-
-## See Also
-
-### Getting Sequence Properties
-
-- [playing](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
-- [tracks](tracks.md): An array that contains all the tracks in the sequence.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
-- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
-- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# Document: removeTrack(_:)
-
-Source path: documentation/avfaudio/avaudiosequencer/removetrack(_:)
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/removetrack(_:)
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# removeTrack(\_:) (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Removes the music track from the sequencer.
-
-## Declaration
-
-```swift
-func removeTrack(_ track: AVMusicTrack) -> Bool
-```
-
-## Parameters
-
-- `track`: The music track to remove.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A Boolean value that indicates whether the call succeeds.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method doesn’t destroy the method track since you can reuse it.
-
-## See Also
-
-### Handling Music Tracks
-
-- [AVMusicTrack](../avmusictrack.md): A collection of music events that you can offset, set to a muted state, modify independently from other track events, and send to a specified destination.
-- [createAndAppendTrack()](createandappendtrack%28%29.md): Creates a new music track and appends it to the sequencer’s list.
-- [reverseEvents()](reverseevents%28%29.md): Reverses the order of all events in all music tracks, including the tempo track.
-- [AVMusicTrackLoopCount](../avmusictrackloopcount.md): Options that define the number of times a track loops.
-
-# removeTrack: (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Removes the music track from the sequencer.
-
-## Declaration
-
-```objectivec
-- (BOOL) removeTrack:(AVMusicTrack *) track;
-```
-
-## Parameters
-
-- `track`: The music track to remove.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A Boolean value that indicates whether the call succeeds.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This method doesn’t destroy the method track since you can reuse it.
-
-## See Also
-
-### Handling Music Tracks
-
-- [AVMusicTrack](../avmusictrack.md): A collection of music events that you can offset, set to a muted state, modify independently from other track events, and send to a specified destination.
-- [createAndAppendTrack](createandappendtrack%28%29.md): Creates a new music track and appends it to the sequencer’s list.
-- [reverseEvents](reverseevents%28%29.md): Reverses the order of all events in all music tracks, including the tempo track.
-- [AVMusicTrackLoopCount](../avmusictrackloopcount.md): Options that define the number of times a track loops.
-
-# Document: reverseEvents()
-
-Source path: documentation/avfaudio/avaudiosequencer/reverseevents()
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/reverseevents()
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# reverseEvents() (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Reverses the order of all events in all music tracks, including the tempo track.
-
-## Declaration
-
-```swift
-func reverseEvents()
-```
-
-## See Also
-
-### Handling Music Tracks
-
-- [AVMusicTrack](../avmusictrack.md): A collection of music events that you can offset, set to a muted state, modify independently from other track events, and send to a specified destination.
-- [createAndAppendTrack()](createandappendtrack%28%29.md): Creates a new music track and appends it to the sequencer’s list.
-- [removeTrack(\_:)](removetrack%28__%29.md): Removes the music track from the sequencer.
-- [AVMusicTrackLoopCount](../avmusictrackloopcount.md): Options that define the number of times a track loops.
-
-# reverseEvents (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Reverses the order of all events in all music tracks, including the tempo track.
-
-## Declaration
-
-```objectivec
-- (void) reverseEvents;
-```
-
-## See Also
-
-### Handling Music Tracks
-
-- [AVMusicTrack](../avmusictrack.md): A collection of music events that you can offset, set to a muted state, modify independently from other track events, and send to a specified destination.
-- [createAndAppendTrack](createandappendtrack%28%29.md): Creates a new music track and appends it to the sequencer’s list.
-- [removeTrack:](removetrack%28__%29.md): Removes the music track from the sequencer.
-- [AVMusicTrackLoopCount](../avmusictrackloopcount.md): Options that define the number of times a track loops.
-
-# Document: seconds(forBeats:)
-
-Source path: documentation/avfaudio/avaudiosequencer/seconds(forbeats:)
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/seconds(forbeats:)
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# seconds(forBeats:) (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Gets the time for the specified beat position (timestamp) in the track, in seconds.
-
-## Declaration
-
-```swift
-func seconds(forBeats beats: AVMusicTimeStamp) -> TimeInterval
-```
-
-## Parameters
-
-- `beats`: The timestamp for the beat position.
-
-## See Also
-
-### Managing Time Stamps
-
-- [AVMusicTimeStamp](../avmusictimestamp.md): A fractional number of beats.
-- [hostTime(forBeats:error:)](hosttime%28forbeats_error_%29.md): Gets the host time the sequence plays at the specified position.
-
-# secondsForBeats: (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Gets the time for the specified beat position (timestamp) in the track, in seconds.
-
-## Declaration
-
-```objectivec
-- (NSTimeInterval) secondsForBeats:(AVMusicTimeStamp) beats;
-```
-
-## Parameters
-
-- `beats`: The timestamp for the beat position.
-
-## See Also
-
-### Managing Time Stamps
-
-- [AVMusicTimeStamp](../avmusictimestamp.md): A fractional number of beats.
-- [hostTimeForBeats:error:](hosttime%28forbeats_error_%29.md): Gets the host time the sequence plays at the specified position.
-
-# Document: setUserCallback(_:)
-
-Source path: documentation/avfaudio/avaudiosequencer/setusercallback(_:)
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/setusercallback(_:)
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# setUserCallback(\_:) (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Adds a callback that the sequencer calls each time it encounters a user event during playback.
-
-## Declaration
-
-```swift
-func setUserCallback(_ userCallback: AVAudioSequencerUserCallback?)
-```
-
-## Parameters
-
-- `userCallback`: The user callback that the system calls.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The system calls the same callback for events that occur on any track in the sequencer. Set the callback to `nil` to disable it.
-
-## See Also
-
-### Setting the User Callback
-
-- [AVAudioSequencerUserCallback](../avaudiosequencerusercallback.md): A callback the sequencer calls asynchronously during playback when it encounters a user event.
-
-# setUserCallback: (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-Adds a callback that the sequencer calls each time it encounters a user event during playback.
-
-## Declaration
-
-```objectivec
-- (void) setUserCallback:(AVAudioSequencerUserCallback) userCallback;
-```
-
-## Parameters
-
-- `userCallback`: The user callback that the system calls.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The system calls the same callback for events that occur on any track in the sequencer. Set the callback to `nil` to disable it.
-
-## See Also
-
-### Setting the User Callback
-
-- [AVAudioSequencerUserCallback](../avaudiosequencerusercallback.md): A callback the sequencer calls asynchronously during playback when it encounters a user event.
-
-# Document: start()
-
-Source path: documentation/avfaudio/avaudiosequencer/start()
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/start()
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# start() (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Starts the sequencer’s player.
-
-## Declaration
-
-```swift
-func start() throws
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If you don’t call [prepareToPlay()](preparetoplay%28%29.md), the framework calls it and then starts the player.
-
-## See Also
-
-### Operating an Audio Sequencer
-
-- [prepareToPlay()](preparetoplay%28%29.md): Gets ready to play the sequence by prerolling all events.
-- [stop()](stop%28%29.md): Stops the sequencer’s player.
-
-# startAndReturnError: (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Starts the sequencer’s player.
-
-## Declaration
-
-```objectivec
-- (BOOL) startAndReturnError:(NSError **) outError;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If you don’t call [prepareToPlay](preparetoplay%28%29.md), the framework calls it and then starts the player.
-
-## See Also
-
-### Operating an Audio Sequencer
-
-- [prepareToPlay](preparetoplay%28%29.md): Gets ready to play the sequence by prerolling all events.
-- [stop](stop%28%29.md): Stops the sequencer’s player.
-
-# Document: stop()
-
-Source path: documentation/avfaudio/avaudiosequencer/stop()
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/stop()
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# stop() (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Stops the sequencer’s player.
-
-## Declaration
-
-```swift
-func stop()
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Stopping the player leaves it in an unprerolled state, but stores the playback position so that a subsequent call to [start()](start%28%29.md) resumes where it stops. This action doesn’t stop an audio engine you associate with it.
-
-## See Also
-
-### Operating an Audio Sequencer
-
-- [prepareToPlay()](preparetoplay%28%29.md): Gets ready to play the sequence by prerolling all events.
-- [start()](start%28%29.md): Starts the sequencer’s player.
-
-# stop (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Stops the sequencer’s player.
-
-## Declaration
-
-```objectivec
-- (void) stop;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Stopping the player leaves it in an unprerolled state, but stores the playback position so that a subsequent call to [startAndReturnError:](start%28%29.md) resumes where it stops. This action doesn’t stop an audio engine you associate with it.
-
-## See Also
-
-### Operating an Audio Sequencer
-
-- [prepareToPlay](preparetoplay%28%29.md): Gets ready to play the sequence by prerolling all events.
-- [startAndReturnError:](start%28%29.md): Starts the sequencer’s player.
-
-# Document: tempoTrack
-
-Source path: documentation/avfaudio/avaudiosequencer/tempotrack
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/tempotrack
-Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# tempoTrack (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The track that contains tempo information about the sequence.
-
-## Declaration
-
-```swift
-var tempoTrack: AVMusicTrack { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Each sequence has a single tempo track. The framework places all tempo events into this track along with other appropriate events, such as the time signature from a MIDI file.
-
-You can edit the tempo track like any other track. The framework ignores nontempo events in the track.
-
-## See Also
-
-### Getting Sequence Properties
-
-- [isPlaying](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
-- [rate](rate.md): The playback rate of the sequencer’s player.
-- [tracks](tracks.md): An array that contains all the tracks in the sequence.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
-- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# tempoTrack (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-The track that contains tempo information about the sequence.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) AVMusicTrack * tempoTrack;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Each sequence has a single tempo track. The framework places all tempo events into this track along with other appropriate events, such as the time signature from a MIDI file.
-
-You can edit the tempo track like any other track. The framework ignores nontempo events in the track.
-
-## See Also
-
-### Getting Sequence Properties
-
-- [playing](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
-- [rate](rate.md): The playback rate of the sequencer’s player.
-- [tracks](tracks.md): An array that contains all the tracks in the sequence.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
-- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# Document: tracks
-
-Source path: documentation/avfaudio/avaudiosequencer/tracks
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/tracks
-Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# tracks (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-An array that contains all the tracks in the sequence.
-
-## Declaration
-
-```swift
-var tracks: [AVMusicTrack] { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The track indices start at `0`, and don’t include the tempo track.
-
-## See Also
-
-### Getting Sequence Properties
-
-- [isPlaying](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
-- [rate](rate.md): The playback rate of the sequencer’s player.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
-- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
-- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# tracks (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-An array that contains all the tracks in the sequence.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) NSArray<AVMusicTrack *> * tracks;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The track indices start at `0`, and don’t include the tempo track.
-
-## See Also
-
-### Getting Sequence Properties
-
-- [playing](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
-- [rate](rate.md): The playback rate of the sequencer’s player.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
-- [userInfo](userinfo.md): A dictionary that contains metadata from a sequence.
-- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# Document: userInfo
-
-Source path: documentation/avfaudio/avaudiosequencer/userinfo
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/userinfo
-Description: Framework: AVFAudio Kind: Instance Property Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# userInfo (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-A dictionary that contains metadata from a sequence.
-
-## Declaration
-
-```swift
-var userInfo: [String : Any] { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This property contains one or more of the values from [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md).
-
-## See Also
-
-### Getting Sequence Properties
-
-- [isPlaying](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
-- [rate](rate.md): The playback rate of the sequencer’s player.
-- [tracks](tracks.md): An array that contains all the tracks in the sequence.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
-- [AVAudioSequencer.InfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [data(withSMPTEResolution:error:)](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# userInfo (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Property  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-A dictionary that contains metadata from a sequence.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, readonly) NSDictionary<NSString *,id> * userInfo;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This property contains one or more of the values from [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md).
-
-## See Also
-
-### Getting Sequence Properties
-
-- [playing](isplaying.md): A Boolean value that indicates whether the sequencer’s player is in a playing state.
-- [rate](rate.md): The playback rate of the sequencer’s player.
-- [tracks](tracks.md): An array that contains all the tracks in the sequence.
-- [currentPositionInBeats](currentpositioninbeats.md): The current playback position, in beats.
-- [currentPositionInSeconds](currentpositioninseconds.md): The current playback position, in seconds.
-- [tempoTrack](tempotrack.md): The track that contains tempo information about the sequence.
-- [AVAudioSequencerInfoDictionaryKey](infodictionarykey.md): Constants that defines metadata keys for a sequencer.
-- [dataWithSMPTEResolution:error:](data%28withsmpteresolution_error_%29.md): Gets a data object that contains the events from the sequence.
-- [AVMusicTimeStampEndOfTrack](../avmusictimestampendoftrack.md): A timestamp you use to access all events in a music track through a beat range.
-
-# Document: write(to:smpteResolution:replaceExisting:)
-
-Source path: documentation/avfaudio/avaudiosequencer/write(to:smpteresolution:replaceexisting:)
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencer/write(to:smpteresolution:replaceexisting:)
-Description: Framework: AVFAudio Kind: Instance Method Availability: iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-# write(to:smpteResolution:replaceExisting:) (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Creates and writes a MIDI file from the events in the sequence.
-
-## Declaration
-
-```swift
-func write(to fileURL: URL, smpteResolution resolution: Int, replaceExisting replace: Bool) throws
-```
-
-## Parameters
-
-- `fileURL`: The URL of the file you want to write to.
-- `resolution`: The relationship between tick and quarter note for saving to a Standard MIDI File. Passing zero uses the default value set using the tempo track.
-- `replace`: When `true`, the framework overwrites an existing file at `fileURL`. Otherwise, the call fails with a permission error if a file at the specified path exists.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The framework writes only MIDI events when writing to the MIDI file. MIDI files are normally beat-based, but can also have an SMPTE (or real-time, rather than beat time) representation. The relationship between tick and quarter note for saving to a Standard MIDI File is the current value for the tempo track.
-
-# writeToURL:SMPTEResolution:replaceExisting:error: (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Instance Method  
-**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
-
-Creates and writes a MIDI file from the events in the sequence.
-
-## Declaration
-
-```objectivec
-- (BOOL) writeToURL:(NSURL *) fileURL SMPTEResolution:(NSInteger) resolution replaceExisting:(BOOL) replace error:(NSError **) outError;
-```
-
-## Parameters
-
-- `fileURL`: The URL of the file you want to write to.
-- `resolution`: The relationship between tick and quarter note for saving to a Standard MIDI File. Passing zero uses the default value set using the tempo track.
-- `replace`: When `true`, the framework overwrites an existing file at `fileURL`. Otherwise, the call fails with a permission error if a file at the specified path exists.
-- `outError`: On input, a pointer to an error object. If an error occurs, the framework sets the pointer to an [NSError](../../foundation/nserror.md) object that describes the error. If you don’t want error information, pass in `nil`.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The framework writes only MIDI events when writing to the MIDI file. MIDI files are normally beat-based, but can also have an SMPTE (or real-time, rather than beat time) representation. The relationship between tick and quarter note for saving to a Standard MIDI File is the current value for the tempo track.
-
-# Document: AVAudioSequencerUserCallback
-
-Source path: documentation/avfaudio/avaudiosequencerusercallback
-Canonical documentation: https://developer.apple.com/documentation/avfaudio/avaudiosequencerusercallback
-Description: Framework: AVFAudio Kind: Type Alias Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-# AVAudioSequencerUserCallback (Swift)
-
-**Framework:** AVFAudio  
-**Kind:** Type Alias  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A callback the sequencer calls asynchronously during playback when it encounters a user event.
-
-## Declaration
-
-```swift
-typealias AVAudioSequencerUserCallback = (AVMusicTrack, Data, AVMusicTimeStamp) -> Void
-```
-
-## Parameters
-
-- `track`: The track that contains the user event.
-- `userData`: The data used to initialize the user event.
-- `timeStamp`: The beat location of the event.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The sequencer delivers this callback asynchronously to the rendering thread on an internal queue. The `userData` this returns is unique to each [AVMusicUserEvent](avmusicuserevent.md) instance.
-
-## See Also
-
-### Setting the User Callback
-
-- [setUserCallback(\_:)](avaudiosequencer/setusercallback%28__%29.md): Adds a callback that the sequencer calls each time it encounters a user event during playback.
-
-# AVAudioSequencerUserCallback (Objective-C)
-
-**Framework:** AVFAudio  
-**Kind:** Type Alias  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
-
-A callback the sequencer calls asynchronously during playback when it encounters a user event.
-
-## Declaration
-
-```objectivec
-typedef void (^)(AVMusicTrack *, NSData *, double) AVAudioSequencerUserCallback;
-```
-
-## Parameters
-
-- `track`: The track that contains the user event.
-- `userData`: The data used to initialize the user event.
-- `timeStamp`: The beat location of the event.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The sequencer delivers this callback asynchronously to the rendering thread on an internal queue. The `userData` this returns is unique to each [AVMusicUserEvent](avmusicuserevent.md) instance.
-
-## See Also
-
-### Setting the User Callback
-
-- [setUserCallback:](avaudiosequencer/setusercallback%28__%29.md): Adds a callback that the sequencer calls each time it encounters a user event during playback.

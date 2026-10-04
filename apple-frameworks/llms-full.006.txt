@@ -1,10 +1,39 @@
-# Apple cross-platform frameworks snapshot-df12c7e37114: full documentation
+# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: df12c7e37114ce7de3cfd4343373adc3253a7eb13c937245eba588e18d800800
-Content digest: 809b3efc0dfe6136d43ea6889a61a77fc978aecdd75fc00cf7de0bda3bf8439a
-Captured at: 2026-09-27T18:07:10.128Z
+Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
+Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
+Captured at: 2026-10-04T18:39:03.048Z
 Volume 6
+
+# Document: buildBlock(_:)
+
+Source path: documentation/appintents/entityquerycomparatorsbuilder/buildblock(_:)
+Canonical documentation: https://developer.apple.com/documentation/appintents/entityquerycomparatorsbuilder/buildblock(_:)
+Description: Framework: App Intents Kind: Type Method Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+# buildBlock(\_:)
+
+**Framework:** App Intents  
+**Kind:** Type Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+## Declaration
+
+```swift
+static func buildBlock(_ components: AnyEntityQueryComparator<Entity, Subject, Property, PropertyType, ComparatorMappingType>...) -> [AnyEntityQueryComparator<Entity, Subject, Property, PropertyType, ComparatorMappingType>]
+```
+
+## See Also
+
+### Building query comparators
+
+- [AnyEntityQueryComparator](../anyentityquerycomparator.md): A type that erases the type information of the underlying query comparator.
+- [buildExpression(\_:)](buildexpression%28__%29-4g6f9.md)
+- [buildExpression(\_:)](buildexpression%28__%29-5tlbq.md)
+- [buildExpression(\_:)](buildexpression%28__%29-6v6cj.md)
+- [buildExpression(\_:)](buildexpression%28__%29-8jx4k.md)
+- [EntityQueryComparator](../entityquerycomparator.md): The base class for all concrete entity query comparators.
 
 # Document: buildExpression(_:)
 
@@ -1600,7 +1629,7 @@ protocol FileEntity : AppEntity where Self.ID == FileEntityIdentifier
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
@@ -3053,7 +3082,7 @@ For more information about adding entities to your app’s Spotlight index, see 
 - [FileEntity](fileentity.md): An entity that refers to a document or other file.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
@@ -45269,13 +45298,20 @@ struct IntentValueRepresentation<Item, IntentValue> where Item : Transferable, I
 
 ## Export and Import
 
-You can create a representation that supports export only, or both export and import:
+You can create a representation that supports export only, import only, or both:
 
 ```swift
 // Export only
 ValueRepresentation(
     exporting: { entity in
         IntentPerson(name: .displayName(entity.name))
+    }
+)
+
+// Import only
+ValueRepresentation(
+    importing: { person in
+        ContactEntity(name: person.name.displayString)
     }
 )
 
@@ -45315,6 +45351,8 @@ struct LocationEntity: TransientAppEntity, Transferable {
 - [init(exporting:)](intentvaluerepresentation/init%28exporting_%29-7wi2e.md): Conforms when `Item` conforms to `Transferable` and `IntentValue` is `IntentPerson`. Creates a value representation that exports an entity to an `IntentPerson`.
 - [init(exporting:importing:)](intentvaluerepresentation/init%28exporting_importing_%29-4zz9c.md): Conforms when `Item` conforms to `Transferable` and `IntentValue` conforms to `_SystemIntentValue`. Creates a value representation that supports bidirectional conversion between an entity and a system intent value.
 - [init(exporting:importing:)](intentvaluerepresentation/init%28exporting_importing_%29-550j7.md): Conforms when `Item` conforms to `Transferable` and `IntentValue` is `IntentPerson`. an entity and an `IntentPerson`.
+- [init(importing:)](intentvaluerepresentation/init%28importing_%29-6jio8.md): Beta. Conforms when `Item` conforms to `Transferable` and `IntentValue` is `IntentPerson`. Creates a value representation that imports an `IntentPerson` into an entity.
+- [init(importing:)](intentvaluerepresentation/init%28importing_%29-7cl3z.md): Beta. Conforms when `Item` conforms to `Transferable` and `IntentValue` conforms to `_SystemIntentValue`. Creates a value representation that imports a system intent value into an entity.
 
 ## Relationships
 
@@ -45536,6 +45574,112 @@ struct ContactEntity: AppEntity, Transferable {
                     id: id,
                     name: person.name.displayString,
                     email: person.handle?.value ?? ""
+                )
+            }
+        )
+    }
+}
+```
+
+# Document: init(importing:)
+
+Source path: documentation/appintents/intentvaluerepresentation/init(importing:)-6jio8
+Canonical documentation: https://developer.apple.com/documentation/appintents/intentvaluerepresentation/init(importing:)-6jio8
+Description: Framework: App Intents Kind: Initializer Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta · watchOS 27.2+ beta
+
+# init(importing:)
+
+**Framework:** App Intents  
+**Kind:** Initializer  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta · watchOS 27.2+ beta
+
+Creates a value representation that imports an `IntentPerson` into an entity.
+
+## Declaration
+
+```swift
+init(importing: @escaping @Sendable (IntentValue) async throws -> Item)
+```
+
+## Parameters
+
+- `importing`: A closure that converts an IntentPerson to an entity.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this initializer when your entity can be created from an `IntentPerson`, but has no meaningful representation to export back out. The entity’s metadata declares `IntentPerson` as importable only, and the entity is never offered for export as a person.
+
+<a id="Example"></a>
+
+## Example
+
+```swift
+struct ContactEntity: AppEntity, Transferable {
+    static var transferRepresentation: some TransferRepresentation {
+        ValueRepresentation(
+            importing: { person in
+                guard case let .applicationDefined(id) = person.identifier?.value else {
+                    throw ImportError.missingIdentifier
+                }
+                return ContactEntity(
+                    id: id,
+                    name: person.name.displayString,
+                    email: person.handle?.value ?? ""
+                )
+            }
+        )
+    }
+}
+```
+
+# Document: init(importing:)
+
+Source path: documentation/appintents/intentvaluerepresentation/init(importing:)-7cl3z
+Canonical documentation: https://developer.apple.com/documentation/appintents/intentvaluerepresentation/init(importing:)-7cl3z
+Description: Framework: App Intents Kind: Initializer Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta · watchOS 27.2+ beta
+
+# init(importing:)
+
+**Framework:** App Intents  
+**Kind:** Initializer  
+**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta · watchOS 27.2+ beta
+
+Creates a value representation that imports a system intent value into an entity.
+
+## Declaration
+
+```swift
+init(importing: @escaping @Sendable (IntentValue) async throws -> Item)
+```
+
+## Parameters
+
+- `importing`: A closure that converts a system intent value to an entity.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this initializer when your entity can be created from a system type, but has no meaningful representation to export back out. The entity’s metadata declares the system type as importable only, and the entity is never offered for export as that type.
+
+<a id="Example"></a>
+
+## Example
+
+```swift
+struct LocationEntity: AppEntity, Transferable {
+    static var transferRepresentation: some TransferRepresentation {
+        IntentValueRepresentation(
+            importing: { place in
+                guard let coordinate = place.coordinate else {
+                    throw ImportError.missingCoordinate
+                }
+                return LocationEntity(
+                    name: place.commonName ?? "Unknown Location",
+                    latitude: coordinate.latitude,
+                    longitude: coordinate.longitude
                 )
             }
         )
@@ -47973,7 +48117,7 @@ Use this protocol to create an app intent that opens the app and displays a spec
 
 > **Note**
 
-> The [URLRepresentableIntent](urlrepresentableintent.md) protocol provides a default implementation of the `AppIntents/perform()` method. If your app intent supports this protocol, or if the [target](openintent/target.md) parameter contains a type with a URL representation, you don’t need to implement that method. The default `AppIntents/perform()` method opens the item using your app’s URL support.
+> If your app intent type implements the [URLRepresentableIntent](urlrepresentableintent.md) protocol, or if the [target](openintent/target.md) parameter contains a type with a URL representation, provide an implementation of your [perform()](appintent/perform%28%29.md) method that returns a result and does nothing else. When a URL is present, the system opens the item using your app’s URL support instead.
 
 The system automatically brings your app to the foreground to run this app intent. If your app intent adopts the [TargetContentProvidingIntent](targetcontentprovidingintent.md) or [UISceneAppIntent](uisceneappintent.md) protocol, the system also directs the app intent to one of your app’s scenes first so you can configure the scene’s views. If your app intent type doesn’t support these protocols, use your [perform()](appintent/perform%28%29.md) method implementation to update your app’s interface and display the item.
 
@@ -48381,7 +48525,7 @@ struct PhotoAlbumEntity: OwnershipProvidingEntity {
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
 - [AppUnionValueCasesProviding](appunionvaluecasesproviding.md): A protocol for the cases enumeration of an `AppUnionValue`.
@@ -57165,7 +57309,7 @@ struct Photo: AppEntity, SyncableEntity {
 - [FileEntity](fileentity.md): An entity that refers to a document or other file.
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
@@ -57790,7 +57934,7 @@ Description: Framework: App Intents Kind: Protocol Availability: iOS 26.0+ · iP
 **Kind:** Protocol  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · tvOS 26.0+ · visionOS 26.0+
 
-An interface that provides a custom identifier for an app intent.
+An interface that provides a custom content identifier for an app intent.
 
 ## Declaration
 
@@ -57807,7 +57951,7 @@ protocol TargetContentProvidingIntent : AppIntent
 
 ## Overview
 
-In a SwiftUI app, adopt this protocol in an app intent that affects the contents of your app’s interface. The protocol provides an identifier string that you use to describe the app intent to your app. When the system launches your app, you use this identifier to match the app intent to one of your app’s scenes. If you’re implementing a UIKit app, use the [UISceneAppIntent](uisceneappintent.md) protocol to achieve the same behavior.
+In a SwiftUI app, adopt this protocol in an app intent that affects the contents of your app’s interface. The protocol provides an identifier string that you use to describe the app intent to your app. When the system launches your app, it looks for a scene that indicates it handles the specified identifier. If you’re implementing a UIKit app, use the [UISceneAppIntent](uisceneappintent.md) protocol to achieve the same behavior.
 
 For more information about how to use app intents to configure your app’s interface, see [Directing app intents to your app’s scenes](directing-app-intents-to-your-apps-scenes.md).
 
@@ -57980,7 +58124,7 @@ protocol TransientAppEntity : AppEntity
 - [FileEntity](fileentity.md): An entity that refers to a document or other file.
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [UnionValue()](unionvalue%28%29.md)
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
@@ -58601,7 +58745,7 @@ protocol UISceneAppIntent : TargetContentProvidingIntent
 
 In a UIKit app, adopt this protocol in an app intent that causes the system to launch your app in the foreground. For example, include this protocol in an app intent that also supports the [OpenIntent](openintent.md) protocol. The `UISceneAppIntent` protocol tells the system to deliver the app intent to one of your app’s scenes before calling the app intent’s [perform()](appintent/perform%28%29.md) method. In your scene code, use the app intent to configure views and prepare your app’s interface for the app intent.
 
-In addition to adopting this protocol in your app intent, update your scene’s delegate object to support the [AppIntentSceneDelegate](appintentscenedelegate.md) protocol. The scene uses that protocol to receive the app intent from the system. If you don’t implement that protocol in your scene delegate, you can alternatively use this protocol’s [performNavigation(forScene:)](uisceneappintent/performnavigation%28forscene_%29.md) method to configure your scene from your app intent type.
+In addition to adopting this protocol in your app intent, update your scene’s delegate to support the [AppIntentSceneDelegate](appintentscenedelegate.md) protocol. When your app receives an app intent, the system directs it to the scene that indicates its support for the specified app intent. If your scene delegate doesn’t implement the [AppIntentSceneDelegate](appintentscenedelegate.md) protocol, the system calls the [performNavigation(forScene:)](uisceneappintent/performnavigation%28forscene_%29.md) method of this protocol in your app intent instead. You can use that method to configure the scene from your app intent code instead of your scene delegate.
 
 For more information about how to use app intents to configure your app’s interface, see [Directing app intents to your app’s scenes](directing-app-intents-to-your-apps-scenes.md).
 
@@ -58634,7 +58778,7 @@ For more information about how to use app intents to configure your app’s inte
 ### Scene support
 
 - [Directing app intents to your app’s scenes](directing-app-intents-to-your-apps-scenes.md): Direct app intents to a specific SwiftUI or UIKit scene and use the app intent to configure the content of the scene.
-- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom identifier for an app intent.
+- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom content identifier for an app intent.
 - [AppIntentSceneDelegate](appintentscenedelegate.md): The interface a UIKit scene delegate uses to receive an app intent and configure the scene’s views.
 
 # Document: contentIdentifier
@@ -59061,7 +59205,7 @@ Description: Framework: App Intents Kind: Macro Availability: iOS 18.0+ · iPadO
 - [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.
 - [SyncableEntity](syncableentity.md): An interface that indicates your entity has an identifier that’s consistent across devices.
 - [TransientAppEntity](transientappentity.md): A type that represents a transient model object which exposes its interface to App Intents via properties. Note that `TransientAppEntity` types are not meant to be queried.
-- [UniqueAppEntity](uniqueappentity.md): An entity that will only ever have one value, such as global settings.
+- [UniqueAppEntity](uniqueappentity.md): An AppEntity subtype for entities that only have a single instance.
 - [OwnershipProvidingEntity](ownershipprovidingentity.md): A type that provides the system with ownership and sharing context for an app entity.
 - [AppUnionValue](appunionvalue.md): A protocol that provides nominal type identity and metadata for union values.
 - [AppUnionValueCasesProviding](appunionvaluecasesproviding.md): A protocol for the cases enumeration of an `AppUnionValue`.
@@ -59078,13 +59222,47 @@ Description: Framework: App Intents Kind: Protocol Availability: iOS 18.0+ · iP
 **Kind:** Protocol  
 **Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
 
-An entity that will only ever have one value, such as global settings.
+An AppEntity subtype for entities that only have a single instance.
 
 ## Declaration
 
 ```swift
 protocol UniqueAppEntity : AppEntity where Self.DefaultQuery : UniqueAppEntityQuery
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+If an entity type only ever has one value, use the `UniqueAppEntity` protocol and the related `UniqueAppEntityQuery`.  For example, app-global settings might be represented using an entity of this type.  The protocols will implement several required methods for you and allow the system to present the entity differently in some contexts.  For example, Shortcuts will not generate a “Find” action for that entity type.
+
+An entity conforming to `UniqueAppEntity` must have a `defaultQuery` type that conforms to `UniqueAppEntityQuery`, which has a single required method, `uniqueEntity`, and uses that to provide implementations of the other required query methods.  If you require a separate query definition, such as because it uses `@Dependency`, it would look like this:
+
+```swift
+struct MyEntity: UniqueAppEntity {
+    static var defaultQuery = MyQuery()
+}
+
+struct MyQuery: UniqueAppEntityQuery {
+    typealias Entity = MyEntity
+
+    func uniqueEntity() -> Entity { ... }
+}
+```
+
+If your query type has no requirements other than the `uniqueEntity` method, you may use the simplified `UniqueAppEntityProvider` type, like this:
+
+```swift
+struct MyEntity: UniqueAppEntity {
+    static var defaultQuery = UniqueAppEntityProvider {
+        ...
+    }
+}
+```
+
+The provider instance will call the supplied block to get the entity value when needed.
+
+An entity that will only ever have one value, such as global settings.
 
 ## Relationships
 
@@ -60196,7 +60374,7 @@ Your app’s interface contains important context about what a person is doing, 
 ### Scene support
 
 - [Directing app intents to your app’s scenes](directing-app-intents-to-your-apps-scenes.md): Direct app intents to a specific SwiftUI or UIKit scene and use the app intent to configure the content of the scene.
-- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom identifier for an app intent.
+- [TargetContentProvidingIntent](targetcontentprovidingintent.md): An interface that provides a custom content identifier for an app intent.
 - [UISceneAppIntent](uisceneappintent.md): An interface you use to direct an app intent to a specific scene in your UIKit app.
 - [AppIntentSceneDelegate](appintentscenedelegate.md): The interface a UIKit scene delegate uses to receive an app intent and configure the scene’s views.
 
@@ -169530,254 +169708,3 @@ private func dragSquare(_ sender: UIPanGestureRecognizer) {
 - [UIImpactFeedbackGenerator](../uikit/uiimpactfeedbackgenerator.md): A concrete feedback generator subclass that creates haptics to simulate physical impacts.
 - [UISelectionFeedbackGenerator](../uikit/uiselectionfeedbackgenerator.md): A concrete feedback generator subclass that creates haptics to indicate a change in selection.
 - [UINotificationFeedbackGenerator](../uikit/uinotificationfeedbackgenerator.md): A concrete feedback generator subclass that creates haptics to communicate successes, failures, and warnings.
-
-# Document: Apple School Manager API
-
-Source path: documentation/appleschoolmanagerapi
-Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi
-Description: Interface language: Data
-
-# Apple School Manager API
-
-**Interface language:** Data
-
-**Framework:** Apple School Manager API  
-**Kind:** Web Service  
-**Availability:** Apple School Manager API 1.7+
-
-Automate device management activities and view device information in Apple School Manager.
-
-<a id="overview"></a>
-
-## Overview
-
-> **Note**
-
-> This API is a part of the [Apple School Manager and Apple Business APIs](apple-school-and-business-manager-api.md) collection.
-
-## Topics
-
-### Devices
-
-- [Get Organization Devices](appleschoolmanagerapi/get-org-devices.md): Get a list of devices in an organization that enroll using Automated Device Enrollment.
-- [Get Device Information](appleschoolmanagerapi/get-orgdevice-information.md): Get information about a device in an organization.
-- [Get AppleCare Coverage Information for a Device](appleschoolmanagerapi/get-all-applecare-coverage-for-an-orgdevice.md): Get a list of AppleCare coverage resources for an organization device.
-
-### Device Management Services
-
-- [Get Device Management Services](appleschoolmanagerapi/get-device-management-services.md): Get a list of device management services in an organization.
-- [Get Device Management Service Information](appleschoolmanagerapi/get-mdmserver-information.md): Get the information for a specific device management service.
-- [Get All Device IDs for a Device Management Service](appleschoolmanagerapi/get-all-device-ids-for-a-device-management-service.md)
-- [Get the Assigned Device Management Service ID for a Device](appleschoolmanagerapi/get-the-assigned-device-management-service-id-for-an-orgdevice.md): Get the assigned device management service ID information for a device.
-- [Get the Assigned Device Management Service Information for a Device](appleschoolmanagerapi/get-the-assigned-device-management-service-information-for-an-orgdevice.md): Get the assigned device management service information for a device.
-- [Assign or Unassign Devices to a Device Management Service](appleschoolmanagerapi/create-an-orgdeviceactivity.md): Assign or unassign devices to a device management service, or manage a device management service for devices.
-- [Get Organization Device Activity Information](appleschoolmanagerapi/get-orgdeviceactivity-information.md): Get information for an organization device activity that a device management action, such as assigning or unassigning, creates.
-
-### Objects and Data Types
-
-- [OrgDevice](appleschoolmanagerapi/orgdevice.md): The data structure that represents an organization device resource.
-- [OrgDeviceResponse](appleschoolmanagerapi/orgdeviceresponse.md): A response that contains a single organization device resource.
-- [OrgDevicesResponse](appleschoolmanagerapi/orgdevicesresponse.md): A response that contains a list of organization device resources.
-- [OrgDeviceAssignedServerLinkageResponse](appleschoolmanagerapi/orgdeviceassignedserverlinkageresponse.md): The data and links that describe the relationship between the resources.
-- [MdmServer](appleschoolmanagerapi/mdmserver.md): The data structure that represents device management services in organizations.
-- [MdmServerResponse](appleschoolmanagerapi/mdmserverresponse.md): A response that contains a single device management service resource.
-- [MdmServersResponse](appleschoolmanagerapi/mdmserversresponse.md): A response that contains a list of device management service resources.
-- [MdmServerDevicesLinkagesResponse](appleschoolmanagerapi/mdmserverdeviceslinkagesresponse.md): The data and links that describe the relationship between the resources.
-- [OrgDeviceActivity](appleschoolmanagerapi/orgdeviceactivity.md): The data structure that represents an organization device activity resource.
-- [OrgDeviceActivityCreateRequest](appleschoolmanagerapi/orgdeviceactivitycreaterequest.md): The request body you use to update the device management service for a device.
-- [OrgDeviceActivityResponse](appleschoolmanagerapi/orgdeviceactivityresponse.md): A response that contains a single organization device activity resource.
-- [AppleCareCoverage](appleschoolmanagerapi/applecarecoverage.md): The data structure that represents an AppleCare coverage resource that belongs to an organization device.
-- [AppleCareCoverageResponse](appleschoolmanagerapi/applecarecoverageresponse.md): A response that contains a list of AppleCare coverage resources that belongs to an organization device.
-- [PagedDocumentLinks](appleschoolmanagerapi/pageddocumentlinks.md): Links related to the response document, including paging links.
-- [PagingInformation](appleschoolmanagerapi/paginginformation.md): Paging information for data responses.
-- [RelationshipLinks](appleschoolmanagerapi/relationshiplinks.md): Links related to the response document, including self-links.
-- [ResourceLinks](appleschoolmanagerapi/resourcelinks.md): Self-links to requested resources.
-- [ErrorResponse](appleschoolmanagerapi/errorresponse.md): The error details that an API returns in the response body whenever the API request isn’t successful.
-- [ErrorLinks](appleschoolmanagerapi/errorlinks.md)
-- [JsonPointer](appleschoolmanagerapi/jsonpointer.md): An object that contains the JSON pointer that indicates the location of the error.
-- [Parameter](appleschoolmanagerapi/parameter.md): An object that contains the query parameter that produces the error.
-- [DocumentLinks](appleschoolmanagerapi/documentlinks.md): Self-links to documents that can contain information for one or more resources.
-
-### Type Aliases
-
-- [OrgDeviceActivityType](appleschoolmanagerapi/orgdeviceactivitytype.md): Strings that represent organization device activities.
-- [AppleCareCoveragePaymentType](appleschoolmanagerapi/applecarecoveragepaymenttype.md): Strings that represent AppleCare coverage payment types.
-- [AppleCareCoverageStatus](appleschoolmanagerapi/applecarecoveragestatus.md): Strings that represent AppleCare coverage status.
-- [ActivationLockType](appleschoolmanagerapi/activationlocktype.md): Strings that represent the type of Activation Lock on a device.
-- [MdmMigrationStatus](appleschoolmanagerapi/mdmmigrationstatus.md): Strings that represent the state of a device’s device management service migration.
-
-### Endpoints
-
-- [Get the Activation Lock Status for a Device](appleschoolmanagerapi/get-the-activation-lock-status-information-for-an-orgdevice.md): Get the Activation Lock status of an organization device.
-
-### Dictionaries
-
-- [ActivationLockStatus](appleschoolmanagerapi/activationlockstatus.md): The data structure that represents the Activation Lock status of an organization device.
-- [ActivityTypeMetadata](appleschoolmanagerapi/activitytypemetadata.md): Additional metadata for an organization device activity, used by device management service migration activity types.
-
-## See Also
-
-### Apple School Manager and Apple Business APIs
-
-- [Apple Business API](applebusinessapi.md): Automate device management activities, view device information, and manage users and user groups in Apple Business.
-
-# Document: ActivationLockStatus
-
-Source path: documentation/appleschoolmanagerapi/activationlockstatus
-Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/activationlockstatus
-Description: Interface language: Data
-
-# ActivationLockStatus
-
-**Interface language:** Data
-
-**Framework:** Apple School Manager API  
-**Kind:** Object  
-**Availability:** Apple School Manager API 1.7+
-
-The data structure that represents the Activation Lock status of an organization device.
-
-## Declaration
-
-```
-object ActivationLockStatus
-```
-
-## Properties
-
-- `attributes` — `ActivationLockStatus.Attributes`: The resource’s attributes.
-- `id` — `string` (required): The opaque resource ID that uniquely identifies the resource.
-- `type` — `string` (required): The resource type.
-  **Allowed values:** `activationLockStatus`
-
-## Topics
-
-### Dictionaries
-
-- [ActivationLockStatus.Attributes](activationlockstatus/attributes-data.dictionary.md): Attributes for an organization device’s Activation Lock status.
-
-# Document: ActivationLockStatus.Attributes
-
-Source path: documentation/appleschoolmanagerapi/activationlockstatus/attributes-data.dictionary
-Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/activationlockstatus/attributes-data.dictionary
-Description: Interface language: Data
-
-# ActivationLockStatus.Attributes
-
-**Interface language:** Data
-
-**Framework:** Apple School Manager API  
-**Kind:** Object  
-**Availability:** Apple School Manager API 1.7+
-
-Attributes for an organization device’s Activation Lock status.
-
-## Declaration
-
-```
-object ActivationLockStatus.Attributes
-```
-
-## Properties
-
-- `isLocked` — `boolean`: Whether the device is currently Activation Locked.
-- `lockType` — `ActivationLockType`: The type of Activation Lock on the device, if `isLocked` is `true`. Possible values: `MDM`, `USER`, `NONE`
-
-<a id="overview"></a>
-
-## Overview
-
-> **Note**
-
-> When additional attributes are added by Apple, they appear automatically, without requiring a newer version of the API.
-
-# Document: ActivationLockStatusResponse
-
-Source path: documentation/appleschoolmanagerapi/activationlockstatusresponse
-Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/activationlockstatusresponse
-Description: Interface language: Data
-
-# ActivationLockStatusResponse
-
-**Interface language:** Data
-
-**Framework:** Apple School Manager API  
-**Kind:** Object  
-**Availability:** Apple School Manager API 1.7+
-
-A response that contains the Activation Lock status of an organization device.
-
-## Declaration
-
-```
-object ActivationLockStatusResponse
-```
-
-## Properties
-
-- `data` — `ActivationLockStatus` (required): The resource data.
-- `links` — `DocumentLinks` (required): Navigational links that include the self-link.
-
-# Document: ActivationLockType
-
-Source path: documentation/appleschoolmanagerapi/activationlocktype
-Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/activationlocktype
-Description: Interface language: Data
-
-# ActivationLockType
-
-**Interface language:** Data
-
-**Framework:** Apple School Manager API  
-**Kind:** Type  
-**Availability:** Apple School Manager API 1.7+
-
-Strings that represent the type of Activation Lock on a device.
-
-## Declaration
-
-```
-string ActivationLockType
-```
-
-## Possible Values
-
-- `MDM`:
-- `USER`:
-- `NONE`:
-
-<a id="discussion"></a>
-
-## Discussion
-
-- Possible Values
-
-  - MDM: The device is Activation Locked by its device management service.
-  - USER: The device is Activation Locked to a personal Apple Account.
-  - NONE: The device isn’t Activation Locked.
-
-# Document: ActivityTypeMetadata
-
-Source path: documentation/appleschoolmanagerapi/activitytypemetadata
-Canonical documentation: https://developer.apple.com/documentation/appleschoolmanagerapi/activitytypemetadata
-Description: Interface language: Data
-
-# ActivityTypeMetadata
-
-**Interface language:** Data
-
-**Framework:** Apple School Manager API  
-**Kind:** Object  
-**Availability:** Apple School Manager API 1.7+
-
-Additional metadata for an organization device activity, used by device management service migration activity types.
-
-## Declaration
-
-```
-object ActivityTypeMetadata
-```
-
-## Properties
-
-- `mdmMigrationDeadlineDateTime` — `date-time`: The deadline, in ISO 8601 format, by which a device needs to complete its device management service migration.

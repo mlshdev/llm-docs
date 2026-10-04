@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-33695ec62253; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/apple-ads-platform-api/sharedbudgetcreate
 
 # SharedBudgetCreate
@@ -24,7 +24,7 @@ object SharedBudgetCreate
 - `startTime` — `date-time` (required): The date and time the budget becomes active. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC (for example, `2026-06-07T00:00:00.000`). Must be tomorrow or later (midnight UTC). Today is rejected.
 - `endTime` — `date-time`: The date and time the budget expires. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC. Must be after `startTime`. Omit for an open-ended budget.
 - `value` — `Money` (required): The total budget amount as a `Money` object with `amount` and ISO 4217 `currency` code. See [Money](money.md).
-- `adAccountIds` — `[int64]` (required): The ad account IDs that can draw from this budget. Exactly one ID is allowed at creation. The API rejects requests that send more than one ID.
+- `adAccountIds` — `[int64]` (required): The ad account IDs that can draw from this budget. At least one ID is required.
 - `invoiceDetail` — `SharedBudgetCreate.InvoiceDetail` (required): Billing contact details. See [InvoiceDetail](invoicedetail.md).
 
 <a id="Discussion"></a>

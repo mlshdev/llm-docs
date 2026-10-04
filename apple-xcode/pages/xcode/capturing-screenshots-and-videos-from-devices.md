@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-4fca00e84bae; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/capturing-screenshots-and-videos-from-devices
 
 # Capturing screenshots and videos from devices
@@ -43,3 +43,4 @@ To record a video of your app, run your app on a simulated device in Device Hub 
 - [Configuring the environment of a simulated device](configuring-the-environment-of-a-simulated-device.md): Modify the settings of a simulated device.
 - [Interacting with your app in Device Hub](interacting-with-your-app-in-device-hub.md): Use Device Hub to control interactions with your apps on simulated and physical devices.
 - [Interacting with your visionOS app in Device Hub](interacting-with-your-visionos-app-in-device-hub.md): Use Device Hub to navigate spaces and control interactions with your visionOS apps running on simulated visionOS devices.
+- [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md): Manage simulated and physical devices from the command line.

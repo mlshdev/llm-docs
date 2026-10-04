@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/revocationtype
 
 # revocationType
@@ -22,6 +22,7 @@ string revocationType
 - `REFUND_FULL`: The transaction has a full refund.
 - `REFUND_PRORATED`: The transaction has a prorated refund.
 - `FAMILY_REVOKE`: The transaction is revoked from Family Sharing.
+- `ASSIGNMENT_REVOKE`: The organization or group purchaser removed the subscription from the customer.
 
 ## Mentioned In
 
@@ -32,6 +33,8 @@ string revocationType
 ## Discussion
 
 If the `revocationType` is `REFUND_PRORATED`, see the [revocationPercentage](revocationpercentage.md) for the prorated percentage.
+
+A `revocationType` of `ASSIGNMENT_REVOKE` indicates that the organization or group purchaser removed the subscription from a customer. Revoke the customer’s access to the content the transaction provides. For more information about assignment, see [Get Customer Groups](get-customer-groups.md).
 
 ## See Also
 

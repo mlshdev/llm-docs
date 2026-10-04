@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-d045c48ba442; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-4fca00e84bae; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/managing-your-simulated-and-physical-devices-in-device-hub
 
 # Managing your simulated and physical devices in Device Hub
@@ -32,6 +32,8 @@ You can add simulators for specific platforms and operating system versions that
 To add a simulator with a specific configuration, click the Add Device button (+) at the top of the sidebar and choose a device under Simulators from the pop-up menu. In the dialog, optionally enter a name for the simulator, choose the operating system version and model, and click Create. The simulator appears under Available in the sidebar.
 
 ![A screenshot of dialog that appears when you choose a simulator from the Add Device pop-up menu.](https://developer.apple.com/images/com.apple.Xcode/add-additional-simulators@2x.png)
+
+If the operating system version you want to use doesn’t appear in the dialog, see [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md) to install the platform support first.
 
 To remove a simulator from Device Hub, Control-click it in the sidebar and choose Remove.
 

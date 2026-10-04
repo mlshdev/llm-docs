@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/bundleresources/information-property-list/nsusertrackingmarkdownusagedescription
 
 # NSUserTrackingMarkdownUsageDescription (Swift)
@@ -26,7 +26,7 @@ This key is optional. The system uses the [NSUserTrackingUsageDescription](nsuse
 This key has regional availability. To use this key, the system requires that the device be located in a specific European Union (EU) country and signed in with an Apple Account that has its country or region set to a specific EU country or region:
 
 - **France, Germany, Italy, Poland, and Romania**: The system uses this key, if available.
-- **The European Union**: The system uses this key if available when your app calls [requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:)](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md), passing `preferExpandedInterface` a value of `true`.
+- **The European Union**: The system uses this key if available when your app calls [requestTrackingAuthorization(preferExpandedInterface:additionalInformationAction:completionHandler:)](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md), passing `preferExpandedInterface` a value of `true`.
 
 Outside of the EU, the system uses the [NSUserTrackingUsageDescription](nsusertrackingusagedescription.md) key instead of this key.
 
@@ -72,7 +72,7 @@ This key is optional. The system uses the [NSUserTrackingUsageDescription](nsuse
 This key has regional availability. To use this key, the system requires that the device be located in a specific European Union (EU) country and signed in with an Apple Account that has its country or region set to a specific EU country or region:
 
 - **France, Germany, Italy, Poland, and Romania**: The system uses this key, if available.
-- **The European Union**: The system uses this key if available when your app calls [requestTrackingAuthorizationUsingExpandedInterface:additionalInformationAction:completionHandler:](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28usingexpandedinterface_additionalinformationaction_completionhandler_%29.md), passing `preferExpandedInterface` a value of `true`.
+- **The European Union**: The system uses this key if available when your app calls [requestTrackingAuthorizationPreferExpandedInterface:additionalInformationAction:completionHandler:](../../apptrackingtransparency/attrackingmanager/requesttrackingauthorization%28preferexpandedinterface_additionalinformationaction_completionhandler_%29.md), passing `preferExpandedInterface` a value of `true`.
 
 Outside of the EU, the system uses the [NSUserTrackingUsageDescription](nsusertrackingusagedescription.md) key instead of this key.
 

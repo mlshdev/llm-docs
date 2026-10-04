@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/sparse_inner_product_sparse_double(_:_:_:_:_:_:)
 
 # sparse_inner_product_sparse_double(\_:\_:\_:\_:\_:\_:) (Swift)

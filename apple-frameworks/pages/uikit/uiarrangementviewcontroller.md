@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/uiarrangementviewcontroller
 
 # UIArrangementViewController (Swift)
 
 **Framework:** UIKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 A view controller that presents its container view controllers through an arrangement.
 
@@ -103,26 +103,26 @@ The split arrangement adapts its axis based on the available size and size class
 
 ### Creating an arrangement view controller
 
-- [init()](uiarrangementviewcontroller/init%28%29.md): Beta. Creates an arrangement view controller.
+- [init()](uiarrangementviewcontroller/init%28%29.md): Creates an arrangement view controller.
 
 ### Configuring the arrangement
 
-- [UIArrangementViewController.Arrangement](uiarrangementviewcontroller/arrangement.md): Beta. A type that describes how an arrangement view controller lays out its view controllers.
-- [UIOverlayArrangement](uioverlayarrangement-swift.struct.md): Beta. An arrangement that overlays views.
-- [UISplitArrangement](uisplitarrangement-swift.struct.md): Beta. An arrangement that splits views.
-- [updateArrangement(\_:animated:)](uiarrangementviewcontroller/updatearrangement%28__animated_%29.md): Beta. Updates the arrangement of the view controller.
+- [UIArrangementViewController.Arrangement](uiarrangementviewcontroller/arrangement.md): A type that describes how an arrangement view controller lays out its view controllers.
+- [UIOverlayArrangement](uioverlayarrangement-swift.struct.md): An arrangement that overlays views.
+- [UISplitArrangement](uisplitarrangement-swift.struct.md): An arrangement that splits views.
+- [updateArrangement(\_:animated:)](uiarrangementviewcontroller/updatearrangement%28__animated_%29.md): Updates the arrangement of the view controller.
 
 ### Managing arrangement view controllers
 
-- [UIArrangementViewController.ViewPlacement](uiarrangementviewcontroller/viewplacement.md): Beta. A placement of a view controller within an arrangement view controller.
-- [viewController(for:)](uiarrangementviewcontroller/viewcontroller%28for_%29.md): Beta. The view controller in the arrangement for the provided placement.
-- [setViewController(\_:for:animated:)](uiarrangementviewcontroller/setviewcontroller%28__for_animated_%29.md): Beta. Sets the view controller in the arrangement for a specific placement.
-- [placement(for:)](uiarrangementviewcontroller/placement%28for_%29.md): Beta. Returns the placement for the provided view controller in the arrangement.
+- [UIArrangementViewController.ViewPlacement](uiarrangementviewcontroller/viewplacement.md): A placement of a view controller within an arrangement view controller.
+- [viewController(for:)](uiarrangementviewcontroller/viewcontroller%28for_%29.md): The view controller in the arrangement for the provided placement.
+- [setViewController(\_:for:animated:)](uiarrangementviewcontroller/setviewcontroller%28__for_animated_%29.md): Sets the view controller in the arrangement for a specific placement.
+- [placement(for:)](uiarrangementviewcontroller/placement%28for_%29.md): Returns the placement for the provided view controller in the arrangement.
 
 ### Getting view state
 
-- [UIArrangementViewController.ViewState](uiarrangementviewcontroller/viewstate.md): Beta. The state of a view within an arrangement.
-- [state(for:)](uiarrangementviewcontroller/state%28for_%29.md): Beta. Returns the view state for a placement in the arrangement.
+- [UIArrangementViewController.ViewState](uiarrangementviewcontroller/viewstate.md): The state of a view within an arrangement.
+- [state(for:)](uiarrangementviewcontroller/state%28for_%29.md): Returns the view state for a placement in the arrangement.
 
 ## Relationships
 
@@ -140,6 +140,7 @@ The split arrangement adapts its axis based on the available size and size class
 - [NSCoding](../foundation/nscoding.md)
 - [NSExtensionRequestHandling](../foundation/nsextensionrequesthandling.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](uiactivityitemsconfigurationproviding.md)
@@ -175,7 +176,7 @@ The split arrangement adapts its axis based on the available size and size class
 
 **Framework:** UIKit  
 **Kind:** Class  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · tvOS 27.1+ · visionOS 27.1+
 
 A view controller that presents its container view controllers through an arrangement.
 
@@ -273,28 +274,28 @@ The split arrangement adapts its axis based on the available size and size class
 
 ### Creating an arrangement view controller
 
-- [init](uiarrangementviewcontroller/init%28%29.md): Beta. Creates an arrangement view controller.
+- [init](uiarrangementviewcontroller/init%28%29.md): Creates an arrangement view controller.
 
 ### Configuring the arrangement
 
-- [UIArrangement](uiarrangement.md): Beta. A type that describes how an arrangement view controller lays out its view controllers.
-- [UIOverlayArrangement](uioverlayarrangement-c.class.md): Beta. An arrangement that overlays views.
-- [UISplitArrangement](uisplitarrangement-c.class.md): Beta. An arrangement that splits views.
-- [updateArrangement:](uiarrangementviewcontroller/updatearrangement_.md): Beta. Updates the arrangement of the view controller.
-- [updateArrangement:animated:](uiarrangementviewcontroller/updatearrangement_animated_.md): Beta. Updates the arrangement of the view controller.
+- [UIArrangement](uiarrangement.md): A type that describes how an arrangement view controller lays out its view controllers.
+- [UIOverlayArrangement](uioverlayarrangement-c.class.md): An arrangement that overlays views.
+- [UISplitArrangement](uisplitarrangement-c.class.md): An arrangement that splits views.
+- [updateArrangement:](uiarrangementviewcontroller/updatearrangement_.md): Updates the arrangement of the view controller.
+- [updateArrangement:animated:](uiarrangementviewcontroller/updatearrangement_animated_.md): Updates the arrangement of the view controller.
 
 ### Managing arrangement view controllers
 
-- [UIArrangementViewControllerViewPlacement](uiarrangementviewcontrollerviewplacement.md): Beta. A placement of a view within an arrangement view controller. Use this type to define placement for container views within the arrangement view controller.
-- [viewControllerForPlacement:](uiarrangementviewcontroller/viewcontrollerforplacement_.md): Beta. The view controller in the arrangement for the provided placement.
-- [setViewController:forPlacement:](uiarrangementviewcontroller/setviewcontroller_forplacement_.md): Beta. Sets the view controller in the arrangement for a specific placement.
-- [setViewController:forPlacement:animated:](uiarrangementviewcontroller/setviewcontroller_forplacement_animated_.md): Beta. Sets the view controller in the arrangement for a specific placement.
-- [placementForViewController:](uiarrangementviewcontroller/placementforviewcontroller_.md): Beta. The placement for the provided view controller in the arrangement. Will return `UIArrangementViewControllerViewPlacementNone` if the provided view controller is not a view controller provided to the arrangement view controller with an explicit placement.
+- [UIArrangementViewControllerViewPlacement](uiarrangementviewcontrollerviewplacement.md): A placement of a view within an arrangement view controller. Use this type to define placement for container views within the arrangement view controller.
+- [viewControllerForPlacement:](uiarrangementviewcontroller/viewcontrollerforplacement_.md): The view controller in the arrangement for the provided placement.
+- [setViewController:forPlacement:](uiarrangementviewcontroller/setviewcontroller_forplacement_.md): Sets the view controller in the arrangement for a specific placement.
+- [setViewController:forPlacement:animated:](uiarrangementviewcontroller/setviewcontroller_forplacement_animated_.md): Sets the view controller in the arrangement for a specific placement.
+- [placementForViewController:](uiarrangementviewcontroller/placementforviewcontroller_.md): The placement for the provided view controller in the arrangement. Will return `UIArrangementViewControllerViewPlacementNone` if the provided view controller is not a view controller provided to the arrangement view controller with an explicit placement.
 
 ### Getting view state
 
-- [UIArrangementViewState](uiarrangementviewstate.md): Beta. The state of a view within an arrangement.
-- [stateForPlacement:](uiarrangementviewcontroller/stateforplacement_.md): Beta. Returns the arrangement view state for a placement.
+- [UIArrangementViewState](uiarrangementviewstate.md): The state of a view within an arrangement.
+- [stateForPlacement:](uiarrangementviewcontroller/stateforplacement_.md): Returns the arrangement view state for a placement.
 
 ## Relationships
 

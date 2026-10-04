@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corelocation/cllocationmanager
 
 # CLLocationManager (Swift)
@@ -109,6 +109,7 @@ For more information, see [Configuring your app to use location services](config
 - [headingFilter](cllocationmanager/headingfilter.md): The minimum angular change in degrees required to generate new heading events.
 - [kCLHeadingFilterNone](kclheadingfilternone.md): A constant indicating that all header values should be reported.
 - [CLLocationDegrees](cllocationdegrees.md): A latitude or longitude value specified in degrees.
+- [headingBody](cllocationmanager/headingbody.md): A physical body or view that defines the reference orientation for heading calculations.
 - [headingOrientation](cllocationmanager/headingorientation.md): Deprecated. The device orientation to use when computing heading values.
 - [CLDeviceOrientation](cldeviceorientation.md): Constants indicating the physical orientation of the device.
 
@@ -144,10 +145,6 @@ For more information, see [Configuring your app to use location services](config
 ### Instance Methods
 
 - [requestHistoricalLocations(purposeKey:sampleCount:completionHandler:)](cllocationmanager/requesthistoricallocations%28purposekey_samplecount_completionhandler_%29.md)
-
-### Instance Properties
-
-- [headingBody](cllocationmanager/headingbody.md)
 
 ## Relationships
 
@@ -283,6 +280,7 @@ For more information, see [Configuring your app to use location services](config
 - [headingFilter](cllocationmanager/headingfilter.md): The minimum angular change in degrees required to generate new heading events.
 - [kCLHeadingFilterNone](kclheadingfilternone.md): A constant indicating that all header values should be reported.
 - [CLLocationDegrees](cllocationdegrees.md): A latitude or longitude value specified in degrees.
+- [headingBody](cllocationmanager/headingbody.md): A physical body or view that defines the reference orientation for heading calculations.
 - [headingOrientation](cllocationmanager/headingorientation.md): Deprecated. The device orientation to use when computing heading values.
 - [CLDeviceOrientation](cldeviceorientation.md): Constants indicating the physical orientation of the device.
 
@@ -318,10 +316,6 @@ For more information, see [Configuring your app to use location services](config
 ### Instance Methods
 
 - [requestHistoricalLocationsWithPurposeKey:sampleCount:completionHandler:](cllocationmanager/requesthistoricallocations%28purposekey_samplecount_completionhandler_%29.md)
-
-### Instance Properties
-
-- [headingBody](cllocationmanager/headingbody.md)
 
 ## Relationships
 

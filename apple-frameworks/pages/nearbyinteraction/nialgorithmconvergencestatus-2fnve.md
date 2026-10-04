@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/nearbyinteraction/nialgorithmconvergencestatus-2fnve
 
 # NIAlgorithmConvergenceStatus
@@ -51,8 +51,7 @@ The framework may require user action before Camera Assistance is fully operatio
 
 ## See Also
 
-### Camera assistance
+### Coaching the user
 
-- [Finding devices with precision](finding-devices-with-precision.md): Leverage the spatial awareness of ARKit and Apple Ultra Wideband Chips in your app to guide users to a nearby device.
-- [NIAlgorithmConvergence](nialgorithmconvergence.md): An object that provides the state and reason for user coaching recommendations.
-- [Algorithm Convergence Status](algorithm-convergence-status.md): The possible Objective-C states of Camera Assistance.
+- [session(\_:didUpdateAlgorithmConvergence:for:)](nisessiondelegate/session%28__didupdatealgorithmconvergence_for_%29.md): Provides recommended actions the user can take to facilitate the framework’s Camera Assistance.
+- [NIAlgorithmConvergenceStatus.Reason](nialgorithmconvergencestatus-2fnve/reason.md): The possible reasons for the Camera Assistance status.

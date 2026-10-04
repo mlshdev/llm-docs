@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/view/transaction(value:_:)
 
 # transaction(value:\_:)
@@ -41,7 +41,7 @@ The following code implements these animations:
 
 ```swift
 struct TransactionExample: View {
-    @State var flag = false
+    @State private var flag = false
 
     var body: some View {
         VStack(spacing: 50) {

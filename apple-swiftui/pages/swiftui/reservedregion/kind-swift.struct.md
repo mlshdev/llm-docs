@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple SwiftUI snapshot-8b55d19a707e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple SwiftUI snapshot-8247613c923d; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/swiftui/reservedregion/kind-swift.struct
 
 # ReservedRegion.Kind
 
 **Framework:** SwiftUI  
 **Kind:** Structure  
-**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta
+**Availability:** iOS 27.1+ beta · iPadOS 27.1+ beta · Mac Catalyst 27.1+ · macOS 27.1+ · tvOS 27.1+ · visionOS 27.1+ · watchOS 27.1+
 
 A kind of reserved region.
 
@@ -19,8 +19,8 @@ struct Kind
 
 ### Getting reserved region kinds
 
-- [division](kind-swift.struct/division.md): Beta. A region where content should split into two separate regions.
-- [occlusion](kind-swift.struct/occlusion.md): Beta. A region that is occluded by an element.
+- [division](kind-swift.struct/division.md): A region where content should split into two separate regions.
+- [occlusion](kind-swift.struct/occlusion.md): A region that is occluded by an element.
 
 ## Relationships
 
@@ -40,6 +40,6 @@ struct Kind
 
 ### Inspecting reserved regions
 
-- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Beta. Returns an array of reserved regions that match the selection options you specify.
-- [ReservedRegion](../reservedregion.md): Beta. A region within a view’s coordinate space that another entity reserves.
-- [ReservedRegion.QueryOptions](queryoptions.md): Beta. Options for querying reserved regions.
+- [reservedRegions(kind:options:layoutDirectionBehavior:)](../geometryproxy/reservedregions%28kind_options_layoutdirectionbehavior_%29.md): Returns an array of reserved regions that match the selection options you specify.
+- [ReservedRegion](../reservedregion.md): A region within a view’s coordinate space that another entity reserves.
+- [ReservedRegion.QueryOptions](queryoptions.md): Options for querying reserved regions.

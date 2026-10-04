@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/uikit/nstextlist/marker(foritemnumber:)
 
 # marker(forItemNumber:) (Swift)
@@ -31,6 +31,7 @@ The computed maker value for `itemNumber`.
 
 - [markerFormat](markerformat-swift.property.md): Returns the marker format string used by the receiver.
 - [NSTextList.MarkerFormat](markerformat-swift.struct.md): Constants that describe marker symbols you can apply to list elements in text lists.
+- [includesTextListMarkers](includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the text content.
 
 # markerForItemNumber: (Objective-C)
 
@@ -62,3 +63,4 @@ The computed maker value for `itemNumber`.
 
 - [markerFormat](markerformat-swift.property.md): Returns the marker format string used by the receiver.
 - [NSTextListMarkerFormat](markerformat-swift.struct.md): Constants that describe marker symbols you can apply to list elements in text lists.
+- [includesTextListMarkers](includestextlistmarkers.md): A Boolean value that indicates whether TextKit includes text list markers in the text content.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/intentvaluerepresentation
 
 # IntentValueRepresentation
@@ -30,13 +30,20 @@ struct IntentValueRepresentation<Item, IntentValue> where Item : Transferable, I
 
 ## Export and Import
 
-You can create a representation that supports export only, or both export and import:
+You can create a representation that supports export only, import only, or both:
 
 ```swift
 // Export only
 ValueRepresentation(
     exporting: { entity in
         IntentPerson(name: .displayName(entity.name))
+    }
+)
+
+// Import only
+ValueRepresentation(
+    importing: { person in
+        ContactEntity(name: person.name.displayString)
     }
 )
 
@@ -76,6 +83,8 @@ struct LocationEntity: TransientAppEntity, Transferable {
 - [init(exporting:)](intentvaluerepresentation/init%28exporting_%29-7wi2e.md): Conforms when `Item` conforms to `Transferable` and `IntentValue` is `IntentPerson`. Creates a value representation that exports an entity to an `IntentPerson`.
 - [init(exporting:importing:)](intentvaluerepresentation/init%28exporting_importing_%29-4zz9c.md): Conforms when `Item` conforms to `Transferable` and `IntentValue` conforms to `_SystemIntentValue`. Creates a value representation that supports bidirectional conversion between an entity and a system intent value.
 - [init(exporting:importing:)](intentvaluerepresentation/init%28exporting_importing_%29-550j7.md): Conforms when `Item` conforms to `Transferable` and `IntentValue` is `IntentPerson`. an entity and an `IntentPerson`.
+- [init(importing:)](intentvaluerepresentation/init%28importing_%29-6jio8.md): Beta. Conforms when `Item` conforms to `Transferable` and `IntentValue` is `IntentPerson`. Creates a value representation that imports an `IntentPerson` into an entity.
+- [init(importing:)](intentvaluerepresentation/init%28importing_%29-7cl3z.md): Beta. Conforms when `Item` conforms to `Transferable` and `IntentValue` conforms to `_SystemIntentValue`. Creates a value representation that imports a system intent value into an entity.
 
 ## Relationships
 

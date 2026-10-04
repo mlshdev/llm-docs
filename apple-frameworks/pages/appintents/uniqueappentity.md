@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintents/uniqueappentity
 
 # UniqueAppEntity
@@ -7,13 +7,47 @@
 **Kind:** Protocol  
 **Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
 
-An entity that will only ever have one value, such as global settings.
+An AppEntity subtype for entities that only have a single instance.
 
 ## Declaration
 
 ```swift
 protocol UniqueAppEntity : AppEntity where Self.DefaultQuery : UniqueAppEntityQuery
 ```
+
+<a id="overview"></a>
+
+## Overview
+
+If an entity type only ever has one value, use the `UniqueAppEntity` protocol and the related `UniqueAppEntityQuery`.  For example, app-global settings might be represented using an entity of this type.  The protocols will implement several required methods for you and allow the system to present the entity differently in some contexts.  For example, Shortcuts will not generate a “Find” action for that entity type.
+
+An entity conforming to `UniqueAppEntity` must have a `defaultQuery` type that conforms to `UniqueAppEntityQuery`, which has a single required method, `uniqueEntity`, and uses that to provide implementations of the other required query methods.  If you require a separate query definition, such as because it uses `@Dependency`, it would look like this:
+
+```swift
+struct MyEntity: UniqueAppEntity {
+    static var defaultQuery = MyQuery()
+}
+
+struct MyQuery: UniqueAppEntityQuery {
+    typealias Entity = MyEntity
+
+    func uniqueEntity() -> Entity { ... }
+}
+```
+
+If your query type has no requirements other than the `uniqueEntity` method, you may use the simplified `UniqueAppEntityProvider` type, like this:
+
+```swift
+struct MyEntity: UniqueAppEntity {
+    static var defaultQuery = UniqueAppEntityProvider {
+        ...
+    }
+}
+```
+
+The provider instance will call the supplied block to get the entity value when needed.
+
+An entity that will only ever have one value, such as global settings.
 
 ## Relationships
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/scsicontrollerdriverkit/iouserscsiparallelinterfacecontroller/bundledparalleltaskcompletion
 
 # BundledParallelTaskCompletion
@@ -37,7 +37,8 @@ The command and response buffers have a one-to-one mapping; use the same slot nu
 
 ## See Also
 
-### Managing Bundled Parallel Tasks
+### Managing bundled parallel tasks
 
 - [UserProcessBundledParallelTasks](userprocessbundledparalleltasks.md): Processes one or more parallel tasks in response to a call from the framework.
 - [UserMapBundledParallelTaskCommandAndResponseBuffers](usermapbundledparalleltaskcommandandresponsebuffers.md): Maps the shared command and response buffers in the dext address space in response to a call from the framework.
+- [kMaxBundledParallelTasks](../kmaxbundledparalleltasks.md)

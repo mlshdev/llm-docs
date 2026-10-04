@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreserverapi/set-app-account-token
 
 # Set App Account Token
@@ -38,7 +38,7 @@ The request body that contains a valid app account token value.
 ## Response Codes
 
 - `200` OK: Request succeeded.
-- `400` Bad Request — `(InvalidTransactionIdError | AppTransactionIdNotSupportedError | FamilyTransactionNotSupportedError | InvalidAppAccountTokenUUIDError | TransactionIdIsNotOriginalTransactionIdError)`: Invalid request. See the error code for more information. If there’s no error code, the request is malformed.
+- `400` Bad Request — `(InvalidTransactionIdError | AppTransactionIdNotSupportedError | FamilyTransactionNotSupportedError | InvalidAppAccountTokenUUIDError | TransactionIdIsNotOriginalTransactionIdError | InvalidAssignedTransactionNotSupportedError)`: Invalid request. See the error code for more information. If there’s no error code, the request is malformed.
 - `401` Unauthorized: The JSON Web Token (JWT) in the authorization header is invalid. For more information, see [Generating JSON Web Tokens for API requests](generating-json-web-tokens-for-api-requests.md).
 - `404` Not Found — `OriginalTransactionIdNotFoundError`: The transaction identifier wasn’t found.
 - `429` — `RateLimitExceededError`: The request exceeded the rate limit. For more information, see [Identifying rate limits](identifying-rate-limits.md).

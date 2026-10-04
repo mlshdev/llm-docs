@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-df12c7e37114; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications/app-store-server-notifications-changelog
 
 # App Store Server Notifications changelog
@@ -17,6 +17,23 @@ Learn about changes to the App Store Server Notifications service.
 App Store Server Notifications has two versions of notifications. Version 1 notifications and the [App Store Server Notifications V1](app-store-server-notifications-v1.md) endpoint are deprecated. Instead, implement the [App Store Server Notifications V2](app-store-server-notifications-v2.md) endpoint on your server to receive version 2 notifications.
 
 To set up your server to receive notifications, see [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md). Use this changelog to learn about feature updates, version information, deprecations, and removals for App Store Server Notifications.
+
+<a id="October-1-2016"></a>
+
+### October 1, 2016
+
+**New features**
+
+- Updated [tokenType](tokentype.md) to include the `CORE_TECHNOLOGY` token type.
+
+<a id="September-28-2026"></a>
+
+### September 28, 2026
+
+**New features**
+
+- Added the `ASSIGNED` value to [inAppOwnershipType](inappownershiptype.md), and the `ASSIGNMENT_REVOKE` value to [revocationType](revocationtype.md), to support multiseat purchases, which let organizations and groups buy your subscriptions in bulk. These values are only available in the sandbox environment.
+- The [quantity](quantity.md) field also reports the number of seats for a subscription that a customer buys as a multiseat purchase.
 
 <a id="April-27-2026"></a>
 

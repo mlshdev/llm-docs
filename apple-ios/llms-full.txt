@@ -2,10 +2,10 @@
 
 Source: https://developer.apple.com/ios/
 Catalog snapshot: d0d1b2f13e0dda7c6d6bed81d67f484e5f0b9662600743bf08baa771840f0378
-Content digest: 389660c763e1ce396dda974d54f5268621a1de23bcebb625192122aebc78e52e
-Captured at: 2026-09-27T18:07:09.630Z
+Content digest: 7f10371886380e2ed40d3ce2c375a595970165d547c289aebb1ac5ef48bb8217
+Captured at: 2026-10-04T18:39:02.517Z
 
 This corpus is published as 2 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-- [Volume 1](llms-full.001.txt): 4033 documents, 8388015 bytes, SHA-256 `d896634a031f55a69a0567462e1d65a777c0fc8bd5e8eaf7e3c0c195deb8f81a`.
-- [Volume 2](llms-full.002.txt): 3362 documents, 6691363 bytes, SHA-256 `0b947dc310a17bb3477fbc750e1c57e6d27d638c419d0519ce184bc580b3b53b`.
+- [Volume 1](llms-full.001.txt): 4033 documents, 8387699 bytes, SHA-256 `18472a982126c3e287c2352840230dfb0ba2f9f738f75889eb9a64ad0d7aa817`.
+- [Volume 2](llms-full.002.txt): 3362 documents, 6691205 bytes, SHA-256 `4c838fd8839e469d2dd3115e0e5749d2d4e69ed4d9048e1a4bfa6254f0f85eaa`.
