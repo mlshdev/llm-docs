@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/935b61a60350ceb964ade84e8dab0e98b74b2c79/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/6d6f5fbf13e2897c5181b2d251646cf371bf342c/doc/general.texi)
 
 # External libraries
 
@@ -1306,6 +1306,7 @@ following image formats are supported:
 - ADPCM IMA Acorn Replay  |       |   X
 - ADPCM IMA AMV           |   X   |   X
   \|  Used in AMV files
+- ADPCM IMA Citrix        |       |   X
 - ADPCM IMA Cunning Developments   |       |   X
 - ADPCM IMA Electronic Arts EACS   |       |   X
 - ADPCM IMA Electronic Arts SEAD   |       |   X

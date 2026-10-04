@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/935b61a60350ceb964ade84e8dab0e98b74b2c79/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/6d6f5fbf13e2897c5181b2d251646cf371bf342c/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -1835,6 +1835,13 @@ This encoder is the default AAC encoder, natively implemented into FFmpeg.
   the `ffmpeg` command-line tool. For library interface users, use
   `global_quality`.
 
+With the default `nmr` coder, VBR holds a constant noise-to-mask target
+and lets the bitrate follow the content. Higher values are finer: `1`
+lands near 128 kbps for typical stereo music, and each doubling of the value
+raises the rate by roughly a third; values above about 6 make no further
+difference. A quality setting takes precedence over `b` and
+`aac_rc`.
+
 - cutoff
   Set cutoff frequency. If unspecified will allow the encoder to dynamically
   adjust the cutoff to improve clarity on low bitrates.
@@ -1865,6 +1872,20 @@ Not currently recommended.
 Uses a cheaper version of twoloop algorithm that doesn't try to do as many
 clever adjustments. Worse with low bitrates (less than 64kbps), but is better
 and much faster at higher bitrates.
+
+- aac\_rc
+  Rate-control mode of the `nmr` coder when a bitrate is set with `b`
+  (other coders ignore it; `q` takes precedence). Possible values:
+
+  - cbr
+    Constant bitrate within the decoder's bit reservoir. This is the default.
+
+  - abr
+    Average bitrate: a constant-quality target, as in VBR, whose set-point a slow
+    servo moves to meet `b` over the length of the stream. Local quality
+    stays constant, so short files and individual passages can deviate from the
+    requested rate; the average converges over minutes rather than seconds. Below
+    roughly 56 kbps stereo the rate lands above the request; use `cbr` there.
 
 - aac\_ms
   Sets mid/side coding mode. The default value of "auto" will automatically use
