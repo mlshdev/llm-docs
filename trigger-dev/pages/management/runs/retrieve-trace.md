@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.2: [docs/management/runs/retrieve-trace.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/management/runs/retrieve-trace.mdx)
+> Pinned source for Trigger.dev v4.7.3: [docs/management/runs/retrieve-trace.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/management/runs/retrieve-trace.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/runs/retrieve-trace
 
 # Retrieve run trace
@@ -59,3 +59,5 @@ Returns the OTel trace subtree for the requested run — the run's span as `root
 Returns the OpenTelemetry trace subtree for the run you request. The response `trace.rootSpan` is that run's span — not necessarily the trace-wide root — with its descendant spans nested under `children`.
 
 For a child or nested run inside a large trace, this endpoint scopes the tree to that run so you still get a useful subtree even when the full trace has more spans than the platform can return in one response.
+
+For a finished run, spans that finish more than 7 days after the run are returned in their last recorded state.

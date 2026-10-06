@@ -6,21 +6,21 @@
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
   "repository": "triggerdotdev/trigger.dev",
-  "tag": "v4.7.2",
-  "releaseId": 401870884,
-  "releasePublishedAt": "2026-10-02T14:05:30Z",
-  "sourceCommit": "28f424096e7c82e99e23cfa0c15068565ad98e90",
+  "tag": "v4.7.3",
+  "releaseId": 404632754,
+  "releasePublishedAt": "2026-10-06T11:31:00Z",
+  "sourceCommit": "10b9960d5a45cfb323cfc48a157e3cb8d481339c",
   "documentCount": 332,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2926387,
+      "byteLength": 2926721,
       "documentCount": 332,
-      "sha256": "c884fa0c020c9b128eb2d2c82351f773f9b9bcfa8a87056d62204b1a4b0b72dd"
+      "sha256": "1ac74e9d5cd5fc4f443753a0e00460d0e33cf932a3f86a0cd0645f3c6e68e7ef"
     }
   ],
-  "outputDigest": "5189618c420f9c36569a6d99c03065010253bcdfce1ebaf7a7c0123f1dbce10c",
+  "outputDigest": "2fa3ee60f109a8d30990f7d9bd7ab2dd990c8dda6ed2e60234bca128b19e9e74",
   "notes": [
     "Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.",
     "API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.",

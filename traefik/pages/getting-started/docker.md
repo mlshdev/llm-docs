@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.13: [docs/content/getting-started/docker.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/getting-started/docker.md)
+> Pinned source for Traefik Proxy v3.7.14: [docs/content/getting-started/docker.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/getting-started/docker.md)
 
 # Getting Started with Docker and Traefik
 
@@ -93,7 +93,7 @@ You can access the dashboard at:
 
 <http://localhost:8080/dashboard/>
 
-![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/traefik-dashboard.png)
+![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/assets/img/getting-started/traefik-dashboard.png)
 
 ## Deploy a Sample Application
 
@@ -141,11 +141,11 @@ X-Real-Ip: 192.168.147.1
 
 You can also open <http://whoami.localhost> in a browser to test the application:
 
-![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/whoami-localhost.png)
+![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/assets/img/getting-started/whoami-localhost.png)
 
 If you navigate to the **HTTP Routers** section of the Traefik dashboard, you can see that the `whoami.localhost` route is managed by the Traefik Docker provider:
 
-![Traefik Dashboard HTTP Routers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/assets/img/getting-started/docker-router.png)
+![Traefik Dashboard HTTP Routers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/assets/img/getting-started/docker-router.png)
 
 That's it! You've successfully deployed Traefik and configured routing in Docker.
 

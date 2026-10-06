@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.2: [docs/run-tests.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/run-tests.mdx)
+> Pinned source for Trigger.dev v4.7.3: [docs/run-tests.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/run-tests.mdx)
 > Canonical documentation: https://trigger.dev/docs/run-tests
 
 # Run tests
@@ -20,4 +20,4 @@ On a task's test page you can:
 - Pre-populate the form from a previous run with **Recent runs**, or save and reuse a configuration with **Templates**.
 - Press **Run test** to trigger the run.
 
-![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/test-dashboard.png)
+![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/test-dashboard.png)

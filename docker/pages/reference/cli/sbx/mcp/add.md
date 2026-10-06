@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_add.yaml](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/data/sbx_cli/sbx_mcp_add.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_add.yaml](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/data/sbx_cli/sbx_mcp_add.yaml)
 
 # sbx mcp add
 
@@ -122,6 +122,10 @@ A resource that publishes a required set therefore gets it requested with no
 flag at all, and the consent block marks that set as derived rather than
 chosen. --no-scope suppresses all scope fallbacks and requests the server's
 default grant.
+
+When using recorded defaults or resource scopes, sbx also requests offline\_access
+if the authorization server advertises it, allowing refresh tokens. To request
+an exact set without this addition, use 'sbx mcp auth <server> --scope ...'.
 
 Scopes you name are checked against the union of two documents a server can
 publish: the authorization server's RFC 8414 scopes\_supported and the

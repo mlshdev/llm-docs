@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_settings_unset.yaml](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/data/sbx_cli/sbx_settings_unset.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_settings_unset.yaml](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/data/sbx_cli/sbx_settings_unset.yaml)
 
 # sbx settings unset
 
@@ -10,7 +10,8 @@ Remove a setting override
 
 Remove the user override for a setting.
 
-The setting then evaluates from its environment variable or default value.
+Administrator policy remains in effect. Otherwise, the setting evaluates from
+its environment variable, remote default, or built-in default.
 
 ## Global options
 

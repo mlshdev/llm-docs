@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_move.yaml](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/data/sbx_cli/sbx_move.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_move.yaml](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/data/sbx_cli/sbx_move.yaml)
 
 # sbx move
 
@@ -39,10 +39,12 @@ What does not travel:
 - Volumes and environment variables attached to a cloud sandbox, when
   moving to local. A local sandbox's environment is part of its image
   and travels to the cloud.
-- Network policies. Moving to cloud uses cloud policies; moving to local
-  starts with the host's default policy. Active local L7 (HTTP) rules
-  prompt before a move to cloud; --force skips the prompt but keeps
-  the warning.
+- Network rules you added locally. The sandbox's kit network rules do
+  travel: moving to cloud applies them, as 'sbx create --cloud' does. If
+  the kit can't be resolved, move warns and the account's cloud policy
+  applies. Moving to local starts with the host's default policy. Active
+  local L7 (HTTP) rules prompt before a move to cloud; --force skips the
+  prompt but keeps the warning.
 - Cloud URLs and host port bindings. Moving to cloud republishes TCP
   ports under new cloud URLs; a port the cloud refuses is skipped with a
   warning. Moving to local saves the published TCP ports and binds them

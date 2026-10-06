@@ -1,15 +1,15 @@
-> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/gateway-api.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/gateway-api.md)
+> Pinned source for Traefik Proxy v3.7.14: [docs/content/reference/routing-configuration/kubernetes/gateway-api.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/routing-configuration/kubernetes/gateway-api.md)
 
 # Traefik & Kubernetes with Gateway API
 
 When using the Kubernetes Gateway API provider, Traefik leverages the Gateway API Custom Resource Definitions (CRDs) to obtain its routing configuration.
 For detailed information on the Gateway API concepts and resources, refer to the official [documentation](https://gateway-api.sigs.k8s.io/).
 
-The Kubernetes Gateway API provider supports version [v1.6.1](https://github.com/kubernetes-sigs/gateway-api/releases/tag/v1.6.1) of the specification.
+The Kubernetes Gateway API provider supports version [v1.6.2](https://github.com/kubernetes-sigs/gateway-api/releases/tag/v1.6.2) of the specification.
 
 It fully supports all `HTTPRoute` core and some extended features, like `BackendTLSPolicy`, `GRPCRoute`, and `TLSRoute` resources from the [Standard channel](https://gateway-api.sigs.k8s.io/concepts/versioning/?h=#release-channels), as well as `TCPRoute` from the [Experimental channel](https://gateway-api.sigs.k8s.io/concepts/versioning/?h=#release-channels).
 
-For more details, check out the conformance [report](https://github.com/kubernetes-sigs/gateway-api/tree/main/conformance/reports/v1.6.1/traefik-traefik).
+For more details, check out the conformance [report](https://github.com/kubernetes-sigs/gateway-api/tree/main/conformance/reports/v1.6.2/traefik-traefik).
 
 ## Deploying a Gateway
 

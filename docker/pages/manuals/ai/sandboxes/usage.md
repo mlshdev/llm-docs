@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/ai/sandboxes/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/ai/sandboxes/usage.md)
 
 # Usage
 
@@ -63,6 +63,23 @@ such as `168h`, an RFC 3339 timestamp, or a Unix timestamp. The older
 `since=<duration>` filter remains supported.
 
 Run `sbx prune` without flags to confirm and remove all stopped sandboxes.
+
+### Remove a sandbox when the agent exits
+
+Pass `--rm` to `sbx run` for a throwaway session. The sandbox is removed when
+the agent exits, without a confirmation prompt:
+
+```console
+$ sbx run --rm claude
+```
+
+The sandbox is removed however the agent exits, and `sbx run` exits with the
+agent's exit status. If `sbx run` created the sandbox and the agent fails
+to start, the sandbox is also removed. If you reattach to an existing sandbox
+with `--rm`, that sandbox is removed only after its agent session finishes.
+
+`--rm` needs an attached agent session to know when to remove the sandbox, so
+you can't combine it with `--detached` or `--detach-keys`.
 
 ## Choose a workspace
 
@@ -130,8 +147,8 @@ $ sbx run claude --name spike ~/my-project
 ## Create without attaching
 
 [`sbx run`](https://docs.docker.com/reference/cli/sbx/run/) creates the sandbox and attaches you to the
-agent. To create a sandbox with the current directory mounted in the background
-without attaching:
+agent. To create a sandbox with the current directory mounted, without
+attaching to it:
 
 ```console
 $ sbx create --name my-project claude .
@@ -148,6 +165,25 @@ $ sbx run --name scratch
 After `sbx create` finishes, the local sandbox stops automatically when no
 sessions keep it running. Its files and configuration persist. Running
 `sbx run --name <sandbox-name>` starts it again and attaches you to the agent.
+
+### Keep a sandbox running in the background
+
+To keep a sandbox running after every session ends, for example to serve an
+application on a [published port](#publish-ports), start it with
+`sbx run --detached` (`-d`). The command starts the sandbox, prints its ID,
+and returns without opening an agent session:
+
+```console
+$ sbx run -d --name my-project claude .
+```
+
+A detached sandbox keeps running until you stop it with `sbx stop` or remove
+it with `sbx rm`. You can attach to it with `sbx run --name` or run commands
+with `sbx exec`, and it keeps running after those sessions end.
+
+Running `sbx run -d --name <sandbox-name>` against an existing sandbox, such
+as one created with `sbx create`, switches it to detached mode permanently. To
+return to the default behavior, remove the sandbox and create it again.
 
 ## Set environment variables
 

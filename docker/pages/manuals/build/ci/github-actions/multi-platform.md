@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/multi-platform.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/build/ci/github-actions/multi-platform.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/multi-platform.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/build/ci/github-actions/multi-platform.md)
 
 # Multi-platform image with GitHub Actions
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.2: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/github-integration.mdx)
+> Pinned source for Trigger.dev v4.7.3: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/github-integration.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-integration
 
 # GitHub integration
@@ -32,7 +32,7 @@ This eliminates the need to manually run the `trigger.dev deploy` command or set
 
 Our GitHub integration uses branch tracking to determine when and where to deploy your code.
 
-![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/git-settings.png)
+![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/git-settings.png)
 
 ### Production and staging branches
 
@@ -79,7 +79,7 @@ You can disconnect a repository at any time from your project git settings. This
 
 To add or remove repository access for the Trigger.dev GitHub app, follow the link in the `Connect GitHub repository` modal:
 
-![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/deployment/connect-repo.png)
+![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/connect-repo.png)
 
 Alternatively, you can follow these steps on GitHub:
 

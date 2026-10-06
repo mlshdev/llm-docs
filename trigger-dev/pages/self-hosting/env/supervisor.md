@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.2: [docs/self-hosting/env/supervisor.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/self-hosting/env/supervisor.mdx)
+> Pinned source for Trigger.dev v4.7.3: [docs/self-hosting/env/supervisor.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/self-hosting/env/supervisor.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/env/supervisor
 
 # Supervisor
@@ -31,7 +31,6 @@ Environment variables for the supervisor container.
 | `TRIGGER_DEQUEUE_ENABLED`                   | No       | true        | Enable dequeue to pull runs from the queue.                 |
 | `TRIGGER_DEQUEUE_INTERVAL_MS`               | No       | 250         | Dequeue interval (ms).                                      |
 | `TRIGGER_DEQUEUE_IDLE_INTERVAL_MS`          | No       | 1000 (1s)   | Dequeue idle interval (ms).                                 |
-| `TRIGGER_DEQUEUE_MAX_RUN_COUNT`             | No       | 10          | Max dequeue run count.                                      |
 | `TRIGGER_DEQUEUE_MAX_CONSUMER_COUNT`        | No       | 1           | Max dequeue consumer count.                                 |
 | **Docker settings**                         |          |             |                                                             |
 | `DOCKER_API_VERSION`                        | No       | v1.41       | Docker API version. You should probably not touch this.     |

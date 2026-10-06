@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.2: [docs/ai-chat/patterns/human-in-the-loop.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/ai-chat/patterns/human-in-the-loop.mdx)
+> Pinned source for Trigger.dev v4.7.3: [docs/ai-chat/patterns/human-in-the-loop.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/ai-chat/patterns/human-in-the-loop.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/human-in-the-loop
 
 # Human-in-the-loop

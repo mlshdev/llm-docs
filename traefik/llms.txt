@@ -1,8 +1,8 @@
-# Traefik Proxy v3.7.13
+# Traefik Proxy v3.7.14
 
-> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `fc92cc118a0557a029c7019d5ee06665127b0f13`.
+> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `3bd7aa32e1b6c41166575529a10fb2346d9eaa2e`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.13.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.14.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow docs/mkdocs.yml navigation order from the immutable release tag.
 - MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted.
@@ -54,7 +54,7 @@
 ## Migrate
 
 - [Migrate from Ingress NGINX Controller to Traefik](pages/migrate/nginx-to-traefik.md): How to migrate from Ingress NGINX Controller to Traefik with zero downtime. (44346 bytes)
-- [Traefik Migration Documentation](pages/migrate/v3.md): This guide provides detailed migration steps for upgrading between different Traefik v3 versions. Each section covers breaking changes, deprecations, and configuration updates required for a smooth transition. (63769 bytes)
+- [Traefik Migration Documentation](pages/migrate/v3.md): This guide provides detailed migration steps for upgrading between different Traefik v3 versions. Each section covers breaking changes, deprecations, and configuration updates required for a smooth transition. (66623 bytes)
 - [Traefik V3 Migration Documentation](pages/migrate/v2-to-v3.md): How to Migrate from Traefik v2 to Traefik v3. (6860 bytes)
 - [Traefik V3 Migration Details](pages/migrate/v2-to-v3-details.md): In v3, the provider Docker has been split into 2 providers: (22529 bytes)
 - [Traefik V2 Migration Documentation](pages/migrate/v2.md): The multiple minor versions of Traefik v2 introduced a number of changes, which may require one to update their configuration when they migrate. (363 bytes)
@@ -64,10 +64,10 @@
 
 - [Traefik Configuration Overview](pages/reference/install-configuration/boot-environment.md): Traefik Proxy’s configuration is divided into two main categories: (3323 bytes)
 - [Traefik Providers Documentation](pages/reference/install-configuration/providers/overview.md): Providers are infrastructure components, whether orchestrators, container engines, cloud providers, or key-value stores. The idea is that Traefik queries the provider APIs in order to find relevant information about rou… (12719 bytes)
-- [Traefik Kubernetes Gateway API Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md): The Kubernetes Gateway provider is a Traefik implementation of the Gateway API specification from the Kubernetes Special Interest Groups (SIGs). (14655 bytes)
+- [Traefik Kubernetes Gateway API Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md): The Kubernetes Gateway provider is a Traefik implementation of the Gateway API specification from the Kubernetes Special Interest Groups (SIGs). (16293 bytes)
 - [Kubernetes Custom Resources](pages/reference/install-configuration/providers/kubernetes/kubernetes-crd.md): Traefik provides some Kubernetes Custom Resources, such as IngressRoute, Middleware, etc. (22129 bytes)
 - [Traefik Kubernetes Ingress Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md): The Traefik Kubernetes Ingress provider is a Kubernetes Ingress controller; i.e, it manages access to cluster services by supporting the Ingress specification. (16935 bytes)
-- [Traefik Kubernetes Ingress NGINX Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md): This provider is a Kubernetes Ingress controller that manages access to cluster services by supporting the Ingress specification. It also supports many of the ingress-nginx annotations on Ingresses, enabling teams to mi… (40462 bytes)
+- [Traefik Kubernetes Ingress NGINX Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md): This provider is a Kubernetes Ingress controller that manages access to cluster services by supporting the Ingress specification. It also supports many of the ingress-nginx annotations on Ingresses, enabling teams to mi… (40831 bytes)
 - [Traefik Knative Documentation](pages/reference/install-configuration/providers/kubernetes/knative.md): The Traefik Knative provider integrates with Knative Serving to provide advanced traffic management and routing capabilities for serverless applications. (12563 bytes)
 - [Traefik Docker Documentation](pages/reference/install-configuration/providers/docker.md): You can enable the Docker provider as detailed below: (24691 bytes)
 - [Traefik Docker Swarm Documentation](pages/reference/install-configuration/providers/swarm.md): This provider works with Docker Swarm Mode. (26571 bytes)
@@ -90,11 +90,11 @@
 - [Traefik OCSP Documentation](pages/reference/install-configuration/tls/ocsp.md): Check certificate status and perform OCSP stapling. (1691 bytes)
 - [Traefik Metrics Overview](pages/reference/install-configuration/observability/metrics.md): Traefik provides metrics in the OpenTelemetry format as well as the following vendor specific backends: (58158 bytes)
 - [Traefik Tracing Overview](pages/reference/install-configuration/observability/tracing.md): Visualize the Requests Flow (14220 bytes)
-- [Traefik Logs Documentation](pages/reference/install-configuration/observability/logs-and-accesslogs.md): Logs concern everything that happens to Traefik itself (startup, configuration, events, shutdown, and so on). (47243 bytes)
+- [Traefik Logs Documentation](pages/reference/install-configuration/observability/logs-and-accesslogs.md): Logs concern everything that happens to Traefik itself (startup, configuration, events, shutdown, and so on). (49045 bytes)
 - [Traefik Health Check Documentation](pages/reference/install-configuration/observability/healthcheck.md): Checking the Health of your Traefik Instances (3226 bytes)
 - [Traefik FastProxy Experimental Configuration](pages/reference/install-configuration/experimental/fastproxy.md): This guide provides instructions on how to configure and use the new experimental fastProxy install configuration option in Traefik. The fastProxy option introduces a high-performance reverse proxy designed to enhance t… (1742 bytes)
 - [Traefik Plugins Experimental Configuration](pages/reference/install-configuration/experimental/plugins.md): This guide provides instructions on how to configure and use the new experimental plugins install configuration option in Traefik. The plugins option introduces a system to extend Traefik capabilities with custom middle… (4533 bytes)
-- [Install Configuration Options](pages/reference/install-configuration/configuration-options.md): Normalized source from docs/content/reference/install-configuration/configuration-options.md. (385755 bytes)
+- [Install Configuration Options](pages/reference/install-configuration/configuration-options.md): Normalized source from docs/content/reference/install-configuration/configuration-options.md. (387882 bytes)
 - [Providing Dynamic Configuration to Traefik](pages/reference/routing-configuration/dynamic-configuration-methods.md): Dynamic configuration—now also known as routing configuration—defines how Traefik routes incoming requests to the correct services. This is distinct from install configuration (formerly known as static configuration), w… (5758 bytes)
 - [Traefik HTTP Routers Documentation](pages/reference/routing-configuration/http/routing/router.md): An HTTP router is in charge of connecting incoming requests to the services that can handle them. Routers analyze incoming requests based on rules, and when a match is found, forward the request through any configured m… (14107 bytes)
 - [Traefik HTTP Routers Rules & Priority Documentation](pages/reference/routing-configuration/http/routing/rules-and-priority.md): An HTTP router is in charge of connecting incoming requests to the services that can handle them. Traefik allows you to define your matching rules and prioritize the routes. (21396 bytes)
@@ -143,7 +143,7 @@
 - [Traefik TCP Routers Documentation](pages/reference/routing-configuration/tcp/routing/router.md): A TCP router is in charge of connecting incoming TCP connections to the services that can handle them. TCP routers analyze incoming connections based on rules, and when a match is found, forward the connection through a… (7696 bytes)
 - [Traefik TCP Routers Rules & Priority Documentation](pages/reference/routing-configuration/tcp/routing/rules-and-priority.md): Rules are a set of matchers configured with values, that determine if a particular connection matches specific criteria. If the rule is verified, the router becomes active, calls middlewares, and then forwards the reque… (8663 bytes)
 - [Traefik TCP Services Documentation](pages/reference/routing-configuration/tcp/service.md): Each of the fields of the service section represents a kind of service. Which means, that for each specified service, one of the fields, and only one, has to be enabled to define what kind of service is created. Current… (11053 bytes)
-- [ServersTransport TCP](pages/reference/routing-configuration/tcp/serverstransport.md): ServersTransport allows to configure the transport between Traefik and your TCP servers. (9013 bytes)
+- [ServersTransport TCP](pages/reference/routing-configuration/tcp/serverstransport.md): ServersTransport allows configuring the transport between Traefik and your TCP servers. (9012 bytes)
 - [Traefik TLS Documentation](pages/reference/routing-configuration/tcp/tls.md): When a TCP router is configured to handle TLS traffic, include a tls field in its definition. This field tells Traefik that the router should process only TLS connections and ignore non-TLS traffic. (8802 bytes)
 - [Traefik Proxy TCP Middleware Overview](pages/reference/routing-configuration/tcp/middlewares/overview.md): Attached to the routers, pieces of middleware are a means of tweaking the requests before they are sent to your service (or before the answer from the services are sent to the clients). (3559 bytes)
 - [Traefik InFlightConn Middleware - TCP](pages/reference/routing-configuration/tcp/middlewares/inflightconn.md): To proactively prevent Services from being overwhelmed with high load, the number of allowed simultaneous connections by IP can be limited with the inFlightConn TCP middleware. (1690 bytes)
@@ -154,7 +154,7 @@
 - [Traefik Kubernetes Gateway](pages/reference/routing-configuration/kubernetes/gateway-api.md): When using the Kubernetes Gateway API provider, Traefik leverages the Gateway API Custom Resource Definitions (CRDs) to obtain its routing configuration. For detailed information on the Gateway API concepts and resource… (29852 bytes)
 - [Kubernetes IngressRoute](pages/reference/routing-configuration/kubernetes/crd/http/ingressroute.md): IngressRoute is the CRD implementation of a Traefik HTTP router. (27101 bytes)
 - [Kubernetes Service](pages/reference/routing-configuration/kubernetes/crd/http/service.md): Service is the implementation of a Traefik HTTP service. (35169 bytes)
-- [Traefik Kubernetes Services Documentation](pages/reference/routing-configuration/kubernetes/crd/http/traefikservice.md): A TraefikService is a custom resource that sits on top of the Kubernetes Services. It enables advanced load-balancing features such as a Weighted Round Robin load balancing, a Highest Random Weight load balancing, a Mir… (44410 bytes)
+- [Traefik Kubernetes Services Documentation](pages/reference/routing-configuration/kubernetes/crd/http/traefikservice.md): A TraefikService is a custom resource that sits on top of the Kubernetes Services. It enables advanced load-balancing features such as a Weighted Round Robin load balancing, a Highest Random Weight load balancing, a Mir… (59834 bytes)
 - [Kubernetes serversTransport](pages/reference/routing-configuration/kubernetes/crd/http/serverstransport.md): A ServersTransport allows you to configure the connection between Traefik and the HTTP servers in Kubernetes. (8100 bytes)
 - [Traefik Kubernetes Middleware Documentation](pages/reference/routing-configuration/kubernetes/crd/http/middleware.md): Middleware is the CRD implementation of a Traefik middleware. (2468 bytes)
 - [TLSOption](pages/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md): The TLS options allow you to configure some parameters of the TLS connection in Traefik. (10025 bytes)
@@ -163,8 +163,8 @@
 - [ServersTransportTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md): ServersTransportTCP is the CRD implementation of ServersTransportTCP. (9337 bytes)
 - [Kubernetes MiddlewareTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md): MiddlewareTCP is the CRD implementation of a Traefik TCP middleware. (1895 bytes)
 - [IngressRouteUDP](pages/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md): IngressRouteUDP is the CRD implementation of a Traefik UDP router. (8448 bytes)
-- [Kubernetes Ingress Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress.md): The Kubernetes Ingress provider watches for incoming ingresses events, such as the example below, and derives the corresponding dynamic configuration from it, which in turn will create the resulting routers, services, h… (32750 bytes)
-- [Traefik Kubernetes Ingress NGINX Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress-nginx.md): Enable seamless migration from NGINX Ingress Controller to Traefik with NGINX annotation compatibility. (71814 bytes)
+- [Kubernetes Ingress Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress.md): The Kubernetes Ingress provider watches for incoming ingresses events, such as the example below, and derives the corresponding dynamic configuration from it, which in turn will create the resulting routers, services, h… (38675 bytes)
+- [Traefik Kubernetes Ingress NGINX Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress-nginx.md): Enable seamless migration from NGINX Ingress Controller to Traefik with NGINX annotation compatibility. (73431 bytes)
 - [Traefik Knative Documentation](pages/reference/routing-configuration/kubernetes/knative.md): When using the Knative provider, Traefik leverages Knative's Custom Resource Definitions (CRDs) to obtain its routing configuration. For detailed information on Knative concepts and resources, refer to the official docu… (3108 bytes)
 - [Traefik Docker Routing Documentation](pages/reference/routing-configuration/other-providers/docker.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With Docker, Traefik can leverage labels attached to a container to generate routing rules. (44596 bytes)
 - [Traefik Docker Swarm Routing Documentation](pages/reference/routing-configuration/other-providers/swarm.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With Docker Swarm, Traefik can leverage labels attached to a service to generate routing rules. (43275 bytes)
@@ -185,10 +185,10 @@
 
 - [Traefik Contribution Documentation](pages/contributing/thank-you.md): You Made It (1729 bytes)
 - [Traefik Submitting Issues Documentation](pages/contributing/submitting-issues.md): Help Us Help You! (3068 bytes)
-- [Traefik Pull Requests Documentation](pages/contributing/submitting-pull-requests.md): This guide is for contributors who already have a pull request to submit. If you are looking for information on setting up your developer environment and creating code to contribute to Traefik Proxy or related projects,… (12710 bytes)
-- [Traefik Security Documentation](pages/contributing/submitting-security-issues.md): We strongly advise you to join our mailing list to be aware of the latest announcements from our security team. You can subscribe by sending an email to or on the online viewer. (7580 bytes)
+- [Traefik Pull Requests Documentation](pages/contributing/submitting-pull-requests.md): This guide is for contributors who already have a pull request to submit. If you are looking for information on setting up your developer environment and creating code to contribute to Traefik Proxy or related projects,… (12755 bytes)
+- [Traefik Security Documentation](pages/contributing/submitting-security-issues.md): We strongly advise you to join our mailing list to be aware of the latest announcements from our security team. You can subscribe by sending an email to or on the online viewer. (8556 bytes)
 - [Traefik Security Decisions](pages/contributing/security-decisions.md): Some classes of report reach us repeatedly. This page records the positions we have already settled, so that you can check a finding against them before submitting, and so that we can answer with a reference instead of… (22668 bytes)
-- [Traefik Building & Testing Documentation](pages/contributing/building-testing.md): Compile and Test Your Own Traefik! (3385 bytes)
+- [Traefik Building & Testing Documentation](pages/contributing/building-testing.md): Compile and Test Your Own Traefik! (3388 bytes)
 - [Traefik Contribution Documentation](pages/contributing/documentation.md): Features Are Better When You Know How to Use Them (3100 bytes)
 - [Traefik Data Collection Documentation](pages/contributing/data-collection.md): Understanding the data Traefik shares and how it is used (4267 bytes)
 - [Traefik Advocation Documentation](pages/contributing/advocating.md): Spread the Love & Tell Us About It (2128 bytes)

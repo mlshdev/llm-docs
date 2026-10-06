@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.7.2: [docs/logging.mdx](https://github.com/triggerdotdev/trigger.dev/blob/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/logging.mdx)
+> Pinned source for Trigger.dev v4.7.3: [docs/logging.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/logging.mdx)
 > Canonical documentation: https://trigger.dev/docs/logging
 
 # Logging, tracing & metrics
 
 How to use the built-in logging, tracing, and metrics system.
 
-![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/run-log.png)
+![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-log.png)
 
 The run log shows you exactly what happened in every run of your tasks. It is comprised of logs, traces and spans.
 
@@ -47,7 +47,7 @@ Trigger.dev uses OpenTelemetry tracing under the hood. With automatic tracing fo
 
 ### Adding instrumentations
 
-![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/28f424096e7c82e99e23cfa0c15068565ad98e90/docs/images/auto-instrumentation.png)
+![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/auto-instrumentation.png)
 
 You can [add instrumentations](https://trigger.dev/docs/config/config-file#instrumentations). The Prisma one above will automatically trace all Prisma queries.
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/anthropic/index.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/_vendor/github.com/docker/docker-agent/docs/providers/anthropic/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/anthropic/index.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/_vendor/github.com/docker/docker-agent/docs/providers/anthropic/index.md)
 
 *Use Claude Sonnet 4, Claude Sonnet 4.5, and other Anthropic models with Docker Agent.*
 

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "projects": {
     "traefik": {
-      "tag": "v3.7.13",
-      "releaseId": 382715786,
-      "releasePublishedAt": "2026-09-04T12:40:17Z",
-      "sourceCommit": "fc92cc118a0557a029c7019d5ee06665127b0f13"
+      "tag": "v3.7.14",
+      "releaseId": 404449592,
+      "releasePublishedAt": "2026-10-06T07:49:56Z",
+      "sourceCommit": "3bd7aa32e1b6c41166575529a10fb2346d9eaa2e"
     },
     "netbird": {
       "tag": "v0.77.1",
@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "d745218a0918016144f1ba0d98222b75b21bf65a",
-      "sourceCommittedAt": "2026-10-05T18:17:37Z",
-      "observedCommit": "d745218a0918016144f1ba0d98222b75b21bf65a",
-      "documentationDigest": "3e3e5997808c588fc9ace6f3cd7b4dddcdd471f218059294dbbb0384442c7bfb"
+      "sourceCommit": "6cf1b1c167f032e8a6629da211602300b623b20e",
+      "sourceCommittedAt": "2026-10-06T08:32:33Z",
+      "observedCommit": "6cf1b1c167f032e8a6629da211602300b623b20e",
+      "documentationDigest": "a5ffb887b281be16b6e89f2b551b270922c2f14c4888191c6fa01ae333bc1a8e"
     },
     "container": {
       "tag": "1.5.0",
@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "47313ad3f9f33b892384b976fb7c09b3c85fd74e",
       "sourceCommittedAt": "2026-10-02T14:07:13Z",
-      "observedCommit": "47313ad3f9f33b892384b976fb7c09b3c85fd74e",
+      "observedCommit": "c0c7684d08d22d9b5c16c7beaf538f439d3f43bf",
       "documentationDigest": "a80ab9ccc7bd5f6fcac19ddc2f6fb7e2e0e8c378fce440c0f6f69ab9caf589d2"
     },
     "yt-dlp": {
@@ -113,10 +113,10 @@
       "sourceCommit": "744846f844374847c902b5e7fd59b4342a51ef99"
     },
     "trigger-dev": {
-      "tag": "v4.7.2",
-      "releaseId": 401870884,
-      "releasePublishedAt": "2026-10-02T14:05:30Z",
-      "sourceCommit": "28f424096e7c82e99e23cfa0c15068565ad98e90"
+      "tag": "v4.7.3",
+      "releaseId": 404632754,
+      "releasePublishedAt": "2026-10-06T11:31:00Z",
+      "sourceCommit": "10b9960d5a45cfb323cfc48a157e3cb8d481339c"
     },
     "aria2": {
       "tag": "release-1.37.0",
@@ -132,10 +132,10 @@
     "vastai": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8",
-      "sourceCommittedAt": "2026-10-05T16:10:37Z",
-      "observedCommit": "991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8",
-      "documentationDigest": "6be6b06c6f874d804c352238162694e67298c63f542fde8a0ea114cbe1c1d54f"
+      "sourceCommit": "a70abe2c977eb9c4264b544c4d4f876089be70e6",
+      "sourceCommittedAt": "2026-10-06T18:03:22Z",
+      "observedCommit": "a70abe2c977eb9c4264b544c4d4f876089be70e6",
+      "documentationDigest": "6fcf22b58848177b77079971b7d080cb758657dbc13e6ab096a86ea89f16c5f5"
     },
     "runpod": {
       "tag": "main",

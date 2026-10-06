@@ -1,8 +1,8 @@
-# Trigger.dev v4.7.2
+# Trigger.dev v4.7.3
 
-> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `28f424096e7c82e99e23cfa0c15068565ad98e90`.
+> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `10b9960d5a45cfb323cfc48a157e3cb8d481339c`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.7.2.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.7.3.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.
 - API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.
@@ -213,8 +213,8 @@
 - [Docker compose](pages/self-hosting/docker.md): You can self-host Trigger.dev on your own infrastructure using Docker. (18552 bytes)
 - [Kubernetes](pages/self-hosting/kubernetes.md): Deploy Trigger.dev to Kubernetes with our official Helm chart - one command for evaluation, external datastores for production. (25006 bytes)
 - [Security & vulnerability reporting](pages/self-hosting/security.md): How to report security issues in Trigger.dev, our response targets, and how self-hosters receive security notices. (3641 bytes)
-- [Webapp](pages/self-hosting/env/webapp.md): Environment variables for the webapp container. (70338 bytes)
-- [Supervisor](pages/self-hosting/env/supervisor.md): Environment variables for the supervisor container. (9420 bytes)
+- [Webapp](pages/self-hosting/env/webapp.md): Environment variables for the webapp container. (70694 bytes)
+- [Supervisor](pages/self-hosting/env/supervisor.md): Environment variables for the supervisor container. (9285 bytes)
 
 ## Open source
 
@@ -261,7 +261,7 @@
 - [Update metadata](pages/management/runs/update-metadata.md): PUT /api/v1/runs/{runId}/metadata (1113 bytes)
 - [Add tags to a run](pages/management/runs/add-tags.md): POST /api/v1/runs/{runId}/tags (1553 bytes)
 - [Retrieve run events](pages/management/runs/retrieve-events.md): GET /api/v1/runs/{runId}/events (2630 bytes)
-- [Retrieve run trace](pages/management/runs/retrieve-trace.md): GET /api/v1/runs/{runId}/trace (3098 bytes)
+- [Retrieve run trace](pages/management/runs/retrieve-trace.md): GET /api/v1/runs/{runId}/trace (3211 bytes)
 - [Retrieve run result](pages/management/runs/retrieve-result.md): GET /api/v1/runs/{runId}/result (1468 bytes)
 
 ## Bulk actions API

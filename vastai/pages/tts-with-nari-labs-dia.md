@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [tts-with-nari-labs-dia.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/tts-with-nari-labs-dia.mdx)
+> Pinned source for Vast.ai main: [tts-with-nari-labs-dia.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/tts-with-nari-labs-dia.mdx)
 > Canonical documentation: https://docs.vast.ai/tts-with-nari-labs-dia
 
 # TTS with Nari Labs Dia
@@ -27,7 +27,7 @@ Once the interface has loaded, you can begin generating speech.  Simply modify t
 
 It will take a few seconds to generate, but once it has finished you can click the play button in the upper right to hear the results.
 
-![Gradio application for speech generation with Dia TTS model](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/use-cases-ai-audio-generation.webp)
+![Gradio application for speech generation with Dia TTS model](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/use-cases-ai-audio-generation.webp)
 
 If you prefer to use the CLI, you can find all of the files you need in the `/workspace/dia` directory which you can access either via SSH or in a Jupyter terminal.
 

@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `a70abe2c977eb9c4264b544c4d4f876089be70e6`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -430,6 +430,7 @@
 - [Optimize Your Earnings](pages/host/optimization-guide.md): A guide to the key settings, tradeoffs, and strategies that determine how much your machines earn. Your hardware is only half the equation; how you configure your listings is the other. (11997 bytes)
 - [Verification Stages](pages/host/verification-stages.md): States: Unverified → Verified → (potentially) Deverified → Unverified → ... (9236 bytes)
 - [How to Self-Test](pages/host/how-to-self-test.md): Before your machine can be verified on Vast.ai, it must meet all minimum quality and reliability benchmarks. Verification confirms that your machine is stable, performant, and properly configured to run client workloads. (3207 bytes)
+- [Using Your Own Machine](pages/host/using-your-own-machine.md): Run your own workloads on your machines as a host: default jobs fill idle time, and self-rentals give you the machine on demand. (8688 bytes)
 - [Host Notifications](pages/host/notifications.md): Choose which Vast.ai host machine, verification, and maintenance events reach you by email or through webhooks. (6509 bytes)
 - [Machine Metrics](pages/host/machine-metrics.md): Monitor the health and performance of your machines with historical CPU, memory, GPU, disk, and network data (14580 bytes)
 - [GPU Market Metrics](pages/host/market-metrics.md): Track GPU supply, demand, pricing, and locations across the Vast marketplace (5202 bytes)

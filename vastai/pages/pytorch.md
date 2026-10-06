@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [pytorch.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/pytorch.mdx)
+> Pinned source for Vast.ai main: [pytorch.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/pytorch.mdx)
 > Canonical documentation: https://docs.vast.ai/pytorch
 
 # PyTorch
@@ -31,7 +31,7 @@ Navigate to the [Templates tab](https://cloud.vast.ai/templates/) to view availa
   - Supports for both **AMD64** and **ARM64**(Grace) architectures, especially on CUDA 12.4+
   - You can select specific PyTorch versions via the Version Tag selector
 
-![PyTorch](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/use-cases-ai-ml-pytorch.webp)
+![PyTorch](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/use-cases-ai-ml-pytorch.webp)
 
 ### 2. Choosing an Instance
 
@@ -54,9 +54,9 @@ Click blue button on instance card in Instances tab when it says "Open" to acces
 
 Open Python's Interactive Shell in the jupyter terminal
 
-![](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/use-cases-ai-ml-pytorch-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/use-cases-ai-ml-pytorch-2.webp)
 
-![](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/use-cases-ai-ml-pytorch-3.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/use-cases-ai-ml-pytorch-3.webp)
 
 Verify your setup by executing these commands in Python's Interactive Shell in a Jupyter terminal:
 

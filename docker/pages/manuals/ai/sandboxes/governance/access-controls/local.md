@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/local.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/ai/sandboxes/governance/access-controls/local.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/local.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/ai/sandboxes/governance/access-controls/local.md)
 
 # Local policy
 
@@ -264,6 +264,14 @@ Use `--protocol` to restrict a deny rule to one protocol.
 UDP follows the same organization and local policy precedence as TCP. It is
 refused when the destination requires an HTTP, SOCKS5, system, or PAC-selected
 proxy, because those proxies can't carry UDP. ICMP remains blocked.
+
+UDP to local-network destinations is blocked before any policy is evaluated,
+so no allow rule can permit it, including one that allows all hosts. This
+covers multicast, link-local, and unspecified addresses, `255.255.255.255`,
+and the broadcast addresses of the host's networks. As a result, discovery
+protocols that use multicast, such as mDNS and SSDP, don't work from a
+sandbox. UDP to `host.docker.internal` isn't affected. The network log records
+these connections under the rule `<udp local network boundary>`.
 
 Inspect UDP rules or check a destination:
 

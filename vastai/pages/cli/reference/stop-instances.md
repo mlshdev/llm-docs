@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/stop-instances.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/cli/reference/stop-instances.mdx)
+> Pinned source for Vast.ai main: [cli/reference/stop-instances.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/cli/reference/stop-instances.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/stop-instances
 
 # vastai stop instances

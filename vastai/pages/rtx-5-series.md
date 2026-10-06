@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [rtx-5-series.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/rtx-5-series.mdx)
+> Pinned source for Vast.ai main: [rtx-5-series.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/rtx-5-series.mdx)
 > Canonical documentation: https://docs.vast.ai/rtx-5-series
 
 # RTX 5 Series
@@ -23,12 +23,12 @@ Templates configured with the `[Automatic]` tag will pull the most recent & supp
 2. **Select a Recommended template with "\[Automatic]" set as the Version Tag (this is the default option).**
    To check this, click the 'pencil' icon on the template card to open the template editor, you can view the image tag.
 
-   ![](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/rtx-5-series.webp)
+   ![](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/rtx-5-series.webp)
 
 3. **Select the 5 series GPU from search filters**
    In the GPU drop down menu select the specific 5 series card you want to rent or select the whole category.
 
-   ![](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/rtx-5-series-2.webp)
+   ![](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/rtx-5-series-2.webp)
 
 4. **Review and customize**
    Set your storage and further refine your search filters (e.g., secure cloud, location, system RAM, CPU, etc.). ⚠️ Do **not** change the Docker image because you need to maintain CUDA 12.8 and the dev version of PyTorch. If you switch to an incompatible Docker image, you may lose 5 series compatibility.

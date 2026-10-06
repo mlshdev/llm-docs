@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/remove-team-role.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/sdk/python/reference/remove-team-role.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/remove-team-role.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/sdk/python/reference/remove-team-role.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/remove-team-role
 
 # VastAI.remove_team_role
