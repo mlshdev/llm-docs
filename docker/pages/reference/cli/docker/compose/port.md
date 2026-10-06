@@ -1,14 +1,14 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml)
 
 # docker compose port
 
-Print the public port for a port binding
+List port mappings or print the public port for a specific mapping for the service
 
-**Usage:** `docker compose port [OPTIONS] SERVICE PRIVATE_PORT`
+**Usage:** `docker compose port [OPTIONS] SERVICE [PRIVATE_PORT]`
 
 ## Description
 
-Prints the public port for a port binding
+List port mappings or print the public port for a specific mapping for the service
 
 ## Options
 

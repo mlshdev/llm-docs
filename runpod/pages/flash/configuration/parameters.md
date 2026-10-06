@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/configuration/parameters.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/flash/configuration/parameters.mdx)
+> Pinned source for Runpod main: [flash/configuration/parameters.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/flash/configuration/parameters.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/parameters
 
 # Endpoint parameters
@@ -72,7 +72,11 @@ result = await ep.post("/inference", {"data": "..."})
 **Type**: `GpuGroup`, `GpuType`, or `list[GpuGroup | GpuType]`
 **Default**: `GpuGroup.ANY` (if neither `gpu` nor `cpu` is specified)
 
-Specifies GPU hardware for the endpoint. Accepts a single GPU type/group or a list for fallback strategies.
+Specifies GPU hardware for the endpoint. Accepts a single GPU pool/type or a list of pools and types:
+
+- A single `GpuType` requests that exact GPU model. This is the only form guaranteed to pin workers to a specific card.
+- A single `GpuGroup` requests any card in that pool.
+- A list requests any of the listed options. The SDK converts each `GpuType` in a list to its GPU pool, so list placement is advisory at the pool/VRAM-tier level: workers may run on a different card with equivalent VRAM rather than one of the exact models you listed, and list order is not preserved.
 
 ```python
 from runpod_flash import Endpoint, GpuType, GpuGroup
@@ -85,12 +89,16 @@ async def infer(data): ...
 @Endpoint(name="rtx-worker", gpu=GpuType.NVIDIA_GEFORCE_RTX_4090)
 async def process(data): ...
 
-# Multiple types for fallback
+# Multiple types: requests any card in the set
 @Endpoint(name="flexible", gpu=[GpuType.NVIDIA_A100_80GB_PCIe, GpuType.NVIDIA_RTX_A6000, GpuType.NVIDIA_GEFORCE_RTX_4090])
 async def flexible_infer(data): ...
 ```
 
-See [GPU types](https://docs.runpod.io/flash/configuration/gpu-types) for all available options.
+> **Note**
+>
+> There is currently no API field that reports which GPU model a worker was actually placed on — the endpoint configuration reflects what you requested, not where workers ran. To verify placement, query the GPU from inside the worker (for example, with `nvidia-smi`).
+
+See [GPU types](https://docs.runpod.io/flash/configuration/gpu-types) for all available options, including [GPU selection behavior](https://docs.runpod.io/flash/configuration/gpu-types#gpu-selection-behavior).
 
 ### cpu
 
@@ -528,22 +536,26 @@ async def process(data): ...
 
 `PodTemplate` provides advanced pod configuration options:
 
-| Parameter           | Type         | Description                                                       | Default |
-| ------------------- | ------------ | ----------------------------------------------------------------- | ------- |
-| `containerDiskInGb` | `int`        | Container disk size in GB                                         | 64      |
-| `env`               | `list[dict]` | Environment variables as list of `{"key": "...", "value": "..."}` | `None`  |
+| Parameter                 | Type         | Description                                                           | Default |
+| ------------------------- | ------------ | --------------------------------------------------------------------- | ------- |
+| `containerDiskInGb`       | `int`        | Container disk size in GB                                             | 64      |
+| `containerRegistryAuthId` | `str`        | ID of saved registry credentials for pulling private container images | `None`  |
+| `env`                     | `list[dict]` | Environment variables as list of `{"key": "...", "value": "..."}`     | `None`  |
 
 ```python
 from runpod_flash import PodTemplate
 
 template = PodTemplate(
     containerDiskInGb=100,
+    containerRegistryAuthId="REGISTRY_CREDENTIAL_ID",
     env=[
         {"key": "PYTHONPATH", "value": "/workspace"},
         {"key": "CUDA_VISIBLE_DEVICES", "value": "0"}
     ]
 )
 ```
+
+To find the registry credential ID for `containerRegistryAuthId`, list your saved credentials with `runpodctl registry list` or check **Container Registry Authentication** in the [Runpod console settings](https://console.runpod.io/user/settings). See [Private images](https://docs.runpod.io/flash/custom-docker-images#private-images) for a complete example.
 
 > **Tip**
 >

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/install/linux.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/compose/install/linux.md)
+> Pinned source for Docker main: [content/manuals/compose/install/linux.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/compose/install/linux.md)
 
 # Install the Docker Compose plugin
 
@@ -73,7 +73,7 @@ To update the Docker Compose plugin, run the following commands:
    ```console
    $ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
    $ mkdir -p $DOCKER_CONFIG/cli-plugins
-   $ curl -SL https://github.com/docker/compose/releases/download/v5.5.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+   $ curl -SL https://github.com/docker/compose/releases/download/v5.6.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
    ```
 
    This command downloads and installs the latest release of Docker Compose for the active user under `$HOME` directory.
@@ -81,7 +81,7 @@ To update the Docker Compose plugin, run the following commands:
    To install:
 
    - Docker Compose for *all users* on your system, replace `~/.docker/cli-plugins` with `/usr/local/lib/docker/cli-plugins`.
-   - A different version of Compose, substitute `v5.5.0` with the version of Compose you want to use.
+   - A different version of Compose, substitute `v5.6.0` with the version of Compose you want to use.
    - For a different architecture, substitute `x86_64` with the [architecture you want](https://github.com/docker/compose/releases).
 
 2. Apply executable permissions to the binary:

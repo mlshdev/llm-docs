@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/notification-webhooks.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/guides/reference/notification-webhooks.mdx)
+> Pinned source for Vast.ai main: [guides/reference/notification-webhooks.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/guides/reference/notification-webhooks.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/notification-webhooks
 
 # Notification Webhooks
@@ -26,7 +26,7 @@ Subscribing a webhook to an event automatically turns on the webhook channel for
 
 Existing webhooks appear below the notification groups. You can edit the name or URL, delete the webhook, or unsubscribe the webhook from an individual event.
 
-![Create webhook modal with webhook name and webhook URL fields](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/console-notification-webhook.png)
+![Create webhook modal with webhook name and webhook URL fields](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/console-notification-webhook.png)
 
 > **Warning**
 >
@@ -52,7 +52,7 @@ This guide covers the delivery behavior you need to integrate safely — signing
 
 > **Note**
 >
-> The test endpoint sends a `webhook_test` event with the same request format and signature headers as a real delivery. It is not retried.
+> The test endpoint sends a `webhook_test` event with the same request format and signature headers as a real delivery, with `data` set to `null` and `data_truncated` set to `false`. It is not retried.
 
 ## Webhook Limits and Validation
 
@@ -80,9 +80,25 @@ Vast.ai sends a JSON `POST` request:
   "notif_type": "low_credit",
   "subject": "Warning - Your Vast.ai Credit Balance Is Getting Low",
   "message": "Your Vast.ai balance is below your configured threshold.",
+  "data": {
+    "balance": 4.82,
+    "threshold": 5.0
+  },
+  "data_truncated": false,
   "timestamp": 1772490000.123
 }
 ```
+
+| Field            | Type             | Description                                                           |
+| ---------------- | ---------------- | --------------------------------------------------------------------- |
+| `event_id`       | string           | Stable event ID. Same value as `X-Vast-Event-Id`.                     |
+| `user_id`        | integer          | Account the event belongs to.                                         |
+| `notif_type`     | string           | Short event slug, such as `low_credit`.                               |
+| `subject`        | string           | Human-readable subject line.                                          |
+| `message`        | string           | Human-readable message text. Meant for people — parse `data` instead. |
+| `data`           | object or `null` | Structured event details. See [The `data` Object](#the-data-object).  |
+| `data_truncated` | boolean          | `true` when `data` was dropped for exceeding the size cap.            |
+| `timestamp`      | number           | Floating-point event time in Unix seconds.                            |
 
 > **Note**
 >
@@ -101,6 +117,26 @@ Headers:
 > **Note**
 >
 > The payload's `timestamp` remains a floating-point event timestamp. Signature verification uses the integer timestamp from `X-Vast-Timestamp`.
+
+### The `data` Object
+
+`data` carries machine-readable details about the event, so you can act on it without parsing `message`. It is always either a JSON object or `null` — never a string.
+
+- **Keys vary by `notif_type`.** Each event type exposes its own keys, and not every event has every key. Read keys defensively and ignore ones you do not recognize.
+- **Only vetted keys are exposed.** Vast.ai sends a fixed set of keys that are safe to deliver to a URL you configure. Anything else, such as payment-processor references or internal bookkeeping, is left out. Keys are never exposed by default, so a new key appears only after it has been reviewed.
+- **Some events send few keys or none.** Treat `data` as optional, and use `message` only for display.
+
+`data_truncated` tells you why `data` is `null`:
+
+| `data` | `data_truncated` | Meaning                                                                                                                     |
+| ------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Object | `false`          | Event details, restricted to vetted keys.                                                                                   |
+| `null` | `false`          | The event has no structured details to share.                                                                               |
+| `null` | `true`           | Details existed, but the serialized object exceeded the 4096-byte size cap and was dropped. A partial object is never sent. |
+
+> **Note**
+>
+> `data` and `data_truncated` are additive. Existing fields keep their names and types, so consumers that ignore unknown fields keep working unchanged. Both fields are part of the signed request body, and signature verification works exactly as before.
 
 ## Verify Signatures
 

@@ -1,6 +1,6 @@
 # FFmpeg master
 
-> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `6d6f5fbf13e2897c5181b2d251646cf371bf342c`.
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `47313ad3f9f33b892384b976fb7c09b3c85fd74e`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -18,7 +18,7 @@
 - [Description](pages/doc/ffmpeg-resampler.md): The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio… (7850 bytes)
 - [Description](pages/doc/ffmpeg-codecs.md): This document describes the codecs (decoders and encoders) provided by the libavcodec library. (178764 bytes)
 - [Description](pages/doc/ffmpeg-formats.md): This document describes the supported formats (muxers and demuxers) provided by the libavformat library. (196162 bytes)
-- [Description](pages/doc/ffmpeg-devices.md): This document describes the input and output devices provided by the libavdevice library. (60331 bytes)
+- [Description](pages/doc/ffmpeg-devices.md): This document describes the input and output devices provided by the libavdevice library. (60525 bytes)
 - [Description](pages/doc/ffmpeg-filters.md): This document describes filters, sources, and sinks provided by the libavfilter library. (897710 bytes)
 - [Description](pages/doc/ffmpeg-protocols.md): This document describes the input and output protocols provided by the libavformat library. (80125 bytes)
 - [Description](pages/doc/ffmpeg-bitstream-filters.md): This document describes the bitstream filters provided by the libavcodec library. (38852 bytes)

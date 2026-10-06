@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `8eadf376553a14870ddea140c39146a88ce44170`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -102,7 +102,7 @@
 - [Account Settings](pages/guides/reference/account-settings.md): On this page you can view and edit important information about your client account. (7259 bytes)
 - [Billing](pages/guides/reference/billing.md): Vast requires pre-payment of credits for GPU rentals. Once credits are purchased, they appear in your account balance. (10540 bytes)
 - [Notifications](pages/guides/reference/notifications.md): Choose which Vast.ai account, billing, and instance events reach you by email or through webhooks. (11872 bytes)
-- [Notification Webhooks](pages/guides/reference/notification-webhooks.md): Send Vast.ai notification events to your own HTTPS endpoint for automation, monitoring, and audit workflows. (9646 bytes)
+- [Notification Webhooks](pages/guides/reference/notification-webhooks.md): Send Vast.ai notification events to your own HTTPS endpoint for automation, monitoring, and audit workflows. (12777 bytes)
 - [Keys](pages/guides/reference/keys.md): The Keys page helps you manage secure access to your Vast.ai account. Here, you'll find different types of keys used for authentication and connection. (3074 bytes)
 - [Two-Factor Authentication](pages/guides/reference/two-factor-authentication.md): Two-factor authentication (2FA) adds a second layer of security to your account. After entering your password, you verify your identity using a code from your phone or email. This means an attacker who obtains your pass… (8389 bytes)
 - [Referral Program](pages/guides/reference/referral-program.md): Turn your audience into earnings! Share your unique Vast.ai referral link (or a public template link), and when someone creates a new client account and buys credits, you get 3% of everything they spend, for the lifetim… (4518 bytes)

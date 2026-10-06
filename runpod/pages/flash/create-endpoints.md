@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/create-endpoints.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/flash/create-endpoints.mdx)
+> Pinned source for Runpod main: [flash/create-endpoints.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/flash/create-endpoints.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/create-endpoints
 
 # Create endpoints
@@ -141,10 +141,12 @@ async def infer(data: dict) -> dict: ...
 @Endpoint(name="rtx-worker", gpu=GpuType.NVIDIA_GEFORCE_RTX_4090)
 async def render(data: dict) -> dict: ...
 
-# Use multiple GPU types for better availability
+# Use multiple GPU types for better availability (requests any card in the set)
 @Endpoint(name="flexible", gpu=[GpuType.NVIDIA_GEFORCE_RTX_4090, GpuType.NVIDIA_RTX_A5000])
 async def process(data: dict) -> dict: ...
 ```
+
+A single `GpuType` requests that exact card; exact-card placement is only guaranteed with a single `GpuType`. A list requests any card in the set and is treated at the pool/VRAM-tier level, so a worker may run on a different card with equivalent VRAM rather than one of the models you listed. See [GPU selection behavior](https://docs.runpod.io/flash/configuration/gpu-types#gpu-selection-behavior) for details.
 
 If neither `gpu=` nor `cpu=` is specified, GPU defaults to `GpuGroup.ANY`.
 

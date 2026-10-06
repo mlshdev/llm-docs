@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits-v2.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/ai/sandboxes/customize/kits-v2.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits-v2.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/ai/sandboxes/customize/kits-v2.md)
 
 # Kits v2
 
@@ -483,7 +483,9 @@ assets from `files/home/`.
 
 ### startup
 
-Runs at every sandbox start. String array, not interpreted by a shell.
+Runs at every sandbox start. String array, not interpreted by a shell. A
+`$WORKSPACE_DIR` reference in the array is passed unchanged. To expand it, run
+the command through a shell, for example `["sh", "-c", "..."]`.
 
 | Field         | Default  | Description                                                                                                        |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -513,17 +515,32 @@ how many times they run.
 
 Files written at sandbox start, with runtime substitution.
 
-| Field           | Default  | Description                                               |
-| --------------- | -------- | --------------------------------------------------------- |
-| `path`          | —        | Absolute container path.                                  |
-| `content`       | —        | File content. `${WORKDIR}` expands to the workspace path. |
-| `mode`          | `"0644"` | File permissions in octal.                                |
-| `onlyIfMissing` | `false`  | Skip if the file already exists.                          |
+| Field           | Default  | Description                                              |
+| --------------- | -------- | -------------------------------------------------------- |
+| `path`          | —        | Absolute container path.                                 |
+| `content`       | —        | File content. Write `${WORKDIR}` for the workspace path. |
+| `mode`          | `"0644"` | File permissions in octal.                               |
+| `onlyIfMissing` | `false`  | Skip if the file already exists.                         |
 
 The runtime writes these files as the agent user with UID 1000. The target
 path must be writable by that user. To write to a root-owned path such as
 `/etc`, use an `install` command, which runs as root by default. Set ownership
 in the install command if the agent needs to modify the file later.
+
+Write `${WORKDIR}` in `content` and `$WORKSPACE_DIR` in commands. Three names
+look alike and mean different things:
+
+| Name            | What it is                                                    | Where it applies                              |
+| --------------- | ------------------------------------------------------------- | --------------------------------------------- |
+| `${WORKDIR}`    | Placeholder for the workspace path                            | `setup.files[].content` only                  |
+| `WORKSPACE_DIR` | Environment variable set by the runtime to the workspace path | Shell commands, and the agent                 |
+| `WORKDIR`       | The template image's Dockerfile working directory             | Where commands start, see [install](#install) |
+
+The runtime replaces `${WORKDIR}` when it creates the sandbox, only inside
+`content`, never in `path` or in commands. `WORKSPACE_DIR` is an environment
+variable, so a `$WORKSPACE_DIR` reference expands only when a shell runs the
+command. `install` strings run through `sh -c`. `startup` arrays run without a
+shell. A Dockerfile `WORKDIR` doesn't define an environment variable.
 
 ### Shell initialization and service logs
 
@@ -775,18 +792,19 @@ place of the built-in shortcut. Every selected kit must use v3.
 Changing `schemaVersion` alone doesn't convert a kit. Separate reusable image
 content from sandbox initialization, and declare runtime capabilities:
 
-| V2 surface                                                       | V3 equivalent                                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `kind: sandbox`                                                  | `kind: workload` with a Dockerfile recipe                                             |
-| `sandbox.image`                                                  | Dockerfile `FROM`                                                                     |
-| `sandbox.entrypoint`, `sandbox.command`, `environment.variables` | Dockerfile `ENTRYPOINT`, `CMD`, and `ENV`                                             |
-| `extends`                                                        | A mixin for composition, or a derived workload image with its own descriptor          |
-| `setup.install`                                                  | Dockerfile `RUN` for reusable content; lifecycle `install` for sandbox initialization |
-| `setup.startup` and `setup.files`                                | Lifecycle capability `startup` and `files`                                            |
-| `setup.files[].onlyIfMissing: true`                              | Lifecycle `files[].overwrite: false`                                                  |
-| Automatic `files/home/` and `files/workspace/` injection         | Dockerfile `COPY`, with lifecycle hooks for destinations provided by runtime mounts   |
-| `permissions.network` and `credentials`                          | Network-policy and credential capabilities                                            |
-| `agentInstructions`                                              | Agent-context capability                                                              |
+| V2 surface                                                       | V3 equivalent                                                                                                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `kind: sandbox`                                                  | `kind: workload` with a Dockerfile recipe                                                                                             |
+| `sandbox.image`                                                  | Dockerfile `FROM`                                                                                                                     |
+| `sandbox.entrypoint`, `sandbox.command`, `environment.variables` | Dockerfile `ENTRYPOINT`, `CMD`, and `ENV`                                                                                             |
+| `extends`                                                        | A mixin for composition, or a derived workload image with its own descriptor                                                          |
+| `setup.install`                                                  | Dockerfile `RUN` for reusable content; lifecycle `install` for sandbox initialization                                                 |
+| `setup.startup` and `setup.files`                                | Lifecycle capability `startup` and `files`                                                                                            |
+| `setup.files[].onlyIfMissing: true`                              | Lifecycle `files[].overwrite: false`                                                                                                  |
+| Automatic `files/home/` and `files/workspace/` injection         | Dockerfile `COPY`, with lifecycle hooks for destinations provided by runtime mounts                                                   |
+| `permissions.network` and `credentials`                          | Network-policy and credential capabilities                                                                                            |
+| `agentInstructions`                                              | Agent-context capability                                                                                                              |
+| `${WORKDIR}` in `setup.files[].content`                          | `${{ kit.env.WORKSPACE_DIR }}` in lifecycle [`files` content](https://docs.docker.com/ai/sandboxes/customize/author/#generated-files) |
 
 Follow the [v3 authoring guidance](https://docs.docker.com/ai/sandboxes/customize/author/)
 when converting runtime setup and capability declarations.

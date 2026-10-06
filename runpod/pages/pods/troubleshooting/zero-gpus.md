@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/troubleshooting/zero-gpus.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/pods/troubleshooting/zero-gpus.mdx)
+> Pinned source for Runpod main: [pods/troubleshooting/zero-gpus.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/pods/troubleshooting/zero-gpus.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/troubleshooting/zero-gpus
 
 # Zero GPU Pods on restart

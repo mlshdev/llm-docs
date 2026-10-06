@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/docker-overview.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/get-started/docker-overview.md)
+> Pinned source for Docker main: [content/get-started/docker-overview.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/get-started/docker-overview.md)
 
 # What is Docker?
 
@@ -76,7 +76,7 @@ daemon. The Docker client and daemon communicate using a REST API, over UNIX
 sockets or a network interface. Another Docker client is Docker Compose,
 that lets you work with applications consisting of a set of containers.
 
-![Docker Architecture diagram](https://raw.githubusercontent.com/docker/docs/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/get-started/images/docker-architecture.webp)
+![Docker Architecture diagram](https://raw.githubusercontent.com/docker/docs/d745218a0918016144f1ba0d98222b75b21bf65a/content/get-started/images/docker-architecture.webp)
 
 ### The Docker daemon
 

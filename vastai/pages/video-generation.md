@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [video-generation.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/video-generation.mdx)
+> Pinned source for Vast.ai main: [video-generation.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/video-generation.mdx)
 > Canonical documentation: https://docs.vast.ai/video-generation
 
 # Video Generation
@@ -76,7 +76,7 @@ Select your template from '[My Templates](https://cloud.vast.ai/templates/)' aft
 
 ComfyUI has a workflow browser, so for a quick start you can choose on of their templates
 
-![ComfyUI template workflows](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/use-cases-ai-video-generation.png)
+![ComfyUI template workflows](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/use-cases-ai-video-generation.png)
 
 We'll pick the LTX Video workflow for this guide.  Simply click it to proceed.
 
@@ -84,7 +84,7 @@ We'll pick the LTX Video workflow for this guide.  Simply click it to proceed.
 
 Your new instance will not yet have the required models, but fortunately ComfyUI will alert us to this and offer the models for download.
 
-![ComfyUI template workflows](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/use-cases-ai-video-generation-2.png)
+![ComfyUI template workflows](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/use-cases-ai-video-generation-2.png)
 
 Unfortunately, the interface does not know it is running in the cloud so clicking the download buttons will download the models to your local machine.  To work around this you can either:&#x20;
 
@@ -108,7 +108,7 @@ The above commands will download the required models into the instance.  When th
 
 Finally, click the **Run** button to process the workflow.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/use-cases-ai-video-generation-3.png)
+![](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/use-cases-ai-video-generation-3.png)
 
 Feel free to modify the prompts and experiement!
 

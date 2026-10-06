@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/generate-pdf-invoices.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/sdk/python/reference/generate-pdf-invoices.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/generate-pdf-invoices.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/sdk/python/reference/generate-pdf-invoices.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/generate-pdf-invoices
 
 # VastAI.generate_pdf_invoices

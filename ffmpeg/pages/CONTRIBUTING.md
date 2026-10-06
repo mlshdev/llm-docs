@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [CONTRIBUTING.md](https://github.com/FFmpeg/FFmpeg/blob/6d6f5fbf13e2897c5181b2d251646cf371bf342c/CONTRIBUTING.md)
+> Pinned source for FFmpeg master: [CONTRIBUTING.md](https://github.com/FFmpeg/FFmpeg/blob/47313ad3f9f33b892384b976fb7c09b3c85fd74e/CONTRIBUTING.md)
 
 # Note to Github users
 

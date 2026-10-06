@@ -1,54 +1,69 @@
-> Pinned source for Docker main: [content/manuals/security/provisioning/_index.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/security/provisioning/_index.md)
+> Pinned source for Docker main: [content/manuals/security/provisioning/_index.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/security/provisioning/_index.md)
 
-# Provision users
+# User provisioning overview
 
 **SSO requirements**
 
 - Subscription: Business
 - For: Administrators
 
-After configuring your SSO connection, the next step is to provision users. This process ensures that users can access your organization through automated user management.
+After you configure single sign-on (SSO), provision users so they can
+access your organization through automated account management.
 
-This page provides an overview of user provisioning and the supported provisioning methods.
+## Provisioning methods
 
-## What is provisioning?
+Provisioning automates account creation, updates, and deactivation using
+data from your identity provider (IdP). Docker supports the following
+methods:
 
-Provisioning helps manage users by automating tasks like account creation, updates, and deactivation based on data from your identity provider (IdP). There are several methods for user provisioning, each offering benefits for different organizational needs:
+| Provisioning method                                                                                       | When it runs                                                                                           | Lifecycle management                                                                      | Default setting                |
+| :-------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- | :----------------------------- |
+| [System for Cross-domain Identity Management (SCIM)](https://docs.docker.com/security/provisioning/scim/) | On the IdP's synchronization schedule or through Provision on Demand                                   | Creates and updates users, synchronizes configured groups, and deprovisions users         | Disabled                       |
+| [Just-in-Time (JIT)](https://docs.docker.com/security/provisioning/just-in-time/)                         | When a user signs in through SSO                                                                       | Creates users and applies attributes from the SSO assertion. It doesn't deprovision users | Enabled when you configure SSO |
+| [Auto-provisioning](https://docs.docker.com/security/provisioning/auto-provisioning/)                     | When an existing Docker user signs in or verifies their email, and that address uses a verified domain | Adds the user to the organization. It doesn't create or deprovision accounts              | Disabled                       |
 
-| Provisioning method                                | Description                                                                                                                                    | Default setting in Docker | Recommended for                                                                         |
-| :------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------ | :-------------------------------------------------------------------------------------- |
-| System for Cross-domain Identity Management (SCIM) | Continuously syncs user data between your IdP and Docker, ensuring user attributes remain updated without manual intervention                  | Disabled by default       | Larger organizations or environments with frequent changes in user information or roles |
-| Group mapping                                      | Maps user groups from your IdP to specific roles and permissions within Docker, enabling fine-grained access control based on group membership | Disabled by default       | Organizations requiring strict access control and role-based user management            |
-| Just-in-Time (JIT)                                 | Automatically creates and provisions user accounts when they first sign in via SSO                                                             | Enabled by default        | Organizations needing minimal setup, smaller teams, or low-security environments        |
-| Auto-provision                                     | Adds users when email addresses match a verified domain                                                                                        | Disabled by default       | Orgs without SSO that need to add existing Docker users by domain                       |
+[Group mapping](https://docs.docker.com/security/provisioning/scim/group-mapping/) assigns
+users to Docker organizations and teams. Use it with SAML SSO or SCIM. You can
+also invite users manually when automatic provisioning isn't configured.
 
 ## Default provisioning setup
 
-By default, Docker enables JIT provisioning when you configure an SSO connection. With JIT enabled, user accounts are automatically created the first time a user signs in using your SSO flow.
+Docker turns on JIT provisioning when you configure an SSO connection. If you
+also enable SCIM, Docker recommends choosing one provisioning source to manage
+users and attributes. Before configuring SCIM, review
+[how SCIM works with JIT](https://docs.docker.com/security/provisioning/scim/#choose-how-scim-works-with-jit).
 
-JIT provisioning may not provide sufficient control or security for some organizations. In such cases, SCIM or group mapping can be configured to give administrators more control over user access and attributes.
+For a domain that belongs to an SSO connection, JIT adds the user instead of
+auto-provisioning.
 
 ## SSO attributes
 
-When a user signs in through SSO, Docker obtains several attributes from your IdP to manage the user's identity and permissions. These attributes include:
+Each time a user signs in through SSO, Docker reads attributes from your
+IdP to set the user's identity and permissions:
 
-- Email address: The unique identifier for the user
-- Full name: The user's complete name
-- Groups: Optional. Used for group-based access control
-- Docker Org: Optional. Specifies the organization the user belongs to
-- Docker Team: Optional. Defines the team the user belongs to within the organization
-- Docker Role: Optional. Determines the user's permissions within Docker
-- Docker session minutes: Optional. Sets the session duration before users must re-authenticate with their IdP. Must be a positive integer greater than 0. If not provided, default session timeouts apply
+| Attribute              | Required | Description                                                                                                                                                           |
+| :--------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Email address          | Yes      | Unique identifier for the user                                                                                                                                        |
+| Full name              | Yes      | User's complete name                                                                                                                                                  |
+| Groups                 | No       | Group-based access control                                                                                                                                            |
+| Docker Org             | No       | Organization the user belongs to                                                                                                                                      |
+| Docker Team            | No       | Team within the organization                                                                                                                                          |
+| Docker Role            | No       | Permissions in Docker                                                                                                                                                 |
+| Docker session minutes | No       | Session duration, in minutes, before users must re-authenticate with their IdP. Must be a positive integer greater than 0. If omitted, default session timeouts apply |
 
 > \[!NOTE]
 >
-> Default session timeouts apply when Docker session minutes is not specified. Docker Desktop sessions expire after 90 days or 30 days of inactivity. Docker Hub and Docker Home sessions expire after 24 hours.
+> Default session timeouts apply when Docker session minutes is not
+> specified. Docker Desktop sessions expire after 90 days or 30 days of
+> inactivity. Docker Hub and Docker Home sessions expire after 24 hours.
 
 ## SAML attribute mapping
 
-If your organization uses SAML for SSO, Docker retrieves these attributes from the SAML assertion message. Different IdPs may use different names for these attributes.
+If your organization uses SAML for SSO, Docker reads these attributes
+from the SAML assertion. Identity providers may use different names for
+the same attributes.
 
-| SSO Attribute                     | SAML Assertion Message Attributes                                                                                                                                                                                        |
+| SSO attribute                     | SAML assertion attributes                                                                                                                                                                                                |
 | :-------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Email address                     | `"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"`, `"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"`, `"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"`, `email` |
 | Full name                         | `"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"`, `name`, `"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"`, `"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"`           |
@@ -56,13 +71,16 @@ If your organization uses SAML for SSO, Docker retrieves these attributes from t
 | Docker Org (optional)             | `dockerOrg`                                                                                                                                                                                                              |
 | Docker Team (optional)            | `dockerTeam`                                                                                                                                                                                                             |
 | Docker Role (optional)            | `dockerRole`                                                                                                                                                                                                             |
-| Docker session minutes (optional) | `dockerSessionMinutes`, must be a positive integer > 0                                                                                                                                                                   |
+| Docker session minutes (optional) | `dockerSessionMinutes`, must be a positive integer greater than 0                                                                                                                                                        |
 
 ## Next steps
 
-Choose the provisioning method that best fits your organization's needs:
+Choose the provisioning method that fits your organization:
 
-- [Add and manage domains](https://docs.docker.com/security/provisioning/domain-management/): Add, verify, and manage domains to control user access and enable auto-provisioning.
-- [SCIM provisioning](https://docs.docker.com/security/provisioning/scim/): Enable continuous user data synchronization between your IdP and Docker. Best for larger organizations.
-- [Just-in-Time (JIT) provisioning](https://docs.docker.com/security/provisioning/just-in-time/): Set up automatic user creation on first sign-in. Ideal for smaller teams with minimal setup requirements.
-- [Auto-provisioning](https://docs.docker.com/security/provisioning/auto-provisioning/): Associate members to an organization when email addresses match a verified domain.
+- [Add and manage domains](https://docs.docker.com/security/provisioning/domain-management/): Add, verify, and manage domains for auto-provisioning.
+- [SCIM provisioning](https://docs.docker.com/security/provisioning/scim/): Sync user data between your IdP and Docker with SCIM.
+- [Just-in-Time (JIT) provisioning](https://docs.docker.com/security/provisioning/just-in-time/): Create user accounts automatically on first SSO sign-in.
+- [Auto-provisioning](https://docs.docker.com/security/provisioning/auto-provisioning/): Add users whose email addresses match a verified domain.
+
+If users get the wrong role or team after you change methods, see
+[Troubleshoot provisioning](https://docs.docker.com/security/provisioning/troubleshoot-provisioning/).

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/manage.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/security/authentication/single-sign-on/manage.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/manage.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/security/authentication/single-sign-on/manage.md)
 
 # Manage SSO domains and connections
 
@@ -107,7 +107,8 @@ Docker supports the following provisioning methods:
 - SCIM provisioning: Sync users and groups from your identity provider to Docker
 - Group mapping: Sync user groups from your identity provider with teams in your
   Docker organization
-- Manual provisioning: Turn off automatic provisioning and manually invite users
+- Manual invitations: Invite users directly. You can turn off JIT only after you
+  enable SCIM.
 
 For more information on provisioning methods, see
 [Provision users](https://docs.docker.com/security/provisioning/).

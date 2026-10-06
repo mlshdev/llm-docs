@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/workers/deploy.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/serverless/workers/deploy.mdx)
+> Pinned source for Runpod main: [serverless/workers/deploy.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/serverless/workers/deploy.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/workers/deploy
 
 # Deploy workers from Docker Hub

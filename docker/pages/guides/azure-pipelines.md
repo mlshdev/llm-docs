@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/azure-pipelines.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/guides/azure-pipelines.md)
+> Pinned source for Docker main: [content/guides/azure-pipelines.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/guides/azure-pipelines.md)
 
 > This guide is a community contribution. Docker would like to thank [Kristiyan Velkov](https://www.linkedin.com/in/kristiyan-velkov-763130b3/) for his valuable contribution.
 
@@ -167,7 +167,7 @@ stages:
     displayName: Build and Push Docker Image
 ```
 
-This stage executes only if the source branch is `main`.
+This stage builds the image on both commit and pull request runs. The push task below runs only when the source branch is `main`.
 
 > \[!TIP]
 >
@@ -178,11 +178,11 @@ This stage executes only if the source branch is `main`.
 ```yaml
 jobs:
   - job: DockerJob
-  displayName: Build and Push
-  pool:
-    vmImage: ubuntu-latest
-    demands:
-      - docker
+    displayName: Build and Push
+    pool:
+      vmImage: ubuntu-latest
+      demands:
+        - docker
 ```
 
 This job utilizes the latest Ubuntu VM image with Docker support, provided by Microsoft-hosted agents. It can be replaced with a custom pool for self-hosted agents if necessary.
@@ -224,7 +224,7 @@ Uses a pre-configured Azure DevOps Docker registry service connection to authent
 #### Step 4.3: Build the Docker image
 
 ```yaml
- - task: Docker@2
+  - task: Docker@2
     displayName: Build Docker Image
     inputs:
       command: build

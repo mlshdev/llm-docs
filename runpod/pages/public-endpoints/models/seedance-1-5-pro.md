@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/seedance-1-5-pro.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/public-endpoints/models/seedance-1-5-pro.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/seedance-1-5-pro.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/public-endpoints/models/seedance-1-5-pro.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/seedance-1-5-pro
 
 # Seedance 1.5 Pro I2V

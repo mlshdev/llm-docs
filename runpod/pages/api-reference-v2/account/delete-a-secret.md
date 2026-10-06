@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/account/delete-a-secret.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/api-reference-v2/account/delete-a-secret.mdx)
+> Pinned source for Runpod main: [api-reference-v2/account/delete-a-secret.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/api-reference-v2/account/delete-a-secret.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/account/delete-a-secret
 
 # Delete A Secret

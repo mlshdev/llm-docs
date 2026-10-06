@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/logging/configure.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/engine/logging/configure.md)
+> Pinned source for Docker main: [content/manuals/engine/logging/configure.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/engine/logging/configure.md)
 
 # Configure logging drivers
 
@@ -63,7 +63,19 @@ example sets four configurable options on the `json-file` logging driver:
 }
 ```
 
-Restart Docker for the changes to take effect for newly created containers.
+Restart Docker Engine on a Linux system that uses `systemd`:
+
+```console
+$ sudo systemctl restart docker
+```
+
+If you use Docker Desktop, restart it with the Docker Desktop CLI:
+
+```console
+$ docker desktop restart
+```
+
+The changes take effect for newly created containers after the restart.
 Existing containers don't use the new logging configuration automatically.
 
 > \[!NOTE]

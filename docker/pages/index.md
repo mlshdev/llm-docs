@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/_index.md)
+> Pinned source for Docker main: [content/_index.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/_index.md)
 
 # Home
 
@@ -15,6 +15,8 @@ reference material for everyday development and operations tasks.
 - [Manuals](https://docs.docker.com/): Install, configure, and use Docker products.
 
 - [Reference](https://docs.docker.com/reference/): Browse CLI, API, and file format documentation.
+
+- [Assign licenses to teams](https://docs.docker.com/accounts/organization/manage/manage-licenses/#teams) (Docker Home, 2026-09-29): Assign a product license to a team so every current and future member receives it. The Licenses page in Docker Home shows available licenses and whether they are assigned to teams or individuals.
 
 - [Run sandboxes on Docker-managed cloud infrastructure](https://docs.docker.com/ai/sandboxes/cloud/) (Docker Sandboxes, 2026-09-24): Create and manage cloud sandboxes with the sbx CLI, including cloud-specific credentials, network policies, lifecycle controls, and transfers between local and cloud environments.
 

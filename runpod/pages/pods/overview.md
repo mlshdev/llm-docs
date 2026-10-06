@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/overview.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/pods/overview.mdx)
+> Pinned source for Runpod main: [pods/overview.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/pods/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/overview
 
 # Overview
@@ -50,7 +50,7 @@ Runpod offers two cloud options:
 
 ## Pricing
 
-Pods are billed by the minute with no fees for ingress/egress. Runpod also offers long-term [savings plans](https://docs.runpod.io/pods/pricing#savings-plans) for extended usage patterns. See [Pod pricing](https://docs.runpod.io/pods/pricing) for details.
+Pods are billed by the second with no fees for ingress/egress. Runpod also offers long-term [savings plans](https://docs.runpod.io/pods/pricing#savings-plans) for extended usage patterns. See [Pod pricing](https://docs.runpod.io/pods/pricing) for details.
 
 ## Limitations
 

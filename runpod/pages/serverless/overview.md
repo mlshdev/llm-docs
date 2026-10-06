@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [serverless/overview.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/serverless/overview.mdx)
+> Pinned source for Runpod main: [serverless/overview.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/serverless/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/overview
 
 # Overview
 
 Pay-as-you-go compute for AI models and compute-intensive workloads. Review configuration and operations guidance for Runpod Serverless.
 
-Runpod Serverless is a cloud computing platform that lets you serve AI models for inference and run other compute-intensive workloads without managing servers. You only pay for the actual compute time you use, with no idle costs when your application isn't processing requests.
+Runpod Serverless is a cloud computing platform that lets you serve AI models for inference and run other compute-intensive workloads without managing servers. You pay only while workers run, and workers scale down to zero after a short [idle timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#idle-timeout) when there are no requests.
 
 ## Get started
 

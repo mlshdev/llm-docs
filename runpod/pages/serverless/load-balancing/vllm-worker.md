@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/load-balancing/vllm-worker.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/serverless/load-balancing/vllm-worker.mdx)
+> Pinned source for Runpod main: [serverless/load-balancing/vllm-worker.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/serverless/load-balancing/vllm-worker.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/load-balancing/vllm-worker
 
 # Build a load balancing vLLM endpoint

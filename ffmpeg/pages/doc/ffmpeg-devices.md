@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-devices.texi](https://github.com/FFmpeg/FFmpeg/blob/6d6f5fbf13e2897c5181b2d251646cf371bf342c/doc/ffmpeg-devices.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-devices.texi](https://github.com/FFmpeg/FFmpeg/blob/47313ad3f9f33b892384b976fb7c09b3c85fd74e/doc/ffmpeg-devices.texi)
 
 # Description
 
@@ -253,8 +253,9 @@ The decklink input device provides capture capabilities for Blackmagic
 DeckLink devices.
 
 To enable this input device, you need the Blackmagic DeckLink SDK and you
-need to configure with the appropriate `--extra-cflags`
-and `--extra-ldflags`.
+need to configure with the appropriate `--extra-cflags`,
+`--extra-cxxflags` and `--extra-ldflags`. The SDK include directory
+must be available to both the C and C++ compilers.
 On Windows, you need to run the IDL files through `widl`.
 
 DeckLink is very picky about the formats it supports. Pixel format of the
@@ -1782,8 +1783,9 @@ The decklink output device provides playback capabilities for Blackmagic
 DeckLink devices.
 
 To enable this output device, you need the Blackmagic DeckLink SDK and you
-need to configure with the appropriate `--extra-cflags`
-and `--extra-ldflags`.
+need to configure with the appropriate `--extra-cflags`,
+`--extra-cxxflags` and `--extra-ldflags`. The SDK include directory
+must be available to both the C and C++ compilers.
 On Windows, you need to run the IDL files through `widl`.
 
 DeckLink is very picky about the formats it supports. Pixel format is always

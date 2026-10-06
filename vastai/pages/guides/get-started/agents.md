@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/get-started/agents.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/guides/get-started/agents.mdx)
+> Pinned source for Vast.ai main: [guides/get-started/agents.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/guides/get-started/agents.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/get-started/agents
 
 # Using Vast.ai with Agents

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/notifications/google-chat-webhook.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/examples/notifications/google-chat-webhook.mdx)
+> Pinned source for Vast.ai main: [examples/notifications/google-chat-webhook.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/examples/notifications/google-chat-webhook.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/notifications/google-chat-webhook
 
 # Send Notifications to Google Chat
@@ -22,7 +22,7 @@ Vast.ai notification -> your HTTPS webhook URL -> local adapter -> Google Chat
 
 Open [Account Settings](https://cloud.vast.ai/account/) and review **Notification Settings**. The notification groups shown here are the same event groups you can subscribe to through the API.
 
-![Notification Settings page with Account, Billing, and Instance notification groups](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/console-notifications-settings.png)
+![Notification Settings page with Account, Billing, and Instance notification groups](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/console-notifications-settings.png)
 
 ## Create a Google Chat Incoming Webhook
 
@@ -221,7 +221,7 @@ export WEBHOOK_ID="$(
 
 You can create the same webhook from the console, but the API flow is best for this example because the adapter needs the signing secret.
 
-![Create webhook modal with webhook name and webhook URL fields](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/console-notification-webhook.png)
+![Create webhook modal with webhook name and webhook URL fields](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/console-notification-webhook.png)
 
 ## Start the Adapter
 

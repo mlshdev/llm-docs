@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/attach-ssh.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/sdk/python/reference/attach-ssh.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/attach-ssh.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/sdk/python/reference/attach-ssh.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/attach-ssh
 
 # VastAI.attach_ssh

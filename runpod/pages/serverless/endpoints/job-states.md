@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/job-states.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/serverless/endpoints/job-states.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/job-states.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/serverless/endpoints/job-states.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/job-states
 
 # Job states and metrics
@@ -13,7 +13,6 @@ Understanding job states helps you track the progress of individual requests and
 
 - `IN_QUEUE`: The job is waiting in the endpoint queue for an available worker to process it.
 - `IN_PROGRESS`: The job has been picked up by a worker and is currently being processed. The request is no longer waiting in the queue.
-- `RUNNING`: A worker has picked up the job and is actively processing it.
 - `COMPLETED`: The job has finished processing successfully and returned a result.
 - `FAILED`: The job encountered an error during execution and did not complete successfully.
 - `CANCELLED`: The job was manually cancelled using the `/cancel/job_id` endpoint before completion.

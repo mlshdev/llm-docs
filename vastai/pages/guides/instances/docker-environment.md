@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/docker-environment.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/guides/instances/docker-environment.mdx)
+> Pinned source for Vast.ai main: [guides/instances/docker-environment.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/guides/instances/docker-environment.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/docker-environment
 
 # Docker Execution Environment

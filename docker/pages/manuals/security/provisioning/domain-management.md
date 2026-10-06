@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/provisioning/domain-management.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/security/provisioning/domain-management.md)
+> Pinned source for Docker main: [content/manuals/security/provisioning/domain-management.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/security/provisioning/domain-management.md)
 
 # Add and manage domains
 
@@ -7,13 +7,19 @@
 - Subscription: Business
 - For: Administrators
 
-Domain management lets you add and verify domains for your organization, then enable auto-provisioning to automatically add users when they sign in with email addresses that match your verified domains. This approach simplifies user management, ensures consistent security settings, and reduces the risk of unmanaged users accessing Docker without visibility or control.
+Domain management lets you add and verify domains for your organization, then
+enable auto-provisioning to automatically add users when they sign in with
+email addresses that match your verified domains. This approach simplifies
+user management, ensures consistent security settings, and reduces the risk of
+unmanaged users accessing Docker without visibility or control.
 
-This page provides steps to add and delete domains, configure auto-provisioning, and audit uncaptured users.
+This page provides steps to add and delete domains, configure
+auto-provisioning, and audit uncaptured users.
 
 ## Add and verify a domain
 
-Adding a domain requires verification to confirm ownership. The verification process uses DNS records to prove you control the domain.
+Adding a domain requires verification to confirm ownership. The verification
+process uses DNS records to prove you control the domain.
 
 ### Add a domain
 
@@ -27,18 +33,27 @@ Adding a domain requires verification to confirm ownership. The verification pro
 
 ### Verify a domain
 
-Verification confirms that you own the domain by adding a TXT record to your Domain Name System (DNS) host. It can take up to 72 hours for the DNS change to propagate. Docker automatically checks for the record and confirms ownership once the change is recognized.
+Verification confirms that you own the domain by adding a TXT record to your
+Domain Name System (DNS) host. It can take up to 72 hours for the DNS change to
+propagate. Docker automatically checks for the record and confirms ownership
+once the change is recognized.
 
 > \[!TIP]
 >
-> The record name field determines where the TXT record is added in your domain (root or subdomain). For root domains like `example.com`, use `@` or leave the record name empty, depending on your provider. Don't enter values like docker, `docker-verification`, `www`, or your domain name, as these may direct to the wrong place. Check your DNS provider's documentation to verify record name requirements.
+> The record name field determines where the TXT record is added in your
+> domain (root or subdomain). For root domains like `example.com`, use `@` or
+> leave the record name empty, depending on your provider. Don't enter values
+> like docker, `docker-verification`, `www`, or your domain name, as these may
+> direct to the wrong place. Check your DNS provider's documentation to verify
+> record name requirements.
 
 Follow the steps for your DNS provider to add the **TXT Record Value**. If
 your provider isn't listed, use the steps for "Other providers":
 
 **AWS Route 53**
 
-1. Add your TXT record to AWS by following [Creating records by using the Amazon Route 53 console](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html).
+1. Add your TXT record to AWS by following
+   [Creating records by using the Amazon Route 53 console](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html).
 2. Wait up to 72 hours for TXT record verification.
 3. Return to the **Domain management** page of the
    **Identity & auth**, then **Domain management**, and select **Verify** next to
@@ -46,7 +61,8 @@ your provider isn't listed, use the steps for "Other providers":
 
 **Google Cloud DNS**
 
-1. Add your TXT record to Google Cloud DNS by following [Verifying your domain with a TXT record](https://cloud.google.com/identity/docs/verify-domain-txt).
+1. Add your TXT record to Google Cloud DNS by following
+   [Verifying your domain with a TXT record](https://cloud.google.com/identity/docs/verify-domain-txt).
 2. Wait up to 72 hours for TXT record verification.
 3. Return to the **Domain management** page of the
    **Identity & auth**, then **Domain management**, and select **Verify** next to
@@ -54,7 +70,8 @@ your provider isn't listed, use the steps for "Other providers":
 
 **GoDaddy**
 
-1. Add your TXT record to GoDaddy by following [Add a TXT record](https://www.godaddy.com/help/add-a-txt-record-19232).
+1. Add your TXT record to GoDaddy by following
+   [Add a TXT record](https://www.godaddy.com/help/add-a-txt-record-19232).
 2. Wait up to 72 hours for TXT record verification.
 3. Return to the **Domain management** page of the
    **Identity & auth**, then **Domain management**, and select **Verify** next to
@@ -71,7 +88,9 @@ your provider isn't listed, use the steps for "Other providers":
 
 ## Audit domains for uncaptured users
 
-Domain audit identifies uncaptured users. Uncaptured users are Docker users who have authenticated using an email address associated with your verified domains but aren't members of your Docker organization.
+Domain audit identifies uncaptured users. Uncaptured users are Docker users who
+have authenticated using an email address associated with your verified
+domains but aren't members of your Docker organization.
 
 ### Limitations
 
@@ -81,7 +100,8 @@ Domain audit can't identify:
 - Users who authenticate using an account that doesn't have an
   email address associated with one of your verified domains
 
-To prevent unidentifiable users from accessing Docker Desktop, [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
+To prevent unidentifiable users from accessing Docker Desktop,
+[enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
 
 ### Run a domain audit
 
@@ -105,18 +125,23 @@ CSV file. For more information on bulk inviting users, see
 
 ## Auto-provisioning
 
-[Auto-provisioning](https://docs.docker.com/security/provisioning/auto-provisioning/) uses verified domains to associate organization members with email address that match the verified domains. To override auto-provisioning, you can configure one of the two alternative methods:
+[Auto-provisioning](https://docs.docker.com/security/provisioning/auto-provisioning/) adds
+existing Docker users to an organization when their email addresses match a
+verified domain. For domains that belong to an SSO connection, Just-in-Time
+(JIT) provisioning takes precedence over auto-provisioning.
 
-- [Just-in-Time (JIT)](https://docs.docker.com/security/provisioning/just-in-time/) provisioning
-- [System for Cross-domain Identity Management (SCIM)](https://docs.docker.com/security/provisioning/scim/)
+To compare JIT, SCIM, and auto-provisioning, see the
+[user provisioning overview](https://docs.docker.com/security/provisioning/).
 
 ## Delete a domain
 
-Deleting a domain removes its TXT record value and disables any associated auto-provisioning.
+Deleting a domain removes its TXT record value and disables any associated
+auto-provisioning.
 
 > \[!WARNING]
 >
-> Deleting a domain will disable auto-provisioning for that domain and remove verification. This action cannot be undone.
+> Deleting a domain will disable auto-provisioning for that domain and remove
+> verification. This action cannot be undone.
 
 To delete a domain:
 

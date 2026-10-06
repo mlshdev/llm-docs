@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/troubleshooting.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/flash/troubleshooting.mdx)
+> Pinned source for Runpod main: [flash/troubleshooting.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/flash/troubleshooting.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/troubleshooting
 
 # Troubleshooting
@@ -581,16 +581,19 @@ Circuit breaker is open. Retry in [N] seconds
 **Solutions:**
 
 1. **Add fallback GPUs**: Expand your `gpu` list with additional options:
+
    ```python
    @Endpoint(
        name="flexible",
        gpu=[
-           GpuType.NVIDIA_A100_80GB_PCIe,    # First choice
-           GpuType.NVIDIA_RTX_A6000,         # Fallback
-           GpuType.NVIDIA_GEFORCE_RTX_4090   # Second fallback
+           GpuType.NVIDIA_A100_80GB_PCIe,
+           GpuType.NVIDIA_RTX_A6000,
+           GpuType.NVIDIA_GEFORCE_RTX_4090
        ]
    )
    ```
+
+   A list requests any card in the set — the SDK does not preserve list order. See [GPU selection behavior](https://docs.runpod.io/flash/configuration/gpu-types#gpu-selection-behavior) for details.
 
 2. **Use GpuGroup.ANY**: For development, accept any available GPU:
    ```python

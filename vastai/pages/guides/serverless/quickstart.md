@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/quickstart.mdx](https://github.com/vast-ai/docs/blob/8eadf376553a14870ddea140c39146a88ce44170/guides/serverless/quickstart.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/quickstart.mdx](https://github.com/vast-ai/docs/blob/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/guides/serverless/quickstart.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/quickstart
 
 # Quickstart
@@ -70,9 +70,9 @@ Many popular models like Llama and Mistral require authentication to download. C
 
 1. Navigate to the [Serverless Dashboard](https://cloud.vast.ai/serverless/) and click **"Get Started"**.
 
-   ![Quickstart modal](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/serverless/quickstart_modal_light.webp)
+   ![Quickstart modal](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/serverless/quickstart_modal_light.webp)
 
-   ![Quickstart modal](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/serverless/quickstart_modal_dark.webp)
+   ![Quickstart modal](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/serverless/quickstart_modal_dark.webp)
 2. Give your endpoint a descriptive name (e.g., `vLLM-Qwen3-8B`) and select a workload type from the dropdown:
 
    - **LLM Inference**: for large language model serving (vLLM, TGI)
@@ -80,15 +80,15 @@ Many popular models like Llama and Mistral require authentication to download. C
    - **Text Generation**: for text generation tasks
    - **Other**: for custom workloads
 
-   ![Workload type dropdown](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/serverless/quickstart_dropdown_light.webp)
+   ![Workload type dropdown](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/serverless/quickstart_dropdown_light.webp)
 
-   ![Workload type dropdown](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/serverless/quickstart_dropdown_dark.webp)
+   ![Workload type dropdown](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/serverless/quickstart_dropdown_dark.webp)
 
    For this quickstart, select **LLM Inference**.
 
-   ![LLM Inference selected](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/serverless/quickstart_selected_light.webp)
+   ![LLM Inference selected](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/serverless/quickstart_selected_light.webp)
 
-   ![LLM Inference selected](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/serverless/quickstart_selected_dark.webp)
+   ![LLM Inference selected](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/serverless/quickstart_selected_dark.webp)
 
    Click **"Continue"** to create the endpoint.
 
@@ -101,9 +101,9 @@ Many popular models like Llama and Mistral require authentication to download. C
    2. Get an API key to interact with your endpoint
    3. Copy the provided sample code
 
-   ![Endpoint created successfully](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/serverless/quickstart_congrats_light.webp)
+   ![Endpoint created successfully](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/serverless/quickstart_congrats_light.webp)
 
-   ![Endpoint created successfully](https://raw.githubusercontent.com/vast-ai/docs/8eadf376553a14870ddea140c39146a88ce44170/images/serverless/quickstart_congrats_dark.webp)
+   ![Endpoint created successfully](https://raw.githubusercontent.com/vast-ai/docs/991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8/images/serverless/quickstart_congrats_dark.webp)
 
    The system will automatically provision GPU workers, select an appropriate template, and configure scaling defaults for your workload type.
 4. Your serverless infrastructure is now being provisioned. **This process takes time** as workers need to:

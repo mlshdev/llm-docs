@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/install/standalone.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/compose/install/standalone.md)
+> Pinned source for Docker main: [content/manuals/compose/install/standalone.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/compose/install/standalone.md)
 
 # Install the Docker Compose standalone (Legacy)
 
@@ -22,7 +22,7 @@ This page contains instructions on how to install Docker Compose standalone on L
 1. To download and install the Docker Compose standalone, run:
 
    ```console
-   $ curl -SL https://github.com/docker/compose/releases/download/v5.5.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+   $ curl -SL https://github.com/docker/compose/releases/download/v5.6.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
    ```
 
 2. Apply executable permissions to the standalone binary in the target path for the installation.
@@ -58,13 +58,13 @@ on Microsoft Windows Server](https://docs.docker.com/engine/install/binaries/#in
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    ```
 
-3. Download the latest release of Docker Compose (v5.5.0). Run the following command:
+3. Download the latest release of Docker Compose (v5.6.0). Run the following command:
 
    ```powershell
-    Start-BitsTransfer -Source "https://github.com/docker/compose/releases/download/v5.5.0/docker-compose-windows-x86_64.exe" -Destination $Env:ProgramFiles\Docker\docker-compose.exe
+    Start-BitsTransfer -Source "https://github.com/docker/compose/releases/download/v5.6.0/docker-compose-windows-x86_64.exe" -Destination $Env:ProgramFiles\Docker\docker-compose.exe
    ```
 
-   To install a different version of Docker Compose, substitute `v5.5.0` with the version of Compose you want to use.
+   To install a different version of Docker Compose, substitute `v5.6.0` with the version of Compose you want to use.
 
    > \[!NOTE]
    >
@@ -76,7 +76,7 @@ on Microsoft Windows Server](https://docs.docker.com/engine/install/binaries/#in
 
    ```console
    $ docker-compose.exe version
-   Docker Compose version v5.5.0
+   Docker Compose version v5.6.0
    ```
 
 ## What's next?

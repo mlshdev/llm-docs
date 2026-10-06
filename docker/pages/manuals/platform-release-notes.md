@@ -1,10 +1,18 @@
-> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/platform-release-notes.md)
+> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/platform-release-notes.md)
 
 # Accounts and admin release notes
 
 This page lists new features, enhancements, known issues, and bug fixes for
 Docker accounts and admin features, including Docker Home, billing, security,
 and subscriptions.
+
+## 2026-09-30
+
+### Bug fixes and enhancements
+
+- Accounts that already have cloud sandboxes skip
+  [Docker Agentic Platform](https://docs.docker.com/subscription-billing/plans/docker-agentic-platform/)
+  checkout.
 
 ## 2026-09-29
 
@@ -19,6 +27,17 @@ and subscriptions.
   in Docker Home shows how many licenses are available and whether they are
   assigned to teams or to individual members.
 
+## 2026-09-28
+
+### Bug fixes and enhancements
+
+- [Creating a team](https://docs.docker.com/accounts/organization/manage/manage-a-team/#create-a-team)
+  in Docker Home opens that team's page.
+- The
+  [member list CSV](https://docs.docker.com/accounts/organization/manage/members/#export-a-member-list-csv)
+  includes a **Licenses** column when the organization has at least one active
+  license pool. The column lists each member's assigned licenses.
+
 ## 2026-09-24
 
 ### New
@@ -27,6 +46,12 @@ and subscriptions.
   [Docker Agentic Platform](https://docs.docker.com/subscription-billing/plans/docker-agentic-platform/)
   pay-as-you-go plan with a personal account to run agents in cloud
   sandboxes. Compute is metered by the second while a sandbox runs.
+
+### Bug fixes and enhancements
+
+- The [support request form](https://app.docker.com/support/contact) **Legal**
+  topic includes **PII/Sensitive information**, **Service abuse**, and
+  **Trademark takedowns**.
 
 ## 2026-09-14
 

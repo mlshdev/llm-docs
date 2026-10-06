@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/concepts/context.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/build/concepts/context.md)
+> Pinned source for Docker main: [content/manuals/build/concepts/context.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/build/concepts/context.md)
 
 The `docker build` and `docker buildx build` commands build Docker images from
 a [Dockerfile](https://docs.docker.com/reference/dockerfile/) and a context.

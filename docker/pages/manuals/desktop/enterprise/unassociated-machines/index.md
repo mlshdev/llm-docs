@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/unassociated-machines/_index.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/desktop/enterprise/unassociated-machines/_index.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/unassociated-machines/_index.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/desktop/enterprise/unassociated-machines/_index.md)
 
 # Manage unassociated machines
 
@@ -104,7 +104,7 @@ To enable sign-in enforcement for individual unassociated machines:
 The **Sign-in required** status updates for the individual machine to
 **Yes**.
 
-### What happens sign-in is enforced
+### What happens when sign-in is enforced
 
 After you enable sign-in enforcement:
 

@@ -8,9 +8,9 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-10-02T16:40:15Z",
-  "documentationDigest": "8e5f887e452feedb00448945361641206606e834581cde5a6b0339bc48b332e5",
-  "sourceCommit": "1cb9a4d2c65d712da863e30cd3a1319ddeea3298",
+  "sourceCommittedAt": "2026-10-05T18:17:37Z",
+  "documentationDigest": "3e3e5997808c588fc9ace6f3cd7b4dddcdd471f218059294dbbb0384442c7bfb",
+  "sourceCommit": "d745218a0918016144f1ba0d98222b75b21bf65a",
   "documentCount": 1695,
   "indexComplete": true,
   "corpusVolumes": [
@@ -18,28 +18,28 @@
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "2e5868dbdbbd8615dd27e1417f39d7fc7305c072a420d16cae0ff255dc317155"
+      "sha256": "86cff98831a435f0d5c0e26cae6c1e4b415cc9f73a36800d24b6513d9926745b"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8352043,
+      "byteLength": 8360090,
       "documentCount": 829,
-      "sha256": "1918c52e801fefb4c1d285bc498a63aaee370fbfce08999b5be3df96c0363ba6"
+      "sha256": "793a33a63e70af7620738fa8a42753b42fec1c5c67e64d1805dde647669a536a"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 7949150,
+      "byteLength": 7953049,
       "documentCount": 206,
-      "sha256": "17bc487930e45850fe0aeaf33bb84a7749e4688d7536661732da5faf9238717e"
+      "sha256": "8bd83659cadd683802f8149ccf31011568f0f903b7a192afbe9679857af05d68"
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 7177366,
+      "byteLength": 7179850,
       "documentCount": 660,
-      "sha256": "309765a22199fdd60bcc3c901bcc20ca3836822bcc90368cb09aa7327d69a990"
+      "sha256": "1859ec4241df1aa4667dfae7476178baf2c0c1c5b3351daf9493754782482363"
     }
   ],
-  "outputDigest": "21ab2abee4373b8a311703cc1b329c878d517aaaedec0fe671cbe996e84efd13",
+  "outputDigest": "c0a844f6795d1b00acc56c6aa68b1abf16d87bf9d3fd5bde34ccfb74ac739214",
   "quarantined": [
     {
       "sourcePath": "content/manuals/ai/sandboxes-api/cookbook/_index.md",

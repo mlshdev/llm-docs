@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/custom-docker-images.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/flash/custom-docker-images.mdx)
+> Pinned source for Runpod main: [flash/custom-docker-images.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/flash/custom-docker-images.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/custom-docker-images
 
 # Use custom containers with Flash
@@ -99,6 +99,36 @@ To create a custom Docker image:
 
    asyncio.run(main())
    ```
+
+## Private images
+
+To deploy an image from a private registry, first save your registry credentials in the Runpod console, then reference the credential ID in your endpoint's `PodTemplate` using the `containerRegistryAuthId` field:
+
+```python
+from runpod_flash import Endpoint, GpuType, PodTemplate
+
+vllm = Endpoint(
+    name="private-vllm",
+    image="ghcr.io/your-org/private-worker:latest",
+    gpu=GpuType.NVIDIA_GEFORCE_RTX_4090,
+    template=PodTemplate(
+        containerDiskInGb=64,
+        containerRegistryAuthId="REGISTRY_CREDENTIAL_ID"
+    )
+)
+```
+
+> **Warning**
+>
+> Without `containerRegistryAuthId`, Runpod cannot pull a private image, and workers fail to start.
+
+To find the credential ID, list your saved registry credentials with the Runpod CLI:
+
+```bash
+runpodctl registry list
+```
+
+To create a new credential, use [`runpodctl registry create`](https://docs.runpod.io/runpodctl/reference/runpodctl-registry), or navigate to [Settings](https://console.runpod.io/user/settings) in the Runpod console and scroll down to **Container Registry Authentication**. For GitHub Container Registry, use a personal access token scoped to `read:packages`.
 
 ## Complete example: vLLM inference
 
@@ -277,7 +307,7 @@ await job.cancel()           # Cancel the job
 **Solutions**:
 
 - Add `HF_TOKEN` to `env` for Hugging Face gated models.
-- Configure Docker registry authentication in [Runpod console](https://console.runpod.io/user/settings) for private images.
+- For private images, save registry credentials in the [Runpod console](https://console.runpod.io/user/settings) and pass the credential ID to your endpoint with `PodTemplate(containerRegistryAuthId=...)`. See [Private images](#private-images).
 
 ## Next steps
 

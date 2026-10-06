@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/orgs-billing.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/organizations/orgs-billing.mdx)
+> Pinned source for Runpod main: [organizations/orgs-billing.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/organizations/orgs-billing.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/orgs-billing
 
 # Billing

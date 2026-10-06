@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/workers/overview.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/serverless/workers/overview.mdx)
+> Pinned source for Runpod main: [serverless/workers/overview.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/serverless/workers/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/workers/overview
 
 # Overview
@@ -47,6 +47,8 @@ The system may also spin up **extra workers** during traffic spikes when Docker 
 | **Throttled**    | Temporarily unable to run due to host machine resource constraints                      | No                     |
 | **Outdated**     | Marked for replacement after update                                                     | Yes (while processing) |
 | **Unhealthy**    | Crashed; auto-retries for up to 7 days                                                  | No                     |
+
+Billing starts when a worker switches to **Running** and stops when it scales down. Pulling the image and downloading cached models happen while the worker is **Initializing**, so they are not billed. A running worker is billed while its handler loads the model (cold start), while it processes requests, and during the [idle timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#idle-timeout) after each request, which the console also shows as **Running**. See [compute cost breakdown](https://docs.runpod.io/serverless/pricing#compute-cost-breakdown).
 
 > **Note**
 >

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/network/packet-filtering-firewalls.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/manuals/engine/network/packet-filtering-firewalls.md)
+> Pinned source for Docker main: [content/manuals/engine/network/packet-filtering-firewalls.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/manuals/engine/network/packet-filtering-firewalls.md)
 
 # Packet filtering and firewalls
 
@@ -84,9 +84,9 @@ forwarding from `ANY` zone to the `docker` zone.
 ## Docker and ufw
 
 [Uncomplicated Firewall](https://launchpad.net/ufw)
-(ufw) is a frontend that ships with Debian and Ubuntu,
-and it lets you manage firewall rules. Docker and ufw use firewall rules in
-ways that make them incompatible with each other.
+(ufw) is a frontend that ships with Ubuntu, and it lets you manage firewall
+rules. Docker and ufw use firewall rules in ways that make them incompatible
+with each other.
 
 When you publish a container's ports using Docker, traffic to and from that
 container gets diverted before it goes through the ufw firewall settings.

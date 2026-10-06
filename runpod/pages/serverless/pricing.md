@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/pricing.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/serverless/pricing.mdx)
+> Pinned source for Runpod main: [serverless/pricing.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/serverless/pricing.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/pricing
 
 # Pricing
@@ -33,7 +33,7 @@ Your total cost includes compute time and storage:
 
 Workers incur charges during three phases:
 
-1. **Start time**: Initializing the container and loading models into GPU memory. Minimize with [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot) or [model caching](https://docs.runpod.io/serverless/endpoints/model-caching).
+1. **Start time**: From when the worker starts running until it is ready, mostly your handler loading models into GPU memory. Pulling the container image and downloading [cached models](https://docs.runpod.io/serverless/endpoints/model-caching) happen before the worker starts running and are not billed. Minimize with [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot) or [model caching](https://docs.runpod.io/serverless/endpoints/model-caching).
 
 2. **Execution time**: Processing requests. Set [execution timeouts](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#execution-timeout) to prevent runaway jobs.
 

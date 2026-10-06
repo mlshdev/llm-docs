@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "1cb9a4d2c65d712da863e30cd3a1319ddeea3298",
-      "sourceCommittedAt": "2026-10-02T16:40:15Z",
-      "observedCommit": "1cb9a4d2c65d712da863e30cd3a1319ddeea3298",
-      "documentationDigest": "8e5f887e452feedb00448945361641206606e834581cde5a6b0339bc48b332e5"
+      "sourceCommit": "d745218a0918016144f1ba0d98222b75b21bf65a",
+      "sourceCommittedAt": "2026-10-05T18:17:37Z",
+      "observedCommit": "d745218a0918016144f1ba0d98222b75b21bf65a",
+      "documentationDigest": "3e3e5997808c588fc9ace6f3cd7b4dddcdd471f218059294dbbb0384442c7bfb"
     },
     "container": {
       "tag": "1.5.0",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "6d6f5fbf13e2897c5181b2d251646cf371bf342c",
-      "sourceCommittedAt": "2026-09-25T03:34:29Z",
-      "observedCommit": "6d6f5fbf13e2897c5181b2d251646cf371bf342c",
-      "documentationDigest": "be5f9edba0c1f484d55192c3ed9f76ca938c3465a31f808ff8498a3470be6e9e"
+      "sourceCommit": "47313ad3f9f33b892384b976fb7c09b3c85fd74e",
+      "sourceCommittedAt": "2026-10-02T14:07:13Z",
+      "observedCommit": "47313ad3f9f33b892384b976fb7c09b3c85fd74e",
+      "documentationDigest": "a80ab9ccc7bd5f6fcac19ddc2f6fb7e2e0e8c378fce440c0f6f69ab9caf589d2"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
@@ -132,18 +132,18 @@
     "vastai": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "8eadf376553a14870ddea140c39146a88ce44170",
-      "sourceCommittedAt": "2026-09-29T00:16:21Z",
-      "observedCommit": "8eadf376553a14870ddea140c39146a88ce44170",
-      "documentationDigest": "4580bd2148d97c754cd0fff90c1e773e0888edfdb06891b80c20e712739dc4e6"
+      "sourceCommit": "991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8",
+      "sourceCommittedAt": "2026-10-05T16:10:37Z",
+      "observedCommit": "991b8e4d53bf7be656511c50cb6c7e8d32b3c0c8",
+      "documentationDigest": "6be6b06c6f874d804c352238162694e67298c63f542fde8a0ea114cbe1c1d54f"
     },
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "07ba10e3d0e07029a5b86bb892bc52eeca596201",
-      "sourceCommittedAt": "2026-09-29T21:41:17Z",
-      "observedCommit": "07ba10e3d0e07029a5b86bb892bc52eeca596201",
-      "documentationDigest": "0750d188efa6f179cf10d099a904011836682d5d7c59a81bfaf766981e10feff"
+      "sourceCommit": "5beeac29243d6a9a384ae9e63947284c17f73623",
+      "sourceCommittedAt": "2026-10-05T19:21:14Z",
+      "observedCommit": "5beeac29243d6a9a384ae9e63947284c17f73623",
+      "documentationDigest": "5e5fae704e10b5e144429c561ca1ee48ba6790c640895e6e42ad13232fbe6b9c"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/testcontainers-java-jooq-flyway.md](https://github.com/docker/docs/blob/1cb9a4d2c65d712da863e30cd3a1319ddeea3298/content/guides/testcontainers-java-jooq-flyway.md)
+> Pinned source for Docker main: [content/guides/testcontainers-java-jooq-flyway.md](https://github.com/docker/docs/blob/d745218a0918016144f1ba0d98222b75b21bf65a/content/guides/testcontainers-java-jooq-flyway.md)
 
 # Working with jOOQ and Flyway using Testcontainers
 

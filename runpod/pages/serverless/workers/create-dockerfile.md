@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/workers/create-dockerfile.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/serverless/workers/create-dockerfile.mdx)
+> Pinned source for Runpod main: [serverless/workers/create-dockerfile.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/serverless/workers/create-dockerfile.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/workers/create-dockerfile
 
 # Create a Dockerfile

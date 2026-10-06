@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-receive.mdx](https://github.com/runpod/docs/blob/07ba10e3d0e07029a5b86bb892bc52eeca596201/runpodctl/reference/runpodctl-receive.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-receive.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/runpodctl/reference/runpodctl-receive.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-receive
 
 # receive
