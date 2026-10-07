@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/cache/backends/gha.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/build/cache/backends/gha.md)
+> Pinned source for Docker main: [content/manuals/build/cache/backends/gha.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/build/cache/backends/gha.md)
 
 # GitHub Actions cache
 
@@ -29,18 +29,18 @@ $ docker buildx build --push -t <registry>/<image> \
 The following table describes the available CSV parameters that you can pass to
 `--cache-to` and `--cache-from`.
 
-| Name           | Option                  | Type        | Default                                                 | Description                                                          |
-| -------------- | ----------------------- | ----------- | ------------------------------------------------------- | -------------------------------------------------------------------- |
-| `url`          | `cache-to`,`cache-from` | String      | `$ACTIONS_CACHE_URL` or `$ACTIONS_RESULTS_URL`          | Cache server URL, see [authentication][1]. Ignored when `version=2`. |
-| `url_v2`       | `cache-to`,`cache-from` | String      | `$ACTIONS_RESULTS_URL`                                  | Cache v2 server URL, see [authentication][1].                        |
-| `token`        | `cache-to`,`cache-from` | String      | `$ACTIONS_RUNTIME_TOKEN`                                | Access token, see [authentication][1].                               |
-| `scope`        | `cache-to`,`cache-from` | String      | `buildkit`                                              | Which scope cache object belongs to, see [scope][2]                  |
-| `mode`         | `cache-to`              | `min`,`max` | `min`                                                   | Cache layers to export, see [cache mode][3].                         |
-| `ignore-error` | `cache-to`              | Boolean     | `false`                                                 | Ignore errors caused by failed cache exports.                        |
-| `timeout`      | `cache-to`,`cache-from` | String      | `10m`                                                   | Max duration for importing or exporting cache before it's timed out. |
-| `repository`   | `cache-to`              | String      |                                                         | GitHub repository used for cache storage.                            |
-| `ghtoken`      | `cache-to`              | String      |                                                         | GitHub token required for accessing the GitHub API.                  |
-| `version`      | `cache-to`,`cache-from` | String      | `1` unless `$ACTIONS_CACHE_SERVICE_V2` is set, then `2` | Selects GitHub Actions cache version, see [version][4]               |
+| Name           | Option                  | Type        | Default                                        | Description                                                          |
+| -------------- | ----------------------- | ----------- | ---------------------------------------------- | -------------------------------------------------------------------- |
+| `url`          | `cache-to`,`cache-from` | String      | `$ACTIONS_CACHE_URL` or `$ACTIONS_RESULTS_URL` | Cache server URL, see [authentication][1] and [version][4].          |
+| `url_v2`       | `cache-to`,`cache-from` | String      | `$ACTIONS_RESULTS_URL`                         | Cache v2 server URL, see [authentication][1].                        |
+| `token`        | `cache-to`,`cache-from` | String      | `$ACTIONS_RUNTIME_TOKEN`                       | Access token, see [authentication][1].                               |
+| `scope`        | `cache-to`,`cache-from` | String      | `buildkit`                                     | Which scope cache object belongs to, see [scope][2]                  |
+| `mode`         | `cache-to`              | `min`,`max` | `min`                                          | Cache layers to export, see [cache mode][3].                         |
+| `ignore-error` | `cache-to`              | Boolean     | `false`                                        | Ignore errors caused by failed cache exports.                        |
+| `timeout`      | `cache-to`,`cache-from` | String      | `10m`                                          | Max duration for importing or exporting cache before it's timed out. |
+| `repository`   | `cache-to`              | String      |                                                | GitHub repository used for cache storage.                            |
+| `ghtoken`      | `cache-to`              | String      |                                                | GitHub token required for accessing the GitHub API.                  |
+| `version`      | `cache-to`,`cache-from` | String      | Inferred from the cache server URL             | Selects GitHub Actions cache version, see [version][4]               |
 
 [1]: #authentication
 
@@ -89,12 +89,23 @@ for affected triggers and how to configure cache imports and exports.
 
 ## Version
 
-If you don’t set `version` explicitly, the default is v1. However, if the environment variable `$ACTIONS_CACHE_SERVICE_V2` is set to a value interpreted as `true` ( `1`, `true`, `yes`), then v2 is used automatically.
+If you set `version` explicitly, BuildKit uses that version. Otherwise it
+selects the version from the cache server URL:
 
-Only one URL is relevant at a time:
+- Setting `url_v2` selects v2.
+- Otherwise a `url` that points at the v2 cache service
+  (`results-receiver.actions.githubusercontent.com`) selects v2, and any other
+  `url` selects v1.
 
-- With v1, use `url` (defaults to `$ACTIONS_CACHE_URL`).
-- With v2, use `url_v2` (defaults to `$ACTIONS_RESULTS_URL`).
+Inside a workflow, Buildx fills unspecified URL parameters from the
+environment. It sets `url_v2` from `$ACTIONS_RESULTS_URL` when you pass
+`version=2`, or when you omit `version` and `$ACTIONS_CACHE_SERVICE_V2`
+holds a true value such as `1` or `true`. It sets `url` from
+`$ACTIONS_CACHE_URL`, falling back to `$ACTIONS_RESULTS_URL` when
+`$ACTIONS_CACHE_URL` isn't set.
+
+Only one URL applies to a build. With v2, BuildKit uses `url_v2`, falling back
+to `url` when `url_v2` isn't set. With v1, it uses `url`.
 
 ### Using `docker/build-push-action`
 

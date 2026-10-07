@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/using-the-build-cache.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/get-started/docker-concepts/building-images/using-the-build-cache.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/using-the-build-cache.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/get-started/docker-concepts/building-images/using-the-build-cache.md)
 
 # Using the build cache
 

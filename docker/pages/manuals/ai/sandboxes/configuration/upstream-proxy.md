@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
 
 # Configure an upstream proxy
 

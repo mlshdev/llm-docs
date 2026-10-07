@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `6cf1b1c167f032e8a6629da211602300b623b20e`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `7ba25eeb0c4c594f79e6efadad1af5eaca0500a8`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -416,7 +416,7 @@
 - [Connect T3 Code to a sandbox](pages/manuals/ai/sandboxes/integrations/t3-code.md): Docker Sandboxes SSH requirements (6043 bytes)
 - [Connect VS Code to a sandbox](pages/manuals/ai/sandboxes/integrations/vscode.md): Docker Sandboxes SSH requirements (2778 bytes)
 - [MCP gateway](pages/manuals/ai/sandboxes/mcp-gateway.md): This page describes the local MCP gateway. Cloud sandboxes use MCP servers configured in Docker Agentic Platform: see Load an MCP server. (21134 bytes)
-- [Docker Sandboxes release notes](pages/manuals/ai/sandboxes/release-notes.md): This page lists changes in recent stable releases of Docker Sandboxes. For the full release history, including pre-releases and downloads, see the Docker Sandboxes releases on GitHub. (23434 bytes)
+- [Docker Sandboxes release notes](pages/manuals/ai/sandboxes/release-notes.md): This page lists changes in recent stable releases of Docker Sandboxes. For the full release history, including pre-releases and downloads, see the Docker Sandboxes releases on GitHub. (20777 bytes)
 - [Default security posture](pages/manuals/ai/sandboxes/security/defaults.md): This page describes local sandboxes. For cloud behavior and limitations, see Compare local and cloud sandboxes. (4212 bytes)
 - [Isolation layers](pages/manuals/ai/sandboxes/security/isolation.md): This page describes local sandboxes. For cloud behavior and limitations, see Compare local and cloud sandboxes. (13023 bytes)
 - [Troubleshooting](pages/manuals/ai/sandboxes/troubleshooting.md): The following diagnostics and recovery steps apply to local sandboxes. Use sbx --cloud diagnose to check cloud connectivity and account access. For cloud files, expiration, and network access, see Cloud sandboxes. Local… (21123 bytes)
@@ -477,7 +477,7 @@
 - [BuildKit](pages/manuals/build/buildkit/index.md): BuildKit is the builder backend used by Docker. BuildKit provides improved functionality and improves your builds' performance over the legacy builder used in earlier versions of Docker. It also introduces support for h… (8766 bytes)
 - [buildkitd.toml](pages/manuals/build/buildkit/toml-configuration.md): The TOML file used to configure the buildkitd daemon settings has a short list of global settings followed by a series of sections for specific areas of daemon configuration. (9492 bytes)
 - [Azure Blob Storage cache](pages/manuals/build/cache/backends/azblob.md): Azure blob requirements (2330 bytes)
-- [GitHub Actions cache](pages/manuals/build/cache/backends/gha.md): GitHub Actions cache requirements (8532 bytes)
+- [GitHub Actions cache](pages/manuals/build/cache/backends/gha.md): GitHub Actions cache requirements (8866 bytes)
 - [Cache storage backends](pages/manuals/build/cache/backends/index.md): To ensure fast builds, BuildKit automatically caches the build result in its own internal cache. Additionally, BuildKit also supports exporting build cache to an external location, making it possible to import in future… (7453 bytes)
 - [Inline cache](pages/manuals/build/cache/backends/inline.md): The inline cache storage backend is the simplest way to get an external cache and is easy to get started using if you're already building and pushing an image. (1836 bytes)
 - [Local cache](pages/manuals/build/cache/backends/local.md): The local cache store is a simple cache option that stores your cache as files in a directory on your filesystem, using an OCI image layout for the underlying directory structure. Local cache is a good choice if you're… (6200 bytes)
@@ -905,7 +905,7 @@
 - [BTRFS storage driver](pages/manuals/engine/storage/drivers/btrfs-driver.md): Btrfs is a copy-on-write filesystem that supports many advanced storage technologies, making it a good fit for Docker. Btrfs is included in the mainline Linux kernel. (13608 bytes)
 - [Device Mapper storage driver (deprecated)](pages/manuals/engine/storage/drivers/device-mapper-driver.md): Device Mapper is a kernel-based framework that underpins many advanced volume management technologies on Linux. Docker's devicemapper storage driver leverages the thin provisioning and snapshotting capabilities of this… (33310 bytes)
 - [Storage drivers](pages/manuals/engine/storage/drivers/index.md): To use storage drivers effectively, it's important to know how Docker builds and stores images, and how these images are used by containers. You can use this information to make informed choices about the best way to pe… (27346 bytes)
-- [OverlayFS storage driver](pages/manuals/engine/storage/drivers/overlayfs-driver.md): OverlayFS is a union filesystem. (18906 bytes)
+- [OverlayFS storage driver](pages/manuals/engine/storage/drivers/overlayfs-driver.md): OverlayFS is a union filesystem. (18746 bytes)
 - [Select a storage driver](pages/manuals/engine/storage/drivers/select-storage-driver.md): Ideally, very little data is written to a container's writable layer, and you use Docker volumes to write data. However, some workloads require you to be able to write to the container's writable layer. This is where st… (12019 bytes)
 - [VFS storage driver](pages/manuals/engine/storage/drivers/vfs-driver.md): The VFS storage driver isn't a union filesystem. Each layer is a directory on disk, and there is no copy-on-write support. To create a new layer, a "deep copy" is done of the previous layer. This leads to lower performa… (4690 bytes)
 - [windowsfilter storage driver](pages/manuals/engine/storage/drivers/windowsfilter-driver.md): The windowsfilter storage driver is the default storage driver for Docker Engine on Windows. The windowsfilter driver uses Windows-native file system layers to for storing Docker layers and volume data on disk. The wind… (1386 bytes)

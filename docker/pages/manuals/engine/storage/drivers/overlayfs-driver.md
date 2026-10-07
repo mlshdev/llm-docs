@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/storage/drivers/overlayfs-driver.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/engine/storage/drivers/overlayfs-driver.md)
+> Pinned source for Docker main: [content/manuals/engine/storage/drivers/overlayfs-driver.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/engine/storage/drivers/overlayfs-driver.md)
 
 # OverlayFS storage driver
 
@@ -8,11 +8,9 @@ This page refers to the Linux kernel driver as `OverlayFS` and to the Docker
 storage driver as `overlay2`.
 
 > \[!NOTE]
-> Docker Engine 29.0 and later uses the
-> [containerd image store](https://docs.docker.com/engine/storage/containerd/) by default.
-> The `overlay2` driver is a legacy storage driver that is superseded by the
-> `overlayfs` containerd snapshotter. For more information, see
-> [Select a storage driver](https://docs.docker.com/engine/storage/drivers/select-storage-driver/).
+> This page covers the classic `overlay2` storage driver. For the `overlayfs`
+> snapshotter used by the containerd image store, see
+> [containerd image store](https://docs.docker.com/engine/storage/containerd/).
 
 > \[!NOTE]
 > For `fuse-overlayfs` driver, check [Rootless mode documentation](https://docs.docker.com/engine/security/rootless/).
@@ -210,7 +208,7 @@ layered. The image layer is the `lowerdir` and the container layer is the
 are used. The unified view is exposed through a directory called `merged` which
 is effectively the containers mount point.
 
-![How Docker constructs map to OverlayFS constructs](https://raw.githubusercontent.com/docker/docs/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/engine/storage/drivers/images/overlay_constructs.webp)
+![How Docker constructs map to OverlayFS constructs](https://raw.githubusercontent.com/docker/docs/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/engine/storage/drivers/images/overlay_constructs.webp)
 
 Where the image layer and the container layer contain the same files, the
 container layer (`upperdir`) takes precedence and obscures the existence of the

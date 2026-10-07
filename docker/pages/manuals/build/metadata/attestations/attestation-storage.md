@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/attestations/attestation-storage.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/_vendor/github.com/moby/buildkit/docs/attestations/attestation-storage.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/attestations/attestation-storage.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/_vendor/github.com/moby/buildkit/docs/attestations/attestation-storage.md)
 
 # Image attestation storage
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/angular.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/guides/angular.md)
+> Pinned source for Docker main: [content/guides/angular.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/guides/angular.md)
 
 The Angular language-specific guide shows you how to containerize an Angular application using Docker, following best practices for creating efficient, production-ready containers.
 

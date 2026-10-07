@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/copy-image-registries.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/build/ci/github-actions/copy-image-registries.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/copy-image-registries.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/build/ci/github-actions/copy-image-registries.md)
 
 # Copy image between registries with GitHub Actions
 

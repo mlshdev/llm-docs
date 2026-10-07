@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/swarm/swarm-tutorial/add-nodes.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/engine/swarm/swarm-tutorial/add-nodes.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/swarm-tutorial/add-nodes.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/engine/swarm/swarm-tutorial/add-nodes.md)
 
 # Add nodes to the swarm
 

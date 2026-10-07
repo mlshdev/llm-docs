@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md)
 
 *Get up and running with Docker Agent in under 5 minutes. Pick whichever path suits you best.*
 

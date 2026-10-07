@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/provisioning/just-in-time.md](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/security/provisioning/just-in-time.md)
+> Pinned source for Docker main: [content/manuals/security/provisioning/just-in-time.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/security/provisioning/just-in-time.md)
 
 # Just-in-Time provisioning
 
@@ -54,7 +54,7 @@ following steps occur automatically:
 The following graphic provides an overview of SSO authentication with JIT
 enabled:
 
-![JIT provisioning enabled workflow](https://raw.githubusercontent.com/docker/docs/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/security/images/jit-enabled-flow.svg)
+![JIT provisioning enabled workflow](https://raw.githubusercontent.com/docker/docs/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/security/images/jit-enabled-flow.svg)
 
 ## SSO authentication with JIT provisioning disabled
 
@@ -85,7 +85,7 @@ If SCIM is not enabled, users won't be auto-provisioned to groups.
 The following graphic provides an overview of SSO authentication with JIT
 disabled:
 
-![JIT provisioning disabled workflow](https://raw.githubusercontent.com/docker/docs/6cf1b1c167f032e8a6629da211602300b623b20e/content/manuals/security/images/jit-disabled-flow.svg)
+![JIT provisioning disabled workflow](https://raw.githubusercontent.com/docker/docs/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/security/images/jit-disabled-flow.svg)
 
 ## Disable JIT provisioning
 

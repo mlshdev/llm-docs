@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "6cf1b1c167f032e8a6629da211602300b623b20e",
-      "sourceCommittedAt": "2026-10-06T08:32:33Z",
-      "observedCommit": "6cf1b1c167f032e8a6629da211602300b623b20e",
-      "documentationDigest": "a5ffb887b281be16b6e89f2b551b270922c2f14c4888191c6fa01ae333bc1a8e"
+      "sourceCommit": "7ba25eeb0c4c594f79e6efadad1af5eaca0500a8",
+      "sourceCommittedAt": "2026-10-07T15:36:47Z",
+      "observedCommit": "7ba25eeb0c4c594f79e6efadad1af5eaca0500a8",
+      "documentationDigest": "44486d16146fd96222e6c44a1452a22fbae6a99c8bf90337fa9b0a62291e906b"
     },
     "container": {
       "tag": "1.5.0",
@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "47313ad3f9f33b892384b976fb7c09b3c85fd74e",
       "sourceCommittedAt": "2026-10-02T14:07:13Z",
-      "observedCommit": "c0c7684d08d22d9b5c16c7beaf538f439d3f43bf",
+      "observedCommit": "5d4755f7dd03d84f006d5a0ef7e3c114f52b3d77",
       "documentationDigest": "a80ab9ccc7bd5f6fcac19ddc2f6fb7e2e0e8c378fce440c0f6f69ab9caf589d2"
     },
     "yt-dlp": {
@@ -103,7 +103,7 @@
       "branch": "master",
       "sourceCommit": "3cd69d30e2a78dfc817be9e349e7c2e4317c92e3",
       "sourceCommittedAt": "2026-09-23T15:18:45Z",
-      "observedCommit": "d48c4b555421e824342c51d68482dd0898e54d0f",
+      "observedCommit": "6671d89bede8c9fc108b17bb98916170f5657650",
       "documentationDigest": "16cd4676f97b7bdaa68b899c801cbd8af53d119d8233fa904a16ab9d9ca6dfd8"
     },
     "bun": {

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml](https://github.com/docker/docs/blob/6cf1b1c167f032e8a6629da211602300b623b20e/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml)
 
 # docker compose bridge transformations
 
