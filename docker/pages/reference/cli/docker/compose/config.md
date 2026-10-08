@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml)
 
 # docker compose config
 

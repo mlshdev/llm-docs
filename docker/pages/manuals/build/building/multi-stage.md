@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/multi-stage.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/build/building/multi-stage.md)
+> Pinned source for Docker main: [content/manuals/build/building/multi-stage.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/build/building/multi-stage.md)
 
 Multi-stage builds are useful to anyone who has struggled to optimize
 Dockerfiles while keeping them easy to read and maintain.

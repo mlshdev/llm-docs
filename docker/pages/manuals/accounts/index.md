@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/_index.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/accounts/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/_index.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/accounts/_index.md)
 
 # Accounts
 
@@ -7,15 +7,14 @@ manage it in [Docker Home](https://app.docker.com/). Docker has two
 primary account types: individual and organization. A company groups
 multiple organizations.
 
-| Account type | What it is                                                                | Who it's for                     |
-| ------------ | ------------------------------------------------------------------------- | -------------------------------- |
-| Individual   | A Docker ID with personal settings, Hub repositories, and sign-in methods | A person                         |
-| Organization | A shared workspace for members, teams, and repositories                   | Teams on Docker Team or Business |
-| Company      | Multiple organizations under centralized administration                   | Docker Business subscribers      |
+| Account type | What it is                                                                                                 | Who it's for                     |
+| ------------ | ---------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Individual   | A Docker ID with personal settings, Hub repositories, and sign-in methods                                  | A person                         |
+| Organization | A shared workspace for members, teams, and repositories                                                    | Teams on Docker Team or Business |
+| Company      | Shared sign-in and administration for organizations that keep their own members, repositories, and billing | Docker Business subscribers      |
 
 You always sign in with your individual account, then work in the
-organizations you own or belong to. Those organizations sit under a
-company when you administer more than one.
+organizations you own or belong to.
 
 ## Next steps
 

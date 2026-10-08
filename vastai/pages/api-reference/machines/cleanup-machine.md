@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/cleanup](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/api-reference/openapi.yaml%23put%20/api/v0/machines/%7Bmachine_id%7D/cleanup)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/cleanup](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/api-reference/openapi.yaml%23put%20/api/v0/machines/%7Bmachine_id%7D/cleanup)
 > Canonical documentation: https://docs.vast.ai/api-reference/machines/cleanup-machine
 
 # cleanup machine

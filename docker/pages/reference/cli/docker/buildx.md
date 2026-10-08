@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/buildx/docker_buildx.yaml](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/data/cli/buildx/docker_buildx.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx.yaml](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/data/cli/buildx/docker_buildx.yaml)
 
 # docker buildx
 
@@ -32,6 +32,7 @@ Extended build capabilities with BuildKit
 - [`docker buildx ls`](https://docs.docker.com/reference/cli/docker/buildx/ls/)
 - [`docker buildx policy`](https://docs.docker.com/reference/cli/docker/buildx/policy/)
 - [`docker buildx prune`](https://docs.docker.com/reference/cli/docker/buildx/prune/)
+- [`docker buildx replay`](https://docs.docker.com/reference/cli/docker/buildx/replay/)
 - [`docker buildx rm`](https://docs.docker.com/reference/cli/docker/buildx/rm/)
 - [`docker buildx stop`](https://docs.docker.com/reference/cli/docker/buildx/stop/)
 - [`docker buildx use`](https://docs.docker.com/reference/cli/docker/buildx/use/)

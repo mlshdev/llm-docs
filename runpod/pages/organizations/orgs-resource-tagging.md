@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/orgs-resource-tagging.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/organizations/orgs-resource-tagging.mdx)
+> Pinned source for Runpod main: [organizations/orgs-resource-tagging.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/organizations/orgs-resource-tagging.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/orgs-resource-tagging
 
 # Resource tagging

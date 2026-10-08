@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/migrations/cog/overview.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/tutorials/migrations/cog/overview.mdx)
+> Pinned source for Runpod main: [tutorials/migrations/cog/overview.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/tutorials/migrations/cog/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/migrations/cog/overview
 
 # Cog

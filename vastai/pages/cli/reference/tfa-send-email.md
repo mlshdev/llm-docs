@@ -1,0 +1,36 @@
+> Pinned source for Vast.ai main: [cli/reference/tfa-send-email.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/cli/reference/tfa-send-email.mdx)
+> Canonical documentation: https://docs.vast.ai/cli/reference/tfa-send-email
+
+# vastai tfa send-email
+
+Request a 2FA verification code via email. Returns a secret token needed for the next step (`vastai tfa login`).
+
+## Usage
+
+```bash
+vastai tfa send-email
+```
+
+## Examples
+
+```bash
+vastai tfa send-email
+```
+
+The command sends a code to your registered email address and prints a secret token. Use both to complete your 2FA login:
+
+```bash
+vastai tfa login --method-type email --secret <SECRET> --code <CODE>
+```
+
+## Global Options
+
+The following options are available for all commands:
+
+| Option          | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `--url URL`     | Server REST API URL                                   |
+| `--retry N`     | Retry limit                                           |
+| `--raw`         | Output machine-readable JSON                          |
+| `--explain`     | Verbose explanation of API calls                      |
+| `--api-key KEY` | API key (defaults to `~/.config/vastai/vast_api_key`) |

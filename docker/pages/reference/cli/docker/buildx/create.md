@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/buildx/docker_buildx_create.yaml](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/data/cli/buildx/docker_buildx_create.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_create.yaml](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/data/cli/buildx/docker_buildx_create.yaml)
 
 # docker buildx create
 
@@ -173,6 +173,9 @@ to achieve that.
 
 Uses Kubernetes pods. With this driver, you can spin up pods with defined
 BuildKit container image to build your images.
+
+Rootless mode (`--driver-opt rootless=true`) requires Kubernetes v1.30 or later
+with support for `securityContext.appArmorProfile`, which is stable in v1.31.
 
 Unlike `docker` driver, built images will not automatically appear in
 `docker images` and [`build --load`](https://docs.docker.com/reference/cli/docker/buildx/build/#load) needs to be used

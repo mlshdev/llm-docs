@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/writing-a-dockerfile.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/get-started/docker-concepts/building-images/writing-a-dockerfile.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/writing-a-dockerfile.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/get-started/docker-concepts/building-images/writing-a-dockerfile.md)
 
 [Watch the video](https://www.youtube.com/watch?v=Jx8zoIhiP4c)
 

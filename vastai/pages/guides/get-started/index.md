@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/get-started/index.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/guides/get-started/index.mdx)
+> Pinned source for Vast.ai main: [guides/get-started/index.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/guides/get-started/index.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/get-started/index
 
 # Welcome

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/generate-sdxl-turbo.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/tutorials/serverless/generate-sdxl-turbo.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/generate-sdxl-turbo.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/tutorials/serverless/generate-sdxl-turbo.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/generate-sdxl-turbo
 
 # Integrate Serverless with a web application
@@ -36,7 +36,7 @@ Now that your endpoint is deployed, you'll need your endpoint ID and API key to 
 2. Click on your SDXL Turbo endpoint.
 3. Copy the **Endpoint ID** shown at the top of the page.
 
-![](https://raw.githubusercontent.com/runpod/docs/5beeac29243d6a9a384ae9e63947284c17f73623/images/4a0706af-serverless-endpoint-id.png)
+![](https://raw.githubusercontent.com/runpod/docs/1c896ad086bccb72275ab0e4211f79ff1dda0041/images/4a0706af-serverless-endpoint-id.png)
 
 ### Find your API key
 

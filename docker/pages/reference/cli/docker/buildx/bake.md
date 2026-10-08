@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/buildx/docker_buildx_bake.yaml](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/data/cli/buildx/docker_buildx_bake.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_bake.yaml](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/data/cli/buildx/docker_buildx_bake.yaml)
 
 # docker buildx bake
 
@@ -16,32 +16,28 @@ as part of the build.
 Read [High-level build options with Bake](https://docs.docker.com/build/bake/)
 guide for introduction to writing bake files.
 
-> \[!NOTE]
-> `buildx bake` command may receive backwards incompatible features in the future
-> if needed. We are looking for feedback on improving the command and extending
-> the functionality further.
-
 ## Options
 
-| Option            | Default | Description                                                                                                          |
-| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| `--allow`         |         | Allow build to access specified resources                                                                            |
-| `--call`          | `build` | Set method for evaluating build (`check`, `outline`, `targets`)                                                      |
-| `--check`         |         | Shorthand for `--call=check`                                                                                         |
-| `-f`, `--file`    |         | Build definition file                                                                                                |
-| `--list`          |         | List targets or variables                                                                                            |
-| `--load`          |         | Shorthand for `--set=*.output=type=docker`. Conditional.                                                             |
-| `--metadata-file` |         | Write build result metadata to a file                                                                                |
-| `--no-cache`      |         | Do not use cache when building the image                                                                             |
-| `--policy`        |         | Global policy evaluation options (format: `[disabled=true\|false][,strict=true\|false][,log-level=level]`)           |
-| `--print`         |         | Print the options without building                                                                                   |
-| `--progress`      | `auto`  | Set type of progress output (`auto`, `none`, `plain`, `quiet`, `rawjson`, `tty`). Use plain to show container output |
-| `--provenance`    |         | Shorthand for `--set=*.attest=type=provenance`                                                                       |
-| `--pull`          |         | Always attempt to pull all referenced images                                                                         |
-| `--push`          |         | Shorthand for `--set=*.output=type=registry`. Conditional.                                                           |
-| `--sbom`          |         | Shorthand for `--set=*.attest=type=sbom`                                                                             |
-| `--set`           |         | Override target value (e.g., `targetpattern.key=value`)                                                              |
-| `--var`           |         | Set a variable value (e.g., `name=value`)                                                                            |
+| Option            | Default     | Description                                                                                                          |
+| ----------------- | ----------- | -------------------------------------------------------------------------------------------------------------------- |
+| `--allow`         |             | Allow build to access specified resources                                                                            |
+| `--call`          | `build`     | Set method for evaluating build (`check`, `outline`, `targets`)                                                      |
+| `--check`         |             | Shorthand for `--call=check`                                                                                         |
+| `-f`, `--file`    |             | Build definition file                                                                                                |
+| `-j`, `--jobs`    | `fail-fast` | Set target execution behavior (format: `N` or `mode[,parallel=N]`)                                                   |
+| `--list`          |             | List targets or variables                                                                                            |
+| `--load`          |             | Shorthand for `--set=*.output=type=docker`. Conditional.                                                             |
+| `--metadata-file` |             | Write build result metadata to a file                                                                                |
+| `--no-cache`      |             | Do not use cache when building the image                                                                             |
+| `--policy`        |             | Global policy evaluation options (format: `[disabled=true\|false][,strict=true\|false][,log-level=level]`)           |
+| `--print`         |             | Print the options without building                                                                                   |
+| `--progress`      | `auto`      | Set type of progress output (`auto`, `none`, `plain`, `quiet`, `rawjson`, `tty`). Use plain to show container output |
+| `--provenance`    |             | Shorthand for `--set=*.attest=type=provenance`                                                                       |
+| `--pull`          |             | Always attempt to pull all referenced images                                                                         |
+| `--push`          |             | Shorthand for `--set=*.output=type=registry`. Conditional.                                                           |
+| `--sbom`          |             | Shorthand for `--set=*.attest=type=sbom`                                                                             |
+| `--set`           |             | Override target value (e.g., `targetpattern.key=value`)                                                              |
+| `--var`           |             | Set a variable value (e.g., `name=value`)                                                                            |
 
 ## Global options
 
@@ -141,6 +137,66 @@ Same as [`build --call`](https://docs.docker.com/reference/cli/docker/buildx/bui
 #### Call: check (--check) {#check}
 
 Same as [`build --check`](https://docs.docker.com/reference/cli/docker/buildx/build/#check).
+
+### Configure target execution behavior (--jobs, -j) {#jobs}
+
+```text
+--jobs=N
+--jobs=[mode,]parallel=N
+--jobs=mode
+```
+
+The `--jobs` flag (shorthand `-j`) controls target concurrency, output
+synchronization, and how Bake handles target failures. It accepts an integer
+as shorthand for `parallel=N`, or comma-separated mode and parallel options.
+For example, `-j=2` is equivalent to `--jobs=parallel=2`, and
+`--jobs=defer-error,parallel=2` combines a mode with a concurrency limit.
+The mode can also be written as `mode=defer-error`.
+
+The default mode is `fail-fast`, which stops the build when a target
+fails and cancels targets that are still running. Outputs already written by
+successful targets are not removed.
+
+The `defer-output` mode waits until all participating targets have successfully
+evaluated their build results before any target begins exporting output. This is
+useful when multiple targets produce related artifacts and you want to withhold
+their outputs if a build fails. Exports are not transactional: an export failure
+can still leave partial output, and completed exports are not rolled back.
+
+For multi-node targets, `defer-output` applies to the BuildKit solve and export
+boundary for each target. Any manifest list merge or registry push that Buildx
+performs after the per-node solves complete is not part of this synchronization
+barrier.
+
+The `defer-error` mode allows independent targets to keep running after another
+target fails. Bake still returns an error after all possible targets complete,
+but successful targets can finish and write their outputs. Targets that depend
+on a failed target cannot complete successfully. When `--metadata-file` is set,
+Bake writes metadata for successful targets even if another target fails.
+
+```console
+$ docker buildx bake --jobs=defer-output # wait for all build results before exporting
+$ docker buildx bake --jobs=defer-error  # let independent targets finish before returning an error
+```
+
+The `parallel` option limits how many Bake targets run at the same time. It
+requires a non-negative integer. When omitted or set to `0`, Bake doesn't apply
+a target concurrency limit. This controls target scheduling, not BuildKit's
+internal parallelism for build steps within a target. Specify the mode and limit
+in the same flag value; repeating `--jobs` replaces the previous value.
+
+```console
+$ docker buildx bake -j=2                          # run at most two targets at the same time
+$ docker buildx bake --jobs=parallel=1             # run targets sequentially
+$ docker buildx bake --jobs=defer-error,parallel=2 # limit concurrency and let independent targets finish after a failure
+```
+
+With `defer-output`, every participating target must be able to reach the output
+boundary before any target completes. A nonzero jobs limit smaller than the
+number of participating targets is therefore rejected. The same restriction
+applies when linked targets are present, because their solves may need to be
+active together. The count includes implicit targets referenced through
+`target:` contexts.
 
 ### Specify a build definition file (-f, --file) {#file}
 
@@ -434,80 +490,114 @@ Override target configurations from command line. The pattern matching syntax
 is defined in <https://golang.org/pkg/path/#Match>.
 
 ```console
-$ docker buildx bake --set target.args.mybuildarg=value
+$ docker buildx bake --set target.arg.mybuildarg=value
 $ docker buildx bake --set target.platform=linux/arm64
-$ docker buildx bake --set foo*.args.mybuildarg=value   # overrides build arg for all targets starting with 'foo'
-$ docker buildx bake --set *.platform=linux/arm64       # overrides platform for all targets
+$ docker buildx bake --set foo*.arg.mybuildarg=value    # overrides build arg for all targets starting with 'foo'
+$ docker buildx bake --set *.platform=linux/arm64       # overrides platforms for all targets
 $ docker buildx bake --set foo*.no-cache                # bypass caching only for targets starting with 'foo'
 $ docker buildx bake --set target.platform+=linux/arm64 # appends 'linux/arm64' to the platform list
 $ docker buildx bake --set target.contexts.bar=../bar   # overrides 'bar' named context
-$ docker buildx bake --set target.resources.memory=2g   # overrides memory resource limit
+$ docker buildx bake --set target.resource.memory=2g    # overrides memory resource limit
 $ docker buildx bake --set target.secret.aws=env=AWS    # overrides source for an existing secret
+$ docker buildx bake --set target.tag=                  # clears all tag values
 ```
 
 > \[!NOTE]
 >
-> `--set` is a repeatable flag. For array fields such as `tags`, repeat `--set`
+> `--set` is a repeatable flag. For array fields such as `tag`, repeat `--set`
 > to provide multiple values or use the `+=` operator to append without
-> replacing. Array literal syntax like `--set target.tags=[a,b]` is not
-> supported.
+> replacing. Array literal syntax like `--set target.tag=[a,b]` is not
+> supported. For array fields, a non-append assignment with an empty value
+> clears values from the Bake definition and earlier `--set` flags. Subsequent
+> assignments or appends add values to the cleared array.
 
 You can override the following fields:
 
-- `annotations`
+- `annotation`
 - `attest`
-- `args`
+- `arg.<name>`
 - `cache-from`
 - `cache-to`
 - `call`
 - `context`
-- `contexts`
+- `contexts.<name>`
 - `dockerfile`
-- `entitlements`
-- `extra-hosts`
-- `labels`
+- `entitlement`
+- `extra-host.<hostname>`
+- `label.<name>`
 - `load`
 - `no-cache`
 - `no-cache-filter`
+- `network`
 - `output`
 - `platform`
+- `policy`
 - `pull`
 - `push`
-- `resources`
+- `resource.<field>`
+- `secret`
 - `secret.<id>`
-- `secrets`
+- `shm-size`
 - `ssh`
-- `tags`
+- `tag`
 - `target`
+- `ulimit`
 
 You can append using `+=` operator for the following fields:
 
-- `annotations`¹
+- `annotation`¹
 - `attest`¹
 - `cache-from`
 - `cache-to`
-- `entitlements`¹
+- `entitlement`¹
 - `no-cache-filter`
 - `output`
 - `platform`
-- `secrets`
+- `policy`
+- `secret`
 - `ssh`
-- `tags`
+- `tag`
+- `ulimit`
 
 > \[!NOTE]
 > ¹ These fields already append by default.
 
+Override keys use singular names. Existing plural Bake field names and
+historical `--set` spellings remain supported as aliases:
+
+| Alias          | Canonical key |
+| -------------- | ------------- |
+| `annotations`  | `annotation`  |
+| `args`         | `arg`         |
+| `entitlements` | `entitlement` |
+| `extra-hosts`  | `extra-host`  |
+| `labels`       | `label`       |
+| `platforms`    | `platform`    |
+| `resources`    | `resource`    |
+| `secrets`      | `secret`      |
+| `tags`         | `tag`         |
+| `ulimits`      | `ulimit`      |
+
+Aliases are normalized before overrides are applied, so they can be mixed
+with canonical keys in repeated `--set` options. `context` and `contexts` are
+not aliases: `context` sets the build context, while `contexts.<name>` sets a
+named context. `secret.<id>` also has separate semantics: it changes the
+source of a secret that is already declared by the target. The plural alias
+does not support this form; `secrets.<id>` is invalid.
+
 #### Inline values for composable attributes
 
-Some fields, such as `ssh`, `secret`, `output`, `cache-to`, `cache-from`,
-`attest`, and `annotations`, are composable attributes that accept a list of
-object values in a Bake file. When you override these fields with `--set`, you
-provide each value using the same inline string syntax as the corresponding
-build flag, not the HCL object form. The `--set` override replaces or appends
-to the list as a whole; it doesn't address individual sub-fields with a
-sub-selector. Only the map-valued fields `args`, `contexts`, `labels`, and
-`extra-hosts` support targeting a specific entry with a sub-key (for example
-`--set target.args.MYARG=value`).
+Composable fields such as `ssh`, `secret`, `output`, `cache-to`, `cache-from`,
+`attest`, and `annotation` accept a list of object values in a Bake file. When
+you override these fields with `--set`, provide each value using the same
+inline string syntax as the corresponding build flag, not the HCL object
+form. The override replaces or appends to the list as a whole and does not
+address individual object fields with a subkey.
+
+Only `arg`, `contexts`, `extra-host`, `label`, `resource`, and `secret` support
+entry-addressed subkeys. For example, use `--set target.arg.MYARG=value` to
+override one build argument. As described above, `secret.<id>` changes the
+source of an existing secret rather than an object field.
 
 For example, to set the SSH agent socket or key for a target, use the same
 `id=path` form accepted by [`build --ssh`](https://docs.docker.com/reference/cli/docker/buildx/build/#ssh):

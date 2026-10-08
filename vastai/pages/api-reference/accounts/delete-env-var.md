@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#delete /api/v0/secrets](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/api-reference/openapi.yaml%23delete%20/api/v0/secrets)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#delete /api/v0/secrets](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/api-reference/openapi.yaml%23delete%20/api/v0/secrets)
 > Canonical documentation: https://docs.vast.ai/api-reference/accounts/delete-env-var
 
 # delete env var

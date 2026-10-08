@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/buildx/docs/bake-reference.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/_vendor/github.com/docker/buildx/docs/bake-reference.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/buildx/docs/bake-reference.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/_vendor/github.com/docker/buildx/docs/bake-reference.md)
 
 The Bake file is a file for defining workflows that you run using `docker buildx bake`.
 
@@ -226,7 +226,7 @@ The following table shows the complete list of attributes that you can assign to
 | [`dockerfile-inline`](#targetdockerfile-inline) | String  | Inline Dockerfile string                                             |
 | [`dockerfile`](#targetdockerfile)               | String  | Dockerfile location                                                  |
 | [`entitlements`](#targetentitlements)           | List    | Permissions that the build process requires to run                   |
-| [`extra-hosts`](#targetextra-hosts)             | List    | Customs host-to-IP mapping                                           |
+| [`extra-hosts`](#targetextra-hosts)             | List    | Custom host-to-IP mapping                                            |
 | [`inherits`](#targetinherits)                   | List    | Inherit attributes from other targets                                |
 | [`labels`](#targetlabels)                       | Map     | Metadata for images                                                  |
 | [`matrix`](#targetmatrix)                       | Map     | Define a set of variables that forks a target into multiple targets. |
@@ -592,7 +592,7 @@ Entitlements are enabled with a two-step process. First, a target must declare t
 
 ### `target.extra-hosts`
 
-Use the `extra-hosts` attribute to define customs host-to-IP mapping for the
+Use the `extra-hosts` attribute to define custom host-to-IP mapping for the
 target. This has the same effect as passing a [`--add-host`][add-host] flag to
 the build command.
 

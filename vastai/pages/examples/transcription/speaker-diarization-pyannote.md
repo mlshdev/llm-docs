@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/transcription/speaker-diarization-pyannote.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/examples/transcription/speaker-diarization-pyannote.mdx)
+> Pinned source for Vast.ai main: [examples/transcription/speaker-diarization-pyannote.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/examples/transcription/speaker-diarization-pyannote.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/transcription/speaker-diarization-pyannote
 
 # Speaker Diarization with Pyannote

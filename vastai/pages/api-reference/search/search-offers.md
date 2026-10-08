@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/bundles](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/api-reference/openapi.yaml%23post%20/api/v0/bundles)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/bundles](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/api-reference/openapi.yaml%23post%20/api/v0/bundles)
 > Canonical documentation: https://docs.vast.ai/api-reference/search/search-offers
 
 # search offers

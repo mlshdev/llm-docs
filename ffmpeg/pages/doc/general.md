@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/47313ad3f9f33b892384b976fb7c09b3c85fd74e/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/538d10d1878fb546c3a2645efa56119848f9ccfc/doc/general.texi)
 
 # External libraries
 
@@ -939,6 +939,8 @@ following image formats are supported:
   \|  V.Flash PTX format
 - QOI           |  X  |  X
   \|  Quite OK Image format
+- RW2           |     |  X
+  \|  Panasonic raw image, RawFormat 8 only
 - SGI           |  X  |  X
   \|  SGI RGB image format
 - Sun Rasterfile   |  X  |  X

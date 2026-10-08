@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/templates/GET/templates.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/api-reference/templates/GET/templates.mdx)
+> Pinned source for Runpod main: [api-reference/templates/GET/templates.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/api-reference/templates/GET/templates.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/templates/GET/templates
 
 # List templates

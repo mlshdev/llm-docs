@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/attestations/slsa-definitions.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/_vendor/github.com/moby/buildkit/docs/attestations/slsa-definitions.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/attestations/slsa-definitions.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/_vendor/github.com/moby/buildkit/docs/attestations/slsa-definitions.md)
 
 # SLSA definitions
 
@@ -180,9 +180,21 @@ field for every step.
     }
 ```
 
-BuildKit sets the `builderPlatform` of the build machine. Note that this is not
-necessarily the platform of the build result that can be determined from the
-`in-toto` subject field.
+BuildKit sets the `builderPlatform` of the build machine. This is not
+necessarily the platform of the build result, which is recorded separately in
+`targetPlatform`.
+
+### `buildDefinition.internalParameters.targetPlatform`
+
+- Ref: <https://slsa.dev/spec/v1.1/provenance#internalParameters>
+- Included with `mode=min` and `mode=max`.
+
+The `targetPlatform` is the platform associated with this build result, for
+example `linux/arm64`. It is set even when the request does not specify a
+platform. For a multi-platform build, each result's provenance contains its
+own target platform. For binary artifacts, this value describes the declared
+result platform; BuildKit does not inspect the output binary to determine its
+architecture.
 
 ### `buildDefinition.resolvedDependencies`
 

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/47313ad3f9f33b892384b976fb7c09b3c85fd74e/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/538d10d1878fb546c3a2645efa56119848f9ccfc/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -1147,6 +1147,9 @@ ffprobe -dump_separator "
   Note: The required alignment depends on if `AV_CODEC_FLAG_UNALIGNED` is set and the
   CPU. `AV_CODEC_FLAG_UNALIGNED` cannot be changed from the command line. Also hardware
   decoders will not apply left/top Cropping.
+
+- lcevc-dec-params *string* (*decoding,video*)
+  A :-separated list of key=value parameters passed to liblcevc-dec to initialize it.
 
 # Decoders
 

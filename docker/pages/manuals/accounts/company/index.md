@@ -1,52 +1,64 @@
-> Pinned source for Docker main: [content/manuals/accounts/company/_index.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/accounts/company/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/company/_index.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/accounts/company/_index.md)
 
-# Company overview
+# Company accounts
 
 **Company requirements**
 
 - Subscription: Business
 - For: Administrators
 
-A company groups multiple Docker organizations for centralized configuration
-and provides a single point of visibility across those organizations.
-Organization owners with a Docker Business subscription can create a company
-and manage it through Docker Home.
+A company is where you configure sign-in and administration for multiple
+Docker organizations.
+
+> \[!TIP]
+>
+> Organization owners with a Docker Business subscription can
+> [create a company](https://docs.docker.com/accounts/company/new-company/) in
+> [Docker Home](https://app.docker.com/).
 
 ## Company structure
 
-A company sits at the top of the hierarchy and groups multiple Docker
-organizations for centralized configuration. Companies are only available
-for Docker Business subscribers.
+A company sits above its organizations, giving company owners full
+administrative access across every organization in the company.
 
-![Diagram showing Docker’s administration hierarchy with Company at the top, followed by Organizations, Teams, and Members](https://raw.githubusercontent.com/docker/docs/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/accounts/organization/images/docker-admin-structure.webp)
+The following diagram shows that hierarchy:
 
-An organization sits below the company. You group teams and members there
-and assign access to repositories. Every Docker Team and Business
-subscriber has at least one organization.
+```mermaid {title="Company structure" caption="Company owners manage a company that contains one or more organizations."}
+flowchart TB
+  co(("Company owners")) -.->|"manage"| C
+  subgraph C["Company"]
+    direction TB
+    subgraph O1["Organization A"]
+      direction TB
+      m1(("Members"))
+      r1[("Repositories")]
+    end
+    subgraph O2["Organization B"]
+      direction TB
+      m2(("Members"))
+      r2[("Repositories")]
+    end
+    O1 ~~~ O2
+  end
+  style C fill:#3b82f622,stroke:#3b82f6
+```
 
-For organization structure, including teams and members, see
-[Organization accounts](https://docs.docker.com/accounts/organization/).
+## What a company lets you do
 
-[Upgrading to a Docker Business plan](https://www.docker.com/pricing?ref=Docs\&refAction=DocsAdmin)
-grants you the company owner role so you can manage multiple organizations.
+When you create a company, you can:
 
-## Company roles
+- Administer every organization in the company from one place.
+- Configure single sign-on (SSO) and System for Cross-domain Identity
+  Management (SCIM) once for every organization in the company.
+- Verify your domains once at the company level instead of in each
+  organization. When you turn on auto-provisioning for a domain, you
+  choose which organization new users join.
+- View members and invitations from every organization in one list, and
+  export that list as a CSV.
 
-A company includes one or more company owners. The creator of a company
-becomes both a company owner and an organization owner, and occupies a seat
-as organization owner. After creation, a company can have multiple owners,
-and each owner has visibility across the entire company. They can manage
-settings for every organization under it and have the same access rights as
-organization owners.
-
-- A company can have up to ten unique company owners.
-- Company owners don't occupy a seat unless one of the following applies:
-  - They're added as a member of an organization under the company.
-  - SSO is enabled and the company owner signs in through SSO, which
-    automatically adds them as an organization member.
-
-To add or remove company owners, see
-[Manage your company](https://docs.docker.com/accounts/company/manage/#company-owners).
+You can assign up to 10 company owners. Company owners occupy a purchased
+seat only when they are also members of an organization. A company owner
+who is not an organization member does not occupy a seat.
 
 ## Next steps
 

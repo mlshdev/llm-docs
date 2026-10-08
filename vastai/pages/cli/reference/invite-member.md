@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/invite-member.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/cli/reference/invite-member.mdx)
+> Pinned source for Vast.ai main: [cli/reference/invite-member.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/cli/reference/invite-member.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/invite-member
 
 # vastai invite member

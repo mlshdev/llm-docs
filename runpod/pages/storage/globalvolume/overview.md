@@ -1,23 +1,19 @@
-> Pinned source for Runpod main: [storage/globalvolume/overview.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/storage/globalvolume/overview.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/overview.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/storage/globalvolume/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/overview
 
 # Overview
 
-Learn how to create a global volume in Runpod and access your data from Pods across all data centers, with storage that persists across sessions.
+Learn how to create a global volume in Runpod and access your data from Pods and Serverless workers across all data centers, with storage that persists across sessions.
 
 > **Note**
 >
 > Global volumes are in beta. Features and behavior may change before general availability.
 
-A global volume is elastic, region-independent storage you can attach to GPU Pods. Unlike a network volume, a global volume is not tied to a specific data center. You create it once and any Pod or worker, anywhere, can mount it at startup. The volume persists when a Pod or worker is stopped or deleted. Your data remains intact until you choose to remove it.
+A global volume is elastic, region-independent storage you can attach to GPU Pods and GPU Serverless endpoints. Unlike a network volume, a global volume is not tied to a specific data center. You create it once and any Pod or worker, anywhere, can mount it at startup. The volume persists when a Pod or worker is stopped or deleted. Your data remains intact until you choose to remove it.
 
 Global volumes are designed for workloads that write data infrequently and read it often, such as model serving and inference. They are not a replacement for network volumes, which are better suited for workloads with frequent writes such as training and checkpointing.
 
-For attachment steps, see [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume-pods).
-
-> **Note**
->
-> Global volumes are currently available for GPU Pods only. Serverless endpoints don't support global volumes.
+For attachment steps, see [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume/globalvolume-pods) or [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume/globalvolume-serverless).
 
 ## Create a global volume
 
@@ -31,13 +27,14 @@ The volume appears in your Storage list with the type set to **Global**. Storage
 
 > **Warning**
 >
-> If your account balance reaches $\0, your global volume is flagged and permanently deleted after 15 days. Enable [low balance notifications](https://docs.runpod.io/accounts-billing/billing#low-balance-notifications) to avoid data loss.
+> If your account balance reaches $0, your global volume is flagged and permanently deleted after 15 days. Enable [low balance notifications](https://docs.runpod.io/accounts-billing/billing#low-balance-notifications) to avoid data loss.
 
 ## Access your files
 
 A global volume mounts automatically at startup. The mount path depends on where you're using it:
 
 - **Pods:** defaults to `/workspace`, or `/workspace-global` when a network volume is also attached. See [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume-pods#mount-paths) for details.
+- **Serverless:** always mounts at `/runpod-volume`. See [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume/globalvolume-serverless#mount-path) for details.
 
 ## Migrate data from a network volume
 
@@ -84,7 +81,7 @@ Workloads that write frequently or loop over large directory listings can accumu
 
 Global volumes use object-backed storage, not a fully POSIX compliant file system. Review the following before using global volumes in production.
 
-- **GPU only:** Global volumes can't be attached to CPU Pods.
+- **GPU only:** Global volumes can't be attached to CPU Pods or CPU Serverless endpoints.
 - **Limited POSIX semantics:** Global volumes do not support file locking, atomic rename, or hard links. Applications that depend on POSIX behavior may fail or produce unexpected results.
 - **No permission bits:** Global volumes cannot set file permission bits. This may produce warnings when downloading models from sources such as Hugging Face.
 - **Concurrent writes to the same file:** Multiple Pods can write to a global volume concurrently, but when two Pods write to the same file at the same time, the last write wins. For workloads that require file locking or high-concurrency writes, use a network volume instead.
@@ -93,5 +90,6 @@ Global volumes use object-backed storage, not a fully POSIX compliant file syste
 ## Next steps
 
 - [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume-pods)
+- [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume/globalvolume-serverless)
 - [Manage network volumes](https://docs.runpod.io/storage/network-volumes)
 - [Use the S3-compatible API](https://docs.runpod.io/storage/s3-api)

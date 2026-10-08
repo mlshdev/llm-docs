@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/sdk/unlist-machine.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/host/sdk/unlist-machine.mdx)
+> Pinned source for Vast.ai main: [host/sdk/unlist-machine.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/host/sdk/unlist-machine.mdx)
 > Canonical documentation: https://docs.vast.ai/host/sdk/unlist-machine
 
 # VastAI.unlist_machine

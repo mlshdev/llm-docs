@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/company/manage.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/accounts/company/manage.md)
+> Pinned source for Docker main: [content/manuals/accounts/company/manage.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/accounts/company/manage.md)
 
 # Manage company organizations, owners, and members
 
@@ -39,7 +39,8 @@ must manage it separately.
 
 A company can have multiple owners who manage the company and all of its
 organizations. For details about the company owner role and how it affects
-seats, see [Company roles](https://docs.docker.com/accounts/company/#company-roles).
+seats, see
+[Company structure](https://docs.docker.com/accounts/company/#company-structure).
 
 ### Add a company owner
 

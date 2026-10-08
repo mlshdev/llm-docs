@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/hosting-overview.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/host/hosting-overview.mdx)
+> Pinned source for Vast.ai main: [host/hosting-overview.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/host/hosting-overview.mdx)
 > Canonical documentation: https://docs.vast.ai/host/hosting-overview
 
 # Hosting Overview
@@ -48,7 +48,7 @@ The offer accepts new rentals until the offer end date. When a client rents an i
 
 Once clients rent your machine, it is very important to honor the terms of each rental contract until its rental end date.
 
-![Offer, rental contract, and instance lifecycle diagram](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/offer-contract-lifecycle.png)
+![Offer, rental contract, and instance lifecycle diagram](https://raw.githubusercontent.com/vast-ai/docs/8629af9a05e884dd603b6a24bbb7c39826c1a10d/images/offer-contract-lifecycle.png)
 
 ## The Rental Contract
 
@@ -116,11 +116,11 @@ Reserved Instance Discounts are a feature for clients which allows them to rent 
 
 The reserved discount pricing is determined by the hosts. If you intend to encourage a long term rental this is a factor that you may want to research. Use the filters in the UI to select reserved.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/hosting-overview.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/8629af9a05e884dd603b6a24bbb7c39826c1a10d/images/hosting-overview.webp)
 
 Once that filter is selected, hosts who offer that discount will become easily visible. Hover over the rental button to see the discount rates that are offered. The original vs. the updated price will be shown as denoted by a stikethrough in the original amount:
 
-![](https://raw.githubusercontent.com/vast-ai/docs/a70abe2c977eb9c4264b544c4d4f876089be70e6/images/hosting-overview-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/8629af9a05e884dd603b6a24bbb7c39826c1a10d/images/hosting-overview-2.webp)
 
 This discount is not static, but rather scales over time that the user rents the machine for. These values are determined by the individual host(s).
 

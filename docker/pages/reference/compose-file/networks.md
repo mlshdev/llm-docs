@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/compose-file/networks.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/reference/compose-file/networks.md)
+> Pinned source for Docker main: [content/reference/compose-file/networks.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/reference/compose-file/networks.md)
 
 # Define and manage networks in Docker Compose
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/text-summarization.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/guides/text-summarization.md)
+> Pinned source for Docker main: [content/guides/text-summarization.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/guides/text-summarization.md)
 
 # Build a text summarization app
 

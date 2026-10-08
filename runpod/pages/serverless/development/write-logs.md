@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/write-logs.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/serverless/development/write-logs.mdx)
+> Pinned source for Runpod main: [serverless/development/write-logs.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/serverless/development/write-logs.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/write-logs
 
 # Write logs

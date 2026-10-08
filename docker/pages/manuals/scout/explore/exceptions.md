@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/explore/exceptions.md](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/content/manuals/scout/explore/exceptions.md)
+> Pinned source for Docker main: [content/manuals/scout/explore/exceptions.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/scout/explore/exceptions.md)
 
 # Manage vulnerability exceptions
 

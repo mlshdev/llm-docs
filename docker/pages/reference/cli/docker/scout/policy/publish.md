@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/scout/docker_scout_policy_publish.yaml](https://github.com/docker/docs/blob/7ba25eeb0c4c594f79e6efadad1af5eaca0500a8/data/cli/scout/docker_scout_policy_publish.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_policy_publish.yaml](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/data/cli/scout/docker_scout_policy_publish.yaml)
 
 # docker scout policy publish
 

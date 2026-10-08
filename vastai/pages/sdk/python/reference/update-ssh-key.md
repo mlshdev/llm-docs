@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/update-ssh-key.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/sdk/python/reference/update-ssh-key.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/update-ssh-key.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/sdk/python/reference/update-ssh-key.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/update-ssh-key
 
 # VastAI.update_ssh_key

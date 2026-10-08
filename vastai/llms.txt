@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `a70abe2c977eb9c4264b544c4d4f876089be70e6`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `8629af9a05e884dd603b6a24bbb7c39826c1a10d`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -240,6 +240,18 @@
 - [vastai metrics gpu](pages/cli/reference/metrics-gpu.md): Host command (1482 bytes)
 - [vastai metrics gpu-trends](pages/cli/reference/metrics-gpu-trends.md): Host command (2607 bytes)
 - [vastai metrics gpu-locations](pages/cli/reference/metrics-gpu-locations.md): Host command (1899 bytes)
+- [Two-Factor Authentication](pages/cli/two-factor-authentication.md): Two-factor authentication (2FA) adds a second layer of security to your account. After logging in with your API key, CLI commands that require sensitive actions verify your identity using a code from your phone or email. (9172 bytes)
+- [vastai tfa status](pages/cli/reference/tfa-status.md): Show the current 2FA status for your account, including whether 2FA is enabled, all active methods, and the number of backup codes remaining. (855 bytes)
+- [vastai tfa auth-new](pages/cli/reference/tfa-auth-new.md): Authorize your account to add a new 2FA method. This step is required before running vastai tfa activate. For your first method, verification defaults to email. For subsequent methods, use an existing 2FA method. (2289 bytes)
+- [vastai tfa activate](pages/cli/reference/tfa-activate.md): Activate a new 2FA method by verifying the code. Run vastai tfa auth-new before this command to authorize adding a new method. (2134 bytes)
+- [vastai tfa login](pages/cli/reference/tfa-login.md): Complete 2FA login by verifying your identity with a 2FA code or backup code. On success, saves the session key to /.config/vastai/vasttfakey. (2081 bytes)
+- [vastai tfa totp-setup](pages/cli/reference/tfa-totp-setup.md): Generate a TOTP secret and QR code for setting up an Authenticator app. Run vastai tfa auth-new before this command to authorize adding a new method. (1343 bytes)
+- [vastai tfa send-sms](pages/cli/reference/tfa-send-sms.md): Request a 2FA verification code via SMS. Returns a secret token needed for the next step (vastai tfa activate or vastai tfa login). (1612 bytes)
+- [vastai tfa resend-sms](pages/cli/reference/tfa-resend-sms.md): Resend an SMS 2FA verification code. Use this if you didn't receive the original code or it expired. (1369 bytes)
+- [vastai tfa send-email](pages/cli/reference/tfa-send-email.md): Request a 2FA verification code via email. Returns a secret token needed for the next step (vastai tfa login). (1043 bytes)
+- [vastai tfa regen-codes](pages/cli/reference/tfa-regen-codes.md): Generate a new set of backup codes. Requires 2FA verification. The CLI asks you to confirm (y/n) before proceeding, since this invalidates every existing backup code, and then prompts for how to save the new ones (a def… (2412 bytes)
+- [vastai tfa update](pages/cli/reference/tfa-update.md): Update a 2FA method's label or primary status. (1471 bytes)
+- [vastai tfa delete](pages/cli/reference/tfa-delete.md): Remove a 2FA method from your account. Requires 2FA verification to authorize the deletion. The CLI asks you to confirm (y/n) before proceeding. (2924 bytes)
 - [vastai cleanup machine](pages/host/cli/cleanup-machine.md): Host command (1444 bytes)
 - [vastai delete machine](pages/host/cli/delete-machine.md): Host command (1089 bytes)
 - [vastai list machine](pages/host/cli/list-machine.md): Host command (3073 bytes)

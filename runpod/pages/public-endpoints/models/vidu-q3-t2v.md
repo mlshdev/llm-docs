@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/vidu-q3-t2v.mdx](https://github.com/runpod/docs/blob/5beeac29243d6a9a384ae9e63947284c17f73623/public-endpoints/models/vidu-q3-t2v.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/vidu-q3-t2v.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/public-endpoints/models/vidu-q3-t2v.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/vidu-q3-t2v
 
 # Vidu Q3 T2V

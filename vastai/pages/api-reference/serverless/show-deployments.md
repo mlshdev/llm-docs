@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/deployments](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/api-reference/openapi.yaml%23get%20/api/v0/deployments)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/deployments](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/api-reference/openapi.yaml%23get%20/api/v0/deployments)
 > Canonical documentation: https://docs.vast.ai/api-reference/serverless/show-deployments
 
 # show deployments

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/ner/gliner2.mdx](https://github.com/vast-ai/docs/blob/a70abe2c977eb9c4264b544c4d4f876089be70e6/examples/ner/gliner2.mdx)
+> Pinned source for Vast.ai main: [examples/ner/gliner2.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/examples/ner/gliner2.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/ner/gliner2
 
 # GLiNER2
