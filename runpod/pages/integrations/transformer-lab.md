@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [integrations/transformer-lab.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/integrations/transformer-lab.mdx)
+> Pinned source for Runpod main: [integrations/transformer-lab.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/integrations/transformer-lab.mdx)
 > Canonical documentation: https://docs.runpod.io/integrations/transformer-lab
 
 # Run Transformer Lab experiments on Runpod
@@ -13,7 +13,7 @@ This guide shows you how to configure Transformer Lab to run ML workloads on Run
 
 You'll need:
 
-- [A Runpod account with an API key](https://docs.runpod.io/get-started/api-keys).
+- [A Runpod account with an API key](https://docs.runpod.io/get-started/credentials).
 - macOS, Linux, or Windows with WSL2.
 - Python 3.8 or higher.
 - Git and curl installed.
@@ -72,7 +72,7 @@ Refer to the [Transformer Lab documentation](https://lab.cloud/for-teams/advance
 
    1. Enter a name for your provider (e.g., "runpod-provider"). Remember this name—you'll use it in your task.yaml files.
    2. Select **Runpod** as the provider type.
-   3. In the configuration JSON field, add your [Runpod API key](https://docs.runpod.io/get-started/api-keys):
+   3. In the configuration JSON field, add your [Runpod API key](https://docs.runpod.io/get-started/credentials):
 
    ```json
    {

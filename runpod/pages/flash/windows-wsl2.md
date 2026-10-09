@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/windows-wsl2.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/flash/windows-wsl2.mdx)
+> Pinned source for Runpod main: [flash/windows-wsl2.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/flash/windows-wsl2.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/windows-wsl2
 
 # Use Flash on Windows
@@ -12,7 +12,7 @@ Flash runs natively on macOS and Linux. On Windows, you can run Flash through Wi
 - Windows 10 version 2004 or later, or Windows 11.
 - Administrator access to your Windows machine.
 - [Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts) with a verified email address.
-- [An API key](https://docs.runpod.io/get-started/api-keys) with **All** access permissions.
+- [An API key](https://docs.runpod.io/get-started/credentials) with **All** access permissions.
 
 ## Step 1: Enable WSL2
 

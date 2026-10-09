@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/catalog.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/desktop/features/mcp-catalog-and-toolkit/catalog.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/catalog.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/desktop/features/mcp-catalog-and-toolkit/catalog.md)
 
 # Docker MCP Catalog
 
@@ -15,11 +15,6 @@ The catalog serves as the source of available MCP servers. When you add servers
 to your [profiles](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/profiles/), you select
 them from the catalog. Each server runs as an isolated container, making it
 portable and consistent across different environments.
-
-> \[!NOTE]
-> E2B sandboxes now include direct access to the Docker MCP Catalog, giving
-> developers access to over 200 tools and services to seamlessly build and run
-> AI agents. For more information, see [E2B Sandboxes](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/e2b-sandboxes/).
 
 ## What's in the catalog
 

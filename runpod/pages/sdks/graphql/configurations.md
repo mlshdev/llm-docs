@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdks/graphql/configurations.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/sdks/graphql/configurations.mdx)
+> Pinned source for Runpod main: [sdks/graphql/configurations.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/sdks/graphql/configurations.mdx)
 > Canonical documentation: https://docs.runpod.io/sdks/graphql/configurations
 
 # Overview

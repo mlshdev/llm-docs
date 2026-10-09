@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/moby/moby/api/docs/CHANGELOG.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/_vendor/github.com/moby/moby/api/docs/CHANGELOG.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/moby/api/docs/CHANGELOG.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/_vendor/github.com/moby/moby/api/docs/CHANGELOG.md)
 
 # Engine API version history
 

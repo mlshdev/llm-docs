@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "858251609b8884594fd1de29c51155bc3024b260",
-      "sourceCommittedAt": "2026-10-08T21:26:54Z",
-      "observedCommit": "858251609b8884594fd1de29c51155bc3024b260",
-      "documentationDigest": "c1090336f481639eb5bc65ff40cb96e8c0dbb597040538b1cfefdca3e96f137b"
+      "sourceCommit": "18bbfeeb249da011f359d558dba84c4b6dc3a335",
+      "sourceCommittedAt": "2026-10-09T15:05:49Z",
+      "observedCommit": "18bbfeeb249da011f359d558dba84c4b6dc3a335",
+      "documentationDigest": "fff955314c5f094c912561127a2582ff22c4e139837ea5c951ce7bf2fb7d96cf"
     },
     "container": {
       "tag": "1.5.0",
@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "538d10d1878fb546c3a2645efa56119848f9ccfc",
       "sourceCommittedAt": "2026-10-08T13:23:51Z",
-      "observedCommit": "538d10d1878fb546c3a2645efa56119848f9ccfc",
+      "observedCommit": "f5d4fd186c68913240c4f6e9cda98443e1518b34",
       "documentationDigest": "b2795b70af799813e1a31590430fac8989c19087c413f80390ff66e3e6baca18"
     },
     "yt-dlp": {
@@ -103,7 +103,7 @@
       "branch": "master",
       "sourceCommit": "3cd69d30e2a78dfc817be9e349e7c2e4317c92e3",
       "sourceCommittedAt": "2026-09-23T15:18:45Z",
-      "observedCommit": "6671d89bede8c9fc108b17bb98916170f5657650",
+      "observedCommit": "f4822b3fc46726bb259d14c6332b702c76b98f82",
       "documentationDigest": "16cd4676f97b7bdaa68b899c801cbd8af53d119d8233fa904a16ab9d9ca6dfd8"
     },
     "bun": {
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "1c896ad086bccb72275ab0e4211f79ff1dda0041",
-      "sourceCommittedAt": "2026-10-08T15:56:16Z",
-      "observedCommit": "1c896ad086bccb72275ab0e4211f79ff1dda0041",
-      "documentationDigest": "9571b6db80eeaa15411f1b7f864310e6cd4ecda988f6c3d943b17b20bae0dd3b"
+      "sourceCommit": "983ff46825e22de0a0c66de8badf50d8ba036ce5",
+      "sourceCommittedAt": "2026-10-09T19:43:05Z",
+      "observedCommit": "983ff46825e22de0a0c66de8badf50d8ba036ce5",
+      "documentationDigest": "002d4ad84bd994263723f166d26bbb650b7efc7c469985a9adc4ed1c085e61f0"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

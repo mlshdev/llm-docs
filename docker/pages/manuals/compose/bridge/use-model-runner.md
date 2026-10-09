@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/bridge/use-model-runner.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/compose/bridge/use-model-runner.md)
+> Pinned source for Docker main: [content/manuals/compose/bridge/use-model-runner.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/compose/bridge/use-model-runner.md)
 
 Compose Bridge supports model-aware deployments. It can deploy and configure Docker Model Runner, a lightweight service that hosts and serves machine LLMs.
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/kubernetes.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/desktop/use-desktop/kubernetes.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/kubernetes.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/desktop/use-desktop/kubernetes.md)
 
 # Explore the Kubernetes view
 

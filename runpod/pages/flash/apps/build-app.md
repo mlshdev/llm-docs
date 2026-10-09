@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/apps/build-app.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/flash/apps/build-app.mdx)
+> Pinned source for Runpod main: [flash/apps/build-app.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/flash/apps/build-app.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/apps/build-app
 
 # Build a Flash app
@@ -14,7 +14,7 @@ Flash apps let you build APIs to serve AI/ML workloads on Runpod Serverless. Thi
 ## Requirements:
 
 - You've [created a Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts).
-- You've [created a Runpod API key](https://docs.runpod.io/get-started/api-keys).
+- You've [created a Runpod API key](https://docs.runpod.io/get-started/credentials).
 - You've installed [Python 3.10, 3.11, 3.12, or 3.13](https://www.python.org/downloads/).
 
 ## Step 1: Initialize a new project

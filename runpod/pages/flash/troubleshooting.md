@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/troubleshooting.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/flash/troubleshooting.mdx)
+> Pinned source for Runpod main: [flash/troubleshooting.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/flash/troubleshooting.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/troubleshooting
 
 # Troubleshooting
@@ -83,7 +83,7 @@ No Runpod API key found. Set one with:
                  or
   echo 'RUNPOD_API_KEY=<your-api-key>' >> .env
 
-Get a key: https://docs.runpod.io/get-started/api-keys
+Get a key: https://docs.runpod.io/get-started/credentials
 ```
 
 **Cause:** Flash requires a valid Runpod API key to provision and manage endpoints.

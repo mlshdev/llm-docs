@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/install/fedora.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/engine/install/fedora.md)
+> Pinned source for Docker main: [content/manuals/engine/install/fedora.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/engine/install/fedora.md)
 
 # Install Docker Engine on Fedora
 
@@ -13,6 +13,7 @@ To get started with Docker Engine on Fedora, make sure you
 To install Docker Engine, you need a maintained version of one of the following
 Fedora versions:
 
+- Fedora 45
 - Fedora 44
 - Fedora 43
 

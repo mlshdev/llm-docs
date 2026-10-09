@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/manage-accounts.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/accounts-billing/manage-accounts.mdx)
+> Pinned source for Runpod main: [accounts-billing/manage-accounts.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/accounts-billing/manage-accounts.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/manage-accounts
 
 # Manage accounts
@@ -123,7 +123,7 @@ Monitor audit logs periodically to ensure compliance with your organization's po
 
 After setting up your account and team you can:
 
-- [Create API keys](https://docs.runpod.io/get-started/api-keys) to enable programmatic access to Runpod services.
+- [Create API keys](https://docs.runpod.io/get-started/credentials) to enable programmatic access to Runpod services.
 - [Deploy your first Pod](https://docs.runpod.io/get-started) to start using GPU resources.
 - Configure [Serverless endpoints](https://docs.runpod.io/serverless/overview) for scalable AI inference.
 - Set up [billing and payment methods](https://console.runpod.io/user/billing) for your team.

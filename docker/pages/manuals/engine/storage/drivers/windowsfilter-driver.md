@@ -1,19 +1,19 @@
-> Pinned source for Docker main: [content/manuals/engine/storage/drivers/windowsfilter-driver.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/engine/storage/drivers/windowsfilter-driver.md)
+> Pinned source for Docker main: [content/manuals/engine/storage/drivers/windowsfilter-driver.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/engine/storage/drivers/windowsfilter-driver.md)
 
 # windowsfilter storage driver
 
-The windowsfilter storage driver is the default storage driver for Docker
-Engine on Windows. The windowsfilter driver uses Windows-native file system
-layers to for storing Docker layers and volume data on disk. The windowsfilter
+The `windowsfilter` storage driver is the default storage driver for Docker
+Engine on Windows. The `windowsfilter` driver uses Windows-native file system
+layers to store Docker layers and volume data on disk. The `windowsfilter`
 storage driver only works on file systems formatted with NTFS.
 
-## Configure the windowsfilter storage driver
+## Configure the `windowsfilter` storage driver
 
-For most use case, no configuring the windowsfilter storage driver is not
+For most use cases, no configuration of the `windowsfilter` storage driver is
 necessary.
 
-The default storage limit for Docker Engine on Windows is 127GB. To use a
-different storage size, set the `size` option for the windowsfilter storage
+The default storage limit for Docker Engine on Windows is 127 GB. To use a
+different storage size, set the `size` option for the `windowsfilter` storage
 driver. See [windowsfilter options](https://docs.docker.com/reference/cli/dockerd/#windowsfilter-options).
 
 Data is stored on the Docker host in `image` and `windowsfilter` subdirectories

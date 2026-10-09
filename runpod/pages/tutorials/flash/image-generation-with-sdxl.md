@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/flash/image-generation-with-sdxl.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/tutorials/flash/image-generation-with-sdxl.mdx)
+> Pinned source for Runpod main: [tutorials/flash/image-generation-with-sdxl.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/tutorials/flash/image-generation-with-sdxl.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/flash/image-generation-with-sdxl
 
 # Generate images with Flash and SDXL
@@ -7,12 +7,12 @@ Learn how to use Flash with Stable Diffusion XL to generate high-quality images 
 
 This tutorial shows you how to build an image generation script using Flash and Stable Diffusion XL (SDXL). You'll learn how to load a pretrained diffusion model on a GPU worker and generate images from text prompts.
 
-![](https://raw.githubusercontent.com/runpod/docs/1c896ad086bccb72275ab0e4211f79ff1dda0041/images/flash_sdxl_output.png)
+![](https://raw.githubusercontent.com/runpod/docs/983ff46825e22de0a0c66de8badf50d8ba036ce5/images/flash_sdxl_output.png)
 
 ## Requirements
 
 - You've [created a Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts).
-- You've [created a Runpod API key](https://docs.runpod.io/get-started/api-keys).
+- You've [created a Runpod API key](https://docs.runpod.io/get-started/credentials).
 - You've installed [Python 3.10, 3.11, 3.12, or 3.13](https://www.python.org/downloads/).
 - You've completed the [Flash quickstart](https://docs.runpod.io/flash/quickstart) or are familiar with Flash basics.
 

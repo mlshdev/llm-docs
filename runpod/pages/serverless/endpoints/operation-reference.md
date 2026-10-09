@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/operation-reference.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/serverless/endpoints/operation-reference.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/operation-reference.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/serverless/endpoints/operation-reference.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/operation-reference
 
 # Operation reference
@@ -22,7 +22,7 @@ npm install --save runpod-sdk
 go get github.com/runpod/go-sdk && go mod tidy
 ```
 
-Set your [API key](https://docs.runpod.io/get-started/api-keys) and endpoint ID as environment variables:
+Set your [API key](https://docs.runpod.io/get-started/credentials) and endpoint ID as environment variables:
 
 ```bash
 export RUNPOD_API_KEY="YOUR_API_KEY"

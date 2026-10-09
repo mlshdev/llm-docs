@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/tools/cli.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/dhi/tools/cli.md)
+> Pinned source for Docker main: [content/manuals/dhi/tools/cli.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/dhi/tools/cli.md)
 
 The `docker dhi` command-line interface (CLI) is a tool for managing Docker Hardened Images:
 

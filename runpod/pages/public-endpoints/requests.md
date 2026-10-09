@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/requests.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/public-endpoints/requests.mdx)
+> Pinned source for Runpod main: [public-endpoints/requests.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/public-endpoints/requests.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/requests
 
 # Make API requests
@@ -10,13 +10,13 @@ This guide covers all the ways to interact with Public Endpoints, from testing i
 ## Requirements
 
 - A [Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts) with credits
-- A [Runpod API key](https://docs.runpod.io/get-started/api-keys) for making API requests
+- A [Runpod API key](https://docs.runpod.io/get-started/credentials) for making API requests
 
 ## Use the playground
 
 The Public Endpoint playground lets you test models directly in your browser before writing any code.
 
-![](https://raw.githubusercontent.com/runpod/docs/1c896ad086bccb72275ab0e4211f79ff1dda0041/images/public-endpoint-playground.png)
+![](https://raw.githubusercontent.com/runpod/docs/983ff46825e22de0a0c66de8badf50d8ba036ce5/images/public-endpoint-playground.png)
 
 The playground offers:
 
@@ -43,7 +43,7 @@ Under **Result**, you can use the dropdown menu to show either a preview of the 
 
 ### Generate code from the playground
 
-![](https://raw.githubusercontent.com/runpod/docs/1c896ad086bccb72275ab0e4211f79ff1dda0041/images/public-endpoint-api-playground.png)
+![](https://raw.githubusercontent.com/runpod/docs/983ff46825e22de0a0c66de8badf50d8ba036ce5/images/public-endpoint-api-playground.png)
 
 After testing a model in the playground, you can automatically generate an API request to use in your application.
 

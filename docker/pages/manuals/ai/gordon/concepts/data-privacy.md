@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/gordon/concepts/data-privacy.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/ai/gordon/concepts/data-privacy.md)
+> Pinned source for Docker main: [content/manuals/ai/gordon/concepts/data-privacy.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/ai/gordon/concepts/data-privacy.md)
 
 # Data privacy and Gordon
 
@@ -84,10 +84,6 @@ Your data is protected through encryption in transit. For paid subscriptions,
 no persistent storage occurs—Gordon processes your requests and discards the
 data immediately.
 
-For questions about privacy terms and conditions, review [Gordon's
-Supplemental
-Terms](https://www.docker.com/legal/docker-ai-supplemental-terms/).
-
 ## Organizational data policies
 
 For Business subscriptions, administrators can enable or disable Gordon for
@@ -119,5 +115,5 @@ for details.
 For questions about Docker's privacy practices:
 
 - Review the [Docker Privacy Policy](https://www.docker.com/legal/privacy/)
-- Read [Gordon's Supplemental Terms](https://www.docker.com/legal/docker-ai-supplemental-terms/)
+- Read the [Docker Subscription Service Agreement](https://www.docker.com/legal/docker-subscription-service-agreement/)
 - Contact Docker Support for specific concerns

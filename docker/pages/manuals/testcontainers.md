@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/testcontainers.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/testcontainers.md)
+> Pinned source for Docker main: [content/manuals/testcontainers.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/testcontainers.md)
 
 # Testcontainers
 
@@ -50,12 +50,3 @@ with different languages and popular frameworks:
 - [Replace H2 with a real database for testing](https://docs.docker.com/guides/testcontainers-java-replace-h2/)
 - [Configuration of services running in a container](https://docs.docker.com/guides/testcontainers-java-service-configuration/)
 - [Testing an ASP.NET Core web app](https://docs.docker.com/guides/testcontainers-dotnet-aspnet-core/)
-- [Testing Spring Boot Kafka Listener](https://docs.docker.com/guides/testcontainers-java-spring-boot-kafka/)
-- [Testing REST API integrations using MockServer](https://docs.docker.com/guides/testcontainers-java-mockserver/)
-- [Testing AWS service integrations using LocalStack](https://docs.docker.com/guides/testcontainers-java-aws-localstack/)
-- [Testing Quarkus applications with Testcontainers](https://docs.docker.com/guides/testcontainers-java-quarkus/)
-- [Working with jOOQ and Flyway using Testcontainers](https://docs.docker.com/guides/testcontainers-java-jooq-flyway/)
-- [Testing REST API integrations using WireMock](https://docs.docker.com/guides/testcontainers-java-wiremock/)
-- [Securing Spring Boot with Keycloak and Testcontainers](https://docs.docker.com/guides/testcontainers-java-keycloak-spring-boot/)
-- [Testing Micronaut REST API with WireMock](https://docs.docker.com/guides/testcontainers-java-micronaut-wiremock/)
-- [Testing Micronaut Kafka Listener](https://docs.docker.com/guides/testcontainers-java-micronaut-kafka/)

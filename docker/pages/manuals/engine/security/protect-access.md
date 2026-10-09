@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/security/protect-access.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/engine/security/protect-access.md)
+> Pinned source for Docker main: [content/manuals/engine/security/protect-access.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/engine/security/protect-access.md)
 
 # Protect the Docker daemon socket
 
@@ -61,7 +61,7 @@ $ docker info
 ### SSH Tips
 
 For the best user experience with SSH, configure `~/.ssh/config` as follows to allow
-reusing a SSH connection for multiple invocations of the `docker` CLI:
+reusing an SSH connection for multiple invocations of the `docker` CLI:
 
 ```text
 ControlMaster     auto

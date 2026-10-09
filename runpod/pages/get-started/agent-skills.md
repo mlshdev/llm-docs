@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/get-started/agent-skills.mdx)
+> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/get-started/agent-skills.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/agent-skills
 
 # Agent skills for AI coding tools

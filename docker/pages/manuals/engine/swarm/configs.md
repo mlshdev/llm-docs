@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/swarm/configs.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/engine/swarm/configs.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/configs.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/engine/swarm/configs.md)
 
 # Store configuration data using Docker Configs
 
@@ -242,7 +242,7 @@ This example assumes that you have PowerShell installed.
    <html lang="en">
      <head><title>Hello Docker</title></head>
      <body>
-       <p>Hello Docker! You have deployed a HTML page.</p>
+       <p>Hello Docker! You have deployed an HTML page.</p>
      </body>
    </html>
    ```

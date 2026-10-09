@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/ai-coding-tools.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/public-endpoints/ai-coding-tools.mdx)
+> Pinned source for Runpod main: [public-endpoints/ai-coding-tools.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/public-endpoints/ai-coding-tools.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/ai-coding-tools
 
 # Connect AI coding tools with Public Endpoints
@@ -11,7 +11,7 @@ Runpod's [Public Endpoints](https://docs.runpod.io/public-endpoints/overview) pr
 
 Before you start, you'll need:
 
-- A [Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts) with an [API key](https://docs.runpod.io/get-started/api-keys), and at least $5 in Runpod credits.
+- A [Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts) with an [API key](https://docs.runpod.io/get-started/credentials), and at least $5 in Runpod credits.
 - One or more of the following AI coding tools installed on your local machine:
   - [OpenCode](https://opencode.ai/): Terminal-based AI coding assistant.
   - [Cursor](https://cursor.com/): AI-powered code editor.
@@ -77,7 +77,7 @@ OpenCode supports multiple provider configurations, so you can set up both Runpo
    }
    EOF
    ```
-2. The `{env:RUNPOD_API_KEY}` syntax in the config file tells OpenCode to read your [API key](https://docs.runpod.io/get-started/api-keys) from the `RUNPOD_API_KEY` environment variable.
+2. The `{env:RUNPOD_API_KEY}` syntax in the config file tells OpenCode to read your [API key](https://docs.runpod.io/get-started/credentials) from the `RUNPOD_API_KEY` environment variable.
 
    Run this command to set the environment variable, replacing `rpa_YOUR_API_KEY` with your actual API key:
 
@@ -115,7 +115,7 @@ OpenCode supports multiple provider configurations, so you can set up both Runpo
 
    Press Ctrl + p to open the command palette and select **Switch model** to select a Runpod endpoint.
 
-   ![](https://raw.githubusercontent.com/runpod/docs/1c896ad086bccb72275ab0e4211f79ff1dda0041/images/ai-coding-opencode-command-palette.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/983ff46825e22de0a0c66de8badf50d8ba036ce5/images/ai-coding-opencode-command-palette.png)
 
 ## Configure Cursor
 
@@ -128,7 +128,7 @@ Cursor supports a single global OpenAI-compatible endpoint override, so you can 
 1. Launch Cursor and press Shift + Cmd + J (macOS) or Shift + Ctrl + J (Windows/Linux) to open Settings.
 2. Go to **Cursor Settings > Models** and expand the **API Keys** section.
 
-   ![](https://raw.githubusercontent.com/runpod/docs/1c896ad086bccb72275ab0e4211f79ff1dda0041/images/ai-coding-cursor-settings.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/983ff46825e22de0a0c66de8badf50d8ba036ce5/images/ai-coding-cursor-settings.png)
 3. Find the **OpenAI API Key** field. Enable it, then enter your Runpod API key (`rpa_...`).
 4. Enable **Override OpenAI Base URL** and enter:
 
@@ -158,7 +158,7 @@ Cline is a VS Code extension with its own settings panel. Unlike Cursor, Cline s
    | API Key  | `rpa_YOUR_API_KEY`                                |
    | Model ID | `openai/gpt-oss-120b`                             |
 
-   ![](https://raw.githubusercontent.com/runpod/docs/1c896ad086bccb72275ab0e4211f79ff1dda0041/images/ai-coding-cline-settings.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/983ff46825e22de0a0c66de8badf50d8ba036ce5/images/ai-coding-cline-settings.png)
 4. Click **Save** to apply your settings.
 
 To use Qwen3 instead, use these values:

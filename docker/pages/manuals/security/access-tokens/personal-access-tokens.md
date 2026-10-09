@@ -1,103 +1,132 @@
-> Pinned source for Docker main: [content/manuals/security/access-tokens/personal-access-tokens.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/security/access-tokens/personal-access-tokens.md)
+> Pinned source for Docker main: [content/manuals/security/access-tokens/personal-access-tokens.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/security/access-tokens/personal-access-tokens.md)
 
-# Personal access tokens
+# Create and manage personal access tokens
 
 **PATs requirements**
 
 - Subscription: Personal, Pro
 - For: Individuals
 
-Personal access tokens (PATs) provide a secure alternative to passwords for Docker CLI authentication. Use PATs to authenticate automated systems, CI/CD pipelines, and development tools without exposing your Docker Hub password.
+A personal access token (PAT) lets you sign in to Docker Hub without
+your password. Use a token for the Docker CLI, scripts, continuous
+integration (CI) jobs, and other tools that should act as your account.
 
-## Key benefits
+Each token has one permission level. You can create several tokens and
+revoke one without changing your password. The token list shows when
+each token was last used.
 
-PATs offer significant security advantages over password authentication:
+When two-factor authentication is turned on, or single sign-on is
+enforced, password sign-in to the CLI isn't supported. Sign in with a
+PAT instead.
 
-- Enhanced security: Investigate token usage, disable suspicious tokens, and prevent administrative actions that could compromise your account if your system is compromised.
-- Better automation: Issue multiple tokens for different integrations, each with specific permissions, and revoke them independently when no longer needed.
-- Two-factor authentication compatibility: Required when you have two-factor authentication turned on, providing secure CLI access without bypassing 2FA protection.
-- Usage tracking: Monitor when and how tokens are used to identify potential security issues or unused automation.
-
-## Who should use personal access tokens?
-
-Use PATs for these common scenarios:
-
-- Development workflows: Authenticate Docker CLI during local development
-- CI/CD pipelines: Automate image builds and deployments in continuous integration systems
-- Automation scripts: Push and pull images in automated deployment or backup scripts
-- Development tools: Integrate Docker Hub access with IDEs, container management tools, or monitoring systems
-- Two-factor authentication: Required for CLI access when 2FA is turned on
-
-> \[!NOTE]
+> \[!TIP]
 >
-> For organization-wide automation, consider [organization access tokens](https://docs.docker.com/security/access-tokens/organization-access-tokens/) which aren't tied to individual user accounts.
+> For organization-wide automation, consider
+> [organization access tokens (OATs)](https://docs.docker.com/security/access-tokens/organization-access-tokens/),
+> which aren't tied to individual user accounts.
 
 ## Create a personal access token
 
-> \[!IMPORTANT]
->
-> Treat access tokens like passwords and keep them secure. Store tokens in credential managers and never commit them to source code repositories.
-
-To create a personal access token:
+Treat PATs like passwords and keep them secure. Store tokens in a
+credential manager and never commit them to source code. Before you create a PAT, you must verify your email address. To create a PAT:
 
 1. Sign in to [Docker Home](https://app.docker.com/).
-2. Select your avatar in the top-right corner and from the drop-down menu select **Account settings**.
+2. Select your avatar in the top-right corner, then select
+   **Account settings**.
 3. Select **Personal access tokens**.
 4. Select **Generate new token**.
 5. Configure your token:
-   - **Description:** Use a descriptive name that indicates the token's purpose
-   - **Expiration date:** Set an expiration date based on your security policies
-   - **Access permissions:** **Read**, **Write**, or **Delete**.
-6. Select **Generate**. Copy the token that appears on the screen and save it. You won't be able to retrieve the token once you exit the screen.
+   - **Access token description:** Enter a name for the token, up to
+     100 characters. This field is required.
+   - **Expiration date:** Optional. Select **30 days**, **90 days**, or
+     **Custom**. With **Custom**, choose a date and hour up to one year
+     from today. The default, **None**, creates a token that doesn't
+     expire.
+   - **Access permissions:** Select one
+     [permission level](https://docs.docker.com/security/access-tokens/reference/#personal-access-token-permissions).
+     The default is **Repo Public Read-only**.
+6. Select **Generate**. Copy the token and save it. Docker shows the
+   token once and doesn't store it. You can't retrieve it after you
+   leave the page.
 
-## Use personal access tokens
+## Sign in
 
-Sign in to the Docker CLI using your personal access token:
+Run `docker login` with your Docker ID. When the CLI asks for a
+password, paste the PAT.
 
 ```console
 $ docker login --username <YOUR_USERNAME>
 Password: [paste your PAT here]
 ```
 
-When prompted for a password, enter your personal access token instead of your Docker Hub password.
+If sign-in fails with `Incorrect authentication credentials`, see
+[Why does sign-in fail with "Incorrect authentication credentials"?](https://docs.docker.com/faqs/accounts/#why-does-sign-in-fail-with-incorrect-authentication-credentials).
 
-## Modify personal access tokens
+## Update or delete
 
-> \[!NOTE]
->
-> You can't edit the expiration date on an existing personal access token. You must create a new PAT if you need to set a new expiration date.
+You can rename a token, change its permissions, deactivate it, activate
+it again, or delete it. You can't edit the expiration date on an
+existing PAT. Create a new token if you need a different expiration
+date.
 
-You can rename, activate, deactivate, or delete a token as needed. You can manage your tokens in your account settings.
+1. Sign in to [Docker Home](https://app.docker.com/).
 
-1. Sign in to [Docker Home](https://app.docker.com/login).
-2. Select your avatar in the top-right corner and from the drop-down menu select **Account settings**.
+2. Select your avatar in the top-right corner, then select
+   **Account settings**.
+
 3. Select **Personal access tokens**.
-   - This page shows an overview of all your tokens, and lists if the token was generated manually or if it was
-     [auto-generated](#auto-generated-tokens). You can also view the scope of the
-     tokens, which tokens are activate and inactive, when they were created, when
-     they were last used, and their expiration date.
-4. Select the actions menu on the far right of a token row, then select **Deactivate** or **Activate**, **Edit**, or **Delete** to modify the token.
-5. After editing the token, select **Save token**.
+
+   The list shows each token's description, scope, and status
+   (**Active**, **Inactive**, or **Revoked**). It also shows whether
+   the token is **Manual** or
+   [**Auto-generated**](#auto-generated-tokens), when it was created,
+   when it was last used, and when it expires.
+
+4. Select the actions menu on the far right of a token row, then select
+   **Deactivate**, **Activate**, **Edit**, or **Delete**.
+
+   A deactivated token stops working until you activate it again.
+   Expired and revoked tokens can only be deleted.
+
+5. If you selected **Edit**, change the **Access token description** or
+   **Scopes**, then select **Save token**.
 
 ## Auto-generated tokens
 
-Docker Desktop automatically creates authentication tokens when you sign in, with these characteristics:
+Signing in to Docker Desktop creates a PAT for CLI
+authentication. These tokens show **Auto-generated** in the **Source**
+column. A token with no description is listed as "Generated by Docker
+Desktop for CLI usage".
 
-- Automatic creation: Generated when you sign in to Docker Desktop
-- Full permissions: Include Read, Write, and Delete access
-- Session-based: Automatically removed when Docker Desktop session expires
-- Account limits: Up to 5 auto-generated tokens per account
-- Automatic cleanup: Older tokens are deleted when new ones are created
+You can have up to five auto-generated tokens on your account. When
+Docker Desktop creates another one, the least recently used
+auto-generated token is deleted. A token that has never been used is
+ranked by when it was created. Tokens you create yourself are not
+deleted.
 
-You can manually delete auto-generated tokens if needed, but they'll be recreated when you use Docker Desktop.
+You can deactivate or delete an auto-generated token the same way as
+any other token.
 
 ## Fair use policy
 
-When using personal access tokens, be aware that excessive token creation may result in throttling or additional charges. Docker reserves the right to impose restrictions on accounts with excessive PAT usage to ensure fair resource allocation and maintain service quality.
+When using PATs, be aware that excessive token
+creation may result in throttling or additional charges. Docker
+reserves the right to impose restrictions on accounts with excessive
+PAT usage to ensure fair resource allocation and maintain service
+quality.
 
 Best practices for fair use include:
 
-- Reuse tokens across similar use cases instead of creating many single-purpose tokens
+- Reuse tokens across similar use cases instead of creating many
+  single-purpose tokens
 - Delete unused tokens regularly
-- Use [organization access tokens](https://docs.docker.com/security/access-tokens/organization-access-tokens/) for organization-wide automation
+- Use [OATs](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
+  for organization-wide automation
 - Monitor token usage to identify optimization opportunities
+
+## Next steps
+
+- [Choose a PAT or OAT](https://docs.docker.com/security/access-tokens/)
+- [Look up PAT permissions](https://docs.docker.com/security/access-tokens/reference/#personal-access-token-permissions)
+- [Create an OAT](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
+- [Turn on two-factor authentication](https://docs.docker.com/security/authentication/2fa/)

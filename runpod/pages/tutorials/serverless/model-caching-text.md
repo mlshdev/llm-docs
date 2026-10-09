@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/model-caching-text.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/tutorials/serverless/model-caching-text.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/model-caching-text.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/tutorials/serverless/model-caching-text.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/model-caching-text
 
 # Deploy Phi-3 using model caching
@@ -16,7 +16,7 @@ This tutorial demonstrates how to build a custom Serverless worker that leverage
 Before starting this tutorial, make sure:
 
 - You have a [Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts) with sufficient credits.
-- You have a [Runpod API key](https://docs.runpod.io/get-started/api-keys).
+- You have a [Runpod API key](https://docs.runpod.io/get-started/credentials).
 - You have a [GitHub account](https://github.com/).
 - Your Runpod account is [connected to GitHub](https://docs.runpod.io/serverless/workers/github-integration#authorize-runpod-with-github).
 

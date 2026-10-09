@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/s3-api.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/storage/s3-api.mdx)
+> Pinned source for Runpod main: [storage/s3-api.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/storage/s3-api.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/s3-api
 
 # S3-compatible API
@@ -103,7 +103,7 @@ Create your network volume in a supported datacenter to use the S3-compatible AP
 
 You can use the S3-compatible API to interact with your Runpod network volumes using standard S3 tools:
 
-- [AWS s3 CLI](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/index.html).
+- [AWS s3 CLI](https://docs.aws.amazon.com/cli/latest/reference/s3/).
 - [AWS s3api CLI](https://docs.aws.amazon.com/cli/latest/reference/s3api/).
 - [The Boto3 Python library](https://docs.aws.amazon.com/boto3/latest/reference/services/s3.html).
 
@@ -491,6 +491,6 @@ s3_client = boto3.client('s3', config=custom_config)
 
 For comprehensive documentation on AWS S3 commands and libraries, refer to:
 
-- [AWS CLI S3 reference](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/index.html).
+- [AWS CLI S3 reference](https://docs.aws.amazon.com/cli/latest/reference/s3/).
 - [AWS S3 API reference](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Operations_Amazon_Simple_Storage_Service.html).
 - [Boto3 S3 reference](https://docs.aws.amazon.com/boto3/latest/reference/services/s3.html).

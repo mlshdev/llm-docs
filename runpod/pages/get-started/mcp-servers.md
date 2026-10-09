@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [get-started/mcp-servers.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/get-started/mcp-servers.mdx)
+> Pinned source for Runpod main: [get-started/mcp-servers.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/get-started/mcp-servers.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/mcp-servers
 
 # Use Runpod's MCP servers
 
 Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access.
 
-Runpod provides two [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) servers that connect AI tools and coding agents directly to Runpod:
+Runpod provides two [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) servers that connect AI tools and coding agents directly to Runpod:
 
 - **[Runpod API MCP server](#runpod-api-mcp-server):** Manage Pods, endpoints, templates, volumes, and registries through the Runpod REST API. Authenticate with Sign in with Runpod or a [Runpod API key](https://docs.runpod.io/get-started/credentials#api-keys).
 - **[Runpod docs MCP server](#runpod-docs-mcp-server):** Search Runpod documentation for features, code examples, and guides. No authentication required.

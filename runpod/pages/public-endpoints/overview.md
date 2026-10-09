@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [public-endpoints/overview.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/public-endpoints/overview.mdx)
+> Pinned source for Runpod main: [public-endpoints/overview.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/public-endpoints/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/overview
 
 # Overview
 
 Test and deploy production-ready AI models using Public Endpoints. Review setup and request guidance for Runpod Public Endpoints.
 
-Runpod offers Public Endpoints for instant API access to pre-deployed AI models for image, video, audio, and text generation. No deployment or infrastructure required—just [create an API key](https://docs.runpod.io/get-started/api-keys) and make a request:
+Runpod offers Public Endpoints for instant API access to pre-deployed AI models for image, video, audio, and text generation. No deployment or infrastructure required—just [create an API key](https://docs.runpod.io/get-started/credentials) and make a request:
 
 ```python Python
 import requests

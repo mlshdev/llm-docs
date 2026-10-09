@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/migrate-from-v1.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/api-reference-v2/migrate-from-v1.mdx)
+> Pinned source for Runpod main: [api-reference-v2/migrate-from-v1.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/api-reference-v2/migrate-from-v1.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/migrate-from-v1
 
 # Migrate from API v1
@@ -15,7 +15,7 @@ Read this guide if you have an existing integration built against the v1 API. RE
 
 - The OpenAPI schema also moves accordingly, from `https://rest.runpod.io/v1/openapi.json` to `https://api.runpod.io/v2/openapi.json`. Regenerate any client or tooling against the v2 schema.
 
-- Authentication is unchanged. Continue to pass your [Runpod API key](https://docs.runpod.io/get-started/api-keys) as an HTTP Bearer token in the `Authorization: Bearer RUNPOD_API_KEY` header. You don't need to change key management or scopes to call v2.
+- Authentication is unchanged. Continue to pass your [Runpod API key](https://docs.runpod.io/get-started/credentials) as an HTTP Bearer token in the `Authorization: Bearer RUNPOD_API_KEY` header. You don't need to change key management or scopes to call v2.
 
 ## Endpoint mapping
 

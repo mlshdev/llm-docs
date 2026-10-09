@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/vllm/configuration.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/serverless/vllm/configuration.mdx)
+> Pinned source for Runpod main: [serverless/vllm/configuration.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/serverless/vllm/configuration.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/vllm/configuration
 
 # Configure vLLM to work with your model
@@ -95,5 +95,5 @@ vLLM pre-allocates memory for its KV cache, so you need more VRAM than the minim
 ## Additional resources
 
 - [vLLM recipes](https://docs.vllm.ai/projects/recipes/en/latest/index.html): Step-by-step deployment guides.
-- [Mistral + vLLM guide](https://docs.mistral.ai/models/deployment/local-deployment/vllm).
+- [Mistral + vLLM guide](https://docs.mistral.ai/inference/deployment/local-deployment/vllm).
 - [Qwen + vLLM guide](https://qwen.readthedocs.io/en/latest/deployment/vllm.html).

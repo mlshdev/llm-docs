@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/daemon/proxy.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/engine/daemon/proxy.md)
+> Pinned source for Docker main: [content/manuals/engine/daemon/proxy.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/engine/daemon/proxy.md)
 
 # Daemon proxy configuration
 

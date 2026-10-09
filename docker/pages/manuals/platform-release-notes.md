@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/platform-release-notes.md)
+> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/platform-release-notes.md)
 
 # Accounts and admin release notes
 
@@ -293,7 +293,7 @@ and subscriptions.
 
 ### New
 
-- [Organization access tokens](https://docs.docker.com/security/access-tokens/organization-access-tokens/#available-scopes)
+- [Organization access tokens](https://docs.docker.com/security/access-tokens/reference/#organization-access-token-scopes)
   now include repository scopes and organization management scopes for members,
   invites, and groups.
 

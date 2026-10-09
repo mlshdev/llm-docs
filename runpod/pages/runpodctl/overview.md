@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/overview.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/runpodctl/overview.mdx)
+> Pinned source for Runpod main: [runpodctl/overview.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/runpodctl/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/overview
 
 # Overview
@@ -123,7 +123,7 @@ This installs `runpodctl` globally on your system, so you can run commands from 
 
 ### Step 2: Configure your API key
 
-Before you can use `runpodctl` locally, you must configure it with an [API key](https://docs.runpod.io/get-started/api-keys).
+Before you can use `runpodctl` locally, you must configure it with an [API key](https://docs.runpod.io/get-started/credentials).
 
 The easiest way to set up your API key and SSH configuration is with the `doctor` command:
 

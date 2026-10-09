@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/pods/storage/types.mdx)
+> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/pods/storage/types.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/storage/types
 
 # Storage options
@@ -67,7 +67,7 @@ Global volumes provide elastic, region-independent storage that any Pod can moun
 
 Global volumes are optimized for workloads that write infrequently and read often, such as model serving and inference. They are not a replacement for network volumes, which are better suited to workloads with frequent writes such as training and checkpointing.
 
-[Learn more about global volumes](https://docs.runpod.io/storage/globalvolume).
+[Learn more about global volumes](https://docs.runpod.io/storage/globalvolume/overview).
 
 > **Note**
 >

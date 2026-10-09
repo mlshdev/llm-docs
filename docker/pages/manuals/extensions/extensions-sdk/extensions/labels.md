@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/extensions/labels.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/extensions/extensions-sdk/extensions/labels.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/extensions/labels.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/extensions/extensions-sdk/extensions/labels.md)
 
 # Extension image labels
 
@@ -6,7 +6,7 @@ Extensions use image labels to provide additional information such as a title, d
 
 This information is then displayed as an overview of the extension, so users can choose to install it.
 
-![An extension overview, generated from labels](https://raw.githubusercontent.com/docker/docs/858251609b8884594fd1de29c51155bc3024b260/content/manuals/extensions/extensions-sdk/extensions/images/marketplace-details.png)
+![An extension overview, generated from labels](https://raw.githubusercontent.com/docker/docs/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/extensions/extensions-sdk/extensions/images/marketplace-details.png)
 
 You can define [image labels](https://docs.docker.com/reference/dockerfile/#label) in the extension's `Dockerfile`.
 

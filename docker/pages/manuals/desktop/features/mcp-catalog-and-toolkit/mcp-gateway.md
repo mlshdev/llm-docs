@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/mcp-gateway.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/desktop/features/mcp-catalog-and-toolkit/mcp-gateway.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/mcp-gateway.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/desktop/features/mcp-catalog-and-toolkit/mcp-gateway.md)
 
 # MCP Gateway
 
@@ -18,11 +18,6 @@ server lifecycle, routing, and authentication across all servers in your
 If you use Docker Desktop with MCP Toolkit enabled, the Gateway runs
 automatically in the background. You don't need to start or configure it
 manually. This documentation is for users who want to understand how the Gateway works or run it directly for advanced use cases.
-
-> \[!TIP]
-> E2B sandboxes now include direct access to the Docker MCP Catalog, giving developers
-> access to over 200 tools and services to seamlessly build and run AI agents. For
-> more information, see [E2B Sandboxes](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/e2b-sandboxes/).
 
 ## How it works
 

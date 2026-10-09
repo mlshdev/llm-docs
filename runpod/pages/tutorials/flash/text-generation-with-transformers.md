@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/flash/text-generation-with-transformers.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/tutorials/flash/text-generation-with-transformers.mdx)
+> Pinned source for Runpod main: [tutorials/flash/text-generation-with-transformers.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/tutorials/flash/text-generation-with-transformers.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/flash/text-generation-with-transformers
 
 # Generate text with Flash and transformers
@@ -10,7 +10,7 @@ This tutorial shows you how to build a text generation script using Flash and Hu
 ## Requirements
 
 - You've [created a Runpod account](https://docs.runpod.io/accounts-billing/manage-accounts).
-- You've [created a Runpod API key](https://docs.runpod.io/get-started/api-keys).
+- You've [created a Runpod API key](https://docs.runpod.io/get-started/credentials).
 - You've installed [Python 3.10, 3.11, 3.12, or 3.13](https://www.python.org/downloads/).
 - You've completed the [Flash quickstart](https://docs.runpod.io/flash/quickstart) or are familiar with Flash basics.
 

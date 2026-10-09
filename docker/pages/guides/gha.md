@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/guides/gha.md)
+> Pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/guides/gha.md)
 
 # Introduction to GitHub Actions with Docker
 
@@ -240,4 +240,4 @@ additional features based on your project's needs, such as
 
 - For more complex build setups, you may want to consider [Bake](https://docs.docker.com/build/bake/). (See also the [Mastering Buildx Bake guide](https://docs.docker.com/guides/bake/).)
 
-- Learn about Docker's managed build service, designed for faster, multi-platform builds, see [Docker Build Cloud](https://docs.docker.com/guides/docker-build-cloud/).
+- Learn about Docker's managed build service, designed for faster, multi-platform builds, see [Docker Build Cloud](https://docs.docker.com/build-cloud/).

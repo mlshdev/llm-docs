@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/get-started.mdx)
+> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/get-started.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started
 
 # Deploy your first Pod
@@ -61,7 +61,7 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
 
    - **Volume disk**: a disk attached directly to your Pod that keeps its data across stops and restarts but is deleted when the Pod is terminated.
    - **Network volume**: permanent storage that exists independently of any Pod, so you can attach the same volume to different Pods over time. A network volume is tied to a single data center.
-   - **Global volume**: permanent, region-independent storage that any Pod can mount, regardless of data center. Capacity grows with the data you store. See [Global volumes](https://docs.runpod.io/storage/globalvolume).
+   - **Global volume**: permanent, region-independent storage that any Pod can mount, regardless of data center. Capacity grows with the data you store. See [Global volumes](https://docs.runpod.io/storage/globalvolume/overview).
 
    Each type mounts at `/workspace` by default. You can change the path at any time. If you attach a network volume and a global volume and leave both paths at their defaults, the global volume moves to `/workspace-global` and the network volume mounts at `/workspace`. Two volumes cannot share a mount path.
 

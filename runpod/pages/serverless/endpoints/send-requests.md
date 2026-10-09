@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/send-requests.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/serverless/endpoints/send-requests.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/send-requests.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/serverless/endpoints/send-requests.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/send-requests
 
 # Send API requests
@@ -51,7 +51,7 @@ The exact parameters depend on your specific worker implementation. Check your w
 
 The quickest way to test your endpoint is in the Runpod console. Navigate to [Serverless](https://www.console.runpod.io/serverless), select your endpoint, and click the **Requests** tab.
 
-![Runpod serverless endpoint details page](https://raw.githubusercontent.com/runpod/docs/1c896ad086bccb72275ab0e4211f79ff1dda0041/images/8f34ba77-serverless-get-started-endpoint-details.png)
+![Runpod serverless endpoint details page](https://raw.githubusercontent.com/runpod/docs/983ff46825e22de0a0c66de8badf50d8ba036ce5/images/8f34ba77-serverless-get-started-endpoint-details.png)
 
 Modify the default test request as needed, then click **Run**. On first execution, workers need to initialize, which may take a moment.
 

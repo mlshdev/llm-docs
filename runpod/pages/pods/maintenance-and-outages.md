@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/maintenance-and-outages.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/pods/maintenance-and-outages.mdx)
+> Pinned source for Runpod main: [pods/maintenance-and-outages.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/pods/maintenance-and-outages.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/maintenance-and-outages
 
 # Maintenance, outages, and data safety
@@ -43,7 +43,7 @@ Most machine learning frameworks include built-in checkpointing support. See you
 - PyTorch: [Saving and Loading Models](https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html).
 - Hugging Face Transformers: [Checkpointing with Trainer](https://huggingface.co/docs/transformers/main_classes/trainer).
 - Hugging Face Accelerate: [Checkpointing guide](https://huggingface.co/docs/accelerate/usage_guides/checkpoint).
-- PyTorch Lightning: [Checkpointing](https://lightning.ai/docs/pytorch/stable/common/checkpointing.html).
+- PyTorch Lightning: [Checkpointing](https://lightning.ai/docs/pytorch/stable/common/checkpointing).
 
 ### Maintain backups
 

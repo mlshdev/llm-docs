@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/faqs/accounts.md)
+> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/faqs/accounts.md)
 
 # Account FAQs
 
@@ -34,6 +34,46 @@ U.S. Trademark on a username.
 If you have a trademark for your Docker ID,
 [Docker Support](https://hub.docker.com/support/contact/) can retrieve the
 Docker ID for you.
+
+### Why did one of my personal access tokens disappear?
+
+Signing in to Docker Desktop creates an auto-generated personal access
+token for CLI authentication. An account can have five of these tokens.
+When Docker Desktop creates another one, it deletes the least recently
+used auto-generated token. A token that has never been used is ranked
+by when it was created. The deleted token is removed from your token
+list.
+
+Tokens you create yourself are not deleted this way. They stay in the
+list until you delete them. A revoked token stays in the list with a
+status of **Revoked**.
+
+For how these tokens are created and how to tell them apart, see
+[Auto-generated PATs](https://docs.docker.com/security/access-tokens/personal-access-tokens/#auto-generated-tokens).
+
+### Why does sign-in fail with "Incorrect authentication credentials"?
+
+`docker login` returns `Incorrect authentication credentials` when the
+username and secret don't match a credential that can sign in. The
+message is the same when a personal access token is wrong, expired,
+inactive, or revoked, and when the username is not the account that
+owns the token.
+
+Check the following:
+
+1. The username is the Docker ID of the account that owns the token.
+   Use an organization name only with an
+   [organization access token](https://docs.docker.com/security/access-tokens/organization-access-tokens/).
+2. You pasted the full token, with no spaces or line breaks. Docker
+   shows a token only once. If you no longer have it,
+   [create a new personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/#create-a-personal-access-token).
+3. On the **Personal access tokens** page, find the token and use its
+   status:
+   - **Expired:** Create a new token. You can't change the expiration
+     date.
+   - **Inactive:** Select **Activate**.
+   - **Revoked:** The token can't be used again. Delete it and create
+     a new one.
 
 ## Organizations
 

@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `1c896ad086bccb72275ab0e4211f79ff1dda0041`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `983ff46825e22de0a0c66de8badf50d8ba036ce5`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -12,19 +12,19 @@
 ## Get started
 
 - [Welcome to Runpod](pages/overview.md): Explore our guides and examples to deploy your AI/ML application on Runpod. Review setup and usage guidance in the Runpod documentation. (4478 bytes)
-- [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (13792 bytes)
+- [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (13801 bytes)
 - [Choose a workflow](pages/get-started/connect-to-runpod.md): Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod. (2219 bytes)
 - [Concepts](pages/get-started/concepts.md): Key concepts and terminology for understanding Runpod's platform and products. Review setup steps and core concepts for building on Runpod. (2935 bytes)
 - [Manage credentials](pages/get-started/credentials.md): Create and manage your API keys, SSH keys, S3 API keys, container registry credentials, and secrets from the Credentials page. (7235 bytes)
 - [Agent skills for AI coding tools](pages/get-started/agent-skills.md): Manage GPU workloads on Runpod with coding agents like Claude Code, Codex, and Cursor. Review setup steps and core concepts for building on Runpod. (8798 bytes)
-- [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (10067 bytes)
+- [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (10078 bytes)
 - [Early access features](pages/get-started/early-access.md): Opt in to experimental Runpod console features before they're generally available. Review setup steps and core concepts for building on Runpod. (1730 bytes)
 
 ## Flash
 
 - [Overview](pages/flash/overview.md): Build autoscaling AI/ML apps using local code with Runpod Flash. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4006 bytes)
 - [Get started with Flash](pages/flash/quickstart.md): Run your first GPU workload with Flash in less than 5 minutes. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (12549 bytes)
-- [Use Flash on Windows](pages/flash/windows-wsl2.md): Set up WSL2 with Ubuntu to run Flash on Windows. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (3741 bytes)
+- [Use Flash on Windows](pages/flash/windows-wsl2.md): Set up WSL2 with Ubuntu to run Flash on Windows. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (3744 bytes)
 - [Pricing](pages/flash/pricing.md): Understand Flash pricing and optimize your costs. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4275 bytes)
 - [Create endpoints](pages/flash/create-endpoints.md): Learn how to create and configure hardware and scaling behavior with the Flash Endpoint class. Review configuration and usage details for Runpod Flash. (13793 bytes)
 - [Use custom containers with Flash](pages/flash/custom-docker-images.md): Deploy pre-built Docker images with Flash using Endpoint. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (9546 bytes)
@@ -34,7 +34,7 @@
 - [Endpoint parameters](pages/flash/configuration/parameters.md): Complete reference for all Endpoint class parameters. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (23900 bytes)
 - [Configuration best practices](pages/flash/configuration/best-practices.md): Recommended configurations for production, development, and cost optimization. Review configuration and usage details for Runpod Flash. (7054 bytes)
 - [Overview](pages/flash/apps/overview.md): Understand the Flash app development lifecycle. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (3472 bytes)
-- [Build a Flash app](pages/flash/apps/build-app.md): Create a Flash app, test it locally, and deploy it to production. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7310 bytes)
+- [Build a Flash app](pages/flash/apps/build-app.md): Create a Flash app, test it locally, and deploy it to production. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7313 bytes)
 - [Initialize a Flash app project](pages/flash/apps/initialize-project.md): Use flash init to create a new Flash project with a ready-to-use structure. Review configuration and usage details for Runpod Flash. (3371 bytes)
 - [Customize your Flash app](pages/flash/apps/customize-app.md): Modify the Flash project template to build your application. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (5260 bytes)
 - [Test Flash apps locally](pages/flash/apps/local-testing.md): Use flash dev to test your Flash application locally before deploying. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (6965 bytes)
@@ -42,10 +42,10 @@
 - [Deploy Flash apps to Runpod](pages/flash/apps/deploy-apps.md): Build and deploy your Flash app for production serving. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (17519 bytes)
 - [Send API requests to deployed endpoints](pages/flash/apps/requests.md): Call your deployed Flash endpoints using HTTP requests for queue-based and load-balanced configurations. (7804 bytes)
 - [Execution model](pages/flash/execution-model.md): Understand how Flash executes your code on Runpod's infrastructure. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (6857 bytes)
-- [Troubleshooting](pages/flash/troubleshooting.md): Monitor, debug, and troubleshoot Flash deployments. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (18690 bytes)
-- [Generate text with Flash and transformers](pages/tutorials/flash/text-generation-with-transformers.md): Learn how to use Flash with Hugging Face transformers to build a GPU-accelerated text generation application. (14214 bytes)
-- [Generate images with Flash and SDXL](pages/tutorials/flash/image-generation-with-sdxl.md): Learn how to use Flash with Stable Diffusion XL to generate high-quality images from text prompts. Follow the implementation steps in this Runpod tutorial. (19050 bytes)
-- [Build a REST API with Flash](pages/tutorials/flash/build-rest-api-with-load-balancer.md): Learn how to build a production-ready REST API using Flash load-balanced endpoints with custom HTTP routes. (21377 bytes)
+- [Troubleshooting](pages/flash/troubleshooting.md): Monitor, debug, and troubleshoot Flash deployments. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (18693 bytes)
+- [Generate text with Flash and transformers](pages/tutorials/flash/text-generation-with-transformers.md): Learn how to use Flash with Hugging Face transformers to build a GPU-accelerated text generation application. (14217 bytes)
+- [Generate images with Flash and SDXL](pages/tutorials/flash/image-generation-with-sdxl.md): Learn how to use Flash with Stable Diffusion XL to generate high-quality images from text prompts. Follow the implementation steps in this Runpod tutorial. (19053 bytes)
+- [Build a REST API with Flash](pages/tutorials/flash/build-rest-api-with-load-balancer.md): Learn how to build a production-ready REST API using Flash load-balanced endpoints with custom HTTP routes. (21380 bytes)
 
 ## Serverless
 
@@ -72,7 +72,7 @@
 - [Pod-first development](pages/serverless/development/dual-mode-worker.md): Develop on a Pod before deploying your worker to Serverless for faster iteration. Review configuration and operations guidance for Runpod Serverless. (14701 bytes)
 - [Overview](pages/serverless/endpoints/overview.md): Deploy and manage Serverless endpoints using the Runpod console or REST API. Review configuration and operations guidance for Runpod Serverless. (5844 bytes)
 - [Send API requests](pages/serverless/endpoints/send-requests.md): Submit and manage jobs for your queue-based endpoints by sending HTTP requests. Review configuration and operations guidance for Runpod Serverless. (10416 bytes)
-- [Operation reference](pages/serverless/endpoints/operation-reference.md): Detailed API reference for all queue-based endpoint operations. Review configuration and operations guidance for Runpod Serverless. (17928 bytes)
+- [Operation reference](pages/serverless/endpoints/operation-reference.md): Detailed API reference for all queue-based endpoint operations. Review configuration and operations guidance for Runpod Serverless. (17931 bytes)
 - [Endpoint settings](pages/serverless/endpoints/endpoint-configurations.md): Reference guide for all Serverless endpoint settings and parameters. Review configuration and operations guidance for Runpod Serverless. (9293 bytes)
 - [Rolling releases](pages/serverless/endpoints/rolling-releases.md): Understand how Runpod rolls out Serverless endpoint updates without downtime, including worker replacement, version tracking, and rollback behavior. (2774 bytes)
 - [Cached models](pages/serverless/endpoints/model-caching.md): Accelerate worker cold starts and reduce costs by using cached models. Review configuration and operations guidance for Runpod Serverless. (8537 bytes)
@@ -87,17 +87,17 @@
 - [Build a load balancing vLLM endpoint](pages/serverless/load-balancing/vllm-worker.md): Learn how to deploy a custom vLLM server to a load balancing Serverless endpoint. Review configuration and operations guidance for Runpod Serverless. (22276 bytes)
 - [Worker affinity](pages/serverless/load-balancing/worker-affinity.md): Pin follow-up requests to a specific worker using the X-Runpod-Worker-Id header. Review configuration and operations guidance for Runpod Serverless. (4171 bytes)
 - [Overview](pages/serverless/vllm/overview.md): Deploy scalable LLM inference endpoints using vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (2680 bytes)
-- [Deploy vLLM on Runpod Serverless](pages/serverless/vllm/get-started.md): Create a Serverless endpoint to serve LLM inference via API request. Review configuration and operations guidance for Runpod Serverless. (6359 bytes)
-- [Configure vLLM to work with your model](pages/serverless/vllm/configuration.md): Learn how to set up vLLM endpoints to work with your chosen model. Review configuration and operations guidance for Runpod Serverless. (5939 bytes)
+- [Deploy vLLM on Runpod Serverless](pages/serverless/vllm/get-started.md): Create a Serverless endpoint to serve LLM inference via API request. Review configuration and operations guidance for Runpod Serverless. (6362 bytes)
+- [Configure vLLM to work with your model](pages/serverless/vllm/configuration.md): Learn how to set up vLLM endpoints to work with your chosen model. Review configuration and operations guidance for Runpod Serverless. (5942 bytes)
 - [Send requests to vLLM workers](pages/serverless/vllm/vllm-requests.md): Use Runpod's native API to send requests to vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (7875 bytes)
 - [OpenAI API compatibility](pages/serverless/vllm/openai-compatibility.md): Use OpenAI client libraries with your vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (7157 bytes)
 - [vLLM environment variables](pages/serverless/vllm/environment-variables.md): Configure your vLLM workers using environment variables. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (29938 bytes)
 - [Troubleshooting](pages/serverless/troubleshooting.md): Common issues and solutions for Serverless endpoints and workers. Review configuration and operations guidance for Runpod Serverless. (9666 bytes)
 - [Generate images with Serverless and SDXL](pages/tutorials/serverless/run-your-first.md): Learn how to deploy a Serverless endpoint running SDXL from the Runpod Hub and use it to generate images. (8206 bytes)
 - [Deploy ComfyUI on Serverless](pages/tutorials/serverless/comfyui.md): Learn how to deploy a Serverless endpoint running ComfyUI from the Runpod Hub and use it to generate images with FLUX Dev. (13714 bytes)
-- [Deploy Phi-3 using model caching](pages/tutorials/serverless/model-caching-text.md): Learn how to create a custom Serverless endpoint that uses model caching to serve Phi-3 with reduced cost and cold start times. (16186 bytes)
-- [Integrate Serverless with a web application](pages/tutorials/serverless/generate-sdxl-turbo.md): Deploy an image generation endpoint from the Hub and integrate it into a web application. Follow the implementation steps in this Runpod tutorial. (10970 bytes)
-- [Deploy a Gemma 3 chatbot with the OpenAI API](pages/tutorials/serverless/run-gemma-7b.md): Deploy a Serverless endpoint with Google's Gemma 3 model using vLLM and the OpenAI API to build an interactive chatbot. (8082 bytes)
+- [Deploy Phi-3 using model caching](pages/tutorials/serverless/model-caching-text.md): Learn how to create a custom Serverless endpoint that uses model caching to serve Phi-3 with reduced cost and cold start times. (16189 bytes)
+- [Integrate Serverless with a web application](pages/tutorials/serverless/generate-sdxl-turbo.md): Deploy an image generation endpoint from the Hub and integrate it into a web application. Follow the implementation steps in this Runpod tutorial. (10973 bytes)
+- [Deploy a Gemma 3 chatbot with the OpenAI API](pages/tutorials/serverless/run-gemma-7b.md): Deploy a Serverless endpoint with Google's Gemma 3 model using vLLM and the OpenAI API to build an interactive chatbot. (8085 bytes)
 - [Create a new endpoint](pages/api-reference/endpoints/POST/endpoints.md): POST /endpoints (25623 bytes)
 - [List endpoints](pages/api-reference/endpoints/GET/endpoints.md): GET /endpoints (19713 bytes)
 - [Find an endpoint by ID](pages/api-reference/endpoints/GET/endpoints/endpointId.md): GET /endpoints/{endpointId} (19359 bytes)
@@ -121,13 +121,13 @@
 - [Pricing](pages/pods/pricing.md): Explore pricing options for Pods, including on-demand and savings plans. Review setup, configuration, and operations guidance for Runpod Pods. (3791 bytes)
 - [Choose a Pod](pages/pods/choose-a-pod.md): Select the right Pod by evaluating your resource requirements. Review setup, configuration, and operations guidance for Runpod Pods. (5355 bytes)
 - [Manage Pods](pages/pods/manage-pods.md): Create, start, stop, and terminate Pods using the Runpod console or CLI. Review setup, configuration, and operations guidance for Runpod Pods. (7523 bytes)
-- [Maintenance, outages, and data safety](pages/pods/maintenance-and-outages.md): Understand how Runpod handles planned and unplanned maintenance and how to protect your data. See setup and usage details for Runpod Pods. (3582 bytes)
+- [Maintenance, outages, and data safety](pages/pods/maintenance-and-outages.md): Understand how Runpod handles planned and unplanned maintenance and how to protect your data. See setup and usage details for Runpod Pods. (3577 bytes)
 - [Connection options](pages/pods/connect-to-a-pod.md): Explore Pod connection options, including the web terminal, SSH, JupyterLab, and VSCode/Cursor. See setup and usage details for Runpod Pods. (2941 bytes)
 - [Connect to a Pod with SSH](pages/pods/configuration/use-ssh.md): Manage Pods from your local machine using SSH. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (8554 bytes)
 - [Connect to a Pod with VSCode or Cursor](pages/pods/configuration/connect-to-ide.md): Set up remote development on your Pod using VSCode or Cursor. Review setup, configuration, and operations guidance for Runpod Pods. (8147 bytes)
 - [Expose ports](pages/pods/configuration/expose-ports.md): Learn how to make your Pod services accessible from the internet using HTTP proxy and TCP port forwarding (8772 bytes)
 - [Global networking](pages/pods/networking.md): Connect your Pods through a secure private network for internal communication. Review setup, configuration, and operations guidance for Runpod Pods. (4717 bytes)
-- [Storage options](pages/pods/storage/types.md): Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6512 bytes)
+- [Storage options](pages/pods/storage/types.md): Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6521 bytes)
 - [Transfer files](pages/pods/storage/transfer-files.md): Move files between your local machine and Pods with a variety of secure transfer methods. See setup and usage details for Runpod Pods. (7928 bytes)
 - [Sync Pod data with cloud storage providers](pages/pods/storage/cloud-sync.md): Learn how to sync your Pod data with popular cloud storage providers. Review setup, configuration, and operations guidance for Runpod Pods. (10224 bytes)
 - [Overview](pages/pods/templates/overview.md): Streamline your Pod deployments with templates, bundling prebuilt container images with hardware specs and network settings. (2670 bytes)
@@ -169,20 +169,20 @@
 
 - [Network volumes](pages/storage/network-volumes.md): Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod. (7924 bytes)
 - [High-performance storage](pages/storage/high-performance-storage.md): Premium storage tier for demanding AI workloads with up to 3x throughput and 4x IOPS. Review configuration and usage guidance for Runpod storage. (5239 bytes)
-- [S3-compatible API](pages/storage/s3-api.md): Use Runpod's S3-compatible API to access and manage your network volumes. Review configuration and usage guidance for Runpod storage. (26479 bytes)
+- [S3-compatible API](pages/storage/s3-api.md): Use Runpod's S3-compatible API to access and manage your network volumes. Review configuration and usage guidance for Runpod storage. (26423 bytes)
 - [Overview](pages/storage/globalvolume/overview.md): Learn how to create a global volume in Runpod and access your data from Pods and Serverless workers across all data centers, with storage that persists across sessions. (6458 bytes)
 - [Global volumes for Pods](pages/storage/globalvolume/globalvolume-pods.md): Attach a global volume to a GPU Pod for elastic, region-independent storage that persists across sessions. (2816 bytes)
 - [Global volumes for Serverless](pages/storage/globalvolume/globalvolume-serverless.md): Attach a global volume to a GPU Serverless endpoint so workers share access to model weights and other read-heavy data across all data centers. (2969 bytes)
 
 ## Public Endpoints
 
-- [Overview](pages/public-endpoints/overview.md): Test and deploy production-ready AI models using Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (6667 bytes)
-- [Quickstart](pages/public-endpoints/quickstart.md): Generate your first image with Public Endpoints in under 5 minutes. Review setup and request guidance for Runpod Public Endpoints. (3769 bytes)
+- [Overview](pages/public-endpoints/overview.md): Test and deploy production-ready AI models using Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (6670 bytes)
+- [Quickstart](pages/public-endpoints/quickstart.md): Generate your first image with Public Endpoints in under 5 minutes. Review setup and request guidance for Runpod Public Endpoints. (3772 bytes)
 - [Available models](pages/public-endpoints/reference.md): Browse all available models for Runpod Public Endpoints. Review setup, model selection, request options, and usage guidance for Runpod Public Endpoints. (12173 bytes)
-- [Make API requests](pages/public-endpoints/requests.md): Use the playground, REST API, and SDKs to interact with Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (10083 bytes)
+- [Make API requests](pages/public-endpoints/requests.md): Use the playground, REST API, and SDKs to interact with Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (10086 bytes)
 - [Vercel AI SDK](pages/public-endpoints/ai-sdk.md): Use the @runpod/ai-sdk-provider package to integrate Public Endpoints with the Vercel AI SDK. Review setup and request guidance for Runpod Public Endpoints. (18027 bytes)
-- [Connect AI coding tools with Public Endpoints](pages/public-endpoints/ai-coding-tools.md): Configure AI coding tools like OpenCode, Cursor, and Cline with Runpod Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (7410 bytes)
-- [Build a text-to-video pipeline](pages/tutorials/public-endpoints/text-to-video-pipeline.md): Chain multiple Public Endpoints to generate videos from text prompts using Python. Follow the implementation steps in this Runpod tutorial. (17435 bytes)
+- [Connect AI coding tools with Public Endpoints](pages/public-endpoints/ai-coding-tools.md): Configure AI coding tools like OpenCode, Cursor, and Cline with Runpod Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (7416 bytes)
+- [Build a text-to-video pipeline](pages/tutorials/public-endpoints/text-to-video-pipeline.md): Chain multiple Public Endpoints to generate videos from text prompts using Python. Follow the implementation steps in this Runpod tutorial. (17438 bytes)
 
 ## Instant Clusters
 
@@ -197,7 +197,7 @@
 
 ## Accounts and billing
 
-- [Manage accounts](pages/accounts-billing/manage-accounts.md): Create accounts, manage teams, and configure user permissions in Runpod. Review account, billing, and management details for Runpod. (7585 bytes)
+- [Manage accounts](pages/accounts-billing/manage-accounts.md): Create accounts, manage teams, and configure user permissions in Runpod. Review account, billing, and management details for Runpod. (7588 bytes)
 - [Billing overview](pages/accounts-billing/billing.md): Understand how Runpod billing works, manage your credits, and configure payment methods. Review account, billing, and management details for Runpod. (7553 bytes)
 - [Cost centers](pages/accounts-billing/cost-centers.md): Track and organize Runpod spending by team, project, or department. Review account, billing, and management details for Runpod. (6433 bytes)
 - [Referral, affiliate, and creator programs](pages/accounts-billing/referrals.md): Earn additional revenue through Runpod's referral, affiliate, and creator programs. Review account, billing, and management details for Runpod. (6036 bytes)
@@ -218,8 +218,8 @@
 ## Integrations
 
 - [Integrate your applications with Runpod](pages/integrations/overview.md): Integrate Runpod compute resources with your applications, external tools, and agentic frameworks. See related Runpod setup and usage details. (7650 bytes)
-- [Run Transformer Lab experiments on Runpod](pages/integrations/transformer-lab.md): Configure Transformer Lab to run ML training and inference workloads on Runpod GPUs. Review configuration and usage guidance for this Runpod integration. (6620 bytes)
-- [Manage Pods with dstack on Runpod](pages/integrations/dstack.md): Use dstack to automate Pod orchestration for AI and ML workloads on Runpod. Review configuration and usage guidance for this Runpod integration. (9573 bytes)
+- [Run Transformer Lab experiments on Runpod](pages/integrations/transformer-lab.md): Configure Transformer Lab to run ML training and inference workloads on Runpod GPUs. Review configuration and usage guidance for this Runpod integration. (6626 bytes)
+- [Manage Pods with dstack on Runpod](pages/integrations/dstack.md): Use dstack to automate Pod orchestration for AI and ML workloads on Runpod. Review configuration and usage guidance for this Runpod integration. (9576 bytes)
 - [Running Runpod on Mods](pages/integrations/mods.md): Use Mods to interact with language models hosted on Runpod from the command line. Review configuration and usage guidance for this Runpod integration. (2023 bytes)
 - [Running Runpod on SkyPilot](pages/integrations/skypilot.md): Use SkyPilot to run LLMs, AI, and batch jobs on Runpod Pods and Serverless endpoints. Review configuration and usage guidance for this Runpod integration. (1911 bytes)
 
@@ -281,7 +281,7 @@
 
 ## Runpod CLI
 
-- [Overview](pages/runpodctl/overview.md): Use Runpod CLI to manage Pods, Serverless endpoints, templates, and more from your local machine. Review commands and usage guidance for the Runpod CLI. (6963 bytes)
+- [Overview](pages/runpodctl/overview.md): Use Runpod CLI to manage Pods, Serverless endpoints, templates, and more from your local machine. Review commands and usage guidance for the Runpod CLI. (6966 bytes)
 - [doctor](pages/runpodctl/reference/runpodctl-doctor.md): Run runpodctl doctor to configure API and SSH credentials, verify the CLI setup, and diagnose common connection or configuration problems. (995 bytes)
 - [pod](pages/runpodctl/reference/runpodctl-pod.md): Use runpodctl to create, list, start, stop, inspect, and delete Pods from the command line with status and resource filters. (6171 bytes)
 - [serverless](pages/runpodctl/reference/runpodctl-serverless.md): Use runpodctl to create, list, inspect, update, and delete Serverless endpoints, including Hub-based deployments and templates. (8451 bytes)
@@ -302,7 +302,7 @@
 
 ## API v1
 
-- [Overview](pages/api-reference/overview.md): Use the Runpod API to programmatically manage your compute resources. Review authentication, request formats, and response details for the Runpod API. (2026 bytes)
+- [Overview](pages/api-reference/overview.md): Use the Runpod API to programmatically manage your compute resources. Review authentication, request formats, and response details for the Runpod API. (2029 bytes)
 
 ## Network volumes
 
@@ -348,8 +348,8 @@
 
 ## API v2
 
-- [API v2](pages/api-reference-v2/overview.md): Manage Runpod Pods, Serverless endpoints, Clusters, storage, templates, billing, and account resources programmatically with the REST API v2. (2109 bytes)
-- [Migrate from API v1](pages/api-reference-v2/migrate-from-v1.md): Move your integrations from the Runpod REST API v1 to the v2 base URL, endpoints, and request and response shapes. (10427 bytes)
+- [API v2](pages/api-reference-v2/overview.md): Manage Runpod Pods, Serverless endpoints, Clusters, storage, templates, billing, and account resources programmatically with the REST API v2. (2112 bytes)
+- [Migrate from API v1](pages/api-reference-v2/migrate-from-v1.md): Move your integrations from the Runpod REST API v1 to the v2 base URL, endpoints, and request and response shapes. (10430 bytes)
 
 ## Account
 
@@ -450,4 +450,4 @@
 
 ## Release notes
 
-- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (29909 bytes)
+- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (30239 bytes)

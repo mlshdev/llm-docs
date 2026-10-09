@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/apps/apps-and-environments.mdx](https://github.com/runpod/docs/blob/1c896ad086bccb72275ab0e4211f79ff1dda0041/flash/apps/apps-and-environments.mdx)
+> Pinned source for Runpod main: [flash/apps/apps-and-environments.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/flash/apps/apps-and-environments.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/apps/apps-and-environments
 
 # Apps and environments

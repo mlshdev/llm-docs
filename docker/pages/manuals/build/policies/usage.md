@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/usage.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/build/policies/usage.md)
+> Pinned source for Docker main: [content/manuals/build/policies/usage.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/build/policies/usage.md)
 
 Build policies validate inputs before builds execute. This guide covers how to
 develop policies iteratively and apply them to real builds with `docker buildx

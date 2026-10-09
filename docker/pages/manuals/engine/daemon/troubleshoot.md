@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/daemon/troubleshoot.md](https://github.com/docker/docs/blob/858251609b8884594fd1de29c51155bc3024b260/content/manuals/engine/daemon/troubleshoot.md)
+> Pinned source for Docker main: [content/manuals/engine/daemon/troubleshoot.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/engine/daemon/troubleshoot.md)
 
 This page describes how to troubleshoot and debug the daemon if you run into
 issues.
@@ -108,7 +108,7 @@ ExecStart=/usr/bin/dockerd
 ```
 
 There are other times when you might need to configure `systemd` with Docker,
-such as [configuring a HTTP or HTTPS proxy](https://docs.docker.com/engine/daemon/proxy/).
+such as [configuring an HTTP or HTTPS proxy](https://docs.docker.com/engine/daemon/proxy/).
 
 > \[!NOTE]
 >
