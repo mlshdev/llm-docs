@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/pm/workspaces.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/pm/workspaces.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/pm/workspaces.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/workspaces.mdx)
 > Canonical documentation: https://bun.com/docs/pm/workspaces
 
 Bun supports [`workspaces`](https://docs.npmjs.com/cli/v9/using-npm/workspaces?v=true#description) in `package.json`. With workspaces, you develop several independent packages in a single repository, a *monorepo*.

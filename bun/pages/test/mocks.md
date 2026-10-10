@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/test/mocks.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/test/mocks.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/test/mocks.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/test/mocks.mdx)
 > Canonical documentation: https://bun.com/docs/test/mocks
 
 Mocking replaces a dependency with a controlled implementation. Bun supports function mocks, spies, and module mocks.
@@ -288,6 +288,26 @@ test("mock.module", async () => {
   // The module is also updated for CJS.
   expect(cjs.foo).toBe("baz");
 });
+```
+
+When the factory returns a promise that is still pending, Bun updates the already-imported module once the promise settles. In that case `mock.module()` returns a promise that resolves after the update, and otherwise it returns `undefined`. `await mock.module(...)` inside a test or hook covers both. At the top level of a test file, Bun waits for pending module mocks before it runs the file's tests.
+
+```ts title="test.ts" icon="/icons/typescript.svg"
+import { test, expect, mock } from "bun:test";
+import { foo } from "./module";
+
+mock.module("./module", async () => {
+  const { default: fixture } = await import("./fixture.json");
+  return { foo: fixture.foo };
+});
+
+test("async factory", () => {
+  expect(foo).toBe("baz");
+});
+```
+
+```json title="fixture.json" icon="file-json"
+{ "foo": "baz" }
 ```
 
 ### Hoisting & Preloading

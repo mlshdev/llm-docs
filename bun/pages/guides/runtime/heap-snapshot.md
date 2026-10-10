@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/guides/runtime/heap-snapshot.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/runtime/heap-snapshot.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/guides/runtime/heap-snapshot.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/runtime/heap-snapshot.mdx)
 > Canonical documentation: https://bun.com/docs/guides/runtime/heap-snapshot
 
 # Inspect memory usage using V8 heap snapshots
@@ -24,4 +24,4 @@ To view V8 heap snapshots in Chrome DevTools:
 3. Click the "Load" button (folder icon)
 4. Select your `.heapsnapshot` file
 
-![Chrome DevTools Memory Tab](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/chrome-devtools-memory.png)
+![Chrome DevTools Memory Tab](https://raw.githubusercontent.com/oven-sh/bun/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/images/chrome-devtools-memory.png)

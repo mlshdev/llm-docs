@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/upstash.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/ecosystem/upstash.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/guides/ecosystem/upstash.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/ecosystem/upstash.mdx)
 > Canonical documentation: https://bun.com/docs/guides/ecosystem/upstash
 
 # Bun Redis with Upstash
@@ -21,7 +21,7 @@
 
    The database page displays two connection methods: HTTP and TLS. For Bun's Redis client, you need the **TLS** connection details; the URL starts with `rediss://`.
 
-   ![Upstash Redis database page](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/guides/upstash-1.png)
+   ![Upstash Redis database page](https://raw.githubusercontent.com/oven-sh/bun/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/images/guides/upstash-1.png)
 3. Set the `REDIS_URL` environment variable in your `.env` file using the Redis endpoint (not the REST URL):
 
    ```ini .env icon="settings"

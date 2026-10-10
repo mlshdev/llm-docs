@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/bundler/index.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/bundler/index.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/bundler/index.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/bundler/index.mdx)
 > Canonical documentation: https://bun.com/docs/bundler
 
 Use Bun's native bundler through the `bun build` CLI command or the `Bun.build()` JavaScript API.
@@ -24,7 +24,7 @@ bun build ./index.tsx --outdir ./build
 
 It's fast. The following numbers are from esbuild's [three.js benchmark](https://github.com/oven-sh/bun/tree/main/bench/bundle).
 
-![](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/bundler-speed.png)
+![](https://raw.githubusercontent.com/oven-sh/bun/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/images/bundler-speed.png)
 
 ## Why bundle?
 
@@ -37,11 +37,8 @@ Bundlers solve several problems:
 
 > **Note**
 >
-> The Bun bundler is not intended to replace&#x20;
->
-> `tsc`
->
-> &#x20;for typechecking or generating type declarations.
+> `bun build` checks types only when you pass [`--check`](https://bun.com/docs/runtime/check#check-before-you-run-build-or-test), or `check:
+>   true` to `Bun.build`. It does not generate type declarations. Use `tsc` to produce `.d.ts` files.
 
 ## Basic example
 
@@ -541,7 +538,9 @@ await Bun.build({
 bun build ./index.tsx --outdir ./out --splitting --min-chunk-size=16384
 ```
 
-Code splitting gives each distinct set of importers its own chunk, then folds chunks that are always loaded together: a module that `index.tsx` imports and that a lazily `import()`ed module also imports lives in `index.js`, and the lazy chunk imports it from there, because the lazy module can only load after `index.tsx` has run. That fold never makes an entrypoint load more code, so it is always on.
+Code splitting gives each distinct set of importers its own chunk, then folds chunks that are always loaded together: a module that `index.tsx` imports and that a lazily `import()`ed module also imports lives in the chunk of `index.tsx`, and the lazy chunk imports it from there, because the lazy module can only load after `index.tsx` has run. That fold never makes an entrypoint load more code, so it is always on.
+
+Nothing folds into the chunk of an entrypoint whose name has no `[hash]` (the default `naming`). Whatever loads that file can add a query string to its URL (`index.js?v=123`), and an `import "./index.js"` in another chunk would then run the file a second time. The shared code goes into one hashed chunk next to the entrypoint. Entrypoints that an HTML file loads, and entrypoints with `[hash]` in `naming.entry`, still take the fold.
 
 `minChunkSize` goes further for chunks whose source files add up to fewer than this many bytes and whose modules run nothing at the top level: only declarations, `"sideEffects": false` in their `package.json`, a lazily initialized CommonJS/ESM wrapper, or an import of a CommonJS module (such as `react`) that is already initialized wherever the chunk's code ends up. Such a chunk folds into a chunk loaded by a superset of its importers. Everything it imports must already be loaded whenever that target is, or be side-effect free as well. The extra entrypoints then carry some unused definitions, capped at about 1.5% of what each entrypoint loaded to begin with. No side effect runs earlier than before and nothing lazy becomes eager. Because these rules bound what an entrypoint can end up loading, a large `minChunkSize` is reasonable.
 
@@ -836,7 +835,7 @@ The `naming` field customizes the names and locations of the generated files. It
 
 - `[name]` - The name of the entrypoint file, without the extension.
 - `[ext]` - The extension of the generated bundle.
-- `[hash]` - A hash of the bundle contents.
+- `[hash]` - A hash of the bundle contents: 8 lowercase alphanumeric characters. If two outputs with different contents would print the same characters, both get enough extra characters to differ (as do the outputs that reference them). `[hash9]` through `[hash13]` set a wider minimum; `[hash13]` is the full 64-bit hash.
 - `[dir]` - The relative path from the project root to the parent directory of the source file.
 
 For example:
@@ -1099,6 +1098,22 @@ await Bun.build({
 bun build ./index.tsx --outdir ./out --drop console --drop debugger
 ```
 
+### check
+
+Type checks the entry points, and everything they import, before Bun writes any output. A type error fails the build like any other build error. See [`bun check`](https://bun.com/docs/runtime/check#bun-build).
+
+```ts title="build.ts" icon="/icons/typescript.svg"
+await Bun.build({
+  entrypoints: ['./index.tsx'],
+  outdir: './out',
+  check: true,
+})
+```
+
+```bash terminal icon="terminal"
+bun build ./index.tsx --outdir ./out --check
+```
+
 ### features
 
 Enable compile-time feature flags for dead code elimination: conditionally include or exclude code paths at bundle time using `import { feature } from "bun:bundle"`.
@@ -1227,7 +1242,7 @@ In each case the member access compiles to a direct reference to `object`, the `
 
 Assignments (`z.x = 1`), optional chains, and non-literal computed keys (`z[key]`) are left as property accesses; `z["object"]` is treated like `z.object`. `export default someImport` is followed only when it ends at a namespace; a default that snapshots a `let` export keeps snapshot semantics.
 
-The same applies to the default import of a CommonJS module whose `exports.x = ...` assignments the bundler lifted to ES module exports, such as `react` and `scheduler`. The default import of a CommonJS module is its `module.exports`, which is that module's namespace, so `import React from "react"; React.useState()` compiles to a direct call of the lifted `useState` binding. The namespace object is created only when `React` itself is used as a value, and it lists the exports in assignment order, like `module.exports` does. A write through it, `React.useLayoutEffect = React.useEffect`, assigns the lifted binding, so every importer sees the new value, the same as a write to `module.exports`. `React.default`, and `ns.default` on `import * as ns`, is the lifted `default` export when the module has one, and otherwise the namespace itself, as `module.exports` is in Node. A module that sets both `exports.__esModule` and `exports.default` keeps its CommonJS wrapper when the importer is not an ES module by type (`.mjs`, `.mts`, or `"type": "module"`), because the default import then depends on that flag at run time. An `import()` of a module that does not set both resolves to that same namespace object as `default`, with or without code splitting.
+The same applies to the default import of a CommonJS module whose `exports.x = ...` assignments the bundler lifted to ES module exports, such as `react` and `scheduler`. The default import of a CommonJS module is its `module.exports`, which is that module's namespace, so `import React from "react"; React.useState()` compiles to a direct call of the lifted `useState` binding. This holds while every use of `React` reads, calls or assigns one of its properties: `React.useState`, `React[key]`, `const { useState } = React`. A write, `React.useLayoutEffect = React.useEffect`, goes through a namespace object whose setters assign the lifted binding, so every importer sees the new value, the same as a write to `module.exports`. Code that holds `React` itself as a value (`fn(React)`, `Object.keys(React)`, `const R = React`, a re-export) or deletes one of its properties can change the object in ways a namespace object cannot pass on to the lifted bindings (`Object.defineProperty`, `delete`, `Object.freeze`). The module then keeps its CommonJS wrapper and the default import is the real `module.exports` object. This rule looks at `import React from` only. `ns.default` on `import * as ns`, the `default` of an `import()` and the `this` of a call like `React.fn()` are still the namespace object of a module that stays lifted. `React.default`, and `ns.default` on `import * as ns`, is the lifted `default` export when the module has one, and otherwise the namespace itself, as `module.exports` is in Node. A module that sets both `exports.__esModule` and `exports.default` keeps its CommonJS wrapper when the importer is not an ES module by type (`.mjs`, `.mts`, or `"type": "module"`), because the default import then depends on that flag at run time. An `import()` of a module that does not set both resolves to that same namespace object as `default`, with or without code splitting.
 
 ### deprecatedNamespaceObjectSetters
 
@@ -1336,6 +1351,7 @@ interface BuildMetafile {
         path: string;
         kind: ImportKind;
         original?: string; // Original specifier before resolution
+        entryPoint?: string; // import() / require() split into another output file: the input that file was built from
         external?: boolean;
       }>;
       format?: "esm" | "cjs" | "json" | "css";
@@ -1676,6 +1692,16 @@ interface BuildConfig {
    */
   bytecodeDepth?: number;
   /**
+   * Build-time optimizations for `bytecode` builds.
+   */
+  optimize?: {
+    /**
+     * Run JavaScriptCore's build-time optimization passes over the generated bytecode.
+     * @default true
+     */
+    bytecode?: boolean;
+  };
+  /**
    * Add a banner to the bundled code such as "use client";
    */
   banner?: string;
@@ -1698,6 +1724,15 @@ interface BuildConfig {
    * @default true
    */
   throw?: boolean;
+
+  /**
+   * Type check the entry points and everything they import before writing any output.
+   * A type error fails the build like any other build error.
+   * Equivalent to `--check` in the CLI.
+   *
+   * @default false
+   */
+  check?: boolean;
 
   /**
    * Custom tsconfig.json file path to use for path resolution.
@@ -1789,6 +1824,10 @@ Use a bytecode cache when compiling
 **Property (type: number)**
 
 How many levels of nested functions to compile to bytecode ahead of time (a non-negative integer). Defaults to all
+
+**Property (type: boolean)**
+
+With `--bytecode`: skip the build-time bytecode optimization passes
 
 **Property (type: string)**
 
@@ -1936,6 +1975,10 @@ Preserve original function and class names when minifying
 
 **Property (type: boolean)**
 
+Type check the entry points and everything they import. Nothing is bundled if there are type errors
+
+**Property (type: boolean)**
+
 Rebuild automatically when files change
 
 **Property (type: boolean)**
@@ -1960,6 +2003,11 @@ Generate a standalone Bun executable containing the bundle
 **Property (type: string)**
 
 Prepend arguments to the standalone executable’s `execArgv`
+
+**Property (type: number)**
+
+JIT tier-up threshold scale the executable starts with; `1` is the normal JIT policy. See
+`Bun.unsafe.setJITPolicy`
 
 **Property (type: boolean)**
 

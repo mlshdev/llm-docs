@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/plugins.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/plugins.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/plugins.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/plugins.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/plugins
 
 # Plugins
@@ -87,7 +87,7 @@ await Bun.build({
 
 ### Namespaces
 
-`onLoad` and `onResolve` accept an optional `namespace` string. Every module has a namespace, which prefixes the import in transpiled code. For instance, a loader with a `filter: /\.yaml$/` and `namespace: "yaml:"` transforms an import from `./myfile.yaml` into `yaml:./myfile.yaml`.
+`onLoad` and `onResolve` accept an optional `namespace` string. Every module has a namespace, which prefixes its path. For instance, when `onResolve` returns `{ path: "./myfile.yaml", namespace: "yaml" }`, the module is `yaml:./myfile.yaml`.
 
 The default namespace is `"file"` and you don't need to specify it: `import myModule from "./my-module.ts"` is the same as `import myModule from "file:./my-module.ts"`.
 
@@ -176,6 +176,10 @@ The first argument to `onResolve()` is an object with a `filter` and [`namespace
 The second argument to `onResolve()` is a callback that runs for each module import Bun finds that matches the `filter` and `namespace` defined in the first argument.
 
 The callback receives the *path* to the matching module and can return a *new path* for it. Bun reads the contents of the *new path* and parses it as a module.
+
+At runtime, the callback runs once for each `import` or `require()` as it executes. A *new path* without a `namespace` is resolved from the importing module like any other import, without running `onResolve()` callbacks on it: it can be relative, leave out its extension, or name a package. If nothing is found there, the *new path* is used as it is when an [`onLoad()`](#onload) callback matches it, so it does not have to exist on disk.
+
+A bare name such as `"my-virtual.js"` could also be a package in the registry, so `onResolve()` callbacks run on it once more. If one of them returns a path, the name is the plugin's own and is never [auto-installed](https://bun.com/docs/runtime/auto-install).
 
 For example, redirecting all imports to `images/` to `./public/images/`:
 

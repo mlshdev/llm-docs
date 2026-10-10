@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/typescript.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/typescript.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/typescript.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/typescript.mdx)
 > Canonical documentation: https://bun.com/docs/typescript
 
 # TypeScript
@@ -52,6 +52,14 @@ Running `bun init` in a new directory generates this `tsconfig.json` for you.
 
 ```sh terminal icon="terminal"
 bun init
+```
+
+## Type checking
+
+Bun runs TypeScript files without checking their types. Use [`bun check`](https://bun.com/docs/runtime/check) to type check your project.
+
+```sh terminal icon="terminal"
+bun check
 ```
 
 ## TypeScript 6 and 7

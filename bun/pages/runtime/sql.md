@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/sql.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/sql.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/sql.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/sql.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/sql
 
 You write queries as tagged template literals, and the client supports connection pooling, transactions, and prepared statements.
@@ -921,6 +921,21 @@ const sql = new SQL("postgres://user:password@localhost/mydb?sslmode=prefer");
 const sql = new SQL("postgres://user:password@localhost/mydb?sslmode=verify-full");
 ```
 
+### Custom CA Certificates
+
+To verify the server against a CA that is not in the default trust store (for example an Amazon RDS or Google Cloud SQL bundle), pass the CA certificate as `tls.ca`, or pass the `BunFile` directly as `tls`. Both forms verify the certificate chain and the hostname (`verify-full`).
+
+```ts
+const sql = new SQL("postgres://user:password@db.example.com/mydb", {
+  tls: { ca: Bun.file("./rds-ca-bundle.pem") },
+});
+
+// Shorthand for the same configuration
+const sql = new SQL("postgres://user:password@db.example.com/mydb", {
+  tls: Bun.file("./rds-ca-bundle.pem"),
+});
+```
+
 ***
 
 ## Connection Pooling
@@ -1154,6 +1169,8 @@ try {
 | `ERR_POSTGRES_MULTIDIMENSIONAL_ARRAY_NOT_SUPPORTED_YET` | Multidimensional arrays not supported |
 | `ERR_POSTGRES_NULLS_IN_ARRAY_NOT_SUPPORTED_YET`         | NULL values in arrays not supported   |
 
+The client raises these errors while it decodes a result, after the server ran the query. Only that query rejects. The connection stays open, and the other queries on it continue. An `INSERT`, `UPDATE` or `DELETE ... RETURNING` can already be stored at that point, so do not retry a write blindly. To read the value, cast the column to `text` or use `.raw()`.
+
 ### Protocol Errors
 
 | Protocol Errors                         | Description                 |
@@ -1167,10 +1184,11 @@ try {
 
 ### Transaction Errors
 
-| Transaction Errors                       | Description                           |
-| ---------------------------------------- | ------------------------------------- |
-| `ERR_POSTGRES_UNSAFE_TRANSACTION`        | Unsafe transaction operation detected |
-| `ERR_POSTGRES_INVALID_TRANSACTION_STATE` | Invalid transaction state             |
+| Transaction Errors                       | Description                                                                                              |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ERR_POSTGRES_UNSAFE_TRANSACTION`        | Unsafe transaction operation detected                                                                    |
+| `ERR_POSTGRES_INVALID_TRANSACTION_STATE` | Invalid transaction state                                                                                |
+| `ERR_POSTGRES_COMMIT_ROLLED_BACK`        | `COMMIT` was answered with `ROLLBACK` because the transaction was already aborted; nothing was committed |
 
 ### SQLite-Specific Errors
 

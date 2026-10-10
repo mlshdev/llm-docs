@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/repl.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/repl.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/repl.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/repl.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/repl
 
 `bun repl` starts an interactive Read-Eval-Print Loop (REPL) for evaluating JavaScript and TypeScript expressions. Use it to test code snippets, explore APIs, and debug.

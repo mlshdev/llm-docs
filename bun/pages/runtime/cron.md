@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/cron.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/cron.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/cron.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/cron.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/cron
 
 Bun has built-in support for cron — parse expressions, run a callback on a schedule inside your process, or register OS-level jobs that survive restarts.

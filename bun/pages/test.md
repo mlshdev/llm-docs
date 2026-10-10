@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/test/index.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/test/index.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/test/index.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/test/index.mdx)
 > Canonical documentation: https://bun.com/docs/test
 
 Bun ships with a fast, built-in, Jest-compatible test runner. Tests run in the Bun runtime and support the following features.
@@ -88,6 +88,8 @@ jobs:
       - name: Run tests
         run: bun test
 ```
+
+To type check the tests in the same step, run `bun test --check`. See [Type check your tests](#type-check-your-tests).
 
 ### JUnit XML reports (GitLab, etc.)
 
@@ -286,6 +288,16 @@ Like `bun run`, `bun test` accepts the `--watch` flag to watch for changes and r
 bun test --watch
 ```
 
+## Type check your tests
+
+`bun test` runs TypeScript tests without checking their types. Use the `--check` flag to type check the test files, and everything they import, before any test runs.
+
+```bash terminal icon="terminal"
+bun test --check
+```
+
+If there is a type error, Bun prints it, exits with code `1`, and runs no tests. See [`bun check`](https://bun.com/docs/runtime/check#check-before-you-run-build-or-test).
+
 ## Lifecycle hooks
 
 Bun supports the following lifecycle hooks:
@@ -425,7 +437,7 @@ Every shard must read the *same set* of timings files for the shards to add up t
 
 Bun's test runner is fast.
 
-![Running 266 React SSR tests faster than Jest can print its version number.](https://raw.githubusercontent.com/oven-sh/bun/744846f844374847c902b5e7fd59b4342a51ef99/docs/images/buntest.jpeg)
+![Running 266 React SSR tests faster than Jest can print its version number.](https://raw.githubusercontent.com/oven-sh/bun/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/images/buntest.jpeg)
 
 ## AI Agent Integration
 
@@ -463,6 +475,10 @@ bun test <patterns>
 ```
 
 ### Execution Control
+
+**Property (type: boolean)**
+
+Type check the test files and everything they import. No test runs if there are type errors
 
 **Property (type: number)**
 
@@ -529,7 +545,8 @@ Generate a coverage profile
 
 **Property (type: string)**
 
-Report coverage in `text` and/or `lcov`. Defaults to `text`
+Report coverage in `text` and/or `lcov`. Defaults to `text`. Implies&#x20;
+`--coverage`
 
 **Property (type: string)**
 

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/templating/init.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/templating/init.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/templating/init.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/templating/init.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/templating/init
 
 # bun init
@@ -21,7 +21,7 @@ bun init my-app
  + CLAUDE.md
  + .cursor/rules/use-bun-instead-of-node-vite-npm-pnpm.mdc -> CLAUDE.md
  + index.ts
- + tsconfig.json (for editor autocomplete)
+ + tsconfig.json (for bun check and editor autocomplete)
  + README.md
 ```
 
@@ -35,7 +35,7 @@ Press `enter` to accept the default answer for each prompt, or pass the `-y` fla
 
 It creates:
 
-- a `package.json` file with a name that defaults to the current directory name
+- a `package.json` file with a name that defaults to the current directory name, and a `typecheck` script that runs [`bun check`](https://bun.com/docs/runtime/check)
 - a `tsconfig.json` or `jsconfig.json` file, depending on whether the entry point is a TypeScript file
 - an entry point, which defaults to `index.ts` unless any of `index.{tsx, jsx, js, mts, mjs}` exist or the `package.json` specifies a `module` or `main` field
 - a `README.md` file
@@ -47,7 +47,7 @@ AI Agent rules (disable with `$BUN_AGENT_RULE_DISABLED=1`):
 
 Pass `-y` or `--yes` to accept the defaults without prompting.
 
-At the end, it runs `bun install` to install `@types/bun`.
+At the end, it runs `bun install` to install `@types/bun`, which [`bun check`](https://bun.com/docs/runtime/check) and your editor read, and `typescript`, which your editor uses.
 
 ***
 

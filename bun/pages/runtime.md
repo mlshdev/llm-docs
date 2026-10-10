@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/index.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/index.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/index.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/index.mdx)
 > Canonical documentation: https://bun.com/docs/runtime
 
 The Bun Runtime is designed to start fast and run fast.
@@ -54,6 +54,16 @@ bun --watch run index.tsx
 > ```
 >
 > `bun` ignores flags at the end of the command and passes them through to the `"dev"` script itself.
+
+### `--check`
+
+Bun runs TypeScript files without checking their types. To type check a file and everything it imports before Bun runs it, use the `--check` flag.
+
+```bash terminal icon="terminal"
+bun --check index.tsx
+```
+
+If there is a type error, Bun prints it, exits with code `1`, and does not run the file. See [`bun check`](https://bun.com/docs/runtime/check#check-before-you-run-build-or-test).
 
 ## Run a `package.json` script
 
@@ -336,6 +346,10 @@ One of `strict`, `throw`, `warn`, `none`, or&#x20;
 Set the default depth for `console.log` object inspection (default: 2)
 
 ### Development Workflow
+
+**Property (type: boolean)**
+
+Type check before running. Nothing runs if there are type errors. See [bun check](https://bun.com/docs/runtime/check)
 
 **Property (type: boolean)**
 

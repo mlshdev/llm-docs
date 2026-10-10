@@ -1,8 +1,8 @@
-# Bun bun-v1.4.2
+# Bun bun-v1.4.3
 
-> Documentation generated from the latest stable release of [oven-sh/bun](https://github.com/oven-sh/bun) and pinned to immutable source commit `744846f844374847c902b5e7fd59b4342a51ef99`.
+> Documentation generated from the latest stable release of [oven-sh/bun](https://github.com/oven-sh/bun) and pinned to immutable source commit `c6da4a4d3010e5553438c60f6bd76d981976867c`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Bun bun-v1.4.2.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Bun bun-v1.4.3.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages and their order come from the release-tagged Mintlify navigation in docs/docs.json; unreferenced files are excluded and snippets are inlined rather than published as duplicate pages.
 - Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.
@@ -10,43 +10,45 @@
 
 ## Get Started
 
-- [Welcome to Bun](pages/index.md): A fast JavaScript runtime designed as a drop-in replacement for Node.js - Bun Package Manager (5416 bytes)
+- [Welcome to Bun](pages/index.md): A fast JavaScript runtime designed as a drop-in replacement for Node.js - Bun Package Manager (5533 bytes)
 - [Installation](pages/installation.md): Bun ships as a single, dependency-free executable. Install it with the install script, a package manager, or Docker on macOS, Linux, and Windows. (6951 bytes)
-- [Quickstart](pages/quickstart.md): Build a minimal HTTP server with Bun.serve, run it locally, then evolve it by installing a package. (5414 bytes)
-- [TypeScript](pages/typescript.md): To get TypeScript definitions for Bun's built-in APIs, install @types/bun. (1592 bytes)
-- [TypeScript 6 and 7](pages/typescript-6.md): TypeScript 6.0 changed how it discovers type definitions. If you've upgraded TypeScript and your editor no longer recognizes Bun, Request, or other globals from @types/bun, here's how to fix it. (2257 bytes)
-- [bun init](pages/runtime/templating/init.md): Scaffold a new Bun project with bun init. (2990 bytes)
+- [Quickstart](pages/quickstart.md): Build a minimal HTTP server with Bun.serve, run it locally, then evolve it by installing a package. (5428 bytes)
+- [TypeScript](pages/typescript.md): To get TypeScript definitions for Bun's built-in APIs, install @types/bun. (1795 bytes)
+- [TypeScript 6 and 7](pages/typescript-6.md): TypeScript 6.0 changed how it discovers type definitions. If you've upgraded TypeScript and your editor no longer recognizes Bun, Request, or other globals from @types/bun, here's how to fix it. (2571 bytes)
+- [bun init](pages/runtime/templating/init.md): Scaffold a new Bun project with bun init. (3210 bytes)
 - [bun create](pages/runtime/templating/create.md): Template a new Bun project with bun create. It creates a project from a React component, a create- npm package, a GitHub repo, or a local template. (10217 bytes)
 
 ## Core Runtime
 
-- [Bun Runtime](pages/runtime.md): The Bun Runtime is designed to start fast and run fast. (13992 bytes)
-- [Watch Mode](pages/runtime/watch-mode.md): Bun supports two kinds of automatic reloading: (5761 bytes)
+- [Bun Runtime](pages/runtime.md): The Bun Runtime is designed to start fast and run fast. (14544 bytes)
+- [Watch Mode](pages/runtime/watch-mode.md): Bun supports two kinds of automatic reloading: (6010 bytes)
+- [Type checking](pages/runtime/check.md): bun check type checks your TypeScript project. It reads your tsconfig.json, reports the same errors as tsc from TypeScript 7, and uses every CPU core. (28959 bytes)
 - [Debugging](pages/runtime/debugger.md): Bun speaks the WebKit Inspector Protocol, so you can debug your code with an interactive debugger. For demonstration purposes, consider the following web server. (12503 bytes)
 - [REPL](pages/runtime/repl.md): bun repl starts an interactive Read-Eval-Print Loop (REPL) for evaluating JavaScript and TypeScript expressions. Use it to test code snippets, explore APIs, and debug. (6544 bytes)
 - [bunfig.toml](pages/runtime/bunfig.md): bunfig.toml is Bun's configuration file. (28240 bytes)
+- [Code generation from strings](pages/runtime/code-generation-from-strings.md): --disallow-code-generation-from-strings stops a program from turning strings into code. The flag has two levels: (14539 bytes)
 
 ## File & Module System
 
-- [File Types](pages/runtime/file-types.md): The Bun bundler implements a set of default loaders. As a rule of thumb, the bundler and the runtime support the same set of file types. (13788 bytes)
-- [Module Resolution](pages/runtime/module-resolution.md): The JavaScript ecosystem is in a years-long transition from CommonJS modules to native ES modules (ESM). Different runtimes and build tools have historically disagreed on how import specifiers map to files on disk. Bun… (17093 bytes)
+- [File Types](pages/runtime/file-types.md): The Bun bundler implements a set of default loaders. As a rule of thumb, the bundler and the runtime support the same set of file types. (13868 bytes)
+- [Module Resolution](pages/runtime/module-resolution.md): The JavaScript ecosystem is in a years-long transition from CommonJS modules to native ES modules (ESM). Different runtimes and build tools have historically disagreed on how import specifiers map to files on disk. Bun… (20549 bytes)
 - [JSX](pages/runtime/jsx.md): Bun supports .jsx and .tsx files. Bun's internal transpiler converts JSX syntax into vanilla JavaScript before execution. (9249 bytes)
 - [Auto-install](pages/runtime/auto-install.md): If Bun finds no nodemodules directory in the working directory or higher, it abandons Node.js-style module resolution in favor of the Bun module resolution algorithm. (4005 bytes)
-- [Plugins](pages/runtime/plugins.md): Bun has a universal plugin API that extends both the runtime and the bundler. (12160 bytes)
+- [Plugins](pages/runtime/plugins.md): Bun has a universal plugin API that extends both the runtime and the bundler. (12820 bytes)
 - [File System Router](pages/runtime/file-system-router.md): This API is intended primarily for library authors. It supports only Next.js-style file-system routing. (2504 bytes)
 
 ## HTTP server
 
 - [Server](pages/runtime/http/server.md): Import HTML files directly into your server code to build full-stack applications with both server-side and client-side code. HTML imports work in two modes: (20127 bytes)
-- [Routing](pages/runtime/http/routing.md): Add routes to Bun.serve() with the routes property (static paths, parameters, and wildcards), or handle unmatched requests with the fetch method. (10917 bytes)
+- [Routing](pages/runtime/http/routing.md): Add routes to Bun.serve() with the routes property (static paths, parameters, and wildcards), or handle unmatched requests with the fetch method. (11208 bytes)
 - [Cookies](pages/runtime/http/cookies.md): Bun has a built-in API for working with cookies in HTTP requests and responses. The BunRequest object exposes a cookies property, a CookieMap for reading and modifying cookies. When using routes, Bun.serve() automatical… (1868 bytes)
 - [TLS](pages/runtime/http/tls.md): Bun's TLS support is built in, powered by BoringSSL. To enable TLS, pass both key and cert. (2455 bytes)
-- [Error Handling](pages/runtime/http/error-handling.md): Bun.serve() runs in development mode by default. It is turned off when NODEENV=production is set, when Bun is run with --production, or when you pass development: false. (1543 bytes)
+- [Error Handling](pages/runtime/http/error-handling.md): Bun.serve() runs in development mode by default. It is turned off when NODEENV=production is set or when you pass development: false. (1625 bytes)
 - [Metrics](pages/runtime/http/metrics.md): Monitor server activity with built-in counters: (670 bytes)
 
 ## Networking
 
-- [Fetch](pages/runtime/networking/fetch.md): Bun implements the WHATWG fetch standard, with some extensions to meet the needs of server-side JavaScript. (14024 bytes)
+- [Fetch](pages/runtime/networking/fetch.md): Bun implements the WHATWG fetch standard, with some extensions to meet the needs of server-side JavaScript. (22694 bytes)
 - [WebSockets](pages/runtime/http/websockets.md): Bun.serve() supports server-side WebSockets, with on-the-fly compression, TLS support, and a Bun-native publish-subscribe API. (13999 bytes)
 - [TCP](pages/runtime/networking/tcp.md): Bun's TCP API is low-level, intended for library authors and advanced use cases. (5300 bytes)
 - [UDP](pages/runtime/networking/udp.md): To create a new (bound) UDP socket: (4605 bytes)
@@ -56,37 +58,38 @@
 
 - [Cookies](pages/runtime/cookies.md): Bun provides two native APIs for working with HTTP cookies: Bun.Cookie and Bun.CookieMap. They parse, generate, and manipulate cookies in HTTP requests and responses. (12102 bytes)
 - [File I/O](pages/runtime/file-io.md): Bun.file(path): BunFile (8237 bytes)
-- [Streams](pages/runtime/streams.md): Streams are an important abstraction for working with binary data without loading it all into memory at once. They are commonly used for reading and writing files, sending and receiving network requests, and processing… (7393 bytes)
+- [Streams](pages/runtime/streams.md): Streams are an important abstraction for working with binary data without loading it all into memory at once. They are commonly used for reading and writing files, sending and receiving network requests, and processing… (10003 bytes)
 - [Binary Data](pages/runtime/binary-data.md): Bun implements several data types and utilities for working with binary data in JavaScript, most of which are Web-standard. Bun-specific APIs are noted as such. (28839 bytes)
 - [Archive](pages/runtime/archive.md): Bun.Archive is Bun's native API for tar archives. It creates archives from in-memory data, extracts archives to disk, and reads archive contents without extraction. (13781 bytes)
-- [SQL](pages/runtime/sql.md): You write queries as tagged template literals, and the client supports connection pooling, transactions, and prepared statements. (57170 bytes)
-- [SQLite](pages/runtime/sqlite.md): Bun natively implements a high-performance SQLite3 driver. To use it, import from the built-in bun:sqlite module. (25799 bytes)
-- [S3](pages/runtime/s3.md): Production servers often read, upload, and write files to S3-compatible object storage services instead of the local filesystem. Historically, that means local filesystem APIs you use in development can't be used in pro… (27962 bytes)
+- [SQL](pages/runtime/sql.md): You write queries as tagged template literals, and the client supports connection pooling, transactions, and prepared statements. (58549 bytes)
+- [SQLite](pages/runtime/sqlite.md): Bun natively implements a high-performance SQLite3 driver. To use it, import from the built-in bun:sqlite module. (25917 bytes)
+- [S3](pages/runtime/s3.md): Production servers often read, upload, and write files to S3-compatible object storage services instead of the local filesystem. Historically, that means local filesystem APIs you use in development can't be used in pro… (28183 bytes)
 - [Redis](pages/runtime/redis.md): Bun's native Redis client has a Promise-based API with built-in connection management, fully typed responses, and TLS support. (15508 bytes)
 
 ## Concurrency
 
-- [Workers](pages/runtime/workers.md): With Worker, you start and communicate with a new JavaScript instance running on a separate thread while sharing I/O resources with the main thread. (10404 bytes)
+- [Workers](pages/runtime/workers.md): With Worker, you start and communicate with a new JavaScript instance running on a separate thread while sharing I/O resources with the main thread. (11866 bytes)
+- [ModuleGraph](pages/runtime/module-graph.md): A Bun.ModuleGraph loads modules into the current global another time. Each graph has its own module instances, its own require.cache, and its own values for the names you pass as globals. Parsed code and bytecode are sh… (10917 bytes)
 
 ## Process & System
 
 - [Environment Variables](pages/runtime/environment-variables.md): Bun reads your .env files automatically and provides idiomatic ways to read and write your environment variables programmatically. You can also configure parts of Bun's runtime behavior with Bun-specific environment var… (11272 bytes)
 - [Shell](pages/runtime/shell.md): Bun Shell makes shell scripting with JavaScript & TypeScript fun. It's a cross-platform bash-like shell with JavaScript interop. (14883 bytes)
-- [Spawn](pages/runtime/child-process.md): Provide a command as an array of strings. The result of Bun.spawn() is a Bun.Subprocess object. (24332 bytes)
+- [Spawn](pages/runtime/child-process.md): Provide a command as an array of strings. The result of Bun.spawn() is a Bun.Subprocess object. (25010 bytes)
 - [WebView](pages/runtime/webview.md): Bun.WebView is a headless browser built into the runtime. Use it to load pages, run JavaScript inside them, simulate real user input, and capture screenshots — without Puppeteer, Playwright, or a separate browser downlo… (35628 bytes)
 - [Cron](pages/runtime/cron.md): Bun has built-in support for cron — parse expressions, run a callback on a schedule inside your process, or register OS-level jobs that survive restarts. (21098 bytes)
 
 ## Interop & Tooling
 
 - [Node-API](pages/runtime/node-api.md): Node-API is an interface for building native add-ons to Node.js. Bun implements this interface from scratch, so most existing Node-API extensions work with Bun out of the box. (447 bytes)
-- [FFI](pages/runtime/ffi.md): Use the built-in bun:ffi module to efficiently call native libraries from JavaScript. It works with any language that supports the C ABI, including Zig, Rust, C/C++, C#, Nim, and Kotlin. (18284 bytes)
+- [FFI](pages/runtime/ffi.md): Use the built-in bun:ffi module to efficiently call native libraries from JavaScript. It works with any language that supports the C ABI, including Zig, Rust, C/C++, C#, Nim, and Kotlin. (18441 bytes)
 - [C Compiler](pages/runtime/c-compiler.md): bun:ffi has experimental support for compiling and running C from JavaScript with low overhead. (5267 bytes)
 - [Transpiler](pages/runtime/transpiler.md): Bun exposes its internal transpiler as the Bun.Transpiler class. To create an instance: (6709 bytes)
 
 ## Utilities
 
 - [CSRF Protection](pages/runtime/csrf.md): Bun.CSRF generates and verifies CSRF (Cross-Site Request Forgery) tokens. Bun signs tokens with HMAC. Each token includes an issue timestamp and an expiry duration. (9083 bytes)
-- [Secrets](pages/runtime/secrets.md): Store and retrieve sensitive credentials securely using the operating system's native credential storage APIs. (8474 bytes)
+- [Secrets](pages/runtime/secrets.md): Store and retrieve sensitive credentials securely using the operating system's native credential storage APIs. (9372 bytes)
 - [Console](pages/runtime/console.md): You can configure how deeply console.log() prints nested objects: (1478 bytes)
 - [TOML](pages/runtime/toml.md): In Bun, TOML is a first-class citizen alongside JSON, JSON5, and YAML. You can: (7442 bytes)
 - [YAML](pages/runtime/yaml.md): In Bun, YAML is a first-class citizen alongside JSON and TOML. You can: (9927 bytes)
@@ -95,7 +98,7 @@
 - [XML](pages/runtime/xml.md): In Bun, XML is a first-class citizen alongside JSON, TOML, YAML, and JSON5. You can: (13554 bytes)
 - [JSONL](pages/runtime/jsonl.md): Bun has built-in support for parsing JSONL (newline-delimited JSON), where each line is a separate JSON value. The parser is implemented in C++ using JavaScriptCore's optimized JSON parser and supports streaming. (5792 bytes)
 - [HTMLRewriter](pages/runtime/html-rewriter.md): HTMLRewriter transforms HTML documents with CSS selectors. It works with Response, string, and ArrayBuffer inputs. Bun's implementation is based on Cloudflare's lol-html. (12558 bytes)
-- [Image](pages/runtime/image.md): Bun.Image is a chainable image pipeline for decoding, resizing, rotating, and re-encoding JPEG, PNG, WebP, HEIC, and AVIF. It is built on libjpeg-turbo, spng, libwebp, and SIMD geometry kernels, with zero npm dependenci… (9893 bytes)
+- [Image](pages/runtime/image.md): Bun.Image is a chainable image pipeline for decoding, resizing, rotating, and re-encoding JPEG, PNG, WebP, HEIC, and AVIF. It is built on libjpeg-turbo, spng, libwebp, and SIMD geometry kernels, with zero npm dependenci… (10464 bytes)
 - [Hashing](pages/runtime/hashing.md): Bun.password is a collection of utility functions for hashing and verifying passwords with various cryptographically secure algorithms. (8955 bytes)
 - [Glob](pages/runtime/glob.md): Scan a directory for files matching .ts: (3979 bytes)
 - [Semver](pages/runtime/semver.md): Bun.semver compares semantic versions and checks whether a version is compatible with a range of versions. Versions and ranges are designed to be compatible with node-semver, which npm clients use. (2009 bytes)
@@ -121,20 +124,20 @@
 - [Globals](pages/runtime/globals.md): Bun implements the following globals. (24815 bytes)
 - [Bun APIs](pages/runtime/bun-apis.md): Bun implements a set of native APIs on the Bun global object and through several built-in modules. These APIs are heavily optimized and are the canonical "Bun-native" way to implement common functionality. (18341 bytes)
 - [Web APIs](pages/runtime/web-apis.md): Some Web APIs, like the DOM API and History API, aren't relevant in a server-first runtime like Bun. Many others are broadly useful outside the browser; when possible, Bun implements these Web-standard APIs instead of i… (13692 bytes)
-- [Node.js Compatibility](pages/runtime/nodejs-compat.md): Every day, Bun gets closer to 100% Node.js API compatibility. Popular frameworks like Next.js, Express, and millions of npm packages intended for Node.js work with Bun. To ensure compatibility, we run thousands of tests… (26969 bytes)
+- [Node.js Compatibility](pages/runtime/nodejs-compat.md): Every day, Bun gets closer to 100% Node.js API compatibility. Popular frameworks like Next.js, Express, and millions of npm packages intended for Node.js work with Bun. To ensure compatibility, we run thousands of tests… (28622 bytes)
 
 ## Contributing
 
 - [Roadmap](pages/project/roadmap.md): Bun is a project with a large scope and is still in its early days. Long-term, Bun aims to provide an all-in-one toolkit to replace the complex, fragmented toolchains common today: Node.js, Jest, Webpack, esbuild, Babel… (383 bytes)
 - [Benchmarking](pages/project/benchmarking.md): Bun is designed for speed. We profile and benchmark hot paths extensively. The source code for all of Bun's public benchmarks is in the /bench directory of the Bun repo. (10626 bytes)
-- [Contributing](pages/project/contributing.md): Configuring a development environment for Bun can take 10-30 minutes depending on your internet connection and computer speed. You will need \10GB of free disk space for the repository and build artifacts. (16795 bytes)
-- [Building Windows](pages/project/building-windows.md): Use PowerShell 7 (pwsh.exe) instead of the default powershell.exe. If you run into problems, ask in the #contributing channel on our Discord. (7883 bytes)
+- [Contributing](pages/project/contributing.md): Configuring a development environment for Bun can take 10-30 minutes depending on your internet connection and computer speed. You will need \10GB of free disk space for the repository and build artifacts. (16704 bytes)
+- [Building Windows](pages/project/building-windows.md): Use PowerShell 7 (pwsh.exe) instead of the default powershell.exe. If you run into problems, ask in the #contributing channel on our Discord. (7814 bytes)
 - [Bindgen](pages/project/bindgen.md): The bindings generator scans for .bind.ts files to find function and class definitions, and generates glue code to interop between JavaScript and native code. (8075 bytes)
 - [License](pages/project/license.md): Bun itself is MIT-licensed. (10787 bytes)
 
 ## Core Commands
 
-- [bun install](pages/pm/cli/install.md): The bun CLI contains a Node.js-compatible package manager designed to be a dramatically faster replacement for npm, yarn, and pnpm. It's a standalone tool that works in existing Node.js projects; if your project has a p… (26254 bytes)
+- [bun install](pages/pm/cli/install.md): The bun CLI contains a Node.js-compatible package manager designed to be a dramatically faster replacement for npm, yarn, and pnpm. It's a standalone tool that works in existing Node.js projects; if your project has a p… (26544 bytes)
 - [bun add](pages/pm/cli/add.md): To add a particular package: (10862 bytes)
 - [bun remove](pages/pm/cli/remove.md): Bun removes the package from every dependency group in package.json that lists it and updates bun.lock. Once nothing else depends on the package, Bun deletes it from nodemodules. (3918 bytes)
 - [bun update](pages/pm/cli/update.md): bun update (alias bun up) updates every dependency, direct and transitive, to the newest version allowed by the ranges that request it. It then rewrites package.json and bun.lock. To ignore your declared ranges, use --l… (10564 bytes)
@@ -173,7 +176,7 @@
 
 ## Core
 
-- [Bundler](pages/bundler.md): Use Bun's native bundler through the bun build CLI command or the Bun.build() JavaScript API. (72085 bytes)
+- [Bundler](pages/bundler.md): Use Bun's native bundler through the bun build CLI command or the Bun.build() JavaScript API. (74994 bytes)
 
 ## Development Server
 
@@ -185,15 +188,15 @@
 - [HTML & static sites](pages/bundler/html-static.md): Bun's bundler has first-class support for HTML. Build static sites, landing pages, and web applications with zero configuration: point Bun at your HTML file and it bundles the scripts, stylesheets, and assets the file r… (12569 bytes)
 - [Standalone HTML](pages/bundler/standalone-html.md): Bun can bundle your entire frontend into a single .html file with zero external dependencies. JavaScript, TypeScript, JSX, CSS, images, fonts, videos, WASM: Bun inlines everything into one file. (10696 bytes)
 - [CSS](pages/bundler/css.md): Bun's bundler has built-in support for CSS with the following features: (25294 bytes)
-- [Loaders](pages/bundler/loaders.md): The Bun bundler has a set of built-in loaders. (12101 bytes)
+- [Loaders](pages/bundler/loaders.md): The Bun bundler has a set of built-in loaders. (12181 bytes)
 
 ## Single File Executable
 
-- [Single-file executable](pages/bundler/executables.md): Bun's bundler implements a --compile flag for generating a standalone binary from a TypeScript or JavaScript file. (35410 bytes)
+- [Single-file executable](pages/bundler/executables.md): Bun's bundler implements a --compile flag for generating a standalone binary from a TypeScript or JavaScript file. (39270 bytes)
 
 ## Extensions
 
-- [Plugins](pages/bundler/plugins.md): Bun's universal plugin API extends both the runtime and the bundler. (13402 bytes)
+- [Plugins](pages/bundler/plugins.md): Bun's universal plugin API extends both the runtime and the bundler. (13358 bytes)
 - [Macros](pages/bundler/macros.md): Macros are JavaScript functions that run at bundle-time. Bun inlines their return values directly into your bundle. (10279 bytes)
 
 ## Optimization
@@ -207,8 +210,8 @@
 
 ## Getting Started
 
-- [Test runner](pages/test.md): Bun ships with a fast, built-in, Jest-compatible test runner. Tests run in the Bun runtime and support the following features. (17142 bytes)
-- [Writing tests](pages/test/writing-tests.md): Define tests with a Jest-like API imported from the built-in bun:test module. Long term, Bun aims for complete Jest compatibility. (18191 bytes)
+- [Test runner](pages/test.md): Bun ships with a fast, built-in, Jest-compatible test runner. Tests run in the Bun runtime and support the following features. (17833 bytes)
+- [Writing tests](pages/test/writing-tests.md): Define tests with a Jest-like API imported from the built-in bun:test module. Long term, Bun aims for complete Jest compatibility. (18239 bytes)
 - [Test configuration](pages/test/configuration.md): Configure bun test with bunfig.toml and command-line options. (11346 bytes)
 
 ## Test Execution
@@ -220,7 +223,7 @@
 ## Test Features
 
 - [Lifecycle hooks](pages/test/lifecycle.md): The test runner supports the following lifecycle hooks. Use them to load test fixtures, mock data, and configure the test environment. (8692 bytes)
-- [Mocks](pages/test/mocks.md): Mocking replaces a dependency with a controlled implementation. Bun supports function mocks, spies, and module mocks. (18425 bytes)
+- [Mocks](pages/test/mocks.md): Mocking replaces a dependency with a controlled implementation. Bun supports function mocks, spies, and module mocks. (19230 bytes)
 - [Snapshots](pages/test/snapshots.md): Snapshot testing saves the output of a value and compares it against future test runs. Use it for UI components, complex objects, or any output that needs to remain consistent. (9335 bytes)
 - [Dates and times](pages/test/dates-times.md): bun:test lets you change what time it is in your tests. (3597 bytes)
 
@@ -248,14 +251,14 @@
 
 ## Runtime & Debugging
 
-- [Install TypeScript declarations for Bun](pages/guides/runtime/typescript.md): To add TypeScript definitions for Bun's built-in APIs to your project, install @types/bun. (1417 bytes)
+- [Install TypeScript declarations for Bun](pages/guides/runtime/typescript.md): To add TypeScript definitions for Bun's built-in APIs to your project, install @types/bun. (1552 bytes)
 - [Re-map import paths](pages/guides/runtime/tsconfig-paths.md): Bun reads the paths field in your tsconfig.json to re-write import paths. This is useful for aliasing package names or avoiding long relative paths. (698 bytes)
 - [Debugging Bun with the VS Code extension](pages/guides/runtime/vscode-debugger.md): Bun speaks the WebKit Inspector Protocol, so you can debug your code with an interactive debugger. (2117 bytes)
 - [Debugging Bun with the web debugger](pages/guides/runtime/web-debugger.md): Bun speaks the WebKit Inspector Protocol. To enable debugging when running code with Bun, use the --inspect flag. Consider the following web server. (3588 bytes)
 - [Inspect memory usage using V8 heap snapshots](pages/guides/runtime/heap-snapshot.md): Bun implements V8's heap snapshot API. Use it to capture the heap at runtime and debug memory leaks in your JavaScript/TypeScript application. (851 bytes)
 - [Build-time constants with --define](pages/guides/runtime/build-time-constants.md): Pass --define to bun build or bun build --compile to inject build-time constants into your application. Use it to embed metadata like build versions, timestamps, or configuration flags directly into your compiled execut… (7619 bytes)
 - [Define and replace static globals & constants](pages/guides/runtime/define-constant.md): The --define flag declares statically-analyzable constants and globals. It replaces all usages of an identifier or property in a JavaScript or TypeScript file with a constant value, and works both at runtime and in bun… (4037 bytes)
-- [Install and run Bun in GitHub Actions](pages/guides/runtime/cicd.md): Use the official setup-bun GitHub Action to install bun in your GitHub Actions runner. (973 bytes)
+- [Install and run Bun in GitHub Actions](pages/guides/runtime/cicd.md): Use the official setup-bun GitHub Action to install bun in your GitHub Actions runner. (1418 bytes)
 - [Codesign a single-file JavaScript executable on macOS](pages/guides/runtime/codesign-macos-executable.md): Compile your executable using the --compile flag. (1864 bytes)
 
 ## Module System
@@ -307,10 +310,10 @@
 - [Common HTTP server usage](pages/guides/http/server.md): This code starts an HTTP server listening on port 3000. It demonstrates basic routing with common responses and handles POST data from standard forms or as JSON. (1403 bytes)
 - [Write a simple HTTP server](pages/guides/http/simple.md): This code starts an HTTP server listening on port 3000. It responds to every request with a 200 status and the body "Welcome to Bun!". (452 bytes)
 - [Send an HTTP request using fetch](pages/guides/http/fetch.md): Bun implements the Web-standard fetch API for sending HTTP requests. To send a GET request to a URL: (672 bytes)
-- [Hot reload an HTTP server](pages/guides/http/hot.md): The --hot flag runs a file with hot reloading enabled. When any module or file changes, Bun re-runs the file. (677 bytes)
+- [Hot reload an HTTP server](pages/guides/http/hot.md): The --hot flag runs a file with hot reloading enabled. When that file or a file it imports changes, Bun re-runs it. Bun does not watch files that no module imports, such as .env, bunfig.toml, and tsconfig.json. Restart… (837 bytes)
 - [Start a cluster of HTTP servers](pages/guides/http/cluster.md): To run multiple HTTP servers concurrently, use the reusePort option in Bun.serve(). It shares one port across multiple processes, and incoming requests are load balanced across them. (1608 bytes)
 - [Configure TLS on an HTTP server](pages/guides/http/tls.md): Set the tls key to configure TLS. Both key and cert are required: key is the contents of your private key and cert is the contents of your issued certificate. Use Bun.file() to read them. (1031 bytes)
-- [Proxy HTTP requests using fetch()](pages/guides/http/proxy.md): In Bun, fetch supports sending requests through an HTTP or HTTPS proxy. Use it on corporate networks or when a request must come from a specific IP address. (1832 bytes)
+- [Proxy HTTP requests using fetch()](pages/guides/http/proxy.md): In Bun, fetch supports sending requests through an HTTP or HTTPS proxy. Use it on corporate networks or when a request must come from a specific IP address. (2244 bytes)
 - [Stream a file as an HTTP Response](pages/guides/http/stream-file.md): Bun.file() accepts a path and returns a lazily-loaded BunFile instance, which you can pass directly to the new Response constructor. (1326 bytes)
 - [Upload files via HTTP using FormData](pages/guides/http/file-uploads.md): To upload files over HTTP with Bun, use the FormData API. Start with an HTTP server that serves an HTML form. (2905 bytes)
 - [fetch with unix domain sockets in Bun](pages/guides/http/fetch-unix.md): In Bun, fetch() can send HTTP requests over a unix domain socket with the unix option. (1035 bytes)

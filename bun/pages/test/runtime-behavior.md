@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/test/runtime-behavior.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/test/runtime-behavior.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/test/runtime-behavior.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/test/runtime-behavior.mdx)
 > Canonical documentation: https://bun.com/docs/test/runtime-behavior
 
 `bun test` is deeply integrated with Bun's runtime. This integration is part of what makes `bun test` fast.

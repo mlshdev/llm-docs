@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/typescript-6.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/typescript-6.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/typescript-6.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/typescript-6.mdx)
 > Canonical documentation: https://bun.com/docs/typescript-6
 
 # TypeScript 6 and 7
@@ -77,3 +77,7 @@ Here's the full recommended `tsconfig.json` for a Bun project using TypeScript 6
 ## Does this apply to TypeScript 7?
 
 Yes. TypeScript 7 carries forward the same default. If you're upgrading directly from TypeScript 5 to 7, the same fix applies — add `"types": ["bun"]` to your `compilerOptions`.
+
+## Does this apply to `bun check`?
+
+Yes. [`bun check`](https://bun.com/docs/runtime/check) behaves like TypeScript 7, whichever version of `typescript` you have installed. See [Coming from TypeScript 5](https://bun.com/docs/runtime/check#coming-from-typescript-5) for the other defaults and options that changed.

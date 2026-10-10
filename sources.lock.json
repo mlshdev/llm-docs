@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "538d10d1878fb546c3a2645efa56119848f9ccfc",
       "sourceCommittedAt": "2026-10-08T13:23:51Z",
-      "observedCommit": "f5d4fd186c68913240c4f6e9cda98443e1518b34",
+      "observedCommit": "99867ef095837e569959d2175709606033345b64",
       "documentationDigest": "b2795b70af799813e1a31590430fac8989c19087c413f80390ff66e3e6baca18"
     },
     "yt-dlp": {
@@ -107,10 +107,10 @@
       "documentationDigest": "16cd4676f97b7bdaa68b899c801cbd8af53d119d8233fa904a16ab9d9ca6dfd8"
     },
     "bun": {
-      "tag": "bun-v1.4.2",
-      "releaseId": 383114065,
-      "releasePublishedAt": "2026-09-05T05:55:48Z",
-      "sourceCommit": "744846f844374847c902b5e7fd59b4342a51ef99"
+      "tag": "bun-v1.4.3",
+      "releaseId": 408543611,
+      "releasePublishedAt": "2026-10-10T05:24:54Z",
+      "sourceCommit": "c6da4a4d3010e5553438c60f6bd76d981976867c"
     },
     "trigger-dev": {
       "tag": "v4.7.3",

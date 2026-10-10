@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/quickstart.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/quickstart.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/quickstart.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/quickstart.mdx)
 > Canonical documentation: https://bun.com/docs/quickstart
 
 # Quickstart
@@ -40,7 +40,7 @@ Build a minimal HTTP server with `Bun.serve`, run it locally, then evolve it by 
    + CLAUDE.md
    + .cursor/rules/use-bun-instead-of-node-vite-npm-pnpm.mdc -> CLAUDE.md
    + index.ts
-   + tsconfig.json (for editor autocomplete)
+   + tsconfig.json (for bun check and editor autocomplete)
    + README.md
    ```
 

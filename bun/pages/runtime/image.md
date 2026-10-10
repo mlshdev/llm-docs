@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/image.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/image.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/image.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/image.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/image
 
 # Image
@@ -28,6 +28,8 @@ Bun sniffs the format from the bytes and ignores extensions and `Content-Type`.
 **Path strings are filesystem paths.** Don't pass user-controlled strings directly to the constructor — that's an arbitrary-file-read primitive. Read untrusted input into a `Buffer` (with `fetch` or `Bun.file` and your own validation) and pass the bytes.
 
 When passing a `TypedArray`/`ArrayBuffer`, don't mutate it while a terminal is pending — decode runs off-thread and borrows the bytes. Bun refuses `SharedArrayBuffer` and resizable buffers; use `buf.slice()` to pass a fixed view.
+
+Bun decodes a damaged JPEG when libjpeg-turbo can finish the decode with only a warning. Examples are stray bytes between segments, a missing end-of-image marker, and truncated scan data. libjpeg-turbo fills the blocks that have no data with flat grey. A progressive file that is cut after its first scan has data for every block, so Bun returns the whole picture with less detail. When libjpeg-turbo cannot finish the decode, the terminal rejects with `ERR_IMAGE_DECODE_FAILED`. `metadata()` reads only the header, so it can resolve for a file that a terminal rejects.
 
 A second `options` argument guards against decompression bombs and controls EXIF handling:
 

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/bundler/bytecode.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/bundler/bytecode.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/bundler/bytecode.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/bundler/bytecode.mdx)
 > Canonical documentation: https://bun.com/docs/bundler/bytecode
 
 Bytecode caching is a build-time optimization that improves startup time by pre-compiling your JavaScript to bytecode. For example, when compiling TypeScript's `tsc` with bytecode enabled, startup time improves by **2x**.

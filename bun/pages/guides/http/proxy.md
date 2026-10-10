@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/guides/http/proxy.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/http/proxy.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/guides/http/proxy.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/http/proxy.mdx)
 > Canonical documentation: https://bun.com/docs/guides/http/proxy
 
 # Proxy HTTP requests using fetch()
@@ -46,4 +46,12 @@ To use the same proxy for all requests, set the `$HTTP_PROXY` and `$HTTPS_PROXY`
 
 ```sh terminal icon="terminal"
 HTTP_PROXY=https://username:password@proxy.example.com:8080 HTTPS_PROXY=https://username:password@proxy.example.com:8080 bun run index.ts
+```
+
+`$ALL_PROXY` applies to both kinds of URL when the scheme-specific variable is unset. `$NO_PROXY` lists the hosts that bypass the proxy. See [Proxying requests](https://bun.com/docs/runtime/networking/fetch#proxying-requests) for the syntax.
+
+To ignore these variables for one request, pass `proxy: false`:
+
+```ts direct.ts icon="/icons/typescript.svg"
+await fetch("https://example.com", { proxy: false });
 ```

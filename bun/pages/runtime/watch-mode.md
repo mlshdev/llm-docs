@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/watch-mode.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/watch-mode.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/watch-mode.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/watch-mode.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/watch-mode
 
 # Watch Mode
@@ -24,6 +24,12 @@ To run your tests in `--watch` mode:
 
 ```bash terminal icon="terminal"
 bun --watch test
+```
+
+To type check before every restart, add [`--check`](https://bun.com/docs/runtime/check#watch-mode). After a type error, Bun waits for your next change instead of running the file.
+
+```bash terminal icon="terminal"
+bun --watch --check index.tsx
 ```
 
 In `--watch` mode, Bun keeps track of all imported files and watches them for changes. When a file changes, Bun restarts the process with the same CLI arguments and environment variables as the initial run. If Bun crashes, `--watch` attempts to restart the process.
@@ -115,9 +121,9 @@ bun --hot server.ts
 ```
 
 ```txt
+Reloaded 0 times
 Reloaded 1 times
 Reloaded 2 times
-Reloaded 3 times
 ```
 
 Traditional file watchers like `nodemon` restart the entire process, so HTTP servers and other stateful objects are lost. By contrast, `bun --hot` reflects the updated code without restarting the process.

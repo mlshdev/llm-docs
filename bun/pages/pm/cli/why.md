@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/pm/cli/why.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/pm/cli/why.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/pm/cli/why.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/cli/why.mdx)
 > Canonical documentation: https://bun.com/docs/pm/cli/why
 
 # bun why

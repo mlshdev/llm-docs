@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/pm/cli/install.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/pm/cli/install.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/pm/cli/install.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/cli/install.mdx)
 > Canonical documentation: https://bun.com/docs/pm/cli/install
 
 ## Basic Usage
@@ -182,6 +182,8 @@ bun install --offline
 ```
 
 `--prefer-offline` is also what `install.prefer = "offline"` in `bunfig.toml` selects; `install.offline = true` is the config form of `--offline`. With a complete restored cache, `--offline --frozen-lockfile` makes a CI install fully deterministic and network-free; `--prefer-offline` still fetches whatever the cache is missing.
+
+An install is only certain to cache the packages that it places in `node_modules`. To warm the cache for an `--offline` install, run an install on the same platform that places at least the same packages. An install with `--production` or `--omit` does not cache the groups it leaves out.
 
 See [lockfile](https://bun.com/docs/pm/lockfile) for more on `bun.lock`.
 

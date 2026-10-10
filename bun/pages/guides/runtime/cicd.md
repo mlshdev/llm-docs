@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/guides/runtime/cicd.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/runtime/cicd.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/guides/runtime/cicd.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/runtime/cicd.mdx)
 > Canonical documentation: https://bun.com/docs/guides/runtime/cicd
 
 # Install and run Bun in GitHub Actions
@@ -37,6 +37,24 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with: # [!code ++]
           bun-version: 1.3.3 # or "latest", "canary", "1.3.x" # [!code ++]
+```
+
+***
+
+To type check your project, run [`bun check`](https://bun.com/docs/runtime/check#run-in-ci). GitHub shows each type error as an annotation on the pull request diff.
+
+```yaml workflow.yml icon="file-code"
+name: my-workflow
+jobs:
+  my-job:
+    name: my-job
+    runs-on: ubuntu-latest
+    steps:
+      # ...
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun check # [!code ++]
 ```
 
 ***

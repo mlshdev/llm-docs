@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/test/writing-tests.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/test/writing-tests.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/test/writing-tests.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/test/writing-tests.mdx)
 > Canonical documentation: https://bun.com/docs/test/writing-tests
 
 # Writing tests
@@ -441,12 +441,13 @@ Bun includes `expectTypeOf` for testing TypeScript types, compatible with Vitest
 
 > **Warning**
 >
-> These functions are no-ops at runtime. Run TypeScript separately to verify the type checks.
+> These functions are no-ops at runtime. Run [`bun check`](https://bun.com/docs/runtime/check) or `bun test --check` to verify the type
+> assertions.
 
 The `expectTypeOf` function provides type-level assertions that TypeScript's type checker verifies. To test your types:
 
 1. Write your type assertions using `expectTypeOf`
-2. Run `bunx tsc --noEmit` to check that your types are correct
+2. Run `bun check` to check that your types are correct
 
 ```ts title="example.test.ts" icon="/icons/typescript.svg"
 import { expectTypeOf } from "bun:test";

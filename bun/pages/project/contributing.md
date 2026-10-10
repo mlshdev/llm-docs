@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/project/contributing.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/project/contributing.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/project/contributing.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/project/contributing.mdx)
 > Canonical documentation: https://bun.com/docs/project/contributing
 
 Configuring a development environment for Bun can take 10-30 minutes depending on your internet connection and computer speed. You will need \~10GB of free disk space for the repository and build artifacts.
@@ -33,7 +33,7 @@ sudo pacman -S base-devel cmake git go libiconv libtool make ninja pkg-config py
 ```
 
 ```bash Fedora
-sudo dnf install clang21 llvm21 lld21 cmake git golang libtool ninja-build pkg-config ruby libatomic-static libstdc++-static sed unzip which libicu-devel 'perl(Math::BigInt)'
+sudo dnf install clang23 llvm23 lld23 cmake git golang libtool ninja-build pkg-config ruby libatomic-static libstdc++-static sed unzip which libicu-devel 'perl(Math::BigInt)'
 ```
 
 ```bash openSUSE Tumbleweed
@@ -86,15 +86,15 @@ The build scripts detect and use `ccache` automatically if it's available. Check
 
 ## Install LLVM
 
-Bun requires LLVM 21.1.8 (`clang` is part of LLVM). The build system enforces this version: a mismatched version causes memory allocation failures at runtime. In most cases, you can install LLVM through your system package manager:
+Bun requires LLVM 23.1.1 (`clang` is part of LLVM). The build system enforces this version: a mismatched version causes memory allocation failures at runtime. In most cases, you can install LLVM through your system package manager:
 
 ```bash macOS (Homebrew)
-brew install llvm@21
+brew install llvm@23
 ```
 
 ```bash Ubuntu/Debian
 # LLVM has an automatic installation script that is compatible with all versions of Ubuntu
-wget https://apt.llvm.org/llvm.sh -O - | sudo bash -s -- 21 all
+wget https://apt.llvm.org/llvm.sh -O - | sudo bash -s -- 23 all
 ```
 
 ```bash Arch
@@ -106,28 +106,28 @@ sudo dnf install llvm clang lld-devel
 ```
 
 ```bash openSUSE Tumbleweed
-sudo zypper install clang21 lld21 llvm21
+sudo zypper install clang23 lld23 llvm23
 ```
 
-If none of these work, install it [manually](https://github.com/llvm/llvm-project/releases/tag/llvmorg-21.1.8).
+If none of these work, install it [manually](https://github.com/llvm/llvm-project/releases/tag/llvmorg-23.1.1).
 
-Make sure Clang/LLVM 21 is in your path:
+Make sure Clang/LLVM 23 is in your path:
 
 ```bash
-which clang-21
+which clang-23
 ```
 
 If not, add it manually:
 
 ```bash macOS (Homebrew)
 # use fish_add_path if you're using fish
-# use path+="$(brew --prefix llvm@21)/bin" if you are using zsh
-export PATH="$(brew --prefix llvm@21)/bin:$PATH"
+# use path+="$(brew --prefix llvm@23)/bin" if you are using zsh
+export PATH="$(brew --prefix llvm@23)/bin:$PATH"
 ```
 
 ```bash Arch
 # use fish_add_path if you're using fish
-export PATH="$PATH:/usr/lib/llvm21/bin"
+export PATH="$PATH:/usr/lib/llvm23/bin"
 ```
 
 > **Warning**
@@ -267,7 +267,7 @@ bun sync-webkit-source
 bun run build:local
 ```
 
-`bun run build:local` handles everything: configuring JSC, building JSC, and building Bun. On subsequent runs, JSC rebuilds incrementally if any WebKit sources changed. `ninja -Cbuild/debug-local` also works after the first build, and builds both Bun and JSC.
+`bun run build:local` handles everything: configuring JSC, building JSC, and building Bun. On subsequent runs, JSC rebuilds incrementally if any WebKit sources changed.
 
 The build output goes to `./build/debug-local` (instead of `./build/debug`), so you'll need to update a couple of places:
 
@@ -304,7 +304,7 @@ The issue may also surface when first running `bun run build`, with Clang unable
 ```txt
 The C++ compiler
 
-  "/usr/bin/clang++-21"
+  "/usr/bin/clang++-23"
 
 is not able to compile a simple test program.
 ```

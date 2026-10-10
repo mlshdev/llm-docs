@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/guides/runtime/typescript.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/runtime/typescript.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/guides/runtime/typescript.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/runtime/typescript.mdx)
 > Canonical documentation: https://bun.com/docs/guides/runtime/typescript
 
 # Install TypeScript declarations for Bun
@@ -49,6 +49,14 @@ Here is the full set of recommended `compilerOptions` for a Bun project. With th
 ***
 
 If you're using TypeScript 6.0 or later, you also need `"types": ["bun"]` in your `compilerOptions`. See [TypeScript 6 and 7](https://bun.com/docs/typescript-6) for details.
+
+***
+
+To type check your project, run [`bun check`](https://bun.com/docs/runtime/check).
+
+```sh terminal icon="terminal"
+bun check
+```
 
 ***
 

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/sqlite.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/sqlite.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/sqlite.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/sqlite.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/sqlite
 
 # SQLite
@@ -640,6 +640,8 @@ db.loadExtension("myext");
 > const db = new Database();
 > db.loadExtension("myext");
 > ```
+>
+> Workers can repeat `setCustomSQLite()` with the exact same path. Bun rejects a different path after SQLite loads.
 
 ### `.fileControl(cmd: number, value: any)`
 

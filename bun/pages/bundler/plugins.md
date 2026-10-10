@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/bundler/plugins.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/bundler/plugins.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/bundler/plugins.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/bundler/plugins.mdx)
 > Canonical documentation: https://bun.com/docs/bundler/plugins
 
 # Plugins
@@ -91,7 +91,7 @@ await Bun.build({
 
 `onLoad` and `onResolve` accept an optional `namespace` string.
 
-Every module has a namespace. Namespaces prefix the import in transpiled code; for example, a loader with a `filter: /\.yaml$/` and `namespace: "yaml:"` transforms an import from `./myfile.yaml` into `yaml:./myfile.yaml`.
+Every module has a namespace, which prefixes its path. For instance, when `onResolve` returns `{ path: "./myfile.yaml", namespace: "yaml" }`, the module is `yaml:./myfile.yaml`.
 
 The default namespace is `"file"` and you don't need to specify it: `import myModule from "./my-module.ts"` is the same as `import myModule from "file:./my-module.ts"`.
 

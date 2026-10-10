@@ -1,9 +1,9 @@
-> Pinned source for Bun bun-v1.4.2: [docs/guides/http/hot.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/http/hot.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/guides/http/hot.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/http/hot.mdx)
 > Canonical documentation: https://bun.com/docs/guides/http/hot
 
 # Hot reload an HTTP server
 
-The [`--hot`](https://bun.com/docs/runtime/watch-mode#hot-mode) flag runs a file with hot reloading enabled. When any module or file changes, Bun re-runs the file.
+The [`--hot`](https://bun.com/docs/runtime/watch-mode#hot-mode) flag runs a file with hot reloading enabled. When that file or a file it imports changes, Bun re-runs it. Bun does not watch files that no module imports, such as `.env`, `bunfig.toml`, and `tsconfig.json`. Restart Bun to apply a change to one of those files.
 
 ```sh terminal icon="terminal"
 bun --hot run index.ts

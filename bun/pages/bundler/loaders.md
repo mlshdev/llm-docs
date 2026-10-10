@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/bundler/loaders.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/bundler/loaders.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/bundler/loaders.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/bundler/loaders.mdx)
 > Canonical documentation: https://bun.com/docs/bundler/loaders
 
 The Bun bundler has a set of built-in loaders.
@@ -45,7 +45,7 @@ Same as the `js` loader, but JSX syntax is supported. By default, Bun down-conve
 
 **TypeScript loader.** Default for `.ts`, `.mts`, and `.cts`.
 
-Strips out all TypeScript syntax, then behaves identically to the `js` loader. Bun does not perform typechecking.
+Strips out all TypeScript syntax, then behaves identically to the `js` loader. The loader does not check types. Use [`bun check`](https://bun.com/docs/runtime/check) to type check your project.
 
 ***
 

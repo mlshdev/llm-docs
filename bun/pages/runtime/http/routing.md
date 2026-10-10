@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/runtime/http/routing.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/http/routing.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/runtime/http/routing.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/http/routing.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/http/routing
 
 # Routing
@@ -190,6 +190,7 @@ Bun.serve({
 - **Last-Modified support** - Uses file modification time for `If-Modified-Since` headers
 - **If-Modified-Since** - Returns `304 Not Modified` when file hasn't changed since client's cached version
 - **Range request support** - Automatically handles partial content requests with `Content-Range` headers
+- **If-Range** - Sends the full file instead of a `206` when the `If-Range` validator is not the response's strong `ETag` or its exact `Last-Modified`
 - **Streaming transfers** - Uses buffered reader with backpressure handling for efficient memory usage
 - **Memory efficient** - Only buffers small chunks during transfer, not entire file
 - **Best for**: Large files, dynamic content, user uploads, files that change frequently
@@ -219,7 +220,7 @@ Directory routes share the response path with file routes:
 
 - **Content-Type** is set from the file extension.
 - **Last-Modified** and a weak `ETag` (`W/"<size>-<mtime>"`) are sent on every response, and `If-Modified-Since` / `If-None-Match` are honored with `304 Not Modified`.
-- **Range requests** are supported with `Accept-Ranges: bytes` and `Content-Range`.
+- **Range requests** are supported with `Accept-Ranges: bytes` and `Content-Range`. `If-Range` is honored with the `Last-Modified` date. The `ETag` is weak, so it never matches `If-Range`, and the response is the full file.
 - A request that resolves to a directory without a trailing `/` receives a `301` redirect to the trailing-slash URL. With the trailing slash, Bun serves `index.html` from that directory.
 - Missing files return `404`.
 

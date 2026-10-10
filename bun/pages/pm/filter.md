@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.2: [docs/pm/filter.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/pm/filter.mdx)
+> Pinned source for Bun bun-v1.4.3: [docs/pm/filter.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/filter.mdx)
 > Canonical documentation: https://bun.com/docs/pm/filter
 
 The `--filter` (or `-F`) flag selects packages in a monorepo by pattern. A pattern is a package name glob, a `./path` glob, a `{dir}` directory selector, or a `...` dependency relation.
