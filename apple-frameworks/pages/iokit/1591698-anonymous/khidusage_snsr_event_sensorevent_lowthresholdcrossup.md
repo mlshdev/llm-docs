@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/iokit/1591698-anonymous/khidusage_snsr_event_sensorevent_lowthresholdcrossup
 
 # kHIDUsage_Snsr_Event_SensorEvent_LowThresholdCrossUp

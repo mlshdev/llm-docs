@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appscreenshotsets-_id_-relationships-appscreenshots
 
 # Get all app screenshot ids for an app screenshot set
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 Get the ordered screenshot IDs in a screenshot set.
+
+> This endpoint is deprecated. Use [Read an app asset library placement](get-v1-appassetlibraryplacements-_id_.md) instead.
 
 ## URL
 
@@ -39,5 +41,5 @@ GET https://api.appstoreconnect.apple.com/v1/appScreenshotSets/{id}/relationship
 
 ### Listing and Reordering All Screenshots in a Set
 
-- [List all app screenshots for an app screenshot set](get-v1-appscreenshotsets-_id_-appscreenshots.md): List all ordered screenshots in a screenshot set.
-- [Replace all app screenshots for an app screenshot set](patch-v1-appscreenshotsets-_id_-relationships-appscreenshots.md): Change the order of the screenshots in a screenshot set.
+- [List all app screenshots for an app screenshot set](get-v1-appscreenshotsets-_id_-appscreenshots.md): Deprecated. List all ordered screenshots in a screenshot set.
+- [Replace all app screenshots for an app screenshot set](patch-v1-appscreenshotsets-_id_-relationships-appscreenshots.md): Deprecated. Change the order of the screenshots in a screenshot set.

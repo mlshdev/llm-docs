@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appevents-_id_
 
 # Read In-App Event Information
@@ -24,7 +24,7 @@ GET https://api.appstoreconnect.apple.com/v1/appEvents/{id}
 ## Query Parameters
 
 - `fields[appEventLocalizations]` — `[string]`: Additional fields to include for each app event localization resource returned by the response.
-  **Allowed values:** `locale`, `name`, `shortDescription`, `longDescription`, `appEvent`, `appEventScreenshots`, `appEventVideoClips`
+  **Allowed values:** `locale`, `name`, `shortDescription`, `longDescription`, `appEvent`, `appEventScreenshots`, `appEventVideoClips`, `placements`
 - `fields[appEvents]` — `[string]`: Additional fields to include for each app event resource returned by the response.
   **Allowed values:** `referenceName`, `badge`, `eventState`, `deepLink`, `purchaseRequirement`, `primaryLocale`, `priority`, `purpose`, `territorySchedules`, `archivedTerritorySchedules`, `localizations`
 - `include` — `[string]`: The relationship data to include in the response.

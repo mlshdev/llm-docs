@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/visionos-release-notes/visionos-26_1-release-notes
 
 # visionOS 26.1 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The visionOS 26.1 SDK provides support for developing apps for Apple Vision Pro devices running visionOS 26.1. The SDK comes bundled with Xcode 26.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
+The visionOS 26.1 SDK provides support for developing apps for Apple Vision Pro devices running visionOS 26.1. The SDK comes bundled with Xcode 26.1. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
 
 <a id="Background-Assets"></a>
 

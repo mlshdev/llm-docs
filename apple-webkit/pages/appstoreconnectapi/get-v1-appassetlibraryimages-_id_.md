@@ -1,0 +1,108 @@
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appassetlibraryimages-_id_
+
+# Read an app asset library image
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 4.5+
+
+Get information about an app asset library image.
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/{id}
+```
+
+## Path Parameters
+
+- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource.
+
+## Query Parameters
+
+- `fields[appAssetLibraryImages]` — `[string]`: Additional fields to include for each app asset library image resource returned by the response.
+  **Allowed values:** `category`, `createdDate`, `lastModifiedDate`, `fileName`, `fileSize`, `imageAsset`, `referenceName`, `specId`, `state`, `stateDetails`, `uploadOperations`, `placements`
+- `fields[appAssetLibraryPlacements]` — `[string]`: Additional fields to include for each app asset library placement resource returned by the response.
+  **Allowed values:** `mediaType`, `placementType`, `placementGroup`, `createdDate`, `lastModifiedDate`, `state`, `stateDetails`, `image`, `video`, `appEventLocalization`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`
+- `include` — `[string]`: The relationship data to include in the response.
+  **Allowed values:** `placements`
+- `limit[placements]` — `integer`: The maximum number of related placement resources to return.
+  **Maximum:** `50`
+
+## Response Codes
+
+- `200` OK — `AppAssetLibraryImageResponse`: The request completed successfully.
+- `400` Bad Request — `ErrorResponse`: An error occurred with your request.
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`: Request not authorized.
+- `404` Not Found — `ErrorResponse`: Resource not found.
+- `429` — `ErrorResponse`:
+
+## Mentioned In
+
+- [Uploading and managing image assets](uploading-and-managing-image-assets.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+<a id="Example-Request-and-Response"></a>
+
+### Example Request and Response
+
+**Request**
+
+```
+https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/f4000005-e036-8f0b-8018-d259974bee61
+```
+
+**Response**
+
+```json
+{
+  "data" : {
+    "type" : "appAssetLibraryImages",
+    "id" : "f4000005-e036-8f0b-8018-d259974bee61",
+    "attributes" : {
+      "category" : "APP_SCREENSHOTS_AND_PREVIEWS",
+      "createdDate" : "2026-08-11T22:44:12Z",
+      "lastModifiedDate" : "2026-08-11T22:44:31Z",
+      "fileName" : "menu-screen-6-9.png",
+      "fileSize" : 1284736,
+      "imageAsset" : {
+        "templateUrl" : "https://is1.mzstatic.com/image/thumb/AOsFKpK1JfF_vrxSCSbIew/{w}x{h}bb.{f}",
+        "width" : 1290,
+        "height" : 2796
+      },
+      "referenceName" : "Menu screen",
+      "specId" : "f56c777c-99ea-5760-97ae-27c5f8cbb884",
+      "state" : "PREPARE_FOR_SUBMISSION",
+      "stateDetails" : null
+    },
+    "relationships" : {
+      "placements" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/f4000005-e036-8f0b-8018-d259974bee61/relationships/placements",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/f4000005-e036-8f0b-8018-d259974bee61/placements"
+        }
+      }
+    },
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/f4000005-e036-8f0b-8018-d259974bee61"
+    }
+  },
+  "links" : {
+    "self" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/f4000005-e036-8f0b-8018-d259974bee61"
+  }
+}
+```
+
+## See Also
+
+### Getting images and reading information
+
+- [List related placements](get-v1-appassetlibraryimages-_id_-placements.md): List the placements that reuse an app asset library image.
+- [List the placement IDs for an app asset library image](get-v1-appassetlibraryimages-_id_-relationships-placements.md): Get a list of placement resource IDs for a specific app asset library image.

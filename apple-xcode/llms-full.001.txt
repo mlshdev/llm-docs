@@ -1,9 +1,9 @@
-# Apple Xcode and developer tools snapshot-4fca00e84bae: full documentation
+# Apple Xcode and developer tools snapshot-bfcfe27766c6: full documentation
 
 Source: https://developer.apple.com/documentation/xcode
-Catalog snapshot: 4fca00e84bae9217beada8f61d8eb44bfcd4978650125b133ae059131660af4f
-Content digest: f0ae4387bb364a5818de2647531622ae1d41631cac9a4423b442f779c19cd8b3
-Captured at: 2026-10-04T18:39:02.500Z
+Catalog snapshot: bfcfe27766c663f14999c4fcf31630a9571e9213781b42c76a1f17dfc49aeaf3
+Content digest: 990e2ee408426ee8304845f1e985cd3c28b8c57d3ce87386d5e53d62cdc12820
+Captured at: 2026-10-11T21:19:14.691Z
 Volume 1
 
 # Document: Analytics Reports
@@ -94772,6 +94772,7 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 
 ### Latest
 
+- [TN3179: Understanding local network privacy](technotes/tn3179-understanding-local-network-privacy.md): Learn how local network privacy affects your software.
 - [TN3214: Validating the fonts you ship in your app](technotes/tn3214-validating-the-fonts-you-ship-in-your-app.md): Understand the App Store’s font validation, reproduce the check, and fix any issues it reports.
 - [TN3137: On Mac keychain APIs and implementations](technotes/tn3137-on-mac-keychains.md): Learn how the keychain on macOS differs from other Apple platforms.
 - [TN3189: Managing Mail background traffic load](technotes/tn3189-managing-mail-background-traffic-load.md): Identify iOS Mail background traffic and manage its impact on your IMAP server.
@@ -94782,7 +94783,6 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 - [TN3208: Preparing your app’s launch screen to meet App Store requirements](technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements.md): Understand the launch screen requirement for App Store submission starting in iOS 27 and iPadOS 27.
 - [TN3205: Low-latency communication with RDMA over Thunderbolt](technotes/tn3205-low-latency-communication-with-rdma-over-thunderbolt.md): Learn how to use RDMA over Thunderbolt to enable low-latency communication between clusters of Mac computers.
 - [TN3206: Updating Apple Pay certificates](technotes/tn3206-updating-apple-pay-certificates.md): Learn how to create, manage, and rotate Apple Pay certificates to maintain uninterrupted payment processing.
-- [TN3179: Understanding local network privacy](technotes/tn3179-understanding-local-network-privacy.md): Learn how local network privacy affects your software.
 - [TN3190: USB audio device design considerations](technotes/tn3190-usb-audio-device-design-considerations.md): Learn the best techniques for designing devices that conform to the USB Audio Device Class specifications.
 - [TN3194: Handling account deletions and revoking tokens for Sign in with Apple](technotes/tn3194-handling-account-deletions-and-revoking-tokens-for-sign-in-with-apple.md): Learn the best techniques for managing Sign in with Apple user sessions and responding to account deletion requests.
 - [TN3193: Managing the on-device foundation model’s context window](technotes/tn3193-managing-the-on-device-foundation-model-s-context-window.md): Learn how to budget for the context window limit of Apple’s on-device foundation model and handle the error when reaching the limit.
@@ -104509,9 +104509,11 @@ On iOS, the easiest option is to delete your app.
 
 Alternatively, if you don’t want to delete your app for some reason, reset the entire privacy subsystem using Settings \> General \> Transfer or Reset \> Reset \> Reset Location & Privacy.
 
-On macOS there’s no way to reset your program’s Local Network privilege to the undetermined state (FB14944392).  One alternative is to run your program in a virtual machine (VM).  To retest, restore the VM from a snapshot taken before you installed your program.
+On macOS, the list in System Settings \> Privacy & Security \> Local Network has add (+) and remove (-) buttons.  To reset your program’s Local Network privilege, select it in the list and click the remove button.
 
-Alternatively, create a new user account and run your test there.  Remember that macOS maintains separate local network privacy state for each user account.
+> **Note**
+
+> These buttons were introduced in macOS 27.2.  On earlier versions of macOS there’s no way to reset your program’s Local Network privilege (FB14944392).  One option is to run your program in a virtual machine (VM).  To retest, restore the VM from a snapshot taken before you installed your program.  Alternatively, create a new user account and run your test there.  Remember that macOS maintains separate local network privacy state for each user account.
 
 <a id="Trigger-the-local-network-alert"></a>
 
@@ -104703,6 +104705,7 @@ If you must work with a specific type of interface, call `getifaddrs` to get the
 
 ## Revision History
 
+- **2026-10-06** Updated the *Reset local network state* section to account for changes in macOS 27.2.
 - **2026-02-17** Updated the *macOS considerations* section to explain how to configure local network privacy on specific networks (r. 161891509).  Moved version-specific information into the *Historical considerations* section.  Made other minor editorial changes.
 - **2025-07-18** Added information about two bugs (FB14321888, FB16131937). Updated the *Build-time considerations* section to cover macOS code signing.
 - **2024-10-31** Rewritten and republished as TN3179.
@@ -121602,7 +121605,7 @@ For information about Xcode Cloud releases, see [Xcode Cloud release notes](http
 ### Xcode 27
 
 - [Xcode 27.2 Beta 2 Release Notes](xcode-release-notes/xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
-- [Xcode 27.1 Beta Release Notes](xcode-release-notes/xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.1 RC Release Notes](xcode-release-notes/xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-release-notes/xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### Xcode 26
@@ -143404,15 +143407,15 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 ### Xcode 27
 
 - [Xcode 27.2 Beta 2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
-- [Xcode 27.1 Beta Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.1 RC Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: Xcode 27.1 Beta Release Notes
+# Document: Xcode 27.1 RC Release Notes
 
 Source path: documentation/xcode-release-notes/xcode-27_1-release-notes
 Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-27_1-release-notes
 Description: Kind: Article
 
-# Xcode 27.1 Beta Release Notes
+# Xcode 27.1 RC Release Notes
 
 **Kind:** Article
 
@@ -143422,7 +143425,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-Xcode 27.1 beta includes Swift 6.4 and SDKs for iOS 27.1, iPadOS 27, tvOS 27, watchOS 27, macOS 27, and visionOS 27. Xcode 27.1 beta supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.1 beta requires a Mac running macOS Tahoe 26.6 or later.
+Xcode 27.1 RC includes Swift 6.4 and SDKs for iOS 27.1, iPadOS 27, tvOS 27, watchOS 27, macOS 27, and visionOS 27. Xcode 27.1 RC supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.1 RC requires a Mac running macOS Tahoe 26.6 or later.
 
 See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more about compatible platforms and deployment targets.
 
@@ -143637,7 +143640,7 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode 27
 
-- [Xcode 27.1 Beta Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.1 RC Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 # Document: About continuous integration and delivery with Xcode Cloud
@@ -161972,190 +161975,3 @@ Don’t pass the `--deep` option to `codesign` when you sign code.  This option 
 - [Signing a daemon with a restricted entitlement](signing-a-daemon-with-a-restricted-entitlement.md): Wrap a daemon in an app-like structure to use an entitlement thatʼs authorized by a provisioning profile.
 - [Synchronizing code signing identities with your developer account](sharing-your-teams-signing-certificates.md): Ensure you and other team members can sign your organization’s code and installer packages in Xcode.
 - [TN3125: Inside Code Signing: Provisioning Profiles](../technotes/tn3125-inside-code-signing-provisioning-profiles.md): Learn how provisioning profiles enable third-party code to run on Apple platforms.
-
-# Document: Creating enhanced security helper extensions
-
-Source path: documentation/xcode/creating-enhanced-security-helper-extensions
-Canonical documentation: https://developer.apple.com/documentation/xcode/creating-enhanced-security-helper-extensions
-Description: Kind: Article
-
-# Creating enhanced security helper extensions
-
-**Kind:** Article
-
-Reduce opportunities for an attacker to target your app through its extensions.
-
-<a id="Overview"></a>
-
-## Overview
-
-Separating sensitive calculations, such as handling data from untrusted sources, into extensions that the system runs as separate processes from your app reduces the opportunity for attackers to target the sensitive calculation and gain access to other parts of your app or the system. Create Enhanced Security helper extensions on iOS, iPadOS, and macOS to enforce tighter sandbox restrictions, and enable compiler and runtime security protections.
-
-<a id="Define-the-extension-point-in-your-app"></a>
-
-### Define the extension point in your app
-
-Add the `EX_ENABLE_EXTENSION_POINT_GENERATION` user-defined build setting with the value `YES` to your app target’s build setting. In your app’s source code, create an extension to [AppExtensionPoint](https://developer.apple.com/documentation/extensionfoundation/appextensionpoint) that defines your app’s extension point. Give the extension point the [AppExtensionPoint.Name](https://developer.apple.com/documentation/extensionfoundation/appextensionpoint/name) of your choosing, and the [AppExtensionPoint.EnhancedSecurity](https://developer.apple.com/documentation/extensionfoundation/appextensionpoint/enhancedsecurity) attribute to tell the system to run your extension in the Enhanced Security runtime:
-
-```swift
-import ExtensionFoundation
-
-extension AppExtensionPoint {
-  @Definition
-  static var exampleExtension: AppExtensionPoint {
-    Name("exampleExtension")
-    EnhancedSecurity()
-  }
-}
-```
-
-<a id="Create-the-extension"></a>
-
-### Create the extension
-
-Follow these steps to create the extension:
-
-1. In Xcode, choose File \> New \> Target, and select the Generic Extension template.
-2. Select the Enhanced Security Extension extension type, and click Finish.
-3. In the Xcode Project navigator, delete the extension target’s `Info.plist` file.
-4. In the target build settings editor, delete the `INFOPLIST_FILE` build setting for the extension target.
-
-Edit the main source file for the extension, so that the [AppExtensionPoint.Identifier](https://developer.apple.com/documentation/extensionfoundation/appextensionpoint/identifier) for the extension point it binds to has your app’s bundle ID as the host identifier, and the name you gave the extension point in the previous section:
-
-```swift
-import ExtensionFoundation
-
-@main
-struct MyAppHelper: ExampleExtension {
-  @AppExtensionPoint.Bind
-  var boundExtensionPoint: AppExtensionPoint {
-    AppExtensionPoint.Identifier(host: "com.example.my-app", name: "exampleExtension")
-  }
-}
-```
-
-Write the code to implement your extension’s behavior. The system runs your extension in a sandbox that restricts access to most system services and frameworks. In particular, your extension can’t present UI. Instead, it must communicate with its host app, and ask the app to present UI and interact with other system services on the extension’s behalf.
-
-<a id="Discover-and-launch-the-extension"></a>
-
-### Discover and launch the extension
-
-In your app, create an [AppExtensionPoint.Monitor](https://developer.apple.com/documentation/extensionfoundation/appextensionpoint/monitor) to discover the Enhanced Security extension:
-
-```swift
-let monitor = try await AppExtensionPoint.Monitor(appExtensionPoint: AppExtensionPoint.exampleExtension)
-guard let identity = monitor.identities.first else {     
-   fatalError("Extension not found")
-} 
-```
-
-The `identity` represents the bundle for the Enhanced Security extension you created in the previous section. Create an [AppExtensionProcess](https://developer.apple.com/documentation/extensionfoundation/appextensionprocess) with that bundle to launch the extension:
-
-```swift
-do {
-  self.process = try await AppExtensionProcess(configuration: .init(appExtensionIdentity: identity, onInterruption: {
-    // The system calls this closure when the extension exits.
-  }))
-  // Communicate with the extension.
-}
-catch let error {
-  // The system can't launch the extension.
-}
-```
-
-<a id="Communicate-between-the-app-and-the-extension"></a>
-
-### Communicate between the app and the extension
-
-Use [XPCSession](https://developer.apple.com/documentation/xpc/xpcsession) to handle communication between your app and its Enhanced Security extension. For more information, see [Creating XPC services](https://developer.apple.com/documentation/xpc/creating-xpc-services).
-
-Define structures that conform to [Codable](https://developer.apple.com/documentation/swift/codable) in code you share between the app and extension, and create instances of those structures to send over XPC using the session you create:
-
-```swift
-struct Message: Identifiable, Codable {
-  var id: String
-  // Add properties that represent data your app sends to its extension.
-
-  struct Response: Codable {
-    // Define another structure that the extension sends back to the app in its reply.
-  }
-}
-```
-
-Call [makeXPCSession()](https://developer.apple.com/documentation/extensionfoundation/appextensionprocess/makexpcsession%28%29) in your app to create an `XPCSession` you use to send messages to the extension:
-
-```swift
-do {
-  self.xpcSession = try process.makeXPCSession()
-  try xpcSession.activate()
-  // Send messages to the extension.
-}
-catch let error {
-  // The system can't create the XPC session.
-}
-```
-
-Use the session you create to send messages to the extension, and receive responses:
-
-```swift
-let response = try await withCheckedThrowingContinuation { continuation in
-  do {
-    // Construct the message the app sends to the extension.
-    let message = Message()
-    try xpcSession.send(Message()) { result in
-      switch result {
-      case .success(let reply):
-        let response = (try? reply.decode(as: Message.Response.self)) ?? /* Create a default response. */
-        continuation.resume(returning: response)
-      case .failure(let error):
-        continuation.resume(throwing: error)
-      }
-    }
-  }
-  catch {
-    continuation.resume(throwing: error)
-  }
-}
-// Interpret the response from the extension.
-```
-
-In the extension, create a [ConnectionHandler](https://developer.apple.com/documentation/extensionfoundation/connectionhandler) to accept incoming connections from the app. Call the [init(onSessionRequest:)](https://developer.apple.com/documentation/extensionfoundation/connectionhandler/init%28onsessionrequest:%29) initializer, and use the closure to accept the XPC connection and create a session.
-
-```swift
-extension ExampleExtension {
-    var configuration: some AppExtensionConfiguration {
-        // Return your extension's configuration upon request.
-        return ConnectionHandler(onSessionRequest: { request in
-            let handler = MessageHandler(appExtension: self)
-            return request.accept { session in
-                return handler
-            }
-        })
-    }
-}
- 
-fileprivate struct MessageHandler<E: ExampleExtension>: XPCPeerHandler, Sendable {
-    let appExtension: E
-     
-    func handleIncomingRequest(_ message: Message) -> (any Encodable)? {
-        // Process the incoming message.
-        return Message.Response()
-    }
-}
-
-```
-
-<a id="Adopt-other-security-hardening-features"></a>
-
-### Adopt other security hardening features
-
-Enhanced security extensions use the same compiler and runtime security features as apps that adopt the Enhanced Security capability. For more information, see [Enabling enhanced security for your app](enabling-enhanced-security-for-your-app.md).
-
-## See Also
-
-### Security and privacy
-
-- [Verifying the origin of your XCFrameworks](verifying-the-origin-of-your-xcframeworks.md): Discover who signed a framework, and take action when that changes.
-- [Enabling enhanced security for your app](enabling-enhanced-security-for-your-app.md): Detect out-of-bounds memory access, use of freed memory, and other potential vulnerabilities.
-- [Adopting type-aware memory allocation](adopting-type-aware-memory-allocation.md): Reduce the opportunities to treat pointers as data in your code.
-- [Conforming to Mach IPC security restrictions](conforming-to-mach-ipc-security-restrictions.md): Avoid crashes and potentially insecure situations associated with Mach messages.

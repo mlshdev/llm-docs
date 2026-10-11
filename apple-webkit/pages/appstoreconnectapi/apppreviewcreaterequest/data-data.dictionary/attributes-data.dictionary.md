@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/apppreviewcreaterequest/data-data.dictionary/attributes-data.dictionary
 
 # AppPreviewCreateRequest.Data.Attributes
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Object  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 Attributes that you set that describe the new resource.
+
+> This object is deprecated. Use [AppAssetLibraryVideoCreateRequest](../../appassetlibraryvideocreaterequest.md) instead.
 
 ## Declaration
 
@@ -28,4 +30,4 @@ object AppPreviewCreateRequest.Data.Attributes
 
 ### Objects
 
-- [AppPreviewCreateRequest.Data.Relationships](relationships-data.dictionary.md): The relationships to other resources that you can set with this request.
+- [AppPreviewCreateRequest.Data.Relationships](relationships-data.dictionary.md): Deprecated. The relationships to other resources that you can set with this request.

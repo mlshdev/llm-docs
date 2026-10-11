@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appcustomproductpagelocalizations-_id_-apppreviewsets
 
 # List App Preview Sets for a Custom Product Page Localization
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.7+
+**Availability:** App Store Connect API 1.7+ (deprecated in 4.5)
 
 List the app preview sets for a specific custom product page localization.
+
+> This relationship is deprecated. Use the [AppAssetLibraryPlacement](appassetlibraryplacement.md) relationship instead.
 
 ## URL
 
@@ -38,11 +40,11 @@ GET https://api.appstoreconnect.apple.com/v1/appCustomProductPageLocalizations/{
 - `limit[appPreviews]` — `integer`: The maximum number of related app previews resources to return.
   **Maximum:** `50`
 - `fields[appCustomProductPageLocalizations]` — `[string]`: Additional fields to include for each app custom product page localization resource returned by the response.
-  **Allowed values:** `locale`, `promotionalText`, `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+  **Allowed values:** `locale`, `promotionalText`, `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
 - `fields[appStoreVersionExperimentTreatmentLocalizations]` — `[string]`: Additional fields to include for each App Store version experiment treatment localization resource returned by the response.
-  **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`
+  **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`, `placements`
 - `fields[appStoreVersionLocalizations]` — `[string]`: Additional fields to include for each App Store version localization resource returned by the response.
-  **Allowed values:** `description`, `locale`, `keywords`, `marketingUrl`, `promotionalText`, `supportUrl`, `whatsNew`, `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+  **Allowed values:** `description`, `locale`, `keywords`, `marketingUrl`, `promotionalText`, `supportUrl`, `whatsNew`, `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
 
 ## Response Codes
 
@@ -57,16 +59,16 @@ GET https://api.appstoreconnect.apple.com/v1/appCustomProductPageLocalizations/{
 
 ### Related Documentation
 
-- [Create an app preview set](post-v1-apppreviewsets.md): Add a new app preview set to an App Store version localization for a specific app preview type and display size.
-- [Delete an app preview set](delete-v1-apppreviewsets-_id_.md): Delete an app preview set and all of its previews.
-- [List all app previews for an app preview set](get-v1-apppreviewsets-_id_-apppreviews.md): List all ordered app previews in a preview set.
-- [Get all app preview ids for an app preview set](get-v1-apppreviewsets-_id_-relationships-apppreviews.md): Get the ordered app preview IDs in a preview set.
-- [Replace all app previews for an app preview set](patch-v1-apppreviewsets-_id_-relationships-apppreviews.md): Change the order of the app previews in a preview set.
+- [Create an app preview set](post-v1-apppreviewsets.md): Deprecated. Add a new app preview set to an App Store version localization for a specific app preview type and display size.
+- [Delete an app preview set](delete-v1-apppreviewsets-_id_.md): Deprecated. Delete an app preview set and all of its previews.
+- [List all app previews for an app preview set](get-v1-apppreviewsets-_id_-apppreviews.md): Deprecated. List all ordered app previews in a preview set.
+- [Get all app preview ids for an app preview set](get-v1-apppreviewsets-_id_-relationships-apppreviews.md): Deprecated. Get the ordered app preview IDs in a preview set.
+- [Replace all app previews for an app preview set](patch-v1-apppreviewsets-_id_-relationships-apppreviews.md): Deprecated. Change the order of the app previews in a preview set.
 
 ### Endpoints
 
-- [Create an app preview set](post-v1-apppreviewsets.md): Add a new app preview set to an App Store version localization for a specific app preview type and display size.
-- [Delete an app preview set](delete-v1-apppreviewsets-_id_.md): Delete an app preview set and all of its previews.
-- [List all app previews for an app preview set](get-v1-apppreviewsets-_id_-apppreviews.md): List all ordered app previews in a preview set.
-- [Get all app preview ids for an app preview set](get-v1-apppreviewsets-_id_-relationships-apppreviews.md): Get the ordered app preview IDs in a preview set.
-- [Replace all app previews for an app preview set](patch-v1-apppreviewsets-_id_-relationships-apppreviews.md): Change the order of the app previews in a preview set.
+- [Create an app preview set](post-v1-apppreviewsets.md): Deprecated. Add a new app preview set to an App Store version localization for a specific app preview type and display size.
+- [Delete an app preview set](delete-v1-apppreviewsets-_id_.md): Deprecated. Delete an app preview set and all of its previews.
+- [List all app previews for an app preview set](get-v1-apppreviewsets-_id_-apppreviews.md): Deprecated. List all ordered app previews in a preview set.
+- [Get all app preview ids for an app preview set](get-v1-apppreviewsets-_id_-relationships-apppreviews.md): Deprecated. Get the ordered app preview IDs in a preview set.
+- [Replace all app previews for an app preview set](patch-v1-apppreviewsets-_id_-relationships-apppreviews.md): Deprecated. Change the order of the app previews in a preview set.

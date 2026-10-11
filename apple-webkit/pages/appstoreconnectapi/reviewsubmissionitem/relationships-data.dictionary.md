@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitem/relationships-data.dictionary
 
 # ReviewSubmissionItem.Relationships
@@ -30,6 +30,8 @@ object ReviewSubmissionItem.Relationships
 - `gameCenterChallengeVersion` — `ReviewSubmissionItem.Relationships.GameCenterChallengeVersion`:
 - `gameCenterLeaderboardSetVersion` — `ReviewSubmissionItem.Relationships.GameCenterLeaderboardSetVersion`:
 - `gameCenterLeaderboardVersion` — `ReviewSubmissionItem.Relationships.GameCenterLeaderboardVersion`:
+- `appAssetLibraryImage` — `ReviewSubmissionItem.Relationships.AppAssetLibraryImage`: The data and links that describe the relationship between the Review Submission Items and the App Asset Library Images resources.
+- `appAssetLibraryVideo` — `ReviewSubmissionItem.Relationships.AppAssetLibraryVideo`: The data and links that describe the relationship between the Review Submission Items and the App Asset Library Videos resources.
 - `inAppPurchaseVersion` — `ReviewSubmissionItem.Relationships.InAppPurchaseVersion`:
 - `subscriptionGroupVersion` — `ReviewSubmissionItem.Relationships.SubscriptionGroupVersion`:
 - `subscriptionVersion` — `ReviewSubmissionItem.Relationships.SubscriptionVersion`:
@@ -52,6 +54,8 @@ object ReviewSubmissionItem.Relationships
 - [ReviewSubmissionItem.Relationships.GameCenterChallengeVersion](relationships-data.dictionary/gamecenterchallengeversion-data.dictionary.md): The data that describes the Game Center challenge version of the review submission item.
 - [ReviewSubmissionItem.Relationships.GameCenterLeaderboardSetVersion](relationships-data.dictionary/gamecenterleaderboardsetversion-data.dictionary.md): The data that describes the Game Center leaderboard set version of the review submission item.
 - [ReviewSubmissionItem.Relationships.GameCenterLeaderboardVersion](relationships-data.dictionary/gamecenterleaderboardversion-data.dictionary.md): The data that describes the Game Center leaderboard version of the review submission item.
+- [ReviewSubmissionItem.Relationships.AppAssetLibraryImage](relationships-data.dictionary/appassetlibraryimage-data.dictionary.md)
+- [ReviewSubmissionItem.Relationships.AppAssetLibraryVideo](relationships-data.dictionary/appassetlibraryvideo-data.dictionary.md)
 - [ReviewSubmissionItem.Relationships.InAppPurchaseVersion](relationships-data.dictionary/inapppurchaseversion-data.dictionary.md)
 - [ReviewSubmissionItem.Relationships.SubscriptionGroupVersion](relationships-data.dictionary/subscriptiongroupversion-data.dictionary.md)
 - [ReviewSubmissionItem.Relationships.SubscriptionVersion](relationships-data.dictionary/subscriptionversion-data.dictionary.md)

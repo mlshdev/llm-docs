@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appevents-_id_-localizations
 
 # List all localizations for an in-app event
@@ -24,13 +24,13 @@ GET https://api.appstoreconnect.apple.com/v1/appEvents/{id}/localizations
 ## Query Parameters
 
 - `fields[appEventLocalizations]` — `[string]`: Additional fields to include for each app event localization resource returned by the response.
-  **Allowed values:** `locale`, `name`, `shortDescription`, `longDescription`, `appEvent`, `appEventScreenshots`, `appEventVideoClips`
+  **Allowed values:** `locale`, `name`, `shortDescription`, `longDescription`, `appEvent`, `appEventScreenshots`, `appEventVideoClips`, `placements`
 - `fields[appEventScreenshots]` — `[string]`: Additional fields to include for each app event screenshot resource returned by the response.
   **Allowed values:** `fileSize`, `fileName`, `imageAsset`, `assetToken`, `uploadOperations`, `assetDeliveryState`, `appEventAssetType`, `appEventLocalization`
 - `fields[appEventVideoClips]` — `[string]`: Additional fields to include for each app event video clip resource returned by the response.
   **Allowed values:** `fileSize`, `fileName`, `previewFrameTimeCode`, `videoUrl`, `previewFrameImage`, `previewImage`, `uploadOperations`, `assetDeliveryState`, `videoDeliveryState`, `appEventAssetType`, `appEventLocalization`
 - `include` — `[string]`: The relationship data to include in the response.
-  **Allowed values:** `appEvent`, `appEventScreenshots`, `appEventVideoClips`
+  **Allowed values:** `appEvent`, `appEventScreenshots`, `appEventVideoClips`, `placements`
 - `limit` — `integer`: The maximum number of app event localization resources to return.
   **Maximum:** `200`
 - `limit[appEventScreenshots]` — `integer`: The maximum number of related app event screenshots resources to return.
@@ -39,6 +39,8 @@ GET https://api.appstoreconnect.apple.com/v1/appEvents/{id}/localizations
   **Maximum:** `50`
 - `fields[appEvents]` — `[string]`: Additional fields to include for each app event resource returned by the response.
   **Allowed values:** `referenceName`, `badge`, `eventState`, `deepLink`, `purchaseRequirement`, `primaryLocale`, `priority`, `purpose`, `territorySchedules`, `archivedTerritorySchedules`, `localizations`
+- `fields[appAssetLibraryPlacements]` — `[string]`: **Allowed values:** `mediaType`, `placementType`, `placementGroup`, `createdDate`, `lastModifiedDate`, `state`, `stateDetails`, `image`, `video`, `appEventLocalization`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`
+- `limit[placements]` — `integer`: **Maximum:** `50`
 
 ## Response Codes
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appstoreversionexperimenttreatmentlocalizations-_id_
 
 # Read app store version experiment treatment localization information
@@ -28,14 +28,16 @@ GET https://api.appstoreconnect.apple.com/v1/appStoreVersionExperimentTreatmentL
 - `fields[appScreenshotSets]` — `[string]`: Additional fields to include for each app screenshot set resource returned by the response.
   **Allowed values:** `screenshotDisplayType`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`, `appScreenshots`
 - `fields[appStoreVersionExperimentTreatmentLocalizations]` — `[string]`: Additional fields to include for each App Store version experiment treatment localization resource returned by the response.
-  **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`
+  **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`, `placements`
 - `include` — `[string]`: The relationship data to include in the response.
-  **Allowed values:** `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`
+  **Allowed values:** `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`, `placements`
 - `limit[appPreviewSets]` — `integer`: The maximum number of related app preview set resources to return.
   **Maximum:** `50`
 - `limit[appScreenshotSets]` — `integer`: The maximum number of related app screenshot set resources to return.
   **Maximum:** `50`
+- `fields[appAssetLibraryPlacements]` — `[string]`: **Allowed values:** `mediaType`, `placementType`, `placementGroup`, `createdDate`, `lastModifiedDate`, `state`, `stateDetails`, `image`, `video`, `appEventLocalization`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`
 - `fields[appStoreVersionExperimentTreatments]` — `[string]`: **Allowed values:** `name`, `appIcon`, `appIconName`, `promotedDate`, `appStoreVersionExperiment`, `appStoreVersionExperimentV2`, `appStoreVersionExperimentTreatmentLocalizations`
+- `limit[placements]` — `integer`: **Maximum:** `50`
 
 ## Response Codes
 
@@ -50,9 +52,11 @@ GET https://api.appstoreconnect.apple.com/v1/appStoreVersionExperimentTreatmentL
 
 ### Endpoints
 
-- [List all screenshot sets for an experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-appscreenshotsets.md): Get a list of screenshot sets for a specific App Store version experiment treatment localization.
-- [List all preview sets for an experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-apppreviewsets.md): Get a list of preview sets for a specific App Store version experiment treatment localization.
-- [List preview set IDs for an App Store version experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-relationships-apppreviewsets.md)
-- [List screenshot set IDs for an App Store version experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-relationships-appscreenshotsets.md)
+- [List all screenshot sets for an experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-appscreenshotsets.md): Deprecated. Get a list of screenshot sets for a specific App Store version experiment treatment localization.
+- [List all preview sets for an experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-apppreviewsets.md): Deprecated. Get a list of preview sets for a specific App Store version experiment treatment localization.
+- [List preview set IDs for an App Store version experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-relationships-apppreviewsets.md): Deprecated.
+- [List screenshot set IDs for an App Store version experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-relationships-appscreenshotsets.md): Deprecated.
 - [Create an app store version experiment treatment localization](post-v1-appstoreversionexperimenttreatmentlocalizations.md): Add a new localization for an App Store version experiment treatment.
 - [Delete a treatment localization for an app store version experiment](delete-v1-appstoreversionexperimenttreatmentlocalizations-_id_.md): Delete localized metatdata that you configured for an App Store Version experiment treatment.
+- [List related placements](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-placements.md): List the placements for an App Store version experiment treatment localization.
+- [List the placement IDs for an App Store version experiment treatment localization](get-v1-appstoreversionexperimenttreatmentlocalizations-_id_-relationships-placements.md): Get a list of placement resource IDs for a specific App Store version experiment treatment localization.

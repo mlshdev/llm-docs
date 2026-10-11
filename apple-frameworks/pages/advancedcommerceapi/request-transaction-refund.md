@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/request-transaction-refund
 
 # Request Transaction Refund
@@ -14,7 +14,7 @@ Request a refund for a one-time charge or subscription transaction.
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/transaction/requestRefund/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/transaction/requestRefund/{transactionId}
 ```
 
 ## Sandbox URL

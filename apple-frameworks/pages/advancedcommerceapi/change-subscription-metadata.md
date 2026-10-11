@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/change-subscription-metadata
 
 # Change Subscription Metadata
@@ -14,7 +14,7 @@ Update the SKU, display name, and description associated with a subscription, wi
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/subscription/changeMetadata/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/subscription/changeMetadata/{transactionId}
 ```
 
 ## Sandbox URL

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/app-store
 
 # App Store
@@ -17,6 +17,10 @@ Manage all aspects of your app, App Clips, In-App Purchases, and customer review
 - [App Metadata](app-metadata.md): Manage the metadata of apps in App Store Connect.
 - [Custom Product Pages and Localizations](custom-product-pages-and-localizations.md): Create and manage your app’s custom product pages and localizations.
 - [App Events and Metadata](app-events-and-metadata.md): Create and schedule in-app events and manage in-app event metadata.
+
+### App Asset Library
+
+- [App Asset Library](app-asset-library.md): Upload image and video assets once, then reuse them across your app’s App Store surfaces.
 
 ### App Clips
 

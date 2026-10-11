@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/matter/mtrbaseclusterlevelcontrol/subscribeattributemaxlevel(withmininterval:maxinterval:params:subscriptionestablished:reporthandler:)
 
 # subscribeAttributeMaxLevel(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:) (Swift)

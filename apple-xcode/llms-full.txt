@@ -1,11 +1,11 @@
-# Apple Xcode and developer tools snapshot-4fca00e84bae: full documentation
+# Apple Xcode and developer tools snapshot-bfcfe27766c6: full documentation
 
 Source: https://developer.apple.com/documentation/xcode
-Catalog snapshot: 4fca00e84bae9217beada8f61d8eb44bfcd4978650125b133ae059131660af4f
-Content digest: f0ae4387bb364a5818de2647531622ae1d41631cac9a4423b442f779c19cd8b3
-Captured at: 2026-10-04T18:39:02.500Z
+Catalog snapshot: bfcfe27766c663f14999c4fcf31630a9571e9213781b42c76a1f17dfc49aeaf3
+Content digest: 990e2ee408426ee8304845f1e985cd3c28b8c57d3ce87386d5e53d62cdc12820
+Captured at: 2026-10-11T21:19:14.691Z
 
 This corpus is published as 2 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-- [Volume 1](llms-full.001.txt): 1962 documents, 8388468 bytes, SHA-256 `66b8f8620b12eb2ad687bff0548742324bd1016fa32accd795fec6beaf7d6d16`.
-- [Volume 2](llms-full.002.txt): 1338 documents, 4891980 bytes, SHA-256 `f91fa627ff716c2fead1b5dc5c0d9dea2021bcfca6c3c17d094e3c1eb5966723`.
+- [Volume 1](llms-full.001.txt): 1961 documents, 8380257 bytes, SHA-256 `473a00eed5b115a44e114882760984488b7d50adda9b2684b87b75d9d7ad12fe`.
+- [Volume 2](llms-full.002.txt): 1339 documents, 4900544 bytes, SHA-256 `ab2b80655026be58317217bae8d55ff2c596c888fde1ed9fb32d5ba5274d64c3`.

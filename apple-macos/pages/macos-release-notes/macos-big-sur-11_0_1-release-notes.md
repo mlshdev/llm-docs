@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-8257b11be327; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes
 
 # macOS Big Sur 11.0.1 Release Notes
@@ -9,7 +9,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 11 SDK provides support to develop apps for Macs running macOS Big Sur 11. The SDK comes bundled with Xcode 12.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
+The macOS 11 SDK provides support to develop apps for Macs running macOS Big Sur 11. The SDK comes bundled with Xcode 12.2. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
 
 <a id="General"></a>
 

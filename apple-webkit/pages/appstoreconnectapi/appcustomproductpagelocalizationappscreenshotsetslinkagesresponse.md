@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appcustomproductpagelocalizationappscreenshotsetslinkagesresponse
 
 # AppCustomProductPageLocalizationAppScreenshotSetsLinkagesResponse
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Object  
-**Availability:** App Store Connect API 3.6+
+**Availability:** App Store Connect API 4.0+ (deprecated in 4.5)
 
 A response containing the resource identifiers of screenshot sets associated with a custom product page localization.
+
+> This object is deprecated. Use [AppAssetLibraryPlacement](appassetlibraryplacement.md) instead.
 
 ## Declaration
 
@@ -41,6 +43,7 @@ object AppCustomProductPageLocalizationAppScreenshotSetsLinkagesResponse
 - [AppCustomProductPageLocalizationResponse](appcustomproductpagelocalizationresponse.md): A response containing a single localization for a custom App Store product page.
 - [AppCustomProductPageLocalizationUpdateRequest](appcustomproductpagelocalizationupdaterequest.md): The request body you use to update an app custom product page localization.
 - [AppCustomProductPageLocalizationsResponse](appcustomproductpagelocalizationsresponse.md): A response containing a list of localizations for a custom App Store product page.
-- [AppCustomProductPageLocalizationAppPreviewSetsLinkagesResponse](appcustomproductpagelocalizationapppreviewsetslinkagesresponse.md): A response containing the resource identifiers of app preview sets associated with a custom product page localization.
+- [AppCustomProductPageLocalizationAppPreviewSetsLinkagesResponse](appcustomproductpagelocalizationapppreviewsetslinkagesresponse.md): Deprecated. A response containing the resource identifiers of app preview sets associated with a custom product page localization.
 - [AppCustomProductPageLocalizationSearchKeywordsLinkagesRequest](appcustomproductpagelocalizationsearchkeywordslinkagesrequest.md): The request body you use to create a relationship between a custom product page localization and a search keyword.
 - [AppCustomProductPageLocalizationSearchKeywordsLinkagesResponse](appcustomproductpagelocalizationsearchkeywordslinkagesresponse.md): A response containing the resource identifiers of search keywords associated with a custom product page localization.
+- [AppCustomProductPageLocalizationPlacementsLinkagesResponse](appcustomproductpagelocalizationplacementslinkagesresponse.md): A response body that contains a list of related resource IDs.

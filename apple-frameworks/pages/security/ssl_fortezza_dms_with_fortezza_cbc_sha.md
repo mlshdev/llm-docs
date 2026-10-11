@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/security/ssl_fortezza_dms_with_fortezza_cbc_sha
 
 # SSL_FORTEZZA_DMS_WITH_FORTEZZA_CBC_SHA (Swift)

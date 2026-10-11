@@ -1,10 +1,972 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 37
+
+# Document: identifier
+
+Source path: documentation/intents/inspeakable/identifier
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakable/identifier
+Description: Framework: Intents Kind: Instance Property Availability: iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 11.0+ · tvOS 10.0+ (deprecated in 11.0) · vis…
+
+# identifier (Swift)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 11.0+ · tvOS 10.0+ (deprecated in 11.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (deprecated in 4.0)
+
+The identifier associated with the string in your app’s custom vocabulary file.
+
+> Use [vocabularyIdentifier](vocabularyidentifier.md) instead.
+
+## Declaration
+
+```swift
+optional var identifier: String? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For phrases that are included in your app’s `AppIntentVocabulary.plist` file, this property contains the value of the `VocabularyItemIdentifier` key associated with that phrase. When determining the resolution for speakable strings, you can use this identifier (when present) to validate and resolve the term to a known phrase.
+
+If the specified phrase was not defined in your vocabulary file, this property is `nil`.
+
+## See Also
+
+### Getting the Identifier
+
+- [vocabularyIdentifier](vocabularyidentifier.md): The identifier associated with the string in your app’s custom vocabulary file.
+
+# identifier (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 11.0+ · tvOS 14.0+ (deprecated in 11.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (deprecated in 4.0)
+
+The identifier associated with the string in your app’s custom vocabulary file.
+
+> Use [vocabularyIdentifier](vocabularyidentifier.md) instead.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, readonly, nullable) NSString * identifier;
+```
+
+```objectivec
+@property (atomic, strong, readonly, nullable) NSString * identifier;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For phrases that are included in your app’s `AppIntentVocabulary.plist` file, this property contains the value of the `VocabularyItemIdentifier` key associated with that phrase. When determining the resolution for speakable strings, you can use this identifier (when present) to validate and resolve the term to a known phrase.
+
+If the specified phrase was not defined in your vocabulary file, this property is `nil`.
+
+## See Also
+
+### Getting the Identifier
+
+- [vocabularyIdentifier](vocabularyidentifier.md): The identifier associated with the string in your app’s custom vocabulary file.
+
+# Document: pronunciationHint
+
+Source path: documentation/intents/inspeakable/pronunciationhint
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakable/pronunciationhint
+Description: Framework: Intents Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+# pronunciationHint (Swift)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+A hint at how the spoken phrase is pronounced.
+
+## Declaration
+
+```swift
+var pronunciationHint: String? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This value provides a hint to Siri about how a string is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could be have “eye toons” as its pronunciation string.
+
+## See Also
+
+### Getting the Spoken Attributes
+
+- [spokenPhrase](spokenphrase.md): The phrase identified by Siri.
+
+# pronunciationHint (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+A hint at how the spoken phrase is pronounced.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, readonly, nullable) NSString * pronunciationHint;
+```
+
+```objectivec
+@property (atomic, strong, readonly, nullable) NSString * pronunciationHint;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This value provides a hint to Siri about how a string is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could be have “eye toons” as its pronunciation string.
+
+## See Also
+
+### Getting the Spoken Attributes
+
+- [spokenPhrase](spokenphrase.md): The phrase identified by Siri.
+
+# Document: spokenPhrase
+
+Source path: documentation/intents/inspeakable/spokenphrase
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakable/spokenphrase
+Description: Framework: Intents Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+# spokenPhrase (Swift)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+The phrase identified by Siri.
+
+## Declaration
+
+```swift
+var spokenPhrase: String { get }
+```
+
+## Mentioned In
+
+- [Handling an Intent](../../sirikit/handling-an-intent.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Typically, this phrase corresponds to a custom term defined in the `AppIntentVocabulary.plist` file of your Intents extension, but it may also be a custom phrase spoken by the user. In both cases, it represents a term that you must resolve as part of handling an intent. For example, it might contain a workout name that you must resolve.
+
+## See Also
+
+### Getting the Spoken Attributes
+
+- [pronunciationHint](pronunciationhint.md): A hint at how the spoken phrase is pronounced.
+
+# spokenPhrase (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+The phrase identified by Siri.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, readonly, nonnull) NSString * spokenPhrase;
+```
+
+```objectivec
+@property (atomic, strong, readonly, nonnull) NSString * spokenPhrase;
+```
+
+## Mentioned In
+
+- [Handling an Intent](../../sirikit/handling-an-intent.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Typically, this phrase corresponds to a custom term defined in the `AppIntentVocabulary.plist` file of your Intents extension, but it may also be a custom phrase spoken by the user. In both cases, it represents a term that you must resolve as part of handling an intent. For example, it might contain a workout name that you must resolve.
+
+## See Also
+
+### Getting the Spoken Attributes
+
+- [pronunciationHint](pronunciationhint.md): A hint at how the spoken phrase is pronounced.
+
+# Document: vocabularyIdentifier
+
+Source path: documentation/intents/inspeakable/vocabularyidentifier
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakable/vocabularyidentifier
+Description: Framework: Intents Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+# vocabularyIdentifier (Swift)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+The identifier associated with the string in your app’s custom vocabulary file.
+
+## Declaration
+
+```swift
+var vocabularyIdentifier: String? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For phrases that are included in your app’s `AppIntentVocabulary.plist` file, this property contains the value of the `VocabularyItemIdentifier` key associated with that phrase. When determining the resolution for speakable strings, you can use this identifier (when present) to validate and resolve the term to a known phrase.
+
+If the specified phrase was not defined in your vocabulary file, this property is `nil`.
+
+## See Also
+
+### Getting the Identifier
+
+- [identifier](identifier.md): Deprecated. The identifier associated with the string in your app’s custom vocabulary file.
+
+# vocabularyIdentifier (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
+
+The identifier associated with the string in your app’s custom vocabulary file.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, readonly, nullable) NSString * vocabularyIdentifier;
+```
+
+```objectivec
+@property (atomic, strong, readonly, nullable) NSString * vocabularyIdentifier;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For phrases that are included in your app’s `AppIntentVocabulary.plist` file, this property contains the value of the `VocabularyItemIdentifier` key associated with that phrase. When determining the resolution for speakable strings, you can use this identifier (when present) to validate and resolve the term to a known phrase.
+
+If the specified phrase was not defined in your vocabulary file, this property is `nil`.
+
+## See Also
+
+### Getting the Identifier
+
+- [identifier](identifier.md): Deprecated. The identifier associated with the string in your app’s custom vocabulary file.
+
+# Document: INSpeakableString
+
+Source path: documentation/intents/inspeakablestring
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring
+Description: Framework: Intents Kind: Class Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
+
+# INSpeakableString (Swift)
+
+**Framework:** Intents  
+**Kind:** Class  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
+
+A custom phrase to be resolved by an Intents extension.
+
+## Declaration
+
+```swift
+class INSpeakableString
+```
+
+## Mentioned In
+
+- [Improving interactions between Siri and your messaging app](../sirikit/improving-interactions-between-siri-and-your-messaging-app.md)
+
+<a id="overview"></a>
+
+## Overview
+
+When creating your Intents extension, you can define custom vocabulary for some types of intents. For example, a workout app may provide a custom `AppIntentVocabulary.plist` file with the names of standard workouts that are shared by all users of the app. In places where those terms might be used, the intent object contains an [INSpeakableString](inspeakablestring.md) object.
+
+Use the contents of an [INSpeakableString](inspeakablestring.md) object to resolve the specified term during the handling of an intent. If the user spoke a term that is defined in your `AppIntentVocabulary.plist` file, Siri includes the identifier of that term in the string’s [identifier](inspeakable/identifier.md) property. For unrecognized terms, the identifier is `nil`.
+
+## Topics
+
+### Initializing a Speakable String
+
+- [init(spokenPhrase:)](inspeakablestring/init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
+- [init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)](inspeakablestring/init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
+- [init(identifier:spokenPhrase:pronunciationHint:)](inspeakablestring/init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
+
+### Initializers
+
+- [init(coder:)](inspeakablestring/init%28coder_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [INSpeakable](inspeakable.md)
+- [NSCoding](../foundation/nscoding.md)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSSecureCoding](../foundation/nssecurecoding.md)
+
+## See Also
+
+### String
+
+- [INSpeakable](inspeakable.md): Pronunciation hints for strings used in a spoken interface.
+
+# INSpeakableString (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Class  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
+
+A custom phrase to be resolved by an Intents extension.
+
+## Declaration
+
+```objectivec
+@interface INSpeakableString : NSObject
+```
+
+## Mentioned In
+
+- [Improving interactions between Siri and your messaging app](../sirikit/improving-interactions-between-siri-and-your-messaging-app.md)
+
+<a id="overview"></a>
+
+## Overview
+
+When creating your Intents extension, you can define custom vocabulary for some types of intents. For example, a workout app may provide a custom `AppIntentVocabulary.plist` file with the names of standard workouts that are shared by all users of the app. In places where those terms might be used, the intent object contains an [INSpeakableString](inspeakablestring.md) object.
+
+Use the contents of an [INSpeakableString](inspeakablestring.md) object to resolve the specified term during the handling of an intent. If the user spoke a term that is defined in your `AppIntentVocabulary.plist` file, Siri includes the identifier of that term in the string’s [identifier](inspeakable/identifier.md) property. For unrecognized terms, the identifier is `nil`.
+
+## Topics
+
+### Initializing a Speakable String
+
+- [initWithSpokenPhrase:](inspeakablestring/init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
+- [initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:](inspeakablestring/init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
+- [initWithIdentifier:spokenPhrase:pronunciationHint:](inspeakablestring/init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [INSpeakable](inspeakable.md)
+- [NSCopying](../foundation/nscopying.md)
+- [NSSecureCoding](../foundation/nssecurecoding.md)
+
+## See Also
+
+### String
+
+- [INSpeakable](inspeakable.md): Pronunciation hints for strings used in a spoken interface.
+
+# Document: init(coder:)
+
+Source path: documentation/intents/inspeakablestring/init(coder:)
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring/init(coder:)
+Description: Framework: Intents Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
+
+# init(coder:)
+
+**Framework:** Intents  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
+
+## Declaration
+
+```swift
+init?(coder: NSCoder)
+```
+
+# Document: init(identifier:spokenPhrase:pronunciationHint:)
+
+Source path: documentation/intents/inspeakablestring/init(identifier:spokenphrase:pronunciationhint:)
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring/init(identifier:spokenphrase:pronunciationhint:)
+Description: Framework: Intents Kind: Initializer Availability: iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (depreca…
+
+# init(identifier:spokenPhrase:pronunciationHint:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (deprecated in 4.0)
+
+Initializes the string with the specified identifier and phrase information.
+
+> Use [init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md) instead.
+
+## Declaration
+
+```swift
+convenience init(identifier: String, spokenPhrase: String, pronunciationHint: String?)
+```
+
+## Parameters
+
+- `identifier`: The identifier associated with the phrase in your Intents extension’s custom vocabulary file.
+- `spokenPhrase`: The phrase to be spoken.
+- `pronunciationHint`: A hint about how the phrase is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could have “eye toons” as its pronunciation string.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized speakable string object.
+
+## See Also
+
+### Initializing a Speakable String
+
+- [init(spokenPhrase:)](init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
+- [init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
+
+# initWithIdentifier:spokenPhrase:pronunciationHint: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Method  
+**Availability:** iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (deprecated in 4.0)
+
+Initializes the string with the specified identifier and phrase information.
+
+> Use [initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md) instead.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithIdentifier:(NSString *) identifier spokenPhrase:(NSString *) spokenPhrase pronunciationHint:(NSString *) pronunciationHint;
+```
+
+## Parameters
+
+- `identifier`: The identifier associated with the phrase in your Intents extension’s custom vocabulary file.
+- `spokenPhrase`: The phrase to be spoken.
+- `pronunciationHint`: A hint about how the phrase is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could have “eye toons” as its pronunciation string.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized speakable string object.
+
+## See Also
+
+### Initializing a Speakable String
+
+- [initWithSpokenPhrase:](init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
+- [initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
+
+# Document: init(spokenPhrase:)
+
+Source path: documentation/intents/inspeakablestring/init(spokenphrase:)
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring/init(spokenphrase:)
+Description: Framework: Intents Kind: Initializer Availability: iOS 10.2+ · iPadOS 10.2+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.1+ · visionOS 1.0+ · watchOS 3.1+
+
+# init(spokenPhrase:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Initializer  
+**Availability:** iOS 10.2+ · iPadOS 10.2+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.1+ · visionOS 1.0+ · watchOS 3.1+
+
+Initializes the string with the specified phrase.
+
+## Declaration
+
+```swift
+convenience init(spokenPhrase: String)
+```
+
+## Parameters
+
+- `spokenPhrase`: The phrase to be spoken.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized speakable string object.
+
+## See Also
+
+### Initializing a Speakable String
+
+- [init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
+- [init(identifier:spokenPhrase:pronunciationHint:)](init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
+
+# initWithSpokenPhrase: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Method  
+**Availability:** iOS 10.2+ · iPadOS 10.2+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.1+ · visionOS 1.0+ · watchOS 3.2+
+
+Initializes the string with the specified phrase.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithSpokenPhrase:(NSString *) spokenPhrase;
+```
+
+## Parameters
+
+- `spokenPhrase`: The phrase to be spoken.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized speakable string object.
+
+## See Also
+
+### Initializing a Speakable String
+
+- [initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
+- [initWithIdentifier:spokenPhrase:pronunciationHint:](init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
+
+# Document: init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)
+
+Source path: documentation/intents/inspeakablestring/init(vocabularyidentifier:spokenphrase:pronunciationhint:)
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring/init(vocabularyidentifier:spokenphrase:pronunciationhint:)
+Description: Framework: Intents Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
+
+# init(vocabularyIdentifier:spokenPhrase:pronunciationHint:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
+
+Initializes the string with a phrase from your app’s vocabulary.
+
+## Declaration
+
+```swift
+init(vocabularyIdentifier: String, spokenPhrase: String, pronunciationHint: String?)
+```
+
+## Parameters
+
+- `vocabularyIdentifier`: The identifier of a phrase that your app registered as part of its vocabulary.
+- `spokenPhrase`: The spoken phrase associated with that vocabulary.
+- `pronunciationHint`: A hint at how the spoken phrase is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could have “eye toons” as its pronunciation string.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized speakable string object.
+
+## See Also
+
+### Initializing a Speakable String
+
+- [init(spokenPhrase:)](init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
+- [init(identifier:spokenPhrase:pronunciationHint:)](init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
+
+# initWithVocabularyIdentifier:spokenPhrase:pronunciationHint: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
+
+Initializes the string with a phrase from your app’s vocabulary.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithVocabularyIdentifier:(NSString *) vocabularyIdentifier spokenPhrase:(NSString *) spokenPhrase pronunciationHint:(NSString *) pronunciationHint;
+```
+
+## Parameters
+
+- `vocabularyIdentifier`: The identifier of a phrase that your app registered as part of its vocabulary.
+- `spokenPhrase`: The spoken phrase associated with that vocabulary.
+- `pronunciationHint`: A hint at how the spoken phrase is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could have “eye toons” as its pronunciation string.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized speakable string object.
+
+## See Also
+
+### Initializing a Speakable String
+
+- [initWithSpokenPhrase:](init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
+- [initWithIdentifier:spokenPhrase:pronunciationHint:](init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
+
+# Document: INSpeakableStringResolutionResult
+
+Source path: documentation/intents/inspeakablestringresolutionresult
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestringresolutionresult
+Description: Framework: Intents Kind: Class Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+# INSpeakableStringResolutionResult (Swift)
+
+**Framework:** Intents  
+**Kind:** Class  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+A resolution result for a speakable string object associated with an intent.
+
+## Declaration
+
+```swift
+class INSpeakableStringResolutionResult
+```
+
+<a id="overview"></a>
+
+## Overview
+
+An [INSpeakableStringResolutionResult](inspeakablestringresolutionresult.md) object is what you return when resolving parameters containing an [INSpeakableString](inspeakablestring.md) object. Use the creation method that best reflects your ability to successfully resolve the parameter.
+
+For additional resolution options, see [INIntentResolutionResult](inintentresolutionresult.md).
+
+## Topics
+
+### Creating a Resolution Result Object
+
+- [success(with:)](inspeakablestringresolutionresult/success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+- [confirmationRequired(with:)](inspeakablestringresolutionresult/confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+- [disambiguation(with:)](inspeakablestringresolutionresult/disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
+
+## Relationships
+
+### Inherits From
+
+- [INIntentResolutionResult](inintentresolutionresult.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Strings
+
+- [INStringResolutionResult](instringresolutionresult.md): A resolution result for a string value associated with an intent.
+
+# INSpeakableStringResolutionResult (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Class  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+A resolution result for a speakable string object associated with an intent.
+
+## Declaration
+
+```objectivec
+@interface INSpeakableStringResolutionResult : INIntentResolutionResult
+```
+
+<a id="overview"></a>
+
+## Overview
+
+An [INSpeakableStringResolutionResult](inspeakablestringresolutionresult.md) object is what you return when resolving parameters containing an [INSpeakableString](inspeakablestring.md) object. Use the creation method that best reflects your ability to successfully resolve the parameter.
+
+For additional resolution options, see [INIntentResolutionResult](inintentresolutionresult.md).
+
+## Topics
+
+### Creating a Resolution Result Object
+
+- [successWithResolvedString:](inspeakablestringresolutionresult/success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+- [confirmationRequiredWithStringToConfirm:](inspeakablestringresolutionresult/confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+- [disambiguationWithStringsToDisambiguate:](inspeakablestringresolutionresult/disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
+
+## Relationships
+
+### Inherits From
+
+- [INIntentResolutionResult](inintentresolutionresult.md)
+
+## See Also
+
+### Strings
+
+- [INStringResolutionResult](instringresolutionresult.md): A resolution result for a string value associated with an intent.
+
+# Document: confirmationRequired(with:)
+
+Source path: documentation/intents/inspeakablestringresolutionresult/confirmationrequired(with:)
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestringresolutionresult/confirmationrequired(with:)
+Description: Framework: Intents Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+# confirmationRequired(with:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+## Declaration
+
+```swift
+class func confirmationRequired(with stringToConfirm: INSpeakableString?) -> Self
+```
+
+## Parameters
+
+- `stringToConfirm`: The value that resolves the request but must be confirmed by the user.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method when you can resolve the parameter to the specified value but you want the user to confirm that value.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [success(with:)](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+- [disambiguation(with:)](disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
+
+# confirmationRequiredWithStringToConfirm: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+## Declaration
+
+```objectivec
++ (instancetype) confirmationRequiredWithStringToConfirm:(INSpeakableString *) stringToConfirm;
+```
+
+## Parameters
+
+- `stringToConfirm`: The value that resolves the request but must be confirmed by the user.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method when you can resolve the parameter to the specified value but you want the user to confirm that value.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [successWithResolvedString:](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+- [disambiguationWithStringsToDisambiguate:](disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
+
+# Document: disambiguation(with:)
+
+Source path: documentation/intents/inspeakablestringresolutionresult/disambiguation(with:)
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestringresolutionresult/disambiguation(with:)
+Description: Framework: Intents Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+# disambiguation(with:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+Creates an object whose resolution requires the user to select from among the specified objects.
+
+## Declaration
+
+```swift
+class func disambiguation(with stringsToDisambiguate: [INSpeakableString]) -> Self
+```
+
+## Parameters
+
+- `stringsToDisambiguate`: An array of [INSpeakableString](../inspeakablestring.md) objects for the user to choose from.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to create a result object when there is more one value that might match the given parameter. The user is asked to select from among the objects you provide.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [success(with:)](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+- [confirmationRequired(with:)](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+# disambiguationWithStringsToDisambiguate: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+Creates an object whose resolution requires the user to select from among the specified objects.
+
+## Declaration
+
+```objectivec
++ (instancetype) disambiguationWithStringsToDisambiguate:(NSArray<INSpeakableString *> *) stringsToDisambiguate;
+```
+
+## Parameters
+
+- `stringsToDisambiguate`: An array of [INSpeakableString](../inspeakablestring.md) objects for the user to choose from.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to create a result object when there is more one value that might match the given parameter. The user is asked to select from among the objects you provide.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [successWithResolvedString:](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+- [confirmationRequiredWithStringToConfirm:](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+# Document: success(with:)
+
+Source path: documentation/intents/inspeakablestringresolutionresult/success(with:)
+Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestringresolutionresult/success(with:)
+Description: Framework: Intents Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+# success(with:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+Creates an object whose resolution involves the successful matching of the specified parameter.
+
+## Declaration
+
+```swift
+class func success(with resolvedString: INSpeakableString) -> Self
+```
+
+## Parameters
+
+- `resolvedString`: The object that resolves the requested parameter of the intent. This value may be different than the one specified in the intent object.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to create a result object when you are able to use the provided string to handle the intent successfully.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [confirmationRequired(with:)](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+- [disambiguation(with:)](disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
+
+# successWithResolvedString: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+Creates an object whose resolution involves the successful matching of the specified parameter.
+
+## Declaration
+
+```objectivec
++ (instancetype) successWithResolvedString:(INSpeakableString *) resolvedString;
+```
+
+## Parameters
+
+- `resolvedString`: The object that resolves the requested parameter of the intent. This value may be different than the one specified in the intent object.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to create a result object when you are able to use the provided string to handle the intent successfully.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [confirmationRequiredWithStringToConfirm:](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+- [disambiguationWithStringsToDisambiguate:](disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
 
 # Document: INSpeedResolutionResult
 
@@ -222347,1533 +223309,3 @@ Description: Interface language: Objective-C
 ```objectivec
 UInt8 endSectorNumberInLayerZero[3];
 ```
-
-# Document: reserved2
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394061-reserved2
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394061-reserved2
-Description: Interface language: Objective-C
-
-# reserved2
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 reserved2:1;
-```
-
-# Document: zero2
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394097-zero2
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394097-zero2
-Description: Interface language: Objective-C
-
-# zero2
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 zero2;
-```
-
-# Document: discSize
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394129-discsize
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394129-discsize
-Description: Interface language: Objective-C
-
-# discSize
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 discSize:4;
-```
-
-# Document: layerType
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394138-layertype
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394138-layertype
-Description: Interface language: Objective-C
-
-# layerType
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 layerType:4;
-```
-
-# Document: minimumRate
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394162-minimumrate
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394162-minimumrate
-Description: Interface language: Objective-C
-
-# minimumRate
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 minimumRate:4;
-```
-
-# Document: endPhysicalSectorNumberOfDataArea
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394166-endphysicalsectornumberofdataare
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394166-endphysicalsectornumberofdataare
-Description: Interface language: Objective-C
-
-# endPhysicalSectorNumberOfDataArea
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 endPhysicalSectorNumberOfDataArea[3];
-```
-
-# Document: linearDensity
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394198-lineardensity
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394198-lineardensity
-Description: Interface language: Objective-C
-
-# linearDensity
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 linearDensity:4;
-```
-
-# Document: mediaSpecific
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394223-mediaspecific
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394223-mediaspecific
-Description: Interface language: Objective-C
-
-# mediaSpecific
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 mediaSpecific[2031];
-```
-
-# Document: partVersion
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394242-partversion
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394242-partversion
-Description: Interface language: Objective-C
-
-# partVersion
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 partVersion:4;
-```
-
-# Document: reserved1
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394256-reserved1
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394256-reserved1
-Description: Interface language: Objective-C
-
-# reserved1
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 reserved1:7;
-```
-
-# Document: bookType
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394272-booktype
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394272-booktype
-Description: Interface language: Objective-C
-
-# bookType
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 bookType:4;
-```
-
-# Document: dataLength
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394276-datalength
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394276-datalength
-Description: Interface language: Objective-C
-
-# dataLength
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 dataLength[2];
-```
-
-# Document: zero1
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394284-zero1
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394284-zero1
-Description: Interface language: Objective-C
-
-# zero1
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 zero1;
-```
-
-# Document: bcaFlag
-
-Source path: documentation/iokit/dvdphysicalformatinfo/1394290-bcaflag
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394290-bcaflag
-Description: Interface language: Objective-C
-
-# bcaFlag
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 bcaFlag:1;
-```
-
-# Document: DVDRegionalPlaybackControlScheme
-
-Source path: documentation/iokit/dvdregionalplaybackcontrolscheme
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionalplaybackcontrolscheme
-Description: Interface language: Objective-C
-
-# DVDRegionalPlaybackControlScheme
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Type Alias  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-typedef UInt8 DVDRegionalPlaybackControlScheme;
-```
-
-# Document: DVDRegionPlaybackControlInfo
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo
-Description: Interface language: Objective-C
-
-# DVDRegionPlaybackControlInfo
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Structure  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-typedef struct DVDRegionPlaybackControlInfo {
-    ...
-} DVDRegionPlaybackControlInfo;
-```
-
-## Topics
-
-### Instance Properties
-
-- [dataLength](dvdregionplaybackcontrolinfo/1394274-datalength.md)
-- [driveRegion](dvdregionplaybackcontrolinfo/1394188-driveregion.md)
-- [numberUserResets](dvdregionplaybackcontrolinfo/1394118-numberuserresets.md)
-- [numberVendorResets](dvdregionplaybackcontrolinfo/1394128-numbervendorresets.md)
-- [reserved](dvdregionplaybackcontrolinfo/1394065-reserved.md)
-- [reserved2](dvdregionplaybackcontrolinfo/1394288-reserved2.md)
-- [rpcScheme](dvdregionplaybackcontrolinfo/1393928-rpcscheme.md)
-- [typeCode](dvdregionplaybackcontrolinfo/1394047-typecode.md)
-
-# Document: rpcScheme
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1393928-rpcscheme
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1393928-rpcscheme
-Description: Interface language: Objective-C
-
-# rpcScheme
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-DVDRegionalPlaybackControlScheme rpcScheme;
-```
-
-# Document: typeCode
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394047-typecode
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394047-typecode
-Description: Interface language: Objective-C
-
-# typeCode
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 typeCode:2;
-```
-
-# Document: reserved
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394065-reserved
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394065-reserved
-Description: Interface language: Objective-C
-
-# reserved
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 reserved[2];
-```
-
-# Document: numberUserResets
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394118-numberuserresets
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394118-numberuserresets
-Description: Interface language: Objective-C
-
-# numberUserResets
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 numberUserResets:3;
-```
-
-# Document: numberVendorResets
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394128-numbervendorresets
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394128-numbervendorresets
-Description: Interface language: Objective-C
-
-# numberVendorResets
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 numberVendorResets:3;
-```
-
-# Document: driveRegion
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394188-driveregion
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394188-driveregion
-Description: Interface language: Objective-C
-
-# driveRegion
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-DVDCPRMRegionCode driveRegion;
-```
-
-# Document: dataLength
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394274-datalength
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394274-datalength
-Description: Interface language: Objective-C
-
-# dataLength
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 dataLength[2];
-```
-
-# Document: reserved2
-
-Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394288-reserved2
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394288-reserved2
-Description: Interface language: Objective-C
-
-# reserved2
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 reserved2;
-```
-
-# Document: DVDRZoneInfo
-
-Source path: documentation/iokit/dvdrzoneinfo
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo
-Description: Interface language: Objective-C
-
-# DVDRZoneInfo
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Structure  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-typedef struct DVDRZoneInfo {
-    ...
-} DVDRZoneInfo;
-```
-
-## Topics
-
-### Instance Properties
-
-- [blank](dvdrzoneinfo/1393901-blank.md)
-- [blockingFactor](dvdrzoneinfo/1393944-blockingfactor.md)
-- [borderNumberLSB](dvdrzoneinfo/1394196-bordernumberlsb.md)
-- [borderNumberMSB](dvdrzoneinfo/1394158-bordernumbermsb.md)
-- [copy](dvdrzoneinfo/1394025-copy.md)
-- [damage](dvdrzoneinfo/1394146-damage.md)
-- [dataLength](dvdrzoneinfo/1394069-datalength.md)
-- [freeBlocks](dvdrzoneinfo/1394250-freeblocks.md)
-- [incremental](dvdrzoneinfo/1394240-incremental.md)
-- [lastRecordedAddress](dvdrzoneinfo/1394035-lastrecordedaddress.md)
-- [lastRecordedAddressValid](dvdrzoneinfo/1394116-lastrecordedaddressvalid.md)
-- [nextWritableAddress](dvdrzoneinfo/1393920-nextwritableaddress.md)
-- [nextWritableAddressValid](dvdrzoneinfo/1394190-nextwritableaddressvalid.md)
-- [reserved](dvdrzoneinfo/1394045-reserved.md)
-- [reserved2](dvdrzoneinfo/1393922-reserved2.md)
-- [reserved3](dvdrzoneinfo/1394010-reserved3.md)
-- [reserved4](dvdrzoneinfo/1394107-reserved4.md)
-- [reserved5](dvdrzoneinfo/1394252-reserved5.md)
-- [reserved6](dvdrzoneinfo/1393905-reserved6.md)
-- [reserved7](dvdrzoneinfo/1394186-reserved7.md)
-- [reservedRZone](dvdrzoneinfo/1394081-reservedrzone.md)
-- [restrictedOverwrite](dvdrzoneinfo/1393903-restrictedoverwrite.md)
-- [rzoneNumberLSB](dvdrzoneinfo/1393960-rzonenumberlsb.md)
-- [rzoneNumberMSB](dvdrzoneinfo/1394236-rzonenumbermsb.md)
-- [rzoneSize](dvdrzoneinfo/1394075-rzonesize.md)
-- [rzoneStartAddress](dvdrzoneinfo/1393975-rzonestartaddress.md)
-
-# Document: blank
-
-Source path: documentation/iokit/dvdrzoneinfo/1393901-blank
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393901-blank
-Description: Interface language: Objective-C
-
-# blank
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 blank:1;
-```
-
-# Document: restrictedOverwrite
-
-Source path: documentation/iokit/dvdrzoneinfo/1393903-restrictedoverwrite
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393903-restrictedoverwrite
-Description: Interface language: Objective-C
-
-# restrictedOverwrite
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 restrictedOverwrite:1;
-```
-
-# Document: reserved6
-
-Source path: documentation/iokit/dvdrzoneinfo/1393905-reserved6
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393905-reserved6
-Description: Interface language: Objective-C
-
-# reserved6
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 reserved6;
-```
-
-# Document: nextWritableAddress
-
-Source path: documentation/iokit/dvdrzoneinfo/1393920-nextwritableaddress
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393920-nextwritableaddress
-Description: Interface language: Objective-C
-
-# nextWritableAddress
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt32 nextWritableAddress;
-```
-
-# Document: reserved2
-
-Source path: documentation/iokit/dvdrzoneinfo/1393922-reserved2
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393922-reserved2
-Description: Interface language: Objective-C
-
-# reserved2
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 reserved2:4;
-```
-
-# Document: blockingFactor
-
-Source path: documentation/iokit/dvdrzoneinfo/1393944-blockingfactor
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393944-blockingfactor
-Description: Interface language: Objective-C
-
-# blockingFactor
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt32 blockingFactor;
-```
-
-# Document: rzoneNumberLSB
-
-Source path: documentation/iokit/dvdrzoneinfo/1393960-rzonenumberlsb
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393960-rzonenumberlsb
-Description: Interface language: Objective-C
-
-# rzoneNumberLSB
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 rzoneNumberLSB;
-```
-
-# Document: rzoneStartAddress
-
-Source path: documentation/iokit/dvdrzoneinfo/1393975-rzonestartaddress
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393975-rzonestartaddress
-Description: Interface language: Objective-C
-
-# rzoneStartAddress
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt32 rzoneStartAddress;
-```
-
-# Document: reserved3
-
-Source path: documentation/iokit/dvdrzoneinfo/1394010-reserved3
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394010-reserved3
-Description: Interface language: Objective-C
-
-# reserved3
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 reserved3:2;
-```
-
-# Document: copy
-
-Source path: documentation/iokit/dvdrzoneinfo/1394025-copy
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394025-copy
-Description: Interface language: Objective-C
-
-# copy
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 copy:1;
-```
-
-# Document: lastRecordedAddress
-
-Source path: documentation/iokit/dvdrzoneinfo/1394035-lastrecordedaddress
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394035-lastrecordedaddress
-Description: Interface language: Objective-C
-
-# lastRecordedAddress
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt32 lastRecordedAddress;
-```
-
-# Document: reserved
-
-Source path: documentation/iokit/dvdrzoneinfo/1394045-reserved
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394045-reserved
-Description: Interface language: Objective-C
-
-# reserved
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 reserved;
-```
-
-# Document: dataLength
-
-Source path: documentation/iokit/dvdrzoneinfo/1394069-datalength
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394069-datalength
-Description: Interface language: Objective-C
-
-# dataLength
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt16 dataLength;
-```
-
-# Document: rzoneSize
-
-Source path: documentation/iokit/dvdrzoneinfo/1394075-rzonesize
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394075-rzonesize
-Description: Interface language: Objective-C
-
-# rzoneSize
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt32 rzoneSize;
-```
-
-# Document: reservedRZone
-
-Source path: documentation/iokit/dvdrzoneinfo/1394081-reservedrzone
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394081-reservedrzone
-Description: Interface language: Objective-C
-
-# reservedRZone
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 reservedRZone:1;
-```
-
-# Document: reserved4
-
-Source path: documentation/iokit/dvdrzoneinfo/1394107-reserved4
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394107-reserved4
-Description: Interface language: Objective-C
-
-# reserved4
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 reserved4:4;
-```
-
-# Document: lastRecordedAddressValid
-
-Source path: documentation/iokit/dvdrzoneinfo/1394116-lastrecordedaddressvalid
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394116-lastrecordedaddressvalid
-Description: Interface language: Objective-C
-
-# lastRecordedAddressValid
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 lastRecordedAddressValid:1;
-```
-
-# Document: damage
-
-Source path: documentation/iokit/dvdrzoneinfo/1394146-damage
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394146-damage
-Description: Interface language: Objective-C
-
-# damage
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 damage:1;
-```
-
-# Document: borderNumberMSB
-
-Source path: documentation/iokit/dvdrzoneinfo/1394158-bordernumbermsb
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394158-bordernumbermsb
-Description: Interface language: Objective-C
-
-# borderNumberMSB
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 borderNumberMSB;
-```
-
-# Document: reserved7
-
-Source path: documentation/iokit/dvdrzoneinfo/1394186-reserved7
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394186-reserved7
-Description: Interface language: Objective-C
-
-# reserved7
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 reserved7;
-```
-
-# Document: nextWritableAddressValid
-
-Source path: documentation/iokit/dvdrzoneinfo/1394190-nextwritableaddressvalid
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394190-nextwritableaddressvalid
-Description: Interface language: Objective-C
-
-# nextWritableAddressValid
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 nextWritableAddressValid:1;
-```
-
-# Document: borderNumberLSB
-
-Source path: documentation/iokit/dvdrzoneinfo/1394196-bordernumberlsb
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394196-bordernumberlsb
-Description: Interface language: Objective-C
-
-# borderNumberLSB
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 borderNumberLSB;
-```
-
-# Document: rzoneNumberMSB
-
-Source path: documentation/iokit/dvdrzoneinfo/1394236-rzonenumbermsb
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394236-rzonenumbermsb
-Description: Interface language: Objective-C
-
-# rzoneNumberMSB
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 rzoneNumberMSB;
-```
-
-# Document: incremental
-
-Source path: documentation/iokit/dvdrzoneinfo/1394240-incremental
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394240-incremental
-Description: Interface language: Objective-C
-
-# incremental
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 incremental:1;
-```
-
-# Document: freeBlocks
-
-Source path: documentation/iokit/dvdrzoneinfo/1394250-freeblocks
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394250-freeblocks
-Description: Interface language: Objective-C
-
-# freeBlocks
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt32 freeBlocks;
-```
-
-# Document: reserved5
-
-Source path: documentation/iokit/dvdrzoneinfo/1394252-reserved5
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394252-reserved5
-Description: Interface language: Objective-C
-
-# reserved5
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-UInt8 reserved5:6;
-```
-
-# Document: DVDRZoneInfoAddressType
-
-Source path: documentation/iokit/dvdrzoneinfoaddresstype
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfoaddresstype
-Description: Interface language: Objective-C
-
-# DVDRZoneInfoAddressType
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Type Alias  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
-
-## Declaration
-
-```objectivec
-typedef UInt8 DVDRZoneInfoAddressType;
-```
-
-# Document: DVDStructureFormat
-
-Source path: documentation/iokit/dvdstructureformat
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdstructureformat
-Description: Interface language: Objective-C
-
-# DVDStructureFormat
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Type Alias  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-typedef UInt8 DVDStructureFormat;
-```
-
-# Document: DVDTitleKeyInfo
-
-Source path: documentation/iokit/dvdtitlekeyinfo
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo
-Description: Interface language: Objective-C
-
-# DVDTitleKeyInfo
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Structure  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-typedef struct DVDTitleKeyInfo {
-    ...
-} DVDTitleKeyInfo;
-```
-
-## Topics
-
-### Instance Properties
-
-- [CGMS](dvdtitlekeyinfo/1394260-cgms.md)
-- [CPM](dvdtitlekeyinfo/1393936-cpm.md)
-- [CP_MOD](dvdtitlekeyinfo/1393946-cp_mod.md)
-- [CP_SEC](dvdtitlekeyinfo/1394238-cp_sec.md)
-- [dataLength](dvdtitlekeyinfo/1394073-datalength.md)
-- [reserved](dvdtitlekeyinfo/1393899-reserved.md)
-- [reserved2](dvdtitlekeyinfo/1394178-reserved2.md)
-- [titleKeyValue](dvdtitlekeyinfo/1394200-titlekeyvalue.md)
-
-# Document: reserved
-
-Source path: documentation/iokit/dvdtitlekeyinfo/1393899-reserved
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1393899-reserved
-Description: Interface language: Objective-C
-
-# reserved
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 reserved[2];
-```
-
-# Document: CPM
-
-Source path: documentation/iokit/dvdtitlekeyinfo/1393936-cpm
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1393936-cpm
-Description: Interface language: Objective-C
-
-# CPM
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 CPM:1;
-```
-
-# Document: CP_MOD
-
-Source path: documentation/iokit/dvdtitlekeyinfo/1393946-cp_mod
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1393946-cp_mod
-Description: Interface language: Objective-C
-
-# CP_MOD
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 CP_MOD:4;
-```
-
-# Document: dataLength
-
-Source path: documentation/iokit/dvdtitlekeyinfo/1394073-datalength
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394073-datalength
-Description: Interface language: Objective-C
-
-# dataLength
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 dataLength[2];
-```
-
-# Document: reserved2
-
-Source path: documentation/iokit/dvdtitlekeyinfo/1394178-reserved2
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394178-reserved2
-Description: Interface language: Objective-C
-
-# reserved2
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 reserved2[2];
-```
-
-# Document: titleKeyValue
-
-Source path: documentation/iokit/dvdtitlekeyinfo/1394200-titlekeyvalue
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394200-titlekeyvalue
-Description: Interface language: Objective-C
-
-# titleKeyValue
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 titleKeyValue[5];
-```
-
-# Document: CP_SEC
-
-Source path: documentation/iokit/dvdtitlekeyinfo/1394238-cp_sec
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394238-cp_sec
-Description: Interface language: Objective-C
-
-# CP_SEC
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 CP_SEC:1;
-```
-
-# Document: CGMS
-
-Source path: documentation/iokit/dvdtitlekeyinfo/1394260-cgms
-Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394260-cgms
-Description: Interface language: Objective-C
-
-# CGMS
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Instance Property  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
-
-## Declaration
-
-```objectivec
-UInt8 CGMS:2;
-```
-
-# Document: eIOAcceleratorClientTypes
-
-Source path: documentation/iokit/eioacceleratorclienttypes
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioacceleratorclienttypes
-Description: Interface language: Objective-C
-
-# eIOAcceleratorClientTypes
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.6+
-
-## Declaration
-
-```objectivec
-enum eIOAcceleratorClientTypes : unsigned int {
-    ...
-};
-```
-
-## Topics
-
-### Constants
-
-- [kIOAccelNumClientTypes](eioacceleratorclienttypes/kioaccelnumclienttypes.md)
-- [kIOAccelSurfaceClientType](eioacceleratorclienttypes/kioaccelsurfaceclienttype.md)
-- [kIOAccelSurface2ClientType](eioacceleratorclienttypes/kioaccelsurface2clienttype.md)
-
-# Document: kIOAccelNumClientTypes
-
-Source path: documentation/iokit/eioacceleratorclienttypes/kioaccelnumclienttypes
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioacceleratorclienttypes/kioaccelnumclienttypes
-Description: Interface language: Objective-C
-
-# kIOAccelNumClientTypes
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.0+
-
-## Declaration
-
-```objectivec
-kIOAccelNumClientTypes
-```
-
-# Document: kIOAccelSurface2ClientType
-
-Source path: documentation/iokit/eioacceleratorclienttypes/kioaccelsurface2clienttype
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioacceleratorclienttypes/kioaccelsurface2clienttype
-Description: Interface language: Objective-C
-
-# kIOAccelSurface2ClientType
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.14+
-
-## Declaration
-
-```objectivec
-kIOAccelSurface2ClientType = 0x20
-```
-
-# Document: kIOAccelSurfaceClientType
-
-Source path: documentation/iokit/eioacceleratorclienttypes/kioaccelsurfaceclienttype
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioacceleratorclienttypes/kioaccelsurfaceclienttype
-Description: Interface language: Objective-C
-
-# kIOAccelSurfaceClientType
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.0+
-
-## Declaration
-
-```objectivec
-kIOAccelSurfaceClientType
-```
-
-# Document: eIOAccelSurfaceLockBits
-
-Source path: documentation/iokit/eioaccelsurfacelockbits
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits
-Description: Interface language: Objective-C
-
-# eIOAccelSurfaceLockBits
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Enumeration  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
-
-## Declaration
-
-```objectivec
-typedef enum eIOAccelSurfaceLockBits : unsigned int {
-    ...
-} eIOAccelSurfaceLockBits;
-```
-
-## Topics
-
-### Constants
-
-- [kIOAccelSurfaceLockInAccel](eioaccelsurfacelockbits/kioaccelsurfacelockinaccel.md)
-- [kIOAccelSurfaceLockInBacking](eioaccelsurfacelockbits/kioaccelsurfacelockinbacking.md)
-- [kIOAccelSurfaceLockInDontCare](eioaccelsurfacelockbits/kioaccelsurfacelockindontcare.md)
-- [kIOAccelSurfaceLockInMask](eioaccelsurfacelockbits/kioaccelsurfacelockinmask.md)
-
-# Document: kIOAccelSurfaceLockInAccel
-
-Source path: documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinaccel
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinaccel
-Description: Interface language: Objective-C
-
-# kIOAccelSurfaceLockInAccel
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
-
-## Declaration
-
-```objectivec
-kIOAccelSurfaceLockInAccel = 1
-```
-
-# Document: kIOAccelSurfaceLockInBacking
-
-Source path: documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinbacking
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinbacking
-Description: Interface language: Objective-C
-
-# kIOAccelSurfaceLockInBacking
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
-
-## Declaration
-
-```objectivec
-kIOAccelSurfaceLockInBacking = 0
-```
-
-# Document: kIOAccelSurfaceLockInDontCare
-
-Source path: documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockindontcare
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockindontcare
-Description: Interface language: Objective-C
-
-# kIOAccelSurfaceLockInDontCare
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
-
-## Declaration
-
-```objectivec
-kIOAccelSurfaceLockInDontCare = 2
-```
-
-# Document: kIOAccelSurfaceLockInMask
-
-Source path: documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinmask
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinmask
-Description: Interface language: Objective-C
-
-# kIOAccelSurfaceLockInMask
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Kind:** Enumeration Case  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
-
-## Declaration
-
-```objectivec
-kIOAccelSurfaceLockInMask = 0x00000003
-```
-
-# Document: eIOAccelSurfaceMemoryTypes
-
-Source path: documentation/iokit/eioaccelsurfacememorytypes
-Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacememorytypes
-Description: Interface language: Objective-C
-
-# eIOAccelSurfaceMemoryTypes
-
-**Interface language:** Objective-C
-
-**Framework:** IOKit  
-**Availability:** Mac Catalyst 18.4+ · macOS 10.6+
-
-## Declaration
-
-```objectivec
-enum eIOAccelSurfaceMemoryTypes : unsigned int {
-    ...
-};
-```
-
-## Topics
-
-### Constants
-
-- [kIOAccelNumSurfaceMemoryTypes](eioaccelsurfacememorytypes/kioaccelnumsurfacememorytypes.md)

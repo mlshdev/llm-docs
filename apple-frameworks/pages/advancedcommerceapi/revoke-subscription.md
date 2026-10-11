@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/revoke-subscription
 
 # Revoke Subscription
@@ -14,7 +14,7 @@ Immediately cancel a customer’s subscription and all the items that are includ
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/subscription/revoke/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/subscription/revoke/{transactionId}
 ```
 
 ## Sandbox URL

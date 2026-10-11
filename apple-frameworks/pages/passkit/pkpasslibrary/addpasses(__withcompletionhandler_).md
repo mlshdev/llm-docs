@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/passkit/pkpasslibrary/addpasses(_:withcompletionhandler:)
 
 # addPasses(\_:withCompletionHandler:) (Swift)
@@ -30,15 +30,15 @@ func addPasses(_ passes: [PKPass]) async -> PKPassLibraryAddPassesStatus
 
 ## Discussion
 
-Use this method whenever the user initiates an action that generates a single pass (like purchasing a concert ticket) or multiple passes (like checking into a multiconnection flight). The user receives a prompt to confirm the overall action or to review the passes individually. If you want to force the user to review individual passes visually before adding them, use an instance of [PKAddPassesViewController](../pkaddpassesviewcontroller.md).
+Use this method when someone initiates an action that generates a single pass, like purchasing a concert ticket, or multiple passes, like checking into a multiconnection flight. Your app adds the pass to the person’s Wallet automatically with [PKPassLibrary.Capability.backgroundAddPasses](capability/backgroundaddpasses.md), or they receive a prompt to confirm the overall action or review the passes individually. If you want to the person to review individual passes visually before adding them, use an instance of [PKAddPassesViewController](../pkaddpassesviewcontroller.md).
 
 ## See Also
 
-### Adding passes
+### Automatically adding passes
 
-- [canAddSecureElementPass(primaryAccountIdentifier:)](canaddsecureelementpass%28primaryaccountidentifier_%29.md): Returns a Boolean value that indicates whether PassKit can add a Secure Element pass for the specified account.
-- [canAddFelicaPass()](canaddfelicapass%28%29.md): Returns a Boolean value that indicates whether the library can add FeliCa™ passes.
-- [PKPassLibraryAddPassesStatus](../pkpasslibraryaddpassesstatus.md): Statuses that PassKit uses when it adds passes to the pass library.
+- [requestAuthorization(for:completion:)](requestauthorization%28for_completion_%29.md): Requests a person’s authorization to use a pass library capability.
+- [PKPassLibrary.AuthorizationStatus](authorizationstatus.md): Statuses that indicate whether a person authorized your app to add a pass to their Wallet.
+- [PKPassLibrary.Capability](capability.md): Features for which your app can request authorization from a person.
 
 # addPasses:withCompletionHandler: (Objective-C)
 
@@ -65,12 +65,12 @@ Presents a user interface for adding multiple passes at once.
 
 ## Discussion
 
-Use this method whenever the user initiates an action that generates a single pass (like purchasing a concert ticket) or multiple passes (like checking into a multiconnection flight). The user receives a prompt to confirm the overall action or to review the passes individually. If you want to force the user to review individual passes visually before adding them, use an instance of [PKAddPassesViewController](../pkaddpassesviewcontroller.md).
+Use this method when someone initiates an action that generates a single pass, like purchasing a concert ticket, or multiple passes, like checking into a multiconnection flight. Your app adds the pass to the person’s Wallet automatically with [PKPassLibraryCapabilityBackgroundAddPasses](capability/backgroundaddpasses.md), or they receive a prompt to confirm the overall action or review the passes individually. If you want to the person to review individual passes visually before adding them, use an instance of [PKAddPassesViewController](../pkaddpassesviewcontroller.md).
 
 ## See Also
 
-### Adding passes
+### Automatically adding passes
 
-- [canAddSecureElementPassWithPrimaryAccountIdentifier:](canaddsecureelementpass%28primaryaccountidentifier_%29.md): Returns a Boolean value that indicates whether PassKit can add a Secure Element pass for the specified account.
-- [canAddFelicaPass](canaddfelicapass%28%29.md): Returns a Boolean value that indicates whether the library can add FeliCa™ passes.
-- [PKPassLibraryAddPassesStatus](../pkpasslibraryaddpassesstatus.md): Statuses that PassKit uses when it adds passes to the pass library.
+- [requestAuthorizationForCapability:completion:](requestauthorization%28for_completion_%29.md): Requests a person’s authorization to use a pass library capability.
+- [PKPassLibraryAuthorizationStatus](authorizationstatus.md): Statuses that indicate whether a person authorized your app to add a pass to their Wallet.
+- [PKPassLibraryCapability](capability.md): Features for which your app can request authorization from a person.

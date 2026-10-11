@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ipados-16-release-notes
 
 # iPadOS 16 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iPadOS 16 SDK provides support to develop apps for iPad devices running iPadOS 16. The SDK comes bundled with Xcode 14.1 RC, available from [Beta Software Downloads](https://developer.apple.com/download/). For information on the compatibility requirements for Xcode 14.1, see [Xcode 14.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_1-release-notes).
+The iPadOS 16 SDK provides support to develop apps for iPad devices running iPadOS 16. The SDK comes bundled with Xcode 14.1, available from [Beta Software Downloads](https://developer.apple.com/download/). For information on the compatibility requirements for Xcode 14.1, see [Xcode 14.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_1-release-notes).
 
 <a id="AVFoundation"></a>
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/advancedcommerceapi/migrate-subscription-to-advanced-commerce-api
 
 # Migrate a Subscription to Advanced Commerce API
@@ -14,7 +14,7 @@ Migrate a subscription that a customer purchased through Apple In-App Purchase t
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/subscription/migrate/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/subscription/migrate/{transactionId}
 ```
 
 ## Sandbox URL

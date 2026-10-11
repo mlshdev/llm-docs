@@ -1,10 +1,221 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 66
+
+# Document: IOUSBEndpointFeatureSelectorStall
+
+Source path: documentation/usbdriverkit/iousbendpointfeatureselectorstall
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbendpointfeatureselectorstall
+Description: Interface language: Objective-C
+
+# IOUSBEndpointFeatureSelectorStall
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+IOUSBEndpointFeatureSelectorStall
+```
+
+## See Also
+
+### Getting the Selector Types
+
+- [kIOUSBDeviceFeatureSelectorRemoteWakeup](kiousbdevicefeatureselectorremotewakeup.md)
+- [kIOUSBDeviceFeatureSelectorTestMode](kiousbdevicefeatureselectortestmode.md)
+- [kIOUSBDeviceFeatureSelectorU1Enable](kiousbdevicefeatureselectoru1enable.md)
+- [kIOUSBDeviceFeatureSelectorU2Enable](kiousbdevicefeatureselectoru2enable.md)
+- [kIOUSBDeviceFeatureSelectorLTMEnable](kiousbdevicefeatureselectorltmenable.md)
+- [kIOUSBInterfaceFeatureSelectorSuspend](kiousbinterfacefeatureselectorsuspend.md)
+
+# Document: IOUSBEndpointStatusHalt
+
+Source path: documentation/usbdriverkit/iousbendpointstatushalt
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbendpointstatushalt
+Description: Interface language: Objective-C
+
+# IOUSBEndpointStatusHalt
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+IOUSBEndpointStatusHalt
+```
+
+## See Also
+
+### Getting the Options
+
+- [kIOUSBDeviceStatusSelfPowered](kiousbdevicestatusselfpowered.md)
+- [kIOUSBDeviceStatusRemoteWakeEnable](kiousbdevicestatusremotewakeenable.md)
+- [kIOUSBDeviceStatusU1Enable](kiousbdevicestatusu1enable.md)
+- [kIOUSBDeviceStatusU2Enable](kiousbdevicestatusu2enable.md)
+- [kIOUSBDeviceStatusLTMEnable](kiousbdevicestatusltmenable.md)
+- [kIOUSBInterfaceStatusRemoteWakeCapable](kiousbinterfacestatusremotewakecapable.md)
+- [kIOUSBInterfaceStatusRemoteWakeEnable](kiousbinterfacestatusremotewakeenable.md)
+
+# Document: IOUSBGetBillboardDescriptor
+
+Source path: documentation/usbdriverkit/iousbgetbillboarddescriptor
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbgetbillboarddescriptor
+Description: Interface language: Objective-C
+
+# IOUSBGetBillboardDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Function  
+**Availability:** DriverKit 19.0+
+
+Finds the first billboard capability descriptor in a BOS descriptor.
+
+## Declaration
+
+```objectivec
+const IOUSBDeviceCapabilityBillboard *IOUSBGetBillboardDescriptor(const IOUSBBOSDescriptor *bosDescriptor);
+```
+
+## Parameters
+
+- `bosDescriptor`: The BOS descriptor that contains the descriptors to iterate through.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The descriptor pointer, or `NULL` if no matching descriptor can be found.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method uses `getNextCapabilityDescriptorWithType` to fetch the first `BillboardCapabilityDescriptor.`
+
+## See Also
+
+### BOS Descriptors
+
+- [IOUSBGetNextCapabilityDescriptor](iousbgetnextcapabilitydescriptor.md): Gets the next device capability descriptor in a BOS descriptor.
+- [IOUSBGetNextCapabilityDescriptorWithType](iousbgetnextcapabilitydescriptorwithtype.md): Finds the next descriptor matching a given type within a BOS descriptor.
+- [IOUSBGetSuperSpeedDeviceCapabilityDescriptor](iousbgetsuperspeeddevicecapabilitydescriptor.md): Finds the first SuperSpeed device capability descriptor in a BOS descriptor.
+- [IOUSBGetSuperSpeedPlusDeviceCapabilityDescriptor](iousbgetsuperspeedplusdevicecapabilitydescriptor.md): Finds the first SuperSpeed Plus device capability descriptor in a BOS descriptor.
+- [IOUSBGetUSB20ExtensionDeviceCapabilityDescriptor](iousbgetusb20extensiondevicecapabilitydescriptor.md): Finds the first USB 2.0 extension capability descriptor in a BOS descriptor.
+- [IOUSBGetContainerIDDescriptor](iousbgetcontaineriddescriptor.md): Finds the first Container ID capability descriptor in a BOS descriptor.
+- [IOUSBGetPlatformCapabilityDescriptor](iousbgetplatformcapabilitydescriptor.md): Finds the first platform capability descriptor in a BOS descriptor.
+
+# Document: IOUSBGetConfigurationMaxPowerMilliAmps
+
+Source path: documentation/usbdriverkit/iousbgetconfigurationmaxpowermilliamps
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbgetconfigurationmaxpowermilliamps
+Description: Interface language: Objective-C
+
+# IOUSBGetConfigurationMaxPowerMilliAmps
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Function  
+**Availability:** DriverKit 19.0+
+
+Extracts the maximum bus current a configuration descriptor requires.
+
+## Declaration
+
+```objectivec
+uint32_t IOUSBGetConfigurationMaxPowerMilliAmps(uint32_t usbDeviceSpeed, const IOUSBConfigurationDescriptor *descriptor);
+```
+
+## Parameters
+
+- `usbDeviceSpeed`: The operational speed of the device.
+- `descriptor`: The configuration descriptor to parse.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The milliamps required.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method parses a configuration descriptor and returns the number of milliamps required to power the device.
+
+## See Also
+
+### Configuration Descriptors
+
+- [IOUSBGetNextDescriptor](iousbgetnextdescriptor.md): Gets the next descriptor in a configuration descriptor.
+- [IOUSBGetNextDescriptorWithType](iousbgetnextdescriptorwithtype.md): Finds the next descriptor matching a given type within a configuration descriptor.
+- [IOUSBGetNextAssociatedDescriptor](iousbgetnextassociateddescriptor.md): Gets the next descriptor in the specified configuration descriptor that belongs to another container descriptor.
+- [IOUSBGetNextAssociatedDescriptorWithType](iousbgetnextassociateddescriptorwithtype.md): Finds the next descriptor matching a specific type within a configuration descriptor that belongs to another container descriptor.
+
+# Document: IOUSBGetContainerIDDescriptor
+
+Source path: documentation/usbdriverkit/iousbgetcontaineriddescriptor
+Canonical documentation: https://developer.apple.com/documentation/usbdriverkit/iousbgetcontaineriddescriptor
+Description: Interface language: Objective-C
+
+# IOUSBGetContainerIDDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Function  
+**Availability:** DriverKit 19.0+
+
+Finds the first Container ID capability descriptor in a BOS descriptor.
+
+## Declaration
+
+```objectivec
+const IOUSBDeviceCapabilityContainerID *IOUSBGetContainerIDDescriptor(const IOUSBBOSDescriptor *bosDescriptor);
+```
+
+## Parameters
+
+- `bosDescriptor`: The BOS descriptor that contains the descriptors to iterate through.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The descriptor pointer, or `NULL` if no matching descriptor can be found.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method uses `getNextCapabilityDescriptorWithType` to fetch the first `ContainerIDCapabilityDescriptor.`
+
+## See Also
+
+### BOS Descriptors
+
+- [IOUSBGetNextCapabilityDescriptor](iousbgetnextcapabilitydescriptor.md): Gets the next device capability descriptor in a BOS descriptor.
+- [IOUSBGetNextCapabilityDescriptorWithType](iousbgetnextcapabilitydescriptorwithtype.md): Finds the next descriptor matching a given type within a BOS descriptor.
+- [IOUSBGetSuperSpeedDeviceCapabilityDescriptor](iousbgetsuperspeeddevicecapabilitydescriptor.md): Finds the first SuperSpeed device capability descriptor in a BOS descriptor.
+- [IOUSBGetSuperSpeedPlusDeviceCapabilityDescriptor](iousbgetsuperspeedplusdevicecapabilitydescriptor.md): Finds the first SuperSpeed Plus device capability descriptor in a BOS descriptor.
+- [IOUSBGetUSB20ExtensionDeviceCapabilityDescriptor](iousbgetusb20extensiondevicecapabilitydescriptor.md): Finds the first USB 2.0 extension capability descriptor in a BOS descriptor.
+- [IOUSBGetPlatformCapabilityDescriptor](iousbgetplatformcapabilitydescriptor.md): Finds the first platform capability descriptor in a BOS descriptor.
+- [IOUSBGetBillboardDescriptor](iousbgetbillboarddescriptor.md): Finds the first billboard capability descriptor in a BOS descriptor.
 
 # Document: IOUSBGetEndpointAddress
 
@@ -189947,142 +190158,3 @@ The request returns the resulting image mask in an instance of [InstanceMaskObse
 - [GenerateForegroundInstanceMaskRequest](generateforegroundinstancemaskrequest.md): A request that generates an instance mask of noticeable objects to separate from the background.
 - [GeneratePersonSegmentationRequest](generatepersonsegmentationrequest.md): A request that produces a matte image for a person it finds in the input image.
 - [GenerateIterativeSegmentationRequest](generateiterativesegmentationrequest.md): A request that generates a segmentation mask from points, a rectangle, or a scribble.
-
-# Document: init(_:)
-
-Source path: documentation/vision/generatepersoninstancemaskrequest/init(_:)
-Canonical documentation: https://developer.apple.com/documentation/vision/generatepersoninstancemaskrequest/init(_:)
-Description: Framework: Vision Kind: Initializer Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# init(\_:)
-
-**Framework:** Vision  
-**Kind:** Initializer  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-Creates a person instance mask request.
-
-## Declaration
-
-```swift
-init(_ revision: GeneratePersonInstanceMaskRequest.Revision? = nil)
-```
-
-# Document: GeneratePersonInstanceMaskRequest.Revision
-
-Source path: documentation/vision/generatepersoninstancemaskrequest/revision-swift.enum
-Canonical documentation: https://developer.apple.com/documentation/vision/generatepersoninstancemaskrequest/revision-swift.enum
-Description: Framework: Vision Kind: Enumeration Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# GeneratePersonInstanceMaskRequest.Revision
-
-**Framework:** Vision  
-**Kind:** Enumeration  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-A type that describes the algorithm or implementation that the request performs.
-
-## Declaration
-
-```swift
-enum Revision
-```
-
-## Topics
-
-### Getting the revision
-
-- [GeneratePersonInstanceMaskRequest.Revision.revision1](revision-swift.enum/revision1.md): An algorithm or implementation that represents the first revision.
-
-## Relationships
-
-### Conforms To
-
-- [Comparable](https://developer.apple.com/documentation/swift/comparable)
-- [Decodable](https://developer.apple.com/documentation/swift/decodable)
-- [Encodable](https://developer.apple.com/documentation/swift/encodable)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
-
-## See Also
-
-### Getting the revision
-
-- [revision](revision-swift.property.md): The algorithm or implementation the request uses.
-- [supportedRevisions](supportedrevisions.md): The collection of revisions the request supports.
-
-# Document: GeneratePersonInstanceMaskRequest.Revision.revision1
-
-Source path: documentation/vision/generatepersoninstancemaskrequest/revision-swift.enum/revision1
-Canonical documentation: https://developer.apple.com/documentation/vision/generatepersoninstancemaskrequest/revision-swift.enum/revision1
-Description: Framework: Vision Kind: Case Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# GeneratePersonInstanceMaskRequest.Revision.revision1
-
-**Framework:** Vision  
-**Kind:** Case  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-An algorithm or implementation that represents the first revision.
-
-## Declaration
-
-```swift
-case revision1
-```
-
-# Document: revision
-
-Source path: documentation/vision/generatepersoninstancemaskrequest/revision-swift.property
-Canonical documentation: https://developer.apple.com/documentation/vision/generatepersoninstancemaskrequest/revision-swift.property
-Description: Framework: Vision Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# revision
-
-**Framework:** Vision  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-The algorithm or implementation the request uses.
-
-## Declaration
-
-```swift
-let revision: GeneratePersonInstanceMaskRequest.Revision
-```
-
-## See Also
-
-### Getting the revision
-
-- [supportedRevisions](supportedrevisions.md): The collection of revisions the request supports.
-- [GeneratePersonInstanceMaskRequest.Revision](revision-swift.enum.md): A type that describes the algorithm or implementation that the request performs.
-
-# Document: supportedRevisions
-
-Source path: documentation/vision/generatepersoninstancemaskrequest/supportedrevisions
-Canonical documentation: https://developer.apple.com/documentation/vision/generatepersoninstancemaskrequest/supportedrevisions
-Description: Framework: Vision Kind: Type Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-# supportedRevisions
-
-**Framework:** Vision  
-**Kind:** Type Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
-
-The collection of revisions the request supports.
-
-## Declaration
-
-```swift
-static let supportedRevisions: [GeneratePersonInstanceMaskRequest.Revision]
-```
-
-## See Also
-
-### Getting the revision
-
-- [revision](revision-swift.property.md): The algorithm or implementation the request uses.
-- [GeneratePersonInstanceMaskRequest.Revision](revision-swift.enum.md): A type that describes the algorithm or implementation that the request performs.

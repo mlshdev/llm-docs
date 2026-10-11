@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appscreenshots-_id_
 
 # Read app screenshot information
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 Get information about an app screenshot and its upload and processing status.
+
+> This endpoint is deprecated. Use [Read an app asset library image](get-v1-appassetlibraryimages-_id_.md) instead.
 
 ## URL
 
@@ -42,4 +44,4 @@ GET https://api.appstoreconnect.apple.com/v1/appScreenshots/{id}
 
 ### Getting Screenshots and Reading Information
 
-- [List all app screenshots for an app screenshot set](get-v1-appscreenshotsets-_id_-appscreenshots.md): List all ordered screenshots in a screenshot set.
+- [List all app screenshots for an app screenshot set](get-v1-appscreenshotsets-_id_-appscreenshots.md): Deprecated. List all ordered screenshots in a screenshot set.

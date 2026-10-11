@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-a3a5c01bb2da; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-447f9a6dd611; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-26_2-release-notes
 
 # watchOS 26.2 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 26.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.2. The SDK comes bundled with Xcode 26.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
+The watchOS 26.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.2. The SDK comes bundled with Xcode 26.2. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
 
 <a id="Instruments"></a>
 

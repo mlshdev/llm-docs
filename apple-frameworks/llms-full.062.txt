@@ -1,10 +1,218 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 62
+
+# Document: activityItemsConfigurationWithItemProviders:
+
+Source path: documentation/uikit/uiactivityitemsconfiguration/activityitemsconfigurationwithitemproviders:
+Canonical documentation: https://developer.apple.com/documentation/uikit/uiactivityitemsconfiguration/activityitemsconfigurationwithitemproviders:
+Description: Interface language: Objective-C
+
+# activityItemsConfigurationWithItemProviders:
+
+**Interface language:** Objective-C
+
+**Framework:** UIKit  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Creates an activity items configuration with the specified item providers.
+
+## Declaration
+
+```objectivec
++ (instancetype) activityItemsConfigurationWithItemProviders:(NSArray<NSItemProvider *> *) itemProviders;
+```
+
+## See Also
+
+### Creating an activity items configuration
+
+- [initWithObjects:](init%28objects_%29.md): Initializes and returns an activity items configuration with the specified objects.
+- [initWithItemProviders:](init%28itemproviders_%29.md): Initializes and returns an activity items configuration with the specified item providers.
+- [activityItemsConfigurationWithObjects:](activityitemsconfigurationwithobjects_.md): Creates an activity items configuration with the specified objects.
+
+# Document: activityItemsConfigurationWithObjects:
+
+Source path: documentation/uikit/uiactivityitemsconfiguration/activityitemsconfigurationwithobjects:
+Canonical documentation: https://developer.apple.com/documentation/uikit/uiactivityitemsconfiguration/activityitemsconfigurationwithobjects:
+Description: Interface language: Objective-C
+
+# activityItemsConfigurationWithObjects:
+
+**Interface language:** Objective-C
+
+**Framework:** UIKit  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Creates an activity items configuration with the specified objects.
+
+## Declaration
+
+```objectivec
++ (instancetype) activityItemsConfigurationWithObjects:(NSArray<id<NSItemProviderWriting>> *) objects;
+```
+
+## See Also
+
+### Creating an activity items configuration
+
+- [initWithObjects:](init%28objects_%29.md): Initializes and returns an activity items configuration with the specified objects.
+- [initWithItemProviders:](init%28itemproviders_%29.md): Initializes and returns an activity items configuration with the specified item providers.
+- [activityItemsConfigurationWithItemProviders:](activityitemsconfigurationwithitemproviders_.md): Creates an activity items configuration with the specified item providers.
+
+# Document: applicationActivitiesProvider
+
+Source path: documentation/uikit/uiactivityitemsconfiguration/applicationactivitiesprovider
+Canonical documentation: https://developer.apple.com/documentation/uikit/uiactivityitemsconfiguration/applicationactivitiesprovider
+Description: Framework: UIKit Kind: Instance Property Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# applicationActivitiesProvider (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A closure that provides application acitivites for the activity items.
+
+## Declaration
+
+```swift
+var applicationActivitiesProvider: (() -> [UIActivity])? { get set }
+```
+
+## See Also
+
+### Managing the configuration
+
+- [localObject](localobject.md): A local object that represents the configuration.
+- [metadataProvider](metadataprovider.md): A closure that provides metadata for the activity items.
+- [perItemMetadataProvider](peritemmetadataprovider.md): A closure that provides metadata for each activity item.
+- [UIActivityItemsConfigurationMetadataKey](../uiactivityitemsconfigurationmetadatakey.md): A structure that defines keys for the metadata associated with an activity items configuration.
+
+# applicationActivitiesProvider (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A closure that provides application acitivites for the activity items.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, nullable) NSArray<UIActivity *> * (^applicationActivitiesProvider)();
+```
+
+## See Also
+
+### Managing the configuration
+
+- [localObject](localobject.md): A local object that represents the configuration.
+- [metadataProvider](metadataprovider.md): A closure that provides metadata for the activity items.
+- [perItemMetadataProvider](peritemmetadataprovider.md): A closure that provides metadata for each activity item.
+- [UIActivityItemsConfigurationMetadataKey](../uiactivityitemsconfigurationmetadatakey.md): A structure that defines keys for the metadata associated with an activity items configuration.
+
+# Document: init(itemProviders:)
+
+Source path: documentation/uikit/uiactivityitemsconfiguration/init(itemproviders:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uiactivityitemsconfiguration/init(itemproviders:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# init(itemProviders:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Initializes and returns an activity items configuration with the specified item providers.
+
+## Declaration
+
+```swift
+init(itemProviders: [NSItemProvider])
+```
+
+## See Also
+
+### Creating an activity items configuration
+
+- [init(objects:)](init%28objects_%29.md): Initializes and returns an activity items configuration with the specified objects.
+
+# initWithItemProviders: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Initializes and returns an activity items configuration with the specified item providers.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithItemProviders:(NSArray<NSItemProvider *> *) itemProviders;
+```
+
+## See Also
+
+### Creating an activity items configuration
+
+- [initWithObjects:](init%28objects_%29.md): Initializes and returns an activity items configuration with the specified objects.
+- [activityItemsConfigurationWithObjects:](activityitemsconfigurationwithobjects_.md): Creates an activity items configuration with the specified objects.
+- [activityItemsConfigurationWithItemProviders:](activityitemsconfigurationwithitemproviders_.md): Creates an activity items configuration with the specified item providers.
+
+# Document: init(objects:)
+
+Source path: documentation/uikit/uiactivityitemsconfiguration/init(objects:)
+Canonical documentation: https://developer.apple.com/documentation/uikit/uiactivityitemsconfiguration/init(objects:)
+Description: Framework: UIKit Kind: Initializer Availability: iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+# init(objects:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Initializes and returns an activity items configuration with the specified objects.
+
+## Declaration
+
+```swift
+init(objects: [any NSItemProviderWriting])
+```
+
+## See Also
+
+### Creating an activity items configuration
+
+- [init(itemProviders:)](init%28itemproviders_%29.md): Initializes and returns an activity items configuration with the specified item providers.
+
+# initWithObjects: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Initializes and returns an activity items configuration with the specified objects.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithObjects:(NSArray<id<NSItemProviderWriting>> *) objects;
+```
+
+## See Also
+
+### Creating an activity items configuration
+
+- [initWithItemProviders:](init%28itemproviders_%29.md): Initializes and returns an activity items configuration with the specified item providers.
+- [activityItemsConfigurationWithObjects:](activityitemsconfigurationwithobjects_.md): Creates an activity items configuration with the specified objects.
+- [activityItemsConfigurationWithItemProviders:](activityitemsconfigurationwithitemproviders_.md): Creates an activity items configuration with the specified item providers.
 
 # Document: localObject
 
@@ -169844,193 +170052,3 @@ doc.open { (success) in
 ### Animating transitions
 
 - [targetView](targetview.md): The target view for transition animations when presenting or dismissing the transition controller’s document.
-
-# Document: targetView
-
-Source path: documentation/uikit/uidocumentbrowsertransitioncontroller/targetview
-Canonical documentation: https://developer.apple.com/documentation/uikit/uidocumentbrowsertransitioncontroller/targetview
-Description: Framework: UIKit Kind: Instance Property Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-# targetView (Swift)
-
-**Framework:** UIKit  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-The target view for transition animations when presenting or dismissing the transition controller’s document.
-
-## Declaration
-
-```swift
-weak var targetView: UIView? { get set }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When this property is set, the transition controller acts as a [UIViewControllerAnimatedTransitioning](../uiviewcontrolleranimatedtransitioning.md) object for the transition from the browser to the document view controller. It provides transition animation that zooms and cross fades from the document’s thumbnail to the target view.
-
-To use the transition animation:
-
-1. Instantiate the view controller to display the document.
-2. Call the document view controller’s [loadViewIfNeeded()](../uiviewcontroller/loadviewifneeded%28%29.md) method to ensure that the view hierarchy is loaded.
-3. Request a transition controller for the document you are going to present.
-4. Assign a view from the document view controller to the transition controller’s [targetView](targetview.md) property.
-5. Create a [UIViewControllerTransitioningDelegate](../uiviewcontrollertransitioningdelegate.md) object that returns the transition controller. You must keep a strong reference to both the transition controller and the transitioning delegate throughout the entire animation.
-6. Set the document view controller’s [modalPresentationStyle](../uiviewcontroller/modalpresentationstyle.md) property to custom.
-7. Assign the transitioning delegate to the document view controller’s [transitioningDelegate](../uiviewcontroller/transitioningdelegate.md) property.
-8. Present the document view controller.
-
-In the following code, the transition controller provides a zoom and fade transition animation both when presenting the document view controller, and when dismissing it.
-
-```swift
-let doc = // Create a UIDocument subclass for the selected URL.
-let editor = // Create a view controller to edit the document.
-
-// Load the editor's view hierarchy.
-editor.loadViewIfNeeded()
-
-// Get the transition controller
-let transitionController = controller.transitionController(forDocumentURL: url)
-
-// Set the target view
-transitionController.targetView = editor.textView
-
-// Instantiate the transitioning delegate
-let transitionDelegate = UIDocumentBrowserTransitioningDelegate(withTransitionController: transitionController)
-
-// Configure the transition animation
-editor.modalPresentationStyle = .custom
-editor.transitioningDelegate = transitionDelegate
-
-// Keep a strong reference to the transition delegate.
-doc.transitioningDelegate = transitionDelegate
-
-// Open the document
-doc.open { (success) in
-    guard success else {
-        // Handle the error here...
-    }
-        
-    // When the load is done, present the document
-    controller.present(editor, animated: true, completion: nil)
-}
-```
-
-```swift
-class UIDocumentBrowserTransitioningDelegate : NSObject, UIViewControllerTransitioningDelegate {
-    
-    let transitionController : UIDocumentBrowserTransitionController
-    
-    init(withTransitionController transitionController: UIDocumentBrowserTransitionController) {
-        self.transitionController = transitionController
-    }
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return transitionController
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return transitionController
-    }
-}
-```
-
-## See Also
-
-### Animating transitions
-
-- [loadingProgress](loadingprogress.md): A progress object that tracks a document as it loads.
-
-# targetView (Objective-C)
-
-**Framework:** UIKit  
-**Kind:** Instance Property  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
-
-The target view for transition animations when presenting or dismissing the transition controller’s document.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, weak, nullable) UIView * targetView;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When this property is set, the transition controller acts as a [UIViewControllerAnimatedTransitioning](../uiviewcontrolleranimatedtransitioning.md) object for the transition from the browser to the document view controller. It provides transition animation that zooms and cross fades from the document’s thumbnail to the target view.
-
-To use the transition animation:
-
-1. Instantiate the view controller to display the document.
-2. Call the document view controller’s [loadViewIfNeeded](../uiviewcontroller/loadviewifneeded%28%29.md) method to ensure that the view hierarchy is loaded.
-3. Request a transition controller for the document you are going to present.
-4. Assign a view from the document view controller to the transition controller’s [targetView](targetview.md) property.
-5. Create a [UIViewControllerTransitioningDelegate](../uiviewcontrollertransitioningdelegate.md) object that returns the transition controller. You must keep a strong reference to both the transition controller and the transitioning delegate throughout the entire animation.
-6. Set the document view controller’s [modalPresentationStyle](../uiviewcontroller/modalpresentationstyle.md) property to custom.
-7. Assign the transitioning delegate to the document view controller’s [transitioningDelegate](../uiviewcontroller/transitioningdelegate.md) property.
-8. Present the document view controller.
-
-In the following code, the transition controller provides a zoom and fade transition animation both when presenting the document view controller, and when dismissing it.
-
-```swift
-let doc = // Create a UIDocument subclass for the selected URL.
-let editor = // Create a view controller to edit the document.
-
-// Load the editor's view hierarchy.
-editor.loadViewIfNeeded()
-
-// Get the transition controller
-let transitionController = controller.transitionController(forDocumentURL: url)
-
-// Set the target view
-transitionController.targetView = editor.textView
-
-// Instantiate the transitioning delegate
-let transitionDelegate = UIDocumentBrowserTransitioningDelegate(withTransitionController: transitionController)
-
-// Configure the transition animation
-editor.modalPresentationStyle = .custom
-editor.transitioningDelegate = transitionDelegate
-
-// Keep a strong reference to the transition delegate.
-doc.transitioningDelegate = transitionDelegate
-
-// Open the document
-doc.open { (success) in
-    guard success else {
-        // Handle the error here...
-    }
-        
-    // When the load is done, present the document
-    controller.present(editor, animated: true, completion: nil)
-}
-```
-
-```swift
-class UIDocumentBrowserTransitioningDelegate : NSObject, UIViewControllerTransitioningDelegate {
-    
-    let transitionController : UIDocumentBrowserTransitionController
-    
-    init(withTransitionController transitionController: UIDocumentBrowserTransitionController) {
-        self.transitionController = transitionController
-    }
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return transitionController
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return transitionController
-    }
-}
-```
-
-## See Also
-
-### Animating transitions
-
-- [loadingProgress](loadingprogress.md): A progress object that tracks a document as it loads.

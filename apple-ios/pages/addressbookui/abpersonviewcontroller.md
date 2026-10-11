@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/addressbookui/abpersonviewcontroller
 
 # ABPersonViewController (Swift)
@@ -68,6 +68,8 @@ The `ABPersonViewController` class does not support subclassing.
 - [NSExtensionRequestHandling](https://developer.apple.com/documentation/foundation/nsextensionrequesthandling)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearanceContainer](https://developer.apple.com/documentation/uikit/uiappearancecontainer)
 - [UIContentContainer](https://developer.apple.com/documentation/uikit/uicontentcontainer)

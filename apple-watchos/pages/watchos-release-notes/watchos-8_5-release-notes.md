@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-a3a5c01bb2da; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-447f9a6dd611; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-8_5-release-notes
 
 # watchOS 8.5 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 8.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.5. The SDK comes bundled with Xcode 13.3.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.3.1, see [Xcode 13.3.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3_1-release-notes).
+The watchOS 8.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.5. The SDK comes bundled with Xcode 13.3.1. For information on the compatibility requirements for Xcode 13.3.1, see [Xcode 13.3.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3_1-release-notes).
 
 <a id="Apple-Pay"></a>
 

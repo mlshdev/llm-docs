@@ -1,9 +1,9 @@
-# Apple iOS and iPadOS snapshot-d0d1b2f13e0d: full documentation
+# Apple iOS and iPadOS snapshot-baedee40f551: full documentation
 
 Source: https://developer.apple.com/ios/
-Catalog snapshot: d0d1b2f13e0dda7c6d6bed81d67f484e5f0b9662600743bf08baa771840f0378
-Content digest: 7f10371886380e2ed40d3ce2c375a595970165d547c289aebb1ac5ef48bb8217
-Captured at: 2026-10-04T18:39:02.517Z
+Catalog snapshot: baedee40f55179b7caa2d2169b495d5b69d435dd5a9589668c4fb46dcd363469
+Content digest: fae343d6fa93c6eaaeb8652a88cd66d5ec09a2f729808a1720309ad6fb4f8afa
+Captured at: 2026-10-11T21:19:14.699Z
 Volume 1
 
 # Document: Accessory Live Activities
@@ -31612,6 +31612,8 @@ The `ABPersonViewController` class does not support subclassing.
 - [NSExtensionRequestHandling](https://developer.apple.com/documentation/foundation/nsextensionrequesthandling)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearanceContainer](https://developer.apple.com/documentation/uikit/uiappearancecontainer)
 - [UIContentContainer](https://developer.apple.com/documentation/uikit/uicontentcontainer)
@@ -132934,8 +132936,6 @@ You don’t create scenes directly. Instead, you specify the name of the appropr
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIPasteConfigurationSupporting](https://developer.apple.com/documentation/uikit/uipasteconfigurationsupporting)
 - [UIResponderStandardEditActions](https://developer.apple.com/documentation/uikit/uiresponderstandardeditactions)
@@ -138273,6 +138273,8 @@ The base view of a navigation app does not receive tap or drag events.
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIAccessibilityIdentification](https://developer.apple.com/documentation/uikit/uiaccessibilityidentification)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIAppearance](https://developer.apple.com/documentation/uikit/uiappearance)

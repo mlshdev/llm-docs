@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appeventscreenshots-_id_
 
 # List the Images for an In-App Event
@@ -7,7 +7,9 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.7+
+**Availability:** App Store Connect API 1.7+ (deprecated in 4.5)
+
+> This endpoint is deprecated. Use [Read an app asset library image](get-v1-appassetlibraryimages-_id_.md) instead.
 
 ## URL
 
@@ -25,7 +27,7 @@ GET https://api.appstoreconnect.apple.com/v1/appEventScreenshots/{id}
   **Allowed values:** `fileSize`, `fileName`, `imageAsset`, `assetToken`, `uploadOperations`, `assetDeliveryState`, `appEventAssetType`, `appEventLocalization`
 - `include` — `[string]`: The relationship data to include in the response.
   **Allowed values:** `appEventLocalization`
-- `fields[appEventLocalizations]` — `[string]`: **Allowed values:** `locale`, `name`, `shortDescription`, `longDescription`, `appEvent`, `appEventScreenshots`, `appEventVideoClips`
+- `fields[appEventLocalizations]` — `[string]`: **Allowed values:** `locale`, `name`, `shortDescription`, `longDescription`, `appEvent`, `appEventScreenshots`, `appEventVideoClips`, `placements`
 
 ## Response Codes
 
@@ -40,6 +42,6 @@ GET https://api.appstoreconnect.apple.com/v1/appEventScreenshots/{id}
 
 ### Endpoints
 
-- [Update an app event screenshot](patch-v1-appeventscreenshots-_id_.md)
-- [Create an app event screenshot](post-v1-appeventscreenshots.md)
-- [Delete an app event screenshot](delete-v1-appeventscreenshots-_id_.md): Delete a specific screenshot from an in-app event.
+- [Update an app event screenshot](patch-v1-appeventscreenshots-_id_.md): Deprecated.
+- [Create an app event screenshot](post-v1-appeventscreenshots.md): Deprecated.
+- [Delete an app event screenshot](delete-v1-appeventscreenshots-_id_.md): Deprecated. Delete a specific screenshot from an in-app event.

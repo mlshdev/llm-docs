@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/post-v1-apppreviewsets
 
 # Create an app preview set
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 Add a new app preview set to an App Store version localization for a specific app preview type and display size.
+
+> This endpoint is deprecated. Use [Create an app asset library placement](post-v1-appassetlibraryplacements.md) instead.
 
 ## URL
 
@@ -37,4 +39,4 @@ Type: `AppPreviewSetCreateRequest`
 
 ### Creating and Deleting Preview Sets
 
-- [Delete an app preview set](delete-v1-apppreviewsets-_id_.md): Delete an app preview set and all of its previews.
+- [Delete an app preview set](delete-v1-apppreviewsets-_id_.md): Deprecated. Delete an app preview set and all of its previews.

@@ -1,9 +1,9 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 35
 
 # Document: HMError.Code.actionInAnotherActionSet
@@ -29694,6 +29694,7 @@ Use the provided tools to segment your stream, create multivariant playlists, an
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](http-live-streaming/hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](http-live-streaming/hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](http-live-streaming/using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](http-live-streaming/about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](http-live-streaming/enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
@@ -29927,6 +29928,7 @@ This example illustrates how CMAF Selection Sets can appear as separate Renditio
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
 - [Links to additional specifications and videos](links-to-additional-specifications-and-videos.md): Review additional specifications and documents.
@@ -30324,6 +30326,7 @@ func adjustedAnchorLoudnessFor(programLoudness: Double,
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
@@ -30331,6 +30334,89 @@ func adjustedAnchorLoudnessFor(programLoudness: Double,
 - [Videos about HLS](videos-about-hls.md): Review informational videos about HTTP Live Streaming.
 - [Providing metadata for xHE-AAC video soundtracks](providing-metadata-for-xhe-aac-video-soundtracks.md): Ensure volume normalization by including metadata for loudness and dynamic range control.
 - [Providing JavaScript Object Notation (JSON) chapters](providing-javascript-object-notation-json-chapters.md): Prepare JSON chapters for HTTP Live Streaming.
+
+# Document: Configuring delivery for HLS
+
+Source path: documentation/http-live-streaming/configuring-delivery
+Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/configuring-delivery
+Description: Kind: Article
+
+# Configuring delivery for HLS
+
+**Kind:** Article
+
+Format media URLs and origin domain access for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+
+<a id="overview"></a>
+
+## Overview
+
+Apple Podcasts requests your media from multiple domains, so correctly formatted URLs and Cross-Origin Resource Sharing (CORS) headers ensure your streams resolve and play without errors.
+
+<a id="Structure-media-URLs-for-Apple-Podcasts"></a>
+
+## Structure media URLs for Apple Podcasts
+
+Apple Podcasts supports multiple URL formats and redirection mechanisms:
+
+- **Parameterized URLs**: Apple Podcasts supports URLs containing query parameters (for example, `low/media.m3u8?campaign=midroll-8`).
+- **Prefix services**: Apple Podcasts recognizes and handles redirect services that use URL prefixes, such as link shorteners or analytics redirect services.
+- **HTTP redirects**: Apple Podcasts automatically follows standard HTTP redirect responses to resolve the final destination URL.
+
+<a id="Configure-CORS-for-Apple-domains"></a>
+
+## Configure CORS for Apple domains
+
+To support media playback on Apple sites, allow Cross-Origin Resource Sharing (CORS) from Apple-owned domains on your media hosts. You can configure your environment using either origin pattern matching or server-side origin validation.
+
+Both configuration options have the following requirements:
+
+- Configure headers for all hosts in the delivery chain, including playlist and manifest servers, media segment hosts, and all HTTP redirect targets.
+- Handle cache keys as follows:
+
+  - Include the `Origin` header in your CDN cache key.
+  - Return `Vary: Origin` on all responses containing `Access-Control-Allow-Origin`.
+- Expose byte-range headers by returning `Access-Control-Expose-Headers: Content-Range, Content-Length` to enable media seeking.
+- Do not return `Access-Control-Allow-Credentials: true`, as playback doesn’t require it.
+
+<a id="Configure-origin-pattern-matching"></a>
+
+### Configure origin pattern matching
+
+Use this approach if your CDN or cloud storage provider supports origin matching rules. If you’re using an origin storage service behind a CDN, configure CORS headers in one layer only (typically at the CDN) to prevent header conflicts or duplicate values.
+
+Configure your platform’s allowed origin field using one of the following options:
+
+- **Apple subdomains only**: Use `https://*.apple.com` to restrict access to Apple-owned origins. The platform verifies the request pattern and automatically reflects the specific requesting origin in the response header.
+- **Universal access**: If your media assets are public and don’t require domain restriction, use the universal wildcard `*` to simplify delivery to Apple Podcasts.
+
+> **Note**
+
+> Never return `Access-Control-Allow-Origin: https://*.apple.com` as a literal header value. Browsers reject wildcard subdomains in HTTP responses.
+
+<a id="Configure-server-side-origin-validation"></a>
+
+### Configure server-side origin validation
+
+If your hosting platform does not support origin pattern matching, or if you need application-level control, validate the incoming `Origin` header directly in server code:
+
+1. Inspect the incoming `Origin` request header.
+2. Validate that the value strictly matches an Apple domain — it starts with `https://` and ends with `.apple.com` (with the leading dot), or is exactly `https://apple.com`.
+
+   Avoid checks without the leading dot, as they could match untrusted domains. For example, `https://not-apple.com` and `https://apple.com.example.com` would defeat checks that omit the leading dot.
+3. If the domain matches, set `Access-Control-Allow-Origin` to the exact value received in the request’s `Origin` header.
+4. If the domain doesn’t match or is omitted, don’t return any `Access-Control-*` headers.
+
+Alternatively, if your media is fully public, your server can return `Access-Control-Allow-Origin: *` for all `GET` and `HEAD` requests.
+
+## See Also
+
+- [Authoring multivariant and media playlists](multivariant-and-media-playlists.md): Author the HTTP Live Streaming (HLS) multivariant and media playlists that Apple Podcasts requires, with the tags and attributes each playlist uses.
+- [Encoding media for HLS](encoding-media.md): Encode audio and video for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Delivering ad interstitials in podcast streams](delivering-ad-interstitials.md): Insert ad interstitials into HTTP Live Streaming (HLS) media playlists.
+- [Delivering WebVTT subtitles and captions in HLS](delivering-subtitles-and-captions.md): Add WebVTT subtitle and caption tracks to your HTTP Live Streaming (HLS) streams, and declare their absence when a stream doesn’t carry captions.
+- [Reviewing sample playlists and validating streams](examples-and-validation.md): Reference sample multivariant and video-on-demand (VOD) media playlists, and validate your HTTP Live Streaming (HLS) streams with Media Stream Validator.
+- [Handling downloads and playback](downloads-and-playback.md): Handle Apple Podcasts’ download and playback behavior, including hybrid audio/video streaming, non-video modes, and user-agent identification.
 
 # Document: Creating a Multivariant Playlist
 
@@ -30400,6 +30486,169 @@ The `EXT-X-STREAM-INF` tag has the following parameters:
 - [Video on Demand playlist construction](video-on-demand-playlist-construction.md): Understand the basic composition for a Video on Demand playlist.
 - [Live Playlist (sliding window) construction](live-playlist-sliding-window-construction.md): Understand the basic composition for a live session playlist.
 - [Event playlist construction](event-playlist-construction.md): Learn about the basic composition of an event session playlist.
+
+# Document: Delivering ad interstitials in podcast streams
+
+Source path: documentation/http-live-streaming/delivering-ad-interstitials
+Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/delivering-ad-interstitials
+Description: Kind: Article
+
+# Delivering ad interstitials in podcast streams
+
+**Kind:** Article
+
+Insert ad interstitials into HTTP Live Streaming (HLS) media playlists.
+
+<a id="overview"></a>
+
+## Overview
+
+An HLS interstitial is alternate content, such as an advertisement, that the player inserts into a stream at a specific point without altering the primary media. Use the `#EXT-X-DATERANGE` tag in your HLS media playlists to deliver client-side interstitial advertising. Place an exact segment boundary at each interstitial cue point in your encoded media when possible. Use `X-SNAP` to let the player correct splice timing automatically. Include `CUE=POST` when you deliver a post-roll interstitial.
+
+Use the following attributes with `#EXT-X-DATERANGE` for interstitial delivery:
+
+| # | Attribute | Description | Required | Example Value |
+| --- | --- | --- | --- | --- |
+| 1 | `CLASS` | Identifies the DATERANGE as an interstitial. Must be set to `com.apple.hls.interstitial`. | Required | `CLASS="com.apple.hls.interstitial"` |
+| 2 | `START-DATE` | A timestamp indicating the exact point in time, relative to the `#EXT-X-PROGRAM-DATE-TIME` of the playlist, where the interstitial should begin playback. | Required | `START-DATE="2023-10-27T10:00:00Z"` |
+| 3 | `PLANNED-DURATION` | A float value representing the intended (but not-to-exceed) duration of the interstitial. | See Note below. | `PLANNED-DURATION=30.0` |
+| 4 | `DURATION` | A float value representing the known, exact duration of the interstitial. If both `PLANNED-DURATION` and `DURATION` are present, `DURATION` takes precedence. | See Note below. | `DURATION=28.5` |
+| 5 | `X-SNAP` | Instructs the player to snap the interstitial splice point to the nearest segment boundary in the primary content. Accepts `OUT`, `IN`, or `OUT,IN` to apply snapping at the exit point, resume point, or both. | Recommended | `X-SNAP="OUT,IN"` |
+| 6 | `X-RESUME-OFFSET` | Specifies the offset time from the primary media. For interstitials, this is typically set to 0. | Required for Podcasts | `X-RESUME-OFFSET=0` |
+| 7 | `X-TIMELINE-OCCUPIES` | Indicates how the interstitial is displayed within the episode timeline. For seamless integration, set to `RANGE`. | Required for Podcasts | `X-TIMELINE-OCCUPIES="RANGE"` |
+| 8 | `X-TIMELINE-STYLE` | Defines the style of the interstitial’s timeline representation. For primary media, set to `PRIMARY`. | Required for Podcasts | `X-TIMELINE-STYLE="PRIMARY"` |
+
+> **Note**
+
+> Include either `PLANNED-DURATION` or `DURATION` for interstitials delivered with `X-ASSET-URI`; choose the option that best aligns with your ad decisioning process. If both are provided, `DURATION` takes precedence. For interstitials delivered with `X-ASSET-LIST`, the duration comes from the JSON response instead.
+
+Interstitial media can be delivered using one of two methods:
+
+<a id="Reference-the-interstitial-directly-with-the-asset-URI"></a>
+
+## Reference the interstitial directly with the asset URI
+
+Use `X-ASSET-URI` when you know the interstitial media playlist and it’s available when you create the HLS playlist. This attribute points directly to the interstitial’s HLS media playlist.
+
+```m3u8
+#EXT-X-DATERANGE:ID="ad_break_1",CLASS="com.apple.hls.interstitial",START-DATE="2023-10-27T10:00:00Z",PLANNED-DURATION=30.0,X-ASSET-URI="https://ad-server.example.com/ads/midroll1.m3u8",X-RESUME-OFFSET=0,X-TIMELINE-OCCUPIES="RANGE",X-TIMELINE-STYLE="PRIMARY"
+```
+
+<a id="Resolve-interstitials-at-playback"></a>
+
+## Resolve interstitials at playback
+
+Use `X-ASSET-LIST` when you need flexibility to determine the interstitial media at playback or download time, or when no interstitial may be available. This attribute points to a JSON response that contains the interstitial media playlist information.
+
+```m3u8
+#EXT-X-DATERANGE:ID="ad_break_1",CLASS="com.apple.hls.interstitial",START-DATE="2023-10-27T10:00:00Z",PLANNED-DURATION=30.0,X-ASSET-LIST="https://ad-server.example.com/ads/midroll1.json",X-RESUME-OFFSET=0,X-TIMELINE-OCCUPIES="RANGE",X-TIMELINE-STYLE="PRIMARY"
+```
+
+The JSON response specified by `X-ASSET-LIST` must contain an `ASSETS` array. Each object in the array represents an interstitial asset and includes the following keys:
+
+- **`URI`**: The URL of the interstitial’s HLS media playlist.
+- **`DURATION`**: A float value indicating the exact duration of the interstitial in seconds.
+
+```json
+{
+  "ASSETS": [
+    {
+      "URI": "https://example.com/ads/interstitial_1.m3u8",
+      "DURATION": 15.0
+    }
+  ]
+}
+```
+
+When you have no ad to place, use an empty list. The player skips the ad break and continues playing the main media.
+
+```json
+{
+  "ASSETS": []
+}
+```
+
+## See Also
+
+- [Authoring multivariant and media playlists](multivariant-and-media-playlists.md): Author the HTTP Live Streaming (HLS) multivariant and media playlists that Apple Podcasts requires, with the tags and attributes each playlist uses.
+- [Encoding media for HLS](encoding-media.md): Encode audio and video for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Configuring delivery for HLS](configuring-delivery.md): Format media URLs and origin domain access for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Delivering WebVTT subtitles and captions in HLS](delivering-subtitles-and-captions.md): Add WebVTT subtitle and caption tracks to your HTTP Live Streaming (HLS) streams, and declare their absence when a stream doesn’t carry captions.
+- [Reviewing sample playlists and validating streams](examples-and-validation.md): Reference sample multivariant and video-on-demand (VOD) media playlists, and validate your HTTP Live Streaming (HLS) streams with Media Stream Validator.
+- [Handling downloads and playback](downloads-and-playback.md): Handle Apple Podcasts’ download and playback behavior, including hybrid audio/video streaming, non-video modes, and user-agent identification.
+
+# Document: Delivering WebVTT subtitles and captions in HLS
+
+Source path: documentation/http-live-streaming/delivering-subtitles-and-captions
+Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/delivering-subtitles-and-captions
+Description: Kind: Article
+
+# Delivering WebVTT subtitles and captions in HLS
+
+**Kind:** Article
+
+Add WebVTT subtitle and caption tracks to your HTTP Live Streaming (HLS) streams, and declare their absence when a stream doesn’t carry captions.
+
+<a id="overview"></a>
+
+## Overview
+
+WebVTT (Web Video Text Tracks) is the standard format for delivering captions and subtitles in HLS streams. Apple devices running iOS, iPadOS, macOS, and tvOS play WebVTT tracks and support multiple languages.
+
+When your media stream or interstitial doesn’t include subtitles or captions, add `CLOSED-CAPTIONS=NONE` to every `#EXT-X-STREAM-INF` tag in your HLS multivariant playlist.
+
+The following sample stream variant declares that no closed captions are available:
+
+```m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=2500000,RESOLUTION=1920x1080,CODECS="avc1.4d401f,mp4a.40.2",CLOSED-CAPTIONS=NONE
+```
+
+<a id="Configure-subtitle-tracks-in-the-multivariant-playlist"></a>
+
+## Configure subtitle tracks in the multivariant playlist
+
+The following attributes apply to `EXT-X-MEDIA` tags with `TYPE=SUBTITLES` in your multivariant playlist:
+
+| # | Attribute | Purpose | Required | Example Value |
+| --- | --- | --- | --- | --- |
+| 1 | `TYPE` | Media type identifier | Yes | `SUBTITLES` |
+| 2 | `GROUP-ID` | Groups related subtitle tracks | Yes | `"subtitles"` |
+| 3 | `NAME` | Display name for subtitle track | Yes | `"English"` |
+| 4 | `LANGUAGE` | ISO 639-1/639-2 language code | Yes | `"en"` |
+| 5 | `URI` | Path to playlist that contains WebVTT segments | Yes | `"subtitles/en.m3u8"` |
+| 6 | `DEFAULT` | Sets default caption track | No, but recommended | `YES`/`NO` |
+| 7 | `AUTOSELECT` | Auto-selects based on device language | No, but recommended | `YES`/`NO` |
+| 8 | `FORCED` | Indicates forced subtitles | If applicable | `YES`/`NO` |
+
+<a id="Synchronize-subtitle-timing-with-video-segments"></a>
+
+## Synchronize subtitle timing with video segments
+
+Follow these guidelines to keep subtitle cues aligned with the audio and video timeline:
+
+- **Segment alignment**: Ensure subtitle timing aligns with video segments.
+- **Overlap handling**: Avoid overlapping cue times.
+- **Precision**: Align cue start and end times to the actual audio boundaries; WebVTT timestamps use millisecond precision (HH:MM:SS.mmm).
+
+<a id="Format-caption-text-for-readability"></a>
+
+## Format caption text for readability
+
+Follow these general accessibility guidelines when you author caption text, as targets rather than hard HLS requirements:
+
+- **Line length**: Maximum 32 characters per line for mobile devices.
+- **Reading speed**: 160–180 words per minute maximum.
+- **Duration**: Minimum 1.5 seconds, maximum 7 seconds per caption.
+- **Line count**: Maximum 2 lines per caption for optimal readability.
+
+## See Also
+
+- [Authoring multivariant and media playlists](multivariant-and-media-playlists.md): Author the HTTP Live Streaming (HLS) multivariant and media playlists that Apple Podcasts requires, with the tags and attributes each playlist uses.
+- [Encoding media for HLS](encoding-media.md): Encode audio and video for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Configuring delivery for HLS](configuring-delivery.md): Format media URLs and origin domain access for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Delivering ad interstitials in podcast streams](delivering-ad-interstitials.md): Insert ad interstitials into HTTP Live Streaming (HLS) media playlists.
+- [Reviewing sample playlists and validating streams](examples-and-validation.md): Reference sample multivariant and video-on-demand (VOD) media playlists, and validate your HTTP Live Streaming (HLS) streams with Media Stream Validator.
+- [Handling downloads and playback](downloads-and-playback.md): Handle Apple Podcasts’ download and playback behavior, including hybrid audio/video streaming, non-video modes, and user-agent identification.
 
 # Document: Deploying a Basic HTTP Live Streaming (HLS) Stream
 
@@ -30492,6 +30741,78 @@ A sample-level encryption format is documented in [MPEG-2 Stream Encryption Form
 ### Essentials
 
 - [Preparing Audio for HTTP Live Streaming](preparing-audio-for-http-live-streaming.md): Encode your media properly to ensure synchronized audio and video playback.
+
+# Document: Handling downloads and playback
+
+Source path: documentation/http-live-streaming/downloads-and-playback
+Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/downloads-and-playback
+Description: Kind: Article
+
+# Handling downloads and playback
+
+**Kind:** Article
+
+Handle Apple Podcasts’ download and playback behavior, including hybrid audio/video streaming, non-video modes, and user-agent identification.
+
+<a id="overview"></a>
+
+## Overview
+
+Apple Podcasts supports a flexible download model that balances cellular data usage with the best available playback experience.
+
+<a id="Deliver-audio-only-downloads-to-followers-by-default"></a>
+
+## Deliver audio-only downloads to followers by default
+
+When followers of a show have auto-downloads enabled, Apple Podcasts delivers audio-only downloads by default. This preserves current behavior and avoids unexpected increases in data usage.
+
+- Apple Podcasts doesn’t enable video auto-download automatically for followers.
+- Followers who want to receive video downloads can opt in to include video in future episodes.
+- Followers who haven’t opted in can still access video by streaming on demand.
+
+Apple Podcasts downloads audio from the media playlist and from each interstitial to the listener’s device. The player fetches and caches only the sub-playlists for the downloaded content type — for example, an audio-only download caches the audio media playlist and its interstitials. The player doesn’t crawl media playlists for variants that weren’t downloaded, such as video; instead, it resolves and fetches them live over the network at playback time.
+
+Because of this, keep your main media and interstitial media URLs resolvable and replayable at a later date. If a URL fails to resolve later, playback errors occur.
+
+<a id="Stream-video-when-only-audio-is-on-device"></a>
+
+## Stream video when only audio is on device
+
+When a user requests video playback but only has an audio version downloaded on device, Apple Podcasts fetches and streams the video version over the network.
+
+- The downloaded audio track continues to play without interruption if a network disruption occurs while the player streams the video.
+- This ensures a seamless listening experience even under poor network conditions.
+
+To support this hybrid playback model, keep the HLS multivariant playlist and all associated interstitials accessible and consistent when Apple Podcasts fetches the video version. A mismatch between the audio download state and the HLS manifest may result in playback issues.
+
+<a id="Continue-audio-playback-in-non-video-contexts"></a>
+
+## Continue audio playback in non-video contexts
+
+When a user is streaming a video episode and transitions to a non-video context — such as locking the device or connecting to CarPlay — the player automatically adjusts:
+
+- Video network traffic stops streaming; audio continues to stream uninterrupted.
+- Video streaming resumes only when the user returns to an active video context.
+
+This behavior optimizes bandwidth usage and ensures uninterrupted audio playback across all listening environments.
+
+<a id="Recognize-Apple-Podcasts-user-agent-strings"></a>
+
+## Recognize Apple Podcasts user-agent strings
+
+Apple Podcasts identifies itself to hosting providers by sending a user-agent header with every media request. Hosting providers should expect to see two distinct user-agent formats:
+
+- **Standard playback:** `Podcasts/#### CFNetwork/####.###.# Darwin/##.#.#` — Apple Podcasts sends this user agent for every media request during user-initiated downloads and streaming playback. Hosting providers don’t need to change how they handle it.
+- **Scout:** `Podcasts/#### CFNetwork/####.###.# Darwin/##.#.# Scout/#.#` — The player uses this user agent to align timed features such as transcripts, chapters, and timed links with episode playback. The player issues Scout requests against the audio track only, retrieving a minimal amount of data. These requests aren’t associated with user-initiated playback or full media delivery.
+
+## See Also
+
+- [Authoring multivariant and media playlists](multivariant-and-media-playlists.md): Author the HTTP Live Streaming (HLS) multivariant and media playlists that Apple Podcasts requires, with the tags and attributes each playlist uses.
+- [Encoding media for HLS](encoding-media.md): Encode audio and video for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Configuring delivery for HLS](configuring-delivery.md): Format media URLs and origin domain access for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Delivering ad interstitials in podcast streams](delivering-ad-interstitials.md): Insert ad interstitials into HTTP Live Streaming (HLS) media playlists.
+- [Delivering WebVTT subtitles and captions in HLS](delivering-subtitles-and-captions.md): Add WebVTT subtitle and caption tracks to your HTTP Live Streaming (HLS) streams, and declare their absence when a stream doesn’t carry captions.
+- [Reviewing sample playlists and validating streams](examples-and-validation.md): Reference sample multivariant and video-on-demand (VOD) media playlists, and validate your HTTP Live Streaming (HLS) streams with Media Stream Validator.
 
 # Document: Enabling Low-Latency HTTP Live Streaming (HLS)
 
@@ -30793,6 +31114,7 @@ The following table describes the changes to the Protocol Extension for Low-Late
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Links to additional specifications and videos](links-to-additional-specifications-and-videos.md): Review additional specifications and documents.
@@ -30800,6 +31122,60 @@ The following table describes the changes to the Protocol Extension for Low-Late
 - [Providing metadata for xHE-AAC video soundtracks](providing-metadata-for-xhe-aac-video-soundtracks.md): Ensure volume normalization by including metadata for loudness and dynamic range control.
 - [Adjusting anchor loudness](adjusting-anchor-loudness.md): Adjust anchor loudness when measurements of speech-gated loudness for a full mix may be inaccurate, such as when speech activity is low.
 - [Providing JavaScript Object Notation (JSON) chapters](providing-javascript-object-notation-json-chapters.md): Prepare JSON chapters for HTTP Live Streaming.
+
+# Document: Encoding media for HLS
+
+Source path: documentation/http-live-streaming/encoding-media
+Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/encoding-media
+Description: Kind: Article
+
+# Encoding media for HLS
+
+**Kind:** Article
+
+Encode audio and video for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+
+<a id="overview"></a>
+
+## Overview
+
+Apple Podcasts plays HLS video on many devices and across a range of network conditions. Use these encoder settings for best results.
+
+<a id="Apply-HLS-video-encoding-best-practices"></a>
+
+## Apply HLS video encoding best practices
+
+Use adaptive bitrate streaming, efficient codecs, and proper segmentation when you encode video for HLS delivery to Apple Podcasts:
+
+- Provide multiple quality levels to adapt to network conditions.
+- Use H.264 (AVC) for broad device compatibility and H.265 (HEVC) for better compression efficiency.
+- Use appropriate segment durations for smooth playback.
+
+<a id="Configure-encoding-settings"></a>
+
+## Configure encoding settings
+
+Use these settings when preparing video for HLS delivery:
+
+- **Keyframe interval**: 2–6 seconds (60–180 frames at 30 fps)
+- **B-frames**: 2–3 for H.264, 3–4 for HEVC
+- **GOP structure**: Closed GOP
+- **Color space**: Rec. 709 for HD, Rec. 2020 for 4K HDR
+
+Use these settings when encoding podcast audio for HLS delivery:
+
+- **Codec**: AAC-LC (recommended) or HE-AAC v1/v2
+- **Sample rate**: 48 kHz (preferred) or 44.1 kHz
+- **Channels**: Stereo and bitrate 192 kbps preferred for most content, 5.1 surround sound also supported
+
+## See Also
+
+- [Authoring multivariant and media playlists](multivariant-and-media-playlists.md): Author the HTTP Live Streaming (HLS) multivariant and media playlists that Apple Podcasts requires, with the tags and attributes each playlist uses.
+- [Configuring delivery for HLS](configuring-delivery.md): Format media URLs and origin domain access for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Delivering ad interstitials in podcast streams](delivering-ad-interstitials.md): Insert ad interstitials into HTTP Live Streaming (HLS) media playlists.
+- [Delivering WebVTT subtitles and captions in HLS](delivering-subtitles-and-captions.md): Add WebVTT subtitle and caption tracks to your HTTP Live Streaming (HLS) streams, and declare their absence when a stream doesn’t carry captions.
+- [Reviewing sample playlists and validating streams](examples-and-validation.md): Reference sample multivariant and video-on-demand (VOD) media playlists, and validate your HTTP Live Streaming (HLS) streams with Media Stream Validator.
+- [Handling downloads and playback](downloads-and-playback.md): Handle Apple Podcasts’ download and playback behavior, including hybrid audio/video streaming, non-video modes, and user-agent identification.
 
 # Document: Event playlist construction
 
@@ -30936,6 +31312,191 @@ You can use the Apple HTTP Live Streaming tools to generate playlists. These too
 ### Stream creation
 
 - [About the EXT-X-VERSION tag](about-the-ext-x-version-tag.md): Find the protocol version that corresponds with the HLS features your app supports.
+
+# Document: Reviewing sample playlists and validating streams
+
+Source path: documentation/http-live-streaming/examples-and-validation
+Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/examples-and-validation
+Description: Kind: Article
+
+# Reviewing sample playlists and validating streams
+
+**Kind:** Article
+
+Reference sample multivariant and video-on-demand (VOD) media playlists, and validate your HTTP Live Streaming (HLS) streams with Media Stream Validator.
+
+<a id="overview"></a>
+
+## Overview
+
+Use the following playlist examples as a reference when authoring your own HLS streams for Apple Podcasts, and validate your streams with Apple’s command-line tools before publishing.
+
+<a id="Multivariant-playlist-example"></a>
+
+## Multivariant playlist example
+
+The following multivariant playlist offers an audio rendition group, a subtitle rendition group, and three video variant streams that are paired with audio and subtitles.
+
+```m3u8
+#EXTM3U
+#EXT-X-VERSION:4
+# Define audio rendition group
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_group",NAME="English Stereo",LANGUAGE="en",AUTOSELECT=YES,DEFAULT=YES,URI="audio/en.m3u8"
+# Define subtitles/captions rendition group
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",AUTOSELECT=YES,DEFAULT=YES,URI="subtitle/en.m3u8"
+# Low quality (480p) - paired with audio_group and subtitles
+#EXT-X-STREAM-INF:BANDWIDTH=800000,AVERAGE-BANDWIDTH=750000,RESOLUTION=854x480,CODECS="avc1.4d401f,mp4a.40.2",AUDIO="audio_group",SUBTITLES="subs"
+low/media.m3u8
+# Medium quality (720p) - paired with audio_group and subtitles
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,AVERAGE-BANDWIDTH=1400000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2",AUDIO="audio_group",SUBTITLES="subs"
+medium/media.m3u8
+# High quality (1080p) - paired with audio_group and subtitles
+#EXT-X-STREAM-INF:BANDWIDTH=2500000,AVERAGE-BANDWIDTH=2350000,RESOLUTION=1920x1080,CODECS="avc1.4d401f,mp4a.40.2",AUDIO="audio_group",SUBTITLES="subs"
+high/media.m3u8
+# Audio-only variant
+#EXT-X-STREAM-INF:BANDWIDTH=131404,CODECS="mp4a.40.2",AUDIO="audio_group"
+audio/audio_only.m3u8
+# I-frame-only variant, for seeking/scrubbing/FF/RW enhancement
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=300000,RESOLUTION=854x480,CODECS="avc1.4d401f",URI="iframe/media.m3u8"
+```
+
+<a id="VOD-media-playlist-example"></a>
+
+## VOD media playlist example
+
+The following is an example of a VOD media playlist with a 10-second target duration for segments. An `#EXT-X-DATERANGE` tag with a `START` time offset describes a pre-roll advertisement and a mid-roll advertisement.
+
+```m3u8
+#EXTM3U
+#EXT-X-TARGETDURATION:10
+#EXT-X-VERSION:7
+#EXT-X-MEDIA-SEQUENCE:1
+#EXT-X-PLAYLIST-TYPE:VOD
+#EXT-X-INDEPENDENT-SEGMENTS
+#EXT-X-MAP:URI="main.mp4",BYTERANGE="1206@0"
+#EXT-X-PROGRAM-DATE-TIME:2025-01-01T00:00:00.000Z
+#Main Content
+#Segment 1
+#EXTINF:9.987,
+#EXT-X-BYTERANGE:1500000@1206
+main.mp4
+#Segment 2
+#EXTINF:9.987,
+#EXT-X-BYTERANGE:1500000@1501206
+main.mp4
+#Segment 3
+#EXTINF:9.987,
+#EXT-X-BYTERANGE:1500000@3001206
+main.mp4
+... more segments ...
+#Segment 99
+#EXTINF:3.15000,
+#EXT-X-BYTERANGE:757516@134587545
+main.mp4
+#EXT-X-ENDLIST
+#Pre-roll Advertisement Marker
+#EXT-X-DATERANGE:ID=“preroll-ad-1”,CLASS=“com.apple.hls.interstitial",START-DATE="2025-01-01T00:00:00.000Z",DURATION=30.0,X-ASSET-URI="https://ad-server.example.com/preroll/campaign-123/ad.m3u8",X-RESUME-OFFSET=0,X-TIMELINE-OCCUPIES="RANGE",X-TIMELINE-STYLE="PRIMARY"
+#Mid-roll Advertisement Marker
+#EXT-X-DATERANGE:ID=“midroll-ad-1”,CLASS=“com.apple.hls.interstitial",START-DATE="2025-01-01T01:23:45.000Z",DURATION=15.0,X-ASSET-URI="https://ad-server.example.com/midroll/campaign-456/ad.m3u8",X-SNAP="OUT,IN",X-RESUME-OFFSET=0,X-TIMELINE-OCCUPIES="RANGE",X-TIMELINE-STYLE="PRIMARY"
+```
+
+<a id="Validate-a-stream-with-Media-Stream-Validator"></a>
+
+## Validate a stream with Media Stream Validator
+
+Media Stream Validator (`mediastreamvalidator`) simulates an HLS session and verifies that the index file and media segments conform to the HLS specification. It checks for several best practices to ensure reliable streaming. If it finds errors or problems, it displays a detailed diagnostic report. To write validation data to a JSON file, pass the `--validation-data-path` argument.
+
+You can use [this Apple Podcasts sample manifest](https://devstreaming-cdn.apple.com/videos/streaming/examples/podcast-sample/mvp_podcast_sample.m3u8) as a reference for development and troubleshooting.
+
+Download Media Stream Validator from [HLS downloads](https://developer.apple.com/download/all/?q=hls).
+
+Use the `--include-settings` option to specify a file containing configuration settings for Media Stream Validator to use:
+
+```shell
+mediastreamvalidator --include-settings podcasts.json <stream-url>
+```
+
+For the `podcasts.json` file, copy and paste the following code block:
+
+```json
+// Configuration to validate the Podcast specification
+// Version: 1.05 (Sep, 2026)
+{
+	"@REQUIRED-VERSION": "mediastreamvalidator:2.0.263",
+	"errors.ignore": [
+		// ignore the following HLSReport errors (passed on to HLSReport)
+		"1024", // Language attribute missing
+		"1038", // No 192k Variant
+		"1072", // Channel Layout Changed
+		"1075", // Bad Frame Rate Switch
+		"1076", // Need Both HDR Codecs
+		"1077", // Full Variant Range
+		"1082", // Wrong Default Variant for iOS WiFi
+		"1083"  // Wrong Default Variant for iOS Cellular
+	],
+	"rules": {
+		"enable" : [
+			// Enable optional RuleSets that are not configured below
+			"33087",// Interstitial Duration: Validate the interstitial duration is declared accurately
+			"42507"	// AV Muxed: Checks that there are no muxed audio/video variants or playlists
+		],
+		// configure EXT-X-DATERANGE validation
+		"24060": {
+			"boundary-check": "must",	// date ranges MUST not appear before the beginning or after or close to the end of stream
+			"boundary-margin": 2.0		// 2s are considsered "close to the end of stream"
+		},
+		// configure and enable AV Variant Type Rule
+		"33053" : { 
+			"audioVideo": "require",
+			"audioOnly": "require",
+			"videoOnly": "forbid",
+			"interstitials": "superset"	// interstitials must *at least* contain variants for all AV types the main stream contains
+		},
+		// configure subtitle rule to not log a SHOULD for streams no providing subtitles or captions
+		"33088": {
+			"captioning": "allow"	// default is prefer
+		},		
+		// configure Interstitial Duration: Validate the interstitial duration is declared accurately
+		"33087": {
+			"duration-err": 10	// Percent error allowed between the date range duration and the actual duration of the interstitial playlist
+		},
+		// Verify target durations for segments and media playlists.
+		"35023": {  
+			"range" : {"min":4, "max":10}	// TargetDuration must be between 4 and 10seconds
+		},
+		// configure Interstitial Date Range Attributes Validation
+		"42508": {
+			"require": ["X-TIMELINE-OCCUPIES", "X-TIMELINE-STYLE"],
+			"limit": {
+				"CUE": ["POST"],	// only CUE="POST" is allowed
+				"X-RESTRICT": [],	// X-RESTRICT is forbidden
+				"X-DEBUG": [],		// X-DEBUG is forbidden
+				"X-TIMELINE-OCCUPIES": ["RANGE"],
+				"X-TIMELINE-STYLE": ["PRIMARY"]
+			}
+		},
+		// Check for stream properties to be in a configurable range
+		"42518": {
+			"types" : ["VOD"],			// only allow VOD playlists
+		}
+	}, // "rules"
+	
+	// configure to return a non zero exit code if MUST Fix Authoring or more sever errors are found
+	"exit-code.threshold": "must_auth",
+
+	// ensure HLSReport compatible output (for now)
+	"compatible-output": ["v1.x"]
+}
+```
+
+## See Also
+
+- [Authoring multivariant and media playlists](multivariant-and-media-playlists.md): Author the HTTP Live Streaming (HLS) multivariant and media playlists that Apple Podcasts requires, with the tags and attributes each playlist uses.
+- [Encoding media for HLS](encoding-media.md): Encode audio and video for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Configuring delivery for HLS](configuring-delivery.md): Format media URLs and origin domain access for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Delivering ad interstitials in podcast streams](delivering-ad-interstitials.md): Insert ad interstitials into HTTP Live Streaming (HLS) media playlists.
+- [Delivering WebVTT subtitles and captions in HLS](delivering-subtitles-and-captions.md): Add WebVTT subtitle and caption tracks to your HTTP Live Streaming (HLS) streams, and declare their absence when a stream doesn’t carry captions.
+- [Handling downloads and playback](downloads-and-playback.md): Handle Apple Podcasts’ download and playback behavior, including hybrid audio/video streaming, non-video modes, and user-agent identification.
 
 # Document: HTTP Live Streaming (HLS) authoring specification for Apple devices
 
@@ -32012,6 +32573,7 @@ The following table describes the changes to this document.
 
 ### Specifications and other documents
 
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
@@ -32497,6 +33059,66 @@ The HEVC codec values are described in ISO/IEC 14496-15. A short description is 
 
 Information about Dolby Video codec values can be obtained from Dolby. A short description is `Codec.Profile.Level`, so in `dvh1.05.03` the Profile is 5 and the Level is 3.
 
+# Document: HLS for Apple Podcasts
+
+Source path: documentation/http-live-streaming/hls-for-podcasts
+Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/hls-for-podcasts
+Description: Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
+
+# HLS for Apple Podcasts
+
+Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
+
+<a id="overview"></a>
+
+## Overview
+
+Apple Podcasts supports HTTP Live Streaming (HLS) video-on-demand media playback with interstitial advertising. This guide covers how the Apple Podcasts player interprets HLS fields, where Apple Podcasts requirements differ from the general HLS specification, and best practices for delivering your content.
+
+<a id="Structure-a-podcast-episode"></a>
+
+## Structure a podcast episode
+
+An HLS podcast episode begins with a multivariant playlist. This describes the basic content as variant streams, each of which describes a different version of the same content — for example, video at a particular bit rate, in a particular format, and a particular resolution. You can extend each variant with media renditions, which are alternate versions of part of the content, such as audio produced in different languages.
+
+The player chooses variants automatically, based on download speed, codec support, preferred pathway, and display characteristics. User input is used to choose renditions, and you need to provide identically named renditions for every variant.
+
+<a id="Deliver-HLS-video-using-the-Podcasts-Connect-API"></a>
+
+## Deliver HLS video using the Podcasts Connect API
+
+The Podcasts Connect API provides the capabilities to associate HLS video Primary Playlist URLs with your standard RSS-based episodes. If you host podcasts and want access to the Podcasts Connect API documentation, complete [this survey](https://survey.apple.com/axm/survey/as/6984af5e34487c4f235c595f). If you already have access, see the [Podcasts Connect API documentation](https://amp-partner-docs.apple.com/docs/podcasts-connect-api-user-guide).
+
+<a id="Apple-Developer-HLS-resources"></a>
+
+## Apple Developer HLS resources
+
+See the [HTTP Live Streaming](https://developer.apple.com/streaming/) technology landing page for additional reference material, such as [Getting Started with HLS Interstitials](https://developer.apple.com/streaming/GettingStartedWithHLSInterstitials.pdf) and [HLS Streaming Examples](https://developer.apple.com/streaming/examples/).
+
+## Topics
+
+- [Authoring multivariant and media playlists](multivariant-and-media-playlists.md): Author the HTTP Live Streaming (HLS) multivariant and media playlists that Apple Podcasts requires, with the tags and attributes each playlist uses.
+- [Encoding media for HLS](encoding-media.md): Encode audio and video for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Configuring delivery for HLS](configuring-delivery.md): Format media URLs and origin domain access for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Delivering ad interstitials in podcast streams](delivering-ad-interstitials.md): Insert ad interstitials into HTTP Live Streaming (HLS) media playlists.
+- [Delivering WebVTT subtitles and captions in HLS](delivering-subtitles-and-captions.md): Add WebVTT subtitle and caption tracks to your HTTP Live Streaming (HLS) streams, and declare their absence when a stream doesn’t carry captions.
+- [Reviewing sample playlists and validating streams](examples-and-validation.md): Reference sample multivariant and video-on-demand (VOD) media playlists, and validate your HTTP Live Streaming (HLS) streams with Media Stream Validator.
+- [Handling downloads and playback](downloads-and-playback.md): Handle Apple Podcasts’ download and playback behavior, including hybrid audio/video streaming, non-video modes, and user-agent identification.
+
+## See Also
+
+### Specifications and other documents
+
+- [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
+- [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
+- [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
+- [Links to additional specifications and videos](links-to-additional-specifications-and-videos.md): Review additional specifications and documents.
+- [Videos about HLS](videos-about-hls.md): Review informational videos about HTTP Live Streaming.
+- [Providing metadata for xHE-AAC video soundtracks](providing-metadata-for-xhe-aac-video-soundtracks.md): Ensure volume normalization by including metadata for loudness and dynamic range control.
+- [Adjusting anchor loudness](adjusting-anchor-loudness.md): Adjust anchor loudness when measurements of speech-gated loudness for a full mix may be inaccurate, such as when speech activity is low.
+- [Providing JavaScript Object Notation (JSON) chapters](providing-javascript-object-notation-json-chapters.md): Prepare JSON chapters for HTTP Live Streaming.
+
 # Document: Incorporating Ads into a Playlist
 
 Source path: documentation/http-live-streaming/incorporating-ads-into-a-playlist
@@ -32597,6 +33219,7 @@ The following links are in addition to the specifications listed below.
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
@@ -32713,6 +33336,65 @@ fileSequence9.ts
 - [Video on Demand playlist construction](video-on-demand-playlist-construction.md): Understand the basic composition for a Video on Demand playlist.
 - [Event playlist construction](event-playlist-construction.md): Learn about the basic composition of an event session playlist.
 - [Creating a Multivariant Playlist](creating-a-multivariant-playlist.md): Offer multiple playlist files to provide different encodings of the same content.
+
+# Document: Authoring multivariant and media playlists
+
+Source path: documentation/http-live-streaming/multivariant-and-media-playlists
+Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/multivariant-and-media-playlists
+Description: Kind: Article
+
+# Authoring multivariant and media playlists
+
+**Kind:** Article
+
+Author the HTTP Live Streaming (HLS) multivariant and media playlists that Apple Podcasts requires, with the tags and attributes each playlist uses.
+
+<a id="overview"></a>
+
+## Overview
+
+An HLS presentation for Apple Podcasts consists of two playlist types: a multivariant playlist that lists the available variant streams and media renditions, and a media playlist for each variant stream or rendition that lists its individual segments. Author both playlist types using the tags described below. For general information about video-on-demand playlists, see [Video on Demand playlist construction](video-on-demand-playlist-construction.md).
+
+<a id="Declare-multivariant-playlist-tags"></a>
+
+## Declare multivariant playlist tags
+
+The multivariant playlist describes all the available variant streams (different video bit rate tiers and formats) and media renditions (audio languages, subtitles, and others) for the presentation. A URI and descriptive tags specify each variant stream and media rendition. The URI tells the player where to download the media playlist for the variant stream or media rendition.
+
+| # | Tag Name | Description | Parameters | Required/Optional | Example |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `#EXTM3U` | Identifies the file as an M3U playlist | None | Required (must be first line) | `#EXTM3U` |
+| 2 | `#EXT-X-VERSION` | Indicates HLS protocol compatibility version | None | Minimum required version is 4. You may need a higher version depending on the features you use. | `#EXT-X-VERSION:4` |
+| 3 | `#EXT-X-STREAM-INF` | Defines a variant stream with its attributes | `BANDWIDTH` (required), `RESOLUTION` (required), `CODECS` (required), `AVERAGE-BANDWIDTH` (required), `FRAME-RATE`, `AUDIO`, `SUBTITLES`, `VIDEO`, `CLOSED-CAPTIONS` (Include “NONE” if not available) | Apple Podcasts requires an audio-only variant stream along with video variant streams. For better performance, include multiple video renditions. 1080p (required) and 720p (required), but consider including 480p and 360p for network-constrained devices. | `#EXT-X-STREAM-INF:BANDWIDTH=2500000,RESOLUTION=1920x1080,CODECS="avc1.4d401f,mp4a.40.2",CLOSED-CAPTIONS=NONE` |
+| 4 | `#EXT-X-MEDIA` | Defines audio grouping and alternative renditions (audio, subtitles, and others) | `TYPE` (required), `GROUP-ID` (required), `NAME` (required), `URI` (required), `LANGUAGE` (required), `AUTOSELECT` (recommended), `DEFAULT` (recommended), `FORCED`, `CHANNELS` | Required for audio-only grouping. Optional for providing alternate audio language renditions or subtitles. | `#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="en-audio",NAME="en-audio",LANGUAGE="en",DEFAULT=YES,CHANNELS="2",URI="audio/en.m3u8"``#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",LANGUAGE="en",DEFAULT=YES,URI="captions/english.m3u8"` |
+| 5 | `#EXT-X-I-FRAME-STREAM-INF` | Defines an iframe-only variant stream for trick play (fast forward, rapid rewind, scrubbing) | `BANDWIDTH` (required), `URI` (required), `CODECS` (recommended), `RESOLUTION` (recommended), `AVERAGE-BANDWIDTH` (recommended) | Required for seeking enhancement. Target capturing 2 frames per second but no more than 8 frames per second. | `#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=200000,URI="iframes.m3u8",CODECS="avc1.4d401f"` |
+
+<a id="Declare-media-playlist-tags"></a>
+
+## Declare media playlist tags
+
+The media playlist contains a list of media segments (video or audio chunks) for a specific variant stream or media rendition, along with a group of descriptive tags. Each media segment is specified by URI and optional byte range, telling the player exactly which files and byte ranges to download and play in sequence. A media playlist can contain advertising markers or HLS interstitials specified by media metadata tags.
+
+| # | Tag Name | Description | Parameters | Required/Optional | Example |
+| --- | --- | --- | --- | --- | --- |
+| 1 | `#EXTM3U` | Identifies the file as an M3U playlist | None | Required (must be first line) | `#EXTM3U` |
+| 2 | `#EXT-X-VERSION` | Indicates HLS protocol compatibility version | Version number | Minimum required version is 7. You may need a higher version depending on the features you use. | `#EXT-X-VERSION:7` |
+| 3 | `#EXT-X-TARGETDURATION` | Maximum segment duration in seconds | Duration in seconds | Required, range should be 4 to 10 seconds. 6 seconds is recommended. | `#EXT-X-TARGETDURATION:10` |
+| 4 | `#EXT-X-MEDIA-SEQUENCE` | Sequence number of first segment | Sequence number | Optional (default 0) | `#EXT-X-MEDIA-SEQUENCE:0` |
+| 5 | `#EXT-X-PLAYLIST-TYPE` | Indicates playlist type | `VOD` or `EVENT` | Required for Apple Podcasts, use `VOD` | `#EXT-X-PLAYLIST-TYPE:VOD` |
+| 6 | `#EXTINF` | Specifies segment duration and optional title | Duration in seconds, optional title | Required for each segment | `#EXTINF:9.987,` |
+| 7 | `#EXT-X-ENDLIST` | Indicates the list of segments is complete | None | Required for VOD | `#EXT-X-ENDLIST` |
+| 8 | `#EXT-X-PROGRAM-DATE-TIME` | Defines a base time for the next segment | A time in ISO 8601 format. Note that this is not a wall clock time. | Required if you use date ranges. Do not use the UNIX start time (Jan 1, 1970). | `#EXT-X-PROGRAM-DATE-TIME:2023-10-27T09:50:00Z` |
+| 9 | `#EXT-X-DATERANGE` | Media Metadata Tag. Defines a date range for metadata or for HLS interstitials. | `ID` (required), `X-RESUME-OFFSET=0` (required), `X-TIMELINE-OCCUPIES="RANGE"` (required), `X-TIMELINE-STYLE="PRIMARY"` (required), `CLASS` (required), `X-SNAP` (recommended), `START-DATE`, `END-DATE`, `DURATION`, `PLANNED-DURATION`, `CUE`, `X-*` custom attributes. `X-RESTRICT` ignored in Apple Podcasts. | See `#EXT-X-DATERANGE` in [Delivering ad interstitials in podcast streams](delivering-ad-interstitials.md). | `#EXT-X-DATERANGE:ID="ad_break_1",CLASS="com.apple.hls.interstitial",START-DATE="2026-04-01T10:09:00Z",PLANNED-DURATION=30.0,X-ASSET-URI="https://ad-server.example.com/ads/midroll1.m3u8",X-RESUME-OFFSET=0,X-SNAP="OUT,IN",X-TIMELINE-OCCUPIES="RANGE",X-TIMELINE-STYLE="PRIMARY"` |
+
+## See Also
+
+- [Encoding media for HLS](encoding-media.md): Encode audio and video for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Configuring delivery for HLS](configuring-delivery.md): Format media URLs and origin domain access for HTTP Live Streaming (HLS) delivery to Apple Podcasts.
+- [Delivering ad interstitials in podcast streams](delivering-ad-interstitials.md): Insert ad interstitials into HTTP Live Streaming (HLS) media playlists.
+- [Delivering WebVTT subtitles and captions in HLS](delivering-subtitles-and-captions.md): Add WebVTT subtitle and caption tracks to your HTTP Live Streaming (HLS) streams, and declare their absence when a stream doesn’t carry captions.
+- [Reviewing sample playlists and validating streams](examples-and-validation.md): Reference sample multivariant and video-on-demand (VOD) media playlists, and validate your HTTP Live Streaming (HLS) streams with Media Stream Validator.
+- [Handling downloads and playback](downloads-and-playback.md): Handle Apple Podcasts’ download and playback behavior, including hybrid audio/video streaming, non-video modes, and user-agent identification.
 
 # Document: Preparing Audio for HTTP Live Streaming
 
@@ -33055,6 +33737,7 @@ The metadata item keys are placed in the key space [quickTimeMetadata](../avfoun
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
@@ -33181,6 +33864,7 @@ User preferences can override DRC settings. The following table provides example
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
@@ -33479,6 +34163,7 @@ This is a UUID in Microsoft’s GUID form. That is, three little-endian numbers 
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
 - [Links to additional specifications and videos](links-to-additional-specifications-and-videos.md): Review additional specifications and documents.
@@ -33606,6 +34291,7 @@ The following WWDC videos provide additional information about HTTP Live Streami
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.
@@ -181725,982 +182411,3 @@ Description: Framework: Intents Kind: Initializer Availability: iOS 11.0+ · iPa
 ```swift
 init?(rawValue: Int)
 ```
-
-# Document: INCallDestinationType.normal
-
-Source path: documentation/intents/incalldestinationtype/normal
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/normal
-Description: Framework: Intents Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-# INCallDestinationType.normal (Swift)
-
-**Framework:** Intents  
-**Kind:** Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-A call routed to its expected destination.
-
-## Declaration
-
-```swift
-case normal
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
-- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
-- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# INCallDestinationTypeNormal (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-A call routed to its expected destination.
-
-## Declaration
-
-```objectivec
-INCallDestinationTypeNormal
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
-- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
-- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# Document: normalDestination
-
-Source path: documentation/intents/incalldestinationtype/normaldestination
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/normaldestination
-Description: Framework: Intents Kind: Type Property Availability: iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (dep…
-
-# normalDestination (Swift)
-
-**Framework:** Intents  
-**Kind:** Type Property  
-**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
-
-A call routed to its expected destination.
-
-> Use INCallDestinationTypeNormal instead
-
-## Declaration
-
-```swift
-static var normalDestination: INCallDestinationType { get }
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
-- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
-- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
-- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# INCallDestinationTypeNormalDestination (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 12.0+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
-
-A call routed to its expected destination.
-
-> Use INCallDestinationTypeNormal instead
-
-## Declaration
-
-```objectivec
-INCallDestinationTypeNormalDestination
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
-- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
-- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
-- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# Document: INCallDestinationType.redial
-
-Source path: documentation/intents/incalldestinationtype/redial
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/redial
-Description: Framework: Intents Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-# INCallDestinationType.redial (Swift)
-
-**Framework:** Intents  
-**Kind:** Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-A call that was the result of redialing a previous call.
-
-## Declaration
-
-```swift
-case redial
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
-- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
-- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
-- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# INCallDestinationTypeRedial (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-A call that was the result of redialing a previous call.
-
-## Declaration
-
-```objectivec
-INCallDestinationTypeRedial
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
-- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
-- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
-- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# Document: redialDestination
-
-Source path: documentation/intents/incalldestinationtype/redialdestination
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/redialdestination
-Description: Framework: Intents Kind: Type Property Availability: iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (dep…
-
-# redialDestination (Swift)
-
-**Framework:** Intents  
-**Kind:** Type Property  
-**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
-
-A call that was the result of redialing a previous call.
-
-> Use INCallDestinationTypeRedial instead
-
-## Declaration
-
-```swift
-static var redialDestination: INCallDestinationType { get }
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
-- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
-- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
-- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-
-# INCallDestinationTypeRedialDestination (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 12.0+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
-
-A call that was the result of redialing a previous call.
-
-> Use INCallDestinationTypeRedial instead
-
-## Declaration
-
-```objectivec
-INCallDestinationTypeRedialDestination
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
-- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
-- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
-- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-
-# Document: INCallDestinationType.unknown
-
-Source path: documentation/intents/incalldestinationtype/unknown
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/unknown
-Description: Framework: Intents Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-# INCallDestinationType.unknown (Swift)
-
-**Framework:** Intents  
-**Kind:** Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-An unknown call destination.
-
-## Declaration
-
-```swift
-case unknown
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
-- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
-- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# INCallDestinationTypeUnknown (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-An unknown call destination.
-
-## Declaration
-
-```objectivec
-INCallDestinationTypeUnknown
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
-- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
-- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# Document: INCallDestinationType.voicemail
-
-Source path: documentation/intents/incalldestinationtype/voicemail
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/voicemail
-Description: Framework: Intents Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-# INCallDestinationType.voicemail (Swift)
-
-**Framework:** Intents  
-**Kind:** Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-A call routed to the user’s voicemail.
-
-## Declaration
-
-```swift
-case voicemail
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
-- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
-- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
-- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# INCallDestinationTypeVoicemail (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-A call routed to the user’s voicemail.
-
-## Declaration
-
-```objectivec
-INCallDestinationTypeVoicemail
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
-- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
-- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
-- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# Document: voicemailDestination
-
-Source path: documentation/intents/incalldestinationtype/voicemaildestination
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/voicemaildestination
-Description: Framework: Intents Kind: Type Property Availability: iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (dep…
-
-# voicemailDestination (Swift)
-
-**Framework:** Intents  
-**Kind:** Type Property  
-**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
-
-A call routed to the user’s voicemail.
-
-> Use INCallDestinationTypeVoicemail instead
-
-## Declaration
-
-```swift
-static var voicemailDestination: INCallDestinationType { get }
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
-- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
-- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
-- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# INCallDestinationTypeVoicemailDestination (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Enumeration Case  
-**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 12.0+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
-
-A call routed to the user’s voicemail.
-
-> Use INCallDestinationTypeVoicemail instead
-
-## Declaration
-
-```objectivec
-INCallDestinationTypeVoicemailDestination
-```
-
-## See Also
-
-### Constants
-
-- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
-- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
-- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
-- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
-- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
-- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
-- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
-- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
-- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
-
-# Document: INCallDestinationTypeResolutionResult
-
-Source path: documentation/intents/incalldestinationtyperesolutionresult
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtyperesolutionresult
-Description: Framework: Intents Kind: Class Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-# INCallDestinationTypeResolutionResult (Swift)
-
-**Framework:** Intents  
-**Kind:** Class  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-A resolution result for the destination type of a call.
-
-## Declaration
-
-```swift
-class INCallDestinationTypeResolutionResult
-```
-
-<a id="overview"></a>
-
-## Overview
-
-You return an `INCallDestinationTypeResolutionResult` object when resolving parameters containing an [INCallDestinationType](incalldestinationtype.md) value. Use the creation method that best reflects your ability to resolve the parameter successfully.
-
-For additional resolution operators, see [INIntentResolutionResult](inintentresolutionresult.md).
-
-## Topics
-
-### Creating a Resolution Result Object
-
-- [success(with:)](incalldestinationtyperesolutionresult/success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-- [confirmationRequired(with:)](incalldestinationtyperesolutionresult/confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-## Relationships
-
-### Inherits From
-
-- [INIntentResolutionResult](inintentresolutionresult.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Resolution Results
-
-- [INCallRecordResolutionResult](incallrecordresolutionresult.md): A resolution result for the details of a call.
-- [INCallRecordTypeResolutionResult](incallrecordtyperesolutionresult.md): A resolution result for the types of calls that your app handled.
-- [INCallCapabilityResolutionResult](incallcapabilityresolutionresult.md): A resolution result for the call capability for the call.
-- [INCallRecordTypeOptionsResolutionResult](incallrecordtypeoptionsresolutionresult.md): A resolution result for the call types to include in a search.
-- [INStartCallContactResolutionResult](instartcallcontactresolutionresult.md): A resolution result for the contact for the call.
-- [INStartCallCallCapabilityResolutionResult](instartcallcallcapabilityresolutionresult.md): A resolution result for the call capability for the call.
-- [INStartCallCallRecordToCallBackResolutionResult](instartcallcallrecordtocallbackresolutionresult.md): A resolution result for the redial capabilities of a missed call.
-
-# INCallDestinationTypeResolutionResult (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Class  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-A resolution result for the destination type of a call.
-
-## Declaration
-
-```objectivec
-@interface INCallDestinationTypeResolutionResult : INIntentResolutionResult
-```
-
-<a id="overview"></a>
-
-## Overview
-
-You return an `INCallDestinationTypeResolutionResult` object when resolving parameters containing an [INCallDestinationType](incalldestinationtype.md) value. Use the creation method that best reflects your ability to resolve the parameter successfully.
-
-For additional resolution operators, see [INIntentResolutionResult](inintentresolutionresult.md).
-
-## Topics
-
-### Creating a Resolution Result Object
-
-- [successWithResolvedCallDestinationType:](incalldestinationtyperesolutionresult/success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-- [confirmationRequiredWithCallDestinationTypeToConfirm:](incalldestinationtyperesolutionresult/confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-## Relationships
-
-### Inherits From
-
-- [INIntentResolutionResult](inintentresolutionresult.md)
-
-## See Also
-
-### Resolution Results
-
-- [INCallRecordResolutionResult](incallrecordresolutionresult.md): A resolution result for the details of a call.
-- [INCallRecordTypeResolutionResult](incallrecordtyperesolutionresult.md): A resolution result for the types of calls that your app handled.
-- [INCallCapabilityResolutionResult](incallcapabilityresolutionresult.md): A resolution result for the call capability for the call.
-- [INCallRecordTypeOptionsResolutionResult](incallrecordtypeoptionsresolutionresult.md): A resolution result for the call types to include in a search.
-- [INStartCallContactResolutionResult](instartcallcontactresolutionresult.md): A resolution result for the contact for the call.
-- [INStartCallCallCapabilityResolutionResult](instartcallcallcapabilityresolutionresult.md): A resolution result for the call capability for the call.
-- [INStartCallCallRecordToCallBackResolutionResult](instartcallcallrecordtocallbackresolutionresult.md): A resolution result for the redial capabilities of a missed call.
-
-# Document: confirmationRequired(with:)
-
-Source path: documentation/intents/incalldestinationtyperesolutionresult/confirmationrequired(with:)
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtyperesolutionresult/confirmationrequired(with:)
-Description: Framework: Intents Kind: Type Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-# confirmationRequired(with:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-## Declaration
-
-```swift
-class func confirmationRequired(with callDestinationTypeToConfirm: INCallDestinationType) -> Self
-```
-
-## Parameters
-
-- `callDestinationTypeToConfirm`: The value that resolves the request but must be confirmed by the user.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INCallDestinationTypeResolutionResult](../incalldestinationtyperesolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method when you can resolve the parameter but want the user to confirm the value before proceeding.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [success(with:)](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-
-# confirmationRequiredWithCallDestinationTypeToConfirm: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-## Declaration
-
-```objectivec
-+ (instancetype) confirmationRequiredWithCallDestinationTypeToConfirm:(INCallDestinationType) callDestinationTypeToConfirm;
-```
-
-## Parameters
-
-- `callDestinationTypeToConfirm`: The value that resolves the request but must be confirmed by the user.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INCallDestinationTypeResolutionResult](../incalldestinationtyperesolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method when you can resolve the parameter but want the user to confirm the value before proceeding.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [successWithResolvedCallDestinationType:](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-
-# Document: success(with:)
-
-Source path: documentation/intents/incalldestinationtyperesolutionresult/success(with:)
-Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtyperesolutionresult/success(with:)
-Description: Framework: Intents Kind: Type Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-# success(with:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-Creates an object whose resolution involves the successful matching of the specified parameter.
-
-## Declaration
-
-```swift
-class func success(with resolvedCallDestinationType: INCallDestinationType) -> Self
-```
-
-## Parameters
-
-- `resolvedCallDestinationType`: The value that resolves the requested parameter of the intent. This value may be different than the one specified in the intent object.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INCallDestinationTypeResolutionResult](../incalldestinationtyperesolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method to create a resolution result object when you recognize the specified type of call destination and are able to use it to resolve an intent.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [confirmationRequired(with:)](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-# successWithResolvedCallDestinationType: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
-
-Creates an object whose resolution involves the successful matching of the specified parameter.
-
-## Declaration
-
-```objectivec
-+ (instancetype) successWithResolvedCallDestinationType:(INCallDestinationType) resolvedCallDestinationType;
-```
-
-## Parameters
-
-- `resolvedCallDestinationType`: The value that resolves the requested parameter of the intent. This value may be different than the one specified in the intent object.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INCallDestinationTypeResolutionResult](../incalldestinationtyperesolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method to create a resolution result object when you recognize the specified type of call destination and are able to use it to resolve an intent.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [confirmationRequiredWithCallDestinationTypeToConfirm:](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-# Document: INCallGroup
-
-Source path: documentation/intents/incallgroup
-Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup
-Description: Framework: Intents Kind: Class Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-# INCallGroup (Swift)
-
-**Framework:** Intents  
-**Kind:** Class  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-The details of a group call handled by your app.
-
-## Declaration
-
-```swift
-class INCallGroup
-```
-
-<a id="overview"></a>
-
-## Overview
-
-An `INCallGroup` object stores details that the user contributed to your app about a group call. Use call group objects to communicate general information about group calls to SiriKit. An `INCallGroup` identifies the calls group name and unique group ID.
-
-## Topics
-
-### Initializers
-
-- [init(coder:)](incallgroup/init%28coder_%29.md)
-- [init(groupName:groupId:)](incallgroup/init%28groupname_groupid_%29.md): Creates a call record with the group details.
-
-### Instance Properties
-
-- [groupId](incallgroup/groupid.md): A unique identifier that disguishes call groups.
-- [groupName](incallgroup/groupname.md): The name contributed the user to their group call.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSCoding](../foundation/nscoding.md)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-- [NSSecureCoding](../foundation/nssecurecoding.md)
-
-## See Also
-
-### Describing a Call
-
-- [INCallRecord](incallrecord.md): The details about a call handled by your app.
-- [INCallRecordFilter](incallrecordfilter.md): Filters a user specifies to redial a call.
-- [INCallRecordType](incallrecordtype.md): Constants describing the type of the call.
-- [INCallRecordTypeOptions](incallrecordtypeoptions.md): Constants describing the types of calls to include during a search.
-- [INCallDestinationType](incalldestinationtype.md): Constants describing the destination of a call.
-
-# INCallGroup (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Class  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-The details of a group call handled by your app.
-
-## Declaration
-
-```objectivec
-@interface INCallGroup : NSObject
-```
-
-<a id="overview"></a>
-
-## Overview
-
-An `INCallGroup` object stores details that the user contributed to your app about a group call. Use call group objects to communicate general information about group calls to SiriKit. An `INCallGroup` identifies the calls group name and unique group ID.
-
-## Topics
-
-### Instance Properties
-
-- [groupId](incallgroup/groupid.md): A unique identifier that disguishes call groups.
-- [groupName](incallgroup/groupname.md): The name contributed the user to their group call.
-
-### Instance Methods
-
-- [initWithGroupName:groupId:](incallgroup/init%28groupname_groupid_%29.md): Creates a call record with the group details.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [NSCopying](../foundation/nscopying.md)
-- [NSSecureCoding](../foundation/nssecurecoding.md)
-
-## See Also
-
-### Describing a Call
-
-- [INCallRecord](incallrecord.md): The details about a call handled by your app.
-- [INCallRecordFilter](incallrecordfilter.md): Filters a user specifies to redial a call.
-- [INCallRecordType](incallrecordtype.md): Constants describing the type of the call.
-- [INCallRecordTypeOptions](incallrecordtypeoptions.md): Constants describing the types of calls to include during a search.
-- [INCallDestinationType](incalldestinationtype.md): Constants describing the destination of a call.
-
-# Document: groupId
-
-Source path: documentation/intents/incallgroup/groupid
-Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup/groupid
-Description: Framework: Intents Kind: Instance Property Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-# groupId (Swift)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-A unique identifier that disguishes call groups.
-
-## Declaration
-
-```swift
-var groupId: String? { get }
-```
-
-# groupId (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-A unique identifier that disguishes call groups.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, readonly, nullable) NSString * groupId;
-```
-
-```objectivec
-@property (atomic, copy, readonly, nullable) NSString * groupId;
-```
-
-# Document: groupName
-
-Source path: documentation/intents/incallgroup/groupname
-Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup/groupname
-Description: Framework: Intents Kind: Instance Property Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-# groupName (Swift)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-The name contributed the user to their group call.
-
-## Declaration
-
-```swift
-var groupName: String? { get }
-```
-
-# groupName (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-The name contributed the user to their group call.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, readonly, nullable) NSString * groupName;
-```
-
-```objectivec
-@property (atomic, copy, readonly, nullable) NSString * groupName;
-```
-
-# Document: init(coder:)
-
-Source path: documentation/intents/incallgroup/init(coder:)
-Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup/init(coder:)
-Description: Framework: Intents Kind: Initializer Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-# init(coder:)
-
-**Framework:** Intents  
-**Kind:** Initializer  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-## Declaration
-
-```swift
-init?(coder: NSCoder)
-```
-
-# Document: init(groupName:groupId:)
-
-Source path: documentation/intents/incallgroup/init(groupname:groupid:)
-Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup/init(groupname:groupid:)
-Description: Framework: Intents Kind: Initializer Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-# init(groupName:groupId:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Initializer  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-Creates a call record with the group details.
-
-## Declaration
-
-```swift
-init(groupName: String?, groupId: String?)
-```
-
-## Parameters
-
-- `groupName`: The name contributed the user to their group call. This field can be `nil`.
-- `groupId`: A unique identifier that disguishes call groups. This field can be `nil`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An initialized [INCallGroup](../incallgroup.md) object or `nil` if the user did not initialize the object.
-
-# initWithGroupName:groupId: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Method  
-**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
-
-Creates a call record with the group details.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithGroupName:(NSString *) groupName groupId:(NSString *) groupId;
-```
-
-## Parameters
-
-- `groupName`: The name contributed the user to their group call. This field can be `nil`.
-- `groupId`: A unique identifier that disguishes call groups. This field can be `nil`.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An initialized [INCallGroup](../incallgroup.md) object or `nil` if the user did not initialize the object.

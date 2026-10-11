@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16_5-release-notes
 
 # iOS & iPadOS 16.5 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS & iPadOS 16.4 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 16.5. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The iOS & iPadOS 16.4 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 16.5. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="Home"></a>
 

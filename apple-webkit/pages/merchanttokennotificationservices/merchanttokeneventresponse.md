@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/merchanttokennotificationservices/merchanttokeneventresponse
 
 # MerchantTokenEventResponse
@@ -21,7 +21,7 @@ object MerchantTokenEventResponse
 
 - `eventType` — `string` (required): A field that indicates the type of event for this notification.
   **Maximum length:** `64`  
-  **Allowed values:** `UNLINK`, `UPDATED_METADATA`, `UPDATED_CARD_ART`, `UPDATED_MERCHANT_TOKEN_PUBLIC_KEY`
+  **Allowed values:** `UNLINK`, `UPDATED_METADATA`, `UPDATED_CARD_ART`, `UPDATED_MERCHANT_TOKEN_PUBLIC_KEY`, `UPDATED_MERCHANT_TOKEN`
 - `merchantTokenIdentifier` — `string` (required): The unique identifier of the merchant token.
   **Maximum length:** `64`
 - `merchantTokenMetadata` — `MerchantTokenMetadata`: Data about the card, including its expiration date and suffix.
@@ -36,3 +36,5 @@ object MerchantTokenEventResponse
 - [MerchantTokenMetadata](merchanttokenmetadata.md): The card information related to a merchant token, including its card art and metadata.
 - [CardArt](cardart.md): Data for displaying art to represent a card.
 - [CardMetadata](cardmetadata.md): Data about the card, including its expiration date and suffix.
+- [EncryptedTokenMetadata](encryptedtokenmetadata.md): Encrypted data about the merchant token, including its Merchant Payment Account Number (MPAN) and expiration date.
+- [TokenMetadata](tokenmetadata.md): Unencrypted metadata about a merchant token, including its Merchant Payment Account Number (MPAN) and expiration date.

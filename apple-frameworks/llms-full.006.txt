@@ -1,9 +1,9 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 6
 
 # Document: buildBlock(_:)
@@ -61103,8 +61103,6 @@ Learn how Rosetta translates executables, and understand what Rosetta can’t tr
 > **Important**
 
 > Rosetta was designed to make the transition to Apple silicon easier, and will be available through macOS 27 — as a general-purpose tool for Intel apps to help developers complete the migration of their apps. Beyond this timeframe, we will keep a subset of Rosetta functionality aimed at supporting older unmaintained gaming titles, that rely on Intel-based frameworks.
->
-> macOS 27 directly integrates support for Intel binary translation, without needing to install Rosetta. This enables support for Intel Linux binaries running in ARM virtual machines (VMs) as well as Intel Linux containers. For more on information on Intel machine code translation and Linux VMs, see [Running Intel Binaries in Linux VMs](https://developer.apple.com/documentation/virtualization/running-intel-binaries-in-linux-vms).
 
 Rosetta is a translation process that allows users to run Mac apps that contain x86_64 instructions on Apple silicon. Rosetta was designed to ease the transition for Mac apps to Apple silicon, giving you time to transition your app to a native Apple silicon binary.
 

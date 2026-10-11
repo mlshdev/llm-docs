@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12_3-release-notes
 
 # iOS 12.3 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS 12.2 SDK provides support for developing iOS apps for iPhone, iPad, or iPod touch devices running iOS 12.3. The SDK comes bundled with Xcode 10.2.1 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.2.1, see [Xcode 10.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_2_1-release-notes).
+The iOS 12.2 SDK provides support for developing iOS apps for iPhone, iPad, or iPod touch devices running iOS 12.3. The SDK comes bundled with Xcode 10.2.1. For information on the compatibility requirements for Xcode 10.2.1, see [Xcode 10.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_2_1-release-notes).
 
 <a id="Accessibility"></a>
 

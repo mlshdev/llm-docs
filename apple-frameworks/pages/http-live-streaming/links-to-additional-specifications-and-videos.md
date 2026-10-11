@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/http-live-streaming/links-to-additional-specifications-and-videos
 
 # Links to additional specifications and videos
@@ -25,6 +25,7 @@ The following links are in addition to the specifications listed below.
 ### Specifications and other documents
 
 - [HTTP Live Streaming (HLS) authoring specification for Apple devices](hls-authoring-specification-for-apple-devices.md): Learn the requirements for live and on-demand audio and video content delivery using HLS.
+- [HLS for Apple Podcasts](hls-for-podcasts.md): Deliver HTTP Live Streaming (HLS) video-on-demand content to Apple Podcasts.
 - [Using content protection systems with HLS](using-content-protection-systems-with-hls.md): Adding encryption keys to media playlists
 - [About the Common Media Application Format with HTTP Live Streaming (HLS)](about-the-common-media-application-format-with-http-live-streaming-hls.md): Learn the Common Media Application Format as it applies to HLS.
 - [Enabling Low-Latency HTTP Live Streaming (HLS)](enabling-low-latency-http-live-streaming-hls.md): Add Low-Latency HLS to your content streams to maintain scalability.

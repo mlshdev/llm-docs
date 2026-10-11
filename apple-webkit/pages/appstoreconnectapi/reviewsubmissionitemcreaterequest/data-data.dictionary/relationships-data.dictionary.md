@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/reviewsubmissionitemcreaterequest/data-data.dictionary/relationships-data.dictionary
 
 # ReviewSubmissionItemCreateRequest.Data.Relationships
@@ -28,6 +28,8 @@ object ReviewSubmissionItemCreateRequest.Data.Relationships
 - `inAppPurchaseVersion` — `ReviewSubmissionItemCreateRequest.Data.Relationships.InAppPurchaseVersion`:
 - `subscriptionGroupVersion` — `ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionGroupVersion`:
 - `subscriptionVersion` — `ReviewSubmissionItemCreateRequest.Data.Relationships.SubscriptionVersion`:
+- `appAssetLibraryImage` — `ReviewSubmissionItemCreateRequest.Data.Relationships.AppAssetLibraryImage`:
+- `appAssetLibraryVideo` — `ReviewSubmissionItemCreateRequest.Data.Relationships.AppAssetLibraryVideo`:
 - `backgroundAssetVersion` — `ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion`:
 - `gameCenterAchievementVersion` — `ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion`:
 - `gameCenterActivityVersion` — `ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion`:
@@ -48,6 +50,8 @@ object ReviewSubmissionItemCreateRequest.Data.Relationships
 
 ### Dictionaries
 
+- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppAssetLibraryImage](relationships-data.dictionary/appassetlibraryimage-data.dictionary.md)
+- [ReviewSubmissionItemCreateRequest.Data.Relationships.AppAssetLibraryVideo](relationships-data.dictionary/appassetlibraryvideo-data.dictionary.md)
 - [ReviewSubmissionItemCreateRequest.Data.Relationships.BackgroundAssetVersion](relationships-data.dictionary/backgroundassetversion-data.dictionary.md)
 - [ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterAchievementVersion](relationships-data.dictionary/gamecenterachievementversion-data.dictionary.md)
 - [ReviewSubmissionItemCreateRequest.Data.Relationships.GameCenterActivityVersion](relationships-data.dictionary/gamecenteractivityversion-data.dictionary.md)

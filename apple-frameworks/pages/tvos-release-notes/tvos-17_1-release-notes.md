@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/tvos-release-notes/tvos-17_1-release-notes
 
 # tvOS 17.1 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 17 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.1. The SDK comes bundled with Xcode 15, available from the Mac App Store. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
+The tvOS 17 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.1. The SDK comes bundled with Xcode 15. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
 
 <a id="General"></a>
 

@@ -1,10 +1,273 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 53
+
+# Document: kCEAutoRateKey
+
+Source path: documentation/professional_video_applications/kceautoratekey
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kceautoratekey
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: ProVideo Encoder Extensions 1.0+
+
+# kCEAutoRateKey (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** ProVideo Encoder Extensions 1.0+
+
+Specifies whether the frame rate is set to automatic in the encoder settings.
+
+## Declaration
+
+```swift
+var kCEAutoRateKey: String { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The value of this key is a negative number if the frame rate is set to automatic; otherwise it’s zero.
+
+When the frame rate is set to automatic, the extension applies a percentage of the source frame rate to calculate the output frame rate.
+
+## See Also
+
+### Encoder Attribute Keys
+
+- [kCEAllowsSegmentationKey](kceallowssegmentationkey.md): Specifies whether the extension supports segmentation of the source media.
+- [kCEFileExtensionKey](kcefileextensionkey.md): Specifies the extension of the output file.
+- [kCEFieldOrderKey](kcefieldorderkey.md): Specifies the output scanning method.
+- [kCEColorSpaceKey](kcecolorspacekey.md): Specifies the color space supported in the output file.
+- [kCEAudioChannelLayoutKey](kceaudiochannellayoutkey.md): Specifies the audio channel layout for the output file.
+- [kCEVideoEnabledKey](kcevideoenabledkey.md): Specifies whether video is enabled in the output file.
+- [kCEAudioEnabledKey](kceaudioenabledkey.md): Specifies whether audio is enabled in the output file.
+- [kCEAudioSampleFloatKey](kceaudiosamplefloatkey.md): Specifies whether audio samples are in floating-point value.
+- [kCEAudioSampleRateKey](kceaudiosampleratekey.md): Specifies the sample rate of audio in the output file.
+- [kCEAudioSampleSizeKey](kceaudiosamplesizekey.md): Specifies the number of bits per audio sample in the output file.
+- [kCEWidthKey](kcewidthkey.md): Specifies the width of the encoded video.
+- [kCEHeightKey](kceheightkey.md): Specifies the height of the encoded video.
+- [kCEAutoWidthKey](kceautowidthkey.md): Specifies whether the output file width is set to automatic in the encoder settings.
+- [kCEAutoHeightKey](kceautoheightkey.md): Specifies whether the output file height is set to automatic in the encoder settings.
+- [kCEPixelAspectKey](kcepixelaspectkey.md): Specifies the aspect ratio of the output frame pixels.
+
+# kCEAutoRateKey (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Macro
+
+Specifies whether the frame rate is set to automatic in the encoder settings.
+
+## Declaration
+
+```objectivec
+#define kCEAutoRateKey
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The value of this key is a negative number if the frame rate is set to automatic; otherwise it’s zero.
+
+When the frame rate is set to automatic, the extension applies a percentage of the source frame rate to calculate the output frame rate.
+
+## See Also
+
+### Encoder Attribute Keys
+
+- [kCEAllowsSegmentationKey](kceallowssegmentationkey.md): Specifies whether the extension supports segmentation of the source media.
+- [kCEFileExtensionKey](kcefileextensionkey.md): Specifies the extension of the output file.
+- [kCEFieldOrderKey](kcefieldorderkey.md): Specifies the output scanning method.
+- [kCEColorSpaceKey](kcecolorspacekey.md): Specifies the color space supported in the output file.
+- [kCEAudioChannelLayoutKey](kceaudiochannellayoutkey.md): Specifies the audio channel layout for the output file.
+- [kCEVideoEnabledKey](kcevideoenabledkey.md): Specifies whether video is enabled in the output file.
+- [kCEAudioEnabledKey](kceaudioenabledkey.md): Specifies whether audio is enabled in the output file.
+- [kCEAudioSampleFloatKey](kceaudiosamplefloatkey.md): Specifies whether audio samples are in floating-point value.
+- [kCEAudioSampleRateKey](kceaudiosampleratekey.md): Specifies the sample rate of audio in the output file.
+- [kCEAudioSampleSizeKey](kceaudiosamplesizekey.md): Specifies the number of bits per audio sample in the output file.
+- [kCEWidthKey](kcewidthkey.md): Specifies the width of the encoded video.
+- [kCEHeightKey](kceheightkey.md): Specifies the height of the encoded video.
+- [kCEAutoWidthKey](kceautowidthkey.md): Specifies whether the output file width is set to automatic in the encoder settings.
+- [kCEAutoHeightKey](kceautoheightkey.md): Specifies whether the output file height is set to automatic in the encoder settings.
+- [kCEPixelAspectKey](kcepixelaspectkey.md): Specifies the aspect ratio of the output frame pixels.
+
+# Document: kCEAutoWidthKey
+
+Source path: documentation/professional_video_applications/kceautowidthkey
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kceautowidthkey
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: ProVideo Encoder Extensions 1.0+
+
+# kCEAutoWidthKey (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** ProVideo Encoder Extensions 1.0+
+
+Specifies whether the output file width is set to automatic in the encoder settings.
+
+## Declaration
+
+```swift
+var kCEAutoWidthKey: String { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The value of this key is a negative number if the width is set to automatic; otherwise it’s zero.
+
+When the width is set to automatic, the extension calculates the output frame width as a percentage of the source size.
+
+## See Also
+
+### Encoder Attribute Keys
+
+- [kCEAllowsSegmentationKey](kceallowssegmentationkey.md): Specifies whether the extension supports segmentation of the source media.
+- [kCEFileExtensionKey](kcefileextensionkey.md): Specifies the extension of the output file.
+- [kCEFieldOrderKey](kcefieldorderkey.md): Specifies the output scanning method.
+- [kCEColorSpaceKey](kcecolorspacekey.md): Specifies the color space supported in the output file.
+- [kCEAudioChannelLayoutKey](kceaudiochannellayoutkey.md): Specifies the audio channel layout for the output file.
+- [kCEVideoEnabledKey](kcevideoenabledkey.md): Specifies whether video is enabled in the output file.
+- [kCEAudioEnabledKey](kceaudioenabledkey.md): Specifies whether audio is enabled in the output file.
+- [kCEAudioSampleFloatKey](kceaudiosamplefloatkey.md): Specifies whether audio samples are in floating-point value.
+- [kCEAudioSampleRateKey](kceaudiosampleratekey.md): Specifies the sample rate of audio in the output file.
+- [kCEAudioSampleSizeKey](kceaudiosamplesizekey.md): Specifies the number of bits per audio sample in the output file.
+- [kCEWidthKey](kcewidthkey.md): Specifies the width of the encoded video.
+- [kCEHeightKey](kceheightkey.md): Specifies the height of the encoded video.
+- [kCEAutoRateKey](kceautoratekey.md): Specifies whether the frame rate is set to automatic in the encoder settings.
+- [kCEAutoHeightKey](kceautoheightkey.md): Specifies whether the output file height is set to automatic in the encoder settings.
+- [kCEPixelAspectKey](kcepixelaspectkey.md): Specifies the aspect ratio of the output frame pixels.
+
+# kCEAutoWidthKey (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Macro
+
+Specifies whether the output file width is set to automatic in the encoder settings.
+
+## Declaration
+
+```objectivec
+#define kCEAutoWidthKey
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The value of this key is a negative number if the width is set to automatic; otherwise it’s zero.
+
+When the width is set to automatic, the extension calculates the output frame width as a percentage of the source size.
+
+## See Also
+
+### Encoder Attribute Keys
+
+- [kCEAllowsSegmentationKey](kceallowssegmentationkey.md): Specifies whether the extension supports segmentation of the source media.
+- [kCEFileExtensionKey](kcefileextensionkey.md): Specifies the extension of the output file.
+- [kCEFieldOrderKey](kcefieldorderkey.md): Specifies the output scanning method.
+- [kCEColorSpaceKey](kcecolorspacekey.md): Specifies the color space supported in the output file.
+- [kCEAudioChannelLayoutKey](kceaudiochannellayoutkey.md): Specifies the audio channel layout for the output file.
+- [kCEVideoEnabledKey](kcevideoenabledkey.md): Specifies whether video is enabled in the output file.
+- [kCEAudioEnabledKey](kceaudioenabledkey.md): Specifies whether audio is enabled in the output file.
+- [kCEAudioSampleFloatKey](kceaudiosamplefloatkey.md): Specifies whether audio samples are in floating-point value.
+- [kCEAudioSampleRateKey](kceaudiosampleratekey.md): Specifies the sample rate of audio in the output file.
+- [kCEAudioSampleSizeKey](kceaudiosamplesizekey.md): Specifies the number of bits per audio sample in the output file.
+- [kCEWidthKey](kcewidthkey.md): Specifies the width of the encoded video.
+- [kCEHeightKey](kceheightkey.md): Specifies the height of the encoded video.
+- [kCEAutoRateKey](kceautoratekey.md): Specifies whether the frame rate is set to automatic in the encoder settings.
+- [kCEAutoHeightKey](kceautoheightkey.md): Specifies whether the output file height is set to automatic in the encoder settings.
+- [kCEPixelAspectKey](kcepixelaspectkey.md): Specifies the aspect ratio of the output frame pixels.
+
+# Document: kCEColorSpaceKey
+
+Source path: documentation/professional_video_applications/kcecolorspacekey
+Canonical documentation: https://developer.apple.com/documentation/professional_video_applications/kcecolorspacekey
+Description: Framework: Professional Video Applications Kind: Global Variable Availability: ProVideo Encoder Extensions 1.0+
+
+# kCEColorSpaceKey (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Global Variable  
+**Availability:** ProVideo Encoder Extensions 1.0+
+
+Specifies the color space supported in the output file.
+
+## Declaration
+
+```swift
+var kCEColorSpaceKey: String { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The value can be one of the integers representing a color space from [eCEColorSpace](ececolorspace.md). If you don’t provide this key, the output file uses the same color space as the source file.
+
+## See Also
+
+### Encoder Attribute Keys
+
+- [kCEAllowsSegmentationKey](kceallowssegmentationkey.md): Specifies whether the extension supports segmentation of the source media.
+- [kCEFileExtensionKey](kcefileextensionkey.md): Specifies the extension of the output file.
+- [kCEFieldOrderKey](kcefieldorderkey.md): Specifies the output scanning method.
+- [kCEAudioChannelLayoutKey](kceaudiochannellayoutkey.md): Specifies the audio channel layout for the output file.
+- [kCEVideoEnabledKey](kcevideoenabledkey.md): Specifies whether video is enabled in the output file.
+- [kCEAudioEnabledKey](kceaudioenabledkey.md): Specifies whether audio is enabled in the output file.
+- [kCEAudioSampleFloatKey](kceaudiosamplefloatkey.md): Specifies whether audio samples are in floating-point value.
+- [kCEAudioSampleRateKey](kceaudiosampleratekey.md): Specifies the sample rate of audio in the output file.
+- [kCEAudioSampleSizeKey](kceaudiosamplesizekey.md): Specifies the number of bits per audio sample in the output file.
+- [kCEWidthKey](kcewidthkey.md): Specifies the width of the encoded video.
+- [kCEHeightKey](kceheightkey.md): Specifies the height of the encoded video.
+- [kCEAutoRateKey](kceautoratekey.md): Specifies whether the frame rate is set to automatic in the encoder settings.
+- [kCEAutoWidthKey](kceautowidthkey.md): Specifies whether the output file width is set to automatic in the encoder settings.
+- [kCEAutoHeightKey](kceautoheightkey.md): Specifies whether the output file height is set to automatic in the encoder settings.
+- [kCEPixelAspectKey](kcepixelaspectkey.md): Specifies the aspect ratio of the output frame pixels.
+
+# kCEColorSpaceKey (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Macro
+
+Specifies the color space supported in the output file.
+
+## Declaration
+
+```objectivec
+#define kCEColorSpaceKey
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The value can be one of the integers representing a color space from [eCEColorSpace](ececolorspace.md). If you don’t provide this key, the output file uses the same color space as the source file.
+
+## See Also
+
+### Encoder Attribute Keys
+
+- [kCEAllowsSegmentationKey](kceallowssegmentationkey.md): Specifies whether the extension supports segmentation of the source media.
+- [kCEFileExtensionKey](kcefileextensionkey.md): Specifies the extension of the output file.
+- [kCEFieldOrderKey](kcefieldorderkey.md): Specifies the output scanning method.
+- [kCEAudioChannelLayoutKey](kceaudiochannellayoutkey.md): Specifies the audio channel layout for the output file.
+- [kCEVideoEnabledKey](kcevideoenabledkey.md): Specifies whether video is enabled in the output file.
+- [kCEAudioEnabledKey](kceaudioenabledkey.md): Specifies whether audio is enabled in the output file.
+- [kCEAudioSampleFloatKey](kceaudiosamplefloatkey.md): Specifies whether audio samples are in floating-point value.
+- [kCEAudioSampleRateKey](kceaudiosampleratekey.md): Specifies the sample rate of audio in the output file.
+- [kCEAudioSampleSizeKey](kceaudiosamplesizekey.md): Specifies the number of bits per audio sample in the output file.
+- [kCEWidthKey](kcewidthkey.md): Specifies the width of the encoded video.
+- [kCEHeightKey](kceheightkey.md): Specifies the height of the encoded video.
+- [kCEAutoRateKey](kceautoratekey.md): Specifies whether the frame rate is set to automatic in the encoder settings.
+- [kCEAutoWidthKey](kceautowidthkey.md): Specifies whether the output file width is set to automatic in the encoder settings.
+- [kCEAutoHeightKey](kceautoheightkey.md): Specifies whether the output file height is set to automatic in the encoder settings.
+- [kCEPixelAspectKey](kcepixelaspectkey.md): Specifies the aspect ratio of the output frame pixels.
 
 # Document: kCEDenominatorKey
 
@@ -182066,391 +182329,3 @@ var parts: [BindPath.Part] { get }
 ### Composing a property identifier
 
 - [BindPath.Part](part.md): An individual piece of a larger path that refers to the target of an animation.
-
-# Document: BindTarget
-
-Source path: documentation/realitykit/bindtarget
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget
-Description: Framework: RealityKit Kind: Enumeration Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# BindTarget
-
-**Framework:** RealityKit  
-**Kind:** Enumeration  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-A reference to a particular scene, entity, or property that animates.
-
-## Declaration
-
-```swift
-enum BindTarget
-```
-
-<a id="overview"></a>
-
-## Overview
-
-This structure describes a reference to an animated property. The property may be a transform, collection of joint transforms, an arbitrary named property of an entity, or the property of a nested entity.
-
-For nested entities, the [BindTarget.path(\_:)](bindtarget/path%28__%29.md) case returns a [BindPath](bindpath.md) instance that contains an array of *parts* ([BindPath.Part](bindpath/part.md)). Each part identifies one or more nested, named entities or scenes, followed by the property to animate.
-
-## Topics
-
-### Choosing a bind target
-
-- [BindTarget.internal(\_:)](bindtarget/internal%28__%29.md): A bind target that refers to a framework-provided property.
-- [BindTarget.jointTransforms](bindtarget/jointtransforms.md): An option that specifies that the entity’s joint transforms animate.
-- [BindTarget.parameter(\_:)](bindtarget/parameter%28__%29.md): Provides a property that animates from the given textual name.
-- [BindTarget.path(\_:)](bindtarget/path%28__%29.md): Provides a complex bind path capable of animating additional entities other than the current entity.
-- [BindTarget.transform](bindtarget/transform.md): A option that specifies that the target entity’s transform animates.
-
-### Targeting entities and scenes
-
-- [scene(\_:)](bindtarget/scene%28__%29.md): Generates a bind path from a particular scene.
-- [BindTarget.ScenePath](bindtarget/scenepath.md): A bind path for a particular scene.
-- [anchorEntity(\_:)](bindtarget/anchorentity%28__%29.md): Generates a complex bind path from a particular anchor entity in the scene.
-- [entity(\_:)](bindtarget/entity%28__%29.md): Generates a complex bind path from a particular child entity of the current entity.
-- [BindTarget.EntityPath](bindtarget/entitypath.md): A bind path context for a particular entity.
-
-### Animatable properties
-
-- [BindTarget.opacity](bindtarget/opacity.md): An option that specifies that the entity’s opacity to animate. Requires that the entity has an OpacityComponent
-- [BindTarget.billboardBlendFactor](bindtarget/billboardblendfactor.md)
-- [BindTarget.blendShapeWeights](bindtarget/blendshapeweights.md): An option the entity’s blend shape weights animate. Requires that the entity has a BlendShapeWeightsComponent.
-- [BindTarget.skeletalPose(\_:)](bindtarget/skeletalpose%28__%29.md): An option that specifies one of the entity’s skeletal poses to animate.
-- [BindTarget.blendShapeWeightsAtIndex(\_:)](bindtarget/blendshapeweightsatindex%28__%29.md)
-- [BindTarget.blendShapeWeightsWithID(\_:)](bindtarget/blendshapeweightswithid%28__%29.md)
-- [material(\_:)](bindtarget/material%28__%29.md): Generates a complex bind path from one of an entity’s materials.
-- [BindTarget.MaterialPath](bindtarget/materialpath.md): Material parameters that an animation can target.
-- [BindTarget.TextureCoordinateTransformPath](bindtarget/texturecoordinatetransformpath.md): The texture coordinate parameters for a given texture layer that an animation can target.
-- [BindTarget.IkSolverPath](bindtarget/iksolverpath.md)
-
-### Binding to root motion
-
-- [BindTarget.rootMotion](bindtarget/rootmotion.md): A target that drives an entity’s root motion.
-
-### Operators
-
-- [==(\_:\_:)](bindtarget/==%28____%29.md): Returns a Boolean value that indicates whether two bind targets are equal.
-
-## Relationships
-
-### Conforms To
-
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-
-## See Also
-
-### Bindable animation targets
-
-- [BindPath](bindpath.md): The components of a target’s path that refer to the animation properties of a nested scene or entity.
-- [BindableValue](bindablevalue.md): The value of a bindable target.
-- [BindableValuesReference](bindablevaluesreference.md): A reference to a bindable value of an animation.
-- [ParameterSet](parameterset.md): A reference to general-purpose entity parameters for animations.
-- [InternalBindPath](internalbindpath.md): A bind target for framework-provided properties.
-
-# Document: ==(_:_:)
-
-Source path: documentation/realitykit/bindtarget/==(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/==(_:_:)
-Description: Framework: RealityKit Kind: Operator Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# ==(\_:\_:)
-
-**Framework:** RealityKit  
-**Kind:** Operator  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Returns a Boolean value that indicates whether two bind targets are equal.
-
-## Declaration
-
-```swift
-static func == (lhs: BindTarget, rhs: BindTarget) -> Bool
-```
-
-## Parameters
-
-- `lhs`: The bind target on the left side of the operator.
-- `rhs`: The bind target on the right side of the operator.
-
-<a id="return-value"></a>
-
-## Return Value
-
-Returns `true` if the bind targets are equal. Otherwise, returns `false`.
-
-# Document: anchorEntity(_:)
-
-Source path: documentation/realitykit/bindtarget/anchorentity(_:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/anchorentity(_:)
-Description: Framework: RealityKit Kind: Type Method Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# anchorEntity(\_:)
-
-**Framework:** RealityKit  
-**Kind:** Type Method  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Generates a complex bind path from a particular anchor entity in the scene.
-
-## Declaration
-
-```swift
-static func anchorEntity(_ name: String) -> BindTarget.EntityPath
-```
-
-## See Also
-
-### Targeting entities and scenes
-
-- [scene(\_:)](scene%28__%29.md): Generates a bind path from a particular scene.
-- [BindTarget.ScenePath](scenepath.md): A bind path for a particular scene.
-- [entity(\_:)](entity%28__%29.md): Generates a complex bind path from a particular child entity of the current entity.
-- [BindTarget.EntityPath](entitypath.md): A bind path context for a particular entity.
-
-# Document: BindTarget.billboardBlendFactor
-
-Source path: documentation/realitykit/bindtarget/billboardblendfactor
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/billboardblendfactor
-Description: Framework: RealityKit Kind: Case Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-# BindTarget.billboardBlendFactor
-
-**Framework:** RealityKit  
-**Kind:** Case  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-## Declaration
-
-```swift
-case billboardBlendFactor
-```
-
-## See Also
-
-### Animatable properties
-
-- [BindTarget.opacity](opacity.md): An option that specifies that the entity’s opacity to animate. Requires that the entity has an OpacityComponent
-- [BindTarget.blendShapeWeights](blendshapeweights.md): An option the entity’s blend shape weights animate. Requires that the entity has a BlendShapeWeightsComponent.
-- [BindTarget.skeletalPose(\_:)](skeletalpose%28__%29.md): An option that specifies one of the entity’s skeletal poses to animate.
-- [BindTarget.blendShapeWeightsAtIndex(\_:)](blendshapeweightsatindex%28__%29.md)
-- [BindTarget.blendShapeWeightsWithID(\_:)](blendshapeweightswithid%28__%29.md)
-- [material(\_:)](material%28__%29.md): Generates a complex bind path from one of an entity’s materials.
-- [BindTarget.MaterialPath](materialpath.md): Material parameters that an animation can target.
-- [BindTarget.TextureCoordinateTransformPath](texturecoordinatetransformpath.md): The texture coordinate parameters for a given texture layer that an animation can target.
-- [BindTarget.IkSolverPath](iksolverpath.md)
-
-# Document: BindTarget.blendShapeWeights
-
-Source path: documentation/realitykit/bindtarget/blendshapeweights
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/blendshapeweights
-Description: Framework: RealityKit Kind: Case Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-# BindTarget.blendShapeWeights
-
-**Framework:** RealityKit  
-**Kind:** Case  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-An option the entity’s blend shape weights animate. Requires that the entity has a BlendShapeWeightsComponent.
-
-## Declaration
-
-```swift
-case blendShapeWeights
-```
-
-## See Also
-
-### Animatable properties
-
-- [BindTarget.opacity](opacity.md): An option that specifies that the entity’s opacity to animate. Requires that the entity has an OpacityComponent
-- [BindTarget.billboardBlendFactor](billboardblendfactor.md)
-- [BindTarget.skeletalPose(\_:)](skeletalpose%28__%29.md): An option that specifies one of the entity’s skeletal poses to animate.
-- [BindTarget.blendShapeWeightsAtIndex(\_:)](blendshapeweightsatindex%28__%29.md)
-- [BindTarget.blendShapeWeightsWithID(\_:)](blendshapeweightswithid%28__%29.md)
-- [material(\_:)](material%28__%29.md): Generates a complex bind path from one of an entity’s materials.
-- [BindTarget.MaterialPath](materialpath.md): Material parameters that an animation can target.
-- [BindTarget.TextureCoordinateTransformPath](texturecoordinatetransformpath.md): The texture coordinate parameters for a given texture layer that an animation can target.
-- [BindTarget.IkSolverPath](iksolverpath.md)
-
-# Document: BindTarget.blendShapeWeightsAtIndex(_:)
-
-Source path: documentation/realitykit/bindtarget/blendshapeweightsatindex(_:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/blendshapeweightsatindex(_:)
-Description: Framework: RealityKit Kind: Case Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-# BindTarget.blendShapeWeightsAtIndex(\_:)
-
-**Framework:** RealityKit  
-**Kind:** Case  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-## Declaration
-
-```swift
-case blendShapeWeightsAtIndex(Int = 0)
-```
-
-## See Also
-
-### Animatable properties
-
-- [BindTarget.opacity](opacity.md): An option that specifies that the entity’s opacity to animate. Requires that the entity has an OpacityComponent
-- [BindTarget.billboardBlendFactor](billboardblendfactor.md)
-- [BindTarget.blendShapeWeights](blendshapeweights.md): An option the entity’s blend shape weights animate. Requires that the entity has a BlendShapeWeightsComponent.
-- [BindTarget.skeletalPose(\_:)](skeletalpose%28__%29.md): An option that specifies one of the entity’s skeletal poses to animate.
-- [BindTarget.blendShapeWeightsWithID(\_:)](blendshapeweightswithid%28__%29.md)
-- [material(\_:)](material%28__%29.md): Generates a complex bind path from one of an entity’s materials.
-- [BindTarget.MaterialPath](materialpath.md): Material parameters that an animation can target.
-- [BindTarget.TextureCoordinateTransformPath](texturecoordinatetransformpath.md): The texture coordinate parameters for a given texture layer that an animation can target.
-- [BindTarget.IkSolverPath](iksolverpath.md)
-
-# Document: BindTarget.blendShapeWeightsWithID(_:)
-
-Source path: documentation/realitykit/bindtarget/blendshapeweightswithid(_:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/blendshapeweightswithid(_:)
-Description: Framework: RealityKit Kind: Case Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-# BindTarget.blendShapeWeightsWithID(\_:)
-
-**Framework:** RealityKit  
-**Kind:** Case  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-## Declaration
-
-```swift
-case blendShapeWeightsWithID(BlendShapeWeightsData.ID)
-```
-
-## See Also
-
-### Animatable properties
-
-- [BindTarget.opacity](opacity.md): An option that specifies that the entity’s opacity to animate. Requires that the entity has an OpacityComponent
-- [BindTarget.billboardBlendFactor](billboardblendfactor.md)
-- [BindTarget.blendShapeWeights](blendshapeweights.md): An option the entity’s blend shape weights animate. Requires that the entity has a BlendShapeWeightsComponent.
-- [BindTarget.skeletalPose(\_:)](skeletalpose%28__%29.md): An option that specifies one of the entity’s skeletal poses to animate.
-- [BindTarget.blendShapeWeightsAtIndex(\_:)](blendshapeweightsatindex%28__%29.md)
-- [material(\_:)](material%28__%29.md): Generates a complex bind path from one of an entity’s materials.
-- [BindTarget.MaterialPath](materialpath.md): Material parameters that an animation can target.
-- [BindTarget.TextureCoordinateTransformPath](texturecoordinatetransformpath.md): The texture coordinate parameters for a given texture layer that an animation can target.
-- [BindTarget.IkSolverPath](iksolverpath.md)
-
-# Document: entity(_:)
-
-Source path: documentation/realitykit/bindtarget/entity(_:)
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/entity(_:)
-Description: Framework: RealityKit Kind: Type Method Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# entity(\_:)
-
-**Framework:** RealityKit  
-**Kind:** Type Method  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-Generates a complex bind path from a particular child entity of the current entity.
-
-## Declaration
-
-```swift
-static func entity(_ name: String) -> BindTarget.EntityPath
-```
-
-## See Also
-
-### Targeting entities and scenes
-
-- [scene(\_:)](scene%28__%29.md): Generates a bind path from a particular scene.
-- [BindTarget.ScenePath](scenepath.md): A bind path for a particular scene.
-- [anchorEntity(\_:)](anchorentity%28__%29.md): Generates a complex bind path from a particular anchor entity in the scene.
-- [BindTarget.EntityPath](entitypath.md): A bind path context for a particular entity.
-
-# Document: BindTarget.EntityPath
-
-Source path: documentation/realitykit/bindtarget/entitypath
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/entitypath
-Description: Framework: RealityKit Kind: Structure Availability: iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-# BindTarget.EntityPath
-
-**Framework:** RealityKit  
-**Kind:** Structure  
-**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
-
-A bind path context for a particular entity.
-
-## Declaration
-
-```swift
-struct EntityPath
-```
-
-<a id="overview"></a>
-
-## Overview
-
-This structure references all the animated properties of an entity.
-
-To access the animated properties of one of the entity’s children, call [entity(\_:)](entitypath/entity%28__%29.md) and pass in the child’s name.
-
-## Topics
-
-### Accessing a bind target
-
-- [jointTransforms](entitypath/jointtransforms.md): A bind target for the entity’s joint transforms.
-- [transform](entitypath/transform.md): A bind target for the entity’s transform.
-- [self](entitypath/self.md): A bind target for the entity.
-- [parameter(\_:)](entitypath/parameter%28__%29.md): Provides a bind target for a particular animated property.
-
-### Accessing child-entity paths
-
-- [entity(\_:)](entitypath/entity%28__%29.md): Provides a child entity’s path.
-
-### Accessing root motion
-
-- [rootMotion](entitypath/rootmotion.md): The root motion bind target for this entity.
-
-### Instance Properties
-
-- [billboardBlendFactor](entitypath/billboardblendfactor.md)
-- [opacity](entitypath/opacity.md): A bind target for the entity’s opacity.. Requires that the entity has an OpacityComponent
-
-### Instance Methods
-
-- [blendShapeWeights()](entitypath/blendshapeweights%28%29.md): A bind target for the entity’s blend shape weights.
-- [blendShapeWeightsAtIndex(\_:)](entitypath/blendshapeweightsatindex%28__%29.md)
-- [blendShapeWeightsWithID(\_:)](entitypath/blendshapeweightswithid%28__%29.md)
-- [ikSolver(\_:)](entitypath/iksolver%28__%29.md)
-- [material(\_:)](entitypath/material%28__%29.md): Provides a specified material’s path.
-- [skeletalPose(\_:)](entitypath/skeletalpose%28__%29.md)
-
-## See Also
-
-### Targeting entities and scenes
-
-- [scene(\_:)](scene%28__%29.md): Generates a bind path from a particular scene.
-- [BindTarget.ScenePath](scenepath.md): A bind path for a particular scene.
-- [anchorEntity(\_:)](anchorentity%28__%29.md): Generates a complex bind path from a particular anchor entity in the scene.
-- [entity(\_:)](entity%28__%29.md): Generates a complex bind path from a particular child entity of the current entity.
-
-# Document: billboardBlendFactor
-
-Source path: documentation/realitykit/bindtarget/entitypath/billboardblendfactor
-Canonical documentation: https://developer.apple.com/documentation/realitykit/bindtarget/entitypath/billboardblendfactor
-Description: Framework: RealityKit Kind: Instance Property Availability: iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-# billboardBlendFactor
-
-**Framework:** RealityKit  
-**Kind:** Instance Property  
-**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
-
-## Declaration
-
-```swift
-var billboardBlendFactor: BindTarget { get }
-```

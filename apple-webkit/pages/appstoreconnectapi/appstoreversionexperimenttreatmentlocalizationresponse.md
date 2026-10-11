@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appstoreversionexperimenttreatmentlocalizationresponse
 
 # AppStoreVersionExperimentTreatmentLocalizationResponse
@@ -20,7 +20,7 @@ object AppStoreVersionExperimentTreatmentLocalizationResponse
 ## Properties
 
 - `data` — `AppStoreVersionExperimentTreatmentLocalization` (required):
-- `included` — `[*]`: **Allowed types:** `AppPreviewSet`, `AppScreenshotSet`, `AppStoreVersionExperimentTreatment`
+- `included` — `[*]`: **Allowed types:** `AppAssetLibraryPlacement`, `AppPreviewSet`, `AppScreenshotSet`, `AppStoreVersionExperimentTreatment`
 - `links` — `DocumentLinks` (required):
 
 ## See Also
@@ -30,3 +30,4 @@ object AppStoreVersionExperimentTreatmentLocalizationResponse
 - [AppStoreVersionExperimentTreatmentLocalization](appstoreversionexperimenttreatmentlocalization.md): The localized screenshots, previews, and text for one treatment variant in an App Store product page A/B experiment.
 - [AppStoreVersionExperimentTreatmentLocalizationCreateRequest](appstoreversionexperimenttreatmentlocalizationcreaterequest.md): The request body you use to create an App Store version experiment treatment localization.
 - [AppStoreVersionExperimentTreatmentLocalizationsResponse](appstoreversionexperimenttreatmentlocalizationsresponse.md): The response body for endpoints that list localized treatments for an App Store version experiment.
+- [AppStoreVersionExperimentTreatmentLocalizationPlacementsLinkagesResponse](appstoreversionexperimenttreatmentlocalizationplacementslinkagesresponse.md): A response body that contains a list of related resource IDs.

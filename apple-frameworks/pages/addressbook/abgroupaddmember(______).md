@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/addressbook/abgroupaddmember(_:_:_:)
 
 # ABGroupAddMember(\_:\_:\_:) (Swift)
@@ -72,8 +72,8 @@ extern bool ABGroupAddMember(ABGroupRef group, ABPersonRef personToAdd);
 ## Parameters
 
 - `group`: The group you wish to add `person` to.
-- `personToAdd`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 - `person`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
+- `personToAdd`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 
 <a id="return-value"></a>
 

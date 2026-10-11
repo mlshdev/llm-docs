@@ -1,10 +1,1540 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 38
+
+# Document: reserved2
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394061-reserved2
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394061-reserved2
+Description: Interface language: Objective-C
+
+# reserved2
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 reserved2:1;
+```
+
+# Document: zero2
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394097-zero2
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394097-zero2
+Description: Interface language: Objective-C
+
+# zero2
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 zero2;
+```
+
+# Document: discSize
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394129-discsize
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394129-discsize
+Description: Interface language: Objective-C
+
+# discSize
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 discSize:4;
+```
+
+# Document: layerType
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394138-layertype
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394138-layertype
+Description: Interface language: Objective-C
+
+# layerType
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 layerType:4;
+```
+
+# Document: minimumRate
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394162-minimumrate
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394162-minimumrate
+Description: Interface language: Objective-C
+
+# minimumRate
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 minimumRate:4;
+```
+
+# Document: endPhysicalSectorNumberOfDataArea
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394166-endphysicalsectornumberofdataare
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394166-endphysicalsectornumberofdataare
+Description: Interface language: Objective-C
+
+# endPhysicalSectorNumberOfDataArea
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 endPhysicalSectorNumberOfDataArea[3];
+```
+
+# Document: linearDensity
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394198-lineardensity
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394198-lineardensity
+Description: Interface language: Objective-C
+
+# linearDensity
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 linearDensity:4;
+```
+
+# Document: mediaSpecific
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394223-mediaspecific
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394223-mediaspecific
+Description: Interface language: Objective-C
+
+# mediaSpecific
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 mediaSpecific[2031];
+```
+
+# Document: partVersion
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394242-partversion
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394242-partversion
+Description: Interface language: Objective-C
+
+# partVersion
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 partVersion:4;
+```
+
+# Document: reserved1
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394256-reserved1
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394256-reserved1
+Description: Interface language: Objective-C
+
+# reserved1
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 reserved1:7;
+```
+
+# Document: bookType
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394272-booktype
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394272-booktype
+Description: Interface language: Objective-C
+
+# bookType
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 bookType:4;
+```
+
+# Document: dataLength
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394276-datalength
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394276-datalength
+Description: Interface language: Objective-C
+
+# dataLength
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 dataLength[2];
+```
+
+# Document: zero1
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394284-zero1
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394284-zero1
+Description: Interface language: Objective-C
+
+# zero1
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 zero1;
+```
+
+# Document: bcaFlag
+
+Source path: documentation/iokit/dvdphysicalformatinfo/1394290-bcaflag
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdphysicalformatinfo/1394290-bcaflag
+Description: Interface language: Objective-C
+
+# bcaFlag
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 bcaFlag:1;
+```
+
+# Document: DVDRegionalPlaybackControlScheme
+
+Source path: documentation/iokit/dvdregionalplaybackcontrolscheme
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionalplaybackcontrolscheme
+Description: Interface language: Objective-C
+
+# DVDRegionalPlaybackControlScheme
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Type Alias  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+typedef UInt8 DVDRegionalPlaybackControlScheme;
+```
+
+# Document: DVDRegionPlaybackControlInfo
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo
+Description: Interface language: Objective-C
+
+# DVDRegionPlaybackControlInfo
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Structure  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+typedef struct DVDRegionPlaybackControlInfo {
+    ...
+} DVDRegionPlaybackControlInfo;
+```
+
+## Topics
+
+### Instance Properties
+
+- [dataLength](dvdregionplaybackcontrolinfo/1394274-datalength.md)
+- [driveRegion](dvdregionplaybackcontrolinfo/1394188-driveregion.md)
+- [numberUserResets](dvdregionplaybackcontrolinfo/1394118-numberuserresets.md)
+- [numberVendorResets](dvdregionplaybackcontrolinfo/1394128-numbervendorresets.md)
+- [reserved](dvdregionplaybackcontrolinfo/1394065-reserved.md)
+- [reserved2](dvdregionplaybackcontrolinfo/1394288-reserved2.md)
+- [rpcScheme](dvdregionplaybackcontrolinfo/1393928-rpcscheme.md)
+- [typeCode](dvdregionplaybackcontrolinfo/1394047-typecode.md)
+
+# Document: rpcScheme
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1393928-rpcscheme
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1393928-rpcscheme
+Description: Interface language: Objective-C
+
+# rpcScheme
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+DVDRegionalPlaybackControlScheme rpcScheme;
+```
+
+# Document: typeCode
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394047-typecode
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394047-typecode
+Description: Interface language: Objective-C
+
+# typeCode
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 typeCode:2;
+```
+
+# Document: reserved
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394065-reserved
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394065-reserved
+Description: Interface language: Objective-C
+
+# reserved
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 reserved[2];
+```
+
+# Document: numberUserResets
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394118-numberuserresets
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394118-numberuserresets
+Description: Interface language: Objective-C
+
+# numberUserResets
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 numberUserResets:3;
+```
+
+# Document: numberVendorResets
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394128-numbervendorresets
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394128-numbervendorresets
+Description: Interface language: Objective-C
+
+# numberVendorResets
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 numberVendorResets:3;
+```
+
+# Document: driveRegion
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394188-driveregion
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394188-driveregion
+Description: Interface language: Objective-C
+
+# driveRegion
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+DVDCPRMRegionCode driveRegion;
+```
+
+# Document: dataLength
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394274-datalength
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394274-datalength
+Description: Interface language: Objective-C
+
+# dataLength
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 dataLength[2];
+```
+
+# Document: reserved2
+
+Source path: documentation/iokit/dvdregionplaybackcontrolinfo/1394288-reserved2
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdregionplaybackcontrolinfo/1394288-reserved2
+Description: Interface language: Objective-C
+
+# reserved2
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 reserved2;
+```
+
+# Document: DVDRZoneInfo
+
+Source path: documentation/iokit/dvdrzoneinfo
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo
+Description: Interface language: Objective-C
+
+# DVDRZoneInfo
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Structure  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+typedef struct DVDRZoneInfo {
+    ...
+} DVDRZoneInfo;
+```
+
+## Topics
+
+### Instance Properties
+
+- [blank](dvdrzoneinfo/1393901-blank.md)
+- [blockingFactor](dvdrzoneinfo/1393944-blockingfactor.md)
+- [borderNumberLSB](dvdrzoneinfo/1394196-bordernumberlsb.md)
+- [borderNumberMSB](dvdrzoneinfo/1394158-bordernumbermsb.md)
+- [copy](dvdrzoneinfo/1394025-copy.md)
+- [damage](dvdrzoneinfo/1394146-damage.md)
+- [dataLength](dvdrzoneinfo/1394069-datalength.md)
+- [freeBlocks](dvdrzoneinfo/1394250-freeblocks.md)
+- [incremental](dvdrzoneinfo/1394240-incremental.md)
+- [lastRecordedAddress](dvdrzoneinfo/1394035-lastrecordedaddress.md)
+- [lastRecordedAddressValid](dvdrzoneinfo/1394116-lastrecordedaddressvalid.md)
+- [nextWritableAddress](dvdrzoneinfo/1393920-nextwritableaddress.md)
+- [nextWritableAddressValid](dvdrzoneinfo/1394190-nextwritableaddressvalid.md)
+- [reserved](dvdrzoneinfo/1394045-reserved.md)
+- [reserved2](dvdrzoneinfo/1393922-reserved2.md)
+- [reserved3](dvdrzoneinfo/1394010-reserved3.md)
+- [reserved4](dvdrzoneinfo/1394107-reserved4.md)
+- [reserved5](dvdrzoneinfo/1394252-reserved5.md)
+- [reserved6](dvdrzoneinfo/1393905-reserved6.md)
+- [reserved7](dvdrzoneinfo/1394186-reserved7.md)
+- [reservedRZone](dvdrzoneinfo/1394081-reservedrzone.md)
+- [restrictedOverwrite](dvdrzoneinfo/1393903-restrictedoverwrite.md)
+- [rzoneNumberLSB](dvdrzoneinfo/1393960-rzonenumberlsb.md)
+- [rzoneNumberMSB](dvdrzoneinfo/1394236-rzonenumbermsb.md)
+- [rzoneSize](dvdrzoneinfo/1394075-rzonesize.md)
+- [rzoneStartAddress](dvdrzoneinfo/1393975-rzonestartaddress.md)
+
+# Document: blank
+
+Source path: documentation/iokit/dvdrzoneinfo/1393901-blank
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393901-blank
+Description: Interface language: Objective-C
+
+# blank
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 blank:1;
+```
+
+# Document: restrictedOverwrite
+
+Source path: documentation/iokit/dvdrzoneinfo/1393903-restrictedoverwrite
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393903-restrictedoverwrite
+Description: Interface language: Objective-C
+
+# restrictedOverwrite
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 restrictedOverwrite:1;
+```
+
+# Document: reserved6
+
+Source path: documentation/iokit/dvdrzoneinfo/1393905-reserved6
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393905-reserved6
+Description: Interface language: Objective-C
+
+# reserved6
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 reserved6;
+```
+
+# Document: nextWritableAddress
+
+Source path: documentation/iokit/dvdrzoneinfo/1393920-nextwritableaddress
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393920-nextwritableaddress
+Description: Interface language: Objective-C
+
+# nextWritableAddress
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt32 nextWritableAddress;
+```
+
+# Document: reserved2
+
+Source path: documentation/iokit/dvdrzoneinfo/1393922-reserved2
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393922-reserved2
+Description: Interface language: Objective-C
+
+# reserved2
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 reserved2:4;
+```
+
+# Document: blockingFactor
+
+Source path: documentation/iokit/dvdrzoneinfo/1393944-blockingfactor
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393944-blockingfactor
+Description: Interface language: Objective-C
+
+# blockingFactor
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt32 blockingFactor;
+```
+
+# Document: rzoneNumberLSB
+
+Source path: documentation/iokit/dvdrzoneinfo/1393960-rzonenumberlsb
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393960-rzonenumberlsb
+Description: Interface language: Objective-C
+
+# rzoneNumberLSB
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 rzoneNumberLSB;
+```
+
+# Document: rzoneStartAddress
+
+Source path: documentation/iokit/dvdrzoneinfo/1393975-rzonestartaddress
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1393975-rzonestartaddress
+Description: Interface language: Objective-C
+
+# rzoneStartAddress
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt32 rzoneStartAddress;
+```
+
+# Document: reserved3
+
+Source path: documentation/iokit/dvdrzoneinfo/1394010-reserved3
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394010-reserved3
+Description: Interface language: Objective-C
+
+# reserved3
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 reserved3:2;
+```
+
+# Document: copy
+
+Source path: documentation/iokit/dvdrzoneinfo/1394025-copy
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394025-copy
+Description: Interface language: Objective-C
+
+# copy
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 copy:1;
+```
+
+# Document: lastRecordedAddress
+
+Source path: documentation/iokit/dvdrzoneinfo/1394035-lastrecordedaddress
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394035-lastrecordedaddress
+Description: Interface language: Objective-C
+
+# lastRecordedAddress
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt32 lastRecordedAddress;
+```
+
+# Document: reserved
+
+Source path: documentation/iokit/dvdrzoneinfo/1394045-reserved
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394045-reserved
+Description: Interface language: Objective-C
+
+# reserved
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 reserved;
+```
+
+# Document: dataLength
+
+Source path: documentation/iokit/dvdrzoneinfo/1394069-datalength
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394069-datalength
+Description: Interface language: Objective-C
+
+# dataLength
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt16 dataLength;
+```
+
+# Document: rzoneSize
+
+Source path: documentation/iokit/dvdrzoneinfo/1394075-rzonesize
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394075-rzonesize
+Description: Interface language: Objective-C
+
+# rzoneSize
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt32 rzoneSize;
+```
+
+# Document: reservedRZone
+
+Source path: documentation/iokit/dvdrzoneinfo/1394081-reservedrzone
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394081-reservedrzone
+Description: Interface language: Objective-C
+
+# reservedRZone
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 reservedRZone:1;
+```
+
+# Document: reserved4
+
+Source path: documentation/iokit/dvdrzoneinfo/1394107-reserved4
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394107-reserved4
+Description: Interface language: Objective-C
+
+# reserved4
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 reserved4:4;
+```
+
+# Document: lastRecordedAddressValid
+
+Source path: documentation/iokit/dvdrzoneinfo/1394116-lastrecordedaddressvalid
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394116-lastrecordedaddressvalid
+Description: Interface language: Objective-C
+
+# lastRecordedAddressValid
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 lastRecordedAddressValid:1;
+```
+
+# Document: damage
+
+Source path: documentation/iokit/dvdrzoneinfo/1394146-damage
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394146-damage
+Description: Interface language: Objective-C
+
+# damage
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 damage:1;
+```
+
+# Document: borderNumberMSB
+
+Source path: documentation/iokit/dvdrzoneinfo/1394158-bordernumbermsb
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394158-bordernumbermsb
+Description: Interface language: Objective-C
+
+# borderNumberMSB
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 borderNumberMSB;
+```
+
+# Document: reserved7
+
+Source path: documentation/iokit/dvdrzoneinfo/1394186-reserved7
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394186-reserved7
+Description: Interface language: Objective-C
+
+# reserved7
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 reserved7;
+```
+
+# Document: nextWritableAddressValid
+
+Source path: documentation/iokit/dvdrzoneinfo/1394190-nextwritableaddressvalid
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394190-nextwritableaddressvalid
+Description: Interface language: Objective-C
+
+# nextWritableAddressValid
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 nextWritableAddressValid:1;
+```
+
+# Document: borderNumberLSB
+
+Source path: documentation/iokit/dvdrzoneinfo/1394196-bordernumberlsb
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394196-bordernumberlsb
+Description: Interface language: Objective-C
+
+# borderNumberLSB
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 borderNumberLSB;
+```
+
+# Document: rzoneNumberMSB
+
+Source path: documentation/iokit/dvdrzoneinfo/1394236-rzonenumbermsb
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394236-rzonenumbermsb
+Description: Interface language: Objective-C
+
+# rzoneNumberMSB
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 rzoneNumberMSB;
+```
+
+# Document: incremental
+
+Source path: documentation/iokit/dvdrzoneinfo/1394240-incremental
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394240-incremental
+Description: Interface language: Objective-C
+
+# incremental
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 incremental:1;
+```
+
+# Document: freeBlocks
+
+Source path: documentation/iokit/dvdrzoneinfo/1394250-freeblocks
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394250-freeblocks
+Description: Interface language: Objective-C
+
+# freeBlocks
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt32 freeBlocks;
+```
+
+# Document: reserved5
+
+Source path: documentation/iokit/dvdrzoneinfo/1394252-reserved5
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfo/1394252-reserved5
+Description: Interface language: Objective-C
+
+# reserved5
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+UInt8 reserved5:6;
+```
+
+# Document: DVDRZoneInfoAddressType
+
+Source path: documentation/iokit/dvdrzoneinfoaddresstype
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdrzoneinfoaddresstype
+Description: Interface language: Objective-C
+
+# DVDRZoneInfoAddressType
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Type Alias  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+typedef UInt8 DVDRZoneInfoAddressType;
+```
+
+# Document: DVDStructureFormat
+
+Source path: documentation/iokit/dvdstructureformat
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdstructureformat
+Description: Interface language: Objective-C
+
+# DVDStructureFormat
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Type Alias  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+typedef UInt8 DVDStructureFormat;
+```
+
+# Document: DVDTitleKeyInfo
+
+Source path: documentation/iokit/dvdtitlekeyinfo
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo
+Description: Interface language: Objective-C
+
+# DVDTitleKeyInfo
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Structure  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+typedef struct DVDTitleKeyInfo {
+    ...
+} DVDTitleKeyInfo;
+```
+
+## Topics
+
+### Instance Properties
+
+- [CGMS](dvdtitlekeyinfo/1394260-cgms.md)
+- [CPM](dvdtitlekeyinfo/1393936-cpm.md)
+- [CP_MOD](dvdtitlekeyinfo/1393946-cp_mod.md)
+- [CP_SEC](dvdtitlekeyinfo/1394238-cp_sec.md)
+- [dataLength](dvdtitlekeyinfo/1394073-datalength.md)
+- [reserved](dvdtitlekeyinfo/1393899-reserved.md)
+- [reserved2](dvdtitlekeyinfo/1394178-reserved2.md)
+- [titleKeyValue](dvdtitlekeyinfo/1394200-titlekeyvalue.md)
+
+# Document: reserved
+
+Source path: documentation/iokit/dvdtitlekeyinfo/1393899-reserved
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1393899-reserved
+Description: Interface language: Objective-C
+
+# reserved
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 reserved[2];
+```
+
+# Document: CPM
+
+Source path: documentation/iokit/dvdtitlekeyinfo/1393936-cpm
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1393936-cpm
+Description: Interface language: Objective-C
+
+# CPM
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 CPM:1;
+```
+
+# Document: CP_MOD
+
+Source path: documentation/iokit/dvdtitlekeyinfo/1393946-cp_mod
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1393946-cp_mod
+Description: Interface language: Objective-C
+
+# CP_MOD
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 CP_MOD:4;
+```
+
+# Document: dataLength
+
+Source path: documentation/iokit/dvdtitlekeyinfo/1394073-datalength
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394073-datalength
+Description: Interface language: Objective-C
+
+# dataLength
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 dataLength[2];
+```
+
+# Document: reserved2
+
+Source path: documentation/iokit/dvdtitlekeyinfo/1394178-reserved2
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394178-reserved2
+Description: Interface language: Objective-C
+
+# reserved2
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 reserved2[2];
+```
+
+# Document: titleKeyValue
+
+Source path: documentation/iokit/dvdtitlekeyinfo/1394200-titlekeyvalue
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394200-titlekeyvalue
+Description: Interface language: Objective-C
+
+# titleKeyValue
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 titleKeyValue[5];
+```
+
+# Document: CP_SEC
+
+Source path: documentation/iokit/dvdtitlekeyinfo/1394238-cp_sec
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394238-cp_sec
+Description: Interface language: Objective-C
+
+# CP_SEC
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 CP_SEC:1;
+```
+
+# Document: CGMS
+
+Source path: documentation/iokit/dvdtitlekeyinfo/1394260-cgms
+Canonical documentation: https://developer.apple.com/documentation/iokit/dvdtitlekeyinfo/1394260-cgms
+Description: Interface language: Objective-C
+
+# CGMS
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+UInt8 CGMS:2;
+```
+
+# Document: eIOAcceleratorClientTypes
+
+Source path: documentation/iokit/eioacceleratorclienttypes
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioacceleratorclienttypes
+Description: Interface language: Objective-C
+
+# eIOAcceleratorClientTypes
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.6+
+
+## Declaration
+
+```objectivec
+enum eIOAcceleratorClientTypes : unsigned int {
+    ...
+};
+```
+
+## Topics
+
+### Constants
+
+- [kIOAccelNumClientTypes](eioacceleratorclienttypes/kioaccelnumclienttypes.md)
+- [kIOAccelSurfaceClientType](eioacceleratorclienttypes/kioaccelsurfaceclienttype.md)
+- [kIOAccelSurface2ClientType](eioacceleratorclienttypes/kioaccelsurface2clienttype.md)
+
+# Document: kIOAccelNumClientTypes
+
+Source path: documentation/iokit/eioacceleratorclienttypes/kioaccelnumclienttypes
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioacceleratorclienttypes/kioaccelnumclienttypes
+Description: Interface language: Objective-C
+
+# kIOAccelNumClientTypes
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+kIOAccelNumClientTypes
+```
+
+# Document: kIOAccelSurface2ClientType
+
+Source path: documentation/iokit/eioacceleratorclienttypes/kioaccelsurface2clienttype
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioacceleratorclienttypes/kioaccelsurface2clienttype
+Description: Interface language: Objective-C
+
+# kIOAccelSurface2ClientType
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.14+
+
+## Declaration
+
+```objectivec
+kIOAccelSurface2ClientType = 0x20
+```
+
+# Document: kIOAccelSurfaceClientType
+
+Source path: documentation/iokit/eioacceleratorclienttypes/kioaccelsurfaceclienttype
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioacceleratorclienttypes/kioaccelsurfaceclienttype
+Description: Interface language: Objective-C
+
+# kIOAccelSurfaceClientType
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+kIOAccelSurfaceClientType
+```
+
+# Document: eIOAccelSurfaceLockBits
+
+Source path: documentation/iokit/eioaccelsurfacelockbits
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits
+Description: Interface language: Objective-C
+
+# eIOAccelSurfaceLockBits
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
+
+## Declaration
+
+```objectivec
+typedef enum eIOAccelSurfaceLockBits : unsigned int {
+    ...
+} eIOAccelSurfaceLockBits;
+```
+
+## Topics
+
+### Constants
+
+- [kIOAccelSurfaceLockInAccel](eioaccelsurfacelockbits/kioaccelsurfacelockinaccel.md)
+- [kIOAccelSurfaceLockInBacking](eioaccelsurfacelockbits/kioaccelsurfacelockinbacking.md)
+- [kIOAccelSurfaceLockInDontCare](eioaccelsurfacelockbits/kioaccelsurfacelockindontcare.md)
+- [kIOAccelSurfaceLockInMask](eioaccelsurfacelockbits/kioaccelsurfacelockinmask.md)
+
+# Document: kIOAccelSurfaceLockInAccel
+
+Source path: documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinaccel
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinaccel
+Description: Interface language: Objective-C
+
+# kIOAccelSurfaceLockInAccel
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
+
+## Declaration
+
+```objectivec
+kIOAccelSurfaceLockInAccel = 1
+```
+
+# Document: kIOAccelSurfaceLockInBacking
+
+Source path: documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinbacking
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinbacking
+Description: Interface language: Objective-C
+
+# kIOAccelSurfaceLockInBacking
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
+
+## Declaration
+
+```objectivec
+kIOAccelSurfaceLockInBacking = 0
+```
+
+# Document: kIOAccelSurfaceLockInDontCare
+
+Source path: documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockindontcare
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockindontcare
+Description: Interface language: Objective-C
+
+# kIOAccelSurfaceLockInDontCare
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
+
+## Declaration
+
+```objectivec
+kIOAccelSurfaceLockInDontCare = 2
+```
+
+# Document: kIOAccelSurfaceLockInMask
+
+Source path: documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinmask
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacelockbits/kioaccelsurfacelockinmask
+Description: Interface language: Objective-C
+
+# kIOAccelSurfaceLockInMask
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.3+
+
+## Declaration
+
+```objectivec
+kIOAccelSurfaceLockInMask = 0x00000003
+```
+
+# Document: eIOAccelSurfaceMemoryTypes
+
+Source path: documentation/iokit/eioaccelsurfacememorytypes
+Canonical documentation: https://developer.apple.com/documentation/iokit/eioaccelsurfacememorytypes
+Description: Interface language: Objective-C
+
+# eIOAccelSurfaceMemoryTypes
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.6+
+
+## Declaration
+
+```objectivec
+enum eIOAccelSurfaceMemoryTypes : unsigned int {
+    ...
+};
+```
+
+## Topics
+
+### Constants
+
+- [kIOAccelNumSurfaceMemoryTypes](eioaccelsurfacememorytypes/kioaccelnumsurfacememorytypes.md)
 
 # Document: kIOAccelNumSurfaceMemoryTypes
 
@@ -217415,844 +218945,3 @@ A Boolean value that indicates whether the JavaScript context is inspectable.
 ### Making a context inspectable
 
 - [JSGlobalContextSetInspectable](jsglobalcontextsetinspectable%28____%29.md): Sets a JavaScript context to be either inspectable or not inspectable.
-
-# Document: JSGlobalContextRef
-
-Source path: documentation/javascriptcore/jsglobalcontextref
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextref
-Description: Framework: JavaScriptCore Kind: Type Alias Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-# JSGlobalContextRef (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Type Alias  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-A global JavaScript execution context.
-
-## Declaration
-
-```swift
-typealias JSGlobalContextRef = OpaquePointer
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-A [JSGlobalContextRef](jsglobalcontextref.md) is a [JSContextRef](jscontextref.md).
-
-## Topics
-
-### Creating a global context
-
-- [JSGlobalContextCreate(\_:)](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
-- [JSGlobalContextCreateInGroup(\_:\_:)](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
-- [JSGlobalContextRetain(\_:)](jsglobalcontextretain%28__%29.md): Retains a global JavaScript execution context.
-- [JSGlobalContextRelease(\_:)](jsglobalcontextrelease%28__%29.md): Releases a global JavaScript execution context.
-
-### Managing the context’s name
-
-- [JSGlobalContextCopyName(\_:)](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
-- [JSGlobalContextSetName(\_:\_:)](jsglobalcontextsetname%28____%29.md): Sets the remote debugging name for a context.
-
-### Making a context inspectable
-
-- [JSGlobalContextIsInspectable(\_:)](jsglobalcontextisinspectable%28__%29.md): Returns a Boolean value that indicates whether the JavaScript context is inspectable.
-- [JSGlobalContextSetInspectable(\_:\_:)](jsglobalcontextsetinspectable%28____%29.md): Sets a JavaScript context to be either inspectable or not inspectable.
-
-## See Also
-
-### JavaScriptCore Engine Interface
-
-- [JSContextGroupRef](jscontextgroupref.md): A group that associates JavaScript contexts with one another.
-- [JSContextRef](jscontextref.md): A JavaScript execution context.
-- [JSStringRef](jsstringref.md): A UTF-16 character buffer.
-- [JSClassRef](jsclassref.md): A JavaScript class.
-
-# JSGlobalContextRef (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Type Alias  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-A global JavaScript execution context.
-
-## Declaration
-
-```objectivec
-typedef struct OpaqueJSContext * JSGlobalContextRef;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-A [JSGlobalContextRef](jsglobalcontextref.md) is a [JSContextRef](jscontextref.md).
-
-## Topics
-
-### Creating a global context
-
-- [JSGlobalContextCreate](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
-- [JSGlobalContextCreateInGroup](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
-- [JSGlobalContextRetain](jsglobalcontextretain%28__%29.md): Retains a global JavaScript execution context.
-- [JSGlobalContextRelease](jsglobalcontextrelease%28__%29.md): Releases a global JavaScript execution context.
-
-### Managing the context’s name
-
-- [JSGlobalContextCopyName](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
-- [JSGlobalContextSetName](jsglobalcontextsetname%28____%29.md): Sets the remote debugging name for a context.
-
-### Making a context inspectable
-
-- [JSGlobalContextIsInspectable](jsglobalcontextisinspectable%28__%29.md): Returns a Boolean value that indicates whether the JavaScript context is inspectable.
-- [JSGlobalContextSetInspectable](jsglobalcontextsetinspectable%28____%29.md): Sets a JavaScript context to be either inspectable or not inspectable.
-
-## See Also
-
-### JavaScriptCore Engine Interface
-
-- [JSContextGroupRef](jscontextgroupref.md): A group that associates JavaScript contexts with one another.
-- [JSContextRef](jscontextref.md): A JavaScript execution context.
-- [JSStringRef](jsstringref.md): A UTF-16 character buffer.
-- [JSClassRef](jsclassref.md): A JavaScript class.
-
-# Document: JSGlobalContextRelease(_:)
-
-Source path: documentation/javascriptcore/jsglobalcontextrelease(_:)
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextrelease(_:)
-Description: Framework: JavaScriptCore Kind: Function Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-# JSGlobalContextRelease(\_:) (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-Releases a global JavaScript execution context.
-
-## Declaration
-
-```swift
-func JSGlobalContextRelease(_ ctx: JSGlobalContextRef!)
-```
-
-## Parameters
-
-- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to release.
-
-## See Also
-
-### Creating a global context
-
-- [JSGlobalContextCreate(\_:)](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
-- [JSGlobalContextCreateInGroup(\_:\_:)](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
-- [JSGlobalContextRetain(\_:)](jsglobalcontextretain%28__%29.md): Retains a global JavaScript execution context.
-
-# JSGlobalContextRelease (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-Releases a global JavaScript execution context.
-
-## Declaration
-
-```objectivec
-void JSGlobalContextRelease(JSGlobalContextRef ctx);
-```
-
-## Parameters
-
-- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to release.
-
-## See Also
-
-### Creating a global context
-
-- [JSGlobalContextCreate](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
-- [JSGlobalContextCreateInGroup](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
-- [JSGlobalContextRetain](jsglobalcontextretain%28__%29.md): Retains a global JavaScript execution context.
-
-# Document: JSGlobalContextRetain(_:)
-
-Source path: documentation/javascriptcore/jsglobalcontextretain(_:)
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextretain(_:)
-Description: Framework: JavaScriptCore Kind: Function Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-# JSGlobalContextRetain(\_:) (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-Retains a global JavaScript execution context.
-
-## Declaration
-
-```swift
-func JSGlobalContextRetain(_ ctx: JSGlobalContextRef!) -> JSGlobalContextRef!
-```
-
-## Parameters
-
-- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to retain.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A [JSGlobalContextRef](jsglobalcontextref.md) that is the same as `ctx`.
-
-## See Also
-
-### Creating a global context
-
-- [JSGlobalContextCreate(\_:)](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
-- [JSGlobalContextCreateInGroup(\_:\_:)](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
-- [JSGlobalContextRelease(\_:)](jsglobalcontextrelease%28__%29.md): Releases a global JavaScript execution context.
-
-# JSGlobalContextRetain (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-Retains a global JavaScript execution context.
-
-## Declaration
-
-```objectivec
-JSGlobalContextRefJSGlobalContextRetain(JSGlobalContextRef ctx);
-```
-
-## Parameters
-
-- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to retain.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A [JSGlobalContextRef](jsglobalcontextref.md) that is the same as `ctx`.
-
-## See Also
-
-### Creating a global context
-
-- [JSGlobalContextCreate](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
-- [JSGlobalContextCreateInGroup](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
-- [JSGlobalContextRelease](jsglobalcontextrelease%28__%29.md): Releases a global JavaScript execution context.
-
-# Document: JSGlobalContextSetInspectable(_:_:)
-
-Source path: documentation/javascriptcore/jsglobalcontextsetinspectable(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextsetinspectable(_:_:)
-Description: Framework: JavaScriptCore Kind: Function Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 9.0+ · visionOS 1.0+
-
-# JSGlobalContextSetInspectable(\_:\_:) (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 9.0+ · visionOS 1.0+
-
-Sets a JavaScript context to be either inspectable or not inspectable.
-
-## Declaration
-
-```swift
-func JSGlobalContextSetInspectable(_ ctx: JSGlobalContextRef!, _ inspectable: Bool)
-```
-
-## Parameters
-
-- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to set whether it’s inspectable.
-- `inspectable`: A Boolean value that indicates whether the context is inspectable.
-
-## Topics
-
-### Related Documentation
-
-- [JSGlobalContextCopyName(\_:)](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
-- [JSGlobalContextSetName(\_:\_:)](jsglobalcontextsetname%28____%29.md): Sets the remote debugging name for a context.
-
-## See Also
-
-### Making a context inspectable
-
-- [JSGlobalContextIsInspectable(\_:)](jsglobalcontextisinspectable%28__%29.md): Returns a Boolean value that indicates whether the JavaScript context is inspectable.
-
-# JSGlobalContextSetInspectable (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 9.0+ · visionOS 1.0+
-
-Sets a JavaScript context to be either inspectable or not inspectable.
-
-## Declaration
-
-```objectivec
-void JSGlobalContextSetInspectable(JSGlobalContextRef ctx, bool inspectable);
-```
-
-## Parameters
-
-- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to set whether it’s inspectable.
-- `inspectable`: A Boolean value that indicates whether the context is inspectable.
-
-## Topics
-
-### Related Documentation
-
-- [JSGlobalContextCopyName](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
-- [JSGlobalContextSetName](jsglobalcontextsetname%28____%29.md): Sets the remote debugging name for a context.
-
-## See Also
-
-### Making a context inspectable
-
-- [JSGlobalContextIsInspectable](jsglobalcontextisinspectable%28__%29.md): Returns a Boolean value that indicates whether the JavaScript context is inspectable.
-
-# Document: JSGlobalContextSetName(_:_:)
-
-Source path: documentation/javascriptcore/jsglobalcontextsetname(_:_:)
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextsetname(_:_:)
-Description: Framework: JavaScriptCore Kind: Function Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
-
-# JSGlobalContextSetName(\_:\_:) (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
-
-Sets the remote debugging name for a context.
-
-## Declaration
-
-```swift
-func JSGlobalContextSetName(_ ctx: JSGlobalContextRef!, _ name: JSStringRef!)
-```
-
-## Parameters
-
-- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) that you want to name.
-- `name`: The remote debugging name to set on `ctx`.
-
-## See Also
-
-### Managing the context’s name
-
-- [JSGlobalContextCopyName(\_:)](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
-
-# JSGlobalContextSetName (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
-
-Sets the remote debugging name for a context.
-
-## Declaration
-
-```objectivec
-void JSGlobalContextSetName(JSGlobalContextRef ctx, JSStringRef name);
-```
-
-## Parameters
-
-- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) that you want to name.
-- `name`: The remote debugging name to set on `ctx`.
-
-## See Also
-
-### Managing the context’s name
-
-- [JSGlobalContextCopyName](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
-
-# Document: JSManagedValue
-
-Source path: documentation/javascriptcore/jsmanagedvalue
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue
-Description: Framework: JavaScriptCore Kind: Class Availability: iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-# JSManagedValue (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Class  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-A JavaScript value with conditional retain behavior to provide automatic memory management.
-
-## Declaration
-
-```swift
-class JSManagedValue
-```
-
-<a id="overview"></a>
-
-## Overview
-
-The primary use case for a managed value is to store a JavaScript value in an Objective-C or Swift object that exports to JavaScript.
-
-> **Important**
-
->  Don’t store a nonmanaged [JSValue](jsvalue.md) object in a native object that exports to JavaScript. Because a [JSValue](jsvalue.md) object references its enclosing [JSContext](jscontext.md) object, this action creates a retain cycle, preventing deallocation of the context.
-
-A managed value’s *conditional retain* behavior ensures retention of its underlying JavaScript value as long as either of the following conditions is true:
-
-- The JavaScript value is reachable through the JavaScript object graph (that is, not subject to JavaScript garbage collection).
-- The [JSManagedValue](jsmanagedvalue.md) object is reachable through the Objective-C or Swift object graph, as you report to the JavaScriptCore virtual machine using the [addManagedReference(\_:withOwner:)](jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
-
-However, if neither of these conditions is true, the managed value sets its [value](jsmanagedvalue/value.md) property to `nil`, releasing the underlying [JSValue](jsvalue.md) object.
-
-> **Note**
-
->  On its own, a [JSManagedValue](jsmanagedvalue.md) object behaves similarly to an ARC weak reference to its underlying [JSValue](jsvalue.md) object—that is, if you don’t use the [addManagedReference(\_:withOwner:)](jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method to add conditional retain behavior, the managed value’s [value](jsmanagedvalue/value.md) property automatically becomes `nil` when the JavaScript garbage collector destroys the underlying JavaScript value.
-
-## Topics
-
-### Creating a Managed Value
-
-- [init(value:)](jsmanagedvalue/init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
-- [init(value:andOwner:)](jsmanagedvalue/init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
-
-### Accessing the Managed Value
-
-- [value](jsmanagedvalue/value.md): The managed value’s underlying JavaScript value.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### JavaScript Code
-
-- [JSValue](jsvalue.md): A JavaScript value.
-
-# JSManagedValue (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Class  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-A JavaScript value with conditional retain behavior to provide automatic memory management.
-
-## Declaration
-
-```objectivec
-@interface JSManagedValue : NSObject
-```
-
-<a id="overview"></a>
-
-## Overview
-
-The primary use case for a managed value is to store a JavaScript value in an Objective-C or Swift object that exports to JavaScript.
-
-> **Important**
-
->  Don’t store a nonmanaged [JSValue](jsvalue.md) object in a native object that exports to JavaScript. Because a [JSValue](jsvalue.md) object references its enclosing [JSContext](jscontext.md) object, this action creates a retain cycle, preventing deallocation of the context.
-
-A managed value’s *conditional retain* behavior ensures retention of its underlying JavaScript value as long as either of the following conditions is true:
-
-- The JavaScript value is reachable through the JavaScript object graph (that is, not subject to JavaScript garbage collection).
-- The [JSManagedValue](jsmanagedvalue.md) object is reachable through the Objective-C or Swift object graph, as you report to the JavaScriptCore virtual machine using the [addManagedReference:withOwner:](jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
-
-However, if neither of these conditions is true, the managed value sets its [value](jsmanagedvalue/value.md) property to `nil`, releasing the underlying [JSValue](jsvalue.md) object.
-
-> **Note**
-
->  On its own, a [JSManagedValue](jsmanagedvalue.md) object behaves similarly to an ARC weak reference to its underlying [JSValue](jsvalue.md) object—that is, if you don’t use the [addManagedReference:withOwner:](jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method to add conditional retain behavior, the managed value’s [value](jsmanagedvalue/value.md) property automatically becomes `nil` when the JavaScript garbage collector destroys the underlying JavaScript value.
-
-## Topics
-
-### Creating a Managed Value
-
-- [initWithValue:](jsmanagedvalue/init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
-- [managedValueWithValue:](jsmanagedvalue/managedvaluewithvalue_.md): Creates a managed value with the specified JavaScript value.
-- [managedValueWithValue:andOwner:](jsmanagedvalue/init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
-
-### Accessing the Managed Value
-
-- [value](jsmanagedvalue/value.md): The managed value’s underlying JavaScript value.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-## See Also
-
-### JavaScript Code
-
-- [JSValue](jsvalue.md): A JavaScript value.
-
-# Document: init(value:)
-
-Source path: documentation/javascriptcore/jsmanagedvalue/init(value:)
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue/init(value:)
-Description: Framework: JavaScriptCore Kind: Initializer Availability: iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-# init(value:) (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Initializer  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-Initializes a managed value with the specified JavaScript value.
-
-## Declaration
-
-```swift
-init!(value: JSValue!)
-```
-
-## Parameters
-
-- `value`: A JavaScript value.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new managed value.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-To ensure that the underlying JavaScript value is retained as long as the managed value remains in use in the Objective-C or Swift runtime, report the managed value’s owner to the JavaScriptCore virtual machine using the [addManagedReference(\_:withOwner:)](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
-
-## See Also
-
-### Creating a Managed Value
-
-- [init(value:andOwner:)](init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
-
-# initWithValue: (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Instance Method  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-Initializes a managed value with the specified JavaScript value.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithValue:(JSValue *) value;
-```
-
-## Parameters
-
-- `value`: A JavaScript value.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new managed value.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-To ensure that the underlying JavaScript value is retained as long as the managed value remains in use in the Objective-C or Swift runtime, report the managed value’s owner to the JavaScriptCore virtual machine using the [addManagedReference:withOwner:](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
-
-## See Also
-
-### Creating a Managed Value
-
-- [managedValueWithValue:](managedvaluewithvalue_.md): Creates a managed value with the specified JavaScript value.
-- [managedValueWithValue:andOwner:](init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
-
-# Document: init(value:andOwner:)
-
-Source path: documentation/javascriptcore/jsmanagedvalue/init(value:andowner:)
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue/init(value:andowner:)
-Description: Framework: JavaScriptCore Kind: Initializer Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
-
-# init(value:andOwner:) (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Initializer  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
-
-Creates a managed value and associates it with an owner.
-
-## Declaration
-
-```swift
-init!(value: JSValue!, andOwner owner: Any!)
-```
-
-## Parameters
-
-- `value`: A JavaScript value.
-- `owner`: The Objective-C or Swift object responsible for
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new managed value.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Calling this method is equivalent to creating a managed value and then reporting it to the JavaScriptCore virtual machine using the [addManagedReference(\_:withOwner:)](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
-
-## See Also
-
-### Creating a Managed Value
-
-- [init(value:)](init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
-
-# managedValueWithValue:andOwner: (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Type Method  
-**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
-
-Creates a managed value and associates it with an owner.
-
-## Declaration
-
-```objectivec
-+ (JSManagedValue *) managedValueWithValue:(JSValue *) value andOwner:(id) owner;
-```
-
-## Parameters
-
-- `value`: A JavaScript value.
-- `owner`: The Objective-C or Swift object responsible for
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new managed value.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Calling this method is equivalent to creating a managed value and then reporting it to the JavaScriptCore virtual machine using the [addManagedReference:withOwner:](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
-
-## See Also
-
-### Creating a Managed Value
-
-- [initWithValue:](init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
-- [managedValueWithValue:](managedvaluewithvalue_.md): Creates a managed value with the specified JavaScript value.
-
-# Document: managedValueWithValue:
-
-Source path: documentation/javascriptcore/jsmanagedvalue/managedvaluewithvalue:
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue/managedvaluewithvalue:
-Description: Interface language: Objective-C
-
-# managedValueWithValue:
-
-**Interface language:** Objective-C
-
-**Framework:** JavaScriptCore  
-**Kind:** Type Method  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-Creates a managed value with the specified JavaScript value.
-
-## Declaration
-
-```objectivec
-+ (JSManagedValue *) managedValueWithValue:(JSValue *) value;
-```
-
-## Parameters
-
-- `value`: A JavaScript value.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new managed value.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-To ensure that the underlying JavaScript value is retained as long as the managed value remains in use in the Objective-C or Swift runtime, report the managed value’s owner to the JavaScriptCore virtual machine using the [addManagedReference:withOwner:](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
-
-## See Also
-
-### Creating a Managed Value
-
-- [initWithValue:](init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
-- [managedValueWithValue:andOwner:](init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
-
-# Document: value
-
-Source path: documentation/javascriptcore/jsmanagedvalue/value
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue/value
-Description: Framework: JavaScriptCore Kind: Instance Property Availability: iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-# value (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Instance Property  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-The managed value’s underlying JavaScript value.
-
-## Declaration
-
-```swift
-var value: JSValue! { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If the JavaScript garbage collector removes the underlying value, this property becomes `nil`.
-
-# value (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Instance Property  
-**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
-
-The managed value’s underlying JavaScript value.
-
-## Declaration
-
-```objectivec
-@property (strong, readonly) JSValue * value;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-If the JavaScript garbage collector removes the underlying value, this property becomes `nil`.
-
-# Document: JSObjectCallAsConstructor(_:_:_:_:_:)
-
-Source path: documentation/javascriptcore/jsobjectcallasconstructor(_:_:_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsobjectcallasconstructor(_:_:_:_:_:)
-Description: Framework: JavaScriptCore Kind: Function Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-# JSObjectCallAsConstructor(\_:\_:\_:\_:\_:) (Swift)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-Calls an object as a constructor.
-
-## Declaration
-
-```swift
-func JSObjectCallAsConstructor(_ ctx: JSContextRef!, _ object: JSObjectRef!, _ argumentCount: Int, _ arguments: UnsafePointer<JSValueRef?>!, _ exception: UnsafeMutablePointer<JSValueRef?>!) -> JSObjectRef!
-```
-
-## Parameters
-
-- `ctx`: The execution context to use.
-- `object`: The [JSObjectRef](jsobjectref.md) to call as a constructor.
-- `argumentCount`: An integer count of the number of arguments in `arguments`.
-- `arguments`: A [JSValueRef](jsvalueref.md) array of arguments to pass to the constructor. Pass `NULL` if `argumentCount` is `0`.
-- `exception`: A pointer to a [JSValueRef](jsvalueref.md) to store an exception in, if any. Pass `NULL` to discard any exception.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The [JSObjectRef](jsobjectref.md) that results from calling `object` as a constructor, or `NULL` if the system throws an exception or `object` isn’t a constructor.
-
-## See Also
-
-### Working with Objects
-
-- [JSObjectCallAsFunction(\_:\_:\_:\_:\_:\_:)](jsobjectcallasfunction%28____________%29.md): Calls an object as a function.
-- [JSObjectCopyPropertyNames(\_:\_:)](jsobjectcopypropertynames%28____%29.md): Gets the names of an object’s enumerable properties.
-- [JSObjectDeleteProperty(\_:\_:\_:\_:)](jsobjectdeleteproperty%28________%29.md): Deletes a property from an object.
-- [JSObjectGetPrivate(\_:)](jsobjectgetprivate%28__%29.md): Gets an object’s private data.
-- [JSObjectGetProperty(\_:\_:\_:\_:)](jsobjectgetproperty%28________%29.md): Gets a property from an object.
-- [JSObjectGetPropertyAtIndex(\_:\_:\_:\_:)](jsobjectgetpropertyatindex%28________%29.md): Gets a property from an object by numeric index.
-- [JSObjectGetPrototype(\_:\_:)](jsobjectgetprototype%28____%29.md): Gets an object’s prototype.
-- [JSObjectHasProperty(\_:\_:\_:)](jsobjecthasproperty%28______%29.md): Tests whether an object has a specified property.
-- [JSObjectIsConstructor(\_:\_:)](jsobjectisconstructor%28____%29.md): Tests whether you can call an object as a constructor.
-- [JSObjectIsFunction(\_:\_:)](jsobjectisfunction%28____%29.md): Tests whether you can call an object as a function.
-- [JSObjectMake(\_:\_:\_:)](jsobjectmake%28______%29.md): Creates a JavaScript object.
-- [JSObjectMakeArray(\_:\_:\_:\_:)](jsobjectmakearray%28________%29.md): Creates a JavaScript array object.
-- [JSObjectMakeConstructor(\_:\_:\_:)](jsobjectmakeconstructor%28______%29.md): Creates a JavaScript constructor.
-- [JSObjectMakeDate(\_:\_:\_:\_:)](jsobjectmakedate%28________%29.md): Creates a JavaScript date object as though invoking the built-in date constructor.
-- [JSObjectMakeError(\_:\_:\_:\_:)](jsobjectmakeerror%28________%29.md): Creates a JavaScript error object as though invoking the built-in error constructor.
-
-# JSObjectCallAsConstructor (Objective-C)
-
-**Framework:** JavaScriptCore  
-**Kind:** Function  
-**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
-
-Calls an object as a constructor.
-
-## Declaration
-
-```objectivec
-JSObjectRefJSObjectCallAsConstructor(JSContextRef ctx, JSObjectRef object, size_t argumentCount, JSValueRef const arguments[], JSValueRef*exception);
-```
-
-## Parameters
-
-- `ctx`: The execution context to use.
-- `object`: The [JSObjectRef](jsobjectref.md) to call as a constructor.
-- `argumentCount`: An integer count of the number of arguments in `arguments`.
-- `arguments`: A [JSValueRef](jsvalueref.md) array of arguments to pass to the constructor. Pass `NULL` if `argumentCount` is `0`.
-- `exception`: A pointer to a [JSValueRef](jsvalueref.md) to store an exception in, if any. Pass `NULL` to discard any exception.
-
-<a id="return-value"></a>
-
-## Return Value
-
-The [JSObjectRef](jsobjectref.md) that results from calling `object` as a constructor, or `NULL` if the system throws an exception or `object` isn’t a constructor.
-
-## See Also
-
-### Working with Objects
-
-- [JSObjectCallAsFunction](jsobjectcallasfunction%28____________%29.md): Calls an object as a function.
-- [JSObjectCopyPropertyNames](jsobjectcopypropertynames%28____%29.md): Gets the names of an object’s enumerable properties.
-- [JSObjectDeleteProperty](jsobjectdeleteproperty%28________%29.md): Deletes a property from an object.
-- [JSObjectGetPrivate](jsobjectgetprivate%28__%29.md): Gets an object’s private data.
-- [JSObjectGetProperty](jsobjectgetproperty%28________%29.md): Gets a property from an object.
-- [JSObjectGetPropertyAtIndex](jsobjectgetpropertyatindex%28________%29.md): Gets a property from an object by numeric index.
-- [JSObjectGetPrototype](jsobjectgetprototype%28____%29.md): Gets an object’s prototype.
-- [JSObjectHasProperty](jsobjecthasproperty%28______%29.md): Tests whether an object has a specified property.
-- [JSObjectIsConstructor](jsobjectisconstructor%28____%29.md): Tests whether you can call an object as a constructor.
-- [JSObjectIsFunction](jsobjectisfunction%28____%29.md): Tests whether you can call an object as a function.
-- [JSObjectMake](jsobjectmake%28______%29.md): Creates a JavaScript object.
-- [JSObjectMakeArray](jsobjectmakearray%28________%29.md): Creates a JavaScript array object.
-- [JSObjectMakeConstructor](jsobjectmakeconstructor%28______%29.md): Creates a JavaScript constructor.
-- [JSObjectMakeDate](jsobjectmakedate%28________%29.md): Creates a JavaScript date object as though invoking the built-in date constructor.
-- [JSObjectMakeError](jsobjectmakeerror%28________%29.md): Creates a JavaScript error object as though invoking the built-in error constructor.

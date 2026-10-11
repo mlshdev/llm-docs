@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/passkit/pkpasslibrary/authorizationstatus/restricted
 
 # PKPassLibrary.AuthorizationStatus.restricted (Swift)
@@ -7,11 +7,21 @@
 **Kind:** Case  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
 
+A status that occurs when the authorization status is limited.
+
 ## Declaration
 
 ```swift
 case restricted
 ```
+
+## See Also
+
+### Authorization statuses
+
+- [PKPassLibrary.AuthorizationStatus.authorized](authorized.md): A status that occurs when the person allows your app to add one or more passes to Wallet.
+- [PKPassLibrary.AuthorizationStatus.denied](denied.md): A status that occurs when the person doesn’t allow your app to add one or more passes to Wallet.
+- [PKPassLibrary.AuthorizationStatus.notDetermined](notdetermined.md): A status that occurs when the authorization status isn’t specified.
 
 # PKPassLibraryAuthorizationStatusRestricted (Objective-C)
 
@@ -19,8 +29,18 @@ case restricted
 **Kind:** Enumeration Case  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
 
+A status that occurs when the authorization status is limited.
+
 ## Declaration
 
 ```objectivec
 PKPassLibraryAuthorizationStatusRestricted
 ```
+
+## See Also
+
+### Authorization statuses
+
+- [PKPassLibraryAuthorizationStatusAuthorized](authorized.md): A status that occurs when the person allows your app to add one or more passes to Wallet.
+- [PKPassLibraryAuthorizationStatusDenied](denied.md): A status that occurs when the person doesn’t allow your app to add one or more passes to Wallet.
+- [PKPassLibraryAuthorizationStatusNotDetermined](notdetermined.md): A status that occurs when the authorization status isn’t specified.

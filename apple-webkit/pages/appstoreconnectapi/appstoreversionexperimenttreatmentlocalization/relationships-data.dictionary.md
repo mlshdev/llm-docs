@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appstoreversionexperimenttreatmentlocalization/relationships-data.dictionary
 
 # AppStoreVersionExperimentTreatmentLocalization.Relationships
@@ -22,6 +22,7 @@ object AppStoreVersionExperimentTreatmentLocalization.Relationships
 - `appPreviewSets` — `AppStoreVersionExperimentTreatmentLocalization.Relationships.AppPreviewSets`:
 - `appScreenshotSets` — `AppStoreVersionExperimentTreatmentLocalization.Relationships.AppScreenshotSets`:
 - `appStoreVersionExperimentTreatment` — `AppStoreVersionExperimentTreatmentLocalization.Relationships.AppStoreVersionExperimentTreatment`:
+- `placements` — `AppStoreVersionExperimentTreatmentLocalization.Relationships.Placements`: The data and links that describe the relationship between the App Store Version Experiment Treatment Localizations and the App Asset Library Placements resources.
 
 ## Topics
 
@@ -30,6 +31,10 @@ object AppStoreVersionExperimentTreatmentLocalization.Relationships
 - [AppStoreVersionExperimentTreatmentLocalization.Relationships.AppPreviewSets](relationships-data.dictionary/apppreviewsets-data.dictionary.md)
 - [AppStoreVersionExperimentTreatmentLocalization.Relationships.AppScreenshotSets](relationships-data.dictionary/appscreenshotsets-data.dictionary.md)
 - [AppStoreVersionExperimentTreatmentLocalization.Relationships.AppStoreVersionExperimentTreatment](relationships-data.dictionary/appstoreversionexperimenttreatment-data.dictionary.md)
+
+### Dictionaries
+
+- [AppStoreVersionExperimentTreatmentLocalization.Relationships.Placements](relationships-data.dictionary/placements-data.dictionary.md)
 
 ## See Also
 

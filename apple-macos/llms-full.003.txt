@@ -1,9 +1,9 @@
-# Apple macOS snapshot-0513df389cc7: full documentation
+# Apple macOS snapshot-8257b11be327: full documentation
 
 Source: https://developer.apple.com/macos/
-Catalog snapshot: 0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d
-Content digest: 14bed8000201559feea98994c1c1775c7d24cc3f228675df96cb28953e4bdfaf
-Captured at: 2026-10-04T18:39:02.631Z
+Catalog snapshot: 8257b11be3276c2e79632f1695b3186136bb4ab3f4b106ab8a041674e3c8ef05
+Content digest: 41edb3868bb6a657018aafb557356ddd3f56fdf018e3a85b9e0b68b3c5e76f1d
+Captured at: 2026-10-11T21:19:14.780Z
 Volume 3
 
 # Document: availableMembers(ofFontFamily:)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appeventscreenshotcreaterequest
 
 # AppEventScreenshotCreateRequest
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Object  
-**Availability:** App Store Connect API 1.7+
+**Availability:** App Store Connect API 1.7+ (deprecated in 4.5)
 
 The request body you use to create an app event screenshot.
+
+> This object is deprecated. Use [AppAssetLibraryImageCreateRequest](appassetlibraryimagecreaterequest.md) instead.
 
 ## Declaration
 
@@ -25,13 +27,13 @@ object AppEventScreenshotCreateRequest
 
 ### Objects
 
-- [AppEventScreenshotCreateRequest.Data](appeventscreenshotcreaterequest/data-data.dictionary.md): The request body you use to create an app event screenshot.
+- [AppEventScreenshotCreateRequest.Data](appeventscreenshotcreaterequest/data-data.dictionary.md): Deprecated. The request body you use to create an app event screenshot.
 
 ## See Also
 
 ### Objects
 
-- [AppEventScreenshot](appeventscreenshot.md): A screenshot image used to promote an app event on the App Store product page.
-- [AppEventScreenshotResponse](appeventscreenshotresponse.md): The response body for endpoints that create, read, or modify an in-app event screenshot.
-- [AppEventScreenshotUpdateRequest](appeventscreenshotupdaterequest.md): The request body you use to update an app event screenshot update request.
-- [AppEventScreenshotsResponse](appeventscreenshotsresponse.md): The response body for endpoints that list screenshots for an in-app event localization.
+- [AppEventScreenshot](appeventscreenshot.md): Deprecated. A screenshot image used to promote an app event on the App Store product page.
+- [AppEventScreenshotResponse](appeventscreenshotresponse.md): Deprecated. The response body for endpoints that create, read, or modify an in-app event screenshot.
+- [AppEventScreenshotUpdateRequest](appeventscreenshotupdaterequest.md): Deprecated. The request body you use to update an app event screenshot update request.
+- [AppEventScreenshotsResponse](appeventscreenshotsresponse.md): Deprecated. The response body for endpoints that list screenshots for an in-app event localization.

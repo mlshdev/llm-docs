@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreservernotifications/app-store-server-notifications-changelog
 
 # App Store Server Notifications changelog
@@ -18,9 +18,9 @@ App Store Server Notifications has two versions of notifications. Version 1 noti
 
 To set up your server to receive notifications, see [Enabling App Store Server Notifications](enabling-app-store-server-notifications.md). Use this changelog to learn about feature updates, version information, deprecations, and removals for App Store Server Notifications.
 
-<a id="October-1-2016"></a>
+<a id="October-1-2026"></a>
 
-### October 1, 2016
+### October 1, 2026
 
 **New features**
 

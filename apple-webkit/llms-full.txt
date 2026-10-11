@@ -1,14 +1,15 @@
-# Apple WebKit and Safari snapshot-f22abf4916e5: full documentation
+# Apple WebKit and Safari snapshot-8cd502625a0a: full documentation
 
 Source: https://developer.apple.com/documentation/webkit
-Catalog snapshot: f22abf4916e5b2883ca54c03e9bfadb5e433da91e20aef1eeabdf5d3c0573721
-Content digest: beac2fd89a021eee1d72dbf403dfcb52f58089a1faaa58b19ce47f2de5dc3c0c
-Captured at: 2026-10-04T18:39:02.493Z
+Catalog snapshot: 8cd502625a0a857a5ff3294a6fec99aafd7b758d2731321d9678da32813f112c
+Content digest: b37471c392a15490eefe07724ec02165879a2030edcf4c23120a65c18ab721d2
+Captured at: 2026-10-11T21:19:14.688Z
 
-This corpus is published as 5 retrieval-sized volumes. Read the volumes in order for the complete corpus.
+This corpus is published as 6 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-- [Volume 1](llms-full.001.txt): 3177 documents, 8388371 bytes, SHA-256 `fbdaa0b569a9bf3bb2cb506c91bd68fe40ec58ff2614e92eb1e230d88c483743`.
-- [Volume 2](llms-full.002.txt): 3846 documents, 8388226 bytes, SHA-256 `663add8ff9734b4663377358384612167b3255cb524f2983a9a63f767299f745`.
-- [Volume 3](llms-full.003.txt): 4705 documents, 8386444 bytes, SHA-256 `f75f2788fbc5ea35ad2a96b0dbf0fd62a3b092c30224aec4906d5423e075db45`.
-- [Volume 4](llms-full.004.txt): 6007 documents, 8382032 bytes, SHA-256 `243f0a8d5471135ae1b33ebef372089c7b3fa91b3393b41490f0b646317195a2`.
-- [Volume 5](llms-full.005.txt): 1023 documents, 7966403 bytes, SHA-256 `c5977a2780f5fe84a224a13c117526bf59c2fe745f5e11d72aa5b16474c69e69`.
+- [Volume 1](llms-full.001.txt): 3167 documents, 8387685 bytes, SHA-256 `3f4da55c8d2888da7a8448b8c1b42d14cfc253c8ad14133b53a9099408cd0669`.
+- [Volume 2](llms-full.002.txt): 3812 documents, 8387490 bytes, SHA-256 `faf014b6eecd6eb52522cdaf30e343efb536b33a02f5eaf59caf9c90272321b4`.
+- [Volume 3](llms-full.003.txt): 4459 documents, 8388034 bytes, SHA-256 `51da23fda9856bf690a04001caa2273be1c156c7bbbdbf266c2b4cba05b3e786`.
+- [Volume 4](llms-full.004.txt): 6476 documents, 8377242 bytes, SHA-256 `17b261a1a5393bacaea78914e9ada7085852b9ecdce8f0b454c37398d8353077`.
+- [Volume 5](llms-full.005.txt): 865 documents, 8388141 bytes, SHA-256 `fc1573fd99a3875f7b3f4e939256d6b85afddd0b200221f09bee9077ba0c6eff`.
+- [Volume 6](llms-full.006.txt): 213 documents, 171253 bytes, SHA-256 `253e925915de5f9089563f56d3188e02258ae50fda4617fc544acad18d17c973`.

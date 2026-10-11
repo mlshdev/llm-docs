@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12-release-notes
 
 # iOS 12 Release Notes
@@ -9,7 +9,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS 12 SDK provides support for developing iOS apps for iPhone, iPad, or iPod touch devices running iOS 12. The SDK comes bundled with Xcode 10 available from the Mac App Store. For information about Xcode 10, see [Xcode 10 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10-release-notes).
+The iOS 12 SDK provides support for developing iOS apps for iPhone, iPad, or iPod touch devices running iOS 12. The SDK comes bundled with Xcode 10. For information about Xcode 10, see [Xcode 10 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10-release-notes).
 
 <a id="App-Store"></a>
 

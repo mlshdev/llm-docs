@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-8257b11be327; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-26_1-release-notes
 
 # macOS Tahoe 26.1 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 26.1 SDK provides support to develop apps for Mac computers running Tahoe 26.1. The SDK comes bundled with Xcode 26.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
+The macOS 26.1 SDK provides support to develop apps for Mac computers running Tahoe 26.1. The SDK comes bundled with Xcode 26.1. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
 
 <a id="Apple-TV-app"></a>
 

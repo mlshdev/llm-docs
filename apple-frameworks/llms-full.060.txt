@@ -1,10 +1,238 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 60
+
+# Document: kSCEntNetIPv6
+
+Source path: documentation/systemconfiguration/kscentnetipv6-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscentnetipv6-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.1+
+
+# kSCEntNetIPv6 (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.1+
+
+The network entity key for the `IPv6` dictionary.
+
+## Declaration
+
+```swift
+let kSCEntNetIPv6: CFString
+```
+
+## See Also
+
+### Constants
+
+- [kSCEntNetAirPort](kscentnetairport-swift.var.md): The network entity key for the `AirPort` dictionary.
+- [kSCEntNetDHCP](kscentnetdhcp-swift.var.md): The network entity key for the `DHCP` dictionary.
+- [kSCEntNetDNS](kscentnetdns-swift.var.md): The network entity key for the `DNS` dictionary.
+- [kSCEntNetEthernet](kscentnetethernet-swift.var.md): The network entity key for the `Ethernet` dictionary.
+- [kSCEntNetFireWire](kscentnetfirewire-swift.var.md): The network entity key for the `FireWire` dictionary.
+- [kSCEntNetInterface](kscentnetinterface-swift.var.md): The network entity key for the `Interface` dictionary.
+- [kSCEntNetIPSec](kscentnetipsec-swift.var.md): The network entity key for the `IPSec` dictionary.
+- [kSCEntNetIPv4](kscentnetipv4-swift.var.md): The network entity key for the `IPv4` dictionary.
+- [kSCEntNetL2TP](kscentnetl2tp-swift.var.md): The network entity key for the `L2TP` dictionary.
+- [kSCEntNetLink](kscentnetlink-swift.var.md): The network entity key for the `Link` dictionary.
+- [kSCEntNetModem](kscentnetmodem-swift.var.md): The network entity key for the `Modem` dictionary.
+- [kSCEntNetPPP](kscentnetppp-swift.var.md): The network entity key for the `PPP` dictionary.
+- [kSCEntNetPPPoE](kscentnetpppoe-swift.var.md): The network entity key for the `PPPoE` dictionary.
+- [kSCEntNetPPPSerial](kscentnetpppserial-swift.var.md): The network entity key for the `PPPSerial` dictionary.
+- [kSCEntNetPPTP](kscentnetpptp-swift.var.md): Deprecated. The network entity key for the `PPTP` dictionary.
+
+# kSCEntNetIPv6 (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.1+
+
+The network entity key for the `IPv6` dictionary.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCEntNetIPv6;
+```
+
+## See Also
+
+### Constants
+
+- [kSCEntNetAirPort](kscentnetairport-swift.var.md): The network entity key for the `AirPort` dictionary.
+- [kSCEntNetDHCP](kscentnetdhcp-swift.var.md): The network entity key for the `DHCP` dictionary.
+- [kSCEntNetDNS](kscentnetdns-swift.var.md): The network entity key for the `DNS` dictionary.
+- [kSCEntNetEthernet](kscentnetethernet-swift.var.md): The network entity key for the `Ethernet` dictionary.
+- [kSCEntNetFireWire](kscentnetfirewire-swift.var.md): The network entity key for the `FireWire` dictionary.
+- [kSCEntNetInterface](kscentnetinterface-swift.var.md): The network entity key for the `Interface` dictionary.
+- [kSCEntNetIPSec](kscentnetipsec-swift.var.md): The network entity key for the `IPSec` dictionary.
+- [kSCEntNetIPv4](kscentnetipv4-swift.var.md): The network entity key for the `IPv4` dictionary.
+- [kSCEntNetL2TP](kscentnetl2tp-swift.var.md): The network entity key for the `L2TP` dictionary.
+- [kSCEntNetLink](kscentnetlink-swift.var.md): The network entity key for the `Link` dictionary.
+- [kSCEntNetModem](kscentnetmodem-swift.var.md): The network entity key for the `Modem` dictionary.
+- [kSCEntNetPPP](kscentnetppp-swift.var.md): The network entity key for the `PPP` dictionary.
+- [kSCEntNetPPPoE](kscentnetpppoe-swift.var.md): The network entity key for the `PPPoE` dictionary.
+- [kSCEntNetPPPSerial](kscentnetpppserial-swift.var.md): The network entity key for the `PPPSerial` dictionary.
+- [kSCEntNetPPTP](kscentnetpptp-swift.var.md): Deprecated. The network entity key for the `PPTP` dictionary.
+
+# Document: kSCEntNetL2TP
+
+Source path: documentation/systemconfiguration/kscentnetl2tp-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscentnetl2tp-c.macro
+Description: Interface language: Objective-C
+
+# kSCEntNetL2TP
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCEntNetL2TP
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
+
+# Document: kSCEntNetL2TP
+
+Source path: documentation/systemconfiguration/kscentnetl2tp-swift.var
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscentnetl2tp-swift.var
+Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.3+
+
+# kSCEntNetL2TP (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.3+
+
+The network entity key for the `L2TP` dictionary.
+
+## Declaration
+
+```swift
+let kSCEntNetL2TP: CFString
+```
+
+## See Also
+
+### Constants
+
+- [kSCEntNetAirPort](kscentnetairport-swift.var.md): The network entity key for the `AirPort` dictionary.
+- [kSCEntNetDHCP](kscentnetdhcp-swift.var.md): The network entity key for the `DHCP` dictionary.
+- [kSCEntNetDNS](kscentnetdns-swift.var.md): The network entity key for the `DNS` dictionary.
+- [kSCEntNetEthernet](kscentnetethernet-swift.var.md): The network entity key for the `Ethernet` dictionary.
+- [kSCEntNetFireWire](kscentnetfirewire-swift.var.md): The network entity key for the `FireWire` dictionary.
+- [kSCEntNetInterface](kscentnetinterface-swift.var.md): The network entity key for the `Interface` dictionary.
+- [kSCEntNetIPSec](kscentnetipsec-swift.var.md): The network entity key for the `IPSec` dictionary.
+- [kSCEntNetIPv4](kscentnetipv4-swift.var.md): The network entity key for the `IPv4` dictionary.
+- [kSCEntNetIPv6](kscentnetipv6-swift.var.md): The network entity key for the `IPv6` dictionary.
+- [kSCEntNetLink](kscentnetlink-swift.var.md): The network entity key for the `Link` dictionary.
+- [kSCEntNetModem](kscentnetmodem-swift.var.md): The network entity key for the `Modem` dictionary.
+- [kSCEntNetPPP](kscentnetppp-swift.var.md): The network entity key for the `PPP` dictionary.
+- [kSCEntNetPPPoE](kscentnetpppoe-swift.var.md): The network entity key for the `PPPoE` dictionary.
+- [kSCEntNetPPPSerial](kscentnetpppserial-swift.var.md): The network entity key for the `PPPSerial` dictionary.
+- [kSCEntNetPPTP](kscentnetpptp-swift.var.md): Deprecated. The network entity key for the `PPTP` dictionary.
+
+# kSCEntNetL2TP (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.3+
+
+The network entity key for the `L2TP` dictionary.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCEntNetL2TP;
+```
+
+## See Also
+
+### Constants
+
+- [kSCEntNetAirPort](kscentnetairport-swift.var.md): The network entity key for the `AirPort` dictionary.
+- [kSCEntNetDHCP](kscentnetdhcp-swift.var.md): The network entity key for the `DHCP` dictionary.
+- [kSCEntNetDNS](kscentnetdns-swift.var.md): The network entity key for the `DNS` dictionary.
+- [kSCEntNetEthernet](kscentnetethernet-swift.var.md): The network entity key for the `Ethernet` dictionary.
+- [kSCEntNetFireWire](kscentnetfirewire-swift.var.md): The network entity key for the `FireWire` dictionary.
+- [kSCEntNetInterface](kscentnetinterface-swift.var.md): The network entity key for the `Interface` dictionary.
+- [kSCEntNetIPSec](kscentnetipsec-swift.var.md): The network entity key for the `IPSec` dictionary.
+- [kSCEntNetIPv4](kscentnetipv4-swift.var.md): The network entity key for the `IPv4` dictionary.
+- [kSCEntNetIPv6](kscentnetipv6-swift.var.md): The network entity key for the `IPv6` dictionary.
+- [kSCEntNetLink](kscentnetlink-swift.var.md): The network entity key for the `Link` dictionary.
+- [kSCEntNetModem](kscentnetmodem-swift.var.md): The network entity key for the `Modem` dictionary.
+- [kSCEntNetPPP](kscentnetppp-swift.var.md): The network entity key for the `PPP` dictionary.
+- [kSCEntNetPPPoE](kscentnetpppoe-swift.var.md): The network entity key for the `PPPoE` dictionary.
+- [kSCEntNetPPPSerial](kscentnetpppserial-swift.var.md): The network entity key for the `PPPSerial` dictionary.
+- [kSCEntNetPPTP](kscentnetpptp-swift.var.md): Deprecated. The network entity key for the `PPTP` dictionary.
+
+# Document: kSCEntNetLink
+
+Source path: documentation/systemconfiguration/kscentnetlink-c.macro
+Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscentnetlink-c.macro
+Description: Interface language: Objective-C
+
+# kSCEntNetLink
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+## Declaration
+
+```objectivec
+#define kSCEntNetLink
+```
+
+## See Also
+
+### Macros
+
+- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
+- [kSCCompGlobal](ksccompglobal-c.macro.md)
+- [kSCCompHostNames](ksccomphostnames-c.macro.md)
+- [kSCCompInterface](ksccompinterface-c.macro.md)
+- [kSCCompNetwork](ksccompnetwork-c.macro.md)
+- [kSCCompService](ksccompservice-c.macro.md)
+- [kSCCompSystem](ksccompsystem-c.macro.md)
+- [kSCCompUsers](ksccompusers-c.macro.md)
+- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
+- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
+- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
+- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
+- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
+- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
+- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
 
 # Document: kSCEntNetLink
 
@@ -181703,7 +181931,7 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### tvOS 27
 
-- [tvOS 27.2 Beta 2 Release Notes](tvos-release-notes/tvos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 27.2 Beta 3 Release Notes](tvos-release-notes/tvos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [tvOS 27 Release Notes](tvos-release-notes/tvos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### tvOS 26
@@ -181850,7 +182078,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 12 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12. For information about new features in tvOS 12, see [What’s New in tvOS](https://developer.apple.com/tvos/whats-new/). The SDK comes bundled with Xcode 10 available from the Mac App Store. For information about Xcode 10, see [Xcode 10 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10-release-notes).
+The tvOS 12 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12. For information about new features in tvOS 12, see [What’s New in tvOS](https://developer.apple.com/tvos/whats-new/). The SDK comes bundled with Xcode 10. For information about Xcode 10, see [Xcode 10 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10-release-notes).
 
 <a id="Dolby-Atmos"></a>
 
@@ -181927,7 +182155,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 12.1 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12.1.1. The SDK comes bundled with Xcode 10.1 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
+The tvOS 12.1 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12.1.1. The SDK comes bundled with Xcode 10.1. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
 
 <a id="General"></a>
 
@@ -181964,7 +182192,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 12.1 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12.1.2. The SDK comes bundled with Xcode 10.1 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
+The tvOS 12.1 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12.1.2. The SDK comes bundled with Xcode 10.1. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
 
 <a id="General"></a>
 
@@ -181997,7 +182225,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 12.2 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12.2. The SDK comes bundled with Xcode 10.2 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.2, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
+The tvOS 12.2 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12.2. The SDK comes bundled with Xcode 10.2. For information on the compatibility requirements for Xcode 10.2, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
 
 <a id="App-Store"></a>
 
@@ -182034,7 +182262,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 12.4 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12.4. The SDK comes bundled with Xcode 10.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.3, see [Xcode 10.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_3-release-notes).
+The tvOS 12.4 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 12.4. The SDK comes bundled with Xcode 10.3. For information on the compatibility requirements for Xcode 10.3, see [Xcode 10.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_3-release-notes).
 
 ## Topics
 
@@ -182069,7 +182297,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 13 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 13. The SDK comes bundled with Xcode 11 available from the Mac App Store. For information on the compatibility requirements for Xcode 11, see [Xcode 11 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11-release-notes).
+The tvOS 13 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 13. The SDK comes bundled with Xcode 11. For information on the compatibility requirements for Xcode 11, see [Xcode 11 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11-release-notes).
 
 <a id="AuthenticationServices"></a>
 
@@ -182199,7 +182427,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 13.2 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 13.2. The SDK comes bundled with Xcode 11.2 available from the Mac App Store. For information on the compatibility requirements for Xcode 11.2, see [Xcode 11.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_2-release-notes).
+The tvOS 13.2 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 13.2. The SDK comes bundled with Xcode 11.2. For information on the compatibility requirements for Xcode 11.2, see [Xcode 11.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_2-release-notes).
 
 <a id="General"></a>
 
@@ -182234,7 +182462,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 13.3 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 13.3. The SDK comes bundled with Xcode 11.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
+The tvOS 13.3 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 13.3. The SDK comes bundled with Xcode 11.3. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
 
 <a id="Networking"></a>
 
@@ -182273,7 +182501,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 13.3.1 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 13.3.1. The SDK comes bundled with Xcode 11.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
+The tvOS 13.3.1 SDK provides support for developing tvOS apps for Apple TV devices running tvOS 13.3.1. The SDK comes bundled with Xcode 11.3. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
 
 <a id="General"></a>
 
@@ -182308,7 +182536,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 13.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 13.4. The SDK comes bundled with Xcode 11.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.4, see [Xcode 11.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_4-release-notes).
+The tvOS 13.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 13.4. The SDK comes bundled with Xcode 11.4. For information on the compatibility requirements for Xcode 11.4, see [Xcode 11.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_4-release-notes).
 
 <a id="General"></a>
 
@@ -182343,7 +182571,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 13.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 13.4.5. The SDK comes bundled with Xcode 11.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
+The tvOS 13.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 13.4.5. The SDK comes bundled with Xcode 11.5. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
 
 ## See Also
 
@@ -182372,7 +182600,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 13.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 13.4.8. The SDK comes bundled with Xcode 11.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
+The tvOS 13.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 13.4.8. The SDK comes bundled with Xcode 11.5. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
 
 <a id="General"></a>
 
@@ -182407,7 +182635,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 14 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14. The SDK comes bundled with Xcode 12, available from the Mac App Store. For information on the compatibility requirements for Xcode 12, see [Xcode 12 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes).
+The tvOS 14 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14. The SDK comes bundled with Xcode 12. For information on the compatibility requirements for Xcode 12, see [Xcode 12 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes).
 
 <a id="AVKit"></a>
 
@@ -182490,7 +182718,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 14.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.2. The SDK comes bundled with Xcode 12.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
+The tvOS 14.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.2. The SDK comes bundled with Xcode 12.2. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
 
 <a id="General"></a>
 
@@ -182525,7 +182753,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 14.3 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.3. The SDK comes bundled with Xcode 12.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.3, see [Xcode 12.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_3-release-notes).
+The tvOS 14.3 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.3. The SDK comes bundled with Xcode 12.3. For information on the compatibility requirements for Xcode 12.3, see [Xcode 12.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_3-release-notes).
 
 <a id="General"></a>
 
@@ -182560,7 +182788,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 14.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.4. The SDK comes bundled with Xcode 12.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.4, see [Xcode 12.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_4-release-notes).
+The tvOS 14.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.4. The SDK comes bundled with Xcode 12.4. For information on the compatibility requirements for Xcode 12.4, see [Xcode 12.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_4-release-notes).
 
 <a id="General"></a>
 
@@ -182595,7 +182823,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 14.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.5. The SDK comes bundled with Xcode 12.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
+The tvOS 14.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.5. The SDK comes bundled with Xcode 12.5. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
 
 <a id="Accessibility"></a>
 
@@ -182687,7 +182915,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-To develop apps for tvOS 14.6, build your apps against the tvOS 14.5 SDK or later. The SDK comes bundled with Xcode 12.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
+To develop apps for tvOS 14.6, build your apps against the tvOS 14.5 SDK or later. The SDK comes bundled with Xcode 12.5. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
 
 <a id="General"></a>
 
@@ -182722,7 +182950,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-To develop apps for tvOS 14.7, build your apps against the tvOS 14.5 SDK or later. The SDK comes bundled with Xcode 12.5.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
+To develop apps for tvOS 14.7, build your apps against the tvOS 14.5 SDK or later. The SDK comes bundled with Xcode 12.5.1. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
 
 <a id="General"></a>
 
@@ -182757,7 +182985,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 15 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15. The SDK comes bundled with Xcode 13, available from the Mac App Store. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
+The tvOS 15 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15. The SDK comes bundled with Xcode 13. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
 
 <a id="App-Store"></a>
 
@@ -182929,7 +183157,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 15 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.1. The SDK comes bundled with Xcode 13, available from the Mac App Store. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
+The tvOS 15 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.1. The SDK comes bundled with Xcode 13. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
 
 <a id="CoreData"></a>
 
@@ -182970,7 +183198,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 15.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.2. The SDK comes bundled with Xcode 13.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.2, see [Xcode 13.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes).
+The tvOS 15.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.2. The SDK comes bundled with Xcode 13.2. For information on the compatibility requirements for Xcode 13.2, see [Xcode 13.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes).
 
 <a id="General"></a>
 
@@ -183005,7 +183233,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 15.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.3. The SDK comes bundled with Xcode 13.2.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.2.1, see [Xcode 13.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2_1-release-notes).
+The tvOS 15.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.3. The SDK comes bundled with Xcode 13.2.1. For information on the compatibility requirements for Xcode 13.2.1, see [Xcode 13.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2_1-release-notes).
 
 <a id="General"></a>
 
@@ -183040,7 +183268,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 15.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.4. The SDK comes bundled with Xcode 13.3.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.3.1, see [Xcode 13.3.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3_1-release-notes).
+The tvOS 15.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.4. The SDK comes bundled with Xcode 13.3.1. For information on the compatibility requirements for Xcode 13.3.1, see [Xcode 13.3.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3_1-release-notes).
 
 <a id="General"></a>
 
@@ -183132,7 +183360,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 15.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.5. The SDK comes bundled with Xcode 13.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.4, see [Xcode 13.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4-release-notes).
+The tvOS 15.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.5. The SDK comes bundled with Xcode 13.4. For information on the compatibility requirements for Xcode 13.4, see [Xcode 13.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4-release-notes).
 
 <a id="General"></a>
 
@@ -183167,7 +183395,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 15.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.6. The SDK comes bundled with Xcode 13.4.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.4.1, see [Xcode 13.4.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4_1-release-notes).
+The tvOS 15.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 15.6. The SDK comes bundled with Xcode 13.4.1. For information on the compatibility requirements for Xcode 13.4.1, see [Xcode 13.4.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4_1-release-notes).
 
 <a id="General"></a>
 
@@ -183202,7 +183430,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 16 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16. The SDK comes bundled with Xcode 14, available from the Mac App Store. For information on the compatibility requirements for Xcode 14, see [Xcode 14 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
+The tvOS 16 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16. The SDK comes bundled with Xcode 14. For information on the compatibility requirements for Xcode 14, see [Xcode 14 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
 
 <a id="General"></a>
 
@@ -183272,7 +183500,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 16.1 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.2. The SDK comes bundled with Xcode 14.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
+The tvOS 16.1 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.2. The SDK comes bundled with Xcode 14.2. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
 
 <a id="SwiftUI"></a>
 
@@ -183311,7 +183539,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 16.1 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.3. The SDK comes bundled with Xcode 14.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
+The tvOS 16.1 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.3. The SDK comes bundled with Xcode 14.2. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
 
 <a id="General"></a>
 
@@ -183346,7 +183574,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 16.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.4. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The tvOS 16.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.4. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="Home"></a>
 
@@ -183399,7 +183627,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 16.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.5. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The tvOS 16.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.5. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="Home"></a>
 
@@ -183438,7 +183666,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 16.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.6. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The tvOS 16.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 16.6. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="General"></a>
 
@@ -183473,7 +183701,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 17 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17. The SDK comes bundled with Xcode 15, available from the Mac App Store. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
+The tvOS 17 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17. The SDK comes bundled with Xcode 15. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
 
 <a id="Accelerate"></a>
 
@@ -183938,7 +184166,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 17 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.1. The SDK comes bundled with Xcode 15, available from the Mac App Store. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
+The tvOS 17 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.1. The SDK comes bundled with Xcode 15. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
 
 <a id="General"></a>
 
@@ -183973,7 +184201,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 17.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.2. The SDK comes bundled with Xcode 15.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
+The tvOS 17.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.2. The SDK comes bundled with Xcode 15.1. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
 
 <a id="Apple-Music"></a>
 
@@ -184077,7 +184305,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 17.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.3. The SDK comes bundled with Xcode 15.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
+The tvOS 17.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.3. The SDK comes bundled with Xcode 15.1. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -184116,7 +184344,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 17.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.4. The SDK comes bundled with Xcode 15.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.3, see [Xcode 15.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_3-release-notes).
+The tvOS 17.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.4. The SDK comes bundled with Xcode 15.3. For information on the compatibility requirements for Xcode 15.3, see [Xcode 15.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_3-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -184178,7 +184406,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 17.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.5. The SDK comes bundled with Xcode 15.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
+The tvOS 17.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.5. The SDK comes bundled with Xcode 15.4. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
 
 <a id="General"></a>
 
@@ -184213,7 +184441,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 17.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.6. The SDK comes bundled with Xcode 15.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
+The tvOS 17.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 17.6. The SDK comes bundled with Xcode 15.4. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
 
 <a id="General"></a>
 
@@ -184248,7 +184476,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 18 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18. The SDK comes bundled with Xcode 16, available from the Mac App Store. For information on the compatibility requirements for Xcode 16, see [Xcode 16 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16-release-notes).
+The tvOS 18 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18. The SDK comes bundled with Xcode 16. For information on the compatibility requirements for Xcode 16, see [Xcode 16 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16-release-notes).
 
 <a id="App-Intents"></a>
 
@@ -184495,7 +184723,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 18.1 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.1. The SDK comes bundled with Xcode 16.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.1, see [Xcode 16.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_1-release-notes).
+The tvOS 18.1 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.1. The SDK comes bundled with Xcode 16.1. For information on the compatibility requirements for Xcode 16.1, see [Xcode 16.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_1-release-notes).
 
 <a id="Screen-Saver"></a>
 
@@ -184554,7 +184782,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 18.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.2. The SDK comes bundled with Xcode 16.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
+The tvOS 18.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.2. The SDK comes bundled with Xcode 16.2. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
 
 <a id="SwiftUI"></a>
 
@@ -184594,7 +184822,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 18.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.3. The SDK comes bundled with Xcode 16.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
+The tvOS 18.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.3. The SDK comes bundled with Xcode 16.2. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
 
 <a id="General"></a>
 
@@ -184629,7 +184857,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 18.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.4. The SDK comes bundled with Xcode 16.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.3, see [Xcode 16.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_3-release-notes).
+The tvOS 18.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.4. The SDK comes bundled with Xcode 16.3. For information on the compatibility requirements for Xcode 16.3, see [Xcode 16.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_3-release-notes).
 
 <a id="Background-Assets"></a>
 
@@ -184747,7 +184975,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 18.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.5. The SDK comes bundled with Xcode 16.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
+The tvOS 18.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.5. The SDK comes bundled with Xcode 16.4. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -184786,7 +185014,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 18.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.6. The SDK comes bundled with Xcode 16.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
+The tvOS 18.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 18.6. The SDK comes bundled with Xcode 16.4. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
 
 <a id="General"></a>
 
@@ -184821,7 +185049,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 26 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26. The SDK comes bundled with Xcode 26, available from the Mac App Store. For information on the compatibility requirements for Xcode 26, see [Xcode 26 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26-release-notes).
+The tvOS 26 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26. The SDK comes bundled with Xcode 26. For information on the compatibility requirements for Xcode 26, see [Xcode 26 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26-release-notes).
 
 <a id="App-Store"></a>
 
@@ -185282,7 +185510,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 26.1 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.1. The SDK comes bundled with Xcode 26.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
+The tvOS 26.1 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.1. The SDK comes bundled with Xcode 26.1. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
 
 <a id="Background-Assets"></a>
 
@@ -185344,7 +185572,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 26.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.2. The SDK comes bundled with Xcode 26.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
+The tvOS 26.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.2. The SDK comes bundled with Xcode 26.2. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
 
 <a id="Apple-TV-app"></a>
 
@@ -185410,7 +185638,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 26.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.3. The SDK comes bundled with Xcode 26.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
+The tvOS 26.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.3. The SDK comes bundled with Xcode 26.2. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -185449,7 +185677,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 26.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.4. The SDK comes bundled with Xcode 26.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.4, see [Xcode 26.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_4-release-notes).
+The tvOS 26.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.4. The SDK comes bundled with Xcode 26.4. For information on the compatibility requirements for Xcode 26.4, see [Xcode 26.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_4-release-notes).
 
 <a id="Address-Sanitizer"></a>
 
@@ -185555,7 +185783,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 26.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.5. The SDK comes bundled with Xcode 26.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.5, see [Xcode 26.5 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_5-release-notes).
+The tvOS 26.5 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.5. The SDK comes bundled with Xcode 26.5. For information on the compatibility requirements for Xcode 26.5, see [Xcode 26.5 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_5-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -185624,7 +185852,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 26.6 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.6. The SDK comes bundled with Xcode 26.6, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.6, see [Xcode 26.6 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_6-release-notes).
+The tvOS 26.6 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.6. The SDK comes bundled with Xcode 26.6. For information on the compatibility requirements for Xcode 26.6, see [Xcode 26.6 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_6-release-notes).
 
 <a id="HealthKit"></a>
 
@@ -185673,7 +185901,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 26.6 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.6 Beat. The SDK comes bundled with Xcode 26.6, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.6, see [Xcode 26.6 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_6-release-notes).
+The tvOS 26.6 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 26.6 Beat. The SDK comes bundled with Xcode 26.6. For information on the compatibility requirements for Xcode 26.6, see [Xcode 26.6 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_6-release-notes).
 
 <a id="General"></a>
 
@@ -185697,7 +185925,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 27 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 27. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
+The tvOS 27 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 27. The SDK comes bundled with Xcode 27. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
 
 <a id="App-Intents"></a>
 
@@ -186074,15 +186302,15 @@ The tvOS 27 SDK provides support to develop tvOS apps for Apple TV devices runni
 
 ### tvOS 27
 
-- [tvOS 27.2 Beta 2 Release Notes](tvos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 27.2 Beta 3 Release Notes](tvos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: tvOS 27.2 Beta 2 Release Notes
+# Document: tvOS 27.2 Beta 3 Release Notes
 
 Source path: documentation/tvos-release-notes/tvos-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/tvos-release-notes/tvos-27_2-release-notes
 Description: Kind: Article
 
-# tvOS 27.2 Beta 2 Release Notes
+# tvOS 27.2 Beta 3 Release Notes
 
 **Kind:** Article
 
@@ -186092,7 +186320,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 27.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 27.2 beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The tvOS 27.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 27.2 beta 3. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="StoreKit-Testing-in-Xcode"></a>
 
@@ -186315,202 +186543,3 @@ To summarize, to provide descriptions of content to Apple TV, you must:
 
 - [Building a Full Screen Top Shelf Extension](building-a-full-screen-top-shelf-extension.md): Highlight content from your Apple TV application by building a full screen Top Shelf extension.
 - [TVTopShelfContentProvider](tvtopshelfcontentprovider.md): The main interface for your Top Shelf app extension, which you use to provide content for the top shelf area of the tvOS Home Screen.
-
-# Document: Mapping Apple TV users to app profiles
-
-Source path: documentation/tvservices/mapping-apple-tv-users-to-app-profiles
-Canonical documentation: https://developer.apple.com/documentation/tvservices/mapping-apple-tv-users-to-app-profiles
-Description: Interface languages: Swift, Objective-C
-
-# Mapping Apple TV users to app profiles
-
-**Interface languages:** Swift, Objective-C
-
-**Framework:** TV Services  
-**Kind:** Sample Code  
-**Availability:** tvOS 15.0+ · Xcode 14.0+
-
-Adapt the content of your app for the current viewer by using an entitlement and simplifying sign-in flows.
-
-<a id="Overview"></a>
-
-## Overview
-
-This sample demonstrates how to reduce configuration dialogs for people who share an Apple TV and a service account, such as a family media subscription. To let people get to your content more directly, your app should save shared login information where it can access the credentials regardless of the current user, and your code should also remember which profile to load for each user.
-
-> **Note**
-
-> This sample code project is associated with WWDC22 session 110384: [Support multiple users in tvOS apps](https://developer.apple.com/wwdc22/110384/).
-
-<a id="Configure-the-sample-code-project"></a>
-
-### Configure the sample code project
-
-Before you run the sample code project in Xcode:
-
-- Update your Apple TV to tvOS 15 or later. This app runs in single-user mode on tvOS 15 and supports multiple users on tvOS 16 and later.
-- Add users by choosing Settings \> Users and Accounts \> Add New User.
-- To switch TV users, press and hold the TV button on your remote or choose Settings \> Users and Accounts \> Switch Current User.
-
-<a id="Run-as-the-current-user"></a>
-
-### Run as the current user
-
-Apple TV supports multiple users. To opt-in to keeping separate data for each user, add the [User Management Entitlement](../bundleresources/entitlements/com.apple.developer.user-management.md) to your app or app extension, with the value `runs-as-current-user-with-user-independent-keychain`.
-
-```plist
-<key>com.apple.developer.user-management</key>
-<array>
-    <string>runs-as-current-user-with-user-independent-keychain</string>
-</array>
-```
-
-> **Note**
-
-> This entitlement value grants your app per-user data storage on tvOS 16 and higher but maintains single-user behavior on tvOS 15 or earlier.
-
-<a id="Save-each-users-profile"></a>
-
-### Save each user’s profile
-
-When your app or extension is running on tvOS 16 with multiple Apple TV users, you can store each person’s preferred profile directly with an API such as [`UserDefaults`](../foundation/userdefaults.md) or CloudKit; the system separates the data for each Apple TV user. Your code doesn’t have to handle any data partitioning.
-
-Here’s an example using [`UserDefaults`](../foundation/userdefaults.md) to save the profile.
-
-```swift
-private var selectedProfileIdentifier: String? {
-    didSet {
-        guard oldValue != selectedProfileIdentifier else { return }
-
-        // If running on tvOS 16, check if the selected profile should be
-        // remembered before storing it.
-        if #available(tvOS 16.0, *), userManager.shouldStorePreferencesForCurrentUser {
-            UserDefaults.standard.set(selectedProfileIdentifier, forKey: "PreferredProfileIdentifierKey")
-        }
-```
-
-The sample only attempts to save the selected profile when running on tvOS 16 or later; it doesn’t run as the current user on tvOS 15 or earlier. It also checks [`shouldStorePreferencesForCurrentUser`](tvusermanager/shouldstorepreferencesforcurrentuser.md) before saving to avoid remembering the selected profile in case there aren’t multiple users on the Apple TV.
-
-<a id="Skip-the-profile-picker-dialog"></a>
-
-### Skip the profile-picker dialog
-
-This sample app can skip the interstitial profile-picker dialog whenever a person who already has a saved profile launches the app.
-
-```swift
-private func presentProfilePickerIfNeeded() {
-    if #available(tvOS 16.0, *) {
-        // On tvOS 16, present the profile picker only if the Apple TV
-        // doesn't have multiple users, or the current user hasn't picked a
-        // profile yet.
-        if !userManager.shouldStorePreferencesForCurrentUser || profileData.selectedProfile == nil {
-            presentProfilePicker()
-        }
-    } else {
-        // Always present the profile picker on tvOS 15 and earlier.
-        presentProfilePicker()
-    }
-}
-```
-
-The sample still presents the profile picker if the Apple TV doesn’t have multiple users, the current user doesn’t have a saved profile, or the app is running on tvOS 15 or earlier.
-
-<a id="Store-shared-login-credentials-in-the-user-independent-Keychain"></a>
-
-### Store shared login credentials in the user-independent Keychain
-
-Another interstitial dialog that can get in the way of the content is the sign-in screen. Keychain data is automatically separated for each Apple TV user. To avoid having each user sign in individually, tvOS 16 adds a new Keychain API: [`kSecUseUserIndependentKeychain`](../security/ksecuseuserindependentkeychain.md).
-
-With [`kSecUseUserIndependentKeychain`](../security/ksecuseuserindependentkeychain.md), signing in only needs to happen once, even when running as the current user, because items stored using this property are accessible by all Apple TV users.
-
-```swift
-var baseQuery: [CFString: Any] = [
-    kSecAttrService: "com.example.apple-samplecode.ProfilesSample",
-    kSecClass: kSecClassGenericPassword
-]
-if #available(tvOS 16.0, *) {
-    baseQuery[kSecUseUserIndependentKeychain] = kCFBooleanTrue as AnyObject
-}
-self.baseQuery = baseQuery
-```
-
-The `loadCredentials` method in the `KeychainController` shows how to use the `baseQuery` above to read the username and password from the Keychain:
-
-```swift
-private func loadCredentials() {
-    var attributesQuery = baseQuery
-    attributesQuery[kSecReturnAttributes] = kCFBooleanTrue
-
-    // Read all attributes. This is where the username comes from.
-    var outAttributes: AnyObject?
-    guard SecItemCopyMatching(attributesQuery as CFDictionary, &outAttributes) == errSecSuccess,
-          let attributes = outAttributes as? [CFString: Any] else {
-        return
-    }
-
-    // This is where the password comes from.
-    var passwordQuery = baseQuery
-    passwordQuery[kSecAttrAccount] = attributes[kSecAttrAccount]
-    passwordQuery[kSecReturnData] = kCFBooleanTrue
-
-    var outPassword: AnyObject?
-    guard SecItemCopyMatching(passwordQuery as CFDictionary, &outPassword) == errSecSuccess,
-          let passwordData = outPassword as? Data else {
-        return
-    }
-
-    if let username = attributes[kSecAttrAccount] as? String,
-        let password = String(data: passwordData, encoding: .utf8) {
-        credentials = (username: username, password: password)
-    }
-}
-```
-
-You can also use the same `baseQuery` to save a new item with username and password.
-
-```swift
-func save(username: String, password: String) {
-    guard let passwordData = password.data(using: .utf8) else {
-        return
-    }
-
-    let attributes: [CFString: Any] = [
-        kSecAttrAccount: username,
-        kSecValueData: passwordData
-    ]
-
-    var status: OSStatus = errSecCoreFoundationUnknown
-    var itemExists = SecItemCopyMatching(baseQuery as CFDictionary, nil) == errSecSuccess
-
-    // Try to add the item to the keychain first.
-    if !itemExists {
-        let addAttributes = baseQuery.merging(attributes) { (current, _) in current }
-        status = SecItemAdd(addAttributes as CFDictionary, nil)
-        itemExists = status == errSecDuplicateItem
-    }
-
-    // Otherwise, update if it already exists.
-    if itemExists {
-        status = SecItemUpdate(baseQuery as CFDictionary, attributes as CFDictionary)
-    }
-
-    guard status == errSecSuccess else {
-        return
-    }
-
-    credentials = (username, password)
-}
-
-func removeCredentials() {
-    SecItemDelete(baseQuery as CFDictionary)
-    credentials = nil
-}
-```
-
-## See Also
-
-### Multiple users
-
-- [Personalizing Your App for Each User on Apple TV](personalizing-your-app-for-each-user-on-apple-tv.md): Use account-specific storage to segregate data on a multiuser system.
-- [Supporting Multiple Users in Your tvOS App](supporting-multiple-users-in-your-tvos-app.md): Store separate data for each user with the new Runs as Current User capability.
-- [TVUserManager](tvusermanager.md): An object that indicates how to store preferences for multiple people on a shared device.

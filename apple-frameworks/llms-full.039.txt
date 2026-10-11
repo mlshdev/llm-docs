@@ -1,10 +1,851 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 39
+
+# Document: JSGlobalContextRef
+
+Source path: documentation/javascriptcore/jsglobalcontextref
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextref
+Description: Framework: JavaScriptCore Kind: Type Alias Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+# JSGlobalContextRef (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Type Alias  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+A global JavaScript execution context.
+
+## Declaration
+
+```swift
+typealias JSGlobalContextRef = OpaquePointer
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A [JSGlobalContextRef](jsglobalcontextref.md) is a [JSContextRef](jscontextref.md).
+
+## Topics
+
+### Creating a global context
+
+- [JSGlobalContextCreate(\_:)](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
+- [JSGlobalContextCreateInGroup(\_:\_:)](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
+- [JSGlobalContextRetain(\_:)](jsglobalcontextretain%28__%29.md): Retains a global JavaScript execution context.
+- [JSGlobalContextRelease(\_:)](jsglobalcontextrelease%28__%29.md): Releases a global JavaScript execution context.
+
+### Managing the context’s name
+
+- [JSGlobalContextCopyName(\_:)](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
+- [JSGlobalContextSetName(\_:\_:)](jsglobalcontextsetname%28____%29.md): Sets the remote debugging name for a context.
+
+### Making a context inspectable
+
+- [JSGlobalContextIsInspectable(\_:)](jsglobalcontextisinspectable%28__%29.md): Returns a Boolean value that indicates whether the JavaScript context is inspectable.
+- [JSGlobalContextSetInspectable(\_:\_:)](jsglobalcontextsetinspectable%28____%29.md): Sets a JavaScript context to be either inspectable or not inspectable.
+
+## See Also
+
+### JavaScriptCore Engine Interface
+
+- [JSContextGroupRef](jscontextgroupref.md): A group that associates JavaScript contexts with one another.
+- [JSContextRef](jscontextref.md): A JavaScript execution context.
+- [JSStringRef](jsstringref.md): A UTF-16 character buffer.
+- [JSClassRef](jsclassref.md): A JavaScript class.
+
+# JSGlobalContextRef (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Type Alias  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+A global JavaScript execution context.
+
+## Declaration
+
+```objectivec
+typedef struct OpaqueJSContext * JSGlobalContextRef;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A [JSGlobalContextRef](jsglobalcontextref.md) is a [JSContextRef](jscontextref.md).
+
+## Topics
+
+### Creating a global context
+
+- [JSGlobalContextCreate](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
+- [JSGlobalContextCreateInGroup](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
+- [JSGlobalContextRetain](jsglobalcontextretain%28__%29.md): Retains a global JavaScript execution context.
+- [JSGlobalContextRelease](jsglobalcontextrelease%28__%29.md): Releases a global JavaScript execution context.
+
+### Managing the context’s name
+
+- [JSGlobalContextCopyName](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
+- [JSGlobalContextSetName](jsglobalcontextsetname%28____%29.md): Sets the remote debugging name for a context.
+
+### Making a context inspectable
+
+- [JSGlobalContextIsInspectable](jsglobalcontextisinspectable%28__%29.md): Returns a Boolean value that indicates whether the JavaScript context is inspectable.
+- [JSGlobalContextSetInspectable](jsglobalcontextsetinspectable%28____%29.md): Sets a JavaScript context to be either inspectable or not inspectable.
+
+## See Also
+
+### JavaScriptCore Engine Interface
+
+- [JSContextGroupRef](jscontextgroupref.md): A group that associates JavaScript contexts with one another.
+- [JSContextRef](jscontextref.md): A JavaScript execution context.
+- [JSStringRef](jsstringref.md): A UTF-16 character buffer.
+- [JSClassRef](jsclassref.md): A JavaScript class.
+
+# Document: JSGlobalContextRelease(_:)
+
+Source path: documentation/javascriptcore/jsglobalcontextrelease(_:)
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextrelease(_:)
+Description: Framework: JavaScriptCore Kind: Function Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+# JSGlobalContextRelease(\_:) (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Releases a global JavaScript execution context.
+
+## Declaration
+
+```swift
+func JSGlobalContextRelease(_ ctx: JSGlobalContextRef!)
+```
+
+## Parameters
+
+- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to release.
+
+## See Also
+
+### Creating a global context
+
+- [JSGlobalContextCreate(\_:)](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
+- [JSGlobalContextCreateInGroup(\_:\_:)](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
+- [JSGlobalContextRetain(\_:)](jsglobalcontextretain%28__%29.md): Retains a global JavaScript execution context.
+
+# JSGlobalContextRelease (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Releases a global JavaScript execution context.
+
+## Declaration
+
+```objectivec
+void JSGlobalContextRelease(JSGlobalContextRef ctx);
+```
+
+## Parameters
+
+- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to release.
+
+## See Also
+
+### Creating a global context
+
+- [JSGlobalContextCreate](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
+- [JSGlobalContextCreateInGroup](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
+- [JSGlobalContextRetain](jsglobalcontextretain%28__%29.md): Retains a global JavaScript execution context.
+
+# Document: JSGlobalContextRetain(_:)
+
+Source path: documentation/javascriptcore/jsglobalcontextretain(_:)
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextretain(_:)
+Description: Framework: JavaScriptCore Kind: Function Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+# JSGlobalContextRetain(\_:) (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Retains a global JavaScript execution context.
+
+## Declaration
+
+```swift
+func JSGlobalContextRetain(_ ctx: JSGlobalContextRef!) -> JSGlobalContextRef!
+```
+
+## Parameters
+
+- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to retain.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [JSGlobalContextRef](jsglobalcontextref.md) that is the same as `ctx`.
+
+## See Also
+
+### Creating a global context
+
+- [JSGlobalContextCreate(\_:)](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
+- [JSGlobalContextCreateInGroup(\_:\_:)](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
+- [JSGlobalContextRelease(\_:)](jsglobalcontextrelease%28__%29.md): Releases a global JavaScript execution context.
+
+# JSGlobalContextRetain (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Retains a global JavaScript execution context.
+
+## Declaration
+
+```objectivec
+JSGlobalContextRefJSGlobalContextRetain(JSGlobalContextRef ctx);
+```
+
+## Parameters
+
+- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to retain.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [JSGlobalContextRef](jsglobalcontextref.md) that is the same as `ctx`.
+
+## See Also
+
+### Creating a global context
+
+- [JSGlobalContextCreate](jsglobalcontextcreate%28__%29.md): Creates a global JavaScript execution context.
+- [JSGlobalContextCreateInGroup](jsglobalcontextcreateingroup%28____%29.md): Creates a global JavaScript execution context in the provided context group.
+- [JSGlobalContextRelease](jsglobalcontextrelease%28__%29.md): Releases a global JavaScript execution context.
+
+# Document: JSGlobalContextSetInspectable(_:_:)
+
+Source path: documentation/javascriptcore/jsglobalcontextsetinspectable(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextsetinspectable(_:_:)
+Description: Framework: JavaScriptCore Kind: Function Availability: iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 9.0+ · visionOS 1.0+
+
+# JSGlobalContextSetInspectable(\_:\_:) (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 9.0+ · visionOS 1.0+
+
+Sets a JavaScript context to be either inspectable or not inspectable.
+
+## Declaration
+
+```swift
+func JSGlobalContextSetInspectable(_ ctx: JSGlobalContextRef!, _ inspectable: Bool)
+```
+
+## Parameters
+
+- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to set whether it’s inspectable.
+- `inspectable`: A Boolean value that indicates whether the context is inspectable.
+
+## Topics
+
+### Related Documentation
+
+- [JSGlobalContextCopyName(\_:)](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
+- [JSGlobalContextSetName(\_:\_:)](jsglobalcontextsetname%28____%29.md): Sets the remote debugging name for a context.
+
+## See Also
+
+### Making a context inspectable
+
+- [JSGlobalContextIsInspectable(\_:)](jsglobalcontextisinspectable%28__%29.md): Returns a Boolean value that indicates whether the JavaScript context is inspectable.
+
+# JSGlobalContextSetInspectable (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 9.0+ · visionOS 1.0+
+
+Sets a JavaScript context to be either inspectable or not inspectable.
+
+## Declaration
+
+```objectivec
+void JSGlobalContextSetInspectable(JSGlobalContextRef ctx, bool inspectable);
+```
+
+## Parameters
+
+- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) to set whether it’s inspectable.
+- `inspectable`: A Boolean value that indicates whether the context is inspectable.
+
+## Topics
+
+### Related Documentation
+
+- [JSGlobalContextCopyName](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
+- [JSGlobalContextSetName](jsglobalcontextsetname%28____%29.md): Sets the remote debugging name for a context.
+
+## See Also
+
+### Making a context inspectable
+
+- [JSGlobalContextIsInspectable](jsglobalcontextisinspectable%28__%29.md): Returns a Boolean value that indicates whether the JavaScript context is inspectable.
+
+# Document: JSGlobalContextSetName(_:_:)
+
+Source path: documentation/javascriptcore/jsglobalcontextsetname(_:_:)
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsglobalcontextsetname(_:_:)
+Description: Framework: JavaScriptCore Kind: Function Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+# JSGlobalContextSetName(\_:\_:) (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+Sets the remote debugging name for a context.
+
+## Declaration
+
+```swift
+func JSGlobalContextSetName(_ ctx: JSGlobalContextRef!, _ name: JSStringRef!)
+```
+
+## Parameters
+
+- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) that you want to name.
+- `name`: The remote debugging name to set on `ctx`.
+
+## See Also
+
+### Managing the context’s name
+
+- [JSGlobalContextCopyName(\_:)](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
+
+# JSGlobalContextSetName (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+Sets the remote debugging name for a context.
+
+## Declaration
+
+```objectivec
+void JSGlobalContextSetName(JSGlobalContextRef ctx, JSStringRef name);
+```
+
+## Parameters
+
+- `ctx`: The [JSGlobalContextRef](jsglobalcontextref.md) that you want to name.
+- `name`: The remote debugging name to set on `ctx`.
+
+## See Also
+
+### Managing the context’s name
+
+- [JSGlobalContextCopyName](jsglobalcontextcopyname%28__%29.md): Gets a copy of the name of a context.
+
+# Document: JSManagedValue
+
+Source path: documentation/javascriptcore/jsmanagedvalue
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue
+Description: Framework: JavaScriptCore Kind: Class Availability: iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+# JSManagedValue (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Class  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+A JavaScript value with conditional retain behavior to provide automatic memory management.
+
+## Declaration
+
+```swift
+class JSManagedValue
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The primary use case for a managed value is to store a JavaScript value in an Objective-C or Swift object that exports to JavaScript.
+
+> **Important**
+
+>  Don’t store a nonmanaged [JSValue](jsvalue.md) object in a native object that exports to JavaScript. Because a [JSValue](jsvalue.md) object references its enclosing [JSContext](jscontext.md) object, this action creates a retain cycle, preventing deallocation of the context.
+
+A managed value’s *conditional retain* behavior ensures retention of its underlying JavaScript value as long as either of the following conditions is true:
+
+- The JavaScript value is reachable through the JavaScript object graph (that is, not subject to JavaScript garbage collection).
+- The [JSManagedValue](jsmanagedvalue.md) object is reachable through the Objective-C or Swift object graph, as you report to the JavaScriptCore virtual machine using the [addManagedReference(\_:withOwner:)](jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
+
+However, if neither of these conditions is true, the managed value sets its [value](jsmanagedvalue/value.md) property to `nil`, releasing the underlying [JSValue](jsvalue.md) object.
+
+> **Note**
+
+>  On its own, a [JSManagedValue](jsmanagedvalue.md) object behaves similarly to an ARC weak reference to its underlying [JSValue](jsvalue.md) object—that is, if you don’t use the [addManagedReference(\_:withOwner:)](jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method to add conditional retain behavior, the managed value’s [value](jsmanagedvalue/value.md) property automatically becomes `nil` when the JavaScript garbage collector destroys the underlying JavaScript value.
+
+## Topics
+
+### Creating a Managed Value
+
+- [init(value:)](jsmanagedvalue/init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
+- [init(value:andOwner:)](jsmanagedvalue/init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
+
+### Accessing the Managed Value
+
+- [value](jsmanagedvalue/value.md): The managed value’s underlying JavaScript value.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### JavaScript Code
+
+- [JSValue](jsvalue.md): A JavaScript value.
+
+# JSManagedValue (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Class  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+A JavaScript value with conditional retain behavior to provide automatic memory management.
+
+## Declaration
+
+```objectivec
+@interface JSManagedValue : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The primary use case for a managed value is to store a JavaScript value in an Objective-C or Swift object that exports to JavaScript.
+
+> **Important**
+
+>  Don’t store a nonmanaged [JSValue](jsvalue.md) object in a native object that exports to JavaScript. Because a [JSValue](jsvalue.md) object references its enclosing [JSContext](jscontext.md) object, this action creates a retain cycle, preventing deallocation of the context.
+
+A managed value’s *conditional retain* behavior ensures retention of its underlying JavaScript value as long as either of the following conditions is true:
+
+- The JavaScript value is reachable through the JavaScript object graph (that is, not subject to JavaScript garbage collection).
+- The [JSManagedValue](jsmanagedvalue.md) object is reachable through the Objective-C or Swift object graph, as you report to the JavaScriptCore virtual machine using the [addManagedReference:withOwner:](jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
+
+However, if neither of these conditions is true, the managed value sets its [value](jsmanagedvalue/value.md) property to `nil`, releasing the underlying [JSValue](jsvalue.md) object.
+
+> **Note**
+
+>  On its own, a [JSManagedValue](jsmanagedvalue.md) object behaves similarly to an ARC weak reference to its underlying [JSValue](jsvalue.md) object—that is, if you don’t use the [addManagedReference:withOwner:](jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method to add conditional retain behavior, the managed value’s [value](jsmanagedvalue/value.md) property automatically becomes `nil` when the JavaScript garbage collector destroys the underlying JavaScript value.
+
+## Topics
+
+### Creating a Managed Value
+
+- [initWithValue:](jsmanagedvalue/init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
+- [managedValueWithValue:](jsmanagedvalue/managedvaluewithvalue_.md): Creates a managed value with the specified JavaScript value.
+- [managedValueWithValue:andOwner:](jsmanagedvalue/init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
+
+### Accessing the Managed Value
+
+- [value](jsmanagedvalue/value.md): The managed value’s underlying JavaScript value.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### JavaScript Code
+
+- [JSValue](jsvalue.md): A JavaScript value.
+
+# Document: init(value:)
+
+Source path: documentation/javascriptcore/jsmanagedvalue/init(value:)
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue/init(value:)
+Description: Framework: JavaScriptCore Kind: Initializer Availability: iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+# init(value:) (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Initializer  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a managed value with the specified JavaScript value.
+
+## Declaration
+
+```swift
+init!(value: JSValue!)
+```
+
+## Parameters
+
+- `value`: A JavaScript value.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new managed value.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To ensure that the underlying JavaScript value is retained as long as the managed value remains in use in the Objective-C or Swift runtime, report the managed value’s owner to the JavaScriptCore virtual machine using the [addManagedReference(\_:withOwner:)](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
+
+## See Also
+
+### Creating a Managed Value
+
+- [init(value:andOwner:)](init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
+
+# initWithValue: (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Instance Method  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a managed value with the specified JavaScript value.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithValue:(JSValue *) value;
+```
+
+## Parameters
+
+- `value`: A JavaScript value.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new managed value.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To ensure that the underlying JavaScript value is retained as long as the managed value remains in use in the Objective-C or Swift runtime, report the managed value’s owner to the JavaScriptCore virtual machine using the [addManagedReference:withOwner:](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
+
+## See Also
+
+### Creating a Managed Value
+
+- [managedValueWithValue:](managedvaluewithvalue_.md): Creates a managed value with the specified JavaScript value.
+- [managedValueWithValue:andOwner:](init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
+
+# Document: init(value:andOwner:)
+
+Source path: documentation/javascriptcore/jsmanagedvalue/init(value:andowner:)
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue/init(value:andowner:)
+Description: Framework: JavaScriptCore Kind: Initializer Availability: iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+# init(value:andOwner:) (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+Creates a managed value and associates it with an owner.
+
+## Declaration
+
+```swift
+init!(value: JSValue!, andOwner owner: Any!)
+```
+
+## Parameters
+
+- `value`: A JavaScript value.
+- `owner`: The Objective-C or Swift object responsible for
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new managed value.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Calling this method is equivalent to creating a managed value and then reporting it to the JavaScriptCore virtual machine using the [addManagedReference(\_:withOwner:)](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
+
+## See Also
+
+### Creating a Managed Value
+
+- [init(value:)](init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
+
+# managedValueWithValue:andOwner: (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Type Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+Creates a managed value and associates it with an owner.
+
+## Declaration
+
+```objectivec
++ (JSManagedValue *) managedValueWithValue:(JSValue *) value andOwner:(id) owner;
+```
+
+## Parameters
+
+- `value`: A JavaScript value.
+- `owner`: The Objective-C or Swift object responsible for
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new managed value.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Calling this method is equivalent to creating a managed value and then reporting it to the JavaScriptCore virtual machine using the [addManagedReference:withOwner:](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
+
+## See Also
+
+### Creating a Managed Value
+
+- [initWithValue:](init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
+- [managedValueWithValue:](managedvaluewithvalue_.md): Creates a managed value with the specified JavaScript value.
+
+# Document: managedValueWithValue:
+
+Source path: documentation/javascriptcore/jsmanagedvalue/managedvaluewithvalue:
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue/managedvaluewithvalue:
+Description: Interface language: Objective-C
+
+# managedValueWithValue:
+
+**Interface language:** Objective-C
+
+**Framework:** JavaScriptCore  
+**Kind:** Type Method  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+Creates a managed value with the specified JavaScript value.
+
+## Declaration
+
+```objectivec
++ (JSManagedValue *) managedValueWithValue:(JSValue *) value;
+```
+
+## Parameters
+
+- `value`: A JavaScript value.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new managed value.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To ensure that the underlying JavaScript value is retained as long as the managed value remains in use in the Objective-C or Swift runtime, report the managed value’s owner to the JavaScriptCore virtual machine using the [addManagedReference:withOwner:](../jsvirtualmachine/addmanagedreference%28__withowner_%29.md) method.
+
+## See Also
+
+### Creating a Managed Value
+
+- [initWithValue:](init%28value_%29.md): Initializes a managed value with the specified JavaScript value.
+- [managedValueWithValue:andOwner:](init%28value_andowner_%29.md): Creates a managed value and associates it with an owner.
+
+# Document: value
+
+Source path: documentation/javascriptcore/jsmanagedvalue/value
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsmanagedvalue/value
+Description: Framework: JavaScriptCore Kind: Instance Property Availability: iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+# value (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Instance Property  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+The managed value’s underlying JavaScript value.
+
+## Declaration
+
+```swift
+var value: JSValue! { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the JavaScript garbage collector removes the underlying value, this property becomes `nil`.
+
+# value (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Instance Property  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+The managed value’s underlying JavaScript value.
+
+## Declaration
+
+```objectivec
+@property (strong, readonly) JSValue * value;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the JavaScript garbage collector removes the underlying value, this property becomes `nil`.
+
+# Document: JSObjectCallAsConstructor(_:_:_:_:_:)
+
+Source path: documentation/javascriptcore/jsobjectcallasconstructor(_:_:_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/javascriptcore/jsobjectcallasconstructor(_:_:_:_:_:)
+Description: Framework: JavaScriptCore Kind: Function Availability: iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+# JSObjectCallAsConstructor(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Calls an object as a constructor.
+
+## Declaration
+
+```swift
+func JSObjectCallAsConstructor(_ ctx: JSContextRef!, _ object: JSObjectRef!, _ argumentCount: Int, _ arguments: UnsafePointer<JSValueRef?>!, _ exception: UnsafeMutablePointer<JSValueRef?>!) -> JSObjectRef!
+```
+
+## Parameters
+
+- `ctx`: The execution context to use.
+- `object`: The [JSObjectRef](jsobjectref.md) to call as a constructor.
+- `argumentCount`: An integer count of the number of arguments in `arguments`.
+- `arguments`: A [JSValueRef](jsvalueref.md) array of arguments to pass to the constructor. Pass `NULL` if `argumentCount` is `0`.
+- `exception`: A pointer to a [JSValueRef](jsvalueref.md) to store an exception in, if any. Pass `NULL` to discard any exception.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The [JSObjectRef](jsobjectref.md) that results from calling `object` as a constructor, or `NULL` if the system throws an exception or `object` isn’t a constructor.
+
+## See Also
+
+### Working with Objects
+
+- [JSObjectCallAsFunction(\_:\_:\_:\_:\_:\_:)](jsobjectcallasfunction%28____________%29.md): Calls an object as a function.
+- [JSObjectCopyPropertyNames(\_:\_:)](jsobjectcopypropertynames%28____%29.md): Gets the names of an object’s enumerable properties.
+- [JSObjectDeleteProperty(\_:\_:\_:\_:)](jsobjectdeleteproperty%28________%29.md): Deletes a property from an object.
+- [JSObjectGetPrivate(\_:)](jsobjectgetprivate%28__%29.md): Gets an object’s private data.
+- [JSObjectGetProperty(\_:\_:\_:\_:)](jsobjectgetproperty%28________%29.md): Gets a property from an object.
+- [JSObjectGetPropertyAtIndex(\_:\_:\_:\_:)](jsobjectgetpropertyatindex%28________%29.md): Gets a property from an object by numeric index.
+- [JSObjectGetPrototype(\_:\_:)](jsobjectgetprototype%28____%29.md): Gets an object’s prototype.
+- [JSObjectHasProperty(\_:\_:\_:)](jsobjecthasproperty%28______%29.md): Tests whether an object has a specified property.
+- [JSObjectIsConstructor(\_:\_:)](jsobjectisconstructor%28____%29.md): Tests whether you can call an object as a constructor.
+- [JSObjectIsFunction(\_:\_:)](jsobjectisfunction%28____%29.md): Tests whether you can call an object as a function.
+- [JSObjectMake(\_:\_:\_:)](jsobjectmake%28______%29.md): Creates a JavaScript object.
+- [JSObjectMakeArray(\_:\_:\_:\_:)](jsobjectmakearray%28________%29.md): Creates a JavaScript array object.
+- [JSObjectMakeConstructor(\_:\_:\_:)](jsobjectmakeconstructor%28______%29.md): Creates a JavaScript constructor.
+- [JSObjectMakeDate(\_:\_:\_:\_:)](jsobjectmakedate%28________%29.md): Creates a JavaScript date object as though invoking the built-in date constructor.
+- [JSObjectMakeError(\_:\_:\_:\_:)](jsobjectmakeerror%28________%29.md): Creates a JavaScript error object as though invoking the built-in error constructor.
+
+# JSObjectCallAsConstructor (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Function  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Calls an object as a constructor.
+
+## Declaration
+
+```objectivec
+JSObjectRefJSObjectCallAsConstructor(JSContextRef ctx, JSObjectRef object, size_t argumentCount, JSValueRef const arguments[], JSValueRef*exception);
+```
+
+## Parameters
+
+- `ctx`: The execution context to use.
+- `object`: The [JSObjectRef](jsobjectref.md) to call as a constructor.
+- `argumentCount`: An integer count of the number of arguments in `arguments`.
+- `arguments`: A [JSValueRef](jsvalueref.md) array of arguments to pass to the constructor. Pass `NULL` if `argumentCount` is `0`.
+- `exception`: A pointer to a [JSValueRef](jsvalueref.md) to store an exception in, if any. Pass `NULL` to discard any exception.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The [JSObjectRef](jsobjectref.md) that results from calling `object` as a constructor, or `NULL` if the system throws an exception or `object` isn’t a constructor.
+
+## See Also
+
+### Working with Objects
+
+- [JSObjectCallAsFunction](jsobjectcallasfunction%28____________%29.md): Calls an object as a function.
+- [JSObjectCopyPropertyNames](jsobjectcopypropertynames%28____%29.md): Gets the names of an object’s enumerable properties.
+- [JSObjectDeleteProperty](jsobjectdeleteproperty%28________%29.md): Deletes a property from an object.
+- [JSObjectGetPrivate](jsobjectgetprivate%28__%29.md): Gets an object’s private data.
+- [JSObjectGetProperty](jsobjectgetproperty%28________%29.md): Gets a property from an object.
+- [JSObjectGetPropertyAtIndex](jsobjectgetpropertyatindex%28________%29.md): Gets a property from an object by numeric index.
+- [JSObjectGetPrototype](jsobjectgetprototype%28____%29.md): Gets an object’s prototype.
+- [JSObjectHasProperty](jsobjecthasproperty%28______%29.md): Tests whether an object has a specified property.
+- [JSObjectIsConstructor](jsobjectisconstructor%28____%29.md): Tests whether you can call an object as a constructor.
+- [JSObjectIsFunction](jsobjectisfunction%28____%29.md): Tests whether you can call an object as a function.
+- [JSObjectMake](jsobjectmake%28______%29.md): Creates a JavaScript object.
+- [JSObjectMakeArray](jsobjectmakearray%28________%29.md): Creates a JavaScript array object.
+- [JSObjectMakeConstructor](jsobjectmakeconstructor%28______%29.md): Creates a JavaScript constructor.
+- [JSObjectMakeDate](jsobjectmakedate%28________%29.md): Creates a JavaScript date object as though invoking the built-in date constructor.
+- [JSObjectMakeError](jsobjectmakeerror%28________%29.md): Creates a JavaScript error object as though invoking the built-in error constructor.
 
 # Document: JSObjectCallAsConstructorCallback
 
@@ -114889,6 +115730,8 @@ The implementation of your [drawMapRect:zoomScale:inContext:](mkoverlayview/draw
 - [NSCoding](../foundation/nscoding.md)
 - [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIAccessibilityIdentification](../uikit/uiaccessibilityidentification.md)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UIAppearance](../uikit/uiappearance.md)
@@ -175164,784 +176007,4 @@ static var clusterElectricalPowerMeasurementAttributeAccuracyID: MTRAttributeIDT
 
 ```objectivec
 MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeAccuracyID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeActiveCurrentID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeactivecurrentid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeactivecurrentid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeActiveCurrentID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeActiveCurrentID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeActiveCurrentID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeActiveCurrentID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeActivePowerID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeactivepowerid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeactivepowerid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeActivePowerID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeActivePowerID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeActivePowerID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeActivePowerID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeApparentCurrentID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeapparentcurrentid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeapparentcurrentid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeApparentCurrentID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeApparentCurrentID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeApparentCurrentID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeApparentCurrentID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeApparentPowerID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeapparentpowerid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeapparentpowerid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeApparentPowerID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeApparentPowerID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeApparentPowerID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeApparentPowerID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeAttributeListID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeattributelistid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeattributelistid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeAttributeListID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeAttributeListID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeAttributeListID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeAttributeListID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeClusterRevisionID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeclusterrevisionid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeclusterrevisionid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeClusterRevisionID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeClusterRevisionID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeClusterRevisionID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeClusterRevisionID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeFeatureMapID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributefeaturemapid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributefeaturemapid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeFeatureMapID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeFeatureMapID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeFeatureMapID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeFeatureMapID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeFrequencyID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributefrequencyid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributefrequencyid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeFrequencyID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeFrequencyID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeFrequencyID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeFrequencyID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeGeneratedCommandListID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributegeneratedcommandlistid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributegeneratedcommandlistid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeGeneratedCommandListID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeGeneratedCommandListID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeGeneratedCommandListID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeGeneratedCommandListID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeHarmonicCurrentsID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeharmoniccurrentsid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeharmoniccurrentsid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeHarmonicCurrentsID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeHarmonicCurrentsID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeHarmonicCurrentsID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeHarmonicCurrentsID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeHarmonicPhasesID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeharmonicphasesid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeharmonicphasesid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeHarmonicPhasesID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeHarmonicPhasesID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeHarmonicPhasesID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeHarmonicPhasesID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeNeutralCurrentID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeneutralcurrentid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeneutralcurrentid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeNeutralCurrentID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeNeutralCurrentID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeNeutralCurrentID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeNeutralCurrentID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributenumberofmeasurementtypesid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributenumberofmeasurementtypesid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributePowerFactorID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributepowerfactorid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributepowerfactorid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributePowerFactorID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributePowerFactorID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributePowerFactorID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributePowerFactorID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributePowerModeID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributepowermodeid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributepowermodeid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributePowerModeID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributePowerModeID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributePowerModeID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributePowerModeID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeRangesID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributerangesid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributerangesid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeRangesID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeRangesID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRangesID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRangesID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeReactiveCurrentID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributereactivecurrentid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributereactivecurrentid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeReactiveCurrentID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeReactiveCurrentID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeReactiveCurrentID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeReactiveCurrentID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeReactivePowerID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributereactivepowerid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributereactivepowerid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeReactivePowerID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeReactivePowerID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeReactivePowerID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeReactivePowerID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeRMSCurrentID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermscurrentid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermscurrentid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeRMSCurrentID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeRMSCurrentID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSCurrentID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSCurrentID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeRMSPowerID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermspowerid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermspowerid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeRMSPowerID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeRMSPowerID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSPowerID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSPowerID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeRMSVoltageID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermsvoltageid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermsvoltageid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeRMSVoltageID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeRMSVoltageID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSVoltageID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSVoltageID
-```
-
-# Document: clusterElectricalPowerMeasurementAttributeVoltageID
-
-Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributevoltageid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributevoltageid
-Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-# clusterElectricalPowerMeasurementAttributeVoltageID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```swift
-static var clusterElectricalPowerMeasurementAttributeVoltageID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeVoltageID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeVoltageID
-```
-
-# Document: clusterEnergyEVSEAttributeAcceptedCommandListID
-
-Source path: documentation/matter/mtrattributeidtype/clusterenergyevseattributeacceptedcommandlistid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterenergyevseattributeacceptedcommandlistid
-Description: Framework: Matter Kind: Type Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-# clusterEnergyEVSEAttributeAcceptedCommandListID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-## Declaration
-
-```swift
-static var clusterEnergyEVSEAttributeAcceptedCommandListID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterEnergyEVSEAttributeAcceptedCommandListID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterEnergyEVSEAttributeAcceptedCommandListID
-```
-
-# Document: clusterEnergyEVSEAttributeApproximateEVEfficiencyID
-
-Source path: documentation/matter/mtrattributeidtype/clusterenergyevseattributeapproximateevefficiencyid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterenergyevseattributeapproximateevefficiencyid
-Description: Framework: Matter Kind: Type Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-# clusterEnergyEVSEAttributeApproximateEVEfficiencyID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-## Declaration
-
-```swift
-static var clusterEnergyEVSEAttributeApproximateEVEfficiencyID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterEnergyEVSEAttributeApproximateEVEfficiencyID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterEnergyEVSEAttributeApproximateEVEfficiencyID
-```
-
-# Document: clusterEnergyEVSEAttributeAttributeListID
-
-Source path: documentation/matter/mtrattributeidtype/clusterenergyevseattributeattributelistid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterenergyevseattributeattributelistid
-Description: Framework: Matter Kind: Type Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-# clusterEnergyEVSEAttributeAttributeListID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-## Declaration
-
-```swift
-static var clusterEnergyEVSEAttributeAttributeListID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterEnergyEVSEAttributeAttributeListID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterEnergyEVSEAttributeAttributeListID
-```
-
-# Document: clusterEnergyEVSEAttributeChargingEnabledUntilID
-
-Source path: documentation/matter/mtrattributeidtype/clusterenergyevseattributechargingenableduntilid
-Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterenergyevseattributechargingenableduntilid
-Description: Framework: Matter Kind: Type Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-# clusterEnergyEVSEAttributeChargingEnabledUntilID (Swift)
-
-**Framework:** Matter  
-**Kind:** Type Property  
-**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-## Declaration
-
-```swift
-static var clusterEnergyEVSEAttributeChargingEnabledUntilID: MTRAttributeIDType { get }
-```
-
-# MTRAttributeIDTypeClusterEnergyEVSEAttributeChargingEnabledUntilID (Objective-C)
-
-**Framework:** Matter  
-**Kind:** Enumeration Case  
-**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
-
-## Declaration
-
-```objectivec
-MTRAttributeIDTypeClusterEnergyEVSEAttributeChargingEnabledUntilID
 ```

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_7-release-notes
 
 # iOS & iPadOS 14.7 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-To develop apps for iOS & iPadOS 14.7, build your apps against the iOS 14.5 SDK or later. The SDK comes bundled with Xcode 12.5.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
+To develop apps for iOS & iPadOS 14.7, build your apps against the iOS 14.5 SDK or later. The SDK comes bundled with Xcode 12.5.1. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
 
 <a id="Battery-Health"></a>
 

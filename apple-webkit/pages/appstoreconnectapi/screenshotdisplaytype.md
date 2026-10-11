@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/screenshotdisplaytype
 
 # ScreenshotDisplayType
@@ -63,9 +63,9 @@ string ScreenshotDisplayType
 
 ### Objects and Data Types
 
-- [AppScreenshotSet](appscreenshotset.md): The data structure that represent an app screenshot set resource.
-- [AppScreenshotSetCreateRequest](appscreenshotsetcreaterequest.md): The request body you use to create an app screenshot set.
-- [AppScreenshotSetResponse](appscreenshotsetresponse.md): The response body for endpoints that create or read a set of app screenshots for a display size.
-- [AppScreenshotSetsResponse](appscreenshotsetsresponse.md): The response body for endpoints that list app screenshot sets for an App Store version localization.
-- [AppScreenshotSetAppScreenshotsLinkagesRequest](appscreenshotsetappscreenshotslinkagesrequest.md): A request body you use to reorder the screenshots in a screenshot set.
-- [AppScreenshotSetAppScreenshotsLinkagesResponse](appscreenshotsetappscreenshotslinkagesresponse.md): A response body that contains a list of related resource IDs.
+- [AppScreenshotSet](appscreenshotset.md): Deprecated. The data structure that represent an app screenshot set resource.
+- [AppScreenshotSetCreateRequest](appscreenshotsetcreaterequest.md): Deprecated. The request body you use to create an app screenshot set.
+- [AppScreenshotSetResponse](appscreenshotsetresponse.md): Deprecated. The response body for endpoints that create or read a set of app screenshots for a display size.
+- [AppScreenshotSetsResponse](appscreenshotsetsresponse.md): Deprecated. The response body for endpoints that list app screenshot sets for an App Store version localization.
+- [AppScreenshotSetAppScreenshotsLinkagesRequest](appscreenshotsetappscreenshotslinkagesrequest.md): Deprecated. A request body you use to reorder the screenshots in a screenshot set.
+- [AppScreenshotSetAppScreenshotsLinkagesResponse](appscreenshotsetappscreenshotslinkagesresponse.md): Deprecated. A response body that contains a list of related resource IDs.

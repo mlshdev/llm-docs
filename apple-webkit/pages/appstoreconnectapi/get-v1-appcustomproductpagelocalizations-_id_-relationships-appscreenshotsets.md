@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appcustomproductpagelocalizations-_id_-relationships-appscreenshotsets
 
 # List app screenshot sets IDs for a custom product page localization
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 4.0+
+**Availability:** App Store Connect API 4.0+ (deprecated in 4.5)
 
 List the app screenshot set IDs for a specific custom product page localization.
+
+> This relationship is deprecated. Use the [AppAssetLibraryPlacement](appassetlibraryplacement.md) relationship instead.
 
 ## URL
 
@@ -39,4 +41,4 @@ GET https://api.appstoreconnect.apple.com/v1/appCustomProductPageLocalizations/{
 
 ### Getting screenshot information
 
-- [List App Screenshot Sets for a Custom Product Page Localization](get-v1-appcustomproductpagelocalizations-_id_-appscreenshotsets.md): List the app screenshot sets for a specific custom product page localization.
+- [List App Screenshot Sets for a Custom Product Page Localization](get-v1-appcustomproductpagelocalizations-_id_-appscreenshotsets.md): Deprecated. List the app screenshot sets for a specific custom product page localization.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/merchanttokennotificationservices/cardart
 
 # CardArt
@@ -37,3 +37,5 @@ object CardArt
 - [MerchantTokenEventResponse](merchanttokeneventresponse.md): A response body that contains information about a life-cycle event for a merchant token.
 - [MerchantTokenMetadata](merchanttokenmetadata.md): The card information related to a merchant token, including its card art and metadata.
 - [CardMetadata](cardmetadata.md): Data about the card, including its expiration date and suffix.
+- [EncryptedTokenMetadata](encryptedtokenmetadata.md): Encrypted data about the merchant token, including its Merchant Payment Account Number (MPAN) and expiration date.
+- [TokenMetadata](tokenmetadata.md): Unencrypted metadata about a merchant token, including its Merchant Payment Account Number (MPAN) and expiration date.

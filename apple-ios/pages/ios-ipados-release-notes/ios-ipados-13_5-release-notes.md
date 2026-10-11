@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-13_5-release-notes
 
 # iOS & iPadOS 13.5 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS & iPadOS 13.5 SDK provides support to develop apps for iPhone, iPad, and iPod touch devices running iOS & iPadOS 13.5. The SDK comes bundled with Xcode 11.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
+The iOS & iPadOS 13.5 SDK provides support to develop apps for iPhone, iPad, and iPod touch devices running iOS & iPadOS 13.5. The SDK comes bundled with Xcode 11.5. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
 
 <a id="Music"></a>
 

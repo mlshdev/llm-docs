@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appscreenshotsetcreaterequest/data-data.dictionary
 
 # AppScreenshotSetCreateRequest.Data
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Object  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 The data element of the request body.
+
+> This object is deprecated. Use [AppAssetLibraryPlacementCreateRequest](../appassetlibraryplacementcreaterequest.md) instead.
 
 ## Declaration
 
@@ -27,5 +29,5 @@ object AppScreenshotSetCreateRequest.Data
 
 ### Objects
 
-- [AppScreenshotSetCreateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes that you set that describe the new resource.
-- [AppScreenshotSetCreateRequest.Data.Relationships](data-data.dictionary/relationships-data.dictionary.md): The relationships to other resources that you can set with this request.
+- [AppScreenshotSetCreateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Deprecated. Attributes that you set that describe the new resource.
+- [AppScreenshotSetCreateRequest.Data.Relationships](data-data.dictionary/relationships-data.dictionary.md): Deprecated. The relationships to other resources that you can set with this request.

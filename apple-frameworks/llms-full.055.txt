@@ -1,10 +1,322 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 55
+
+# Document: appAppleId
+
+Source path: documentation/retentionmessaging/appappleid
+Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/appappleid
+Description: Interface language: Data
+
+# appAppleId
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Type  
+**Availability:** Retention Messaging API 1.0+
+
+The unique identifier of an app in the App Store.
+
+## Declaration
+
+```
+int64 appAppleId
+```
+
+## See Also
+
+### Real-time request body
+
+- [signedPayload](signedpayload.md): The payload in a JSON Web Signature (JWS) format, signed by the App Store.
+- [originalTransactionId](originaltransactionid.md): The original transaction identifier of an In-App Purchase.
+- [requestIdentifier](requestidentifier.md): A unique identifier the App Store server creates for its requests.
+- [signedDate](signeddate.md): The UNIX time, in milliseconds, that the App Store signed the JSON Web Signature data.
+- [environment](environment.md): The server environment, either sandbox or production.
+
+# Document: BadRequestAboveImageRequiresAnImageError
+
+Source path: documentation/retentionmessaging/badrequestaboveimagerequiresanimageerror
+Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/badrequestaboveimagerequiresanimageerror
+Description: Interface language: Data
+
+# BadRequestAboveImageRequiresAnImageError
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.4+
+
+An error that indicates that no image object is included, but the request indicates that the header should be placed above the image.
+
+## Declaration
+
+```
+object BadRequestAboveImageRequiresAnImageError
+```
+
+## Properties
+
+- `errorCode` — `number`: **Allowed values:** `4000224`
+- `errorMessage` — `string`: **Allowed values:** `Invalid request. ABOVE_IMAGE requires an image to be provided.`
+
+## See Also
+
+### Errors for bad requests
+
+- [BadRequestAppTransactionIdForUnsupportedEndpointError](badrequestapptransactionidforunsupportedendpointerror.md): An error that indicates the endpoint doesn’t support app transaction identifiers instead of transaction identifiers.
+- [BadRequestBulletPointTextTooLongError](badrequestbulletpointtexttoolongerror.md): An error that indicates the text for a bullet point is too long.
+- [BadRequestImageSizeError](badrequestimagesizeerror.md): An error that indicates the image size provided is invalid.
+- [BadRequestRealtimeUrlError](badrequestrealtimeurlerror.md): An error that indicates the URL is invalid.
+- [BadRequestTooManyBulletPointsError](badrequesttoomanybulletpointserror.md): An error that indicates there are too many bullet points.
+- [BadRequestTransactionIdError](badrequesttransactioniderror.md): An error that indicates the transaction ID is invalid.
+- [BadRequestTransactionIdNotOtidError](badrequesttransactionidnototiderror.md): An error that indicates the transaction ID provided is not an original transaction ID.
+- [BadRequestTransactionIdNotSupportedForFamilySharingError](badrequesttransactionidnotsupportedforfamilysharingerror.md): An error that indicates that the endpoint doesn’t support transactions for products the customer receives through Family Sharing.
+
+# Document: BadRequestAppTransactionIdForUnsupportedEndpointError
+
+Source path: documentation/retentionmessaging/badrequestapptransactionidforunsupportedendpointerror
+Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/badrequestapptransactionidforunsupportedendpointerror
+Description: Interface language: Data
+
+# BadRequestAppTransactionIdForUnsupportedEndpointError
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.4+
+
+An error that indicates the endpoint doesn’t support app transaction identifiers instead of transaction identifiers.
+
+## Declaration
+
+```
+object BadRequestAppTransactionIdForUnsupportedEndpointError
+```
+
+## Properties
+
+- `errorCode` — `number`: **Allowed values:** `4000048`
+- `errorMessage` — `string`: **Allowed values:** `Invalid request. App transactions aren't supported by this endpoint.`
+
+## See Also
+
+### Errors for bad requests
+
+- [BadRequestAboveImageRequiresAnImageError](badrequestaboveimagerequiresanimageerror.md): An error that indicates that no image object is included, but the request indicates that the header should be placed above the image.
+- [BadRequestBulletPointTextTooLongError](badrequestbulletpointtexttoolongerror.md): An error that indicates the text for a bullet point is too long.
+- [BadRequestImageSizeError](badrequestimagesizeerror.md): An error that indicates the image size provided is invalid.
+- [BadRequestRealtimeUrlError](badrequestrealtimeurlerror.md): An error that indicates the URL is invalid.
+- [BadRequestTooManyBulletPointsError](badrequesttoomanybulletpointserror.md): An error that indicates there are too many bullet points.
+- [BadRequestTransactionIdError](badrequesttransactioniderror.md): An error that indicates the transaction ID is invalid.
+- [BadRequestTransactionIdNotOtidError](badrequesttransactionidnototiderror.md): An error that indicates the transaction ID provided is not an original transaction ID.
+- [BadRequestTransactionIdNotSupportedForFamilySharingError](badrequesttransactionidnotsupportedforfamilysharingerror.md): An error that indicates that the endpoint doesn’t support transactions for products the customer receives through Family Sharing.
+
+# Document: BadRequestBulletPointTextTooLongError
+
+Source path: documentation/retentionmessaging/badrequestbulletpointtexttoolongerror
+Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/badrequestbulletpointtexttoolongerror
+Description: Interface language: Data
+
+# BadRequestBulletPointTextTooLongError
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.4+
+
+An error that indicates the text for a bullet point is too long.
+
+## Declaration
+
+```
+object BadRequestBulletPointTextTooLongError
+```
+
+## Properties
+
+- `errorCode` — `number`: **Allowed values:** `4000219`
+- `errorMessage` — `string`: **Allowed values:** `Invalid request. The bullet point text is too long.`
+
+## See Also
+
+### Errors for bad requests
+
+- [BadRequestAboveImageRequiresAnImageError](badrequestaboveimagerequiresanimageerror.md): An error that indicates that no image object is included, but the request indicates that the header should be placed above the image.
+- [BadRequestAppTransactionIdForUnsupportedEndpointError](badrequestapptransactionidforunsupportedendpointerror.md): An error that indicates the endpoint doesn’t support app transaction identifiers instead of transaction identifiers.
+- [BadRequestImageSizeError](badrequestimagesizeerror.md): An error that indicates the image size provided is invalid.
+- [BadRequestRealtimeUrlError](badrequestrealtimeurlerror.md): An error that indicates the URL is invalid.
+- [BadRequestTooManyBulletPointsError](badrequesttoomanybulletpointserror.md): An error that indicates there are too many bullet points.
+- [BadRequestTransactionIdError](badrequesttransactioniderror.md): An error that indicates the transaction ID is invalid.
+- [BadRequestTransactionIdNotOtidError](badrequesttransactionidnototiderror.md): An error that indicates the transaction ID provided is not an original transaction ID.
+- [BadRequestTransactionIdNotSupportedForFamilySharingError](badrequesttransactionidnotsupportedforfamilysharingerror.md): An error that indicates that the endpoint doesn’t support transactions for products the customer receives through Family Sharing.
+
+# Document: BadRequestImageSizeError
+
+Source path: documentation/retentionmessaging/badrequestimagesizeerror
+Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/badrequestimagesizeerror
+Description: Interface language: Data
+
+# BadRequestImageSizeError
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.4+
+
+An error that indicates the image size provided is invalid.
+
+## Declaration
+
+```
+object BadRequestImageSizeError
+```
+
+## Properties
+
+- `errorCode` — `number`: **Allowed values:** `4000216`
+- `errorMessage` — `string`: **Allowed values:** `Invalid request. The image's size is invalid.`
+
+## See Also
+
+### Errors for bad requests
+
+- [BadRequestAboveImageRequiresAnImageError](badrequestaboveimagerequiresanimageerror.md): An error that indicates that no image object is included, but the request indicates that the header should be placed above the image.
+- [BadRequestAppTransactionIdForUnsupportedEndpointError](badrequestapptransactionidforunsupportedendpointerror.md): An error that indicates the endpoint doesn’t support app transaction identifiers instead of transaction identifiers.
+- [BadRequestBulletPointTextTooLongError](badrequestbulletpointtexttoolongerror.md): An error that indicates the text for a bullet point is too long.
+- [BadRequestRealtimeUrlError](badrequestrealtimeurlerror.md): An error that indicates the URL is invalid.
+- [BadRequestTooManyBulletPointsError](badrequesttoomanybulletpointserror.md): An error that indicates there are too many bullet points.
+- [BadRequestTransactionIdError](badrequesttransactioniderror.md): An error that indicates the transaction ID is invalid.
+- [BadRequestTransactionIdNotOtidError](badrequesttransactionidnototiderror.md): An error that indicates the transaction ID provided is not an original transaction ID.
+- [BadRequestTransactionIdNotSupportedForFamilySharingError](badrequesttransactionidnotsupportedforfamilysharingerror.md): An error that indicates that the endpoint doesn’t support transactions for products the customer receives through Family Sharing.
+
+# Document: BadRequestRealtimeUrlError
+
+Source path: documentation/retentionmessaging/badrequestrealtimeurlerror
+Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/badrequestrealtimeurlerror
+Description: Interface language: Data
+
+# BadRequestRealtimeUrlError
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.4+
+
+An error that indicates the URL is invalid.
+
+## Declaration
+
+```
+object BadRequestRealtimeUrlError
+```
+
+## Properties
+
+- `errorCode` — `number`: **Allowed values:** `4000215`
+- `errorMessage` — `string`: **Allowed values:** `Invalid request. The url is invalid.`
+
+## See Also
+
+### Errors for bad requests
+
+- [BadRequestAboveImageRequiresAnImageError](badrequestaboveimagerequiresanimageerror.md): An error that indicates that no image object is included, but the request indicates that the header should be placed above the image.
+- [BadRequestAppTransactionIdForUnsupportedEndpointError](badrequestapptransactionidforunsupportedendpointerror.md): An error that indicates the endpoint doesn’t support app transaction identifiers instead of transaction identifiers.
+- [BadRequestBulletPointTextTooLongError](badrequestbulletpointtexttoolongerror.md): An error that indicates the text for a bullet point is too long.
+- [BadRequestImageSizeError](badrequestimagesizeerror.md): An error that indicates the image size provided is invalid.
+- [BadRequestTooManyBulletPointsError](badrequesttoomanybulletpointserror.md): An error that indicates there are too many bullet points.
+- [BadRequestTransactionIdError](badrequesttransactioniderror.md): An error that indicates the transaction ID is invalid.
+- [BadRequestTransactionIdNotOtidError](badrequesttransactionidnototiderror.md): An error that indicates the transaction ID provided is not an original transaction ID.
+- [BadRequestTransactionIdNotSupportedForFamilySharingError](badrequesttransactionidnotsupportedforfamilysharingerror.md): An error that indicates that the endpoint doesn’t support transactions for products the customer receives through Family Sharing.
+
+# Document: BadRequestTooManyBulletPointsError
+
+Source path: documentation/retentionmessaging/badrequesttoomanybulletpointserror
+Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/badrequesttoomanybulletpointserror
+Description: Interface language: Data
+
+# BadRequestTooManyBulletPointsError
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.4+
+
+An error that indicates there are too many bullet points.
+
+## Declaration
+
+```
+object BadRequestTooManyBulletPointsError
+```
+
+## Properties
+
+- `errorCode` — `number`: **Allowed values:** `4000218`
+- `errorMessage` — `string`: **Allowed values:** `Invalid request. The number of bullet points is too many.`
+
+## See Also
+
+### Errors for bad requests
+
+- [BadRequestAboveImageRequiresAnImageError](badrequestaboveimagerequiresanimageerror.md): An error that indicates that no image object is included, but the request indicates that the header should be placed above the image.
+- [BadRequestAppTransactionIdForUnsupportedEndpointError](badrequestapptransactionidforunsupportedendpointerror.md): An error that indicates the endpoint doesn’t support app transaction identifiers instead of transaction identifiers.
+- [BadRequestBulletPointTextTooLongError](badrequestbulletpointtexttoolongerror.md): An error that indicates the text for a bullet point is too long.
+- [BadRequestImageSizeError](badrequestimagesizeerror.md): An error that indicates the image size provided is invalid.
+- [BadRequestRealtimeUrlError](badrequestrealtimeurlerror.md): An error that indicates the URL is invalid.
+- [BadRequestTransactionIdError](badrequesttransactioniderror.md): An error that indicates the transaction ID is invalid.
+- [BadRequestTransactionIdNotOtidError](badrequesttransactionidnototiderror.md): An error that indicates the transaction ID provided is not an original transaction ID.
+- [BadRequestTransactionIdNotSupportedForFamilySharingError](badrequesttransactionidnotsupportedforfamilysharingerror.md): An error that indicates that the endpoint doesn’t support transactions for products the customer receives through Family Sharing.
+
+# Document: BadRequestTransactionIdError
+
+Source path: documentation/retentionmessaging/badrequesttransactioniderror
+Canonical documentation: https://developer.apple.com/documentation/retentionmessaging/badrequesttransactioniderror
+Description: Interface language: Data
+
+# BadRequestTransactionIdError
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.4+
+
+An error that indicates the transaction ID is invalid.
+
+## Declaration
+
+```
+object BadRequestTransactionIdError
+```
+
+## Properties
+
+- `errorCode` — `number`: **Allowed values:** `4000006`
+- `errorMessage` — `string`: **Allowed values:** `Invalid transaction id.`
+
+## See Also
+
+### Errors for bad requests
+
+- [BadRequestAboveImageRequiresAnImageError](badrequestaboveimagerequiresanimageerror.md): An error that indicates that no image object is included, but the request indicates that the header should be placed above the image.
+- [BadRequestAppTransactionIdForUnsupportedEndpointError](badrequestapptransactionidforunsupportedendpointerror.md): An error that indicates the endpoint doesn’t support app transaction identifiers instead of transaction identifiers.
+- [BadRequestBulletPointTextTooLongError](badrequestbulletpointtexttoolongerror.md): An error that indicates the text for a bullet point is too long.
+- [BadRequestImageSizeError](badrequestimagesizeerror.md): An error that indicates the image size provided is invalid.
+- [BadRequestRealtimeUrlError](badrequestrealtimeurlerror.md): An error that indicates the URL is invalid.
+- [BadRequestTooManyBulletPointsError](badrequesttoomanybulletpointserror.md): An error that indicates there are too many bullet points.
+- [BadRequestTransactionIdNotOtidError](badrequesttransactionidnototiderror.md): An error that indicates the transaction ID provided is not an original transaction ID.
+- [BadRequestTransactionIdNotSupportedForFamilySharingError](badrequesttransactionidnotsupportedforfamilysharingerror.md): An error that indicates that the endpoint doesn’t support transactions for products the customer receives through Family Sharing.
 
 # Document: BadRequestTransactionIdNotOtidError
 
@@ -173211,299 +173523,3 @@ The authorization engine sends you the entry point to the `SetHintValue` functio
 > **Important**
 
 >  Do not call this function after you have called the [SetResult](setresult.md) function. If you do so, the function does not set the hint data, even though the function returns the [errAuthorizationSuccess](../errauthorizationsuccess.md) result code.
-
-# Document: SetResult
-
-Source path: documentation/security/authorizationcallbacks/setresult
-Canonical documentation: https://developer.apple.com/documentation/security/authorizationcallbacks/setresult
-Description: Interface language: Objective-C
-
-# SetResult
-
-**Interface language:** Objective-C
-
-**Framework:** Security  
-**Kind:** Instance Property  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-Returns the result of an authorization operation.
-
-## Declaration
-
-```objectivec
-int (*)(struct __OpaqueAuthorizationEngine *, enum AuthorizationResult) SetResult;
-```
-
-## Parameters
-
-- `inEngine`: An opaque handle that is passed to your plug-in when the authorization engine calls your [MechanismCreate](../authorizationplugininterface/mechanismcreate.md) function.
-- `inResult`: The result of the authorization attempt. See [AuthorizationResult](../authorizationresult.md) for possible values.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A result code. Possible results are [errAuthorizationSuccess](../errauthorizationsuccess.md) (no error) and [errAuthorizationInternal](../errauthorizationinternal.md) (Security Server internal error).
-
-## Mentioned In
-
-- [Extending authorization services with plug-ins](../extending-authorization-services-with-plug-ins.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When an application calls the [AuthorizationCopyRights](../authorizationcopyrights%28__________%29.md) function to request a specific authorization right, the Security Agent looks for that right in the authorization policy database. If that right corresponds to your plug-in, the authorization engine calls the [MechanismInvoke](../authorizationplugininterface/mechanisminvoke.md) function for each mechanism listed in the policy database for your plug-in.
-
-When the authorization engine calls your [MechanismInvoke](../authorizationplugininterface/mechanisminvoke.md) function, your plug-in should invoke the specified mechanism to attempt an authorization operation. You use the `SetResult` function to return the results of this operation. If the mechanism returns [kAuthorizationResultAllow](../authorizationresult/kauthorizationresultallow.md), then the authorization engine calls the next mechanism (if any) specified in the authorization policy database for the policy. If any of the mechanisms report a result other than [kAuthorizationResultAllow](../authorizationresult/kauthorizationresultallow.md), the authorization attempt fails. If all of the mechanisms report results of [kAuthorizationResultAllow](../authorizationresult/kauthorizationresultallow.md), the authorization is considered to have succeeded.
-
-Note that you can spin off a separate process and return from [MechanismInvoke](../authorizationplugininterface/mechanisminvoke.md) before calling `SetResult`. For example, you might do so to avoid blocking the Security Server if your mechanism takes a significant amount of time to complete or if you want to be able to cancel the operation by calling the [RequestInterrupt](requestinterrupt.md) function (if, for example, the user has clicked Cancel).In that case, your separate process must call the `SetResult` function to report the result; the authorization engine does not call the next mechanism until you do so.
-
-The authorization engine sends you the entry point to the `SetResult` function in an [AuthorizationCallbacks](../authorizationcallbacks.md) structure when you call the [AuthorizationPluginCreate](../authorizationplugincreate.md) function.
-
-# Document: version
-
-Source path: documentation/security/authorizationcallbacks/version
-Canonical documentation: https://developer.apple.com/documentation/security/authorizationcallbacks/version
-Description: Interface language: Objective-C
-
-# version
-
-**Interface language:** Objective-C
-
-**Framework:** Security  
-**Kind:** Instance Property  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-The engine callback version.
-
-## Declaration
-
-```objectivec
-UInt32 version;
-```
-
-# Document: AuthorizationContextFlags
-
-Source path: documentation/security/authorizationcontextflags
-Canonical documentation: https://developer.apple.com/documentation/security/authorizationcontextflags
-Description: Interface language: Objective-C
-
-# AuthorizationContextFlags
-
-**Interface language:** Objective-C
-
-**Framework:** Security  
-**Kind:** Enumeration  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
-
-The flags that specify whether authentication data should be made available to the authorization client.
-
-## Declaration
-
-```objectivec
-enum AuthorizationContextFlags : UInt32;
-```
-
-## Topics
-
-### Constants
-
-- [kAuthorizationContextFlagExtractable](authorizationcontextflags/kauthorizationcontextflagextractable.md): It is possible for the authorization client to use the [AuthorizationCopyInfo](authorizationcopyinfo%28______%29.md) function to obtain the value.
-- [kAuthorizationContextFlagVolatile](authorizationcontextflags/kauthorizationcontextflagvolatile.md): The value is not saved for the authorization client.
-- [kAuthorizationContextFlagSticky](authorizationcontextflags/kauthorizationcontextflagsticky.md): This data persists through an interrupted or failed evaluation.
-
-# Document: kAuthorizationContextFlagExtractable
-
-Source path: documentation/security/authorizationcontextflags/kauthorizationcontextflagextractable
-Canonical documentation: https://developer.apple.com/documentation/security/authorizationcontextflags/kauthorizationcontextflagextractable
-Description: Interface language: Objective-C
-
-# kAuthorizationContextFlagExtractable
-
-**Interface language:** Objective-C
-
-**Framework:** Security  
-**Kind:** Enumeration Case  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-It is possible for the authorization client to use the [AuthorizationCopyInfo](../authorizationcopyinfo%28______%29.md) function to obtain the value.
-
-## Declaration
-
-```objectivec
-kAuthorizationContextFlagExtractable
-```
-
-# Document: kAuthorizationContextFlagSticky
-
-Source path: documentation/security/authorizationcontextflags/kauthorizationcontextflagsticky
-Canonical documentation: https://developer.apple.com/documentation/security/authorizationcontextflags/kauthorizationcontextflagsticky
-Description: Interface language: Objective-C
-
-# kAuthorizationContextFlagSticky
-
-**Interface language:** Objective-C
-
-**Framework:** Security  
-**Kind:** Enumeration Case  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-This data persists through an interrupted or failed evaluation.
-
-## Declaration
-
-```objectivec
-kAuthorizationContextFlagSticky
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This flag can be used to propagate an error condition from a downstream plug-in to an upstream one. It is not remembered in the authorization reference (see [Authorization Services](../authorization-services.md)).
-
-# Document: kAuthorizationContextFlagVolatile
-
-Source path: documentation/security/authorizationcontextflags/kauthorizationcontextflagvolatile
-Canonical documentation: https://developer.apple.com/documentation/security/authorizationcontextflags/kauthorizationcontextflagvolatile
-Description: Interface language: Objective-C
-
-# kAuthorizationContextFlagVolatile
-
-**Interface language:** Objective-C
-
-**Framework:** Security  
-**Kind:** Enumeration Case  
-**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
-
-The value is not saved for the authorization client.
-
-## Declaration
-
-```objectivec
-kAuthorizationContextFlagVolatile
-```
-
-# Document: AuthorizationCopyInfo(_:_:_:)
-
-Source path: documentation/security/authorizationcopyinfo(_:_:_:)
-Canonical documentation: https://developer.apple.com/documentation/security/authorizationcopyinfo(_:_:_:)
-Description: Framework: Security Kind: Function Availability: Mac Catalyst 13.0+ · macOS 10.0+
-
-# AuthorizationCopyInfo(\_:\_:\_:) (Swift)
-
-**Framework:** Security  
-**Kind:** Function  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
-
-Retrieves supporting data such as the user name and other information gathered during evaluation of authorization.
-
-## Declaration
-
-```swift
-func AuthorizationCopyInfo(_ authorization: AuthorizationRef, _ tag: AuthorizationString?, _ info: UnsafeMutablePointer<UnsafeMutablePointer<AuthorizationItemSet>?>) -> OSStatus
-```
-
-## Parameters
-
-- `authorization`: An authorization reference referring to the authorization session.
-- `tag`: An [AuthorizationString](authorizationstring.md) specifying the type of data the Security Server should return. Pass `nil` to retrieve all available information.
-- `info`: A pointer to an authorization set the Security Server creates. On return, this set contains side-band authorization data. When this set is no longer needed, free the memory associated with it by calling the function [AuthorizationFreeItemSet(\_:)](authorizationfreeitemset%28__%29.md).
-
-<a id="return-value"></a>
-
-## Return Value
-
-A result code. See [Authorization Services Result Codes](authorization-services-result-codes.md).
-
-## Mentioned In
-
-- [Extending authorization services with plug-ins](extending-authorization-services-with-plug-ins.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-An authorization plug-in can store the results of an authentication operation by calling the [SetContextValue](authorizationcallbacks/setcontextvalue.md) function. You can use the [AuthorizationCopyInfo(\_:\_:\_:)](authorizationcopyinfo%28______%29.md) function to retrieve this information.
-
-# AuthorizationCopyInfo (Objective-C)
-
-**Framework:** Security  
-**Kind:** Function  
-**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
-
-Retrieves supporting data such as the user name and other information gathered during evaluation of authorization.
-
-## Declaration
-
-```objectivec
-OSStatus AuthorizationCopyInfo(AuthorizationRef authorization, AuthorizationString tag, AuthorizationItemSet **info);
-```
-
-## Parameters
-
-- `authorization`: An authorization reference referring to the authorization session.
-- `tag`: An [AuthorizationString](authorizationstring.md) specifying the type of data the Security Server should return. Pass `nil` to retrieve all available information.
-- `info`: A pointer to an authorization set the Security Server creates. On return, this set contains side-band authorization data. When this set is no longer needed, free the memory associated with it by calling the function [AuthorizationFreeItemSet](authorizationfreeitemset%28__%29.md).
-
-<a id="return-value"></a>
-
-## Return Value
-
-A result code. See [Authorization Services Result Codes](authorization-services-result-codes.md).
-
-## Mentioned In
-
-- [Extending authorization services with plug-ins](extending-authorization-services-with-plug-ins.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-An authorization plug-in can store the results of an authentication operation by calling the [SetContextValue](authorizationcallbacks/setcontextvalue.md) function. You can use the [AuthorizationCopyInfo](authorizationcopyinfo%28______%29.md) function to retrieve this information.
-
-# Document: AuthorizationCopyPrivilegedReference
-
-Source path: documentation/security/authorizationcopyprivilegedreference
-Canonical documentation: https://developer.apple.com/documentation/security/authorizationcopyprivilegedreference
-Description: Interface language: Objective-C
-
-# AuthorizationCopyPrivilegedReference
-
-**Interface language:** Objective-C
-
-**Framework:** Security  
-**Kind:** Function  
-**Availability:** macOS 10.1+ (deprecated in 10.7)
-
-Retrieves the authorization reference passed by the AuthorizationExecuteWithPrivileges function.
-
-> Use a `launchd`-launched helper tool and/or the Service Management framework for this functionality.
-
-## Declaration
-
-```objectivec
-OSStatus AuthorizationCopyPrivilegedReference(AuthorizationRef*authorization, AuthorizationFlags flags);
-```
-
-## Parameters
-
-- `authorization`: A pointer to an authorization reference. The Security Server allocates the authorization reference for you, so you do not need to call the function [AuthorizationCreate](authorizationcreate%28________%29.md). On return, it points to a copy of the authorization reference used in the call to the [AuthorizationExecuteWithPrivileges](authorizationexecutewithprivileges.md) function.
-- `flags`: Reserved options. Pass the [kAuthorizationFlagDefaults](authorizationflags/kauthorizationflagdefaults.md) constant.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A result code. See [Authorization Services Result Codes](authorization-services-result-codes.md).
-
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Important**
-
->  This function is deprecated. Use a `launchd`-launched helper tool and/or the Service Management framework for this functionality.
-
-This function retrieves the authorization reference you pass in the function [AuthorizationExecuteWithPrivileges](authorizationexecutewithprivileges.md). The new process can use the authorization reference to verify authorizations obtained by the calling process.

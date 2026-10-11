@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/apps
 
 # Apps
@@ -199,6 +199,11 @@ To learn more about managing your apps, see [Add a new app](https://developer.ap
 - [Read the Android to iOS App Mapping Details for an App](get-v1-apps-_id_-androidtoiosappmappingdetails.md): Get details about the Android to iOS app mapping for a specific app.
 - [List the IDs of Android to iOS App Mapping Details for an App](get-v1-apps-_id_-relationships-androidtoiosappmappingdetails.md): Get the IDs of Android to iOS app mapping details for a specific app.
 
+### Getting asset library information
+
+- [Read related asset library](get-v1-apps-_id_-assetlibrary.md): Get the asset library for an app.
+- [Get the asset library ID for an app](get-v1-apps-_id_-relationships-assetlibrary.md): Get the asset library resource ID for a specific app.
+
 ### Objects and data types
 
 - [App](app.md): An app registered in App Store Connect, representing all versions, metadata, and configuration for your iOS, macOS, tvOS, or watchOS application.
@@ -226,6 +231,7 @@ To learn more about managing your apps, see [Add a new app](https://developer.ap
 - [SubscriptionStatusUrlVersion](subscriptionstatusurlversion.md): Strings that represent versions of App Store Server Notifications.
 - [App.Relationships.InAppPurchases](app/relationships-data.dictionary/inapppurchases-data.dictionary.md): Deprecated. The data and links that describe the relationship between the resources.
 - [AppAlternativeDistributionKeyLinkageResponse](appalternativedistributionkeylinkageresponse.md)
+- [AppAssetLibraryLinkageResponse](appassetlibrarylinkageresponse.md): A response body that contains the ID of a single related resource.
 - [AppWebhooksLinkagesResponse](appwebhookslinkagesresponse.md)
 - [AppAppClipsLinkagesResponse](appappclipslinkagesresponse.md)
 - [AppAppCustomProductPagesLinkagesResponse](appappcustomproductpageslinkagesresponse.md)

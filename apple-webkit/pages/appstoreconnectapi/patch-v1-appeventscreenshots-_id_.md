@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/patch-v1-appeventscreenshots-_id_
 
 # Update an app event screenshot
@@ -7,7 +7,9 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.7+
+**Availability:** App Store Connect API 1.7+ (deprecated in 4.5)
+
+> This endpoint is deprecated. Use [Modify an app asset library image](patch-v1-appassetlibraryimages-_id_.md) instead.
 
 ## URL
 
@@ -40,6 +42,6 @@ Type: `AppEventScreenshotUpdateRequest`
 
 ### Endpoints
 
-- [List the Images for an In-App Event](get-v1-appeventscreenshots-_id_.md)
-- [Create an app event screenshot](post-v1-appeventscreenshots.md)
-- [Delete an app event screenshot](delete-v1-appeventscreenshots-_id_.md): Delete a specific screenshot from an in-app event.
+- [List the Images for an In-App Event](get-v1-appeventscreenshots-_id_.md): Deprecated.
+- [Create an app event screenshot](post-v1-appeventscreenshots.md): Deprecated.
+- [Delete an app event screenshot](delete-v1-appeventscreenshots-_id_.md): Deprecated. Delete a specific screenshot from an in-app event.

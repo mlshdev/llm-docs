@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appcustomproductpagelocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary
 
 # AppCustomProductPageLocalizationCreateRequest.Data.Relationships
@@ -20,12 +20,17 @@ object AppCustomProductPageLocalizationCreateRequest.Data.Relationships
 ## Properties
 
 - `appCustomProductPageVersion` — `AppCustomProductPageLocalizationCreateRequest.Data.Relationships.AppCustomProductPageVersion` (required):
+- `placements` — `AppCustomProductPageLocalizationCreateRequest.Data.Relationships.Placements`:
 
 ## Topics
 
 ### Objects
 
 - [AppCustomProductPageLocalizationCreateRequest.Data.Relationships.AppCustomProductPageVersion](relationships-data.dictionary/appcustomproductpageversion-data.dictionary.md)
+
+### Dictionaries
+
+- [AppCustomProductPageLocalizationCreateRequest.Data.Relationships.Placements](relationships-data.dictionary/placements-data.dictionary.md)
 
 ## See Also
 

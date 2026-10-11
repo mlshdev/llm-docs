@@ -1,9 +1,9 @@
-# Apple watchOS snapshot-a3a5c01bb2da: full documentation
+# Apple watchOS snapshot-447f9a6dd611: full documentation
 
 Source: https://developer.apple.com/watchos/
-Catalog snapshot: a3a5c01bb2daa6e5b05b5f912615fe697fc6a01a5d070c58d528670dcc2bc090
-Content digest: 969d356ee45d18f331ae9e63dc5d3d9e1c8d1e118e170d2545729c62d2ffbec0
-Captured at: 2026-10-04T18:39:02.632Z
+Catalog snapshot: 447f9a6dd611dee4a61bc09594d42113d2d10675eea9da59f089f5c144a20623
+Content digest: 5ae4ac22146e79b7a9fee3c80bdeb5c6fd14c6362e183db13a422faa7f0c0e84
+Captured at: 2026-10-11T21:19:14.781Z
 
 # Document: WatchKit
 
@@ -57303,7 +57303,7 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### watchOS 27
 
-- [watchOS 27.2 Beta 2 Release Notes](watchos-release-notes/watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27.2 Beta 3 Release Notes](watchos-release-notes/watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [watchOS 27 Release Notes](watchos-release-notes/watchos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### watchOS 26
@@ -57399,7 +57399,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 10 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10. The SDK comes bundled with Xcode 15, available from the Mac App Store. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
+The watchOS 10 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10. The SDK comes bundled with Xcode 15. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
 
 <a id="General"></a>
 
@@ -57925,7 +57925,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 10 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.1. The SDK comes bundled with Xcode 15, available from the Mac App Store. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
+The watchOS 10 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.1. The SDK comes bundled with Xcode 15. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
 
 <a id="Power"></a>
 
@@ -57964,7 +57964,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 10.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.2. The SDK comes bundled with Xcode 15.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
+The watchOS 10.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.2. The SDK comes bundled with Xcode 15.1. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
 
 <a id="AirDrop"></a>
 
@@ -58107,7 +58107,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 10.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.3. The SDK comes bundled with Xcode 15.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
+The watchOS 10.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.3. The SDK comes bundled with Xcode 15.1. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
 
 <a id="Device-Support"></a>
 
@@ -58156,7 +58156,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 10.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.4. The SDK comes bundled with Xcode 15.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.3, see [Xcode 15.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_3-release-notes).
+The watchOS 10.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.4. The SDK comes bundled with Xcode 15.3. For information on the compatibility requirements for Xcode 15.3, see [Xcode 15.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_3-release-notes).
 
 <a id="Movement-Disorder-API"></a>
 
@@ -58218,7 +58218,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 10.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.5. The SDK comes bundled with Xcode 15.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
+The watchOS 10.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.5. The SDK comes bundled with Xcode 15.4. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -58258,7 +58258,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 10.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.6. The SDK comes bundled with Xcode 15.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
+The watchOS 10.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 10.6. The SDK comes bundled with Xcode 15.4. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
 
 <a id="General"></a>
 
@@ -58293,7 +58293,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 11 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11. The SDK comes bundled with Xcode 16, available from the Mac App Store. For information on the compatibility requirements for Xcode 16, see [Xcode 16 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16-release-notes).
+The watchOS 11 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11. The SDK comes bundled with Xcode 16. For information on the compatibility requirements for Xcode 16, see [Xcode 16 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16-release-notes).
 
 <a id="General"></a>
 
@@ -58600,7 +58600,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 11.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.1. The SDK comes bundled with Xcode 16.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.1, see [Xcode 16.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_1-release-notes).
+The watchOS 11.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.1. The SDK comes bundled with Xcode 16.1. For information on the compatibility requirements for Xcode 16.1, see [Xcode 16.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_1-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -58659,7 +58659,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 11.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.2. The SDK comes bundled with Xcode 16.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
+The watchOS 11.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.2. The SDK comes bundled with Xcode 16.2. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
 
 <a id="Battery-Health"></a>
 
@@ -58719,7 +58719,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 11.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.3. The SDK comes bundled with Xcode 16.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
+The watchOS 11.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.3. The SDK comes bundled with Xcode 16.2. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
 
 <a id="HealthKit"></a>
 
@@ -58758,7 +58758,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 11.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.4. The SDK comes bundled with Xcode 16.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.3, see [Xcode 16.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_3-release-notes).
+The watchOS 11.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.4. The SDK comes bundled with Xcode 16.3. For information on the compatibility requirements for Xcode 16.3, see [Xcode 16.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_3-release-notes).
 
 <a id="libxml2"></a>
 
@@ -58856,7 +58856,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 11.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.5. The SDK comes bundled with Xcode 16.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
+The watchOS 11.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.5. The SDK comes bundled with Xcode 16.4. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -58895,7 +58895,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 11.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.6. The SDK comes bundled with Xcode 16.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
+The watchOS 11.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 11.6. The SDK comes bundled with Xcode 16.4. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
 
 <a id="General"></a>
 
@@ -58930,7 +58930,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 26 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26. The SDK comes bundled with Xcode 26, available from the Mac App Store. For information on the compatibility requirements for Xcode 26, see [Xcode 26 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26-release-notes).
+The watchOS 26 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26. The SDK comes bundled with Xcode 26. For information on the compatibility requirements for Xcode 26, see [Xcode 26 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26-release-notes).
 
 <a id="General"></a>
 
@@ -59347,7 +59347,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 26.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.1. The SDK comes bundled with Xcode 26.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
+The watchOS 26.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.1. The SDK comes bundled with Xcode 26.1. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
 
 <a id="HealthKit"></a>
 
@@ -59399,7 +59399,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 26.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.2. The SDK comes bundled with Xcode 26.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
+The watchOS 26.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.2. The SDK comes bundled with Xcode 26.2. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
 
 <a id="Instruments"></a>
 
@@ -59455,7 +59455,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 26.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.3. The SDK comes bundled with Xcode 26.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
+The watchOS 26.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.3. The SDK comes bundled with Xcode 26.2. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -59494,7 +59494,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 26.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.4. The SDK comes bundled with Xcode 26.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.4, see [Xcode 26.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_4-release-notes).
+The watchOS 26.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.4. The SDK comes bundled with Xcode 26.4. For information on the compatibility requirements for Xcode 26.4, see [Xcode 26.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_4-release-notes).
 
 <a id="Address-Sanitizer"></a>
 
@@ -59605,7 +59605,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 26.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.5. The SDK comes bundled with Xcode 26.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.5, see [Xcode 26.5 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_5-release-notes).
+The watchOS 26.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.5. The SDK comes bundled with Xcode 26.5. For information on the compatibility requirements for Xcode 26.5, see [Xcode 26.5 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_5-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -59665,7 +59665,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 26.6 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.6. The SDK comes bundled with Xcode 26.6, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.6, see [Xcode 26.6 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_6-release-notes).
+The watchOS 26.6 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 26.6. The SDK comes bundled with Xcode 26.6. For information on the compatibility requirements for Xcode 26.6, see [Xcode 26.6 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_6-release-notes).
 
 <a id="HealthKit"></a>
 
@@ -59715,7 +59715,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
+The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27. The SDK comes bundled with Xcode 27. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
 
 <a id="App-Intents"></a>
 
@@ -60110,15 +60110,15 @@ The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devi
 
 ### watchOS 27
 
-- [watchOS 27.2 Beta 2 Release Notes](watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27.2 Beta 3 Release Notes](watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: watchOS 27.2 Beta 2 Release Notes
+# Document: watchOS 27.2 Beta 3 Release Notes
 
 Source path: documentation/watchos-release-notes/watchos-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-27_2-release-notes
 Description: Kind: Article
 
-# watchOS 27.2 Beta 2 Release Notes
+# watchOS 27.2 Beta 3 Release Notes
 
 **Kind:** Article
 
@@ -60128,7 +60128,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 27.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.2 beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The watchOS 27.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.2 beta 3. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="StoreKit-Testing-in-Xcode"></a>
 
@@ -60170,7 +60170,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 5 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 5. For information about new features in watchOS 5, see [What’s New in watchOS](https://developer.apple.com/watchos/whats-new/). The SDK comes bundled with Xcode 10 available from the Mac App Store. For information about Xcode 10, see [Xcode 10 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10-release-notes).
+The watchOS 5 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 5. For information about new features in watchOS 5, see [What’s New in watchOS](https://developer.apple.com/watchos/whats-new/). The SDK comes bundled with Xcode 10. For information about Xcode 10, see [Xcode 10 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10-release-notes).
 
 <a id="Networking"></a>
 
@@ -60229,7 +60229,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 5.1 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 5.1. The SDK comes bundled with Xcode 10.1 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
+The watchOS 5.1 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 5.1. The SDK comes bundled with Xcode 10.1. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
 
 <a id="Clock"></a>
 
@@ -60267,7 +60267,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 5.1 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 5.1.3. The SDK comes bundled with Xcode 10.1 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
+The watchOS 5.1 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 5.1.3. The SDK comes bundled with Xcode 10.1. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
 
 <a id="General"></a>
 
@@ -60303,7 +60303,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 5.3 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 5.3. The SDK comes bundled with Xcode 10.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.3, see [Xcode 10.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_3-release-notes).
+The watchOS 5.3 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 5.3. The SDK comes bundled with Xcode 10.3. For information on the compatibility requirements for Xcode 10.3, see [Xcode 10.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_3-release-notes).
 
 <a id="General"></a>
 
@@ -60634,7 +60634,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 6.1 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 6.1. The SDK comes bundled with Xcode 11.2 available from the Mac App Store. For information on the compatibility requirements for Xcode 11.2, see [Xcode 11.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_2-release-notes).
+The watchOS 6.1 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 6.1. The SDK comes bundled with Xcode 11.2. For information on the compatibility requirements for Xcode 11.2, see [Xcode 11.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_2-release-notes).
 
 <a id="General"></a>
 
@@ -60669,7 +60669,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 6.1.1 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 6.1.1. The SDK comes bundled with Xcode 11.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
+The watchOS 6.1.1 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 6.1.1. The SDK comes bundled with Xcode 11.3. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
 
 <a id="Networking"></a>
 
@@ -60708,7 +60708,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 6.1.2 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 6.1.2. The SDK comes bundled with Xcode 11.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
+The watchOS 6.1.2 SDK provides support for developing watchOS apps for Apple Watch devices running watchOS 6.1.2. The SDK comes bundled with Xcode 11.3. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
 
 <a id="General"></a>
 
@@ -60743,7 +60743,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 6.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 6.2. The SDK comes bundled with Xcode 11.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.4, see [Xcode 11.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_4-release-notes).
+The watchOS 6.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 6.2. The SDK comes bundled with Xcode 11.4. For information on the compatibility requirements for Xcode 11.4, see [Xcode 11.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_4-release-notes).
 
 <a id="Authentication"></a>
 
@@ -60802,7 +60802,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 6.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 6.2.5. The SDK comes bundled with Xcode 11.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
+The watchOS 6.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 6.2.5. The SDK comes bundled with Xcode 11.5. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
 
 <a id="General"></a>
 
@@ -60837,7 +60837,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 6.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 6.2.8. The SDK comes bundled with Xcode 11.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
+The watchOS 6.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 6.2.8. The SDK comes bundled with Xcode 11.5. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
 
 <a id="General"></a>
 
@@ -60872,7 +60872,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 7 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7. The SDK comes bundled with Xcode 12, available from the Mac App Store. For information on the compatibility requirements for Xcode 12, see [Xcode 12 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes).
+The watchOS 7 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7. The SDK comes bundled with Xcode 12. For information on the compatibility requirements for Xcode 12, see [Xcode 12 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-release-notes).
 
 <a id="Clock"></a>
 
@@ -60972,7 +60972,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 7.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7.1. The SDK comes bundled with Xcode 12.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
+The watchOS 7.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7.1. The SDK comes bundled with Xcode 12.2. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
 
 <a id="General"></a>
 
@@ -61007,7 +61007,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 7.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7.2. The SDK comes bundled with Xcode 12.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.3, see [Xcode 12.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_3-release-notes).
+The watchOS 7.2 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7.2. The SDK comes bundled with Xcode 12.3. For information on the compatibility requirements for Xcode 12.3, see [Xcode 12.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_3-release-notes).
 
 <a id="General"></a>
 
@@ -61042,7 +61042,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 7.3 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7.3. The SDK comes bundled with Xcode 12.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.4, see [Xcode 12.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_4-release-notes).
+The watchOS 7.3 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7.3. The SDK comes bundled with Xcode 12.4. For information on the compatibility requirements for Xcode 12.4, see [Xcode 12.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_4-release-notes).
 
 <a id="General"></a>
 
@@ -61077,7 +61077,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 7.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7.4. The SDK comes bundled with Xcode 12.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
+The watchOS 7.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 7.4. The SDK comes bundled with Xcode 12.5. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
 
 <a id="Accessibility"></a>
 
@@ -61148,7 +61148,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-To develop apps for watchOS 7.5, build your apps against the watchOS 7.4 SDK or later. The SDK comes bundled with Xcode 12.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
+To develop apps for watchOS 7.5, build your apps against the watchOS 7.4 SDK or later. The SDK comes bundled with Xcode 12.5. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
 
 <a id="General"></a>
 
@@ -61183,7 +61183,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-To develop apps for watchOS 7.6, build your apps against the watchOS 7.4 SDK or later. The SDK comes bundled with Xcode 12.5.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
+To develop apps for watchOS 7.6, build your apps against the watchOS 7.4 SDK or later. The SDK comes bundled with Xcode 12.5.1. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
 
 <a id="General"></a>
 
@@ -61218,7 +61218,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 8 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8. The SDK comes bundled with Xcode 13, available from the Mac App Store. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
+The watchOS 8 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8. The SDK comes bundled with Xcode 13. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
 
 <a id="General"></a>
 
@@ -61448,7 +61448,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 8 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.1. The SDK comes bundled with Xcode 13, available from the Mac App Store. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
+The watchOS 8 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.1. The SDK comes bundled with Xcode 13. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
 
 <a id="CoreData"></a>
 
@@ -61489,7 +61489,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 8.3 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.3. The SDK comes bundled with Xcode 13.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.2, see [Xcode 13.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes).
+The watchOS 8.3 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.3. The SDK comes bundled with Xcode 13.2. For information on the compatibility requirements for Xcode 13.2, see [Xcode 13.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes).
 
 <a id="General"></a>
 
@@ -61524,7 +61524,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 8.3 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.4. The SDK comes bundled with Xcode 13.2.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.2.1, see [Xcode 13.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2_1-release-notes).
+The watchOS 8.3 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.4. The SDK comes bundled with Xcode 13.2.1. For information on the compatibility requirements for Xcode 13.2.1, see [Xcode 13.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2_1-release-notes).
 
 <a id="General"></a>
 
@@ -61559,7 +61559,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 8.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.5. The SDK comes bundled with Xcode 13.3.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.3.1, see [Xcode 13.3.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3_1-release-notes).
+The watchOS 8.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.5. The SDK comes bundled with Xcode 13.3.1. For information on the compatibility requirements for Xcode 13.3.1, see [Xcode 13.3.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3_1-release-notes).
 
 <a id="Apple-Pay"></a>
 
@@ -61655,7 +61655,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 8.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.6. The SDK comes bundled with Xcode 13.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.4, see [Xcode 13.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4-release-notes).
+The watchOS 8.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.6. The SDK comes bundled with Xcode 13.4. For information on the compatibility requirements for Xcode 13.4, see [Xcode 13.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4-release-notes).
 
 <a id="Store-Kit"></a>
 
@@ -61694,7 +61694,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 8.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.7. The SDK comes bundled with Xcode 13.4.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.4.1, see [Xcode 13.4.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4_1-release-notes).
+The watchOS 8.5 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 8.7. The SDK comes bundled with Xcode 13.4.1. For information on the compatibility requirements for Xcode 13.4.1, see [Xcode 13.4.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4_1-release-notes).
 
 <a id="General"></a>
 
@@ -61729,7 +61729,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 9 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9. The SDK comes bundled with Xcode 14, available from the Mac App Store. For information on the compatibility requirements for Xcode 14, see [Xcode 14 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
+The watchOS 9 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9. The SDK comes bundled with Xcode 14. For information on the compatibility requirements for Xcode 14, see [Xcode 14 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
 
 <a id="General"></a>
 
@@ -61940,7 +61940,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 9.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.2. The SDK comes bundled with Xcode 14.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
+The watchOS 9.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.2. The SDK comes bundled with Xcode 14.2. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
 
 <a id="SwiftUI"></a>
 
@@ -61979,7 +61979,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 9.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.3. The SDK comes bundled with Xcode 14.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
+The watchOS 9.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.3. The SDK comes bundled with Xcode 14.2. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
 
 <a id="Movement-Disorder-API"></a>
 
@@ -62018,7 +62018,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 9.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.4. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The watchOS 9.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.4. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="General"></a>
 
@@ -62082,7 +62082,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 9.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.5. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The watchOS 9.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.5. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="General"></a>
 
@@ -62117,7 +62117,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 9.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.6. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The watchOS 9.4 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.6. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="General"></a>
 

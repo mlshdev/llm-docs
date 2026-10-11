@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/passkit/pkpasslibrary
 
 # PKPassLibrary (Swift)
@@ -32,6 +32,13 @@ The `PKPassLibrary` isn’t thread-safe. Use instances of this class only on a s
 - [containsPass(\_:)](pkpasslibrary/containspass%28__%29.md): Returns a Boolean value that indicates whether the user’s pass library contains the specified pass.
 - [serviceProviderData(for:completion:)](pkpasslibrary/serviceproviderdata%28for_completion_%29.md): Calls a completion handler that returns the custom data for a Secure Element pass.
 - [remoteSecureElementPasses](pkpasslibrary/remotesecureelementpasses.md): The Secure Element passes that PassKit stores on paired devices.
+
+### Automatically adding passes
+
+- [requestAuthorization(for:completion:)](pkpasslibrary/requestauthorization%28for_completion_%29.md): Requests a person’s authorization to use a pass library capability.
+- [PKPassLibrary.AuthorizationStatus](pkpasslibrary/authorizationstatus.md): Statuses that indicate whether a person authorized your app to add a pass to their Wallet.
+- [PKPassLibrary.Capability](pkpasslibrary/capability.md): Features for which your app can request authorization from a person.
+- [addPasses(\_:withCompletionHandler:)](pkpasslibrary/addpasses%28__withcompletionhandler_%29.md): Presents a user interface for adding multiple passes at once.
 
 ### Adding passes
 
@@ -82,12 +89,6 @@ The `PKPassLibrary` isn’t thread-safe. Use instances of this class only on a s
 - [encryptedServiceProviderData(for:completion:)](pkpasslibrary/encryptedserviceproviderdata%28for_completion_%29.md)
 - [openPaymentSetup(merchantIdentifier:)](pkpasslibrary/openpaymentsetup%28merchantidentifier_%29.md)
 - [passes(withReaderIdentifier:)](pkpasslibrary/passes%28withreaderidentifier_%29.md)
-- [requestAuthorization(for:completion:)](pkpasslibrary/requestauthorization%28for_completion_%29.md)
-
-### Enumerations
-
-- [PKPassLibrary.AuthorizationStatus](pkpasslibrary/authorizationstatus.md)
-- [PKPassLibrary.Capability](pkpasslibrary/capability.md)
 
 ## Relationships
 
@@ -135,6 +136,13 @@ The `PKPassLibrary` isn’t thread-safe. Use instances of this class only on a s
 - [containsPass:](pkpasslibrary/containspass%28__%29.md): Returns a Boolean value that indicates whether the user’s pass library contains the specified pass.
 - [serviceProviderDataForSecureElementPass:completion:](pkpasslibrary/serviceproviderdata%28for_completion_%29.md): Calls a completion handler that returns the custom data for a Secure Element pass.
 - [remoteSecureElementPasses](pkpasslibrary/remotesecureelementpasses.md): The Secure Element passes that PassKit stores on paired devices.
+
+### Automatically adding passes
+
+- [requestAuthorizationForCapability:completion:](pkpasslibrary/requestauthorization%28for_completion_%29.md): Requests a person’s authorization to use a pass library capability.
+- [PKPassLibraryAuthorizationStatus](pkpasslibrary/authorizationstatus.md): Statuses that indicate whether a person authorized your app to add a pass to their Wallet.
+- [PKPassLibraryCapability](pkpasslibrary/capability.md): Features for which your app can request authorization from a person.
+- [addPasses:withCompletionHandler:](pkpasslibrary/addpasses%28__withcompletionhandler_%29.md): Presents a user interface for adding multiple passes at once.
 
 ### Adding passes
 
@@ -185,7 +193,6 @@ The `PKPassLibrary` isn’t thread-safe. Use instances of this class only on a s
 - [encryptedServiceProviderDataForSecureElementPass:completion:](pkpasslibrary/encryptedserviceproviderdata%28for_completion_%29.md)
 - [openPaymentSetupWithMerchantIdentifier:](pkpasslibrary/openpaymentsetup%28merchantidentifier_%29.md)
 - [passesWithReaderIdentifier:](pkpasslibrary/passes%28withreaderidentifier_%29.md)
-- [requestAuthorizationForCapability:completion:](pkpasslibrary/requestauthorization%28for_completion_%29.md)
 
 ## Relationships
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/passkit
 
 # PassKit (Apple Pay and Wallet) (Swift)
@@ -110,11 +110,6 @@ The Wallet app allows users to organize their boarding passes, tickets, gift car
 - [PKPaymentNetworkRuPay](passkit/pkpaymentnetwork/rupay.md)
 - [PKPaymentNetworkUzCard](passkit/pkpaymentnetwork/uzcard.md)
 - [PKPaymentNetworkVerve](passkit/pkpaymentnetwork/verve.md)
-
-### Enumerations
-
-- [PKPassLibraryAuthorizationStatus](passkit/pkpasslibrary/authorizationstatus.md)
-- [PKPassLibraryCapability](passkit/pkpasslibrary/capability.md)
 
 ## See Also
 

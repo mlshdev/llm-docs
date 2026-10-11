@@ -1,10 +1,306 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 56
+
+# Document: SetResult
+
+Source path: documentation/security/authorizationcallbacks/setresult
+Canonical documentation: https://developer.apple.com/documentation/security/authorizationcallbacks/setresult
+Description: Interface language: Objective-C
+
+# SetResult
+
+**Interface language:** Objective-C
+
+**Framework:** Security  
+**Kind:** Instance Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the result of an authorization operation.
+
+## Declaration
+
+```objectivec
+int (*)(struct __OpaqueAuthorizationEngine *, enum AuthorizationResult) SetResult;
+```
+
+## Parameters
+
+- `inEngine`: An opaque handle that is passed to your plug-in when the authorization engine calls your [MechanismCreate](../authorizationplugininterface/mechanismcreate.md) function.
+- `inResult`: The result of the authorization attempt. See [AuthorizationResult](../authorizationresult.md) for possible values.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. Possible results are [errAuthorizationSuccess](../errauthorizationsuccess.md) (no error) and [errAuthorizationInternal](../errauthorizationinternal.md) (Security Server internal error).
+
+## Mentioned In
+
+- [Extending authorization services with plug-ins](../extending-authorization-services-with-plug-ins.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When an application calls the [AuthorizationCopyRights](../authorizationcopyrights%28__________%29.md) function to request a specific authorization right, the Security Agent looks for that right in the authorization policy database. If that right corresponds to your plug-in, the authorization engine calls the [MechanismInvoke](../authorizationplugininterface/mechanisminvoke.md) function for each mechanism listed in the policy database for your plug-in.
+
+When the authorization engine calls your [MechanismInvoke](../authorizationplugininterface/mechanisminvoke.md) function, your plug-in should invoke the specified mechanism to attempt an authorization operation. You use the `SetResult` function to return the results of this operation. If the mechanism returns [kAuthorizationResultAllow](../authorizationresult/kauthorizationresultallow.md), then the authorization engine calls the next mechanism (if any) specified in the authorization policy database for the policy. If any of the mechanisms report a result other than [kAuthorizationResultAllow](../authorizationresult/kauthorizationresultallow.md), the authorization attempt fails. If all of the mechanisms report results of [kAuthorizationResultAllow](../authorizationresult/kauthorizationresultallow.md), the authorization is considered to have succeeded.
+
+Note that you can spin off a separate process and return from [MechanismInvoke](../authorizationplugininterface/mechanisminvoke.md) before calling `SetResult`. For example, you might do so to avoid blocking the Security Server if your mechanism takes a significant amount of time to complete or if you want to be able to cancel the operation by calling the [RequestInterrupt](requestinterrupt.md) function (if, for example, the user has clicked Cancel).In that case, your separate process must call the `SetResult` function to report the result; the authorization engine does not call the next mechanism until you do so.
+
+The authorization engine sends you the entry point to the `SetResult` function in an [AuthorizationCallbacks](../authorizationcallbacks.md) structure when you call the [AuthorizationPluginCreate](../authorizationplugincreate.md) function.
+
+# Document: version
+
+Source path: documentation/security/authorizationcallbacks/version
+Canonical documentation: https://developer.apple.com/documentation/security/authorizationcallbacks/version
+Description: Interface language: Objective-C
+
+# version
+
+**Interface language:** Objective-C
+
+**Framework:** Security  
+**Kind:** Instance Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The engine callback version.
+
+## Declaration
+
+```objectivec
+UInt32 version;
+```
+
+# Document: AuthorizationContextFlags
+
+Source path: documentation/security/authorizationcontextflags
+Canonical documentation: https://developer.apple.com/documentation/security/authorizationcontextflags
+Description: Interface language: Objective-C
+
+# AuthorizationContextFlags
+
+**Interface language:** Objective-C
+
+**Framework:** Security  
+**Kind:** Enumeration  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+The flags that specify whether authentication data should be made available to the authorization client.
+
+## Declaration
+
+```objectivec
+enum AuthorizationContextFlags : UInt32;
+```
+
+## Topics
+
+### Constants
+
+- [kAuthorizationContextFlagExtractable](authorizationcontextflags/kauthorizationcontextflagextractable.md): It is possible for the authorization client to use the [AuthorizationCopyInfo](authorizationcopyinfo%28______%29.md) function to obtain the value.
+- [kAuthorizationContextFlagVolatile](authorizationcontextflags/kauthorizationcontextflagvolatile.md): The value is not saved for the authorization client.
+- [kAuthorizationContextFlagSticky](authorizationcontextflags/kauthorizationcontextflagsticky.md): This data persists through an interrupted or failed evaluation.
+
+# Document: kAuthorizationContextFlagExtractable
+
+Source path: documentation/security/authorizationcontextflags/kauthorizationcontextflagextractable
+Canonical documentation: https://developer.apple.com/documentation/security/authorizationcontextflags/kauthorizationcontextflagextractable
+Description: Interface language: Objective-C
+
+# kAuthorizationContextFlagExtractable
+
+**Interface language:** Objective-C
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+It is possible for the authorization client to use the [AuthorizationCopyInfo](../authorizationcopyinfo%28______%29.md) function to obtain the value.
+
+## Declaration
+
+```objectivec
+kAuthorizationContextFlagExtractable
+```
+
+# Document: kAuthorizationContextFlagSticky
+
+Source path: documentation/security/authorizationcontextflags/kauthorizationcontextflagsticky
+Canonical documentation: https://developer.apple.com/documentation/security/authorizationcontextflags/kauthorizationcontextflagsticky
+Description: Interface language: Objective-C
+
+# kAuthorizationContextFlagSticky
+
+**Interface language:** Objective-C
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+This data persists through an interrupted or failed evaluation.
+
+## Declaration
+
+```objectivec
+kAuthorizationContextFlagSticky
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This flag can be used to propagate an error condition from a downstream plug-in to an upstream one. It is not remembered in the authorization reference (see [Authorization Services](../authorization-services.md)).
+
+# Document: kAuthorizationContextFlagVolatile
+
+Source path: documentation/security/authorizationcontextflags/kauthorizationcontextflagvolatile
+Canonical documentation: https://developer.apple.com/documentation/security/authorizationcontextflags/kauthorizationcontextflagvolatile
+Description: Interface language: Objective-C
+
+# kAuthorizationContextFlagVolatile
+
+**Interface language:** Objective-C
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The value is not saved for the authorization client.
+
+## Declaration
+
+```objectivec
+kAuthorizationContextFlagVolatile
+```
+
+# Document: AuthorizationCopyInfo(_:_:_:)
+
+Source path: documentation/security/authorizationcopyinfo(_:_:_:)
+Canonical documentation: https://developer.apple.com/documentation/security/authorizationcopyinfo(_:_:_:)
+Description: Framework: Security Kind: Function Availability: Mac Catalyst 13.0+ · macOS 10.0+
+
+# AuthorizationCopyInfo(\_:\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Retrieves supporting data such as the user name and other information gathered during evaluation of authorization.
+
+## Declaration
+
+```swift
+func AuthorizationCopyInfo(_ authorization: AuthorizationRef, _ tag: AuthorizationString?, _ info: UnsafeMutablePointer<UnsafeMutablePointer<AuthorizationItemSet>?>) -> OSStatus
+```
+
+## Parameters
+
+- `authorization`: An authorization reference referring to the authorization session.
+- `tag`: An [AuthorizationString](authorizationstring.md) specifying the type of data the Security Server should return. Pass `nil` to retrieve all available information.
+- `info`: A pointer to an authorization set the Security Server creates. On return, this set contains side-band authorization data. When this set is no longer needed, free the memory associated with it by calling the function [AuthorizationFreeItemSet(\_:)](authorizationfreeitemset%28__%29.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Authorization Services Result Codes](authorization-services-result-codes.md).
+
+## Mentioned In
+
+- [Extending authorization services with plug-ins](extending-authorization-services-with-plug-ins.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+An authorization plug-in can store the results of an authentication operation by calling the [SetContextValue](authorizationcallbacks/setcontextvalue.md) function. You can use the [AuthorizationCopyInfo(\_:\_:\_:)](authorizationcopyinfo%28______%29.md) function to retrieve this information.
+
+# AuthorizationCopyInfo (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Retrieves supporting data such as the user name and other information gathered during evaluation of authorization.
+
+## Declaration
+
+```objectivec
+OSStatus AuthorizationCopyInfo(AuthorizationRef authorization, AuthorizationString tag, AuthorizationItemSet **info);
+```
+
+## Parameters
+
+- `authorization`: An authorization reference referring to the authorization session.
+- `tag`: An [AuthorizationString](authorizationstring.md) specifying the type of data the Security Server should return. Pass `nil` to retrieve all available information.
+- `info`: A pointer to an authorization set the Security Server creates. On return, this set contains side-band authorization data. When this set is no longer needed, free the memory associated with it by calling the function [AuthorizationFreeItemSet](authorizationfreeitemset%28__%29.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Authorization Services Result Codes](authorization-services-result-codes.md).
+
+## Mentioned In
+
+- [Extending authorization services with plug-ins](extending-authorization-services-with-plug-ins.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+An authorization plug-in can store the results of an authentication operation by calling the [SetContextValue](authorizationcallbacks/setcontextvalue.md) function. You can use the [AuthorizationCopyInfo](authorizationcopyinfo%28______%29.md) function to retrieve this information.
+
+# Document: AuthorizationCopyPrivilegedReference
+
+Source path: documentation/security/authorizationcopyprivilegedreference
+Canonical documentation: https://developer.apple.com/documentation/security/authorizationcopyprivilegedreference
+Description: Interface language: Objective-C
+
+# AuthorizationCopyPrivilegedReference
+
+**Interface language:** Objective-C
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.1+ (deprecated in 10.7)
+
+Retrieves the authorization reference passed by the AuthorizationExecuteWithPrivileges function.
+
+> Use a `launchd`-launched helper tool and/or the Service Management framework for this functionality.
+
+## Declaration
+
+```objectivec
+OSStatus AuthorizationCopyPrivilegedReference(AuthorizationRef*authorization, AuthorizationFlags flags);
+```
+
+## Parameters
+
+- `authorization`: A pointer to an authorization reference. The Security Server allocates the authorization reference for you, so you do not need to call the function [AuthorizationCreate](authorizationcreate%28________%29.md). On return, it points to a copy of the authorization reference used in the call to the [AuthorizationExecuteWithPrivileges](authorizationexecutewithprivileges.md) function.
+- `flags`: Reserved options. Pass the [kAuthorizationFlagDefaults](authorizationflags/kauthorizationflagdefaults.md) constant.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Authorization Services Result Codes](authorization-services-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  This function is deprecated. Use a `launchd`-launched helper tool and/or the Service Management framework for this functionality.
+
+This function retrieves the authorization reference you pass in the function [AuthorizationExecuteWithPrivileges](authorizationexecutewithprivileges.md). The new process can use the authorization reference to verify authorizations obtained by the calling process.
 
 # Document: AuthorizationCopyRights(_:_:_:_:_:)
 
@@ -251405,327 +251701,3 @@ The Sensitive Content Analysis framework includes this value in [detectedTypes](
 ### Identifying content categories
 
 - [SCSensitiveContentTypeGoreOrViolence](goreorviolence.md): A content type that indicates the presence of graphic violence or gore.
-
-# Document: detectedTypes
-
-Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/detectedtypes
-Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/detectedtypes
-Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-# detectedTypes (Swift)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-A property that contains the categories of sensitive content that analysis detects.
-
-## Declaration
-
-```swift
-var detectedTypes: Set<SCSensitivityAnalysis.ContentType> { get }
-```
-
-## Mentioned In
-
-- [Detecting sensitive content in media and providing intervention options](../detecting-nudity-in-media-and-providing-intervention-options.md)
-- [Testing your app’s response to sensitive media](../testing-your-app-s-response-to-sensitive-media.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The Sensitive Content Analysis framework sets this property when analysis determines that media contains sensitive content. Check this property to determine the specific types of sensitive content, such as [sexuallyExplicit](contenttype/sexuallyexplicit.md) or [goreOrViolence](contenttype/goreorviolence.md). The framework populates this set only when [isSensitive](issensitive.md) is `true`.
-
-For example, the following code checks for specific content types after determining that media is sensitive:
-
-```swift
-let analysis = try await analyzer.analyzeImage(at: imageURL)
-
-guard analysis.isSensitive else {
-    displayContent(imageURL)
-    return
-}
-
-// Check for specific harm types.
-let detectedTypes = analysis.detectedTypes
-
-if detectedTypes.contains(.sexuallyExplicit) {
-    showContentWarning(
-        message: "This image may contain nudity.",
-        allowAccess: true
-    )
-}
-
-if detectedTypes.contains(.goreOrViolence) {
-    blockContent(
-        message: "This image may contain violence or gore.",
-        offerResources: true
-    )
-}
-```
-
-## See Also
-
-### Identifying content categories
-
-- [SCSensitivityAnalysis.ContentType](contenttype.md): A type that identifies a category of sensitive content.
-
-# detectedTypes (Objective-C)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
-
-A property that contains the categories of sensitive content that analysis detects.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, copy, readonly, nonnull) NSSet<NSString *> * detectedTypes;
-```
-
-## Mentioned In
-
-- [Detecting sensitive content in media and providing intervention options](../detecting-nudity-in-media-and-providing-intervention-options.md)
-- [Testing your app’s response to sensitive media](../testing-your-app-s-response-to-sensitive-media.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-The Sensitive Content Analysis framework sets this property when analysis determines that media contains sensitive content. Check this property to determine the specific types of sensitive content, such as [SCSensitiveContentTypeSexuallyExplicit](contenttype/sexuallyexplicit.md) or [SCSensitiveContentTypeGoreOrViolence](contenttype/goreorviolence.md). The framework populates this set only when [sensitive](issensitive.md) is `true`.
-
-For example, the following code checks for specific content types after determining that media is sensitive:
-
-```swift
-let analysis = try await analyzer.analyzeImage(at: imageURL)
-
-guard analysis.isSensitive else {
-    displayContent(imageURL)
-    return
-}
-
-// Check for specific harm types.
-let detectedTypes = analysis.detectedTypes
-
-if detectedTypes.contains(.sexuallyExplicit) {
-    showContentWarning(
-        message: "This image may contain nudity.",
-        allowAccess: true
-    )
-}
-
-if detectedTypes.contains(.goreOrViolence) {
-    blockContent(
-        message: "This image may contain violence or gore.",
-        offerResources: true
-    )
-}
-```
-
-## See Also
-
-### Identifying content categories
-
-- [SCSensitiveContentType](contenttype.md): A type that identifies a category of sensitive content.
-
-# Document: isSensitive
-
-Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/issensitive
-Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/issensitive
-Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 2.0+
-
-# isSensitive (Swift)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 2.0+
-
-A Boolean value that indicates whether the checked content contains sensitive material.
-
-## Declaration
-
-```swift
-var isSensitive: Bool { get }
-```
-
-## Mentioned In
-
-- [Testing your app’s response to sensitive media](../testing-your-app-s-response-to-sensitive-media.md)
-- [Detecting sensitive content in media and providing intervention options](../detecting-nudity-in-media-and-providing-intervention-options.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-The framework indicates that content is sensitive only when the active [analysisPolicy](../scsensitivityanalyzer/analysispolicy.md) is a value other than [SCSensitivityAnalysisPolicy.disabled](../scsensitivityanalysispolicy/disabled.md). When this property is `true`, check [detectedTypes](detectedtypes.md) to determine the specific categories of sensitive content that the framework detects in the media.
-
-# sensitive (Objective-C)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 2.0+
-
-A Boolean value that indicates whether the checked content contains sensitive material.
-
-## Declaration
-
-```objectivec
-@property (readonly, getter=isSensitive) BOOL sensitive;
-```
-
-## Mentioned In
-
-- [Testing your app’s response to sensitive media](../testing-your-app-s-response-to-sensitive-media.md)
-- [Detecting sensitive content in media and providing intervention options](../detecting-nudity-in-media-and-providing-intervention-options.md)
-
-<a id="discussion"></a>
-
-## Discussion
-
-The framework indicates that content is sensitive only when the active [analysisPolicy](../scsensitivityanalyzer/analysispolicy.md) is a value other than [SCSensitivityAnalysisPolicyDisabled](../scsensitivityanalysispolicy/disabled.md). When this property is `true`, check [detectedTypes](detectedtypes.md) to determine the specific categories of sensitive content that the framework detects in the media.
-
-# Document: shouldIndicateSensitivity
-
-Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldindicatesensitivity
-Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldindicatesensitivity
-Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
-
-# shouldIndicateSensitivity (Swift)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
-
-Intervention guidance that suggests the app indicate the presence of sensitive content.
-
-## Declaration
-
-```swift
-var shouldIndicateSensitivity: Bool { get }
-```
-
-## See Also
-
-### Receiving intervention guidance
-
-- [shouldInterruptVideo](shouldinterruptvideo.md): Intervention guidance that suggests the app interrupt the video stream.
-- [shouldMuteAudio](shouldmuteaudio.md): Intervention guidance that suggests the app mute the audio of the current video stream.
-
-# shouldIndicateSensitivity (Objective-C)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 26.0+ · iPadOS 26.0+
-
-Intervention guidance that suggests the app indicate the presence of sensitive content.
-
-## Declaration
-
-```objectivec
-@property (readonly) BOOL shouldIndicateSensitivity;
-```
-
-## See Also
-
-### Receiving intervention guidance
-
-- [shouldInterruptVideo](shouldinterruptvideo.md): Intervention guidance that suggests the app interrupt the video stream.
-- [shouldMuteAudio](shouldmuteaudio.md): Intervention guidance that suggests the app mute the audio of the current video stream.
-
-# Document: shouldInterruptVideo
-
-Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldinterruptvideo
-Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldinterruptvideo
-Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
-
-# shouldInterruptVideo (Swift)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
-
-Intervention guidance that suggests the app interrupt the video stream.
-
-## Declaration
-
-```swift
-var shouldInterruptVideo: Bool { get }
-```
-
-## See Also
-
-### Receiving intervention guidance
-
-- [shouldIndicateSensitivity](shouldindicatesensitivity.md): Intervention guidance that suggests the app indicate the presence of sensitive content.
-- [shouldMuteAudio](shouldmuteaudio.md): Intervention guidance that suggests the app mute the audio of the current video stream.
-
-# shouldInterruptVideo (Objective-C)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 26.0+ · iPadOS 26.0+
-
-Intervention guidance that suggests the app interrupt the video stream.
-
-## Declaration
-
-```objectivec
-@property (readonly) BOOL shouldInterruptVideo;
-```
-
-## See Also
-
-### Receiving intervention guidance
-
-- [shouldIndicateSensitivity](shouldindicatesensitivity.md): Intervention guidance that suggests the app indicate the presence of sensitive content.
-- [shouldMuteAudio](shouldmuteaudio.md): Intervention guidance that suggests the app mute the audio of the current video stream.
-
-# Document: shouldMuteAudio
-
-Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldmuteaudio
-Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldmuteaudio
-Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
-
-# shouldMuteAudio (Swift)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
-
-Intervention guidance that suggests the app mute the audio of the current video stream.
-
-## Declaration
-
-```swift
-var shouldMuteAudio: Bool { get }
-```
-
-## See Also
-
-### Receiving intervention guidance
-
-- [shouldIndicateSensitivity](shouldindicatesensitivity.md): Intervention guidance that suggests the app indicate the presence of sensitive content.
-- [shouldInterruptVideo](shouldinterruptvideo.md): Intervention guidance that suggests the app interrupt the video stream.
-
-# shouldMuteAudio (Objective-C)
-
-**Framework:** Sensitive Content Analysis  
-**Kind:** Instance Property  
-**Availability:** iOS 26.0+ · iPadOS 26.0+
-
-Intervention guidance that suggests the app mute the audio of the current video stream.
-
-## Declaration
-
-```objectivec
-@property (readonly) BOOL shouldMuteAudio;
-```
-
-## See Also
-
-### Receiving intervention guidance
-
-- [shouldIndicateSensitivity](shouldindicatesensitivity.md): Intervention guidance that suggests the app indicate the presence of sensitive content.
-- [shouldInterruptVideo](shouldinterruptvideo.md): Intervention guidance that suggests the app interrupt the video stream.

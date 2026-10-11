@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/tvos-release-notes/tvos-14_2-release-notes
 
 # tvOS 14.2 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The tvOS 14.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.2. The SDK comes bundled with Xcode 12.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
+The tvOS 14.2 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 14.2. The SDK comes bundled with Xcode 12.2. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
 
 <a id="General"></a>
 

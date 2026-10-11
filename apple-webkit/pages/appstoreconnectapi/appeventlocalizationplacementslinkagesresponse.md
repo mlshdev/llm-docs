@@ -1,0 +1,43 @@
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appeventlocalizationplacementslinkagesresponse
+
+# AppEventLocalizationPlacementsLinkagesResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 4.5+
+
+A response body that contains a list of related resource IDs.
+
+## Declaration
+
+```
+object AppEventLocalizationPlacementsLinkagesResponse
+```
+
+## Properties
+
+- `data` — `[AppEventLocalizationPlacementsLinkagesResponse.Data]` (required):
+- `links` — `PagedDocumentLinks` (required):
+- `meta` — `PagingInformation`:
+
+## Topics
+
+### Dictionaries
+
+- [AppEventLocalizationPlacementsLinkagesResponse.Data](appeventlocalizationplacementslinkagesresponse/data-data.dictionary.md)
+
+## See Also
+
+### Objects
+
+- [AppEventLocalization](appeventlocalization.md): The localized name, short description, and long description for an App Store app event in a specific language.
+- [AppEventLocalizationCreateRequest](appeventlocalizationcreaterequest.md): The request body you use to create an app event localization.
+- [AppEventLocalizationResponse](appeventlocalizationresponse.md): The response body for endpoints that create, read, or modify a localized in-app event entry.
+- [AppEventLocalizationUpdateRequest](appeventlocalizationupdaterequest.md): The request body you use to update an app event localization update request.
+- [AppEventLocalizationsResponse](appeventlocalizationsresponse.md): The response body for endpoints that list localized entries for an in-app event.
+- [AppEventLocalizationAppEventScreenshotsLinkagesResponse](appeventlocalizationappeventscreenshotslinkagesresponse.md)
+- [AppEventLocalizationAppEventVideoClipsLinkagesResponse](appeventlocalizationappeventvideoclipslinkagesresponse.md)
+- [AppEventLocalizationsLinkagesResponse](appeventlocalizationslinkagesresponse.md)

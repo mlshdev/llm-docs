@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appscreenshotupdaterequest/data-data.dictionary
 
 # AppScreenshotUpdateRequest.Data
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Object  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 The data element of the request body.
+
+> This object is deprecated. Use [AppAssetLibraryImageUpdateRequest](../appassetlibraryimageupdaterequest.md) instead.
 
 ## Declaration
 
@@ -27,4 +29,4 @@ object AppScreenshotUpdateRequest.Data
 
 ### Objects
 
-- [AppScreenshotUpdateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Attributes whose values you’re changing as part of the update request.
+- [AppScreenshotUpdateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Deprecated. Attributes whose values you’re changing as part of the update request.

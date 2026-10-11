@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-a3a5c01bb2da; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-447f9a6dd611; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-9_3-release-notes
 
 # watchOS 9.3 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 9.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.3. The SDK comes bundled with Xcode 14.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
+The watchOS 9.1 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 9.3. The SDK comes bundled with Xcode 14.2. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
 
 <a id="Movement-Disorder-API"></a>
 

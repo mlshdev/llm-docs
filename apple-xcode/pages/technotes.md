@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-4fca00e84bae; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes
 
 # Technotes
@@ -15,6 +15,7 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 
 ### Latest
 
+- [TN3179: Understanding local network privacy](technotes/tn3179-understanding-local-network-privacy.md): Learn how local network privacy affects your software.
 - [TN3214: Validating the fonts you ship in your app](technotes/tn3214-validating-the-fonts-you-ship-in-your-app.md): Understand the App Store’s font validation, reproduce the check, and fix any issues it reports.
 - [TN3137: On Mac keychain APIs and implementations](technotes/tn3137-on-mac-keychains.md): Learn how the keychain on macOS differs from other Apple platforms.
 - [TN3189: Managing Mail background traffic load](technotes/tn3189-managing-mail-background-traffic-load.md): Identify iOS Mail background traffic and manage its impact on your IMAP server.
@@ -25,7 +26,6 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 - [TN3208: Preparing your app’s launch screen to meet App Store requirements](technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements.md): Understand the launch screen requirement for App Store submission starting in iOS 27 and iPadOS 27.
 - [TN3205: Low-latency communication with RDMA over Thunderbolt](technotes/tn3205-low-latency-communication-with-rdma-over-thunderbolt.md): Learn how to use RDMA over Thunderbolt to enable low-latency communication between clusters of Mac computers.
 - [TN3206: Updating Apple Pay certificates](technotes/tn3206-updating-apple-pay-certificates.md): Learn how to create, manage, and rotate Apple Pay certificates to maintain uninterrupted payment processing.
-- [TN3179: Understanding local network privacy](technotes/tn3179-understanding-local-network-privacy.md): Learn how local network privacy affects your software.
 - [TN3190: USB audio device design considerations](technotes/tn3190-usb-audio-device-design-considerations.md): Learn the best techniques for designing devices that conform to the USB Audio Device Class specifications.
 - [TN3194: Handling account deletions and revoking tokens for Sign in with Apple](technotes/tn3194-handling-account-deletions-and-revoking-tokens-for-sign-in-with-apple.md): Learn the best techniques for managing Sign in with Apple user sessions and responding to account deletion requests.
 - [TN3193: Managing the on-device foundation model’s context window](technotes/tn3193-managing-the-on-device-foundation-model-s-context-window.md): Learn how to budget for the context window limit of Apple’s on-device foundation model and handle the error when reaching the limit.

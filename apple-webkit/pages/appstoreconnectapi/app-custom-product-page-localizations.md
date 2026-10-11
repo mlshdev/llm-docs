@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/app-custom-product-page-localizations
 
 # App Custom Product Page Localizations
@@ -18,6 +18,10 @@ Use `appCustomProductPageLocalizations` to manage app preview sets and app scree
 
 You can update the Promotional Text for your custom product page localization at any time.
 
+> **Note**
+
+>  Manage custom product page media with the [App Asset Library](app-asset-library.md) and [placements](app-asset-library-placements.md). The app preview set and app screenshot set relationships are deprecated.
+
 ## Topics
 
 ### Managing localizations
@@ -30,13 +34,13 @@ You can update the Promotional Text for your custom product page localization at
 
 ### Getting preview set information
 
-- [List App Preview Sets for a Custom Product Page Localization](get-v1-appcustomproductpagelocalizations-_id_-apppreviewsets.md): List the app preview sets for a specific custom product page localization.
-- [List app preview set IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-apppreviewsets.md): List the app preview set IDs for a specific custom product page localization.
+- [List App Preview Sets for a Custom Product Page Localization](get-v1-appcustomproductpagelocalizations-_id_-apppreviewsets.md): Deprecated. List the app preview sets for a specific custom product page localization.
+- [List app preview set IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-apppreviewsets.md): Deprecated. List the app preview set IDs for a specific custom product page localization.
 
 ### Getting screenshot information
 
-- [List App Screenshot Sets for a Custom Product Page Localization](get-v1-appcustomproductpagelocalizations-_id_-appscreenshotsets.md): List the app screenshot sets for a specific custom product page localization.
-- [List app screenshot sets IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-appscreenshotsets.md): List the app screenshot set IDs for a specific custom product page localization.
+- [List App Screenshot Sets for a Custom Product Page Localization](get-v1-appcustomproductpagelocalizations-_id_-appscreenshotsets.md): Deprecated. List the app screenshot sets for a specific custom product page localization.
+- [List app screenshot sets IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-appscreenshotsets.md): Deprecated. List the app screenshot set IDs for a specific custom product page localization.
 
 ### Managing search keywords
 
@@ -44,6 +48,11 @@ You can update the Promotional Text for your custom product page localization at
 - [List all search keywords for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-searchkeywords.md): Get a list of search keyword IDs for a custom product page localization.
 - [Add a Search Keyword to a Custom Product Page Localization](post-v1-appcustomproductpagelocalizations-_id_-relationships-searchkeywords.md): Assign one or more search keywords to a specific custom product page localization.
 - [Remove a Search Keyword From a Custom Product Page Localization](delete-v1-appcustomproductpagelocalizations-_id_-relationships-searchkeywords.md): Unassign a search keyword from a specific custom product page localization.
+
+### Getting asset library placements
+
+- [List related placements](get-v1-appcustomproductpagelocalizations-_id_-placements.md): List the placements for an app custom product page localization.
+- [List the placement IDs for an app custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-placements.md): Get a list of placement resource IDs for a specific app custom product page localization.
 
 ### Objects
 
@@ -55,7 +64,8 @@ You can update the Promotional Text for your custom product page localization at
 - [AppCustomProductPageLocalizationResponse](appcustomproductpagelocalizationresponse.md): A response containing a single localization for a custom App Store product page.
 - [AppCustomProductPageLocalizationUpdateRequest](appcustomproductpagelocalizationupdaterequest.md): The request body you use to update an app custom product page localization.
 - [AppCustomProductPageLocalizationsResponse](appcustomproductpagelocalizationsresponse.md): A response containing a list of localizations for a custom App Store product page.
-- [AppCustomProductPageLocalizationAppPreviewSetsLinkagesResponse](appcustomproductpagelocalizationapppreviewsetslinkagesresponse.md): A response containing the resource identifiers of app preview sets associated with a custom product page localization.
-- [AppCustomProductPageLocalizationAppScreenshotSetsLinkagesResponse](appcustomproductpagelocalizationappscreenshotsetslinkagesresponse.md): A response containing the resource identifiers of screenshot sets associated with a custom product page localization.
+- [AppCustomProductPageLocalizationAppPreviewSetsLinkagesResponse](appcustomproductpagelocalizationapppreviewsetslinkagesresponse.md): Deprecated. A response containing the resource identifiers of app preview sets associated with a custom product page localization.
+- [AppCustomProductPageLocalizationAppScreenshotSetsLinkagesResponse](appcustomproductpagelocalizationappscreenshotsetslinkagesresponse.md): Deprecated. A response containing the resource identifiers of screenshot sets associated with a custom product page localization.
 - [AppCustomProductPageLocalizationSearchKeywordsLinkagesRequest](appcustomproductpagelocalizationsearchkeywordslinkagesrequest.md): The request body you use to create a relationship between a custom product page localization and a search keyword.
 - [AppCustomProductPageLocalizationSearchKeywordsLinkagesResponse](appcustomproductpagelocalizationsearchkeywordslinkagesresponse.md): A response containing the resource identifiers of search keywords associated with a custom product page localization.
+- [AppCustomProductPageLocalizationPlacementsLinkagesResponse](appcustomproductpagelocalizationplacementslinkagesresponse.md): A response body that contains a list of related resource IDs.

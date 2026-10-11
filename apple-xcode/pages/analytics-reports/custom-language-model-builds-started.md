@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-4fca00e84bae; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/analytics-reports/custom-language-model-builds-started
 
 # Custom Language Model Builds Started

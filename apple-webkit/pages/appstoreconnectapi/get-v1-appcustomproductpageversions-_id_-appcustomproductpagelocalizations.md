@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appcustomproductpageversions-_id_-appcustomproductpagelocalizations
 
 # List Custom Product Pages Localizations
@@ -24,14 +24,14 @@ GET https://api.appstoreconnect.apple.com/v1/appCustomProductPageVersions/{id}/a
 ## Query Parameters
 
 - `fields[appCustomProductPageLocalizations]` — `[string]`: Additional fields to include for each app custom product page localization resource returned by the response.
-  **Allowed values:** `locale`, `promotionalText`, `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+  **Allowed values:** `locale`, `promotionalText`, `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
 - `fields[appPreviewSets]` — `[string]`: Additional fields to include for each app preview set resource returned by the response.
   **Allowed values:** `previewType`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`, `appPreviews`
 - `fields[appScreenshotSets]` — `[string]`: Additional fields to include for each app screenshot set resource returned by the response.
   **Allowed values:** `screenshotDisplayType`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`, `appScreenshots`
 - `filter[locale]` — `[string]`: Filter the returned app custom product page localizations by locale.
 - `include` — `[string]`: The relationship data to include in the response.
-  **Allowed values:** `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+  **Allowed values:** `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
 - `limit` — `integer`: The maximum number of app custom product page localization resources to return.
   **Maximum:** `200`
 - `limit[appPreviewSets]` — `integer`: The maximum number of related app preview sets resources to return.
@@ -40,7 +40,9 @@ GET https://api.appstoreconnect.apple.com/v1/appCustomProductPageVersions/{id}/a
   **Maximum:** `50`
 - `fields[appCustomProductPageVersions]` — `[string]`: Additional fields to include for each app custom product page version resource returned by the response.
   **Allowed values:** `version`, `state`, `deepLink`, `appCustomProductPage`, `appCustomProductPageLocalizations`
+- `fields[appAssetLibraryPlacements]` — `[string]`: **Allowed values:** `mediaType`, `placementType`, `placementGroup`, `createdDate`, `lastModifiedDate`, `state`, `stateDetails`, `image`, `video`, `appEventLocalization`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`
 - `fields[appKeywords]` — `[string]`:
+- `limit[placements]` — `integer`: **Maximum:** `50`
 - `limit[searchKeywords]` — `integer`: **Maximum:** `50`
 
 ## Response Codes

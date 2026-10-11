@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/delete-v1-apppreviewsets-_id_
 
 # Delete an app preview set
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 Delete an app preview set and all of its previews.
+
+> This endpoint is deprecated. Use [Delete an app asset library placement](delete-v1-appassetlibraryplacements-_id_.md) instead.
 
 ## URL
 
@@ -34,4 +36,4 @@ DELETE https://api.appstoreconnect.apple.com/v1/appPreviewSets/{id}
 
 ### Creating and Deleting Preview Sets
 
-- [Create an app preview set](post-v1-apppreviewsets.md): Add a new app preview set to an App Store version localization for a specific app preview type and display size.
+- [Create an app preview set](post-v1-apppreviewsets.md): Deprecated. Add a new app preview set to an App Store version localization for a specific app preview type and display size.

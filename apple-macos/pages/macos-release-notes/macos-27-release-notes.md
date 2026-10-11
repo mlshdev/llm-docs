@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-8257b11be327; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes
 
 # macOS 27 Golden Gate Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 27 SDK provides support to develop apps for Mac computers running macOS 27 Golden Gate. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
+The macOS 27 SDK provides support to develop apps for Mac computers running macOS 27 Golden Gate. The SDK comes bundled with Xcode 27. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
 
 <a id="General"></a>
 
@@ -1291,4 +1291,4 @@ The macOS 27 SDK provides support to develop apps for Mac computers running macO
 
 ### macOS 27
 
-- [macOS 27.2 Golden Gate Beta 2 Release Notes](macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [macOS 27.2 Golden Gate Beta 3 Release Notes](macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appeventlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary
 
 # AppEventLocalizationCreateRequest.Data.Relationships
@@ -20,12 +20,17 @@ object AppEventLocalizationCreateRequest.Data.Relationships
 ## Properties
 
 - `appEvent` — `AppEventLocalizationCreateRequest.Data.Relationships.AppEvent` (required):
+- `placements` — `AppEventLocalizationCreateRequest.Data.Relationships.Placements`:
 
 ## Topics
 
 ### Objects
 
 - [AppEventLocalizationCreateRequest.Data.Relationships.AppEvent](relationships-data.dictionary/appevent-data.dictionary.md)
+
+### Dictionaries
+
+- [AppEventLocalizationCreateRequest.Data.Relationships.Placements](relationships-data.dictionary/placements-data.dictionary.md)
 
 ## See Also
 

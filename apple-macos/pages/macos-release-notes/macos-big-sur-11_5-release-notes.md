@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-8257b11be327; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_5-release-notes
 
 # macOS Big Sur 11.5 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-To develop apps for macOS Big Sur 11.5, build your apps against the macOS 11.3 SDK or later. The SDK comes bundled with Xcode 12.5.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
+To develop apps for macOS Big Sur 11.5, build your apps against the macOS 11.3 SDK or later. The SDK comes bundled with Xcode 12.5.1. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
 
 <a id="SwiftUI"></a>
 

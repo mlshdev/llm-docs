@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-17_2-release-notes
 
 # iOS & iPadOS 17.2 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS & iPadOS 17.2 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 17.2. The SDK comes bundled with Xcode 15.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
+The iOS & iPadOS 17.2 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 17.2. The SDK comes bundled with Xcode 15.1. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
 
 <a id="AirDrop"></a>
 

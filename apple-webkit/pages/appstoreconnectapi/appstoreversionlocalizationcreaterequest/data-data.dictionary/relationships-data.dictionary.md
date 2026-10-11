@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appstoreversionlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary
 
 # AppStoreVersionLocalizationCreateRequest.Data.Relationships
@@ -20,12 +20,17 @@ object AppStoreVersionLocalizationCreateRequest.Data.Relationships
 ## Properties
 
 - `appStoreVersion` — `AppStoreVersionLocalizationCreateRequest.Data.Relationships.AppStoreVersion` (required):
+- `placements` — `AppStoreVersionLocalizationCreateRequest.Data.Relationships.Placements`:
 
 ## Topics
 
 ### Objects
 
 - [AppStoreVersionLocalizationCreateRequest.Data.Relationships.AppStoreVersion](relationships-data.dictionary/appstoreversion-data.dictionary.md): The relationships to other resources that you can set with this request.
+
+### Dictionaries
+
+- [AppStoreVersionLocalizationCreateRequest.Data.Relationships.Placements](relationships-data.dictionary/placements-data.dictionary.md)
 
 ## See Also
 

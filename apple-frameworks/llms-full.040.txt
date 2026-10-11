@@ -1,10 +1,790 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 40
+
+# Document: clusterElectricalPowerMeasurementAttributeActiveCurrentID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeactivecurrentid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeactivecurrentid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeActiveCurrentID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeActiveCurrentID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeActiveCurrentID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeActiveCurrentID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeActivePowerID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeactivepowerid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeactivepowerid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeActivePowerID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeActivePowerID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeActivePowerID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeActivePowerID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeApparentCurrentID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeapparentcurrentid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeapparentcurrentid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeApparentCurrentID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeApparentCurrentID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeApparentCurrentID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeApparentCurrentID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeApparentPowerID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeapparentpowerid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeapparentpowerid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeApparentPowerID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeApparentPowerID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeApparentPowerID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeApparentPowerID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeAttributeListID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeattributelistid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeattributelistid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeAttributeListID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeAttributeListID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeAttributeListID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeAttributeListID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeClusterRevisionID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeclusterrevisionid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeclusterrevisionid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeClusterRevisionID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeClusterRevisionID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeClusterRevisionID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeClusterRevisionID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeFeatureMapID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributefeaturemapid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributefeaturemapid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeFeatureMapID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeFeatureMapID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeFeatureMapID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeFeatureMapID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeFrequencyID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributefrequencyid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributefrequencyid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeFrequencyID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeFrequencyID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeFrequencyID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeFrequencyID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeGeneratedCommandListID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributegeneratedcommandlistid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributegeneratedcommandlistid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeGeneratedCommandListID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeGeneratedCommandListID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeGeneratedCommandListID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeGeneratedCommandListID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeHarmonicCurrentsID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeharmoniccurrentsid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeharmoniccurrentsid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeHarmonicCurrentsID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeHarmonicCurrentsID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeHarmonicCurrentsID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeHarmonicCurrentsID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeHarmonicPhasesID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeharmonicphasesid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeharmonicphasesid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeHarmonicPhasesID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeHarmonicPhasesID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeHarmonicPhasesID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeHarmonicPhasesID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeNeutralCurrentID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeneutralcurrentid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributeneutralcurrentid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeNeutralCurrentID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeNeutralCurrentID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeNeutralCurrentID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeNeutralCurrentID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributenumberofmeasurementtypesid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributenumberofmeasurementtypesid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeNumberOfMeasurementTypesID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributePowerFactorID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributepowerfactorid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributepowerfactorid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributePowerFactorID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributePowerFactorID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributePowerFactorID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributePowerFactorID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributePowerModeID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributepowermodeid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributepowermodeid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributePowerModeID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributePowerModeID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributePowerModeID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributePowerModeID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeRangesID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributerangesid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributerangesid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeRangesID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeRangesID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRangesID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRangesID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeReactiveCurrentID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributereactivecurrentid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributereactivecurrentid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeReactiveCurrentID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeReactiveCurrentID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeReactiveCurrentID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeReactiveCurrentID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeReactivePowerID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributereactivepowerid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributereactivepowerid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeReactivePowerID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeReactivePowerID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeReactivePowerID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeReactivePowerID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeRMSCurrentID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermscurrentid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermscurrentid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeRMSCurrentID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeRMSCurrentID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSCurrentID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSCurrentID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeRMSPowerID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermspowerid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermspowerid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeRMSPowerID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeRMSPowerID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSPowerID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSPowerID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeRMSVoltageID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermsvoltageid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributermsvoltageid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeRMSVoltageID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeRMSVoltageID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSVoltageID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeRMSVoltageID
+```
+
+# Document: clusterElectricalPowerMeasurementAttributeVoltageID
+
+Source path: documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributevoltageid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterelectricalpowermeasurementattributevoltageid
+Description: Framework: Matter Kind: Type Property Availability: iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+# clusterElectricalPowerMeasurementAttributeVoltageID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+static var clusterElectricalPowerMeasurementAttributeVoltageID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeVoltageID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterElectricalPowerMeasurementAttributeVoltageID
+```
+
+# Document: clusterEnergyEVSEAttributeAcceptedCommandListID
+
+Source path: documentation/matter/mtrattributeidtype/clusterenergyevseattributeacceptedcommandlistid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterenergyevseattributeacceptedcommandlistid
+Description: Framework: Matter Kind: Type Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# clusterEnergyEVSEAttributeAcceptedCommandListID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+static var clusterEnergyEVSEAttributeAcceptedCommandListID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterEnergyEVSEAttributeAcceptedCommandListID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterEnergyEVSEAttributeAcceptedCommandListID
+```
+
+# Document: clusterEnergyEVSEAttributeApproximateEVEfficiencyID
+
+Source path: documentation/matter/mtrattributeidtype/clusterenergyevseattributeapproximateevefficiencyid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterenergyevseattributeapproximateevefficiencyid
+Description: Framework: Matter Kind: Type Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# clusterEnergyEVSEAttributeApproximateEVEfficiencyID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+static var clusterEnergyEVSEAttributeApproximateEVEfficiencyID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterEnergyEVSEAttributeApproximateEVEfficiencyID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterEnergyEVSEAttributeApproximateEVEfficiencyID
+```
+
+# Document: clusterEnergyEVSEAttributeAttributeListID
+
+Source path: documentation/matter/mtrattributeidtype/clusterenergyevseattributeattributelistid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterenergyevseattributeattributelistid
+Description: Framework: Matter Kind: Type Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# clusterEnergyEVSEAttributeAttributeListID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+static var clusterEnergyEVSEAttributeAttributeListID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterEnergyEVSEAttributeAttributeListID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterEnergyEVSEAttributeAttributeListID
+```
+
+# Document: clusterEnergyEVSEAttributeChargingEnabledUntilID
+
+Source path: documentation/matter/mtrattributeidtype/clusterenergyevseattributechargingenableduntilid
+Canonical documentation: https://developer.apple.com/documentation/matter/mtrattributeidtype/clusterenergyevseattributechargingenableduntilid
+Description: Framework: Matter Kind: Type Property Availability: iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+# clusterEnergyEVSEAttributeChargingEnabledUntilID (Swift)
+
+**Framework:** Matter  
+**Kind:** Type Property  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+static var clusterEnergyEVSEAttributeChargingEnabledUntilID: MTRAttributeIDType { get }
+```
+
+# MTRAttributeIDTypeClusterEnergyEVSEAttributeChargingEnabledUntilID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Enumeration Case  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+MTRAttributeIDTypeClusterEnergyEVSEAttributeChargingEnabledUntilID
+```
 
 # Document: clusterEnergyEVSEAttributeCircuitCapacityID
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/delete-v1-appscreenshots-_id_
 
 # Delete an app screenshot
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 Delete an app screenshot that is associated with a screenshot set.
+
+> This endpoint is deprecated. Use [Delete an app asset library image](delete-v1-appassetlibraryimages-_id_.md) instead.
 
 ## URL
 
@@ -34,5 +36,5 @@ DELETE https://api.appstoreconnect.apple.com/v1/appScreenshots/{id}
 
 ### Creating, Modifying, and Deleting Screenshots
 
-- [Create an app screenshot](post-v1-appscreenshots.md): Add a new screenshot to a screenshot set.
-- [Modify an app screenshot](patch-v1-appscreenshots-_id_.md): Commit an app screenshot after uploading it.
+- [Create an app screenshot](post-v1-appscreenshots.md): Deprecated. Add a new screenshot to a screenshot set.
+- [Modify an app screenshot](patch-v1-appscreenshots-_id_.md): Deprecated. Commit an app screenshot after uploading it.

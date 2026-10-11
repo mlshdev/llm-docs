@@ -1,10 +1,334 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 57
+
+# Document: detectedTypes
+
+Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/detectedtypes
+Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/detectedtypes
+Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+# detectedTypes (Swift)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+A property that contains the categories of sensitive content that analysis detects.
+
+## Declaration
+
+```swift
+var detectedTypes: Set<SCSensitivityAnalysis.ContentType> { get }
+```
+
+## Mentioned In
+
+- [Detecting sensitive content in media and providing intervention options](../detecting-nudity-in-media-and-providing-intervention-options.md)
+- [Testing your app’s response to sensitive media](../testing-your-app-s-response-to-sensitive-media.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The Sensitive Content Analysis framework sets this property when analysis determines that media contains sensitive content. Check this property to determine the specific types of sensitive content, such as [sexuallyExplicit](contenttype/sexuallyexplicit.md) or [goreOrViolence](contenttype/goreorviolence.md). The framework populates this set only when [isSensitive](issensitive.md) is `true`.
+
+For example, the following code checks for specific content types after determining that media is sensitive:
+
+```swift
+let analysis = try await analyzer.analyzeImage(at: imageURL)
+
+guard analysis.isSensitive else {
+    displayContent(imageURL)
+    return
+}
+
+// Check for specific harm types.
+let detectedTypes = analysis.detectedTypes
+
+if detectedTypes.contains(.sexuallyExplicit) {
+    showContentWarning(
+        message: "This image may contain nudity.",
+        allowAccess: true
+    )
+}
+
+if detectedTypes.contains(.goreOrViolence) {
+    blockContent(
+        message: "This image may contain violence or gore.",
+        offerResources: true
+    )
+}
+```
+
+## See Also
+
+### Identifying content categories
+
+- [SCSensitivityAnalysis.ContentType](contenttype.md): A type that identifies a category of sensitive content.
+
+# detectedTypes (Objective-C)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+A property that contains the categories of sensitive content that analysis detects.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly, nonnull) NSSet<NSString *> * detectedTypes;
+```
+
+## Mentioned In
+
+- [Detecting sensitive content in media and providing intervention options](../detecting-nudity-in-media-and-providing-intervention-options.md)
+- [Testing your app’s response to sensitive media](../testing-your-app-s-response-to-sensitive-media.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The Sensitive Content Analysis framework sets this property when analysis determines that media contains sensitive content. Check this property to determine the specific types of sensitive content, such as [SCSensitiveContentTypeSexuallyExplicit](contenttype/sexuallyexplicit.md) or [SCSensitiveContentTypeGoreOrViolence](contenttype/goreorviolence.md). The framework populates this set only when [sensitive](issensitive.md) is `true`.
+
+For example, the following code checks for specific content types after determining that media is sensitive:
+
+```swift
+let analysis = try await analyzer.analyzeImage(at: imageURL)
+
+guard analysis.isSensitive else {
+    displayContent(imageURL)
+    return
+}
+
+// Check for specific harm types.
+let detectedTypes = analysis.detectedTypes
+
+if detectedTypes.contains(.sexuallyExplicit) {
+    showContentWarning(
+        message: "This image may contain nudity.",
+        allowAccess: true
+    )
+}
+
+if detectedTypes.contains(.goreOrViolence) {
+    blockContent(
+        message: "This image may contain violence or gore.",
+        offerResources: true
+    )
+}
+```
+
+## See Also
+
+### Identifying content categories
+
+- [SCSensitiveContentType](contenttype.md): A type that identifies a category of sensitive content.
+
+# Document: isSensitive
+
+Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/issensitive
+Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/issensitive
+Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 2.0+
+
+# isSensitive (Swift)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 2.0+
+
+A Boolean value that indicates whether the checked content contains sensitive material.
+
+## Declaration
+
+```swift
+var isSensitive: Bool { get }
+```
+
+## Mentioned In
+
+- [Testing your app’s response to sensitive media](../testing-your-app-s-response-to-sensitive-media.md)
+- [Detecting sensitive content in media and providing intervention options](../detecting-nudity-in-media-and-providing-intervention-options.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+The framework indicates that content is sensitive only when the active [analysisPolicy](../scsensitivityanalyzer/analysispolicy.md) is a value other than [SCSensitivityAnalysisPolicy.disabled](../scsensitivityanalysispolicy/disabled.md). When this property is `true`, check [detectedTypes](detectedtypes.md) to determine the specific categories of sensitive content that the framework detects in the media.
+
+# sensitive (Objective-C)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 2.0+
+
+A Boolean value that indicates whether the checked content contains sensitive material.
+
+## Declaration
+
+```objectivec
+@property (readonly, getter=isSensitive) BOOL sensitive;
+```
+
+## Mentioned In
+
+- [Testing your app’s response to sensitive media](../testing-your-app-s-response-to-sensitive-media.md)
+- [Detecting sensitive content in media and providing intervention options](../detecting-nudity-in-media-and-providing-intervention-options.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+The framework indicates that content is sensitive only when the active [analysisPolicy](../scsensitivityanalyzer/analysispolicy.md) is a value other than [SCSensitivityAnalysisPolicyDisabled](../scsensitivityanalysispolicy/disabled.md). When this property is `true`, check [detectedTypes](detectedtypes.md) to determine the specific categories of sensitive content that the framework detects in the media.
+
+# Document: shouldIndicateSensitivity
+
+Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldindicatesensitivity
+Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldindicatesensitivity
+Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+# shouldIndicateSensitivity (Swift)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+Intervention guidance that suggests the app indicate the presence of sensitive content.
+
+## Declaration
+
+```swift
+var shouldIndicateSensitivity: Bool { get }
+```
+
+## See Also
+
+### Receiving intervention guidance
+
+- [shouldInterruptVideo](shouldinterruptvideo.md): Intervention guidance that suggests the app interrupt the video stream.
+- [shouldMuteAudio](shouldmuteaudio.md): Intervention guidance that suggests the app mute the audio of the current video stream.
+
+# shouldIndicateSensitivity (Objective-C)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+
+
+Intervention guidance that suggests the app indicate the presence of sensitive content.
+
+## Declaration
+
+```objectivec
+@property (readonly) BOOL shouldIndicateSensitivity;
+```
+
+## See Also
+
+### Receiving intervention guidance
+
+- [shouldInterruptVideo](shouldinterruptvideo.md): Intervention guidance that suggests the app interrupt the video stream.
+- [shouldMuteAudio](shouldmuteaudio.md): Intervention guidance that suggests the app mute the audio of the current video stream.
+
+# Document: shouldInterruptVideo
+
+Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldinterruptvideo
+Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldinterruptvideo
+Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+# shouldInterruptVideo (Swift)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+Intervention guidance that suggests the app interrupt the video stream.
+
+## Declaration
+
+```swift
+var shouldInterruptVideo: Bool { get }
+```
+
+## See Also
+
+### Receiving intervention guidance
+
+- [shouldIndicateSensitivity](shouldindicatesensitivity.md): Intervention guidance that suggests the app indicate the presence of sensitive content.
+- [shouldMuteAudio](shouldmuteaudio.md): Intervention guidance that suggests the app mute the audio of the current video stream.
+
+# shouldInterruptVideo (Objective-C)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+
+
+Intervention guidance that suggests the app interrupt the video stream.
+
+## Declaration
+
+```objectivec
+@property (readonly) BOOL shouldInterruptVideo;
+```
+
+## See Also
+
+### Receiving intervention guidance
+
+- [shouldIndicateSensitivity](shouldindicatesensitivity.md): Intervention guidance that suggests the app indicate the presence of sensitive content.
+- [shouldMuteAudio](shouldmuteaudio.md): Intervention guidance that suggests the app mute the audio of the current video stream.
+
+# Document: shouldMuteAudio
+
+Source path: documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldmuteaudio
+Canonical documentation: https://developer.apple.com/documentation/sensitivecontentanalysis/scsensitivityanalysis/shouldmuteaudio
+Description: Framework: Sensitive Content Analysis Kind: Instance Property Availability: iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+# shouldMuteAudio (Swift)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+Intervention guidance that suggests the app mute the audio of the current video stream.
+
+## Declaration
+
+```swift
+var shouldMuteAudio: Bool { get }
+```
+
+## See Also
+
+### Receiving intervention guidance
+
+- [shouldIndicateSensitivity](shouldindicatesensitivity.md): Intervention guidance that suggests the app indicate the presence of sensitive content.
+- [shouldInterruptVideo](shouldinterruptvideo.md): Intervention guidance that suggests the app interrupt the video stream.
+
+# shouldMuteAudio (Objective-C)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+
+
+Intervention guidance that suggests the app mute the audio of the current video stream.
+
+## Declaration
+
+```objectivec
+@property (readonly) BOOL shouldMuteAudio;
+```
+
+## See Also
+
+### Receiving intervention guidance
+
+- [shouldIndicateSensitivity](shouldindicatesensitivity.md): Intervention guidance that suggests the app indicate the presence of sensitive content.
+- [shouldInterruptVideo](shouldinterruptvideo.md): Intervention guidance that suggests the app interrupt the video stream.
 
 # Document: SCSensitivityAnalysisPolicy
 
@@ -211197,299 +211521,3 @@ static simd_half3 simd_refract(simd_half3 __x, simd_half3 __n, _Float16 __eta);
 - [simd_precise_project](simd_precise_project-9ry7l.md): Returns the precise projected vector.
 - [simd_fast_project](simd_fast_project-99ic5.md): Returns the fast projected vector.
 - [simd_reflect](simd_reflect-79zx0.md): Returns the reflection direction of an incident vector and a unit normal vector.
-
-# Document: simd_refract
-
-Source path: documentation/simd/simd_refract-6q75f
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_refract-6q75f
-Description: Interface language: Objective-C
-
-# simd_refract
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the refraction direction of an incident vector, a unit normal vector, and an index of refraction eta.
-
-## Declaration
-
-```objectivec
-static simd_half4 simd_refract(simd_half4 __x, simd_half4 __n, _Float16 __eta);
-```
-
-## See Also
-
-### Geometry functions
-
-- [simd_dot](simd_dot-87ssc.md): Returns the dot product of two vectors.
-- [simd_normalize](simd_normalize-9o6iq.md): Returns a vector pointing in the same direction of the supplied vector, with a length of 1.
-- [simd_fast_normalize](simd_fast_normalize-3vaz.md): Returns the fast normalized vector.
-- [simd_precise_normalize](simd_precise_normalize-4vqaw.md): Returns the precise normalized vector.
-- [simd_project](simd_project-24ld6.md): Returns the first vector projected onto the second vector.
-- [simd_precise_project](simd_precise_project-1cw2i.md): Returns the precise projected vector.
-- [simd_fast_project](simd_fast_project-6ymj6.md): Returns the fast projected vector.
-- [simd_reflect](simd_reflect-9r760.md): Returns the reflection direction of an incident vector and a unit normal vector.
-
-# Document: simd_refract
-
-Source path: documentation/simd/simd_refract-7dskm
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_refract-7dskm
-Description: Interface language: Objective-C
-
-# simd_refract
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the refraction direction of an incident vector, a unit normal vector, and an index of refraction eta.
-
-## Declaration
-
-```objectivec
-static simd_double4 simd_refract(simd_double4 __x, simd_double4 __n, double __eta);
-```
-
-## See Also
-
-### Geometry Functions
-
-- [simd_dot](simd_dot-85nay.md): Returns the dot product of two vectors.
-- [simd_normalize](simd_normalize-9o7wa.md): Returns a vector pointing in the same direction of the supplied vector, with a length of 1.
-- [simd_fast_normalize](simd_fast_normalize-3rv7.md): Returns the fast normalized vector.
-- [simd_precise_normalize](simd_precise_normalize-4vtps.md): Returns the precise normalized vector.
-- [simd_project](simd_project-6cfku.md): Returns the first vector projected onto the second vector.
-- [simd_fast_project](simd_fast_project-6urv1.md): Returns the fast projected vector.
-- [simd_precise_project](simd_precise_project-1f1gc.md): Returns the precise projected vector.
-- [simd_reflect](simd_reflect-91ah5.md): Returns the reflection direction of an incident vector and a unit normal vector.
-
-# Document: simd_refract
-
-Source path: documentation/simd/simd_refract-8ogip
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_refract-8ogip
-Description: Interface language: Objective-C
-
-# simd_refract
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the refraction direction of an incident vector, a unit normal vector, and an index of refraction eta.
-
-## Declaration
-
-```objectivec
-static simd_double3 simd_refract(simd_double3 __x, simd_double3 __n, double __eta);
-```
-
-## See Also
-
-### Geometry Functions
-
-- [simd_cross](simd_cross-27rm0.md): Returns the cross product of two vectors.
-- [simd_dot](simd_dot-8l0kd.md): Returns the dot product of two vectors.
-- [simd_insphere](simd_insphere-88pzx.md): Tests if a double-precision point lies inside, on, or outside a sphere.
-- [simd_normalize](simd_normalize-9c477.md): Returns a vector pointing in the same direction of the supplied vector, with a length of 1.
-- [simd_fast_normalize](simd_fast_normalize-d0e.md): Returns the fast normalized vector.
-- [simd_precise_normalize](simd_precise_normalize-4z8q1.md): Returns the precise normalized vector.
-- [simd_orient](simd_orient-4dorr.md): Tests the orientation of the three supplied vectors.
-- [simd_orient](simd_orient-5pahm.md): Tests the orientation of the four supplied vectors.
-- [simd_project](simd_project-7mlzt.md): Returns the first vector projected onto the second vector.
-- [simd_fast_project](simd_fast_project-54ecd.md): Returns the fast projected vector.
-- [simd_precise_project](simd_precise_project-3cfbv.md): Returns the precise projected vector.
-- [simd_reflect](simd_reflect-26oex.md): Returns the reflection direction of an incident vector and a unit normal vector.
-
-# Document: simd_refract
-
-Source path: documentation/simd/simd_refract-8tap1
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_refract-8tap1
-Description: Interface language: Objective-C
-
-# simd_refract
-
-**Interface language:** Objective-C
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the refraction direction of an incident vector, a unit normal vector, and an index of refraction eta.
-
-## Declaration
-
-```objectivec
-static simd_float4 simd_refract(simd_float4 __x, simd_float4 __n, float __eta);
-```
-
-## See Also
-
-### Geometry Functions
-
-- [simd_dot](simd_dot-6c4kk.md): Returns the dot product of two vectors.
-- [simd_normalize](simd_normalize-9o75a.md): Returns a vector pointing in the same direction of the supplied vector, with a length of 1.
-- [simd_fast_normalize](simd_fast_normalize-3shj.md): Returns the fast normalized vector.
-- [simd_precise_normalize](simd_precise_normalize-4vumw.md): Returns the precise normalized vector.
-- [simd_project](simd_project-409nq.md): Returns the first vector projected onto the second vector.
-- [simd_fast_project](simd_fast_project-t4b2.md): Returns the fast projected vector.
-- [simd_precise_project](simd_precise_project-vzd4.md): Returns the precise projected vector.
-- [simd_reflect](simd_reflect-2n1lw.md): Returns the reflection direction of an incident vector and a unit normal vector.
-
-# Document: simd_rsqrt(_:)
-
-Source path: documentation/simd/simd_rsqrt(_:)-1ofzq
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_rsqrt(_:)-1ofzq
-Description: Framework: simd Kind: Function
-
-# simd_rsqrt(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the reciprocal square root of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_rsqrt(_ x: simd_half8) -> simd_half8
-```
-
-## See Also
-
-### Reciprocal and reciprocal square root functions
-
-- [simd_recip(\_:)](simd_recip%28__%29-98e5u.md): Returns the reciprocal of each element in a vector.
-- [simd_precise_recip(\_:)](simd_precise_recip%28__%29-74du2.md): Returns the precise reciprocal of each element in a vector.
-- [simd_precise_rsqrt(\_:)](simd_precise_rsqrt%28__%29-1hm48.md): Returns the precise reciprocal square root of each element in a vector.
-- [simd_fast_recip(\_:)](simd_fast_recip%28__%29-16ixv.md): Returns the fast reciprocal of each element in a vector.
-- [simd_fast_rsqrt(\_:)](simd_fast_rsqrt%28__%29-923z8.md): Returns the fast reciprocal square root of each element in a vector.
-
-# simd_rsqrt (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the reciprocal square root of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_half8 simd_rsqrt(simd_half8 x);
-```
-
-## See Also
-
-### Reciprocal and reciprocal square root functions
-
-- [simd_recip](simd_recip%28__%29-98e5u.md): Returns the reciprocal of each element in a vector.
-- [simd_precise_recip](simd_precise_recip%28__%29-74du2.md): Returns the precise reciprocal of each element in a vector.
-- [simd_precise_rsqrt](simd_precise_rsqrt%28__%29-1hm48.md): Returns the precise reciprocal square root of each element in a vector.
-- [simd_fast_recip](simd_fast_recip%28__%29-16ixv.md): Returns the fast reciprocal of each element in a vector.
-- [simd_fast_rsqrt](simd_fast_rsqrt%28__%29-923z8.md): Returns the fast reciprocal square root of each element in a vector.
-
-# Document: simd_rsqrt(_:)
-
-Source path: documentation/simd/simd_rsqrt(_:)-1oj3u
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_rsqrt(_:)-1oj3u
-Description: Framework: simd Kind: Function
-
-# simd_rsqrt(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the reciprocal square root of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_rsqrt(_ x: simd_float8) -> simd_float8
-```
-
-## See Also
-
-### Reciprocal and Reciprocal Square Root Functions
-
-- [simd_recip(\_:)](simd_recip%28__%29-989se.md): Returns the reciprocal of each element in a vector.
-- [simd_fast_recip(\_:)](simd_fast_recip%28__%29-16fz3.md): Returns the fast reciprocal of each element in a vector.
-- [simd_precise_recip(\_:)](simd_precise_recip%28__%29-74deu.md): Returns the precise reciprocal of each element in a vector.
-- [simd_fast_rsqrt(\_:)](simd_fast_rsqrt%28__%29-923f0.md): Returns the fast reciprocal square root of each element in a vector.
-- [simd_precise_rsqrt(\_:)](simd_precise_rsqrt%28__%29-1hqkg.md): Returns the precise reciprocal square root of each element in a vector.
-
-# simd_rsqrt (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the reciprocal square root of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_float8 simd_rsqrt(simd_float8 x);
-```
-
-## See Also
-
-### Reciprocal and Reciprocal Square Root Functions
-
-- [simd_recip](simd_recip%28__%29-989se.md): Returns the reciprocal of each element in a vector.
-- [simd_fast_recip](simd_fast_recip%28__%29-16fz3.md): Returns the fast reciprocal of each element in a vector.
-- [simd_precise_recip](simd_precise_recip%28__%29-74deu.md): Returns the precise reciprocal of each element in a vector.
-- [simd_fast_rsqrt](simd_fast_rsqrt%28__%29-923f0.md): Returns the fast reciprocal square root of each element in a vector.
-- [simd_precise_rsqrt](simd_precise_rsqrt%28__%29-1hqkg.md): Returns the precise reciprocal square root of each element in a vector.
-
-# Document: simd_rsqrt(_:)
-
-Source path: documentation/simd/simd_rsqrt(_:)-1ojpy
-Canonical documentation: https://developer.apple.com/documentation/simd/simd_rsqrt(_:)-1ojpy
-Description: Framework: simd Kind: Function
-
-# simd_rsqrt(\_:) (Swift)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the reciprocal square root of each element in a vector.
-
-## Declaration
-
-```swift
-func simd_rsqrt(_ x: simd_double8) -> simd_double8
-```
-
-## See Also
-
-### Reciprocal and Reciprocal Square Root Functions
-
-- [simd_recip(\_:)](simd_recip%28__%29-98afu.md): Returns the reciprocal of each element in a vector.
-- [simd_fast_recip(\_:)](simd_fast_recip%28__%29-16f97.md): Returns the fast reciprocal of each element in a vector.
-- [simd_precise_recip(\_:)](simd_precise_recip%28__%29-74cqq.md): Returns the precise reciprocal of each element in a vector.
-- [simd_fast_rsqrt(\_:)](simd_fast_rsqrt%28__%29-922us.md): Returns the fast reciprocal square root of each element in a vector.
-- [simd_precise_rsqrt(\_:)](simd_precise_rsqrt%28__%29-1hq00.md): Returns the precise reciprocal square root of each element in a vector.
-
-# simd_rsqrt (Objective-C)
-
-**Framework:** simd  
-**Kind:** Function
-
-Returns the reciprocal square root of each element in a vector.
-
-## Declaration
-
-```objectivec
-static simd_double8 simd_rsqrt(simd_double8 x);
-```
-
-## See Also
-
-### Reciprocal and Reciprocal Square Root Functions
-
-- [simd_recip](simd_recip%28__%29-98afu.md): Returns the reciprocal of each element in a vector.
-- [simd_fast_recip](simd_fast_recip%28__%29-16f97.md): Returns the fast reciprocal of each element in a vector.
-- [simd_precise_recip](simd_precise_recip%28__%29-74cqq.md): Returns the precise reciprocal of each element in a vector.
-- [simd_fast_rsqrt](simd_fast_rsqrt%28__%29-922us.md): Returns the fast reciprocal square root of each element in a vector.
-- [simd_precise_rsqrt](simd_precise_rsqrt%28__%29-1hq00.md): Returns the precise reciprocal square root of each element in a vector.

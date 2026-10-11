@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appstoreversionexperimenttreatments-_id_-appstoreversionexperimenttreatmentlocalizations
 
 # List all localizations for an app store version experiment treatment
@@ -28,10 +28,10 @@ GET https://api.appstoreconnect.apple.com/v1/appStoreVersionExperimentTreatments
 - `fields[appScreenshotSets]` — `[string]`: Additional fields to include for each app screenshot set resource returned by the response.
   **Allowed values:** `screenshotDisplayType`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`, `appScreenshots`
 - `fields[appStoreVersionExperimentTreatmentLocalizations]` — `[string]`: Additional fields to include for each App Store version experiment treatment localization resource returned by the response.
-  **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`
+  **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`, `placements`
 - `filter[locale]` — `[string]`: Filter the returned App Store version experiment treatment localizations by locale.
 - `include` — `[string]`: The relationship data to include in the response.
-  **Allowed values:** `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`
+  **Allowed values:** `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`, `placements`
 - `limit` — `integer`: The maximum number of App Store version experiment treatment localization resources to return.
   **Maximum:** `200`
 - `limit[appPreviewSets]` — `integer`: The maximum number of related app preview set resources to return.
@@ -40,6 +40,8 @@ GET https://api.appstoreconnect.apple.com/v1/appStoreVersionExperimentTreatments
   **Maximum:** `50`
 - `fields[appStoreVersionExperimentTreatments]` — `[string]`: Additional fields to include for each App Store version experiment treatment resource returned by the response.
   **Allowed values:** `name`, `appIcon`, `appIconName`, `promotedDate`, `appStoreVersionExperiment`, `appStoreVersionExperimentV2`, `appStoreVersionExperimentTreatmentLocalizations`
+- `fields[appAssetLibraryPlacements]` — `[string]`: **Allowed values:** `mediaType`, `placementType`, `placementGroup`, `createdDate`, `lastModifiedDate`, `state`, `stateDetails`, `image`, `video`, `appEventLocalization`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`
+- `limit[placements]` — `integer`: **Maximum:** `50`
 
 ## Response Codes
 

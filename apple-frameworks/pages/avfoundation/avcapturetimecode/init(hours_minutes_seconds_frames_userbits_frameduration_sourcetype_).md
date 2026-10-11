@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/avfoundation/avcapturetimecode/init(hours:minutes:seconds:frames:userbits:frameduration:sourcetype:)
 
 # init(hours:minutes:seconds:frames:userBits:frameDuration:sourceType:)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appeventlocalizationappeventvideoclipslinkagesresponse
 
 # AppEventLocalizationAppEventVideoClipsLinkagesResponse
@@ -38,3 +38,4 @@ object AppEventLocalizationAppEventVideoClipsLinkagesResponse
 - [AppEventLocalizationsResponse](appeventlocalizationsresponse.md): The response body for endpoints that list localized entries for an in-app event.
 - [AppEventLocalizationAppEventScreenshotsLinkagesResponse](appeventlocalizationappeventscreenshotslinkagesresponse.md)
 - [AppEventLocalizationsLinkagesResponse](appeventlocalizationslinkagesresponse.md)
+- [AppEventLocalizationPlacementsLinkagesResponse](appeventlocalizationplacementslinkagesresponse.md): A response body that contains a list of related resource IDs.

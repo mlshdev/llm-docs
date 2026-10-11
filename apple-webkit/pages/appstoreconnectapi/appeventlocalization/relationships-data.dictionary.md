@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appeventlocalization/relationships-data.dictionary
 
 # AppEventLocalization.Relationships
@@ -22,6 +22,7 @@ object AppEventLocalization.Relationships
 - `appEvent` — `AppEventLocalization.Relationships.AppEvent`:
 - `appEventScreenshots` — `AppEventLocalization.Relationships.AppEventScreenshots`:
 - `appEventVideoClips` — `AppEventLocalization.Relationships.AppEventVideoClips`:
+- `placements` — `AppEventLocalization.Relationships.Placements`: The data and links that describe the relationship between the App Event Localizations and the App Asset Library Placements resources.
 
 ## Topics
 
@@ -30,6 +31,10 @@ object AppEventLocalization.Relationships
 - [AppEventLocalization.Relationships.AppEvent](relationships-data.dictionary/appevent-data.dictionary.md)
 - [AppEventLocalization.Relationships.AppEventScreenshots](relationships-data.dictionary/appeventscreenshots-data.dictionary.md)
 - [AppEventLocalization.Relationships.AppEventVideoClips](relationships-data.dictionary/appeventvideoclips-data.dictionary.md)
+
+### Dictionaries
+
+- [AppEventLocalization.Relationships.Placements](relationships-data.dictionary/placements-data.dictionary.md)
 
 ## See Also
 

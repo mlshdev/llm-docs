@@ -1,0 +1,157 @@
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appassetlibraries-_id_-images
+
+# List related images
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 4.5+
+
+List the image assets in an app’s asset library.
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/appAssetLibraries/{id}/images
+```
+
+## Path Parameters
+
+- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource.
+
+## Query Parameters
+
+- `filter[category]` — `[string]`: Filter the returned app asset library images by category.
+  **Allowed values:** `CREATIVE_ASSETS`, `APP_SCREENSHOTS_AND_PREVIEWS`
+- `filter[state]` — `[string]`: Filter the returned app asset library images by state.
+  **Allowed values:** `AWAITING_UPLOAD`, `UPLOAD_COMPLETE`, `FAILED`, `COMPLETE`, `PREPARE_FOR_SUBMISSION`, `READY_FOR_REVIEW`, `WAITING_FOR_REVIEW`, `IN_REVIEW`, `ACCEPTED`, `APPROVED`, `REJECTED`, `ARCHIVED`
+- `filter[referenceName]` — `[string]`: Filter the returned app asset library images by reference name.
+- `filter[specId]` — `[string]`: Filter the returned app asset library images by specification ID.
+- `filter[id]` — `[string]`: Filter the returned app asset library images by resource ID.
+- `sort` — `[string]`: Attributes by which to sort.
+  **Allowed values:** `createdDate`, `-createdDate`, `lastModifiedDate`, `-lastModifiedDate`, `referenceName`, `-referenceName`
+- `fields[appAssetLibraryImages]` — `[string]`: Additional fields to include for each app asset library image resource returned by the response.
+  **Allowed values:** `category`, `createdDate`, `lastModifiedDate`, `fileName`, `fileSize`, `imageAsset`, `referenceName`, `specId`, `state`, `stateDetails`, `uploadOperations`, `placements`
+- `fields[appAssetLibraryPlacements]` — `[string]`: Additional fields to include for each app asset library placement resource returned by the response.
+  **Allowed values:** `mediaType`, `placementType`, `placementGroup`, `createdDate`, `lastModifiedDate`, `state`, `stateDetails`, `image`, `video`, `appEventLocalization`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`
+- `limit` — `integer`: The maximum number of app asset library image resources to return.
+  **Maximum:** `200`
+- `include` — `[string]`: The relationship data to include in the response.
+  **Allowed values:** `placements`
+- `limit[placements]` — `integer`: The maximum number of related placement resources to return.
+  **Maximum:** `50`
+
+## Response Codes
+
+- `200` OK — `AppAssetLibraryImagesResponse`: The request completed successfully.
+- `400` Bad Request — `ErrorResponse`: An error occurred with your request.
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`: Request not authorized.
+- `404` Not Found — `ErrorResponse`: Resource not found.
+- `429` — `ErrorResponse`:
+
+## Mentioned In
+
+- [App Store Connect API 4.5.1 release notes](app-store-connect-api-4-5-1-release-notes.md)
+- [Uploading and managing image assets](uploading-and-managing-image-assets.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+<a id="Example-Request-and-Response"></a>
+
+### Example Request and Response
+
+**Request**
+
+```
+https://api.appstoreconnect.apple.com/v1/appAssetLibraries/1234567890/images?filter[state]=PREPARE_FOR_SUBMISSION&sort=-createdDate&limit=2
+```
+
+**Response**
+
+```json
+{
+  "data" : [ {
+    "type" : "appAssetLibraryImages",
+    "id" : "c3000005-e036-8f0b-8038-36fbc8d1c4ae",
+    "attributes" : {
+      "category" : "APP_SCREENSHOTS_AND_PREVIEWS",
+      "createdDate" : "2026-08-11T22:47:02Z",
+      "lastModifiedDate" : "2026-08-11T22:47:19Z",
+      "fileName" : "order-screen-6-9.png",
+      "fileSize" : 1284736,
+      "imageAsset" : {
+        "templateUrl" : "https://is1.mzstatic.com/image/thumb/AOsFKpK1JfF_vrxSCSbIew/{w}x{h}bb.{f}",
+        "width" : 1290,
+        "height" : 2796
+      },
+      "referenceName" : "Order screen",
+      "specId" : "f56c777c-99ea-5760-97ae-27c5f8cbb884",
+      "state" : "PREPARE_FOR_SUBMISSION",
+      "stateDetails" : null
+    },
+    "relationships" : {
+      "placements" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/c3000005-e036-8f0b-8038-36fbc8d1c4ae/relationships/placements",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/c3000005-e036-8f0b-8038-36fbc8d1c4ae/placements"
+        }
+      }
+    },
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/c3000005-e036-8f0b-8038-36fbc8d1c4ae"
+    }
+  }, {
+    "type" : "appAssetLibraryImages",
+    "id" : "f4000005-e036-8f0b-8018-d259974bee61",
+    "attributes" : {
+      "category" : "APP_SCREENSHOTS_AND_PREVIEWS",
+      "createdDate" : "2026-08-11T22:44:12Z",
+      "lastModifiedDate" : "2026-08-11T22:44:31Z",
+      "fileName" : "menu-screen-6-9.png",
+      "fileSize" : 1284736,
+      "imageAsset" : {
+        "templateUrl" : "https://is1.mzstatic.com/image/thumb/AOsFKpK1JfF_vrxSCSbIew/{w}x{h}bb.{f}",
+        "width" : 1290,
+        "height" : 2796
+      },
+      "referenceName" : "Menu screen",
+      "specId" : "f56c777c-99ea-5760-97ae-27c5f8cbb884",
+      "state" : "PREPARE_FOR_SUBMISSION",
+      "stateDetails" : null
+    },
+    "relationships" : {
+      "placements" : {
+        "links" : {
+          "self" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/f4000005-e036-8f0b-8018-d259974bee61/relationships/placements",
+          "related" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/f4000005-e036-8f0b-8018-d259974bee61/placements"
+        }
+      }
+    },
+    "links" : {
+      "self" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraryImages/f4000005-e036-8f0b-8018-d259974bee61"
+    }
+  } ],
+  "links" : {
+    "self" : "https://api.appstoreconnect.apple.com/v1/appAssetLibraries/1234567890/images"
+  },
+  "meta" : {
+    "paging" : {
+      "total" : 2,
+      "limit" : 2
+    }
+  }
+}
+```
+
+## See Also
+
+### Getting assets in a library
+
+- [List related videos](get-v1-appassetlibraries-_id_-videos.md): List the video assets in an app’s asset library.
+- [List the image IDs for an app asset library](get-v1-appassetlibraries-_id_-relationships-images.md): Get a list of image asset resource IDs for a specific asset library.
+- [List the video IDs for an app asset library](get-v1-appassetlibraries-_id_-relationships-videos.md): Get a list of video asset resource IDs for a specific asset library.

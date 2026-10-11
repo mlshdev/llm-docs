@@ -1,10 +1,989 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 36
+
+# Document: INCallDestinationType.normal
+
+Source path: documentation/intents/incalldestinationtype/normal
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/normal
+Description: Framework: Intents Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+# INCallDestinationType.normal (Swift)
+
+**Framework:** Intents  
+**Kind:** Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+A call routed to its expected destination.
+
+## Declaration
+
+```swift
+case normal
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
+- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
+- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# INCallDestinationTypeNormal (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+A call routed to its expected destination.
+
+## Declaration
+
+```objectivec
+INCallDestinationTypeNormal
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
+- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
+- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# Document: normalDestination
+
+Source path: documentation/intents/incalldestinationtype/normaldestination
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/normaldestination
+Description: Framework: Intents Kind: Type Property Availability: iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (dep…
+
+# normalDestination (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Property  
+**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
+
+A call routed to its expected destination.
+
+> Use INCallDestinationTypeNormal instead
+
+## Declaration
+
+```swift
+static var normalDestination: INCallDestinationType { get }
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
+- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
+- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
+- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# INCallDestinationTypeNormalDestination (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 12.0+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
+
+A call routed to its expected destination.
+
+> Use INCallDestinationTypeNormal instead
+
+## Declaration
+
+```objectivec
+INCallDestinationTypeNormalDestination
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
+- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
+- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
+- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# Document: INCallDestinationType.redial
+
+Source path: documentation/intents/incalldestinationtype/redial
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/redial
+Description: Framework: Intents Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+# INCallDestinationType.redial (Swift)
+
+**Framework:** Intents  
+**Kind:** Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+A call that was the result of redialing a previous call.
+
+## Declaration
+
+```swift
+case redial
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
+- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
+- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
+- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# INCallDestinationTypeRedial (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+A call that was the result of redialing a previous call.
+
+## Declaration
+
+```objectivec
+INCallDestinationTypeRedial
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
+- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
+- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
+- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# Document: redialDestination
+
+Source path: documentation/intents/incalldestinationtype/redialdestination
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/redialdestination
+Description: Framework: Intents Kind: Type Property Availability: iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (dep…
+
+# redialDestination (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Property  
+**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
+
+A call that was the result of redialing a previous call.
+
+> Use INCallDestinationTypeRedial instead
+
+## Declaration
+
+```swift
+static var redialDestination: INCallDestinationType { get }
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
+- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
+- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
+- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+
+# INCallDestinationTypeRedialDestination (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 12.0+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
+
+A call that was the result of redialing a previous call.
+
+> Use INCallDestinationTypeRedial instead
+
+## Declaration
+
+```objectivec
+INCallDestinationTypeRedialDestination
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
+- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
+- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
+- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+
+# Document: INCallDestinationType.unknown
+
+Source path: documentation/intents/incalldestinationtype/unknown
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/unknown
+Description: Framework: Intents Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+# INCallDestinationType.unknown (Swift)
+
+**Framework:** Intents  
+**Kind:** Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+An unknown call destination.
+
+## Declaration
+
+```swift
+case unknown
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
+- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
+- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# INCallDestinationTypeUnknown (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+An unknown call destination.
+
+## Declaration
+
+```objectivec
+INCallDestinationTypeUnknown
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
+- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
+- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# Document: INCallDestinationType.voicemail
+
+Source path: documentation/intents/incalldestinationtype/voicemail
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/voicemail
+Description: Framework: Intents Kind: Case Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+# INCallDestinationType.voicemail (Swift)
+
+**Framework:** Intents  
+**Kind:** Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+A call routed to the user’s voicemail.
+
+## Declaration
+
+```swift
+case voicemail
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
+- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
+- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
+- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [voicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# INCallDestinationTypeVoicemail (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+A call routed to the user’s voicemail.
+
+## Declaration
+
+```objectivec
+INCallDestinationTypeVoicemail
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
+- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
+- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
+- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [INCallDestinationTypeVoicemailDestination](voicemaildestination.md): Deprecated. A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# Document: voicemailDestination
+
+Source path: documentation/intents/incalldestinationtype/voicemaildestination
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtype/voicemaildestination
+Description: Framework: Intents Kind: Type Property Availability: iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (dep…
+
+# voicemailDestination (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Property  
+**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.13+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
+
+A call routed to the user’s voicemail.
+
+> Use INCallDestinationTypeVoicemail instead
+
+## Declaration
+
+```swift
+static var voicemailDestination: INCallDestinationType { get }
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationType.unknown](unknown.md): An unknown call destination.
+- [INCallDestinationType.normal](normal.md): A call routed to its expected destination.
+- [INCallDestinationType.emergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationType.voicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationType.redial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationType.callBack](callback.md): A call that was the result of a call back.
+- [normalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [emergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [redialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# INCallDestinationTypeVoicemailDestination (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ (deprecated in 11.0) · iPadOS 11.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 12.0+ (deprecated in 10.13) · visionOS 1.0+ (deprecated in 1.0) · watchOS 4.0+ (deprecated in 4.0)
+
+A call routed to the user’s voicemail.
+
+> Use INCallDestinationTypeVoicemail instead
+
+## Declaration
+
+```objectivec
+INCallDestinationTypeVoicemailDestination
+```
+
+## See Also
+
+### Constants
+
+- [INCallDestinationTypeUnknown](unknown.md): An unknown call destination.
+- [INCallDestinationTypeNormal](normal.md): A call routed to its expected destination.
+- [INCallDestinationTypeEmergency](emergency.md): A call routed to an emergency number.
+- [INCallDestinationTypeVoicemail](voicemail.md): A call routed to the user’s voicemail.
+- [INCallDestinationTypeRedial](redial.md): A call that was the result of redialing a previous call.
+- [INCallDestinationTypeCallBack](callback.md): A call that was the result of a call back.
+- [INCallDestinationTypeNormalDestination](normaldestination.md): Deprecated. A call routed to its expected destination.
+- [INCallDestinationTypeEmergencyDestination](emergencydestination.md): Deprecated. A call routed to an emergency number.
+- [INCallDestinationTypeRedialDestination](redialdestination.md): Deprecated. A call that was the result of redialing a previous call.
+
+# Document: INCallDestinationTypeResolutionResult
+
+Source path: documentation/intents/incalldestinationtyperesolutionresult
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtyperesolutionresult
+Description: Framework: Intents Kind: Class Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+# INCallDestinationTypeResolutionResult (Swift)
+
+**Framework:** Intents  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+A resolution result for the destination type of a call.
+
+## Declaration
+
+```swift
+class INCallDestinationTypeResolutionResult
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You return an `INCallDestinationTypeResolutionResult` object when resolving parameters containing an [INCallDestinationType](incalldestinationtype.md) value. Use the creation method that best reflects your ability to resolve the parameter successfully.
+
+For additional resolution operators, see [INIntentResolutionResult](inintentresolutionresult.md).
+
+## Topics
+
+### Creating a Resolution Result Object
+
+- [success(with:)](incalldestinationtyperesolutionresult/success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+- [confirmationRequired(with:)](incalldestinationtyperesolutionresult/confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+## Relationships
+
+### Inherits From
+
+- [INIntentResolutionResult](inintentresolutionresult.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Resolution Results
+
+- [INCallRecordResolutionResult](incallrecordresolutionresult.md): A resolution result for the details of a call.
+- [INCallRecordTypeResolutionResult](incallrecordtyperesolutionresult.md): A resolution result for the types of calls that your app handled.
+- [INCallCapabilityResolutionResult](incallcapabilityresolutionresult.md): A resolution result for the call capability for the call.
+- [INCallRecordTypeOptionsResolutionResult](incallrecordtypeoptionsresolutionresult.md): A resolution result for the call types to include in a search.
+- [INStartCallContactResolutionResult](instartcallcontactresolutionresult.md): A resolution result for the contact for the call.
+- [INStartCallCallCapabilityResolutionResult](instartcallcallcapabilityresolutionresult.md): A resolution result for the call capability for the call.
+- [INStartCallCallRecordToCallBackResolutionResult](instartcallcallrecordtocallbackresolutionresult.md): A resolution result for the redial capabilities of a missed call.
+
+# INCallDestinationTypeResolutionResult (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+A resolution result for the destination type of a call.
+
+## Declaration
+
+```objectivec
+@interface INCallDestinationTypeResolutionResult : INIntentResolutionResult
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You return an `INCallDestinationTypeResolutionResult` object when resolving parameters containing an [INCallDestinationType](incalldestinationtype.md) value. Use the creation method that best reflects your ability to resolve the parameter successfully.
+
+For additional resolution operators, see [INIntentResolutionResult](inintentresolutionresult.md).
+
+## Topics
+
+### Creating a Resolution Result Object
+
+- [successWithResolvedCallDestinationType:](incalldestinationtyperesolutionresult/success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+- [confirmationRequiredWithCallDestinationTypeToConfirm:](incalldestinationtyperesolutionresult/confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+## Relationships
+
+### Inherits From
+
+- [INIntentResolutionResult](inintentresolutionresult.md)
+
+## See Also
+
+### Resolution Results
+
+- [INCallRecordResolutionResult](incallrecordresolutionresult.md): A resolution result for the details of a call.
+- [INCallRecordTypeResolutionResult](incallrecordtyperesolutionresult.md): A resolution result for the types of calls that your app handled.
+- [INCallCapabilityResolutionResult](incallcapabilityresolutionresult.md): A resolution result for the call capability for the call.
+- [INCallRecordTypeOptionsResolutionResult](incallrecordtypeoptionsresolutionresult.md): A resolution result for the call types to include in a search.
+- [INStartCallContactResolutionResult](instartcallcontactresolutionresult.md): A resolution result for the contact for the call.
+- [INStartCallCallCapabilityResolutionResult](instartcallcallcapabilityresolutionresult.md): A resolution result for the call capability for the call.
+- [INStartCallCallRecordToCallBackResolutionResult](instartcallcallrecordtocallbackresolutionresult.md): A resolution result for the redial capabilities of a missed call.
+
+# Document: confirmationRequired(with:)
+
+Source path: documentation/intents/incalldestinationtyperesolutionresult/confirmationrequired(with:)
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtyperesolutionresult/confirmationrequired(with:)
+Description: Framework: Intents Kind: Type Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+# confirmationRequired(with:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+## Declaration
+
+```swift
+class func confirmationRequired(with callDestinationTypeToConfirm: INCallDestinationType) -> Self
+```
+
+## Parameters
+
+- `callDestinationTypeToConfirm`: The value that resolves the request but must be confirmed by the user.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INCallDestinationTypeResolutionResult](../incalldestinationtyperesolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method when you can resolve the parameter but want the user to confirm the value before proceeding.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [success(with:)](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+
+# confirmationRequiredWithCallDestinationTypeToConfirm: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+## Declaration
+
+```objectivec
++ (instancetype) confirmationRequiredWithCallDestinationTypeToConfirm:(INCallDestinationType) callDestinationTypeToConfirm;
+```
+
+## Parameters
+
+- `callDestinationTypeToConfirm`: The value that resolves the request but must be confirmed by the user.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INCallDestinationTypeResolutionResult](../incalldestinationtyperesolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method when you can resolve the parameter but want the user to confirm the value before proceeding.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [successWithResolvedCallDestinationType:](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
+
+# Document: success(with:)
+
+Source path: documentation/intents/incalldestinationtyperesolutionresult/success(with:)
+Canonical documentation: https://developer.apple.com/documentation/intents/incalldestinationtyperesolutionresult/success(with:)
+Description: Framework: Intents Kind: Type Method Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+# success(with:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Creates an object whose resolution involves the successful matching of the specified parameter.
+
+## Declaration
+
+```swift
+class func success(with resolvedCallDestinationType: INCallDestinationType) -> Self
+```
+
+## Parameters
+
+- `resolvedCallDestinationType`: The value that resolves the requested parameter of the intent. This value may be different than the one specified in the intent object.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INCallDestinationTypeResolutionResult](../incalldestinationtyperesolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to create a resolution result object when you recognize the specified type of call destination and are able to use it to resolve an intent.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [confirmationRequired(with:)](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+# successWithResolvedCallDestinationType: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Creates an object whose resolution involves the successful matching of the specified parameter.
+
+## Declaration
+
+```objectivec
++ (instancetype) successWithResolvedCallDestinationType:(INCallDestinationType) resolvedCallDestinationType;
+```
+
+## Parameters
+
+- `resolvedCallDestinationType`: The value that resolves the requested parameter of the intent. This value may be different than the one specified in the intent object.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INCallDestinationTypeResolutionResult](../incalldestinationtyperesolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to create a resolution result object when you recognize the specified type of call destination and are able to use it to resolve an intent.
+
+## See Also
+
+### Creating a Resolution Result Object
+
+- [confirmationRequiredWithCallDestinationTypeToConfirm:](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
+
+# Document: INCallGroup
+
+Source path: documentation/intents/incallgroup
+Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup
+Description: Framework: Intents Kind: Class Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+# INCallGroup (Swift)
+
+**Framework:** Intents  
+**Kind:** Class  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+The details of a group call handled by your app.
+
+## Declaration
+
+```swift
+class INCallGroup
+```
+
+<a id="overview"></a>
+
+## Overview
+
+An `INCallGroup` object stores details that the user contributed to your app about a group call. Use call group objects to communicate general information about group calls to SiriKit. An `INCallGroup` identifies the calls group name and unique group ID.
+
+## Topics
+
+### Initializers
+
+- [init(coder:)](incallgroup/init%28coder_%29.md)
+- [init(groupName:groupId:)](incallgroup/init%28groupname_groupid_%29.md): Creates a call record with the group details.
+
+### Instance Properties
+
+- [groupId](incallgroup/groupid.md): A unique identifier that disguishes call groups.
+- [groupName](incallgroup/groupname.md): The name contributed the user to their group call.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](../foundation/nscoding.md)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSSecureCoding](../foundation/nssecurecoding.md)
+
+## See Also
+
+### Describing a Call
+
+- [INCallRecord](incallrecord.md): The details about a call handled by your app.
+- [INCallRecordFilter](incallrecordfilter.md): Filters a user specifies to redial a call.
+- [INCallRecordType](incallrecordtype.md): Constants describing the type of the call.
+- [INCallRecordTypeOptions](incallrecordtypeoptions.md): Constants describing the types of calls to include during a search.
+- [INCallDestinationType](incalldestinationtype.md): Constants describing the destination of a call.
+
+# INCallGroup (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Class  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+The details of a group call handled by your app.
+
+## Declaration
+
+```objectivec
+@interface INCallGroup : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+An `INCallGroup` object stores details that the user contributed to your app about a group call. Use call group objects to communicate general information about group calls to SiriKit. An `INCallGroup` identifies the calls group name and unique group ID.
+
+## Topics
+
+### Instance Properties
+
+- [groupId](incallgroup/groupid.md): A unique identifier that disguishes call groups.
+- [groupName](incallgroup/groupname.md): The name contributed the user to their group call.
+
+### Instance Methods
+
+- [initWithGroupName:groupId:](incallgroup/init%28groupname_groupid_%29.md): Creates a call record with the group details.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+- [NSSecureCoding](../foundation/nssecurecoding.md)
+
+## See Also
+
+### Describing a Call
+
+- [INCallRecord](incallrecord.md): The details about a call handled by your app.
+- [INCallRecordFilter](incallrecordfilter.md): Filters a user specifies to redial a call.
+- [INCallRecordType](incallrecordtype.md): Constants describing the type of the call.
+- [INCallRecordTypeOptions](incallrecordtypeoptions.md): Constants describing the types of calls to include during a search.
+- [INCallDestinationType](incalldestinationtype.md): Constants describing the destination of a call.
+
+# Document: groupId
+
+Source path: documentation/intents/incallgroup/groupid
+Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup/groupid
+Description: Framework: Intents Kind: Instance Property Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+# groupId (Swift)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+A unique identifier that disguishes call groups.
+
+## Declaration
+
+```swift
+var groupId: String? { get }
+```
+
+# groupId (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+A unique identifier that disguishes call groups.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly, nullable) NSString * groupId;
+```
+
+```objectivec
+@property (atomic, copy, readonly, nullable) NSString * groupId;
+```
+
+# Document: groupName
+
+Source path: documentation/intents/incallgroup/groupname
+Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup/groupname
+Description: Framework: Intents Kind: Instance Property Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+# groupName (Swift)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+The name contributed the user to their group call.
+
+## Declaration
+
+```swift
+var groupName: String? { get }
+```
+
+# groupName (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+The name contributed the user to their group call.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly, nullable) NSString * groupName;
+```
+
+```objectivec
+@property (atomic, copy, readonly, nullable) NSString * groupName;
+```
+
+# Document: init(coder:)
+
+Source path: documentation/intents/incallgroup/init(coder:)
+Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup/init(coder:)
+Description: Framework: Intents Kind: Initializer Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+# init(coder:)
+
+**Framework:** Intents  
+**Kind:** Initializer  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+## Declaration
+
+```swift
+init?(coder: NSCoder)
+```
+
+# Document: init(groupName:groupId:)
+
+Source path: documentation/intents/incallgroup/init(groupname:groupid:)
+Canonical documentation: https://developer.apple.com/documentation/intents/incallgroup/init(groupname:groupid:)
+Description: Framework: Intents Kind: Initializer Availability: iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+# init(groupName:groupId:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Initializer  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+Creates a call record with the group details.
+
+## Declaration
+
+```swift
+init(groupName: String?, groupId: String?)
+```
+
+## Parameters
+
+- `groupName`: The name contributed the user to their group call. This field can be `nil`.
+- `groupId`: A unique identifier that disguishes call groups. This field can be `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized [INCallGroup](../incallgroup.md) object or `nil` if the user did not initialize the object.
+
+# initWithGroupName:groupId: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Method  
+**Availability:** iOS 14.5+ · iPadOS 14.5+ · Mac Catalyst 14.5+ · macOS 11.3+ · visionOS 1.0+ · watchOS 7.3+
+
+Creates a call record with the group details.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithGroupName:(NSString *) groupName groupId:(NSString *) groupId;
+```
+
+## Parameters
+
+- `groupName`: The name contributed the user to their group call. This field can be `nil`.
+- `groupId`: A unique identifier that disguishes call groups. This field can be `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized [INCallGroup](../incallgroup.md) object or `nil` if the user did not initialize the object.
 
 # Document: INCallRecord
 
@@ -179533,965 +180512,3 @@ An array of alternative phrases that match the current phrase.
 ```objectivec
 @property (atomic, strong, readonly, nullable) NSArray<id<INSpeakable>> * alternativeSpeakableMatches;
 ```
-
-# Document: identifier
-
-Source path: documentation/intents/inspeakable/identifier
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakable/identifier
-Description: Framework: Intents Kind: Instance Property Availability: iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 11.0+ · tvOS 10.0+ (deprecated in 11.0) · vis…
-
-# identifier (Swift)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 11.0+ · tvOS 10.0+ (deprecated in 11.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (deprecated in 4.0)
-
-The identifier associated with the string in your app’s custom vocabulary file.
-
-> Use [vocabularyIdentifier](vocabularyidentifier.md) instead.
-
-## Declaration
-
-```swift
-optional var identifier: String? { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-For phrases that are included in your app’s `AppIntentVocabulary.plist` file, this property contains the value of the `VocabularyItemIdentifier` key associated with that phrase. When determining the resolution for speakable strings, you can use this identifier (when present) to validate and resolve the term to a known phrase.
-
-If the specified phrase was not defined in your vocabulary file, this property is `nil`.
-
-## See Also
-
-### Getting the Identifier
-
-- [vocabularyIdentifier](vocabularyidentifier.md): The identifier associated with the string in your app’s custom vocabulary file.
-
-# identifier (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 11.0+ · tvOS 14.0+ (deprecated in 11.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (deprecated in 4.0)
-
-The identifier associated with the string in your app’s custom vocabulary file.
-
-> Use [vocabularyIdentifier](vocabularyidentifier.md) instead.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, strong, readonly, nullable) NSString * identifier;
-```
-
-```objectivec
-@property (atomic, strong, readonly, nullable) NSString * identifier;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-For phrases that are included in your app’s `AppIntentVocabulary.plist` file, this property contains the value of the `VocabularyItemIdentifier` key associated with that phrase. When determining the resolution for speakable strings, you can use this identifier (when present) to validate and resolve the term to a known phrase.
-
-If the specified phrase was not defined in your vocabulary file, this property is `nil`.
-
-## See Also
-
-### Getting the Identifier
-
-- [vocabularyIdentifier](vocabularyidentifier.md): The identifier associated with the string in your app’s custom vocabulary file.
-
-# Document: pronunciationHint
-
-Source path: documentation/intents/inspeakable/pronunciationhint
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakable/pronunciationhint
-Description: Framework: Intents Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-# pronunciationHint (Swift)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-A hint at how the spoken phrase is pronounced.
-
-## Declaration
-
-```swift
-var pronunciationHint: String? { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This value provides a hint to Siri about how a string is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could be have “eye toons” as its pronunciation string.
-
-## See Also
-
-### Getting the Spoken Attributes
-
-- [spokenPhrase](spokenphrase.md): The phrase identified by Siri.
-
-# pronunciationHint (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-A hint at how the spoken phrase is pronounced.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, strong, readonly, nullable) NSString * pronunciationHint;
-```
-
-```objectivec
-@property (atomic, strong, readonly, nullable) NSString * pronunciationHint;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-This value provides a hint to Siri about how a string is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could be have “eye toons” as its pronunciation string.
-
-## See Also
-
-### Getting the Spoken Attributes
-
-- [spokenPhrase](spokenphrase.md): The phrase identified by Siri.
-
-# Document: spokenPhrase
-
-Source path: documentation/intents/inspeakable/spokenphrase
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakable/spokenphrase
-Description: Framework: Intents Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-# spokenPhrase (Swift)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-The phrase identified by Siri.
-
-## Declaration
-
-```swift
-var spokenPhrase: String { get }
-```
-
-## Mentioned In
-
-- [Handling an Intent](../../sirikit/handling-an-intent.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Typically, this phrase corresponds to a custom term defined in the `AppIntentVocabulary.plist` file of your Intents extension, but it may also be a custom phrase spoken by the user. In both cases, it represents a term that you must resolve as part of handling an intent. For example, it might contain a workout name that you must resolve.
-
-## See Also
-
-### Getting the Spoken Attributes
-
-- [pronunciationHint](pronunciationhint.md): A hint at how the spoken phrase is pronounced.
-
-# spokenPhrase (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-The phrase identified by Siri.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, strong, readonly, nonnull) NSString * spokenPhrase;
-```
-
-```objectivec
-@property (atomic, strong, readonly, nonnull) NSString * spokenPhrase;
-```
-
-## Mentioned In
-
-- [Handling an Intent](../../sirikit/handling-an-intent.md)
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Typically, this phrase corresponds to a custom term defined in the `AppIntentVocabulary.plist` file of your Intents extension, but it may also be a custom phrase spoken by the user. In both cases, it represents a term that you must resolve as part of handling an intent. For example, it might contain a workout name that you must resolve.
-
-## See Also
-
-### Getting the Spoken Attributes
-
-- [pronunciationHint](pronunciationhint.md): A hint at how the spoken phrase is pronounced.
-
-# Document: vocabularyIdentifier
-
-Source path: documentation/intents/inspeakable/vocabularyidentifier
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakable/vocabularyidentifier
-Description: Framework: Intents Kind: Instance Property Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-# vocabularyIdentifier (Swift)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-The identifier associated with the string in your app’s custom vocabulary file.
-
-## Declaration
-
-```swift
-var vocabularyIdentifier: String? { get }
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-For phrases that are included in your app’s `AppIntentVocabulary.plist` file, this property contains the value of the `VocabularyItemIdentifier` key associated with that phrase. When determining the resolution for speakable strings, you can use this identifier (when present) to validate and resolve the term to a known phrase.
-
-If the specified phrase was not defined in your vocabulary file, this property is `nil`.
-
-## See Also
-
-### Getting the Identifier
-
-- [identifier](identifier.md): Deprecated. The identifier associated with the string in your app’s custom vocabulary file.
-
-# vocabularyIdentifier (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Property  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 3.2+
-
-The identifier associated with the string in your app’s custom vocabulary file.
-
-## Declaration
-
-```objectivec
-@property (nonatomic, strong, readonly, nullable) NSString * vocabularyIdentifier;
-```
-
-```objectivec
-@property (atomic, strong, readonly, nullable) NSString * vocabularyIdentifier;
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-For phrases that are included in your app’s `AppIntentVocabulary.plist` file, this property contains the value of the `VocabularyItemIdentifier` key associated with that phrase. When determining the resolution for speakable strings, you can use this identifier (when present) to validate and resolve the term to a known phrase.
-
-If the specified phrase was not defined in your vocabulary file, this property is `nil`.
-
-## See Also
-
-### Getting the Identifier
-
-- [identifier](identifier.md): Deprecated. The identifier associated with the string in your app’s custom vocabulary file.
-
-# Document: INSpeakableString
-
-Source path: documentation/intents/inspeakablestring
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring
-Description: Framework: Intents Kind: Class Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
-
-# INSpeakableString (Swift)
-
-**Framework:** Intents  
-**Kind:** Class  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
-
-A custom phrase to be resolved by an Intents extension.
-
-## Declaration
-
-```swift
-class INSpeakableString
-```
-
-## Mentioned In
-
-- [Improving interactions between Siri and your messaging app](../sirikit/improving-interactions-between-siri-and-your-messaging-app.md)
-
-<a id="overview"></a>
-
-## Overview
-
-When creating your Intents extension, you can define custom vocabulary for some types of intents. For example, a workout app may provide a custom `AppIntentVocabulary.plist` file with the names of standard workouts that are shared by all users of the app. In places where those terms might be used, the intent object contains an [INSpeakableString](inspeakablestring.md) object.
-
-Use the contents of an [INSpeakableString](inspeakablestring.md) object to resolve the specified term during the handling of an intent. If the user spoke a term that is defined in your `AppIntentVocabulary.plist` file, Siri includes the identifier of that term in the string’s [identifier](inspeakable/identifier.md) property. For unrecognized terms, the identifier is `nil`.
-
-## Topics
-
-### Initializing a Speakable String
-
-- [init(spokenPhrase:)](inspeakablestring/init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
-- [init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)](inspeakablestring/init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
-- [init(identifier:spokenPhrase:pronunciationHint:)](inspeakablestring/init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
-
-### Initializers
-
-- [init(coder:)](inspeakablestring/init%28coder_%29.md)
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [INSpeakable](inspeakable.md)
-- [NSCoding](../foundation/nscoding.md)
-- [NSCopying](../foundation/nscopying.md)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-- [NSSecureCoding](../foundation/nssecurecoding.md)
-
-## See Also
-
-### String
-
-- [INSpeakable](inspeakable.md): Pronunciation hints for strings used in a spoken interface.
-
-# INSpeakableString (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Class  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
-
-A custom phrase to be resolved by an Intents extension.
-
-## Declaration
-
-```objectivec
-@interface INSpeakableString : NSObject
-```
-
-## Mentioned In
-
-- [Improving interactions between Siri and your messaging app](../sirikit/improving-interactions-between-siri-and-your-messaging-app.md)
-
-<a id="overview"></a>
-
-## Overview
-
-When creating your Intents extension, you can define custom vocabulary for some types of intents. For example, a workout app may provide a custom `AppIntentVocabulary.plist` file with the names of standard workouts that are shared by all users of the app. In places where those terms might be used, the intent object contains an [INSpeakableString](inspeakablestring.md) object.
-
-Use the contents of an [INSpeakableString](inspeakablestring.md) object to resolve the specified term during the handling of an intent. If the user spoke a term that is defined in your `AppIntentVocabulary.plist` file, Siri includes the identifier of that term in the string’s [identifier](inspeakable/identifier.md) property. For unrecognized terms, the identifier is `nil`.
-
-## Topics
-
-### Initializing a Speakable String
-
-- [initWithSpokenPhrase:](inspeakablestring/init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
-- [initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:](inspeakablestring/init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
-- [initWithIdentifier:spokenPhrase:pronunciationHint:](inspeakablestring/init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
-
-## Relationships
-
-### Inherits From
-
-- [NSObject](../objectivec/nsobject-swift.class.md)
-
-### Conforms To
-
-- [INSpeakable](inspeakable.md)
-- [NSCopying](../foundation/nscopying.md)
-- [NSSecureCoding](../foundation/nssecurecoding.md)
-
-## See Also
-
-### String
-
-- [INSpeakable](inspeakable.md): Pronunciation hints for strings used in a spoken interface.
-
-# Document: init(coder:)
-
-Source path: documentation/intents/inspeakablestring/init(coder:)
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring/init(coder:)
-Description: Framework: Intents Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
-
-# init(coder:)
-
-**Framework:** Intents  
-**Kind:** Initializer  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
-
-## Declaration
-
-```swift
-init?(coder: NSCoder)
-```
-
-# Document: init(identifier:spokenPhrase:pronunciationHint:)
-
-Source path: documentation/intents/inspeakablestring/init(identifier:spokenphrase:pronunciationhint:)
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring/init(identifier:spokenphrase:pronunciationhint:)
-Description: Framework: Intents Kind: Initializer Availability: iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (depreca…
-
-# init(identifier:spokenPhrase:pronunciationHint:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Initializer  
-**Availability:** iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (deprecated in 4.0)
-
-Initializes the string with the specified identifier and phrase information.
-
-> Use [init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md) instead.
-
-## Declaration
-
-```swift
-convenience init(identifier: String, spokenPhrase: String, pronunciationHint: String?)
-```
-
-## Parameters
-
-- `identifier`: The identifier associated with the phrase in your Intents extension’s custom vocabulary file.
-- `spokenPhrase`: The phrase to be spoken.
-- `pronunciationHint`: A hint about how the phrase is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could have “eye toons” as its pronunciation string.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An initialized speakable string object.
-
-## See Also
-
-### Initializing a Speakable String
-
-- [init(spokenPhrase:)](init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
-- [init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
-
-# initWithIdentifier:spokenPhrase:pronunciationHint: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Method  
-**Availability:** iOS 10.0+ (deprecated in 11.0) · iPadOS 10.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.2+ (deprecated in 4.0)
-
-Initializes the string with the specified identifier and phrase information.
-
-> Use [initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md) instead.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithIdentifier:(NSString *) identifier spokenPhrase:(NSString *) spokenPhrase pronunciationHint:(NSString *) pronunciationHint;
-```
-
-## Parameters
-
-- `identifier`: The identifier associated with the phrase in your Intents extension’s custom vocabulary file.
-- `spokenPhrase`: The phrase to be spoken.
-- `pronunciationHint`: A hint about how the phrase is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could have “eye toons” as its pronunciation string.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An initialized speakable string object.
-
-## See Also
-
-### Initializing a Speakable String
-
-- [initWithSpokenPhrase:](init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
-- [initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
-
-# Document: init(spokenPhrase:)
-
-Source path: documentation/intents/inspeakablestring/init(spokenphrase:)
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring/init(spokenphrase:)
-Description: Framework: Intents Kind: Initializer Availability: iOS 10.2+ · iPadOS 10.2+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.1+ · visionOS 1.0+ · watchOS 3.1+
-
-# init(spokenPhrase:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Initializer  
-**Availability:** iOS 10.2+ · iPadOS 10.2+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.1+ · visionOS 1.0+ · watchOS 3.1+
-
-Initializes the string with the specified phrase.
-
-## Declaration
-
-```swift
-convenience init(spokenPhrase: String)
-```
-
-## Parameters
-
-- `spokenPhrase`: The phrase to be spoken.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An initialized speakable string object.
-
-## See Also
-
-### Initializing a Speakable String
-
-- [init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
-- [init(identifier:spokenPhrase:pronunciationHint:)](init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
-
-# initWithSpokenPhrase: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Method  
-**Availability:** iOS 10.2+ · iPadOS 10.2+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.1+ · visionOS 1.0+ · watchOS 3.2+
-
-Initializes the string with the specified phrase.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithSpokenPhrase:(NSString *) spokenPhrase;
-```
-
-## Parameters
-
-- `spokenPhrase`: The phrase to be spoken.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An initialized speakable string object.
-
-## See Also
-
-### Initializing a Speakable String
-
-- [initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:](init%28vocabularyidentifier_spokenphrase_pronunciationhint_%29.md): Initializes the string with a phrase from your app’s vocabulary.
-- [initWithIdentifier:spokenPhrase:pronunciationHint:](init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
-
-# Document: init(vocabularyIdentifier:spokenPhrase:pronunciationHint:)
-
-Source path: documentation/intents/inspeakablestring/init(vocabularyidentifier:spokenphrase:pronunciationhint:)
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestring/init(vocabularyidentifier:spokenphrase:pronunciationhint:)
-Description: Framework: Intents Kind: Initializer Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
-
-# init(vocabularyIdentifier:spokenPhrase:pronunciationHint:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Initializer  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
-
-Initializes the string with a phrase from your app’s vocabulary.
-
-## Declaration
-
-```swift
-init(vocabularyIdentifier: String, spokenPhrase: String, pronunciationHint: String?)
-```
-
-## Parameters
-
-- `vocabularyIdentifier`: The identifier of a phrase that your app registered as part of its vocabulary.
-- `spokenPhrase`: The spoken phrase associated with that vocabulary.
-- `pronunciationHint`: A hint at how the spoken phrase is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could have “eye toons” as its pronunciation string.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An initialized speakable string object.
-
-## See Also
-
-### Initializing a Speakable String
-
-- [init(spokenPhrase:)](init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
-- [init(identifier:spokenPhrase:pronunciationHint:)](init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
-
-# initWithVocabularyIdentifier:spokenPhrase:pronunciationHint: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Instance Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 11.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.2+
-
-Initializes the string with a phrase from your app’s vocabulary.
-
-## Declaration
-
-```objectivec
-- (instancetype) initWithVocabularyIdentifier:(NSString *) vocabularyIdentifier spokenPhrase:(NSString *) spokenPhrase pronunciationHint:(NSString *) pronunciationHint;
-```
-
-## Parameters
-
-- `vocabularyIdentifier`: The identifier of a phrase that your app registered as part of its vocabulary.
-- `spokenPhrase`: The spoken phrase associated with that vocabulary.
-- `pronunciationHint`: A hint at how the spoken phrase is pronounced. This string is not a phonetic spelling of the original phrase, but is a string that has an equivalent sound when spoken. For example, the phrase “iTunes” could have “eye toons” as its pronunciation string.
-
-<a id="return-value"></a>
-
-## Return Value
-
-An initialized speakable string object.
-
-## See Also
-
-### Initializing a Speakable String
-
-- [initWithSpokenPhrase:](init%28spokenphrase_%29.md): Initializes the string with the specified phrase.
-- [initWithIdentifier:spokenPhrase:pronunciationHint:](init%28identifier_spokenphrase_pronunciationhint_%29.md): Deprecated. Initializes the string with the specified identifier and phrase information.
-
-# Document: INSpeakableStringResolutionResult
-
-Source path: documentation/intents/inspeakablestringresolutionresult
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestringresolutionresult
-Description: Framework: Intents Kind: Class Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-# INSpeakableStringResolutionResult (Swift)
-
-**Framework:** Intents  
-**Kind:** Class  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-A resolution result for a speakable string object associated with an intent.
-
-## Declaration
-
-```swift
-class INSpeakableStringResolutionResult
-```
-
-<a id="overview"></a>
-
-## Overview
-
-An [INSpeakableStringResolutionResult](inspeakablestringresolutionresult.md) object is what you return when resolving parameters containing an [INSpeakableString](inspeakablestring.md) object. Use the creation method that best reflects your ability to successfully resolve the parameter.
-
-For additional resolution options, see [INIntentResolutionResult](inintentresolutionresult.md).
-
-## Topics
-
-### Creating a Resolution Result Object
-
-- [success(with:)](inspeakablestringresolutionresult/success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-- [confirmationRequired(with:)](inspeakablestringresolutionresult/confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-- [disambiguation(with:)](inspeakablestringresolutionresult/disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
-
-## Relationships
-
-### Inherits From
-
-- [INIntentResolutionResult](inintentresolutionresult.md)
-
-### Conforms To
-
-- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
-- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
-- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
-- [Equatable](https://developer.apple.com/documentation/swift/equatable)
-- [Hashable](https://developer.apple.com/documentation/swift/hashable)
-- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
-
-## See Also
-
-### Strings
-
-- [INStringResolutionResult](instringresolutionresult.md): A resolution result for a string value associated with an intent.
-
-# INSpeakableStringResolutionResult (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Class  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-A resolution result for a speakable string object associated with an intent.
-
-## Declaration
-
-```objectivec
-@interface INSpeakableStringResolutionResult : INIntentResolutionResult
-```
-
-<a id="overview"></a>
-
-## Overview
-
-An [INSpeakableStringResolutionResult](inspeakablestringresolutionresult.md) object is what you return when resolving parameters containing an [INSpeakableString](inspeakablestring.md) object. Use the creation method that best reflects your ability to successfully resolve the parameter.
-
-For additional resolution options, see [INIntentResolutionResult](inintentresolutionresult.md).
-
-## Topics
-
-### Creating a Resolution Result Object
-
-- [successWithResolvedString:](inspeakablestringresolutionresult/success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-- [confirmationRequiredWithStringToConfirm:](inspeakablestringresolutionresult/confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-- [disambiguationWithStringsToDisambiguate:](inspeakablestringresolutionresult/disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
-
-## Relationships
-
-### Inherits From
-
-- [INIntentResolutionResult](inintentresolutionresult.md)
-
-## See Also
-
-### Strings
-
-- [INStringResolutionResult](instringresolutionresult.md): A resolution result for a string value associated with an intent.
-
-# Document: confirmationRequired(with:)
-
-Source path: documentation/intents/inspeakablestringresolutionresult/confirmationrequired(with:)
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestringresolutionresult/confirmationrequired(with:)
-Description: Framework: Intents Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-# confirmationRequired(with:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-## Declaration
-
-```swift
-class func confirmationRequired(with stringToConfirm: INSpeakableString?) -> Self
-```
-
-## Parameters
-
-- `stringToConfirm`: The value that resolves the request but must be confirmed by the user.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method when you can resolve the parameter to the specified value but you want the user to confirm that value.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [success(with:)](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-- [disambiguation(with:)](disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
-
-# confirmationRequiredWithStringToConfirm: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-## Declaration
-
-```objectivec
-+ (instancetype) confirmationRequiredWithStringToConfirm:(INSpeakableString *) stringToConfirm;
-```
-
-## Parameters
-
-- `stringToConfirm`: The value that resolves the request but must be confirmed by the user.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method when you can resolve the parameter to the specified value but you want the user to confirm that value.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [successWithResolvedString:](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-- [disambiguationWithStringsToDisambiguate:](disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
-
-# Document: disambiguation(with:)
-
-Source path: documentation/intents/inspeakablestringresolutionresult/disambiguation(with:)
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestringresolutionresult/disambiguation(with:)
-Description: Framework: Intents Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-# disambiguation(with:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-Creates an object whose resolution requires the user to select from among the specified objects.
-
-## Declaration
-
-```swift
-class func disambiguation(with stringsToDisambiguate: [INSpeakableString]) -> Self
-```
-
-## Parameters
-
-- `stringsToDisambiguate`: An array of [INSpeakableString](../inspeakablestring.md) objects for the user to choose from.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method to create a result object when there is more one value that might match the given parameter. The user is asked to select from among the objects you provide.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [success(with:)](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-- [confirmationRequired(with:)](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-# disambiguationWithStringsToDisambiguate: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-Creates an object whose resolution requires the user to select from among the specified objects.
-
-## Declaration
-
-```objectivec
-+ (instancetype) disambiguationWithStringsToDisambiguate:(NSArray<INSpeakableString *> *) stringsToDisambiguate;
-```
-
-## Parameters
-
-- `stringsToDisambiguate`: An array of [INSpeakableString](../inspeakablestring.md) objects for the user to choose from.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method to create a result object when there is more one value that might match the given parameter. The user is asked to select from among the objects you provide.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [successWithResolvedString:](success%28with_%29.md): Creates an object whose resolution involves the successful matching of the specified parameter.
-- [confirmationRequiredWithStringToConfirm:](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-
-# Document: success(with:)
-
-Source path: documentation/intents/inspeakablestringresolutionresult/success(with:)
-Canonical documentation: https://developer.apple.com/documentation/intents/inspeakablestringresolutionresult/success(with:)
-Description: Framework: Intents Kind: Type Method Availability: iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-# success(with:) (Swift)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-Creates an object whose resolution involves the successful matching of the specified parameter.
-
-## Declaration
-
-```swift
-class func success(with resolvedString: INSpeakableString) -> Self
-```
-
-## Parameters
-
-- `resolvedString`: The object that resolves the requested parameter of the intent. This value may be different than the one specified in the intent object.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method to create a result object when you are able to use the provided string to handle the intent successfully.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [confirmationRequired(with:)](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-- [disambiguation(with:)](disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.
-
-# successWithResolvedString: (Objective-C)
-
-**Framework:** Intents  
-**Kind:** Type Method  
-**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
-
-Creates an object whose resolution involves the successful matching of the specified parameter.
-
-## Declaration
-
-```objectivec
-+ (instancetype) successWithResolvedString:(INSpeakableString *) resolvedString;
-```
-
-## Parameters
-
-- `resolvedString`: The object that resolves the requested parameter of the intent. This value may be different than the one specified in the intent object.
-
-<a id="return-value"></a>
-
-## Return Value
-
-A new [INSpeakableStringResolutionResult](../inspeakablestringresolutionresult.md) object.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Use this method to create a result object when you are able to use the provided string to handle the intent successfully.
-
-## See Also
-
-### Creating a Resolution Result Object
-
-- [confirmationRequiredWithStringToConfirm:](confirmationrequired%28with_%29.md): Creates an object whose resolution requires that the user must confirm the value before proceeding.
-- [disambiguationWithStringsToDisambiguate:](disambiguation%28with_%29.md): Creates an object whose resolution requires the user to select from among the specified objects.

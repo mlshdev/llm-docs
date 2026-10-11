@@ -1,0 +1,6001 @@
+# Apple WebKit and Safari snapshot-8cd502625a0a: full documentation
+
+Source: https://developer.apple.com/documentation/webkit
+Catalog snapshot: 8cd502625a0a857a5ff3294a6fec99aafd7b758d2731321d9678da32813f112c
+Content digest: b37471c392a15490eefe07724ec02165879a2030edcf4c23120a65c18ab721d2
+Captured at: 2026-10-11T21:19:14.688Z
+Volume 6
+
+# Document: deleteRule
+
+Source path: documentation/webkitjs/webkitcsskeyframesrule/1807097-deleterule
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcsskeyframesrule/1807097-deleterule
+Description: Interface language: Data
+
+# deleteRule
+
+**Interface language:** Data
+
+**Framework:** WebKit JS
+
+Removes a keyframe rule from the collection of keyframes.
+
+## Declaration
+
+```
+void deleteRule (in DOMString key);
+```
+
+## Parameters
+
+- `key`: A selector for the rule that is either a percentage or the keyword `from` or `to`.
+
+## See Also
+
+### Changing Rules
+
+- [insertRule](1807093-insertrule.md): Adds a keyframe rule to the collection of keyframes.
+- [findRule](1807100-findrule.md): Returns the keyframe rule for the specified selector.
+
+# Document: findRule
+
+Source path: documentation/webkitjs/webkitcsskeyframesrule/1807100-findrule
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcsskeyframesrule/1807100-findrule
+Description: Interface language: Data
+
+# findRule
+
+**Interface language:** Data
+
+**Framework:** WebKit JS
+
+Returns the keyframe rule for the specified selector.
+
+## Declaration
+
+```
+WebKitCSSKeyframeRule findRule (in DOMString key);
+```
+
+## Parameters
+
+- `key`: A selector for the rule that is either a percentage or the keyword `from` or `to`.
+
+<a id="return_value"></a>
+
+## Return Value
+
+Returns the keyframe rule corresponding to the given selector if it exists.
+
+## See Also
+
+### Changing Rules
+
+- [insertRule](1807093-insertrule.md): Adds a keyframe rule to the collection of keyframes.
+- [deleteRule](1807097-deleterule.md): Removes a keyframe rule from the collection of keyframes.
+
+# Document: WebKitCSSMatrix
+
+Source path: documentation/webkitjs/webkitcssmatrix
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix
+Description: Interface language: Data
+
+# WebKitCSSMatrix
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 2.0+
+
+`WebKitCSSMatrix` objects represent a 4x4 homogeneous matrix for 3D transforms or a vector for 2D transforms. You can use these objects to manipulate matrices in JavaScript. For example, you can multiply, translate, and scale matrices.
+
+## Declaration
+
+```
+interface WebKitCSSMatrix
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The values of a 3D matrix can be initialized from the [matrix3d](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/Functions.html#//apple_ref/css/func/matrix3d) transform function returned by `window.getComputedStyle(element).webkitTransform()`. To apply the final matrix to an element, construct a string using the [matrix3d](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/Functions.html#//apple_ref/css/func/matrix3d) transform function passing the 16 values, and assign it to `element.style.webkitTransform`. Similarly, you can construct a matrix for 2D transforms by setting 6 values, represented by the `a`-`f` properties.
+
+## Topics
+
+### Accessing Properties
+
+- [a](webkitcssmatrix/1633464-a.md): The first 2D vector value.
+- [b](webkitcssmatrix/1630954-b.md): The second 2D vector value.
+- [c](webkitcssmatrix/1629966-c.md): The third 2D vector value.
+- [d](webkitcssmatrix/1633079-d.md): The fourth 2D vector value.
+- [e](webkitcssmatrix/1633835-e.md): The fifth 2D vector value.
+- [f](webkitcssmatrix/1633411-f.md): The sixth 2D vector value.
+- [m11](webkitcssmatrix/1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](webkitcssmatrix/1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](webkitcssmatrix/1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](webkitcssmatrix/1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](webkitcssmatrix/1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](webkitcssmatrix/1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](webkitcssmatrix/1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](webkitcssmatrix/1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](webkitcssmatrix/1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](webkitcssmatrix/1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](webkitcssmatrix/1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](webkitcssmatrix/1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](webkitcssmatrix/1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](webkitcssmatrix/1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](webkitcssmatrix/1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](webkitcssmatrix/1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+### Setting the Matrix
+
+- [setMatrixValue](webkitcssmatrix/1629980-setmatrixvalue.md): Sets the matrix values using a string representation.
+
+### Applying Operations
+
+- [multiply](webkitcssmatrix/1631528-multiply.md): Returns the result of multiplying this matrix by a given matrix that is on the right.
+- [inverse](webkitcssmatrix/1633805-inverse.md): Returns the inverse of this matrix.
+- [translate](webkitcssmatrix/1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [scale](webkitcssmatrix/1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotate](webkitcssmatrix/1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [rotateAxisAngle](webkitcssmatrix/1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewX](webkitcssmatrix/1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+- [skewY](webkitcssmatrix/1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.
+
+### Converting the Matrix
+
+- [toString](webkitcssmatrix/1630836-tostring.md): Returns a string representation of the matrix.
+
+# Document: m31
+
+Source path: documentation/webkitjs/webkitcssmatrix/1628844-m31
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1628844-m31
+Description: Interface language: Data
+
+# m31
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the third row and first column.
+
+## Declaration
+
+```
+attribute unrestricted double m31;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: m23
+
+Source path: documentation/webkitjs/webkitcssmatrix/1629105-m23
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1629105-m23
+Description: Interface language: Data
+
+# m23
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the second row and third column.
+
+## Declaration
+
+```
+attribute unrestricted double m23;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: m13
+
+Source path: documentation/webkitjs/webkitcssmatrix/1629376-m13
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1629376-m13
+Description: Interface language: Data
+
+# m13
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the first row and third column.
+
+## Declaration
+
+```
+attribute unrestricted double m13;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: m11
+
+Source path: documentation/webkitjs/webkitcssmatrix/1629449-m11
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1629449-m11
+Description: Interface language: Data
+
+# m11
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the first row and first column.
+
+## Declaration
+
+```
+attribute unrestricted double m11;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: rotate
+
+Source path: documentation/webkitjs/webkitcssmatrix/1629773-rotate
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1629773-rotate
+Description: Interface language: Data
+
+# rotate
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Returns the result of rotating this matrix by a given vector.
+
+## Declaration
+
+```
+WebKitCSSMatrix rotate(
+    optional unrestricted double rotX, 
+    optional unrestricted double rotY, 
+    optional unrestricted double rotZ
+);
+```
+
+## Parameters
+
+- `rotX`: The x component in the vector, in degrees.
+- `rotY`: The y component in the vector, in degrees. If undefined, the x component is used.
+- `rotZ`: The z component in the vector, in degrees. If undefined, the x component is used.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the result of rotating this matrix by each of the three rotation matrices about the major axes, first the x axes, y axes, and then z axes.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This matrix is not modified by this method.
+
+## See Also
+
+### Applying Operations
+
+- [multiply](1631528-multiply.md): Returns the result of multiplying this matrix by a given matrix that is on the right.
+- [inverse](1633805-inverse.md): Returns the inverse of this matrix.
+- [translate](1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [scale](1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotateAxisAngle](1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewX](1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+- [skewY](1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.
+
+# Document: m12
+
+Source path: documentation/webkitjs/webkitcssmatrix/1629940-m12
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1629940-m12
+Description: Interface language: Data
+
+# m12
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+The 3D matrix value in the first row and second column.
+
+## Declaration
+
+```
+attribute unrestricted double m12;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: c
+
+Source path: documentation/webkitjs/webkitcssmatrix/1629966-c
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1629966-c
+Description: Interface language: Data
+
+# c
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The third 2D vector value.
+
+## Declaration
+
+```
+attribute unrestricted double c;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: setMatrixValue
+
+Source path: documentation/webkitjs/webkitcssmatrix/1629980-setmatrixvalue
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1629980-setmatrixvalue
+Description: Interface language: Data
+
+# setMatrixValue
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+Sets the matrix values using a string representation.
+
+## Declaration
+
+```
+void setMatrixValue(
+    optional DOMString string
+);
+```
+
+## Parameters
+
+- `string`: A string returned by the [matrix3d](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/Functions.html#//apple_ref/css/func/matrix3d) transform function—typically returned by `window.getComputedStyle(element).webkitTransform()`.
+
+# Document: m34
+
+Source path: documentation/webkitjs/webkitcssmatrix/1630077-m34
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1630077-m34
+Description: Interface language: Data
+
+# m34
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+The 3D matrix value in the third row and fourth column.
+
+## Declaration
+
+```
+attribute unrestricted double m34;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: m42
+
+Source path: documentation/webkitjs/webkitcssmatrix/1630663-m42
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1630663-m42
+Description: Interface language: Data
+
+# m42
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+The 3D matrix value in the fourth row and second column.
+
+## Declaration
+
+```
+attribute unrestricted double m42;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: translate
+
+Source path: documentation/webkitjs/webkitcssmatrix/1630758-translate
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1630758-translate
+Description: Interface language: Data
+
+# translate
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Returns the result of translating this matrix by a given vector.
+
+## Declaration
+
+```
+WebKitCSSMatrix translate(
+    optional unrestricted double x, 
+    optional unrestricted double y, 
+    optional unrestricted double z
+);
+```
+
+## Parameters
+
+- `x`: The x component in the vector.
+- `y`: The y component in the vector.
+- `z`: The z component in the vector. If undefined, `0` is used.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the result of translating this matrix.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This matrix is not modified by this method.
+
+## See Also
+
+### Applying Operations
+
+- [multiply](1631528-multiply.md): Returns the result of multiplying this matrix by a given matrix that is on the right.
+- [inverse](1633805-inverse.md): Returns the inverse of this matrix.
+- [scale](1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotate](1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [rotateAxisAngle](1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewX](1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+- [skewY](1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.
+
+# Document: toString
+
+Source path: documentation/webkitjs/webkitcssmatrix/1630836-tostring
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1630836-tostring
+Description: Interface language: Data
+
+# toString
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Returns a string representation of the matrix.
+
+## Declaration
+
+```
+DOMString toString();
+```
+
+<a id="return_value"></a>
+
+## Return Value
+
+A string representation of the matrix’s values.
+
+# Document: m41
+
+Source path: documentation/webkitjs/webkitcssmatrix/1630945-m41
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1630945-m41
+Description: Interface language: Data
+
+# m41
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the fourth row and first column.
+
+## Declaration
+
+```
+attribute unrestricted double m41;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: b
+
+Source path: documentation/webkitjs/webkitcssmatrix/1630954-b
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1630954-b
+Description: Interface language: Data
+
+# b
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 3.0+
+
+The second 2D vector value.
+
+## Declaration
+
+```
+attribute unrestricted double b;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: m21
+
+Source path: documentation/webkitjs/webkitcssmatrix/1630988-m21
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1630988-m21
+Description: Interface language: Data
+
+# m21
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the second row and first column.
+
+## Declaration
+
+```
+attribute unrestricted double m21;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: skewY
+
+Source path: documentation/webkitjs/webkitcssmatrix/1631022-skewy
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1631022-skewy
+Description: Interface language: Data
+
+# skewY
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Specifies a skew transformation along the y-axis by the given angle.
+
+## Declaration
+
+```
+WebKitCSSMatrix skewY(
+    optional unrestricted double angle
+);
+```
+
+## Parameters
+
+- `angle`: The angle amount in degrees to skew.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the result of skewing this matrix by the specified angle along the y-axis.
+
+## See Also
+
+### Applying Operations
+
+- [multiply](1631528-multiply.md): Returns the result of multiplying this matrix by a given matrix that is on the right.
+- [inverse](1633805-inverse.md): Returns the inverse of this matrix.
+- [translate](1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [scale](1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotate](1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [rotateAxisAngle](1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewX](1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+
+# Document: m44
+
+Source path: documentation/webkitjs/webkitcssmatrix/1631430-m44
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1631430-m44
+Description: Interface language: Data
+
+# m44
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+The 3D matrix value in the fourth row and fourth column.
+
+## Declaration
+
+```
+attribute unrestricted double m44;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+
+# Document: multiply
+
+Source path: documentation/webkitjs/webkitcssmatrix/1631528-multiply
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1631528-multiply
+Description: Interface language: Data
+
+# multiply
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Returns the result of multiplying this matrix by a given matrix that is on the right.
+
+## Declaration
+
+```
+WebKitCSSMatrix multiply(
+    optional WebKitCSSMatrix? secondMatrix
+);
+```
+
+## Parameters
+
+- `secondMatrix`: The matrix to multiply.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the result of multiplying this matrix by the given matrix.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The given matrix is on the right of the multiplication. This matrix is not modified by this method.
+
+## See Also
+
+### Applying Operations
+
+- [inverse](1633805-inverse.md): Returns the inverse of this matrix.
+- [translate](1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [scale](1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotate](1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [rotateAxisAngle](1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewX](1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+- [skewY](1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.
+
+# Document: scale
+
+Source path: documentation/webkitjs/webkitcssmatrix/1632184-scale
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1632184-scale
+Description: Interface language: Data
+
+# scale
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Returns the result of scaling this matrix by a given vector.
+
+## Declaration
+
+```
+WebKitCSSMatrix scale(
+    optional unrestricted double scaleX, 
+    optional unrestricted double scaleY, 
+    optional unrestricted double scaleZ
+);
+```
+
+## Parameters
+
+- `scaleX`: The x component in the vector.
+- `scaleY`: The y component in the vector. If undefined, the x component is used.
+- `scaleZ`: The z component in the vector. If undefined, `1` is used.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the result of scaling this matrix.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This matrix is not modified by this method.
+
+## See Also
+
+### Applying Operations
+
+- [multiply](1631528-multiply.md): Returns the result of multiplying this matrix by a given matrix that is on the right.
+- [inverse](1633805-inverse.md): Returns the inverse of this matrix.
+- [translate](1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [rotate](1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [rotateAxisAngle](1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewX](1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+- [skewY](1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.
+
+# Document: m14
+
+Source path: documentation/webkitjs/webkitcssmatrix/1632308-m14
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1632308-m14
+Description: Interface language: Data
+
+# m14
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+The 3D matrix value in the first row and fourth column.
+
+## Declaration
+
+```
+attribute unrestricted double m14;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: rotateAxisAngle
+
+Source path: documentation/webkitjs/webkitcssmatrix/1632317-rotateaxisangle
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1632317-rotateaxisangle
+Description: Interface language: Data
+
+# rotateAxisAngle
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+Returns the result of rotating this matrix by a given vector and angle.
+
+## Declaration
+
+```
+WebKitCSSMatrix rotateAxisAngle(
+    optional unrestricted double x, 
+    optional unrestricted double y, 
+    optional unrestricted double z, 
+    optional unrestricted double angle
+);
+```
+
+## Parameters
+
+- `x`: The x component in the vector, in degrees.
+- `y`: The y component in the vector, in degrees. If undefined, the x component is used.
+- `z`: The z component in the vector, in degrees. If undefined, the x component is used.
+- `angle`: The angle of rotation about the axis vector, in degrees.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the result of rotating this matrix by each of the three rotation matrices about the major axes and angle. The right-hand rule is used to determine the direction of rotation.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This matrix is not modified by this method.
+
+## See Also
+
+### Applying Operations
+
+- [multiply](1631528-multiply.md): Returns the result of multiplying this matrix by a given matrix that is on the right.
+- [inverse](1633805-inverse.md): Returns the inverse of this matrix.
+- [translate](1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [scale](1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotate](1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [skewX](1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+- [skewY](1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.
+
+# Document: m22
+
+Source path: documentation/webkitjs/webkitcssmatrix/1632488-m22
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1632488-m22
+Description: Interface language: Data
+
+# m22
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the second row and second column.
+
+## Declaration
+
+```
+attribute unrestricted double m22;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: d
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633079-d
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633079-d
+Description: Interface language: Data
+
+# d
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 3.0+
+
+The fourth 2D vector value.
+
+## Declaration
+
+```
+attribute unrestricted double d;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: m33
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633250-m33
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633250-m33
+Description: Interface language: Data
+
+# m33
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the third row and third column.
+
+## Declaration
+
+```
+attribute unrestricted double m33;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: m32
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633297-m32
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633297-m32
+Description: Interface language: Data
+
+# m32
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the third row and second column.
+
+## Declaration
+
+```
+attribute unrestricted double m32;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: skewX
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633353-skewx
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633353-skewx
+Description: Interface language: Data
+
+# skewX
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 5.1+ · Safari Mobile 5.0+
+
+Specifies a skew transformation along the x-axis by the given angle.
+
+## Declaration
+
+```
+WebKitCSSMatrix skewX(
+    optional unrestricted double angle
+);
+```
+
+## Parameters
+
+- `angle`: The angle amount in degrees to skew.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the result of skewing this matrix by the specified angle along the x-axis.
+
+## See Also
+
+### Applying Operations
+
+- [multiply](1631528-multiply.md): Returns the result of multiplying this matrix by a given matrix that is on the right.
+- [inverse](1633805-inverse.md): Returns the inverse of this matrix.
+- [translate](1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [scale](1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotate](1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [rotateAxisAngle](1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewY](1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.
+
+# Document: f
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633411-f
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633411-f
+Description: Interface language: Data
+
+# f
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The sixth 2D vector value.
+
+## Declaration
+
+```
+attribute unrestricted double f;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: a
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633464-a
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633464-a
+Description: Interface language: Data
+
+# a
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The first 2D vector value.
+
+## Declaration
+
+```
+attribute unrestricted double a;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+### Related Documentation
+
+- [Safari CSS Visual Effects Guide](https://developer.apple.com/library/archive/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Introduction.html#//apple_ref/doc/uid/TP40008032)
+
+# Document: m43
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633644-m43
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633644-m43
+Description: Interface language: Data
+
+# m43
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The 3D matrix value in the fourth row and third column.
+
+## Declaration
+
+```
+attribute unrestricted double m43;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: inverse
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633805-inverse
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633805-inverse
+Description: Interface language: Data
+
+# inverse
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+Returns the inverse of this matrix.
+
+## Declaration
+
+```
+WebKitCSSMatrix inverse();
+```
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the inverse of this matrix.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This matrix is not modified by this method.
+
+## See Also
+
+### Applying Operations
+
+- [multiply](1631528-multiply.md): Returns the result of multiplying this matrix by a given matrix that is on the right.
+- [translate](1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [scale](1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotate](1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [rotateAxisAngle](1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewX](1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+- [skewY](1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.
+
+# Document: e
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633835-e
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633835-e
+Description: Interface language: Data
+
+# e
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The fifth 2D vector value.
+
+## Declaration
+
+```
+attribute unrestricted double e;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m24](1633956-m24.md): The 3D matrix value in the second row and fourth column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: m24
+
+Source path: documentation/webkitjs/webkitcssmatrix/1633956-m24
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1633956-m24
+Description: Interface language: Data
+
+# m24
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+The 3D matrix value in the second row and fourth column.
+
+## Declaration
+
+```
+attribute unrestricted double m24;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+One of the 16 values for the 4x4 homogeneous matrix. For example, `m12` represents the value in the first row and the second column.
+
+## See Also
+
+### Accessing Properties
+
+- [a](1633464-a.md): The first 2D vector value.
+- [b](1630954-b.md): The second 2D vector value.
+- [c](1629966-c.md): The third 2D vector value.
+- [d](1633079-d.md): The fourth 2D vector value.
+- [e](1633835-e.md): The fifth 2D vector value.
+- [f](1633411-f.md): The sixth 2D vector value.
+- [m11](1629449-m11.md): The 3D matrix value in the first row and first column.
+- [m12](1629940-m12.md): The 3D matrix value in the first row and second column.
+- [m13](1629376-m13.md): The 3D matrix value in the first row and third column.
+- [m14](1632308-m14.md): The 3D matrix value in the first row and fourth column.
+- [m21](1630988-m21.md): The 3D matrix value in the second row and first column.
+- [m22](1632488-m22.md): The 3D matrix value in the second row and second column.
+- [m23](1629105-m23.md): The 3D matrix value in the second row and third column.
+- [m31](1628844-m31.md): The 3D matrix value in the third row and first column.
+- [m32](1633297-m32.md): The 3D matrix value in the third row and second column.
+- [m33](1633250-m33.md): The 3D matrix value in the third row and third column.
+- [m34](1630077-m34.md): The 3D matrix value in the third row and fourth column.
+- [m41](1630945-m41.md): The 3D matrix value in the fourth row and first column.
+- [m42](1630663-m42.md): The 3D matrix value in the fourth row and second column.
+- [m43](1633644-m43.md): The 3D matrix value in the fourth row and third column.
+- [m44](1631430-m44.md): The 3D matrix value in the fourth row and fourth column.
+
+# Document: WebKitCSSRegionRule
+
+Source path: documentation/webkitjs/webkitcssregionrule
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssregionrule
+Description: Interface language: Data
+
+# WebKitCSSRegionRule
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+interface WebKitCSSRegionRule
+```
+
+## Topics
+
+### Instance Properties
+
+- [cssRules](webkitcssregionrule/1630273-cssrules.md)
+
+## Relationships
+
+### Inherits From
+
+- [CSSRule](cssrule.md)
+
+# Document: cssRules
+
+Source path: documentation/webkitjs/webkitcssregionrule/1630273-cssrules
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitcssregionrule/1630273-cssrules
+Description: Interface language: Data
+
+# cssRules
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute CSSRuleList cssRules;
+```
+
+# Document: WebKitMediaKeyError
+
+Source path: documentation/webkitjs/webkitmediakeyerror
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror
+Description: Interface language: Data
+
+# WebKitMediaKeyError
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+interface WebKitMediaKeyError
+```
+
+## Topics
+
+### Instance Properties
+
+- [code](webkitmediakeyerror/2871084-code.md)
+- [systemCode](webkitmediakeyerror/2871033-systemcode.md)
+
+### Miscellaneous
+
+- [MEDIA_KEYERR_CLIENT](webkitmediakeyerror/2871348-media_keyerr_client.md)
+- [MEDIA_KEYERR_DOMAIN](webkitmediakeyerror/2871262-media_keyerr_domain.md)
+- [MEDIA_KEYERR_HARDWARECHANGE](webkitmediakeyerror/2871049-media_keyerr_hardwarechange.md)
+- [MEDIA_KEYERR_OUTPUT](webkitmediakeyerror/2871405-media_keyerr_output.md)
+- [MEDIA_KEYERR_SERVICE](webkitmediakeyerror/2871316-media_keyerr_service.md)
+- [MEDIA_KEYERR_UNKNOWN](webkitmediakeyerror/2871428-media_keyerr_unknown.md)
+
+# Document: systemCode
+
+Source path: documentation/webkitjs/webkitmediakeyerror/2871033-systemcode
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871033-systemcode
+Description: Interface language: Data
+
+# systemCode
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute unsigned long systemCode;
+```
+
+# Document: MEDIA_KEYERR_HARDWARECHANGE
+
+Source path: documentation/webkitjs/webkitmediakeyerror/2871049-media_keyerr_hardwarechange
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871049-media_keyerr_hardwarechange
+Description: Interface language: Data
+
+# MEDIA_KEYERR_HARDWARECHANGE
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+const unsigned short MEDIA_KEYERR_HARDWARECHANGE;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [MEDIA_KEYERR_CLIENT](2871348-media_keyerr_client.md)
+- [MEDIA_KEYERR_DOMAIN](2871262-media_keyerr_domain.md)
+- [MEDIA_KEYERR_OUTPUT](2871405-media_keyerr_output.md)
+- [MEDIA_KEYERR_SERVICE](2871316-media_keyerr_service.md)
+- [MEDIA_KEYERR_UNKNOWN](2871428-media_keyerr_unknown.md)
+
+# Document: code
+
+Source path: documentation/webkitjs/webkitmediakeyerror/2871084-code
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871084-code
+Description: Interface language: Data
+
+# code
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute unsigned short code;
+```
+
+# Document: MEDIA_KEYERR_DOMAIN
+
+Source path: documentation/webkitjs/webkitmediakeyerror/2871262-media_keyerr_domain
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871262-media_keyerr_domain
+Description: Interface language: Data
+
+# MEDIA_KEYERR_DOMAIN
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+const unsigned short MEDIA_KEYERR_DOMAIN;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [MEDIA_KEYERR_CLIENT](2871348-media_keyerr_client.md)
+- [MEDIA_KEYERR_HARDWARECHANGE](2871049-media_keyerr_hardwarechange.md)
+- [MEDIA_KEYERR_OUTPUT](2871405-media_keyerr_output.md)
+- [MEDIA_KEYERR_SERVICE](2871316-media_keyerr_service.md)
+- [MEDIA_KEYERR_UNKNOWN](2871428-media_keyerr_unknown.md)
+
+# Document: MEDIA_KEYERR_SERVICE
+
+Source path: documentation/webkitjs/webkitmediakeyerror/2871316-media_keyerr_service
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871316-media_keyerr_service
+Description: Interface language: Data
+
+# MEDIA_KEYERR_SERVICE
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+const unsigned short MEDIA_KEYERR_SERVICE;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [MEDIA_KEYERR_CLIENT](2871348-media_keyerr_client.md)
+- [MEDIA_KEYERR_DOMAIN](2871262-media_keyerr_domain.md)
+- [MEDIA_KEYERR_HARDWARECHANGE](2871049-media_keyerr_hardwarechange.md)
+- [MEDIA_KEYERR_OUTPUT](2871405-media_keyerr_output.md)
+- [MEDIA_KEYERR_UNKNOWN](2871428-media_keyerr_unknown.md)
+
+# Document: MEDIA_KEYERR_CLIENT
+
+Source path: documentation/webkitjs/webkitmediakeyerror/2871348-media_keyerr_client
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871348-media_keyerr_client
+Description: Interface language: Data
+
+# MEDIA_KEYERR_CLIENT
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+const unsigned short MEDIA_KEYERR_CLIENT;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [MEDIA_KEYERR_DOMAIN](2871262-media_keyerr_domain.md)
+- [MEDIA_KEYERR_HARDWARECHANGE](2871049-media_keyerr_hardwarechange.md)
+- [MEDIA_KEYERR_OUTPUT](2871405-media_keyerr_output.md)
+- [MEDIA_KEYERR_SERVICE](2871316-media_keyerr_service.md)
+- [MEDIA_KEYERR_UNKNOWN](2871428-media_keyerr_unknown.md)
+
+# Document: MEDIA_KEYERR_OUTPUT
+
+Source path: documentation/webkitjs/webkitmediakeyerror/2871405-media_keyerr_output
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871405-media_keyerr_output
+Description: Interface language: Data
+
+# MEDIA_KEYERR_OUTPUT
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+const unsigned short MEDIA_KEYERR_OUTPUT;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [MEDIA_KEYERR_CLIENT](2871348-media_keyerr_client.md)
+- [MEDIA_KEYERR_DOMAIN](2871262-media_keyerr_domain.md)
+- [MEDIA_KEYERR_HARDWARECHANGE](2871049-media_keyerr_hardwarechange.md)
+- [MEDIA_KEYERR_SERVICE](2871316-media_keyerr_service.md)
+- [MEDIA_KEYERR_UNKNOWN](2871428-media_keyerr_unknown.md)
+
+# Document: MEDIA_KEYERR_UNKNOWN
+
+Source path: documentation/webkitjs/webkitmediakeyerror/2871428-media_keyerr_unknown
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyerror/2871428-media_keyerr_unknown
+Description: Interface language: Data
+
+# MEDIA_KEYERR_UNKNOWN
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+const unsigned short MEDIA_KEYERR_UNKNOWN;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [MEDIA_KEYERR_CLIENT](2871348-media_keyerr_client.md)
+- [MEDIA_KEYERR_DOMAIN](2871262-media_keyerr_domain.md)
+- [MEDIA_KEYERR_HARDWARECHANGE](2871049-media_keyerr_hardwarechange.md)
+- [MEDIA_KEYERR_OUTPUT](2871405-media_keyerr_output.md)
+- [MEDIA_KEYERR_SERVICE](2871316-media_keyerr_service.md)
+
+# Document: WebKitMediaKeyMessageEvent
+
+Source path: documentation/webkitjs/webkitmediakeymessageevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeymessageevent
+Description: Interface language: Data
+
+# WebKitMediaKeyMessageEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+interface WebKitMediaKeyMessageEvent
+```
+
+## Topics
+
+### Instance Properties
+
+- [destinationURL](webkitmediakeymessageevent/2871466-destinationurl.md)
+- [message](webkitmediakeymessageevent/2871069-message.md)
+
+## Relationships
+
+### Inherits From
+
+- [Event](https://developer.apple.com/documentation/tvmljs/event)
+
+# Document: message
+
+Source path: documentation/webkitjs/webkitmediakeymessageevent/2871069-message
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeymessageevent/2871069-message
+Description: Interface language: Data
+
+# message
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute Uint8Array message;
+```
+
+# Document: destinationURL
+
+Source path: documentation/webkitjs/webkitmediakeymessageevent/2871466-destinationurl
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeymessageevent/2871466-destinationurl
+Description: Interface language: Data
+
+# destinationURL
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute DOMString destinationURL;
+```
+
+# Document: WebKitMediaKeyNeededEvent
+
+Source path: documentation/webkitjs/webkitmediakeyneededevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyneededevent
+Description: Interface language: Data
+
+# WebKitMediaKeyNeededEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+interface WebKitMediaKeyNeededEvent
+```
+
+## Topics
+
+### Instance Properties
+
+- [initData](webkitmediakeyneededevent/2871224-initdata.md)
+
+## Relationships
+
+### Inherits From
+
+- [Event](https://developer.apple.com/documentation/tvmljs/event)
+
+# Document: initData
+
+Source path: documentation/webkitjs/webkitmediakeyneededevent/2871224-initdata
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeyneededevent/2871224-initdata
+Description: Interface language: Data
+
+# initData
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute Uint8Array initData;
+```
+
+# Document: WebKitMediaKeys
+
+Source path: documentation/webkitjs/webkitmediakeys
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeys
+Description: Interface language: Data
+
+# WebKitMediaKeys
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+interface WebKitMediaKeys
+```
+
+## Topics
+
+### Instance Properties
+
+- [keySystem](webkitmediakeys/2871340-keysystem.md)
+
+### Instance Methods
+
+- [createSession](webkitmediakeys/2871278-createsession.md)
+
+### Type Methods
+
+- [isTypeSupported](webkitmediakeys/2871070-istypesupported.md)
+
+# Document: isTypeSupported
+
+Source path: documentation/webkitjs/webkitmediakeys/2871070-istypesupported
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeys/2871070-istypesupported
+Description: Interface language: Data
+
+# isTypeSupported
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Type Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+static boolean isTypeSupported(
+    DOMString keySystem, 
+    optional DOMString type
+);
+```
+
+# Document: createSession
+
+Source path: documentation/webkitjs/webkitmediakeys/2871278-createsession
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeys/2871278-createsession
+Description: Interface language: Data
+
+# createSession
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+WebKitMediaKeySession createSession(
+    DOMString type, 
+    Uint8Array initData
+);
+```
+
+# Document: keySystem
+
+Source path: documentation/webkitjs/webkitmediakeys/2871340-keysystem
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeys/2871340-keysystem
+Description: Interface language: Data
+
+# keySystem
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute DOMString keySystem;
+```
+
+# Document: WebKitMediaKeySession
+
+Source path: documentation/webkitjs/webkitmediakeysession
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession
+Description: Interface language: Data
+
+# WebKitMediaKeySession
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+interface WebKitMediaKeySession
+```
+
+## Topics
+
+### Instance Properties
+
+- [error](webkitmediakeysession/2871077-error.md)
+- [keySystem](webkitmediakeysession/2870982-keysystem.md)
+- [onwebkitkeyadded](webkitmediakeysession/2871427-onwebkitkeyadded.md)
+- [onwebkitkeyerror](webkitmediakeysession/2871154-onwebkitkeyerror.md)
+- [onwebkitkeymessage](webkitmediakeysession/2871256-onwebkitkeymessage.md)
+- [sessionId](webkitmediakeysession/2870986-sessionid.md)
+
+### Instance Methods
+
+- [close](webkitmediakeysession/2871139-close.md)
+- [update](webkitmediakeysession/2870997-update.md)
+
+## Relationships
+
+### Inherits From
+
+- [EventTarget](https://developer.apple.com/documentation/tvmljs/eventtarget)
+
+# Document: keySystem
+
+Source path: documentation/webkitjs/webkitmediakeysession/2870982-keysystem
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession/2870982-keysystem
+Description: Interface language: Data
+
+# keySystem
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute DOMString keySystem;
+```
+
+# Document: sessionId
+
+Source path: documentation/webkitjs/webkitmediakeysession/2870986-sessionid
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession/2870986-sessionid
+Description: Interface language: Data
+
+# sessionId
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute DOMString sessionId;
+```
+
+# Document: update
+
+Source path: documentation/webkitjs/webkitmediakeysession/2870997-update
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession/2870997-update
+Description: Interface language: Data
+
+# update
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+void update(
+    Uint8Array key
+);
+```
+
+# Document: error
+
+Source path: documentation/webkitjs/webkitmediakeysession/2871077-error
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession/2871077-error
+Description: Interface language: Data
+
+# error
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+readonly attribute WebKitMediaKeyError error;
+```
+
+# Document: close
+
+Source path: documentation/webkitjs/webkitmediakeysession/2871139-close
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession/2871139-close
+Description: Interface language: Data
+
+# close
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+void close();
+```
+
+# Document: onwebkitkeyerror
+
+Source path: documentation/webkitjs/webkitmediakeysession/2871154-onwebkitkeyerror
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession/2871154-onwebkitkeyerror
+Description: Interface language: Data
+
+# onwebkitkeyerror
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+attribute EventHandler onwebkitkeyerror;
+```
+
+# Document: onwebkitkeymessage
+
+Source path: documentation/webkitjs/webkitmediakeysession/2871256-onwebkitkeymessage
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession/2871256-onwebkitkeymessage
+Description: Interface language: Data
+
+# onwebkitkeymessage
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+attribute EventHandler onwebkitkeymessage;
+```
+
+# Document: onwebkitkeyadded
+
+Source path: documentation/webkitjs/webkitmediakeysession/2871427-onwebkitkeyadded
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitmediakeysession/2871427-onwebkitkeyadded
+Description: Interface language: Data
+
+# onwebkitkeyadded
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+attribute EventHandler onwebkitkeyadded;
+```
+
+# Document: WebKitNamedFlow
+
+Source path: documentation/webkitjs/webkitnamedflow
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamedflow
+Description: Interface language: Data
+
+# WebKitNamedFlow
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+interface WebKitNamedFlow
+```
+
+## Topics
+
+### Instance Properties
+
+- [firstEmptyRegionIndex](webkitnamedflow/1633942-firstemptyregionindex.md)
+- [name](webkitnamedflow/1631243-name.md)
+- [overset](webkitnamedflow/1630679-overset.md)
+
+### Instance Methods
+
+- [getContent](webkitnamedflow/1631262-getcontent.md)
+- [getRegions](webkitnamedflow/1631848-getregions.md)
+- [getRegionsByContent](webkitnamedflow/1632823-getregionsbycontent.md)
+
+## Relationships
+
+### Inherits From
+
+- [EventTarget](https://developer.apple.com/documentation/tvmljs/eventtarget)
+
+# Document: overset
+
+Source path: documentation/webkitjs/webkitnamedflow/1630679-overset
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamedflow/1630679-overset
+Description: Interface language: Data
+
+# overset
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute boolean overset;
+```
+
+# Document: name
+
+Source path: documentation/webkitjs/webkitnamedflow/1631243-name
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamedflow/1631243-name
+Description: Interface language: Data
+
+# name
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute DOMString name;
+```
+
+# Document: getContent
+
+Source path: documentation/webkitjs/webkitnamedflow/1631262-getcontent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamedflow/1631262-getcontent
+Description: Interface language: Data
+
+# getContent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+NodeList getContent();
+```
+
+# Document: getRegions
+
+Source path: documentation/webkitjs/webkitnamedflow/1631848-getregions
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamedflow/1631848-getregions
+Description: Interface language: Data
+
+# getRegions
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+NodeList getRegions();
+```
+
+# Document: getRegionsByContent
+
+Source path: documentation/webkitjs/webkitnamedflow/1632823-getregionsbycontent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamedflow/1632823-getregionsbycontent
+Description: Interface language: Data
+
+# getRegionsByContent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+NodeList getRegionsByContent(
+    Node? contentNode
+);
+```
+
+# Document: firstEmptyRegionIndex
+
+Source path: documentation/webkitjs/webkitnamedflow/1633942-firstemptyregionindex
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamedflow/1633942-firstemptyregionindex
+Description: Interface language: Data
+
+# firstEmptyRegionIndex
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute long firstEmptyRegionIndex;
+```
+
+# Document: WebKitNamespace
+
+Source path: documentation/webkitjs/webkitnamespace
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamespace
+Description: Interface language: Data
+
+# WebKitNamespace
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+interface WebKitNamespace
+```
+
+## Topics
+
+### Instance Properties
+
+- [messageHandlers](webkitnamespace/1633768-messagehandlers.md)
+
+# Document: messageHandlers
+
+Source path: documentation/webkitjs/webkitnamespace/1633768-messagehandlers
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitnamespace/1633768-messagehandlers
+Description: Interface language: Data
+
+# messageHandlers
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute UserMessageHandlersNamespace messageHandlers;
+```
+
+# Document: WebKitPlaybackTargetAvailabilityEvent
+
+Source path: documentation/webkitjs/webkitplaybacktargetavailabilityevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitplaybacktargetavailabilityevent
+Description: Interface language: Data
+
+# WebKitPlaybackTargetAvailabilityEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+interface WebKitPlaybackTargetAvailabilityEvent
+```
+
+## Topics
+
+### Instance Properties
+
+- [availability](webkitplaybacktargetavailabilityevent/1629181-availability.md)
+
+## Relationships
+
+### Inherits From
+
+- [Event](https://developer.apple.com/documentation/tvmljs/event)
+
+# Document: availability
+
+Source path: documentation/webkitjs/webkitplaybacktargetavailabilityevent/1629181-availability
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitplaybacktargetavailabilityevent/1629181-availability
+Description: Interface language: Data
+
+# availability
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute DOMString availability;
+```
+
+# Document: WebKitPoint
+
+Source path: documentation/webkitjs/webkitpoint
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitpoint
+Description: Interface language: Data
+
+# WebKitPoint
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 2.0+
+
+`WebKitPoint` objects represent a point in two-dimensional space used by CSS transitions specified using the -webkit-transition property.
+
+## Declaration
+
+```
+interface WebKitPoint
+```
+
+## Topics
+
+### Accessing Properties
+
+- [x](webkitpoint/1634113-x.md): The x coordinate for the point.
+- [y](webkitpoint/1631459-y.md): The y coordinate for the point.
+
+# Document: y
+
+Source path: documentation/webkitjs/webkitpoint/1631459-y
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitpoint/1631459-y
+Description: Interface language: Data
+
+# y
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 2.0+
+
+The y coordinate for the point.
+
+## Declaration
+
+```
+attribute unrestricted float y;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [x](1634113-x.md): The x coordinate for the point.
+
+# Document: x
+
+Source path: documentation/webkitjs/webkitpoint/1634113-x
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitpoint/1634113-x
+Description: Interface language: Data
+
+# x
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The x coordinate for the point.
+
+## Declaration
+
+```
+attribute unrestricted float x;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [y](1631459-y.md): The y coordinate for the point.
+
+### Related Documentation
+
+- [Safari CSS Visual Effects Guide](https://developer.apple.com/library/archive/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Introduction.html#//apple_ref/doc/uid/TP40008032)
+
+# Document: WebKitSubtleCrypto
+
+Source path: documentation/webkitjs/webkitsubtlecrypto
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitsubtlecrypto
+Description: Interface language: Data
+
+# WebKitSubtleCrypto
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+interface WebKitSubtleCrypto
+```
+
+## Topics
+
+### Instance Methods
+
+- [\<](webkitsubtlecrypto/2871440.md)
+- [decrypt](webkitsubtlecrypto/2870989-decrypt.md)
+- [digest](webkitsubtlecrypto/2871331-digest.md)
+- [encrypt](webkitsubtlecrypto/2871452-encrypt.md)
+- [sign](webkitsubtlecrypto/2871185-sign.md)
+- [verify](webkitsubtlecrypto/2871304-verify.md)
+
+# Document: decrypt
+
+Source path: documentation/webkitjs/webkitsubtlecrypto/2870989-decrypt
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitsubtlecrypto/2870989-decrypt
+Description: Interface language: Data
+
+# decrypt
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+Promise <ArrayBuffer> decrypt(
+    AlgorithmIdentifier algorithm, 
+    Key key, 
+    sequence <CryptoOperationData> data
+);
+```
+
+# Document: sign
+
+Source path: documentation/webkitjs/webkitsubtlecrypto/2871185-sign
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitsubtlecrypto/2871185-sign
+Description: Interface language: Data
+
+# sign
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+Promise <ArrayBuffer> sign(
+    AlgorithmIdentifier algorithm, 
+    Key key, 
+    sequence <CryptoOperationData> data
+);
+```
+
+# Document: verify
+
+Source path: documentation/webkitjs/webkitsubtlecrypto/2871304-verify
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitsubtlecrypto/2871304-verify
+Description: Interface language: Data
+
+# verify
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+Promise <boolean> verify(
+    AlgorithmIdentifier algorithm, 
+    Key key, 
+    CryptoOperationData signature, 
+    sequence <CryptoOperationData> data
+);
+```
+
+# Document: digest
+
+Source path: documentation/webkitjs/webkitsubtlecrypto/2871331-digest
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitsubtlecrypto/2871331-digest
+Description: Interface language: Data
+
+# digest
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+Promise <ArrayBuffer> digest(
+    AlgorithmIdentifier algorithm, 
+    sequence <CryptoOperationData> data
+);
+```
+
+# Document: <
+
+Source path: documentation/webkitjs/webkitsubtlecrypto/2871440
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitsubtlecrypto/2871440
+Description: Interface language: Data
+
+# \<
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+Promise <(
+    KeyFormat format, 
+    CryptoOperationData wrappedKey, 
+    Key unwrappingKey, 
+    AlgorithmIdentifier unwrapAlgorithm, 
+    AlgorithmIdentifier? unwrappedKeyAlgorithm, 
+    optional boolean extractable, 
+    optional sequence <KeyUsage> keyUsages
+);
+```
+
+# Document: encrypt
+
+Source path: documentation/webkitjs/webkitsubtlecrypto/2871452-encrypt
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkitsubtlecrypto/2871452-encrypt
+Description: Interface language: Data
+
+# encrypt
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+Promise <ArrayBuffer> encrypt(
+    AlgorithmIdentifier algorithm, 
+    Key key, 
+    sequence <CryptoOperationData> data
+);
+```
+
+# Document: WebKitTransitionEvent
+
+Source path: documentation/webkitjs/webkittransitionevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkittransitionevent
+Description: Interface language: Data
+
+# WebKitTransitionEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 2.0+
+
+`WebKitTransitionEvent` objects provide information about CSS transitions specified using the `transition` property. An event is sent at the end of a transition for each CSS property in the transition. Each event contains the name of the CSS property and duration of the transition. You can use these events to perform some action that starts at the end of a transition.
+
+## Declaration
+
+```
+interface WebKitTransitionEvent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+For more on CSS transition events, see https://www.w3.org/TR/css3-transitions/#transition-events.
+
+## Topics
+
+### Accessing Properties
+
+- [propertyName](webkittransitionevent/1630487-propertyname.md): The name of the CSS property associated with the transition.
+- [elapsedTime](webkittransitionevent/1629406-elapsedtime.md): The duration of the transition, in seconds, since this event was sent. This value is not affected by the value of the CSS `transition-delay` property.
+
+### Initializing
+
+- [initWebKitTransitionEvent](webkittransitionevent/1806991-initwebkittransitionevent.md): Initializes a new transition event object.
+
+### Instance Properties
+
+- [pseudoElement](webkittransitionevent/1632635-pseudoelement.md): An abstract element representing the portion of the CSS render tree on which the transition occurs.
+
+## Relationships
+
+### Inherits From
+
+- [Event](https://developer.apple.com/documentation/tvmljs/event)
+
+# Document: elapsedTime
+
+Source path: documentation/webkitjs/webkittransitionevent/1629406-elapsedtime
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkittransitionevent/1629406-elapsedtime
+Description: Interface language: Data
+
+# elapsedTime
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The duration of the transition, in seconds, since this event was sent. This value is not affected by the value of the CSS `transition-delay` property.
+
+## Declaration
+
+```
+readonly attribute double elapsedTime;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [propertyName](1630487-propertyname.md): The name of the CSS property associated with the transition.
+
+# Document: propertyName
+
+Source path: documentation/webkitjs/webkittransitionevent/1630487-propertyname
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkittransitionevent/1630487-propertyname
+Description: Interface language: Data
+
+# propertyName
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The name of the CSS property associated with the transition.
+
+## Declaration
+
+```
+readonly attribute DOMString propertyName;
+```
+
+## See Also
+
+### Accessing Properties
+
+- [elapsedTime](1629406-elapsedtime.md): The duration of the transition, in seconds, since this event was sent. This value is not affected by the value of the CSS `transition-delay` property.
+
+### Related Documentation
+
+- [Safari CSS Visual Effects Guide](https://developer.apple.com/library/archive/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Introduction.html#//apple_ref/doc/uid/TP40008032)
+
+# Document: pseudoElement
+
+Source path: documentation/webkitjs/webkittransitionevent/1632635-pseudoelement
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkittransitionevent/1632635-pseudoelement
+Description: Interface language: Data
+
+# pseudoElement
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+An abstract element representing the portion of the CSS render tree on which the transition occurs.
+
+## Declaration
+
+```
+readonly attribute DOMString pseudoElement;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This element is an empty string if the transition occurs on a non-abstract element.
+
+# Document: initWebKitTransitionEvent
+
+Source path: documentation/webkitjs/webkittransitionevent/1806991-initwebkittransitionevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/webkittransitionevent/1806991-initwebkittransitionevent
+Description: Interface language: Data
+
+# initWebKitTransitionEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS
+
+Initializes a new transition event object.
+
+## Declaration
+
+```
+void initWebKitTransitionEvent (in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in DOMString propertyNameArg, in double elapsedTimeArg);
+```
+
+## Parameters
+
+- `typeArg`: The type of event.
+
+  Possible values for this argument are described in `Types of Transition Events`. This type of event can bubble and be canceled. Its `propertyName` property is always set.
+- `canBubbleArg`: Determines whether the event can bubble. Pass `true` if it can bubble; otherwise, `false`.
+- `cancelableArg`: Determines whether the event’s default action can be prevented. Pass `true` if it can be prevented; otherwise, `false`.
+- `propertyNameArg`: The name of the CSS property associated with this event.
+- `elapsedTimeArg`: The duration of the transition, in seconds, since the event was sent.
+
+<a id="overview"></a>
+
+## Overview
+
+You use this method to initialize the value of a `WebKitTransitionEvent` object that is created through the `DocumentEvent` interface. This method can only be invoked before the `WebKitTransitionEvent` object is dispatched via the `dispatchEvent` method (although, it can be invoked multiple times during that phase, if necessary). If it is invoked multiple times, the final invocation takes precedence.
+
+# Document: WebSocket
+
+Source path: documentation/webkitjs/websocket
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket
+Description: Interface language: Data
+
+# WebSocket
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 4.2+
+
+## Declaration
+
+```
+interface WebSocket
+```
+
+## Topics
+
+### Instance Properties
+
+- [URL](websocket/1631803-url.md)
+- [binaryType](websocket/1631874-binarytype.md)
+- [bufferedAmount](websocket/1628931-bufferedamount.md)
+- [extensions](websocket/1630584-extensions.md)
+- [onclose](websocket/1634301-onclose.md)
+- [onerror](websocket/1634357-onerror.md)
+- [onmessage](websocket/1629230-onmessage.md)
+- [onopen](websocket/1632689-onopen.md)
+- [protocol](websocket/1629765-protocol.md)
+- [readyState](websocket/1629775-readystate.md)
+- [url](websocket/1630271-url.md)
+
+### Instance Methods
+
+- [close](websocket/1632860-close.md)
+- [send](websocket/1631301-send.md)
+
+### Miscellaneous
+
+- [CLOSED](websocket/1630255-closed.md)
+- [CLOSING](websocket/1630353-closing.md)
+- [CONNECTING](websocket/1629286-connecting.md)
+- [OPEN](websocket/1631722-open.md)
+
+## Relationships
+
+### Inherits From
+
+- [EventTarget](https://developer.apple.com/documentation/tvmljs/eventtarget)
+
+# Document: bufferedAmount
+
+Source path: documentation/webkitjs/websocket/1628931-bufferedamount
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1628931-bufferedamount
+Description: Interface language: Data
+
+# bufferedAmount
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 5.0+ · Safari Mobile 4.2+
+
+## Declaration
+
+```
+readonly attribute unsigned long bufferedAmount;
+```
+
+# Document: onmessage
+
+Source path: documentation/webkitjs/websocket/1629230-onmessage
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1629230-onmessage
+Description: Interface language: Data
+
+# onmessage
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 5.0+ · Safari Mobile 4.2+
+
+## Declaration
+
+```
+attribute EventHandler onmessage;
+```
+
+# Document: CONNECTING
+
+Source path: documentation/webkitjs/websocket/1629286-connecting
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1629286-connecting
+Description: Interface language: Data
+
+# CONNECTING
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+const unsigned short CONNECTING;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [CLOSED](1630255-closed.md)
+- [CLOSING](1630353-closing.md)
+- [OPEN](1631722-open.md)
+
+# Document: protocol
+
+Source path: documentation/webkitjs/websocket/1629765-protocol
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1629765-protocol
+Description: Interface language: Data
+
+# protocol
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute DOMString? protocol;
+```
+
+# Document: readyState
+
+Source path: documentation/webkitjs/websocket/1629775-readystate
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1629775-readystate
+Description: Interface language: Data
+
+# readyState
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute unsigned short readyState;
+```
+
+# Document: CLOSED
+
+Source path: documentation/webkitjs/websocket/1630255-closed
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1630255-closed
+Description: Interface language: Data
+
+# CLOSED
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 5.0+ · Safari Mobile 4.2+
+
+## Declaration
+
+```
+const unsigned short CLOSED;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [CLOSING](1630353-closing.md)
+- [CONNECTING](1629286-connecting.md)
+- [OPEN](1631722-open.md)
+
+# Document: url
+
+Source path: documentation/webkitjs/websocket/1630271-url
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1630271-url
+Description: Interface language: Data
+
+# url
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute USVString url;
+```
+
+# Document: CLOSING
+
+Source path: documentation/webkitjs/websocket/1630353-closing
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1630353-closing
+Description: Interface language: Data
+
+# CLOSING
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+const unsigned short CLOSING;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [CLOSED](1630255-closed.md)
+- [CONNECTING](1629286-connecting.md)
+- [OPEN](1631722-open.md)
+
+# Document: extensions
+
+Source path: documentation/webkitjs/websocket/1630584-extensions
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1630584-extensions
+Description: Interface language: Data
+
+# extensions
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute DOMString? extensions;
+```
+
+# Document: send
+
+Source path: documentation/webkitjs/websocket/1631301-send
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1631301-send
+Description: Interface language: Data
+
+# send
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 5.0+ · Safari Mobile 4.2+
+
+## Declaration
+
+```
+void send(
+    ArrayBuffer data
+);
+```
+
+# Document: OPEN
+
+Source path: documentation/webkitjs/websocket/1631722-open
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1631722-open
+Description: Interface language: Data
+
+# OPEN
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+const unsigned short OPEN;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [CLOSED](1630255-closed.md)
+- [CLOSING](1630353-closing.md)
+- [CONNECTING](1629286-connecting.md)
+
+# Document: URL
+
+Source path: documentation/webkitjs/websocket/1631803-url
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1631803-url
+Description: Interface language: Data
+
+# URL
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute USVString URL;
+```
+
+# Document: binaryType
+
+Source path: documentation/webkitjs/websocket/1631874-binarytype
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1631874-binarytype
+Description: Interface language: Data
+
+# binaryType
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute DOMString binaryType;
+```
+
+# Document: onopen
+
+Source path: documentation/webkitjs/websocket/1632689-onopen
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1632689-onopen
+Description: Interface language: Data
+
+# onopen
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler onopen;
+```
+
+# Document: close
+
+Source path: documentation/webkitjs/websocket/1632860-close
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1632860-close
+Description: Interface language: Data
+
+# close
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 5.0+ · Safari Mobile 4.2+
+
+## Declaration
+
+```
+void close(
+    optional unsigned short code, 
+    optional DOMString reason
+);
+```
+
+# Document: onclose
+
+Source path: documentation/webkitjs/websocket/1634301-onclose
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1634301-onclose
+Description: Interface language: Data
+
+# onclose
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler onclose;
+```
+
+# Document: onerror
+
+Source path: documentation/webkitjs/websocket/1634357-onerror
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/websocket/1634357-onerror
+Description: Interface language: Data
+
+# onerror
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 5.0+ · Safari Mobile 4.2+
+
+## Declaration
+
+```
+attribute EventHandler onerror;
+```
+
+# Document: WheelEvent
+
+Source path: documentation/webkitjs/wheelevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent
+Description: Interface language: Data
+
+# WheelEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 1.0+
+
+## Declaration
+
+```
+interface WheelEvent
+```
+
+## Topics
+
+### Instance Properties
+
+- [deltaMode](wheelevent/1630519-deltamode.md)
+- [deltaX](wheelevent/1631157-deltax.md)
+- [deltaY](wheelevent/1630032-deltay.md)
+- [deltaZ](wheelevent/1634368-deltaz.md)
+- [webkitDirectionInvertedFromDevice](wheelevent/1630157-webkitdirectioninvertedfromdevic.md)
+- [wheelDelta](wheelevent/1633018-wheeldelta.md)
+- [wheelDeltaX](wheelevent/1633615-wheeldeltax.md)
+- [wheelDeltaY](wheelevent/1631213-wheeldeltay.md)
+
+### Instance Methods
+
+- [initWebKitWheelEvent](wheelevent/1629934-initwebkitwheelevent.md)
+
+### Miscellaneous
+
+- [DOM_DELTA_LINE](wheelevent/1633362-dom_delta_line.md)
+- [DOM_DELTA_PAGE](wheelevent/1631699-dom_delta_page.md)
+- [DOM_DELTA_PIXEL](wheelevent/1633750-dom_delta_pixel.md)
+
+## Relationships
+
+### Inherits From
+
+- [MouseEvent](mouseevent.md)
+
+# Document: initWebKitWheelEvent
+
+Source path: documentation/webkitjs/wheelevent/1629934-initwebkitwheelevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1629934-initwebkitwheelevent
+Description: Interface language: Data
+
+# initWebKitWheelEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 5.0+ · Safari Mobile 4.1+
+
+## Declaration
+
+```
+void initWebKitWheelEvent(
+    optional long wheelDeltaX, 
+    optional long wheelDeltaY, 
+    optional DOMWindow? view, 
+    optional long screenX, 
+    optional long screenY, 
+    optional long clientX, 
+    optional long clientY, 
+    optional boolean ctrlKey, 
+    optional boolean altKey, 
+    optional boolean shiftKey, 
+    optional boolean metaKey
+);
+```
+
+# Document: deltaY
+
+Source path: documentation/webkitjs/wheelevent/1630032-deltay
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1630032-deltay
+Description: Interface language: Data
+
+# deltaY
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute unrestricted double deltaY;
+```
+
+# Document: webkitDirectionInvertedFromDevice
+
+Source path: documentation/webkitjs/wheelevent/1630157-webkitdirectioninvertedfromdevic
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1630157-webkitdirectioninvertedfromdevic
+Description: Interface language: Data
+
+# webkitDirectionInvertedFromDevice
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute boolean webkitDirectionInvertedFromDevice;
+```
+
+# Document: deltaMode
+
+Source path: documentation/webkitjs/wheelevent/1630519-deltamode
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1630519-deltamode
+Description: Interface language: Data
+
+# deltaMode
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute unsigned long deltaMode;
+```
+
+# Document: deltaX
+
+Source path: documentation/webkitjs/wheelevent/1631157-deltax
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1631157-deltax
+Description: Interface language: Data
+
+# deltaX
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute unrestricted double deltaX;
+```
+
+# Document: wheelDeltaY
+
+Source path: documentation/webkitjs/wheelevent/1631213-wheeldeltay
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1631213-wheeldeltay
+Description: Interface language: Data
+
+# wheelDeltaY
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 3.0+ · Safari Mobile 2.0+
+
+## Declaration
+
+```
+readonly attribute long wheelDeltaY;
+```
+
+# Document: DOM_DELTA_PAGE
+
+Source path: documentation/webkitjs/wheelevent/1631699-dom_delta_page
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1631699-dom_delta_page
+Description: Interface language: Data
+
+# DOM_DELTA_PAGE
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+const unsigned long DOM_DELTA_PAGE;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [DOM_DELTA_LINE](1633362-dom_delta_line.md)
+- [DOM_DELTA_PIXEL](1633750-dom_delta_pixel.md)
+
+# Document: wheelDelta
+
+Source path: documentation/webkitjs/wheelevent/1633018-wheeldelta
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1633018-wheeldelta
+Description: Interface language: Data
+
+# wheelDelta
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute long wheelDelta;
+```
+
+# Document: DOM_DELTA_LINE
+
+Source path: documentation/webkitjs/wheelevent/1633362-dom_delta_line
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1633362-dom_delta_line
+Description: Interface language: Data
+
+# DOM_DELTA_LINE
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+const unsigned long DOM_DELTA_LINE;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [DOM_DELTA_PAGE](1631699-dom_delta_page.md)
+- [DOM_DELTA_PIXEL](1633750-dom_delta_pixel.md)
+
+# Document: wheelDeltaX
+
+Source path: documentation/webkitjs/wheelevent/1633615-wheeldeltax
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1633615-wheeldeltax
+Description: Interface language: Data
+
+# wheelDeltaX
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute long wheelDeltaX;
+```
+
+# Document: DOM_DELTA_PIXEL
+
+Source path: documentation/webkitjs/wheelevent/1633750-dom_delta_pixel
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1633750-dom_delta_pixel
+Description: Interface language: Data
+
+# DOM_DELTA_PIXEL
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+const unsigned long DOM_DELTA_PIXEL;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [DOM_DELTA_LINE](1633362-dom_delta_line.md)
+- [DOM_DELTA_PAGE](1631699-dom_delta_page.md)
+
+# Document: deltaZ
+
+Source path: documentation/webkitjs/wheelevent/1634368-deltaz
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/wheelevent/1634368-deltaz
+Description: Interface language: Data
+
+# deltaZ
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+readonly attribute unrestricted double deltaZ;
+```
+
+# Document: WindowEventHandlers
+
+Source path: documentation/webkitjs/windoweventhandlers
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers
+Description: Interface language: Data
+
+# WindowEventHandlers
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+interface WindowEventHandlers
+```
+
+## Topics
+
+### Instance Properties
+
+- [onbeforeunload](windoweventhandlers/1630543-onbeforeunload.md)
+- [onhashchange](windoweventhandlers/1631936-onhashchange.md)
+- [onlanguagechange](windoweventhandlers/2871355-onlanguagechange.md)
+- [onmessage](windoweventhandlers/1634283-onmessage.md)
+- [onoffline](windoweventhandlers/1634242-onoffline.md)
+- [ononline](windoweventhandlers/1630026-ononline.md)
+- [onorientationchange](windoweventhandlers/1632027-onorientationchange.md)
+- [onpagehide](windoweventhandlers/1633531-onpagehide.md)
+- [onpageshow](windoweventhandlers/1631753-onpageshow.md)
+- [onpopstate](windoweventhandlers/1631365-onpopstate.md)
+- [onstorage](windoweventhandlers/1634170-onstorage.md)
+- [onunload](windoweventhandlers/1630320-onunload.md)
+
+# Document: ononline
+
+Source path: documentation/webkitjs/windoweventhandlers/1630026-ononline
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1630026-ononline
+Description: Interface language: Data
+
+# ononline
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler ononline;
+```
+
+# Document: onunload
+
+Source path: documentation/webkitjs/windoweventhandlers/1630320-onunload
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1630320-onunload
+Description: Interface language: Data
+
+# onunload
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onunload;
+```
+
+# Document: onbeforeunload
+
+Source path: documentation/webkitjs/windoweventhandlers/1630543-onbeforeunload
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1630543-onbeforeunload
+Description: Interface language: Data
+
+# onbeforeunload
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onbeforeunload;
+```
+
+# Document: onpopstate
+
+Source path: documentation/webkitjs/windoweventhandlers/1631365-onpopstate
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1631365-onpopstate
+Description: Interface language: Data
+
+# onpopstate
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onpopstate;
+```
+
+# Document: onpageshow
+
+Source path: documentation/webkitjs/windoweventhandlers/1631753-onpageshow
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1631753-onpageshow
+Description: Interface language: Data
+
+# onpageshow
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onpageshow;
+```
+
+# Document: onhashchange
+
+Source path: documentation/webkitjs/windoweventhandlers/1631936-onhashchange
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1631936-onhashchange
+Description: Interface language: Data
+
+# onhashchange
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onhashchange;
+```
+
+# Document: onorientationchange
+
+Source path: documentation/webkitjs/windoweventhandlers/1632027-onorientationchange
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1632027-onorientationchange
+Description: Interface language: Data
+
+# onorientationchange
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onorientationchange;
+```
+
+# Document: onpagehide
+
+Source path: documentation/webkitjs/windoweventhandlers/1633531-onpagehide
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1633531-onpagehide
+Description: Interface language: Data
+
+# onpagehide
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onpagehide;
+```
+
+# Document: onstorage
+
+Source path: documentation/webkitjs/windoweventhandlers/1634170-onstorage
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1634170-onstorage
+Description: Interface language: Data
+
+# onstorage
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onstorage;
+```
+
+# Document: onoffline
+
+Source path: documentation/webkitjs/windoweventhandlers/1634242-onoffline
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1634242-onoffline
+Description: Interface language: Data
+
+# onoffline
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onoffline;
+```
+
+# Document: onmessage
+
+Source path: documentation/webkitjs/windoweventhandlers/1634283-onmessage
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/1634283-onmessage
+Description: Interface language: Data
+
+# onmessage
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onmessage;
+```
+
+# Document: onlanguagechange
+
+Source path: documentation/webkitjs/windoweventhandlers/2871355-onlanguagechange
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoweventhandlers/2871355-onlanguagechange
+Description: Interface language: Data
+
+# onlanguagechange
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Mobile 10.1+
+
+## Declaration
+
+```
+attribute EventHandler onlanguagechange;
+```
+
+# Document: WindowOrWorkerGlobalScope
+
+Source path: documentation/webkitjs/windoworworkerglobalscope
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoworworkerglobalscope
+Description: Interface language: Data
+
+# WindowOrWorkerGlobalScope
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+interface WindowOrWorkerGlobalScope
+```
+
+## Topics
+
+### Instance Methods
+
+- [atob](windoworworkerglobalscope/2528102-atob.md)
+- [btoa](windoworworkerglobalscope/2528104-btoa.md)
+- [clearInterval](windoworworkerglobalscope/2528101-clearinterval.md)
+- [clearTimeout](windoworworkerglobalscope/2528121-cleartimeout.md)
+- [setInterval](windoworworkerglobalscope/2528136-setinterval.md)
+- [setTimeout](windoworworkerglobalscope/2528128-settimeout.md)
+
+# Document: clearInterval
+
+Source path: documentation/webkitjs/windoworworkerglobalscope/2528101-clearinterval
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoworworkerglobalscope/2528101-clearinterval
+Description: Interface language: Data
+
+# clearInterval
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+void clearInterval(
+    optional long handle
+);
+```
+
+# Document: atob
+
+Source path: documentation/webkitjs/windoworworkerglobalscope/2528102-atob
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoworworkerglobalscope/2528102-atob
+Description: Interface language: Data
+
+# atob
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+DOMString atob(
+    DOMString string
+);
+```
+
+# Document: btoa
+
+Source path: documentation/webkitjs/windoworworkerglobalscope/2528104-btoa
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoworworkerglobalscope/2528104-btoa
+Description: Interface language: Data
+
+# btoa
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+DOMString btoa(
+    DOMString string
+);
+```
+
+# Document: clearTimeout
+
+Source path: documentation/webkitjs/windoworworkerglobalscope/2528121-cleartimeout
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoworworkerglobalscope/2528121-cleartimeout
+Description: Interface language: Data
+
+# clearTimeout
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+void clearTimeout(
+    optional long handle
+);
+```
+
+# Document: setTimeout
+
+Source path: documentation/webkitjs/windoworworkerglobalscope/2528128-settimeout
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoworworkerglobalscope/2528128-settimeout
+Description: Interface language: Data
+
+# setTimeout
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+long setTimeout(
+    any handler, 
+    optional long timeout
+);
+```
+
+# Document: setInterval
+
+Source path: documentation/webkitjs/windoworworkerglobalscope/2528136-setinterval
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/windoworworkerglobalscope/2528136-setinterval
+Description: Interface language: Data
+
+# setInterval
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+long setInterval(
+    any handler, 
+    optional long timeout
+);
+```
+
+# Document: Worker
+
+Source path: documentation/webkitjs/worker
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/worker
+Description: Interface language: Data
+
+# Worker
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 5.0+
+
+## Declaration
+
+```
+interface Worker
+```
+
+## Topics
+
+### Instance Properties
+
+- [onmessage](worker/1630905-onmessage.md)
+
+### Instance Methods
+
+- [postMessage](worker/1630390-postmessage.md)
+- [terminate](worker/1633552-terminate.md)
+
+## Relationships
+
+### Inherits From
+
+- [EventTarget](https://developer.apple.com/documentation/tvmljs/eventtarget)
+
+# Document: postMessage
+
+Source path: documentation/webkitjs/worker/1630390-postmessage
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/worker/1630390-postmessage
+Description: Interface language: Data
+
+# postMessage
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+void postMessage(
+    any message, 
+    optional sequence <object> transfer
+);
+```
+
+# Document: onmessage
+
+Source path: documentation/webkitjs/worker/1630905-onmessage
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/worker/1630905-onmessage
+Description: Interface language: Data
+
+# onmessage
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 5.0+
+
+## Declaration
+
+```
+attribute EventHandler onmessage;
+```
+
+# Document: terminate
+
+Source path: documentation/webkitjs/worker/1633552-terminate
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/worker/1633552-terminate
+Description: Interface language: Data
+
+# terminate
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 5.0+
+
+## Declaration
+
+```
+void terminate();
+```
+
+# Document: WorkerGlobalScope
+
+Source path: documentation/webkitjs/workerglobalscope
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope
+Description: Interface language: Data
+
+# WorkerGlobalScope
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+interface WorkerGlobalScope
+```
+
+## Topics
+
+### Instance Properties
+
+- [IDBCursor](workerglobalscope/1632991-idbcursor.md)
+- [IDBCursorWithValue](workerglobalscope/1632279-idbcursorwithvalue.md)
+- [IDBDatabase](workerglobalscope/1632261-idbdatabase.md)
+- [IDBFactory](workerglobalscope/1630223-idbfactory.md)
+- [IDBIndex](workerglobalscope/1630252-idbindex.md)
+- [IDBKeyRange](workerglobalscope/1634167-idbkeyrange.md)
+- [IDBObjectStore](workerglobalscope/1630524-idbobjectstore.md)
+- [IDBOpenDBRequest](workerglobalscope/1631904-idbopendbrequest.md)
+- [IDBRequest](workerglobalscope/1634157-idbrequest.md)
+- [IDBTransaction](workerglobalscope/1629811-idbtransaction.md)
+- [IDBVersionChangeEvent](workerglobalscope/1634018-idbversionchangeevent.md)
+- [indexedDB](workerglobalscope/1628997-indexeddb.md)
+- [location](workerglobalscope/1630557-location.md)
+- [navigator](workerglobalscope/1631615-navigator.md)
+- [onerror](workerglobalscope/1632625-onerror.md)
+- [onoffline](workerglobalscope/1632640-onoffline.md)
+- [ononline](workerglobalscope/1631409-ononline.md)
+- [self](workerglobalscope/1632302-self.md)
+- [webkitNotifications](workerglobalscope/1778101-webkitnotifications.md)
+- [webkitURL](workerglobalscope/1633352-webkiturl.md)
+
+### Instance Methods
+
+- [close](workerglobalscope/1630453-close.md)
+- [fetch](workerglobalscope/2871299-fetch.md)
+- [fetchRequest](workerglobalscope/2871397-fetchrequest.md)
+- [importScripts](workerglobalscope/1632211-importscripts.md)
+
+# Document: indexedDB
+
+Source path: documentation/webkitjs/workerglobalscope/1628997-indexeddb
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1628997-indexeddb
+Description: Interface language: Data
+
+# indexedDB
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute IDBFactory indexedDB;
+```
+
+# Document: IDBTransaction
+
+Source path: documentation/webkitjs/workerglobalscope/1629811-idbtransaction
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1629811-idbtransaction
+Description: Interface language: Data
+
+# IDBTransaction
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute IDBTransactionConstructor IDBTransaction;
+```
+
+# Document: IDBFactory
+
+Source path: documentation/webkitjs/workerglobalscope/1630223-idbfactory
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1630223-idbfactory
+Description: Interface language: Data
+
+# IDBFactory
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute IDBFactoryConstructor IDBFactory;
+```
+
+# Document: IDBIndex
+
+Source path: documentation/webkitjs/workerglobalscope/1630252-idbindex
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1630252-idbindex
+Description: Interface language: Data
+
+# IDBIndex
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute IDBIndexConstructor IDBIndex;
+```
+
+# Document: close
+
+Source path: documentation/webkitjs/workerglobalscope/1630453-close
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1630453-close
+Description: Interface language: Data
+
+# close
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+void close();
+```
+
+# Document: IDBObjectStore
+
+Source path: documentation/webkitjs/workerglobalscope/1630524-idbobjectstore
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1630524-idbobjectstore
+Description: Interface language: Data
+
+# IDBObjectStore
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute IDBObjectStoreConstructor IDBObjectStore;
+```
+
+# Document: location
+
+Source path: documentation/webkitjs/workerglobalscope/1630557-location
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1630557-location
+Description: Interface language: Data
+
+# location
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute WorkerLocation location;
+```
+
+# Document: ononline
+
+Source path: documentation/webkitjs/workerglobalscope/1631409-ononline
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1631409-ononline
+Description: Interface language: Data
+
+# ononline
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler ononline;
+```
+
+# Document: navigator
+
+Source path: documentation/webkitjs/workerglobalscope/1631615-navigator
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1631615-navigator
+Description: Interface language: Data
+
+# navigator
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute WorkerNavigator navigator;
+```
+
+# Document: IDBOpenDBRequest
+
+Source path: documentation/webkitjs/workerglobalscope/1631904-idbopendbrequest
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1631904-idbopendbrequest
+Description: Interface language: Data
+
+# IDBOpenDBRequest
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute IDBOpenDBRequestConstructor IDBOpenDBRequest;
+```
+
+# Document: importScripts
+
+Source path: documentation/webkitjs/workerglobalscope/1632211-importscripts
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1632211-importscripts
+Description: Interface language: Data
+
+# importScripts
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+void importScripts();
+```
+
+# Document: IDBDatabase
+
+Source path: documentation/webkitjs/workerglobalscope/1632261-idbdatabase
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1632261-idbdatabase
+Description: Interface language: Data
+
+# IDBDatabase
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute IDBDatabaseConstructor IDBDatabase;
+```
+
+# Document: IDBCursorWithValue
+
+Source path: documentation/webkitjs/workerglobalscope/1632279-idbcursorwithvalue
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1632279-idbcursorwithvalue
+Description: Interface language: Data
+
+# IDBCursorWithValue
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute IDBCursorWithValueConstructor IDBCursorWithValue;
+```
+
+# Document: self
+
+Source path: documentation/webkitjs/workerglobalscope/1632302-self
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1632302-self
+Description: Interface language: Data
+
+# self
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute WorkerGlobalScope self;
+```
+
+# Document: onerror
+
+Source path: documentation/webkitjs/workerglobalscope/1632625-onerror
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1632625-onerror
+Description: Interface language: Data
+
+# onerror
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onerror;
+```
+
+# Document: onoffline
+
+Source path: documentation/webkitjs/workerglobalscope/1632640-onoffline
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1632640-onoffline
+Description: Interface language: Data
+
+# onoffline
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute EventHandler onoffline;
+```
+
+# Document: IDBCursor
+
+Source path: documentation/webkitjs/workerglobalscope/1632991-idbcursor
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1632991-idbcursor
+Description: Interface language: Data
+
+# IDBCursor
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute IDBCursorConstructor IDBCursor;
+```
+
+# Document: webkitURL
+
+Source path: documentation/webkitjs/workerglobalscope/1633352-webkiturl
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1633352-webkiturl
+Description: Interface language: Data
+
+# webkitURL
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute DOMURLConstructor webkitURL;
+```
+
+# Document: IDBVersionChangeEvent
+
+Source path: documentation/webkitjs/workerglobalscope/1634018-idbversionchangeevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1634018-idbversionchangeevent
+Description: Interface language: Data
+
+# IDBVersionChangeEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute IDBVersionChangeEventConstructor IDBVersionChangeEvent;
+```
+
+# Document: IDBRequest
+
+Source path: documentation/webkitjs/workerglobalscope/1634157-idbrequest
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1634157-idbrequest
+Description: Interface language: Data
+
+# IDBRequest
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute IDBRequestConstructor IDBRequest;
+```
+
+# Document: IDBKeyRange
+
+Source path: documentation/webkitjs/workerglobalscope/1634167-idbkeyrange
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1634167-idbkeyrange
+Description: Interface language: Data
+
+# IDBKeyRange
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+attribute IDBKeyRangeConstructor IDBKeyRange;
+```
+
+# Document: webkitNotifications
+
+Source path: documentation/webkitjs/workerglobalscope/1778101-webkitnotifications
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/1778101-webkitnotifications
+Description: Interface language: Data
+
+# webkitNotifications
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+
+
+## Declaration
+
+```
+readonly attribute NotificationCenter webkitNotifications;
+```
+
+# Document: fetch
+
+Source path: documentation/webkitjs/workerglobalscope/2871299-fetch
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/2871299-fetch
+Description: Interface language: Data
+
+# fetch
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+Promise <Response> fetch(
+    any input, 
+    optional RequestInit init
+);
+```
+
+# Document: fetchRequest
+
+Source path: documentation/webkitjs/workerglobalscope/2871397-fetchrequest
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerglobalscope/2871397-fetchrequest
+Description: Interface language: Data
+
+# fetchRequest
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+Promise <Response> fetchRequest(
+    FetchRequest request
+);
+```
+
+# Document: WorkerLocation
+
+Source path: documentation/webkitjs/workerlocation
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation
+Description: Interface language: Data
+
+# WorkerLocation
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 5.0+
+
+## Declaration
+
+```
+interface WorkerLocation
+```
+
+## Topics
+
+### Instance Properties
+
+- [hash](workerlocation/1633089-hash.md)
+- [host](workerlocation/1634035-host.md)
+- [hostname](workerlocation/1634381-hostname.md)
+- [href](workerlocation/1629448-href.md)
+- [origin](workerlocation/1777873-origin.md)
+- [pathname](workerlocation/1629084-pathname.md)
+- [port](workerlocation/1630777-port.md)
+- [protocol](workerlocation/1631703-protocol.md)
+- [search](workerlocation/1633762-search.md)
+
+# Document: pathname
+
+Source path: documentation/webkitjs/workerlocation/1629084-pathname
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1629084-pathname
+Description: Interface language: Data
+
+# pathname
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 5.0+
+
+## Declaration
+
+```
+readonly attribute USVString pathname;
+```
+
+# Document: href
+
+Source path: documentation/webkitjs/workerlocation/1629448-href
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1629448-href
+Description: Interface language: Data
+
+# href
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 5.0+
+
+## Declaration
+
+```
+stringifier readonly attribute USVString href;
+```
+
+# Document: port
+
+Source path: documentation/webkitjs/workerlocation/1630777-port
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1630777-port
+Description: Interface language: Data
+
+# port
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute USVString port;
+```
+
+# Document: protocol
+
+Source path: documentation/webkitjs/workerlocation/1631703-protocol
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1631703-protocol
+Description: Interface language: Data
+
+# protocol
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute USVString protocol;
+```
+
+# Document: hash
+
+Source path: documentation/webkitjs/workerlocation/1633089-hash
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1633089-hash
+Description: Interface language: Data
+
+# hash
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute USVString hash;
+```
+
+# Document: search
+
+Source path: documentation/webkitjs/workerlocation/1633762-search
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1633762-search
+Description: Interface language: Data
+
+# search
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute USVString search;
+```
+
+# Document: host
+
+Source path: documentation/webkitjs/workerlocation/1634035-host
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1634035-host
+Description: Interface language: Data
+
+# host
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 5.0+
+
+## Declaration
+
+```
+readonly attribute USVString host;
+```
+
+# Document: hostname
+
+Source path: documentation/webkitjs/workerlocation/1634381-hostname
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1634381-hostname
+Description: Interface language: Data
+
+# hostname
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute USVString hostname;
+```
+
+# Document: origin
+
+Source path: documentation/webkitjs/workerlocation/1777873-origin
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workerlocation/1777873-origin
+Description: Interface language: Data
+
+# origin
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute USVString origin;
+```
+
+# Document: WorkerNavigator
+
+Source path: documentation/webkitjs/workernavigator
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/workernavigator
+Description: Interface language: Data
+
+# WorkerNavigator
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 5.0+
+
+## Declaration
+
+```
+interface WorkerNavigator
+```
+
+# Document: WritableStream
+
+Source path: documentation/webkitjs/writablestream
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/writablestream
+Description: Interface language: Data
+
+# WritableStream
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+interface WritableStream
+```
+
+## Topics
+
+### Instance Properties
+
+- [closed](writablestream/1777932-closed.md)
+- [ready](writablestream/1777815-ready.md)
+- [state](writablestream/1777874-state.md)
+
+### Instance Methods
+
+- [abort](writablestream/1777851-abort.md)
+- [close](writablestream/1777772-close.md)
+- [write](writablestream/1777931-write.md)
+
+# Document: close
+
+Source path: documentation/webkitjs/writablestream/1777772-close
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/writablestream/1777772-close
+Description: Interface language: Data
+
+# close
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+Promise <any> close();
+```
+
+# Document: ready
+
+Source path: documentation/webkitjs/writablestream/1777815-ready
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/writablestream/1777815-ready
+Description: Interface language: Data
+
+# ready
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute Promise <boolean> ready;
+```
+
+# Document: abort
+
+Source path: documentation/webkitjs/writablestream/1777851-abort
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/writablestream/1777851-abort
+Description: Interface language: Data
+
+# abort
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+Promise <any> abort(
+    optional any reason
+);
+```
+
+# Document: state
+
+Source path: documentation/webkitjs/writablestream/1777874-state
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/writablestream/1777874-state
+Description: Interface language: Data
+
+# state
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute DOMString state;
+```
+
+# Document: write
+
+Source path: documentation/webkitjs/writablestream/1777931-write
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/writablestream/1777931-write
+Description: Interface language: Data
+
+# write
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+Promise <any> write(
+    any chunk
+);
+```
+
+# Document: closed
+
+Source path: documentation/webkitjs/writablestream/1777932-closed
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/writablestream/1777932-closed
+Description: Interface language: Data
+
+# closed
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute Promise <boolean> closed;
+```
+
+# Document: XMLDocument
+
+Source path: documentation/webkitjs/xmldocument
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmldocument
+Description: Interface language: Data
+
+# XMLDocument
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+interface XMLDocument
+```
+
+## Relationships
+
+### Inherits From
+
+- [Document](https://developer.apple.com/documentation/tvmljs/document)
+
+# Document: XMLHttpRequestEventTarget
+
+Source path: documentation/webkitjs/xmlhttprequesteventtarget
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequesteventtarget
+Description: Interface language: Data
+
+# XMLHttpRequestEventTarget
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+interface XMLHttpRequestEventTarget
+```
+
+## Topics
+
+### Instance Properties
+
+- [onabort](xmlhttprequesteventtarget/1777961-onabort.md)
+- [onerror](xmlhttprequesteventtarget/1777888-onerror.md)
+- [onload](xmlhttprequesteventtarget/1777839-onload.md)
+- [onloadend](xmlhttprequesteventtarget/1777982-onloadend.md)
+- [onloadstart](xmlhttprequesteventtarget/1777886-onloadstart.md)
+- [onprogress](xmlhttprequesteventtarget/1777869-onprogress.md)
+- [ontimeout](xmlhttprequesteventtarget/1777977-ontimeout.md)
+
+## Relationships
+
+### Inherits From
+
+- [EventTarget](https://developer.apple.com/documentation/tvmljs/eventtarget)
+
+# Document: onload
+
+Source path: documentation/webkitjs/xmlhttprequesteventtarget/1777839-onload
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequesteventtarget/1777839-onload
+Description: Interface language: Data
+
+# onload
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler onload;
+```
+
+# Document: onprogress
+
+Source path: documentation/webkitjs/xmlhttprequesteventtarget/1777869-onprogress
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequesteventtarget/1777869-onprogress
+Description: Interface language: Data
+
+# onprogress
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler onprogress;
+```
+
+# Document: onloadstart
+
+Source path: documentation/webkitjs/xmlhttprequesteventtarget/1777886-onloadstart
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequesteventtarget/1777886-onloadstart
+Description: Interface language: Data
+
+# onloadstart
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler onloadstart;
+```
+
+# Document: onerror
+
+Source path: documentation/webkitjs/xmlhttprequesteventtarget/1777888-onerror
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequesteventtarget/1777888-onerror
+Description: Interface language: Data
+
+# onerror
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler onerror;
+```
+
+# Document: onabort
+
+Source path: documentation/webkitjs/xmlhttprequesteventtarget/1777961-onabort
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequesteventtarget/1777961-onabort
+Description: Interface language: Data
+
+# onabort
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler onabort;
+```
+
+# Document: ontimeout
+
+Source path: documentation/webkitjs/xmlhttprequesteventtarget/1777977-ontimeout
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequesteventtarget/1777977-ontimeout
+Description: Interface language: Data
+
+# ontimeout
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler ontimeout;
+```
+
+# Document: onloadend
+
+Source path: documentation/webkitjs/xmlhttprequesteventtarget/1777982-onloadend
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequesteventtarget/1777982-onloadend
+Description: Interface language: Data
+
+# onloadend
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+attribute EventHandler onloadend;
+```
+
+# Document: XMLHttpRequestProgressEvent
+
+Source path: documentation/webkitjs/xmlhttprequestprogressevent
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequestprogressevent
+Description: Interface language: Data
+
+# XMLHttpRequestProgressEvent
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 3.0+
+
+## Declaration
+
+```
+interface XMLHttpRequestProgressEvent
+```
+
+## Topics
+
+### Instance Properties
+
+- [position](xmlhttprequestprogressevent/1628999-position.md)
+- [totalSize](xmlhttprequestprogressevent/1631837-totalsize.md)
+
+## Relationships
+
+### Inherits From
+
+- [ProgressEvent](progressevent.md)
+
+# Document: position
+
+Source path: documentation/webkitjs/xmlhttprequestprogressevent/1628999-position
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequestprogressevent/1628999-position
+Description: Interface language: Data
+
+# position
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute unsigned long long position;
+```
+
+# Document: totalSize
+
+Source path: documentation/webkitjs/xmlhttprequestprogressevent/1631837-totalsize
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequestprogressevent/1631837-totalsize
+Description: Interface language: Data
+
+# totalSize
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+readonly attribute unsigned long long totalSize;
+```
+
+# Document: XMLHttpRequestResponseType
+
+Source path: documentation/webkitjs/xmlhttprequestresponsetype
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequestresponsetype
+Description: Interface language: Data
+
+# XMLHttpRequestResponseType
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Enumeration  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 9.0+
+
+# Document: XMLHttpRequestUpload
+
+Source path: documentation/webkitjs/xmlhttprequestupload
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xmlhttprequestupload
+Description: Interface language: Data
+
+# XMLHttpRequestUpload
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 3.0+
+
+## Declaration
+
+```
+interface XMLHttpRequestUpload
+```
+
+## Relationships
+
+### Inherits From
+
+- [XMLHttpRequestEventTarget](xmlhttprequesteventtarget.md)
+
+# Document: XPathNSResolver
+
+Source path: documentation/webkitjs/xpathnsresolver
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xpathnsresolver
+Description: Interface language: Data
+
+# XPathNSResolver
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 2.0+
+
+## Declaration
+
+```
+interface XPathNSResolver
+```
+
+## Topics
+
+### Instance Methods
+
+- [lookupNamespaceURI](xpathnsresolver/1629972-lookupnamespaceuri.md)
+
+# Document: lookupNamespaceURI
+
+Source path: documentation/webkitjs/xpathnsresolver/1629972-lookupnamespaceuri
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xpathnsresolver/1629972-lookupnamespaceuri
+Description: Interface language: Data
+
+# lookupNamespaceURI
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+DOMString? lookupNamespaceURI(
+    optional DOMString prefix
+);
+```
+
+# Document: XSLTProcessor
+
+Source path: documentation/webkitjs/xsltprocessor
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor
+Description: Interface language: Data
+
+# XSLTProcessor
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Class  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 3.0+
+
+## Declaration
+
+```
+interface XSLTProcessor
+```
+
+## Topics
+
+### Instance Methods
+
+- [clearParameters](xsltprocessor/1632979-clearparameters.md)
+- [getParameter](xsltprocessor/1630561-getparameter.md)
+- [importStylesheet](xsltprocessor/1634417-importstylesheet.md)
+- [removeParameter](xsltprocessor/1630910-removeparameter.md)
+- [reset](xsltprocessor/1631602-reset.md)
+- [setParameter](xsltprocessor/1634367-setparameter.md)
+- [transformToDocument](xsltprocessor/1632968-transformtodocument.md)
+- [transformToFragment](xsltprocessor/1632104-transformtofragment.md)
+
+# Document: getParameter
+
+Source path: documentation/webkitjs/xsltprocessor/1630561-getparameter
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor/1630561-getparameter
+Description: Interface language: Data
+
+# getParameter
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+DOMString getParameter(
+    DOMString namespaceURI, 
+    DOMString localName
+);
+```
+
+# Document: removeParameter
+
+Source path: documentation/webkitjs/xsltprocessor/1630910-removeparameter
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor/1630910-removeparameter
+Description: Interface language: Data
+
+# removeParameter
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+void removeParameter(
+    DOMString namespaceURI, 
+    DOMString localName
+);
+```
+
+# Document: reset
+
+Source path: documentation/webkitjs/xsltprocessor/1631602-reset
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor/1631602-reset
+Description: Interface language: Data
+
+# reset
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+void reset();
+```
+
+# Document: transformToFragment
+
+Source path: documentation/webkitjs/xsltprocessor/1632104-transformtofragment
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor/1632104-transformtofragment
+Description: Interface language: Data
+
+# transformToFragment
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+DocumentFragment transformToFragment(
+    optional Node? source, 
+    optional Document? docVal
+);
+```
+
+# Document: transformToDocument
+
+Source path: documentation/webkitjs/xsltprocessor/1632968-transformtodocument
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor/1632968-transformtodocument
+Description: Interface language: Data
+
+# transformToDocument
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+Document transformToDocument(
+    optional Node? source
+);
+```
+
+# Document: clearParameters
+
+Source path: documentation/webkitjs/xsltprocessor/1632979-clearparameters
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor/1632979-clearparameters
+Description: Interface language: Data
+
+# clearParameters
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 3.0+
+
+## Declaration
+
+```
+void clearParameters();
+```
+
+# Document: setParameter
+
+Source path: documentation/webkitjs/xsltprocessor/1634367-setparameter
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor/1634367-setparameter
+Description: Interface language: Data
+
+# setParameter
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+void setParameter(
+    DOMString namespaceURI, 
+    DOMString localName, 
+    DOMString value
+);
+```
+
+# Document: importStylesheet
+
+Source path: documentation/webkitjs/xsltprocessor/1634417-importstylesheet
+Canonical documentation: https://developer.apple.com/documentation/webkitjs/xsltprocessor/1634417-importstylesheet
+Description: Interface language: Data
+
+# importStylesheet
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 4.0+ · Safari Mobile 3.0+
+
+## Declaration
+
+```
+void importStylesheet(
+    optional Node? stylesheet
+);
+```

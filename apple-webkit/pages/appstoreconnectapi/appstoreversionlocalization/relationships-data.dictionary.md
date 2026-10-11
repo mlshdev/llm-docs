@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appstoreversionlocalization/relationships-data.dictionary
 
 # AppStoreVersionLocalization.Relationships
@@ -22,6 +22,7 @@ object AppStoreVersionLocalization.Relationships
 - `appPreviewSets` — `AppStoreVersionLocalization.Relationships.AppPreviewSets`:
 - `appScreenshotSets` — `AppStoreVersionLocalization.Relationships.AppScreenshotSets`:
 - `appStoreVersion` — `AppStoreVersionLocalization.Relationships.AppStoreVersion`:
+- `placements` — `AppStoreVersionLocalization.Relationships.Placements`: The data and links that describe the relationship between the App Store Version Localizations and the App Asset Library Placements resources.
 - `searchKeywords` — `AppStoreVersionLocalization.Relationships.SearchKeywords`:
 
 ## Topics
@@ -34,6 +35,7 @@ object AppStoreVersionLocalization.Relationships
 
 ### Dictionaries
 
+- [AppStoreVersionLocalization.Relationships.Placements](relationships-data.dictionary/placements-data.dictionary.md)
 - [AppStoreVersionLocalization.Relationships.SearchKeywords](relationships-data.dictionary/searchkeywords-data.dictionary.md)
 
 ## See Also

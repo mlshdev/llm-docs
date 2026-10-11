@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appcustomproductpagelocalization/relationships-data.dictionary
 
 # AppCustomProductPageLocalization.Relationships
@@ -23,6 +23,7 @@ object AppCustomProductPageLocalization.Relationships
 - `appPreviewSets` — `AppCustomProductPageLocalization.Relationships.AppPreviewSets`:
 - `appScreenshotSets` — `AppCustomProductPageLocalization.Relationships.AppScreenshotSets`:
 - `searchKeywords` — `AppCustomProductPageLocalization.Relationships.SearchKeywords`:
+- `placements` — `AppCustomProductPageLocalization.Relationships.Placements`: The data and links that describe the relationship between the App Custom Product Page Localizations and the App Asset Library Placements resources.
 
 ## Topics
 
@@ -35,6 +36,7 @@ object AppCustomProductPageLocalization.Relationships
 ### Dictionaries
 
 - [AppCustomProductPageLocalization.Relationships.SearchKeywords](relationships-data.dictionary/searchkeywords-data.dictionary.md): The data and links that describe the search keywords related to a custom product page localization.
+- [AppCustomProductPageLocalization.Relationships.Placements](relationships-data.dictionary/placements-data.dictionary.md)
 
 ## See Also
 

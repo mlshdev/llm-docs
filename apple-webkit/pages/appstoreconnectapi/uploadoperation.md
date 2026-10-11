@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/uploadoperation
 
 # UploadOperation
@@ -35,11 +35,11 @@ object UploadOperation
 
 ### Objects and Data Types
 
-- [AppPreview](apppreview.md): The data structure that represent an App Previews resource.
-- [AppPreviewCreateRequest](apppreviewcreaterequest.md): The request body you use to create an App Preview.
-- [AppPreviewUpdateRequest](apppreviewupdaterequest.md): The request body you use to update an App Preview.
-- [AppPreviewResponse](apppreviewresponse.md): The response body for endpoints that create, read, or modify an app preview video.
-- [AppPreviewsResponse](apppreviewsresponse.md): The response body for endpoints that list app preview videos in a preview set.
+- [AppPreview](apppreview.md): Deprecated. The data structure that represent an App Previews resource.
+- [AppPreviewCreateRequest](apppreviewcreaterequest.md): Deprecated. The request body you use to create an App Preview.
+- [AppPreviewUpdateRequest](apppreviewupdaterequest.md): Deprecated. The request body you use to update an App Preview.
+- [AppPreviewResponse](apppreviewresponse.md): Deprecated. The response body for endpoints that create, read, or modify an app preview video.
+- [AppPreviewsResponse](apppreviewsresponse.md): Deprecated. The response body for endpoints that list app preview videos in a preview set.
 - [PreviewType](previewtype.md): String that represents the display type of an app preview.
 - [PreviewFrameImage](previewframeimage.md): The properties that describe a preview frame image for an app preview or app event video.
 - [AppMediaVideoState](appmediavideostate.md): The properties that describe the state of an app preview or app event video.

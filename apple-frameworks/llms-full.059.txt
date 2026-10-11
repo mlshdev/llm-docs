@@ -1,10 +1,418 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 59
+
+# Document: fontColor
+
+Source path: documentation/spritekit/sklabelnode/fontcolor
+Canonical documentation: https://developer.apple.com/documentation/spritekit/sklabelnode/fontcolor
+Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+# fontColor (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The color of the label.
+
+## Declaration
+
+```swift
+var fontColor: UIColor? { get set }
+```
+
+```swift
+var fontColor: NSColor? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default color is white.
+
+## See Also
+
+### Specifying a Label’s Font
+
+- [fontName](fontname.md): The font used for the text in the label.
+- [fontSize](fontsize.md): The size of the font used in the label.
+
+# fontColor (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The color of the label.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, retain, nullable) UIColor * fontColor;
+```
+
+```objectivec
+@property (nonatomic, retain, nullable) NSColor * fontColor;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default color is white.
+
+## See Also
+
+### Specifying a Label’s Font
+
+- [fontName](fontname.md): The font used for the text in the label.
+- [fontSize](fontsize.md): The size of the font used in the label.
+
+# Document: fontName
+
+Source path: documentation/spritekit/sklabelnode/fontname
+Canonical documentation: https://developer.apple.com/documentation/spritekit/sklabelnode/fontname
+Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+# fontName (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The font used for the text in the label.
+
+## Declaration
+
+```swift
+var fontName: String? { get set }
+```
+
+## Mentioned In
+
+- [Adding Text to a Scene](../adding-text-to-a-scene.md)
+
+## See Also
+
+### Specifying a Label’s Font
+
+- [fontColor](fontcolor.md): The color of the label.
+- [fontSize](fontsize.md): The size of the font used in the label.
+
+# fontName (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The font used for the text in the label.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSString * fontName;
+```
+
+## Mentioned In
+
+- [Adding Text to a Scene](../adding-text-to-a-scene.md)
+
+## See Also
+
+### Specifying a Label’s Font
+
+- [fontColor](fontcolor.md): The color of the label.
+- [fontSize](fontsize.md): The size of the font used in the label.
+
+# Document: fontSize
+
+Source path: documentation/spritekit/sklabelnode/fontsize
+Canonical documentation: https://developer.apple.com/documentation/spritekit/sklabelnode/fontsize
+Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+# fontSize (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The size of the font used in the label.
+
+## Declaration
+
+```swift
+var fontSize: CGFloat { get set }
+```
+
+## Mentioned In
+
+- [Adding Text to a Scene](../adding-text-to-a-scene.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default font size is 32 points.
+
+## See Also
+
+### Specifying a Label’s Font
+
+- [fontColor](fontcolor.md): The color of the label.
+- [fontName](fontname.md): The font used for the text in the label.
+
+# fontSize (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The size of the font used in the label.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) CGFloat fontSize;
+```
+
+## Mentioned In
+
+- [Adding Text to a Scene](../adding-text-to-a-scene.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default font size is 32 points.
+
+## See Also
+
+### Specifying a Label’s Font
+
+- [fontColor](fontcolor.md): The color of the label.
+- [fontName](fontname.md): The font used for the text in the label.
+
+# Document: horizontalAlignmentMode
+
+Source path: documentation/spritekit/sklabelnode/horizontalalignmentmode
+Canonical documentation: https://developer.apple.com/documentation/spritekit/sklabelnode/horizontalalignmentmode
+Description: Framework: SpriteKit Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+# horizontalAlignmentMode (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The horizontal position of the text within the node.
+
+## Declaration
+
+```swift
+var horizontalAlignmentMode: SKLabelHorizontalAlignmentMode { get set }
+```
+
+## Mentioned In
+
+- [Adding Text to a Scene](../adding-text-to-a-scene.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The possible values for this property are listed in [SKLabelHorizontalAlignmentMode](../sklabelhorizontalalignmentmode.md). The default value of this property is [SKLabelHorizontalAlignmentMode.center](../sklabelhorizontalalignmentmode/center.md).
+
+## See Also
+
+### Controlling a Label’s Alignment
+
+- [verticalAlignmentMode](verticalalignmentmode.md): The vertical position of the text within the node.
+- [SKLabelVerticalAlignmentMode](../sklabelverticalalignmentmode.md): Options for aligning text vertically.
+- [SKLabelHorizontalAlignmentMode](../sklabelhorizontalalignmentmode.md): Options for aligning text horizontally.
+
+# horizontalAlignmentMode (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The horizontal position of the text within the node.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) SKLabelHorizontalAlignmentMode horizontalAlignmentMode;
+```
+
+## Mentioned In
+
+- [Adding Text to a Scene](../adding-text-to-a-scene.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The possible values for this property are listed in [SKLabelHorizontalAlignmentMode](../sklabelhorizontalalignmentmode.md). The default value of this property is [SKLabelHorizontalAlignmentModeCenter](../sklabelhorizontalalignmentmode/center.md).
+
+## See Also
+
+### Controlling a Label’s Alignment
+
+- [verticalAlignmentMode](verticalalignmentmode.md): The vertical position of the text within the node.
+- [SKLabelVerticalAlignmentMode](../sklabelverticalalignmentmode.md): Options for aligning text vertically.
+- [SKLabelHorizontalAlignmentMode](../sklabelhorizontalalignmentmode.md): Options for aligning text horizontally.
+
+# Document: init(attributedText:)
+
+Source path: documentation/spritekit/sklabelnode/init(attributedtext:)
+Canonical documentation: https://developer.apple.com/documentation/spritekit/sklabelnode/init(attributedtext:)
+Description: Framework: SpriteKit Kind: Initializer Availability: iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 4.0+
+
+# init(attributedText:) (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Initializes a new label object with an attributed text string.
+
+## Declaration
+
+```swift
+convenience init(attributedText: NSAttributedString?)
+```
+
+## Parameters
+
+- `attributedText`: The attributed string from which to initialize the label.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A lable initialized from attributed text.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+## See Also
+
+### Creating a Label
+
+- [init(fontNamed:)](init%28fontnamed_%29.md): Initializes a new label object with a specified font.
+- [init(text:)](init%28text_%29.md): Initializes a new label object with a text string.
+
+# labelNodeWithAttributedText: (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Initializes a new label object with an attributed text string.
+
+## Declaration
+
+```objectivec
++ (instancetype) labelNodeWithAttributedText:(NSAttributedString *) attributedText;
+```
+
+## Parameters
+
+- `attributedText`: The attributed string from which to initialize the label.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A lable initialized from attributed text.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+## See Also
+
+### Creating a Label
+
+- [initWithFontNamed:](init%28fontnamed_%29.md): Initializes a new label object with a specified font.
+- [labelNodeWithFontNamed:](labelnodewithfontnamed_.md): Initializes a new label object.
+- [labelNodeWithText:](init%28text_%29.md): Initializes a new label object with a text string.
+
+# Document: init(fontNamed:)
+
+Source path: documentation/spritekit/sklabelnode/init(fontnamed:)
+Canonical documentation: https://developer.apple.com/documentation/spritekit/sklabelnode/init(fontnamed:)
+Description: Framework: SpriteKit Kind: Initializer Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+# init(fontNamed:) (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Initializer  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Initializes a new label object with a specified font.
+
+## Declaration
+
+```swift
+init(fontNamed fontName: String?)
+```
+
+## Parameters
+
+- `fontName`: The name of the font used by the label.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized label object.
+
+## See Also
+
+### Creating a Label
+
+- [init(text:)](init%28text_%29.md): Initializes a new label object with a text string.
+- [init(attributedText:)](init%28attributedtext_%29.md): Initializes a new label object with an attributed text string.
+
+# initWithFontNamed: (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Initializes a new label object with a specified font.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithFontNamed:(NSString *) fontName;
+```
+
+## Parameters
+
+- `fontName`: The name of the font used by the label.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized label object.
+
+## See Also
+
+### Creating a Label
+
+- [labelNodeWithFontNamed:](labelnodewithfontnamed_.md): Initializes a new label object.
+- [labelNodeWithText:](init%28text_%29.md): Initializes a new label object with a text string.
+- [labelNodeWithAttributedText:](init%28attributedtext_%29.md): Initializes a new label object with an attributed text string.
 
 # Document: init(text:)
 
@@ -2029,6 +2437,8 @@ Set the values that make a node unique to a shader.
 - [NSStandardKeyBindingResponding](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
 - [NSUserActivityRestoring](https://developer.apple.com/documentation/appkit/nsuseractivityrestoring)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](../uikit/uiactivityitemsconfigurationproviding.md)
 - [UICoordinateSpace](../uikit/uicoordinatespace.md)
 - [UIFocusEnvironment](../uikit/uifocusenvironment.md)
@@ -180068,234 +180478,6 @@ Description: Interface language: Objective-C
 
 ```objectivec
 #define kSCEntNetIPv6
-```
-
-## See Also
-
-### Macros
-
-- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
-- [kSCCompGlobal](ksccompglobal-c.macro.md)
-- [kSCCompHostNames](ksccomphostnames-c.macro.md)
-- [kSCCompInterface](ksccompinterface-c.macro.md)
-- [kSCCompNetwork](ksccompnetwork-c.macro.md)
-- [kSCCompService](ksccompservice-c.macro.md)
-- [kSCCompSystem](ksccompsystem-c.macro.md)
-- [kSCCompUsers](ksccompusers-c.macro.md)
-- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
-- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
-- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
-- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
-- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
-- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
-- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
-
-# Document: kSCEntNetIPv6
-
-Source path: documentation/systemconfiguration/kscentnetipv6-swift.var
-Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscentnetipv6-swift.var
-Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.1+
-
-# kSCEntNetIPv6 (Swift)
-
-**Framework:** System Configuration  
-**Kind:** Global Variable  
-**Availability:** macOS 10.1+
-
-The network entity key for the `IPv6` dictionary.
-
-## Declaration
-
-```swift
-let kSCEntNetIPv6: CFString
-```
-
-## See Also
-
-### Constants
-
-- [kSCEntNetAirPort](kscentnetairport-swift.var.md): The network entity key for the `AirPort` dictionary.
-- [kSCEntNetDHCP](kscentnetdhcp-swift.var.md): The network entity key for the `DHCP` dictionary.
-- [kSCEntNetDNS](kscentnetdns-swift.var.md): The network entity key for the `DNS` dictionary.
-- [kSCEntNetEthernet](kscentnetethernet-swift.var.md): The network entity key for the `Ethernet` dictionary.
-- [kSCEntNetFireWire](kscentnetfirewire-swift.var.md): The network entity key for the `FireWire` dictionary.
-- [kSCEntNetInterface](kscentnetinterface-swift.var.md): The network entity key for the `Interface` dictionary.
-- [kSCEntNetIPSec](kscentnetipsec-swift.var.md): The network entity key for the `IPSec` dictionary.
-- [kSCEntNetIPv4](kscentnetipv4-swift.var.md): The network entity key for the `IPv4` dictionary.
-- [kSCEntNetL2TP](kscentnetl2tp-swift.var.md): The network entity key for the `L2TP` dictionary.
-- [kSCEntNetLink](kscentnetlink-swift.var.md): The network entity key for the `Link` dictionary.
-- [kSCEntNetModem](kscentnetmodem-swift.var.md): The network entity key for the `Modem` dictionary.
-- [kSCEntNetPPP](kscentnetppp-swift.var.md): The network entity key for the `PPP` dictionary.
-- [kSCEntNetPPPoE](kscentnetpppoe-swift.var.md): The network entity key for the `PPPoE` dictionary.
-- [kSCEntNetPPPSerial](kscentnetpppserial-swift.var.md): The network entity key for the `PPPSerial` dictionary.
-- [kSCEntNetPPTP](kscentnetpptp-swift.var.md): Deprecated. The network entity key for the `PPTP` dictionary.
-
-# kSCEntNetIPv6 (Objective-C)
-
-**Framework:** System Configuration  
-**Kind:** Global Variable  
-**Availability:** macOS 10.1+
-
-The network entity key for the `IPv6` dictionary.
-
-## Declaration
-
-```objectivec
-extern CFStringRef const kSCEntNetIPv6;
-```
-
-## See Also
-
-### Constants
-
-- [kSCEntNetAirPort](kscentnetairport-swift.var.md): The network entity key for the `AirPort` dictionary.
-- [kSCEntNetDHCP](kscentnetdhcp-swift.var.md): The network entity key for the `DHCP` dictionary.
-- [kSCEntNetDNS](kscentnetdns-swift.var.md): The network entity key for the `DNS` dictionary.
-- [kSCEntNetEthernet](kscentnetethernet-swift.var.md): The network entity key for the `Ethernet` dictionary.
-- [kSCEntNetFireWire](kscentnetfirewire-swift.var.md): The network entity key for the `FireWire` dictionary.
-- [kSCEntNetInterface](kscentnetinterface-swift.var.md): The network entity key for the `Interface` dictionary.
-- [kSCEntNetIPSec](kscentnetipsec-swift.var.md): The network entity key for the `IPSec` dictionary.
-- [kSCEntNetIPv4](kscentnetipv4-swift.var.md): The network entity key for the `IPv4` dictionary.
-- [kSCEntNetL2TP](kscentnetl2tp-swift.var.md): The network entity key for the `L2TP` dictionary.
-- [kSCEntNetLink](kscentnetlink-swift.var.md): The network entity key for the `Link` dictionary.
-- [kSCEntNetModem](kscentnetmodem-swift.var.md): The network entity key for the `Modem` dictionary.
-- [kSCEntNetPPP](kscentnetppp-swift.var.md): The network entity key for the `PPP` dictionary.
-- [kSCEntNetPPPoE](kscentnetpppoe-swift.var.md): The network entity key for the `PPPoE` dictionary.
-- [kSCEntNetPPPSerial](kscentnetpppserial-swift.var.md): The network entity key for the `PPPSerial` dictionary.
-- [kSCEntNetPPTP](kscentnetpptp-swift.var.md): Deprecated. The network entity key for the `PPTP` dictionary.
-
-# Document: kSCEntNetL2TP
-
-Source path: documentation/systemconfiguration/kscentnetl2tp-c.macro
-Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscentnetl2tp-c.macro
-Description: Interface language: Objective-C
-
-# kSCEntNetL2TP
-
-**Interface language:** Objective-C
-
-**Framework:** System Configuration  
-**Kind:** Macro  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-#define kSCEntNetL2TP
-```
-
-## See Also
-
-### Macros
-
-- [kSCCompAnyRegex](ksccompanyregex-c.macro.md)
-- [kSCCompGlobal](ksccompglobal-c.macro.md)
-- [kSCCompHostNames](ksccomphostnames-c.macro.md)
-- [kSCCompInterface](ksccompinterface-c.macro.md)
-- [kSCCompNetwork](ksccompnetwork-c.macro.md)
-- [kSCCompService](ksccompservice-c.macro.md)
-- [kSCCompSystem](ksccompsystem-c.macro.md)
-- [kSCCompUsers](ksccompusers-c.macro.md)
-- [kSCDynamicStoreDomainFile](kscdynamicstoredomainfile-c.macro.md)
-- [kSCDynamicStoreDomainPlugin](kscdynamicstoredomainplugin-c.macro.md)
-- [kSCDynamicStoreDomainPrefs](kscdynamicstoredomainprefs-c.macro.md)
-- [kSCDynamicStoreDomainSetup](kscdynamicstoredomainsetup-c.macro.md)
-- [kSCDynamicStoreDomainState](kscdynamicstoredomainstate-c.macro.md)
-- [kSCDynamicStorePropNetInterfaces](kscdynamicstorepropnetinterfaces-c.macro.md)
-- [kSCDynamicStorePropNetPrimaryInterface](kscdynamicstorepropnetprimaryinterface-c.macro.md)
-
-# Document: kSCEntNetL2TP
-
-Source path: documentation/systemconfiguration/kscentnetl2tp-swift.var
-Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscentnetl2tp-swift.var
-Description: Framework: System Configuration Kind: Global Variable Availability: macOS 10.3+
-
-# kSCEntNetL2TP (Swift)
-
-**Framework:** System Configuration  
-**Kind:** Global Variable  
-**Availability:** macOS 10.3+
-
-The network entity key for the `L2TP` dictionary.
-
-## Declaration
-
-```swift
-let kSCEntNetL2TP: CFString
-```
-
-## See Also
-
-### Constants
-
-- [kSCEntNetAirPort](kscentnetairport-swift.var.md): The network entity key for the `AirPort` dictionary.
-- [kSCEntNetDHCP](kscentnetdhcp-swift.var.md): The network entity key for the `DHCP` dictionary.
-- [kSCEntNetDNS](kscentnetdns-swift.var.md): The network entity key for the `DNS` dictionary.
-- [kSCEntNetEthernet](kscentnetethernet-swift.var.md): The network entity key for the `Ethernet` dictionary.
-- [kSCEntNetFireWire](kscentnetfirewire-swift.var.md): The network entity key for the `FireWire` dictionary.
-- [kSCEntNetInterface](kscentnetinterface-swift.var.md): The network entity key for the `Interface` dictionary.
-- [kSCEntNetIPSec](kscentnetipsec-swift.var.md): The network entity key for the `IPSec` dictionary.
-- [kSCEntNetIPv4](kscentnetipv4-swift.var.md): The network entity key for the `IPv4` dictionary.
-- [kSCEntNetIPv6](kscentnetipv6-swift.var.md): The network entity key for the `IPv6` dictionary.
-- [kSCEntNetLink](kscentnetlink-swift.var.md): The network entity key for the `Link` dictionary.
-- [kSCEntNetModem](kscentnetmodem-swift.var.md): The network entity key for the `Modem` dictionary.
-- [kSCEntNetPPP](kscentnetppp-swift.var.md): The network entity key for the `PPP` dictionary.
-- [kSCEntNetPPPoE](kscentnetpppoe-swift.var.md): The network entity key for the `PPPoE` dictionary.
-- [kSCEntNetPPPSerial](kscentnetpppserial-swift.var.md): The network entity key for the `PPPSerial` dictionary.
-- [kSCEntNetPPTP](kscentnetpptp-swift.var.md): Deprecated. The network entity key for the `PPTP` dictionary.
-
-# kSCEntNetL2TP (Objective-C)
-
-**Framework:** System Configuration  
-**Kind:** Global Variable  
-**Availability:** macOS 10.3+
-
-The network entity key for the `L2TP` dictionary.
-
-## Declaration
-
-```objectivec
-extern CFStringRef const kSCEntNetL2TP;
-```
-
-## See Also
-
-### Constants
-
-- [kSCEntNetAirPort](kscentnetairport-swift.var.md): The network entity key for the `AirPort` dictionary.
-- [kSCEntNetDHCP](kscentnetdhcp-swift.var.md): The network entity key for the `DHCP` dictionary.
-- [kSCEntNetDNS](kscentnetdns-swift.var.md): The network entity key for the `DNS` dictionary.
-- [kSCEntNetEthernet](kscentnetethernet-swift.var.md): The network entity key for the `Ethernet` dictionary.
-- [kSCEntNetFireWire](kscentnetfirewire-swift.var.md): The network entity key for the `FireWire` dictionary.
-- [kSCEntNetInterface](kscentnetinterface-swift.var.md): The network entity key for the `Interface` dictionary.
-- [kSCEntNetIPSec](kscentnetipsec-swift.var.md): The network entity key for the `IPSec` dictionary.
-- [kSCEntNetIPv4](kscentnetipv4-swift.var.md): The network entity key for the `IPv4` dictionary.
-- [kSCEntNetIPv6](kscentnetipv6-swift.var.md): The network entity key for the `IPv6` dictionary.
-- [kSCEntNetLink](kscentnetlink-swift.var.md): The network entity key for the `Link` dictionary.
-- [kSCEntNetModem](kscentnetmodem-swift.var.md): The network entity key for the `Modem` dictionary.
-- [kSCEntNetPPP](kscentnetppp-swift.var.md): The network entity key for the `PPP` dictionary.
-- [kSCEntNetPPPoE](kscentnetpppoe-swift.var.md): The network entity key for the `PPPoE` dictionary.
-- [kSCEntNetPPPSerial](kscentnetpppserial-swift.var.md): The network entity key for the `PPPSerial` dictionary.
-- [kSCEntNetPPTP](kscentnetpptp-swift.var.md): Deprecated. The network entity key for the `PPTP` dictionary.
-
-# Document: kSCEntNetLink
-
-Source path: documentation/systemconfiguration/kscentnetlink-c.macro
-Canonical documentation: https://developer.apple.com/documentation/systemconfiguration/kscentnetlink-c.macro
-Description: Interface language: Objective-C
-
-# kSCEntNetLink
-
-**Interface language:** Objective-C
-
-**Framework:** System Configuration  
-**Kind:** Macro  
-**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
-
-## Declaration
-
-```objectivec
-#define kSCEntNetLink
 ```
 
 ## See Also

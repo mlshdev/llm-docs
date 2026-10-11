@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appcustomproductpagelocalizations-_id_-appscreenshotsets
 
 # List App Screenshot Sets for a Custom Product Page Localization
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.7+
+**Availability:** App Store Connect API 1.7+ (deprecated in 4.5)
 
 List the app screenshot sets for a specific custom product page localization.
+
+> This relationship is deprecated. Use the [AppAssetLibraryPlacement](appassetlibraryplacement.md) relationship instead.
 
 ## URL
 
@@ -38,11 +40,11 @@ GET https://api.appstoreconnect.apple.com/v1/appCustomProductPageLocalizations/{
 - `limit[appScreenshots]` — `integer`: The maximum number of related app screenshots resources to return.
   **Maximum:** `50`
 - `fields[appCustomProductPageLocalizations]` — `[string]`: Additional fields to include for each app custom product page localization resource returned by the response.
-  **Allowed values:** `locale`, `promotionalText`, `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+  **Allowed values:** `locale`, `promotionalText`, `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
 - `fields[appStoreVersionExperimentTreatmentLocalizations]` — `[string]`: Additional fields to include for each App Store version experiment treatment localization resource returned by the response.
-  **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`
+  **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`, `placements`
 - `fields[appStoreVersionLocalizations]` — `[string]`: Additional fields to include for each App Store version localization resource returned by the response.
-  **Allowed values:** `description`, `locale`, `keywords`, `marketingUrl`, `promotionalText`, `supportUrl`, `whatsNew`, `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+  **Allowed values:** `description`, `locale`, `keywords`, `marketingUrl`, `promotionalText`, `supportUrl`, `whatsNew`, `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
 
 ## Response Codes
 
@@ -165,11 +167,11 @@ https://api.appstoreconnect.apple.com/v1/appCustomProductPageVersions/e0e9216a-3
 - [Modify Custom Product Page Localization Information](patch-v1-appcustomproductpagelocalizations-_id_.md): Update the promotional text for an app custom product page localization.
 - [List Custom Product Pages Localizations](get-v1-appcustomproductpageversions-_id_-appcustomproductpagelocalizations.md): List all localizations for an app custom product page.
 - [Read Custom Product Page Localization Information](get-v1-appcustomproductpagelocalizations-_id_.md): Get information about a specific app custom product page localization.
-- [List App Preview Sets for a Custom Product Page Localization](get-v1-appcustomproductpagelocalizations-_id_-apppreviewsets.md): List the app preview sets for a specific custom product page localization.
-- [List app preview set IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-apppreviewsets.md): List the app preview set IDs for a specific custom product page localization.
-- [List app screenshot sets IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-appscreenshotsets.md): List the app screenshot set IDs for a specific custom product page localization.
+- [List App Preview Sets for a Custom Product Page Localization](get-v1-appcustomproductpagelocalizations-_id_-apppreviewsets.md): Deprecated. List the app preview sets for a specific custom product page localization.
+- [List app preview set IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-apppreviewsets.md): Deprecated. List the app preview set IDs for a specific custom product page localization.
+- [List app screenshot sets IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-appscreenshotsets.md): Deprecated. List the app screenshot set IDs for a specific custom product page localization.
 - [Delete an App Custom Product Page Localization](delete-v1-appcustomproductpagelocalizations-_id_.md): Delete localized metadata that you configured for a custom product page.
 
 ### Getting screenshot information
 
-- [List app screenshot sets IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-appscreenshotsets.md): List the app screenshot set IDs for a specific custom product page localization.
+- [List app screenshot sets IDs for a custom product page localization](get-v1-appcustomproductpagelocalizations-_id_-relationships-appscreenshotsets.md): Deprecated. List the app screenshot set IDs for a specific custom product page localization.

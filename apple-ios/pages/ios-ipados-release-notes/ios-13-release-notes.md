@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-13-release-notes
 
 # iOS 13 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS 13 SDK provides support for developing apps for iPhone devices running iOS 13. The SDK comes bundled with Xcode 11 available from the Mac App Store. For information about Xcode 11, see [Xcode 11 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11-release-notes).
+The iOS 13 SDK provides support for developing apps for iPhone devices running iOS 13. The SDK comes bundled with Xcode 11. For information about Xcode 11, see [Xcode 11 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11-release-notes).
 
 > **Warning**
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/app/relationships-data.dictionary
 
 # App.Relationships
@@ -52,6 +52,7 @@ object App.Relationships
 - `appPriceSchedule` — `App.Relationships.AppPriceSchedule`: The data and links that describe the relationship between the Apps and the App Price Schedules resources.
 - `appStoreIcon` — `App.Relationships.AppStoreIcon`: The data and links that describe the relationship between the Apps and the App Store Icons resources.
 - `appTags` — `App.Relationships.AppTags`: The data and links that describe the relationship between the Apps and the App Tags resources.
+- `assetLibrary` — `App.Relationships.AssetLibrary`: The data and links that describe the relationship between the Apps and the App Asset Libraries resources.
 - `backgroundAssets` — `App.Relationships.BackgroundAssets`: The data and links that describe the relationship between the Apps and the Background Assets resources.
 - `betaFeedbackCrashSubmissions` — `App.Relationships.BetaFeedbackCrashSubmissions`: The data and links that describe the relationship between the Apps and the Beta Feedback Crash Submissions resources.
 - `betaFeedbackScreenshotSubmissions` — `App.Relationships.BetaFeedbackScreenshotSubmissions`: The data and links that describe the relationship between the Apps and the Beta Feedback Screenshot Submissions resources.
@@ -84,6 +85,7 @@ object App.Relationships
 - [App.Relationships.AppStoreVersionExperimentsV2](relationships-data.dictionary/appstoreversionexperimentsv2-data.dictionary.md)
 - [App.Relationships.AppStoreVersions](relationships-data.dictionary/appstoreversions-data.dictionary.md): The data and links that describe the relationship between the resources.
 - [App.Relationships.AppTags](relationships-data.dictionary/apptags-data.dictionary.md)
+- [App.Relationships.AssetLibrary](relationships-data.dictionary/assetlibrary-data.dictionary.md)
 - [App.Relationships.BackgroundAssets](relationships-data.dictionary/backgroundassets-data.dictionary.md): The link object for the app’s background assets relationship.
 - [App.Relationships.BetaAppLocalizations](relationships-data.dictionary/betaapplocalizations-data.dictionary.md): The data and links that describe the relationship between the resources.
 - [App.Relationships.BetaAppReviewDetail](relationships-data.dictionary/betaappreviewdetail-data.dictionary.md): The data and links that describe the relationship between the resources.

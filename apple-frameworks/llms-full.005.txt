@@ -1,9 +1,9 @@
-# Apple cross-platform frameworks snapshot-9afb9b6c8001: full documentation
+# Apple cross-platform frameworks snapshot-2d7a1d789740: full documentation
 
 Source: https://developer.apple.com/documentation/technologies
-Catalog snapshot: 9afb9b6c800178a5c034d451b4ea3ca6ae75ee5a4cfd37e41500cc95b4b37e0c
-Content digest: d61457f7c50d309f5a6387fd537e90fb21c95f6be8b2aacc9eda392b1a38230e
-Captured at: 2026-10-04T18:39:03.048Z
+Catalog snapshot: 2d7a1d789740aa6998fbeafe5d9f2947fae433bcfc3d13caa6ef6ccdffd20e0c
+Content digest: 8b2b138ba3efa7b9a82ccac4a95addb5fc1123b9e570d19b9febcb2161c6ab60
+Captured at: 2026-10-11T21:19:15.087Z
 Volume 5
 
 # Document: Audio graphs
@@ -30901,8 +30901,8 @@ extern bool ABGroupAddMember(ABGroupRef group, ABPersonRef personToAdd);
 ## Parameters
 
 - `group`: The group you wish to add `person` to.
-- `personToAdd`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 - `person`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
+- `personToAdd`: The person to add to `group`. If `person` is `NULL`, this function raises an exception.
 
 <a id="return-value"></a>
 
@@ -32024,8 +32024,8 @@ extern bool ABGroupRemoveMember(ABGroupRef group, ABPersonRef personToRemove);
 ## Parameters
 
 - `group`: The group that you wish to remove `person` from.
-- `member`: The person that you wish to remove from group.
 - `personToRemove`: The member that you wish to remove from `group`.
+- `member`: The person that you wish to remove from group.
 
 <a id="return-value"></a>
 
@@ -71859,7 +71859,7 @@ Turn off automatic renewal to cancel a customer’s auto-renewable subscription.
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/subscription/cancel/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/subscription/cancel/{transactionId}
 ```
 
 ## Sandbox URL
@@ -72057,7 +72057,7 @@ Update the SKU, display name, and description associated with a subscription, wi
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/subscription/changeMetadata/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/subscription/changeMetadata/{transactionId}
 ```
 
 ## Sandbox URL
@@ -72130,7 +72130,7 @@ Increase or decrease the price of an auto-renewable subscription, a bundle, or i
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/subscription/changePrice/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/subscription/changePrice/{transactionId}
 ```
 
 ## Sandbox URL
@@ -75605,7 +75605,7 @@ Migrate a subscription that a customer purchased through Apple In-App Purchase t
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/subscription/migrate/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/subscription/migrate/{transactionId}
 ```
 
 ## Sandbox URL
@@ -79227,7 +79227,7 @@ Request a refund for a one-time charge or subscription transaction.
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/transaction/requestRefund/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/transaction/requestRefund/{transactionId}
 ```
 
 ## Sandbox URL
@@ -79545,7 +79545,7 @@ Immediately cancel a customer’s subscription and all the items that are includ
 ## URL
 
 ```http
-POST https://api.storekit.itunes.apple.com/advancedCommerce/v1/subscription/revoke/{transactionId}
+POST https://api.storekit.apple.com/advancedCommerce/v1/subscription/revoke/{transactionId}
 ```
 
 ## Sandbox URL

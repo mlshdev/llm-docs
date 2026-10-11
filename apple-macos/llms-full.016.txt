@@ -1,9 +1,9 @@
-# Apple macOS snapshot-0513df389cc7: full documentation
+# Apple macOS snapshot-8257b11be327: full documentation
 
 Source: https://developer.apple.com/macos/
-Catalog snapshot: 0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d
-Content digest: 14bed8000201559feea98994c1c1775c7d24cc3f228675df96cb28953e4bdfaf
-Captured at: 2026-10-04T18:39:02.631Z
+Catalog snapshot: 8257b11be3276c2e79632f1695b3186136bb4ab3f4b106ab8a041674e3c8ef05
+Content digest: 41edb3868bb6a657018aafb557356ddd3f56fdf018e3a85b9e0b68b3c5e76f1d
+Captured at: 2026-10-11T21:19:14.780Z
 Volume 16
 
 # Document: StandardUSB::kDeviceCapabilityTypeUSB20Extension
@@ -152679,7 +152679,7 @@ When writing your report, please include the full version number in the title an
 
 ### macOS 27
 
-- [macOS 27.2 Golden Gate Beta 2 Release Notes](macos-release-notes/macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [macOS 27.2 Golden Gate Beta 3 Release Notes](macos-release-notes/macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [macOS 27 Golden Gate Release Notes](macos-release-notes/macos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### macOS 26
@@ -153888,7 +153888,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 12 SDK provides support to develop apps for Mac computers running macOS Monterey 12.0.1. The SDK comes bundled with Xcode 13.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.1, see [Xcode 13.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_1-release-notes).
+The macOS 12 SDK provides support to develop apps for Mac computers running macOS Monterey 12.0.1. The SDK comes bundled with Xcode 13.1. For information on the compatibility requirements for Xcode 13.1, see [Xcode 13.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_1-release-notes).
 
 <a id="AppKit"></a>
 
@@ -154048,7 +154048,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 12.1 SDK provides support to develop apps for Mac computers running macOS Monterey 12.1. The SDK comes bundled with Xcode 13.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.2, see [Xcode 13.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes).
+The macOS 12.1 SDK provides support to develop apps for Mac computers running macOS Monterey 12.1. The SDK comes bundled with Xcode 13.2. For information on the compatibility requirements for Xcode 13.2, see [Xcode 13.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes).
 
 <a id="App-Store"></a>
 
@@ -154131,7 +154131,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 12.1 SDK provides support to develop apps for Mac computers running macOS Monterey 12.2. The SDK comes bundled with Xcode 13.2.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.2.1, see [Xcode 13.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2_1-release-notes).
+The macOS 12.1 SDK provides support to develop apps for Mac computers running macOS Monterey 12.2. The SDK comes bundled with Xcode 13.2.1. For information on the compatibility requirements for Xcode 13.2.1, see [Xcode 13.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2_1-release-notes).
 
 <a id="General"></a>
 
@@ -154165,7 +154165,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 12.3 SDK provides support to develop apps for Mac computers running macOS Monterey 12.3. The SDK comes bundled with Xcode 13.3.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.3.1, see [Xcode 13.3.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3_1-release-notes).
+The macOS 12.3 SDK provides support to develop apps for Mac computers running macOS Monterey 12.3. The SDK comes bundled with Xcode 13.3.1. For information on the compatibility requirements for Xcode 13.3.1, see [Xcode 13.3.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3_1-release-notes).
 
 <a id="Apple-Pay"></a>
 
@@ -154323,7 +154323,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 12.4 SDK provides support to develop apps for Mac computers running macOS Monterey 12.4. The SDK comes bundled with Xcode 13.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.4, see [Xcode 13.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4-release-notes).
+The macOS 12.4 SDK provides support to develop apps for Mac computers running macOS Monterey 12.4. The SDK comes bundled with Xcode 13.4. For information on the compatibility requirements for Xcode 13.4, see [Xcode 13.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4-release-notes).
 
 <a id="Core-Foundation"></a>
 
@@ -154383,7 +154383,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 12.4 SDK provides support to develop apps for Mac computers running macOS Monterey 12.5. The SDK comes bundled with Xcode 13.4.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.4.1, see [Xcode 13.4.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4_1-release-notes).
+The macOS 12.4 SDK provides support to develop apps for Mac computers running macOS Monterey 12.5. The SDK comes bundled with Xcode 13.4.1. For information on the compatibility requirements for Xcode 13.4.1, see [Xcode 13.4.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4_1-release-notes).
 
 <a id="General"></a>
 
@@ -154688,7 +154688,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 13.1 SDK provides support to develop apps for Mac computers running macOS Ventura 13.1. The SDK comes bundled with Xcode 14.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
+The macOS 13.1 SDK provides support to develop apps for Mac computers running macOS Ventura 13.1. The SDK comes bundled with Xcode 14.2. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
 
 <a id="Endpoint-Security"></a>
 
@@ -154808,7 +154808,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 13.1 SDK provides support to develop apps for Mac computers running macOS Ventura 13.2. The SDK comes bundled with Xcode 14.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
+The macOS 13.1 SDK provides support to develop apps for Mac computers running macOS Ventura 13.2. The SDK comes bundled with Xcode 14.2. For information on the compatibility requirements for Xcode 14.2, see [Xcode 14.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_2-release-notes).
 
 <a id="ServiceManagement"></a>
 
@@ -154856,7 +154856,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 13.3 SDK provides support to develop apps for Mac computers running Ventura 13.3. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The macOS 13.3 SDK provides support to develop apps for Mac computers running Ventura 13.3. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="Accelerate"></a>
 
@@ -155097,7 +155097,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 13.3 SDK provides support to develop apps for Mac computers running Ventura 13.4. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The macOS 13.3 SDK provides support to develop apps for Mac computers running Ventura 13.4. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="Apple-Studio-Display"></a>
 
@@ -155167,7 +155167,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 13.3 SDK provides support to develop apps for Mac computers running Ventura 13.5. The SDK comes bundled with Xcode 14.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
+The macOS 13.3 SDK provides support to develop apps for Mac computers running Ventura 13.5. The SDK comes bundled with Xcode 14.3. For information on the compatibility requirements for Xcode 14.3, see [Xcode 14.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-14_3-release-notes).
 
 <a id="Finder"></a>
 
@@ -155215,7 +155215,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 14 SDK provides support to develop apps for Mac computers running Sonoma 14. The SDK comes bundled with Xcode 15 RC, available from the Mac App Store. For information on the compatibility requirements for Xcode 15 RC, see [Xcode 15 RC Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
+The macOS 14 SDK provides support to develop apps for Mac computers running Sonoma 14. The SDK comes bundled with Xcode 15 RC. For information on the compatibility requirements for Xcode 15 RC, see [Xcode 15 RC Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
 
 <a id="General"></a>
 
@@ -156289,7 +156289,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 14 SDK provides support to develop apps for Mac computers running Sonoma 14.1. The SDK comes bundled with Xcode 15, available from the Mac App Store. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
+The macOS 14 SDK provides support to develop apps for Mac computers running Sonoma 14.1. The SDK comes bundled with Xcode 15. For information on the compatibility requirements for Xcode 15, see [Xcode 15 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15-release-notes).
 
 <a id="Remote-Widgets"></a>
 
@@ -156360,7 +156360,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 14.2 SDK provides support to develop apps for Mac computers running Sonoma 14.2. The SDK comes bundled with Xcode 15.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
+The macOS 14.2 SDK provides support to develop apps for Mac computers running Sonoma 14.2. The SDK comes bundled with Xcode 15.1. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
 
 <a id="iMessage-Contact-Key-Verification"></a>
 
@@ -156513,7 +156513,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 14.2 SDK provides support to develop apps for Mac computers running Sonoma 14.3. The SDK comes bundled with Xcode 15.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
+The macOS 14.2 SDK provides support to develop apps for Mac computers running Sonoma 14.3. The SDK comes bundled with Xcode 15.1. For information on the compatibility requirements for Xcode 15.1, see [Xcode 15.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_1-release-notes).
 
 <a id="AppKit"></a>
 
@@ -156592,7 +156592,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 14.4 SDK provides support to develop apps for Mac computers running Sonoma 14.4. The SDK comes bundled with Xcode 15.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.3, see [Xcode 15.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_3-release-notes).
+The macOS 14.4 SDK provides support to develop apps for Mac computers running Sonoma 14.4. The SDK comes bundled with Xcode 15.3. For information on the compatibility requirements for Xcode 15.3, see [Xcode 15.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_3-release-notes).
 
 <a id="AppKit"></a>
 
@@ -156751,7 +156751,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 14.5 SDK provides support to develop apps for Mac computers running Sonoma 14.5. The SDK comes bundled with Xcode 15.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
+The macOS 14.5 SDK provides support to develop apps for Mac computers running Sonoma 14.5. The SDK comes bundled with Xcode 15.4. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
 
 <a id="FaceTime"></a>
 
@@ -156800,7 +156800,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 14.5 SDK provides support to develop apps for Mac computers running Sonoma 14.6. The SDK comes bundled with Xcode 15.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
+The macOS 14.5 SDK provides support to develop apps for Mac computers running Sonoma 14.6. The SDK comes bundled with Xcode 15.4. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
 
 <a id="ARKit"></a>
 
@@ -156879,7 +156879,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 15 SDK provides support to develop apps for Mac computers running Sequoia 15. The SDK comes bundled with Xcode 16, available from the Mac App Store. For information on the compatibility requirements for Xcode 16, see [Xcode 16 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16-release-notes).
+The macOS 15 SDK provides support to develop apps for Mac computers running Sequoia 15. The SDK comes bundled with Xcode 16. For information on the compatibility requirements for Xcode 16, see [Xcode 16 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16-release-notes).
 
 <a id="Accessibility"></a>
 
@@ -157787,7 +157787,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 15.1 SDK provides support to develop apps for Mac computers running Sequoia 15.1. The SDK comes bundled with Xcode 16.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.1, see [Xcode 16.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_1-release-notes).
+The macOS 15.1 SDK provides support to develop apps for Mac computers running Sequoia 15.1. The SDK comes bundled with Xcode 16.1. For information on the compatibility requirements for Xcode 16.1, see [Xcode 16.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_1-release-notes).
 
 <a id="AppKit"></a>
 
@@ -157955,7 +157955,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 15.2 SDK provides support to develop apps for Mac computers running Sequoia 15.2. The SDK comes bundled with Xcode 16.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
+The macOS 15.2 SDK provides support to develop apps for Mac computers running Sequoia 15.2. The SDK comes bundled with Xcode 16.2. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
 
 <a id="Accelerate"></a>
 
@@ -158103,7 +158103,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 15.2 SDK provides support to develop apps for Mac computers running Sequoia 15.3. The SDK comes bundled with Xcode 16.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
+The macOS 15.2 SDK provides support to develop apps for Mac computers running Sequoia 15.3. The SDK comes bundled with Xcode 16.2. For information on the compatibility requirements for Xcode 16.2, see [Xcode 16.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_2-release-notes).
 
 <a id="Apple-Intelligence"></a>
 
@@ -158152,7 +158152,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 15.4 SDK provides support to develop apps for Mac computers running Sequoia 15.4. The SDK comes bundled with Xcode 16.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.3, see [Xcode 16.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_3-release-notes).
+The macOS 15.4 SDK provides support to develop apps for Mac computers running Sequoia 15.4. The SDK comes bundled with Xcode 16.3. For information on the compatibility requirements for Xcode 16.3, see [Xcode 16.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_3-release-notes).
 
 <a id="Apple-Intelligence"></a>
 
@@ -158424,7 +158424,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 15.5 SDK provides support to develop apps for Mac computers running Sequoia 15.5. The SDK comes bundled with Xcode 16.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
+The macOS 15.5 SDK provides support to develop apps for Mac computers running Sequoia 15.5. The SDK comes bundled with Xcode 16.4. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
 
 <a id="Finder"></a>
 
@@ -158503,7 +158503,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 15.5 SDK provides support to develop apps for Mac computers running Sequoia 15.6. The SDK comes bundled with Xcode 16.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
+The macOS 15.5 SDK provides support to develop apps for Mac computers running Sequoia 15.6. The SDK comes bundled with Xcode 16.4. For information on the compatibility requirements for Xcode 16.4, see [Xcode 16.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-16_4-release-notes).
 
 <a id="General"></a>
 
@@ -158542,7 +158542,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 26 SDK provides support to develop apps for Mac computers running Tahoe 26. The SDK comes bundled with Xcode 26, available from the Mac App Store. For information on the compatibility requirements for Xcode 26, see [Xcode 26 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26-release-notes).
+The macOS 26 SDK provides support to develop apps for Mac computers running Tahoe 26. The SDK comes bundled with Xcode 26. For information on the compatibility requirements for Xcode 26, see [Xcode 26 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26-release-notes).
 
 <a id="General"></a>
 
@@ -159551,7 +159551,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 26.1 SDK provides support to develop apps for Mac computers running Tahoe 26.1. The SDK comes bundled with Xcode 26.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
+The macOS 26.1 SDK provides support to develop apps for Mac computers running Tahoe 26.1. The SDK comes bundled with Xcode 26.1. For information on the compatibility requirements for Xcode 26.1, see [Xcode 26.1 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_1-release-notes).
 
 <a id="Apple-TV-app"></a>
 
@@ -159644,7 +159644,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 26.2 SDK provides support to develop apps for Mac computers running Tahoe 26.2. The SDK comes bundled with Xcode 26.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
+The macOS 26.2 SDK provides support to develop apps for Mac computers running Tahoe 26.2. The SDK comes bundled with Xcode 26.2. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
 
 <a id="AirDrop"></a>
 
@@ -159740,7 +159740,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 26.2 SDK provides support to develop apps for Mac computers running Tahoe 26.3. The SDK comes bundled with Xcode 26.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
+The macOS 26.2 SDK provides support to develop apps for Mac computers running Tahoe 26.3. The SDK comes bundled with Xcode 26.2. For information on the compatibility requirements for Xcode 26.2, see [Xcode 26.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_2-release-notes).
 
 <a id="AppKit"></a>
 
@@ -159799,7 +159799,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 26.4 SDK provides support to develop apps for Mac computers running Tahoe 26.4. The SDK comes bundled with Xcode 26.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.4, see [Xcode 26.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_4-release-notes).
+The macOS 26.4 SDK provides support to develop apps for Mac computers running Tahoe 26.4. The SDK comes bundled with Xcode 26.4. For information on the compatibility requirements for Xcode 26.4, see [Xcode 26.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_4-release-notes).
 
 <a id="Address-Sanitizer"></a>
 
@@ -160051,7 +160051,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 26.5 SDK provides support to develop apps for Mac computers running Tahoe 26.5. The SDK comes bundled with Xcode 26.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.5, see [Xcode 26.5 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_5-release-notes).
+The macOS 26.5 SDK provides support to develop apps for Mac computers running Tahoe 26.5. The SDK comes bundled with Xcode 26.5. For information on the compatibility requirements for Xcode 26.5, see [Xcode 26.5 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_5-release-notes).
 
 <a id="StoreKit"></a>
 
@@ -160120,7 +160120,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 26.6 SDK provides support to develop apps for Mac computers running macOS Tahoe 26.6. The SDK comes bundled with Xcode 26.6, available from the Mac App Store. For information on the compatibility requirements for Xcode 26.6, see [Xcode 26.6 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_6-release-notes).
+The macOS 26.6 SDK provides support to develop apps for Mac computers running macOS Tahoe 26.6. The SDK comes bundled with Xcode 26.6. For information on the compatibility requirements for Xcode 26.6, see [Xcode 26.6 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-26_6-release-notes).
 
 <a id="CoreStorage"></a>
 
@@ -160189,7 +160189,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 27 SDK provides support to develop apps for Mac computers running macOS 27 Golden Gate. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
+The macOS 27 SDK provides support to develop apps for Mac computers running macOS 27 Golden Gate. The SDK comes bundled with Xcode 27. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
 
 <a id="General"></a>
 
@@ -161469,15 +161469,15 @@ The macOS 27 SDK provides support to develop apps for Mac computers running macO
 
 ### macOS 27
 
-- [macOS 27.2 Golden Gate Beta 2 Release Notes](macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [macOS 27.2 Golden Gate Beta 3 Release Notes](macos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: macOS 27.2 Golden Gate Beta 2 Release Notes
+# Document: macOS 27.2 Golden Gate Beta 3 Release Notes
 
 Source path: documentation/macos-release-notes/macos-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/macos-release-notes/macos-27_2-release-notes
 Description: Kind: Article
 
-# macOS 27.2 Golden Gate Beta 2 Release Notes
+# macOS 27.2 Golden Gate Beta 3 Release Notes
 
 **Kind:** Article
 
@@ -161487,7 +161487,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 27.2 SDK provides support to develop apps for Mac computers running macOS 27.2 Golden Gate beta 2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The macOS 27.2 SDK provides support to develop apps for Mac computers running macOS 27.2 Golden Gate beta 3. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="General"></a>
 
@@ -161508,6 +161508,16 @@ The macOS 27.2 SDK provides support to develop apps for Mac computers running ma
 #### Deprecations
 
 - The `EnablePasteboardPrivacyDeveloperPreview` user default has been removed. (186955507)
+
+<a id="Display-Settings"></a>
+
+### Display Settings
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- When an external display is connected, display settings might not be restored correctly, and the display arrangement might change. (188643179)
 
 <a id="Notifications"></a>
 
@@ -161624,7 +161634,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 11 SDK provides support to develop apps for Macs running macOS Big Sur 11. The SDK comes bundled with Xcode 12.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
+The macOS 11 SDK provides support to develop apps for Macs running macOS Big Sur 11. The SDK comes bundled with Xcode 12.2. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
 
 <a id="General"></a>
 
@@ -162169,7 +162179,7 @@ Update your apps to support Macs with Apple silicon.
 
 ## Overview
 
-The macOS 11 Universal Apps beta SDK aids in the creation of Universal Mac apps that run on both Apple silicon and Intel-based Mac computers running macOS Big Sur 11. The SDK comes bundled with Xcode 12.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
+The macOS 11 Universal Apps beta SDK aids in the creation of Universal Mac apps that run on both Apple silicon and Intel-based Mac computers running macOS Big Sur 11. The SDK comes bundled with Xcode 12.2. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
 
 This page is specific to the Developer Transition Kit. For additional macOS 11 changes, see [macOS Big Sur 11.0.1 Release Notes](macos-big-sur-11_0_1-release-notes.md).
 
@@ -162351,7 +162361,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 11.1 SDK provides support to develop apps for Macs running macOS Big Sur 11.1. The SDK comes bundled with Xcode 12.3, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.3, see [Xcode 12.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_3-release-notes).
+The macOS 11.1 SDK provides support to develop apps for Macs running macOS Big Sur 11.1. The SDK comes bundled with Xcode 12.3. For information on the compatibility requirements for Xcode 12.3, see [Xcode 12.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_3-release-notes).
 
 <a id="AppKit"></a>
 
@@ -162416,7 +162426,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 11.2 SDK provides support to develop apps for Macs running macOS Big Sur 11.2. The SDK comes bundled with Xcode 12.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.4, see [Xcode 12.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_4-release-notes).
+The macOS 11.2 SDK provides support to develop apps for Macs running macOS Big Sur 11.2. The SDK comes bundled with Xcode 12.4. For information on the compatibility requirements for Xcode 12.4, see [Xcode 12.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_4-release-notes).
 
 <a id="General"></a>
 
@@ -162452,7 +162462,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 11.3 SDK provides support to develop apps for Macs running macOS Big Sur 11.3. The SDK comes bundled with Xcode 12.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
+The macOS 11.3 SDK provides support to develop apps for Macs running macOS Big Sur 11.3. The SDK comes bundled with Xcode 12.5. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
 
 <a id="General"></a>
 
@@ -162558,7 +162568,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-To develop apps for macOS Big Sur 11.4, build your apps against the macOS 11.3 SDK or later. The SDK comes bundled with Xcode 12.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
+To develop apps for macOS Big Sur 11.4, build your apps against the macOS 11.3 SDK or later. The SDK comes bundled with Xcode 12.5. For information on the compatibility requirements for Xcode 12.5, see [Xcode 12.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5-release-notes).
 
 <a id="Displays"></a>
 
@@ -162611,7 +162621,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-To develop apps for macOS Big Sur 11.5, build your apps against the macOS 11.3 SDK or later. The SDK comes bundled with Xcode 12.5.1, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
+To develop apps for macOS Big Sur 11.5, build your apps against the macOS 11.3 SDK or later. The SDK comes bundled with Xcode 12.5.1. For information on the compatibility requirements for Xcode 12.5.1, see [Xcode 12.5.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_5_1-release-notes).
 
 <a id="SwiftUI"></a>
 
@@ -162652,7 +162662,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.15 SDK provides support for developing apps for Macs running macOS Catalina 10.15. The SDK comes bundled with Xcode 11 available from the Mac App Store. For information on the compatibility requirements for Xcode 11, see [Xcode 11 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11-release-notes).
+The macOS 10.15 SDK provides support for developing apps for Macs running macOS Catalina 10.15. The SDK comes bundled with Xcode 11. For information on the compatibility requirements for Xcode 11, see [Xcode 11 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11-release-notes).
 
 <a id="General"></a>
 
@@ -163239,7 +163249,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.15.2 SDK provides support for developing apps for Macs running macOS Catalina 10.15.2. The SDK comes bundled with Xcode 11.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
+The macOS 10.15.2 SDK provides support for developing apps for Macs running macOS Catalina 10.15.2. The SDK comes bundled with Xcode 11.3. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
 
 <a id="Networking"></a>
 
@@ -163278,7 +163288,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.15.3 SDK provides support for developing apps for Macs running macOS Catalina 10.15.3. The SDK comes bundled with Xcode 11.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
+The macOS 10.15.3 SDK provides support for developing apps for Macs running macOS Catalina 10.15.3. The SDK comes bundled with Xcode 11.3. For information on the compatibility requirements for Xcode 11.3, see [Xcode 11.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_3-release-notes).
 
 <a id="General"></a>
 
@@ -163317,7 +163327,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.15.4 SDK provides support to develop apps for Macs running macOS Catalina 10.15.4. The SDK comes bundled with Xcode 11.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.4, see [Xcode 11.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_4-release-notes).
+The macOS 10.15.4 SDK provides support to develop apps for Macs running macOS Catalina 10.15.4. The SDK comes bundled with Xcode 11.4. For information on the compatibility requirements for Xcode 11.4, see [Xcode 11.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_4-release-notes).
 
 <a id="Endpoint-Security"></a>
 
@@ -163376,7 +163386,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.15.4 SDK provides support to develop apps for Macs running macOS Catalina 10.15.5. The SDK comes bundled with Xcode 11.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
+The macOS 10.15.4 SDK provides support to develop apps for Macs running macOS Catalina 10.15.5. The SDK comes bundled with Xcode 11.5. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
 
 <a id="Finder"></a>
 
@@ -163415,7 +163425,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.15.4 SDK provides support to develop apps for Macs running macOS Catalina 10.15.6. The SDK comes bundled with Xcode 11.5, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
+The macOS 10.15.4 SDK provides support to develop apps for Macs running macOS Catalina 10.15.6. The SDK comes bundled with Xcode 11.5. For information on the compatibility requirements for Xcode 11.5, see [Xcode 11.5 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_5-release-notes).
 
 <a id="General"></a>
 
@@ -163450,7 +163460,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.14 SDK provides support for developing apps for Macs running macOS Mojave. The SDK comes bundled with Xcode 10 available from the Mac App Store. For information about Xcode 10, see [Xcode 10 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10-release-notes).
+The macOS 10.14 SDK provides support for developing apps for Macs running macOS Mojave. The SDK comes bundled with Xcode 10. For information about Xcode 10, see [Xcode 10 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10-release-notes).
 
 <a id="General"></a>
 
@@ -163726,7 +163736,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.14.1 SDK provides support for developing apps for Macs running macOS Mojave 10.14.2. The SDK comes bundled with Xcode 10.1 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
+The macOS 10.14.1 SDK provides support for developing apps for Macs running macOS Mojave 10.14.2. The SDK comes bundled with Xcode 10.1. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
 
 <a id="Security"></a>
 
@@ -163764,7 +163774,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.14.1 SDK provides support for developing apps for Macs running macOS Mojave 10.14.3. The SDK comes bundled with Xcode 10.1 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
+The macOS 10.14.1 SDK provides support for developing apps for Macs running macOS Mojave 10.14.3. The SDK comes bundled with Xcode 10.1. For information on the compatibility requirements for Xcode 10.1, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
 
 <a id="General"></a>
 
@@ -163798,7 +163808,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.14.4 SDK provides support for developing apps for Macs running macOS Mojave 10.14.5. The SDK comes bundled with Xcode 10.2.1 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.2.1, see [Xcode 10.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_2_1-release-notes).
+The macOS 10.14.4 SDK provides support for developing apps for Macs running macOS Mojave 10.14.5. The SDK comes bundled with Xcode 10.2.1. For information on the compatibility requirements for Xcode 10.2.1, see [Xcode 10.2.1 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_2_1-release-notes).
 
 <a id="Accessibility"></a>
 
@@ -163872,7 +163882,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.14.6 SDK provides support for developing apps for Macs running macOS Mojave 10.14.6. The SDK comes bundled with Xcode 10.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.3, see [Xcode 10.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_3-release-notes).
+The macOS 10.14.6 SDK provides support for developing apps for Macs running macOS Mojave 10.14.6. The SDK comes bundled with Xcode 10.3. For information on the compatibility requirements for Xcode 10.3, see [Xcode 10.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_3-release-notes).
 
 <a id="Security"></a>
 
@@ -163910,7 +163920,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The macOS 10.14.4 SDK provides support for developing apps for Macs running macOS Mojave 10.14.4. The SDK comes bundled with Xcode 10.2 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.2, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
+The macOS 10.14.4 SDK provides support for developing apps for Macs running macOS Mojave 10.14.4. The SDK comes bundled with Xcode 10.2. For information on the compatibility requirements for Xcode 10.2, see [Xcode Release Notes](https://developer.apple.com/documentation/xcode-release-notes).
 
 <a id="Accessibility"></a>
 
@@ -202960,3 +202970,61 @@ The media source must have finished loading before this method returns valid dat
 - [mediaGroupForIdentifier:](mediagroup%28foridentifier_%29.md): Deprecated. Returns the media group with the specified identifier.
 - [mediaGroupsForIdentifiers:](mediagroups%28foridentifiers_%29.md): Deprecated. Returns the media groups with the specified identifiers.
 - [mediaObjectForIdentifier:](mediaobject%28foridentifier_%29.md): Deprecated. Returns the media object with the specified identifier.
+
+# Document: mediaSourceIdentifier
+
+Source path: documentation/medialibrary/mlmediasource/mediasourceidentifier
+Canonical documentation: https://developer.apple.com/documentation/medialibrary/mlmediasource/mediasourceidentifier
+Description: Framework: Media Library Kind: Instance Property Availability: Mac Catalyst 13.0+ · macOS 10.9+ (deprecated in 10.15)
+
+# mediaSourceIdentifier (Swift)
+
+**Framework:** Media Library  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.9+ (deprecated in 10.15)
+
+A unique identifier for the media source.
+
+## Declaration
+
+```swift
+var mediaSourceIdentifier: String { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For a list of possible media source identifiers, see [Media Source Identifiers](../media-source-identifiers.md).
+
+## See Also
+
+### Identifying the Source
+
+- [mediaLibrary](medialibrary.md): Deprecated. A pointer to the media library instance that loaded this media source.
+
+# mediaSourceIdentifier (Objective-C)
+
+**Framework:** Media Library  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.9+ (deprecated in 10.15)
+
+A unique identifier for the media source.
+
+## Declaration
+
+```objectivec
+@property (copy, readonly) NSString * mediaSourceIdentifier;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For a list of possible media source identifiers, see [Media Source Identifiers](../media-source-identifiers.md).
+
+## See Also
+
+### Identifying the Source
+
+- [mediaLibrary](medialibrary.md): Deprecated. A pointer to the media library instance that loaded this media source.

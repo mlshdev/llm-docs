@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/uploading-app-previews
 
 # Uploading App Previews
@@ -13,6 +13,10 @@ Upload your app previews, including video files, to App Store Connect by using t
 <a id="Overview"></a>
 
 ## Overview
+
+> **Note**
+
+>  The app preview and app preview set resources this sample uses are deprecated. Manage app preview media with the [App Asset Library](app-asset-library.md) and [placements](app-asset-library-placements.md) instead.
 
 This sample code includes a script written in Python that uploads a video as an app preview for an app. To run this sample, you must have an app in App Store Connect with a version in the “Prepare for Submission” state, and an app preview file to upload. You’ll also need your API key.
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-a3a5c01bb2da; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-447f9a6dd611; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-27-release-notes
 
 # watchOS 27 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27. The SDK comes bundled with Xcode 27, available from the Mac App Store. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
+The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27. The SDK comes bundled with Xcode 27. For information on the compatibility requirements for Xcode 27, see [Xcode 27 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27-release-notes).
 
 <a id="App-Intents"></a>
 
@@ -406,4 +406,4 @@ The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devi
 
 ### watchOS 27
 
-- [watchOS 27.2 Beta 2 Release Notes](watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27.2 Beta 3 Release Notes](watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.

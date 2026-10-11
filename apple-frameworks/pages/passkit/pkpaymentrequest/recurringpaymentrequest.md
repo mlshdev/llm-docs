@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/passkit/pkpaymentrequest/recurringpaymentrequest
 
 # recurringPaymentRequest (Swift)
@@ -25,7 +25,7 @@ This property is optional. Set this property by assigning it to an instance of [
 
 > **Important**
 
->  You can’t use this property with [multiTokenContexts](multitokencontexts.md) or [automaticReloadPaymentRequest](automaticreloadpaymentrequest.md) properties. Simultaneous use of these properties results in a runtime error and cancels the payment request. Simultaneous use of these properties results in a runtime error and cancels the payment request.
+>  You can’t use this property with [multiTokenContexts](multitokencontexts.md) or [automaticReloadPaymentRequest](automaticreloadpaymentrequest.md) properties. Simultaneous use of these properties results in a runtime error and cancels the payment request.
 
 ## See Also
 
@@ -61,7 +61,7 @@ This property is optional. Set this property by assigning it to an instance of [
 
 > **Important**
 
->  You can’t use this property with [multiTokenContexts](multitokencontexts.md) or [automaticReloadPaymentRequest](automaticreloadpaymentrequest.md) properties. Simultaneous use of these properties results in a runtime error and cancels the payment request. Simultaneous use of these properties results in a runtime error and cancels the payment request.
+>  You can’t use this property with [multiTokenContexts](multitokencontexts.md) or [automaticReloadPaymentRequest](automaticreloadpaymentrequest.md) properties. Simultaneous use of these properties results in a runtime error and cancels the payment request.
 
 ## See Also
 

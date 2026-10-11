@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/app-store-connect-api-2-1-release-notes
 
 # App Store Connect API 2.1 release notes
@@ -26,6 +26,7 @@ App Store Connect API version 2.1 provides resources that enable you to automate
 
 ### Versions
 
+- [App Store Connect API 4.5.1 release notes](app-store-connect-api-4-5-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 4.5 release notes](app-store-connect-api-4-5-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 4.4.1 release notes](app-store-connect-api-4-4-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 4.4 release notes](app-store-connect-api-4-4-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
@@ -40,4 +41,3 @@ App Store Connect API version 2.1 provides resources that enable you to automate
 - [App Store Connect API 3.5 release notes](app-store-connect-api-3-5-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 3.4 release notes](app-store-connect-api-3-4-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
 - [App Store Connect API 3.3 release notes](app-store-connect-api-3-3-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
-- [App Store Connect API 3.2 release notes](app-store-connect-api-3-2-release-notes.md): Update your server-side code to use new features, and test your code against API changes.

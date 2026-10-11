@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apppreviewsets-_id_
 
 # Read app preview set information
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 Get an app preview set that includes its display target, language, and the previews it contains.
+
+> This endpoint is deprecated. Use [Read an app asset library placement](get-v1-appassetlibraryplacements-_id_.md) instead.
 
 ## URL
 
@@ -31,9 +33,9 @@ GET https://api.appstoreconnect.apple.com/v1/appPreviewSets/{id}
   **Allowed values:** `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`, `appPreviews`
 - `limit[appPreviews]` — `integer`: The maximum number of related app previews resources to return.
   **Maximum:** `50`
-- `fields[appCustomProductPageLocalizations]` — `[string]`: **Allowed values:** `locale`, `promotionalText`, `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
-- `fields[appStoreVersionExperimentTreatmentLocalizations]` — `[string]`: **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`
-- `fields[appStoreVersionLocalizations]` — `[string]`: **Allowed values:** `description`, `locale`, `keywords`, `marketingUrl`, `promotionalText`, `supportUrl`, `whatsNew`, `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+- `fields[appCustomProductPageLocalizations]` — `[string]`: **Allowed values:** `locale`, `promotionalText`, `appCustomProductPageVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
+- `fields[appStoreVersionExperimentTreatmentLocalizations]` — `[string]`: **Allowed values:** `locale`, `appStoreVersionExperimentTreatment`, `appScreenshotSets`, `appPreviewSets`, `placements`
+- `fields[appStoreVersionLocalizations]` — `[string]`: **Allowed values:** `description`, `locale`, `keywords`, `marketingUrl`, `promotionalText`, `supportUrl`, `whatsNew`, `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
 
 ## Response Codes
 

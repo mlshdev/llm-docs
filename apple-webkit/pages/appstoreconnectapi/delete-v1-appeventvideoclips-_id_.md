@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/delete-v1-appeventvideoclips-_id_
 
 # Delete an app event video clip
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.7+
+**Availability:** App Store Connect API 1.7+ (deprecated in 4.5)
 
 Delete a specific video clip from an in-app event.
+
+> This endpoint is deprecated. Use [Delete an app asset library video](delete-v1-appassetlibraryvideos-_id_.md) instead.
 
 ## URL
 
@@ -34,6 +36,6 @@ DELETE https://api.appstoreconnect.apple.com/v1/appEventVideoClips/{id}
 
 ### Endpoints
 
-- [Read app event video clip information](get-v1-appeventvideoclips-_id_.md): Get information about a specific video clip for an in-app event.
-- [Modify an app event video clip](patch-v1-appeventvideoclips-_id_.md): Commit an uploaded video clip asset for an in-app event.
-- [Create an app event video clip](post-v1-appeventvideoclips.md): Reserve a video clip asset for an in-app event.
+- [Read app event video clip information](get-v1-appeventvideoclips-_id_.md): Deprecated. Get information about a specific video clip for an in-app event.
+- [Modify an app event video clip](patch-v1-appeventvideoclips-_id_.md): Deprecated. Commit an uploaded video clip asset for an in-app event.
+- [Create an app event video clip](post-v1-appeventvideoclips.md): Deprecated. Reserve a video clip asset for an in-app event.

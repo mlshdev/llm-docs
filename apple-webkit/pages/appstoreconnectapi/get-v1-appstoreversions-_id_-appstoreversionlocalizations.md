@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appstoreversions-_id_-appstoreversionlocalizations
 
 # List all app store version localizations for an app store version
@@ -31,7 +31,7 @@ GET https://api.appstoreconnect.apple.com/v1/appStoreVersions/{id}/appStoreVersi
 - `fields[appPreviewSets]` — `[string]`: Additional fields to include for each app preview set resource returned by the response.
   **Allowed values:** `previewType`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`, `appPreviews`
 - `fields[appStoreVersionLocalizations]` — `[string]`: Additional fields to include for each App Store version localization resource returned by the response.
-  **Allowed values:** `description`, `locale`, `keywords`, `marketingUrl`, `promotionalText`, `supportUrl`, `whatsNew`, `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+  **Allowed values:** `description`, `locale`, `keywords`, `marketingUrl`, `promotionalText`, `supportUrl`, `whatsNew`, `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
 - `limit` — `integer`: The maximum number of App Store version localization resources to return.
   **Maximum:** `200`
 - `limit[appScreenshotSets]` — `integer`: The maximum number of related app screenshot set resources to return.
@@ -39,8 +39,10 @@ GET https://api.appstoreconnect.apple.com/v1/appStoreVersions/{id}/appStoreVersi
 - `limit[appPreviewSets]` — `integer`: The maximum number of related app preview set resources to return.
   **Maximum:** `50`
 - `include` — `[string]`: The relationship data to include in the response.
-  **Allowed values:** `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`
+  **Allowed values:** `appStoreVersion`, `appScreenshotSets`, `appPreviewSets`, `searchKeywords`, `placements`
+- `fields[appAssetLibraryPlacements]` — `[string]`: **Allowed values:** `mediaType`, `placementType`, `placementGroup`, `createdDate`, `lastModifiedDate`, `state`, `stateDetails`, `image`, `video`, `appEventLocalization`, `appStoreVersionLocalization`, `appCustomProductPageLocalization`, `appStoreVersionExperimentTreatmentLocalization`
 - `fields[appKeywords]` — `[string]`:
+- `limit[placements]` — `integer`: **Maximum:** `50`
 - `limit[searchKeywords]` — `integer`: **Maximum:** `50`
 
 ## Response Codes

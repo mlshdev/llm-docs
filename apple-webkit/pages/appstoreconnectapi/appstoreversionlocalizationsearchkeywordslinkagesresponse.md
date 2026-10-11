@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/appstoreversionlocalizationsearchkeywordslinkagesresponse
 
 # AppStoreVersionLocalizationSearchKeywordsLinkagesResponse
@@ -39,3 +39,4 @@ object AppStoreVersionLocalizationSearchKeywordsLinkagesResponse
 - [AppStoreVersionLocalizationsResponse](appstoreversionlocalizationsresponse.md): The response body for endpoints that list localized App Store version entries.
 - [AppStoreVersionLocalizationUpdateRequest](appstoreversionlocalizationupdaterequest.md): The request body you use to update an App Store Version Localization
 - [AppStoreVersionLocalizationSearchKeywordsLinkagesRequest](appstoreversionlocalizationsearchkeywordslinkagesrequest.md): The request body for updating the list of search keywords linked to an App Store version localization.
+- [AppStoreVersionLocalizationPlacementsLinkagesResponse](appstoreversionlocalizationplacementslinkagesresponse.md): A response body that contains a list of related resource IDs.

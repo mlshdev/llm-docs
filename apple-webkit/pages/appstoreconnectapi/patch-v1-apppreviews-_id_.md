@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appstoreconnectapi/patch-v1-apppreviews-_id_
 
 # Modify an app preview
@@ -7,9 +7,11 @@
 
 **Framework:** App Store Connect API  
 **Kind:** Web Service Endpoint  
-**Availability:** App Store Connect API 1.2+
+**Availability:** App Store Connect API 1.2+ (deprecated in 4.5)
 
 Commit the app preview after uploading it, and update the poster frame timecode.
+
+> This endpoint is deprecated. Use [Modify an app asset library video](patch-v1-appassetlibraryvideos-_id_.md) instead.
 
 ## URL
 
@@ -42,5 +44,5 @@ Type: `AppPreviewUpdateRequest`
 
 ### Creating, Modifying, and Deleting App Previews
 
-- [Create an app preview](post-v1-apppreviews.md): Add a new app preview to a preview set.
-- [Delete an app preview](delete-v1-apppreviews-_id_.md): Delete an app preview within a preview set.
+- [Create an app preview](post-v1-apppreviews.md): Deprecated. Add a new app preview to a preview set.
+- [Delete an app preview](delete-v1-apppreviews-_id_.md): Deprecated. Delete an app preview within a preview set.

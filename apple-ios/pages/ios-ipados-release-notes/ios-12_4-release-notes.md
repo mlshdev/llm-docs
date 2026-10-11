@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-d0d1b2f13e0d; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12_4-release-notes
 
 # iOS 12.4 Release Notes
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS 12.4 SDK provides support for developing iOS apps for iPhone, iPad, or iPod touch devices running iOS 12.4. The SDK comes bundled with Xcode 10.3 available from the Mac App Store. For information on the compatibility requirements for Xcode 10.3, see [Xcode 10.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_3-release-notes).
+The iOS 12.4 SDK provides support for developing iOS apps for iPhone, iPad, or iPod touch devices running iOS 12.4. The SDK comes bundled with Xcode 10.3. For information on the compatibility requirements for Xcode 10.3, see [Xcode 10.3 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-10_3-release-notes).
 
 <a id="Instruments"></a>
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple macOS snapshot-0513df389cc7; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple macOS snapshot-8257b11be327; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessoryaccess/aausbaccessory
 
 # AAUSBAccessory (Swift)
@@ -19,7 +19,9 @@ class AAUSBAccessory
 
 ## Discussion
 
-A USB accessory can either be obtained from the [usbAccessoryDidConnect(\_:)](aausbaccessorylistener/usbaccessorydidconnect%28__%29.md) method, or instantiated from an [XPC](https://developer.apple.com/documentation/xpc) representation that describes an existing USB accessory.
+Obtain a USB accessory from the [usbAccessoryDidConnect(\_:)](aausbaccessorylistener/usbaccessorydidconnect%28__%29.md) method, or instantiate one from an [XPC](https://developer.apple.com/documentation/xpc) representation that describes an existing USB accessory.
+
+A USB accessory may not be in a configured state when your application receives it. To configure a USB accessory, open it with [open(serviceQueue:completionHandler:)](aausbaccessory/open%28servicequeue_completionhandler_%29.md) and select a configuration with [configureWithValue:error:](../iousbhost/iousbhostdevice/configurewithvalue_error_.md).
 
 ## Topics
 
@@ -47,6 +49,11 @@ A USB accessory can either be obtained from the [usbAccessoryDidConnect(\_:)](aa
 ### Encoding a USB accessory for delivery to an XPC service
 
 - [createXPCRepresentation()](aausbaccessory/createxpcrepresentation%28%29.md): Creates an encoded representation of the USB accessory.
+
+### See also
+
+- [AAUSBAccessoryListener](aausbaccessorylistener.md): A class that conforms to the framework’s USB accessory listener protocol can listen to the accessory events.
+- [IOUSBHostDevice](../iousbhost/iousbhostdevice.md): The class that claims and configures devices, retrieves descriptors, and sends device requests.
 
 ## Relationships
 
@@ -91,7 +98,9 @@ A class that represents a USB accessory.
 
 ## Discussion
 
-A USB accessory can either be obtained from the [usbAccessoryDidConnect:](aausbaccessorylistener/usbaccessorydidconnect%28__%29.md) method, or instantiated from an [XPC](https://developer.apple.com/documentation/xpc) representation that describes an existing USB accessory.
+Obtain a USB accessory from the [usbAccessoryDidConnect:](aausbaccessorylistener/usbaccessorydidconnect%28__%29.md) method, or instantiate one from an [XPC](https://developer.apple.com/documentation/xpc) representation that describes an existing USB accessory.
+
+A USB accessory may not be in a configured state when your application receives it. To configure a USB accessory, open it with [openWithServiceQueue:completionHandler:](aausbaccessory/open%28servicequeue_completionhandler_%29.md) and select a configuration with [configureWithValue:error:](../iousbhost/iousbhostdevice/configurewithvalue_error_.md).
 
 ## Topics
 
@@ -113,6 +122,11 @@ A USB accessory can either be obtained from the [usbAccessoryDidConnect:](aausba
 ### Encoding a USB accessory for delivery to an XPC service
 
 - [createXPCRepresentation](aausbaccessory/createxpcrepresentation%28%29.md): Creates an encoded representation of the USB accessory.
+
+### See also
+
+- [AAUSBAccessoryListener](aausbaccessorylistener.md): A class that conforms to the framework’s USB accessory listener protocol can listen to the accessory events.
+- [IOUSBHostDevice](../iousbhost/iousbhostdevice.md): The class that claims and configures devices, retrieves descriptors, and sends device requests.
 
 ## Relationships
 

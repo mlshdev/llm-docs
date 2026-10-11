@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-f22abf4916e5; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple WebKit and Safari snapshot-8cd502625a0a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/merchanttokennotificationservices
 
 # Apple Pay Merchant Token Management API
@@ -47,6 +47,8 @@ If a life-cycle event affects the token — for example, the card’s expiration
 - [MerchantTokenMetadata](merchanttokennotificationservices/merchanttokenmetadata.md): The card information related to a merchant token, including its card art and metadata.
 - [CardArt](merchanttokennotificationservices/cardart.md): Data for displaying art to represent a card.
 - [CardMetadata](merchanttokennotificationservices/cardmetadata.md): Data about the card, including its expiration date and suffix.
+- [EncryptedTokenMetadata](merchanttokennotificationservices/encryptedtokenmetadata.md): Encrypted data about the merchant token, including its Merchant Payment Account Number (MPAN) and expiration date.
+- [TokenMetadata](merchanttokennotificationservices/tokenmetadata.md): Unencrypted metadata about a merchant token, including its Merchant Payment Account Number (MPAN) and expiration date.
 
 ### Merchant token usage information
 

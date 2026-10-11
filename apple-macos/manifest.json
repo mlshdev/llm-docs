@@ -6,10 +6,10 @@
   "title": "Apple macOS",
   "homepage": "https://developer.apple.com/macos/",
   "catalog": "macos",
-  "tag": "snapshot-0513df389cc7",
-  "snapshotDigest": "0513df389cc7d03925548349e7911a6ebef119a2d6175e34677a7c70890bc66d",
-  "contentDigest": "14bed8000201559feea98994c1c1775c7d24cc3f228675df96cb28953e4bdfaf",
-  "capturedAt": "2026-10-04T18:39:02.631Z",
+  "tag": "snapshot-8257b11be327",
+  "snapshotDigest": "8257b11be3276c2e79632f1695b3186136bb4ab3f4b106ab8a041674e3c8ef05",
+  "contentDigest": "41edb3868bb6a657018aafb557356ddd3f56fdf018e3a85b9e0b68b3c5e76f1d",
+  "capturedAt": "2026-10-11T21:19:14.780Z",
   "documentCount": 78011,
   "indexComplete": false,
   "corpusVolumes": [
@@ -17,121 +17,121 @@
       "name": "llms-full.txt",
       "byteLength": 2939,
       "documentCount": 0,
-      "sha256": "7c93cbe4715f91419d913887c12cd807e09b8033489f964bde0f35249c8e4b9f"
+      "sha256": "2f41c25df2166d9c85ec503cdfad2bceae9b5ab96e41c7ff422ad56faf0d863c"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8370598,
+      "byteLength": 8371934,
       "documentCount": 2556,
-      "sha256": "1afafa152ba57d28c23e749dc667c48d04ce92024500e276383be4f1dcbc47b3"
+      "sha256": "4e9455100e2de5c0316e3d72b3de824ee3a82aa1e60d3fa47df01b7fd93b0813"
     },
     {
       "name": "llms-full.002.txt",
       "byteLength": 8388354,
       "documentCount": 2715,
-      "sha256": "dfe40a975f098ded98cb3ecec12a64dcc57ed72b15e50295415b50a2bbd35d76"
+      "sha256": "63ff7d39347fa56ed0235be174096494b3e7aac1c6aeda900327c5eace8c9c0d"
     },
     {
       "name": "llms-full.003.txt",
       "byteLength": 8384441,
       "documentCount": 2695,
-      "sha256": "f2f0da473dc3c0f5a3e08833a512b71681a3fa6a2a2fd93ccfe3d8d267c87b05"
+      "sha256": "467e22ff92272a1e6bf9e2e22fa42bf4f0ac42f161f12037ae348164f007079c"
     },
     {
       "name": "llms-full.004.txt",
       "byteLength": 8387762,
       "documentCount": 3052,
-      "sha256": "b66cc7f99f65be2fe528936044abe7366c937243dbf190b113378125143dbc14"
+      "sha256": "896080bb7099652b1cc1b4c9f85e0250799beb98129d87353866fa226747cfeb"
     },
     {
       "name": "llms-full.005.txt",
-      "byteLength": 8386839,
+      "byteLength": 8386997,
       "documentCount": 2574,
-      "sha256": "e3090237eb8d1b90cd3fd443b837ce4b63ac0433c91d261ee57c9ca75735b312"
+      "sha256": "1e83cb8a091578fc47b575755f904fa671449ffac7a23e03762a2eb6d73a5175"
     },
     {
       "name": "llms-full.006.txt",
       "byteLength": 8386850,
       "documentCount": 6089,
-      "sha256": "243127fb8475ea8038da882e9a1547dd6b5ecf5b5add3b47e230113e744e6bea"
+      "sha256": "f8be6ba4243ea383ef814b0e185efd6cea9ce2c948cb16d1ddcf77c656420e55"
     },
     {
       "name": "llms-full.007.txt",
       "byteLength": 8385913,
       "documentCount": 6173,
-      "sha256": "74932a7701ada219cfa5d5c48d931cf7524039a4d4a2e6a65c03bc2835388a4e"
+      "sha256": "3fe686d50a204b74dface686f2f26d131ca810070f0b1eeb1140842e28660294"
     },
     {
       "name": "llms-full.008.txt",
       "byteLength": 8387778,
       "documentCount": 2682,
-      "sha256": "beb7e3a57259169e1228437e408c018c4b8e2d9bb37061ea6d974a7cccb19afa"
+      "sha256": "6dd6d1f2712da57f0e2f27a3ac5856535948ac2abaebd0e777e25485ec573b14"
     },
     {
       "name": "llms-full.009.txt",
       "byteLength": 8386647,
       "documentCount": 3512,
-      "sha256": "e9c349356ab02ffbcaa2f2450bf8e6ae4acdde4797878929ab2e8a1b1009afd9"
+      "sha256": "19d43bab078490f623d05e518c335eaccef30915d01305b7053a41e8946063da"
     },
     {
       "name": "llms-full.010.txt",
       "byteLength": 8387920,
       "documentCount": 2937,
-      "sha256": "58089e150bb0d0bd358a34c93988d36241b46ac1e1fa75e26ff9e0f590e53d3b"
+      "sha256": "8d18da148bf009af02de2c7e4f92f3f29ce5e406b6a68526a386cf6d8b189440"
     },
     {
       "name": "llms-full.011.txt",
       "byteLength": 8388295,
       "documentCount": 6033,
-      "sha256": "c0771ef20aa46da0d40c63c2beb82494250731d3765f3c3b80293bc77968b0dc"
+      "sha256": "9852face5d3f95b357d5349a6bb3574de64c8a247d6ff71ef12b3907f1e87bb9"
     },
     {
       "name": "llms-full.012.txt",
       "byteLength": 8388382,
       "documentCount": 8648,
-      "sha256": "9c5ea6ad0577de0079bd221f9dc50cced854a9ea1add123f479688db4b09cb09"
+      "sha256": "40ebc75731ae4082df0a67bf2b06b9724f6fdccc3967cd0809b7fa2cdb9ad6bb"
     },
     {
       "name": "llms-full.013.txt",
       "byteLength": 8383522,
       "documentCount": 8316,
-      "sha256": "5e0f0b9cf8205f98a54688dde2334114094733705651600a9acdb739a9c72b64"
+      "sha256": "ff31ca11724800bb184f7480699aca385f02815a44f3e7f670bc0788c2c03066"
     },
     {
       "name": "llms-full.014.txt",
       "byteLength": 8375755,
       "documentCount": 4467,
-      "sha256": "8bdb206cb1a7ba3e153231df7a1ae29b341b65025c17b81ac9f76d01cc92a010"
+      "sha256": "4ff5a6700310efffac882c7eb0070e3143de58c324eed414b249a1caa3171d76"
     },
     {
       "name": "llms-full.015.txt",
       "byteLength": 8388215,
       "documentCount": 7260,
-      "sha256": "f94bb52d553886bb0877b82b270e8c9c5a3ceb187b376d46e04214fd4bb4dcaa"
+      "sha256": "c606f2ba798aa68f83f456fd5828ae98fc661aef7d50800752e903d4633e2a06"
     },
     {
       "name": "llms-full.016.txt",
-      "byteLength": 8388356,
-      "documentCount": 5430,
-      "sha256": "7628c55ae23f8d90db67ba9448590ef0d16b0ec4532d9c3f6477e12207bfcbe5"
+      "byteLength": 8388428,
+      "documentCount": 5431,
+      "sha256": "283ebe6d4068db10b4e7e5e0c01b5a80fbbde89eb4932bc650d7599e9cf82d12"
     },
     {
       "name": "llms-full.017.txt",
-      "byteLength": 8388365,
+      "byteLength": 8387837,
       "documentCount": 2370,
-      "sha256": "7faef3aa60be000e791c6944a813ba67be039d90494b7118bfd50c30d1dff59a"
+      "sha256": "f1950e233a7f6e866753f8f15e804a4a2dad347731b78cf9417fdb459f4ac1ea"
     },
     {
       "name": "llms-full.018.txt",
-      "byteLength": 1361914,
-      "documentCount": 502,
-      "sha256": "c750bf1312a9717adc36d9e8f83350bb0b84bebf115f089f46dc4331f0470cac"
+      "byteLength": 1360698,
+      "documentCount": 501,
+      "sha256": "7ff44ee5ed16926c56dba2cadc756df51c16fadcfc87818403080c0c6b6d0a62"
     }
   ],
-  "outputDigest": "1882a9e0d126e84da4bd6dadacf42c401082ff6e92b291c43125a9a32402e0e7",
+  "outputDigest": "7e1dd5d767baf00c864d516be51971b0b6414a92657e38e6c62883881d5f4aa8",
   "notes": [
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
-    "39 frameworks in this catalog, captured at 2026-10-04T18:39:02.631Z.",
+    "39 frameworks in this catalog, captured at 2026-10-11T21:19:14.780Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
     "Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-9afb9b6c8001; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple cross-platform frameworks snapshot-2d7a1d789740; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accelerate/vimagergbprimaries/init(red_x:green_x:blue_x:white_x:red_y:green_y:blue_y:white_y:)
 
 # init(red_x:green_x:blue_x:white_x:red_y:green_y:blue_y:white_y:)
