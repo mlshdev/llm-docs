@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.3: [docs/source/markdown/podman-container-diff.1.md.in](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-container-diff.1.md.in)
+> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-container-diff.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-container-diff.1.md.in)
 
 # podman-container-diff
 
@@ -61,7 +61,7 @@ C /etc
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman.1.md)**, **[podman-container(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-container.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-container(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-container.1.md)**
 
 ## HISTORY
 

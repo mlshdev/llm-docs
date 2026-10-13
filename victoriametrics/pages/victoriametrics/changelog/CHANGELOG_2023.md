@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/changelog/CHANGELOG_2023.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/changelog/CHANGELOG_2023.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/changelog/CHANGELOG_2023.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/changelog/CHANGELOG_2023.md)
 
 ## [v1.96.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.96.0)
 
@@ -53,7 +53,7 @@ Released at 2023-12-13
 
 - FEATURE: [Alerting rules for VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics/tree/master/deployment/docker#alerts): ease aggregation for certain alerting rules to keep more useful labels for the context. Before, all extra labels except `job` and `instance` were ignored. See this [pull request](https://github.com/VictoriaMetrics/VictoriaMetrics/pull/5429) and this [follow-up commit](https://github.com/VictoriaMetrics/VictoriaMetrics/commit/8fb68152e67712ed2c16dcfccf7cf4d0af140835). Thanks to @7840vz.
 
-- FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): allow reversing the migrating order from the newest to the oldest data for [vm-native](https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/) and [remote-read](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/) modes via `--vm-native-filter-time-reverse` and `--remote-read-filter-time-reverse` command-line flags respectively. See: <https://docs.victoriametrics.com/victoriametrics/vmctl/#using-time-based-chunking-of-migration> and [this feature request](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/5376).
+- FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): allow reversing the migrating order from the newest to the oldest data for [vm-native](https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/) and [remote-read](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/) modes via `--vm-native-filter-time-reverse` and `--remote-read-filter-time-reverse` command-line flags respectively. See: <https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/#time-intervals> and [this feature request](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/5376).
 
 - BUGFIX: [MetricsQL](https://docs.victoriametrics.com/victoriametrics/metricsql/): properly calculate values for the first point on the graph for queries, which do not use [rollup functions](https://docs.victoriametrics.com/victoriametrics/metricsql/#rollup-functions). For example, previously `count(up)` could return lower than expected values for the first point on the graph. This also could result in lower than expected values in the middle of the graph like in [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/5388) when the response caching isn't disabled. The issue has been introduced in [v1.95.0](https://docs.victoriametrics.com/victoriametrics/changelog/#v1950).
 
@@ -63,7 +63,7 @@ Released at 2023-12-13
 
 - BUGFIX: [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/): properly add new labels at `output_relabel_configs` during [stream aggregation](https://docs.victoriametrics.com/victoriametrics/stream-aggregation/). Previously this could lead to corrupted labels in output samples. Thanks to @ChengChung for providing [detailed report for this bug](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/5402).
 
-- BUGFIX: [vmalert-tool](https://docs.victoriametrics.com/victoriametrics/vmalert-tool/): allow using arbitrary `eval_time`  in [alert\_rule\_test](https://docs.victoriametrics.com/victoriametrics/vmalert-tool/#alert_test_case) case. Previously, test cases with `eval_time`  not being a multiple of `evaluation_interval` would fail.
+- BUGFIX: [vmalert-tool](https://docs.victoriametrics.com/victoriametrics/vmalert-tool/): allow using arbitrary `eval_time`  in [alert\_rule\_test](https://docs.victoriametrics.com/victoriametrics/vmalert-tool/#ltalert_test_casegt) case. Previously, test cases with `eval_time`  not being a multiple of `evaluation_interval` would fail.
 
 - BUGFIX: [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/): sanitize label names before sending the alert notification to Alertmanager. Before, vmalert would send notifications with labels containing characters not supported by Alertmanager validator, resulting into validation errors like `msg="Failed to validate alerts" err="invalid label set: invalid name "foo.bar"`.
 
@@ -505,7 +505,7 @@ The v1.93.x line will be supported for at least 12 months since [v1.93.0](https:
 
 - FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): allow disabling binary export API protocol via `-vm-native-disable-binary-protocol` cmd-line flag when [migrating data from VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/). Disabling binary protocol can be useful for deduplication of the exported data before ingestion. For this, deduplication need [to be configured](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#deduplication) at `-vm-native-src-addr` side and `-vm-native-disable-binary-protocol` should be set on vmctl side.
 
-- FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): add support of `week` step for [time-based chunking migration](https://docs.victoriametrics.com/victoriametrics/vmctl/#using-time-based-chunking-of-migration). See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/4738).
+- FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): add support of `week` step for [time-based chunking migration](https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/#time-intervals). See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/4738).
 
 - FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): allow specifying custom full url at `--remote-read-src-addr` command-line flag if `--remote-read-disable-path-append` command-line flag is set. This allows importing data from urls, which do not end with `/api/v1/read`. For example, from Promscale. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/4655).
 
@@ -803,7 +803,7 @@ Released at 2023-05-18
 
 - FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): add support for [different time formats](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#timestamp-formats) for `--vm-native-filter-time-start` and `--vm-native-filter-time-end` command-line flags. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/4091).
 
-- FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): set default value for `--vm-native-step-interval` command-line flag to `month`. This enables [time-based chunking](https://docs.victoriametrics.com/victoriametrics/vmctl/#using-time-based-chunking-of-migration) of data based on monthly step value when using native migration mode. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/4309).
+- FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): set default value for `--vm-native-step-interval` command-line flag to `month`. This enables [time-based chunking](https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/#time-intervals) of data based on monthly step value when using native migration mode. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/4309).
 
 - BUGFIX: reduce the probability of sudden increase in the number of small parts on systems with small number of CPU cores.
 

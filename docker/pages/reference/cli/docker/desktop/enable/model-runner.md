@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/desktop/docker_desktop_enable_model_runner.yaml](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/data/cli/desktop/docker_desktop_enable_model_runner.yaml)
+> Pinned source for Docker main: [data/cli/desktop/docker_desktop_enable_model_runner.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/cli/desktop/docker_desktop_enable_model_runner.yaml)
 
 # docker desktop enable model-runner
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/vmbackup.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmbackup.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/vmbackup.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmbackup.md)
 
 `vmbackup` creates backups of VictoriaMetrics data to protect against hardware failures and accidental data loss.
 Whether you are using a single-node  or a cluster version, it is recommended to use `vmbackup` to perform periodical data backup from instant snapshots.
@@ -477,6 +477,8 @@ Run `vmbackup -help` in order to see all the available options:
      S3 tags to be set for uploaded objects. Must be set in JSON format: {"param1":"value1",...,"paramN":"valueN"}.
   -s3SSEKMSKeyId string
      SSE KMS Key ID for use with S3-compatible storages.
+  -s3SkipTaggingDirective
+     Whether to skip the x-amz-tagging-directive and x-amz-tagging headers when copying objects. Enable it only for S3-compatible storage that rejects these headers.
   -s3StorageClass string
      The Storage Class applied to objects uploaded to AWS S3. Supported values are: GLACIER, DEEP_ARCHIVE, GLACIER_IR, INTELLIGENT_TIERING, ONEZONE_IA, OUTPOSTS, REDUCED_REDUNDANCY, STANDARD, STANDARD_IA.
      See https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html

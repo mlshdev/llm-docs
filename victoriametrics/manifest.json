@@ -6,21 +6,27 @@
   "title": "VictoriaMetrics",
   "homepage": "https://docs.victoriametrics.com/",
   "repository": "VictoriaMetrics/VictoriaMetrics",
-  "tag": "v1.153.0",
-  "releaseId": 396722068,
-  "releasePublishedAt": "2026-09-28T08:49:46Z",
-  "sourceCommit": "3acd30be3427c5a63aa75b498af929daf2633480",
-  "documentCount": 115,
+  "tag": "v1.154.0",
+  "releaseId": 407997657,
+  "releasePublishedAt": "2026-10-12T11:48:06Z",
+  "sourceCommit": "29c43cd2fee05409499a4d1b38e950e1b7f13bd4",
+  "documentCount": 114,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 5504695,
-      "documentCount": 115,
-      "sha256": "4ab869f91285e0505189a23233e07f87f2ff55a8d6a913f77c81f51ce7934b16"
+      "byteLength": 5568024,
+      "documentCount": 114,
+      "sha256": "2305a000a15b9e10aa9160edb2bb3bf2a5a1c8a14ea9272c0d94a3b6f4de3bfa"
     }
   ],
-  "outputDigest": "55c486ae7b78842c4540d0c3195f4aa70dd43302885ecc2c2df39d29bacc821e",
+  "outputDigest": "5ae765ce9ec26225520f707e2f4ee4164e5d2d58a399d15bd1461f5002416cb4",
+  "quarantined": [
+    {
+      "sourcePath": "docs/playgrounds/_index.md",
+      "reason": "Unresolved victoriametrics source syntax \"{{% a\""
+    }
+  ],
   "notes": [
     "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
     "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",

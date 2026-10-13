@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/QuickStart.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/anomaly-detection/QuickStart.md)
 
 For a broader overview please visit the [navigation page](https://docs.victoriametrics.com/anomaly-detection/).
 
@@ -328,7 +328,7 @@ writer:
 
 *(available from vmanomaly v1.26.0)* `vmanomaly`'s built-in web UI supports prototyping and interactive generation of `vmanomaly` and `vmalert` configuration files. See the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/) for instructions and examples. For optional AI-assisted workflows, use the [UI Copilot](https://docs.victoriametrics.com/anomaly-detection/ui/#ai-assistance), connect the [vmanomaly MCP server](https://docs.victoriametrics.com/ai-tools/#vmanomaly-mcp-server), or follow the published [agent skills](https://docs.victoriametrics.com/ai-tools/#agent-skills).
 
-![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/anomaly-detection/vmanomaly-ui-overview.webp)
+![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/anomaly-detection/vmanomaly-ui-overview.webp)
 
 > \[!TIP]
 > Public playgrounds with pre-configured `vmanomaly` instances and VictoriaMetrics/VictoriaLogs/VictoriaTraces datasources are available for interactive experimenting without the need to set up your own instance or getting an enterprise license. You can find them in the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/#playgrounds) or access them directly via the links - [metrics](https://play-vmanomaly.victoriametrics.com/metrics/), [logs](https://play-vmanomaly.victoriametrics.com/logs/), [traces](https://play-vmanomaly.victoriametrics.com/traces/) - or embedded versions in the collapsible blocks.

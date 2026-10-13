@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/BestPractices.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/BestPractices.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/BestPractices.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/BestPractices.md)
 
 ## Install Recommendation
 
@@ -8,7 +8,7 @@ There is no need to tune VictoriaMetrics because it uses reasonable defaults for
 
 ## Swap
 
-It is recommended to disable swap for machines running [vmstorage](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#storage) or [Single-node VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/).
+It is recommended to disable swap for machines running [vmstorage](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#architecture-overview) or [Single-node VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/).
 If swap is enabled, the operating system may move actively used data from fast RAM to much slower disk storage when memory usage approaches system limits or configured thresholds.
 This leads to performance degradation and latency spikes. On systemd-based Linux distributions run:
 

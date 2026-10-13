@@ -1,10 +1,6 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/limits.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/ai/sandboxes-api/limits.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/limits.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes-api/limits.md)
 
 # Compute sizes and limits
-
-> \[!NOTE]
-> The Docker Sandboxes API and SDK are experimental. Features, interfaces,
-> and behavior may change.
 
 Choose a compute size for each sandbox and keep your application's resource
 usage within your account's quotas. Request rate limits also constrain how

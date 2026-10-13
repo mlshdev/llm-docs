@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/vmctl/opentsdb.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmctl/opentsdb.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/vmctl/opentsdb.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmctl/opentsdb.md)
 
 `vmctl` can migrate historical data from OpenTSDB to VictoriaMetrics.
 See `./vmctl opentsdb --help` for details and full list of flags.

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.3: [docs/source/markdown/podman-machine-list.1.md.in](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-machine-list.1.md.in)
+> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-machine-list.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-list.1.md.in)
 
 # podman-machine-list
 
@@ -26,7 +26,7 @@ Rootless only.
 NOTE: The podman-machine configuration file is managed under the
 `$XDG_CONFIG_HOME/containers/podman/machine/` directory. Changing the `$XDG_CONFIG_HOME`
 environment variable while the machines are running can lead to unexpected behavior.
-(see [podman(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman.1.md))
+(see [podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md))
 
 ## OPTIONS
 
@@ -107,7 +107,7 @@ $ podman machine ls --format json
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-machine.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine.1.md)**
 
 ## HISTORY
 

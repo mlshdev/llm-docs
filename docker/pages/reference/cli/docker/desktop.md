@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/desktop/docker_desktop.yaml](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/data/cli/desktop/docker_desktop.yaml)
+> Pinned source for Docker main: [data/cli/desktop/docker_desktop.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/cli/desktop/docker_desktop.yaml)
 
 # docker desktop
 
@@ -22,3 +22,4 @@ Control Docker Desktop from the CLI
 - [`docker desktop disable`](https://docs.docker.com/reference/cli/docker/desktop/disable/)
 - [`docker desktop enable`](https://docs.docker.com/reference/cli/docker/desktop/enable/)
 - [`docker desktop version`](https://docs.docker.com/reference/cli/docker/desktop/version/)
+- [`docker desktop auth`](https://docs.docker.com/reference/cli/docker/desktop/auth/)

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/url-examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/url-examples.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/url-examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/url-examples.md)
 
 ## General information
 
@@ -956,13 +956,13 @@ Note that the handler accepts any HTTP method, so sending a `GET` request to `/a
 Single-node VictoriaMetrics:
 
 ```sh
-curl 'http://<vmsingle>:8428/api/v1/admin/tsdb/delete_series' -d 'match[]=vm_http_request_errors_total'
+curl -x POST 'http://<vmsingle>:8428/api/v1/admin/tsdb/delete_series' -d 'match[]=vm_http_request_errors_total'
 ```
 
 Cluster version of VictoriaMetrics:
 
 ```sh
-curl 'http://<vmselect>:8481/delete/0/prometheus/api/v1/admin/tsdb/delete_series' -d 'match[]=vm_http_request_errors_total'
+curl -X POST 'http://<vmselect>:8481/delete/0/prometheus/api/v1/admin/tsdb/delete_series' -d 'match[]=vm_http_request_errors_total'
 ```
 
 Use `-deleteAuthKey` command-line flag for protecting the delete endpoint.

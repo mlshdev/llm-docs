@@ -1,8 +1,8 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/Single-server-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/Single-server-VictoriaMetrics.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/Single-server-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/Single-server-VictoriaMetrics.md)
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
-![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/README-components.webp)
+![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/README-components.webp)
 
 - **Case studies**: [Grammarly, Roblox, Wix, Spotify,...](https://docs.victoriametrics.com/victoriametrics/casestudies/).
 - **Available**: [Binary releases](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest), Docker images on [Docker Hub](https://hub.docker.com/r/victoriametrics/victoria-metrics/) and [Quay](https://quay.io/repository/victoriametrics/victoria-metrics), [Source code](https://github.com/VictoriaMetrics/VictoriaMetrics).
@@ -669,7 +669,7 @@ VictoriaMetrics exposes the current number of available snapshots via `vm_snapsh
 
 ## How to delete time series
 
-Send a request to `http://<victoriametrics-addr>:8428/api/v1/admin/tsdb/delete_series?match[]=<timeseries_selector_for_delete>`,
+Send a POST request to `http://<victoriametrics-addr>:8428/api/v1/admin/tsdb/delete_series?match[]=<timeseries_selector_for_delete>`,
 where `<timeseries_selector_for_delete>` may contain any [time series selector](https://prometheus.io/docs/prometheus/latest/querying/basics/#time-series-selectors)
 for metrics to delete. Delete API doesn't support the deletion of specific time ranges, the series can only be deleted completely.
 Storage space for the deleted time series isn't freed instantly - it is freed during subsequent
@@ -684,7 +684,7 @@ adjust `start` and `end` to a suitable range to achieve match hits. Also, if the
 rather big you will need to set `-search.maxDeleteSeries` flag (see [Resource usage limits](#resource-usage-limits)).
 
 The `/api/v1/admin/tsdb/delete_series` handler may be protected with `authKey` if `-deleteAuthKey` command-line flag is set.
-Note that handler accepts any HTTP method, so sending a `GET` request to `/api/v1/admin/tsdb/delete_series` will result in deletion of time series.
+Note that handler accepts only HTTP POST method.
 
 The delete API is intended mainly for the following cases:
 
@@ -1331,13 +1331,13 @@ Load-balancing is **the most cost-efficient option** - it queries only one Victo
 
 The downside of this approach is that when one instance goes down and then comes back, the load balancer may start routing read queries to it again. Even though this instance didn't catch up yet with vmagent's queue and may return incomplete results.
 
-This shortcoming can be mitigated during sequential upgrades by removing the catching-up instance from the vmauth configuration until the vmagent queues are drained. During sequential upgrades, this mechanism is automatically applied when using the [Kubernetes VMDistributed](https://docs.victoriametrics.com/operator/resources/vmdistributed/) resource. After an outage, you must remove the recovered instance manually until its vmagent queues are drained.
+This shortcoming can be mitigated by removing the catching-up instance from the vmauth configuration until the vmagent queues are drained. If using [Kubernetes VMDistributed](https://docs.victoriametrics.com/operator/resources/vmdistributed/) resource, this mechanism is automatically applied during orchestrated updates.
 
 Another option is to use to [query all replicas at once](https://docs.victoriametrics.com/victoriametrics/#query-multiple-replicas-via-vmselect), as described below.
 
 #### Query multiple replicas via vmselect
 
-In this option, we use a top-level [vmselect](https://docs.victoriametrics.com/victoriametrics/vmselect/) to query all
+In this option, we use a top-level [vmselect](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#architecture-overview) to query all
 remote destinations simultaneously and merge the results.
 
 This option is only possible if VictoriaMetrics single-node instances are configured with the `-vmselectAddr` flag.
@@ -2363,14 +2363,22 @@ are added to all the metrics before sending them to the remote storage:
 
 ## Caches
 
+VictoriaMetrics uses various internal caches to optimize write and read load. Command-line flags `-memory.allowedPercent` and `-memory.allowedBytes` limit the amounts of memory that caches can use. To increase cache's memory limit, simply increase the amount of available memory to VictoriaMetrics, and it will automatically re-distribute it among the caches.
+
+VictoriaMetrics stores caches on disk during graceful shutdown and re-loads them on startup. This helps VictoriaMetrics to catch up faster with the workload after restart.
+If VictoriaMetrics can't restore the cache from the disk, it will print the corresponding warning message in the logs. See [how to drop caches](https://docs.victoriametrics.com/victoriametrics/#cache-removal) if you need intentionally to remove the cache on startup.
+
+> Note: due to specifics of the cache implementation, caches can reset automatically after changing the amount of available memory or CPUs.
+
+VictoriaMetrics exposes various metrics for monitoring the cache usage. These metrics are available on [Grafana dashboards](https://docs.victoriametrics.com/victoriametrics/#monitoring) and are explained in [cache tuning docs](https://docs.victoriametrics.com/victoriametrics/#cache-tuning).
+
 ### Cache removal
 
-VictoriaMetrics uses various internal caches. These caches are stored to `<-storageDataPath>/cache` directory during graceful shutdown
-(e.g. when VictoriaMetrics is stopped by sending `SIGINT` signal). The caches are read on the next VictoriaMetrics startup.
-Sometimes it is needed to remove such caches on the next startup. This can be done in the following ways:
+Caches are stored in `<-storageDataPath>/cache` directory during graceful shutdown (e.g. when VictoriaMetrics is stopped by sending `SIGINT` signal),
+so they can be restored back during startup. To remove such caches on the next startup, use one of the following options:
 
-- By manually removing the `<-storageDataPath>/cache` directory when VictoriaMetrics is stopped.
-- By placing `reset_cache_on_startup` file inside the `<-storageDataPath>/cache` directory before the restart of VictoriaMetrics.
+- Manually remove the `<-storageDataPath>/cache` directory when VictoriaMetrics is stopped.
+- Place `reset_cache_on_startup` file inside the `<-storageDataPath>/cache` directory before the restart of VictoriaMetrics.
   In this case VictoriaMetrics will automatically remove all the caches on the next start.
   See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/1447) for details.
 
@@ -2394,7 +2402,6 @@ See also [cache removal docs](#cache-removal).
 
 ### Cache tuning
 
-VictoriaMetrics uses various in-memory caches for faster data ingestion and query performance.
 The following metrics for each type of cache are exported at [`/metrics` page](#monitoring):
 
 - `vm_cache_size_bytes` - the actual cache size
@@ -2412,11 +2419,11 @@ of reads for which no value was found in the cache. If the cache utilization is 
 cache misses, then the cache is either not accepting new entries or evicting existing ones. Its
 size may need to be increased.
 
-Please note, default cache sizes were carefully adjusted accordingly to the most
-practical scenarios and workloads. Change the defaults only if you understand the implications
-and vmstorage has enough free memory to accommodate new cache sizes.
+> Please note, default cache sizes were carefully adjusted accordingly to the most
+> practical scenarios and workloads. Change the defaults only if you understand the implications
+> and vmstorage has enough free memory to accommodate new cache sizes.
 
-To override the default values see command-line flags with `-storage.cacheSize` prefix.
+To override the default values see command-line flag `-cacheExpireDuration` and flags with `-storage.cacheSize` prefix.
 See the full description of [command-line flags](#list-of-command-line-flags).
 
 ## Data migration
@@ -2729,12 +2736,14 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/
      authKey, which must be passed in query string to /internal/force_merge pages. It overrides -httpAuth.*
      Flag value can be read from the given file when using -forceMergeAuthKey=file:///abs/path/to/file or -forceMergeAuthKey=file://./relative/path/to/file.
      Flag value can be read from the given http/https url when using -forceMergeAuthKey=http://host/path or -forceMergeAuthKey=https://host/path
+  -fs.disableAdviseRandomRead
+     Whether to disable FADV_RANDOM and MADV_RANDOM hints for data part files. Typical queries with selectors access data part files at random offsets, so FADV_RANDOM is enforced to reduce excessive disk readahead.Use this flag if your query read pattern benefits from sequential read (e.g. query by metric name without selectors) to prefer FADV_NORMAL. (default true)
   -fs.disableMincore
      Whether to disable the mincore() syscall for checking mmap()ed files. By default, mincore() is used to detect whether mmap()ed file pages are resident in memory. Disabling mincore() may be needed on older ZFS filesystems (below 2.1.5), since it may trigger ZFS bug. See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/10327 for details.
   -fs.disableMmap
      Whether to use pread() instead of mmap() for reading data files. By default, mmap() is used for 64-bit arches and pread() is used for 32-bit arches, since they cannot read data files bigger than 2^32 bytes in memory. mmap() is usually faster for reading small data chunks than pread()
   -fs.maxConcurrency int
-     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default fsutil.getDefaultConcurrency())
+     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default 16x CPU cores, capped at 256)
   -futureRetention value
      Data with timestamps bigger than now+futureRetention is automatically deleted. The minimum futureRetention is 2 days. See https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#retention
      The following optional suffixes are supported: s (second), h (hour), d (day), w (week), M (month), y (year). If suffix isn't set, then the duration is counted in months (default 2d)
@@ -2851,7 +2860,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/
      The maximum allowed age for the ingested samples with historical timestamps. Samples with timestamps older than now-maxBackfillAge are rejected during data ingestion. By default, or when set to 0, -maxBackfillAge equals to -retentionPeriod, e.g. it is unlimited within the configured retention. This can be useful for limiting ingestion of historical samples, for example, when older data has been moved to another storage tier. See https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#retention
      The following optional suffixes are supported: s (second), h (hour), d (day), w (week), M (month), y (year). If suffix isn't set, then the duration is counted in months (default 0)
   -maxConcurrentInserts int
-     The maximum number of concurrent insert requests. Set higher value when clients send data over slow networks. Default value depends on the number of available CPU cores. It should work fine in most cases since it minimizes resource usage. See also -insert.maxQueueDuration (default 2*cgroup.AvailableCPUs())
+     The maximum number of concurrent insert requests. Set higher value when clients send data over slow networks. Default value depends on the number of available CPU cores. It should work fine in most cases since it minimizes resource usage. See also -insert.maxQueueDuration (default 2x CPU cores)
   -maxIngestionRate int
      The maximum number of samples vmsingle can receive per second. Data ingestion is paused when the limit is exceeded. By default there are no limits on samples ingestion rate.
   -maxInsertRequestSize size
@@ -3102,7 +3111,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/
   -search.maxBinaryOpPushdownLabelValues int
      The maximum number of values for a label in the first expression that can be extracted as a common label filter and pushed down to the second expression in a binary operation. A larger value makes the pushed-down filter more complex but fewer time series will be returned. This flag is useful when selective label (e.g., 'instance') contains numerous values, and storage resources are abundant. (default 100)
   -search.maxConcurrentRequests int
-     The maximum number of concurrent search requests. It shouldn't be high, since a single request can saturate all the CPU cores, while many concurrently executed requests may require high amounts of memory. See also -search.maxQueueDuration and -search.maxMemoryPerQuery (default vmselect.getDefaultMaxConcurrentRequests())
+     The maximum number of concurrent search requests. It shouldn't be high, since a single request can saturate all the CPU cores, while many concurrently executed requests may require high amounts of memory. See also -search.maxQueueDuration and -search.maxMemoryPerQuery (default 2x CPU cores, capped at 16)
   -search.maxDeleteDuration duration
      The maximum duration for /api/v1/admin/tsdb/delete_series call (default 5m0s)
   -search.maxDeleteSeries int
@@ -3170,7 +3179,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/
   -search.maxUniqueTimeseries int
      The maximum number of unique time series, which can be scanned during every query. This allows protecting against heavy queries, which select unexpectedly high number of series. When set to zero, the limit is automatically calculated based on -search.maxConcurrentRequests (inversely proportional) and memory available to the process (proportional). See also -search.max* command-line flags at vmselect
   -search.maxWorkersPerQuery int
-     The maximum number of CPU cores a single query can use. The default value should work good for most cases. The flag can be set to lower values for improving performance of big number of concurrently executed queries. The flag can be set to bigger values for improving performance of heavy queries, which scan big number of time series (>10K) and/or big number of samples (>100M). There is no sense in setting this flag to values bigger than the number of CPU cores available on the system (default netstorage.defaultMaxWorkersPerQuery())
+     The maximum number of CPU cores a single query can use. The default value should work good for most cases. The flag can be set to lower values for improving performance of big number of concurrently executed queries. The flag can be set to bigger values for improving performance of heavy queries, which scan big number of time series (>10K) and/or big number of samples (>100M). There is no sense in setting this flag to values bigger than the number of CPU cores available on the system (default CPU cores, capped at 32)
   -search.minStalenessInterval duration
      The minimum interval for staleness calculations. This flag could be useful for removing gaps on graphs generated from time series with irregular intervals between samples. See also '-search.maxStalenessInterval'
   -search.minWindowForInstantRollupOptimization duration

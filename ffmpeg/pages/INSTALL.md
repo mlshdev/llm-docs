@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [INSTALL.md](https://github.com/FFmpeg/FFmpeg/blob/538d10d1878fb546c3a2645efa56119848f9ccfc/INSTALL.md)
+> Pinned source for FFmpeg master: [INSTALL.md](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/INSTALL.md)
 
 # Installing FFmpeg
 

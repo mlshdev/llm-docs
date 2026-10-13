@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/image-library/mirror.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/docker-hub/image-library/mirror.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/image-library/mirror.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/docker-hub/image-library/mirror.md)
 
 # Mirror the Docker Hub library
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/explore/_index.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/dhi/explore/_index.md)
+> Pinned source for Docker main: [content/manuals/dhi/explore/_index.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/dhi/explore/_index.md)
 
 # Explore Docker Hardened Images
 
@@ -20,4 +20,5 @@ shared between Docker and you as a user.
 - [Image testing](https://docs.docker.com/dhi/explore/test/): See how Docker Hardened Images are automatically tested for standards compliance, functionality, and security.
 - [Malware scanning](https://docs.docker.com/dhi/explore/malware-scanning/): Learn how Docker scans Docker Hardened Images for viruses and malware, and how to view and verify the scan attestation.
 - [Responsibility overview](https://docs.docker.com/dhi/explore/responsibility/): Understand Docker's role and your responsibilities when using Docker Hardened Images as part of your secure software supply chain.
+- [EU data residency](https://docs.docker.com/dhi/explore/eu-region/): Learn how Docker stores your mirrored and customized images in the EU when your subscription is in the EU region.
 - [Security concepts](https://docs.docker.com/dhi/explore/security-concepts/): Learn the core concepts behind Docker Hardened Images — signed attestations, immutable digests, SLSA, VEX, and more.

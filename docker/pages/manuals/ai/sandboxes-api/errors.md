@@ -1,10 +1,6 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/errors.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/ai/sandboxes-api/errors.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/errors.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes-api/errors.md)
 
 # Errors and retries
-
-> \[!NOTE]
-> The Docker Sandboxes API and SDK are experimental. Features, interfaces,
-> and behavior may change.
 
 Before retrying a failed request, check whether the service already started
 the work. For example, a create request can succeed even if your application

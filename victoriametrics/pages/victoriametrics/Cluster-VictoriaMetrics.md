@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/Cluster-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/Cluster-VictoriaMetrics.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/Cluster-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/Cluster-VictoriaMetrics.md)
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
@@ -42,7 +42,7 @@ Each service may scale independently and may run on the most suitable hardware.
 This is a [shared nothing architecture](https://en.wikipedia.org/wiki/Shared-nothing_architecture).
 It increases cluster availability, and simplifies cluster maintenance as well as cluster scaling.
 
-![Cluster Scheme](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/Cluster-VictoriaMetrics-components.webp)
+![Cluster Scheme](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/Cluster-VictoriaMetrics-components.webp)
 
 > Further reading, deep dives into how each service works internally:
 >
@@ -61,7 +61,7 @@ A minimal cluster setup consists of the following components:
 > The [Enterprise version of VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/enterprise/) supports automatic discovery and updating of `vmstorage` nodes.
 > See [automatic vmstorage discovery](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#automatic-vmstorage-discovery) for details.
 
-Prefer running many small `vmstorage` nodes over a few big `vmstorage` nodes. For example, prefer running at least 10 `vmstorage` nodes for better [load distribution and availability](#cluster-availability). If you need fewer `vmstorage` nodes, consider using the [single-node version](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/) of VictoriaMetrics instead. See more on [choosing between single-node and cluster versions](https://docs.victoriametrics.com/victoriametrics/faq/#which-victoriametrics-type-is-recommended-for-use-in-production---single-node-or-cluster).
+Prefer running many small `vmstorage` nodes over a few big `vmstorage` nodes. For example, prefer running at least 10 (or more) `vmstorage` nodes for better [load distribution and availability](#cluster-availability). If you need fewer `vmstorage` nodes, consider using the [single-node version](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/) of VictoriaMetrics instead. See more on [choosing between single-node and cluster versions](https://docs.victoriametrics.com/victoriametrics/faq/#which-victoriametrics-type-is-recommended-for-use-in-production---single-node-or-cluster).
 
 If you run multiple nodes of `vminsert` or `vmselect`, use an HTTP load balancer such as [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/)
 or `nginx` in front of them. It must contain the following routing configs according to [the URL format](#url-format):
@@ -357,33 +357,41 @@ HDD-based persistent disks should be enough for the majority of use cases. It is
 
 ## Cluster resizing and scalability
 
+Make sure you read [capacity planning docs](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#capacity-planning) first.
+
+### Scaling up
+
 Cluster performance and capacity can be scaled up in two ways:
 
 - By adding more resources (CPU, RAM, disk IO, disk space, network bandwidth) to existing nodes in the cluster (aka vertical scalability).
 - By adding more nodes to the cluster (aka horizontal scalability).
+
+> \[!NOTE] Warning
+> All VictoriaMetrics components read the available CPU and memory limits only once at startup. They use these values to size caches, buffers and concurrency limits.
+> Without a restart, a component doesn't use the added resources after a scale-up,
+> and it may be killed by the OOM killer after the memory limit is decreased.
+> Self-monitoring metrics such as `vm_available_memory_bytes` and `vm_available_cpu_cores` also keep reporting the limits read at startup.
+> So we do not recommend using in-place vertical scaling without restarts (such as Kubernetes VPA in [InPlaceOrRecreate](https://kubernetes.io/docs/concepts/workloads/autoscaling/vertical-pod-autoscale/#updateMode-InPlaceOrRecreate) mode).
+> Make sure components are restarted after their CPU or memory limits are changed.
 
 General recommendations for cluster scalability:
 
 - Adding more CPU and RAM to existing `vmselect` nodes improves the performance for heavy queries, which process big number of time series with big number of raw samples.
   See [this article on how to detect and optimize heavy queries](https://valyala.medium.com/how-to-optimize-promql-and-metricsql-queries-85a1b75bf986).
 
-- Adding more `vmstorage` nodes (aka horizontal scaling) increases the number of [active time series](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-an-active-time-series)
-  the cluster can handle. This also increases query performance over time series with [high churn rate](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-high-churn-rate),
-  since every `vmstorage` node contains lower number of time series when the number of `vmstorage` nodes increases.
+- Adding more `vmselect` nodes increases the maximum possible queries rate, since the incoming concurrent requests may be split among bigger number of `vmselect` nodes.
+
+- Adding more `vminsert` nodes increases the maximum possible data ingestion speed, since the ingested data may be split among bigger number of `vminsert` nodes.
+
+- Adding more CPU and RAM to existing `vmstorage` nodes (aka vertical scaling) increases the number
+  of [active time series](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-an-active-time-series) the cluster can handle. This also increases query performance over time series with [high churn rate](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-high-churn-rate). Scaling vertically is a preferred way to scale cluster if you already have big number of shards (30+) and scaling up is not limited by resource constraints like CPU, RAM or disk space. Otherwise, scale horizontally.
+
+- Adding more `vmstorage` nodes (aka horizontal scaling) improves cluster performance and capacity, since every `vmstorage` node contains lower number of time series when the number of `vmstorage` nodes increases.
 
   The cluster stability is also improved with the number of `vmstorage` nodes, since active `vmstorage` nodes need to handle lower additional workload
   when some of `vmstorage` nodes become unavailable. For example, if one node out of 3 nodes is unavailable, then `1/3=33%` of the load is re-distributed across 2 remaining nodes,
   so per-node workload increase is `(1/3/2)/(1/3) = 1/2 = 50%`.
-  If one node out of 10 nodes is unavailable, then `1/10=10%` of the load is re-distributed across 9 remaining nodes, so per-node workload increase is `(1/10/9)/(1/10) = 1/9 =~ 11%`.
-
-- Adding more CPU and RAM to existing `vmstorage` nodes (aka vertical scaling) increases the number
-  of [active time series](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-an-active-time-series) the cluster can handle.
-  It is preferred to add more `vmstorage` nodes over adding more CPU and RAM to existing `vmstorage` nodes, since higher number of `vmstorage` nodes
-  increases cluster stability and improves query performance over time series with [high churn rate](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-high-churn-rate).
-
-- Adding more `vminsert` nodes increases the maximum possible data ingestion speed, since the ingested data may be split among bigger number of `vminsert` nodes.
-
-- Adding more `vmselect` nodes increases the maximum possible queries rate, since the incoming concurrent requests may be split among bigger number of `vmselect` nodes.
+  If one node out of 10 nodes is unavailable, then `1/10=10%` of the load is re-distributed across 9 remaining nodes, so per-node workload increase is `(1/10/9)/(1/10) = 1/9 =~ 11%`. This is why it is recommended to have 10 or more `vmstorage` nodes.
 
 Steps to add `vmstorage` node:
 
@@ -391,7 +399,43 @@ Steps to add `vmstorage` node:
 2. Gradually restart all the `vmselect` nodes with new `-storageNode` arg containing `<new_vmstorage_host>`.
 3. Gradually restart all the `vminsert` nodes with new `-storageNode` arg containing `<new_vmstorage_host>`.
 
-In order to handle uneven disk space usage distribution after adding new `vmstorage` node it is possible to update `vminsert` configuration to route newly ingested metrics only to new storage nodes. Once disk usage will be similar configuration can be updated to include all nodes again. Note that `vmselect` nodes need to reference all storage nodes for querying.
+To handle uneven disk space usage distribution after adding new `vmstorage` node it is possible to update `vminsert` configuration to route newly ingested metrics only to new storage nodes. Once disk usage will be similar configuration can be updated to include all nodes again. Note that `vmselect` nodes need to reference all storage nodes for querying.
+See more at [rebalancing docs](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#rebalancing).
+
+### Scaling down
+
+Since `vmstorage` nodes are stateful, scaling down the cluster requires redistributing existing accumulated data from the removed nodes to the remaining nodes. This is a time- and resource-consuming process that is better avoided by scaling down vertically or by following the [capacity planning docs](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#capacity-planning) and picking the right number of shards from the beginning.
+
+To remove a `vmstorage` node from the cluster, follow these steps:
+
+1. Remove `vmstorage` from the [`-storageNode` command-line flag](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#cluster-setup) on all `vminsert` nodes. This ensures that no new data is ingested into the removed node.
+2. Keep the configuration of `vmselect` nodes unchanged, so they continue to read data from the removed `vmstorage` node.
+3. Decide how to keep the data from the removed `vmstorage` node available:
+   - The easiest way is to keep the removed `vmstorage` node until its `-retentionPeriod` is reached. It won't receive new data but will continue serving read queries for what it already stores. This approach requires no additional work, but keeps the resources of the removed node occupied. Once `-retentionPeriod` is reached, the `vmstorage` node can be removed from `vmselect`'s `-storageNode` configuration and decommissioned. No re-distribution or migration is required in this case.
+   - Try migrating the data from the removed node by re-ingesting it into the remaining nodes. See how to do it below.
+
+Please note that migrating big volumes of data is a time- and resource-consuming process, as data has to be read and ingested via the native /export and /import APIs. To re-ingest data from the removed `vmstorage` node to the remaining nodes, follow these steps:
+
+1. Set [deduplication](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#deduplication) on `vmselect` and `vmstorage` nodes via the command-line flag `-dedup.minScrapeInterval=1ms`. This ensures that `vmselect` and `vmstorage` nodes deduplicate identical samples during migration.
+2. Set up a separate temporary `vmselect` node configured to read data **only from the removed node**. Adjust the `-search.maxExportDuration`, `-search.maxExportSeries`, and `-search.maxSeries` limits on the temporary `vmselect` to higher values. You might hit these limits during migration, and error logs on the temporary `vmselect` will identify which limit was hit.
+3. Use [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/) to read data from the removed node via new temporary vmselect and write it to the remaining nodes via existing vminserts:
+
+```sh
+ ./vmctl vm-native --vm-native-src-addr=http://<new-vmselect>:8481/ \
+  --vm-native-dst-addr=http://<vminsert>:8480/ \
+  --vm-native-filter-match='{__name__!=""}' \
+  --vm-native-filter-time-start='2026-08-01T00:00:00Z' \
+  --vm-native-step-interval=day \
+  --vm-intercluster
+```
+
+- Run vmctl in the same network as cluster for the best performance
+- If you have load balancer like vmauth in front of vminsert nodes, specify its address in `--vm-native-dst-addr`. This will ensure that import requests will be distributed across all vminserts.
+- Specify `--vm-native-filter-match` or `--vm-native-filter-time-start` if you want to migrate only a subset of data. See more about [vmctl configuration](https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/#configuration).
+
+4. Wait for migration to complete. See how to [monitor migration process](https://docs.victoriametrics.com/victoriametrics/vmctl/#monitoring-the-migration-process) and [migration tips](https://docs.victoriametrics.com/victoriametrics/vmctl/#migration-tips). It is OK to restart migration and re-ingest the same data again if main `vmselect` and `vmstorage` nodes have deduplication enabled.
+5. Once migration is completed, remove `vmstorage` from [`-storageNode` command-line flag](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#cluster-setup) on all `vmselect` nodes. Verify that read queries are still returning expected results.
+6. Remove and decommission the temporary `vmselect` node, and `vmstorage` that had to be removed.
 
 ## Multitenancy
 
@@ -1097,11 +1141,20 @@ See more details about cardinality limiter in [these docs](https://docs.victoria
 
 VictoriaMetrics uses lower amounts of CPU, RAM and storage space on production workloads compared to competing solutions (Prometheus, Thanos, Cortex, TimescaleDB, InfluxDB, QuestDB, M3DB) according to [our case studies](https://docs.victoriametrics.com/victoriametrics/casestudies/).
 
-Each node type - `vminsert`, `vmselect` and `vmstorage` - can run on the most suitable hardware. Cluster capacity scales linearly with the available resources. The needed amounts of CPU and RAM per each node type highly depends on the workload - the number of [active time series](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-an-active-time-series), [series churn rate](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-high-churn-rate), query types, query qps, etc. It is recommended to setup a test VictoriaMetrics cluster for your production workload and iteratively scale per-node resources and the number of nodes per node type until the cluster becomes stable. It is recommended to setup [monitoring for the cluster](#monitoring). It helps to determine bottlenecks in the cluster setup. It is also recommended to follow [the troubleshooting docs](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#troubleshooting).
+Cluster capacity scales linearly with the available resources. The needed amounts of CPU and RAM for each node type highly depend on the workload - the number of [active time series](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-an-active-time-series), [series churn rate](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-high-churn-rate), query types, query QPS, etc.
+To start with capacity planning it is recommended to:
 
-The needed storage space for the given retention (the retention is set via `-retentionPeriod` command-line flag at `vmstorage`) can be extrapolated from disk space usage in a test run. For example, if the storage space usage is 10GB after a day-long test run on a production workload, then it will need at least `10GB*100=1TB` of disk space for `-retentionPeriod=100d` (100-days retention period). Storage space usage can be monitored with [the official Grafana dashboard for VictoriaMetrics cluster](#monitoring).
+1. Setup a test VictoriaMetrics cluster for your production workload. Start with 20-30 `vmstorage` shards with low resource limits, as bigger number of shards contributes to the cluster's reliability and makes future scalability easier.
+2. Setup [monitoring for the test cluster](#monitoring), so you can identify resource usage and bottlenecks.
+3. Start ingesting production workload by replicating it from your metrics collection agents, run read queries that you expect to have in the production system.
+4. Iteratively scale resources until the cluster becomes stable:
+   - Run approximately 1 `vminsert` for each 3-5 `vmstorage` shards. Scale vminserts horizontally if you have a high rate of write requests per-second, scale vertically otherwise. It is recommended running vmagent in front of vminserts, as it optimally compresses and batches data before forwarding it. Dedicate about 2GiB of RAM per 1 vCPU.
+   - Run an arbitrary number of `vmselect` nodes depending on the load. Scale vmselects horizontally if you have a high rate of read requests per-second. Scale vertically to improve query latency. Memory usage depends on queries: pick it accordingly to [-search.maxMemoryPerQuery and -search.maxConcurrentRequests](https://docs.victoriametrics.com/victoriametrics/#resource-usage-limits) limits. Dedicate at least 10GiB of disk volume for `vmselect` for storing local caches.
+   - `vmstorage` nodes, unlike `vmselect` and `vminsert`, are stateful and their number can't be easily scaled up or down. This is why it is recommended to start with many small shards, and vertically scale resources until installation is stable. Scale horizontally to improve overall performance or to overcome hardware limitations, such as CPU/RAM/Disk size per instance.
 
-It is recommended leaving the following amounts of spare resources:
+The required storage space for the given retention (the retention is set via `-retentionPeriod` command-line flag at `vmstorage`) can be extrapolated from disk space usage in a test run. For example, if the storage space usage is 10GB after a day-long test run on a production workload, then it will need at least `10GB*100=1TB` of disk space for `-retentionPeriod=100d` (100-days retention period). Storage space usage can be monitored with [the official Grafana dashboard for VictoriaMetrics cluster](#monitoring).
+
+It is recommended leaving the following amounts of spare resources to ensure the stability of the cluster:
 
 - 50% of free RAM across all the node types for reducing the probability of OOM (out of memory) crashes and slowdowns during temporary spikes in workload.
 - 50% of spare CPU across all the node types for reducing the probability of slowdowns during temporary spikes in workload.
@@ -1112,10 +1165,10 @@ Increase free storage space and `-storage.minFreeDiskSpaceBytes` to match at lea
 Some capacity planning tips for VictoriaMetrics cluster:
 
 - The [replication](#replication-and-data-safety) increases the amounts of needed resources for the cluster by up to `N` times where `N` is replication factor. This is because `vminsert` stores `N` copies of every ingested sample on distinct `vmstorage` nodes. These copies are de-duplicated by `vmselect` during querying. The most cost-efficient and performant solution for data durability is to rely on replicated durable persistent disks such as [Google Compute persistent disks](https://cloud.google.com/compute/docs/disks#pdspecs) instead of using the [replication at VictoriaMetrics level](#replication-and-data-safety).
-- It is recommended to run a cluster with big number of small `vmstorage` nodes instead of a cluster with small number of big `vmstorage` nodes. This increases chances that the cluster remains available and stable when some of `vmstorage` nodes are temporarily unavailable during maintenance events such as upgrades, configuration changes or migrations. For example, when a cluster contains 10 `vmstorage` nodes and a single node becomes temporarily unavailable, then the workload on the remaining 9 nodes increases by `1/9=11%`. When a cluster contains 3 `vmstorage` nodes and a single node becomes temporarily unavailable, then the workload on the remaining 2 nodes increases by `1/2=50%`. The remaining `vmstorage` nodes may have no enough free capacity for handling the increased workload. In this case the cluster may become overloaded, which may result to decreased availability and stability.
+- It is recommended to run a cluster with many small `vmstorage` nodes instead of a cluster with small number of big `vmstorage` nodes. This increases chances that the cluster remains available and stable when some of `vmstorage` nodes are temporarily unavailable during maintenance events such as upgrades, configuration changes or migrations. For example, when a cluster contains 10 `vmstorage` nodes and a single node becomes temporarily unavailable, then the workload on the remaining 9 nodes increases by `1/9=11%`. When a cluster contains 3 `vmstorage` nodes and a single node becomes temporarily unavailable, then the workload on the remaining 2 nodes increases by `1/2=50%`. The remaining `vmstorage` nodes may have no enough free capacity for handling the increased workload. In this case the cluster may become overloaded, which may result to decreased availability and stability.
 - Cluster capacity for [active time series](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-an-active-time-series) can be increased by increasing RAM and CPU resources per each `vmstorage` node or by adding new `vmstorage` nodes.
-- Query latency can be reduced by increasing CPU resources per each `vmselect` node, since each incoming query is processed by a single `vmselect` node. Performance for heavy queries scales with the number of available CPU cores at `vmselect` node, since `vmselect` processes time series referred by the query on all the available CPU cores.
-- If the cluster needs to process incoming queries at a high rate, then its capacity can be increased by adding more `vmselect` nodes, so incoming queries could be spread among bigger number of `vmselect` nodes.
+- Query latency can be reduced by increasing CPU resources per each `vmselect` node. Performance for heavy queries scales with the number of available CPU cores at `vmselect` node, since `vmselect` processes time series referred by the query on all the available CPU cores. Query latency also depends on performance of `vmstorage` nodes - you can identify the bottleneck by [tracing slow queries](https://docs.victoriametrics.com/victoriametrics/#query-tracing).
+- If the cluster needs to process incoming queries at a high rate, then its capacity can be increased by adding more `vmselect` nodes, so incoming queries could be spread among bigger number of `vmselect` nodes. The query throughput also depends on performance of `vmstorage` nodes - you can identify the bottleneck by [tracing slow queries](https://docs.victoriametrics.com/victoriametrics/#query-tracing).
 - By default `vmstorage` compresses the data it sends to `vmselect` during queries in order to reduce network bandwidth usage. The compression takes additional CPU resources at `vmstorage`. If `vmstorage` nodes have limited CPU, then the compression can be disabled by passing `-rpc.disableCompression` command-line flag at `vmstorage` nodes.
 
 See also [resource usage limits docs](#resource-usage-limits).
@@ -1293,12 +1346,14 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
      Auth key for /flags endpoint. It must be passed via authKey query arg. It overrides -httpAuth.*
      Flag value can be read from the given file when using -flagsAuthKey=file:///abs/path/to/file or -flagsAuthKey=file://./relative/path/to/file.
      Flag value can be read from the given http/https url when using -flagsAuthKey=http://host/path or -flagsAuthKey=https://host/path
+  -fs.disableAdviseRandomRead
+     Whether to disable FADV_RANDOM and MADV_RANDOM hints for data part files. Typical queries with selectors access data part files at random offsets, so FADV_RANDOM is enforced to reduce excessive disk readahead.Use this flag if your query read pattern benefits from sequential read (e.g. query by metric name without selectors) to prefer FADV_NORMAL. (default true)
   -fs.disableMincore
      Whether to disable the mincore() syscall for checking mmap()ed files. By default, mincore() is used to detect whether mmap()ed file pages are resident in memory. Disabling mincore() may be needed on older ZFS filesystems (below 2.1.5), since it may trigger ZFS bug. See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/10327 for details.
   -fs.disableMmap
      Whether to use pread() instead of mmap() for reading data files. By default, mmap() is used for 64-bit arches and pread() is used for 32-bit arches, since they cannot read data files bigger than 2^32 bytes in memory. mmap() is usually faster for reading small data chunks than pread()
   -fs.maxConcurrency int
-     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default fsutil.getDefaultConcurrency())
+     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default 16x CPU cores, capped at 256)
   -graphite.sanitizeMetricName
      Sanitize metric names for the ingested Graphite data. See https://docs.victoriametrics.com/victoriametrics/integrations/graphite/#ingesting
   -graphiteListenAddr string
@@ -1401,7 +1456,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
   -loggerWarnsPerSecondLimit int
      Per-second limit on the number of WARN messages. If more than the given number of warns are emitted per second, then the remaining warns are suppressed. Zero values disable the rate limit
   -maxConcurrentInserts int
-     The maximum number of concurrent insert requests. Set higher value when clients send data over slow networks. Default value depends on the number of available CPU cores. It should work fine in most cases since it minimizes resource usage. See also -insert.maxQueueDuration (default 2*cgroup.AvailableCPUs())
+     The maximum number of concurrent insert requests. Set higher value when clients send data over slow networks. Default value depends on the number of available CPU cores. It should work fine in most cases since it minimizes resource usage. See also -insert.maxQueueDuration (default 2x CPU cores)
   -maxInsertRequestSize size
      The maximum size in bytes of a single Prometheus remote_write API request
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 33554432)
@@ -1663,12 +1718,14 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
      Auth key for /flags endpoint. It must be passed via authKey query arg. It overrides -httpAuth.*
      Flag value can be read from the given file when using -flagsAuthKey=file:///abs/path/to/file or -flagsAuthKey=file://./relative/path/to/file.
      Flag value can be read from the given http/https url when using -flagsAuthKey=http://host/path or -flagsAuthKey=https://host/path
+  -fs.disableAdviseRandomRead
+     Whether to disable FADV_RANDOM and MADV_RANDOM hints for data part files. Typical queries with selectors access data part files at random offsets, so FADV_RANDOM is enforced to reduce excessive disk readahead.Use this flag if your query read pattern benefits from sequential read (e.g. query by metric name without selectors) to prefer FADV_NORMAL. (default true)
   -fs.disableMincore
      Whether to disable the mincore() syscall for checking mmap()ed files. By default, mincore() is used to detect whether mmap()ed file pages are resident in memory. Disabling mincore() may be needed on older ZFS filesystems (below 2.1.5), since it may trigger ZFS bug. See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/10327 for details.
   -fs.disableMmap
      Whether to use pread() instead of mmap() for reading data files. By default, mmap() is used for 64-bit arches and pread() is used for 32-bit arches, since they cannot read data files bigger than 2^32 bytes in memory. mmap() is usually faster for reading small data chunks than pread()
   -fs.maxConcurrency int
-     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default fsutil.getDefaultConcurrency())
+     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default 16x CPU cores, capped at 256)
   -globalReplicationFactor int
      How many copies of every ingested sample is available across vmstorage groups. vmselect continues returning full responses when up to globalReplicationFactor-1 vmstorage groups are temporarily unavailable. See https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#vmstorage-groups-at-vmselect . See also -replicationFactor (default 1)
   -graphite.sanitizeMetricName
@@ -1738,7 +1795,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
   -loggerWarnsPerSecondLimit int
      Per-second limit on the number of WARN messages. If more than the given number of warns are emitted per second, then the remaining warns are suppressed. Zero values disable the rate limit
   -maxConcurrentInserts int
-     The maximum number of concurrent insert requests. Set higher value when clients send data over slow networks. Default value depends on the number of available CPU cores. It should work fine in most cases since it minimizes resource usage. See also -insert.maxQueueDuration (default 2*cgroup.AvailableCPUs())
+     The maximum number of concurrent insert requests. Set higher value when clients send data over slow networks. Default value depends on the number of available CPU cores. It should work fine in most cases since it minimizes resource usage. See also -insert.maxQueueDuration (default 2x CPU cores)
   -memory.allowedBytes size
      Allowed size of system memory VictoriaMetrics caches may occupy. This option overrides -memory.allowedPercent if set to a non-zero value. Too low a value may increase the cache miss rate usually resulting in higher CPU and disk IO usage. Too high a value may evict too much data from the OS page cache resulting in higher disk IO usage. The process may behave unexpectedly if this flag is set too small (e.g., 1 byte).
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 0)
@@ -1989,7 +2046,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
   -search.maxUniqueTimeseries -search.maxUniqueTimeseries
      The maximum number of unique time series, which can be selected during /api/v1/query and /api/v1/query_range queries. This option allows limiting memory usage. The limit can't exceed the explicitly set corresponding value -search.maxUniqueTimeseries on vmstorage side.
   -search.maxWorkersPerQuery int
-     The maximum number of CPU cores a single query can use. The default value should work good for most cases. The flag can be set to lower values for improving performance of big number of concurrently executed queries. The flag can be set to bigger values for improving performance of heavy queries, which scan big number of time series (>10K) and/or big number of samples (>100M). There is no sense in setting this flag to values bigger than the number of CPU cores available on the system (default netstorage.defaultMaxWorkersPerQuery())
+     The maximum number of CPU cores a single query can use. The default value should work good for most cases. The flag can be set to lower values for improving performance of big number of concurrently executed queries. The flag can be set to bigger values for improving performance of heavy queries, which scan big number of time series (>10K) and/or big number of samples (>100M). There is no sense in setting this flag to values bigger than the number of CPU cores available on the system (default CPU cores, capped at 32)
   -search.minStalenessInterval duration
      The minimum interval for staleness calculations. This flag could be useful for removing gaps on graphs generated from time series with irregular intervals between samples. See also '-search.maxStalenessInterval'
   -search.minWindowForInstantRollupOptimization duration
@@ -2162,6 +2219,10 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
      Whether to disable the ability to trace queries. See https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#query-tracing
   -disablePerDayIndex
      Disable per-day index and use global index for all searches. This may improve performance and decrease disk space usage for the use cases with fixed set of timeseries scattered across a big time range (for example, when loading years of historical data). See https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#index-tuning
+  -enableIngestionAPI
+     Whether to enable ingestion APIs on vmstorage HTTP listener. Currently enables Prometheus remote write v1 at /insert/<accountID>/prometheus and /insert/<accountID>/prometheus/api/v1/write
+  -enableMetadata
+     Whether to enable metadata processing for metrics scraped from targets, received via VictoriaMetrics remote write, Prometheus remote write v1 or OpenTelemetry protocol. See also remoteWrite.maxMetadataPerBlock (default true)
   -enableTCP6
      Whether to enable IPv6 for listening and dialing. By default, only IPv4 TCP and UDP are used
   -envflag.enable
@@ -2184,12 +2245,14 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
      authKey, which must be passed in query string to /internal/force_merge pages. It overrides -httpAuth.*
      Flag value can be read from the given file when using -forceMergeAuthKey=file:///abs/path/to/file or -forceMergeAuthKey=file://./relative/path/to/file.
      Flag value can be read from the given http/https url when using -forceMergeAuthKey=http://host/path or -forceMergeAuthKey=https://host/path
+  -fs.disableAdviseRandomRead
+     Whether to disable FADV_RANDOM and MADV_RANDOM hints for data part files. Typical queries with selectors access data part files at random offsets, so FADV_RANDOM is enforced to reduce excessive disk readahead.Use this flag if your query read pattern benefits from sequential read (e.g. query by metric name without selectors) to prefer FADV_NORMAL. (default true)
   -fs.disableMincore
      Whether to disable the mincore() syscall for checking mmap()ed files. By default, mincore() is used to detect whether mmap()ed file pages are resident in memory. Disabling mincore() may be needed on older ZFS filesystems (below 2.1.5), since it may trigger ZFS bug. See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/10327 for details.
   -fs.disableMmap
      Whether to use pread() instead of mmap() for reading data files. By default, mmap() is used for 64-bit arches and pread() is used for 32-bit arches, since they cannot read data files bigger than 2^32 bytes in memory. mmap() is usually faster for reading small data chunks than pread()
   -fs.maxConcurrency int
-     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default fsutil.getDefaultConcurrency())
+     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default 16x CPU cores, capped at 256)
   -futureRetention value
      Data with timestamps bigger than now+futureRetention is automatically deleted. The minimum futureRetention is 2 days. See https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#retention
      The following optional suffixes are supported: s (second), h (hour), d (day), w (week), M (month), y (year). If suffix isn't set, then the duration is counted in months (default 2d)
@@ -2269,7 +2332,18 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
      The maximum allowed age for the ingested samples with historical timestamps. Samples with timestamps older than now-maxBackfillAge are rejected during data ingestion. By default, or when set to 0, -maxBackfillAge equals to -retentionPeriod, e.g. it is unlimited within the configured retention. This can be useful for limiting ingestion of historical samples, for example, when older data has been moved to another storage tier. See https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#retention
      The following optional suffixes are supported: s (second), h (hour), d (day), w (week), M (month), y (year). If suffix isn't set, then the duration is counted in months (default 0)
   -maxConcurrentInserts int
-     The maximum number of concurrent insert requests. Set higher value when clients send data over slow networks. Default value depends on the number of available CPU cores. It should work fine in most cases since it minimizes resource usage. See also -insert.maxQueueDuration (default 2*cgroup.AvailableCPUs())
+     The maximum number of concurrent insert requests. Set higher value when clients send data over slow networks. Default value depends on the number of available CPU cores. It should work fine in most cases since it minimizes resource usage. See also -insert.maxQueueDuration (default 2x CPU cores)
+  -maxIngestionRate int
+     The maximum number of samples vmstorage can receive per second via ingestion APIs when -enableIngestionAPI is enabled. Data ingestion is paused when the limit is exceeded. By default there are no limits on samples ingestion rate.
+  -maxInsertRequestSize size
+     The maximum size in bytes of a single Prometheus remote_write API request
+     Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 33554432)
+  -maxLabelNameLen int
+     The maximum length of label name in the accepted time series at ingestion APIs when -enableIngestionAPI is enabled. Series with longer label name are ignored. In this case the vm_rows_ignored_total{reason="too_long_label_name"} metric at /metrics page is incremented. Value must be in range 1..65535. (default 256)
+  -maxLabelValueLen int
+     The maximum length of label values in the accepted time series at ingestion APIs when -enableIngestionAPI is enabled. Series with longer label value are ignored. In this case the vm_rows_ignored_total{reason="too_long_label_value"} metric at /metrics page is incremented. Value must be in range 1..65535. (default 4096)
+  -maxLabelsPerTimeseries int
+     The maximum number of labels per time series to be accepted at ingestion APIs when -enableIngestionAPI is enabled. Series with superfluous labels are ignored. In this case the vm_rows_ignored_total{reason="too_many_labels"} metric at /metrics page is incremented (default 40)
   -memory.allowedBytes size
      Allowed size of system memory VictoriaMetrics caches may occupy. This option overrides -memory.allowedPercent if set to a non-zero value. Too low a value may increase the cache miss rate usually resulting in higher CPU and disk IO usage. Too high a value may evict too much data from the OS page cache resulting in higher disk IO usage. The process may behave unexpectedly if this flag is set too small (e.g., 1 byte).
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 0)
@@ -2341,6 +2415,8 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/cluster-victori
   -snapshotsMaxAge value
      Automatically delete snapshots older than -snapshotsMaxAge if it is set to non-zero duration. Make sure that backup process has enough time to finish the backup before the corresponding snapshot is automatically deleted
      The following optional suffixes are supported: s (second), h (hour), d (day), w (week), M (month), y (year). If suffix isn't set, then the duration is counted in months (default 3d)
+  -sortLabels
+     Whether to sort labels for samples ingested via vmstorage ingestion APIs when -enableIngestionAPI is enabled. This may be needed for reducing memory usage at storage when the order of labels in incoming samples is random. For example, if m{k1="v1",k2="v2"} may be sent as m{k2="v2",k1="v1"}. Enabled sorting for labels can slow down ingestion performance a bit
   -storage.cacheSizeIndexDBDataBlocks size
      Overrides max size for indexdb/dataBlocks cache. See https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#cache-tuning
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 0)

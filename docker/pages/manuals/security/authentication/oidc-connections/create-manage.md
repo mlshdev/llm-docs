@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/oidc-connections/create-manage.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/security/authentication/oidc-connections/create-manage.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/oidc-connections/create-manage.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/security/authentication/oidc-connections/create-manage.md)
 
 # Create and manage OIDC connections
 
@@ -22,8 +22,9 @@ with a short-lived token.
 1. Sign in to [Docker Home](https://app.docker.com/), select your
    organization, then go to **Identity & auth**.
 2. Select **OIDC connections**.
-3. Select **Create OIDC connection** and fill in the OIDC connection form.
-   - Provide rulesets and subject claims. Other values are optional.
+3. Select **Create OIDC connection** and fill in the form.
+   - **Connection name**, a **Ruleset name**, and a **Subject claim** are
+     required. **Description** is optional.
    - For rulesets, subject claims, and resources, see
      [OIDC connections rulesets and subject claims](https://docs.docker.com/security/authentication/oidc-connections/rulesets-claims/).
 4. Select **Create connection**.
@@ -69,7 +70,8 @@ connections** page.
 2. Find the row with your target connection ID.
 3. Select the action menu icon for your options.
    - **Edit** opens the **Edit OIDC connection** page where you can copy
-     your connection ID, update rulesets, or view the **Failures** table.
+     your connection ID, update rulesets, or open the **Failures** tab.
+     See [View connection failures](#view-connection-failures).
    - **Deactivate** temporarily disables access to your GitHub workflow.
    - **Activate** restores access to your GitHub workflow.
    - **Delete** permanently deletes a connection.
@@ -88,6 +90,51 @@ fails at the token-exchange step until you activate the connection.
 > replacement connection ID in every affected workflow before it runs
 > again.
 
+## View connection failures
+
+Docker records a failure when a workflow reaches the token-exchange step
+for your connection and no ruleset matches the token's claims. For GitHub
+Actions, Docker only logs the failure when the token's repository
+namespace matches a namespace in a `sub` rule on the connection. An
+unrelated repository can still receive `access denied` without a
+**Failures** row.
+
+1. Sign in to [Docker Home](https://app.docker.com/), select your
+   organization, then go to **Identity & auth**.
+2. Select **OIDC connections**.
+3. Find the connection, open the action menu, and select **Edit**.
+4. On the **Edit OIDC connection** page, select the **Failures** tab.
+
+The **Failures** tab is view-only. It lists past failed exchanges so you
+can compare claims to rulesets. It does not run a test or accept inputs.
+
+If Docker has not recorded any failures for the connection, the tab shows
+**No failures have been reported for this connection**.
+
+> \[!NOTE]
+> Wrong connection IDs, deactivated connections, and token problems that
+> fail before claim matching do not appear on **Failures**. See
+> [Troubleshoot OIDC connections](https://docs.docker.com/security/authentication/oidc-connections/troubleshoot/).
+
+### Read a failure entry
+
+Each failure row includes:
+
+- The date and time of the failed exchange
+- The ruleset rule that did not match, shown as `claim = expected value`
+  (for example, `sub = repo:my-org/my-repo:ref:refs/heads/main`)
+- The incoming claim value from the GitHub ID token, marked with ❌ when
+  it does not match
+
+To inspect every claim in the token, expand **Show all claims**. The
+expanded table lists **Incoming claim** and **Value**. Claims that failed
+validation appear with ❌.
+
+Use the unmatched expected value and the incoming value together to
+decide whether to update the ruleset or the workflow that produced the
+token.
+
 ## Next steps
 
 - [OIDC connections rulesets and subject claims](https://docs.docker.com/security/authentication/oidc-connections/rulesets-claims/)
+- [Troubleshoot OIDC connections](https://docs.docker.com/security/authentication/oidc-connections/troubleshoot/)

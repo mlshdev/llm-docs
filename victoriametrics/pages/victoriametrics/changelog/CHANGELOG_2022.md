@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/changelog/CHANGELOG_2022.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/changelog/CHANGELOG_2022.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/changelog/CHANGELOG_2022.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/changelog/CHANGELOG_2022.md)
 
 ## [v1.85.3](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.85.3)
 
@@ -118,7 +118,7 @@ Released at 2022-12-11
 
 - FEATURE: [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/): add `-remoteWrite.sendTimeout` command-line flag, which allows configuring timeout for sending data to `-remoteWrite.url`. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/3408).
 
-- FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): add ability to migrate data between VictoriaMetrics clusters with automatic tenants discovery. See [these docs](https://docs.victoriametrics.com/victoriametrics/vmctl/#cluster-to-cluster-migration-mode) and [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/2930).
+- FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): add ability to migrate data between VictoriaMetrics clusters with automatic tenants discovery. See [Cluster to Cluster migration](https://docs.victoriametrics.com/victoriametrics/vmctl/victoriametrics/#cluster-to-cluster) and [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/2930).
 
 - FEATURE: [vmctl](https://docs.victoriametrics.com/victoriametrics/vmctl/): add ability to copy data from sources via Prometheus `remote_read` protocol. See [these docs](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/). The related issues: [one](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/3132) and [two](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/1101).
 
@@ -857,7 +857,7 @@ scrape_configs:
 - BUGFIX: [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/): properly reload changed `-promscrape.config` file when `-promscrape.configCheckInterval` option is set. The changed config file wasn't reloaded in this case since [v1.69.0](https://docs.victoriametrics.com/victoriametrics/changelog/changelog_2021/#v1690). See [this pull request](https://github.com/VictoriaMetrics/VictoriaMetrics/pull/2786). Thanks to @ttyv for the fix.
 - BUGFIX: [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/): properly set `Host` header during target scraping when `proxy_url` is set to http proxy. Previously the `Host` header was set to the proxy hostname instead of the target hostname. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/2794).
 - BUGFIX: [VictoriaMetrics cluster](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/): assume that the response is complete if `-search.denyPartialResponse` is enabled and up to `-replicationFactor - 1` `vmstorage` nodes are unavailable. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/1767).
-- BUGFIX: [vmselect](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#vmselect): update `vm_partial_results_total` metric labels to be consistent with `vm_requests_total` labels.
+- BUGFIX: `vmselect` in [VictoriaMetrics cluster](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/): update `vm_partial_results_total` metric labels to be consistent with `vm_requests_total` labels.
 - BUGFIX: accept tags without values when reading data in [DataDog format](https://docs.victoriametrics.com/victoriametrics/integrations/datadog/). Thanks to @PerGon for the [pull request](https://github.com/VictoriaMetrics/VictoriaMetrics/pull/2839).
 - BUGFIX: [vmui](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#vmui): properly pass the end of the selected time range to `time` query arg to [/api/v1/query](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#instant-query) when displaying the requested data in JSON and table views. Previously the `time` query arg wasn't set, so `/api/v1/query` was always returning query results for the current time regardless of the selected time range. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/2781).
 - BUGFIX: [vmui](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#vmui): allow clicking on the suggestion from autocomplete list. See [this issue](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/2804).

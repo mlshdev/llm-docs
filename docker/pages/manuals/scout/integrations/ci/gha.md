@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/integrations/ci/gha.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/scout/integrations/ci/gha.md)
+> Pinned source for Docker main: [content/manuals/scout/integrations/ci/gha.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/scout/integrations/ci/gha.md)
 
 # Integrate Docker Scout with GitHub Actions
 

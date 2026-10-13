@@ -1,24 +1,25 @@
-# VictoriaMetrics v1.153.0
+# VictoriaMetrics v1.154.0
 
-> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) and pinned to immutable source commit `3acd30be3427c5a63aa75b498af929daf2633480`.
+> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) and pinned to immutable source commit `29c43cd2fee05409499a4d1b38e950e1b7f13bd4`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics v1.153.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics v1.154.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.
 - Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.
 - Hugo shortcodes are expanded to plain Markdown; presentation-only attribute lists are dropped.
+- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## VictoriaMetrics
 
-- [VictoriaMetrics](pages/victoriametrics/index.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (282128 bytes)
+- [VictoriaMetrics](pages/victoriametrics/index.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (283365 bytes)
 - [Quick start](pages/victoriametrics/Quick-Start.md): There are two ways to get started with VictoriaMetrics: (31599 bytes)
-- [Single-node version](pages/victoriametrics/Single-server-VictoriaMetrics.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (282128 bytes)
-- [Cluster version](pages/victoriametrics/Cluster-VictoriaMetrics.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (249010 bytes)
-- [vmagent](pages/victoriametrics/vmagent.md): vmagent is a tiny agent that helps you collect metrics from various sources, relabel and filter the collected metrics and store them in VictoriaMetrics or any other storage systems via the Prometheus remotewrite protoco… (199401 bytes)
-- [vmalert](pages/victoriametrics/vmalert.md): vmalert executes a list of the given alerting or recording rules against configured -datasource.url. For sending alerting notifications vmalert relies on Alertmanager configured via -notifier.url flag. Recording rules r… (148835 bytes)
-- [vmauth](pages/victoriametrics/vmauth.md): vmauth is an HTTP proxy, which can authorize, route, and load balance requests across VictoriaMetrics components or any other HTTP backends. (116841 bytes)
-- [vmbackup](pages/victoriametrics/vmbackup.md): vmbackup creates backups of VictoriaMetrics data to protect against hardware failures and accidental data loss. Whether you are using a single-node or a cluster version, it is recommended to use vmbackup to perform peri… (42264 bytes)
-- [vmrestore](pages/victoriametrics/vmrestore.md): vmrestore restores data from backups created by vmbackup. (24289 bytes)
+- [Single-node version](pages/victoriametrics/Single-server-VictoriaMetrics.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (283365 bytes)
+- [Cluster version](pages/victoriametrics/Cluster-VictoriaMetrics.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (259290 bytes)
+- [vmagent](pages/victoriametrics/vmagent.md): vmagent is a tiny agent that helps you collect metrics from various sources, relabel and filter the collected metrics and store them in VictoriaMetrics or any other storage systems via the Prometheus remotewrite protoco… (199841 bytes)
+- [vmalert](pages/victoriametrics/vmalert.md): vmalert executes a list of the given alerting or recording rules against configured -datasource.url. For sending alerting notifications vmalert relies on Alertmanager configured via -notifier.url flag. Recording rules r… (149220 bytes)
+- [vmauth](pages/victoriametrics/vmauth.md): vmauth is an HTTP proxy, which can authorize, route, and load balance requests across VictoriaMetrics components or any other HTTP backends. (120315 bytes)
+- [vmbackup](pages/victoriametrics/vmbackup.md): vmbackup creates backups of VictoriaMetrics data to protect against hardware failures and accidental data loss. Whether you are using a single-node or a cluster version, it is recommended to use vmbackup to perform peri… (42456 bytes)
+- [vmrestore](pages/victoriametrics/vmrestore.md): vmrestore restores data from backups created by vmbackup. (24481 bytes)
 - [vmctl](pages/victoriametrics/vmctl/index.md): VictoriaMetrics command-line tool (vmctl) provides the following migration modes: (19677 bytes)
 - [Prometheus](pages/victoriametrics/vmctl/prometheus.md): vmctl can migrate historical data from Prometheus to VictoriaMetrics by reading Prometheus snapshot. See ./vmctl prometheus --help for details and full list of flags. Also see Prometheus related articles. (11180 bytes)
 - [InfluxDB](pages/victoriametrics/vmctl/influxdb.md): vmctl can migrate historical data from InfluxDB (v1) to VictoriaMetrics. See ./vmctl influx --help for details and full list of flags. Also see migrating data from InfluxDB to VictoriaMetrics article. (13459 bytes)
@@ -30,10 +31,10 @@
 - [Mimir](pages/victoriametrics/vmctl/mimir.md): GrafanaLabs Mimir supports Prometheus remote read API. vmctl in remote-read mode can be used for historical data migration from Mimir. (15660 bytes)
 - [VictoriaMetrics](pages/victoriametrics/vmctl/victoriametrics.md): The simplest way to migrate data between VictoriaMetrics installations is to copy data between instances or to run single-node and cluster together. But when simple copy isn't possible (migration between single-node and… (20346 bytes)
 - [vmgateway](pages/victoriametrics/vmgateway.md): vmgateway is a part of enterprise package. It is available for download and evaluation at releases page. See how to request a free trial license. (40586 bytes)
-- [vmbackupmanager](pages/victoriametrics/vmbackupmanager.md): vmbackupmanager is a part of enterprise package. It is available for download and evaluation at releases page. See how to request a free trial license. (44707 bytes)
+- [vmbackupmanager](pages/victoriametrics/vmbackupmanager.md): vmbackupmanager is a part of enterprise package. It is available for download and evaluation at releases page. See how to request a free trial license. (44899 bytes)
 - [vmalert-tool](pages/victoriametrics/vmalert-tool.md): VMAlert command-line tool (13577 bytes)
 - [Integrations](pages/victoriametrics/integrations/index.md): VictoriaMetrics integrates with many popular monitoring solutions as remote storage or datasource: (1956 bytes)
-- [Grafana](pages/victoriametrics/integrations/grafana/index.md): VictoriaMetrics integrates with Grafana using either Prometheus datasource or VictoriaMetrics datasource plugins. (4405 bytes)
+- [Grafana](pages/victoriametrics/integrations/grafana/index.md): VictoriaMetrics integrates with Grafana using either Prometheus datasource or VictoriaMetrics datasource plugins. (4475 bytes)
 - [Prometheus](pages/victoriametrics/integrations/prometheus.md): VictoriaMetrics integrates with Prometheus as remote storage for writes. (3632 bytes)
 - [Graphite](pages/victoriametrics/integrations/graphite.md): VictoriaMetrics components like vmagent, vminsert or single-node can receive inserts from Graphite-compatible agents (such as StatsD). VictoriaMetrics single-node and vmselect support Graphite query language. It can be… (9269 bytes)
 - [Datadog](pages/victoriametrics/integrations/datadog.md): VictoriaMetrics components like vmagent, vminsert or single-node accepts data from DataDog agent, DogStatsD and DataDog Lambda Extension via "submit metrics" API at /datadog/api/v2/series or via "sketches" API at /datad… (5443 bytes)
@@ -54,28 +55,28 @@
 - [Telegraf](pages/victoriametrics/data-ingestion/Telegraf.md): This document covers various output configurations for Telegraf for shipping data via HTTP to VictoriaMetrics. All the options examples below can be combined to fit your use case. (3872 bytes)
 - [Proxmox](pages/victoriametrics/data-ingestion/Proxmox.md): Since Proxmox Virtual Environment(PVE) and Proxmox Backup Server(PBS) support sending data using the InfluxDB we can use the InfluxDB write support built into VictoriaMetrics. Currently, PVE and PBS only support using a… (3406 bytes)
 - [OpenTelemetry Collector](pages/victoriametrics/data-ingestion/OpenTelemetry-Collector.md): OpenTelemetry Collector is a vendor-agnostic agent for receiving, processing, and exporting telemetry data. VictoriaMetrics supports the OTLP metrics protocol natively, so the collector can push metrics directly using t… (1269 bytes)
-- [Best practices](pages/victoriametrics/BestPractices.md): It is recommended to run the latest available release of VictoriaMetrics from this page, since it contains all the bugfixes and enhancements. (5927 bytes)
+- [Best practices](pages/victoriametrics/BestPractices.md): It is recommended to run the latest available release of VictoriaMetrics from this page, since it contains all the bugfixes and enhancements. (5941 bytes)
 - [MetricsQL](pages/victoriametrics/MetricsQL.md): VictoriaMetrics implements MetricsQL - query language inspired by PromQL. MetricsQL is backwards-compatible with PromQL, so Grafana dashboards backed by Prometheus datasource should work the same after switching from Pr… (141014 bytes)
 - [FAQ](pages/victoriametrics/FAQ.md): To be the best tool for monitoring and observability. (54978 bytes)
 - [Case studies and talks](pages/victoriametrics/CaseStudies.md): Below please find public case studies and talks from VictoriaMetrics users. You can also join our community Slack channel where you can chat with VictoriaMetrics users to get additional references, reviews and case stud… (48329 bytes)
-- [Articles](pages/victoriametrics/Articles.md): See also case studies. (26580 bytes)
-- [API examples](pages/victoriametrics/url-examples.md): This page contains copy-paste examples for the most commonly used VictoriaMetrics APIs. (41604 bytes)
+- [Articles](pages/victoriametrics/Articles.md): See also case studies. (26707 bytes)
+- [API examples](pages/victoriametrics/url-examples.md): This page contains copy-paste examples for the most commonly used VictoriaMetrics APIs. (41620 bytes)
 - [Key concepts](pages/victoriametrics/keyConcepts/index.md): Simply put, metric is a numeric measure or observation of something. (52565 bytes)
 - [Troubleshooting](pages/victoriametrics/Troubleshooting.md): This document contains troubleshooting guides for the most common issues when working with VictoriaMetrics. (39399 bytes)
 - [Prometheus service discovery](pages/victoriametrics/sd_configs.md): vmagent and single-node VictoriaMetrics supports the following Prometheus-compatible service discovery options for Prometheus-compatible scrape targets in the file pointed by -promscrape.config command-line flag: (111629 bytes)
 - [Scrape config examples](pages/victoriametrics/scrape_config_examples.md): Let's start from a simple case with scraping targets at pre-defined addresses. Create a scrape.yaml file with the following contents: (18380 bytes)
-- [Relabeling cookbook](pages/victoriametrics/relabeling.md): The relabeling cookbook provides practical examples and patterns for transforming your metrics data as it flows through VictoriaMetrics, helping you control what gets collected and how it's labeled. (49345 bytes)
+- [Relabeling cookbook](pages/victoriametrics/relabeling.md): The relabeling cookbook provides practical examples and patterns for transforming your metrics data as it flows through VictoriaMetrics, helping you control what gets collected and how it's labeled. (49352 bytes)
 - [Streaming aggregation](pages/victoriametrics/stream-aggregation/index.md): vmagent and single-node VictoriaMetrics can aggregate incoming samples in streaming mode by time and by labels before data is written to remote storage (or local storage for single-node VictoriaMetrics). (58123 bytes)
 - [Configuration](pages/victoriametrics/stream-aggregation/configuration.md): Stream aggregation can be configured via the following command-line flags: (29395 bytes)
-- [Enterprise](pages/victoriametrics/enterprise.md): VictoriaMetrics, VictoriaLogs and VictoriaTraces components are provided in two kinds - Community edition and Enterprise edition. (20931 bytes)
+- [Enterprise](pages/victoriametrics/enterprise.md): VictoriaMetrics, VictoriaLogs and VictoriaTraces components are provided in two kinds - Community edition and Enterprise edition. (21106 bytes)
 - [Cluster Per Tenant Statistic](pages/victoriametrics/PerTenantStatistic.md): The per-tenant statistic is a part of enterprise package. It is available for download and evaluation at releases page. To get the license key you can request a free trial license. (5128 bytes)
 - [Query execution stats](pages/victoriametrics/query-stats.md): VictoriaMetrics Enterprise supports logging statistics (available from v1.116.0) for read queries made through the /api/v1/query and /api/v1/query\range APIs. (4962 bytes)
-- [CHANGELOG](pages/victoriametrics/changelog/index.md): The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs: (371191 bytes)
-- [Year 2026](pages/victoriametrics/changelog/CHANGELOG_2026.md): The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs: (371191 bytes)
-- [Year 2025](pages/victoriametrics/changelog/CHANGELOG_2025.md): Released at 2025-12-12 (341988 bytes)
-- [Year 2024](pages/victoriametrics/changelog/CHANGELOG_2024.md): Released at 2024-12-18 (290913 bytes)
-- [Year 2023](pages/victoriametrics/changelog/CHANGELOG_2023.md): Released at 2023-12-13 (235232 bytes)
-- [Year 2022](pages/victoriametrics/changelog/CHANGELOG_2022.md): Released at 2022-12-20 (208136 bytes)
+- [CHANGELOG](pages/victoriametrics/changelog/index.md): The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs: (399316 bytes)
+- [Year 2026](pages/victoriametrics/changelog/CHANGELOG_2026.md): The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs: (399316 bytes)
+- [Year 2025](pages/victoriametrics/changelog/CHANGELOG_2025.md): Released at 2025-12-12 (342073 bytes)
+- [Year 2024](pages/victoriametrics/changelog/CHANGELOG_2024.md): Released at 2024-12-18 (290963 bytes)
+- [Year 2023](pages/victoriametrics/changelog/CHANGELOG_2023.md): Released at 2023-12-13 (235212 bytes)
+- [Year 2022](pages/victoriametrics/changelog/CHANGELOG_2022.md): Released at 2022-12-20 (208169 bytes)
 - [Year 2021](pages/victoriametrics/changelog/CHANGELOG_2021.md): Released at 2021-12-20 (107222 bytes)
 - [Year 2020](pages/victoriametrics/changelog/CHANGELOG_2020.md): Released at 2020-12-27 (31009 bytes)
 - [Long-term support releases](pages/victoriametrics/LTS-releases.md): Enterprise version of VictoriaMetrics provides long-term support lines of releases (aka LTS releases). Every LTS line receives bugfixes and security fixes for 12 months after the initial release. New LTS lines are publi… (1672 bytes)
@@ -94,7 +95,7 @@
 - [Setup vmagent - Multi-Tenant remote write & OIDC](pages/guides/vmagent-openid-configuration/index.md): Using vmagent with vmauth and OAuth authentication (available from v1.138.0) enables secure metric ingestion in multi-tenant environments, where vmagent authenticates to vmauth using JWT tokens issued by an external ide… (10529 bytes)
 - [Setup vmauth - Multi-Tenant Access with Grafana & OIDC](pages/guides/grafana-vmauth-openid-configuration/index.md): Using Grafana with vmauth is an effective way to provide multi-tenant access to your metrics, logs, and traces. vmauth provides a way to authenticate users using JWT tokens (available from v1.138.0) issued by an externa… (19867 bytes)
 - [How to delete or replace metrics in VictoriaMetrics](pages/guides/guide-delete-or-replace-metrics/index.md): Data deletion in VictoriaMetrics should be used only in specific, one-off cases, such as correcting malformed data or satisfying GDPR requirements. VictoriaMetrics architecture is optimized for appending data, not delet… (17397 bytes)
-- [Migrate from InfluxDB to VictoriaMetrics](pages/guides/migrate-from-influx/index.md): InfluxDB is a well-known time series database built for IoT monitoring, Application Performance Monitoring (APM) and analytics. It has its query language, unique data model, and rich tooling for collecting and processin… (16484 bytes)
+- [Migrate from InfluxDB to VictoriaMetrics](pages/guides/migrate-from-influx/index.md): InfluxDB is a well-known time series database built for IoT monitoring, Application Performance Monitoring (APM) and analytics. It has its query language, unique data model, and rich tooling for collecting and processin… (16486 bytes)
 - [HA monitoring setup in Kubernetes via VictoriaMetrics Cluster](pages/guides/k8s-ha-monitoring-via-vm-cluster/index.md): This guide walks you through deploying a VictoriaMetrics cluster version on Kubernetes in high-availability mode. (17156 bytes)
 - [Understand Your Setup Size](pages/guides/understand-your-setup-size/index.md): This guide is based on capacity planning for Single-Node, Cluster and VictoriaMetrics Cloud docs. (10921 bytes)
 - [Multi Retention Setup within VictoriaMetrics Cluster](pages/guides/guide-vmcluster-multiple-retention-setup/index.md): This guide explains how to set up multiple retentions using an open-source VictoriaMetrics Cluster. (13633 bytes)
@@ -109,7 +110,7 @@
 
 - [Anomaly Detection](pages/anomaly-detection/index.md): In today's fast-paced and complex landscape of system monitoring, VictoriaMetrics Anomaly Detection (vmanomaly), a part of our Enterprise offering, serves as an observability layer for SREs and DevOps teams atop of coll… (12147 bytes)
 - [Quick Start](pages/anomaly-detection/QuickStart.md): For a broader overview please visit the navigation page. (29561 bytes)
-- [Presets](pages/anomaly-detection/Presets.md): Preset (available from vmanomaly v1.13.0) mode allows for simpler configuration and anomaly detection with vmanomaly on widely-recognized metrics, such as those generated by node\exporter, which are typically challengin… (27111 bytes)
+- [Presets](pages/anomaly-detection/Presets.md): Preset (available from vmanomaly v1.13.0) mode allows for simpler configuration and anomaly detection with vmanomaly on widely-recognized metrics, such as those generated by node\exporter, which are typically challengin… (27113 bytes)
 - [UI](pages/anomaly-detection/UI.md): (available from vmanomaly v1.26.0) vmanomaly includes a built-in vmui-like UI for exploring queries, comparing anomaly detection models, and tuning model or domain settings before production deployment. (69941 bytes)
 - [Components](pages/anomaly-detection/components/index.md): This chapter describes the configuration sections used to run VictoriaMetrics Anomaly Detection, or vmanomaly: (17140 bytes)
 - [Models](pages/anomaly-detection/components/models.md): This section covers the Models component of VictoriaMetrics Anomaly Detection (commonly referred to as vmanomaly) and provides a guide on how to configure the service. (117585 bytes)
@@ -133,11 +134,7 @@
 
 ## AI tools
 
-- [AI tools](pages/ai-tools/index.md): VictoriaMetrics Observability Stack integrates with AI assistants through MCP servers and agent skills. The integrations allow AI agents and automation tools to query Metrics, Logs, and Traces, analyze telemetry data, a… (7583 bytes)
-
-## Playgrounds
-
-- [Playgrounds](pages/playgrounds/index.md): VictoriaMetrics offers public playgrounds where you can try the full observability stack online. (10868 bytes)
+- [AI tools](pages/ai-tools/index.md): VictoriaMetrics Observability Stack integrates with AI assistants through MCP servers and agent skills. The integrations allow AI agents and automation tools to query Metrics, Logs, and Traces, analyze telemetry data, a… (7806 bytes)
 
 ## Contributing
 

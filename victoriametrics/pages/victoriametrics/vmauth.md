@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/vmauth.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmauth.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/vmauth.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmauth.md)
 
 `vmauth` is an HTTP proxy, which can [authorize](https://docs.victoriametrics.com/victoriametrics/vmauth/#authorization), [route](https://docs.victoriametrics.com/victoriametrics/vmauth/#routing), and [load balance](https://docs.victoriametrics.com/victoriametrics/vmauth/#load-balancing) requests across [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) components or any other HTTP backends.
 
@@ -698,6 +698,7 @@ The `sso` section fields:
 - `oidc.scopes` — the OAuth2 scopes. The `openid` scope is always included.
 - `oidc.session_duration` — this caps session cookie lifetime. Actual `MaxAge` = min(`session_duration`, token `exp`). Go duration syntax, e.g., `10m`, `1h`. Defaults to `10m`.
 - `oidc.default_redirect_url` — the redirect target after login if the original URL fails validation. Defaults to `/`.
+- `oidc.auth_params` - additional query parameters for the [authentication request](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest) sent to the IdP. See [SSO authentication request parameters](https://docs.victoriametrics.com/victoriametrics/vmauth/#sso-authentication-request-parameters).
 - `oidc.insecure` — disables `Secure` cookie flag and uses HTTP callback URIs. Used for local dev only; when `vmauth` runs behind a TLS-terminating proxy, keep this `false`.
 
 Register the following URL in your IdP as the Authorized redirect URI:
@@ -714,6 +715,82 @@ After login, the ID token works as a standard JWT — all [JWT claim matching](h
 If a user authenticates but no `users` entry matches their token claims, `vmauth` shows the login page with an "Access Denied" error message.
 
 By default, the cookie token is not proxied to backends. To forward the ID token as an `Authorization: Bearer` header, set `proxy_cookie_authorization_token: Authorization` in the `jwt` user config.
+
+#### SSO authentication request parameters
+
+The `oidc.auth_params` map adds provider-specific query parameters to the authentication request sent to the IdP,
+such as `prompt`, `login_hint` or the provider extensions listed below.
+Parameters set by `vmauth` (`response_type`, `client_id`, `redirect_uri`, `scope`, `nonce` and `state`) can't be overridden.
+
+These parameters are sent via the browser, so the user can modify or remove them. Use them to streamline the login page,
+not to restrict access. Restrict access with `match_claims` on claims of the signed ID token instead.
+
+[Google](https://developers.google.com/identity/openid-connect/openid-connect#authenticationuriparameters) - `hd` limits the account chooser
+to accounts of the given Google Workspace domain. The `hd` claim of the ID token contains the user's domain:
+
+```yaml
+sso:
+  - src_host: 'sso\.example\.com'
+    oidc:
+      issuer: 'https://accounts.google.com'
+      client_id: 'theClientID.apps.googleusercontent.com'
+      client_secret: 'theClientSecret'
+      scopes: ['openid', 'email']
+      cookie_secret: 'theCookieSecret1234567890'
+      auth_params:
+        hd: 'example.com'
+        prompt: 'select_account'
+
+users:
+  - jwt:
+      match_claims:
+        iss: 'https://accounts.google.com'
+        aud: 'theClientID.apps.googleusercontent.com'
+        hd: 'example.com'
+      oidc:
+        issuer: 'https://accounts.google.com'
+    url_prefix: "http://vmsingle:8428"
+```
+
+[Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc#send-the-sign-in-request) - `domain_hint` skips
+the email-based discovery on the sign-in page and redirects federated users to their home realm.
+Restrict sign-in to a single tenant by using the tenant-specific issuer, since `vmauth` verifies the `iss` claim:
+
+```yaml
+sso:
+  - src_host: 'sso\.example\.com'
+    oidc:
+      issuer: 'https://login.microsoftonline.com/<tenant-id>/v2.0'
+      # ...
+      auth_params:
+        domain_hint: 'example.com'
+```
+
+[Keycloak](https://www.keycloak.org/docs/latest/server_admin/index.html) - `kc_idp_hint` skips the Keycloak login page
+and redirects the user to the identity provider with the given alias:
+
+```yaml
+sso:
+  - src_host: 'sso\.example\.com'
+    oidc:
+      issuer: 'https://keycloak.example.com/realms/master'
+      # ...
+      auth_params:
+        kc_idp_hint: 'github'
+```
+
+[Auth0](https://auth0.com/docs/api/authentication/authorization-code-flow/authorize-application) - `connection` sends the user directly
+to the given connection, and `organization` selects the organization to log in to:
+
+```yaml
+sso:
+  - src_host: 'sso\.example\.com'
+    oidc:
+      issuer: 'https://example.auth0.com/'
+      # ...
+      auth_params:
+        connection: 'google-oauth2'
+```
 
 See also [authorization](#authorization), [security](#security), [routing](#routing) and [load balancing](#load-balancing) docs.
 
@@ -1871,12 +1948,14 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmauth/ .
      Auth key for /flags endpoint. It must be passed via authKey query arg. It overrides -httpAuth.*
      Flag value can be read from the given file when using -flagsAuthKey=file:///abs/path/to/file or -flagsAuthKey=file://./relative/path/to/file.
      Flag value can be read from the given http/https url when using -flagsAuthKey=http://host/path or -flagsAuthKey=https://host/path
+  -fs.disableAdviseRandomRead
+     Whether to disable FADV_RANDOM and MADV_RANDOM hints for data part files. Typical queries with selectors access data part files at random offsets, so FADV_RANDOM is enforced to reduce excessive disk readahead.Use this flag if your query read pattern benefits from sequential read (e.g. query by metric name without selectors) to prefer FADV_NORMAL. (default true)
   -fs.disableMincore
      Whether to disable the mincore() syscall for checking mmap()ed files. By default, mincore() is used to detect whether mmap()ed file pages are resident in memory. Disabling mincore() may be needed on older ZFS filesystems (below 2.1.5), since it may trigger ZFS bug. See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/10327 for details.
   -fs.disableMmap
      Whether to use pread() instead of mmap() for reading data files. By default, mmap() is used for 64-bit arches and pread() is used for 32-bit arches, since they cannot read data files bigger than 2^32 bytes in memory. mmap() is usually faster for reading small data chunks than pread()
   -fs.maxConcurrency int
-     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default fsutil.getDefaultConcurrency())
+     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default 16x CPU cores, capped at 256)
   -http.connTimeout duration
      Incoming connections to -httpListenAddr are closed after the configured timeout. This may help evenly spreading load among a cluster of services behind TCP-level load balancer. Zero value disables closing of incoming connections (default 2m0s)
   -http.disableCORS

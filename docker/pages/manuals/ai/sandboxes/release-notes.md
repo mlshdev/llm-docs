@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/release-notes.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/ai/sandboxes/release-notes.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/release-notes.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/release-notes.md)
 
 # Docker Sandboxes release notes
 
@@ -150,7 +150,7 @@ V2 kits remain supported for built-in agents and existing customizations. V3 wor
 
 #### Run agents in cloud sandboxes
 
-Run AI agents on Docker-managed cloud infrastructure with `sbx --cloud`. Cloud support is experimental and requires an active Docker Agentic Platform subscription. See [Get started with cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/).
+Run AI agents on Docker-managed cloud infrastructure with `sbx --cloud`. Cloud support requires an active Docker Agentic Platform subscription. See [Get started with cloud sandboxes](https://docs.docker.com/ai/sandboxes/cloud/).
 
 ### What's new
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/integrations/graphite.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/integrations/graphite.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/integrations/graphite.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/integrations/graphite.md)
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive inserts from Graphite-compatible agents (such as [StatsD](https://github.com/etsy/statsd)).
 VictoriaMetrics **single-node** and **vmselect** support Graphite query language. It can be integrated with Grafana via [Graphite datasource](https://grafana.com/docs/grafana/latest/datasources/graphite/).

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/scout/docker_scout_recommendations.yaml](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/data/cli/scout/docker_scout_recommendations.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_recommendations.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/cli/scout/docker_scout_recommendations.yaml)
 
 # docker scout recommendations
 

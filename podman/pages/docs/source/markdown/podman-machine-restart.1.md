@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.3: [docs/source/markdown/podman-machine-restart.1.md](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-machine-restart.1.md)
+> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-machine-restart.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-restart.1.md)
 
 # podman-machine-restart
 
@@ -46,7 +46,7 @@ $ podman machine restart myvm
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-machine.1.md)**, **[podman-machine-start(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-machine-start.1.md.in)**, **[podman-machine-stop(1)](https://github.com/podman-container-tools/podman/blob/85b994955e0b4e30fbce9c8351cab85676140ede/docs/source/markdown/podman-machine-stop.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine.1.md)**, **[podman-machine-start(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-start.1.md.in)**, **[podman-machine-stop(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-stop.1.md)**
 
 ## HISTORY
 

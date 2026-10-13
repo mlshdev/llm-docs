@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/Quick-Start.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/Quick-Start.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/Quick-Start.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/Quick-Start.md)
 
 There are two ways to get started with VictoriaMetrics:
 
@@ -39,8 +39,8 @@ and unpack it. It contains a single `victoria-metrics-prod` binary.
 For example, on Linux with `amd64` architecture:
 
 ```sh
-wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.152.0/victoria-metrics-linux-amd64-v1.152.0.tar.gz
-tar xzf victoria-metrics-linux-amd64-v1.152.0.tar.gz
+wget https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.153.0/victoria-metrics-linux-amd64-v1.153.0.tar.gz
+tar xzf victoria-metrics-linux-amd64-v1.153.0.tar.gz
 ```
 
 The binary is self-contained and requires no installation - it is ready to run as is.
@@ -76,7 +76,7 @@ Now that metrics are being collected, it's time to look at them.
 Open <http://localhost:8428/vmui> in your browser to access [vmui](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#vmui) -
 the built-in UI for querying and graphing metrics. You should see its query page:
 
-![vmui query page](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/quick-start-vmui.webp)
+![vmui query page](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/quick-start-vmui.webp)
 
 Self-scraped metrics become queryable within \~30 seconds after the start.
 
@@ -215,9 +215,9 @@ Download the newest available [VictoriaMetrics release](https://docs.victoriamet
 from [DockerHub](https://hub.docker.com/r/victoriametrics/victoria-metrics) or [Quay](https://quay.io/repository/victoriametrics/victoria-metrics?tab=tags):
 
 ```sh
-docker pull victoriametrics/victoria-metrics:v1.152.0
+docker pull victoriametrics/victoria-metrics:v1.153.0
 docker run -it --rm -v `pwd`/victoria-metrics-data:/victoria-metrics-data -p 8428:8428 \
- victoriametrics/victoria-metrics:v1.152.0 --selfScrapeInterval=5s -storageDataPath=victoria-metrics-data
+ victoriametrics/victoria-metrics:v1.153.0 --selfScrapeInterval=5s -storageDataPath=victoria-metrics-data
 ```
 
 *For Enterprise images, see [this link](https://docs.victoriametrics.com/victoriametrics/enterprise/#docker-images).*

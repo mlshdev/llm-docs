@@ -1,10 +1,19 @@
-> Pinned source for Docker main: [content/manuals/dhi/release-notes/platform.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/dhi/release-notes/platform.md)
+> Pinned source for Docker main: [content/manuals/dhi/release-notes/platform.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/dhi/release-notes/platform.md)
 
 # Docker Hardened Images release notes
 
 This page contains information about the new features, improvements, and changes
 in the Docker Hardened Images (DHI) platform. Release notes are aggregated by
 quarter and include only notable product changes.
+
+## Q4 2026
+
+New features and enhancements released in the fourth quarter of 2026.
+
+- EU data residency (early access): Docker can provision your DHI
+  subscription in the EU region. When your subscription is in the EU region,
+  Docker stores your mirrored and customized images in the EU. For more
+  information, see [EU data residency](https://docs.docker.com/dhi/explore/eu-region/).
 
 ## Q3 2026
 

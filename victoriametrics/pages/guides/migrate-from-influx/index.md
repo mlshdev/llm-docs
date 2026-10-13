@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/guides/migrate-from-influx/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/guides/migrate-from-influx/_index.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/guides/migrate-from-influx/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/migrate-from-influx/_index.md)
 
 InfluxDB is a well-known time series database built for
 [IoT](https://en.wikipedia.org/wiki/Internet_of_things) monitoring, Application Performance Monitoring (APM) and
@@ -119,7 +119,7 @@ VictoriaMetrics does not have a command-line interface (CLI). Instead, it provid
 [VMUI](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#vmui) - a graphical User Interface for
 querying and visualizing metrics:
 
-![Migrate from Influx](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/guides/migrate-from-influx/vmui.webp)
+![Migrate from Influx](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/migrate-from-influx/vmui.webp)
 
 VictoriaMetrics can be configured as [Grafana datasource](https://docs.victoriametrics.com/victoriametrics/integrations/grafana/).
 See more about [how to query data in VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#query-data).
@@ -147,7 +147,7 @@ foo,instance=localhost bar=4.00 1652170560000000000
 This data sample consists of data points for a measurement `foo` and a field `bar` with additional
 tag `instance=localhost`. If we would like plot this data as a time series in Grafana it might have the following look:
 
-![Data sample in Influx](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/guides/migrate-from-influx/data-sample-in-influx.webp)
+![Data sample in Influx](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/migrate-from-influx/data-sample-in-influx.webp)
 
 The query used for this panel is written in [InfluxQL](https://docs.influxdata.com/influxdb/v1.8/query_language/):
 
@@ -180,7 +180,7 @@ to [MetricsQL](https://docs.victoriametrics.com/victoriametrics/metricsql/) let'
 In result, the MetricsQL expression will have the following form: `foo_bar{instance="localhost"}`.
 See its result executed with `step=1m` for the same set of data in Grafana below:
 
-![Data sample in VM](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/guides/migrate-from-influx/data-sample-in-vm.webp)
+![Data sample in VM](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/migrate-from-influx/data-sample-in-vm.webp)
 
 Visualizations from both databases are a bit different - VictoriaMetrics shows some extra points filling the gaps in the graph.
 This behavior is described in more detail [here](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#range-query).
@@ -224,9 +224,9 @@ Please note, data migration is a backfilling process, so read about [backfilling
 ## Frequently asked questions
 
 - How does VictoriaMetrics compare to InfluxDB?
-  - *[VictoriaMetrics is way more resource efficient](https://docs.victoriametrics.com/victoriametrics/faq/#how-does-victoriametrics-compare-to-influxdb).*
+  - *[VictoriaMetrics is way more resource efficient](https://docs.victoriametrics.com/victoriametrics/faq/#how-does-victoriametrics-compare-to-influxdb-).*
 - Why don't VictoriaMetrics support Remote Read API, so I don't need to learn MetricsQL?
-  - *[Remote Read API has very high performance overhead](https://docs.victoriametrics.com/victoriametrics/faq/#why-doesnrsquot-victoriametrics-support-the-prometheus-remote-read-api).*
+  - *[Remote Read API has very high performance overhead](https://docs.victoriametrics.com/victoriametrics/faq/#why-doesnrsquot-victoriametrics-support-the-prometheus-remote-read-api-).*
 - PromQL and MetricsQL are often mentioned together - why is that?
   - *MetricsQL - query language inspired by PromQL. MetricsQL is backward-compatible with PromQL, so Grafana
     dashboards backed by Prometheus datasource should work the same after switching from Prometheus to

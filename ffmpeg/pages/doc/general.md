@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/538d10d1878fb546c3a2645efa56119848f9ccfc/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/doc/general.texi)
 
 # External libraries
 
@@ -323,6 +323,14 @@ FFmpeg can make use of the Fraunhofer AAC library for AAC decoding & encoding.
 Go to <http://sourceforge.net/projects/opencore-amr/> and follow the
 instructions for installing the library.
 Then pass `--enable-libfdk-aac` to configure to enable it.
+
+### Fraunhofer xHE-AAC library
+
+FFmpeg can make use of the Fraunhofer xHE-AAC library for xHE-AAC encoding.
+
+Go to <http://sourceforge.net/projects/opencore-amr/> and follow the
+instructions for installing the library.
+Then pass `--enable-libfdk-xhe-aac` to configure to enable it.
 
 ### Fraunhofer MPEG-H 3D Audio decoder library
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/mcp/docker_mcp_tools_count.yaml](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/data/cli/mcp/docker_mcp_tools_count.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_tools_count.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/cli/mcp/docker_mcp_tools_count.yaml)
 
 # docker mcp tools count
 

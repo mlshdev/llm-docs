@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/admin-set-up.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/guides/admin-set-up.md)
+> Pinned source for Docker main: [content/guides/admin-set-up.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/guides/admin-set-up.md)
 
 # Set up your company for success with Docker
 

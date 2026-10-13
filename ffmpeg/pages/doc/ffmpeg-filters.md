@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/538d10d1878fb546c3a2645efa56119848f9ccfc/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -10845,13 +10845,13 @@ It accepts the following parameters:
 
 - w, out\_w
   The width of the output video. It defaults to `iw`.
-  This expression is evaluated only once during the filter
-  configuration, or when the `w` or `out_w` command is sent.
+  This expression is evaluated during the filter configuration, when the
+  `w` or `out_w` command is sent, or when the input frame size changes.
 
 - h, out\_h
   The height of the output video. It defaults to `ih`.
-  This expression is evaluated only once during the filter
-  configuration, or when the `h` or `out_h` command is sent.
+  This expression is evaluated during the filter configuration, when the
+  `h` or `out_h` command is sent, or when the input frame size changes.
 
 - x
   The horizontal position, in the input video, of the left edge of the output

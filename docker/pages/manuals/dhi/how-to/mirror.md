@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/how-to/mirror.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/dhi/how-to/mirror.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/mirror.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/dhi/how-to/mirror.md)
 
 **Docker Hardened Images requirements**
 
@@ -164,6 +164,14 @@ prefixed by `dhi-`, and continues to receive updated images. It behaves like any
 other Docker Hub repository, so you can manage access and permissions, configure
 webhooks, and use other standard Hub features. See [Docker Hub
 repositories](https://docs.docker.com/docker-hub/repos/) for details.
+
+### Mirrors in the EU region
+
+If your organization's DHI subscription is in the EU region, Docker creates
+your mirrored repositories on Docker Hub in the EU. Mirrors created before your
+subscription moved to the EU region stay in their original region. For
+details, including how to get a subscription in the EU region, see [EU data
+residency](https://docs.docker.com/dhi/explore/eu-region/).
 
 ### Stop mirroring a repository
 

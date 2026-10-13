@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/vmbackupmanager.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmbackupmanager.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/vmbackupmanager.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmbackupmanager.md)
 
 ## vmbackupmanager
 
@@ -109,11 +109,11 @@ The result on the GCS bucket
 
 - The root folder
 
-![root folder](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmbackupmanager_root_folder.webp)
+![root folder](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmbackupmanager_root_folder.webp)
 
 - The latest folder
 
-![latest folder](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmbackupmanager_latest_folder.webp)
+![latest folder](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmbackupmanager_latest_folder.webp)
 
 `vmbackupmanager` uses [smart backups](https://docs.victoriametrics.com/victoriametrics/vmbackup/#smart-backups) technique in order
 to accelerate backups and save both data transfer costs and data copying costs. This includes server-side copy of already existing
@@ -140,7 +140,7 @@ Backup retention policy is controlled by:
 
 Let’s assume we have a backup manager collecting daily backups for the past 10 days.
 
-![retention policy daily before retention cycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmbackupmanager_rp_daily_1.webp)
+![retention policy daily before retention cycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmbackupmanager_rp_daily_1.webp)
 
 We enable backup retention policy for backup manager by using following configuration:
 
@@ -165,7 +165,7 @@ info    app/vmbackupmanager/retention.go:106    daily backups to delete [daily/2
 
 The result on the GCS bucket. We see only 3 daily backups:
 
-![retention policy daily after retention cycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/vmbackupmanager_rp_daily_2.webp "retention policy daily after retention cycle")
+![retention policy daily after retention cycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmbackupmanager_rp_daily_2.webp "retention policy daily after retention cycle")
 
 #### Retention by using object storage lifecycle rules
 
@@ -674,6 +674,8 @@ command-line flags:
      S3 tags to be set for uploaded objects. Must be set in JSON format: {"param1":"value1",...,"paramN":"valueN"}.
   -s3SSEKMSKeyId string
      SSE KMS Key ID for use with S3-compatible storages.
+  -s3SkipTaggingDirective
+     Whether to skip the x-amz-tagging-directive and x-amz-tagging headers when copying objects. Enable it only for S3-compatible storage that rejects these headers.
   -s3StorageClass string
      The Storage Class applied to objects uploaded to AWS S3. Supported values are: GLACIER, DEEP_ARCHIVE, GLACIER_IR, INTELLIGENT_TIERING, ONEZONE_IA, OUTPOSTS, REDUCED_REDUNDANCY, STANDARD, STANDARD_IA.
      See https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html

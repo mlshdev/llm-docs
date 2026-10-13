@@ -1,10 +1,6 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/concepts.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/ai/sandboxes-api/concepts.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/concepts.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes-api/concepts.md)
 
 # Docker Sandboxes API concepts
-
-> \[!NOTE]
-> The Docker Sandboxes API and SDK are experimental. Features, interfaces,
-> and behavior may change.
 
 An application uses the Docker Sandboxes API to create sandboxes, connect to
 them, and track their state. Choose the environment for your sandbox, then

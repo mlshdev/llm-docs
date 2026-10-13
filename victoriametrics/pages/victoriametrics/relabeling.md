@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/relabeling.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/relabeling.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/relabeling.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/relabeling.md)
 
 The relabeling cookbook provides practical examples and patterns for
 transforming your metrics data as it flows through VictoriaMetrics, helping you
@@ -1051,7 +1051,7 @@ section instead of `relabel_configs` section. They serve different purposes:
   targets and removed after relabeling:
   - Meta-labels starting with the `__meta_` prefix. The specific sets of labels
     for each supported service discovery option are listed in
-    [Prometheus Service Discovery](https://docs.victoriametrics.com/victoriametrics/sd_configs/#prometheus-service-discovery).
+    [Prometheus Service Discovery](https://docs.victoriametrics.com/victoriametrics/sd_configs/#supported-service-discovery-configs).
   - Additional labels with the `__` prefix other than `__meta_` labels, such as
     [`__scheme__` or `__address__`](#how-to-modify-scrape-urls-in-targets). It
     is common practice to store temporary labels with names starting with `__`

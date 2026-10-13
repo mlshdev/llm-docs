@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/538d10d1878fb546c3a2645efa56119848f9ccfc/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -2531,6 +2531,43 @@ High-Efficiency AAC profile:
 ```text
 ffmpeg -i input.wav -c:a libfdk_aac -profile:a aac_he -b:a 64k output.m4a
 ```
+
+## libfdk-xhe-aac
+
+libfdk-xhe-aac (Extended High-Efficiency Advanced Audio Coding) encoder wrapper.
+
+The libfdk-xhe-aac library is based on the Fraunhofer FDK Extended High
+Efficiency AAC Encoder Software code from the Android project.
+
+Requires the presence of the libfdk-xhe-aac headers and library during
+configuration. You need to explicitly configure the build with
+`--enable-libfdk-xhe-aac`. The library is also incompatible with GPL,
+so if you allow the use of GPL, you should configure with
+`--enable-gpl --enable-nonfree --enable-libfdk-xhe-aac`.
+
+### Options
+
+The following are private options of the libfdk\_xhe\_aac encoder.
+
+- vbr
+  Set VBR mode, from 0 to 6. 0 is lowest quality and 6 is highest quality.
+  A value of -1 will disable VBR, and CBR (Constant Bit Rate) is enabled.
+
+If not set, the default is CBR.
+
+- live\_loudness\_level
+  Set the expected loudness level of the stream, between -31 and -10
+  dB LUFS. Defaults to -24 dB LUFS if not set.
+
+- rap\_length
+  The duration between encoded Random Access Points in the bitstream.
+
+- stream\_id
+  A unique ID of the encoded stream within an adaptation set. The ID
+  is embedded into the encoded bitstream.
+
+If not set, the encoder tries to generate a hopefully unique ID for
+the stream.
 
 <a id="liblc3-enc"></a>
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/ai-tools/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/ai-tools/_index.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/ai-tools/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/ai-tools/_index.md)
 
 VictoriaMetrics Observability Stack integrates with AI assistants through [MCP servers](https://docs.victoriametrics.com/ai-tools/#mcp-servers)
 and [agent skills](https://docs.victoriametrics.com/ai-tools/#agent-skills).
@@ -104,12 +104,15 @@ These skills provide predefined workflows and capabilities such as:
 - Build validated `vmanomaly` configurations from measured time-series characteristics (e.g., seasonality, changepoints, trends)
 - Query and operate the `vmanomaly` API
 - Review existing anomaly detection configurations against real data and identify false-positive or model-data fit issues
+- Look up command-line flags, HTTP API paths and LogsQL/MetricsQL constructs in the documentation
 
 To install the available skills for AI agents, run:
 
 ```sh
 npx skills add VictoriaMetrics/skills
 ```
+
+To install a single skill, pass its name, for example `npx skills add VictoriaMetrics/skills --skill victoriametrics-docs`.
 
 See more details at [VictoriaMetrics/skills](https://github.com/VictoriaMetrics/skills).
 

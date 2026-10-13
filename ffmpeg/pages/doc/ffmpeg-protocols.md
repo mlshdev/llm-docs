@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/538d10d1878fb546c3a2645efa56119848f9ccfc/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -414,6 +414,39 @@ Gophers protocol.
 
 The Gopher protocol with TLS encapsulation.
 
+## handle
+
+Windows handle access protocol.
+
+The accepted syntax is:
+
+```text
+handle: -handle *handle*
+```
+
+If `handle` is not specified, by default the output handle will be
+used for writing, input handle for reading. This protocol is only available
+on Windows. It has seek support if the handle corresponds to a regular file.
+It doesn't support passing the handle via URL.
+
+This protocol accepts the following options:
+
+- blocksize
+  Set I/O operation maximum block size, in bytes. Default value is
+  `INT_MAX`, which results in not limiting the requested block size.
+  Setting this value reasonably low improves user termination request reaction
+  time, which is valuable if data transmission is slow.
+
+- handle
+  Set Windows handle.
+
+The supplied handle must already be valid in the calling process.
+When launching `ffmpeg`, arrange for the child process to
+inherit the handle before passing its numeric value with
+`handle`. Handles opened with `FILE_FLAG_OVERLAPPED`
+are not supported. Closing the protocol does not close the
+caller's original handle.
+
 ## http
 
 HTTP (Hyper Text Transfer Protocol).
@@ -557,6 +590,10 @@ autodetection in the future.
 - reconnect\_at\_eof
   If set then eof is treated like an error and causes reconnection, this is useful
   for live / endless streams.
+  This does not apply to the deliberately established end of a resource whose
+  complete size is unknown, i.e. when a ranged request past the end is answered
+  with `416`. Such an end is reported as a clean EOF and is not retried,
+  unless `reconnect_on_http_error` lists 416 by number.
 
 - reconnect\_on\_network\_error
   Reconnect automatically in case of TCP/TLS errors during connect.
@@ -564,6 +601,10 @@ autodetection in the future.
 - reconnect\_on\_http\_error
   A comma separated list of HTTP status codes to reconnect on. The list can
   include specific status codes (e.g. '503') or the strings '4xx' / '5xx'.
+  A `416` that ends a read or a seek past the end of a resource whose
+  complete size is unknown is reported as EOF. It is retried first only if 416
+  is listed by number, for example to read a resource that is still being
+  written. '4xx' does not cover it.
 
 - reconnect\_streamed
   If set then even streamed/non seekable streams will be reconnected on errors.

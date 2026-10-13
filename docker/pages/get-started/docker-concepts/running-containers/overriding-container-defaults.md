@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/docker-concepts/running-containers/overriding-container-defaults.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/get-started/docker-concepts/running-containers/overriding-container-defaults.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/running-containers/overriding-container-defaults.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/get-started/docker-concepts/running-containers/overriding-container-defaults.md)
 
 # Overriding container defaults
 
@@ -87,7 +87,7 @@ In this hands-on guide, you'll see how to use the `docker run` command to overri
 
 3. Verify that both containers are running by going to the **Containers** view in the Docker Desktop Dashboard.
 
-![A screenshot of the Docker Desktop Dashboard showing the running instances of Postgres containers](https://raw.githubusercontent.com/docker/docs/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/get-started/docker-concepts/running-containers/images/running-postgres-containers.webp?border=true)
+![A screenshot of the Docker Desktop Dashboard showing the running instances of Postgres containers](https://raw.githubusercontent.com/docker/docs/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/get-started/docker-concepts/running-containers/images/running-postgres-containers.webp?border=true)
 
 ### Run Postgres container in a controlled network
 
@@ -170,7 +170,7 @@ Sometimes, you might need to override the default commands (`CMD`) or entry poin
    # psql -U postgres
    ```
 
-![A screenshot of the Docker Desktop Dashboard selecting the Postgres container and entering into its shell using EXEC button](https://raw.githubusercontent.com/docker/docs/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/get-started/docker-concepts/running-containers/images/exec-into-postgres-container.webp?border=true)
+![A screenshot of the Docker Desktop Dashboard selecting the Postgres container and entering into its shell using EXEC button](https://raw.githubusercontent.com/docker/docs/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/get-started/docker-concepts/running-containers/images/exec-into-postgres-container.webp?border=true)
 
 ```
 > [!NOTE]

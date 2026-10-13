@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/dhi.md](https://github.com/docker/docs/blob/18bbfeeb249da011f359d558dba84c4b6dc3a335/content/manuals/subscription-billing/plans/dhi.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/dhi.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/subscription-billing/plans/dhi.md)
 
 # DHI plans
 
@@ -19,6 +19,10 @@ When you upgrade from DHI Community to DHI Select, you purchase a set number of 
 DHI Enterprise extends DHI Select with unlimited customizations, optional full catalog access, the Hardened System Packages repository, and an Extended Lifecycle Support add-on.
 
 For details on setting up and managing repositories, see [Get started with DHI Select and Enterprise](https://docs.docker.com/dhi/how-to/select-enterprise/).
+
+> \[!TIP]
+>
+> EU data residency is in early access. Docker can provision your organization's DHI subscription in the EU region. To request it, contact your Docker account representative or <a id="dkr_docs_cs_plans_dhi_eu_region"></a>Docker sales. For details, see [EU data residency for Docker Hardened Images](https://docs.docker.com/dhi/explore/eu-region/).
 
 ## Billing cycle
 

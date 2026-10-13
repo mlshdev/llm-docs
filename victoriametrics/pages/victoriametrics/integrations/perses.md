@@ -1,8 +1,8 @@
-> Pinned source for VictoriaMetrics v1.153.0: [docs/victoriametrics/integrations/perses.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/integrations/perses.md)
+> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/integrations/perses.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/integrations/perses.md)
 
 VictoriaMetrics integrates with [Perses](https://perses.dev/) via [Prometheus plugins](https://perses.dev/plugins/docs/prometheus/).
 
-![Overview VictoriaMetrics Perses integration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/integrations/perses-overview.webp)
+![Overview VictoriaMetrics Perses integration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/integrations/perses-overview.webp)
 
 # Plugins setup
 
@@ -13,7 +13,7 @@ VictoriaMetrics integrates with [Perses](https://perses.dev/) via [Prometheus pl
 - Choose `Proxy` or `Direct access` depending on the [public availability](https://perses.dev/perses/docs/concepts/proxy/) of your VictoriaMetrics instance.
 - Click `Save` to submit.
 
-![Prometheus datasource plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/integrations/perses-datasource.webp)
+![Prometheus datasource plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/integrations/perses-datasource.webp)
 
 ## Variables plugin
 
@@ -25,7 +25,7 @@ VictoriaMetrics integrates with [Perses](https://perses.dev/) via [Prometheus pl
 - Type the name of a label in `Label Name` field.
 - Click `Save` to submit.
 
-![Prometheus variables plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/integrations/perses-variable.webp)
+![Prometheus variables plugin configuration](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/integrations/perses-variable.webp)
 
 # Create panels
 
@@ -40,4 +40,4 @@ VictoriaMetrics integrates with [Perses](https://perses.dev/) via [Prometheus pl
   It may reference a variable defined in variables plugin section using `${var-name}` expression or with specific formats like `${var:pipe}` for regex filters or `${var:csv}` for comma-separated values.
 - Click `Add` to save a panel.
 
-![Build Time Series panel using Prometheus plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3acd30be3427c5a63aa75b498af929daf2633480/docs/victoriametrics/integrations/perses-time-panel.webp)
+![Build Time Series panel using Prometheus plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/integrations/perses-time-panel.webp)
