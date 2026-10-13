@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_prune.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_prune.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_prune.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_prune.yaml)
 
 # sbx prune
 
@@ -22,7 +22,7 @@ A sandbox whose stop time the daemon cannot report is left alone, since how long
 it has been stopped cannot be established.
 
 Use --dry-run to list what would be removed without removing anything, and
-\--json with it for machine-readable output.
+\--format json or --format yaml with it for machine-readable output.
 
 Pruning requires confirmation; use --force to skip the confirmation prompt
 (for non-interactive scripts) and to remove a sandbox that is in use (e.g. an
@@ -39,7 +39,8 @@ Local-only: cloud sandboxes expire via their TTL.
 | `--dry-run`     |         | List the sandboxes that would be removed without removing them                    |
 | `--filter`      |         | Filter candidates (supported: until=TIMESTAMP — stopped before TIMESTAMP)         |
 | `-f`, `--force` |         | Skip confirmation prompts and remove even if in use (e.g. an open SSH connection) |
-| `--json`        |         | Output the --dry-run listing in JSON format                                       |
+| `--format`      |         | Output format: table, json or yaml                                                |
+| `--json`        |         | Output in JSON format                                                             |
 
 ## Global options
 
@@ -47,3 +48,16 @@ Local-only: cloud sandboxes expire via their TTL.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+
+## Examples
+
+```console
+# Show what would be removed
+  sbx prune --dry-run
+
+  # Remove without asking
+  sbx prune --force
+
+  # Only sandboxes stopped before a point in time
+  sbx prune --filter until=2026-01-01T00:00:00Z
+```

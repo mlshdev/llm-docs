@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth_rm.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_mcp_auth_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth_rm.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_mcp_auth_rm.yaml)
 
 # sbx mcp auth rm
 
 Remove MCP server OAuth credentials
 
-**Usage:** `sbx mcp auth rm [server-name] [flags]`
+**Usage:** `sbx mcp auth rm [SERVER] [flags]`
 
 ## Description
 
@@ -15,12 +15,12 @@ to remove a registration.
 
 ## Options
 
-| Option          | Default | Description                                     |
-| --------------- | ------- | ----------------------------------------------- |
-| `--all`         |         | Apply to all registered OAuth servers           |
-| `-f`, `--force` |         | Skip confirmation prompts                       |
-| `--format`      | `text`  | Output format: "text" or "json"                 |
-| `--json`        |         | Output in JSON format (alias for --format json) |
+| Option          | Default | Description                           |
+| --------------- | ------- | ------------------------------------- |
+| `--all`         |         | Apply to all registered OAuth servers |
+| `-f`, `--force` |         | Skip confirmation prompts             |
+| `--format`      | `text`  | Output format: "text" or "json"       |
+| `--json`        |         | Output in JSON format                 |
 
 ## Global options
 

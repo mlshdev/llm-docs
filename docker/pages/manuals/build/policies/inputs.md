@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/inputs.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/build/policies/inputs.md)
+> Pinned source for Docker main: [content/manuals/build/policies/inputs.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/build/policies/inputs.md)
 
 When Buildx evaluates policies, it provides information about build inputs
 through the `input` object. The structure of `input` depends on the type of
@@ -13,6 +13,7 @@ Build inputs correspond to Dockerfile instructions:
 | `FROM alpine:latest`                    | Image      | `input.image`  |
 | `COPY --from=builder /app /app`         | Image      | `input.image`  |
 | `ADD https://example.com/file.tar.gz /` | HTTP       | `input.http`   |
+| `RUN curl https://example.com/`         | HTTP       | `input.http`   |
 | `ADD git@github.com:user/repo.git /src` | Git        | `input.git`    |
 | Build context (`.`)                     | Local      | `input.local`  |
 
@@ -21,7 +22,8 @@ Each input type has specific fields available for policy evaluation.
 ## HTTP inputs
 
 HTTP inputs represent files downloaded over HTTP or HTTPS using the `ADD`
-instruction.
+instruction, or requests from `RUN` instructions when BuildKit's proxy is
+enabled. See [Block URLs in build steps](https://docs.docker.com/build/policies/usage/#block-urls-in-build-steps).
 
 ### Example Dockerfile
 

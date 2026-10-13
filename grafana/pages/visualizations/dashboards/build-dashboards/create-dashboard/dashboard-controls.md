@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls.md)
 
 # Dashboard controls
 
@@ -70,7 +70,7 @@ To add filters and group by controls, follow these steps:
    - **Controls menu**: The filter is displayed in the dashboard controls menu instead of above the dashboard. The dashboard controls menu appears as a button in the dashboard toolbar.
    - **Hidden**: No filter drop-down list is displayed on the dashboard.
 
-9. Under the **Filter options** section of the page, set the following options:
+9. Under the **Filter options** section of the sidebar, set the following options:
 
    | Option                    | Description                                                                                                                                                                                                                                                                                                                          |
    | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -104,7 +104,7 @@ The overview lets you search for specific keys, and adjust them, without scrolli
 
 ![Dashboard with the filters and group by dimensions](https://grafana.com/media/docs/grafana/screenshot-filters-overview-v12.0.png)
 
-Add an operator and value for a key to add it as a filter or select the **Group by** checkbox to set a group by dimension.
+Add an operator and value for a key to add it as a filter or select the **GroupBy** checkbox to set a group by dimension.
 You can use a key for both a filter and a group by.
 
 ## Cross-filtering {#dashboard-drilldown-with-filters}
@@ -864,7 +864,7 @@ To confirm if the built-in query is enabled, take the following steps:
 
 4. Expand the **Hidden** section of annotations.
 
-5. Select the **Annotations & Alerts (Built-in query)**.
+5. Select the **Annotations & Alerts (Built-in)**.
 
 6. Check if the **Enabled** checkbox is selected.
 
@@ -971,8 +971,8 @@ To add a link to another dashboard at the top of your current dashboard, follow 
 
 1. In the dashboard you want to link, click **Edit**.
 2. In the toolbar, click the **Dashboard options** icon.
-3. In the sidebar, click **Settings**.
-4. Go to the **Links** tab and then click **Add dashboard link**.
+3. In the sidebar, click **View all settings**.
+4. Go to the **Links** tab and then click **Add dashboard link**. If the dashboard already has links, click **New link**.
 
 The default link type is **Dashboards**.
 
@@ -1012,9 +1012,9 @@ To add a URL link to your dashboard, follow these steps:
 
 2. In the toolbar, click the **Dashboard options** icon.
 
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 
-4. Go to the **Links** tab and then click **Add dashboard link**.
+4. Go to the **Links** tab and then click **Add dashboard link**. If the dashboard already has links, click **New link**.
 
 5. In the **Type** drop-down list, select **Link**.
 
@@ -1046,7 +1046,7 @@ To edit, duplicate, or delete dashboard link, follow these steps:
 
 2. In the toolbar, click the **Dashboard options** icon.
 
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 
 4. Go to the **Links** tab.
 
@@ -1208,8 +1208,8 @@ To add a link to another dashboard at the top of your current dashboard, follow 
 
 1. In the dashboard you want to link, click **Edit**.
 2. In the toolbar, click the **Dashboard options** icon.
-3. In the sidebar, click **Settings**.
-4. Go to the **Links** tab and then click **Add dashboard link**.
+3. In the sidebar, click **View all settings**.
+4. Go to the **Links** tab and then click **Add dashboard link**. If the dashboard already has links, click **New link**.
 
 The default link type is **Dashboards**.
 
@@ -1249,9 +1249,9 @@ To add a URL link to your dashboard, follow these steps:
 
 2. In the toolbar, click the **Dashboard options** icon.
 
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 
-4. Go to the **Links** tab and then click **Add dashboard link**.
+4. Go to the **Links** tab and then click **Add dashboard link**. If the dashboard already has links, click **New link**.
 
 5. In the **Type** drop-down list, select **Link**.
 
@@ -1283,7 +1283,7 @@ To edit, duplicate, or delete dashboard link, follow these steps:
 
 2. In the toolbar, click the **Dashboard options** icon.
 
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 
 4. Go to the **Links** tab.
 
@@ -1403,7 +1403,7 @@ To manage dashboard controls, follow these steps:
 
 3. Do one or more of the following:
 
-   - **Edit**: Click **Select** on the control to open it in the sidebar so you can make updates.
+   - **Edit**: Click the **Edit** icon on the control to open it in the sidebar so you can make updates.
    - **Reorder**: Drag and drop controls to reorder them.
    - **Change display**: Drag and drop controls between sub-sections **Above dashboard**, **Controls menu**, and **Hidden** to update the control display option. Note that links can't be hidden.
 

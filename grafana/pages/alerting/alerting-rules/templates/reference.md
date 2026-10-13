@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/alerting-rules/templates/reference.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/alerting-rules/templates/reference.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/templates/reference.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/templates/reference.md)
 
 # Annotation and label template reference
 
@@ -48,7 +48,7 @@ The outcome of this template would be:
 CPU usage for server1 has exceeded 80% for the last 5 minutes
 ```
 
-> If you are using a classic condition then `$labels` will not contain any labels from the query. Classic conditions discard these labels in order to enforce uni-dimensional behavior (at most one alert per alert rule). If you want to use labels from the query in your template then use the example [here](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/examples/#print-all-labels-from-a-classic-condition).
+> If you are using a classic condition then `$labels` will not contain any labels from the query. Classic conditions discard these labels to enforce uni-dimensional behavior (at most one alert per alert rule). If you want to use labels from the query in your template then use the example [here](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/examples/#print-all-labels-from-a-classic-condition).
 
 ### $values
 
@@ -314,7 +314,7 @@ example.com:8080
 
 #### graphLink
 
-The `graphLink` function returns the path to the graphical view in [Explore](https://grafana.com/docs/grafana/v13.2/explore/) for the given expression and data source:
+The `graphLink` function returns the path to the graphical view in [Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/) for the given expression and data source:
 
 ```
 {{ graphLink "{\"expr\": \"up\", \"datasource\": \"gdev-prometheus\"}" }}
@@ -350,7 +350,7 @@ example:8080
 
 #### tableLink
 
-The `tableLink` function returns the path to the tabular view in [Explore](https://grafana.com/docs/grafana/v13.2/explore/) for the given expression and data source:
+The `tableLink` function returns the path to the tabular view in [Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/) for the given expression and data source:
 
 ```
 {{ tableLink "{\"expr\": \"up\", \"datasource\": \"gdev-prometheus\"}" }}

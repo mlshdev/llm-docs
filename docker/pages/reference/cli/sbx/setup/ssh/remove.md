@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_setup_ssh_remove.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_setup_ssh_remove.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_setup_ssh_remove.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_setup_ssh_remove.yaml)
 
 # sbx setup ssh remove
 
-Remove SSH client config for the current local app instance
+Remove SSH config and desktop targets; keep sandboxes
 
 **Usage:** `sbx setup ssh remove [flags]`
 
@@ -15,3 +15,9 @@ Remove SSH client config for the current local app instance
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+
+## Examples
+
+```console
+sbx setup ssh remove
+```

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/storage/drivers/device-mapper-driver.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/engine/storage/drivers/device-mapper-driver.md)
+> Pinned source for Docker main: [content/manuals/engine/storage/drivers/device-mapper-driver.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/engine/storage/drivers/device-mapper-driver.md)
 
 # Device Mapper storage driver (deprecated)
 
@@ -747,7 +747,7 @@ container, it is a snapshot of the image the container is based on. The followin
 example shows a Docker host with two running containers. The first is a `ubuntu`
 container and the second is a `busybox` container.
 
-![Ubuntu and busybox image layers](https://raw.githubusercontent.com/docker/docs/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/engine/storage/drivers/images/two_dm_container.webp?w=450\&h=100)
+![Ubuntu and busybox image layers](https://raw.githubusercontent.com/docker/docs/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/engine/storage/drivers/images/two_dm_container.webp?w=450\&h=100)
 
 ## How container reads and writes work with `devicemapper`
 
@@ -757,7 +757,7 @@ With `devicemapper`, reads happen at the block level. The diagram below shows
 the high level process for reading a single block (`0x44f`) in an example
 container.
 
-![Reading a block with devicemapper](https://raw.githubusercontent.com/docker/docs/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/engine/storage/drivers/images/dm_container.webp?w=650)
+![Reading a block with devicemapper](https://raw.githubusercontent.com/docker/docs/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/engine/storage/drivers/images/dm_container.webp?w=650)
 
 An application makes a read request for block `0x44f` in the container. Because
 the container is a thin snapshot of an image, it doesn't have the block, but it

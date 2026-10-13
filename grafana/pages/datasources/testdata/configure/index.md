@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/datasources/testdata/configure/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/testdata/configure/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/datasources/testdata/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/testdata/configure/index.md)
 
 # Configure the TestData data source
 
@@ -41,7 +41,7 @@ If the test fails, refer to [Troubleshoot TestData](https://grafana.com/docs/gra
 
 ## Provision the data source
 
-You can define and configure the data source in YAML files as part of Grafana's provisioning system. For more information about provisioning, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
 
 TestData doesn't require any `jsonData` or `secureJsonData` fields.
 
@@ -73,7 +73,7 @@ For all available configuration options, refer to the [Grafana provider data sou
 
 After configuring your TestData data source, you can:
 
-- [Write queries](https://grafana.com/docs/grafana/v13.2/datasources/testdata/query-editor/) using the 30 available scenarios to generate simulated data.
+- [Write queries](https://grafana.com/docs/grafana/v13.2/datasources/testdata/query-editor/) using the 33 available scenarios to generate simulated data.
 - [Use template variables](https://grafana.com/docs/grafana/v13.2/datasources/testdata/template-variables/) to create dynamic, reusable dashboards.
 - [Set up alerting](https://grafana.com/docs/grafana/v13.2/datasources/testdata/alerting/) to prototype and test alert rules with simulated data.
 - [Troubleshoot issues](https://grafana.com/docs/grafana/v13.2/datasources/testdata/troubleshooting/) if you encounter problems with your data source.

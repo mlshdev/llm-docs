@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/get-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/api-reference-v2/serverless/get-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/get-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/api-reference-v2/serverless/get-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/get-a-serverless-endpoint
 
 # Get A Serverless Endpoint
@@ -101,10 +101,17 @@ Returns a single serverless endpoint by ID.
             - `items` (string)
           - `networkVolumes` (required; array)
             - `items` (string)
+          - `mounts` (required; object): Volumes mounted on every worker of the endpoint.
+            - `network` (required; array)
+              - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+                - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
+            - `global` (required; array)
+              - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+                - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
           - `timeout` (required; integer): Per-request execution timeout in milliseconds
           - `flashboot` (required; string; enum: `OFF`, `FLASHBOOT`, `PRIORITY_FLASHBOOT`): FlashBoot cold-start acceleration mode. - `OFF` — disabled - `FLASHBOOT` — enabled - `PRIORITY_FLASHBOOT` — enabled with priority capacity
           - `createdAt` (required; string; format: date-time)
-    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"LOAD_BALANCER","requestUrls":{"base":"https://4m7x2k9q.api.runpod.ai","health":"https://4m7x2k9q.api.runpod.ai/ping"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":0,"max":5,"idleTimeout":5},"scaling":{"type":"REQUEST_COUNT","requestCount":4},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
+    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"LOAD_BALANCER","requestUrls":{"base":"https://4m7x2k9q.api.runpod.ai","health":"https://4m7x2k9q.api.runpod.ai/ping"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":0,"max":5,"idleTimeout":5},"scaling":{"type":"REQUEST_COUNT","requestCount":4},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"mounts":{"network":[{"volumeId":"2q9m7x4c"}],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

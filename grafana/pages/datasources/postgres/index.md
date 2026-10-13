@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/datasources/postgres/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/postgres/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/datasources/postgres/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/postgres/_index.md)
 
 # PostgreSQL data source
 
@@ -89,6 +89,42 @@ preinstall_sync = grafana-postgresql-datasource
 ; Or install a specific version:
 ; preinstall_sync = grafana-postgresql-datasource@<version>
 ```
+
+[//]: # "Shared note: querying a data source with the gcx Grafana CLI."
+
+[//]: # "This shared file is included in these locations:"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: #
+
+[//]: # "If you make changes to this file, verify that the meaning and content are not changed in any place where the file is included."
+
+[//]: # "Any links should be fully qualified and not relative: /docs/grafana/ instead of ../grafana/."
+
+## Query with the Grafana CLI
+
+You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
+
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+
+For example, to explore and query your PostgreSQL data source, use the `gcx datasources postgres` commands:
+
+```sh
+# List tables and views, or filter to a single schema
+gcx datasources postgres list-tables -d <DATASOURCE_UID>
+gcx datasources postgres list-tables -d <DATASOURCE_UID> --schema public
+
+# Show the columns of a table
+gcx datasources postgres describe-table orders -d <DATASOURCE_UID>
+
+# Run a SQL query (server-side macros like $__timeFilter are supported)
+gcx datasources postgres query -d <DATASOURCE_UID> 'SELECT * FROM events WHERE $__timeFilter(created_at)' --since 1h
+```
+
+Replace *`<DATASOURCE_UID>`* with the UID of your PostgreSQL data source. You can omit the `-d` flag when `datasources.postgres` is configured in your `gcx` context. The `query` command supports Grafana server-side macros such as `$__timeFilter` and `$__timeGroup`, and `list-tables` and `describe-table` help you explore the schema. Schema and table names match exactly and are case-sensitive.
 
 ## Related data sources
 

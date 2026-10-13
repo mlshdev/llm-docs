@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_ports.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_ports.yaml)
 
 # sbx ports
 
@@ -45,7 +45,8 @@ for each exposed port.
 
 | Option        | Default | Description                                                                                                                   |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `--json`      |         | Output in JSON format (for port listing)                                                                                      |
+| `--format`    |         | Output format: table, json or yaml                                                                                            |
+| `--json`      |         | Output in JSON format                                                                                                         |
 | `--publish`   |         | Publish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud) |
 | `--unpublish` |         | Unpublish a port (can be repeated): \[HOST\_IP:]HOST\_PORT:SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud)  |
 

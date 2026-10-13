@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/annotate-visualizations/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/annotate-visualizations/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/annotate-visualizations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/annotate-visualizations/index.md)
 
 # Annotate visualizations
 
@@ -244,7 +244,7 @@ To confirm if the built-in query is enabled, take the following steps:
 
 4. Expand the **Hidden** section of annotations.
 
-5. Select the **Annotations & Alerts (Built-in query)**.
+5. Select the **Annotations & Alerts (Built-in)**.
 
 6. Check if the **Enabled** checkbox is selected.
 

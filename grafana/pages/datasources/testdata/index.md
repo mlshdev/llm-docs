@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/datasources/testdata/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/testdata/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/datasources/testdata/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/testdata/_index.md)
 
 # TestData data source
 
-Grafana ships with a built-in TestData data source that generates simulated time-series, log, trace, and other data for any [panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/). You can use it to verify dashboard functionality, test visualizations, prototype alerting rules, and reproduce issues without connecting to an external data source.
+Every dashboard starts with data, and the TestData data source gives you data instantly. TestData is bundled with Grafana, so it's ready to use out of the box with no installation required. It generates simulated time series, logs, traces, and more for any [panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/), with no external connection required. Use it to prototype dashboards, put visualizations through their paces with tricky edge cases, experiment with alert rules, and reproduce issues in a way that others can replicate.
 
 ## Supported features
 
@@ -18,9 +18,10 @@ Grafana ships with a built-in TestData data source that generates simulated time
 The following pages help you set up and use the TestData data source:
 
 - [Configure the TestData data source](https://grafana.com/docs/grafana/v13.2/datasources/testdata/configure/) for setup and provisioning instructions.
-- [TestData query editor](https://grafana.com/docs/grafana/v13.2/datasources/testdata/query-editor/) for a reference of all 30 available scenarios and their options.
+- [TestData query editor](https://grafana.com/docs/grafana/v13.2/datasources/testdata/query-editor/) for a reference of all 33 available scenarios and their options.
 - [TestData alerting](https://grafana.com/docs/grafana/v13.2/datasources/testdata/alerting/) for prototyping and testing alert rules with simulated data.
 - [TestData template variables](https://grafana.com/docs/grafana/v13.2/datasources/testdata/template-variables/) for using TestData with dashboard variables.
+- [TestData annotations](https://grafana.com/docs/grafana/v13.2/datasources/testdata/annotations/) for generating simulated annotation events.
 - [Troubleshoot TestData](https://grafana.com/docs/grafana/v13.2/datasources/testdata/troubleshooting/) for solutions to common issues.
 
 ## Additional features

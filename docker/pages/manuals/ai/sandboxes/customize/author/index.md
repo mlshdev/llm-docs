@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/_index.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/customize/author/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/_index.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/customize/author/_index.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -128,13 +128,8 @@ format version and the `sbx` release. The
 [upstream capability definitions](https://github.com/docker/sandbox-kit-spec/blob/main/docs/spec/SPEC-v3.md#72-well-known-types)
 describe the available capabilities and their settings.
 
-> \[!NOTE]
-> `sbx` doesn't apply `usb-device@1`, `privileged@1`, or `agent-sessions@1`
-> requests. Its capability enforcement can let sandbox creation succeed even
-> when a required capability is unsupported. Don't rely on this behavior:
-> choose capabilities supported by the runtime where your kit will run.
-> The `kit-registry@1` capability is restricted to approved OCI builder kits;
-> local and Git kit sources don't receive it.
+See [Capability support](https://docs.docker.com/ai/sandboxes/customize/author/capabilities/) for local and cloud availability,
+minimum `sbx` versions, and Docker-specific restrictions.
 
 The guides here show how to use capabilities with Docker Sandboxes. For all
 descriptor fields and the rules for combining kits, see the
@@ -167,6 +162,17 @@ basic process variables, proxy settings, and certificate paths. If your command 
 variable, name it in the hook's `env` list. For example, `env: [WORKSPACE_DIR]`
 gives the command the mounted workspace's path. In `sbx`, startup hooks receive
 the sandbox's environment without this filtering.
+
+Sandbox containers set `SBX_AGENT` to the provisioned agent's name, such
+as `claude` or `codex`. For a v3 workload from a registry, the value is the
+last component of the kit's repository name. For example,
+`sbx run --name foo docker.io/me/my-custom-kit` sets `SBX_AGENT` to
+`my-custom-kit`. The `--name` flag names the sandbox and does not change
+`SBX_AGENT`.
+
+Use `SBX_AGENT` in hooks or scripts that need different behavior for different
+agents. Add `SBX_AGENT` to an install hook's `env` list to make it available
+to that hook. Startup hooks receive it without that declaration.
 
 See [Kit authoring patterns](https://docs.docker.com/ai/sandboxes/customize/author/patterns/#run-setup-after-combining-kits)
 for setup examples and the upstream
@@ -210,7 +216,7 @@ capabilities:
 ```
 
 A sandbox created with this kit behaves like one started with
-[`sbx run --detached`](https://docs.docker.com/ai/sandboxes/usage/#keep-a-sandbox-running-in-the-background):
+[`sbx run --detach`](https://docs.docker.com/ai/sandboxes/usage/#keep-a-sandbox-running-in-the-background):
 it keeps running until someone stops or removes it, including after you attach
 to it and disconnect. When a workload, mixin, or set declares the capability,
 it applies to the whole sandbox.
@@ -223,6 +229,4 @@ it:
 
 - Cloud sandboxes can't provide this capability. `sbx --cloud` refuses a kit
   that requires it and skips an optional entry.
-- `sbx kit add` can't apply the capability to a running sandbox. A required
-  entry fails, and an optional entry is skipped with a warning. Recreate the
-  sandbox with the kit to apply it.
+- `sbx kit add` can't apply the capability to a running sandbox. Create the sandbox with the kit to apply it.

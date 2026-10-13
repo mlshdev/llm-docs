@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/set-up/configure-rbac/access-roles/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/set-up/configure-rbac/access-roles/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/configure-rbac/access-roles/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/configure-rbac/access-roles/index.md)
 
 # Manage access using roles
 
@@ -10,12 +10,12 @@ There are four basic roles: `Admin`, `Editor`, `Viewer`, and `None`. Each basic 
 
 Details of the basic roles and the access they provide for Grafana Alerting are below.
 
-| Role          | Access                                                                                                                                                                                                                                              |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Admin         | Write access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), alert enrichments, and provisioning.                                                        |
-| Editor        | Write access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), alert enrichments, and provisioning.                                                        |
-| Viewer        | Read access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), and alert enrichments.                                                                       |
-| No basic role | A blank canvas to assign fixed or custom roles and craft permissions more precisely. For example, if you want to give a user the ability to see alert rules, but not notification settings, add No basic role and then the fixed role Rules reader. |
+| Role   | Access                                                                                                                                                                                                                                              |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Admin  | Write access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), alert enrichments, and provisioning.                                                        |
+| Editor | Write access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), alert enrichments, and provisioning.                                                        |
+| Viewer | Read access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), and alert enrichments.                                                                       |
+| None   | A blank canvas to assign fixed or custom roles and craft permissions more precisely. For example, if you want to give a user the ability to see alert rules, but not notification settings, add No basic role and then the fixed role Rules reader. |
 
 ## Fixed roles
 

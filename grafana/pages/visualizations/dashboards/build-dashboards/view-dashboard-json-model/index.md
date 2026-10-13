@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md)
 
 # Dashboard JSON model
 
@@ -23,7 +23,7 @@ To access the JSON representation of a dashboard:
 1. Navigate to the dashboard.
 2. Click **Edit** in the top-right corner.
 3. In the toolbar, click the **Dashboard options** icon.
-4. In the sidebar, click **Settings**.
+4. In the sidebar, click **View all settings**.
 5. Go to the **JSON Model** tab.
 6. When you've finished updating the JSON, click **Save changes** at the bottom of the tab.
 7. Click **Back** and **Exit edit**.

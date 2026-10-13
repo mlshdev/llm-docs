@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/update-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/api-reference-v2/serverless/update-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/update-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/api-reference-v2/serverless/update-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/update-a-serverless-endpoint
 
 # Update A Serverless Endpoint
@@ -15,8 +15,9 @@ untouched. See `UpdateEndpointRequest` for the full body.
 
 Mutable fields: `name`, `gpu`, `cpu`, `workers` (`min`/`max`),
 `scaling` (`type`/`value`/`idleTimeout`), `dataCenterIds`,
-`networkVolumes`, `timeout`, `flashboot`, and the container settings
-(`image`, `args`, `disk`, `ports`, `env`, `registry`).
+`networkVolumes`, `timeout`, `flashboot`, and the
+container settings (`image`, `args`, `disk`, `ports`, `env`,
+`registry`).
 
 Omitted compute preserves the current selection. `cpu` completely
 replaces a CPU endpoint's selection; compute family is immutable.
@@ -81,8 +82,15 @@ keep the previous version until they are replaced. Track rollout via
                 - `items` (string; pattern: `^\d+\.\d+$`)
               - `minCudaVersion` (string; pattern: `^$|^\d+\.\d+$`): Lowest acceptable CUDA version for worker placement, as `major.minor`. An explicit `""` clears the floor; omitting the field leaves it unchanged. Takes effect as workers are replaced. Mutually exclusive with a non-empty allowedCudaVersions (400 if both are sent); an explicit `[]` there states no constraint and may accompany this floor.
         - `name` (string; minimum length: `1`)
-        - `networkVolumes` (array)
+        - `networkVolumes` (array): Network volume IDs. Pass `[]` to detach.
           - `items` (string)
+        - `mounts` (object): Volumes to mount on the endpoint's workers. A `network` or `global` list that is present replaces the endpoint's current list of that kind; an empty list detaches it, and an omitted list is left unchanged. Both kinds cannot be present on the endpoint at once, so to switch kinds send `[]` for one and the new list for the other in the same request. Changes apply to workers created afterwards. At most one global volume, GPU endpoints only. `network` may accompany the deprecated `networkVolumes` field only if the two agree exactly.
+          - `network` (array): Network volumes, at most one per data center.
+            - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+              - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
+          - `global` (array; maximum items: `1`)
+            - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+              - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
         - `scaling`: Autoscaling signal — a discriminated union on `type`: `QUEUE_DELAY` (queue-based endpoints only) or `REQUEST_COUNT`. The scaler is chosen independently of the endpoint's routing `type` and can be switched on update.
           - oneOf:
             - `variant 1` (object): Scale on queue wait time. Queue-based endpoints only.
@@ -184,10 +192,17 @@ keep the previous version until they are replaced. Track rollout via
             - `items` (string)
           - `networkVolumes` (required; array)
             - `items` (string)
+          - `mounts` (required; object): Volumes mounted on every worker of the endpoint.
+            - `network` (required; array)
+              - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+                - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
+            - `global` (required; array)
+              - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+                - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
           - `timeout` (required; integer): Per-request execution timeout in milliseconds
           - `flashboot` (required; string; enum: `OFF`, `FLASHBOOT`, `PRIORITY_FLASHBOOT`): FlashBoot cold-start acceleration mode. - `OFF` — disabled - `FLASHBOOT` — enabled - `PRIORITY_FLASHBOOT` — enabled with priority capacity
           - `createdAt` (required; string; format: date-time)
-    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/4m7x2k9q/run","runSync":"https://api.runpod.ai/v2/4m7x2k9q/runsync","status":"https://api.runpod.ai/v2/4m7x2k9q/status/{job_id}","stream":"https://api.runpod.ai/v2/4m7x2k9q/stream/{job_id}","cancel":"https://api.runpod.ai/v2/4m7x2k9q/cancel/{job_id}","retry":"https://api.runpod.ai/v2/4m7x2k9q/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/4m7x2k9q/purge-queue","health":"https://api.runpod.ai/v2/4m7x2k9q/health"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":1,"max":10,"idleTimeout":10},"scaling":{"type":"QUEUE_DELAY","queueDelay":8},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
+    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/4m7x2k9q/run","runSync":"https://api.runpod.ai/v2/4m7x2k9q/runsync","status":"https://api.runpod.ai/v2/4m7x2k9q/status/{job_id}","stream":"https://api.runpod.ai/v2/4m7x2k9q/stream/{job_id}","cancel":"https://api.runpod.ai/v2/4m7x2k9q/cancel/{job_id}","retry":"https://api.runpod.ai/v2/4m7x2k9q/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/4m7x2k9q/purge-queue","health":"https://api.runpod.ai/v2/4m7x2k9q/health"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":1,"max":10,"idleTimeout":10},"scaling":{"type":"QUEUE_DELAY","queueDelay":8},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"mounts":{"network":[{"volumeId":"2q9m7x4c"}],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)

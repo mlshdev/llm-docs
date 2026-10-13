@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_restart-runner.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_restart-runner.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_restart-runner.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_restart-runner.yaml)
 
 # docker model restart-runner
 

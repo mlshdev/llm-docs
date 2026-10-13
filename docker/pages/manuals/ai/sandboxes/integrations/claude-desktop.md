@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/claude-desktop.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/integrations/claude-desktop.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/claude-desktop.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/integrations/claude-desktop.md)
 
 # Connect Claude Desktop to a sandbox
 
@@ -34,6 +34,10 @@ session.
 > Connecting Claude Desktop to a sandbox over SSH transmits Anthropic
 > credentials into the Claude Code process within the sandbox, reducing
 > isolation guarantees.
+
+For a dedicated sandbox created on first connection, see
+[Set up desktop app connections](https://docs.docker.com/ai/sandboxes/integrations/#set-up-desktop-app-connections).
+The following steps connect to a sandbox with a mounted host workspace.
 
 Create a named Claude sandbox for the current directory if you don't already
 have one:

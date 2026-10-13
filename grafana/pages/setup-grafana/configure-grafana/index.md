@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/setup-grafana/configure-grafana/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/setup-grafana/configure-grafana/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-grafana/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-grafana/_index.md)
 
 # Configure Grafana
 
@@ -2152,6 +2152,10 @@ Set the query offset to imported Grafana-managed rules when `query_offset` is no
 #### `default_datasource_uid`
 
 Set the default data source UID to use for query execution when importing Prometheus rules. Grafana uses this default when the `X-Grafana-Alerting-Datasource-UID` header isn't provided during import. If this option isn't set, the header becomes required. The default value is empty.
+
+#### `max_request_body_bytes`
+
+Set the maximum allowed request body size in bytes for Prometheus conversion API POST endpoints. This limits the size of rule group and Alertmanager configuration payloads that can be imported. Set to `0` to disable the limit. The default value is `52428800` (50 MB).
 
 <hr>
 

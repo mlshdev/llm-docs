@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/get-started.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/get-started.md)
 
 # Get started with local Docker Sandboxes
 
@@ -89,14 +89,14 @@ From another terminal, list your sandboxes:
 
 ```console
 $ sbx ls
-SANDBOX       AGENT    STATUS    PORTS   WORKSPACE
-my-sandbox    claude   running           ~/my-project
+SANDBOX      AGENT    STATUS      PORTS   WORKSPACE      CREATED
+my-sandbox   claude   ● running           ~/my-project   2m
 ```
 
-Each row shows a sandbox's name, the agent running in it, its status, any
-[published ports](https://docs.docker.com/ai/sandboxes/usage/#publish-ports), and its
-workspace — the host directory shared into the sandbox. That workspace is the
-one part of your machine the agent can see.
+Each row shows a sandbox's name, agent, status,
+[published ports](https://docs.docker.com/ai/sandboxes/usage/#publish-ports), workspace, and age. The workspace is
+the host directory shared into the sandbox and the one part of your machine
+the agent can see.
 
 When you run `sbx run` from a project directory without passing a workspace
 path, the current directory is mounted read-write. The agent and your host see
@@ -169,7 +169,7 @@ Run `sbx` with no arguments to open the interactive dashboard: a live view of
 every sandbox where you can attach to agents, open shells, and manage network
 rules from one place.
 
-![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
+![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
 
 Then explore:
 

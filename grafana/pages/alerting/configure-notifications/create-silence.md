@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/configure-notifications/create-silence.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/configure-notifications/create-silence.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/create-silence.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/create-silence.md)
 
 # Configure silences
 
@@ -117,7 +117,7 @@ To add a silence, complete the following steps.
 
 **How label matching works**
 
-Use labels and label matchers to link alert rules to notification policies and silences. This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
+Use [labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
 
 A label matchers consists of 3 distinct parts, the **label**, the **value** and the **operator**.
 

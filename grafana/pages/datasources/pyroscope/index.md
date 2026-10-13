@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/datasources/pyroscope/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/pyroscope/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/datasources/pyroscope/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/pyroscope/_index.md)
 
 # Pyroscope data source
 
@@ -79,6 +79,35 @@ Combined traces and profiles let you see granular line-level detail when availab
 For more information, refer to [Configure Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure-traces-to-profiles/) and [Link tracing and profiling with span profiles](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/).
 
 [Watch the video on YouTube](https://www.youtube.com/watch?v=AG8VzfFMLxo)
+
+[//]: # "Shared note: querying a data source with the gcx Grafana CLI."
+
+[//]: # "This shared file is included in these locations:"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: #
+
+[//]: # "If you make changes to this file, verify that the meaning and content are not changed in any place where the file is included."
+
+[//]: # "Any links should be fully qualified and not relative: /docs/grafana/ instead of ../grafana/."
+
+## Query with the Grafana CLI
+
+You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
+
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+
+For example, to run a profiling query against your Pyroscope data source, use `gcx datasources pyroscope query`:
+
+```sh
+gcx datasources pyroscope query -d <DATASOURCE_UID> '{service_name="frontend"}' \
+  --profile-type process_cpu:cpu:nanoseconds:cpu:nanoseconds --since 1h
+```
+
+Replace *`<DATASOURCE_UID>`* with the UID of your Pyroscope data source. The query takes a label selector (`{service_name="frontend"}`), a profile type (`--profile-type`), and a time range (`--since`).
 
 ## Related Pyroscope documentation
 

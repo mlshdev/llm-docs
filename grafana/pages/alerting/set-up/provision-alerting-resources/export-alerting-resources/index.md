@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/set-up/provision-alerting-resources/export-alerting-resources/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/set-up/provision-alerting-resources/export-alerting-resources/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/provision-alerting-resources/export-alerting-resources/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/provision-alerting-resources/export-alerting-resources/index.md)
 
 # Export alerting resources
 
@@ -130,7 +130,7 @@ To export the notification policy tree from the Grafana UI, complete the followi
 
 4. Click **Copy Code** or **Download**.
 
-You can also export individual [named routing trees](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-notification-policy/).
+You can also export individual [named routing trees](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-notification-policy/#manage-multiple-notification-policy-trees).
 
 1. Click **Alerts & IRM** -> **Notification policies**.
 2. Find the routing tree you want to export in the list.

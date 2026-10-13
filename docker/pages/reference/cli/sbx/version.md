@@ -1,16 +1,17 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_version.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_version.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_version.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_version.yaml)
 
 # sbx version
 
 Show Docker Sandboxes version information
 
-**Usage:** `sbx version`
+**Usage:** `sbx version [flags]`
 
 ## Options
 
-| Option   | Default | Description                                                                                                            |
-| -------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `--json` |         | Output in JSON format, including the server version and, when the backend reports them, the runtime component versions |
+| Option     | Default | Description                        |
+| ---------- | ------- | ---------------------------------- |
+| `--format` |         | Output format: table, json or yaml |
+| `--json`   |         | Output in JSON format              |
 
 ## Global options
 
@@ -18,3 +19,12 @@ Show Docker Sandboxes version information
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+
+## Examples
+
+```console
+sbx version
+
+  # Include daemon and build details
+  sbx version --debug
+```

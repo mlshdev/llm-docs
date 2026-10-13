@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/datasources/tempo/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/tempo/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/_index.md)
 
 # Tempo data source
 
@@ -53,6 +53,45 @@ After you've connected Grafana to Tempo, you can configure correlations between 
 - [Trace to metrics](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus or other metrics data sources.
 - [Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope with embedded flame graphs.
 - [Trace correlations](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/trace-correlations/): Create custom correlation links to any data source or external URL.
+
+[//]: # "Shared note: querying a data source with the gcx Grafana CLI."
+
+[//]: # "This shared file is included in these locations:"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: #
+
+[//]: # "If you make changes to this file, verify that the meaning and content are not changed in any place where the file is included."
+
+[//]: # "Any links should be fully qualified and not relative: /docs/grafana/ instead of ../grafana/."
+
+## Query with the Grafana CLI
+
+You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
+
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+
+For example, to search and query your Tempo data source, use the `gcx datasources tempo` commands:
+
+```sh
+# Search for traces with a TraceQL query
+gcx datasources tempo query -d <DATASOURCE_UID> '{ span.http.status_code >= 500 }' --since 1h
+
+# Retrieve a single trace by its ID
+gcx datasources tempo get -d <DATASOURCE_UID> <TRACE_ID>
+
+# List all trace labels, or the values for a single label
+gcx datasources tempo labels -d <DATASOURCE_UID>
+gcx datasources tempo labels -d <DATASOURCE_UID> --label service.name
+
+# Run a TraceQL metrics query that returns time series
+gcx datasources tempo metrics -d <DATASOURCE_UID> '{ } | rate()' --since 1h
+```
+
+Replace *`<DATASOURCE_UID>`* with the UID of your Tempo data source and *`<TRACE_ID>`* with a hex-encoded trace ID. You can omit the `-d` flag when `datasources.tempo` is configured in your `gcx` context. The `query` command searches for traces, `get` retrieves a single trace by ID, and `metrics` returns time series from a TraceQL metrics query.
 
 ## Related resources
 

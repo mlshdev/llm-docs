@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_ls.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_secret_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_ls.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_secret_ls.yaml)
 
 # sbx secret ls
 
@@ -15,13 +15,14 @@ global secrets, or --sandbox to show only secrets scoped to one sandbox.
 
 ## Options
 
-| Option           | Default | Description                       |
-| ---------------- | ------- | --------------------------------- |
-| `-g`, `--global` |         | Only list global secrets          |
-| `--json`         |         | Output in JSON format             |
-| `-q`, `--quiet`  |         | Only display secret names         |
-| `--sandbox`      |         | Only list secrets for one sandbox |
-| `--service`      |         | Filter by secret service name     |
+| Option           | Default | Description                        |
+| ---------------- | ------- | ---------------------------------- |
+| `--format`       |         | Output format: table, json or yaml |
+| `-g`, `--global` |         | Only list global secrets           |
+| `--json`         |         | Output in JSON format              |
+| `-q`, `--quiet`  |         | Only display secret names          |
+| `--sandbox`      |         | Only list secrets for one sandbox  |
+| `--service`      |         | Filter by secret service name      |
 
 ## Global options
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_setup_ssh.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_setup_ssh.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_setup_ssh.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_setup_ssh.yaml)
 
 # sbx setup ssh
 
@@ -15,15 +15,17 @@ Write a generated SSH config + known\_hosts and include it from
 \~/.ssh/config so "ssh <name>.sbx" connects with no prompts. Named app instances
 use "ssh <name>.sbx-<app>" instead. Re-run any time; it's idempotent.
 
-No SSH client key is needed — authentication is handled by the daemon's Unix
-socket (OS user boundary) combined with an active Docker login. Sign in first
-(sbx login).
+No SSH client key is needed — authentication is handled by the daemon's local
+socket or named pipe (OS user boundary) combined with an active Docker login. Sign in first
+(sbx login). On macOS and Windows, use --auto-create to install the fixed codex.sbx and
+claude.sbx desktop profiles. Sandboxes are created with the standard resource defaults.
 
 ## Options
 
-| Option    | Default | Description                       |
-| --------- | ------- | --------------------------------- |
-| `--alias` | `*.sbx` | ssh\_config Host pattern to write |
+| Option          | Default | Description                                                           |
+| --------------- | ------- | --------------------------------------------------------------------- |
+| `--alias`       | `*.sbx` | ssh\_config Host pattern to write                                     |
+| `--auto-create` |         | enable managed Codex and Claude Desktop profiles on macOS and Windows |
 
 ## Global options
 

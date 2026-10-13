@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/_index.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/cloud/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/_index.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/cloud/_index.md)
 
 # Cloud sandboxes
 
@@ -37,6 +37,15 @@ Sign in with the same Docker account you used to subscribe:
 ```console
 $ sbx login
 ```
+
+For CI and other environments without a browser, sign in with a Docker
+Personal Access Token (PAT) for the subscribed account:
+
+```console
+$ echo "$DOCKER_PAT" | sbx login --username <your-docker-id> --password-stdin
+```
+
+For PAT setup instructions, see [CI and headless use](https://docs.docker.com/ai/sandboxes/workflows/automation/).
 
 Check cloud connectivity and account access:
 

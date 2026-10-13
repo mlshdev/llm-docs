@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/network.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/governance/access-controls/network.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/network.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/governance/access-controls/network.md)
 
 # Network access policies
 
@@ -152,22 +152,12 @@ To inspect a single entry, pass its ID to `sbx policy approval inspect`:
 
 ```console
 $ sbx policy approval inspect network:cWtN-4xUrNjxh4ouezcstgjrky6Rg57QfeRe3WEkyyY
-APPROVAL network:cWtN-4xUrNjxh4ouezcstgjrky6Rg57QfeRe3WEkyyY  (sandbox: my-sandbox)
-  api.example.com:443
-  Protocol: TCP
-  Resource type: domain
-  approval required by policy "default network"
-
-  OPTION    LABEL
-  allow     Allow
-  dismiss   Dismiss
 ```
 
 Respond by selecting one of the options the entry offers:
 
 ```console
 $ sbx policy approval respond network:cWtN-4xUrNjxh4ouezcstgjrky6Rg57QfeRe3WEkyyY --option allow
-Recorded: Allow
 ```
 
 Choosing `allow` grants access to that destination. Choosing `dismiss` leaves

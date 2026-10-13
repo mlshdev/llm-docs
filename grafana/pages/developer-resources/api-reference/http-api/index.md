@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/developer-resources/api-reference/http-api/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/developer-resources/api-reference/http-api/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/_index.md)
 
 # Grafana HTTP API reference guide
 
@@ -41,10 +41,11 @@ The following table lists all available HTTP API reference pages. New APIs are l
 | [Banners HTTP API (Swagger)](https://play.grafana.org/swagger?api=banners.grafana.app-v0alpha1)                                                                 | **New**              | No                  |
 | [Dashboard HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/dashboard/)                                              | **New**              | `/api/dashboards/*` |
 | [Folder HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/folder/)                                                    | **New**              | `/api/folders/*`    |
-| [SLO (Swagger)](https://play.grafana.org/swagger?api=grafana-slo-app.plugins.grafana.com-v1)                                                                    | **New - Cloud only** | No                  |
+| [SLO (Swagger) / Kubernetes CRD](https://play.grafana.org/swagger?api=grafana-slo-app.plugins.grafana.com-v1)                                                   | **New - Cloud only** | No                  |
 | [Playlist HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/playlist/)                                                | **New**              | No                  |
 | [Resource history HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/resource-history/)                                | **New**              | No                  |
 | [Secrets Management HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/secrets_management/)                            | **New**              | No                  |
+| [Stars HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/stars/)                                                      | **New**              | `/api/collection/*` |
 | [Admin HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin/)                                           | Deprecated           | Not Applicable      |
 | [Alerting Provisioning HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/alerting_provisioning/)           | Deprecated           | Not Applicable      |
 | [Annotations HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/annotations/)                               | Deprecated           | Not Applicable      |

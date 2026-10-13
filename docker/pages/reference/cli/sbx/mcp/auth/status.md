@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth_status.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_mcp_auth_status.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth_status.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_mcp_auth_status.yaml)
 
 # sbx mcp auth status
 
 Show MCP server OAuth status
 
-**Usage:** `sbx mcp auth status [server-name] [flags]`
+**Usage:** `sbx mcp auth status [SERVER] [flags]`
 
 ## Description
 
@@ -14,11 +14,11 @@ This command does not start OAuth or refresh expired credentials.
 
 ## Options
 
-| Option     | Default | Description                                     |
-| ---------- | ------- | ----------------------------------------------- |
-| `--all`    |         | Apply to all registered OAuth servers           |
-| `--format` | `text`  | Output format: "text" or "json"                 |
-| `--json`   |         | Output in JSON format (alias for --format json) |
+| Option     | Default | Description                           |
+| ---------- | ------- | ------------------------------------- |
+| `--all`    |         | Apply to all registered OAuth servers |
+| `--format` | `text`  | Output format: "text" or "json"       |
+| `--json`   |         | Output in JSON format                 |
 
 ## Global options
 

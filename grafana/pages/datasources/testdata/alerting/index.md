@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/datasources/testdata/alerting/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/testdata/alerting/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/datasources/testdata/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/testdata/alerting/index.md)
 
 # TestData alerting
 
@@ -13,16 +13,17 @@ The TestData data source supports [Grafana Alerting](https://grafana.com/docs/gr
 
 TestData scenarios that return time-series data work with alert rule conditions. Choose a scenario based on the behavior you want to test.
 
-| Scenario                     | Alerting use case                                                                              |
-| ---------------------------- | ---------------------------------------------------------------------------------------------- |
-| **Predictable Pulse**        | Deterministic on/off pattern. Produces repeatable alert firing and resolving on a fixed cycle. |
-| **Random Walk**              | Non-deterministic time series. Useful for quick prototyping and load testing alert evaluation. |
-| **CSV Metric Values**        | Controlled, fixed values. Test exact threshold boundaries.                                     |
-| **Predictable CSV Wave**     | Custom repeating waveforms. Test complex threshold patterns with precise control.              |
-| **Random Walk (with error)** | Returns both data and an error. Test how alerts handle partial failures.                       |
-| **Error with source**        | Returns a plugin or downstream error. Test alert evaluation error handling.                    |
-| **No Data Points**           | Returns empty results. Test no-data alert conditions.                                          |
-| **Slow Query**               | Introduces a configurable delay. Test alert evaluation timeouts.                               |
+| Scenario                     | Alerting use case                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Predictable Pulse**        | Deterministic on/off pattern. Produces repeatable alert firing and resolving on a fixed cycle.   |
+| **Random Walk**              | Non-deterministic time series. Useful for quick prototyping and load testing alert evaluation.   |
+| **CSV Metric Values**        | Controlled, fixed values. Test exact threshold boundaries.                                       |
+| **Predictable CSV Wave**     | Custom repeating waveforms. Test complex threshold patterns with precise control.                |
+| **Random Walk (with error)** | Returns both data and an error. Test how alerts handle partial failures.                         |
+| **Error with source**        | Returns a plugin or downstream error. Test alert evaluation error handling.                      |
+| **Flaky Query**              | Returns errors intermittently. Test how alerts handle a data source that fails part of the time. |
+| **No Data Points**           | Returns empty results. Test no-data alert conditions.                                            |
+| **Slow Query**               | Introduces a configurable delay. Test alert evaluation timeouts.                                 |
 
 Scenarios that produce logs, traces, or streaming data aren't suitable for threshold-based alert conditions.
 
@@ -102,10 +103,14 @@ Select the **No Data Points** scenario. The backend returns an empty result, whi
 
 Select **Error with source** and choose the error type:
 
-- **Plugin** — simulates a failure in the plugin itself. The alert enters an error state.
-- **Downstream** — simulates a failure in the data source or network. The alert enters an error state with a downstream classification.
+- **Plugin**: Simulates a failure in the plugin itself. The alert enters an error state.
+- **Downstream**: Simulates a failure in the data source or network. The alert enters an error state with a downstream classification.
 
 You can also use **Random Walk (with error)**, which returns valid data alongside an error, to test how the alerting engine handles partial failures.
+
+### Intermittent errors
+
+Select **Flaky Query** to simulate a data source that fails part of the time. Set the **Error rate** to control how often requests fail, and use **Status code** and **Error source** to shape the error. Use this to verify how an alert rule behaves when evaluations succeed and fail across consecutive intervals, and how the **No data and error handling** settings respond to intermittent failures.
 
 ### Timeouts
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md)
 
 # Modify dashboard settings
 
@@ -12,7 +12,7 @@ To access the dashboard setting page:
 
 1. Click **Edit**.
 2. In the toolbar, click the **Dashboard options** icon.
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 
 ## Modify dashboard time settings
 
@@ -27,7 +27,9 @@ Adjust dashboard time settings when you want to change the dashboard timezone, t
      - Standard [ISO 8601 time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), including UTC.
    - **Auto refresh:** Customize the options displayed for relative time and the auto-refresh options Entries are comma separated and accept any valid time unit.
    - **Now delay:** Override the `now` time by entering a time delay. Use this option to accommodate known delays in data aggregation to avoid null values.
+   - **Week start:** Choose the day the week starts on.
    - **Hide time picker:** Select this option if you do not want Grafana to display the time picker.
+   - **Refresh live dashboards:** Select this option to continuously update panels when the time range includes the current time.
 
 3. Click **Save**.
 
@@ -100,7 +102,7 @@ Dashboard links enable you to place links to other dashboards and web sites dire
 
 1. On the **Settings** page, click the **Links** tab.
 
-2. Click **+ New link**.
+2. Click **New link**.
 
 3. Enter title for the link.
 

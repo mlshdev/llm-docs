@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/manage-version-history/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/manage-version-history/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/manage-version-history/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/manage-version-history/index.md)
 
 # Manage dashboard version history
 
@@ -14,12 +14,12 @@ To compare two dashboard versions, follow these steps:
 
 1. Click **Edit**.
 2. In the toolbar, click the **Dashboard options** icon.
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 4. Go to the **Versions** tab.
 5. Select the two dashboard versions that you want to compare.
 6. Click **Compare versions** to view the diff between the two versions.
 7. Review the text descriptions of the differences between the versions.
-8. (Optional) Expand the **View JSON Diff** section of the page to see the diff of the raw JSON that represents your dashboard.
+8. (Optional) Expand the **View JSON diff** section of the page to see the diff of the raw JSON that represents your dashboard.
 9. When you've finished comparing versions, click **Back** and **Exit edit**.
 
 When you're comparing versions, if one of the versions you've selected is the latest version, a button to restore the previous version is also displayed, so you can restore a version from the compare view:
@@ -32,7 +32,7 @@ To restore to a previously saved dashboard version, follow these steps:
 
 1. Click **Edit**.
 2. Click the **Dashboard options** icon.
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 4. Go to the **Versions** tab.
 5. Click the **Restore** button next to the version.
 

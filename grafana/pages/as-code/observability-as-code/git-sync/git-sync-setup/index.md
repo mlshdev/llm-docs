@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/_index.md)
 
 # Set up Git Sync
 
@@ -195,7 +195,7 @@ Select **Choose additional settings** to continue setup.
 To proceed with the sync:
 
 1. Review the known limitations.
-2. You may see the experimental checkbox **Migrate existing resources**, which allows you to migrate your unmanaged dashboards to the provisioned folder. If you don't, refer to [Export non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/export-resources/) to learn how to migrate your existing resources.
+2. You may see the experimental checkbox **Migrate existing resources**, which allows you to migrate your unmanaged dashboards to the provisioned folder. If you don't, refer to [Export non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/) to learn how to migrate your existing resources.
 3. Click **Begin synchronization** to create the Git Sync connection. When the process is completed, you'll see a summary of the synced resources.
 
 Click **Choose additional settings** for the final configuration steps.

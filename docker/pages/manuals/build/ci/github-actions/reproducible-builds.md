@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/reproducible-builds.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/build/ci/github-actions/reproducible-builds.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/reproducible-builds.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/build/ci/github-actions/reproducible-builds.md)
 
 # Reproducible builds with GitHub Actions
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/as-code/observability-as-code/git-sync/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/observability-as-code/git-sync/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/_index.md)
 
 # Introduction to Git Sync
 
@@ -87,7 +87,9 @@ Refer to the following documents to learn about Git Sync in depth:
   - [Set up Git Sync as code](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/): Instructions for setting up Git Sync as code, so you can provision Git repositories for use with Grafana.
   - [Set up Git Sync with Terraform](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform/): Instructions for setting up Git Sync as code, so you can provision Git repositories for use with Grafana.
   - [Instantaneous pulling and dashboard previews](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend/): Instructions for extending Git Sync for real-time notification and image rendering.
-- [Add non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/export-resources/): Export non-provisioned resources from Grafana.
+- [Add non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/): Export non-provisioned resources from Grafana.
+  - [Cherry-pick and copy individual dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-copy/): Cherry-pick and copy individual dashboards.
+  - [Migrate existing dashboards to Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate/): Migrate existing dashboards to Git Sync.
 - [Work with provisioned repositories in Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/use-git-sync/): Instructions for working with Git Sync to perform common tasks, such as saving dashboards to GitHub and synchronizing changes with Grafana.
 - [Work with provisioned dashboards in Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/provisioned-dashboards/): Update, save, and modify provisioned resources in Grafana using Git Sync.
 - [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana/): Learn about permissions and access control for Git Sync, including required Grafana roles and repository permissions.

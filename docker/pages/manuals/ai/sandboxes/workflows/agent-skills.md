@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/agent-skills.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/workflows/agent-skills.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/agent-skills.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/workflows/agent-skills.md)
 
 # Share agent skills
 
@@ -72,27 +72,32 @@ Preview the skills that `sbx` finds without copying them:
 $ sbx skills import --dry-run
 ```
 
-The command scans the following directories in order and copies each skill
-subdirectory into the shared store. When the sandbox starts, `sbx` mounts the
-store at the path the agent reads inside the sandbox.
+The preview scans the host sources in the following order. The table also
+shows where supported agents read the shared store inside the sandbox:
 
-| Agent           | Host source         | Sandbox mount target          |
-| --------------- | ------------------- | ----------------------------- |
-| Claude Code     | `~/.claude/skills`  | `/home/agent/.claude/skills`  |
-| Codex and Devin | `~/.agents/skills`  | `/home/agent/.agents/skills`  |
-| Copilot         | `~/.copilot/skills` | `/home/agent/.copilot/skills` |
-| Cursor          | `~/.cursor/skills`  | `/home/agent/.cursor/skills`  |
-| Droid           | `~/.factory/skills` | `/home/agent/.factory/skills` |
+| Agent           | Host source                 | Sandbox mount target                  |
+| --------------- | --------------------------- | ------------------------------------- |
+| Codex and Devin | `~/.agents/skills`          | `/home/agent/.agents/skills`          |
+| Claude Code     | `~/.claude/skills`          | `/home/agent/.claude/skills`          |
+| OpenCode        | `~/.config/opencode/skills` | `/home/agent/.config/opencode/skills` |
+| Copilot         | `~/.copilot/skills`         | `/home/agent/.copilot/skills`         |
+| Cursor          | `~/.cursor/skills`          | `/home/agent/.cursor/skills`          |
+| Droid           | `~/.factory/skills`         | `/home/agent/.factory/skills`         |
 
 All imported skills go into the same store, regardless of their source. If
 more than one source contains a skill with the same directory name, the skill
 from the first source in the table wins and `sbx` warns about the others.
 
-Import the skills:
+Copy the skills into the shared store:
 
 ```console
 $ sbx skills import
 ```
+
+Import copies each skill directory, including directories reached through a
+symlink at the top level of a source. It skips symlinks inside skill directories
+and loose files in the source directory. If a skill depends on linked files,
+replace those links with files before importing it.
 
 The final output reports the shared store path. The default locations are:
 

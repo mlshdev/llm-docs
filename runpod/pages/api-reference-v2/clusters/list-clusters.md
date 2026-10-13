@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/list-clusters.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/api-reference-v2/clusters/list-clusters.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/list-clusters.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/api-reference-v2/clusters/list-clusters.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/list-clusters
 
 # List Clusters
@@ -9,9 +9,18 @@ List all Runpod Clusters owned by the authenticated user, including each Cluster
 
 **List clusters**
 
-Returns all clusters owned by the authenticated user.
+Returns clusters owned by the authenticated user, cursor-paginated
+newest-first; an omitted `limit` defaults to 1000. Follow
+`pagination.nextCursor` until `hasNextPage` is false.
 
 **Authentication:** `bearerAuth`
+
+**Parameters**
+
+- `cursor` (query; string; minimum length: `1`): Opaque resume cursor — pass the previous response's `pagination.nextCursor` through verbatim; omit for the first page. A cursor is only valid for the operation and parameters that issued it; a malformed or foreign cursor is rejected with 422.
+  - Example: `Y3JlYXRlZEF0PTE3NDg3ODA0MDA`
+- `limit` (query; integer; minimum: `1`; maximum: `1000`): Page size, 1–1000. Defaults to 1000 when omitted.
+  - Example: `50`
 
 **Responses**
 
@@ -47,6 +56,9 @@ Returns all clusters owned by the authenticated user.
                 - `status` (required; string; enum: `PROVISIONING`, `STARTING`, `RUNNING`, `EXITED`, `ERROR`, `TERMINATED`): Lifecycle status of a pod. - `PROVISIONING` — pod is being allocated - `STARTING` — container is starting - `RUNNING` — container is healthy - `EXITED` — container exited (stopped) - `ERROR` — container is in an unrecoverable error state - `TERMINATED` — pod has been permanently deleted
                 - `sshEndpoint` (string): Public SSH endpoint (`host:port`) for the primary node; omitted when the primary is not yet RUNNING or does not expose SSH (22/tcp).
           - `createdAt` (required; string; format: date-time)
+      - `pagination` (required; object): Cursor-pagination metadata, uniform across list endpoints. Every response carries it: follow `nextCursor` while `hasNextPage` is true to walk the full result set.
+        - `nextCursor` (required; nullable): Pass as the `cursor` query parameter to fetch the next page. Null on the last page.
+        - `hasNextPage` (required; boolean): Whether more items exist after this page.
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

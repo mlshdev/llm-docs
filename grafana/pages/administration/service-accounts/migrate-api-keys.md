@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/administration/service-accounts/migrate-api-keys.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/administration/service-accounts/migrate-api-keys.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/administration/service-accounts/migrate-api-keys.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/service-accounts/migrate-api-keys.md)
 
 # Migrate API keys to service account tokens
 

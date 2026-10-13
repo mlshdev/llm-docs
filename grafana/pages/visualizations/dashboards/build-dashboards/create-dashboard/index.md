@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md)
 
 # Create dashboards
 
@@ -15,10 +15,10 @@ Each panel needs at least one query to display a visualization.
 To create a dashboard, follow these steps:
 
 1. Click **Dashboards** in the main menu.
-2. Click **New** and select **New Dashboard**.
+2. Click **New** and select **New dashboard**.
 3. Click the **Add new element** icon (blue plus sign) and click or drag a panel onto the dashboard.
 
-![Empty dashboard with sidebar open](https://grafana.com/media/docs/grafana/dashboards/screenshot-empty-dashboard-v13.1.png)
+![Empty dashboard with sidebar open](https://grafana.com/media/docs/grafana/dashboards/screenshot-empty-dashboard-v13.2.png)
 
 1. On the new panel, select one of the following options:
 
@@ -191,13 +191,13 @@ To edit a dashboard, follow these steps:
 
 3. Do one of the following:
 
-   | Update                 | Action                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-   | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Edit existing elements | <p>Click the element to open the sidebar showing the relevant options. Click the **Dashboard options** icon to access dashboard settings.</p><p>If the dashboard is large, open the **Content outline** and use it to navigate to the part of the dashboard you want to update.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-   | Add more panels        | <p>Click the **Add new element** icon and select **Panel**.</p><p>You can also hover your cursor on the dashboard to display the **Add panel** button. This is helpful if you want to ensure that you add a new panel within a grouping.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-   | Group panels           | <p>Click **Add new element** and select **Add row/Group into rows** or **Add tab/Group into tabs**.</p><p>Alternatively hover your cursor on the dashboard to display the **Group panels** and select a grouping option or select a specific set of panels and group them into rows or tabs.</p><p>For more information on groupings, refer to [Panel groupings](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-groupings/).</p>                                                                                                                                                                                                                                                    |
-   | Add dashboard controls | Click **Add new element** and select one of the following: <ul><li>[Filter and Group by](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-filters-and-group-by-controls)</li><li>[Variable](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables)</li><li>[Annotation query](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-annotation-queries)</li><li>[Links](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-links)</li></ul> |
-   | Change layouts         | Click a row, tab, or the **Dashboard options** icon to open the sidebar and access layout options. For more information, refer to [panel layout options](#panel-layouts).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+   | Update                 | Action                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+   | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | Edit existing elements | <p>Click the element to open the sidebar showing the relevant options. Click the **Dashboard options** icon to access dashboard settings.</p><p>If the dashboard is large, open the **Content outline** and use it to navigate to the part of the dashboard you want to update.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+   | Add more panels        | <p>Click the **Add new element** icon and select **Panel**.</p><p>You can also hover your cursor on the dashboard to display the **Add panel** button. This is helpful if you want to ensure that you add a new panel within a grouping.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+   | Group panels           | <p>Click **Add new element** and select **Add row/Group into rows** or **Add tab/Group into tabs**.</p><p>Alternatively hover your cursor on the dashboard to display the **Group panels** and select a grouping option or select a specific set of panels and group them into rows or tabs.</p><p>For more information on groupings, refer to [Panel groupings](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-groupings/).</p>                                                                                                                                                                                                                                                   |
+   | Add dashboard controls | Click **Add new element** and select one of the following: <ul><li>[Filter and Group by](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-filters-and-group-by-controls)</li><li>[Variable](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables)</li><li>[Annotation query](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-annotation-queries)</li><li>[Link](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-links)</li></ul> |
+   | Change layouts         | Click a row, tab, or the **Dashboard options** icon to open the sidebar and access layout options. For more information, refer to [panel layout options](#panel-layouts).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 4. When you've finished making changes, click **Save**.
 
@@ -249,7 +249,7 @@ To update the panel layout, follow these steps:
 2. Click **Edit**.
 3. Click the dashboard or the grouping that contains the panel layout you want to update.
 4. Click the **Dashboard options** icon to open the sidebar, if needed.
-5. Under **Layout**, select **Custom** or **Auto grid**.
+5. Under **Layout**, select **Custom** or **Auto**.
 6. Click **Save**.
 7. (Optional) Enter a description of the changes you've made.
 8. Click **Save**.
@@ -315,7 +315,7 @@ There are three types of show/hide rules to choose from:
 - [Template variable](#template-variable-rule)
 - [Time range less than](#time-range-less-than-rule)
 
-For steps on how to create show/hide rules, refer to [Configure show/hide rules](#configure-showhide-rules).
+For steps to create show/hide rules, refer to [Configure show/hide rules](#configure-showhide-rules).
 
 > **Note**
 >
@@ -339,7 +339,7 @@ In this case, you'd set the rule as follows:
 
 ### Template variable rule
 
-Show or hide a panel, row, or tab dynamically based on the variable value.
+Show or hide a panel, row, or tab dynamically based on a variable value.
 You can select any variable that's configured for the dashboard and choose from the following operators for maximum flexibility:
 
 - Equals
@@ -347,14 +347,14 @@ You can select any variable that's configured for the dashboard and choose from 
 - Matches (regular expression values)
 - Not matches (regular expression values)
 
-You can add more variables if you need to without leaving the dashboard.
+You can [add more variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables) if you need to without leaving the dashboard.
 
 ### Time range less than rule
 
 Show or hide a panel, row, or tab if the dashboard time range is shorter than the selected time range.
 This ensures that as you change the time range of the dashboard, you only see data relevant to that time period.
 
-For example, a dashboard is tracking adoption of a feature over time has the following setup:
+For example, a dashboard that's tracking adoption of a feature over time has the following setup:
 
 - Dashboard time range is **Last 7 days**
 - One panel tracks weekly stats
@@ -368,7 +368,7 @@ For this rule type, you can select time ranges from **5 minutes** to **5 years**
 
 ### Configure show/hide rules
 
-To configure show/hide rules, follow these steps:
+To configure a show/hide rule, follow these steps:
 
 1. Navigate to the dashboard you want to update.
 
@@ -386,17 +386,14 @@ To configure show/hide rules, follow these steps:
 
 7. Select a rule type:
    - **Query result**: Show or hide a panel based on query results. Choose from **Has data** and **No data**.
-   - **Template variable**: Show or hide the panel, row, or tab dynamically based on the variable value. Select a variable and operator and enter a value.
+   - **Template variable**: Show or hide the panel, row, or tab dynamically based on the variable value. Select a variable and operator, and enter a value.
    - **Time range less than**: Show or hide the panel, row, or tab if the dashboard time range is shorter than the selected time range. Select a time range from **5 minutes** to **5 years**.
 
-8. If you've configured more than rule, under **Match rules**, select one of the following:
-
+8. If you've configured multiple rules, the **Match rules** option displays. Select one of the following:
    - **Match all**: The panel, row, or tab is shown or hidden only if *all* the rules are matched.
    - **Match any**: The panel, row, or tab is shown or hidden if *any* of the rules are matched.
 
-   This option is only displayed if you add multiple rules.
-
-9. When you've finished setting rules, click **Save**.
+9. When you've finished setting rules, save the dashboard.
 
 10. (Optional) Enter a description of the changes you've made.
 
@@ -429,7 +426,7 @@ To move a panel, follow these steps:
 
 7. (Optional) Enter a description of the changes you've made.
 
-8. Click **Save**.
+8. Click **Save** again.
 
 9. Click **Exit edit**
 

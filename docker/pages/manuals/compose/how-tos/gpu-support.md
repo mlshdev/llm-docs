@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/how-tos/gpu-support.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/compose/how-tos/gpu-support.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/gpu-support.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/compose/how-tos/gpu-support.md)
 
 # Run Docker Compose services with GPU access
 

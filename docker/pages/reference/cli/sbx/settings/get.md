@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_settings_get.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_settings_get.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_settings_get.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_settings_get.yaml)
 
 # sbx settings get
 
 Get the value of a setting
 
-**Usage:** `sbx settings get <key> [flags]`
+**Usage:** `sbx settings get KEY [flags]`
 
 ## Description
 
@@ -15,9 +15,10 @@ default, and description.
 
 ## Options
 
-| Option   | Default | Description                               |
-| -------- | ------- | ----------------------------------------- |
-| `--json` |         | Print the complete setting record as JSON |
+| Option     | Default | Description                        |
+| ---------- | ------- | ---------------------------------- |
+| `--format` |         | Output format: table, json or yaml |
+| `--json`   |         | Output in JSON format              |
 
 ## Global options
 

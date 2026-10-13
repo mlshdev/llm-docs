@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder_history.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_kit_builder_history.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder_history.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_kit_builder_history.yaml)
 
 # sbx kit builder history
 
-Inspect kit build history in the builder sandbox
+Show kit build history in the builder sandbox
 
 **Usage:** `sbx kit builder history COMMAND`
 

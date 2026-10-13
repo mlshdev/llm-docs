@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_skills_add.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_skills_add.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_skills_add.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_skills_add.yaml)
 
 # sbx skills add
 
 Add skills from a Git repository
 
-**Usage:** `sbx skills add <repository> [flags]`
+**Usage:** `sbx skills add REPOSITORY [flags]`
 
 > \[!NOTE]
 > This command is experimental.

@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_rm.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_mcp_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_rm.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_mcp_rm.yaml)
 
 # sbx mcp rm
 
 Remove a registered MCP server
 
-**Usage:** `sbx mcp rm <name> [flags]`
+**Usage:** `sbx mcp rm NAME [flags]`
 
 ## Options
 

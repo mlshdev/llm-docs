@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/create-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/api-reference-v2/serverless/create-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/create-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/api-reference-v2/serverless/create-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/create-a-serverless-endpoint
 
 # Create A Serverless Endpoint
@@ -115,8 +115,15 @@ none.
         - `flashboot` (default: `OFF`)
           - allOf:
             - `variant 1` (string; enum: `OFF`, `FLASHBOOT`, `PRIORITY_FLASHBOOT`): FlashBoot cold-start acceleration mode. - `OFF` — disabled - `FLASHBOOT` — enabled - `PRIORITY_FLASHBOOT` — enabled with priority capacity
-        - `networkVolumes` (array)
+        - `networkVolumes` (array): Network volume IDs.
           - `items` (string)
+        - `mounts` (object): Volumes to mount on the endpoint's workers. A `network` or `global` list that is present replaces the endpoint's current list of that kind; an empty list detaches it, and an omitted list is left unchanged. Both kinds cannot be present on the endpoint at once, so to switch kinds send `[]` for one and the new list for the other in the same request. Changes apply to workers created afterwards. At most one global volume, GPU endpoints only. `network` may accompany the deprecated `networkVolumes` field only if the two agree exactly.
+          - `network` (array): Network volumes, at most one per data center.
+            - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+              - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
+          - `global` (array; maximum items: `1`)
+            - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+              - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
         - `templateId` (string; minimum length: `1`): ID of a serverless template to base this endpoint on. The template is resolved at create time into the same container settings you could otherwise spread into this body (image, args, disk, ports, env, registry); explicit body fields override the template's, except `env`, which is merged per key with body values winning. The template's allowedCudaVersions seeds `gpu.allowedCudaVersions` when the body omits it — but only for a GPU create, since a CPU endpoint has no gpu block to seed into, and not when the body sets `gpu.minCudaVersion`, since seeding a set beside a floor would manufacture the mutual-exclusion 400 from a valid request. Its pod-specific startSsh/startJupyter flags are ignored. Later template edits do not affect the endpoint. The template may be one of your own or a public catalog template — see `GET /v2/catalog/templates` (unknown or inaccessible ID → 404) — and must be a serverless template (→ 422).
         - `timeout` (integer; default: `300000`)
         - `workers` (object)
@@ -214,11 +221,18 @@ none.
             - `items` (string)
           - `networkVolumes` (required; array)
             - `items` (string)
+          - `mounts` (required; object): Volumes mounted on every worker of the endpoint.
+            - `network` (required; array)
+              - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+                - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
+            - `global` (required; array)
+              - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
+                - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
           - `timeout` (required; integer): Per-request execution timeout in milliseconds
           - `flashboot` (required; string; enum: `OFF`, `FLASHBOOT`, `PRIORITY_FLASHBOOT`): FlashBoot cold-start acceleration mode. - `OFF` — disabled - `FLASHBOOT` — enabled - `PRIORITY_FLASHBOOT` — enabled with priority capacity
           - `createdAt` (required; string; format: date-time)
-    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/4m7x2k9q/run","runSync":"https://api.runpod.ai/v2/4m7x2k9q/runsync","status":"https://api.runpod.ai/v2/4m7x2k9q/status/{job_id}","stream":"https://api.runpod.ai/v2/4m7x2k9q/stream/{job_id}","cancel":"https://api.runpod.ai/v2/4m7x2k9q/cancel/{job_id}","retry":"https://api.runpod.ai/v2/4m7x2k9q/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/4m7x2k9q/purge-queue","health":"https://api.runpod.ai/v2/4m7x2k9q/health"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":0,"max":5,"idleTimeout":5},"scaling":{"type":"QUEUE_DELAY","queueDelay":4},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
-    - Example `cpuEndpoint`: `{"id":"7c3v1n8p","name":"cpu-inference","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/7c3v1n8p/run","runSync":"https://api.runpod.ai/v2/7c3v1n8p/runsync","status":"https://api.runpod.ai/v2/7c3v1n8p/status/{job_id}","stream":"https://api.runpod.ai/v2/7c3v1n8p/stream/{job_id}","cancel":"https://api.runpod.ai/v2/7c3v1n8p/cancel/{job_id}","retry":"https://api.runpod.ai/v2/7c3v1n8p/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/7c3v1n8p/purge-queue","health":"https://api.runpod.ai/v2/7c3v1n8p/health"},"image":"python:3.11-slim","args":"","disk":20,"ports":[],"env":{},"registry":null,"cpu":[{"id":"cpu5c","vcpuCount":4,"memory":16},{"id":"cpu5g","vcpuCount":8,"memory":16}],"workers":{"min":0,"max":3,"idleTimeout":10},"scaling":{"type":"QUEUE_DELAY","queueDelay":4},"dataCenterIds":[],"networkVolumes":[],"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
+    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/4m7x2k9q/run","runSync":"https://api.runpod.ai/v2/4m7x2k9q/runsync","status":"https://api.runpod.ai/v2/4m7x2k9q/status/{job_id}","stream":"https://api.runpod.ai/v2/4m7x2k9q/stream/{job_id}","cancel":"https://api.runpod.ai/v2/4m7x2k9q/cancel/{job_id}","retry":"https://api.runpod.ai/v2/4m7x2k9q/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/4m7x2k9q/purge-queue","health":"https://api.runpod.ai/v2/4m7x2k9q/health"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":0,"max":5,"idleTimeout":5},"scaling":{"type":"QUEUE_DELAY","queueDelay":4},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"mounts":{"network":[{"volumeId":"2q9m7x4c"}],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
+    - Example `cpuEndpoint`: `{"id":"7c3v1n8p","name":"cpu-inference","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/7c3v1n8p/run","runSync":"https://api.runpod.ai/v2/7c3v1n8p/runsync","status":"https://api.runpod.ai/v2/7c3v1n8p/status/{job_id}","stream":"https://api.runpod.ai/v2/7c3v1n8p/stream/{job_id}","cancel":"https://api.runpod.ai/v2/7c3v1n8p/cancel/{job_id}","retry":"https://api.runpod.ai/v2/7c3v1n8p/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/7c3v1n8p/purge-queue","health":"https://api.runpod.ai/v2/7c3v1n8p/health"},"image":"python:3.11-slim","args":"","disk":20,"ports":[],"env":{},"registry":null,"cpu":[{"id":"cpu5c","vcpuCount":4,"memory":16},{"id":"cpu5g","vcpuCount":8,"memory":16}],"workers":{"min":0,"max":3,"idleTimeout":10},"scaling":{"type":"QUEUE_DELAY","queueDelay":4},"dataCenterIds":[],"networkVolumes":[],"mounts":{"network":[],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)

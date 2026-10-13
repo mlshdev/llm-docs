@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md)
 
 # Filter and group by controls
 
@@ -57,7 +57,7 @@ To add filters and group by controls, follow these steps:
    - **Controls menu**: The filter is displayed in the dashboard controls menu instead of above the dashboard. The dashboard controls menu appears as a button in the dashboard toolbar.
    - **Hidden**: No filter drop-down list is displayed on the dashboard.
 
-9. Under the **Filter options** section of the page, set the following options:
+9. Under the **Filter options** section of the sidebar, set the following options:
 
    | Option                    | Description                                                                                                                                                                                                                                                                                                                          |
    | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -91,7 +91,7 @@ The overview lets you search for specific keys, and adjust them, without scrolli
 
 ![Dashboard with the filters and group by dimensions](https://grafana.com/media/docs/grafana/screenshot-filters-overview-v12.0.png)
 
-Add an operator and value for a key to add it as a filter or select the **Group by** checkbox to set a group by dimension.
+Add an operator and value for a key to add it as a filter or select the **GroupBy** checkbox to set a group by dimension.
 You can use a key for both a filter and a group by.
 
 ## Cross-filtering {#dashboard-drilldown-with-filters}

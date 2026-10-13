@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md)
 
 # User API
 
@@ -10,23 +10,25 @@
 >
 > To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
 
-> **Caution**
->
-> You can't authenticate to the User HTTP API with service account tokens.
-> Service accounts are limited to an organization and an organization role.
-> They can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators).
->
-> Alternatively, you can use the [Organization HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/org/#current-organization-api) with service account tokens to manage users in a specific organization
->
-> To use these API endpoints you have to use Basic authentication and the Grafana user must have the Grafana server administrator permission.
->
-> The `admin` user that Grafana is provisioned with by default has permissions to use these API endpoints.
+The User API is a special, instance-wide endpoint that lists users across every organization on all its Grafana instances.
 
-For Grafana Cloud customers, refer to [Organization HTTP API](https://grafana.com/docs/grafana/latest/developers/http_api/org/) for finding users with the org Admin role.
+**This API does not work in Grafana Cloud**.
 
-> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+## Permissions
 
-## Search Users
+To use these API endpoints you must have the Grafana server administrator permissions.
+
+In Grafana OSS, the default `admin` user has permissions to use these API endpoints. If you're running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+
+Because Grafana Cloud stacks are multi-tenant, **no Grafana Cloud account is allowed to call these endpoints**. That level of access is reserved only for Grafana platform operators. If you're a Grafana Cloud user, refer to the [Organization HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/http_api/api-legacy/org/) instead.
+
+## Authentication
+
+**You need basic authentication to use this API**, you can't authenticate with service account tokens. Service accounts are limited to an organization and an organization role, and can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators).
+
+Alternatively, you can use the [Organization HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/org/#current-organization-api) with service account tokens to manage users in a specific organization
+
+## Search users
 
 `GET /api/users?perpage=10&page=1&sort=login-asc,email-asc`
 
@@ -83,7 +85,7 @@ Content-Type: application/json
 ]
 ```
 
-## Search Users with Paging
+## Search users with paging
 
 `GET /api/users/search?perpage=10&page=1&query=mygraf&sort=login-asc,email-asc`
 
@@ -192,7 +194,7 @@ Content-Type: application/json
 }
 ```
 
-## Get single user by Username(login) or Email
+## Get single user by username (login) or email
 
 `GET /api/users/lookup?loginOrEmail=user@mygraf.com`
 
@@ -247,7 +249,7 @@ Content-Type: application/json
 }
 ```
 
-## User Update
+## User update
 
 `PUT /api/users/:id`
 
@@ -286,7 +288,7 @@ Content-Type: application/json
 {"message":"User updated"}
 ```
 
-## Get Organizations for user
+## Get organizations for user
 
 `GET /api/users/:id/orgs`
 
@@ -324,7 +326,7 @@ Content-Type: application/json
 ]
 ```
 
-## Get Teams for user
+## Get teams for user
 
 `GET /api/users/:id/teams`
 
@@ -366,9 +368,7 @@ Content-Type: application/json
 ]
 ```
 
-## User
-
-## Actual User
+## Actual user
 
 `GET /api/user`
 
@@ -406,7 +406,7 @@ Content-Type: application/json
 }
 ```
 
-## Change Password
+## Change password
 
 `PUT /api/user/password`
 
@@ -493,7 +493,7 @@ Content-Type: application/json
 {"message":"Active organization changed"}
 ```
 
-## Organizations of the actual User
+## Organizations of the actual user
 
 `GET /api/user/orgs`
 
@@ -523,7 +523,7 @@ Content-Type: application/json
 ]
 ```
 
-## Teams that the actual User is member of
+## Teams that the actual user is member of
 
 `GET /api/user/teams`
 
@@ -604,7 +604,7 @@ Content-Type: application/json
 {"message":"Dashboard unstarred"}
 ```
 
-## Auth tokens of the actual User
+## Auth tokens of the actual user
 
 `GET /api/user/auth-tokens`
 
@@ -653,7 +653,7 @@ Content-Type: application/json
 ]
 ```
 
-## Revoke an auth token of the actual User
+## Revoke an auth token of the actual user
 
 `POST /api/user/revoke-auth-token`
 

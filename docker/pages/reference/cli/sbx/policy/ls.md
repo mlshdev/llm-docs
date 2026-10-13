@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_policy_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_policy_ls.yaml)
 
 # sbx policy ls
 
@@ -30,8 +30,9 @@ rule.
 | -------------------- | ------- | ------------------------------------------------------------------------------------------ |
 | `--created-via`      |         | Filter policies by how they were created: "default", "added", "provisioned", or "approval" |
 | `--decision`         |         | Filter policies by decision: "allow" or "deny"                                             |
+| `--format`           |         | Output format: table, json or yaml                                                         |
 | `--include-inactive` |         | Show inactive policy rules hidden by remote governance                                     |
-| `--json`             |         | Output filtered policy rules as JSON                                                       |
+| `--json`             |         | Output in JSON format                                                                      |
 | `--protocol`         |         | Filter network rules by protocol: tcp or udp                                               |
 | `--source`           |         | Filter policies by source: "local", "org", or "kit"                                        |
 | `--type`             | `all`   | Filter policies by type: "all", "network", "filesystem" (default "all")                    |

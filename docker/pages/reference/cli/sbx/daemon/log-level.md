@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_daemon_log-level.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_daemon_log-level.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_daemon_log-level.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_daemon_log-level.yaml)
 
 # sbx daemon log-level
 
-Inspect or change sandboxd's per-category log levels
+Show or change sandboxd's per-category log levels
 
 **Usage:** `sbx daemon log-level [COMMAND]`
 

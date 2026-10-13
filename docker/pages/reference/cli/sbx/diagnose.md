@@ -1,18 +1,18 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_diagnose.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_diagnose.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_diagnose.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_diagnose.yaml)
 
 # sbx diagnose
 
 Diagnose common issues with your sbx installation
 
-**Usage:** `sbx diagnose`
+**Usage:** `sbx diagnose [flags]`
 
 ## Options
 
-| Option           | Default | Description                                     |
-| ---------------- | ------- | ----------------------------------------------- |
-| `--json`         |         | Output in JSON format (alias for --output json) |
-| `-o`, `--output` |         | Output format: "json" or "github-issue"         |
-| `--upload`       |         | Upload diagnostics to Docker support            |
+| Option     | Default | Description                                      |
+| ---------- | ------- | ------------------------------------------------ |
+| `--format` |         | Output format: table, json, yaml or github-issue |
+| `--json`   |         | Output in JSON format                            |
+| `--upload` |         | Upload diagnostics to Docker support             |
 
 ## Global options
 
@@ -20,3 +20,15 @@ Diagnose common issues with your sbx installation
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+
+## Examples
+
+```console
+sbx diagnose
+
+  # Print the report as JSON
+  sbx diagnose --format json
+
+  # Upload the report to Docker support
+  sbx diagnose --upload
+```

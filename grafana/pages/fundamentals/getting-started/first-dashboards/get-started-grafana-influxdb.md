@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-influxdb.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-influxdb.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-influxdb.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-influxdb.md)
 
 # Get started with Grafana and InfluxDB
 
@@ -28,11 +28,11 @@ Windows users might need to make additional adjustments. Look for special instru
 
 You can have more than one InfluxDB data source defined in Grafana.
 
-1. Follow the general instructions to [add a data source](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/datasources/#add-a-data-source).
+1. Follow the general instructions to [add a data source](https://grafana.com/docs/grafana/v13.2/datasources/#add-a-data-source).
 2. Decide if you will use InfluxQL or Flux as your query language.
-   - [Configure the data source](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/datasources/influxdb/#configure-the-data-source) for your chosen query language.
+   - [Configure the data source](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/configure/) for your chosen query language.
      Each query language has its own unique data source settings.
-   - For querying features specific to each language, see the data source's [query editor documentation](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/datasources/influxdb/query-editor/).
+   - For querying features specific to each language, see the data source's [query editor documentation](https://grafana.com/docs/grafana/latest/datasources/influxdb/query-editor/).
 
 ##### InfluxDB guides
 
@@ -65,8 +65,8 @@ Grafana displays a list of possible series. Click one to select it, and Grafana 
 
 Create a simple Flux query.
 
-1. [Add a panel](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/dashboards/build-dashboards/create-dashboard/).
-2. In the query editor, select your InfluxDB-Flux data source. For more information, refer to [Queries](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/panels-visualizations/query-transform-data/).
+1. [Add a panel](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/).
+2. In the query editor, select your InfluxDB-Flux data source. For more information, refer to [Queries](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/).
 3. Select the **Table** visualization.
 4. In the query editor text field, enter `buckets()` and then click outside of the query editor.
 
@@ -86,12 +86,12 @@ You can also create Flux queries in the InfluxDB Explore view.
 
 ![InfluxDB Explore Script Editor](https://grafana.com/static/img/docs/influxdb/explore-query-text-7-5.png)
 
-1. In Grafana, [add a panel](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/dashboards/build-dashboards/create-dashboard/) and then paste your Flux code into the query editor.
+1. In Grafana, [add a panel](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/) and then paste your Flux code into the query editor.
 2. Click **Apply**. Your new panel should be visible with data from your Flux query.
 
 #### Check InfluxDB metrics in Grafana Explore
 
-In your Grafana instance, go to the [Explore](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/explore/) view and build queries to experiment with the metrics you want to monitor. Here you can also debug issues related to collecting metrics.
+In your Grafana instance, go to the [Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/) view and build queries to experiment with the metrics you want to monitor. Here you can also debug issues related to collecting metrics.
 
 #### Start building dashboards
 
@@ -99,5 +99,5 @@ There you go! Use Explore and Data Explorer to experiment with your data, and ad
 
 Here are some resources to learn more:
 
-- Grafana documentation: [InfluxDB data source](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/datasources/influxdb/)
+- Grafana documentation: [InfluxDB data source](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/)
 - InfluxDB documentation: [Comparison of Flux vs InfluxQL](https://docs.influxdata.com/influxdb/v1.8/flux/flux-vs-influxql/)

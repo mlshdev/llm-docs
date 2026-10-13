@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_mcp_auth.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_mcp_auth.yaml)
 
 # sbx mcp auth
 
 Authorize MCP servers
 
-**Usage:** `sbx mcp auth [server-name] [flags]`
+**Usage:** `sbx mcp auth [SERVER] [flags]`
 
 ## Description
 
@@ -62,7 +62,7 @@ Scope values may be URN-shaped (urn:ietf:params:oauth:scope:mail) or URL-shaped
 | ------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `--all`      |         | Apply to all registered OAuth servers                                                                                                                                                                                                                                                                                                                                                                      |
 | `--format`   | `text`  | Output format: "text" or "json"                                                                                                                                                                                                                                                                                                                                                                            |
-| `--json`     |         | Output in JSON format (alias for --format json)                                                                                                                                                                                                                                                                                                                                                            |
+| `--json`     |         | Output in JSON format                                                                                                                                                                                                                                                                                                                                                                                      |
 | `--no-scope` |         | Request no scopes at all for this run, so the authorization server applies its own default grant. Suppresses recorded, required, and OIDC fallback scopes; cannot be combined with --scope                                                                                                                                                                                                                 |
 | `--scope`    |         | OAuth scope to authorize for this run (repeatable; overrides the recorded default; unrecognized scopes warn but are still requested). With no --scope and no recorded default, the scope set the resource itself requires is requested; with none of those, whichever of openid, email, profile, and offline\_access are advertised are requested; other advertised scopes are excluded from this fallback |
 | `--verbose`  |         | Print authorization polling progress                                                                                                                                                                                                                                                                                                                                                                       |

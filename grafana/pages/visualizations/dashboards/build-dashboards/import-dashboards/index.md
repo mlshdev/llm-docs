@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/import-dashboards/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/import-dashboards/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/import-dashboards/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/import-dashboards/index.md)
 
 # Import dashboards
 
@@ -14,8 +14,8 @@ To import a dashboard, follow these steps:
 
 3. Perform one of the following steps:
    - Upload a dashboard JSON file.
-   - Paste a [Grafana.com dashboard](#discover-dashboards-on-grafanacom) URL or ID into the field provided.
-   - Paste dashboard JSON text directly into the text area.
+   - Paste a [Grafana.com dashboard](#discover-dashboards-on-grafanacom) URL or ID into the field provided, and click **Load**.
+   - Paste dashboard JSON text directly into the text area, and click **Load**.
 
 4. (Optional) Change the dashboard name, folder, or UID, and specify metric prefixes, if the dashboard uses any.
 

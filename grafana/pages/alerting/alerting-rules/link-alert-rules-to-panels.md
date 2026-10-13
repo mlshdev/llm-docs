@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/alerting-rules/link-alert-rules-to-panels.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/alerting-rules/link-alert-rules-to-panels.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/link-alert-rules-to-panels.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/link-alert-rules-to-panels.md)
 
 # Create and link alert rules to panels
 
@@ -49,7 +49,7 @@ By default, notification messages include a link to the dashboard panel. Additio
 
 ## Access linked alert rules from panels
 
-This option is available only in [time series panels](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/). To access alert rules associated to a time series panel, complete the following steps.
+This option is available only in [time series panels](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/time-series/). To access alert rules associated to a time series panel, complete the following steps.
 
 1. Hover over the top-right corner of the panel and click the panel menu icon.
 2. Click **Edit**.

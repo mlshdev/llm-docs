@@ -10,7 +10,7 @@
 - [Docker main](docker/llms.txt): [full corpus](docker/llms-full.txt), [manifest](docker/manifest.json)
 - [Apple container 1.5.0](container/llms.txt): [full corpus](container/llms-full.txt), [manifest](container/manifest.json)
 - [n8n main](n8n/llms.txt): [full corpus](n8n/llms-full.txt), [manifest](n8n/manifest.json)
-- [Grafana v13.2.3](grafana/llms.txt): [full corpus](grafana/llms-full.txt), [manifest](grafana/manifest.json)
+- [Grafana v13.2.4](grafana/llms.txt): [full corpus](grafana/llms-full.txt), [manifest](grafana/manifest.json)
 - [VictoriaMetrics v1.154.0](victoriametrics/llms.txt): [full corpus](victoriametrics/llms-full.txt), [manifest](victoriametrics/manifest.json)
 - [VictoriaLogs v1.53.0](victorialogs/llms.txt): [full corpus](victorialogs/llms-full.txt), [manifest](victorialogs/manifest.json)
 - [VictoriaMetrics datasource for Grafana v0.26.1](victoriametrics-datasource/llms.txt): [full corpus](victoriametrics-datasource/llms-full.txt), [manifest](victoriametrics-datasource/manifest.json)

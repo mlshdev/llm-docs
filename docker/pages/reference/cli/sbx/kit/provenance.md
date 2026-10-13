@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_provenance.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_kit_provenance.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_provenance.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_kit_provenance.yaml)
 
 # sbx kit provenance
 
@@ -33,6 +33,7 @@ digest are reported as VERIFIED.
 | `--certificate-identity-regexp`    |         | Keyless signer identity regexp (certificate SAN)                               |
 | `--certificate-oidc-issuer`        |         | Exact keyless OIDC issuer                                                      |
 | `--certificate-oidc-issuer-regexp` |         | Keyless OIDC issuer regexp                                                     |
+| `--format`                         |         | Output format: table, json or yaml                                             |
 | `--insecure-ignore-tlog`           |         | Do not require a Rekor transparency-log entry (for private keyless signatures) |
 | `--json`                           |         | Output in JSON format                                                          |
 | `--key`                            |         | Public key for key-based verification (PEM)                                    |

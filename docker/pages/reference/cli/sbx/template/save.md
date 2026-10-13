@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_template_save.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_template_save.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_template_save.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_template_save.yaml)
 
 # sbx template save
 
@@ -34,11 +34,11 @@ minutes to complete. See <https://docs.docker.com/ai/sandboxes/> for the snapsho
 
 ## Options
 
-| Option                | Default | Description                                                                                                                                                                                                                                                     |
-| --------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--capture-mode`      | `disk`  | What gets captured for this template. "disk" (default) captures only the filesystem — cold-boot from a standard OCI image, faster load. "all" captures memory + disk + microVM checkpoint — sub-second TTI on resume, slower load. Only effective with --cloud. |
-| `-d`, `--description` |         | Description for the template (cloud only)                                                                                                                                                                                                                       |
-| `-o`, `--output`      |         | Also export the image to a tar file                                                                                                                                                                                                                             |
+| Option           | Default | Description                                                                                                                                                                                                                                                     |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--capture-mode` | `disk`  | What gets captured for this template. "disk" (default) captures only the filesystem — cold-boot from a standard OCI image, faster load. "all" captures memory + disk + microVM checkpoint — sub-second TTI on resume, slower load. Only effective with --cloud. |
+| `--description`  |         | Description for the template (cloud only)                                                                                                                                                                                                                       |
+| `-o`, `--output` |         | Also export the image to a tar file                                                                                                                                                                                                                             |
 
 ## Global options
 

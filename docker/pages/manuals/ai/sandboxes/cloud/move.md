@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/move.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/cloud/move.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/move.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/cloud/move.md)
 
 # Move a sandbox
 
@@ -106,6 +106,16 @@ $ sbx move local-project --to cloud --ttl 2h --on-timeout stop
 
 The `stop` action preserves state. An explicit request fails if stopping is
 unavailable. Use `--on-timeout delete` to delete on expiration.
+
+To restart the destination automatically when it expires, use `restart`:
+
+```console
+$ sbx move local-project --to cloud --ttl 4h --on-timeout restart
+```
+
+The `restart` action stops and immediately starts the destination. If you
+specify `--ttl`, it must be at least one hour.
+
 These flags apply only to moves to the cloud. After the move, inspect or extend
 the expiration with [`sbx --cloud ttl`](https://docs.docker.com/ai/sandboxes/cloud/usage/#configure-expiration).
 

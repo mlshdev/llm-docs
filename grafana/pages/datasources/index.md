@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/datasources/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/datasources/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/_index.md)
 
 # Data sources
 
-A *data source* in Grafana is a connection to a storage backend that holds your data, such as a Prometheus server, a Loki instance, a SQL database, or a cloud monitoring service. Grafana queries data sources to retrieve the stored data (e.g. metrics, logs, traces, and profiles) that it then visualizes in dashboards and Explore.
+A *data source* in Grafana is a connection to a storage backend that holds your data, such as a Prometheus server, a Loki instance, a SQL database, or a cloud monitoring service. Grafana queries data sources to retrieve the stored data (for example, metrics, logs, traces, and profiles) that it then visualizes in dashboards and Explore.
 
 Grafana comes with built-in support for many data sources.
 If you need other data sources, you can also install one of the many data source plugins.
@@ -73,11 +73,28 @@ Grafana includes three special data sources:
 
 ### Grafana
 
-A built-in data source that generates random walk data and can poll the [TestData](https://grafana.com/docs/grafana/v13.2/datasources/testdata/) data source. Additionally, it can list files and get other data from a Grafana installation. This can be helpful for testing visualizations and running experiments.
+This built-in data source generates random walk data and can poll the [TestData](https://grafana.com/docs/grafana/v13.2/datasources/testdata/) data source. It can also list files and retrieve other data from a Grafana installation, making it useful for testing visualizations and running experiments.
+
+In a panel query, the Grafana data source supports the following query types, which you select in the query editor:
+
+- **Random walk:** Generate a random time series signal within the selected time range, which is useful for testing panels and visualizations.
+- **Live measurements:** Stream real-time measurements from Grafana Live channels.
+- **List public files:** Show directory listings for public resources served by the Grafana installation.
+
+When you add an annotation query in a dashboard's settings, the Grafana data source supports the following additional query types:
+
+- **Annotations and alerts:** Return annotations or alerts managed by Grafana, filtered either by the current dashboard or by tags.
+- **Time regions:** Highlight a repeating time region, such as business hours or weekends.
+
+You don't select the **Snapshot** query type manually. Grafana uses it automatically to display the data captured in a dashboard snapshot.
 
 ### Mixed
 
-An abstraction that lets you query multiple data sources in the same panel. When you select Mixed, you can then select a different data source for each new query that you add.
+This data source lets you query multiple data sources in the same panel. When you select **Mixed**, you can select a different data source for each new query that you add. This is useful when you want to compare or combine data from different backends in a single visualization, such as metrics from Prometheus alongside logs from Loki.
+
+Each query runs against its own data source using that data source's query editor, and Grafana runs the queries in parallel. If one query fails, the others still return results, and the failed query reports an error labeled with its data source name.
+
+Note the following behavior:
 
 - The first query uses the data source that was selected before you selected **Mixed**.
 - You can't change an existing query to use the **Mixed** data source.
@@ -86,7 +103,21 @@ An abstraction that lets you query multiple data sources in the same panel. When
 
 ### Dashboard
 
-A data source that uses the result set from another panel in the same dashboard. The dashboard data source can use data either directly from the selected panel or from annotations attached to the selected panel.
+This data source reuses the result set from another panel in the same dashboard. Instead of running its own query against a backend, a panel using the **Dashboard** data source points to a *source panel* and works with the data that panel already returned.
+
+Because it depends on another panel in the same dashboard, the **Dashboard** data source is only available when you edit a panel within a dashboard. It doesn't appear in Explore.
+
+The Dashboard data source references the complete output of another panel. It doesn't chain one query into another within a single panel, so you can't feed the results of one query into a second query as an input. To reshape or narrow the referenced data, apply [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/) in the panel that uses the Dashboard data source.
+
+Use the Dashboard data source when you want to:
+
+- **Share query results:** Point several panels at one source panel so Grafana runs a single query and reuses the results, which reduces the number of queries sent to your backend. For details, refer to [Share query results with another panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/share-query/).
+- **Filter unsupported data:** Reference a panel whose data source doesn't support the use of filters, then filter the referenced data in the new panel. For details, refer to [Filter any data using the Dashboard data source](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/#filter-any-data-using-the-dashboard-data-source).
+
+When you configure the Dashboard data source, you set the following options:
+
+- **Source panel:** The panel whose results you want to reuse.
+- **Data:** Select **All data** to use the source panel's query results, or select annotations to use only the annotations attached to that panel.
 
 [Panel as a Data Source in Grafana Play](https://play.grafana.org/d/ede8zps8ndb0gc/)
 
@@ -117,7 +148,6 @@ Grafana ships with the following core data sources, organized by their primary u
 
 ### Profiles
 
-- [Parca](https://grafana.com/docs/grafana/v13.2/datasources/parca/)
 - [Pyroscope](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/)
 
 ### SQL databases

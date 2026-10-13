@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_template_rm.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_template_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_template_rm.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_template_rm.yaml)
 
 # sbx template rm
 
@@ -20,9 +20,11 @@ The template can be identified by its tmpl\_\* ID or by its human name
 
 ## Options
 
-| Option          | Default | Description               |
-| --------------- | ------- | ------------------------- |
-| `-f`, `--force` |         | Skip confirmation prompts |
+| Option          | Default | Description                        |
+| --------------- | ------- | ---------------------------------- |
+| `-f`, `--force` |         | Skip confirmation prompts          |
+| `--format`      |         | Output format: table, json or yaml |
+| `--json`        |         | Output in JSON format              |
 
 ## Global options
 

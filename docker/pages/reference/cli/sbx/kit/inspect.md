@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_inspect.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_kit_inspect.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_inspect.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_kit_inspect.yaml)
 
 # sbx kit inspect
 
-Display details about a kit artifact
+Show kit artifact details
 
 **Usage:** `sbx kit inspect REFERENCE [flags]`
 
@@ -22,6 +22,7 @@ arguments; the output shows the substituted content.
 
 | Option            | Default | Description                                                                                                                    |
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `--format`        |         | Output format: table, json or yaml                                                                                             |
 | `--json`          |         | Output in JSON format                                                                                                          |
 | `--kit-arg`       |         | Value for an argument the kit declares, as name=value for every kit or kit.name=value for one (can be repeated) (Experimental) |
 | `--kit-args-file` |         | File of name=value kit arguments, one per line (can be repeated); --kit-arg overrides (Experimental)                           |
@@ -32,3 +33,13 @@ arguments; the output shows the substituted content.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+
+## Examples
+
+```console
+sbx kit inspect ./my-kit
+  sbx kit inspect ghcr.io/myorg/my-kit:1.0
+
+  # Machine-readable output
+  sbx kit inspect ghcr.io/myorg/my-kit:1.0 --format json
+```

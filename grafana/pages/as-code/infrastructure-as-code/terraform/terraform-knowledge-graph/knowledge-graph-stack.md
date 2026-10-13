@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack.md)
 
 # Configure the Knowledge Graph stack using Terraform
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/alerting-rules/templates/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/alerting-rules/templates/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/templates/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/templates/_index.md)
 
 # Template annotations and labels
 
@@ -83,7 +83,7 @@ Two common methods are used to test and preview annotation templates:
 
 ## Template labels
 
-The set of [labels](https://grafana.com/docs/grafana/v13.2/latest/alerting/fundamentals/alert-rules/annotation-label/) for an alert instance is used to uniquely identify that alert among all other alert instances.
+The set of [labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/) for an alert instance is used to uniquely identify that alert among all other alert instances.
 
 Labels determine how alerts are routed and managed for notifications, making their design key to the effectiveness of your alerting system.
 

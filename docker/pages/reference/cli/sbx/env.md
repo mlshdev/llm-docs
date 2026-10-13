@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_env.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_env.yaml)
 
 # sbx env
 
@@ -108,59 +108,54 @@ Everything an environment sets up — host commands, credentials, bindings, MCP
 registrations, directories, published ports, the sandbox itself and the
 variables it runs with — is shown as a plan and approved before anything runs:
 
-── ENVIRONMENT PLAN
-claude-proj
+ENVIRONMENT
+Name:   claude-proj
+File:   /Users/me/proj/sbxenv.yaml
+
+SECRETS
+\+ anthropic
+ref: op\://vault/anthropic/key
+refresh: 55m
+
+LIFECYCLE
+\~ initialize: make setup && make seed
+command: make setup -> make setup && make seed
+workdir: /Users/me/proj
 
 ```
- secrets:
+1 to add · 1 to change · 0 to destroy
 ```
 
-- anthropic:
-- ```
-   ref: op://vault/anthropic/key
-  ```
-- ```
-   refresh: 55m
-  ```
+Approve this plan? (y/N)
 
-  lifecycle:
-  initialize:
-  \~      - command: make setup -> make setup && make seed
-  workdir: /Users/me/proj
-
-  Plan: + 1 to add, \~ 1 to change, - 0 to destroy.
-
-  Approve this plan? \[y/N]
-
-The plan is your file: the same keys, nested the same way, in the order the
-blocks are declared in, so a line is looked up where it was written. What the
-plan adds is the margin, and the two values a line moves between. The totals
-name every symbol the margin can carry: "+ to add" and "\~ to change" above,
+The plan groups resources by the block of the file that declares them, in the
+order the blocks are declared, so a row is looked up where it was written. The
+mark in front of a row is what applying does to the resource, and the totals
+name every mark a plan can carry: "+ to add" and "\~ to change" above,
 "- to destroy" for what "sbx env rm" takes away, "> to run" for a command that
 runs again — a command converges to nothing, so it runs on every apply that
 reaches it — and "! to forget" for a resource this environment applied and no
-longer declares. Where the file has nothing to
-say, a note in the margin does: that a resource is missing, or that the work
-waits for the next create, since a port, a credential, a kit or a postCreate
-command comes with the sandbox, so attaching to one that already exists leaves it
-for the next one that is built. A resource that is as it was, and already
-approved, is left out: what is on screen is what there is to read.
+longer declares. Where the file has nothing to say, the text after the row's name does:
+that a resource is missing, or that the work waits for the next create, since a
+port, a credential, a kit or a postCreate command comes with the sandbox, so
+attaching to one that already exists leaves it for the next one that is built. A
+resource that is as it was, and already approved, is left out: what is on screen
+is what there is to read.
 
-An attribute shows what the environment declares, so an edited kit argument or
-variable reads as what it was against what it becomes, and a "command:" or "ref:"
-secret shows where the credential comes from — a command that resolves one runs on
-this machine. A secret's literal "value:" is the one exception: a plan is both shown
-here and written to state, so it is named and stands in as a "sha256:" digest.
+The lines under a row are the attributes the environment declares, so an edited
+kit argument or variable reads as what it was against what it becomes, and a
+"command:" or "ref:" secret shows where the credential comes from — a command
+that resolves one runs on this machine. A secret's literal "value:" is the one
+exception: a plan is both shown here and written to state, so it is named and
+stands in as a "sha256:" digest.
 
-```
- kits:
-```
+KITS
+\~ ./mixins/tool
+args.version: 1.2.3 -> 1.2.4
 
-\~    - source: ./mixins/tool
-\~      args:
-\~        version: 1.2.3 -> 1.2.4
-env:
-\~    GOFLAGS: -mod=mod -> -mod=readonly
+ENV
+\~ GOFLAGS
+value: -mod=mod -> -mod=readonly
 
 What an attribute was is what this environment last applied here, or — for one it
 approved and never applied, such as a binding or a port answered for while
@@ -184,7 +179,7 @@ the invocation, and what a command does depends on what the project holds when i
 runs rather than on the text approved before. "sbx env plan" prints the plan and
 changes nothing.
 
-Use --auto-approve (-y) where there is no terminal to answer on. Where an
+Use --force (-f) where there is no terminal to answer on. Where an
 environment's commands are your own and run many times a day,
 "sbx settings set env.rememberHostCommands true" asks about them only when
 they change.
@@ -232,7 +227,7 @@ creation. Sandbox env values apply to new sessions; rejoining a live agent keeps
 that process's existing environment.
 
 sbx --cloud env plan ./sbxenv.yaml
-sbx --cloud env run --auto-approve --detached ./sbxenv.yaml
+sbx --cloud env run --force --detach ./sbxenv.yaml
 sbx --cloud env exec ./sbxenv.yaml -- git status
 sbx --cloud env rm --force ./sbxenv.yaml
 

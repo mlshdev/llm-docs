@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_settings_list.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_settings_list.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_settings_ls.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_settings_ls.yaml)
 
-# sbx settings list
+# sbx settings ls
 
 List settings
 
-**Usage:** `sbx settings list [flags]`
+**Usage:** `sbx settings ls [flags]`
 
 ## Description
 
@@ -13,14 +13,15 @@ List known settings with their evaluated value, type, source, and description.
 The SOURCE column shows where the value came from (default, envvar, or
 override). RESTART identifies settings that require 'sbx daemon restart' for
 existing daemon-side consumers. Long values and descriptions are truncated to
-keep the table readable; use --no-trunc or --json for complete output. Use
-'sbx settings get <key>' to print one value in full.
+keep the table readable; use --no-trunc or --format json for complete output. Use
+'sbx settings get KEY' to print one value in full.
 
 ## Options
 
 | Option       | Default | Description                                              |
 | ------------ | ------- | -------------------------------------------------------- |
-| `--json`     |         | Print complete setting records as JSON                   |
+| `--format`   |         | Output format: table, json or yaml                       |
+| `--json`     |         | Output in JSON format                                    |
 | `--no-trunc` |         | Show full values and descriptions, one setting per block |
 
 ## Global options
@@ -34,8 +35,8 @@ keep the table readable; use --no-trunc or --json for complete output. Use
 
 ```console
 # List settings as a table
-  sbx settings list
+  sbx settings ls
 
   # List settings as JSON
-  sbx settings list --json
+  sbx settings ls --format json
 ```

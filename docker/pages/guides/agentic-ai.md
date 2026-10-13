@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/agentic-ai.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/guides/agentic-ai.md)
+> Pinned source for Docker main: [content/guides/agentic-ai.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/guides/agentic-ai.md)
 
 > \[!TIP]
 >
@@ -32,7 +32,7 @@ Docker makes this AI-powered stack simpler, faster, and more secure by unifying
 models, and tool gateways into a developer-friendly workflow that uses Docker
 Compose.
 
-![A diagram of the agentic stack](https://raw.githubusercontent.com/docker/docs/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/guides/images/agentic-ai-diagram.webp)
+![A diagram of the agentic stack](https://raw.githubusercontent.com/docker/docs/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/guides/images/agentic-ai-diagram.webp)
 
 This guide walks you through the core components of agentic development and
 shows how Docker ties them all together with the following tools:
@@ -105,7 +105,7 @@ To run the application locally, follow these steps:
    incorrect fact in the prompt and hit enter. An agent searches DuckDuckGo to
    verify it and another agent revises the output.
 
-![Screenshot of the application](https://raw.githubusercontent.com/docker/docs/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/guides/images/agentic-ai-app.png)
+![Screenshot of the application](https://raw.githubusercontent.com/docker/docs/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/guides/images/agentic-ai-app.png)
 
 3. Press ctrl-c in the terminal to stop the application when you're done.
 

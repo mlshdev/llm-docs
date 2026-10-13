@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/monitor-status/view-notification-history.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/monitor-status/view-notification-history.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/monitor-status/view-notification-history.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/monitor-status/view-notification-history.md)
 
 # View notification history
 
@@ -91,7 +91,7 @@ The tab shows the same notification list as the **History** page, pre-filtered t
 
 ## Explore and query notification history
 
-Because notification history is stored in Loki, you can query it directly in Loki through [Grafana Explore](https://grafana.com/docs/grafana/v13.2/explore/). Use Explore to build custom dashboards or run free-form investigations of your notification delivery.
+Because notification history is stored in Loki, you can query it directly in Loki through [Grafana Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/). Use Explore to build custom dashboards or run free-form investigations of your notification delivery.
 
 ## Next steps
 

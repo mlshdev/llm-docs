@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend.md)
 
 # Set up instantaneous pulling and dashboard previews in Pull Requests
 
@@ -89,7 +89,7 @@ Image rendering requires webhooks.
 To learn more about using Git Sync refer to the following documents:
 
 - [Set up Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/)
-- [Export resources](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/export-resources/)
+- [Export resources](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/)
 - [Work with provisioned repositories](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/use-git-sync/)
 - [Work with provisioned dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/provisioned-dashboards/)
 - [Git Sync deployment scenarios](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/)

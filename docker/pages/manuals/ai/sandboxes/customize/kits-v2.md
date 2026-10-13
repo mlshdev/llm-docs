@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits-v2.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/customize/kits-v2.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits-v2.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/customize/kits-v2.md)
 
 # Kits v2
 
@@ -459,10 +459,11 @@ command can consume a bundled file from `files/home/`, but not one from
 
 `sbx kit add` recreates the sandbox rather than modifying it in place. It
 supports mixin kits limited to
-`environment.variables`, `setup.install`, and `permissions.network.allow`,
-which follow the same order as sandbox creation. It rejects a kit that declares
-static files, `setup.startup`, or `setup.files`. To use those fields, recreate
-the sandbox with the kit.
+`environment.variables`, `setup.install`, `setup.startup`, and
+`permissions.network.allow`, which follow the same order as sandbox creation.
+Startup commands run after the kit is added and on each subsequent sandbox
+start. The command rejects kits that declare static files or `setup.files`.
+To use those fields, create the sandbox with the kit included.
 
 ### install
 
@@ -671,8 +672,9 @@ The `sbx kit` subcommands validate, inspect, and publish kits:
   for sharing.
 - `sbx kit push <path> <ref>` — publish to an OCI registry (for example,
   `ghcr.io/myorg/my-kit:1.0`).
-- `sbx kit pull <ref>` — download a kit from a registry as a ZIP file to
-  the working directory.
+- `sbx kit pull <ref>` — download a kit to the working directory as `.zip`
+  for schema v1 or `.tar.gz` for schema v2. Use `--output <FILE>` to choose
+  the output path.
 
 For Docker Hub, `sbx kit pull` and `sbx kit push` use the session from
 `sbx login`. For other registries, they prefer credentials stored with
@@ -712,6 +714,19 @@ $ sbx kit push ./my-kit/ ghcr.io/myorg/my-kit:1.0 --sign
 ```
 
 ZIP kits can't carry verifiable signatures.
+
+### Inspect provenance
+
+Pushing a kit also attaches a provenance attestation that records its content
+digests, declared sandbox image, and source Git commit when pushed from a
+working tree. Inspect it to check the source of a published kit:
+
+```console
+$ sbx kit provenance ghcr.io/myorg/my-kit:1.0
+```
+
+Provenance is unsigned by default. Use `sbx kit push --sign` to sign both the
+kit manifest and its provenance when publishing.
 
 ### Require signed kits
 

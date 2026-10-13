@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_setup.yaml](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/data/sbx_cli/sbx_setup.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_setup.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_setup.yaml)
 
 # sbx setup
 
@@ -15,9 +15,9 @@ Detect what is already configured on your host and prepare Docker Sandboxes.
 
 Agent secrets are detected from the built-in agent kit specs and the
 env vars set on this host, and accepted secrets are imported into the global
-secrets store (the same store as "sbx secret set"). When SSH\_AUTH\_SOCK is set,
-setup can enable SSH-agent forwarding and either use each client's current
-socket or persist a fixed socket path.
+secrets store (the same store as "sbx secret set"). Setup can enable SSH-agent
+forwarding using each client's SSH\_AUTH\_SOCK, or the native Windows OpenSSH
+agent pipe when that variable is unset. A fixed endpoint can also be configured.
 
 ## Global options
 

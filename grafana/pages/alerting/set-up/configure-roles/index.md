@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/set-up/configure-roles/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/set-up/configure-roles/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/configure-roles/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/configure-roles/index.md)
 
 # Configure roles and permissions
 
@@ -10,15 +10,16 @@ For more information, refer to [Organization roles](https://grafana.com/docs/gra
 
 ## Manage access using roles
 
-Grafana OSS has three roles: Admin, Editor, and Viewer.
+Grafana OSS has four basic roles: `Admin`, `Editor`, `Viewer`, and `None`.
 
 The following table describes the access each role provides for Grafana Alerting.
 
 | Role   | Access                                                                                                                                                                                             |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Viewer | Read access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences).                                             |
-| Editor | Write access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), and provisioning.                          |
 | Admin  | Write access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), and provisioning, as well as assign roles. |
+| Editor | Write access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences), and provisioning.                          |
+| Viewer | Read access to alert rules, notification resources (notification API, contact points, templates, time intervals, notification policies, and silences).                                             |
+| None   | No access to alert rules or notification resources. Limit access to only the required resources by assigning fixed or custom roles, or granting folder or contact point permissions.               |
 
 ## Assign roles
 
@@ -38,9 +39,9 @@ Refer to the following table for details on the additional access provided by fo
 
 | Folder permission | Additional Access                                                                                       |
 | ----------------- | ------------------------------------------------------------------------------------------------------- |
-| View              | No additional access: all permissions already contained in Viewer role.                                 |
-| Edit              | Write access to alert rules and their rule-specific silences *only* in the given folder and subfolders. |
 | Admin             | Same additional access as Edit.                                                                         |
+| Edit              | Write access to alert rules and their rule-specific silences *only* in the given folder and subfolders. |
+| View              | No additional access: all permissions already contained in Viewer role.                                 |
 
 > **Note**
 >
@@ -63,9 +64,9 @@ Refer to the following table for details on the additional access provided by co
 
 | Contact point permission | Additional Access                                                                                                                             |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| View                     | View and export contact point as well as select it on the Alert rule edit page                                                                |
-| Edit                     | Update or delete the contact point                                                                                                            |
 | Admin                    | Same additional access as Edit and manage permissions for the contact point. User should have additional permissions to read users and teams. |
+| Edit                     | Update or delete the contact point                                                                                                            |
+| View                     | View and export contact point as well as select it on the Alert rule edit page                                                                |
 
 ### Assign contact point permissions
 

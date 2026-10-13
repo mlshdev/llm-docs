@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/alerting-rules/create-data-source-managed-rule.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/alerting-rules/create-data-source-managed-rule.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/create-data-source-managed-rule.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/create-data-source-managed-rule.md)
 
 > **Caution**
 >
@@ -113,7 +113,7 @@ Use [alert rule evaluation](https://grafana.com/docs/grafana/v13.2/alerting/fund
 
    The [pending period](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/#pending-period) is the period in which an alert rule can be in breach of the condition until it fires.
 
-   Once a condition is met, the alert goes into the **Pending** state. If the condition remains active for the duration specified, the alert transitions to the **Firing** state, else it reverts to the **Normal** state.
+   After a condition is met, the alert goes into the **Pending** state. If the condition remains active for the duration specified, the alert transitions to the **Firing** state, else it reverts to the **Normal** state.
 
 ### Configure labels and notifications
 
@@ -157,9 +157,9 @@ Grafana provides several optional annotations.
 
 \[//]: <> (
 
-Use annotations to add information to alert messages that can help respond to the alert.
+Use [annotations](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#annotations) to add information to alert messages that can help respond to the alert.
 
-Annotations are included by default in notification messages, and can use text or templates to display dynamic data from queries.
+Annotations are included by default in notification messages, and can use text or [templates](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) to display dynamic data from queries.
 
 Grafana provides several optional annotations.
 
@@ -181,7 +181,7 @@ Grafana provides several optional annotations.
 
 5. Optional: **Link dashboard and panel**.
 
-   Link the alert rule to a panel to facilitate alert investigation.
+   [Link the alert rule to a panel](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/link-alert-rules-to-panels/) to facilitate alert investigation.
 
 6. Click **Save rule**.
 

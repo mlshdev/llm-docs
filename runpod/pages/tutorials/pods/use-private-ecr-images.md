@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/pods/use-private-ecr-images.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/tutorials/pods/use-private-ecr-images.mdx)
+> Pinned source for Runpod main: [tutorials/pods/use-private-ecr-images.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/tutorials/pods/use-private-ecr-images.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/pods/use-private-ecr-images
 
 # Use private AWS ECR images

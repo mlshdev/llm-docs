@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/dashboards/build-dashboards/manage-dashboard-links/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/dashboards/build-dashboards/manage-dashboard-links/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/manage-dashboard-links/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/manage-dashboard-links/index.md)
 
 # Manage dashboard links
 
@@ -44,8 +44,8 @@ To add a link to another dashboard at the top of your current dashboard, follow 
 
 1. In the dashboard you want to link, click **Edit**.
 2. In the toolbar, click the **Dashboard options** icon.
-3. In the sidebar, click **Settings**.
-4. Go to the **Links** tab and then click **Add dashboard link**.
+3. In the sidebar, click **View all settings**.
+4. Go to the **Links** tab and then click **Add dashboard link**. If the dashboard already has links, click **New link**.
 
 The default link type is **Dashboards**.
 
@@ -85,9 +85,9 @@ To add a URL link to your dashboard, follow these steps:
 
 2. In the toolbar, click the **Dashboard options** icon.
 
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 
-4. Go to the **Links** tab and then click **Add dashboard link**.
+4. Go to the **Links** tab and then click **Add dashboard link**. If the dashboard already has links, click **New link**.
 
 5. In the **Type** drop-down list, select **Link**.
 
@@ -119,7 +119,7 @@ To edit, duplicate, or delete dashboard link, follow these steps:
 
 2. In the toolbar, click the **Dashboard options** icon.
 
-3. In the sidebar, click **Settings**.
+3. In the sidebar, click **View all settings**.
 
 4. Go to the **Links** tab.
 

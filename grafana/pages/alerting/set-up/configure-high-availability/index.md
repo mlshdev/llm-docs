@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/set-up/configure-high-availability/_index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/set-up/configure-high-availability/_index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/configure-high-availability/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/configure-high-availability/_index.md)
 
 # Configure high availability
 
@@ -131,10 +131,6 @@ For a demo, see this [example using Docker Compose](https://github.com/grafana/a
    ```
 
 ## Single-node evaluation mode
-
-> **Public preview**
->
-> Single-node evaluation mode is in public preview.
 
 By default, all Grafana instances in a high-availability cluster evaluate all alert rules. This means query load on data sources is multiplied by the number of Grafana instances. Single-node evaluation mode changes this so that only one instance evaluates alert rules, reducing query load from N times to 1.
 

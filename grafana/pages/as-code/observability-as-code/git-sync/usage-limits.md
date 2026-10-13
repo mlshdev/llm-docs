@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/as-code/observability-as-code/git-sync/usage-limits.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/observability-as-code/git-sync/usage-limits.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/usage-limits.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/usage-limits.md)
 
 # Usage and performance limitations
 
@@ -168,11 +168,11 @@ When migrating to resources to Git Sync, you can still create, edit or delete re
 
 ### Use existing resources
 
-To add existing resources as provisioned Git Sync resources, you can use the Import dashboards tool, save them from the UI, save them as JSON files and commit them to the synced repository, or use `gcx`. Refer to [Export non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/export-resources) for more details. When migrating existing dashboards, the folder structure will be replicated in the provisioned repository.
+To add existing resources as provisioned Git Sync resources, you can use the Import dashboards tool, save them from the UI, save them as JSON files and commit them to the synced repository, or use `gcx`. Refer to [Export non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources) for more details. When migrating existing dashboards, the folder structure will be replicated in the provisioned repository.
 
 > **Caution**
 >
-> Git Sync cannot take ownership of a resource while an unmanaged resource with the same UID exists in Grafana, so you may need to manually remove the original resources to ensure the transition to provisioned resources. Since deleting resources implies certain operational caveats, refer to [How to delete existing resources in Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/export-resources#how-to-delete-existing-resources-in-grafana) for more information.
+> Git Sync cannot take ownership of a resource while an unmanaged resource with the same UID exists in Grafana, so you may need to manually remove the original resources to ensure the transition to provisioned resources. Since deleting resources implies certain operational caveats, refer to [How to delete existing resources in Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate#step-2-delete-the-original-dashboards) for more information.
 
 ### Restore resources
 

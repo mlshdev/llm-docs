@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/visualizations/panels-visualizations/panel-overview/index.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/visualizations/panels-visualizations/panel-overview/index.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/panel-overview/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/panel-overview/index.md)
 
 # Panel overview
 
@@ -204,7 +204,7 @@ Time series
 
 To add a panel to an empty dashboard, click or drag the panel onto the dashboard:
 
-![Empty dashboard state](https://grafana.com/media/docs/grafana/dashboards/screenshot-empty-dashboard-v13.1.png)
+![Empty dashboard state](https://grafana.com/media/docs/grafana/dashboards/screenshot-empty-dashboard-v13.2.png)
 
 To add a panel to an existing dashboard, follow these steps:
 

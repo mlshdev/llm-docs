@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/alerting-rules/create-grafana-managed-rule.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/alerting-rules/create-grafana-managed-rule.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/create-grafana-managed-rule.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/create-grafana-managed-rule.md)
 
 > **Caution**
 >
@@ -56,7 +56,7 @@ To backup and manage alert rules, you can [provision alerting resources](https:/
 
 Note that if you delete an alert resource created in the UI, you can no longer retrieve it.
 
-To backup and manage alert rules, you can provision alerting resources using options such as configuration files, Terraform, or the Alerting API.
+To backup and manage alert rules, you can [provision alerting resources](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/) using options such as configuration files, Terraform, or the Alerting API.
 
 )
 
@@ -106,7 +106,7 @@ The **Default** option allows to configure one query and one alert condition. Th
 
 1. Select a data source.
 
-2. From the **Options** drop-down menu, specify a [time range](https://grafana.com/docs/grafana/v13.2/dashboards/use-dashboards/#time-units-and-relative-ranges).
+2. From the **Options** drop-down menu, specify a [time range](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/use-dashboards/#time-units-and-relative-ranges).
 
    Note that Grafana Alerting only supports fixed relative time ranges, for example, `now-24hr: now`.
    It doesn't support absolute time ranges: `2021-12-02 00:00:00 to 2021-12-05 23:59:592` or semi-relative time ranges: `now/d to: now`.
@@ -293,9 +293,9 @@ Grafana provides several optional annotations.
 
 \[//]: <> (
 
-Use annotations to add information to alert messages that can help respond to the alert.
+Use [annotations](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#annotations) to add information to alert messages that can help respond to the alert.
 
-Annotations are included by default in notification messages, and can use text or templates to display dynamic data from queries.
+Annotations are included by default in notification messages, and can use text or [templates](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) to display dynamic data from queries.
 
 Grafana provides several optional annotations.
 
@@ -317,7 +317,7 @@ Grafana provides several optional annotations.
 
 5. Optional: **Link dashboard and panel**.
 
-   Link the alert rule to a panel to facilitate alert investigation.
+   [Link the alert rule to a panel](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/link-alert-rules-to-panels/) to facilitate alert investigation.
 
 6. Click **Save rule**.
 

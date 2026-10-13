@@ -1,6 +1,6 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-secrets-management.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/as-code/infrastructure-as-code/terraform/terraform-secrets-management.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-secrets-management.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-secrets-management.md)
 
-# Use Terraform to provision secure values
+# Manage secrets in Grafana Cloud using Terraform
 
 Use the Terraform Grafana provider to create and manage secure values in [Grafana Secrets Management](https://grafana.com/docs/grafana-cloud/platform/security-and-account-management/security-and-access/manage-secrets/) as code.
 With Terraform, you keep secrets such as API keys, tokens, passwords, and certificates in version-controlled, declarative infrastructure alongside the rest of your Grafana stack.

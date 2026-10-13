@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/db384a4bd8b8f7eefbd6ed3796e49b5bfa517aad/content/manuals/ai/sandboxes/cloud/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/cloud/usage.md)
 
 # Use cloud sandboxes
 
@@ -83,7 +83,7 @@ For scripts or terminals without interactive input, start the sandbox without
 opening an agent session:
 
 ```console
-$ sbx --cloud run --detached claude --name cloud-task
+$ sbx --cloud run --detach claude --name cloud-task
 ```
 
 A detached run with `--name` reuses the named sandbox and starts it if stopped.
@@ -223,7 +223,7 @@ $ sbx --cloud attach cloud-project
 ```
 
 You can also use `sbx --cloud run claude --name cloud-project`, or run the agent
-without `--name` and select the sandbox when prompted. Add `--detached` to a
+without `--name` and select the sandbox when prompted. Add `--detach` to a
 named run to resume without attaching.
 
 Resuming keeps the sandbox ID and state, and starts a new time-to-live
@@ -255,7 +255,7 @@ $ sbx --cloud run --rm claude
 ```
 
 The detach gesture is turned off for that session, and you can't combine
-`--rm` with `--detached`. If the session ends without completing, for example
+`--rm` with `--detach`. If the session ends without completing, for example
 because the connection drops, the sandbox is kept and the CLI prints the
 command to remove it.
 
@@ -284,22 +284,44 @@ exit overwrites the stored snapshot.
 
 ## Customize a cloud sandbox
 
-Cloud templates have their own store. A local template is not available to
-`sbx --cloud` until you transfer it. To capture a running cloud sandbox and
-create another sandbox from that template:
+### Save and reuse a template
+
+Save a running cloud sandbox as a template to reuse its configured filesystem.
+Before saving, remove credentials written to the sandbox filesystem: snapshots
+include those files. Managed cloud secrets stay in the secret store. See
+[Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/).
 
 ```console
 $ sbx --cloud template save cloud-project cloud-template
 $ sbx --cloud create --name cloud-copy --template cloud-template
 ```
 
+By default, saving a template captures disk state, and sandboxes created from
+it cold-boot from that filesystem. To resume from the running sandbox's state
+instead, add `--capture-mode all` to `template save`. This captures memory,
+disk, and the microVM checkpoint, and takes longer to load.
+
 The template supplies its CPU and memory configuration. Do not combine
 `--template` with an agent name, `--cpus`, or `--memory`. To launch an OCI image
 directly instead, use `--image-ref` with explicit CPU and memory values.
 
-Snapshots include credentials written to the sandbox filesystem. Remove those
-credentials before saving a template. Managed cloud secrets stay in the secret
-store. See [Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/).
+### Import a local template
+
+Cloud templates have a separate store. To use a local template in the cloud,
+upload its tar file with a name that is unique in your account:
+
+```console
+$ sbx --cloud template load my-template.tar cloud-template \
+  --cpus 2 --memory-mib 4096
+```
+
+Both resource flags are required and must match a
+[cloud size](#choose-resources-and-platform). Like `template save`,
+`template load` uses disk capture by default and accepts `--capture-mode all` to capture
+memory and checkpoint state as well. Uploading or saving large templates can
+take several minutes.
+
+### Customize with kits
 
 Cloud sandboxes also support sandbox kits and `--kit` mixins. See
 [Kits](https://docs.docker.com/ai/sandboxes/customize/) for customization and

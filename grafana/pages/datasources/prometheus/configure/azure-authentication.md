@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/datasources/prometheus/configure/azure-authentication.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/datasources/prometheus/configure/azure-authentication.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/configure/azure-authentication.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/configure/azure-authentication.md)
 
 # Migrate from Prometheus Azure AD to Azure Monitor Managed Service for Prometheus
 

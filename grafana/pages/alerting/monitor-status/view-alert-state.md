@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.3: [docs/sources/alerting/monitor-status/view-alert-state.md](https://github.com/grafana/grafana/blob/6193dc03311b631b9727b560d24369e683dc396e/docs/sources/alerting/monitor-status/view-alert-state.md)
+> Pinned source for Grafana v13.2.4: [docs/sources/alerting/monitor-status/view-alert-state.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/monitor-status/view-alert-state.md)
 
 # View alert state
 
@@ -70,10 +70,10 @@ Colored annotations indicate changes in alert state, such as pending, alerting, 
 
 ![A panel with a firing alert and annotations that display the pending and alerting state changes.](https://grafana.com/media/docs/alerting/panel-displays-alert-state.png)
 
-Additionally, Grafana provides an [alert list panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/alert-list/) that you can add to a dashboard to display a list of alerts and their states.
+Additionally, Grafana provides an [alert list panel](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/alert-list/) that you can add to a dashboard to display a list of alerts and their states.
 
 ![Two alert list panels displaying distinct lists of alerts.](https://grafana.com/static/img/docs/alert-list-panel/alert-list-panel.png)
 
-You can configure the alert list panel with various visualization options and filters to control how alerts are displayed. For more details, refer to the [Alert list documentation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/alert-list/).
+You can configure the alert list panel with various visualization options and filters to control how alerts are displayed. For more details, refer to the [Alert list documentation](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/alert-list/).
 
 [this demo dashboard with alert list panels and linked alert rules in Grafana Play](https://play.grafana.org/d/000000074/alerting?tech=docs\&pg=alerting-demo\&plcmt=callout-play\&cta=alert-demo-dashboard)

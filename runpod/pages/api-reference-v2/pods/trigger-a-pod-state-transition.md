@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/trigger-a-pod-state-transition.mdx](https://github.com/runpod/docs/blob/983ff46825e22de0a0c66de8badf50d8ba036ce5/api-reference-v2/pods/trigger-a-pod-state-transition.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/trigger-a-pod-state-transition.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/api-reference-v2/pods/trigger-a-pod-state-transition.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/trigger-a-pod-state-transition
 
 # Trigger A Pod State Transition
@@ -76,14 +76,21 @@ not valid for the pod's current status returns `409`.
           - `status` (required; string; enum: `PROVISIONING`, `STARTING`, `RUNNING`, `EXITED`, `ERROR`, `TERMINATED`): Lifecycle status of a pod. - `PROVISIONING` — pod is being allocated - `STARTING` — container is starting - `RUNNING` — container is healthy - `EXITED` — container exited (stopped) - `ERROR` — container is in an unrecoverable error state - `TERMINATED` — pod has been permanently deleted
           - `actions` (required; array): Valid state transitions for the current status.
             - `items` (string; enum: `start`, `stop`, `restart`, `terminate`): State transition to trigger on a pod.
-          - `mounts` (required; object): Storage mounts attached to a pod. At-most-one of `persistent` or `network` may be set today (mutually exclusive, enforced at the handler with 400 if both are present). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. PATCH semantics: - Omitting `mounts` or sending `{}` leaves the existing mount unchanged. - An explicit `network: []` is rejected with 400 (clearing mounts is not supported). - Mount kind is fixed at create — a PATCH that introduces a kind not present at create (persistent on a network pod, network on a persistent pod, or any mount on a previously-mountless pod) is rejected with 400. - The `volumeId` of a network mount is immutable; a PATCH that names a different `volumeId` is rejected with 400. - Partial mounts are not supported — every mount entry must include the full schema (`size` + `path` for persistent, `volumeId` + `path` for network). Missing required fields → 422.
-            - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
-              - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
-              - `path` (required; string): Mount path inside the container. May be changed via PATCH.
-            - `network` (array; maximum items: `1`)
-              - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
-                - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
-                - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
+          - `mounts` (required): Storage mounts attached to a pod. `persistent` is mutually exclusive with both `network` and `global` (enforced at the handler with 400 if combined). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. PATCH semantics: - Omitting `mounts` or sending `{}` leaves the existing mount unchanged. - An explicit `network: []` is rejected with 400 (clearing mounts is not supported). - Mount kind is fixed at create — a PATCH that introduces a kind not present at create (persistent on a network pod, network on a persistent pod, or any mount on a previously-mountless pod) is rejected with 400. - The `volumeId` of a network mount is immutable; a PATCH that names a different `volumeId` is rejected with 400. - Partial mounts are not supported — every mount entry must include the full schema (`size` + `path` for persistent, `volumeId` + `path` for network). Missing required fields → 422.
+            - allOf:
+              - `variant 1` (object): The mount kinds every resource that takes `mounts` shares. At-most-one of `persistent` or `network` may be set today (mutually exclusive, enforced at the handler with 400 if both are present). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. Left open so that concrete schemas can extend it and close themselves.
+                - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
+                  - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
+                  - `path` (required; string): Mount path inside the container. May be changed via PATCH.
+                - `network` (array; maximum items: `1`)
+                  - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
+                    - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
+                    - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
+              - `variant 2` (object)
+                - `global` (array; maximum items: `1`): At most one global volume, on GPU and CPU pods, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): upstream drops a persistent disk whenever a volume is attached. Same PATCH rules as `network`: global mounts are fixed at create, `global: []` is rejected with 400, and `volumeId` is immutable; only `path` may change.
+                  - `items` (object): Reference to a GlobalVolume. Usage-billed, so it has no size. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
+                    - `volumeId` (required; string): ID of an existing GlobalVolume.
+                    - `path` (string): Mount path inside the container. Optional on create, where a default is chosen for you; a PATCH that omits it leaves the path unchanged.
           - `gpu`: Present for GPU pods; omitted from CPU pods.
             - allOf:
               - `variant 1`
