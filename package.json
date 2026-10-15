@@ -25,12 +25,12 @@
     "remark-mdx": "3.1.1",
     "remark-parse": "11.0.0",
     "remark-stringify": "11.0.0",
-    "tar-stream": "3.2.1",
+    "tar-stream": "3.2.2",
     "unified": "11.0.5",
     "yaml": "2.9.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.14",
+    "@biomejs/biome": "2.5.15",
     "@types/bun": "1.4.2",
     "@types/estree": "1.0.9",
     "@types/mdast": "4.0.4",
