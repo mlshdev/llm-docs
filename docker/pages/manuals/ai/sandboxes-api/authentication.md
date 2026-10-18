@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/authentication.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes-api/authentication.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/authentication.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/ai/sandboxes-api/authentication.md)
 
 # Authentication and authorization
 
@@ -37,9 +37,11 @@ the application. SDK sign-in is separate from `docker login` and `sbx login`.
 ## Authenticate automation with a PAT
 
 Use a [personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/)
-for CI jobs and unattended applications. When creating the token, select the
-`sandbox:use` permission in your Docker account's personal access token
-settings. Registry permissions alone don't grant Cloud Sandboxes access.
+for CI jobs and unattended applications. When creating the token, select
+**Allow Cloud Sandboxes access**. That grants the `sandbox:use` scope. The
+same token can also have a repository permission, for example to push
+images and use Cloud Sandboxes. Registry permissions alone don't grant
+Cloud Sandboxes access.
 
 Provide your Docker ID and PAT to the SDK. For example, read them from your
 application's environment:
@@ -106,8 +108,8 @@ Account permissions also control access to optional features. See
 ## Authenticate direct API requests
 
 If you call the REST API without the SDK, obtain and renew access tokens in
-your application. Exchange your Docker ID and a PAT with `sandbox:use`
-permission using the [Docker Hub authentication API](https://docs.docker.com/reference/api/hub/latest/operations/AuthCreateAccessToken/):
+your application. Exchange your Docker ID and a PAT with the `sandbox:use`
+scope using the [Docker Hub authentication API](https://docs.docker.com/reference/api/hub/latest/operations/AuthCreateAccessToken/):
 
 ```console
 $ ACCESS_TOKEN=$(curl --silent --show-error --fail --request POST \

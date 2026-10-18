@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/siem.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/governance/audit/siem.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/siem.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/ai/sandboxes/governance/audit/siem.md)
 
 # SIEM forwarding
 
@@ -14,12 +14,13 @@ with the supplied credential before saving.
 
 ## Supported destinations
 
-| Destination        | Description                                       |
-| ------------------ | ------------------------------------------------- |
-| Splunk Cloud (HEC) | Hosted Splunk using the HTTP Event Collector      |
-| Dynatrace          | Dynatrace Log Management using the Log Ingest API |
-| Datadog            | Datadog Logs using the HTTP log intake API        |
-| Sumo Logic         | Sumo Logic using an HTTP Source                   |
+| Destination                      | Description                                              |
+| -------------------------------- | -------------------------------------------------------- |
+| Splunk Cloud (HEC)               | Hosted Splunk using the HTTP Event Collector             |
+| Dynatrace                        | Dynatrace Log Management using the Log Ingest API        |
+| Datadog                          | Datadog Logs using the HTTP log intake API               |
+| Sumo Logic                       | Sumo Logic using an HTTP Source                          |
+| CrowdStrike Falcon Next-Gen SIEM | Falcon Next-Gen SIEM using an HEC / HTTP Event Connector |
 
 ## Before you begin
 
@@ -33,7 +34,9 @@ organization. If you haven't already, enable it under **AI Platform** >
 **Audit logs** > **Audit delivery** before configuring a SIEM destination. See
 [Configure audit delivery](https://docs.docker.com/ai/sandboxes/governance/audit/configure/).
 
-Gather credentials from your SIEM before configuring forwarding:
+Gather the endpoint URL and credential from your SIEM before configuring
+forwarding. Some destinations require you to create a connector or source
+first:
 
 - **Splunk Cloud**: HEC ingest URL and an HEC token. Optionally, a Splunk index
   name. See [Splunk documentation](https://docs.splunk.com/).
@@ -43,6 +46,9 @@ Gather credentials from your SIEM before configuring forwarding:
   [Datadog documentation](https://docs.datadoghq.com/).
 - **Sumo Logic**: HTTP Source URL and an auth token from an HTTP Logs &
   Metrics source. See [Sumo Logic documentation](https://www.sumologic.com/help/).
+- **CrowdStrike Falcon Next-Gen SIEM**: API URL and an API key from an HEC /
+  HTTP Event Connector. Append `/raw` to the API URL when you add the
+  destination. See [CrowdStrike documentation](https://library.humio.com/logscale-api/log-shippers-hec-raw.html).
 
 ## Add a SIEM destination
 

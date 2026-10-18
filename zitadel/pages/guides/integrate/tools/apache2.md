@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/integrate/tools/apache2.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/integrate/tools/apache2.mdx)
+> Pinned source for ZITADEL v4.19.5: [apps/docs/content/guides/integrate/tools/apache2.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/guides/integrate/tools/apache2.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/tools/apache2
 
 This integration guide shows you the basic OpenID Connect integration with ZITADEL and an Apache 2.0 server.
@@ -9,11 +9,11 @@ This integration guide shows you the basic OpenID Connect integration with ZITAD
 - When created go to the "Redirect Settings" and *enable Development Mode*
 - Add the Redirect Uri, f.e. `http://localhost:8080/secure/callback`
 - Add the Post Logout Uri, f.e. `http://localhost:8080/index.html`
-  ![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/integrate/tools/apache-configuration.png)
-  ![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/integrate/tools/apache-redirect_settings.png)
+  ![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/integrate/tools/apache-configuration.png)
+  ![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/integrate/tools/apache-redirect_settings.png)
 
 You can find the url to your discovery endpoint under "URLs":
-![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/integrate/tools/apache-urls.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/integrate/tools/apache-urls.png)
 
 ## Configure Apache2
 

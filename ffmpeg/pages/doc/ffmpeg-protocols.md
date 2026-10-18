@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/94cba3150c6b83057ed48b833689adc806715cc0/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -2483,6 +2483,7 @@ The list of supported options follows.
 - fifo\_size=*units*
   Set the UDP receiving circular buffer size, expressed as a number of
   packets with size of 188 bytes. If not specified defaults to 7\*4096.
+  Set to 0 to disable the receiving circular buffer and its receive thread.
 
 - overrun\_nonfatal=*1|0*
   Survive in case of UDP receiving circular buffer overrun. Default

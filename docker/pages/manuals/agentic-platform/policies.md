@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/agentic-platform/policies.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/agentic-platform/policies.md)
+> Pinned source for Docker main: [content/manuals/agentic-platform/policies.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/agentic-platform/policies.md)
 
 # Network policies
 
@@ -23,7 +23,9 @@ There are two types of network policy:
 The launcher remembers your policy selections from the previous launch in the
 same browser. Without saved selections, it selects the account's policies
 marked **Always applied**. These policies can't be deselected in the launcher.
-You can select zero, one, or several additional user policies.
+You can select zero, one, or several additional user policies. By default,
+**Open** is marked **Always applied**, unlike local sandboxes where you choose a
+network preset.
 
 ## How policies combine
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/ai-chat/patterns/sub-agents.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/ai-chat/patterns/sub-agents.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/ai-chat/patterns/sub-agents.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/ai-chat/patterns/sub-agents.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/sub-agents
 
 # Sub-Agents
@@ -134,6 +134,39 @@ The parent LLM naturally calls this tool multiple times:
 1. `researchAgent({ conversationId: "competitors", message: "Research competitors in AI agents" })` — first call triggers a new sub-agent run
 2. `researchAgent({ conversationId: "competitors", message: "Go deeper on pricing" })` — same run, sub-agent has full context
 3. `researchAgent({ conversationId: "new-topic", message: "..." })` — different ID = different sub-agent
+
+## Limiting parallel sub-agents per session
+
+Give every sub-agent task a shared named limit with a `perKey`, pass the parent session's id as each sub-agent's `concurrencyKey`, and raise that key's cap when the user picks a parallelism:
+
+```ts trigger/limits.ts
+import { concurrencyLimit } from "@trigger.dev/sdk";
+
+// one sub-agent at a time per session unless a session is given more
+export const subagentsLimit = concurrencyLimit({ name: "subagents", perKey: 1 });
+```
+
+```ts trigger/research-agent.ts
+export const researchAgent = chat.agent({
+  id: "research-agent",
+  concurrency: subagentsLimit,
+  // ...
+});
+```
+
+```ts
+// in the parent agent, once per session, when the user picks a parallelism of 3
+await concurrencyLimits.override("subagents", { concurrencyKey: sessionId, perKey: 3 });
+
+// every sub-agent for this session carries the session's key
+const agent = new AgentChat({
+  agent: "research-agent",
+  id: conversationId,
+  triggerConfig: { concurrencyKey: sessionId },
+});
+```
+
+Three sub-agent runs for this session execute at once; a fourth waits. Other sessions keep the declared cap of one, and any tenant-level limit the sub-agent task also holds keeps applying. The override expires after 7 days by default (`ttl` sets it, up to 30 days), so a session that outlives that should call `override` again. See [Overriding a limit for one key](https://trigger.dev/docs/concurrency#overriding-a-limit-for-one-key).
 
 ### Cross-turn persistence
 

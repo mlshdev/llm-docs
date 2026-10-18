@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/reference/routing-configuration/kubernetes/crd/http/service.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/routing-configuration/kubernetes/crd/http/service.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/reference/routing-configuration/kubernetes/crd/http/service.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/routing-configuration/kubernetes/crd/http/service.md)
 
 `Service` is the implementation of a [Traefik HTTP service](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service).
 
@@ -7,7 +7,7 @@ There is no dedicated CRD, a `Service` is part of:
 - [`IngressRoute`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute)
 - [`TraefikService`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/traefikservice)
 
-Note that, before creating `IngressRoute` or `TraefikService` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/reference/dynamic-configuration/kubernetes-crd/#definitions) to your Kubernetes cluster.
+Note that, before creating `IngressRoute` or `TraefikService` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements) to your Kubernetes cluster.
 
 This registers the Traefik-specific resources.
 

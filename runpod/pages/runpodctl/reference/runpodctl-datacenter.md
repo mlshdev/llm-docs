@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-datacenter.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/runpodctl/reference/runpodctl-datacenter.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-datacenter.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/runpodctl/reference/runpodctl-datacenter.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-datacenter
 
 # datacenter
 
 Use runpodctl to list Runpod data centers, review their locations, and inspect current GPU availability from the command line.
 
-List available datacenters and their locations.
+List the datacenters you can deploy to and their regions.
 
 ```bash Command
 runpodctl datacenter <subcommand> [flags]
@@ -23,7 +23,7 @@ runpodctl dc list
 
 ### List datacenters
 
-List all available datacenters with GPU availability:
+List the datacenters you can deploy to, with GPU availability in each one. Datacenters that aren't open for deployment aren't listed:
 
 ```bash
 runpodctl datacenter list
@@ -42,7 +42,7 @@ runpodctl datacenter list
       }
     ],
     "id": "US-GA-1",
-    "location": "United States",
+    "location": "NORTH_AMERICA",
     "name": "US-GA-1"
   },
   {
@@ -54,11 +54,13 @@ runpodctl datacenter list
       }
     ],
     "id": "EU-RO-1",
-    "location": "Europe",
+    "location": "EUROPE",
     "name": "EU-RO-1"
   }
 ]
 ```
+
+The `location` field is the datacenter's region, such as `NORTH_AMERICA`, `EUROPE`, or `ASIA`.
 
 ## Using datacenter IDs
 

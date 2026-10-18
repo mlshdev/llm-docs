@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [SECURITY.md](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/SECURITY.md)
+> Pinned source for SearXNG master: [SECURITY.md](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/SECURITY.md)
 
 # Security Policy
 

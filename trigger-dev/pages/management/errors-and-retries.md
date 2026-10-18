@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/management/errors-and-retries.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/management/errors-and-retries.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/management/errors-and-retries.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/management/errors-and-retries.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/errors-and-retries
 
 # Errors and retries
@@ -10,14 +10,14 @@ Handling errors and retries with the Trigger.dev management API
 When the SDK method is unable to connect to the API server, or the API server returns a non-successful response, the SDK will throw an `ApiError` that you can catch and handle:
 
 ```ts
-import { runs, APIError } from "@trigger.dev/sdk";
+import { runs, ApiError } from "@trigger.dev/sdk";
 
 async function main() {
   try {
     const run = await runs.retrieve("run_1234");
   } catch (error) {
     if (error instanceof ApiError) {
-      console.error(`API error: ${error.status}, ${error.headers}, ${error.body}`);
+      console.error(`API error: ${error.status} ${error.message}`, error.error);
     } else {
       console.error(`Unknown error: ${error.message}`);
     }
@@ -27,7 +27,7 @@ async function main() {
 
 ## Retries
 
-The SDK will automatically retry requests that fail due to network errors or server errors. By default, the SDK will retry requests up to 3 times, with an exponential backoff delay between retries.
+The SDK will automatically retry requests that fail due to network errors, `5xx` responses, and `408`, `409` and `429` responses. By default, the SDK makes up to 5 attempts per request (`maxAttempts: 5`, so up to 4 retries) with exponential backoff (`minTimeoutInMs` 1000, `maxTimeoutInMs` 30000, `factor` 1.6, `randomize` false). Any retry fields you pass are merged over these defaults.
 
 You can customize the retry behavior by passing a `requestOptions` option to the `configure` function:
 
@@ -60,8 +60,3 @@ async function main() {
   });
 }
 ```
-
-> **Note**
->
-> When running inside a task, the SDK ignores customized retry options for certain functions (e.g.,
-> `task.trigger`, `task.batchTrigger`), and uses retry settings optimized for task execution.

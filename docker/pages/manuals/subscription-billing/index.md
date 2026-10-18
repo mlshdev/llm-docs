@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/_index.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/subscription-billing/_index.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/_index.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/subscription-billing/_index.md)
 
 # Subscription and billing
 
@@ -29,13 +29,13 @@ let you subscribe without one. For details, see
 Plans come with usage entitlements that can be extended without upgrading to
 a different plan.
 
-| Unit              | Description                                                                           | Examples                      |
-| ----------------- | ------------------------------------------------------------------------------------- | ----------------------------- |
-| Seats             | Each seat extends entitlements to one more member.                                    | Docker Team, Docker Business  |
-| Licenses          | Access to specific products or features.                                              | AI Governance, Docker Offload |
-| Minutes           | Cloud build capacity, sold in blocks and consumed within the billing period.          | Docker Build Cloud            |
-| Repositories      | Additional container repositories covered by security scanning and analysis features. | DHI                           |
-| Consuming domains | Additional consuming domains tracked in publisher analytics, sold in blocks of 25.    | DVP Starter, DVP Growth       |
+| Unit                                                                                                                     | Description                                                                           | Examples                      |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- | ----------------------------- |
+| [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/)                                              | Each seat extends entitlements to one more member.                                    | Docker Team, Docker Business  |
+| [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/)                                        | Access to specific products or features.                                              | AI Governance, Docker Offload |
+| [Minutes](https://docs.docker.com/subscription-billing/plans/docker/#docker-build-cloud-minutes)                         | Cloud build capacity, sold in blocks and consumed within the billing period.          | Docker Build Cloud            |
+| [Repositories](https://docs.docker.com/subscription-billing/plans/dhi/)                                                  | Additional container repositories covered by security scanning and analysis features. | DHI                           |
+| [Consuming domains](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/#add-consuming-domains) | Additional consuming domains tracked in publisher analytics, sold in blocks of 25.    | DVP Starter, DVP Growth       |
 
 ## Manage your plans
 

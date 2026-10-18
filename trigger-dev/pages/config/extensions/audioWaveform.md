@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/config/extensions/audioWaveform.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/config/extensions/audioWaveform.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/config/extensions/audioWaveform.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/config/extensions/audioWaveform.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/audioWaveform
 
 # Audio Waveform
@@ -15,7 +15,9 @@ export default defineConfig({
   project: "<project ref>",
   // Your other config settings...
   build: {
-    extensions: [audioWaveform()], // uses verson 1.1.0 of audiowaveform by default
+    extensions: [audioWaveform()], // uses version 1.10.1 of audiowaveform by default
   },
 });
 ```
+
+To use a different version, pass the `version` and `checksum` options to `audioWaveform()`.

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/94cba3150c6b83057ed48b833689adc806715cc0/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -27853,7 +27853,20 @@ This is the default.
   Controls the output pixel format. By default, or if none is specified, the input
   pixel format is used.
 
-The filter does not support converting between YUV and RGB pixel formats.
+Converting between `yuv420p`, `yuv422p`, `yuv444p`,
+`yuv420p10`, `yuv422p10`, `yuv444p10`, `nv12`, `nv16`,
+`p010` or `p210` and `bgra`, `rgba`, `bgr0` or
+`rgb0` is supported, also together with resizing. Resizing is then done
+on the RGB side, after converting from YUV or before converting to YUV, and
+always uses the generic filters selected with `interp_algo`. Resizing
+the YUV side in a separate instance instead needs less intermediate memory and
+may be faster, but filters chroma differently.
+YUV to RGB conversion uses the YCbCr matrix and range of the input, RGB to YUV
+conversion those selected for the output (see `out_color_matrix` and
+`out_range`). An unspecified matrix is treated as BT.601 and an
+unspecified range as limited. The conversion samples chroma independently of
+`interp_algo`: YUV to RGB conversion uses the nearest chroma sample, RGB
+to YUV conversion averages, which centers the chroma samples.
 
 - passthrough
   If set to 0, every frame is processed, even if no conversion is necessary.
@@ -27868,7 +27881,8 @@ parameters. This is the default behaviour.
   shader kernels. May be faster or slower depending on the hardware. A value
   of `auto` (the default) enables this automatically when required for
   correct anti-aliasing when downscaling, and for high-quality Lanczos scaling.
-  Set this to 0 to use the legacy fixed 4-tap Lanczos kernel.
+  Set this to 0 to use the legacy fixed 4-tap Lanczos kernel. Resizing during
+  YUV to RGB or RGB to YUV conversion always uses the generic filters.
 
 - param
   Algorithm-specific parameter. For *bicubic*, this affects the filter
@@ -27882,6 +27896,28 @@ parameters. This is the default behaviour.
 
 - reset\_sar
   Works the same as the identical scale filter option.
+
+- out\_range
+  Set the output YCbCr sample range. One of `auto` (the default),
+  `jpeg`/`full`/`pc`, or `mpeg`/`limited`/`tv`.
+
+- out\_color\_matrix
+  Set the output YCbCr matrix. One of `auto` (the default), `bt601`,
+  `smpte170m`, `bt470`, `bt470bg`, `bt709`, `fcc`,
+  `smpte240m`, `ycgco`, `bt2020` or `bt2020nc`.
+
+With `auto`, `out_range` and `out_color_matrix` are left to
+filter-graph negotiation. They follow a single range and matrix negotiated for
+the input, as for decoded video, and otherwise prefer BT.601 limited range. For
+RGB to YUV conversion, `auto` thus means BT.601 limited range, unless the
+filter graph requires otherwise; converting full range YUV to RGB and back keeps
+the full range.
+
+Outside RGB to YUV conversion, these options describe the existing samples
+without remapping them; an unspecified input description may adopt the
+negotiated output description, while conflicting specified descriptions are
+rejected. Both options can only be used with YUV output; RGB output is full
+range.
 
 ### Examples
 
@@ -27909,6 +27945,23 @@ decoders frame pool.
 
 ```text
 scale_cuda=passthrough=0
+```
+
+-
+
+Convert BT.709 input to RGB for a filter that requires it, then back to
+BT.709 NV12 with limited range.
+
+```text
+scale_cuda=format=bgra,scale_cuda=format=nv12:out_color_matrix=bt709:out_range=limited
+```
+
+-
+
+Scale to 720p while converting to RGB.
+
+```text
+scale_cuda=-2:720:format=bgra
 ```
 
 ## thumbnail\_cuda

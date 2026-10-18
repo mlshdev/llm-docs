@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/realtime/backend/streams.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/realtime/backend/streams.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/realtime/backend/streams.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/realtime/backend/streams.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/backend/streams
 
 # Stream data to your backend (AI, files)
@@ -91,17 +91,15 @@ async function consumeWithTimeout(runId: string) {
     timeoutInSeconds: 120, // Wait up to 2 minutes for data
   });
 
-  try {
-    for await (const chunk of stream) {
-      console.log("Received chunk:", chunk);
-    }
-  } catch (error) {
-    if (error.name === "TimeoutError") {
-      console.log("Stream timed out");
-    }
+  for await (const chunk of stream) {
+    console.log("Received chunk:", chunk);
   }
+
+  // The loop ends normally if no data arrives within the timeout
 }
 ```
+
+If no data arrives within `timeoutInSeconds`, the stream closes and the `for await` loop ends without throwing an error. To detect a timeout, track whether you received the chunk you expected to be last.
 
 ### Start index
 
@@ -115,6 +113,25 @@ async function resumeStream(runId: string, lastChunkIndex: number) {
   // Start reading from the chunk after the last one we received
   const stream = await aiStream.read(runId, {
     startIndex: lastChunkIndex + 1,
+  });
+
+  for await (const chunk of stream) {
+    console.log("Received chunk:", chunk);
+  }
+}
+```
+
+### Start from latest
+
+Pass `from: "latest"` to start reading at the end of the stream instead of replaying its history. You may still receive the most recent existing chunk before new chunks arrive. The default is `"beginning"`, which replays the full history first. `from` is ignored when `startIndex` is set:
+
+```ts
+import { streams } from "@trigger.dev/sdk";
+import { aiStream } from "./trigger/streams";
+
+async function watchLive(runId: string) {
+  const stream = await aiStream.read(runId, {
+    from: "latest", // Start at the end of the stream instead of replaying history
   });
 
   for await (const chunk of stream) {
@@ -182,8 +199,6 @@ async function advancedStreamConsumption(runId: string) {
   } catch (error) {
     if (error.name === "AbortError") {
       console.log("Stream was cancelled");
-    } else if (error.name === "TimeoutError") {
-      console.log("Stream timed out");
     } else {
       console.error("Stream error:", error);
     }

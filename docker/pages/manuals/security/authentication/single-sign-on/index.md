@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/authentication/single-sign-on/_index.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/authentication/single-sign-on/_index.md)
 
 # Single sign-on overview
 
@@ -7,49 +7,81 @@
 - Subscription: Business
 - For: Administrators
 
-Single sign-on (SSO) lets users access Docker by authenticating through their
-identity providers (IdPs). SSO can be configured for an entire company,
-including all associated organizations, or for a single organization that has a
-Docker Business subscription.
+Single sign-on (SSO) lets users access Docker by authenticating through your
+identity provider (IdP). You can configure SSO for an entire company,
+including all associated organizations, or for a single organization. SSO
+requires a Docker Business subscription or an
+[AI Governance](https://docs.docker.com/accounts/organization/manage/manage-licenses/)
+license.
 
 ## How SSO works
 
-When SSO is enabled, Docker supports a non-IdP-initiated flow for user sign-in.
-Instead of signing in with a Docker username and password, users are redirected
-to your IdP’s sign-in page. Users must initiate the SSO authentication process
-by signing in to Docker Hub or Docker Desktop.
+When a user signs in to Docker Desktop or Docker Hub, Docker sends them to
+your IdP's sign-in page. The IdP accepts or denies the sign-in.
 
-The following diagram illustrates how SSO operates and is managed between Docker
-Hub, Docker Desktop, and your IdP.
+```mermaid {title="Sign-in when the IdP accepts the user" caption="The user has no Docker session, and the IdP accepts them."}
+sequenceDiagram
+  actor User
+  participant App as Docker Desktop<br/>or<br/>Docker Hub
+  participant Login as Docker Login
+  participant IdP as Your IdP
 
-![SSO architecture](https://raw.githubusercontent.com/docker/docs/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/authentication/single-sign-on/images/SSO.png)
+  User->>App: Open the app
+  App->>Login: Start authentication
+  Login->>IdP: Send the user to your IdP
+  IdP->>User: Prompt for credentials
+  User->>IdP: Enter credentials
+  IdP->>Login: Confirm the user
+  Login->>App: Return the user to the app
+```
 
 ## Set up SSO
 
-To configure SSO in Docker, follow these steps:
+Setting up SSO is a multi-step procedure that moves between Docker and your
+IdP.
 
-1. [Configure your domain](https://docs.docker.com/security/authentication/single-sign-on/connect/) by creating and verifying it.
-2. [Create your SSO connection](https://docs.docker.com/security/authentication/single-sign-on/connect/) in Docker and your IdP.
-3. Link Docker to your identity provider.
-4. Test your SSO connection.
-5. Provision users in Docker.
-6. Optional.
-   [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
-7. [Manage your SSO configuration](https://docs.docker.com/security/authentication/single-sign-on/manage/).
+```mermaid {title="SSO setup flow" caption="The hexagon marks the IdP step. After the connection works, complete the post-setup tasks."}
+flowchart LR
+  %% Link the columns to each other. A link into a step inside a
+  %% column makes that column run left to right.
+  subgraph configure["Configure SSO"]
+    direction TB
+    A["1. Add a domain"] --> B["2. Verify your domain"]
+    B --> C["3. Create an SSO connection in Docker"]
+    C --> D{{"4. Create an SSO connection in your IdP"}}
+    D --> E["5. Connect Docker to your IdP"]
+    E --> F["6. Test the connection"]
+  end
 
-Once configuration is complete, users can sign in to Docker services using their
-company email address. After signing in, users are added to your company,
-assigned to an organization, and added to a team.
+  subgraph post["Post-setup"]
+    direction TB
+    G["Provision users"]
+    H["Optional: Enforce SSO / Desktop sign-in"]
+    I["Manage SSO configuration"]
+    G --> H --> I
+  end
+
+  configure -->|"After the connection works"| post
+
+  classDef step fill:#ffffff,stroke:#6b7280,color:#111827
+  class A,B,C,D,E,F,G,H,I step
+  style configure fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+  style post fill:#fef9c3,stroke:#ca8a04,stroke-width:2px
+```
+
+After you finish the setup, users sign in to Docker services with their
+company email address. When
+[Just-in-Time provisioning](https://docs.docker.com/security/provisioning/just-in-time/)
+is turned on, which is the default for an SSO connection, Docker adds each
+user to your organization and team on first sign-in.
 
 > \[!IMPORTANT]
 >
-> When SSO is enforced, CLI password-based sign-in is no longer supported. Use a
-> personal access token (PAT) for CLI access. For more information, see the
-> [security announcement](https://docs.docker.com/security/security-announcements/#deprecation-of-password-logins-on-cli-when-sso-enforced).
+> When SSO is enforced, the Docker CLI rejects password sign-in. Use a
+> personal access token (PAT) to sign in to the CLI.
 
 ## Next steps
 
 - Start [configuring SSO](https://docs.docker.com/security/authentication/single-sign-on/connect/).
 - Read the [FAQs](https://docs.docker.com/faqs/security/).
-- [Troubleshoot](https://docs.docker.com/security/authentication/single-sign-on/troubleshoot-sso/)
-  SSO issues.
+- [Troubleshoot SSO issues](https://docs.docker.com/security/authentication/single-sign-on/troubleshoot-sso/).

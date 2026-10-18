@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/installation-apache.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/admin/installation-apache.rst)
+> Pinned source for SearXNG master: [docs/admin/installation-apache.rst](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/docs/admin/installation-apache.rst)
 
 <a id="installation-apache"></a>
 

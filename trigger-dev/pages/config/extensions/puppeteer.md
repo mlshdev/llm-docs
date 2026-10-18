@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/config/extensions/puppeteer.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/config/extensions/puppeteer.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/config/extensions/puppeteer.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/config/extensions/puppeteer.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/puppeteer
 
 # Puppeteer build extension
@@ -24,10 +24,6 @@ export default defineConfig({
 });
 ```
 
-And add the following environment variable in your Trigger.dev dashboard on the Environment Variables page:
-
-```bash
-PUPPETEER_EXECUTABLE_PATH: "/usr/bin/google-chrome-stable",
-```
+The extension installs Chrome and sets `PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable` for deployed builds automatically, so you do not need to set it. Don't set it in your Dev environment: the extension does nothing in Dev, and locally Puppeteer uses the browser it downloads on install.
 
 Follow [this example](https://trigger.dev/docs/guides/examples/puppeteer) to get setup with Trigger.dev and Puppeteer in your project.

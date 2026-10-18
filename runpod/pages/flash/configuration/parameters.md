@@ -1,37 +1,41 @@
-> Pinned source for Runpod main: [flash/configuration/parameters.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/configuration/parameters.mdx)
+> Pinned source for Runpod main: [flash/configuration/parameters.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/configuration/parameters.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/parameters
 
 # Endpoint parameters
 
 Complete reference for all Endpoint class parameters. Review setup, configuration, deployment, and usage guidance for Runpod Flash.
 
+> **Warning**
+>
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
+
 This page provides a complete reference for all parameters available on the `Endpoint` class.
 
 ## Parameter overview
 
-| Parameter              | Type                           | Description                                       | Default                       |
-| ---------------------- | ------------------------------ | ------------------------------------------------- | ----------------------------- |
-| `name`                 | `str`                          | Endpoint name (required unless `id=` is used)     | -                             |
-| `id`                   | `str`                          | Connect to existing endpoint by ID                | `None`                        |
-| `gpu`                  | `GpuGroup`, `GpuType`, or list | GPU type(s) for the endpoint                      | `GpuGroup.ANY`                |
-| `cpu`                  | `str` or `CpuInstanceType`     | CPU instance type (mutually exclusive with `gpu`) | `None`                        |
-| `workers`              | `int` or `(min, max)`          | Worker scaling configuration                      | `(0, 1)`                      |
-| `idle_timeout`         | `int`                          | Seconds before scaling down idle workers          | `60`                          |
-| `dependencies`         | `list[str]`                    | Python packages to install                        | `None`                        |
-| `system_dependencies`  | `list[str]`                    | System packages to install (apt)                  | `None`                        |
-| `accelerate_downloads` | `bool`                         | Enable download acceleration                      | `True`                        |
-| `volume`               | `NetworkVolume` or list        | Network volume(s) for persistent storage          | `None`                        |
-| `datacenter`           | `DataCenter`, list, or `None`  | Datacenter(s) for deployment                      | `None` (all DCs)              |
-| `env`                  | `dict[str, str]`               | Environment variables                             | `None`                        |
-| `gpu_count`            | `int`                          | GPUs per worker                                   | `1`                           |
-| `execution_timeout_ms` | `int`                          | Max execution time in milliseconds                | `0` (no limit)                |
-| `flashboot`            | `bool`                         | Enable Flashboot fast startup                     | `True`                        |
-| `image`                | `str`                          | Custom Docker image to deploy                     | `None`                        |
-| `scaler_type`          | `ServerlessScalerType`         | Scaling strategy                                  | auto                          |
-| `scaler_value`         | `int`                          | Scaling threshold                                 | `4`                           |
-| `template`             | `PodTemplate`                  | Pod template overrides                            | `None`                        |
-| `min_cuda_version`     | `str` or `CudaVersion`         | Minimum CUDA version for GPU host selection       | `"12.8"` (GPU) / `None` (CPU) |
-| `python_version`       | `str`                          | Python version for the worker image               | Local Python                  |
+| Parameter              | Type                           | Description                                                      | Default                       |
+| ---------------------- | ------------------------------ | ---------------------------------------------------------------- | ----------------------------- |
+| `name`                 | `str`                          | Endpoint name (required unless `id=` is used)                    | -                             |
+| `id`                   | `str`                          | Connect to existing endpoint by ID                               | `None`                        |
+| `gpu`                  | `GpuGroup`, `GpuType`, or list | GPU type(s) for the endpoint                                     | `GpuGroup.ANY`                |
+| `cpu`                  | `str` or `CpuInstanceType`     | CPU instance type (mutually exclusive with `gpu`)                | `None`                        |
+| `workers`              | `int` or `(min, max)`          | Worker scaling configuration                                     | `(0, 1)`                      |
+| `idle_timeout`         | `int`                          | Seconds a running worker waits for a new job before scaling down | `60`                          |
+| `dependencies`         | `list[str]`                    | Python packages to install                                       | `None`                        |
+| `system_dependencies`  | `list[str]`                    | System packages to install (apt)                                 | `None`                        |
+| `accelerate_downloads` | `bool`                         | Enable download acceleration                                     | `True`                        |
+| `volume`               | `NetworkVolume` or list        | Network volume(s) for persistent storage                         | `None`                        |
+| `datacenter`           | `DataCenter`, list, or `None`  | Datacenter(s) for deployment                                     | `None` (all DCs)              |
+| `env`                  | `dict[str, str]`               | Environment variables                                            | `None`                        |
+| `gpu_count`            | `int`                          | GPUs per worker                                                  | `1`                           |
+| `execution_timeout_ms` | `int`                          | Max execution time in milliseconds                               | `0` (no limit)                |
+| `flashboot`            | `bool`                         | Enable Flashboot fast startup                                    | `True`                        |
+| `image`                | `str`                          | Custom Docker image to deploy                                    | `None`                        |
+| `scaler_type`          | `ServerlessScalerType`         | Scaling strategy                                                 | auto                          |
+| `scaler_value`         | `int`                          | Scaling threshold                                                | `4`                           |
+| `template`             | `PodTemplate`                  | Pod template overrides                                           | `None`                        |
+| `min_cuda_version`     | `str` or `CudaVersion`         | Minimum CUDA version for GPU host selection                      | `"12.8"` (GPU) / `None` (CPU) |
+| `python_version`       | `str`                          | Python version for the worker image                              | Local Python                  |
 
 ## Parameter details
 
@@ -144,6 +148,11 @@ Controls worker scaling. Accepts either a single integer (max workers with min=0
 - `workers=N` or `workers=(0, N)`: Cost-optimized, allows scale to zero
 - `workers=(1, N)`: Avoid cold starts by keeping at least one worker warm
 - `workers=(N, N)`: Fixed worker count for consistent performance
+
+> **Note**
+>
+> Runpod also keeps a few standby workers parked for each endpoint so jobs can start quickly with [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot). The API shows their target count as `workersStandby`, and the [`/health` operation](https://docs.runpod.io/serverless/endpoints/operation-reference#health) can list them as ready. Runpod picks this number for you, and you aren't billed for a parked worker until it starts running.
+> `workers=(0, N)` still scales to zero.
 
 ### idle\_timeout
 

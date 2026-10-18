@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/94cba3150c6b83057ed48b833689adc806715cc0/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -3003,6 +3003,16 @@ Motion JPEG encoder.
 
   - optimal
     Compute and use optimal huffman tables.
+
+- intra\_dc\_precision *integer*
+  Set the precision of the DC coefficient minus 8. Valid range is 0 to 3.
+  Higher values quantize DC more finely as the DC entry of the written
+  quantization table is 8 >> *intra\_dc\_precision* so 3 gives a DC
+  quantizer of 1. Default is 0 which keeps the previous fixed DC
+  quantizer of 8.
+
+Combined with `-q:v 1` and an `intra_matrix` of all 8s,
+a value of 3 produces a quantization table of all ones.
 
 <a id="wavpackenc"></a>
 

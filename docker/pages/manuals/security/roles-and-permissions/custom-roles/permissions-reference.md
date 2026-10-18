@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/roles-and-permissions/custom-roles/permissions-reference.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/roles-and-permissions/custom-roles/permissions-reference.md)
+> Pinned source for Docker main: [content/manuals/security/roles-and-permissions/custom-roles/permissions-reference.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/roles-and-permissions/custom-roles/permissions-reference.md)
 
 # Custom role permissions reference
 
@@ -8,8 +8,9 @@
 - For: Administrators
 
 Custom roles use permissions from organization management, Docker Hub,
-billing, AI Governance, Docker Hardened Images, and Docker Offload. Use
-the following tables to [create or edit a custom role](https://docs.docker.com/security/roles-and-permissions/custom-roles/manage/).
+billing, licensing, AI Governance, Docker Hardened Images, Docker
+Offload, and Docker Cloud Sandboxes. Use the following tables to [create
+or edit a custom role](https://docs.docker.com/security/roles-and-permissions/custom-roles/manage/).
 
 ## Organization management
 
@@ -49,6 +50,12 @@ the following tables to [create or edit a custom role](https://docs.docker.com/s
 | View billing   | View organization billing information            |
 | Manage billing | Complete access to managing organization billing |
 
+## Licensing
+
+| Permission      | Description                                                                                                                         |
+| :-------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Manage licenses | Assign and revoke licenses for members and manage auto-assign rules. Does not include purchasing or changing the number of licenses |
+
 ## AI Governance
 
 | Permission            | Description                                          |
@@ -60,15 +67,22 @@ the following tables to [create or edit a custom role](https://docs.docker.com/s
 
 ## DHI (Docker Hardened Images)
 
-| Permission         | Description                                      |
-| :----------------- | :----------------------------------------------- |
-| Create DHI mirrors | Create Docker Hardened Image mirror repositories |
+| Permission            | Description                                                     |
+| :-------------------- | :-------------------------------------------------------------- |
+| Create DHI mirrors    | Create Docker Hardened Image mirror repositories                |
+| Manage customizations | Create, update, and delete Docker Hardened Image customizations |
 
 ## Docker Offload
 
 | Permission        | Description                                    |
 | :---------------- | :--------------------------------------------- |
 | Offload Read-Only | View Offload account status, leases, and zones |
+
+## Cloud Sandboxes
+
+| Permission          | Description                           |
+| :------------------ | :------------------------------------ |
+| Use Cloud Sandboxes | Create and use Docker Cloud Sandboxes |
 
 ## Next steps
 

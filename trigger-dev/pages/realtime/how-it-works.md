@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/realtime/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/realtime/how-it-works.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/realtime/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/realtime/how-it-works.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/how-it-works
 
 # How Realtime works
@@ -81,7 +81,7 @@ See our [run metadata docs](https://trigger.dev/docs/runs/metadata) for more on 
 
 You can combine run metadata with the Realtime API to bridge the gap between your trigger.dev tasks and your applications in two ways:
 
-1. Using our [React hooks](https://trigger.dev/docs/realtime/react-hooks/subscribe#using-metadata) to subscribe to metadata updates and update your UI in real-time.
+1. Using our [React hooks](https://trigger.dev/docs/realtime/react-hooks/subscribe#using-metadata-to-show-progress-in-your-ui) to subscribe to metadata updates and update your UI in real-time.
 2. Using our [backend functions](https://trigger.dev/docs/realtime/backend) to subscribe to metadata updates in your backend.
 
 ## Limits

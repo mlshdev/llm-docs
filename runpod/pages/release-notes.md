@@ -1,17 +1,55 @@
-> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/release-notes.mdx)
+> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/release-notes.mdx)
 > Canonical documentation: https://docs.runpod.io/release-notes
 
 # Product updates
 
 New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation.
 
+**October 15, 2026**
+
+\*\*\*\* [Runpod SDK 2.0](https://docs.runpod.io/sdk/overview) Flash is now part of the `runpod` Python package. You can define queue endpoints, load-balanced APIs, and tasks that run on their own Pod with `runpod.App`, develop against real hardware with `rp flash dev`, and deploy with `rp flash deploy`. See the [quickstart](https://docs.runpod.io/sdk/quickstart) to get started.
+
+\*\*\*\* [runpod 2.0 CLI changes](https://docs.runpod.io/sdk/migrate-from-flash) `runpod` 2.0 removes the `runpod config`, `runpod project`, and `runpod exec` commands. Use `rp login` to authenticate and `rp flash` commands to develop and deploy apps.
+
+\*\*\*\* [Standalone Flash package](https://docs.runpod.io/sdk/migrate-from-flash) The `runpod-flash` package no longer gets new features, and the runpod/flash repository will be archived. Existing Flash code and deployed endpoints keep working. To move a project to the Runpod SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
+
+**October 13, 2026**
+
+\*\*\*\* [Seedance 2.5 on Public Endpoints](https://docs.runpod.io/public-endpoints/models/seedance-2-5-t2v) You can now generate 4-30 second videos at up to 4K with native audio using Seedance 2.5. [Seedance 2.5 Text-to-Video](https://docs.runpod.io/public-endpoints/models/seedance-2-5-t2v) works from a prompt with optional image, video, and audio references. [Seedance 2.5 Image-to-Video](https://docs.runpod.io/public-endpoints/models/seedance-2-5-i2v) animates a start image.
+
+\*\*\*\* [Seedance 1.5 Pro I2V](https://docs.runpod.io/public-endpoints/models/seedance-1-5-pro) The Seedance 1.5 Pro I2V public endpoint is deprecated and is being phased out. Migrate to [Seedance 2.5 Image-to-Video](https://docs.runpod.io/public-endpoints/models/seedance-2-5-i2v).
+
+**October 8, 2026**
+
+\*\*\*\* [Global volumes for Serverless (Beta)](https://docs.runpod.io/storage/globalvolume/globalvolume-serverless) You can now attach a global volume to GPU Serverless endpoints from the console. Workers mount the volume at `/runpod-volume`, and because a global volume has no data center, attaching one doesn't restrict where your workers run. An endpoint can use one global volume at a time and can't combine it with a network volume.
+
 **October 2, 2026**
 
 \*\*\*\* [AstaBrief 8B on Serverless](https://console.runpod.io/hub/runpod-workers/astabrief?utm_source=hub\&utm_medium=product\&utm_campaign=202610_activation_indie-ml-dev_allen-ai-astabrief-8b\&utm_content=readme)  AstaBrief 8B from Allen AI is available on Runpod Serverless with a validated vLLM recipe.
 
+**September 25, 2026**
+
+\*\*\*\* [Unified credentials page](https://docs.runpod.io/get-started/credentials) API keys, S3 API keys, SSH public keys, container registry credentials, and secrets now live together on a single [Credentials page](https://console.runpod.io/user/credentials) in the console.&#x20;
+
+**September 23, 2026**
+
+\*\*\*\* [Post-paid billing (Beta)](https://docs.runpod.io/accounts-billing/post-paid-billing) Enterprise customers can now be billed in arrears under a custom contract instead of maintaining a prepaid credit balance. Runpod meters your usage throughout the month and invoices it at your contracted rates, with [cost centers](https://docs.runpod.io/accounts-billing/cost-centers) as the primary way to attribute spend. To convert your account, contact your Runpod account manager.
+
+**September 22, 2026**
+
+\*\*\*\* [New Pod deploy flow is now the default](https://docs.runpod.io/get-started) The redesigned Pod deploy flow, where you configure your workload before choosing a GPU, is now the default for all users. To return to the previous experience, enable **Switch back to the legacy deploy flow** in your [account settings](https://console.runpod.io/user/settings).
+
+**September 21, 2026**
+
+\*\*\*\* [Organizations (Beta)](https://docs.runpod.io/organizations/orgs-overview) Organizations are a new enterprise account model in which the organization, not individual members, owns all resources, including compute, storage, secrets, and templates. Built-in [roles](https://docs.runpod.io/organizations/org-roles) control member permissions, [groups](https://docs.runpod.io/organizations/orgs-groups) organize members into teams, and [billing](https://docs.runpod.io/organizations/orgs-billing) runs on post-paid invoicing. Organizations and Teams are mutually exclusive, so review the [overview](https://docs.runpod.io/organizations/orgs-overview) before accepting an invitation.
+
+**September 18, 2026**
+
+\*\*\*\* [Request pricing for global volumes](https://docs.runpod.io/storage/globalvolume/overview#request-costs) Global volumes charge for request operations separately from storage. Class A requests (writes, creates, and lists) cost $0.005 per 1,000 requests, and Class B requests (reads and metadata lookups) cost $0.0005 per 1,000 requests. Test your workflow at small scale to estimate request costs before scaling up.
+
 **September 15, 2026**
 
-\*\*\*\* [Global Volumes - Beta](https://docs.runpod.io/storage/globalstore)  Elastic, region-independent storage you can attach to any Pod from any Runpod data center. Create a global volume once and mount it at startup across any region — no copying data between data centers required. Best suited for model serving and inference workloads that read large files and write infrequently.
+\*\*\*\* [Global volumes (Beta)](https://docs.runpod.io/storage/globalvolume/overview) You can now attach elastic, region-independent storage to any Pod in any Runpod data center. Create a global volume once and mount it at startup in any region, without copying data between data centers. Global volumes are best suited for model serving and inference workloads that read large files and write infrequently.
 
 **September 14, 2026**
 
@@ -185,7 +223,7 @@ Flash now supports deploying endpoints to [multiple datacenters](https://docs.ru
 
 **[New Public Endpoints](https://docs.runpod.io/public-endpoints/reference):** Expansion of available models across all categories.
 
-- **Video:** [SORA 2](https://docs.runpod.io/public-endpoints/models/sora-2) and [SORA 2 Pro](https://docs.runpod.io/public-endpoints/models/sora-2-pro), [Kling v2.1](https://docs.runpod.io/public-endpoints/models/kling-v2-1) and [v2.6 Motion Control](https://docs.runpod.io/public-endpoints/models/kling-v2-6-motion-control), [WAN 2.6](https://docs.runpod.io/public-endpoints/models/wan-2-6-t2v).
+- **Video:** [SORA 2](https://docs.runpod.io/public-endpoints/models/sora-2) and [SORA 2 Pro](https://docs.runpod.io/public-endpoints/models/sora-2-pro), Kling v2.1 and [v2.6 Motion Control](https://docs.runpod.io/public-endpoints/models/kling-v2-6-motion-control), [WAN 2.6](https://docs.runpod.io/public-endpoints/models/wan-2-6-t2v).
 - **Image:** [Seedream 4.0](https://docs.runpod.io/public-endpoints/models/seedream-4-t2i).
 - **Text:** [Qwen3 32B](https://docs.runpod.io/public-endpoints/models/qwen3-32b), [IBM Granite 4.0](https://docs.runpod.io/public-endpoints/models/granite-4).
 - **Audio:** [Chatterbox Turbo](https://docs.runpod.io/public-endpoints/models/chatterbox-turbo) for text-to-speech.

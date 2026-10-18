@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/docker.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/subscription-billing/plans/docker.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/docker.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/subscription-billing/plans/docker.md)
 
 # Docker plans
 
@@ -10,7 +10,8 @@ licensing, and expanded feature sets.
 
 To upgrade to Docker Pro, go to the <a id="dkr_docs_pricing_docker_pro"></a>Docker pricing page
 and select **Buy now**.
-To upgrade to Docker Team or Docker Business, see [Manage plans](https://docs.docker.com/subscription-billing/manage/).
+To upgrade to Docker Team or Docker Business, see
+[Manage plans](https://docs.docker.com/subscription-billing/manage/plans/).
 
 ## Usage
 

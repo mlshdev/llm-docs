@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/runs.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/runs.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/runs.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/runs.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs
 
 # Runs
@@ -20,7 +20,7 @@ A run is created when you trigger a task (e.g. calling `yourTask.trigger({ foo: 
 
 A run can go through **various** states during its lifecycle. The following diagram illustrates a typical state transition where a single run is triggered and completes successfully:
 
-![Run Lifecycle](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-lifecycle.png)
+![Run Lifecycle](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-lifecycle.png)
 
 Runs can also find themselves in lots of other states depending on what's happening at any given time. The following sections describe all the possible states in more detail.
 
@@ -60,7 +60,7 @@ to complete successfully due to an error in the task code.
 failed because it exceeded its `maxDuration`.
 
 **Crashed**: The worker process crashed
-during execution (likely due to an Out of Memory error) and won’t be retried.
+during execution (likely due to an Out of Memory error) and won’t be retried, unless `retry.outOfMemory.machine` is set to retry on a larger machine. See [Machines](https://trigger.dev/docs/machines#retrying-with-a-larger-machine).
 
 **System failure**: An unrecoverable system
 error has occurred.
@@ -78,7 +78,7 @@ An attempt represents a single execution of a task within a run. A run can have 
 
 When a task fails, it will be retried according to its retry settings, creating new attempts until it either succeeds or reaches the retry limit.
 
-![Run with retries](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-with-retries.png)
+![Run with retries](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-with-retries.png)
 
 ## Run completion
 
@@ -98,7 +98,7 @@ import { runs } from "@trigger.dev/sdk";
 
 const run = await runs.retrieve("run_1234");
 
-if (run.isCompleted) {
+if (run.isSuccess) {
   console.log("Run completed successfully");
 }
 ```
@@ -107,7 +107,7 @@ if (run.isCompleted) {
 - **`isExecuting`**: Returns `true` when the status is `EXECUTING` or `DEQUEUED`. These count against your concurrency limits.
 - **`isWaiting`**: Returns `true` when the status is `WAITING`. These do not count against your concurrency limits.
 - **`isCompleted`**: Returns `true` when the status is any of the completed statuses
-- **`isCanceled`**: Returns `true` when the status is `CANCELED`
+- **`isCancelled`**: Returns `true` when the status is `CANCELED`
 - **`isFailed`**: Returns `true` when the status is any of the failed statuses
 - **`isSuccess`**: Returns `true` when the status is `COMPLETED`
 
@@ -117,7 +117,7 @@ These helpers are also available when subscribing to Realtime run updates:
 import { runs } from "@trigger.dev/sdk";
 
 for await (const run of runs.subscribeToRun("run_1234")) {
-  if (run.isCompleted) {
+  if (run.isSuccess) {
     console.log("Run completed successfully!");
     break;
   }
@@ -135,7 +135,7 @@ await yourTask.trigger({ foo: "bar" }, { idempotencyKey: "unique-key" });
 ```
 
 - If a run with the same idempotency key is already in progress, the new trigger will be ignored.
-- If the run has already finished, the previous output or error will be returned.
+- If the run completed successfully (or was canceled), the existing run is returned. If it failed or expired, the key is released and triggering again creates a new run.
 
 See our [Idempotency docs](https://trigger.dev/docs/idempotency) for more information.
 
@@ -215,7 +215,7 @@ If the run hasn't started within the specified TTL, it will automatically expire
 
 Dev runs automatically have a 10-minute TTL. On Trigger.dev Cloud, staging and production runs have a maximum TTL of 14 days applied automatically (runs without an explicit TTL get 14 days; longer TTLs are clamped). See [Limits — Maximum run TTL](https://trigger.dev/docs/limits#maximum-run-ttl) for details.
 
-![Run with TTL](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-with-ttl.png)
+![Run with TTL](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-with-ttl.png)
 
 ### Delayed runs
 
@@ -227,7 +227,7 @@ await yourTask.trigger({ foo: "bar" }, { delay: "1h" });
 
 This is useful for tasks that need to be executed at a specific time in the future.
 
-![Run with delay](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-with-delay.png)
+![Run with delay](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-with-delay.png)
 
 ### Replaying runs
 
@@ -247,17 +247,23 @@ You can also replay runs from the dashboard using the same or different payload.
 
 The `triggerAndWait()` function triggers a task and then lets you wait for the result before continuing. [Learn more about triggerAndWait()](https://trigger.dev/docs/triggering#yourtask-triggerandwait).
 
-![Run with triggerAndWait](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-with-triggerAndWait\(\).png)
+![Run with triggerAndWait](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-with-triggerAndWait\(\).png)
 
 #### batchTriggerAndWait()
 
 Similar to `triggerAndWait()`, the `batchTriggerAndWait()` function lets you batch trigger a task and wait for all the results [Learn more about batchTriggerAndWait()](https://trigger.dev/docs/triggering#yourtask-batchtriggerandwait).
 
-![Run with batchTriggerAndWait](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-with-batchTriggerAndWait\(\).png)
+![Run with batchTriggerAndWait](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-with-batchTriggerAndWait\(\).png)
 
 ### Runs API
 
 #### runs.list()
+
+> **Warning**
+>
+> `runs.list()` is for browsing, reporting, and bulk operations, not for coordinating runs. Don't
+> call it before every trigger or poll it in a loop. See [runs.list() best
+> practices](https://trigger.dev/docs/runs/list-best-practices) for what to use instead.
 
 List runs in a specific environment. You can filter the runs by status, created at, task identifier, version, and more:
 
@@ -296,7 +302,7 @@ import { runs } from "@trigger.dev/sdk";
 const response = await runs.list({
   status: ["QUEUED", "EXECUTING"], // Filter by status
   taskIdentifier: ["my-task", "my-other-task"], // Filter by task identifier
-  from: new Date("2024-04-01T00:00:00Z"), // Filter by created at
+  from: new Date(Date.now() - 24 * 60 * 60 * 1000), // Filter by created at (last 24 hours)
   to: new Date(),
   version: "20241127.2", // Filter by deployment version,
   tag: ["tag1", "tag2"], // Filter by tags
@@ -333,7 +339,7 @@ If you have just triggered a run, you can pass the entire response object to `re
 import { runs, tasks } from "@trigger.dev/sdk";
 import type { myTask } from "./trigger/myTask";
 
-const response = await tasks.trigger<typeof myTask>({ foo: "bar" });
+const response = await tasks.trigger<typeof myTask>("my-task", { foo: "bar" });
 const run = await runs.retrieve(response);
 
 console.log(run.payload.foo); // string
@@ -352,13 +358,17 @@ await runs.cancel(runId);
 
 #### runs.replay()
 
-Replay a run:
+Replay a run, optionally overriding its payload or options for the new run:
 
 ```ts
 import { runs } from "@trigger.dev/sdk";
 
 await runs.replay(runId);
+
+await runs.replay(runId, { payload: { userId: "user_456" }, delay: "10m" });
 ```
+
+See [Replaying](https://trigger.dev/docs/replaying#replaying-using-the-sdk) for every option.
 
 #### runs.reschedule()
 
@@ -398,5 +408,5 @@ For more on real-time updates, see the [Realtime](https://trigger.dev/docs/realt
 
 ### Triggering runs for undeployed tasks
 
-It's possible to trigger a run for a task that hasn't been deployed yet. The run will enter the "Waiting for deploy" state until the task is deployed. Once deployed, the run will be queued and executed normally.
+It's possible to trigger a run for a task that hasn't been deployed yet. The run will enter the "Pending version" state until the task is deployed. Once deployed, the run will be queued and executed normally.
 This feature is particularly useful in CI/CD pipelines where you want to trigger tasks before the deployment is complete.

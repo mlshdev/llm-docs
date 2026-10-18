@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/frameworks/prisma.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/frameworks/prisma.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/frameworks/prisma.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/frameworks/prisma.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/prisma
 
 # Prisma setup guide
@@ -43,7 +43,7 @@ Follow these steps if you don't already have Trigger.dev set up in your project.
    >
    > Our [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) gives your AI assistant direct access to Trigger.dev tools; search docs, trigger tasks, deploy projects, and monitor runs. We recommend installing it for the best developer experience.
 
-   1. Ask if you want to install the [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) for your AI assistant.
+   1. Ask if you want to set up AI tooling: the [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) and/or Trigger.dev agent skills (shown the first time you run init). If you choose either, you can let your AI assistant finish the setup instead of the CLI.
    2. Log you into the CLI if you're not already logged in.
    3. Ask you to select your project.
    4. Install the required SDK packages.
@@ -74,15 +74,15 @@ Follow these steps if you don't already have Trigger.dev set up in your project.
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/test-dashboard.png)
 
 1) Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/terminal-completed-run.png)
 
 ## Creating a task using Prisma and deploying it to production
 
@@ -180,12 +180,12 @@ Follow these steps if you don't already have Trigger.dev set up in your project.
    ```bash yarn
    yarn dlx trigger.dev@latest deploy
    ```
-5. In your Trigger.dev dashboard sidebar click "Environment Variables" , and then the "New environment variable" button .
+5. In your Trigger.dev dashboard sidebar click "Environment Variables" , and then the "Add new" button .
 
    You can add values for your local dev environment, staging and prod. in this case we will add the `DATABASE_URL` for the production environment.
 
    ![Environment variables
-   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/environment-variables-panel.jpg)
+   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/environment-variables-panel.jpg)
 6. To test this task, go to the 'test' page in the Trigger.dev dashboard and run the task with the following payload:
 
    ```json

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/frameworks/sequin.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/frameworks/sequin.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/frameworks/sequin.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/frameworks/sequin.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/sequin
 
 # Sequin database triggers
@@ -9,13 +9,13 @@ This guide will show you how to trigger tasks from database changes using Sequin
 
 Often, task runs coincide with database changes. For instance, you might want to use a Trigger.dev task to generate an embedding for each post in your database:
 
-![Sequin and Trigger.dev Overview](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/sequin-intro.png)
+![Sequin and Trigger.dev Overview](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/sequin-intro.png)
 
 In this guide, you'll learn how to use Sequin to trigger Trigger.dev tasks from database changes.
 
 ## Prerequisites
 
-You are about to create a [regular Trigger.dev task](https://trigger.dev/docs/tasks-regular) that you will execute when ever a post is inserted or updated in your database. Sequin will detect all the changes on the `posts` table and then send the payload of the post to an API endpoint that will call `tasks.trigger()` to create the embedding and update the database.
+You are about to create a [regular Trigger.dev task](https://trigger.dev/docs/tasks/overview) that you will execute when ever a post is inserted or updated in your database. Sequin will detect all the changes on the `posts` table and then send the payload of the post to an API endpoint that will call `tasks.trigger()` to create the embedding and update the database.
 
 As long as you create an HTTP endpoint that Sequin can deliver webhooks to, you can use any web framework or edge function (e.g. Supabase Edge Functions, Vercel Functions, Cloudflare Workers, etc.) to invoke your Trigger.dev task. In this guide, we'll show you how to setup Trigger.dev tasks using Next.js API Routes.
 
@@ -124,7 +124,7 @@ Start by creating a new Trigger.dev task that takes in a Sequin change event as 
 
    In the Trigger.dev dashboard, you should now see the `create-embedding-for-post` task:
 
-   ![Task added](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/sequin-register-task.png)
+   ![Task added](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/sequin-register-task.png)
 
 > **Success**
 >
@@ -232,12 +232,12 @@ You'll now configure Sequin to send every row in your `posts` table to your Trig
 
    4. You'll now set the sort and filter for the consumer. For this guide, we'll sort by `updated_at` and start at the beginning of the table. We won't apply any filters:
 
-   ![Consumer Sort and Filter](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/sequin-sort-and-filter.png)
+   ![Consumer Sort and Filter](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/sequin-sort-and-filter.png)
 
    5. On the next screen, select **Push** to have Sequin send the events to your webhook URL. Click **Continue**.
    6. Now, give your consumer a name (i.e. `posts_push_consumer`) and in the **HTTP Endpoint** section select the `local_endpoint` you created above. Add the exact API route you created in the previous step (i.e. `/api/create-embedding-for-post`):
 
-   ![Consumer Endpoint](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/sequin-consumer-config.png)
+   ![Consumer Endpoint](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/sequin-consumer-config.png)
 
    7. Click the **Create Consumer** button.
 
@@ -262,7 +262,7 @@ You'll now configure Sequin to send every row in your `posts` table to your Trig
    ```
 3. In the Sequin console, navigate to the [**Trace**](https://console.sequinstream.com/trace) tab and confirm that Sequin delivered the event to your local endpoint:
 
-   ![Trace Event](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/sequin-trace.png)
+   ![Trace Event](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/sequin-trace.png)
 4. In your local terminal, you should see a `200` response in your Next.js app:
 
    ```bash
@@ -270,7 +270,7 @@ You'll now configure Sequin to send every row in your `posts` table to your Trig
    ```
 5. Finally, in the [**Trigger.dev dashboard**](https://cloud.trigger.dev/), navigate to the Runs page and confirm that the task run completed successfully:
 
-   ![Task run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/sequin-final-run.png)
+   ![Task run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/sequin-final-run.png)
 
 > **Success**
 >

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/access-tokens/personal-access-tokens.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/access-tokens/personal-access-tokens.md)
+> Pinned source for Docker main: [content/manuals/security/access-tokens/personal-access-tokens.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/access-tokens/personal-access-tokens.md)
 
 # Create and manage personal access tokens
 
@@ -8,16 +8,13 @@
 - For: Individuals
 
 A personal access token (PAT) lets you sign in to Docker Hub without
-your password. Use a token for the Docker CLI, scripts, continuous
-integration (CI) jobs, and other tools that should act as your account.
+your password. You can create several tokens and revoke one without
+changing your password. From Docker Home, you can view the token list,
+which shows when each token was last used.
 
-Each token has one permission level. You can create several tokens and
-revoke one without changing your password. The token list shows when
-each token was last used.
-
-When two-factor authentication is turned on, or single sign-on is
-enforced, password sign-in to the CLI isn't supported. Sign in with a
-PAT instead.
+Treat PATs like passwords and keep them secure. Store tokens in a
+credential manager and never commit them to source code. Before you
+create a PAT, you must verify your email address.
 
 > \[!TIP]
 >
@@ -25,10 +22,14 @@ PAT instead.
 > [organization access tokens (OATs)](https://docs.docker.com/security/access-tokens/organization-access-tokens/),
 > which aren't tied to individual user accounts.
 
-## Create a personal access token
+## Create a personal access token {#create}
 
-Treat PATs like passwords and keep them secure. Store tokens in a
-credential manager and never commit them to source code. Before you create a PAT, you must verify your email address. To create a PAT:
+When you create a PAT, you choose one repository permission and whether
+the token can use Cloud Sandboxes. You can combine these to fit the
+task. For example, a token can use Cloud Sandboxes with no repository
+access, or it can push images and use Cloud Sandboxes.
+
+To create a PAT:
 
 1. Sign in to [Docker Home](https://app.docker.com/).
 2. Select your avatar in the top-right corner, then select
@@ -38,18 +39,28 @@ credential manager and never commit them to source code. Before you create a PAT
 5. Configure your token:
    - **Access token description:** Enter a name for the token, up to
      100 characters. This field is required.
-   - **Expiration date:** Optional. Select **30 days**, **90 days**, or
-     **Custom**. With **Custom**, choose a date and hour up to one year
-     from today. The default, **None**, creates a token that doesn't
-     expire.
-   - **Access permissions:** Select one
-     [permission level](https://docs.docker.com/security/access-tokens/reference/#personal-access-token-permissions).
-     The default is **Repo Public Read-only**.
+   - **Expiration date:** Optional. The default is **None**, which
+     creates a token that doesn't expire.
+     - Select **30 days**, **90 days**, or **Custom**.
+     - With **Custom**, choose a date and hour up to one year from
+       today.
+   - **Access permissions:** Set a repository permission and, if you
+     need it, Cloud Sandboxes access. Select at least
+     [one permission](https://docs.docker.com/security/access-tokens/reference/#personal-access-token-permissions).
+     - **Repository permissions:** The default is **Repo Public
+       Read-only**.
+       - Select one level.
+       - Select **No repository access** when the token should not
+         access repositories.
+     - **Allow Cloud Sandboxes access:** Select this to let the token
+       create and use Cloud Sandboxes. You can add it to any
+       repository permission, or use it with **No repository
+       access**.
 6. Select **Generate**. Copy the token and save it. Docker shows the
    token once and doesn't store it. You can't retrieve it after you
    leave the page.
 
-## Sign in
+## Sign in with a personal access token {#sign-in}
 
 Run `docker login` with your Docker ID. When the CLI asks for a
 password, paste the PAT.
@@ -62,7 +73,7 @@ Password: [paste your PAT here]
 If sign-in fails with `Incorrect authentication credentials`, see
 [Why does sign-in fail with "Incorrect authentication credentials"?](https://docs.docker.com/faqs/accounts/#why-does-sign-in-fail-with-incorrect-authentication-credentials).
 
-## Update or delete
+## Update or delete a personal access token {#update-or-delete}
 
 You can rename a token, change its permissions, deactivate it, activate
 it again, or delete it. You can't edit the expiration date on an
@@ -89,7 +100,7 @@ date.
    Expired and revoked tokens can only be deleted.
 
 5. If you selected **Edit**, change the **Access token description** or
-   **Scopes**, then select **Save token**.
+   **Access permissions**, then select **Save token**.
 
 ## Auto-generated tokens
 
@@ -128,5 +139,6 @@ Best practices for fair use include:
 
 - [Choose a PAT or OAT](https://docs.docker.com/security/access-tokens/)
 - [Look up PAT permissions](https://docs.docker.com/security/access-tokens/reference/#personal-access-token-permissions)
+- [Authenticate to Cloud Sandboxes](https://docs.docker.com/ai/sandboxes-api/authentication/)
 - [Create an OAT](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
 - [Turn on two-factor authentication](https://docs.docker.com/security/authentication/2fa/)

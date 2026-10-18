@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/troubleshooting.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/serverless/troubleshooting.mdx)
+> Pinned source for Runpod main: [serverless/troubleshooting.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/troubleshooting.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/troubleshooting
 
 # Troubleshooting
@@ -33,8 +33,8 @@ If your worker fails to start or initialize:
 If jobs remain `IN_QUEUE` for extended periods:
 
 - **No workers available**: Check if `max_workers` is set appropriately.
-- **Workers throttled**: Your endpoint may be hitting rate limits. Check the Workers tab for throttled workers.
-- **Cold start delays**: First requests after idle periods require worker initialization. Consider increasing `min_workers` or enabling [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot).
+- **Workers throttled**: The hosts holding your workers have no free GPUs. Check the Workers tab for throttled workers, and consider adding more GPU types to your endpoint.
+- **Cold start delays**: The first request after workers scale down has to wait for a worker to start. Consider increasing `min_workers` or enabling [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot).
 
 ### Jobs funneled to a single worker
 
@@ -81,7 +81,7 @@ To bring the endpoint back, increase its max workers in the [Runpod console](htt
 
 ### Slow cold starts
 
-Cold start time includes container startup, model loading, and initialization. To reduce cold starts:
+Cold start time runs from when a worker starts until your handler is ready to take a job. It includes container startup, model loading, and initialization. To reduce cold starts:
 
 1. **Use model caching**: Store models on [network volumes](https://docs.runpod.io/serverless/endpoints/model-caching) instead of downloading on each start.
 2. **Enable FlashBoot**: Use [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot) for faster container initialization.

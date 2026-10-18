@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/private-networking/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/private-networking/overview.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/private-networking/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/private-networking/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/private-networking/overview
 
 # Private networking
@@ -111,7 +111,7 @@ All three conditions must be true. No organization can route traffic to another 
 
 ## Limits
 
-- **Two connections per organization.** This is a soft limit — get in touch if you need more.
+- **Four connections per organization.** This is a soft limit — get in touch if you need more.
 - **All ports accepted.** Our security group allows all TCP ports from peered CIDRs. You control which ports are reachable through your NLB and target groups.
 - **Same-region or cross-region.** Connections work within the same region as your tasks or across regions (cross-region adds AWS-level cost and \~10-30ms latency).
 

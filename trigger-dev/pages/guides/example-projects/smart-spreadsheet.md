@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/example-projects/smart-spreadsheet.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/example-projects/smart-spreadsheet.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/example-projects/smart-spreadsheet.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/example-projects/smart-spreadsheet.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/example-projects/smart-spreadsheet
 
 # Smart Spreadsheet
@@ -36,7 +36,7 @@ The enrichment workflow:
 
 ## Features
 
-- **Parallel processing** – All four enrichment categories run simultaneously using [batch.triggerByTaskAndWait](https://trigger.dev/docs/triggering#batch-trigger-by-task-and-wait)
+- **Parallel processing** – All four enrichment categories run simultaneously using [batch.triggerByTaskAndWait](https://trigger.dev/docs/triggering#batch-triggerbytaskandwait)
 - **Source attribution** – Every data point includes the URL it was extracted from
 - **Live updates** – Results appear in the UI as each task completes using [Realtime](https://trigger.dev/docs/realtime/overview)
 - **Structured extraction** – Zod schemas ensure consistent data output from Claude

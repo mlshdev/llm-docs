@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/runs/heartbeats.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/runs/heartbeats.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/runs/heartbeats.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/runs/heartbeats.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/heartbeats
 
 # Heartbeats
 
 Keep long-running or CPU-heavy tasks from being marked as stalled.
 
-We send a heartbeat from your task to the platform every 30 seconds. If we don't receive a heartbeat within 5 minutes, we mark the run as stalled and stop it with a `TASK_RUN_STALLED_EXECUTING` error.
+We send a heartbeat from your task to the platform every 20 seconds by default for deployed runs (30 seconds in local dev). If we don't receive a heartbeat within 5 minutes, we mark the run as stalled and stop it with a `TASK_RUN_STALLED_EXECUTING` error.
 
 Code that blocks the event loop for too long (for example, a tight loop doing synchronous work on a large dataset) can prevent heartbeats from being sent. In that case, use `heartbeats.yield()` inside the loop so the runtime can yield to the event loop and send a heartbeat. You can call it every iteration; the implementation only yields when needed.
 
@@ -32,7 +32,7 @@ If you see `TASK_RUN_STALLED_EXECUTING`, see [Task run stalled executing](https:
 
 ## Sending progress to Trigger.dev
 
-To stream progress or status updates to the dashboard and your app, use [run metadata](https://trigger.dev/docs/runs/metadata). Call `metadata.set()` (or `metadata.append()`) as the task runs. The dashboard and [Realtime](https://trigger.dev/docs/realtime) (including `runs.subscribeToRun` and the React hooks) receive those updates as they happen. See [Progress monitoring](https://trigger.dev/docs/realtime/backend/subscribe#progress-monitoring) for a full example.
+To stream progress or status updates to the dashboard and your app, use [run metadata](https://trigger.dev/docs/runs/metadata). Call `metadata.set()` (or `metadata.append()`) as the task runs. The dashboard and [Realtime](https://trigger.dev/docs/realtime) (including `runs.subscribeToRun` and the React hooks) receive those updates as they happen. See [Subscribe to metadata updates](https://trigger.dev/docs/realtime/backend/subscribe#subscribe-to-metadata-updates-from-your-tasks) for a full example.
 
 ## Sending updates to your own system
 

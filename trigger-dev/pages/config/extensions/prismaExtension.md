@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/config/extensions/prismaExtension.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/config/extensions/prismaExtension.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/config/extensions/prismaExtension.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/config/extensions/prismaExtension.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/prismaExtension
 
 # Prisma
@@ -341,7 +341,7 @@ steps:
 
 If you are using the [Trigger.dev Github integration](https://trigger.dev/docs/github-integration), you can configure a pre-build command to run `prisma generate` before deploying your project. Navigate to your project's settings page and configure the pre-build command to run `prisma generate`, for example:
 
-![Pre-build command](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/pre-build-command-prisma-generate.png)
+![Pre-build command](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/pre-build-command-prisma-generate.png)
 
 ***
 
@@ -642,7 +642,7 @@ prismaExtension({
 ```prisma
 generator client {
   provider      = "prisma-client-js"
-  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 ```
 
@@ -886,7 +886,7 @@ export const db = new PrismaClient({
 generator client {
   provider      = "prisma-client-js"
   output        = "../src/generated/prisma"
-  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
 datasource db {
@@ -914,7 +914,6 @@ datasource db {
 prismaExtension({
   mode: "engine-only",
   version: "6.19.0",
-  binaryTarget: "linux-arm64-openssl-3.0.x",
 });
 ```
 

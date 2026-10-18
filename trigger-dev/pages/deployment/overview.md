@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/deployment/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/overview.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/deployment/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/overview
 
 # Deployment
 
 Learn how to deploy your tasks to Trigger.dev.
 
-Before you can run production workloads on Trigger.dev, you need to deploy your tasks. The only way to do this at the moment is through the [deploy CLI command](https://trigger.dev/docs/cli-deploy-commands):
+Before you can run production workloads on Trigger.dev, you need to deploy your tasks. The manual way to do this is the [deploy CLI command](https://trigger.dev/docs/cli-deploy-commands). You can also deploy automatically with the [GitHub integration](https://trigger.dev/docs/github-integration) or the [Vercel integration](https://trigger.dev/docs/vercel-integration):
 
 ```bash npm
 npx trigger.dev@latest deploy
@@ -55,7 +55,7 @@ Trigger.dev (3.3.16)
 
 Now if you visit your Trigger.dev dashboard you should see the new version deployed:
 
-![Trigger.dev dashboard showing the latest version deployed](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/my-first-deployment.png)
+![Trigger.dev dashboard showing the latest version deployed](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/my-first-deployment.png)
 
 > **Note**
 >
@@ -96,8 +96,9 @@ The current version defines which version of the code new task runs will execute
 
 > **Note**
 >
-> When you Replay a run in the dashboard we will create a new run, locked to the current version and
-> not necessarily the version of the original run.
+> When you Replay a run in the dashboard we create a new run that uses the current version by default
+> (in deployed environments you can pick a specific version in the replay dialog), not necessarily
+> the version of the original run.
 
 ### Version locking
 
@@ -140,7 +141,7 @@ npx trigger.dev deploy --skip-promotion
 
 This will create a new deployment version but not promote it to the current version:
 
-![Trigger.dev dashboard showing the latest version deployed but not promoted](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/skip-promotion.png)
+![Trigger.dev dashboard showing the latest version deployed but not promoted](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/skip-promotion.png)
 
 This allows you to deploy and test a new version without affecting new task runs. When you want to promote the version, you can do so from the CLI:
 
@@ -150,7 +151,7 @@ npx trigger.dev promote 20250228.1
 
 Or from the dashboard:
 
-![Trigger.dev dashboard showing the promote button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/promote-button.png)
+![Trigger.dev dashboard showing the promote button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/promote-button.png)
 
 To keep your app and tasks in sync without coordinating promotion at all, see [atomic deployments](https://trigger.dev/docs/deployment/atomic-deployment).
 
@@ -169,7 +170,7 @@ npx trigger.dev deploy --env staging
 
 This will create an entirely new version of your tasks for the `staging` environment, with a new version number and an independent current version:
 
-![Trigger.dev dashboard showing the staging environment](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/staging-deploy.png)
+![Trigger.dev dashboard showing the staging environment](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/staging-deploy.png)
 
 To trigger tasks against Staging, create a named key in the Staging environment with **Trigger only** access and set it as `TRIGGER_SECRET_KEY`:
 
@@ -181,10 +182,10 @@ For additional environments beyond `prod` and `staging`, you can use [preview br
 
 ## Local builds
 
-By default we use a remote build provider to speed up builds. However, you can also force the build to happen locally on your machine using the `--force-local-build` flag:
+By default we use a remote build provider to speed up builds. However, you can also force the build to happen locally on your machine using the `--local-build` flag:
 
 ```bash
-npx trigger.dev deploy --force-local-build
+npx trigger.dev deploy --local-build
 ```
 
 > **Tip**
@@ -200,7 +201,7 @@ To use local builds, you need the following tools installed on your machine:
 
 ## Environment variables
 
-To add custom environment variables to your deployed tasks, you need to add them to your project in the Trigger.dev dashboard, or automatically sync them using our [syncEnvVars](https://trigger.dev/docs/config/config-file#syncenvvars) or [syncVercelEnvVars](https://trigger.dev/docs/config/config-file#syncvercelenvvars) build extensions.
+To add custom environment variables to your deployed tasks, you need to add them to your project in the Trigger.dev dashboard, or automatically sync them using our [syncEnvVars](https://trigger.dev/docs/config/extensions/syncEnvVars) or [syncVercelEnvVars](https://trigger.dev/docs/config/extensions/syncEnvVars#syncvercelenvvars) build extensions.
 
 For more information on environment variables, see our [environment variables](https://trigger.dev/docs/deploy-environment-variables) guide.
 
@@ -230,7 +231,7 @@ You can run the deploy command with `--log-level debug` at the end. This will pr
 
 There should be a link below the error message to the full build logs on your machine. Take a look at these to see what went wrong. Join [our Discord](https://trigger.dev/discord) and you share it privately with us if you can't figure out what's going wrong. Do NOT share these publicly as the verbose logs might reveal private information about your project.
 
-Sometimes these errors are caused by upstream availability issues with our remote build provider. In this case, you can try deploying with a local build using the `--force-local-build` flag. Refer to the [Local builds](#local-builds) section for more information.
+Sometimes these errors are caused by upstream availability issues with our remote build provider. In this case, you can try deploying with a local build using the `--local-build` flag. Refer to the [Local builds](#local-builds) section for more information.
 
 #### `Deployment encountered an error`
 

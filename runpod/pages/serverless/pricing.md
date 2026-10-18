@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/pricing.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/serverless/pricing.mdx)
+> Pinned source for Runpod main: [serverless/pricing.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/pricing.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/pricing
 
 # Pricing
@@ -13,11 +13,11 @@ Serverless offers pay-per-second pricing with no upfront costs. You're billed fr
 
 ## Worker types
 
-|              | Flex workers                          | Active workers                               |
-| ------------ | ------------------------------------- | -------------------------------------------- |
-| **Behavior** | Scale to zero when idle               | Always running (24/7)                        |
-| **Pricing**  | Standard per-second rate              | Discounts available through sales inquiry    |
-| **Best for** | Variable workloads, cost optimization | Consistent traffic, low-latency requirements |
+|              | Flex workers                             | Active workers                               |
+| ------------ | ---------------------------------------- | -------------------------------------------- |
+| **Behavior** | Scale to zero when there are no requests | Always running (24/7)                        |
+| **Pricing**  | Standard per-second rate                 | Discounts available through sales inquiry    |
+| **Best for** | Variable workloads, cost optimization    | Consistent traffic, low-latency requirements |
 
 ## What you're billed for
 
@@ -33,11 +33,13 @@ Your total cost includes compute time and storage:
 
 Workers incur charges during three phases:
 
-1. **Start time**: From when the worker starts running until it is ready, mostly your handler loading models into GPU memory. Pulling the container image and downloading [cached models](https://docs.runpod.io/serverless/endpoints/model-caching) happen before the worker starts running and are not billed. Minimize with [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot) or [model caching](https://docs.runpod.io/serverless/endpoints/model-caching).
+1. **Cold start**: From when the worker starts until your handler is ready, mostly your handler loading models into GPU memory. Pulling the container image and downloading [cached models](https://docs.runpod.io/serverless/endpoints/model-caching) normally happen while the worker is scaled down and are not billed. Minimize with [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot) or [model caching](https://docs.runpod.io/serverless/endpoints/model-caching).
 
 2. **Execution time**: Processing requests. Set [execution timeouts](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#execution-timeout) to prevent runaway jobs.
 
-3. **Idle timeout duration**: The time a worker remains active (running) after completing a request, waiting for additional requests before scaling down (default: 5 seconds). Configure in [endpoint settings](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#idle-timeout).
+3. **Waiting (idle timeout)**: After its last job, a worker keeps running and waits for new requests for up to the idle timeout (default: 5 seconds) before it scales down. Configure in [endpoint settings](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#idle-timeout).
+
+A worker that has scaled down, shown as **Idle** in the console, is not billed. See [worker lifecycle](https://docs.runpod.io/serverless/workers/overview#worker-lifecycle).
 
 > **Tip**
 >

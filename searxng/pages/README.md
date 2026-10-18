@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [README.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/README.rst)
+> Pinned source for SearXNG master: [README.rst](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/README.rst)
 
 <a id="metasearch-engine"></a> <a id="installation-guide"></a> <a id="configuration-guide"></a> <a id="contributing"></a> <a id="license"></a>
 

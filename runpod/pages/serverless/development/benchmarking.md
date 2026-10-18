@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/benchmarking.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/serverless/development/benchmarking.mdx)
+> Pinned source for Runpod main: [serverless/development/benchmarking.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/development/benchmarking.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/benchmarking
 
 # Benchmark workers and requests
@@ -9,7 +9,7 @@ Benchmarking your Serverless workers helps you identify bottlenecks and [optimiz
 
 Performance is measured by two key metrics:
 
-- **Delay time**: The time spent waiting for a worker to become available. This includes the cold start time if a new worker needs to be spun up.
+- **Delay time**: The time from when a request enters the queue until a worker picks it up. This includes the cold start time if a new worker needs to be started.
 - **Execution time**: The time the GPU takes to process the request once the worker has received the job.
 
 ## Send a test request

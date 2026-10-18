@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/vuejs.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/guides/vuejs.md)
+> Pinned source for Docker main: [content/guides/vuejs.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/guides/vuejs.md)
 
 The Vue.js language-specific guide shows you how to containerize an Vue.js application using Docker, following best practices for creating efficient, production-ready containers.
 

@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [CONTRIBUTING.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/CONTRIBUTING.rst)
+> Pinned source for SearXNG master: [CONTRIBUTING.rst](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/CONTRIBUTING.rst)
 
 <a id="quickstart-guide"></a> <a id="commits-guide"></a> <a id="ai-policy"></a> <a id="weblate"></a> <a id="github-codespaces"></a> <a id="120-hours-per-month"></a> <a id="list-of-existing-codespaces"></a>
 

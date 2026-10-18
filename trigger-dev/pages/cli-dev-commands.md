@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-dev-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-dev-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-dev-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-dev-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-dev-commands
 
 # CLI dev command
@@ -37,12 +37,23 @@ The project ref. Required if there is no config file.
 
 **Property (type: --env-file)**
 
-Load environment variables from a file. This will only hydrate the `process.env` of the CLI
-process, not the tasks.
+Load environment variables from a file instead of the default `.env` files. They are available to your tasks in the local dev session.
 
 **Property (type: --skip-update-check)**
 
 Skip checking for `@trigger.dev` package updates.
+
+**Property (type: --branch | -b)**
+
+The dev branch to use. Defaults to the `TRIGGER_DEV_BRANCH` environment variable. See [dev branches](https://trigger.dev/docs/deployment/dev-branches).
+
+**Property (type: --max-concurrent-runs)**
+
+The maximum number of concurrent runs in the dev session. It can only lower your dev environment's concurrency limit, not raise it.
+
+**Property (type: --keep-tmp-files)**
+
+Keep temporary files after the dev session ends.
 
 **Property (type: --analyze)**
 
@@ -55,7 +66,7 @@ These options are available on most commands.
 
 **Property (type: --profile)**
 
-The login profile to use. Defaults to "default".
+The login profile to use. Defaults to the current profile, which is set by your last `login` or `switch` (initially "default").
 
 **Property (type: --api-url | -a)**
 

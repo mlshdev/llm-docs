@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/oidc-connections/_index.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/authentication/oidc-connections/_index.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/oidc-connections/_index.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/authentication/oidc-connections/_index.md)
 
 # OIDC connections overview
 
@@ -16,8 +16,9 @@ vendor that can grant fine-grained access to your Docker resources.
 
 OIDC connections follow the OpenID Connect (OIDC) standard. Establishing a
 trust relationship involves creating the connection, configuring a
-workflow, and testing. A connection, then, is the named trust relationship in Docker Home that workflows point to. For example, a trust relationship between Docker and
-GitHub follows these steps:
+workflow, and testing. A connection, then, is the named trust relationship
+in Docker Home that workflows point to. For example, a trust relationship
+between Docker and GitHub follows these steps:
 
 - GitHub issues a JWT ID token for the workflow run.
 - During authentication, Docker:
@@ -32,6 +33,25 @@ and issued on a per-workflow basis.
 
 For how OIDC connections compare to organization access tokens, see
 [Access tokens](https://docs.docker.com/security/access-tokens/).
+
+## Connection limits
+
+The number of OIDC connections an organization can have depends on its
+subscription:
+
+| Subscription                                                                                                  | Maximum OIDC connections |
+| :------------------------------------------------------------------------------------------------------------ | :----------------------- |
+| Team                                                                                                          | 10                       |
+| [Docker-Sponsored Open Source](https://docs.docker.com/docker-hub/repos/manage/trusted-content/dsos-program/) | 10                       |
+| Business                                                                                                      | 100                      |
+
+Active and deactivated connections count toward the limit, but deleted
+connections don't. When your organization reaches the limit, the
+**Create OIDC connection** button is disabled. To create another
+connection, delete one you no longer need.
+
+Each connection can have up to five rulesets. See
+[Rulesets](https://docs.docker.com/security/authentication/oidc-connections/rulesets-claims/#rulesets).
 
 ## Next steps
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/run-tests.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/run-tests.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/run-tests.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/run-tests.mdx)
 > Canonical documentation: https://trigger.dev/docs/run-tests
 
 # Run tests
@@ -10,8 +10,8 @@ You can run a test for any of your tasks, in any environment, from the dashboard
 > **Note**
 >
 > There is no longer a "Test" page in the sidebar. You test a task from the task itself: on the
-> Tasks page open a task (or use the "Test" action next to a task in the Runs list) and press the
-> "Test" button to open its test page.
+> Tasks page use the "Test" action next to a task, or open the task and press "Test task" ("Test
+> schedule" for a scheduled task), to open its test page.
 
 On a task's test page you can:
 
@@ -20,4 +20,4 @@ On a task's test page you can:
 - Pre-populate the form from a previous run with **Recent runs**, or save and reuse a configuration with **Templates**.
 - Press **Run test** to trigger the run.
 
-![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/test-dashboard.png)
+![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/test-dashboard.png)

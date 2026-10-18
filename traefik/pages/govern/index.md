@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/govern/index.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/govern/index.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/govern/index.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/govern/index.md)
 
 # Govern Your APIs with Traefik Hub
 

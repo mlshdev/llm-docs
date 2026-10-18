@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/example-projects/openai-agent-sdk-guardrails.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/example-projects/openai-agent-sdk-guardrails.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/example-projects/openai-agent-sdk-guardrails.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/example-projects/openai-agent-sdk-guardrails.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/example-projects/openai-agent-sdk-guardrails
 
 # OpenAI Agents SDK for Python guardrails
@@ -48,4 +48,4 @@ Guardrails are safety mechanisms that run alongside AI agents to validate input,
 
 - [OpenAI Agent SDK documentation](https://openai.github.io/openai-agents-python/)
 - [OpenAI Agent SDK guardrails](https://openai.github.io/openai-agents-python/guardrails/)
-- Our [Python build extension](https://trigger.dev/docs/config/extensions/pythonExtension#python)
+- Our [Python build extension](https://trigger.dev/docs/config/extensions/pythonExtension)

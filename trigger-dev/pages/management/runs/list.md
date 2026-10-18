@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/management/runs/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/management/runs/list.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/management/runs/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/management/runs/list.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/runs/list
 
 # List runs
@@ -7,7 +7,7 @@
 
 **List runs**
 
-List runs in a specific environment. You can filter the runs by status, created at, task identifier, version, and more.
+List runs in a specific environment. You can filter the runs by status, created at, task identifier, version, and more. Without a `filter[createdAt]` value, only runs created in the last 7 days are returned. This endpoint is for browsing, reporting, and bulk operations, not for coordinating runs, so don't call it before every trigger or poll it in a loop. See [runs.list() best practices](https://trigger.dev/docs/runs/list-best-practices).
 
 **Authentication:** `secretKey`
 

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/doc/ffmpeg-bitstream-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/94cba3150c6b83057ed48b833689adc806715cc0/doc/ffmpeg-bitstream-filters.texi)
 
 # Description
 
@@ -592,6 +592,42 @@ For example, to remux 30 MB/sec NTSC IMX to MOV:
 
 ```text
 ffmpeg -i input.mxf -c copy -bsf:v imxdump -tag:v mx3n output.mov
+```
+
+## jpegapp
+
+Inject JPEG APP0..APP15 segments from a length-prefixed sidecar into each
+MJPEG packet, after SOI.
+
+The sidecar is a sequence of records, one per encoded JPEG, in encode
+order:
+
+```text
+u32be length
+u8    payload[length]
+```
+
+*length* does not include the 4-byte prefix and must not exceed
+16 MiB. A zero *length* leaves that packet unchanged. A non-empty
+payload must be a concatenation of complete APP segments (`FF En`
+plus the 16-bit length that includes those two length bytes).
+
+If the payload starts with APP0 and the packet has an APP0 marker in
+the two bytes immediately following SOI, that APP0 segment is dropped.
+APP0 segments preceded by fill bytes or another segment are retained.
+An APP1-only payload keeps the encoder APP0: SOI, APP1, APP0, DQT, ...
+
+The filter requires `sidecar`. Extra unused sidecar bytes are
+ignored; a packet without a matching record is an error.
+Records follow packets in arrival order. Flushing the filter does not
+rewind the sidecar, so a reused context needs a sidecar positioned for
+the packets it will see next.
+A sidecar read or validation error prevents further record consumption
+by that filter context. To resume, create a new context with a sidecar
+matching the remaining packets. Flushing does not clear this error.
+
+```text
+ffmpeg -i in.mp4 -c:v mjpeg -bsf:v jpegapp=sidecar=00000004DEADBEEF frame_%d.jpg
 ```
 
 ## mjpeg2jpeg

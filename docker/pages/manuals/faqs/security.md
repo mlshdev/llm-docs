@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/security.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/faqs/security.md)
+> Pinned source for Docker main: [content/manuals/faqs/security.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/faqs/security.md)
 
 # Security FAQs
 
@@ -121,7 +121,7 @@ For detailed instructions, see [Configure single sign-on](https://docs.docker.co
 
 Not with JIT alone. JIT provisions users when they authenticate, but it
 doesn't deprovision users who leave your IdP. You must
-[remove those users](https://docs.docker.com/accounts/organization/manage/members/#remove-a-member-from-the-organization)
+[remove those users](https://docs.docker.com/accounts/organization/manage/members/#remove-member-from-organization)
 manually.
 
 [SCIM](https://docs.docker.com/security/provisioning/scim/) provides continuous user

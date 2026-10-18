@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/pods/storage/types.mdx)
+> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/pods/storage/types.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/storage/types
 
 # Storage options
@@ -6,6 +6,8 @@
 Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods.
 
 Pods offer four storage types optimized for different use cases. Choose based on your data persistence, performance, and sharing needs.
+
+For a comparison of persistent storage across Pods, Serverless, and the Runpod SDK, see [Storage overview](https://docs.runpod.io/storage/overview).
 
 ## Comparison
 

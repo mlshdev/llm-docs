@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/reference/routing-configuration/http/middlewares/retry.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/routing-configuration/http/middlewares/retry.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/reference/routing-configuration/http/middlewares/retry.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/routing-configuration/http/middlewares/retry.md)
 
 The `retry` middleware retries requests a given number of times to a backend server if that server does not reply.
 As soon as the server answers, the middleware stops retrying, regardless of the response status.

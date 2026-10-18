@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/example-projects/openai-agents-sdk-typescript-playground.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/example-projects/openai-agents-sdk-typescript-playground.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/example-projects/openai-agents-sdk-typescript-playground.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/example-projects/openai-agents-sdk-typescript-playground.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/example-projects/openai-agents-sdk-typescript-playground
 
 # OpenAI Agents SDK for Typescript + Trigger.dev playground
@@ -52,4 +52,4 @@ By combining the OpenAI Agents SDK with Trigger.dev, you can create durable agen
 - [OpenAI Agents SDK docs](https://openai.github.io/openai-agents-js/) - learn about creating and managing AI agents
 - [OpenAI Agents SDK handoffs](https://openai.github.io/openai-agents-js/guides/handoffs/) - learn about agent-to-agent delegation patterns
 - [Batch triggering](https://trigger.dev/docs/triggering#batch-trigger) - learn about parallel task execution
-- [Scheduled tasks (cron)](https://trigger.dev/docs/tasks/scheduled#scheduled-tasks-cron) - learn about cron-based task scheduling
+- [Scheduled tasks (cron)](https://trigger.dev/docs/tasks/scheduled) - learn about cron-based task scheduling

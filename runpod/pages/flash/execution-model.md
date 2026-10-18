@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/execution-model.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/execution-model.mdx)
+> Pinned source for Runpod main: [flash/execution-model.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/execution-model.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/execution-model
 
 # Execution model
 
 Understand how Flash executes your code on Runpod's infrastructure. Review setup, configuration, deployment, and usage guidance for Runpod Flash.
+
+> **Warning**
+>
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 Flash runs your Python functions on remote GPU/CPU workers while you maintain local control flow. This page explains what happens when you call an `@Endpoint` function.
 
@@ -110,14 +114,15 @@ Workers scale up and down based on demand and your configuration.
 
 ### Worker states
 
-| State            | Description                                                        | Billing                |
-| ---------------- | ------------------------------------------------------------------ | ---------------------- |
-| **Initializing** | Downloading image, loading code                                    | Yes                    |
-| **Idle**         | Scaled down, waiting for requests                                  | No                     |
-| **Running**      | Processing requests                                                | Yes                    |
-| **Throttled**    | Temporarily unable to run due to host machine resource constraints | No                     |
-| **Outdated**     | Marked for replacement after update                                | Yes (while processing) |
-| **Unhealthy**    | Crashed; auto-retries for up to 7 days                             | No                     |
+| State            | Description                                                                         | Billed |
+| ---------------- | ----------------------------------------------------------------------------------- | ------ |
+| **Initializing** | Scaled down. Runpod is pulling the image onto the host.                             | No     |
+| **Idle**         | Scaled down and ready to start                                                      | No     |
+| **Running**      | Started. Covers the cold start, processing jobs, and waiting during `idle_timeout`. | Yes    |
+| **Throttled**    | Scaled down. The GPUs on its host machine are in use by other workloads.            | No     |
+| **Unhealthy**    | Crashed or failed to initialize; retried for up to 7 days                           | No     |
+
+A worker is billed only while it is **Running**. **Idle** means the worker has scaled down, not that it is waiting for work. See [worker lifecycle](https://docs.runpod.io/serverless/workers/overview#worker-lifecycle).
 
 ### Scaling behavior
 
@@ -125,8 +130,8 @@ Workers scale up and down based on demand and your configuration.
 @Endpoint(
     name="demo",
     gpu=GpuGroup.ANY,
-    workers=(0, 5),   # (min, max) - Scale to zero when idle, up to 5 workers
-    idle_timeout=60   # Seconds before running workers scale down
+    workers=(0, 5),   # (min, max) - Scale to zero with no jobs, up to 5 workers
+    idle_timeout=60   # Seconds a running worker waits for a new job before scaling down
 )
 def process(data): ...
 ```
@@ -135,8 +140,8 @@ def process(data): ...
 
 1. First job arrives → Scale to 1 worker (cold start).
 2. More jobs arrive while worker busy → Scale up to max workers.
-3. Jobs complete → Workers stay running for `idle_timeout` seconds before scaling down to idle.
-4. No new jobs → Scale down to min workers.
+3. Jobs complete → Workers keep running and wait up to `idle_timeout` seconds for new jobs. They are billed while they wait.
+4. No new jobs → Workers scale down to the minimum and billing stops for the ones that stopped.
 
 ## Cold starts and warm starts
 
@@ -164,14 +169,14 @@ A cold start occurs when no workers are available to handle your job, because:
 
 ### Warm start
 
-A warm start occurs when a worker is already running and idle:
+A warm start occurs when a worker is already running and waiting for work:
 
 - Worker completed a previous job and is waiting for more work.
 - Worker is within its `idle_timeout` period.
 
 **What happens during a warm start**:
 
-1. Job is routed immediately to the idle worker.
+1. Job is routed immediately to the waiting worker.
 2. Your function executes.
 
 **Typical timing**: \~1 second + your function's execution time.

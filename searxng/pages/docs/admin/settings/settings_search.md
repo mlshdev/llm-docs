@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/settings/settings_search.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/admin/settings/settings_search.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_search.rst](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/docs/admin/settings/settings_search.rst)
 
 <a id="settings-search"></a>
 
@@ -65,12 +65,12 @@ favicons before reading the [Favicons documentation](https://docs.searxng.org/ad
 **`default_lang`:**
 
 Default search language - leave blank to detect from browser information or
-use codes from [searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/sxng_locales.py).
+use codes from [searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/searx/sxng_locales.py).
 
 **`languages`:**
 
 List of available languages - leave unset to use all codes from
-[searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/sxng_locales.py).  Otherwise list codes of available languages.
+[searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/searx/sxng_locales.py).  Otherwise list codes of available languages.
 The `all` value is shown as the `Default language` in the user interface
 (in most cases, it is meant to send the query without a language parameter ;
 in some cases, it means the English language) Example:

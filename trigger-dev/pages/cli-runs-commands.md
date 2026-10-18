@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-runs-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-runs-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-runs-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-runs-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-runs-commands
 
 # CLI runs commands
@@ -85,8 +85,7 @@ The project ref. Required if there is no config file.
 
 **Property (type: --branch | -b)**
 
-When using `--env preview` the branch is automatically detected from git. But you can manually
-specify it by using this option, e.g. `--branch my-branch` or `-b my-branch`.
+Required when using `--env preview`. Specify the branch, e.g. `--branch my-branch` or `-b my-branch`.
 
 ### Common options
 
@@ -94,7 +93,7 @@ These options are available on most commands.
 
 **Property (type: --profile)**
 
-The login profile to use. Defaults to "default".
+The login profile to use. Defaults to the current profile, which is set by your last `login` or `switch` (initially "default").
 
 **Property (type: --api-url | -a)**
 

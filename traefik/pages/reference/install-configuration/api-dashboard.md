@@ -1,10 +1,10 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/reference/install-configuration/api-dashboard.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/install-configuration/api-dashboard.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/reference/install-configuration/api-dashboard.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/install-configuration/api-dashboard.md)
 
 Traefik exposes a number of information through API endpoints, such as the configuration of your routers, services, middlewares, etc.
 
 The dashboard, which is the central place that displays the current active routes handled by Traefik, fetches the data from this API.
 
-![Dashboard - Providers](https://raw.githubusercontent.com/traefik/traefik/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/assets/img/webui-dashboard.png)
+![Dashboard - Providers](https://raw.githubusercontent.com/traefik/traefik/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/assets/img/webui-dashboard.png)
 *The dashboard in action*
 
 ## Security

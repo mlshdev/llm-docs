@@ -1,6 +1,6 @@
 # FFmpeg master
 
-> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a`.
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `94cba3150c6b83057ed48b833689adc806715cc0`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -16,12 +16,12 @@
 - [Description](pages/doc/ffmpeg-utils.md): This document describes some generic features and utilities provided by the libavutil library. (22298 bytes)
 - [Description](pages/doc/ffmpeg-scaler.md): The FFmpeg rescaler provides a high-level interface to the libswscale library image conversion utilities. In particular it allows one to perform image rescaling and pixel format conversion. (5815 bytes)
 - [Description](pages/doc/ffmpeg-resampler.md): The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio… (7850 bytes)
-- [Description](pages/doc/ffmpeg-codecs.md): This document describes the codecs (decoders and encoders) provided by the libavcodec library. (180157 bytes)
+- [Description](pages/doc/ffmpeg-codecs.md): This document describes the codecs (decoders and encoders) provided by the libavcodec library. (180600 bytes)
 - [Description](pages/doc/ffmpeg-formats.md): This document describes the supported formats (muxers and demuxers) provided by the libavformat library. (196162 bytes)
 - [Description](pages/doc/ffmpeg-devices.md): This document describes the input and output devices provided by the libavdevice library. (60525 bytes)
-- [Description](pages/doc/ffmpeg-filters.md): This document describes filters, sources, and sinks provided by the libavfilter library. (897760 bytes)
-- [Description](pages/doc/ffmpeg-protocols.md): This document describes the input and output protocols provided by the libavformat library. (81728 bytes)
-- [Description](pages/doc/ffmpeg-bitstream-filters.md): This document describes the bitstream filters provided by the libavcodec library. (38852 bytes)
+- [Description](pages/doc/ffmpeg-filters.md): This document describes filters, sources, and sinks provided by the libavfilter library. (900004 bytes)
+- [Description](pages/doc/ffmpeg-protocols.md): This document describes the input and output protocols provided by the libavformat library. (81804 bytes)
+- [Description](pages/doc/ffmpeg-bitstream-filters.md): This document describes the bitstream filters provided by the libavcodec library. (40226 bytes)
 - [Introduction](pages/doc/developer.md): This text is concerned with the development of FFmpeg itself. Information on using the FFmpeg libraries in other programs can be found elsewhere, e.g. in: ----------------------------------------------------------------… (43485 bytes)
 - [General Questions](pages/doc/faq.md): Because no one has taken on that task yet. FFmpeg development is driven by the tasks that are important to the individual developers. If there is a feature that is important to you, the best way to get it implemented is… (23687 bytes)
 - [Introduction](pages/doc/fate.md): FATE is an extended regression suite on the client-side and a means for results aggregation and presentation on the server-side. (8956 bytes)
@@ -33,9 +33,9 @@
 
 ## Development reference
 
-- [FFmpeg README](pages/README.md): FFmpeg is a collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata. (1798 bytes)
+- [FFmpeg README](pages/README.md): FFmpeg is a collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata. (1991 bytes)
 - [Installing FFmpeg](pages/INSTALL.md): configure can be launched from a directory different from the FFmpeg sources to build the objects out of tree. To do this, use an absolute path when launching configure, e.g. /ffmpegdir/ffmpeg/configure. (1114 bytes)
-- [Note to Github users](pages/CONTRIBUTING.md): Patches should be submitted to Forgejo or the ffmpeg-devel mailing list using git format-patch or git send-email. Github pull requests should be avoided because they are not part of our review process and will be ignore… (429 bytes)
+- [Note to Github users](pages/CONTRIBUTING.md): Patches should be submitted to Forgejo or the ffmpeg-devel mailing list using git format-patch or git send-email. Github pull requests should be avoided because they are not part of our review process and will be ignore… (432 bytes)
 - [Build System.Txt](pages/doc/build_system.md): FFmpeg currently uses a custom build system, this text attempts to document some of its obscure features and options. (1788 bytes)
 - [Filter design](pages/doc/filter_design.md): This document explains guidelines that should be observed (or ignored with good reason) when writing filters for libavfilter. (10689 bytes)
 - [FFmpeg Infrastructure:](pages/doc/infra.md): Trademark: (5744 bytes)

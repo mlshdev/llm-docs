@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/migration-mergent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/migration-mergent.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/migration-mergent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/migration-mergent.mdx)
 > Canonical documentation: https://trigger.dev/docs/migration-mergent
 
 # Migrating from Mergent
 
 A guide for migrating from Mergent to Trigger.dev
 
-Mergent is being absorbed into Resend, so if you’re running background jobs or scheduled tasks on Mergent, now is a good time to migrate. Trigger.dev is a modern, developer-friendly platform for background jobs, workflows, and scheduling.
+Mergent was acquired by Resend and its service shut down on July 28, 2025. If you ran background jobs or scheduled tasks on Mergent, you need to move them to another platform. Trigger.dev is a modern, developer-friendly platform for background jobs, workflows, and scheduling.
 
 ### Why Trigger.dev?
 

@@ -1,8 +1,28 @@
-> Pinned source for VictoriaLogs datasource for Grafana v0.32.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/CHANGELOG.md)
+> Pinned source for VictoriaLogs datasource for Grafana v0.33.1: [CHANGELOG.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- BUGFIX: fix the `An unexpected error happened` crash of the Explore query editor when `Drilldown` opens on Grafana 10.x. See [pr #740](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/740).
+
+## v0.33.0
+
+- FEATURE: add a `Drilldown` button to the query editor that opens a drawer for exploring logs without writing LogsQL. The main view breaks the logs down by field, by stream field and by message pattern. Adding any filter chip opens a details view with a volume chart and the `Logs`, `Stream fields`, `Fields` and `Patterns` tabs. See [Drilldown](https://docs.victoriametrics.com/victorialogs/integrations/grafana/#drilldown) docs and [#424](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/424).
+
+  - **Note:** for now, the `Drilldown` button is available only in the `Code` mode of the Explore query editor. The drawer does not take the current Explore query and always opens with the `*` query.
+
+- FEATURE: in Explore, request the logs volume histogram after the `Raw Logs` query answers, so the logs appear as early as possible.
+
+- FEATURE: load the Explore logs volume histogram bar by bar when VictoriaLogs has not started answering a request within 3 seconds, so a specific moment can be zoomed into without waiting for the whole range. The behaviour can be switched off per query with the new `Incremental hits loading` option. See [Incremental hits loading](https://docs.victoriametrics.com/victorialogs/integrations/grafana/#incremental-hits-loading) docs and [#690](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/690).
+
+- FEATURE: pick the logs volume bucket step the same way the VictoriaLogs UI does: the closest of its steps from `1s` to `364d`, with the number of buckets following the panel width. Buckets are aligned to calendar boundaries in the dashboard timezone, and weeks start on Monday.
+
+- BUGFIX: stop highlighting commas in the logs panel when the query uses a LogsQL filter with a comma-separated argument list, such as `seq("foo", "bar")` or `contains_common_case("foo", "bar")`. See [#725](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/725).
+
+- BUGFIX: fix a browser tab freeze when the query contains a pipe inside parentheses, for example a subquery filter like `_msg:in(* | fields _msg)`.
+
+## v0.32.0
 
 - FEATURE: add a `Group hits by` option to `Raw Logs` queries in Explore: the logs volume histogram can be grouped by any log field instead of the default `level`. See [#689](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/689).
 
@@ -92,7 +112,7 @@
 
 - FEATURE: replace the `/health` endpoint in the datasource backend health check with a real query to `/select/logsql/query`. This verifies that the VictoriaLogs backend can actually serve log queries, not just that the HTTP server is up. See [#599](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/599).
 
-- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/src/README.md#opentelemetry-preset) docs.
+- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/README.md#opentelemetry-preset) docs.
 
 - FEATURE: route "Filter for value" / "Filter out" actions in Grafana Explore into the `extra_filters` query parameter instead of mutating the main `expr`. The user's LogsQL stays untouched; added filters appear as removable chips under the query editor (via the existing Ad-hoc filters control). Dashboard behavior is unchanged — there Grafana keeps driving these clicks through ad-hoc template variables.
 

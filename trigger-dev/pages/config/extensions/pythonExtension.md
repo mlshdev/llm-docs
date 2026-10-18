@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/config/extensions/pythonExtension.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/config/extensions/pythonExtension.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/config/extensions/pythonExtension.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/config/extensions/pythonExtension.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/pythonExtension
 
 # Python
@@ -104,6 +104,14 @@ export default defineConfig({
 
 This will install the packages specified in the `requirements.txt` file during the build process. You can then use these packages in your Python scripts.
 
+You can also list requirements inline with the `requirements` option instead. You can't use it together with `requirementsFile`:
+
+```ts
+pythonExtension({
+  requirements: ["pandas"],
+});
+```
+
 > **Note**
 >
 > The `requirementsFile` option is only available in production mode. In development mode, you can
@@ -146,7 +154,7 @@ export const myStreamingScript = task({
     const result = python.stream.runScript("./python/my_script.py", ["hello", "world"]);
 
     // result is an async iterable/readable stream
-    for await (const chunk of streamingResult) {
+    for await (const chunk of result) {
       console.log(chunk);
     }
   },

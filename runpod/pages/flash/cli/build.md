@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/cli/build.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/cli/build.mdx)
+> Pinned source for Runpod main: [flash/cli/build.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/cli/build.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/build
 
 # build
 
 Build a deployment-ready Flash application artifact without deploying, with controls for dependencies, exclusions, and output files.
+
+> **Warning**
+>
+> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
 
 Build a deployment-ready artifact for your Flash application without deploying. Use this for more control over the build process or to inspect the artifact before deploying.
 
@@ -84,7 +88,7 @@ Local (non-pip) modules that your endpoints import are bundled automatically, pr
 
 If shipped code imports a local module that an ignore rule excludes (for example, a `test_*.py` sibling or a file under `tests/`), the build fails with a `LocalModuleResolutionError` instead of silently overriding your ignore rules or shipping a broken artifact. Flash names each excluded file and the file that imports it:
 
-```
+```text
 Shipped code imports local modules that the build ignore rules (.gitignore or built-in defaults) exclude:
   utils/helpers.py (imported by endpoint.py)
 

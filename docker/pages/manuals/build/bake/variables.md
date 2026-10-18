@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/variables.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/build/bake/variables.md)
+> Pinned source for Docker main: [content/manuals/build/bake/variables.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/build/bake/variables.md)
 
 You can define and use variables in a Bake file to set attribute values,
 interpolate them into other values, and perform arithmetic operations.

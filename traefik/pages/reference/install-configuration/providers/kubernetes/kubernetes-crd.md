@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md)
 
 Traefik provides some Kubernetes Custom Resources, such as `IngressRoute`, `Middleware`, etc.
 
@@ -201,6 +201,12 @@ parents are health checked once per reference, instead of once for all of them.
 > and in the `router` and `service` labels of the metrics.
 > Dashboards, alerting rules, and log queries that match on Kubernetes CRD router, middleware or service names must be updated accordingly
 > when `safeNaming` is enabled.
+> **Cross-provider references**
+> The generated names are also the ones the other providers reference. When `safeNaming` is enabled, a namespaced
+> `@kubernetescrd` reference, such as the `traefik.ingress.kubernetes.io/router.middlewares` annotation on an Ingress,
+> must be of form `namespace_name@kubernetescrd` instead of `namespace-name@kubernetescrd`.
+> A reference left in the legacy form is not resolved, and the routers using it are not created.
+> For a TLS options reference, the TLS handshake is refused on the host names served by those routers.
 > **File (YAML)**
 
 ```yaml

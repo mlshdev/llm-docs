@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/access-tokens/_index.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/access-tokens/_index.md)
+> Pinned source for Docker main: [content/manuals/security/access-tokens/_index.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/access-tokens/_index.md)
 
 # Access tokens
 
@@ -11,7 +11,16 @@ password.
 
 ## Choose a token type
 
-## PATs
+Pick a PAT for work that runs as you, or an OAT for organization-owned
+automation.
+
+## Personal access tokens (PATs) {#pats}
+
+A PAT has
+[one repository permission](https://docs.docker.com/security/access-tokens/reference/#personal-access-token-permissions)
+for every repository the account can access. A PAT can also grant
+[Cloud Sandboxes access](https://docs.docker.com/security/access-tokens/reference/#cloud-sandboxes-access),
+which is a separate setting on the token.
 
 Use a PAT for Docker Desktop, for environments governed by
 [Image Access Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/image-access-management/),
@@ -20,11 +29,7 @@ to the CLI when two-factor authentication (2FA) is turned on or single
 sign-on (SSO) is enforced, because the CLI doesn't accept your password
 in those cases.
 
-A PAT uses
-[one permission level](https://docs.docker.com/security/access-tokens/reference/#personal-access-token-permissions)
-for every repository the account can access.
-
-## OATs
+## Organization access tokens (OATs) {#oats}
 
 Use an OAT for production systems that pull images during deployment,
 monitoring or backup tools that check repository status or pull images,

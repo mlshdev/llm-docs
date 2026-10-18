@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_check_network.yaml](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/data/sbx_cli/sbx_policy_check_network.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_check_network.yaml](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/data/sbx_cli/sbx_policy_check_network.yaml)
 
 # sbx policy check network
 

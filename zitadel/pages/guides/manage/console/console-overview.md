@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/manage/console/console-overview.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/manage/console/console-overview.mdx)
+> Pinned source for ZITADEL v4.19.5: [apps/docs/content/guides/manage/console/console-overview.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/guides/manage/console/console-overview.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/console/console-overview
 
 ## Overview
@@ -24,7 +24,7 @@ Depending on your use case:
 - **B2C:** You might stick to your global organization.
 - **B2B:** You will frequently switch between multiple organizations to manage specific customer settings.
 
-![Context switcher](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/console/contextswitcher.png)
+![Context switcher](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/console/contextswitcher.png)
 
 To understand how to structure your organizations, read our [Solution Scenario](https://zitadel.com/docs/guides/solution-scenarios/configurations) guides.
 

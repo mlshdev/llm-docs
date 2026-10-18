@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/management/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/management/overview.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/management/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/management/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/overview
 
 # Management API overview
@@ -30,7 +30,7 @@ import { configure, runs } from "@trigger.dev/sdk";
 
 configure({
   // this is the default and if the `TRIGGER_SECRET_KEY` environment variable is set, can omit calling configure
-  secretKey: process.env["TRIGGER_SECRET_KEY"],
+  accessToken: process.env["TRIGGER_SECRET_KEY"],
 });
 
 async function main() {

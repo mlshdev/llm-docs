@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/troubleshooting.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/troubleshooting.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/troubleshooting.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/troubleshooting.mdx)
 > Canonical documentation: https://trigger.dev/docs/troubleshooting
 
 # Common problems
@@ -255,7 +255,7 @@ If runs are staying in the `QUEUED` state for extended periods, check your concu
 **Solutions:**
 
 - **Increase concurrency limits** - If you're on a paid plan, increase your environment concurrency limit via the dashboard
-- **Review queue concurrency limits** - Check if individual queues have restrictive `concurrencyLimit` settings
+- **Review concurrency settings** - Check if your tasks have restrictive `concurrency` settings, or your queues a restrictive legacy `concurrencyLimit`. See [Concurrency](https://trigger.dev/docs/concurrency)
 - **Check for stuck runs** - See if stalled runs are blocking new executions
 
 ### Runs queued because a billing limit was reached

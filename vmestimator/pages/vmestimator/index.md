@@ -1,4 +1,4 @@
-> Pinned source for vmestimator v0.1.16: [docs/vmestimator/_index.md](https://github.com/VictoriaMetrics/vmestimator/blob/1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f/docs/vmestimator/_index.md)
+> Pinned source for vmestimator v0.1.17: [docs/vmestimator/_index.md](https://github.com/VictoriaMetrics/vmestimator/blob/48cf2fbe31c2431b852d235f684481b05a9b44f7/docs/vmestimator/_index.md)
 
 `vmestimator` measures metrics cardinality across arbitrary label dimensions in real time and exposes the results as metrics.
 
@@ -18,31 +18,31 @@ This allows alerting on cardinality spikes within minutes and identifying the of
 Instead of discovering the problem after it impacts the infrastructure, it becomes possible to react before it turns into an outage.
 
 `vmestimator` can measure cardinality across arbitrary label dimensions, enabling use cases such as per-tenant usage analysis,
-long-term trend tracking, and capacity planning. See more [use cases](https://github.com/VictoriaMetrics/vmestimator/#use-cases).
+long-term trend tracking, and capacity planning. See more [use cases](https://docs.victoriametrics.com/victoriametrics/vmestimator/#use-cases).
 
 ## Key features
 
 - real-time in-flight cardinality tracking without impacting the metrics source or storage
-- no vendor-lock: works with any Prometheus-compatible database or agent
-- [configurable measurement windows, labels grouping](https://github.com/VictoriaMetrics/vmestimator#configuration)
+- no vendor-lock: ingest telemetry via [Prometheus RW 1.x](https://prometheus.io/docs/specs/prw/remote_write_spec/) protocol, scrape cardinality estimations in [Prometheus exposition format](https://prometheus.io/docs/instrumenting/exposition_formats/#prometheus-text-format)
+- [configurable measurement windows, labels grouping](https://docs.victoriametrics.com/victoriametrics/vmestimator/#configuration)
 - low resource usage: can handle millions of samples/s and hundreds of millions unique time series on a single machine
-- [horizontally scalable](https://github.com/VictoriaMetrics/vmestimator#cluster)
-- goes with default [alerting rules](https://github.com/VictoriaMetrics/vmestimator#alerting) and [Grafana dashboards](https://github.com/VictoriaMetrics/vmestimator#dashboards)
+- [horizontally scalable](https://docs.victoriametrics.com/victoriametrics/vmestimator/#cluster)
+- ships with a preset set of [alerting rules](https://docs.victoriametrics.com/victoriametrics/vmestimator/#alerting) and [Grafana dashboards](https://docs.victoriametrics.com/victoriametrics/vmestimator/#dashboards)
 
 ## Design
 
-`vmestimator` accepts traffic for analysis via Prometheus remote write v1 protocol. It then computes the cardinality of
-the ingested metrics according to the given [configuration](https://github.com/VictoriaMetrics/vmestimator#configuration)
-and exposes [cardinality metrics](https://github.com/VictoriaMetrics/vmestimator/tree/main#cardinality-metrics)
-in Prometheus exposition format on `/metrics` endpoint, so they can be scraped by any Prometheus-compatible collector.
+`vmestimator` accepts traffic for analysis via [Prometheus Remote-Write v1](https://prometheus.io/docs/specs/prw/remote_write_spec/) protocol. It then computes the cardinality of
+the ingested metrics according to the given [configuration](https://docs.victoriametrics.com/victoriametrics/vmestimator/#configuration)
+and exposes [cardinality metrics](https://docs.victoriametrics.com/victoriametrics/vmestimator/#cardinality-metrics)
+in Prometheus exposition format on `/metrics` endpoint, so they can be [scraped](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#pull-model) by any Prometheus-compatible collector.
 
 \[Image unavailable: design-1]
 
-`vmestimator` is heavily optimized for high-throughput processing. It approximately requires 1 CPU core for ingesting
-around 800K metric samples/s and around 150MiB of memory per each [stream](https://github.com/VictoriaMetrics/vmestimator#configuration)
+`vmestimator` is heavily optimized for high-throughput processing. It approximately requires 1 CPU core for processing
+800K metric samples/s, and around 150MiB of memory per each configured [stream](https://docs.victoriametrics.com/victoriametrics/vmestimator/#configuration)
 (tracking 3Mil unique time series via 2 streams is using 200MiB on the testing stand).
-It is expected for one vmestimator instance to easily handle traffic for millions of samples/s and hundreds of millions unique time series. It is also possible
-to [scale vmestimator horizontally](https://github.com/VictoriaMetrics/vmestimator/tree/main#cluster).
+It is expected that one `vmestimator` instance can easily handle traffic for millions of samples/s and hundreds of millions of unique time series. It is also possible
+to [scale vmestimator horizontally](https://docs.victoriametrics.com/victoriametrics/vmestimator/#cluster).
 
 We recommend deploying `vmestimator` close to the metrics source, ideally alongside `vmagent` instances that scrape or forward metrics.
 Configure each `vmagent` to [replicate](https://docs.victoriametrics.com/vmagent/index.html#replication-and-high-availability) all metrics into the vmestimator.
@@ -57,36 +57,39 @@ Run vmagent:
 
 ```bash
 /path/to/vmagent \
-  -remoteWrite.url=http://127.0.0.1:8428/api/v1/write \ # main remote destination
+  -remoteWrite.url=http://127.0.0.1:8428/api/v1/write \             # main remote destination
   -remoteWrite.url=http://127.0.0.1:8490/cardinality/api/v1/write \ # replicate workload to vmestimator
-  -remoteWrite.disableOnDiskQueue=false,true \ # disable queueing for vmestimator
-  -remoteWrite.disableMetadata=false,true # disable metadata for vmestimator
+  -remoteWrite.disableOnDiskQueue=false,true \                      # disable queueing for vmestimator
+  -remoteWrite.disableMetadata=false,true                           # disable metadata for vmestimator
 ```
 
-> To reduce overhead, persistent queueing and metadata ingestion can be disabled for the estimator remote write path.
-> It is safe to send metrics from multiple independent `vmagent` instances into a single `vmestimator`.
+> `-remoteWrite.disableOnDiskQueue` and `-remoteWrite.disableMetadata` reduce resource overhead for vmagent, so it can skip persisting on-disk queue or metadata processing for vmestimator.
 
-The next step is to expose cardinality estimates as metrics.
-For this, `vmagent` should scrape the estimator `/metrics` endpoint and forward those metrics to a `vmsingle` instance (or another VictoriaMetrics storage).
+When `vmestimator` receives metrics, it starts estimating the cardinality according to the configuration. For example, the following config calculates cardinality per unique metric name across the last 5 minutes:
+
+```yaml
+- interval: '5m'
+  group_by: ['__name__']
+```
+
+The output of this estimation is available on vmestimator's [`/metrics` endpoint](https://docs.victoriametrics.com/victoriametrics/vmestimator/#cardinality-metrics):
+
+```text
+cardinality_estimate{interval="5m0s",filter="",group_by_keys="__name__",group_by_values="vm_app_version",by__name__="vm_app_version"} 4
+cardinality_estimate{interval="5m0s",filter="",group_by_keys="__name__",group_by_values="process_cpu_seconds_total",by__name__="process_cpu_seconds_total"} 4
+...
+```
+
+The next step is to collect cardinality estimates and to deliver to the monitoring system, so we can visualize or alert on them.
+We can re-use the same `vmagent` instance for this purpose, but it is recommended to run a dedicated pipeline for cardinality estimation. This allows isolating impact: cardinality estimation won't affect the main observability pipeline, and if the main observability pipeline becomes unavailable - cardinality estimations will remain available:
 
 \[Image unavailable: design-2]
 
-> In this way, `vmestimator` is just an alternative pipeline for ingesting metrics and collecting computed cardinality estimates.
-> Overloading vmestimator won't have any impact on the rest of the Observability pipeline.
-
-This setup is straightforward and introduces minimal overhead.
-The main drawback is that cardinality data shares the same storage with production metrics.
-If that storage becomes unavailable, the visibility into cardinality is lost precisely when it may be most needed.
-
-To mitigate this, we recommend running a separate `vmsingle` instance dedicated to scraping and storing VictoriaMetrics-related monitoring signals only.
-This pattern is commonly referred to as a monitoring-of-monitoring (MoM) setup.
-In this architecture, `vmestimator` metrics are isolated from production observability storage,
-ensuring cardinality visibility remains available even during incidents affecting the primary monitoring system.
-
-The resulting topology looks like this:
-\[Image unavailable: design-3]
+In this architecture, `vmestimator` metrics are isolated from the main observability pipeline, ensuring cardinality visibility remains available even during incidents affecting the primary monitoring system.
 
 ## Install
+
+### Start with Docker
 
 Create a `streams.yaml` from [example config](https://github.com/VictoriaMetrics/vmestimator/blob/main/streams.yaml).
 Run the Docker image from [Docker Hub](https://hub.docker.com/r/victoriametrics/vmestimator) or [Quay](https://quay.io/repository/victoriametrics/vmestimator), mounting your config file:
@@ -99,14 +102,50 @@ docker run --rm \
   -config=/streams.yaml
 ```
 
-See [Use Cases](https://github.com/VictoriaMetrics/vmestimator#use-cases) for more configuration examples and
-[Command-line flags](https://github.com/VictoriaMetrics/vmestimator#command-line-flags) for all available options.
+Ingest metrics into `vmestimator` via `http://127.0.0.1:8490/cardinality/api/v1/write` path, observe cardinality estimation metrics at <http://127.0.0.1:8490/metrics>.
 
-To build from sources, see [How to build from sources](https://github.com/VictoriaMetrics/vmestimator#how-to-build-from-sources).
+See [Use Cases](https://docs.victoriametrics.com/victoriametrics/vmestimator/#use-cases) for more configuration examples and
+[Command-line flags](https://docs.victoriametrics.com/victoriametrics/vmestimator/#command-line-flags) for all available options.
+
+To build from sources, see [How to build from sources](https://docs.victoriametrics.com/victoriametrics/vmestimator/#how-to-build-from-sources).
+
+### Start with Docker Compose
+
+To run vmestimator in docker-compose environment, clone vmestimator repository and run the following command:
+
+```sh
+git clone https://github.com/VictoriaMetrics/vmestimator.git && cd vmestimator
+make docker-up
+```
+
+Visit <http://127.0.0.1:3000> for Grafana (*login with admin:admin*) to see `vmestimator` dashboards. Or observe cardinality estimation metrics at <http://127.0.0.1:8490/metrics>.
+
+To stop the environment, run the following command:
+
+```
+make docker-down
+```
+
+See the full compose file [here](https://github.com/VictoriaMetrics/vmestimator/blob/main/deployment/docker/compose.yml).
+
+### Start with Binary
+
+See [How to build binary from sources](https://github.com/VictoriaMetrics/vmestimator#how-to-build-from-sources) or download pre-built binaries from [GitHub Releases](https://github.com/VictoriaMetrics/vmestimator/releases).
+
+Create a `streams.yaml` from [example config](https://github.com/VictoriaMetrics/vmestimator/blob/main/streams.yaml). Then run `vmestimator` with the following command:
+
+```sh
+./vmestimator-prod -config=/path/to/streams.yaml
+```
+
+Ingest metrics into `vmestimator` via `http://127.0.0.1:8490/cardinality/api/v1/write` path, observe cardinality estimation metrics at <http://127.0.0.1:8490/metrics>.
+
+See [Use Cases](https://docs.victoriametrics.com/victoriametrics/vmestimator/#use-cases) for more configuration examples and
+[Command-line flags](https://docs.victoriametrics.com/victoriametrics/vmestimator/#command-line-flags) for all available options.
 
 ## Configuration
 
-To run vmestimator a `streams.yaml` config has to be provided (see [example config](https://github.com/VictoriaMetrics/vmestimator/blob/main/streams.yaml)):
+To run `vmestimator` a `streams.yaml` config has to be provided (see [example config](https://github.com/VictoriaMetrics/vmestimator/blob/main/streams.yaml)):
 
 ```bash
 /path/to/vmestimator -config=streams.yaml # -httpListenAddr=:8490
@@ -124,17 +163,16 @@ streams:
     # default: 5m
     interval: <duration>
 
-    # Optional. When set, vmestimator emits a cardinality_churn_ratio metric measuring
+    # Optional. When set to true, vmestimator emits a cardinality_churn_ratio metric measuring
     # how quickly the series set changes within the measurement window.
-    # The look-back comparison window: vmestimator retains a snapshot of the HLL sketch
-    # and replaces it every churn_interval. The churn ratio in [0, 1] is computed as:
+    # vmestimator retains a snapshot of the HLL sketch and replaces it every interval.
+    # The churn ratio in [0, 1] is computed as:
     #   (2*|A∪B| - |A| - |B|) / |A∪B|
     # where A is the retained snapshot and B is the current sketch.
     # A ratio of 0 means the series set is completely stable; 1 means completely replaced.
-    # Must not exceed interval.
     #
-    # default: 0 (churn ratio metric is not emitted)
-    churn_interval: <duration>
+    # default: false (churn ratio metric is not emitted)
+    calculate_churn: <bool>
 
     # Optional. MetricsQL label selector used to pre-filter time series before counting.
     # Only series matching all matchers are counted. Supports equality (=), negative equality (!=),
@@ -173,6 +211,14 @@ streams:
     # default: 10000
     group_limit: <integer>
 
+    # Optional. Minimum cardinality estimate to expose for group_by streams.
+    # When positive, overrides the global -cardinalityMetrics.minCardinality flag for this stream only.
+    # When zero, the global flag value is used.
+    # When negative, no threshold is enforced for this stream.
+    #
+    # default: 0
+    min_cardinality: <integer>
+
     # Optional. Number of shards used to reduce lock contention during parallel ingestion.
     # Slightly increases memory for global streams (no group_by); negligible otherwise.
     # Leave at the default unless you have profiled lock contention or have a specific reason to change it.
@@ -204,6 +250,27 @@ streams:
     labels:
       <labelname>: <labelvalue> ...
 ```
+
+### Config reload
+
+`vmestimator` reloads the `-config` file without restart on:
+
+- `SIGHUP` signal, e.g. `kill -HUP $(pidof vmestimator)`.
+- HTTP request to `/-/reload`. Protect it with `-reloadAuthKey`, passed via the `authKey` query arg.
+- Every `-configCheckInterval`, if the flag is set.
+
+If the file content is unchanged, nothing happens. Otherwise the new config is applied stream by stream:
+
+- Streams with unchanged settings keep their accumulated estimates and churn state. The order of streams in the file doesn't matter.
+- Added streams and streams with any changed setting (e.g. `group_limit` or `hll_precision`) start with empty estimates.
+- Removed streams are stopped and their estimates are no longer exposed.
+
+If any stream is added or changed, the deduplication state is reset, so the new streams receive all the series.
+If the new config is invalid, the error is logged and the previous config stays active.
+
+Reload status is exposed via `vmestimator_config_reloads_total`, `vmestimator_config_reloads_errors_total`,
+`vmestimator_config_last_reload_successful` and `vmestimator_config_last_reload_success_timestamp_seconds` metrics.
+Changes in command-line flags need a restart.
 
 ## Cardinality Metrics
 
@@ -247,6 +314,26 @@ This is controlled by the `-cardinalityMetrics.exposeAt` flag:
 Use `-cardinalityMetrics.minCardinality=N` to suppress group-by cardinality estimates below `N`.
 This is useful when `group_by` produces many low-cardinality groups that add noise without actionable signal.
 When groups are suppressed, the `vmestimator_cardinality_estimates_dropped` metric reports the number of dropped groups per stream.
+
+The global flag applies the same threshold to every stream. To override it per stream — for example to
+keep low-cardinality estimates from a `__label__` stream while suppressing noise from high-cardinality
+streams — set the `min_cardinality` field on individual streams:
+
+```yaml
+streams:
+  - group_by: [__name__, job, region]
+    interval: 5m
+    min_cardinality: 1000
+
+  - group_by: [__label__]
+    interval: 5m
+    # min_cardinality unset → falls back to the global flag
+```
+
+When `min_cardinality` is set to a positive value on a stream, it overrides the global flag for that stream only.
+When unset or `0`, the global flag value is used.
+When negative, no threshold is enforced for that stream, even if the global flag is set.
+In cluster mode, `min_cardinality` is taken from the storage nodes' stream configs; if they differ, the select node uses the largest value.
 
 Computing cardinality estimates is expensive, so results are cached.
 Cache duration is controlled by `-cardinalityMetrics.cacheTTL` (default: `30s`).
@@ -329,23 +416,23 @@ Can be narrowed to a specific job: `['job', '__label__']`.
 [High churn](https://docs.victoriametrics.com/victoriametrics/faq/#what-is-high-churn-rate) means many series appear briefly and are replaced by new ones.
 This puts pressure on storage, because each new series must be indexed regardless of how short its lifetime is.
 
-To measure churn, add `churn_interval` to a stream:
+To measure churn, set `calculate_churn: true` on a stream:
 
 ```yaml
 # streams.yaml
 
 - interval: '15m'
-  churn_interval: '15m'
+  calculate_churn: true
   group_by: ['job']
 ```
 
-vmestimator will emit a `cardinality_churn_ratio` metric per group. The value is in `[0, 1]`:
+vmestimator will emit a `cardinality_churn_ratio` metric per group, comparing the series set against a snapshot taken one `interval` earlier. The value is in `[0, 1]`:
 
 - `0` — the series set is completely stable; the same series were active across both windows.
 - `1` — complete churn; entirely different series appeared in the latest window.
 
 ```
-cardinality_churn_ratio{interval="15m0s",churn_interval="15m0s",filter="",group_by_keys="job",group_by_values="api",by_job="api"} 0.1200
+cardinality_churn_ratio{interval="15m0s",filter="",group_by_keys="job",group_by_values="api",by_job="api"} 0.1200
 ```
 
 This helps identify jobs that create the most indexing pressure on storage, even when their current active cardinality appears moderate.
@@ -364,11 +451,11 @@ They require the following stream configuration to also support churn detection:
 
 # Global stream — required for GlobalChurnTooHigh and GlobalCardinalityTooHigh.
 - interval: '15m'
-  churn_interval: '15m'
+  calculate_churn: true
 
 # Per-job stream — required for JobChurnTooHigh and JobCardinalityTooHigh.
 - interval: '15m'
-  churn_interval: '15m'
+  calculate_churn: true
   group_by: ['job']
 ```
 
@@ -484,7 +571,7 @@ Additionally, every stream (including non-grouped ones) exposes:
 
 ## Deduplication
 
-Processing each time series is CPU-intensive: vmestimator must iterate over all labels, resolve group-by values, and call HLL insert for every estimator.
+Processing each time series is CPU-intensive: `vmestimator` must iterate over all labels, resolve group-by values, and call HLL insert for every estimator.
 For `__label__` streams it is even more expensive, as HLL insert is called once per label per series.
 
 Scraped time series are mostly identical between scrapes on short intervals.
@@ -497,7 +584,7 @@ Enable deduplication with `-deduplication.interval`:
 /path/to/vmestimator -config=streams.yaml -deduplication.interval=2m
 ```
 
-When enabled, vmestimator tracks which time series it has already seen within the configured window using bloom filters.
+When enabled, `vmestimator` tracks which time series it has already seen within the configured window using bloom filters.
 Series seen within the window are dropped before reaching the estimators.
 Set the interval 3–5× lower than the shortest estimator interval to ensure estimates remain accurate.
 
@@ -524,6 +611,14 @@ Two Grafana dashboards are available in the [dashboards](https://github.com/Vict
 
 - [VictoriaMetrics - Cardinality Estimations](https://play-grafana.victoriametrics.com/d/mktd5g9/victoriametrics-cardinality-estimations) — cardinality estimations: shows estimations, churn over configured label dimensions.
   \[Image unavailable: dashboard-cardinality]
+
+## Limitations
+
+For performance reasons, `vmestimator` doesn't decode [metric samples](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#raw-samples) in received Remote Write requests. It only parses [labels](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#labels). This optimization introduces the following limitations:
+
+1. Cardinality is estimated based on time of arrival of the request, not the actual timestamps of the samples within the request. If `vmestimator` receives backfilling traffic with month old timestamps, the cardinality estimation will be estimated as of now.
+2. [Staleness markers](https://prometheus.io/docs/prometheus/latest/querying/basics/#staleness) aren't decoded. A time series carrying a staleness marker is counted like any other received time series.
+3. Consistent order of labels in time series matters. `vmestimator` expects that clients already send time series with deterministic orders of labels, so it skips sorting for performance reasons. If time series arrive with unsorted order of labels within time series, then cardinality estimations can become inflated. For example, `metric{foo=bar, baz=qux}` and `metric{baz=qux, foo=bar}` are considered as two distinct time series.
 
 ## How to build from sources
 
@@ -574,6 +669,8 @@ Usage of ./bin/vmestimator:
         Minimum cardinality estimate to expose. Estimates below this threshold are suppressed to reduce metric volume and noise. Set to 0 to expose all estimates (default 0).
   -config string
         Path to YAML configuration file. Must be set unless -storageNode is specified. See https://github.com/VictoriaMetrics/vmestimator/blob/main/streams.yaml for config example
+  -configCheckInterval duration
+        Interval for checking for changes in '-config' file. By default, the checking is disabled. Send SIGHUP signal or request /-/reload in order to force config check for changes
   -deduplication.interval duration
         Time window for deduplication. When set, time series already seen within the window are dropped before being forwarded to estimators. Disabled when set to 0.
   -deduplication.maxSize int
@@ -691,6 +788,10 @@ Usage of ./bin/vmestimator:
         Optional URL to push metrics exposed at /metrics page. See https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#push-metrics . By default, metrics exposed at /metrics page aren't pushed to any remote storage
         Supports an array of values separated by comma or specified via multiple flags.
         Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
+  -reloadAuthKey value
+        Auth key for /-/reload http endpoint. It must be passed via authKey query arg. It overrides -httpAuth.*
+        Flag value can be read from the given file when using -reloadAuthKey=file:///abs/path/to/file or -reloadAuthKey=file://./relative/path/to/file.
+        Flag value can be read from the given http/https url when using -reloadAuthKey=http://host/path or -reloadAuthKey=https://host/path
   -secret.flags array
         Comma-separated list of flag names with secret values. Values for these flags are hidden in logs and on /metrics page
         Supports an array of values separated by comma or specified via multiple flags.
