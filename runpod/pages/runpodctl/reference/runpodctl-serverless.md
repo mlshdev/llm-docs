@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-serverless.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/runpodctl/reference/runpodctl-serverless.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-serverless.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/runpodctl/reference/runpodctl-serverless.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-serverless
 
 # serverless
@@ -33,7 +33,7 @@ runpodctl serverless list
 
 **--include-template (type: bool)**
 
-Include template information in the output.
+Include the endpoint's container configuration in the output: image, start command or Docker arguments, disk size, environment variables, and ports. Environment variable values may contain secrets.
 
 **--include-workers (type: bool)**
 
@@ -47,11 +47,13 @@ Get detailed information about a specific endpoint:
 runpodctl serverless get <endpoint-id>
 ```
 
+The output doesn't include the ID of the template the endpoint uses. To see what the endpoint runs, add `--include-template`.
+
 #### Get flags
 
 **--include-template (type: bool)**
 
-Include template information in the output.
+Include the endpoint's container configuration in the output: image, start command or Docker arguments, disk size, environment variables, and ports. Environment variable values may contain secrets.
 
 **--include-workers (type: bool)**
 

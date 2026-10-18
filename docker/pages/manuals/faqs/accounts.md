@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/faqs/accounts.md)
+> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/faqs/accounts.md)
 
 # Account FAQs
 
@@ -66,7 +66,7 @@ Check the following:
    [organization access token](https://docs.docker.com/security/access-tokens/organization-access-tokens/).
 2. You pasted the full token, with no spaces or line breaks. Docker
    shows a token only once. If you no longer have it,
-   [create a new personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/#create-a-personal-access-token).
+   [create a new personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/#create).
 3. On the **Personal access tokens** page, find the token and use its
    status:
    - **Expired:** Create a new token. You can't change the expiration
@@ -195,7 +195,7 @@ Company owners don't occupy a seat unless one of the following is true:
 When you first create a company, your account is both a company owner and an
 organization owner, so it occupies a seat as long as you remain an organization
 owner. To free up that seat,
-[assign another user as the organization owner](https://docs.docker.com/accounts/organization/manage/members/#update-a-member-role)
+[assign another user as the organization owner](https://docs.docker.com/accounts/organization/manage/members/#update-member-role)
 and remove yourself from the organization. You keep full administrative access
 as a company owner without using a subscription seat.
 

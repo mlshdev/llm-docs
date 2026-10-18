@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/triggering.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/triggering.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/triggering.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/triggering.mdx)
 > Canonical documentation: https://trigger.dev/docs/triggering
 
 # Triggering
@@ -689,7 +689,7 @@ await myTask.trigger({ some: "data" }, { delay: new Date("2024-07-23T11:50:00+02
 
 Runs that are delayed and have not been enqueued yet will display in the dashboard with a "Delayed" status:
 
-![Delayed run in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/delayed-runs.png)
+![Delayed run in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/delayed-runs.png)
 
 > **Note**
 >
@@ -726,6 +726,12 @@ await myTask.batchTrigger([{ payload: { some: "data" }, options: { delay: "1h" }
 > `JSON.stringify()`. The SDK handles Date serialization automatically. If you need to stringify
 > manually, convert Dates to ISO strings first (e.g., `date.toISOString()`).
 
+> **Tip**
+>
+> A `delay` doesn't merge triggers: each trigger still creates its own run. To collapse a burst of
+> triggers into one run, use [`debounce`](#debounce). See [runs.list() best
+> practices](https://trigger.dev/docs/runs/list-best-practices#using-a-fixed-delay-to-space-out-triggers).
+
 ### `ttl`
 
 You can set a TTL (time to live) when triggering a task, which will automatically expire the run if it hasn't started within the specified time. This is useful for ensuring that a run doesn't get stuck in the queue for too long.
@@ -747,7 +753,7 @@ await myTask.trigger({ some: "data" }, { ttl: 3600 }); // 1 hour
 
 When a run is expired, it will be marked as "Expired" in the dashboard:
 
-![Expired runs in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/expired-runs.png)
+![Expired runs in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/expired-runs.png)
 
 When you use both `delay` and `ttl`, the TTL will start counting down from the time the run is enqueued, not from the time the run is triggered.
 
@@ -793,6 +799,8 @@ export const myTask = task({
   },
 });
 ```
+
+Build the key from the work being done, like an order or event ID. A random value on every trigger never matches, so it never dedupes. See [runs.list() best practices](https://trigger.dev/docs/runs/list-best-practices#using-a-random-idempotency-key).
 
 For more information, see our [Idempotency](https://trigger.dev/docs/idempotency) documentation.
 

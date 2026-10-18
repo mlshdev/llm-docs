@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/private-networking/aws-console-setup.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/private-networking/aws-console-setup.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/private-networking/aws-console-setup.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/private-networking/aws-console-setup.mdx)
 > Canonical documentation: https://trigger.dev/docs/private-networking/aws-console-setup
 
 # Setting up PrivateLink in the AWS Console
@@ -49,12 +49,12 @@ The target group is how the NLB will know where to forward traffic. AWS requires
 
    Click **Next** to move to the second step (registering targets).
 
-   ![Target group first step — basic configuration](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-target-group-first-step.png)
+   ![Target group first step — basic configuration](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-target-group-first-step.png)
 4. On the **Register targets** page — the second step of the IP target-group flow — paste the
    private IPs of your resource and set the port to the same value you picked above. Click
    **Include as pending below**, then **Create target group**.
 
-   ![Register targets in the target group](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-target-group-register-listeners.png)
+   ![Register targets in the target group](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-target-group-register-listeners.png)
 
    Both ElastiCache and RDS expose a DNS endpoint, not an IP, on their console pages. Find the
    private IP behind the endpoint via the EC2 console:
@@ -84,18 +84,18 @@ The NLB is what PrivateLink exposes to Trigger.dev. It must be **internal** (not
    - **Scheme**: **Internal**
    - **IP address type**: IPv4
 
-   ![Network Load Balancer basic configuration](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-network-load-balancer-basic.png)
+   ![Network Load Balancer basic configuration](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-network-load-balancer-basic.png)
 3. Pick the same VPC as your target group. Select one private subnet per AZ that should serve traffic.
    Each subnet you select adds an availability zone to the endpoint.
 
-   ![Network Load Balancer VPC and Availability Zones](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-network-load-balancer-vpc-az.png)
+   ![Network Load Balancer VPC and Availability Zones](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-network-load-balancer-vpc-az.png)
 4. Under **Listeners and routing**, configure:
 
    - **Protocol**: TCP
    - **Port**: same as your target group port (5432 for Postgres, 6379 for Redis, etc.)
    - **Default action**: forward to the target group you created in Step 1
 
-   ![Add the target group to the NLB listener](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-network-load-balancer-add-target-group.png)
+   ![Add the target group to the NLB listener](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-network-load-balancer-add-target-group.png)
 5. Click **Create load balancer**. Provisioning takes 1–2 minutes — wait until the NLB's **State**
    column shows **Active** before moving on. The endpoint service in the next step won't list the
    NLB until it's fully active.
@@ -105,7 +105,7 @@ The NLB is what PrivateLink exposes to Trigger.dev. It must be **internal** (not
    dropped before reaching your listener. Uncheck **Enforce inbound rules on PrivateLink traffic**
    and save.
 
-   ![Uncheck Enforce inbound rules on PrivateLink traffic on the NLB](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-nlb-disable-inbound-rules-options.png)
+   ![Uncheck Enforce inbound rules on PrivateLink traffic on the NLB](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-nlb-disable-inbound-rules-options.png)
 
 > **Tip**
 >
@@ -128,7 +128,7 @@ This is the resource that PrivateLink consumers connect to.
    - **Available load balancers**: select the NLB you created
    - **Require acceptance for endpoint**: **No** (recommended)
 
-   ![Create VPC Endpoint Service form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-create-endpoint-service.png)
+   ![Create VPC Endpoint Service form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-create-endpoint-service.png)
 
    > **Note**
    >
@@ -165,7 +165,7 @@ By default, no one can connect to your endpoint service. You need to explicitly 
    arn:aws:iam::<account-id>:root
    ```
 
-   ![Allow principal dialog](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-allow-principal.png)
+   ![Allow principal dialog](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-allow-principal.png)
 
    > **Warning**
    >
@@ -176,7 +176,7 @@ By default, no one can connect to your endpoint service. You need to explicitly 
    `com.amazonaws.vpce.us-east-1.vpce-svc-0123abcd...`. You'll paste this into the Trigger.dev
    dashboard in the next step.
 
-   ![Copy the endpoint service name](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priv-connections-copy-endpoint-name.png)
+   ![Copy the endpoint service name](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priv-connections-copy-endpoint-name.png)
 
 ## Step 5: Add the connection in Trigger.dev
 
@@ -186,7 +186,7 @@ By default, no one can connect to your endpoint service. You need to explicitly 
 
    - **Friendly name**: a short, human-readable label for this connection.
    - **VPC Endpoint Service name**: paste the `com.amazonaws.vpce.<region>.vpce-svc-...` value from Step 4.
-   - **Target region**: the AWS region your endpoint service lives in.
+   - **Target region**: the Trigger.dev region where the VPC Endpoint is created (pick one from the list, such as `us-east-1` or `eu-central-1`), normally the region your tasks run in. If it differs from the region your endpoint service lives in, enable cross-region access in Step 3.
 3. Submit the form. The connection's status moves through **Pending → Provisioning → Active**.
    Provisioning typically takes 30–90 seconds.
 4. Once **Active**, the dashboard shows the assigned private IP. Plug it into the

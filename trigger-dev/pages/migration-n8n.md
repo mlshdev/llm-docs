@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/migration-n8n.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/migration-n8n.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/migration-n8n.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/migration-n8n.mdx)
 > Canonical documentation: https://trigger.dev/docs/migration-n8n
 
 # Migrating from n8n
@@ -19,7 +19,7 @@ Your task code runs on Trigger.dev's managed infrastructure, so there are no ser
 | Node                                              | A step or library call inside `run()`                                                                                                      |
 | Execute Sub-workflow node (wait for completion)   | [tasks.triggerAndWait()](https://trigger.dev/docs/triggering#yourtask-triggerandwait)                                                      |
 | Execute Sub-workflow node (execute in background) | [tasks.trigger()](https://trigger.dev/docs/triggering)                                                                                     |
-| Loop over N items → Execute Sub-workflow → Merge  | [tasks.batchTriggerAndWait()](https://trigger.dev/docs/tasks#yourtask-batchtriggerandwait)                                                 |
+| Loop over N items → Execute Sub-workflow → Merge  | [tasks.batchTriggerAndWait()](https://trigger.dev/docs/triggering#yourtask-batchtriggerandwait)                                            |
 | Loop Over Items (Split in Batches)                | `for` loop or `.map()`                                                                                                                     |
 | IF / Switch node                                  | `if` / `switch` statements                                                                                                                 |
 | Wait node (time interval or specific time)        | [wait.for()](https://trigger.dev/docs/wait-for) or [wait.until()](https://trigger.dev/docs/wait-until)                                     |
@@ -29,7 +29,7 @@ Your task code runs on Trigger.dev's managed infrastructure, so there are no ser
 | Code node                                         | A function or step within `run()`                                                                                                          |
 | Credentials                                       | [Environment variable secret](https://trigger.dev/docs/deploy-environment-variables)                                                       |
 | Execution                                         | Run (visible in the dashboard with full logs)                                                                                              |
-| Retry on Fail (per-node setting)                  | [retry.maxAttempts](https://trigger.dev/docs/tasks/overview#retry) (retries the whole `run()`, not a single step)                          |
+| Retry on Fail (per-node setting)                  | [retry.maxAttempts](https://trigger.dev/docs/tasks/overview#retry-options) (retries the whole `run()`, not a single step)                  |
 | AI Agent node                                     | Any AI SDK called inside `run()` (Vercel AI SDK, Claude SDK, OpenAI SDK, etc.)                                                             |
 | Respond to Webhook node                           | Route handler + [task.triggerAndWait()](https://trigger.dev/docs/triggering#yourtask-triggerandwait) returning the result as HTTP response |
 

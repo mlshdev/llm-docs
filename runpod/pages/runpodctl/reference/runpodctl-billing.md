@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-billing.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/runpodctl/reference/runpodctl-billing.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-billing.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/runpodctl/reference/runpodctl-billing.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-billing
 
 # billing
 
 Use runpodctl to retrieve billing history for Pods, Serverless endpoints, and network volumes across configurable time ranges.
 
-View billing history for Pods, Serverless endpoints, and network volumes.
+View billing history for Pods, Serverless endpoints, and network volumes. Each command returns one record per resource per time bucket, with the total cost split into its components.
 
 ```bash Command
 runpodctl billing <subcommand> [flags]
@@ -35,17 +35,25 @@ Start time in RFC3339 format (e.g., `2024-01-01T00:00:00Z`).
 
 End time in RFC3339 format.
 
-**--grouping (type: string)**
-
-Group results by `podId` or `gpuId`.
-
 **--pod-id (type: string)**
 
 Filter by specific Pod ID.
 
-**--gpu-id (type: string)**
+Each record includes `startTime`, `endTime`, `podId`, `totalAmount`, and the cost split into `gpuAmount`, `cpuAmount`, and `diskAmount`. CPU Pods are included.
 
-Filter by specific GPU type.
+```json
+[
+  {
+    "startTime": "2026-09-01T00:00:00Z",
+    "endTime": "2026-09-02T00:00:00Z",
+    "podId": "abc123xyz",
+    "totalAmount": 4.32,
+    "gpuAmount": 4.08,
+    "cpuAmount": 0,
+    "diskAmount": 0.24
+  }
+]
+```
 
 ### View Serverless billing
 
@@ -69,17 +77,11 @@ Start time in RFC3339 format.
 
 End time in RFC3339 format.
 
-**--grouping (type: string)**
-
-Group results by `endpointId`, `podId`, or `gpuId`.
-
 **--endpoint-id (type: string)**
 
 Filter by specific endpoint ID.
 
-**--gpu-id (type: string)**
-
-Filter by specific GPU type.
+Each record includes `startTime`, `endTime`, `serverlessId` (the endpoint ID), `totalAmount`, and the cost split into `gpuAmount`, `cpuAmount`, and `diskAmount`. CPU endpoints are included.
 
 ### View network volume billing
 
@@ -102,6 +104,8 @@ Start time in RFC3339 format.
 **--end-time (type: string)**
 
 End time in RFC3339 format.
+
+Each record includes `startTime`, `endTime`, `networkVolumeId`, `totalAmount`, and the cost split into `standardAmount` and `highPerformanceAmount` for standard and high-performance storage.
 
 ## Related commands
 

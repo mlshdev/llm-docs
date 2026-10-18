@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.4: [apps/docs/content/apis/benchmarks/v4.17.1/manipulate_user/index.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/apis/benchmarks/v4.17.1/manipulate_user/index.mdx)
+> Pinned source for ZITADEL v4.19.5: [apps/docs/content/apis/benchmarks/v4.17.1/manipulate_user/index.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/apis/benchmarks/v4.17.1/manipulate_user/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/benchmarks/v4.17.1/manipulate_user
 
 Benchmark results of the v4.17.1 release of Zitadel.

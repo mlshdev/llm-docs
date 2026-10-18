@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/security/request-path.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/security/request-path.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/security/request-path.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/security/request-path.md)
 
 # Request Path
 
@@ -92,7 +92,7 @@ This filtering occurs before path sanitization and catches attack attempts that 
 All encoded character filtering is disabled by default (`true` means encoded characters are allowed).
 
 > **Security Considerations**
-> When your backend is not fully compliant with [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) and notably decode encoded reserved characters in the requets path,
+> When your backend is not fully compliant with [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) and notably decode encoded reserved characters in the requests path,
 > it is recommended to set these options to `false` to avoid split-view situation and helps prevent path traversal attacks or other malicious attempts to bypass security controls.
 > **File (YAML)**
 

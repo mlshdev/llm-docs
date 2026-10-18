@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/installation-docker.rst](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/docs/admin/installation-docker.rst)
+> Pinned source for SearXNG master: [docs/admin/installation-docker.rst](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/docs/admin/installation-docker.rst)
 
 <a id="installation-container"></a>
 
@@ -230,7 +230,7 @@ Two volumes are exposed that should be mounted to preserve its contents:
 The following environment variables can be configured:
 
 - `$SEARXNG_*`: Controls the SearXNG configuration options, look out for
-  environment `$SEARXNG_*` in [settings server](https://docs.searxng.org/admin/settings/settings_server.html#settings-server), [settings general](https://docs.searxng.org/admin/settings/settings_general.html#settings-general) and the [container/.env.example](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/container/.env.example) template.
+  environment `$SEARXNG_*` in [settings server](https://docs.searxng.org/admin/settings/settings_server.html#settings-server), [settings general](https://docs.searxng.org/admin/settings/settings_general.html#settings-general) and the [container/.env.example](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/container/.env.example) template.
 - `$GRANIAN_*`: Controls the [Granian server options](https://docs.searxng.org/admin/installation-granian.html#granian-configuration).
 - `$FORCE_OWNERSHIP`: Ensures mounted volumes/files are owned by the
   `searxng:searxng` user (default: `true`)
@@ -262,12 +262,12 @@ $ cd ./searxng/
 $ make container
 
 $ docker images
-REPOSITORY                 TAG                  IMAGE ID  SIZE
-localhost/searxng/searxng  2026.6.19-93f66bfb4  ...       265 MB
-localhost/searxng/searxng  latest               ...       265 MB
-localhost/searxng/searxng  builder              ...       687 MB
-docker.io/searxng/base     searxng-builder      ...       565 MB
-docker.io/searxng/base     searxng              ...       143 MB
+REPOSITORY                 TAG              IMAGE ID  SIZE
+localhost/searxng/searxng  latest           ...       271 MB
+localhost/searxng/searxng  2026.10.17-*     ...       271 MB
+<none>                     <none>           ...       677 MB
+docker.io/searxng/base     searxng          ...       144 MB
+docker.io/searxng/base     searxng-builder  ...       550 MB
 ```
 
 # Migrate from `searxng-docker`
@@ -299,7 +299,7 @@ $ mv ./searxng-docker/searxng/* ./searxng/core-config/
 ```
 
 If using Valkey features like bot protection (limiter), you will need to update
-the URL hostname in [searx/settings.yml](https://github.com/searxng/searxng/blob/3cd69d30e2a78dfc817be9e349e7c2e4317c92e3/searx/settings.yml) file to `valkey` or
+the URL hostname in [searx/settings.yml](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/searx/settings.yml) file to `valkey` or
 `searxng-valkey`.
 
 If you have any environment variables in the old `.env` file, make

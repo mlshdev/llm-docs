@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/troubleshooting.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/troubleshooting.mdx)
+> Pinned source for Runpod main: [flash/troubleshooting.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/troubleshooting.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/troubleshooting
 
 # Troubleshooting
 
 Monitor, debug, and troubleshoot Flash deployments. Review setup, configuration, deployment, and usage guidance for Runpod Flash.
+
+> **Warning**
+>
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 This guide covers how to monitor your Flash deployments, debug issues, and resolve common errors.
 
@@ -74,7 +78,7 @@ async def process(data: dict) -> dict:
 
 **Error:**
 
-```
+```text
 No Runpod API key found. Set one with:
 
   flash login                              # interactive setup
@@ -129,7 +133,7 @@ Get a key: https://docs.runpod.io/get-started/credentials
 
 **Error:**
 
-```
+```text
 Error: ~/.runpod/config.toml is corrupted and cannot be parsed.
 Run 'flash login' to re-authenticate, or delete the file and retry.
 ```
@@ -147,7 +151,7 @@ flash login
 
 **Error:**
 
-```
+```text
 Load-balanced endpoints require route decorators
 ```
 
@@ -174,7 +178,7 @@ async def health_check() -> dict:
 
 **Error:**
 
-```
+```text
 method must be one of {'GET', 'POST', 'PUT', 'DELETE', 'PATCH'}
 ```
 
@@ -186,7 +190,7 @@ method must be one of {'GET', 'POST', 'PUT', 'DELETE', 'PATCH'}
 
 **Error:**
 
-```
+```text
 path must start with '/'
 ```
 
@@ -206,7 +210,7 @@ path must start with '/'
 
 **Error:**
 
-```
+```text
 Duplicate route 'POST /process' in endpoint 'my-api'
 ```
 
@@ -220,7 +224,7 @@ Duplicate route 'POST /process' in endpoint 'my-api'
 
 **Error:**
 
-```
+```text
 Local Python 3.9 is not supported by Flash workers (supported: 3.10, 3.11, 3.12, 3.13).
 Pass --python-version, declare python_version on a resource config, or run flash from a supported interpreter.
 ```
@@ -247,7 +251,6 @@ You have three options:
    # Using pyenv
    pyenv install 3.12
    pyenv local 3.12
-
    # Or using uv
    uv venv --python 3.12
    source .venv/bin/activate
@@ -261,13 +264,13 @@ You have three options:
 
 **Error:**
 
-```
+```text
 endpoint.py: relative import (level=1, module='helpers') could not be resolved to a local file under /path/to/project
 ```
 
 Or, for an ignore-excluded import:
 
-```
+```text
 Shipped code imports local modules that the build ignore rules (.gitignore or built-in defaults) exclude:
   utils/helpers.py (imported by endpoint.py)
 
@@ -294,7 +297,7 @@ For how Flash resolves and bundles local imports, see [Import local modules](htt
 
 **Error:**
 
-```
+```text
 Tarball exceeds maximum size. File size: 1.6GB, Max: 1.5GB
 ```
 
@@ -310,7 +313,7 @@ Tarball exceeds maximum size. File size: 1.6GB, Max: 1.5GB
 
 **Error:**
 
-```
+```text
 File is not a valid gzip file. Expected magic bytes (31, 139)
 ```
 
@@ -327,7 +330,7 @@ flash build
 
 **Error:**
 
-```
+```text
 SSL certificate verification failed. This usually means Python cannot find your system's CA certificates.
 ```
 
@@ -357,7 +360,7 @@ SSL certificate verification failed. This usually means Python cannot find your 
 
 **Error:**
 
-```
+```text
 Failed to provision resources: [error details]
 ```
 
@@ -380,7 +383,7 @@ Failed to provision resources: [error details]
 
 **Error:**
 
-```
+```text
 Endpoint URL not available - endpoint may not be deployed
 ```
 
@@ -398,7 +401,7 @@ Endpoint URL not available - endpoint may not be deployed
 
 **Error:**
 
-```
+```text
 Execution timeout on [endpoint] after [N]s
 ```
 
@@ -423,7 +426,7 @@ Execution timeout on [endpoint] after [N]s
 
 **Error:**
 
-```
+```text
 Failed to connect to endpoint [name] ([url])
 ```
 
@@ -439,7 +442,7 @@ Failed to connect to endpoint [name] ([url])
 
 **Error:**
 
-```
+```text
 HTTP error from endpoint [name]: 500 - Internal Server Error
 ```
 
@@ -466,7 +469,7 @@ HTTP error from endpoint [name]: 500 - Internal Server Error
 
 **Error:**
 
-```
+```text
 Failed to deserialize result: [error]
 ```
 
@@ -480,7 +483,6 @@ Failed to deserialize result: [error]
    ```python
    # Correct
    return {"result": tensor.tolist()}
-
    # Incorrect - tensor is not serializable
    return {"result": tensor}
    ```
@@ -491,7 +493,7 @@ Failed to deserialize result: [error]
 
 **Error:**
 
-```
+```text
 Payload size X MB exceeds limit of 10.0 MB
 ```
 
@@ -511,7 +513,6 @@ Payload size X MB exceeds limit of 10.0 MB
 2. **Compress data before sending**: For data that must be passed directly, use compression:
    ```python
    import gzip
-
    compressed = gzip.compress(data.tobytes())
    # Pass compressed bytes instead
    ```
@@ -522,7 +523,7 @@ Payload size X MB exceeds limit of 10.0 MB
 
 **Error:**
 
-```
+```text
 Inline module payload is X bytes, over the 8388608-byte live-serverless cap.
 Use `flash deploy` for endpoints with large local dependencies.
 ```
@@ -544,7 +545,7 @@ See [Live execution size limit](https://docs.runpod.io/flash/create-endpoints#li
 
 **Error:**
 
-```
+```text
 Deserialization timed out after 30s
 ```
 
@@ -556,7 +557,7 @@ Deserialization timed out after 30s
 
 **Error:**
 
-```
+```text
 Circuit breaker is open. Retry in [N] seconds
 ```
 
@@ -610,7 +611,7 @@ Circuit breaker is open. Retry in [N] seconds
 
 **Error (in worker logs):**
 
-```
+```text
 ModuleNotFoundError: No module named 'transformers'
 ```
 

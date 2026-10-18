@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/errors-retrying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/errors-retrying.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/errors-retrying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/errors-retrying.mdx)
 > Canonical documentation: https://trigger.dev/docs/errors-retrying
 
 # Errors & Retrying
@@ -22,8 +22,8 @@ You can configure retrying in two ways:
 
 > **Note**
 >
-> By default when you create your project using the CLI init command we disabled retrying in the DEV
-> environment. You can enable it in your [trigger.config file](https://trigger.dev/docs/config/config-file).
+> By default when you create your project using the CLI init command, retrying is enabled in the DEV
+> environment. You can disable it by setting `enabledInDev: false` in your [trigger.config file](https://trigger.dev/docs/config/config-file).
 
 ## A simple example with OpenAI
 
@@ -151,7 +151,7 @@ import { task, logger, retry } from "@trigger.dev/sdk";
 
 export const taskWithFetchRetries = task({
   id: "task-with-fetch-retries",
-  run: async ({ payload, ctx }) => {
+  run: async (payload: any, { ctx }) => {
     //if the Response is a 429 (too many requests), it will retry using the data from the response. A lot of good APIs send these headers.
     const headersResponse = await retry.fetch("http://my.host/test-headers", {
       retry: {
@@ -221,7 +221,7 @@ export const taskWithFetchRetries = task({
 
 ## Advanced error handling and retrying
 
-We provide a `catchError` callback on the task and in your `trigger.config` file. This gets called when an uncaught error is thrown in your task.
+We provide a `catchError` callback on the task, and you can register one globally with `tasks.catchError()`. This gets called when an uncaught error is thrown in your task.
 
 You can
 

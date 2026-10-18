@@ -1,10 +1,10 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md)
 
 In Traefik, certificates are grouped together in certificates stores.
 
 `TLSStore` is the CRD implementation of a [Traefik TLS Store](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-certificates#certificates-stores).
 
-Before creating `TLSStore` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/reference/dynamic-configuration/kubernetes-crd/#definitions) to your Kubernetes cluster.
+Before creating `TLSStore` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements) to your Kubernetes cluster.
 
 > **Default TLS Store**
 > Traefik currently only uses the TLS Store named "default". This default `TLSStore` should be in a namespace discoverable by Traefik. Since it is used by default on `IngressRoute` and `IngressRouteTCP` objects, there never is a need to actually reference it. This means that you cannot have two stores that are named default in different Kubernetes namespaces. As a consequence, with respect to TLS stores, the only change that makes sense (and only if needed) is to configure the default `TLSStore`. The [`defaultTLSResourcesNamespace`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#defaulttlsresourcesnamespace) provider option restricts the namespace this cluster-wide store can be defined in.

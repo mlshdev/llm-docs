@@ -4,7 +4,7 @@
 
 ## Projects
 
-- [Traefik Proxy v3.7.14](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
+- [Traefik Proxy v3.7.15](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
 - [NetBird v0.77.1](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
 - [Podman v6.1.4](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
 - [Docker main](docker/llms.txt): [full corpus](docker/llms-full.txt), [manifest](docker/manifest.json)
@@ -14,14 +14,14 @@
 - [VictoriaMetrics v1.154.0](victoriametrics/llms.txt): [full corpus](victoriametrics/llms-full.txt), [manifest](victoriametrics/manifest.json)
 - [VictoriaLogs v1.53.0](victorialogs/llms.txt): [full corpus](victorialogs/llms-full.txt), [manifest](victorialogs/manifest.json)
 - [VictoriaMetrics datasource for Grafana v0.26.1](victoriametrics-datasource/llms.txt): [full corpus](victoriametrics-datasource/llms-full.txt), [manifest](victoriametrics-datasource/manifest.json)
-- [VictoriaLogs datasource for Grafana v0.32.0](victorialogs-datasource/llms.txt): [full corpus](victorialogs-datasource/llms-full.txt), [manifest](victorialogs-datasource/manifest.json)
-- [vmestimator v0.1.16](vmestimator/llms.txt): [full corpus](vmestimator/llms-full.txt), [manifest](vmestimator/manifest.json)
-- [ZITADEL v4.19.4](zitadel/llms.txt): [full corpus](zitadel/llms-full.txt), [manifest](zitadel/manifest.json)
+- [VictoriaLogs datasource for Grafana v0.33.1](victorialogs-datasource/llms.txt): [full corpus](victorialogs-datasource/llms-full.txt), [manifest](victorialogs-datasource/manifest.json)
+- [vmestimator v0.1.17](vmestimator/llms.txt): [full corpus](vmestimator/llms-full.txt), [manifest](vmestimator/manifest.json)
+- [ZITADEL v4.19.5](zitadel/llms.txt): [full corpus](zitadel/llms-full.txt), [manifest](zitadel/manifest.json)
 - [FFmpeg master](ffmpeg/llms.txt): [full corpus](ffmpeg/llms-full.txt), [manifest](ffmpeg/manifest.json)
 - [yt-dlp 2026.08.19](yt-dlp/llms.txt): [full corpus](yt-dlp/llms-full.txt), [manifest](yt-dlp/manifest.json)
 - [SearXNG master](searxng/llms.txt): [full corpus](searxng/llms-full.txt), [manifest](searxng/manifest.json)
 - [Bun bun-v1.4.3](bun/llms.txt): [full corpus](bun/llms-full.txt), [manifest](bun/manifest.json)
-- [Trigger.dev v4.7.3](trigger-dev/llms.txt): [full corpus](trigger-dev/llms-full.txt), [manifest](trigger-dev/manifest.json)
+- [Trigger.dev v4.7.4](trigger-dev/llms.txt): [full corpus](trigger-dev/llms-full.txt), [manifest](trigger-dev/manifest.json)
 - [aria2 release-1.37.0](aria2/llms.txt): [full corpus](aria2/llms-full.txt), [manifest](aria2/manifest.json)
 - [PostgreSQL 18 REL_18_6](postgres-18/llms.txt): [full corpus](postgres-18/llms-full.txt), [manifest](postgres-18/manifest.json)
 - [Vast.ai main](vastai/llms.txt): [full corpus](vastai/llms-full.txt), [manifest](vastai/manifest.json)

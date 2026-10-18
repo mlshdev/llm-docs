@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/examples/supabase-storage-upload.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/examples/supabase-storage-upload.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/examples/supabase-storage-upload.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/examples/supabase-storage-upload.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/supabase-storage-upload
 
 # Uploading files to Supabase Storage
@@ -9,8 +9,8 @@ This example demonstrates how to upload files to Supabase Storage using Trigger.
 
 This example shows how to upload a video file to Supabase Storage using two different methods.
 
-- [Upload to Supabase Storage using the Supabase client](https://trigger.dev/docs/guides/examples/supabase-storage-upload#example-1-upload-to-supabase-storage-using-the-supabase-storage-client)
-- [Upload to Supabase Storage using the AWS S3 client](https://trigger.dev/docs/guides/examples/supabase-storage-upload#example-2-upload-to-supabase-storage-using-the-aws-s3-client)
+- [Upload to Supabase Storage using the Supabase client](https://trigger.dev/docs/guides/examples/supabase-storage-upload#upload-to-supabase-storage-using-the-supabase-client)
+- [Upload to Supabase Storage using the AWS S3 client](https://trigger.dev/docs/guides/examples/supabase-storage-upload#upload-to-supabase-storage-using-the-aws-s3-client)
 
 ## Upload to Supabase Storage using the Supabase client
 

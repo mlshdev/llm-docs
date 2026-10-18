@@ -1,0 +1,174 @@
+> Pinned source for Runpod main: [public-endpoints/models/seedance-2-5-t2v.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/public-endpoints/models/seedance-2-5-t2v.mdx)
+> Canonical documentation: https://docs.runpod.io/public-endpoints/models/seedance-2-5-t2v
+
+# Seedance 2.5 Text-to-Video
+
+Generate 4-30 second videos up to 4K with native audio from a text prompt. Explore this model's inputs and outputs on Runpod Public Endpoints.
+
+Seedance 2.5 Text-to-Video is ByteDance's text-to-video model. It generates 4-30 second videos at up to 4K resolution from a text prompt. Native audio is generated alongside the video. Add optional reference images, videos, and audio to guide the subject, motion, and soundtrack.
+
+|              |                                                   |
+| ------------ | ------------------------------------------------- |
+| **Endpoint** | `https://api.runpod.ai/v2/tdq07exynr7zux/runsync` |
+| **Model**    | `bytedance/seedance-2.5`                          |
+| **Pricing**  | $0.18–$1.80 per second                            |
+| **Type**     | Video generation (text-to-video)                  |
+
+## Request
+
+All parameters are passed within the `input` object in the request body.
+
+**Property (type: string; required)**
+
+Text description of the video to generate.
+
+**Property (type: array)**
+
+Optional array of reference image URLs that guide the subject, style, or setting of the video.
+
+**Property (type: array)**
+
+Optional array of reference video URLs that guide motion or camera movement.
+
+**Property (type: array)**
+
+Optional array of reference audio URLs that guide the soundtrack, such as music, sound effects, or voice.
+
+**Property (type: integer)**
+
+Video duration in seconds. Range: 4-30 seconds.
+
+**Property (type: string)**
+
+Output resolution. Options: `480p`, `720p`, `1080p`, `4k`.
+
+**Property (type: string)**
+
+Aspect ratio. Options: `21:9`, `16:9`, `9:16`, `1:1`, `4:3`, `3:4`.
+
+**Property (type: boolean)**
+
+Generate native audio, such as dialogue, sound effects, and music, alongside the video.
+
+**Property (type: integer)**
+
+Seed for reproducible results. Set to -1 for random.
+
+```bash cURL
+curl -X POST "https://api.runpod.ai/v2/tdq07exynr7zux/runsync" \
+  -H "Authorization: Bearer $RUNPOD_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "input": {
+      "prompt": "A golden retriever runs along a sunny beach as waves crash behind it",
+      "duration": 5,
+      "resolution": "720p",
+      "aspect_ratio": "16:9",
+      "generate_audio": true,
+      "seed": -1
+    }
+  }'
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    "https://api.runpod.ai/v2/tdq07exynr7zux/runsync",
+    headers={
+        "Authorization": f"Bearer {RUNPOD_API_KEY}",
+        "Content-Type": "application/json",
+    },
+    json={
+        "input": {
+            "prompt": "A golden retriever runs along a sunny beach as waves crash behind it",
+            "duration": 5,
+            "resolution": "720p",
+            "aspect_ratio": "16:9",
+            "generate_audio": True,
+            "seed": -1,
+        }
+    },
+)
+
+result = response.json()
+print(result["output"]["video_url"])
+```
+
+```javascript JavaScript
+const response = await fetch(
+  "https://api.runpod.ai/v2/tdq07exynr7zux/runsync",
+  {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${RUNPOD_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      input: {
+        prompt: "A golden retriever runs along a sunny beach as waves crash behind it",
+        duration: 5,
+        resolution: "720p",
+        aspect_ratio: "16:9",
+        generate_audio: true,
+        seed: -1,
+      },
+    }),
+  }
+);
+
+const result = await response.json();
+console.log(result.output.video_url);
+```
+
+## Response
+
+**id (type: string)**
+
+Unique identifier for the request.
+
+**status (type: string)**
+
+Request status. Returns `COMPLETED` on success, `FAILED` on error.
+
+**output (type: object)**
+
+The generation result containing the video URL and cost.
+
+**output.video\_url (type: string)**
+
+URL of the generated video. This URL expires after 7 days.
+
+**output.cost (type: float)**
+
+Cost of the generation in USD.
+
+```json 200
+{
+  "id": "sync-a1b2c3d4-e5f6-7890-abcd-ef1234567890-u1",
+  "status": "COMPLETED",
+  "delayTime": 25,
+  "executionTime": 98765,
+  "output": {
+    "video_url": "https://video.runpod.ai/abc123/output.mp4",
+    "cost": 1.8
+  }
+}
+```
+
+> **Warning**
+>
+> Video URLs expire after 7 days. Download and store generated videos immediately if you need to keep them.
+
+## Cost calculation
+
+Seedance 2.5 Text-to-Video charges per second of output video, based on resolution:
+
+| Resolution | Cost per second |
+| ---------- | --------------- |
+| 480p       | $0.18           |
+| 720p       | $0.36           |
+| 1080p      | $0.90           |
+| 4K         | $1.80           |
+
+Example: A 5-second 720p video costs $1.80.

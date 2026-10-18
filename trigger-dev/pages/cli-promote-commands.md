@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-promote-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-promote-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-promote-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-promote-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-promote-commands
 
 # CLI promote command
@@ -8,26 +8,44 @@ Use the promote command to promote a previously deployed version to the current 
 Run the command like this:
 
 ```bash npm
-npx trigger.dev@latest promote [version]
+npx trigger.dev@latest promote <version>
 ```
 
 ```bash pnpm
-pnpm dlx trigger.dev@latest promote [version]
+pnpm dlx trigger.dev@latest promote <version>
 ```
 
 ```bash yarn
-yarn dlx trigger.dev@latest promote [version]
+yarn dlx trigger.dev@latest promote <version>
 ```
 
 ## Arguments
 
 ```
-npx trigger.dev@latest promote [version]
+npx trigger.dev@latest promote <version>
 ```
 
-**Property (type: \[version])**
+**Property (type: \<version>)**
 
-The version to promote. This is the version that was previously deployed.
+The version to promote, e.g. `20250208.1`.
+
+## Options
+
+**Property (type: -c, --config \<config file>)**
+
+The name of the config file.
+
+**Property (type: -e, --env \<env>)**
+
+The environment to promote in: `prod`, `staging` or `preview`. Defaults to `prod`.
+
+**Property (type: -b, --branch \<branch>)**
+
+The preview branch when `--env` is `preview`. If omitted, it's read from `TRIGGER_PREVIEW_BRANCH`, then `VERCEL_GIT_COMMIT_REF`, then your git branch.
+
+**Property (type: -p, --project-ref \<project ref>)**
+
+The project ref. Required if there is no config file. Overrides the project in the config file.
 
 ### Common options
 
@@ -35,7 +53,7 @@ These options are available on most commands.
 
 **Property (type: --profile)**
 
-The login profile to use. Defaults to "default".
+The login profile to use. Defaults to the current profile, which is set by your last `login` or `switch` (initially "default").
 
 **Property (type: --api-url | -a)**
 

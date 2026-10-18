@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/cli/env.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/cli/env.mdx)
+> Pinned source for Runpod main: [flash/cli/env.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/cli/env.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/env
 
 # env
 
 Create, inspect, list, and delete isolated Flash deployment environments for development, staging, and production applications.
+
+> **Warning**
+>
+> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
 
 Manage deployment environments for Flash applications. Environments are isolated deployment contexts (like `dev`, `staging`, `production`) within a Flash app.
 

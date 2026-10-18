@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/configuration/best-practices.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/configuration/best-practices.mdx)
+> Pinned source for Runpod main: [flash/configuration/best-practices.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/configuration/best-practices.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/best-practices
 
 # Configuration best practices
 
 Recommended configurations for production, development, and cost optimization. Review configuration and usage details for Runpod Flash.
+
+> **Warning**
+>
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 This guide provides best practices for configuring Flash endpoints based on your use case. Recommendations are organized by workload type and optimization goal.
 
@@ -14,7 +18,7 @@ Here are some best practices for production deployments requiring reliability an
 ### General recommendations
 
 - **Pin specific GPU types** instead of using `GpuGroup.ANY` for predictable performance and costs.
-- **Use network volumes** for large models to avoid downloading on each worker startup.
+- **Use network volumes** for large models to avoid downloading on each worker startup. Wrap the model load in [`VolumeCache`](https://docs.runpod.io/flash/configuration/storage#load-large-models-from-local-disk) so workers load the weights from local disk instead of reading them over the network mount.
 - **Set appropriate `execution_timeout_ms`** to prevent runaway jobs and control costs.
 - **Use environment variables** for configuration and secrets, not hardcoded values.
 
@@ -107,7 +111,7 @@ Here are some best practices for minimizing costs on infrequent or batch workloa
 
 ### General recommendations
 
-- **Set `workers=(0, n)`** to scale to zero when idle (no usage = no cost).
+- **Set `workers=(0, n)`** to scale to zero when there are no requests (no running workers = no compute cost).
 - **Use smaller GPU types** when workload allows (e.g., `GpuType.NVIDIA_GEFORCE_RTX_4090` instead of `GpuType.NVIDIA_A100_80GB_PCIe`).
 - **Use CPU endpoints** when GPU acceleration isn't needed.
 - **Reduce `idle_timeout`** for sporadic workloads (300-600 seconds / 5-10 minutes).

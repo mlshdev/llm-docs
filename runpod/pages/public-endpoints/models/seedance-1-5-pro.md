@@ -1,9 +1,15 @@
-> Pinned source for Runpod main: [public-endpoints/models/seedance-1-5-pro.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/public-endpoints/models/seedance-1-5-pro.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/seedance-1-5-pro.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/public-endpoints/models/seedance-1-5-pro.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/seedance-1-5-pro
 
 # Seedance 1.5 Pro I2V
 
 Cinematic image-to-video with expressive motion and stable aesthetics. Explore this model's inputs and outputs on Runpod Public Endpoints.
+
+> **Warning**
+>
+> **Seedance 1.5 Pro I2V is deprecated and will be retired soon.**
+>
+> Seedance 2.5 replaces it as the latest Seedance model on Runpod. Migrate to [Seedance 2.5 Image-to-Video](https://docs.runpod.io/public-endpoints/models/seedance-2-5-i2v) before 1.5 Pro is retired.
 
 Seedance 1.5 Pro I2V generates cinematic, live-action-leaning clips from a text prompt. It preserves the image's subject and composition while adding expressive motion and stable aesthetics.
 

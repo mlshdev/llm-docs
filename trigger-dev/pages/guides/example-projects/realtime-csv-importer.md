@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/example-projects/realtime-csv-importer.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/example-projects/realtime-csv-importer.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/example-projects/realtime-csv-importer.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/example-projects/realtime-csv-importer.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/example-projects/realtime-csv-importer
 
 # Next.js Realtime CSV Importer
@@ -26,7 +26,7 @@ The frontend is a Next.js app that allows users to upload a CSV file, which is t
 
 - View the Trigger.dev task code in the [src/trigger/csv.ts](https://github.com/triggerdotdev/examples/blob/main/realtime-csv-importer/src/trigger/csv.ts) file.
 - The parent task `csvValidator` downloads the CSV file, parses it, and then splits the rows into multiple batches. It then does a `batch.triggerAndWait` to distribute the work the `handleCSVRow` task.
-- The `handleCSVRow` task "simulates" checking the row for a valid email address and then updates the progress of the parent task using `metadata.parent`. See the [Trigger.dev docs](https://trigger.dev/docs/runs/metadata#parent-and-root-updates) for more information on how to use the `metadata.parent` object.
+- The `handleCSVRow` task "simulates" checking the row for a valid email address and then updates the progress of the parent task using `metadata.parent`. See the [Trigger.dev docs](https://trigger.dev/docs/runs/metadata#parent-&-root-updates) for more information on how to use the `metadata.parent` object.
 - The `useRealtimeCSVValidator` hook in the [src/hooks/useRealtimeCSVValidator.ts](https://github.com/triggerdotdev/examples/blob/main/realtime-csv-importer/src/hooks/useRealtimeCSVValidator.ts) file handles the call to `useRealtimeRun` to get the progress of the parent task.
 - The `CSVProcessor` component in the [src/components/CSVProcessor.tsx](https://github.com/triggerdotdev/examples/blob/main/realtime-csv-importer/src/components/CSVProcessor.tsx) file handles the file upload and displays the progress bar, and uses the `useRealtimeCSVValidator` hook to get the progress updates.
 

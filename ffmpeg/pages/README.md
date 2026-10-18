@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [README.md](https://github.com/FFmpeg/FFmpeg/blob/0eeb79fcc5b2761e8fdd3d0cfc5e5ba0e786645a/README.md)
+> Pinned source for FFmpeg master: [README.md](https://github.com/FFmpeg/FFmpeg/blob/94cba3150c6b83057ed48b833689adc806715cc0/README.md)
 
 # FFmpeg README
 
@@ -42,6 +42,6 @@ GPL. Please refer to the LICENSE file for detailed information.
 
 ## Contributing
 
-Patches should be submitted to the ffmpeg-devel mailing list using
-`git format-patch` or `git send-email`. Github pull requests should be
-avoided because they are not part of our review process and will be ignored.
+Patches should be submitted to [Forgejo](https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls) or the [ffmpeg-devel mailing list](https://lists.ffmpeg.org/mailman3/lists/ffmpeg-devel.ffmpeg.org/) using `git format-patch` or `git send-email`. Github pull requests should be avoided because they are not part of our review process and **will be ignored**.
+
+See <https://ffmpeg.org/developer.html> for more information.

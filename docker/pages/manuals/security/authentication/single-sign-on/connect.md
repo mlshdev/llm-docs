@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/connect.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/authentication/single-sign-on/connect.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/connect.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/authentication/single-sign-on/connect.md)
 
 # Set up single sign-on
 
@@ -95,15 +95,29 @@ hours. Docker automatically checks for the record during this time.
 
 1. From [app.docker.com](https://app.docker.com), choose your organization.
 2. Select **Identity & auth**, then **SSO and SCIM**.
-3. Select **Create Connection**. Name the connection, then choose **SAML 2.0**.
-4. Keep this window open. You need to copy and paste these values in your IdP
-   window:
-   - **Entity ID**
-   - **ACS URL**
-   - **Connection ID**
+3. Select **Create Connection** and name the connection.
 
-You will return here to finish connecting after creating an SSO connection in
-your IdP.
+The dialog offers two connection types. Select the type that matches the
+identity provider tab you use in the next step.
+
+**SAML 2.0**
+
+Use this type for the Okta SAML and Entra ID SAML 2.0 tabs.
+
+1. Select **SAML 2.0**.
+2. Copy **Entity ID**, **ACS URL**, and **Connection ID**. For SAML
+   configuration, paste these values into your identity provider.
+
+**Azure AD (OIDC)**
+
+Use this type for the Azure OpenID Connect (OIDC) tab.
+
+1. Select **Azure AD (OIDC)**.
+2. Copy **Redirect URI**. For Azure AD configuration, paste the Redirect
+   URI, also called the **Reply URL**, into your identity provider.
+
+Keep this window open. You will return here to finish connecting after
+creating an SSO connection in your IdP.
 
 ### Step 4: Create an SSO connection in your IdP
 
@@ -167,13 +181,25 @@ permissions.
 3. Name the application "Docker".
 4. Set account types and paste the **Redirect URI** from Docker.
 5. Select **Register**.
-6. Copy the **Client ID**.
+6. On the app registration **Overview** page, copy **Application (client)
+   ID**. This value is the Docker **Client ID**.
 
 #### Create client secrets
 
 1. In your app, go to **Certificates & secrets**.
 2. Select **New client secret**, describe and configure duration, then **Add**.
-3. Copy the **value** of the new secret.
+3. Copy the secret **Value**, not the **Secret ID**. The **Value** is the
+   Docker **Client Secret**.
+
+   **Value** is the secret string Entra generated. Docker uses it when someone
+   signs in with this connection. Entra shows the **Value** on this screen
+   only. If you leave the page or refresh it, the column is blank. Create a
+   new secret and copy its **Value** before you leave.
+
+   **Secret ID** is the identifier for that row. It stays visible so you can
+   tell two secrets apart, see which secret is about to expire, or delete a
+   specific one. Entra does not accept the **Secret ID** as the **Client
+   Secret**.
 
 #### Set API permissions
 
@@ -220,8 +246,8 @@ Complete the integration by pasting your IdP values into Docker.
 
 1. Return to Docker Home.
 2. Paste the following values:
-   - **Client ID**
-   - **Client Secret**
+   - **Client ID**: the **Application (client) ID** you copied
+   - **Client Secret**: the secret **Value** you copied
    - **Azure AD Domain**
 3. Optional. Select a default team, if required by your org.
 4. Review and select **Create connection**.

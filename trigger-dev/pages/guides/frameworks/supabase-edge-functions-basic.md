@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/frameworks/supabase-edge-functions-basic.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/frameworks/supabase-edge-functions-basic.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/frameworks/supabase-edge-functions-basic.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/frameworks/supabase-edge-functions-basic.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-basic
 
 # Triggering tasks from Supabase edge functions
@@ -88,7 +88,7 @@ This guide shows you how to set up and deploy a simple Supabase edge function ex
    >
    > Our [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) gives your AI assistant direct access to Trigger.dev tools; search docs, trigger tasks, deploy projects, and monitor runs. We recommend installing it for the best developer experience.
 
-   1. Ask if you want to install the [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) for your AI assistant.
+   1. Ask if you want to set up AI tooling: the [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) and/or Trigger.dev agent skills (shown the first time you run init). If you choose either, you can let your AI assistant finish the setup instead of the CLI.
    2. Log you into the CLI if you're not already logged in.
    3. Ask you to select your project.
    4. Install the required SDK packages.
@@ -119,15 +119,15 @@ This guide shows you how to set up and deploy a simple Supabase edge function ex
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/test-dashboard.png)
 
 1. Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/terminal-completed-run.png)
 
 ## Create a new Supabase edge function and deploy it
 
@@ -213,7 +213,7 @@ Then, in [Supabase](https://supabase.com/dashboard/projects), select your projec
 
 Add `TRIGGER_SECRET_KEY`  with the environment API key you created.
 
-![Add secret key in Supabase](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/supabase-keys-1.png)
+![Add secret key in Supabase](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/supabase-keys-1.png)
 
 ## Deploy your task and trigger it from your edge function
 
@@ -246,7 +246,7 @@ Add `TRIGGER_SECRET_KEY`  with the environment API key you created.
 
    Once loaded you should see ‘OK’ on the new screen.
 
-   ![Edge function URL](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/supabase-function-url.png)
+   ![Edge function URL](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/supabase-function-url.png)
 
    The task will be triggered when your edge function URL is accessed.
 

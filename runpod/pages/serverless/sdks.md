@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/sdks.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/serverless/sdks.mdx)
+> Pinned source for Runpod main: [serverless/sdks.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/sdks.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/sdks
 
 # Install the Runpod Serverless SDK
@@ -7,7 +7,7 @@ Install and configure the Serverless SDK for Python, JavaScript, or Go to intera
 
 ## Python
 
-The Python SDK requires Python 3.10 or higher.
+The Python SDK requires Python 3.10 or higher. The same `runpod` package also includes the app SDK (formerly Flash) and the `rp` CLI. See the [Runpod SDK overview](https://docs.runpod.io/sdk/overview) for everything the package can do.
 
 ### Install
 

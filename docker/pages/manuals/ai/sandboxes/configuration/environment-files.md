@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/ai/sandboxes/configuration/environment-files.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/ai/sandboxes/configuration/environment-files.md)
 
 A sandbox environment file captures the setup for a local or cloud sandbox in a
 `sbxenv.yaml` file. Share the file with project contributors so they use the
@@ -44,6 +44,10 @@ ports:
   - sandbox: 3000
     host: 3000
 ```
+
+> \[!NOTE]
+> This example uses kits v2, the format used by built-in agents. For v3, see
+> [Add v3 kits](#add-v3-kits).
 
 From `web-app-env`, run the environment:
 
@@ -264,6 +268,36 @@ second time.
 
 The following examples combine environment file fields into configurations you
 can adapt for a project.
+
+### Add v3 kits
+
+To add v3 mixins, include a v3 workload in `kits` and set `agent` to the
+workload's name.
+
+For example, save this as `web-app-env/v3.sbxenv.yaml` to use a v3 Claude Code
+workload with the v3 Playwright mixin:
+
+```yaml
+schemaVersion: "1"
+name: web-app-v3
+agent: sbx-kit-claude
+workspace: ./web-app
+
+kits:
+  - docker.io/docker/sbx-kit-claude:2.1.267
+  - docker.io/sbx/playwright:1.61.1
+```
+
+From `web-app-env`, run:
+
+```console
+$ sbx env run v3.sbxenv.yaml
+```
+
+The `agent` value, `sbx-kit-claude`, matches the last component of the
+workload's repository name. The `web-app-v3` name creates a separate sandbox.
+For other agents, see the
+[published v3 workloads](https://docs.docker.com/ai/sandboxes/customize/use-kits/#published-v3-workloads).
 
 ### Combine team defaults and personal settings
 
@@ -584,10 +618,8 @@ true`.
 `kits` accepts local directories, ZIP archives, OCI registry references, and
 Git URLs prefixed with `git+https://` or `git+ssh://`. Kits can install tools,
 configure the sandbox, and give the agent project-specific instructions.
-The examples on this page pair built-in agents with v2 mixins. See
-[Kits v2](https://docs.docker.com/ai/sandboxes/customize/kits-v2/) for that format, or
-[Version compatibility](https://docs.docker.com/ai/sandboxes/customize/#version-compatibility)
-when selecting v3 kits.
+Built-in agents use v2 mixins. For v3 workloads and mixins, see
+[Add v3 kits](#add-v3-kits).
 
 An environment file selects kits and configures a sandbox's host resources.
 A kit descriptor defines the package itself. The environment file's

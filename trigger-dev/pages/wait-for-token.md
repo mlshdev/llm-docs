@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/wait-for-token.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/wait-for-token.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/wait-for-token.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/wait-for-token.mdx)
 > Canonical documentation: https://trigger.dev/docs/wait-for-token
 
 # Wait for token
@@ -132,7 +132,7 @@ The `createToken` function accepts an object with the following properties:
 
 **Property (type: string)**
 
-The maximum amount of time to wait for the token to be completed. Defaults to "10m".
+The maximum amount of time to wait for the token to be completed. If omitted, the token has no timeout. Accepts a duration string like `"30s"` or `"4w"`, or a `Date`.
 
 **Property (type: string)**
 
@@ -141,7 +141,7 @@ if the same idempotency key is used again.
 
 **Property (type: string)**
 
-The time to live for the idempotency key. Defaults to "1h".
+The time to live for the idempotency key. If omitted, the key does not expire.
 
 **Property (type: string\[])**
 
@@ -372,7 +372,7 @@ Tags to filter by.
 
 **Property (type: string)**
 
-The period to filter by. Can be one of: `1h`, `1d`, `7d`, `30d`.
+The period to filter by, as a duration string such as `1h`, `1d`, `7d` or `30d`.
 
 **Property (type: Date | number)**
 

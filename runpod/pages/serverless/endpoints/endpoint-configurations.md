@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/serverless/endpoints/endpoint-configurations.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/endpoints/endpoint-configurations.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/endpoint-configurations
 
 # Endpoint settings
@@ -13,15 +13,15 @@ This guide details the configuration options available for Runpod Serverless end
 
 ## Quick reference
 
-| Setting               | Default       | Description                                |
-| --------------------- | ------------- | ------------------------------------------ |
-| **Active workers**    | 0             | Always-on workers (eliminates cold starts) |
-| **Max workers**       | 3             | Maximum concurrent workers                 |
-| **GPUs per worker**   | 1             | GPU count per worker instance              |
-| **Idle timeout**      | 5s            | Time before idle worker shuts down         |
-| **Execution timeout** | 600s (10 min) | Max job duration                           |
-| **Job TTL**           | 24h           | Total job lifespan in system               |
-| **FlashBoot**         | Enabled       | Faster cold starts via state retention     |
+| Setting               | Default       | Description                                                           |
+| --------------------- | ------------- | --------------------------------------------------------------------- |
+| **Active workers**    | 0             | Always-on workers (eliminates cold starts)                            |
+| **Max workers**       | 3             | Maximum concurrent workers                                            |
+| **GPUs per worker**   | 1             | GPU count per worker instance                                         |
+| **Idle timeout**      | 5s            | How long a running worker waits for a new request before scaling down |
+| **Execution timeout** | 600s (10 min) | Max job duration                                                      |
+| **Job TTL**           | 24h           | Total job lifespan in system                                          |
+| **FlashBoot**         | Enabled       | Faster cold starts via state retention                                |
 
 ## General configuration
 
@@ -64,7 +64,7 @@ For endpoints with fewer than five workers, all workers use the highest-priority
 
 ### Active workers
 
-Minimum number of workers that remain warm and ready at all times. Setting this to 1+ eliminates cold starts. Active workers incur charges continuously, including when idle.
+Minimum number of workers that remain warm and ready at all times. Setting this to 1+ eliminates cold starts. Active workers incur charges continuously, including when they have no jobs.
 
 ### Max workers
 
@@ -84,7 +84,9 @@ Number of GPUs assigned to each worker instance. Default is 1. Generally priorit
 
 ### Idle timeout
 
-How long a worker stays active after completing a request before shutting down. You're billed during idle time, but the worker remains warm for immediate processing. Default: 5 seconds.
+How long a worker keeps running after its last job, waiting for a new request, before it scales down. The worker is billed while it waits, and a request that arrives in this window starts immediately with no cold start. Default: 5 seconds.
+
+The console shows a waiting worker as **Running**. **Idle** in the console means a worker that has already scaled down and is not billed. See [worker lifecycle](https://docs.runpod.io/serverless/workers/overview#worker-lifecycle).
 
 ### Idle endpoint scale-down
 

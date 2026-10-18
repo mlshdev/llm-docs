@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-pod.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/runpodctl/reference/runpodctl-pod.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-pod.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/runpodctl/reference/runpodctl-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-pod
 
 # pod
@@ -15,7 +15,7 @@ runpodctl <subcommand> pod [flags]
 
 ### List Pods
 
-List your Pods. By default, this command shows only running Pods (similar to `docker ps`):
+List your Pods. By default, this command shows only running Pods and Pods in an error state (similar to `docker ps`). Pods in an error state are included because they still exist and may still incur charges:
 
 ```bash
 runpodctl pod list
@@ -50,11 +50,11 @@ runpodctl pod list --created-after 2025-01-15
 
 **--all, -a (type: bool)**
 
-Show all Pods including exited ones. By default, only running Pods are shown.
+Show all Pods including exited ones. By default, only running Pods and Pods in an error state are shown.
 
 **--status (type: string)**
 
-Filter by Pod status (e.g., `RUNNING`, `EXITED`). Cannot be used with `--all`.
+Filter by desired status (`desiredStatus`), such as `RUNNING` or `EXITED`. Matching is case-insensitive. Does not accept `runtimeStatus` values like `initializing`; passing one returns no results. Cannot be used with `--all`.
 
 **--since (type: string)**
 
@@ -79,6 +79,16 @@ Get detailed information about a specific Pod, including SSH connection info:
 ```bash
 runpodctl pod get <pod-id>
 ```
+
+#### Get flags
+
+**--include-machine (type: bool)**
+
+Include the Pod's placement: its datacenter ID (`dataCenterId`) and whether it runs on Secure Cloud (`secureCloud`).
+
+**--include-network-volume (type: bool)**
+
+Include details of the attached network volume.
 
 ### Create a Pod
 
@@ -112,11 +122,11 @@ Docker image to use (e.g., `runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-u
 
 **--name (type: string)**
 
-Custom name for the Pod.
+Custom name for the Pod. If you don't set one, the Pod is named after its image without the tag (for example, `runpod/pytorch`). A Pod created from a template without `--image` is named after the template ID.
 
 **--gpu-id (type: string)**
 
-GPU type (e.g., `NVIDIA GeForce RTX 4090`, `NVIDIA A100 80GB PCIe`). Use [`runpodctl gpu list`](https://docs.runpod.io/runpodctl/reference/runpodctl-gpu) to see available GPUs.
+GPU type (e.g., `NVIDIA GeForce RTX 4090`, `NVIDIA A100 80GB PCIe`). Required for GPU Pods, and not supported for CPU Pods. Use [`runpodctl gpu list`](https://docs.runpod.io/runpodctl/reference/runpodctl-gpu) to see available GPUs.
 
 **--gpu-count (type: int)**
 
@@ -132,7 +142,7 @@ Container disk size in GB.
 
 **--volume-in-gb (type: int)**
 
-Persistent volume size in GB.
+Persistent volume size in GB. CPU Pods can't have a persistent volume. You also can't combine this flag with `--network-volume-id` because a network volume takes the place of the persistent volume.
 
 **--volume-mount-path (type: string)**
 
@@ -148,7 +158,7 @@ Environment variables as a JSON object (e.g., `'{"KEY":"value"}'`).
 
 **--cloud-type (type: string)**
 
-Cloud tier (`SECURE` or `COMMUNITY`).
+Cloud tier (`SECURE` or `COMMUNITY`). Community Cloud Pods aren't guaranteed a public IP address, so their SSH port may not be publicly reachable. Use Secure Cloud if you need SSH access.
 
 **--data-center-ids (type: string)**
 
@@ -157,10 +167,6 @@ Comma-separated list of preferred datacenter IDs. Use [`runpodctl datacenter lis
 **--global-networking (type: bool)**
 
 Enable global networking (Secure Cloud only).
-
-**--public-ip (type: bool)**
-
-Require public IP (Community Cloud only).
 
 **--ssh (type: bool)**
 
@@ -184,11 +190,11 @@ Container registry authentication ID for pulling private images. Use [`runpodctl
 
 **--country-code (type: string)**
 
-Country code for regional deployment (e.g., `US`, `CA`, `EU`). Restricts Pod placement to machines in the specified region.
+Country code that restricts Pod placement to datacenters in that country (e.g., `US`, `DE`). Supported only for GPU Pods on Secure Cloud. For CPU Pods, use `--data-center-ids` instead.
 
 **--compliance (type: string)**
 
-Compliance settings for the Pod (e.g., regulatory requirements for data handling).
+Comma-separated list of compliance certifications the datacenter must hold (e.g., `HIPAA,SOC_2_TYPE_2`). Supported only on Secure Cloud.
 
 ### Start a Pod
 
@@ -212,14 +218,6 @@ Restart a Pod:
 
 ```bash
 runpodctl pod restart <pod-id>
-```
-
-### Reset a Pod
-
-Reset a Pod to its initial state:
-
-```bash
-runpodctl pod reset <pod-id>
 ```
 
 ### Update a Pod
@@ -267,6 +265,73 @@ Delete a Pod:
 ```bash
 runpodctl pod delete <pod-id>
 ```
+
+## Pod runtime status
+
+`runpodctl pod get` and `runpodctl pod list` report a Pod's real runtime state in their JSON and YAML output, alongside the existing `desiredStatus`. `desiredStatus` is the state you asked for (for example, `RUNNING`), while `runtimeStatus` is what the Pod is actually doing. For example, a Pod still pulling a large image and a Pod that has been serving traffic for an hour both show `desiredStatus: RUNNING`, but their `runtimeStatus` values differ.
+
+**runtimeStatus (type: string)**
+
+Always present. What the Pod is actually doing (see the table below).
+
+**runtimeStatusReason (type: string)**
+
+Present only when there is more to say. A stable token you can safely branch on in scripts.
+
+For example, `runpodctl pod list --output json` returns entries like this for a running Pod:
+
+```json
+{
+  "id": "abc123xyz",
+  "name": "my-training-pod",
+  "desiredStatus": "RUNNING",
+  "runtimeStatus": "running",
+  "imageName": "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04",
+  "gpuCount": 1,
+  "costPerHr": 0.69,
+  "createdAt": "2025-01-15T09:30:00Z",
+  "uptimeSeconds": 3600
+}
+```
+
+When a Pod is initializing, `runtimeStatus` is `initializing`, `runtimeStatusReason` is `awaiting_container`, and `uptimeSeconds` is omitted because no container is reporting yet.
+
+### Runtime status values
+
+| Value          | Meaning                                                                                                                                                                                                                                                                | What to do                                                                                                                                                                                                             |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `running`      | desiredStatus is `RUNNING` and the platform is reporting runtime telemetry, so the container is up. Does not imply that any port (such as SSH) is reachable.                                                                                                           | Ready to use.                                                                                                                                                                                                          |
+| `initializing` | desiredStatus is `RUNNING` but no telemetry is being reported yet. Usually the container is not up yet (image pull, container creation, or boot, which the platform does not distinguish). Read this as "no container reported," not "the container is provably down." | Keep polling.                                                                                                                                                                                                          |
+| `stopped`      | desiredStatus is `EXITED`. The container is gone, but the Pod's disk is kept.                                                                                                                                                                                          | Run `runpodctl pod start <pod-id>` to bring it back.                                                                                                                                                                   |
+| `terminated`   | desiredStatus is `TERMINATED`: the Pod is being destroyed. A terminated Pod drops out of `runpodctl pod list` shortly after, so this is a narrow window.                                                                                                               | None; the Pod is gone. Because a terminated Pod quickly drops out of `runpodctl pod list`, a teardown script should treat "Pod not found" (not `runtimeStatus: terminated`) as the reliable signal that a Pod is gone. |
+| `error`        | desiredStatus is `ERROR`: the Pod is in a state it won't recover from on its own. It still exists and may still incur charges, so the default `runpodctl pod list` keeps showing it. No SSH command is offered.                                                        | Check `runpodctl pod logs <pod-id>`, then delete or recreate the Pod.                                                                                                                                                  |
+| `unknown`      | The runtime state cannot be derived (an uncommon `desiredStatus`, or the runtime lookup wasn't made).                                                                                                                                                                  | Read `desiredStatus` from the same output.                                                                                                                                                                             |
+
+### Runtime status reasons
+
+| Token                 | Paired status  | Meaning                                                                                     |
+| --------------------- | -------------- | ------------------------------------------------------------------------------------------- |
+| `awaiting_container`  | `initializing` | No container is being reported yet for a Pod that should be running.                        |
+| `runtime_unavailable` | `unknown`      | The runtime lookup could not be made, so `running` and `initializing` cannot be told apart. |
+
+The API doesn't record why a Pod stopped in a machine-readable form, so `stopped`, `terminated`, and `error` have no reason token.
+
+> **Tip**
+>
+> To poll a Pod to readiness in a script, wait for `runtimeStatus: running`. Branch on the `runtimeStatus` and `runtimeStatusReason` tokens in scripts. If `runtimeStatus` becomes `error`, stop polling, because the Pod won't recover on its own.
+>
+> ```bash
+> # Wait until the Pod's container is up
+> until [ "$(runpodctl pod get <pod-id> --output json | jq -r '.runtimeStatus')" = "running" ]; do
+>   sleep 5
+> done
+> ```
+>
+> A `runtimeStatus` of `unknown` with reason `runtime_unavailable` during polling usually means the runtime lookup momentarily failed, not that the Pod is down—keep polling rather than treating it as terminal.
+
+`runtimeStatus` and `desiredStatus` come from the same API read, so they always agree on the Pod's state.
+
+The `uptimeSeconds` field reports the container's uptime and is omitted when no container is reporting.
 
 ## Pod URLs
 

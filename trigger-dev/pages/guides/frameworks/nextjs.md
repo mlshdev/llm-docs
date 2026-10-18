@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/frameworks/nextjs.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/frameworks/nextjs.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/frameworks/nextjs.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/frameworks/nextjs.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/nextjs
 
 # Next.js setup guide
@@ -40,7 +40,7 @@ This guide will show you how to setup Trigger.dev in your existing Next.js proje
    >
    > Our [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) gives your AI assistant direct access to Trigger.dev tools; search docs, trigger tasks, deploy projects, and monitor runs. We recommend installing it for the best developer experience.
 
-   1. Ask if you want to install the [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) for your AI assistant.
+   1. Ask if you want to set up AI tooling: the [Trigger.dev MCP server](https://trigger.dev/docs/mcp-introduction) and/or Trigger.dev agent skills (shown the first time you run init). If you choose either, you can let your AI assistant finish the setup instead of the CLI.
    2. Log you into the CLI if you're not already logged in.
    3. Ask you to select your project.
    4. Install the required SDK packages.
@@ -71,15 +71,15 @@ This guide will show you how to setup Trigger.dev in your existing Next.js proje
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/test-dashboard.png)
 
 1) Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/terminal-completed-run.png)
 
 > **Tip**
 >
@@ -169,7 +169,7 @@ Here are the steps to trigger your task in the Next.js App and Pages router and 
 
    You should see the CLI log the task run with a link to view the logs in the dashboard.
 
-   ![Trigger.dev CLI showing a successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/trigger-cli-run-success.png)
+   ![Trigger.dev CLI showing a successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/trigger-cli-run-success.png)
 
    Visit the [Trigger.dev dashboard](https://cloud.trigger.dev) to see your run.
 
@@ -254,7 +254,7 @@ Here are the steps to trigger your task in the Next.js App and Pages router and 
 
    Then click the button we created in your app to trigger the task. You should see the CLI log the task run with a link to view the logs.
 
-   ![Trigger.dev CLI showing a successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/trigger-cli-run-success.png)
+   ![Trigger.dev CLI showing a successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/trigger-cli-run-success.png)
 
    Visit the [Trigger.dev dashboard](https://cloud.trigger.dev) to see your run.
 
@@ -314,7 +314,7 @@ Here are the steps to trigger your task in the Next.js App and Pages router and 
 
    You should see the CLI log the task run with a link to view the logs in the dashboard.
 
-   ![Trigger.dev CLI showing a successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/trigger-cli-run-success.png)
+   ![Trigger.dev CLI showing a successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/trigger-cli-run-success.png)
 
    Visit the [Trigger.dev dashboard](https://cloud.trigger.dev) to see your run.
 
@@ -353,11 +353,11 @@ export default defineConfig({
 
 If you have any environment variables in your tasks, be sure to add them in the dashboard so deployed code runs successfully. In Node.js, these environment variables are accessed in your code using `process.env.MY_ENV_VAR`.
 
-In the sidebar select the "Environment Variables" page, then press the "New environment variable"
-button. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/environment-variables-page.jpg)
+In the sidebar select the "Environment Variables" page, then press the "Add new"
+button. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/environment-variables-page.jpg)
 
 You can add values for your local dev environment, staging and prod. ![Environment variables
-page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/environment-variables-panel.jpg)
+page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/environment-variables-panel.jpg)
 
 You can also add environment variables in code by following the steps on the [Environment Variables page](https://trigger.dev/docs/deploy-environment-variables#in-your-code).
 
@@ -381,7 +381,7 @@ yarn dlx trigger.dev@latest deploy
 
 Use GitHub Actions to automatically deploy your tasks whenever new code is pushed and when the `trigger` directory has changes in it. Follow [this guide](https://trigger.dev/docs/github-actions) to set up GitHub Actions.
 
-We're working on adding an official [Vercel integration](https://trigger.dev/docs/vercel-integration) which you can follow the progress of [here](https://feedback.trigger.dev/p/vercel-integration-3).
+Use the official [Vercel integration](https://trigger.dev/docs/vercel-integration) to deploy your tasks automatically.
 
 ## Troubleshooting & extra resources
 

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md)
 
 # Traefik & Consul Catalog
 
@@ -178,7 +178,7 @@ providers:
 # ...
 ```
 
-For additional information, refer to [Restrict the Scope of Service Discovery](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#exposedbydefault-and-traefikenable).
+For additional information, refer to [Restrict the Scope of Service Discovery](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery).
 
 ### `namespaces`
 

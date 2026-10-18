@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/realtime/run-object.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/realtime/run-object.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/realtime/run-object.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/realtime/run-object.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/run-object
 
 # The run object
@@ -37,30 +37,25 @@ Timestamp when the run was created.
 
 Timestamp when the run was last updated.
 
-**Property (type: number; required)**
-
-Sequential number assigned to the run.
-
 **Property (type: RunStatus; required)**
 
 Current status of the run.
 
-| Status               | Description                                                                                               |
-| -------------------- | --------------------------------------------------------------------------------------------------------- |
-| `WAITING_FOR_DEPLOY` | Task hasn't been deployed yet but is waiting to be executed                                               |
-| `QUEUED`             | Run is waiting to be executed by a worker                                                                 |
-| `EXECUTING`          | Run is currently being executed by a worker                                                               |
-| `REATTEMPTING`       | Run has failed and is waiting to be retried                                                               |
-| `FROZEN`             | Run has been paused by the system, and will be resumed by the system                                      |
-| `COMPLETED`          | Run has been completed successfully                                                                       |
-| `CANCELED`           | Run has been canceled by the user                                                                         |
-| `FAILED`             | Run has been completed with errors                                                                        |
-| `CRASHED`            | Run has crashed and won't be retried, most likely the worker ran out of resources, e.g. memory or storage |
-| `INTERRUPTED`        | Run was interrupted during execution, mostly this happens in development environments                     |
-| `SYSTEM_FAILURE`     | Run has failed to complete, due to an error in the system                                                 |
-| `DELAYED`            | Run has been scheduled to run at a specific time                                                          |
-| `EXPIRED`            | Run has expired and won't be executed                                                                     |
-| `TIMED_OUT`          | Run has reached it's maxDuration and has been stopped                                                     |
+| Status            | Description                                                                                               |
+| ----------------- | --------------------------------------------------------------------------------------------------------- |
+| `PENDING_VERSION` | Run is waiting for a version update because it cannot execute without additional information              |
+| `QUEUED`          | Run is waiting to be executed by a worker                                                                 |
+| `DEQUEUED`        | Run has been dequeued and is being sent to a worker to start executing                                    |
+| `EXECUTING`       | Run is currently being executed by a worker                                                               |
+| `WAITING`         | Run has been paused by the system, and will be resumed by the system                                      |
+| `COMPLETED`       | Run has been completed successfully                                                                       |
+| `CANCELED`        | Run has been canceled by the user                                                                         |
+| `FAILED`          | Run has been completed with errors                                                                        |
+| `CRASHED`         | Run has crashed and won't be retried, most likely the worker ran out of resources, e.g. memory or storage |
+| `SYSTEM_FAILURE`  | Run has failed to complete, due to an error in the system                                                 |
+| `DELAYED`         | Run has been scheduled to run at a specific time                                                          |
+| `EXPIRED`         | Run has expired and won't be executed                                                                     |
+| `TIMED_OUT`       | Run has reached it's maxDuration and has been stopped                                                     |
 
 **Property (type: number; required)**
 
@@ -85,10 +80,6 @@ Key used to ensure idempotent execution.
 **Property (type: Date)**
 
 Timestamp when the run expired.
-
-**Property (type: string)**
-
-Time-to-live duration for the run.
 
 **Property (type: Date)**
 
@@ -117,6 +108,38 @@ Error information if the run failed.
 **Property (type: boolean; required)**
 
 Indicates whether this is a test run.
+
+**Property (type: string\[]; required)**
+
+Names of the Realtime streams on the run.
+
+**Property (type: boolean; required)**
+
+`true` if the run is queued, delayed or waiting for a version update.
+
+**Property (type: boolean; required)**
+
+`true` if the run is dequeued or executing.
+
+**Property (type: boolean; required)**
+
+`true` if the run is waiting.
+
+**Property (type: boolean; required)**
+
+`true` if the run has finished, either successfully or with any failure status.
+
+**Property (type: boolean; required)**
+
+`true` if the run failed, crashed, hit a system failure, expired or timed out.
+
+**Property (type: boolean; required)**
+
+`true` if the run completed successfully.
+
+**Property (type: boolean; required)**
+
+`true` if the run was canceled.
 
 ## Type-safety
 

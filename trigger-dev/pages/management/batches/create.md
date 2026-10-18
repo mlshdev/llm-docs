@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/management/batches/create.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/management/batches/create.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/management/batches/create.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/management/batches/create.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/batches/create
 
 # Create batch
@@ -16,7 +16,9 @@ After creating a batch, stream items via POST /api/v3/batches/{batchId}/items.
 
 - Media type: `application/json`
   - Schema (object)
-    - `runCount` (required; integer; minimum: `1`): Expected number of items in the batch. Must be a positive integer.
+    - `runCount` (required; integer; minimum: `1`): Expected number of items in the batch. Must be a positive integer, up to the server's maximum batch size (1,000 by default; self-hosted instances can configure it). Requests above the maximum return a 400.
+    - `taskIdentifiers` (array; minimum items: `1`): Distinct task identifiers of the items in the batch. Used to authorize tokens scoped to specific tasks. If omitted, only credentials with broad task access are accepted.
+      - `items` (string)
     - `parentRunId` (string): Parent run ID (friendly ID) for batchTriggerAndWait.
     - `resumeParentOnCompletion` (boolean): Whether to resume parent on completion. Set to true for batchTriggerAndWait.
     - `idempotencyKey` (string): Idempotency key for the batch. If provided and a batch with this key already exists, the existing batch will be returned.
@@ -35,12 +37,12 @@ After creating a batch, stream items via POST /api/v3/batches/{batchId}/items.
 - `400`: Invalid request (e.g., runCount <= 0 or exceeds maximum)
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)
 - `401`: Unauthorized - API key is missing or invalid
 - `422`: Validation error
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)
 - `429`: Rate limit exceeded
   - Header `X-RateLimit-Limit` (integer): Maximum number of requests allowed
   - Header `X-RateLimit-Remaining` (integer): Number of requests remaining
@@ -48,8 +50,8 @@ After creating a batch, stream items via POST /api/v3/batches/{batchId}/items.
   - Header `Retry-After` (integer): Seconds to wait before retrying
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)
 - `500`: Internal server error
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)

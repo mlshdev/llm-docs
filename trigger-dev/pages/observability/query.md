@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/observability/query.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/observability/query.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/observability/query.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/observability/query.mdx)
 > Canonical documentation: https://trigger.dev/docs/observability/query
 
 # Query
@@ -10,6 +10,7 @@ Query allows you to write custom queries against your data using TRQL (Trigger.d
 - `runs`: contains all task run data including status, timing, costs, and task output. Run metadata (key-value set in your task) is not available on the Query page.
 - `metrics`: contains metrics data for your runs including CPU, memory, and your custom metrics
 - `llm_metrics`: contains LLM/AI metrics including token usage, costs, latency, and model performance data from GenAI spans
+- `llm_models`: anonymized cross-tenant model performance aggregates (calls, cost, latency, throughput per model per minute); it has no tenant-specific data
 
 ### `metrics` table columns
 
@@ -26,6 +27,9 @@ Query allows you to write custom queries against your data using TRQL (Trigger.d
 | `machine_name`     | string   | Machine preset (e.g., `small-1x`)                   |
 | `worker_version`   | string   | Worker version                                      |
 | `environment_type` | string   | `PRODUCTION`, `STAGING`, `DEVELOPMENT`, `PREVIEW`   |
+| `worker_id`        | string   | Worker ID that produced the metric                  |
+| `environment`      | string   | Environment slug                                    |
+| `project`          | string   | Project ref, starting with `proj_`                  |
 | `attributes`       | json     | Raw JSON attributes for custom data                 |
 
 See [Logging, tracing & metrics](https://trigger.dev/docs/logging#automatic-system-and-runtime-metrics) for the full list of automatically collected metrics and how to create custom metrics. You can visualize this data on [Dashboards](https://trigger.dev/docs/observability/dashboards).
@@ -70,7 +74,7 @@ ORDER BY timeBucket
 LIMIT 1000
 ```
 
-Available format types: `bytes`, `percent`, `duration`, `durationSeconds`, `quantity`, `costInDollars`.
+Available format types: `bytes`, `percent`, `duration`, `durationSeconds`, `quantity`, `costInDollars`, `decimalBytes`, `cost`.
 
 ## Using the Query dashboard
 
@@ -82,7 +86,7 @@ Navigate to the Query page to write and execute queries. The dashboard provides:
 - **Interactive help** - Built-in documentation for TRQL syntax and functions
 - **Export options** - Download results as JSON or CSV
 
-![The Query dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/query-chart-usage-percentiles.png)
+![The Query dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/query-chart-usage-percentiles.png)
 
 ## Querying from the SDK
 
@@ -604,7 +608,7 @@ LIMIT 100
 
 We have several limits to prevent abuse and ensure performance:
 
-- **Concurrency limit**: We limit the number of concurrent queries per organization.
+- **Concurrency limit**: We limit the number of concurrent queries per project.
 - **Row limit**: We limit the number of rows returned to 10k.
 - **Time restrictions**: We limit the time period you can query.
 - **Time/Memory limit**: We limit the memory a query can use and the time it can run for. As well as other limits like AST complexity.

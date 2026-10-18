@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/members.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/accounts/organization/manage/members.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/members.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/accounts/organization/manage/members.md)
 
 # Invite and manage organization members
 
-Learn how to invite and manage members for your organization in Docker Home.
+Invite and manage members for your organization in Docker Home.
 
 ## Invite members
 
@@ -153,7 +153,7 @@ To bulk resend invitations:
 Use Docker Hub or Docker Home to add or remove team members. Organization
 owners can add a member to one or more teams within an organization.
 
-### Add a member to a team
+### Add member
 
 1. Sign in to [Docker Home](https://app.docker.com/) and select your
    organization.
@@ -163,24 +163,7 @@ owners can add a member to one or more teams within an organization.
 
 An invitee must accept the invitation before you can add them to a team.
 
-### Remove members from teams
-
-If your organization uses single sign-on (SSO) with
-[SCIM](https://docs.docker.com/security/provisioning/scim/) enabled,
-remove members from your identity provider (IdP). That removes them from
-Docker automatically. If SCIM is disabled, remove members manually in Docker
-using the following steps.
-
-Removing a member from a team revokes their access to that team's permitted
-resources.
-
-1. Sign in to [Docker Home](https://app.docker.com/) and select your
-   organization.
-2. Select **Teams**, then select the team.
-3. Select the **X** next to the member's name to remove them from the team.
-4. When prompted, select **Remove** to confirm.
-
-### Update a member role
+### Update member role
 
 Organization owners can manage
 [roles](https://docs.docker.com/security/roles-and-permissions/) within
@@ -197,7 +180,25 @@ can also manage that organization's roles. If SSO is enabled, you can use
 If you're the only owner of an organization and you want to edit your role,
 assign a new owner first so you can change your own role.
 
-### Remove a member from the organization
+### Remove members from teams
+
+If your organization uses
+[SCIM group mapping](https://docs.docker.com/security/provisioning/scim/group-mapping/) to
+manage teams, update team membership in your identity provider (IdP). You can
+also remove a member from a team in Docker Home with the following steps.
+
+Removing a member from a team revokes their access to that team's permitted
+resources. To remove someone from the organization entirely when SCIM is
+enabled, see
+[Remove member from organization](#remove-member-from-organization).
+
+1. Sign in to [Docker Home](https://app.docker.com/) and select your
+   organization.
+2. Select **Teams**, then select the team.
+3. Select the **X** next to the member's name to remove them from the team.
+4. When prompted, select **Remove** to confirm.
+
+## Remove member from organization
 
 Organization owners can remove members from the organization. Removing a
 member revokes their access to the organization's resources and teams.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/accounts/organization/manage/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/accounts/organization/manage/_index.md)
 
 # Manage your organization
 
@@ -20,7 +20,7 @@ plans. The following table summarizes the difference.
 
 | Entitlement | What it grants                                          | Applies to                                       | Managed from                 |
 | ----------- | ------------------------------------------------------- | ------------------------------------------------ | ---------------------------- |
-| Seat        | Membership in your Docker Team or Business subscription | Docker Core subscription                         | Billing                      |
+| Seat        | Membership in your Docker Team or Business subscription | Docker Team or Business subscription             | Billing                      |
 | License     | Access to a specific product or add-on                  | AI Governance, Docker Offload, and other add-ons | Licenses, Teams, and Members |
 
 For details, see [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/)

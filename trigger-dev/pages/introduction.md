@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/introduction.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/introduction
 
 # Trigger.dev docs
@@ -17,6 +17,18 @@ Build and run durable AI agents and workflows in TypeScript. Long-running tasks 
 - [Guides & examples](https://trigger.dev/docs/guides/introduction)
 
   Frameworks like Next.js, worked example projects, and step-by-step how-to guides.
+
+## Set up with AI
+
+Copy this prompt into your AI coding assistant from your app's directory:
+
+```text
+Bootstrap a Trigger.dev project: trigger.dev/SKILL.md
+```
+
+Your agent guides you through login, choosing or creating an organization and project, and running your first task locally. You authorize login yourself, and the agent asks when a choice is ambiguous.
+
+[Read the full setup instructions](https://trigger.dev/SKILL.md) before running.
 
 ## What is Trigger.dev?
 

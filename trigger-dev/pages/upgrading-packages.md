@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/upgrading-packages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/upgrading-packages.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/upgrading-packages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/upgrading-packages.mdx)
 > Canonical documentation: https://trigger.dev/docs/upgrading-packages
 
 # How to upgrade the Trigger.dev packages
@@ -38,10 +38,10 @@ You can deploy using [GitHub Actions](https://trigger.dev/docs/github-actions). 
 > The deploy step will fail if version mismatches are detected. It's important that you update the
 > version using the steps below.
 
-1. In your `.githubs/workflows` folder you can find your workflow yml files. You may have a prod
+1. In your `.github/workflows` folder you can find your workflow yml files. You may have a prod
    and staging one.
 2. In the steps you'll see a `run` command. It will run the trigger.dev deploy CLI command. Make
-   sure to update this version to the latest version (e.g. `npx trigger.dev@3.0.0 deploy`).
+   sure to update this version to the latest version (e.g. `npx trigger.dev@4.7.3 deploy`).
 
 ## package.json dev dependency
 
@@ -52,7 +52,7 @@ For example:
 ```json
 {
   "devDependencies": {
-    "trigger.dev": "3.0.0"
+    "trigger.dev": "4.7.3"
   }
 }
 ```

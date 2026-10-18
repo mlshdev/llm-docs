@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-list-profiles-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-list-profiles-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-list-profiles-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-list-profiles-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-list-profiles-commands
 
 # CLI list-profiles command

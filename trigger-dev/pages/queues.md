@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/queues.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/queues.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/queues.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/queues.mdx)
 > Canonical documentation: https://trigger.dev/docs/queues
 
 # Queues
@@ -98,7 +98,7 @@ You can set a priority when you trigger a run. This allows you to prioritize som
 
 The value for priority is a time offset in seconds that determines the order of dequeuing.
 
-![Priority runs](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/priority-runs.png)
+![Priority runs](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/priority-runs.png)
 
 If you specify a priority of `10` the run will dequeue before runs that were triggered with no priority 8 seconds ago, like in this example:
 

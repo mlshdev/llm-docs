@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/management/batches/stream-items.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/management/batches/stream-items.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/management/batches/stream-items.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/management/batches/stream-items.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/batches/stream-items
 
 # Stream batch items
@@ -39,20 +39,20 @@ The batch is sealed when the stream completes successfully.
 - `400`: Invalid request (e.g., invalid JSON, item exceeds maximum size)
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)
 - `401`: Unauthorized - API key is missing or invalid
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)
 - `415`: Unsupported Media Type - Content-Type must be application/x-ndjson or application/ndjson
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)
 - `422`: Validation error
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)
 - `500`: Internal server error
   - Media type: `application/json`
     - Schema (object)
-      - `message` (string)
+      - `error` (string)

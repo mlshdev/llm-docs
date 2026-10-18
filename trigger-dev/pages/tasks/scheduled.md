@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/tasks/scheduled.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/tasks/scheduled.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/tasks/scheduled.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/tasks/scheduled.mdx)
 > Canonical documentation: https://trigger.dev/docs/tasks/scheduled
 
 # Scheduled tasks (cron)
@@ -47,7 +47,7 @@ export const firstScheduledTask = schedules.task({
     //this can be undefined if you didn't provide one
     console.log(payload.externalId); //is a string or undefined
 
-    //the next 5 dates this task is scheduled to run
+    //the next 10 dates this task is scheduled to run
     console.log(payload.upcoming); //is an array of Date objects
   },
 });
@@ -60,14 +60,14 @@ You can see from the comments that the payload has several useful properties:
 - `timezone` - the timezone the schedule was registered with, defaults to "UTC". In IANA format, e.g. "America/New\_York".
 - `scheduleId` - the id of the schedule that triggered the task
 - `externalId` - the external id you (optionally) provided when creating the schedule
-- `upcoming` - the next 5 times the task is scheduled to run
+- `upcoming` - the next 10 times the task is scheduled to run
 
 > **Note**
 >
 > This task will NOT get triggered on a schedule until you attach a schedule to it. Read on for how
 > to do that.
 
-Like all tasks they don't have timeouts, they should be placed inside a [/trigger folder](https://trigger.dev/docs/config/config-file), and you [can configure them](https://trigger.dev/docs/tasks/overview#defining-a-task).
+Like all tasks they have a [maxDuration](https://trigger.dev/docs/runs/max-duration), they should be placed inside a [/trigger folder](https://trigger.dev/docs/config/config-file), and you [can configure them](https://trigger.dev/docs/tasks/overview#defining-a-task).
 
 You can set a [TTL](https://trigger.dev/docs/runs#time-to-live-ttl) on a scheduled task to automatically expire runs that aren't dequeued in time. This is useful when a schedule fires while the previous run is still executing - rather than queueing up stale runs, they'll expire:
 
@@ -144,7 +144,7 @@ To use imperative schedules you need to do two things:
 
 ## Spreading runs with windows
 
-By default a schedule runs at its exact cron time. When many schedules share the same cron pattern, such as a daily `0 9 * * *`, they all fire at the same time and load your downstream systems as well as ours. A **window** spreads those runs out: each schedule is assigned a stable time within the window after its cron time, so the load is smoothed while each schedule keeps firing at a predictable, repeatable moment.
+When many schedules share the same cron pattern, such as a daily `0 9 * * *`, they all fire at the same time and load your downstream systems as well as ours. A **window** spreads those runs out: each schedule is assigned a stable time within the window after its cron time, so the load is smoothed while each schedule keeps firing at a predictable, repeatable moment. New schedules use a [60-minute window by default](#default-window).
 
 The assigned time is deterministic. A given schedule always lands at the same offset for a given interval, so runs don't jump around between occurrences. And you can always see exactly when the next run will start.
 
@@ -153,7 +153,7 @@ Set a `window` as either:
 - **An absolute duration** in whole minutes or hours, up to 24 hours: `"30m"`, `"2h"`, `"24h"`. Absolute windows are capped at the next cron time, so a run is never delayed past its following occurrence.
 - **A percentage** of the interval between runs: `"30%"`, `"100%"`. A `"50%"` window on an hourly schedule spreads runs across the first 30 minutes of each hour.
 
-Set `"0m"` (or `"0%"`) for no spreading — the run fires at its exact cron time.
+Set `"0m"` (or `"0%"`) for no spreading — the run fires at its exact cron time. This also overrides the [default window](#default-window).
 
 Declarative schedules set the window on the `cron` object:
 
@@ -185,6 +185,12 @@ const createdSchedule = await schedules.create({
 > The payload `timestamp` and `upcoming` values are always the nominal cron times, not the assigned
 > times. When you retrieve a schedule, `nextRun` is the nominal cron time and `nextRunEffectiveAt`
 > is the assigned time the run will actually start.
+
+### Default window
+
+New schedules get a default 60-minute window unless you set one, so each run starts at a stable time within the hour after its cron time. Like any absolute window, it's capped at the next cron time: a schedule that runs every 15 minutes is spread across those 15 minutes.
+
+To opt a new schedule out of the default window, set `window: "0m"`.
 
 ### Free-plan minimum window
 
@@ -251,9 +257,9 @@ You need to attach a schedule to a task before it will run on a schedule. You ca
 
 1. In the sidebar select the "Tasks" page, then select the scheduled task you want to attach a
    schedule to (scheduled tasks have a clock icon, and you can filter the list to Scheduled).
-   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/schedules-blank.png)
+   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/schedules-blank.png)
 2. Press the "Create schedule" button, fill in the form, and press "Create schedule" when you're
-   done. ![Create schedule form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/schedules-create.png)
+   done. ![Create schedule form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/schedules-create.png)
 
    These are the options when creating a schedule:
 
@@ -396,9 +402,9 @@ You can test a scheduled task in the dashboard. Note that the `scheduleId` will 
 > open it on the Tasks page and press the "Test schedule" button.
 
 1. On the "Tasks" page, open your scheduled task and press the "Test schedule" button.
-   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/schedules-test.png)
+   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/schedules-test.png)
 2. Fill in the form \[1]. You can select from a recent run \[2] to pre-populate the fields. Press "Run
-   test" when you're ready ![Schedule test form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/schedules-test-form.png)
+   test" when you're ready ![Schedule test form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/schedules-test-form.png)
 
 ## Managing schedules with the SDK
 

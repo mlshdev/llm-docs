@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/how-it-works.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/how-it-works.mdx)
 > Canonical documentation: https://trigger.dev/docs/how-it-works
 
 # How Trigger.dev works
@@ -7,7 +7,7 @@ Understand how Trigger.dev works and how it can help you.
 
 ## Introduction
 
-Trigger.dev v3 allows you to integrate long-running async tasks into your application and run them in the background. This allows you to offload tasks that take a long time to complete, such as sending multi-day email campaigns, processing videos, or running long chains of AI tasks.
+Trigger.dev allows you to integrate long-running async tasks into your application and run them in the background. This allows you to offload tasks that take a long time to complete, such as sending multi-day email campaigns, processing videos, or running long chains of AI tasks.
 
 For example, the below task processes a video with `ffmpeg` and sends the results to an s3 bucket, then updates a database with the results and sends an email to the user.
 
@@ -277,8 +277,8 @@ export const convertVideo = task({
     // Update database
     await updateVideoUrl(videoId, s3Url);
 
-    // Send email, we don't need to wait for this to finish
-    await sendUserEmail.trigger({ videoId, s3Url }, { idempotencyKey });
+    // Send email
+    await sendUserEmail.triggerAndWait({ videoId, s3Url }, { idempotencyKey }).unwrap();
 
     return { success: true, s3Url };
   },
@@ -417,7 +417,7 @@ When you run `npx trigger.dev@latest dev`, we run your task code locally on your
 - Changes are automatically detected and a new version is spun up when you save your code.
 - Add debuggers and breakpoints to your code and debug it locally.
 - Each task is run in a separate process, so you can run multiple tasks in parallel.
-- Auto-cancels tasks when you stop the dev server.
+- Stopping the dev server stops your local task processes. If the CLI is killed abruptly (for example by a package manager sending SIGKILL), in-flight runs are cancelled automatically. After a normal Ctrl-C stop, in-flight runs are not cancelled and can end with a `TASK_RUN_STALLED_EXECUTING` error once the 5 minute heartbeat timeout passes.
 
 > **Note**
 >
@@ -427,7 +427,7 @@ When you run `npx trigger.dev@latest dev`, we run your task code locally on your
 
 ## Staging and production environments
 
-Trigger.dev supports deploying to `prod` and `staging` environments. This allows you to test your tasks in a staging environment before deploying them to production. You can deploy to a different environment by running `npx trigger.dev@latest deploy --env <env>`, where `<env>` is either `prod` or `staging`. Each environment has its own API Key, which you can use to trigger tasks in that environment.
+Trigger.dev supports deploying to `prod` and `staging` environments. This allows you to test your tasks in a staging environment before deploying them to production. You can deploy to a different environment by running `npx trigger.dev@latest deploy --env <env>`, where `<env>` is `prod`, `staging` or `preview` (the branch is detected from git, or you can pass `--branch`). Each environment has its own API Key, which you can use to trigger tasks in that environment.
 
 For additional isolated environments, you can use [preview branches](https://trigger.dev/docs/deployment/preview-branches), which allow you to create separate environments for each branch of your code.
 
@@ -435,7 +435,7 @@ For additional isolated environments, you can use [preview branches](https://tri
 
 The Trigger.dev logging and task dashboard is powered by OpenTelemetry traces and logs, which allows you to trace your tasks and auto-instrument your code. We also auto-correlate logs from subtasks and parent tasks, making it easy view the entire trace of a task execution. A single run of the video processing task above looks like this in the dashboard:
 
-![OpenTelemetry trace](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/opentelemetry-trace.png)
+![OpenTelemetry trace](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/opentelemetry-trace.png)
 
 Because we use standard OpenTelemetry, you can instrument your code and OpenTelemetry compatible libraries to get detailed traces and logs of your tasks. The above trace instruments both Prisma and the AWS SDK:
 

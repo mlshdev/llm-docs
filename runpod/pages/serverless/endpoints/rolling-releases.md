@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/rolling-releases.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/serverless/endpoints/rolling-releases.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/rolling-releases.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/endpoints/rolling-releases.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/rolling-releases
 
 # Rolling releases
@@ -16,11 +16,11 @@ A rolling release starts automatically whenever you save a change to an endpoint
 
 ## How it works
 
-When a rolling release starts, Runpod distinguishes between idle workers and workers that are actively processing a job.
+When a rolling release starts, Runpod distinguishes between workers that are processing a job and workers that are not.
 
-**Idle workers** (not currently processing a job) on the old version are terminated immediately and replaced with new workers running the updated image.
+**Workers without a job** on the old version, whether scaled down or running and waiting for work, are terminated immediately and replaced with new workers running the updated image.
 
-**Running workers** (actively processing a job) are allowed to finish their current job. Once the job completes, the worker is replaced with a new one on the updated image.
+**Workers processing a job** are allowed to finish their current job. Once the job completes, the worker is replaced with a new one on the updated image.
 
 During the rollout, your endpoint continues to accept and process requests. New requests are routed to workers on the updated image when available.
 

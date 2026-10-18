@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/configuration/use-ssh.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/pods/configuration/use-ssh.mdx)
+> Pinned source for Runpod main: [pods/configuration/use-ssh.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/pods/configuration/use-ssh.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/configuration/use-ssh
 
 # Connect to a Pod with SSH
@@ -94,6 +94,10 @@ Where:
 ## Troubleshooting SSH key authentication
 
 If you're asked for a password when connecting to your Pod via SSH, this means something is not set up correctly. Runpod does not require a password for SSH connections, as authentication is handled entirely through your SSH key pair.
+
+> **Tip**
+>
+> If your Pod is unreachable or stuck, run `runpodctl ssh info <pod-id>` to see the specific reason. See [Get SSH connection info](https://docs.runpod.io/runpodctl/reference/runpodctl-ssh#get-ssh-connection-info).
 
 Here are some common reasons why this might happen:
 

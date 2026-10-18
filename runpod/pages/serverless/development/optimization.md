@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/optimization.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/serverless/development/optimization.mdx)
+> Pinned source for Runpod main: [serverless/development/optimization.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/development/optimization.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/optimization
 
 # Optimize your endpoints
@@ -30,8 +30,10 @@ Two metrics affect request response time:
 
 **Delay time** breaks down into:
 
-- **Initialization time**: Downloading Docker image
-- **Cold start time**: Loading model into GPU memory
+- **Queue time**: Waiting for a running worker to become free
+- **Cold start time**: Starting a new worker and loading your model into GPU memory, when no running worker is free
+
+Runpod normally downloads your Docker image before a worker starts, so image size affects how quickly new workers become available rather than cold start time.
 
 > **Tip**
 >

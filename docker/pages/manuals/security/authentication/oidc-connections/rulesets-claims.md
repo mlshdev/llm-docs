@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/oidc-connections/rulesets-claims.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/authentication/oidc-connections/rulesets-claims.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/oidc-connections/rulesets-claims.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/authentication/oidc-connections/rulesets-claims.md)
 
 # Configure OIDC rulesets and subject claims
 
@@ -25,7 +25,9 @@ Each ruleset has these fields:
 
 You can add one to five rulesets on a connection. If more than one
 ruleset matches a token, Docker grants the union of their resources and
-scopes.
+scopes. Your subscription also limits how many connections your
+organization can have. See
+[Connection limits](https://docs.docker.com/security/authentication/oidc-connections/#connection-limits).
 
 ## Subject claims
 

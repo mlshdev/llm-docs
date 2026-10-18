@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/troubleshooting-alerts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/troubleshooting-alerts.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/troubleshooting-alerts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/troubleshooting-alerts.mdx)
 > Canonical documentation: https://trigger.dev/docs/troubleshooting-alerts
 
 # Alerts
@@ -22,17 +22,17 @@ The first three are created from the **Alerts** page. The fourth — an **Error 
 ## How to setup alerts
 
 1. Click on "Alerts" in the left hand side menu, then click on "New alert" to open the new alert modal.
-   ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/troubleshooting-alerts-blank.png)
+   ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/troubleshooting-alerts-blank.png)
 2. Choose to be notified by email, Slack notification or webhook whenever:
 
    - a run fails
    - a deployment fails
    - a deployment succeeds
 
-     ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/troubleshooting-alerts-modal.png)
+     ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/troubleshooting-alerts-modal.png)
 3. Click on the triple dot menu on the right side of the table row and select "Disable" or "Delete".
 
-   ![Disable and delete alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/troubleshooting-alerts-disable-delete.png)
+   ![Disable and delete alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/troubleshooting-alerts-disable-delete.png)
 
 ## Error group alerts
 
@@ -234,11 +234,15 @@ Environment ID
 
 **Property (type: string)**
 
-Environment type (STAGING or PRODUCTION)
+Environment type (`PRODUCTION`, `STAGING`, or `PREVIEW`)
 
 **Property (type: string)**
 
 Environment slug
+
+**Property (type: string)**
+
+Environment branch name (optional)
 
 **Property (type: string)**
 
@@ -302,7 +306,7 @@ Environment ID
 
 **Property (type: string)**
 
-Environment type (STAGING or PRODUCTION)
+Environment type (`PRODUCTION`, `STAGING`, or `PREVIEW`)
 
 **Property (type: string)**
 
@@ -335,6 +339,54 @@ Project slug
 **Property (type: string)**
 
 Project name
+
+**Property (type: object)**
+
+Git metadata for the deployment (optional). When present, `branch`, `commitSha`, `commitMessage`, `commitUrl` and `branchUrl` are always set.
+
+**Property (type: string)**
+
+Git branch
+
+**Property (type: string)**
+
+Short commit SHA (first 7 characters)
+
+**Property (type: string)**
+
+Commit message (empty string if unavailable)
+
+**Property (type: string)**
+
+URL of the commit
+
+**Property (type: string)**
+
+URL of the branch
+
+**Property (type: number)**
+
+Pull request number (optional)
+
+**Property (type: string)**
+
+Pull request title (optional)
+
+**Property (type: string)**
+
+Pull request URL (optional)
+
+**Property (type: string)**
+
+Git provider (optional)
+
+**Property (type: object)**
+
+Vercel metadata for the deployment (optional)
+
+**Property (type: string)**
+
+URL of the deployment in the Vercel dashboard
 
 ### Deployment Failed Alert
 
@@ -382,7 +434,7 @@ Environment ID
 
 **Property (type: string)**
 
-Environment type (STAGING or PRODUCTION)
+Environment type (`PRODUCTION`, `STAGING`, or `PREVIEW`)
 
 **Property (type: string)**
 
@@ -415,6 +467,54 @@ Project slug
 **Property (type: string)**
 
 Project name
+
+**Property (type: object)**
+
+Git metadata for the deployment (optional). When present, `branch`, `commitSha`, `commitMessage`, `commitUrl` and `branchUrl` are always set.
+
+**Property (type: string)**
+
+Git branch
+
+**Property (type: string)**
+
+Short commit SHA (first 7 characters)
+
+**Property (type: string)**
+
+Commit message (empty string if unavailable)
+
+**Property (type: string)**
+
+URL of the commit
+
+**Property (type: string)**
+
+URL of the branch
+
+**Property (type: number)**
+
+Pull request number (optional)
+
+**Property (type: string)**
+
+Pull request title (optional)
+
+**Property (type: string)**
+
+Pull request URL (optional)
+
+**Property (type: string)**
+
+Git provider (optional)
+
+**Property (type: object)**
+
+Vercel metadata for the deployment (optional)
+
+**Property (type: string)**
+
+URL of the deployment in the Vercel dashboard
 
 ### Error Group Alert
 

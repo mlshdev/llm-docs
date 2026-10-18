@@ -1,8 +1,8 @@
-# Traefik Proxy v3.7.14
+# Traefik Proxy v3.7.15
 
-> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `3bd7aa32e1b6c41166575529a10fb2346d9eaa2e`.
+> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `351a5ab1e884a6be95d02997016cbb2751106bc0`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.14.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.15.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow docs/mkdocs.yml navigation order from the immutable release tag.
 - MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted.
@@ -32,7 +32,7 @@
 
 - [Exposing Services with Traefik Proxy](pages/expose/overview.md): This section guides you through exposing services securely with Traefik Proxy. You'll learn how to route HTTP and HTTPS traffic to your services, add security features, and implement advanced load balancing. (4065 bytes)
 - [Exposing Services with Traefik on Kubernetes - Basic](pages/expose/kubernetes/basic.md): This guide will help you get started with exposing your services through Traefik Proxy on Kubernetes. You'll learn the fundamentals of routing HTTP traffic, setting up path-based routing, and securing your services with… (10479 bytes)
-- [Exposing Services with Traefik on Kubernetes - Advanced](pages/expose/kubernetes/advanced.md): This guide builds on the concepts and setup from the Basic Guide. Make sure you've completed the basic guide and have a working Traefik setup with Kubernetes before proceeding. (27874 bytes)
+- [Exposing Services with Traefik on Kubernetes - Advanced](pages/expose/kubernetes/advanced.md): This guide builds on the concepts and setup from the Basic Guide. Make sure you've completed the basic guide and have a working Traefik setup with Kubernetes before proceeding. (28163 bytes)
 - [Exposing Services with Traefik on Docker - Basic](pages/expose/docker/basic.md): This guide will help you get started with exposing your services through Traefik Proxy using Docker. You'll learn the fundamentals of routing HTTP traffic, setting up path-based routing, and securing your services with… (7144 bytes)
 - [Exposing Services with Traefik on Docker - Advanced](pages/expose/docker/advanced.md): This guide builds on the concepts and setup from the Basic Guide. Make sure you've completed the basic guide and have a working Traefik setup with Docker before proceeding. (17980 bytes)
 - [Exposing Services with Traefik on Docker Swarm - Basic](pages/expose/swarm/basic.md): This guide will help you get started with exposing your services through Traefik Proxy using Docker Swarm. You'll learn the fundamentals of routing HTTP traffic, setting up path-based routing, and securing your services… (5687 bytes)
@@ -54,7 +54,7 @@
 ## Migrate
 
 - [Migrate from Ingress NGINX Controller to Traefik](pages/migrate/nginx-to-traefik.md): How to migrate from Ingress NGINX Controller to Traefik with zero downtime. (44346 bytes)
-- [Traefik Migration Documentation](pages/migrate/v3.md): This guide provides detailed migration steps for upgrading between different Traefik v3 versions. Each section covers breaking changes, deprecations, and configuration updates required for a smooth transition. (66623 bytes)
+- [Traefik Migration Documentation](pages/migrate/v3.md): This guide provides detailed migration steps for upgrading between different Traefik v3 versions. Each section covers breaking changes, deprecations, and configuration updates required for a smooth transition. (68645 bytes)
 - [Traefik V3 Migration Documentation](pages/migrate/v2-to-v3.md): How to Migrate from Traefik v2 to Traefik v3. (6860 bytes)
 - [Traefik V3 Migration Details](pages/migrate/v2-to-v3-details.md): In v3, the provider Docker has been split into 2 providers: (22529 bytes)
 - [Traefik V2 Migration Documentation](pages/migrate/v2.md): The multiple minor versions of Traefik v2 introduced a number of changes, which may require one to update their configuration when they migrate. (363 bytes)
@@ -63,25 +63,25 @@
 ## Reference
 
 - [Traefik Configuration Overview](pages/reference/install-configuration/boot-environment.md): Traefik Proxy’s configuration is divided into two main categories: (3323 bytes)
-- [Traefik Providers Documentation](pages/reference/install-configuration/providers/overview.md): Providers are infrastructure components, whether orchestrators, container engines, cloud providers, or key-value stores. The idea is that Traefik queries the provider APIs in order to find relevant information about rou… (12719 bytes)
+- [Traefik Providers Documentation](pages/reference/install-configuration/providers/overview.md): Providers are infrastructure components, whether orchestrators, container engines, cloud providers, or key-value stores. The idea is that Traefik queries the provider APIs in order to find relevant information about rou… (13022 bytes)
 - [Traefik Kubernetes Gateway API Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md): The Kubernetes Gateway provider is a Traefik implementation of the Gateway API specification from the Kubernetes Special Interest Groups (SIGs). (16293 bytes)
-- [Kubernetes Custom Resources](pages/reference/install-configuration/providers/kubernetes/kubernetes-crd.md): Traefik provides some Kubernetes Custom Resources, such as IngressRoute, Middleware, etc. (22129 bytes)
+- [Kubernetes Custom Resources](pages/reference/install-configuration/providers/kubernetes/kubernetes-crd.md): Traefik provides some Kubernetes Custom Resources, such as IngressRoute, Middleware, etc. (22686 bytes)
 - [Traefik Kubernetes Ingress Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md): The Traefik Kubernetes Ingress provider is a Kubernetes Ingress controller; i.e, it manages access to cluster services by supporting the Ingress specification. (16935 bytes)
 - [Traefik Kubernetes Ingress NGINX Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md): This provider is a Kubernetes Ingress controller that manages access to cluster services by supporting the Ingress specification. It also supports many of the ingress-nginx annotations on Ingresses, enabling teams to mi… (40831 bytes)
 - [Traefik Knative Documentation](pages/reference/install-configuration/providers/kubernetes/knative.md): The Traefik Knative provider integrates with Knative Serving to provide advanced traffic management and routing capabilities for serverless applications. (12563 bytes)
-- [Traefik Docker Documentation](pages/reference/install-configuration/providers/docker.md): You can enable the Docker provider as detailed below: (24691 bytes)
-- [Traefik Docker Swarm Documentation](pages/reference/install-configuration/providers/swarm.md): This provider works with Docker Swarm Mode. (26571 bytes)
-- [Nomad Service Discovery](pages/reference/install-configuration/providers/hashicorp/nomad.md): You can enable the Nomad provider with as detailed below: (17443 bytes)
+- [Traefik Docker Documentation](pages/reference/install-configuration/providers/docker.md): You can enable the Docker provider as detailed below: (24696 bytes)
+- [Traefik Docker Swarm Documentation](pages/reference/install-configuration/providers/swarm.md): This provider works with Docker Swarm Mode. (26576 bytes)
+- [Nomad Service Discovery](pages/reference/install-configuration/providers/hashicorp/nomad.md): You can enable the Nomad provider with as detailed below: (17448 bytes)
 - [Traefik Consul Documentation](pages/reference/install-configuration/providers/hashicorp/consul.md): You can enable the Consul provider as detailed below: (7315 bytes)
-- [Traefik Consul Catalog Documentation](pages/reference/install-configuration/providers/hashicorp/consul-catalog.md): You can enable the Consul Catalog provider as detailed below: (21771 bytes)
+- [Traefik Consul Catalog Documentation](pages/reference/install-configuration/providers/hashicorp/consul-catalog.md): You can enable the Consul Catalog provider as detailed below: (21776 bytes)
 - [Traefik Redis Documentation](pages/reference/install-configuration/providers/kv/redis.md): You can enable the Redis provider as detailed below: (11984 bytes)
 - [Traefik Consul Documentation](pages/reference/install-configuration/providers/kv/consul.md): You can enable the Consul provider as detailed below: (7315 bytes)
 - [Traefik Etcd Documentation](pages/reference/install-configuration/providers/kv/etcd.md): You can enable the etcd provider as detailed below: (6457 bytes)
 - [Traefik ZooKeeper Documentation](pages/reference/install-configuration/providers/kv/zk.md): You can enable the ZooKeeper provider as detailed below: (3939 bytes)
 - [Traefik File Documentation](pages/reference/install-configuration/providers/others/file.md): The file provider lets you define the install configuration in a YAML or TOML file. (6946 bytes)
-- [Traefik AWS ECS Documentation](pages/reference/install-configuration/providers/others/ecs.md): You can enable the ECS provider with as detailed below: (12638 bytes)
+- [Traefik AWS ECS Documentation](pages/reference/install-configuration/providers/others/ecs.md): You can enable the ECS provider with as detailed below: (12643 bytes)
 - [Traefik HTTP Documentation](pages/reference/install-configuration/providers/others/http.md): Provide your install configuration via an HTTP(S) endpoint and let Traefik do the rest! (6994 bytes)
-- [Traefik EntryPoints Documentation](pages/reference/install-configuration/entrypoints.md): Listening for Incoming Connections/Requests (61977 bytes)
+- [Traefik EntryPoints Documentation](pages/reference/install-configuration/entrypoints.md): Listening for Incoming Connections/Requests (62294 bytes)
 - [Traefik API & Dashboard Documentation](pages/reference/install-configuration/api-dashboard.md): Traefik exposes a number of information through API endpoints, such as the configuration of your routers, services, middlewares, etc. (15211 bytes)
 - [Certificates Resolver](pages/reference/install-configuration/tls/certificate-resolvers/overview.md): In Traefik, TLS Certificates can be generated using Certificates Resolvers. (805 bytes)
 - [Traefik & ACME Certificates Resolver](pages/reference/install-configuration/tls/certificate-resolvers/acme.md): Below is an example of a basic configuration for ACME in Traefik. (25483 bytes)
@@ -151,19 +151,19 @@
 - [Traefik UDP Routers Documentation](pages/reference/routing-configuration/udp/routing/router.md): A UDP router is in charge of connecting incoming UDP packets to the services that can handle them. Unlike HTTP and TCP routers, UDP routers operate at the transport layer and have unique characteristics due to the conne… (3685 bytes)
 - [Traefik UDP Routers Rules & Priority Documentation](pages/reference/routing-configuration/udp/routing/rules-priority.md): A router is in charge of connecting incoming requests to the services that can handle them. (3170 bytes)
 - [Traefik UDP Services Documentation](pages/reference/routing-configuration/udp/service.md): Each of the fields of the service section represents a kind of service. Which means, that for each specified service, one of the fields, and only one, has to be enabled to define what kind of service is created. Current… (3733 bytes)
-- [Traefik Kubernetes Gateway](pages/reference/routing-configuration/kubernetes/gateway-api.md): When using the Kubernetes Gateway API provider, Traefik leverages the Gateway API Custom Resource Definitions (CRDs) to obtain its routing configuration. For detailed information on the Gateway API concepts and resource… (29852 bytes)
+- [Traefik Kubernetes Gateway](pages/reference/routing-configuration/kubernetes/gateway-api.md): When using the Kubernetes Gateway API provider, Traefik leverages the Gateway API Custom Resource Definitions (CRDs) to obtain its routing configuration. For detailed information on the Gateway API concepts and resource… (29824 bytes)
 - [Kubernetes IngressRoute](pages/reference/routing-configuration/kubernetes/crd/http/ingressroute.md): IngressRoute is the CRD implementation of a Traefik HTTP router. (27101 bytes)
-- [Kubernetes Service](pages/reference/routing-configuration/kubernetes/crd/http/service.md): Service is the implementation of a Traefik HTTP service. (35169 bytes)
+- [Kubernetes Service](pages/reference/routing-configuration/kubernetes/crd/http/service.md): Service is the implementation of a Traefik HTTP service. (35195 bytes)
 - [Traefik Kubernetes Services Documentation](pages/reference/routing-configuration/kubernetes/crd/http/traefikservice.md): A TraefikService is a custom resource that sits on top of the Kubernetes Services. It enables advanced load-balancing features such as a Weighted Round Robin load balancing, a Highest Random Weight load balancing, a Mir… (59834 bytes)
-- [Kubernetes serversTransport](pages/reference/routing-configuration/kubernetes/crd/http/serverstransport.md): A ServersTransport allows you to configure the connection between Traefik and the HTTP servers in Kubernetes. (8100 bytes)
-- [Traefik Kubernetes Middleware Documentation](pages/reference/routing-configuration/kubernetes/crd/http/middleware.md): Middleware is the CRD implementation of a Traefik middleware. (2468 bytes)
-- [TLSOption](pages/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md): The TLS options allow you to configure some parameters of the TLS connection in Traefik. (10025 bytes)
-- [TLSStore](pages/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md): In Traefik, certificates are grouped together in certificates stores. (4425 bytes)
-- [Kubernetes IngressRouteTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md): IngressRouteTCP is the CRD implementation of a Traefik TCP router. (17547 bytes)
-- [ServersTransportTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md): ServersTransportTCP is the CRD implementation of ServersTransportTCP. (9337 bytes)
-- [Kubernetes MiddlewareTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md): MiddlewareTCP is the CRD implementation of a Traefik TCP middleware. (1895 bytes)
-- [IngressRouteUDP](pages/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md): IngressRouteUDP is the CRD implementation of a Traefik UDP router. (8448 bytes)
-- [Kubernetes Ingress Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress.md): The Kubernetes Ingress provider watches for incoming ingresses events, such as the example below, and derives the corresponding dynamic configuration from it, which in turn will create the resulting routers, services, h… (38675 bytes)
+- [Kubernetes serversTransport](pages/reference/routing-configuration/kubernetes/crd/http/serverstransport.md): A ServersTransport allows you to configure the connection between Traefik and the HTTP servers in Kubernetes. (8126 bytes)
+- [Traefik Kubernetes Middleware Documentation](pages/reference/routing-configuration/kubernetes/crd/http/middleware.md): Middleware is the CRD implementation of a Traefik middleware. (2494 bytes)
+- [TLSOption](pages/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md): The TLS options allow you to configure some parameters of the TLS connection in Traefik. (10365 bytes)
+- [TLSStore](pages/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md): In Traefik, certificates are grouped together in certificates stores. (4451 bytes)
+- [Kubernetes IngressRouteTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md): IngressRouteTCP is the CRD implementation of a Traefik TCP router. (17573 bytes)
+- [ServersTransportTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md): ServersTransportTCP is the CRD implementation of ServersTransportTCP. (9363 bytes)
+- [Kubernetes MiddlewareTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md): MiddlewareTCP is the CRD implementation of a Traefik TCP middleware. (1921 bytes)
+- [IngressRouteUDP](pages/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md): IngressRouteUDP is the CRD implementation of a Traefik UDP router. (8474 bytes)
+- [Kubernetes Ingress Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress.md): The Kubernetes Ingress provider watches for incoming ingresses events, such as the example below, and derives the corresponding dynamic configuration from it, which in turn will create the resulting routers, services, h… (39036 bytes)
 - [Traefik Kubernetes Ingress NGINX Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress-nginx.md): Enable seamless migration from NGINX Ingress Controller to Traefik with NGINX annotation compatibility. (73431 bytes)
 - [Traefik Knative Documentation](pages/reference/routing-configuration/kubernetes/knative.md): When using the Knative provider, Traefik leverages Knative's Custom Resource Definitions (CRDs) to obtain its routing configuration. For detailed information on Knative concepts and resources, refer to the official docu… (3108 bytes)
 - [Traefik Docker Routing Documentation](pages/reference/routing-configuration/other-providers/docker.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With Docker, Traefik can leverage labels attached to a container to generate routing rules. (44596 bytes)
@@ -173,7 +173,7 @@
 - [Traefik ECS Documentation](pages/reference/routing-configuration/other-providers/ecs.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With ECS, Traefik can leverage labels attached to a container to generate routing rules. (37992 bytes)
 - [Traefik Routing Configuration with KV stores](pages/reference/routing-configuration/other-providers/kv.md): You can declare TCP Routers and/or Services using KV. (39852 bytes)
 - [Traefik File Routing Configuration](pages/reference/routing-configuration/other-providers/file.md): The file provider lets you define routing configuration in YAML or TOML. Use it to declare routers, services, middlewares, TCP and UDP routing, and TLS options that Traefik should load from a file or a directory. (40532 bytes)
-- [Request Path](pages/security/request-path.md): Protecting Against Path-Based Attacks Through Sanitization and Filtering (5877 bytes)
+- [Request Path](pages/security/request-path.md): Protecting Against Path-Based Attacks Through Sanitization and Filtering (5878 bytes)
 - [Content-Length](pages/security/content-length.md): Traefik acts as a streaming proxy. By default, it checks each chunk of data against the Content-Length header as it passes it on to the backend or client. This live check blocks truncated or over‑long streams without ho… (965 bytes)
 - [HTTP/2 Header Memory](pages/security/http2-header-memory.md): Traefik serves HTTP/2 through the Go standard library. With HTTP/2, a single connection can multiplex many concurrent requests, each carrying its own header block. (2523 bytes)
 - [Headers with Aliasing Names](pages/security/header-aliases.md): Preventing Header Spoofing Through Aliasing Header Names (4036 bytes)
@@ -190,6 +190,7 @@
 - [Traefik Security Decisions](pages/contributing/security-decisions.md): Some classes of report reach us repeatedly. This page records the positions we have already settled, so that you can check a finding against them before submitting, and so that we can answer with a reference instead of… (22668 bytes)
 - [Traefik Building & Testing Documentation](pages/contributing/building-testing.md): Compile and Test Your Own Traefik! (3388 bytes)
 - [Traefik Contribution Documentation](pages/contributing/documentation.md): Features Are Better When You Know How to Use Them (3100 bytes)
+- [Traefik Documentation Style Guide](pages/contributing/documentation-style-guide.md): This guide covers how to write and edit pages under docs/content/. It is written for contributors and for the AI assistants they use. Follow it for new pages and for any lines you change. Existing pages may not follow e… (15803 bytes)
 - [Traefik Data Collection Documentation](pages/contributing/data-collection.md): Understanding the data Traefik shares and how it is used (4267 bytes)
 - [Traefik Advocation Documentation](pages/contributing/advocating.md): Spread the Love & Tell Us About It (2128 bytes)
 - [Traefik Maintainers Documentation](pages/contributing/maintainers.md): People who have had an incredibly positive impact on the project, and are now focusing on other projects. (1830 bytes)

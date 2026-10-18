@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/ai-sdk.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/public-endpoints/ai-sdk.mdx)
+> Pinned source for Runpod main: [public-endpoints/ai-sdk.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/public-endpoints/ai-sdk.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/ai-sdk
 
 # Vercel AI SDK
@@ -308,7 +308,7 @@ const { image } = await generateImage({
 
 ## Video generation
 
-Use `experimental_generateVideo` to generate videos from text prompts or images. The Runpod provider supports 15 video models, including Sora, Wan, Seedance, and Kling.
+Use `experimental_generateVideo` to generate videos from text prompts or images. The Runpod provider supports 14 video models, including Sora, Wan, Seedance, and Kling.
 
 Video generation is asynchronous—the SDK submits a job, polls for completion, and returns the video URL when ready.
 
@@ -421,7 +421,6 @@ const { video } = await generateVideo({
 | `vidu/q3-i2v`                           | i2v         | 720p, 1080p       | 16:9, 9:16, 1:1                 | 5, 10s     |
 | `kwaivgi/kling-v2.6-std-motion-control` | i2v + video | 720p              | 16:9, 9:16, 1:1                 | 5, 10s     |
 | `kwaivgi/kling-video-o1-r2v`            | i2v         | 720p              | 16:9, 9:16, 1:1                 | 3–10s      |
-| `kwaivgi/kling-v2.1-i2v-pro`            | i2v         | 720p              | 16:9, 9:16, 1:1                 | 5, 10s     |
 | `alibaba/wan-2.6-t2v`                   | t2v         | 720p, 1080p       | 16:9, 9:16                      | 5, 10, 15s |
 | `alibaba/wan-2.6-i2v`                   | i2v         | 720p, 1080p       | 16:9, 9:16                      | 5, 10, 15s |
 | `alibaba/wan-2.5`                       | i2v         | 480p, 720p, 1080p | 16:9, 9:16                      | 5, 10s     |

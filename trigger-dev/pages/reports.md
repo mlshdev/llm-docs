@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/reports.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/reports.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/reports.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/reports.mdx)
 > Canonical documentation: https://trigger.dev/docs/reports
 
 # Project health report
@@ -124,7 +124,7 @@ The MCP server also registers a `report` prompt, which hosts that support MCP pr
 
 ### HTTP API: `GET /api/v1/reports/:key`
 
-The endpoint behind every surface. It accepts a `period` and a `format`, and authenticates with a token scoped to read the report's query tables (`read:query`).
+The endpoint behind every surface. It accepts a `period` and a `format`, and authenticates with an environment secret key or a JWT scoped to read the report's query tables (`read:query`).
 
 | Query param | Default    | Description                               |
 | ----------- | ---------- | ----------------------------------------- |
@@ -135,8 +135,10 @@ The endpoint behind every surface. It accepts a `period` and a `format`, and aut
 
 ```bash
 curl "https://api.trigger.dev/api/v1/reports/health?period=24h&format=json" \
-  -H "Authorization: Bearer $TRIGGER_ACCESS_TOKEN"
+  -H "Authorization: Bearer $TRIGGER_SECRET_KEY"
 ```
+
+The environment comes from the key. Use an environment secret key, or a JWT scoped `read:query` for the report's tables. Personal access tokens are not accepted.
 
 An unknown report key returns `404` with the list of available keys.
 

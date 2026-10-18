@@ -1,9 +1,9 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-projects-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-projects-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-projects-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-projects-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-projects-commands
 
 # CLI projects commands
 
-Create, inspect, and rename Trigger.dev projects from the terminal.
+List, create, inspect, and rename Trigger.dev projects from the terminal.
 
 These commands act on the organizations and projects your account can access, so run
 [`login`](https://trigger.dev/docs/cli-login-commands) first.
@@ -32,6 +32,18 @@ The organization slug or ID to create the project in.
 
 The name of the new project.
 
+## projects list
+
+Lists your projects with the runtime and version of their current Production deployment.
+
+```bash
+npx trigger.dev@latest projects list
+```
+
+**Property (type: --needs-update)**
+
+Only show projects using Node.js 21 in Production.
+
 ## projects get
 
 Prints the name, ref, slug, organization, default runtime and region of a project.
@@ -56,7 +68,7 @@ These options are available on most commands.
 
 **Property (type: --profile)**
 
-The login profile to use. Defaults to "default".
+The login profile to use. Defaults to the current profile, which is set by your last `login` or `switch` (initially "default").
 
 **Property (type: --api-url | -a)**
 

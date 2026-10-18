@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/_index.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/authentication/_index.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/_index.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/authentication/_index.md)
 
 # Authentication
 
@@ -17,8 +17,9 @@ Connect (OIDC) connections authenticate CI workloads such as GitHub Actions.
 | Single sign-on (SSO)            | An organization or company           | An organization or company owner | Users sign in through the organization's identity provider (IdP)              |
 | OIDC connections                | GitHub Actions and similar workloads | An organization owner or editor  | Docker exchanges short-lived tokens issued per workflow run                   |
 
-SSO requires a Docker Business subscription. OIDC connections require a
-Docker Team or Business subscription.
+SSO requires a Docker Business subscription, or an
+[AI Governance](https://docs.docker.com/accounts/organization/manage/manage-licenses/)
+license. OIDC connections require a Docker Team or Business subscription.
 
 To require Docker Desktop users to sign in as organization members, see
 [Enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).

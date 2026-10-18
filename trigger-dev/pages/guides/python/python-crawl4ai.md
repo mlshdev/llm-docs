@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/python/python-crawl4ai.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/python/python-crawl4ai.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/python/python-crawl4ai.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/python/python-crawl4ai.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/python/python-crawl4ai
 
 # Python headless browser web crawler example
@@ -58,7 +58,7 @@ After you've initialized your project with Trigger.dev, add these build settings
 ```ts trigger.config.ts
 import { defineConfig } from "@trigger.dev/sdk";
 import { pythonExtension } from "@trigger.dev/python/extension";
-import type { BuildContext, BuildExtension } from "@trigger.dev/core/build";
+import type { BuildContext, BuildExtension } from "@trigger.dev/build";
 
 export default defineConfig({
   project: "<project ref>",

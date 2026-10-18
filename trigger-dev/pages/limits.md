@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/limits.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/limits.mdx)
 > Canonical documentation: https://trigger.dev/docs/limits
 
 # Limits
@@ -44,7 +44,7 @@ The maximum number of runs that can be queued **per queue** (not across all queu
 
 > **Note**
 >
-> The limits below apply to [Trigger.dev Cloud](https://trigger.dev). If you self-host Trigger.dev, queue size limits are configurable via the `MAXIMUM_DEV_QUEUE_SIZE` and `MAXIMUM_DEPLOYED_QUEUE_SIZE` environment variables — see [Self-hosting environment variables](https://trigger.dev/docs/self-hosting/env/webapp#run-engine).
+> The limits below apply to [Trigger.dev Cloud](https://trigger.dev). If you self-host Trigger.dev, queue size limits are configurable via the `MAXIMUM_DEV_QUEUE_SIZE` and `MAXIMUM_DEPLOYED_QUEUE_SIZE` environment variables — see [Self-hosting environment variables](https://trigger.dev/docs/self-hosting/env/webapp).
 
 | Pricing tier | Development (per queue) | Staging / Production (per queue) |
 | :----------- | :---------------------- | :------------------------------- |
@@ -60,7 +60,7 @@ On Trigger.dev Cloud, all runs have an enforced maximum TTL of 14 days. Runs wit
 
 There is no maximum on `delay`.
 
-If you self-host, you can configure a maximum TTL via the `RUN_ENGINE_DEFAULT_MAX_TTL` environment variable — see [Self-hosting environment variables](https://trigger.dev/docs/self-hosting/env/webapp#run-engine).
+If you self-host, you can configure a maximum TTL via the `RUN_ENGINE_DEFAULT_MAX_TTL` environment variable — see [Self-hosting environment variables](https://trigger.dev/docs/self-hosting/env/webapp).
 
 ## Schedules
 
@@ -152,6 +152,26 @@ When you send a batch trigger, we convert it into individual runs. This limit co
 | Hobby        | 10 concurrent batches |
 | Pro          | 50 concurrent batches |
 
+## Webhook ingest rate limits
+
+Each hosted webhook endpoint accepts a limited number of requests per 10 seconds. Requests over the limit get a `429` response with a `Retry-After` header, and providers that retry deliver them again after the window.
+
+| Pricing tier | Requests per endpoint |
+| :----------- | :-------------------- |
+| Free         | 100 every 10 sec      |
+| Hobby        | 300 every 10 sec      |
+| Pro          | 1,000 every 10 sec    |
+| Enterprise   | Set per organization  |
+
+All of an environment's endpoints also share a per-environment limit, counted in tokens: a request costs one token for every 64 KiB of body, started, so a 10 KiB event costs one and a 1 MiB event costs 16. Requests over it get the same `429` with `Retry-After`.
+
+| Pricing tier | Tokens per environment |
+| :----------- | :--------------------- |
+| Free         | 300 every 10 sec       |
+| Hobby        | 1,000 every 10 sec     |
+| Pro          | 3,000 every 10 sec     |
+| Enterprise   | Set per organization   |
+
 ## Log retention
 
 | Pricing tier | Limit   |
@@ -166,8 +186,8 @@ We limit the size of logs to prevent oversized data potentially causing issues.
 
 #### Attribute Limits
 
-- Span Attribute Count Limit: 256
-- Log Attribute Count Limit: 256
+- Span Attribute Count Limit: 1024
+- Log Attribute Count Limit: 1024
 - Span Attribute Value Length Limit: 131072 characters
 - Log Attribute Value Length Limit: 131072 characters
 
@@ -184,8 +204,8 @@ We limit the size of logs to prevent oversized data potentially causing issues.
 
 #### Attribute Clipping Behavior
 
-- Attributes exceeding the value length limit (1028 characters) are discarded.
-- If the total number of attributes exceeds 256, additional attributes are not included.
+- Attributes exceeding the value length limit (131072 characters) are discarded.
+- If the total number of attributes exceeds 1024, additional attributes are not included.
 
 #### Attribute Value Size Calculation
 

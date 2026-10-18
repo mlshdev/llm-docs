@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-login-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-login-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-login-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-login-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-login-commands
 
 # CLI login command
@@ -21,13 +21,33 @@ yarn dlx trigger.dev@latest login
 
 ## Options
 
+**Property (type: --no-browser)**
+
+Do not open the browser. Print the URL only.
+
+**Property (type: --email \<email>)**
+
+Prefill the email on the login page.
+
+**Property (type: --name \<name>)**
+
+Set your name after authorization. Only applies to a new account that has not set its details yet.
+
+**Property (type: --cancel-pending)**
+
+Cancel a pending login and keep the current account.
+
+**Property (type: --no-wait)**
+
+Save the authorization and exit so login can be resumed later.
+
 ### Common options
 
 These options are available on most commands.
 
 **Property (type: --profile)**
 
-The login profile to use. Defaults to "default".
+The login profile to use. Defaults to the current profile, which is set by your last `login` or `switch` (initially "default").
 
 **Property (type: --api-url | -a)**
 

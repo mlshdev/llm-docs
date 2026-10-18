@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/apikeys.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/apikeys.mdx)
 > Canonical documentation: https://trigger.dev/docs/apikeys
 
 # API keys
@@ -67,7 +67,7 @@ The default API URL is `https://api.trigger.dev`.
 
 ## Access presets
 
-Access presets define what a key can do. Some presets require a paid plan. The dashboard shows which presets your organization can use — see [pricing](https://trigger.dev/pricing).
+Access presets define what a key can do. On the Free and Hobby plans only the **No restrictions** preset is available. All other presets require the Pro or Enterprise plan.
 
 | Preset              | Access                                                                                                                                         |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -79,7 +79,7 @@ Access presets define what a key can do. Some presets require a paid plan. The d
 | **Variables only**  | Read and write environment variables in this environment                                                                                       |
 | **No restrictions** | Full access to the environment                                                                                                                 |
 
-**Trigger only** and **Task operator** can be restricted to selected tasks. Task restrictions use task identifiers, such as `send-email`. A request involving multiple tasks — such as a batch trigger — succeeds only when the key can access every task in the request, so a task-restricted key can batch-trigger only its selected tasks.
+**Trigger only** and **Task operator** can be restricted to selected tasks, up to 10 tasks per key. Task restrictions use task identifiers, such as `send-email`. A request involving multiple tasks — such as a batch trigger — succeeds only when the key can access every task in the request, so a task-restricted key can batch-trigger only its selected tasks.
 
 ## Deploy with an API key
 
@@ -113,7 +113,7 @@ Use `@trigger.dev/sdk` version 4.5.8 or later to create public tokens with envir
 
 - The token must request at least one scope.
 - Its scopes cannot exceed the key's access.
-- Its expiration cannot exceed 30 days.
+- Its expiration cannot exceed 30 days (the default is 15 minutes).
 
 > **Note**
 >

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/run-usage.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/run-usage.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/run-usage.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/run-usage.mdx)
 > Canonical documentation: https://trigger.dev/docs/run-usage
 
 # Usage
@@ -40,10 +40,10 @@ export const heavyTask = task({
       } 
       */
 
-    // In the cloud product we do not count waits towards the compute cost or duration.
+    // In the cloud product we do not count waits longer than 5 seconds towards the compute cost or duration.
     // We also don't include time between attempts or before the run starts executing your code.
     // So this line does not affect the cost or duration.
-    await wait.for({ seconds: 5 });
+    await wait.for({ seconds: 10 });
 
     // This will give the same result as before the wait.
     currentUsage = usage.getCurrent();
@@ -60,7 +60,7 @@ export const heavyTask = task({
 > **Note**
 >
 > In Trigger.dev cloud we do not include time between attempts, before your code executes, or waits
-> towards the compute cost or duration.
+> longer than 5 seconds towards the compute cost or duration. Waits of 5 seconds or less still count.
 
 ## Getting the run cost and duration from your backend
 

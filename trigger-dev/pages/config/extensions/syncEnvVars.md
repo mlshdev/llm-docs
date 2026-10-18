@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/config/extensions/syncEnvVars.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/config/extensions/syncEnvVars.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/config/extensions/syncEnvVars.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/config/extensions/syncEnvVars.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/syncEnvVars
 
 # Sync env vars
@@ -32,6 +32,9 @@ The callback is passed a context object with the following properties:
 - `environment`: The environment name that the task is being deployed to (e.g. `production`, `staging`, etc.)
 - `projectRef`: The project ref of the Trigger.dev project
 - `env`: The environment variables that are currently set in the Trigger.dev project
+- `branch`: The preview branch name, if deploying to a preview branch (optional)
+
+`syncEnvVars` also accepts a second argument with an `override` option (defaults to `true`). When `true`, synced variables overwrite variables with the same name that are already set in the environment you're deploying to. Set it to `false` to only sync variables that aren't set there yet.
 
 ### Marking variables as secrets
 
@@ -161,11 +164,14 @@ export default defineConfig({
         projectId: "your-vercel-project-id",
         vercelAccessToken: "your-vercel-access-token", // optional, we recommend to keep it as env variable
         vercelTeamId: "your-vercel-team-id", // optional
+        branch: "your-preview-branch", // optional
       }),
     ],
   },
 });
 ```
+
+The `branch` option filters branch-specific Vercel variables for preview branches. It defaults to the `VERCEL_PREVIEW_BRANCH` environment variable, then the Trigger.dev preview branch. The access token is read from `VERCEL_ACCESS_TOKEN`, falling back to `VERCEL_TOKEN`.
 
 ### syncNeonEnvVars
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/troubleshoot-sso.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/security/authentication/single-sign-on/troubleshoot-sso.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/troubleshoot-sso.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/security/authentication/single-sign-on/troubleshoot-sso.md)
 
 # Troubleshoot single sign-on
 
@@ -282,3 +282,43 @@ In your IdP, ensure the Name ID attribute format is correct:
 1. Verify that the Name ID attribute format in your IdP is set to
    `EmailAddress`.
 2. Adjust your IdP settings to return the correct Name ID format.
+
+## Application was not found in the directory
+
+### Error message
+
+During Azure AD (OIDC) sign-in, Microsoft Entra can return:
+
+```text
+AADSTS700016: Application with identifier '{identifier}' was not found in the directory '{directory}'.
+```
+
+### Causes
+
+The **Client ID** on the Docker SSO connection is not the **Application
+(client) ID** from the app registration **Overview** page. Pasting the
+**Secret ID** into **Client ID** makes Entra search for an application that
+does not exist.
+
+Entra also returns this error when the sign-in request goes to a directory
+that does not contain the app registration.
+
+### Solutions
+
+Replace the application identifier in Docker:
+
+1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), open
+   the app registration.
+2. On the **Overview** page, copy **Application (client) ID**.
+3. Sign in to [Docker Home](https://app.docker.com/) and select your
+   organization.
+4. Select **Identity & auth**, then **SSO and SCIM**.
+5. In the SSO connections table, select the **Action** menu, then **Edit
+   connection**.
+6. Paste **Application (client) ID** into **Client ID**. The **Secret ID**
+   and the secret **Value** are not application identifiers.
+
+If the directory named in the error is not the tenant where you registered
+the app, update **Azure AD Domain** on the Docker connection so sign-in uses
+that tenant. For the connection steps, see
+[Set up single sign-on](https://docs.docker.com/security/authentication/single-sign-on/connect/).

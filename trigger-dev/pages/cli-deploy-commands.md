@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-deploy-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-deploy-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-deploy-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-deploy-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-deploy-commands
 
 # CLI deploy command
@@ -124,7 +124,7 @@ the build server. Requires `--native-build`.
 
 **Property (type: --depot-build)**
 
-Build the image with Depot, the default build provider.
+Build the image with Depot, ignoring the build path configured for your project.
 
 **Property (type: --local-build)**
 
@@ -141,7 +141,7 @@ These options are available on most commands.
 
 **Property (type: --profile)**
 
-The login profile to use. Defaults to "default".
+The login profile to use. Defaults to the current profile, which is set by your last `login` or `switch` (initially "default").
 
 **Property (type: --api-url | -a)**
 

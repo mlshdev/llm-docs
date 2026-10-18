@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/realtime/react-hooks/streams.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/realtime/react-hooks/streams.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/realtime/react-hooks/streams.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/realtime/react-hooks/streams.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/react-hooks/streams
 
 # Stream data to React (AI, files, progress)
@@ -467,7 +467,7 @@ function MyComponent({ runId, publicAccessToken }: { runId: string; publicAccess
 
 ### Throttling updates
 
-The `useRealtimeRunWithStreams` hook accepts an `experimental_throttleInMs` option to throttle the updates from the server. This can be useful if you are getting too many updates and want to reduce the number of updates.
+The `useRealtimeRunWithStreams` hook accepts a `throttleInMs` option to throttle the updates from the server. This can be useful if you are getting too many updates and want to reduce the number of updates.
 
 ```tsx
 import { useRealtimeRunWithStreams } from "@trigger.dev/react-hooks";
@@ -481,7 +481,7 @@ export function MyComponent({
 }) {
   const { run, streams, error } = useRealtimeRunWithStreams(runId, {
     accessToken: publicAccessToken,
-    experimental_throttleInMs: 1000, // Throttle updates to once per second
+    throttleInMs: 1000, // Throttle updates to once per second
   });
 
   if (error) return <div>Error: {error.message}</div>;

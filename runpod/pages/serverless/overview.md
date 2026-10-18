@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/overview.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/serverless/overview.mdx)
+> Pinned source for Runpod main: [serverless/overview.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/overview
 
 # Overview
@@ -27,7 +27,7 @@ The access point for your Serverless application. Endpoints provide a URL where 
 
 ### [Workers](https://docs.runpod.io/serverless/workers/overview)
 
-The container instances that execute your code when requests arrive at your endpoint. Each worker runs your custom Docker container with your application code and dependencies. Runpod automatically manages worker lifecycle, starting them when needed and stopping them when idle to optimize resource usage.
+The container instances that execute your code when requests arrive at your endpoint. Each worker runs your custom Docker container with your application code and dependencies. Runpod automatically manages worker lifecycle, starting them when requests arrive and stopping them when there are no requests to optimize resource usage.
 
 ### [Handler functions](https://docs.runpod.io/serverless/workers/handler-functions)
 
@@ -63,8 +63,8 @@ When a user/client sends a request to your endpoint:
 2. The request is queued until a worker is available.
 3. A worker processes the request using your handler function.
 4. The result is returned to the user/client after they call `/status` (or automatically if you used `/runsync`).
-5. Workers remain active for a period to handle additional requests.
-6. Idle workers eventually shut down if no new requests arrive.
+5. The worker keeps running and waits for more requests for up to the [idle timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#idle-timeout). It is billed while it waits.
+6. If no new requests arrive, the worker scales down and billing stops.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
@@ -99,7 +99,7 @@ flowchart TD
 
 ### Cold starts
 
-A "cold start" refers to the time between when an endpoint with no running workers receives a request, and when a worker is fully "warmed up" and ready to handle the request. This generally involves starting the container, loading models into GPU memory, and initializing runtime environments. Larger models take longer to load into memory, increasing cold start time, and request response time by extension.
+A "cold start" is the time from when Runpod starts a worker until the worker is ready to take its first job. It happens when a request arrives and no running worker can take it, either because none are running or because all running workers are busy. It covers starting the container, loading models into GPU memory, and initializing runtime environments. A worker is billed during its cold start. See [worker lifecycle](https://docs.runpod.io/serverless/workers/overview#worker-lifecycle). Larger models take longer to load into memory, increasing cold start time, and request response time by extension.
 
 Minimizing cold start times is key to creating a responsive and cost-effective endpoint. You can reduce cold starts by using [cached models](https://docs.runpod.io/serverless/endpoints/model-caching), enabling [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot), setting [active worker counts](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#active-min-workers) above zero.
 

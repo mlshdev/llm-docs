@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/manage/terraform-provider.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/manage/terraform-provider.mdx)
+> Pinned source for ZITADEL v4.19.5: [apps/docs/content/guides/manage/terraform-provider.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/guides/manage/terraform-provider.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/terraform-provider
 
 The [ZITADEL Terraform Provider](https://registry.terraform.io/providers/zitadel/zitadel/latest/docs) is a tool that allows you to manage ZITADEL resources through Terraform.

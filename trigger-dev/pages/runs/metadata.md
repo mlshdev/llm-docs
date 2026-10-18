@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/runs/metadata.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/runs/metadata.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/runs/metadata.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/runs/metadata.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/metadata
 
 # Run metadata
@@ -75,7 +75,7 @@ This means it's safe to call these methods anywhere in your code, and they will 
 > Calling `metadata.current()` or `metadata.get()` outside of the run function will always return
 > undefined.
 
-These methods also work inside any task lifecycle hook, either attached to the specific task or the global hooks defined in your `trigger.config.ts` file.
+These methods also work inside any task lifecycle hook, either attached to the specific task or registered globally with `tasks.*` (for example in your `init.ts` file).
 
 ```ts myTasks.ts
 import { task, metadata } from "@trigger.dev/sdk";
@@ -85,7 +85,7 @@ export const myTask = task({
   run: async (payload: { message: string }) => {
     // Your run function work here
   },
-  onStart: async () => {
+  onStartAttempt: async () => {
     metadata.set("progress", 0.5);
   },
   onSuccess: async () => {
@@ -94,14 +94,11 @@ export const myTask = task({
 });
 ```
 
-```ts trigger.config.ts
-import { defineConfig, metadata } from "@trigger.dev/sdk";
+```ts init.ts
+import { tasks, metadata } from "@trigger.dev/sdk";
 
-export default defineConfig({
-  project: "proj_1234",
-  onStart: async () => {
-    metadata.set("progress", 0.5);
-  },
+tasks.onStartAttempt(async () => {
+  metadata.set("progress", 0.5);
 });
 ```
 
@@ -699,7 +696,7 @@ export const myTask = task({
 
 You can view the metadata for a run in the Trigger.dev dashboard. The metadata will be displayed in the run details view:
 
-![View run metadata dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/run-metadata.png)
+![View run metadata dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/run-metadata.png)
 
 ### API
 
@@ -717,4 +714,4 @@ See the [API reference](https://trigger.dev/docs/management/runs/retrieve) for m
 
 ## Size limit
 
-The maximum size of the metadata object is 256KB. If you exceed this limit, the SDK will throw an error. If you are self-hosting Trigger.dev, you can increase this limit by setting the `TASK_RUN_METADATA_MAXIMUM_SIZE` environment variable. For example, to increase the limit to 16KB, you would set `TASK_RUN_METADATA_MAXIMUM_SIZE=16384`.
+The maximum size of the metadata object is 256KB. If an update would exceed this limit, the server rejects it (HTTP 413) and the update is not applied. Inside a task, metadata updates are sent in the background, so the SDK logs a `Failed to flush metadata` error instead of throwing from `metadata.set()` or `metadata.flush()`. If you are self-hosting, you can change the limit with the `TASK_RUN_METADATA_MAXIMUM_SIZE` environment variable (bytes, default 262144). For example, to raise it to 512KB, set `TASK_RUN_METADATA_MAXIMUM_SIZE=524288`.

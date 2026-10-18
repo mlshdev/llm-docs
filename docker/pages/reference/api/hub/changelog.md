@@ -1,9 +1,24 @@
-> Pinned source for Docker main: [content/reference/api/hub/changelog.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/reference/api/hub/changelog.md)
+> Pinned source for Docker main: [content/reference/api/hub/changelog.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/reference/api/hub/changelog.md)
 
 # Docker Hub API changelog
 
 Here you can learn about the latest changes, new features, bug fixes, and known
 issues for Docker Service APIs.
+
+***
+
+## 2026-10-15
+
+### Updates
+
+- Add `sandbox:use` to personal access token scopes on
+  [Create personal access token](https://docs.docker.com/reference/api/hub/latest/operations/postV2AccessTokens/).
+  A request can send `sandbox:use` alone, or `sandbox:use` with one
+  repository scope (`repo:admin`, `repo:write`, `repo:read`, or
+  `repo:public_read`).
+- In Docker Home, **Allow Cloud Sandboxes access** is separate from
+  **Repository permissions**. The checkbox grants `sandbox:use`.
+  **No repository access** leaves the token without a repository scope.
 
 ***
 

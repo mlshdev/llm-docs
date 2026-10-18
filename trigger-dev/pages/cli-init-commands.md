@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-init-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-init-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-init-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-init-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-init-commands
 
 # CLI init command
@@ -19,6 +19,12 @@ pnpm dlx trigger.dev@latest init
 yarn dlx trigger.dev@latest init
 ```
 
+## Arguments
+
+**Property (type: \[path])**
+
+The path to the project. Defaults to `.`.
+
 ## Options
 
 **Property (type: --javascript)**
@@ -32,7 +38,7 @@ The project ref to use when initializing the project.
 
 **Property (type: --tag | -t)**
 
-The version of the `@trigger.dev/sdk` package to install. Defaults to `latest`.
+The version of the `@trigger.dev/sdk` package to install. Defaults to the CLI version.
 
 **Property (type: --skip-package-install)**
 
@@ -41,6 +47,26 @@ Skip installing the `@trigger.dev/sdk` package.
 **Property (type: --override-config)**
 
 Override the existing config file if it exists.
+
+**Property (type: --project-name \<name>)**
+
+The name of the project to create when your account has no projects yet.
+
+**Property (type: --org-name \<name>)**
+
+The organization to create the first project in. Matches an existing organization by name, or creates it if you have none.
+
+**Property (type: -r, --runtime \<runtime>)**
+
+The runtime to use: `node`, `node-22`, `node-24`, `node-26` or `bun`. Defaults to `node-24`.
+
+**Property (type: -y, --yes)**
+
+Skip all prompts. Requires `--project-ref`, or `--project-name` with `--org-name` for a new account.
+
+**Property (type: --no-browser)**
+
+Do not open the browser during login. Print the URL only.
 
 **Property (type: --pkg-args)**
 
@@ -52,7 +78,7 @@ These options are available on most commands.
 
 **Property (type: --profile)**
 
-The login profile to use. Defaults to "default".
+The login profile to use. Defaults to the current profile, which is set by your last `login` or `switch` (initially "default").
 
 **Property (type: --api-url | -a)**
 

@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/cli/undeploy.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/cli/undeploy.mdx)
+> Pinned source for Runpod main: [flash/cli/undeploy.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/cli/undeploy.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/undeploy
 
 # undeploy
 
 List or delete Runpod Serverless endpoints created by Flash, including individual deployments and local development resources.
+
+> **Warning**
+>
+> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
 
 Manage and delete Runpod Serverless endpoints deployed via Flash. Use this command to clean up endpoints created during local development with `flash dev`.
 

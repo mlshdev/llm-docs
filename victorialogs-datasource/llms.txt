@@ -1,20 +1,20 @@
-# VictoriaLogs datasource for Grafana v0.32.0
+# VictoriaLogs datasource for Grafana v0.33.1
 
-> Documentation generated from the latest stable release of [VictoriaMetrics/victorialogs-datasource](https://github.com/VictoriaMetrics/victorialogs-datasource) and pinned to immutable source commit `9cce7548fe6771d542d86576e24ec63684197844`.
+> Documentation generated from the latest stable release of [VictoriaMetrics/victorialogs-datasource](https://github.com/VictoriaMetrics/victorialogs-datasource) and pinned to immutable source commit `dd71b1acde8699f27d9196f3c478d0bcb23e3d6c`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaLogs datasource for Grafana v0.32.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaLogs datasource for Grafana v0.33.1.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.
 - Links and screenshots that upstream pins to a branch are rewritten to the released commit.
 
 ## Plugin documentation
 
-- [VictoriaLogs datasource for Grafana](pages/plugin.md): The VictoriaLogs Grafana plugin allows Grafana to query, visualize, and interact with VictoriaLogs, a high-performance log storage and processing system. (27193 bytes)
+- [VictoriaLogs datasource for Grafana](pages/plugin.md): The VictoriaLogs Grafana plugin allows Grafana to query, visualize, and interact with VictoriaLogs, a high-performance log storage and processing system. (33093 bytes)
 
 ## Repository
 
-- [VictoriaLogs datasource for Grafana: repository guide](pages/repository.md): The VictoriaLogs datasource plugin allows you to query and visualize VictoriaLogs data in Grafana. (14887 bytes)
+- [VictoriaLogs datasource for Grafana: repository guide](pages/repository.md): The VictoriaLogs datasource plugin allows you to query and visualize VictoriaLogs data in Grafana. (15034 bytes)
 
 ## Release history
 
-- [VictoriaLogs datasource for Grafana: changelog](pages/changelog.md): ⚠️ Breaking Change: Plugin ID Updated Update Note 1: In the new version of the plugin, the plugin ID has been updated. The new plugin ID is victoriametrics-logs-datasource. This is a breaking change: Grafana will treat… (46637 bytes)
+- [VictoriaLogs datasource for Grafana: changelog](pages/changelog.md): ⚠️ Breaking Change: Plugin ID Updated Update Note 1: In the new version of the plugin, the plugin ID has been updated. The new plugin ID is victoriametrics-logs-datasource. This is a breaking change: Grafana will treat… (48947 bytes)

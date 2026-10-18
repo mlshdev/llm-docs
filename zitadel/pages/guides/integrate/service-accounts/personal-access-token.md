@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.4: [apps/docs/content/guides/integrate/service-accounts/personal-access-token.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/guides/integrate/service-accounts/personal-access-token.mdx)
+> Pinned source for ZITADEL v4.19.5: [apps/docs/content/guides/integrate/service-accounts/personal-access-token.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/guides/integrate/service-accounts/personal-access-token.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/service-accounts/personal-access-token
 
 A Personal Access Token (PAT) is a ready-to-use token that can be used as an *Authorization* header.
@@ -19,7 +19,7 @@ It is an alternative to the [private key JWT](https://zitadel.com/docs/guides/in
 6. You can either set an expiration date or leave it empty if you don't want it to expire
 7. Copy the token from the dialog (You will not see this again)
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/console-service-user-pat.gif)
+![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/console-service-user-pat.gif)
 
 ## Grant role for ZITADEL
 
@@ -30,7 +30,7 @@ To be able to access the ZITADEL APIs, your service account needs permissions to
 3. Search for your service account
 4. Give the user the role you need — for example, we choose Org Owner (More about [ZITADEL Permissions](https://zitadel.com/docs/guides/manage/console/administrators))
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/public/img/guides/console-service-user-org-owner.gif)
+![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/console-service-user-org-owner.gif)
 
 ## Accessing ZITADEL APIs
 

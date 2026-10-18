@@ -1,15 +1,15 @@
-> Pinned source for Traefik Proxy v3.7.14: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md](https://github.com/traefik/traefik/blob/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md)
+> Pinned source for Traefik Proxy v3.7.15: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md)
 
 # Traefik & Kubernetes with Gateway API
 
 The Kubernetes Gateway provider is a Traefik implementation of the [Gateway API](https://gateway-api.sigs.k8s.io/)
 specification from the Kubernetes Special Interest Groups (SIGs).
 
-This provider supports Standard version [v1.6.2](https://github.com/kubernetes-sigs/gateway-api/releases/tag/v1.6.2) of the Gateway API specification.
+This provider supports Standard version [v1.6.3](https://github.com/kubernetes-sigs/gateway-api/releases/tag/v1.6.3) of the Gateway API specification.
 
 It fully supports all `HTTPRoute` core and some extended features, like `BackendTLSPolicy`, `GRPCRoute`, and `TLSRoute` resources from the [Standard channel](https://gateway-api.sigs.k8s.io/concepts/versioning/?h=#release-channels), as well as `TCPRoute` from the [Experimental channel](https://gateway-api.sigs.k8s.io/concepts/versioning/?h=#release-channels).
 
-For more details, check out the conformance [report](https://github.com/kubernetes-sigs/gateway-api/tree/main/conformance/reports/v1.6.2/traefik-traefik).
+For more details, check out the conformance [report](https://github.com/kubernetes-sigs/gateway-api/tree/main/conformance/reports/v1.6.3/traefik-traefik).
 
 > **Using The Helm Chart**
 > When using the Traefik [Helm Chart](https://doc.traefik.io/traefik/v3.7/getting-started/kubernetes#install-traefik), the RBAC (Role-Based Access Control) are automatically managed for you.
@@ -24,7 +24,7 @@ General functionality cannot be guaranteed for older versions.
 
    ```bash
    # Install Gateway API CRDs from the Standard channel.
-   kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.6.2/standard-install.yaml
+   kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.6.3/standard-install.yaml
    ```
 
    > **`experimentalChannel` requires the Experimental channel CRDs**
@@ -34,7 +34,7 @@ General functionality cannot be guaranteed for older versions.
    > (`experimental-install.yaml`) prevents the Kubernetes Gateway provider from starting:
    > no Gateway API resource is served at all, not only `TCPRoute` and `TLSRoute`.
    > Traefik keeps running and the other providers are unaffected.
-2. If you are not using the Helm Chart, install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/3bd7aa32e1b6c41166575529a10fb2346d9eaa2e/docs/content/reference/dynamic-configuration/kubernetes-gateway-rbac.yml) for Gateway API.
+2. If you are not using the Helm Chart, install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/dynamic-configuration/kubernetes-gateway-rbac.yml) for Gateway API.
 
    ```bash
    # Install Traefik RBACs for Gateway API.

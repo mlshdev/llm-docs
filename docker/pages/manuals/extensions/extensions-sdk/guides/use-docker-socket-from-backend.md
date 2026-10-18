@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/use-docker-socket-from-backend.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/extensions/extensions-sdk/guides/use-docker-socket-from-backend.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/guides/use-docker-socket-from-backend.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/extensions/extensions-sdk/guides/use-docker-socket-from-backend.md)
 
 # Use the Docker socket from the extension backend
 

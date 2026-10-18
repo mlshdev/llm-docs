@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/overview.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/runpodctl/overview.mdx)
+> Pinned source for Runpod main: [runpodctl/overview.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/runpodctl/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/overview
 
 # Overview
@@ -118,6 +118,24 @@ mamba install conda-forge::runpodctl
 ```bash
 pixi global install runpodctl
 ```
+
+Install `runpodctl` from its [Nix flake](https://github.com/runpod/runpodctl) on Linux (x86\_64, aarch64) or macOS (arm64). You need [Nix](https://nixos.org) with flakes enabled.
+
+**Install:**
+
+```bash
+nix profile install github:runpod/runpodctl
+```
+
+**Run without installing:**
+
+```bash
+nix run github:runpod/runpodctl -- pod list
+```
+
+> **Note**
+>
+> `runpodctl update` doesn't work on a Nix install because it replaces its own binary and the Nix store is read-only. Upgrade with `nix profile upgrade` instead.
 
 This installs `runpodctl` globally on your system, so you can run commands from any directory.
 

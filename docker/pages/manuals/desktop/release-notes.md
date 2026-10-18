@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/desktop/release-notes.md)
+> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -995,16 +995,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-06-08
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/228796/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/228796/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/228796/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/228796/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/228796/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/228796/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/228796/docker-desktop-x86_64.pkg.tar.zst)
-
 ### New
 
 - You can now export log data from the **Logs** view.
@@ -1045,16 +1035,6 @@ Download Docker Desktop:
 ## 4.76.0
 
 **Release date:** 2026-06-01
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/228118/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/228118/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/228118/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/228118/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/228118/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/228118/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/228118/docker-desktop-x86_64.pkg.tar.zst)
 
 ### New
 
@@ -1109,16 +1089,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-05-26
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/227598/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/227598/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/227598/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/227598/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/227598/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/227598/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/227598/docker-desktop-x86_64.pkg.tar.zst)
-
 ### Updates
 
 - Docker Offload v0.5.92
@@ -1148,16 +1118,6 @@ Download Docker Desktop:
 ## 4.74.0
 
 **Release date:** 2026-05-19
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/227015/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/227015/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/227015/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/227015/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/227015/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/227015/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/227015/docker-desktop-x86_64.pkg.tar.zst)
 
 ### New
 
@@ -1192,10 +1152,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-05-13
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/226574/Docker%20Desktop%20Installer.exe)
-
 ### Bug fixes and enhancements
 
 #### For Windows
@@ -1205,16 +1161,6 @@ Download Docker Desktop:
 ## 4.73.0
 
 **Release date:** 2026-05-11
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/226246/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/226246/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/226246/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/226246/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/226246/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/226246/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/226246/docker-desktop-x86_64.pkg.tar.zst)
 
 ### Updates
 
@@ -1239,16 +1185,6 @@ Download Docker Desktop:
 ## 4.72.0
 
 **Release date:** 2026-05-06
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/225998/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/225998/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/225998/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/225998/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/225998/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/225998/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/225998/docker-desktop-x86_64.pkg.tar.zst)
 
 ### New
 
@@ -1292,16 +1228,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-04-27
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/225177/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/225177/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/225177/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/225177/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/225177/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/225177/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/225177/docker-desktop-x86_64.pkg.tar.zst)
-
 > \[!IMPORTANT]
 >
 > Support for RHEL 8 has ended. Installing Docker Desktop will require RHEL 9 or RHEL 10 in the next release.
@@ -1343,16 +1269,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-04-20
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/224270/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/224270/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/224270/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/224270/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/224270/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/224270/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/224270/docker-desktop-x86_64.pkg.tar.zst)
-
 ### New
 
 - Added a CLI hint that surfaces the **Logs** view when running `logs`, `compose logs`, `compose attach`, or `compose up` commands, giving you quick access to logs across all running containers. Available with the **Logs** (Beta) feature enabled.
@@ -1390,16 +1306,6 @@ Download Docker Desktop:
 
 **Release date:** 2026-04-13
 
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/224084/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/224084/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/224084/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/224084/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/224084/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/224084/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/224084/docker-desktop-x86_64.pkg.tar.zst)
-
 ### Updates
 
 - [Docker Agent v1.42.0](https://github.com/docker/docker-agent/releases/tag/v1.42.0)
@@ -1434,16 +1340,6 @@ Download Docker Desktop:
 ## 4.68.0
 
 **Release date:** 2026-04-07
-
-Download Docker Desktop:
-
-- [Windows](https://desktop.docker.com/win/main/amd64/223695/Docker%20Desktop%20Installer.exe)
-- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/223695/Docker%20Desktop%20Installer.exe)
-- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/223695/Docker.dmg)
-- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/223695/Docker.dmg)
-- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/223695/docker-desktop-amd64.deb)
-- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/223695/docker-desktop-x86_64.rpm)
-- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/223695/docker-desktop-x86_64.pkg.tar.zst)
 
 ### New
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/logs.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/desktop/use-desktop/logs.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/logs.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/desktop/use-desktop/logs.md)
 
 # Explore the Logs view in Docker Desktop
 

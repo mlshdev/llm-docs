@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.4: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://github.com/zitadel/zitadel/blob/101343ad87aef7b0eea7c3522d519308e0ea9547/apps/docs/content/self-hosting/manage/configure/configure.mdx)
+> Pinned source for ZITADEL v4.19.5: [apps/docs/content/self-hosting/manage/configure/configure.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/self-hosting/manage/configure/configure.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/configure/configure
 
 This guide assumes you are familiar with [running ZITADEL using the least amount of configuration possible](https://zitadel.com/docs/self-hosting/deploy/overview).
@@ -640,8 +640,6 @@ Executions:
   DenyList: # ZITADEL_EXECUTIONS_DENYLIST (comma separated list)
 
 Auth:
-  # See Projections.BulkLimit
-  SearchLimit: 1000 # ZITADEL_AUTH_SEARCHLIMIT
   Spooler:
     # See Projections.TransationDuration
     TransactionDuration: 10s #ZITADEL_AUTH_SPOOLER_TRANSACTIONDURATION
@@ -654,8 +652,6 @@ Auth:
   AmountOfCachedAuthRequests: 0 #ZITADEL_AUTH_AMOUNTOFCACHEDAUTHREQUESTS
 
 Admin:
-  # See Projections.BulkLimit
-  SearchLimit: 1000 # ZITADEL_ADMIN_SEARCHLIMIT
   Spooler:
     # See Projections.TransationDuration
     TransactionDuration: 10s
@@ -1062,9 +1058,15 @@ SystemDefaults:
     PublicKeyLifetime: 30h # ZITADEL_SYSTEMDEFAULTS_KEYCONFIG_PUBLICKEYLIFETIME
     # 8766h are 1 year
     CertificateLifetime: 8766h # ZITADEL_SYSTEMDEFAULTS_KEYCONFIG_CERTIFICATELIFETIME
-  # DefaultQueryLimit limits the number of items that can be queried in a single v3 API search request without explicitly passing a limit.
+  # DefaultQueryLimit limits the number of items returned by a single v2 (or newer) API list request without explicitly passing a limit.
+  # 0 disables the default and returns all items.
   DefaultQueryLimit: 100 # ZITADEL_SYSTEMDEFAULTS_DEFAULTQUERYLIMIT
-  # MaxQueryLimit limits the number of items that can be queried in a single v3 API search request with explicitly passing a limit.
+  # MaxQueryLimit is the highest limit that can be explicitly passed in a single API list request,
+  # including the list and change history requests of the v1 APIs.
+  # Requests exceeding it fail with an InvalidArgument error. 0 disables the maximum.
+  # The v1 APIs also use it as default if no limit is passed, as well as the limit for the refresh tokens
+  # listed and revoked by the auth API (ListMyRefreshTokens, RevokeAllMyRefreshTokens).
+  # The events API (ListEvents) is not affected and always returns at most 1000 events.
   MaxQueryLimit: 1000 # ZITADEL_SYSTEMDEFAULTS_MAXQUERYLIMIT
   # The maximum duration of the IDP intent lifetime after which the IDP intent expires and can not be retrieved or used anymore.
   # Note that this time is measured only after the IdP intent was successful and not after the IDP intent was created.

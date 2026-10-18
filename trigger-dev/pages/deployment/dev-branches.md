@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/deployment/dev-branches.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/dev-branches.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/deployment/dev-branches.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/dev-branches.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/dev-branches
 
 # Development branches
@@ -52,7 +52,7 @@ Without `--branch`, the session runs on the `default` branch.
 
 ## Archive a branch
 
-Archive a branch from the CLI when you no longer need it. The CLI detects your local git branch, or you can name one with `--branch`:
+Archive a branch from the CLI when you no longer need it. Pass the branch with `--branch` (or set `TRIGGER_DEV_BRANCH`); it's required, and the `default` branch can't be archived:
 
 ```bash npm
 npx trigger.dev@latest dev archive --branch my-feature
@@ -70,12 +70,12 @@ You can also create and archive branches from the **Dev branches** page in the d
 
 ## Limits on active branches
 
-Each branch has its own concurrency, so we limit how many can be active per project. Archive a branch at any time to unlock another slot.
+Each branch has its own concurrency, so we limit how many dev branches each developer can have active per project. The `default` development environment counts toward this limit. If you are at the limit when you run `dev --branch`, the CLI automatically archives up to 3 of your branches that have no connected dev session and have been idle for over an hour, to make room. You can also archive a branch any time to free a slot.
 
 | Plan  | Active dev branches |
 | ----- | ------------------- |
-| Free  | 25                  |
-| Hobby | 25                  |
-| Pro   | 25                  |
+| Free  | 50                  |
+| Hobby | 50                  |
+| Pro   | 50                  |
 
 Need more? [Get in touch](https://trigger.dev/contact) and we'll raise the limit.

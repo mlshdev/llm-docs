@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/mcp-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/mcp-introduction.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/mcp-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/mcp-introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/mcp-introduction
 
 # MCP Introduction
@@ -305,7 +305,7 @@ After adding the config, restart your client. You should see a server named **tr
 
 ## Authentication
 
-The `search_docs` tool works without authentication. All other tools require you to be logged in via the [Trigger.dev CLI](https://trigger.dev/docs/cli-login-commands). The first time you use an authenticated tool, your MCP client will prompt you to log in.
+The `search_docs` tool works without authentication, and so do the local-only tools `list_profiles`, `dev_server_status` and `stop_dev_server`. All other tools require you to be logged in via the [Trigger.dev CLI](https://trigger.dev/docs/cli-login-commands). The first time you use an authenticated tool, your MCP client will prompt you to log in.
 
 The `install-mcp` command supports these options:
 
@@ -314,7 +314,6 @@ The `install-mcp` command supports these options:
 - `-p, --project-ref <project ref>` — Scope the MCP server to a specific project
 - `-t, --tag <package tag>` — CLI package version to use (default: latest)
 - `--dev-only` — Restrict to the dev environment only
-- `--readonly` — Read-only mode. Hides write tools (`deploy`, `trigger_task`, `cancel_run`) so the AI cannot make changes to your account
 - `--yolo` — Install into all supported clients automatically
 - `--scope <scope>` — `user`, `project`, or `local`
 - `--client <clients...>` — Install into specific client(s)
@@ -345,17 +344,19 @@ Restrict to dev environment for a specific project:
 npx trigger.dev@latest install-mcp --dev-only --project-ref proj_abc123
 ```
 
-Read-only mode (prevents AI from deploying or triggering tasks):
-
-```bash
-npx trigger.dev@latest install-mcp --readonly
-```
-
 To add these options to a manual config, append them to the `args` array:
 
 ```json
 {
   "args": ["trigger.dev@latest", "mcp", "--dev-only", "--project-ref", "proj_abc123"]
+}
+```
+
+The `mcp` command also accepts `--readonly`, which hides the tools that write to your account (for example `deploy`, `trigger_task` and `cancel_run`) so the AI cannot make changes to it. It is only available as a manual config arg:
+
+```json
+{
+  "args": ["trigger.dev@latest", "mcp", "--readonly"]
 }
 ```
 

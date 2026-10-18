@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/how-tos/configure-cli.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/scout/how-tos/configure-cli.md)
+> Pinned source for Docker main: [content/manuals/scout/how-tos/configure-cli.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/scout/how-tos/configure-cli.md)
 
 # Configure Docker Scout with environment variables
 

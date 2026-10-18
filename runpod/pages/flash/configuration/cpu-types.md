@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/configuration/cpu-types.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/configuration/cpu-types.mdx)
+> Pinned source for Runpod main: [flash/configuration/cpu-types.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/configuration/cpu-types.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/cpu-types
 
 # CPU types
 
 Available CPU instance types for Flash endpoints. Review setup, configuration, deployment, and usage guidance for Runpod Flash.
+
+> **Warning**
+>
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 Flash provides access to CPU-only compute instances for workloads that don't require GPU acceleration. This reference lists all available CPU instance types.
 

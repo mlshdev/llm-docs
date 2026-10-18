@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/billing-limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/billing-limits.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/billing-limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/billing-limits.mdx)
 > Canonical documentation: https://trigger.dev/docs/billing-limits
 
 # Billing limits and alerts
@@ -17,7 +17,7 @@ Billing limits let you cap your organization's monthly compute spend so a runawa
 
 You can find the settings in the dashboard: open the **Organization** menu in the top left, then **Settings** → **Billing limits**.
 
-![Billing limit settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/billing-docs.png)
+![Billing limit settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/billing-docs.png)
 
 ## Setting a billing limit
 
@@ -38,7 +38,7 @@ Billing alerts are email notifications sent when your monthly spend crosses a th
 - **With a billing limit set**: thresholds are percentages of your limit (e.g. 50%, 80%).
 - **Without a billing limit**: thresholds are dollar amounts.
 
-![Billing alerts settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/images/billing-alerts-docs.png)
+![Billing alerts settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/billing-alerts-docs.png)
 
 Alerts only notify you — they never pause environments or reject runs. Use them on their own for visibility, or alongside a limit to get advance warning before enforcement kicks in.
 
@@ -50,7 +50,7 @@ When your organization's spend reaches the billing limit, billable environments 
 2. New runs can still be triggered and are queued, but they won't start executing. Queued runs incur no compute cost until they start.
 3. You have **24 hours** to review and decide what to do.
 
-If you don't act before the grace period ends, queued runs are canceled and new triggers are rejected for the rest of the billing cycle.
+If you don't act before the grace period ends, new triggers are rejected until you increase or remove the limit (limits also reset at the start of each billing cycle). Queued runs stay queued until you resolve the limit and choose to resume or cancel them. If the limit is still in place when a new billing cycle starts, queued runs resume automatically. Runs that have a TTL still expire if they stay queued past it.
 
 > **Note**
 >

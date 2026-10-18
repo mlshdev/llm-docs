@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/ros2.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/guides/ros2.md)
+> Pinned source for Docker main: [content/guides/ros2.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/guides/ros2.md)
 
 # Introduction to ROS 2 Development with Docker
 

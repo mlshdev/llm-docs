@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/cli/overview.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/cli/overview.mdx)
+> Pinned source for Runpod main: [flash/cli/overview.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/cli/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/overview
 
 # CLI overview
 
 Learn how to use the Flash CLI for local development and deployment. Review setup, configuration, deployment, and usage guidance for Runpod Flash.
+
+> **Warning**
+>
+> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
 
 The Flash CLI provides commands for initializing projects, running local development servers, building deployment artifacts, and managing your applications on Runpod Serverless.
 

@@ -1,9 +1,13 @@
-> Pinned source for Runpod main: [flash/cli/update.mdx](https://github.com/runpod/docs/blob/674b3f2b13fbc59fb349a716b32faf18fb2fcc98/flash/cli/update.mdx)
+> Pinned source for Runpod main: [flash/cli/update.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/flash/cli/update.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/update
 
 # update
 
 Update the Flash CLI to the latest or a selected version, understand automatic update checks, and configure when those checks run.
+
+> **Warning**
+>
+> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
 
 Update the Flash CLI to the latest version or a specific version. The command fetches version information from PyPI and installs using uv (when available) or pip.
 
@@ -35,7 +39,7 @@ Target version to install. If not specified, updates to the latest version avail
 
 Flash checks for newer versions in the background when you run most commands. If an update is available, a notice appears after the command completes:
 
-```
+```text
 A new version of runpod-flash is available: 2.0.0
   Run 'flash update' to upgrade.
 ```

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-licenses.md](https://github.com/docker/docs/blob/9643ba0813ea4290a7ab1f206dddaf7683f39edd/content/manuals/accounts/organization/manage/manage-licenses.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-licenses.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/accounts/organization/manage/manage-licenses.md)
 
 # Manage licenses
 
@@ -105,21 +105,23 @@ card.
 
 When the toggle is on:
 
-- Docker Core: members receive a license when they sign in to Docker Desktop.
+- Docker Team or Business: members receive a license when they sign in to
+  Docker Desktop.
 - AI Governance: members receive a license when they sign in to
-  [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/). The `sbx login` command
-  provisions licenses on a first-come, first-served basis.
+  [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/). The `sbx login`
+  command provisions licenses on a first-come, first-served basis.
 - Licenses are assigned until exhausted.
   - Once the available licenses are exhausted, automatic license assignment
     stops until more licenses are available.
   - Members can still use Docker Sandboxes or Docker Desktop, but
     organization policies for those products won't affect their usage.
 
-AI Governance licenses include single sign-on (SSO) and provisioning features
-regardless of your Docker Core subscription. With automatic assignment on,
-Docker assigns a license when a member uses Docker Sandboxes, whether they
-joined by invitation or through SSO with System for Cross-domain Identity
-Management (SCIM) or Just-in-Time (JIT) provisioning.
+AI Governance licenses include single sign-on (SSO) and provisioning with
+System for Cross-domain Identity Management (SCIM) or Just-in-Time (JIT),
+even if your organization doesn't have a Docker Business subscription.
+Members who join through SSO can receive an automatically assigned license
+when they use Docker Sandboxes, the same as members you invite. See
+[Authentication](https://docs.docker.com/security/authentication/).
 
 ## View licenses
 

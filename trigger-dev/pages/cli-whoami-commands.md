@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/cli-whoami-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/cli-whoami-commands.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/cli-whoami-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-whoami-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-whoami-commands
 
 # CLI whoami command
@@ -21,13 +21,25 @@ yarn dlx trigger.dev@latest whoami
 
 ## Options
 
+**Property (type: -c, --config \<config file>)**
+
+The name of the config file.
+
+**Property (type: -p, --project-ref \<project ref>)**
+
+The project ref. Overrides the project in the config file.
+
+**Property (type: --env-file \<env file>)**
+
+Path to a `.env` file to read `TRIGGER_PROJECT_REF` from. Defaults to `.env`, `.env.development`, `.env.local`, `.env.development.local` and `dev.vars` in the current directory.
+
 ### Common options
 
 These options are available on most commands.
 
 **Property (type: --profile)**
 
-The login profile to use. Defaults to "default".
+The login profile to use. Defaults to the current profile, which is set by your last `login` or `switch` (initially "default").
 
 **Property (type: --api-url | -a)**
 

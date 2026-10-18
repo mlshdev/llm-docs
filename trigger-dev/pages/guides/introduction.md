@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/guides/introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/guides/introduction.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/guides/introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/introduction
 
 # Frameworks, guides and examples
@@ -26,7 +26,7 @@ Get set up fast using our detailed walk-through guides.
 | [AI Agent: Route questions](https://trigger.dev/docs/guides/ai-agents/route-question)                              | Route questions to different models based on complexity                |
 | [AI Agent: Translation refinement](https://trigger.dev/docs/guides/ai-agents/translate-and-refine)                 | Evaluate and refine translations with feedback                         |
 | [Claude Agent SDK](https://trigger.dev/docs/guides/ai-agents/claude-code-trigger)                                  | Build AI agents that read files, run commands, and edit code           |
-| [Cursor rules](https://trigger.dev/docs/guides/cursor-rules)                                                       | Use Cursor rules to help write Trigger.dev tasks                       |
+| [Agent rules](https://trigger.dev/docs/mcp-agent-rules)                                                            | Install agent skills so your AI assistant writes correct tasks         |
 | [Prisma](https://trigger.dev/docs/guides/frameworks/prisma)                                                        | How to setup Prisma with Trigger.dev                                   |
 | [Python image processing](https://trigger.dev/docs/guides/python/python-image-processing)                          | Use Python and Pillow to process images                                |
 | [Python document to markdown](https://trigger.dev/docs/guides/python/python-doc-to-markdown)                       | Use Python and MarkItDown to convert documents to markdown             |

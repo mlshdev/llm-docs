@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/realtime/auth.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/realtime/auth.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/realtime/auth.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/realtime/auth.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/auth
 
 # Realtime authentication
@@ -158,7 +158,7 @@ const { parts } = useRealtimeStream<{ url: string }>(runId, "frames", {
 
 When you [trigger tasks](https://trigger.dev/docs/triggering) from your backend, the `handle` received includes a `publicAccessToken` field. This token can be used to authenticate real-time requests in your frontend application.
 
-By default, auto-generated tokens expire after 15 minutes and have a read scope for the specific run(s) that were triggered. You can customize the expiration by passing a `publicTokenOptions` object to the trigger function.
+Auto-generated tokens expire after 1 hour and have a read scope for the specific run(s) that were triggered. For a different expiration or scopes, create a token yourself with [`auth.createPublicToken`](#creating-public-access-tokens).
 
 See our [triggering documentation](https://trigger.dev/docs/triggering) for detailed examples of how to trigger tasks and get auto-generated tokens.
 

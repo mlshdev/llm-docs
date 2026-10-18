@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.3: [docs/deployment/atomic-deployment.mdx](https://github.com/triggerdotdev/trigger.dev/blob/10b9960d5a45cfb323cfc48a157e3cb8d481339c/docs/deployment/atomic-deployment.mdx)
+> Pinned source for Trigger.dev v4.7.4: [docs/deployment/atomic-deployment.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/atomic-deployment.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/atomic-deployment
 
 # Atomic deployments
@@ -430,6 +430,8 @@ If you use the [Vercel integration](https://trigger.dev/docs/vercel-integration)
 - `VERCEL_GIT_COMMIT_SHA` is available at runtime on Vercel, so the SDK discovers the matching id with no work from you.
 
 This covers production, staging and preview alike.
+
+In production, the integration also gates the release on the task build. Each production deployment from your production branch carries a blocking **Trigger.dev Build** check, so a commit whose tasks fail to build never goes live and its runs never wait on a deployment that won't arrive. Re-run the **Trigger.dev deployment** check in GitHub to build that commit again. See [Production waits for your tasks](https://trigger.dev/docs/vercel-integration#production-waits-for-your-tasks).
 
 ### Opting out
 
