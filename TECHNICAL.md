@@ -134,4 +134,9 @@ desktop release tags.
 3. Behavior changes to rendering or conversion require a test fixture in the
    affected adapter's `.test.ts`.
 4. Dependency updates go through Dependabot (bun ecosystem + GitHub Actions,
-   Mon/Thu cron); PRs auto-queue for merge only after the required `check`.
+   Mon/Thu cron); auto-merge waits for the required `check`. For manifest or
+   lockfile updates, merge the current `main` into the PR branch, run `bun ci`
+   and `bun run build`, then commit the regenerated snapshots after
+   `bun run check` passes. Keep the Biome schema version in `biome.json` aligned
+   with its installed version. CI requires the rebuilt corpus to match the
+   committed snapshots, including their generator digests.
