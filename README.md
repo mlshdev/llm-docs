@@ -165,6 +165,11 @@ bun run verify:apple
 
 `bun run update`, `bun run build`, `bun run verify`, and `bun run check` operate only on GitHub-backed projects, keeping normal local work away from the multi-gigabyte Apple corpus. The corresponding `:apple` commands select only DocC projects, while `:all` selects both source classes. `bun run update` contacts the GitHub API, downloads source archives only when stable pins change, and writes `build-report.json` describing anything it had to hold back plus per-project request counts and elapsed time. `bun run update:apple` compares Apple's current catalog inventory with the committed pins and rebuilds only changed catalogs. Immutable GitHub archives are cached by commit SHA under the operating system's temporary directory; set `GITHUB_ARCHIVE_CACHE_DIR` to retain them at a deliberate location. `bun run build:apple` retains already-captured DocC projects unless `DOCC_REBUILD=1` is set because Apple does not serve historical snapshots. `bun run src/cli.ts report` renders the last report as the tracking-issue body. Set `SOURCE_CONCURRENCY` to bound simultaneous source resolution, `DOCC_CONCURRENCY` to control concurrent Apple reads, `DOCC_CACHE_DIR` to retain render JSON between interrupted runs, `DOCC_CACHE_TTL` to control cache freshness in seconds, or `DOCC_REFRESH=1` to bypass the cache.
 
+After changing dependencies, run `bun ci`, `bun run build`, and `bun run check`,
+and include the regenerated snapshots in the same pull request. Dependency-only
+updates also change the generator digest, so their committed manifests must be
+rebuilt before CI can verify them.
+
 ## Adding a project
 
 Add project metadata to `config/sources.json`, extend the `ProjectId` type, and implement a source-specific adapter under `src/projects/`. Adapters must select authoritative source files, exclude generated duplicates and assets, preserve upstream licensing, and fail rather than silently discard unsupported source constructs. Collect documents through `DocumentCollector` so that a page the adapter cannot convert is quarantined and reported instead of failing the whole project, and add the project's expected-to-be-resolved source syntax to `unresolvedSyntax` in `src/quarantine.ts`.
