@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/94cba3150c6b83057ed48b833689adc806715cc0/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/122336c1e3811db383add97c390fd4f41ccc25e7/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -19370,7 +19370,19 @@ It accepts the following options:
   Allows you to specify an external file-transform to use instead of the OCIO config file. This is useful for applying a single transform without needing a full OCIO config file.
 
 - format
-  Allow you to specify the output pix\_fmt of the OCIO filter. This *has* to be a RGB colorspace, so you really are limited to rgb24, rgba, rgb48, rgba48, gbrp10, gbrp12, gbrpf32le, gbrapf32le, for most encoding we would recommend rgb48
+  Allow you to specify the output pix\_fmt of the OCIO filter. This *has* to be a
+  RGB colorspace, so you are limited to rgb24, rgba, rgb48, rgba64, gbrp10,
+  gbrap10, gbrp12, gbrap12, gbrpf32 and gbrapf32; for most encoding we would
+  recommend rgb48.
+
+Half-float (gbrpf16, gbrapf16) is accepted as input but is not a valid output
+format, because swscale has no half-float write support and its legacy
+half-float read path clamps values to \[0,1]. When this option is not set, the
+output format defaults to the input format, except that half-float input is
+promoted to the matching float format. Where negotiation cannot yet tell
+whether the input will be half-float, the output falls back to float, so a
+float output may be selected even when the input turns out to be an integer
+format.
 
 - context\_params
   Allow you to specify additional context parameters for the OCIO filter. This is a list of key=value pairs, separated by colons.

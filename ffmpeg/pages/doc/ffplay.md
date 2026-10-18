@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffplay.texi](https://github.com/FFmpeg/FFmpeg/blob/94cba3150c6b83057ed48b833689adc806715cc0/doc/ffplay.texi)
+> Pinned source for FFmpeg master: [doc/ffplay.texi](https://github.com/FFmpeg/FFmpeg/blob/122336c1e3811db383add97c390fd4f41ccc25e7/doc/ffplay.texi)
 
 # Synopsis
 
@@ -699,12 +699,17 @@ frame, and pause.
 - page down/page up
   Seek to previous/next chapter or backward/forward 10 minutes if no chapters.
   The chapter list is shown briefly, marking the chapter being played at its
-  left edge. It needs the ass filter and the SDL renderer, so it is unavailable
+  left edge. It needs libass and the SDL renderer, so it is unavailable
   in builds without libass and with the Vulkan renderer.
 
 - l
   Keep the chapter list on screen. While it is kept, typing filters the list by
   artist and title, down/up move its selection and escape closes it.
+
+- o
+  Show the files in the directory of the input. Enter or a click plays the
+  selected file or opens the selected directory, escape closes the list. Typing
+  filters the list by name.
 
 - enter
   Seek to the chapter selected in the chapter list while it is shown.
