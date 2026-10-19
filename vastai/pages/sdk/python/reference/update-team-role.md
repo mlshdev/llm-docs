@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/update-team-role.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/sdk/python/reference/update-team-role.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/update-team-role.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/sdk/python/reference/update-team-role.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/update-team-role
 
 # VastAI.update_team_role

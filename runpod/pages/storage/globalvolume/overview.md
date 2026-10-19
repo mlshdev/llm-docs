@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/globalvolume/overview.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/storage/globalvolume/overview.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/overview.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/storage/globalvolume/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/overview
 
 # Overview
@@ -33,14 +33,14 @@ The volume appears in your Storage list with the type set to **Global**. Storage
 
 A global volume mounts automatically at startup. The mount path depends on where you're using it:
 
-- **Pods:** defaults to `/workspace`, or `/workspace-global` when a network volume is also attached. See [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume-pods#mount-paths) for details.
+- **Pods:** defaults to `/workspace`, or `/workspace-global` when a network volume is also attached. See [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume/globalvolume-pods#mount-paths) for details.
 - **Serverless:** always mounts at `/runpod-volume`. See [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume/globalvolume-serverless#mount-path) for details.
 
 ## Migrate data from a network volume
 
 If you have data on a network volume that you want to move to a global volume, you can use `rsync`. When both volumes are attached to a Pod without a custom mount path, the network volume is at `/workspace` and the global volume is at `/workspace-global`. Verify your paths in the Pod's **Console** tab before running the command.
 
-1. Deploy a Pod with both your network volume and global volume attached (see [Attach a global volume to a Pod](https://docs.runpod.io/storage/globalvolume-pods#attach-a-global-volume-to-a-pod)).
+1. Deploy a Pod with both your network volume and global volume attached (see [Attach a global volume to a Pod](https://docs.runpod.io/storage/globalvolume/globalvolume-pods#attach-a-global-volume-to-a-pod)).
 2. Run the following command from the Pod's **Console** tab:
 
 ```bash
@@ -89,7 +89,7 @@ Global volumes use object-backed storage, not a fully POSIX compliant file syste
 
 ## Next steps
 
-- [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume-pods)
+- [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume/globalvolume-pods)
 - [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume/globalvolume-serverless)
 - [Manage network volumes](https://docs.runpod.io/storage/network-volumes)
 - [Use the S3-compatible API](https://docs.runpod.io/storage/s3-api)

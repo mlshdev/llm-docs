@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/seedance-1-5-pro.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/public-endpoints/models/seedance-1-5-pro.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/seedance-1-5-pro.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/public-endpoints/models/seedance-1-5-pro.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/seedance-1-5-pro
 
 # Seedance 1.5 Pro I2V
@@ -101,7 +101,7 @@ response = requests.post(
 )
 
 result = response.json()
-print(result["output"]["video_url"])
+print(result["output"]["result"])
 ```
 
 ```javascript JavaScript
@@ -127,7 +127,7 @@ const response = await fetch(
 );
 
 const result = await response.json();
-console.log(result.output.video_url);
+console.log(result.output.result);
 ```
 
 ## Response
@@ -144,7 +144,7 @@ Request status. Returns `COMPLETED` on success, `FAILED` on error.
 
 The generation result containing the video URL and cost.
 
-**output.video\_url (type: string)**
+**output.result (type: string)**
 
 URL of the generated video. This URL expires after 7 days.
 
@@ -159,7 +159,7 @@ Cost of the generation in USD.
   "delayTime": 25,
   "executionTime": 65432,
   "output": {
-    "video_url": "https://video.runpod.ai/abc123/output.mp4",
+    "result": "https://video.runpod.ai/abc123/output.mp4",
     "cost": 0.26
   }
 }

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/deployment/{id}/start](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/api-reference/openapi.yaml%23post%20/api/v0/deployment/%7Bid%7D/start)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/deployment/{id}/start](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/api-reference/openapi.yaml%23post%20/api/v0/deployment/%7Bid%7D/start)
 > Canonical documentation: https://docs.vast.ai/api-reference/serverless/start-deployment
 
 # start deployment

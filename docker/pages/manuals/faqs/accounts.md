@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/content/manuals/faqs/accounts.md)
+> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/faqs/accounts.md)
 
 # Account FAQs
 
@@ -169,6 +169,40 @@ Yes. Organization owners occupy a seat.
 
 Yes. In a scenario where a user belongs to two organizations, they take up one
 seat in each organization.
+
+### Why is Insights data missing for some users?
+
+Older versions of Docker Desktop may omit some metrics. Update those users to
+the latest Docker Desktop release.
+
+For prerequisites and how to open Insights, see
+[Insights](https://docs.docker.com/accounts/organization/insights/).
+
+### Why are opted-out users missing from Insights?
+
+Insights includes a user only when **Send usage statistics**
+(`analyticsEnabled`) is on. Turn the setting on for users who opted out. At
+scale, use
+[Settings
+Management](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/)
+and set `analyticsEnabled` to `true`.
+
+### Why is Docker Engine usage missing from Insights?
+
+Only Docker Desktop sends Insights data. A standalone Docker Engine install
+sends none.
+
+### Why are some users excluded from Insights?
+
+Insights includes users who sign in with an account associated with your
+organization. To include the rest,
+[enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
+
+### Why does Insights show no data?
+
+Insights may show no data until you verify your organization's domain.
+[Verify the
+domain](https://docs.docker.com/security/provisioning/domain-management/).
 
 ### Companies
 

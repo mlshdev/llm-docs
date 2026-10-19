@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/ner/gliner2.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/examples/ner/gliner2.mdx)
+> Pinned source for Vast.ai main: [examples/ner/gliner2.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/examples/ner/gliner2.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/ner/gliner2
 
 # GLiNER2
@@ -405,7 +405,7 @@ vastai destroy instance <INSTANCE_ID>
 ## Additional Resources
 
 - [GLiNER2 GitHub Repository](https://github.com/fastino-ai/GLiNER2)
-- [GLiNER2 Models on Hugging Face](https://huggingface.co/collections/fastino/gliner2)
+- [GLiNER2 Models on Hugging Face](https://huggingface.co/collections/fastino/gliner2-family)
 - [Vast.ai CLI Guide](https://docs.vast.ai/cli/hello-world)
 - [Create Your Own Template](https://docs.vast.ai/guides/templates/creating-templates)
 

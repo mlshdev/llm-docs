@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/122336c1e3811db383add97c390fd4f41ccc25e7/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/bbd37149e4b1bd9730a70f06b72d1c1f9b95bc0f/doc/general.texi)
 
 # External libraries
 
@@ -1126,6 +1126,8 @@ following image formats are supported:
 - IFF ByteRun1            |       |   X
   \|  IFF run length encoded bitmap
 - Infinity IMM4           |       |   X
+- Infinity IMM5           |       |   X
+- Infinity IMM6           |       |   X
 - Intel H.263             |       |   X
 - Intel Indeo 2           |       |   X
 - Intel Indeo 3           |       |   X

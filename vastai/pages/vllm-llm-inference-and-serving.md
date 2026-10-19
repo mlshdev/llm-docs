@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [vllm-llm-inference-and-serving.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/vllm-llm-inference-and-serving.mdx)
+> Pinned source for Vast.ai main: [vllm-llm-inference-and-serving.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/vllm-llm-inference-and-serving.mdx)
 > Canonical documentation: https://docs.vast.ai/vllm-llm-inference-and-serving
 
 # vLLM (LLM inference and serving)
@@ -18,7 +18,7 @@ vLLM serve is launched automatically by the template and it will use the configu
 1. Vist the [templates](https://cloud.vast.ai/templates/) page and find the recommended vLLM template.
 2. Click the pencil button to open up the template editor.
 3. If you would like to run a model other than the default, edit the `VLLM_MODEL`environment variable.  The default value is `deepseek-ai/DeepSeek-R1-Distill-Llama-8B` which is a HuggingFace repository.
-4. You can also set the arguments to pass to `vllm serve` by modifying the `VLLM_ARGS` environment variable.  vLLM is highly configurable so it's a good idea to check the official documentation before changing anything here. All available startup arguments are listed in the [official vLLM documentation](https://docs.vllm.ai/en/latest/serving/engine_args.html).
+4. You can also set the arguments to pass to `vllm serve` by modifying the `VLLM_ARGS` environment variable.  vLLM is highly configurable so it's a good idea to check the official documentation before changing anything here. All available startup arguments are listed in the [official vLLM documentation](https://docs.vllm.ai/en/latest/configuration/engine_args/).
 5. Save the template.  You will be able to find the version you have just modified in the templates page in the 'My Templates' section.
 
 ## Launch Your Instance

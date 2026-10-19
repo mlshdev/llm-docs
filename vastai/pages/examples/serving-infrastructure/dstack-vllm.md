@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/serving-infrastructure/dstack-vllm.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/examples/serving-infrastructure/dstack-vllm.mdx)
+> Pinned source for Vast.ai main: [examples/serving-infrastructure/dstack-vllm.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/examples/serving-infrastructure/dstack-vllm.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/serving-infrastructure/dstack-vllm
 
 # dstack + vLLM
@@ -278,7 +278,7 @@ Remember to:
 ## Additional Resources
 
 - [dstack Documentation](https://dstack.ai/docs/)
-- [dstack CLI Reference](https://dstack.ai/docs/reference/cli/)
+- [dstack CLI Reference](https://dstack.ai/docs/reference/cli/dstack/apply/)
 - [vLLM Documentation](https://docs.vllm.ai/)
 - [Vast.ai Console](https://cloud.vast.ai/)
 - [Qwen3-30B-A3B Model Card](https://huggingface.co/Qwen/Qwen3-30B-A3B)

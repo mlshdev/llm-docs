@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [multi-node-training-using-torch-nccl.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/multi-node-training-using-torch-nccl.mdx)
+> Pinned source for Vast.ai main: [multi-node-training-using-torch-nccl.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/multi-node-training-using-torch-nccl.mdx)
 > Canonical documentation: https://docs.vast.ai/multi-node-training-using-torch-nccl
 
 # Multi-Node training using Torch + NCCL

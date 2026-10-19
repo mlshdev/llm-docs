@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/advanced-setup.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/guides/templates/advanced-setup.mdx)
+> Pinned source for Vast.ai main: [guides/templates/advanced-setup.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/guides/templates/advanced-setup.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/advanced-setup
 
 # Advanced Setup
@@ -50,7 +50,7 @@ https://raw.githubusercontent.com/karthik-vast-ai/vast-cli/distributed-inference
 5. Make sure to click "+" to add the environment variable
 6. Click Create and Use
 
-![](https://raw.githubusercontent.com/vast-ai/docs/8629af9a05e884dd603b6a24bbb7c39826c1a10d/images/console-create-custom-template.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/e0e0293c3626e419c16dcfc6f799976252de5c5f/images/console-create-custom-template.webp)
 
 ### Example PROVISIONING\_SCRIPT
 
@@ -123,7 +123,7 @@ Note: Instance Portal UI is **not** required and its own config declaration can 
 
 ## Building Custom Docker Images
 
-If you want to create your own custom Docker image, you can optionally start FROM one of our [Vast.ai base images](https://hub.docker.com/r/vastai/base-image/tags) to get built-in security features and Instance Portal integration. See the [Introduction](https://docs.vast.ai/guides/templates/introduction#vastai-base-images) for more details on why you might want to use Vast base images.
+If you want to create your own custom Docker image, you can optionally start FROM one of our [Vast.ai base images](https://hub.docker.com/r/vastai/base-image/tags) to get built-in security features and Instance Portal integration. See the [Introduction](https://docs.vast.ai/guides/templates/introduction#vast-ai-base-images) for more details on why you might want to use Vast base images.
 
 ### Building FROM Vast Base Images
 

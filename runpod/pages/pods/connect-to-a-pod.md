@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [pods/connect-to-a-pod.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/pods/connect-to-a-pod.mdx)
+> Pinned source for Runpod main: [pods/connect-to-a-pod.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/pods/connect-to-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/connect-to-a-pod
 
 # Connection options
 
 Explore Pod connection options, including the web terminal, SSH, JupyterLab, and VSCode/Cursor. See setup and usage details for Runpod Pods.
 
-![](https://raw.githubusercontent.com/runpod/docs/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/images/pod-connection-options.png)
+![](https://raw.githubusercontent.com/runpod/docs/d53e0557ab43204135d5bc362bfaf2baca752af4/images/pod-connection-options.png)
 
 Choose a connection method based on your workflow:
 

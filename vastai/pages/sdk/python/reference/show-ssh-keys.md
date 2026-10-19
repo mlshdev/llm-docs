@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/show-ssh-keys.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/sdk/python/reference/show-ssh-keys.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/show-ssh-keys.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/sdk/python/reference/show-ssh-keys.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/show-ssh-keys
 
 # VastAI.show_ssh_keys

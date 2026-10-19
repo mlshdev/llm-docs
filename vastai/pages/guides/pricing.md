@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/pricing.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/guides/pricing.mdx)
+> Pinned source for Vast.ai main: [guides/pricing.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/guides/pricing.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/pricing
 
 # Pricing overview

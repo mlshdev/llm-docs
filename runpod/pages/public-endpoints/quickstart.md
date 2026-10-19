@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/quickstart.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/public-endpoints/quickstart.mdx)
+> Pinned source for Runpod main: [public-endpoints/quickstart.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/public-endpoints/quickstart.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/quickstart
 
 # Quickstart
@@ -23,7 +23,7 @@ The fastest way to test Public Endpoints is through the browser-based playground
 
 You've just generated your first image. The playground shows the estimated cost (\~$0.0025 for a 1024x1024 image).
 
-![](https://raw.githubusercontent.com/runpod/docs/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/images/public-endpoints-quickstart-playground.png)
+![](https://raw.githubusercontent.com/runpod/docs/d53e0557ab43204135d5bc362bfaf2baca752af4/images/public-endpoints-quickstart-playground.png)
 
 ## Step 2: Generate an image with the API
 

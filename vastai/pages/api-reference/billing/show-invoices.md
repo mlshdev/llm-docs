@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v1/invoices](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/api-reference/openapi.yaml%23get%20/api/v1/invoices)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v1/invoices](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/api-reference/openapi.yaml%23get%20/api/v1/invoices)
 > Canonical documentation: https://docs.vast.ai/api-reference/billing/show-invoices
 
 # show invoices

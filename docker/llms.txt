@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `31d174d090fd7111ca2199ed54a3978e0d4ac74d`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `7efe90099b0a1ac8295c099f13abf8ac173ec46b`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -126,7 +126,7 @@
 - [Manage a Docker account](pages/manuals/accounts/individual/manage-account.md): You can manage your Docker account in Docker Home, including administrative and security settings. (4360 bytes)
 - [Activity logs](pages/manuals/accounts/organization/activity-logs.md): Activity logs requirements (13027 bytes)
 - [Organization accounts](pages/manuals/accounts/organization/index.md): A Docker organization is a shared workspace for members and repositories under one namespace. Organization owners administer membership, access, and security. (2301 bytes)
-- [Insights](pages/manuals/accounts/organization/insights.md): Insights requirements (17373 bytes)
+- [View organization Insights for Docker Desktop](pages/manuals/accounts/organization/insights.md): Insights requirements (11015 bytes)
 - [Deactivate an organization](pages/manuals/accounts/organization/manage/deactivate-account.md): General admin requirements (1836 bytes)
 - [Change general organization information](pages/manuals/accounts/organization/manage/general-settings.md): Learn how to update your organization information. (1225 bytes)
 - [Manage your organization](pages/manuals/accounts/organization/manage/index.md): As an organization owner, you manage your organization's membership, access, product usage, and settings. You can invite members, group them into teams, assign or revoke licenses and seats, change access to Docker produ… (2855 bytes)
@@ -610,7 +610,7 @@
 - [Docker Desktop WSL 2 backend on Windows](pages/manuals/desktop/features/wsl/index.md): Windows Subsystem for Linux (WSL) 2 is a full Linux kernel built by Microsoft that lets Linux distributions run without managing virtual machines. With Docker Desktop running on WSL 2, users can leverage Linux workspace… (6109 bytes)
 - [Develop with Docker Desktop using WSL 2 on Windows](pages/manuals/desktop/features/wsl/use-wsl.md): The following section describes how to start developing your applications using Docker and WSL 2. (1379 bytes)
 - [Docker Desktop](pages/manuals/desktop/index.md): Docker Desktop is a one-click-install application for your Mac, Linux, or Windows environment that lets you build, share, and run containerized applications and microservices. (3185 bytes)
-- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (354093 bytes)
+- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (358414 bytes)
 - [How to back up and restore your Docker Desktop data](pages/manuals/desktop/settings-and-maintenance/backup-and-restore.md): Use this procedure to back up and restore your images and container data. This is useful if you want to reset your VM disk or to move your Docker environment to a new computer, or recover from a failed Docker Desktop up… (5350 bytes)
 - [Change your Docker Desktop settings](pages/manuals/desktop/settings-and-maintenance/settings.md): Customize Docker Desktop behavior and optimize performance and resource usage with Docker Desktop's settings. (53884 bytes)
 - [Install Docker Desktop on Arch-based distributions](pages/manuals/desktop/setup/install/linux/archlinux.md): Docker Desktop Archlinux requirements (5026 bytes)
@@ -960,7 +960,7 @@
 
 ## Faqs
 
-- [Account FAQs](pages/manuals/faqs/accounts.md): A Docker ID is a username for your Docker account that lets you access Docker products. To create a Docker ID you need one of the following: (9121 bytes)
+- [Account FAQs](pages/manuals/faqs/accounts.md): A Docker ID is a username for your Docker account that lets you access Docker products. To create a Docker ID you need one of the following: (10323 bytes)
 - [FAQs](pages/manuals/faqs/index.md): Answers to common questions about Docker accounts, organizations, companies, subscriptions, billing, and security. (688 bytes)
 - [Platform FAQs](pages/manuals/faqs/platform.md): If you've discovered a security vulnerability in Docker, report it responsibly to so Docker can quickly address it. (6792 bytes)
 - [Security FAQs](pages/manuals/faqs/security.md): Docker supports Service Provider Initiated (SP-initiated) SSO flow. Users must sign in to Docker Hub or Docker Desktop to initiate the SSO authentication process. (12409 bytes)

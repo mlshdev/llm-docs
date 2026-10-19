@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/122336c1e3811db383add97c390fd4f41ccc25e7/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/bbd37149e4b1bd9730a70f06b72d1c1f9b95bc0f/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -8628,6 +8628,14 @@ The filter accepts the following options:
   Set threshold B for 3rd plane. Default is 0.04.
   Valid range is 0 to 5.
 
+- 3a
+  Set threshold A for 4th plane. Default is 0.02.
+  Valid range is 0 to 0.3.
+
+- 3b
+  Set threshold B for 4th plane. Default is 0.04.
+  Valid range is 0 to 5.
+
 Threshold A is designed to react on abrupt changes in the input signal and
 threshold B is designed to react on continuous changes in the input signal.
 
@@ -8649,7 +8657,8 @@ will continue processing other side of frames if they are equal or below thresho
 - 0s
 - 1s
 - 2s
-  Set sigma for 1st plane, 2nd plane or 3rd plane. Default is 32767.
+- 3s
+  Set sigma for 1st plane, 2nd plane, 3rd plane or 4th plane. Default is 32767.
   Valid range is from 0 to 32767.
   This options controls weight for each pixel in radius defined by size.
   Default value means every pixel have same weight.
@@ -12334,6 +12343,24 @@ inference request. The shared `async` and `nireq` options
 therefore have no effect for `dnn_backend=onnx`; inference always
 runs synchronously regardless of their values.
 
+When FFmpeg is built with Direct3D 12 support and this build's ONNX
+Runtime provides a working DirectML execution provider, setting
+`device=dml` together with `AV_PIX_FMT_D3D12` NV12 hardware
+frames as input (e.g. via `-hwaccel d3d12va -hwaccel_output_format
+d3d12`) keeps frames in VRAM for the whole filter, from the decoder's
+output through DNN inference and back out, without a host round-trip.
+Software-frame input retains the host I/O path. D3D12 input requires
+successful DirectML negotiation; unsupported hardware-input
+configurations fail during configuration. At runtime,
+`DirectML.dll` and `d3dcompiler_47.dll` must be loadable from
+the application directory or System32. Currently, only single-channel
+(luma-only), `FLOAT`/NCHW models with a `[1,1,H,W]` output
+tensor and even input/output frame dimensions are supported; the chroma
+plane is copied or bilinearly upscaled on the GPU without going
+through the model. The output frames are D3D12 hardware frames, so they
+must either be consumed by a D3D12 encoder or downloaded explicitly with
+`hwdownload,format=nv12`.
+
 - model
   Set path to model file specifying network architecture and its parameters.
   Note that different backends use different file formats. TensorFlow, OpenVINO,
@@ -12427,6 +12454,32 @@ throughout the pipeline:
 ```text
 ./ffmpeg -init_hw_device cuda=cuda -filter_hw_device cuda -i input.mp4 \
   -vf "format=rgb24,hwupload,dnn_processing=dnn_backend=torch:model=my_model.pt,hwdownload,format=rgb0" \
+  -y output.mp4
+```
+
+-
+
+Run a single-channel (luma-only) super-resolution model on D3D12
+hardware frames with the ONNX Runtime backend, keeping frames in VRAM
+from decode through inference (Windows only, requires a build with
+Direct3D 12 support and `--enable-libonnxruntime` against a
+DirectML-capable ONNX Runtime). The D3D12 output frames are encoded
+directly by a D3D12 hardware encoder:
+
+```text
+./ffmpeg -hwaccel d3d12va -hwaccel_output_format d3d12 -i input.mp4 \
+  -vf dnn_processing=dnn_backend=onnx:model=sr_model.onnx:device=dml \
+  -c:v h264_d3d12va -bf 0 -y output.mp4
+```
+
+-
+
+Same as above, but download the result to software frames after
+inference so that a software encoder can be used:
+
+```text
+./ffmpeg -hwaccel d3d12va -hwaccel_output_format d3d12 -i input.mp4 \
+  -vf dnn_processing=dnn_backend=onnx:model=sr_model.onnx:device=dml,hwdownload,format=nv12 \
   -y output.mp4
 ```
 

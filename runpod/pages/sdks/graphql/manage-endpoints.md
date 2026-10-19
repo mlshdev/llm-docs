@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdks/graphql/manage-endpoints.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/sdks/graphql/manage-endpoints.mdx)
+> Pinned source for Runpod main: [sdks/graphql/manage-endpoints.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/sdks/graphql/manage-endpoints.mdx)
 > Canonical documentation: https://docs.runpod.io/sdks/graphql/manage-endpoints
 
 # Manage endpoints

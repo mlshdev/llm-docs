@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/storage/data-movement.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/guides/instances/storage/data-movement.mdx)
+> Pinned source for Vast.ai main: [guides/instances/storage/data-movement.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/guides/instances/storage/data-movement.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/storage/data-movement
 
 # Data Movement
@@ -31,7 +31,7 @@ Vast currently supports Dropbox, Amazon S3 and Backblaze cloud storage providers
 
 First you will need to connect to the cloud provider on the [account page](https://cloud.vast.ai/account/) and then use the cloud sync button on the instance to start the copy operation.
 
-![Cloud Sync](https://raw.githubusercontent.com/vast-ai/docs/8629af9a05e884dd603b6a24bbb7c39826c1a10d/images/data-movement-cloud-sync.webp)
+![Cloud Sync](https://raw.githubusercontent.com/vast-ai/docs/e0e0293c3626e419c16dcfc6f799976252de5c5f/images/data-movement-cloud-sync.webp)
 
 See [Cloud Sync](https://docs.vast.ai/guides/instances/cloud-sync) for more details.
 
@@ -46,11 +46,11 @@ If the two instances are on the same machine or the same local network (same pro
 
 ### Using the GUI
 
-You can use the copy buttons to copy data between two instances. Instances can be stopped/inactive. See complete [Constraints](https://docs.vast.ai/guides/instances/storage#constraints)  below.
+You can use the copy buttons to copy data between two instances. Instances can be stopped/inactive. See complete [Constraints](#constraints)  below.
 
 Click the copy button on the source instance and then on the destination instance to bring up the copy dialogue. For docker-based instances you will see the following folder dialogue.
 
-![Instance to Instance Copy](https://raw.githubusercontent.com/vast-ai/docs/8629af9a05e884dd603b6a24bbb7c39826c1a10d/images/data-movement-itoicopy.gif)
+![Instance to Instance Copy](https://raw.githubusercontent.com/vast-ai/docs/e0e0293c3626e419c16dcfc6f799976252de5c5f/images/data-movement-itoicopy.gif)
 
 Pick the folders where you want to copy to/from. Leave a '/' at the end of the source directory to copy all the files inside into the target directory, vs nesting a copy of the source dir into the target dir.
 
@@ -62,7 +62,7 @@ Pick the folders where you want to copy to/from. Leave a '/' at the end of the s
 > up the permissions on your instance ssh folder, breaking future copy
 > operations (as they use ssh authentication).
 
-![Copy Modal](https://raw.githubusercontent.com/vast-ai/docs/8629af9a05e884dd603b6a24bbb7c39826c1a10d/images/instances-storage-copy-modal.webp)
+![Copy Modal](https://raw.githubusercontent.com/vast-ai/docs/e0e0293c3626e419c16dcfc6f799976252de5c5f/images/instances-storage-copy-modal.webp)
 
 After clicking the copy button, give it 5-10 seconds to start. The status messages will display as the copy operation begins.
 

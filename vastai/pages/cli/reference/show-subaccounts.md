@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/show-subaccounts.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/cli/reference/show-subaccounts.mdx)
+> Pinned source for Vast.ai main: [cli/reference/show-subaccounts.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/cli/reference/show-subaccounts.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/show-subaccounts
 
 # vastai show subaccounts

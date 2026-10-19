@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/overview.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/api-reference-v2/overview.mdx)
+> Pinned source for Runpod main: [api-reference-v2/overview.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/api-reference-v2/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/overview
 
 # API v2
@@ -32,6 +32,10 @@ The Runpod REST API v2 provides programmatic access to all Runpod compute resour
 ## Authentication
 
 All requests require a [Runpod API key](https://docs.runpod.io/get-started/credentials) in the request headers. The API uses standard HTTP methods and returns JSON responses.
+
+## Rate limits
+
+The API limits how many requests each user can send per minute, hour, and day. Responses include `RateLimit` headers that report your remaining quota, and requests over the limit return `429 Too Many Requests`. To learn how to read these headers and build a client that handles them, see [Rate limits](https://docs.runpod.io/api-reference-v2/rate-limits).
 
 ## OpenAPI schema
 

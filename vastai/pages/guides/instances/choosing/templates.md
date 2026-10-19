@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/choosing/templates.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/guides/instances/choosing/templates.mdx)
+> Pinned source for Vast.ai main: [guides/instances/choosing/templates.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/guides/instances/choosing/templates.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/choosing/templates
 
 # Choosing a Template
@@ -139,5 +139,5 @@ See the full [Templates documentation](https://docs.vast.ai/guides/templates/int
 **Having issues?**
 
 - Start with a recommended template
-- Check the [Templates FAQ](https://docs.vast.ai/guides/reference/faq/instances#templates)
+- Check [common template issues](#common-issues)
 - Review [troubleshooting guide](https://docs.vast.ai/guides/reference/troubleshooting)

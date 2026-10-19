@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/show-connections.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/sdk/python/reference/show-connections.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/show-connections.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/sdk/python/reference/show-connections.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/show-connections
 
 # VastAI.show_connections

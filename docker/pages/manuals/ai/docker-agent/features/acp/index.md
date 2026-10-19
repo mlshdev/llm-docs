@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/acp/index.md](https://github.com/docker/docs/blob/31d174d090fd7111ca2199ed54a3978e0d4ac74d/_vendor/github.com/docker/docker-agent/docs/features/acp/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/acp/index.md](https://github.com/docker/docs/blob/7efe90099b0a1ac8295c099f13abf8ac173ec46b/_vendor/github.com/docker/docker-agent/docs/features/acp/index.md)
 
 *Expose Docker Agent agents via the Agent Client Protocol for integration with ACP-compatible hosts like VS Code, IDEs, and other developer tools.*
 

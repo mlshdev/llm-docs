@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/vllm/vllm-requests.mdx](https://github.com/runpod/docs/blob/d267bc5c7b0e6ee99fe0adcc2ddd8052c44f9375/serverless/vllm/vllm-requests.mdx)
+> Pinned source for Runpod main: [serverless/vllm/vllm-requests.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/serverless/vllm/vllm-requests.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/vllm/vllm-requests
 
 # Send requests to vLLM workers
@@ -177,9 +177,10 @@ Add parameters to control how the model generates text. Include these in the `sa
 
 ## Error handling
 
-Implement retry logic with exponential backoff to handle network issues, rate limits, and cold starts.
+Implement retry logic with exponential backoff and jitter to handle network issues, rate limits, and cold starts. Retrying a request after a timeout or server error can run the same job twice, so cap your retries. For more guidance, see [Handle rate limits in your client](https://docs.runpod.io/serverless/endpoints/send-requests#handle-rate-limits-in-your-client).
 
 ```python
+import random
 import requests
 import time
 
@@ -190,13 +191,11 @@ def send_request(url, headers, payload, max_retries=3):
             response.raise_for_status()
             return response.json()
         except requests.exceptions.HTTPError as e:
-            if e.response.status_code == 429:  # Rate limit
-                time.sleep(5)
-            elif e.response.status_code >= 500:
-                time.sleep(2 ** attempt)
+            if e.response.status_code == 429 or e.response.status_code >= 500:  # Rate limit or server error
+                time.sleep(2 ** attempt + random.uniform(0, 1))
             else:
                 raise
         except requests.exceptions.RequestException:
-            time.sleep(2 ** attempt)
+            time.sleep(2 ** attempt + random.uniform(0, 1))
     raise Exception("Max retries exceeded")
 ```

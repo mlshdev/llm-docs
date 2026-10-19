@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/migrations/runpod-to-vast.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/examples/migrations/runpod-to-vast.mdx)
+> Pinned source for Vast.ai main: [examples/migrations/runpod-to-vast.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/examples/migrations/runpod-to-vast.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/migrations/runpod-to-vast
 
 # Migrate from Runpod to Vast.ai

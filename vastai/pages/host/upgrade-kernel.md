@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/upgrade-kernel.mdx](https://github.com/vast-ai/docs/blob/8629af9a05e884dd603b6a24bbb7c39826c1a10d/host/upgrade-kernel.mdx)
+> Pinned source for Vast.ai main: [host/upgrade-kernel.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/host/upgrade-kernel.mdx)
 > Canonical documentation: https://docs.vast.ai/host/upgrade-kernel
 
 # Upgrade the Kernel

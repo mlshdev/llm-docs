@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `8629af9a05e884dd603b6a24bbb7c39826c1a10d`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `e0e0293c3626e419c16dcfc6f799976252de5c5f`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -12,12 +12,12 @@
 ## Getting started
 
 - [Welcome](pages/guides/get-started/index.md): Vast.ai is a marketplace for affordable GPU cloud computing. We make it easy for anyone to: (3338 bytes)
-- [Sign up and rent your first GPU](pages/guides/get-started/quickstart.md): This Quickstart will guide you through setting up your Vast.ai account and running your first instance in just a few steps.&#x20; (7046 bytes)
+- [Sign up and rent your first GPU](pages/guides/get-started/quickstart.md): This Quickstart will guide you through setting up your Vast.ai account and running your first instance in just a few steps.&#x20; (7137 bytes)
 - [Concepts](pages/guides/concepts.md): The core vocabulary of the Vast.ai platform, marketplace, offers, instances, templates, endpoints, workers. (5987 bytes)
 - [Manage API keys](pages/guides/reference/api-keys.md): Create, scope, rotate, and revoke Vast.ai API keys for the CLI, SDK, and REST API. (6326 bytes)
-- [Quick Start](pages/guides/templates/quickstart.md): To jump right in and run a template, follow these steps. (2720 bytes)
+- [Quick Start](pages/guides/templates/quickstart.md): To jump right in and run a template, follow these steps. (2756 bytes)
 - [Using Vast.ai with Agents](pages/guides/get-started/agents.md): Manage Vast.ai GPU instances, serverless endpoints, volumes, and billing from coding agents like Claude Code, Codex, and Cursor. (8530 bytes)
-- [Teams Quickstart](pages/guides/teams/teams-quickstart.md): This quickstart guide will walk you through how to create a team, invite new team members and assign them to different roles. (4525 bytes)
+- [Teams Quickstart](pages/guides/teams/teams-quickstart.md): This quickstart guide will walk you through how to create a team, invite new team members and assign them to different roles. (4536 bytes)
 
 ## Instances
 
@@ -26,17 +26,17 @@
 - [Choosing Instances Overview](pages/guides/instances/choosing/overview.md): Learn the complete process of selecting and renting a GPU instance on Vast.ai, from choosing templates to configuring and launching. (2661 bytes)
 - [Finding & Renting Instances](pages/guides/instances/choosing/find-and-rent.md): Find and rent GPU instances on Vast.ai. Learn how to search, filter, understand offer cards, and configure your instance. (6800 bytes)
 - [Instance Types](pages/guides/instances/choosing/instance-types.md): Understand Vast.ai instance types - On-demand, Reserved, and Interruptible. Learn how each type works, their differences, and when to use each. (4820 bytes)
-- [Choosing a Template](pages/guides/instances/choosing/templates.md): Select the right template for your Vast.ai instance. Templates define your Docker image, launch mode, and initialization settings. (4508 bytes)
-- [Reserved Instances](pages/guides/instances/choosing/reserved-instances.md): Save up to 50% on GPU costs by pre-paying for reserved instances. Learn how to convert on-demand instances to reserved pricing. (6153 bytes)
+- [Choosing a Template](pages/guides/instances/choosing/templates.md): Select the right template for your Vast.ai instance. Templates define your Docker image, launch mode, and initialization settings. (4466 bytes)
+- [Reserved Instances](pages/guides/instances/choosing/reserved-instances.md): Save up to 50% on GPU costs by pre-paying for reserved instances. Learn how to convert on-demand instances to reserved pricing. (6156 bytes)
 - [Overview](pages/guides/instances/connect/overview.md): Learn about Vast.ai connection methods-SSH, Jupyter, and Entrypoint-and how each controls instance access and workflow. (3131 bytes)
 - [SSH Connection](pages/guides/instances/connect/ssh.md): Learn how to securely connect to Vast.ai instances using SSH. Generate keys, establish connections, use port forwarding, and integrate with VS Code. (10578 bytes)
 - [Jupyter](pages/guides/instances/connect/jupyter.md): Run Jupyter on Vast.ai with proxy or direct HTTPS. Learn setup, TLS certificate installation, and secure connections for smooth AI/ML development. (5588 bytes)
 - [Windows SSH Guide](pages/guides/instances/connect/windows-guide.md): Learn how to securely connect to Vast.ai instances using SSH on Windows. Understand the basics of SSH, how to generate and add keys, and how to use PuTTY and MobaXterm for GUI-based connections. (6947 bytes)
-- [Instance Portal](pages/guides/instances/connect/instance-portal.md): The Instance Portal is the first application you will see after clicking the 'Open' button to access an instance that has been loaded with a Vast.ai Docker image. Many of our recommended templates include the Instance P… (8221 bytes)
+- [Instance Portal](pages/guides/instances/connect/instance-portal.md): The Instance Portal is the first application you will see after clicking the 'Open' button to access an instance that has been loaded with a Vast.ai Docker image. Many of our recommended templates include the Instance P… (8254 bytes)
 - [Networking & Ports](pages/guides/instances/connect/networking.md): Understand how Vast.ai handles networking, port mapping, and environment variables for Docker instances. (5285 bytes)
 - [Storage Types](pages/guides/instances/storage/types.md): Understand the different storage options available on Vast.ai instances, including container storage and volumes. (4239 bytes)
 - [Volumes](pages/guides/instances/storage/volumes.md): The Storage page allows you to easily access and manage your volumes - storage that can be attached to your instances for data storage. (9220 bytes)
-- [Data Movement](pages/guides/instances/storage/data-movement.md): Learn how to move data on Vast.ai using Cloud Sync, instance-to-instance transfers, CLI copy, VM migration, scp, and other efficient methods. (10331 bytes)
+- [Data Movement](pages/guides/instances/storage/data-movement.md): Learn how to move data on Vast.ai using Cloud Sync, instance-to-instance transfers, CLI copy, VM migration, scp, and other efficient methods. (10286 bytes)
 - [Cloud Sync](pages/guides/instances/storage/cloud-sync.md): Learn how to connect Vast.ai instances with cloud storage providers like Google Drive, S3, Backblaze, Dropbox, and Hugging Face for secure data sync. (7362 bytes)
 - [Scheduled Cloud Backups](pages/guides/instances/storage/cloud-backups.md): Learn how to set up and schedule automated Vast.ai cloud backups using CLI or cron. Keep your data safe with best practices and easy management. (10192 bytes)
 - [Managing Instances](pages/guides/instances/manage-instances.md): Learn how to manage running instances - start, stop, destroy, monitor status, and handle common operational tasks. (6860 bytes)
@@ -86,7 +86,7 @@
 - [Creating Templates](pages/guides/templates/creating-templates.md): Creating a template is simple - it's just telling Vast.ai how you want your instances to be configured. This guide will walk you through creating your first template step by step. (6144 bytes)
 - [Managing Templates](pages/guides/templates/managing-templates.md): If you want to make changes to a template you previously saved, simply navigate back to the templates page and select 'My Templates'. Here you'll be able to make your changes by clicking the pencil icon. (2445 bytes)
 - [Template Settings](pages/guides/templates/template-settings.md): This guide documents all settings and options available when configuring a template. Use this guide when you need to understand what a specific setting does or how to configure a particular option. (10593 bytes)
-- [Advanced Setup](pages/guides/templates/advanced-setup.md): This guide covers advanced customization techniques available on the Vast.ai platform. These features allow you to extend and enhance your templates beyond basic configuration. (6903 bytes)
+- [Advanced Setup](pages/guides/templates/advanced-setup.md): This guide covers advanced customization techniques available on the Vast.ai platform. These features allow you to extend and enhance your templates beyond basic configuration. (6904 bytes)
 - [Creating Templates for GROBID](pages/guides/templates/examples/grobid.md): This guide demonstrates creating a template using an existing Docker image. See our Creating Templates guide for more details on template configuration. We will be using the image from GROBID on dockerhub. (5661 bytes)
 
 ## Teams
@@ -433,7 +433,7 @@
 
 ## Concepts
 
-- [Hosting Overview](pages/host/hosting-overview.md): Vast is a GPU marketplace. Hosts sell GPU resources on the marketplace. Hosts are responsible for: (22557 bytes)
+- [Hosting Overview](pages/host/hosting-overview.md): Vast is a GPU marketplace. Hosts sell GPU resources on the marketplace. Hosts are responsible for: (22578 bytes)
 - [Understanding Verification](pages/host/understanding-verification.md): Verification is fully automated and powered by proprietary algorithms that continuously evaluate each machine’s operational health and performance, dynamically adjusting assessments based on real-time supply and demand. (5962 bytes)
 - [Earning](pages/host/earning.md): This page in the console allows you to manage your earnings from referrals. You can find more information about Vast's referral program here. (2575 bytes)
 
@@ -465,7 +465,7 @@
 
 ## Serving infrastructure
 
-- [dstack + vLLM](pages/examples/serving-infrastructure/dstack-vllm.md): dstack is an open-source GPU orchestration platform that simplifies deploying AI workloads across cloud providers. This guide shows you how to use dstack with Vast.ai as the backend to deploy language models using vLLM,… (7278 bytes)
+- [dstack + vLLM](pages/examples/serving-infrastructure/dstack-vllm.md): dstack is an open-source GPU orchestration platform that simplifies deploying AI workloads across cloud providers. This guide shows you how to use dstack with Vast.ai as the backend to deploy language models using vLLM,… (7291 bytes)
 - [SGLang Router](pages/examples/serving-infrastructure/sglang-router-vast.md): When serving LLMs in production, a single GPU instance quickly becomes a bottleneck. Requests queue up during traffic spikes, latency increases, and scaling requires expensive hardware upgrades. SGLang Router solves thi… (11897 bytes)
 
 ## Notifications
@@ -481,7 +481,7 @@
 ## AI agents
 
 - [Autonomous AI Research with Autoresearch on Vast.ai](pages/examples/ai-agents/autoresearch.md): Autoresearch is Andrej Karpathy's framework for autonomous AI-driven ML research. The idea is simple: point an AI agent (Claude Code) at a small but real LLM training setup and let it experiment autonomously overnight.… (7666 bytes)
-- [Langflow + Ollama](pages/langflow-ollama.md): Langflow is a node-based agent builder you can use from your web browser. While it integrates with many frontier language models it also has a fantastic Ollama integration which makes it really easy to use with open wei… (7234 bytes)
+- [Langflow + Ollama](pages/langflow-ollama.md): Langflow is a node-based agent builder you can use from your web browser. While it integrates with many frontier language models it also has a fantastic Ollama integration which makes it really easy to use with open wei… (7259 bytes)
 - [BrowseSafe Prompt Injection Detection](pages/examples/ai-agents/browsesafe.md): Deploy Perplexity AI's BrowseSafe model for real-time HTML prompt injection detection using vLLM on Vast.ai. (7365 bytes)
 - [OpenClaw AI Assistant with vLLM on Vast.ai](pages/examples/ai-agents/openclaw.md): Deploy Qwen3-8B on a Vast.ai GPU with vLLM and connect OpenClaw to it for private, self-hosted AI conversations with tool use. (13181 bytes)
 - [Budget-Friendly Alternative to Claude Code - Overnight Ralph Loop Guide](pages/examples/ai-agents/overnight-ralph-loop.md): Run autonomous coding agents all night long for under $18 and wake up to a completed project with passing tests. (9890 bytes)
@@ -496,7 +496,7 @@
 - [Oobabooga (LLM webui)](pages/oobabooga-llm-webui.md): A large language model(LLM) learns to predict the next word in a sentence by analyzing the patterns and structures in the text it has been trained on. This enables it to generate human-like text based on the input it re… (5076 bytes)
 - [Huggingface TGI with LLama3](pages/huggingface-tgi-with-llama3.md): This is a guide on how to setup and expose an API for Llama3 Text Generation. (3655 bytes)
 - [Quantized GGUF models (cloned)](pages/quantized-gguf-models-cloned.md): Here's a step-by-step guide to running quantized LLM models in multi-part GGUF format. We will use Unsloth's Deepseek-R1 Q8\0 model as an example. This model is very large and will require an 8xH200 machine configuratio… (4197 bytes)
-- [vLLM (LLM inference and serving)](pages/vllm-llm-inference-and-serving.md): Below is a guide for runing the vLLM template on Vast. The template contains everything you need to get started, so you will only need to specify the model you want to serve and the corresponding vLLM configuration. (4829 bytes)
+- [vLLM (LLM inference and serving)](pages/vllm-llm-inference-and-serving.md): Below is a guide for runing the vLLM template on Vast. The template contains everything you need to get started, so you will only need to specify the model you want to serve and the corresponding vLLM configuration. (4831 bytes)
 - [MiniMax-M2](pages/examples/text-generation/minimax-m2.md): MiniMax-M2 is a breakthrough 230 billion parameter Mixture of Experts (MoE) language model that activates only 10 billion parameters per inference, making it incredibly fast and cost-effective. This guide shows you how… (10117 bytes)
 - [GLM-4.7-Flash](pages/examples/text-generation/glm-47-flash.md): GLM-4.7-Flash is a 30B-parameter Mixture of Experts model from Zhipu AI that activates 3B parameters per token. Despite being roughly the same active parameter count as Qwen3-30B-A3B, GLM-4.7-Flash has a fundamentally d… (7254 bytes)
 - [NVIDIA Nemotron 3 Super](pages/examples/text-generation/nemotron-3-super.md): NVIDIA Nemotron 3 Super is a 120B parameter model that only activates 12B parameters per token, which means you get the quality of a much larger model at a fraction of the compute. It uses a novel hybrid architecture —… (9436 bytes)
@@ -515,13 +515,13 @@
 ## Audio & transcription
 
 - [TTS with Nari Labs Dia](pages/tts-with-nari-labs-dia.md): Below is a step-by-step guide on how to configure and run Nari Labs Dia 1.6b model for text to speech. Our template will automatically setup an easy to access web based interface to help you get started. (2404 bytes)
-- [Whisper ASR Guide](pages/whisper-asr-guide.md): Whisper is a general-purpose speech recognition model trained on a large dataset of diverse audio. Go through the Readme first before using.&#x20; (4266 bytes)
+- [Whisper ASR Guide](pages/whisper-asr-guide.md): Whisper is a general-purpose speech recognition model trained on a large dataset of diverse audio. Go through the Readme first before using.&#x20; (4299 bytes)
 - [Speaker Diarization with Pyannote](pages/examples/transcription/speaker-diarization-pyannote.md): Speaker diarization partitions an audio stream into segments according to speaker identity-identifying "who spoke when" in multi-speaker recordings like meetings, podcasts, or interviews. (6756 bytes)
 
 ## Information extraction
 
 - [Running RolmOCR](pages/examples/ocr/rolmocr.md): RolmOCR from Reducto is an open-source document OCR model built on Qwen2.5-VL-7B. Unlike traditional OCR tools like Tesseract that rely on character-level pattern matching, RolmOCR uses vision-language understanding to… (5970 bytes)
-- [GLiNER2](pages/examples/ner/gliner2.md): Named Entity Recognition (NER) extracts structured data from text-people, companies, dates, etc. Traditional NER models only recognize entity types they were trained on. LLMs can extract anything but are slow and expens… (10696 bytes)
+- [GLiNER2](pages/examples/ner/gliner2.md): Named Entity Recognition (NER) extracts structured data from text-people, companies, dates, etc. Traditional NER models only recognize entity types they were trained on. LLMs can extract anything but are slow and expens… (10703 bytes)
 - [Infinity Embeddings](pages/infinity-embeddings.md): Infinity Embeddings is a helpful serving framework to serve embedding models. It is particularly great at enabling embedding, re-ranking, and classification out of the box. It supports multiple different runtime framewo… (6655 bytes)
 - [Serving Rerankers with vLLM](pages/examples/embeddings/serving-rerankers-vllm.md): Rerankers determine relevance between text pairs-matching search queries to documents, evaluating LLM outputs, or finding similar content. They perform detailed comparisons that capture nuanced relationships simple meth… (6557 bytes)
 
