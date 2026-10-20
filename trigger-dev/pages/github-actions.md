@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/github-actions.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/github-actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-actions
 
 # CI / GitHub Actions
@@ -47,7 +47,7 @@ jobs:
         env:
           TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
         run: |
-          npx trigger.dev@latest deploy --external-id ${{ github.sha }}
+          npx trigger.dev@latest deploy --env prod --external-id ${{ github.sha }}
 ```
 
 ```yaml .github/workflows/release-trigger-staging.yml
@@ -155,7 +155,7 @@ Create a separate API key for each environment that your CI workflows deploy to.
 4. Open the repository's **Settings**, then select **Secrets and variables** → **Actions** → **New
    repository secret**. Add the name `TRIGGER_ACCESS_TOKEN` and paste the API key as its value.
 
-   ![Add TRIGGER\_ACCESS\_TOKEN in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/github-access-token.png)
+   ![Add TRIGGER\_ACCESS\_TOKEN in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/166db1ca0781345894af115bc877081a9546a44c/docs/images/github-access-token.png)
 
 The API key must belong to the environment targeted by the deploy command. If the repository deploys to multiple environments, store each environment's key in a separate GitHub secret and map the appropriate secret to `TRIGGER_ACCESS_TOKEN` in each workflow.
 
@@ -167,7 +167,7 @@ Tip: add the `trigger.dev` CLI to your `devDependencies` and the deploy command 
 ```json
 {
   "scripts": {
-    "deploy:trigger-prod": "trigger deploy",
+    "deploy:trigger-prod": "trigger deploy --env prod",
     "deploy:trigger": "trigger deploy --env staging"
   },
   "devDependencies": {
@@ -235,5 +235,5 @@ jobs:
           TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
           TRIGGER_API_URL: ${{ secrets.TRIGGER_API_URL }}
         run: |
-          npx trigger.dev@latest deploy
+          npx trigger.dev@latest deploy --env prod
 ```

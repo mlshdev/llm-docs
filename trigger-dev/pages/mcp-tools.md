@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/mcp-tools.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/mcp-tools.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/mcp-tools.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/mcp-tools.mdx)
 > Canonical documentation: https://trigger.dev/docs/mcp-tools
 
 # MCP Tools
@@ -211,7 +211,7 @@ Execute a TRQL query against your Trigger.dev data. TRQL is a SQL-style query la
 
 ### list\_dashboards
 
-List available built-in dashboards with their widgets. Each dashboard contains pre-built queries for common metrics.
+List the built-in dashboards and your organization's custom dashboards, with their widgets.
 
 **Example usage:**
 
@@ -220,12 +220,30 @@ List available built-in dashboards with their widgets. Each dashboard contains p
 
 ### run\_dashboard\_query
 
-Execute a single widget query from a built-in dashboard. Use `list_dashboards` first to see available dashboards and widget IDs.
+Execute a single widget query from a built-in or custom dashboard. Use `list_dashboards` first to see available dashboards and widget IDs.
 
 **Example usage:**
 
 - `"Run the total runs widget from the overview dashboard"`
 - `"Show me the LLM cost over time from the AI dashboard"`
+
+### create\_dashboard
+
+Create a custom dashboard, optionally with widgets. Each widget has a title, a TRQL query and a display: a table, a bar or line chart, a big number, or a section title. Queries are checked when the dashboard is saved.
+
+**Example usage:**
+
+- `"Make a dashboard for the email tasks with total runs, failures and runs per day"`
+- `"Create a dashboard that charts p95 duration by task"`
+
+### set\_dashboard\_widgets
+
+Replace every widget on a custom dashboard, and optionally rename it.
+
+**Example usage:**
+
+- `"Add a failed runs widget to the email dashboard"`
+- `"Change the runs per day chart to a line chart"`
 
 ### get\_report
 
@@ -268,7 +286,7 @@ Check the status of the dev server and view recent output. Shows whether it is s
 
 > **Warning**
 >
-> The deploy and list\_preview\_branches tools are not available when the MCP server is running with the `--dev-only` flag. The `--readonly` flag hides deploy, trigger\_task, cancel\_run, and replay\_run.
+> The deploy and list\_preview\_branches tools are not available when the MCP server is running with the `--dev-only` flag. The `--readonly` flag hides deploy, trigger\_task, cancel\_run, replay\_run, create\_dashboard, and set\_dashboard\_widgets.
 
 ## Agent Chat Tools
 
@@ -370,3 +388,95 @@ Append one record to a named side channel's `in` stream. Sends control input to 
 > **Warning**
 >
 > `write_session_channel` is a write operation and is not available in readonly mode.
+
+## Webhook Tools
+
+> **Note**
+>
+> Webhooks are in private beta. [Request access](https://trigger.dev/webhooks-beta) and we'll turn them on for your
+> organization.
+
+Set up and debug [hosted webhook endpoints](https://trigger.dev/docs/webhooks/overview). Endpoint ids start with `wh_` and delivery ids with `whd_`; endpoint tools also accept an endpoint's declared id. The same operations are on the [Webhooks API](https://trigger.dev/docs/management/webhooks/list-endpoints).
+
+### list\_webhook\_endpoints
+
+List the environment's webhook endpoints: each one's id, declared id, source, status, URL and whether its signing secret is set.
+
+**Example usage:**
+
+- `"Which webhook endpoints do I have in dev?"`
+
+### get\_webhook\_endpoint\_details
+
+Get an endpoint's subscribers, with the filters that decide which events each accepts, and its setup prompt: the steps for registering the endpoint and its signing secret with the provider.
+
+**Parameters:**
+
+- `endpointId` (required): the endpoint's declared id (such as `payments`) or `wh_` id
+
+**Example usage:**
+
+- `"Connect my payments webhook to Stripe"`
+
+### list\_webhook\_deliveries
+
+List recent deliveries, newest first.
+
+**Parameters:**
+
+- `endpointId` (optional): only this endpoint's deliveries, by declared id or `wh_` id
+- `status` (optional): only these statuses, such as `["failed", "filtered"]`
+- `period` (optional, default: `7d`): how far back to look
+- `limit` (optional, default: `20`): how many to return, up to 100
+- `cursor` (optional): the cursor from a previous call, for the next page
+
+**Example usage:**
+
+- `"Did the Stripe checkout event arrive in the last hour?"`
+- `"Show me failed deliveries on the github endpoint"`
+
+### get\_webhook\_delivery
+
+Get one delivery: its status and error, each subscriber's result (the run or session it started, or why its filter skipped the event), how many waiting runs it resumed, and its event and headers.
+
+**Parameters:**
+
+- `deliveryId` (required): the delivery's `whd_` id
+
+**Example usage:**
+
+- `"Why didn't this webhook trigger my order task?"`
+
+### replay\_webhook\_delivery
+
+Replay a delivery from its stored event. Without `targetId` it goes to every subscriber again, with their filters checked again. With `targetId` it goes to that subscriber even if its filter skipped the event.
+
+**Parameters:**
+
+- `deliveryId` (required): the delivery's `whd_` id
+- `targetId` (optional): the subscriber id to replay to
+
+**Example usage:**
+
+- `"Replay that delivery to the refunds task"`
+
+### generate\_webhook\_secret
+
+Generate a new signing secret for an endpoint and return it once, for providers where you choose the secret (such as GitHub). It replaces any existing secret.
+
+**Parameters:**
+
+- `endpointId` (required): the endpoint's declared id (such as `payments`) or `wh_` id
+
+### set\_webhook\_secret
+
+Store a signing secret or public key the provider issued, such as Stripe's `whsec_` secret. It replaces any existing secret.
+
+**Parameters:**
+
+- `endpointId` (required): the endpoint's declared id (such as `payments`) or `wh_` id
+- `secret` (required): the secret or public key
+
+> **Warning**
+>
+> `replay_webhook_delivery`, `generate_webhook_secret` and `set_webhook_secret` are write operations and are not available in readonly mode.

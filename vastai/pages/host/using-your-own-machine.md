@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/using-your-own-machine.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/host/using-your-own-machine.mdx)
+> Pinned source for Vast.ai main: [host/using-your-own-machine.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/host/using-your-own-machine.mdx)
 > Canonical documentation: https://docs.vast.ai/host/using-your-own-machine
 
 # Using Your Own Machine

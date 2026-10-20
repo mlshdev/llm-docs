@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.0: [docs/guides/k8s-ui-headlamp/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/k8s-ui-headlamp/_index.md)
+> Pinned source for VictoriaMetrics v1.154.1: [docs/guides/k8s-ui-headlamp/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/guides/k8s-ui-headlamp/_index.md)
 
 [Headlamp](https://headlamp.dev/) is a user-friendly Kubernetes UI with a built-in Prometheus plugin that can show metrics from VictoriaMetrics.
 
@@ -36,13 +36,13 @@ You can run Headlamp as a [desktop application](https://headlamp.dev/docs/latest
 
 To configure the Prometheus plugin, go to **Settings** > **Plugins** and select Prometheus.
 
-![Screenshot of Headlamp UI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/k8s-ui-headlamp/headlamp-plugins.webp)
+![Screenshot of Headlamp UI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/guides/k8s-ui-headlamp/headlamp-plugins.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Built-in plugins in Headlamp UI (desktop version)</figcaption>
 
 Ensure **Enable metrics** is activated and **Auto-detect** is disabled.
 
-![Screenshot of Headlamp UI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/k8s-ui-headlamp/prometheus-plugin-start.webp)
+![Screenshot of Headlamp UI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/guides/k8s-ui-headlamp/prometheus-plugin-start.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Prometheus plugin: Enable metrics and disable auto-detect</figcaption>
 
@@ -58,7 +58,7 @@ For example, in the single-node version running in the default namespace, the ad
 default/vmsingle-victoria-metrics-single-server:8428
 ```
 
-![Screenshot of Prometheus Plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/k8s-ui-headlamp/prometheus-config-vmsingle.webp)
+![Screenshot of Prometheus Plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/guides/k8s-ui-headlamp/prometheus-config-vmsingle.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Prometheus plugin configured for VictoriaMetrics single node</figcaption>
 
@@ -74,7 +74,7 @@ In addition, only for the cluster version, you must fill in the following path i
 /select/0/prometheus
 ```
 
-![Screenshot of Prometheus Plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/k8s-ui-headlamp/prometheus-config-vmcluster.webp)
+![Screenshot of Prometheus Plugin](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/guides/k8s-ui-headlamp/prometheus-config-vmcluster.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Prometheus plugin configured for VictoriaMetrics cluster</figcaption>
 
@@ -85,7 +85,7 @@ Press **Save** to confirm your changes.
 
 You should now find the Show Prometheus metrics option on several pages.
 
-![Screenshot of Headlamp UI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/k8s-ui-headlamp/pod-metrics.webp)
+![Screenshot of Headlamp UI](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/guides/k8s-ui-headlamp/pod-metrics.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Headlamp showing CPU metrics for a pod</figcaption>
 

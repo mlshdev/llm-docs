@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/enterprise.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/enterprise.md)
+> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/enterprise.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/enterprise.md)
 
 VictoriaMetrics, [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) and [VictoriaTraces](https://docs.victoriametrics.com/victoriatraces/) components are provided
 in two kinds - [Community edition](https://victoriametrics.com/products/open-source/) and [Enterprise edition](https://victoriametrics.com/products/enterprise/).

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/configuration/parameters.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/flash/configuration/parameters.mdx)
+> Pinned source for Runpod main: [flash/configuration/parameters.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/flash/configuration/parameters.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/parameters
 
 # Endpoint parameters
@@ -7,7 +7,7 @@ Complete reference for all Endpoint class parameters. Review setup, configuratio
 
 > **Warning**
 >
-> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which stops getting fixes and updates after its [deprecation date](https://docs.runpod.io/flash/overview). For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 This page provides a complete reference for all parameters available on the `Endpoint` class.
 

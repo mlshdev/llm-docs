@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/guides/examples/fal-ai-image-to-cartoon.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/guides/examples/fal-ai-image-to-cartoon.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/guides/examples/fal-ai-image-to-cartoon.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/guides/examples/fal-ai-image-to-cartoon.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/fal-ai-image-to-cartoon
 
 # Convert an image to a cartoon using Fal.ai

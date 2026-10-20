@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/config/extensions/emitDecoratorMetadata.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/config/extensions/emitDecoratorMetadata.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/config/extensions/emitDecoratorMetadata.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/config/extensions/emitDecoratorMetadata.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/emitDecoratorMetadata
 
 # Emit Decorator Metadata

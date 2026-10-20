@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/quickstart.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/flash/quickstart.mdx)
+> Pinned source for Runpod main: [flash/quickstart.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/flash/quickstart.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/quickstart
 
 # Get started with Flash
@@ -7,7 +7,7 @@ Run your first GPU workload with Flash in less than 5 minutes. Review setup, con
 
 > **Warning**
 >
-> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK quickstart](https://docs.runpod.io/sdk/quickstart). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which stops getting fixes and updates after its [deprecation date](https://docs.runpod.io/flash/overview). For new projects, use the [Runpod SDK quickstart](https://docs.runpod.io/sdk/quickstart). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 This quickstart gets you running GPU workloads on Runpod in minutes. You'll execute a function on a remote GPU and see the results immediately.
 

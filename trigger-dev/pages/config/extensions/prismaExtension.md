@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/config/extensions/prismaExtension.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/config/extensions/prismaExtension.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/config/extensions/prismaExtension.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/config/extensions/prismaExtension.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/prismaExtension
 
 # Prisma
@@ -190,7 +190,7 @@ prismaExtension({
   "scripts": {
     "prebuild": "prisma generate",
     "dev": "trigger dev",
-    "deploy": "trigger deploy"
+    "deploy": "trigger deploy --env prod"
   }
 }
 ```
@@ -332,7 +332,7 @@ steps:
   - name: Generate Prisma client
     run: npx prisma@6.19.0 generate
   - name: Deploy Trigger.dev
-    run: npx trigger.dev@4.1.1 deploy
+    run: npx trigger.dev@4.1.1 deploy --env prod
     env:
       TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
 ```
@@ -341,7 +341,7 @@ steps:
 
 If you are using the [Trigger.dev Github integration](https://trigger.dev/docs/github-integration), you can configure a pre-build command to run `prisma generate` before deploying your project. Navigate to your project's settings page and configure the pre-build command to run `prisma generate`, for example:
 
-![Pre-build command](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/pre-build-command-prisma-generate.png)
+![Pre-build command](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/166db1ca0781345894af115bc877081a9546a44c/docs/images/pre-build-command-prisma-generate.png)
 
 ***
 
@@ -903,7 +903,7 @@ datasource db {
   "scripts": {
     "generate": "prisma generate",
     "dev": "pnpm generate && trigger dev",
-    "deploy": "trigger deploy"
+    "deploy": "trigger deploy --env prod"
   }
 }
 ```
@@ -976,7 +976,7 @@ export default defineConfig({
   "scripts": {
     "generate": "prisma generate",
     "dev": "pnpm generate && trigger dev",
-    "deploy": "trigger deploy"
+    "deploy": "trigger deploy --env prod"
   }
 }
 ```

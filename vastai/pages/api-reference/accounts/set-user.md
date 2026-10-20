@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/users](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/api-reference/openapi.yaml%23put%20/api/v0/users)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/users](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/api-reference/openapi.yaml%23put%20/api/v0/users)
 > Canonical documentation: https://docs.vast.ai/api-reference/accounts/set-user
 
 # set user

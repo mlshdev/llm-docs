@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/windows-wsl2.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/flash/windows-wsl2.mdx)
+> Pinned source for Runpod main: [flash/windows-wsl2.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/flash/windows-wsl2.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/windows-wsl2
 
 # Use Flash on Windows
@@ -7,7 +7,7 @@ Set up WSL2 with Ubuntu to run Flash on Windows. Review setup, configuration, de
 
 > **Warning**
 >
-> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which stops getting fixes and updates after its [deprecation date](https://docs.runpod.io/flash/overview). For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 Flash runs natively on macOS and Linux. On Windows, you can run Flash through Windows Subsystem for Linux (WSL2), which provides a full Linux environment on your machine.
 

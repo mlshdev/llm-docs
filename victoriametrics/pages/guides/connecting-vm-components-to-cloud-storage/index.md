@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.0: [docs/guides/connecting-vm-components-to-cloud-storage/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/guides/connecting-vm-components-to-cloud-storage/_index.md)
+> Pinned source for VictoriaMetrics v1.154.1: [docs/guides/connecting-vm-components-to-cloud-storage/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/guides/connecting-vm-components-to-cloud-storage/_index.md)
 
 Several VictoriaMetrics components can connect to cloud storage to read or write object data.
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/cli-dev-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-dev-commands.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/cli-dev-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/cli-dev-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-dev-commands
 
 # CLI dev command
@@ -24,6 +24,21 @@ It will first perform an update check to prevent version mismatches, failed depl
 You will see in the terminal that the server is running and listening for tasks. When you run a task, you will see it in the terminal along with a link to view it in the dashboard.
 
 It is worth noting that each task runs in a separate Node process. This means that if you have a long-running task, it will not block other tasks from running.
+
+When a build fails, the dev command keeps watching your files and rebuilds as soon as you fix the errors. Until then, new runs use the last version that built successfully.
+
+## Running dev from a coding agent
+
+The dev command detects when a coding agent such as Claude Code, Cursor, Codex or Gemini CLI is running it, and changes its output so the agent can act on it:
+
+- It skips the prompts to install the MCP server and agent skills.
+- If your `@trigger.dev/*` packages don't match the CLI version, it exits with instructions instead of asking whether to update them.
+- When the local worker is ready, it lists the task ids it registered and prints plain dashboard URLs.
+- Each run prints its dashboard URL, and successful runs print their output.
+
+If your agent isn't detected, set the `AI_AGENT` environment variable to its name.
+
+To test a task, an agent can trigger it with [`tasks trigger`](https://trigger.dev/docs/cli-tasks-commands) and `--wait`, which prints the run's output or error.
 
 ## Options
 

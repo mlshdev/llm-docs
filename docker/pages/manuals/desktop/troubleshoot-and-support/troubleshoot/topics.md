@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md](https://github.com/docker/docs/blob/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md)
+> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/desktop/troubleshoot-and-support/troubleshoot/topics.md)
 
 # Troubleshoot topics for Docker Desktop
 
@@ -219,6 +219,27 @@ To avoid this issue in the future:
 - In managed environments, use PKG installations over DMG drag-and-drop
 - Keep installer volumes mounted until installation is complete
 
+### Containers can't reach devices on my local network
+
+Containers can reach the internet, but not other devices on your local network
+(LAN), such as a NAS, a printer, or another computer at a `192.168.x.x`
+address. The device itself can reach them.
+
+#### Cause
+
+Docker Desktop doesn't have the Mac **Local Network** permission. Mac then
+blocks container traffic to devices on your local network, including your
+router, while traffic to the internet still works.
+
+#### Solution
+
+To give Docker Desktop the Local Network permission:
+
+1. On your device, open **System Settings** > **Privacy & Security** > **Local Network**.
+2. Turn on **Docker**.
+
+The change applies immediately, without needing to restart Docker Desktop.
+
 ## Topics for Windows
 
 ### Docker Desktop fails to start when anti-virus software is installed
@@ -378,7 +399,7 @@ Your machine must have the following features for Docker Desktop to function cor
    Note that many Windows devices already have virtualization enabled, so this may not apply.
 4. Hypervisor enabled at Windows startup
 
-![WSL 2 enabled](https://raw.githubusercontent.com/docker/docs/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/desktop/images/wsl2-enabled.png)
+![WSL 2 enabled](https://raw.githubusercontent.com/docker/docs/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/desktop/images/wsl2-enabled.png)
 
 It must be possible to run WSL 2 commands without error, for example:
 
@@ -405,7 +426,7 @@ On Windows 10 Pro or Enterprise, you can also use Hyper-V with the following fea
    Note that many Windows devices already have virtualization enabled, so this may not apply.
 3. Hypervisor enabled at Windows startup
 
-![Hyper-V on Windows features](https://raw.githubusercontent.com/docker/docs/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/desktop/images/hyperv-enabled.png)
+![Hyper-V on Windows features](https://raw.githubusercontent.com/docker/docs/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/desktop/images/hyperv-enabled.png)
 
 Docker Desktop requires Hyper-V as well as the Hyper-V Module for Windows
 PowerShell to be installed and enabled. The Docker Desktop installer enables
@@ -423,7 +444,7 @@ In the subsequent screen, verify that Hyper-V is enabled.
 In addition to [Hyper-V](#hyper-v) or [WSL 2](https://docs.docker.com/desktop/features/wsl/), virtualization must be turned on. Check the
 Performance tab on the Task Manager. Alternatively, you can type `systeminfo` into your terminal. If you see `Hyper-V Requirements: A hypervisor has been detected. Features required for Hyper-V will not be displayed`, then virtualization is enabled.
 
-![Task Manager](https://raw.githubusercontent.com/docker/docs/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/desktop/images/virtualization-enabled.png)
+![Task Manager](https://raw.githubusercontent.com/docker/docs/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/desktop/images/virtualization-enabled.png)
 
 If you manually uninstall Hyper-V, WSL 2 or turn off virtualization,
 Docker Desktop cannot start.

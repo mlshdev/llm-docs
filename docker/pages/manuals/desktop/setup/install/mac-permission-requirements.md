@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-permission-requirements.md](https://github.com/docker/docs/blob/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/desktop/setup/install/mac-permission-requirements.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-permission-requirements.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/desktop/setup/install/mac-permission-requirements.md)
 
 # Understand permission requirements for Docker Desktop on Mac
 
@@ -45,6 +45,10 @@ It is your responsibility to ensure that localhost is resolved to `127.0.0.1` an
 ### Binding privileged ports
 
 You can choose to enable privileged port mapping during installation (version 4.88.0 and earlier), or from the **Advanced** page in **Settings** post-installation. Docker Desktop requires authorization to confirm this choice.
+
+## Local Network permission
+
+For containers to reach devices on your local network, Docker Desktop needs the macOS **Local Network** permission. You can check it in **System Settings** > **Privacy & Security** > **Local Network**. See [Containers can't reach devices on my local network](https://docs.docker.com/desktop/troubleshoot-and-support/troubleshoot/topics/#containers-cant-reach-devices-on-my-local-network).
 
 ## Installing from the command line
 

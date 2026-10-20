@@ -1,11 +1,10 @@
-> Pinned source for Docker main: [content/manuals/accounts/_index.md](https://github.com/docker/docs/blob/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/accounts/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/_index.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/accounts/_index.md)
 
 # Accounts
 
 A Docker account identifies you and lets you access Docker products. You
-manage it in [Docker Home](https://app.docker.com/). Docker has two
-primary account types: individual and organization. A company groups
-multiple organizations.
+manage your Docker accounts in [Docker Home](https://app.docker.com/).
+Docker offers individual, organization, and company account types.
 
 | Account type | What it is                                                                                                 | Who it's for                     |
 | ------------ | ---------------------------------------------------------------------------------------------------------- | -------------------------------- |
@@ -14,7 +13,7 @@ multiple organizations.
 | Company      | Shared sign-in and administration for organizations that keep their own members, repositories, and billing | Docker Business subscribers      |
 
 You always sign in with your individual account, then work in the
-organizations you own or belong to.
+organizations or companies you own or belong to.
 
 ## Next steps
 

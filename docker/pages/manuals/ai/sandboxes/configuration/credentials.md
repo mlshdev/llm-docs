@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/ai/sandboxes/configuration/credentials.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/ai/sandboxes/configuration/credentials.md)
 
 # Manage credentials
 
@@ -30,12 +30,12 @@ See the [`oauth` kit fields](https://github.com/docker/sandbox-kit-spec/blob/mai
 There are several ways to provide that value. When more than one source has a
 value for the same service, the stored secret takes precedence.
 
-| Form                                                                        | What it is                                                      | Use it when                                                                                                      |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| [Stored secrets](#stored-secrets) (`sbx secret set`)                        | A value or dynamic source in your OS keychain, keyed by service | The default for any built-in or kit-declared service                                                             |
-| [Custom secrets](#custom-secrets) (`sbx secret set-custom`)                 | A value keyed to a domain and environment variable              | The service model doesn't fit — the agent validates the variable's format, or the secret rides in a request body |
-| OAuth                                                                       | A host-side sign-in flow; the token never enters the sandbox    | The agent supports it, such as Claude Code, Codex, Cursor, or Droid                                              |
-| [Registry credentials](#registry-credentials) (`sbx secret set --registry`) | Authentication for pulling images and kits                      | Pulling templates or kits from a private registry                                                                |
+| Form                                                                        | What it is                                                      | Use it when                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [Stored secrets](#stored-secrets) (`sbx secret set`)                        | A value or dynamic source in your OS keychain, keyed by service | The default for any built-in or kit-declared service                        |
+| [Custom secrets](#custom-secrets) (`sbx secret set-custom`)                 | A value keyed to a domain and environment variable              | The service model doesn't fit, or the agent validates the variable's format |
+| OAuth                                                                       | A host-side sign-in flow; the token never enters the sandbox    | The agent supports it, such as Claude Code, Codex, Cursor, or Droid         |
+| [Registry credentials](#registry-credentials) (`sbx secret set --registry`) | Authentication for pulling images and kits                      | Pulling templates or kits from a private registry                           |
 
 Providing a value and approving its use are separate steps.
 [Credential bindings](#credential-bindings) record which mechanisms and domains
@@ -406,8 +406,7 @@ network policy. For details, see
 > change without notice.
 
 For credentials that don't fit the service-identifier model — for example,
-when an agent validates the environment variable format at boot, or when the
-credential lands in a request body rather than a header — use
+when an agent validates the environment variable format at boot — use
 `sbx secret set-custom`. The secret is keyed on one or more target domains, an
 environment variable name, and an optional placeholder string, instead of a
 service identifier.
@@ -436,8 +435,9 @@ $ sbx secret set-custom \
 
 Inside the sandbox, `API_KEY` is set to a generated placeholder (for example,
 `sbx-cs-<rand>`). When a sandboxed process sends a request to any of the
-configured hosts and the placeholder appears anywhere in the request, the
-proxy replaces it with the real value. The agent never sees the real secret.
+configured hosts and the placeholder appears in an HTTP request header, the
+proxy replaces it with the real value. Replacement applies only to HTTP request
+headers, not request bodies. The agent never sees the real secret.
 
 ### Target multiple hosts
 

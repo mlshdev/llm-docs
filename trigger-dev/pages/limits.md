@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/limits.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/limits.mdx)
 > Canonical documentation: https://trigger.dev/docs/limits
 
 # Limits
@@ -11,6 +11,12 @@ You can view your current limits, quotas, and rate limit usage in real-time by v
 >
 > Looking to cap your monthly spend? That's a setting you control, not a platform limit — see
 > [Billing limits and alerts](https://trigger.dev/docs/billing-limits).
+
+## Run duration
+
+Runs have no maximum duration. You set a default `maxDuration` for your project and can override it per task or per run, or set it to `timeout.None` to let a run execute indefinitely.
+
+Trigger is built for long running AI agents and workflows and we have seen Trigger.dev users with runs lasting more than six months.
 
 ## Concurrency limits
 

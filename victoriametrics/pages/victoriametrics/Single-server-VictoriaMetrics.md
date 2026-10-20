@@ -1,8 +1,8 @@
-> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/Single-server-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/Single-server-VictoriaMetrics.md)
+> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/Single-server-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/Single-server-VictoriaMetrics.md)
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
-![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/README-components.webp)
+![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/README-components.webp)
 
 - **Case studies**: [Grammarly, Roblox, Wix, Spotify,...](https://docs.victoriametrics.com/victoriametrics/casestudies/).
 - **Available**: [Binary releases](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest), Docker images on [Docker Hub](https://hub.docker.com/r/victoriametrics/victoria-metrics/) and [Quay](https://quay.io/repository/victoriametrics/victoria-metrics), [Source code](https://github.com/VictoriaMetrics/VictoriaMetrics).

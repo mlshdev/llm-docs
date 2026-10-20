@@ -6,21 +6,75 @@
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
   "repository": "triggerdotdev/trigger.dev",
-  "tag": "v4.7.4",
-  "releaseId": 412977240,
-  "releasePublishedAt": "2026-10-14T17:09:17Z",
-  "sourceCommit": "7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43",
-  "documentCount": 334,
+  "tag": "v4.7.6",
+  "releaseId": 418726181,
+  "releasePublishedAt": "2026-10-20T18:25:06Z",
+  "sourceCommit": "166db1ca0781345894af115bc877081a9546a44c",
+  "documentCount": 354,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2988324,
-      "documentCount": 334,
-      "sha256": "114163d97e0500143e0136d25cd6b8923723aab2988f9133256dbe3fbe701296"
+      "byteLength": 3087370,
+      "documentCount": 354,
+      "sha256": "9b0fac3e83e98a249e954aa0e4b5726f72054823b813594217fe14050398e5e9"
     }
   ],
-  "outputDigest": "f45ede08d4b0d9ac3a5418ca322cf207450eff0333f5f60c530e05b0f8da3dd4",
+  "outputDigest": "f99c8b1ded4a69d56dea66c80e4403004bae905b787edcf233a09a53cc2f252f",
+  "quarantined": [
+    {
+      "sourcePath": "deploy-environment-variables.mdx",
+      "reason": "Unable to convert Trigger.dev page deploy-environment-variables.mdx: Unhandled MDX component <RollingOut> in deploy-environment-variables.mdx"
+    },
+    {
+      "sourcePath": "management/runs/retrieve-trace.mdx",
+      "reason": "Unable to convert Trigger.dev page management/runs/retrieve-trace.mdx: Unhandled MDX component <RollingOut> in management/runs/retrieve-trace.mdx"
+    },
+    {
+      "sourcePath": "webhooks/channels.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/channels.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/connect.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/connect.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/deliveries.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/deliveries.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/filters.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/filters.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/human-in-the-loop.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/human-in-the-loop.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/linear.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/linear.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/overview.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/overview.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/session-routing.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/session-routing.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/slack.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/slack.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/sources.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/sources.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    },
+    {
+      "sourcePath": "webhooks/waiters.mdx",
+      "reason": "Unable to convert Trigger.dev page webhooks/waiters.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
+    }
+  ],
   "notes": [
     "Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.",
     "API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.",

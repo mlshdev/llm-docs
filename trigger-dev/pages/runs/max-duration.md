@@ -1,9 +1,13 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/runs/max-duration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/runs/max-duration.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/runs/max-duration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/runs/max-duration.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/max-duration
 
 # Max duration
 
 Set a maximum duration for a task to run.
+
+Runs have no maximum duration. You set a default `maxDuration` for your project and can override it per task or per run, or set it to `timeout.None` to let a run execute indefinitely.
+
+Trigger is built for long running AI agents and workflows and we have seen Trigger.dev users with runs lasting more than six months.
 
 The `maxDuration` parameter sets a maximum compute time limit for tasks. When a task exceeds this duration, it will be automatically stopped. This helps prevent runaway tasks and manage compute resources effectively.
 
@@ -54,7 +58,7 @@ export const maxDurationTask = task({
 
 The above value will be compared to the `maxDuration` you set. If the task exceeds the `maxDuration`, it will be stopped with the following error:
 
-![Max duration error](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/runs/max-duration-error.png)
+![Max duration error](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/166db1ca0781345894af115bc877081a9546a44c/docs/runs/max-duration-error.png)
 
 ## Configuring for a task
 

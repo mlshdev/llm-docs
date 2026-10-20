@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/create-ssh-key.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/cli/reference/create-ssh-key.mdx)
+> Pinned source for Vast.ai main: [cli/reference/create-ssh-key.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/cli/reference/create-ssh-key.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/create-ssh-key
 
 # vastai create ssh-key

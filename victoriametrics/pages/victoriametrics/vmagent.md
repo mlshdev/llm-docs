@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmagent.md)
+> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmagent.md)
 
 `vmagent` is a tiny agent that helps you collect metrics from various sources,
 [relabel and filter the collected metrics](https://docs.victoriametrics.com/victoriametrics/relabeling/)
@@ -8,7 +8,7 @@ or via the [VictoriaMetrics `remote_write` protocol](#victoriametrics-remote-wri
 
 See [Quick Start](#quick-start) for details.
 
-![vmagent](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/vmagent.webp)
+![vmagent](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmagent.webp)
 
 ## Motivation
 

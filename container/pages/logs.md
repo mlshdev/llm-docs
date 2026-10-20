@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.5.0: [docs/logs.md](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/logs.md)
+> Pinned source for Apple container 1.6.0: [docs/logs.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/logs.md)
 
 # Logs
 
@@ -18,6 +18,9 @@ my-web-server
 192.168.64.1 - - [15/May/2025 03:00:03] "GET / HTTP/1.1" 200 -
 %
 </pre>
+
+Use `--follow` (or `-f`) to display existing output and follow new log output.
+If the log is empty, the command waits for output instead of exiting.
 
 Use the `--boot` option to see the logs for the virtual machine boot and init process:
 
@@ -64,5 +67,5 @@ The `container system logs` command allows you to look at the log messages that 
 %
 </pre>
 
-See [bug report how-to](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/bug-report-how-to.md) for gathering logs when filing an
+See [bug report how-to](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/bug-report-how-to.md) for gathering logs when filing an
 issue.

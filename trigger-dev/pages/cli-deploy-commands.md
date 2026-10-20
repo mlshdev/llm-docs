@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/cli-deploy-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-deploy-commands.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/cli-deploy-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/cli-deploy-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-deploy-commands
 
 # CLI deploy command
@@ -8,15 +8,15 @@ Use the deploy command to deploy your tasks to Trigger.dev.
 Run the command like this:
 
 ```bash npm
-npx trigger.dev@latest deploy
+npx trigger.dev@latest deploy --env prod
 ```
 
 ```bash pnpm
-pnpm dlx trigger.dev@latest deploy
+pnpm dlx trigger.dev@latest deploy --env prod
 ```
 
 ```bash yarn
-yarn dlx trigger.dev@latest deploy
+yarn dlx trigger.dev@latest deploy --env prod
 ```
 
 > **Warning**
@@ -29,7 +29,7 @@ It performs a few steps to deploy:
 1. Optionally updates packages when running locally.
 2. Compiles and bundles the code.
 3. Deploys the code to the Trigger.dev instance.
-4. Registers the tasks as a new version in the environment (prod by default).
+4. Registers the tasks as a new version in the environment you pass with `--env`.
 
 ## Deploying from CI
 
@@ -66,8 +66,14 @@ Skip checking for `@trigger.dev` package updates.
 
 **Property (type: --env | -e)**
 
-Defaults to `prod` but you can specify `staging` or `preview`. If you specify `preview` we will
-try and automatically detect the branch name from git.
+The environment to deploy to: `prod`, `staging` or `preview`. If you specify `preview` we will
+try and automatically detect the branch name from git. When you don't pass `--env`, the deploy
+goes to the environment of the API key in `TRIGGER_ACCESS_TOKEN`, or to `prod` if you're using a
+personal access token. We recommend always passing `--env`.
+
+**Property (type: --prod)**
+
+Deploy to the `prod` environment. Shorthand for `--env prod`.
 
 **Property (type: --branch | -b)**
 

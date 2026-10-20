@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `d53e0557ab43204135d5bc362bfaf2baca752af4`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `d83395f928bd3bd0f862b1c40d662baf9924c1d1`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -35,34 +35,34 @@
 - [Deploy an app](pages/sdk/apps/deploy.md): Deploy a Runpod SDK app with rp flash deploy: what goes into the build, ignore rules, size limits, Python versions, and how to call deployed resources. (5614 bytes)
 - [rp CLI reference](pages/sdk/cli.md): Reference for the rp CLI that ships with the runpod Python package: log in, scaffold apps, run live dev sessions, deploy, and manage SSH keys and Pods. (8050 bytes)
 - [Runpod SDK runtime](pages/sdk/runtime.md): Learn what the runpod-sdk-runtime package does, where its source lives, and when you need to think about it separately from the runpod Python SDK. (2750 bytes)
-- [Migrate from Flash to the Runpod SDK](pages/sdk/migrate-from-flash.md): Move an existing Flash project to the unified Runpod SDK: install runpod, update CLI commands and code, check behavior changes, and test before redeploying. (18716 bytes)
+- [Migrate from Flash to the Runpod SDK](pages/sdk/migrate-from-flash.md): Move an existing Flash project to the unified Runpod SDK: install runpod, update CLI commands and code, check behavior changes, and test before redeploying. (19416 bytes)
 
 ## Flash
 
-- [Overview](pages/flash/overview.md): Build autoscaling AI/ML apps using local code with Runpod Flash. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4419 bytes)
-- [Get started with Flash](pages/flash/quickstart.md): Run your first GPU workload with Flash in less than 5 minutes. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (12975 bytes)
-- [Use Flash on Windows](pages/flash/windows-wsl2.md): Set up WSL2 with Ubuntu to run Flash on Windows. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4157 bytes)
-- [Pricing](pages/flash/pricing.md): Understand Flash pricing and optimize your costs. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4792 bytes)
-- [Create endpoints](pages/flash/create-endpoints.md): Learn how to create and configure hardware and scaling behavior with the Flash Endpoint class. Review configuration and usage details for Runpod Flash. (14206 bytes)
-- [Use custom containers with Flash](pages/flash/custom-docker-images.md): Deploy pre-built Docker images with Flash using Endpoint. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (9959 bytes)
-- [Storage](pages/flash/configuration/storage.md): Understand container disk and network volume storage for Flash workloads. Review configuration and usage details for Runpod Flash. (8755 bytes)
-- [GPU types](pages/flash/configuration/gpu-types.md): Available GPU pools and specific GPU types for Flash endpoints. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (11773 bytes)
-- [CPU types](pages/flash/configuration/cpu-types.md): Available CPU instance types for Flash endpoints. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4391 bytes)
-- [Endpoint parameters](pages/flash/configuration/parameters.md): Complete reference for all Endpoint class parameters. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (25184 bytes)
-- [Configuration best practices](pages/flash/configuration/best-practices.md): Recommended configurations for production, development, and cost optimization. Review configuration and usage details for Runpod Flash. (7719 bytes)
-- [Overview](pages/flash/apps/overview.md): Understand the Flash app development lifecycle. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (3885 bytes)
-- [Build a Flash app](pages/flash/apps/build-app.md): Create a Flash app, test it locally, and deploy it to production. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7726 bytes)
-- [Initialize a Flash app project](pages/flash/apps/initialize-project.md): Use flash init to create a new Flash project with a ready-to-use structure. Review configuration and usage details for Runpod Flash. (3784 bytes)
-- [Customize your Flash app](pages/flash/apps/customize-app.md): Modify the Flash project template to build your application. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (5673 bytes)
-- [Test Flash apps locally](pages/flash/apps/local-testing.md): Use flash dev to test your Flash application locally before deploying. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7378 bytes)
-- [Apps and environments](pages/flash/apps/apps-and-environments.md): Understanding Flash's two-level deployment structure for organizing projects and managing deployments. (6199 bytes)
-- [Deploy Flash apps to Runpod](pages/flash/apps/deploy-apps.md): Build and deploy your Flash app for production serving. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (17932 bytes)
-- [Send API requests to deployed endpoints](pages/flash/apps/requests.md): Call your deployed Flash endpoints using HTTP requests for queue-based and load-balanced configurations. (8217 bytes)
-- [Execution model](pages/flash/execution-model.md): Understand how Flash executes your code on Runpod's infrastructure. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7503 bytes)
-- [Troubleshooting](pages/flash/troubleshooting.md): Monitor, debug, and troubleshoot Flash deployments. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (19195 bytes)
-- [Generate text with Flash and transformers](pages/tutorials/flash/text-generation-with-transformers.md): Learn how to use Flash with Hugging Face transformers to build a GPU-accelerated text generation application. (14630 bytes)
-- [Generate images with Flash and SDXL](pages/tutorials/flash/image-generation-with-sdxl.md): Learn how to use Flash with Stable Diffusion XL to generate high-quality images from text prompts. Follow the implementation steps in this Runpod tutorial. (19466 bytes)
-- [Build a REST API with Flash](pages/tutorials/flash/build-rest-api-with-load-balancer.md): Learn how to build a production-ready REST API using Flash load-balanced endpoints with custom HTTP routes. (21793 bytes)
+- [Overview](pages/flash/overview.md): Build autoscaling AI/ML apps using local code with Runpod Flash. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4447 bytes)
+- [Get started with Flash](pages/flash/quickstart.md): Run your first GPU workload with Flash in less than 5 minutes. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (13029 bytes)
+- [Use Flash on Windows](pages/flash/windows-wsl2.md): Set up WSL2 with Ubuntu to run Flash on Windows. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4211 bytes)
+- [Pricing](pages/flash/pricing.md): Understand Flash pricing and optimize your costs. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4846 bytes)
+- [Create endpoints](pages/flash/create-endpoints.md): Learn how to create and configure hardware and scaling behavior with the Flash Endpoint class. Review configuration and usage details for Runpod Flash. (14260 bytes)
+- [Use custom containers with Flash](pages/flash/custom-docker-images.md): Deploy pre-built Docker images with Flash using Endpoint. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (10013 bytes)
+- [Storage](pages/flash/configuration/storage.md): Understand container disk and network volume storage for Flash workloads. Review configuration and usage details for Runpod Flash. (8809 bytes)
+- [GPU types](pages/flash/configuration/gpu-types.md): Available GPU pools and specific GPU types for Flash endpoints. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (11827 bytes)
+- [CPU types](pages/flash/configuration/cpu-types.md): Available CPU instance types for Flash endpoints. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4445 bytes)
+- [Endpoint parameters](pages/flash/configuration/parameters.md): Complete reference for all Endpoint class parameters. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (25238 bytes)
+- [Configuration best practices](pages/flash/configuration/best-practices.md): Recommended configurations for production, development, and cost optimization. Review configuration and usage details for Runpod Flash. (7773 bytes)
+- [Overview](pages/flash/apps/overview.md): Understand the Flash app development lifecycle. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (3939 bytes)
+- [Build a Flash app](pages/flash/apps/build-app.md): Create a Flash app, test it locally, and deploy it to production. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7780 bytes)
+- [Initialize a Flash app project](pages/flash/apps/initialize-project.md): Use flash init to create a new Flash project with a ready-to-use structure. Review configuration and usage details for Runpod Flash. (3838 bytes)
+- [Customize your Flash app](pages/flash/apps/customize-app.md): Modify the Flash project template to build your application. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (5727 bytes)
+- [Test Flash apps locally](pages/flash/apps/local-testing.md): Use flash dev to test your Flash application locally before deploying. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7432 bytes)
+- [Apps and environments](pages/flash/apps/apps-and-environments.md): Understanding Flash's two-level deployment structure for organizing projects and managing deployments. (6253 bytes)
+- [Deploy Flash apps to Runpod](pages/flash/apps/deploy-apps.md): Build and deploy your Flash app for production serving. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (17986 bytes)
+- [Send API requests to deployed endpoints](pages/flash/apps/requests.md): Call your deployed Flash endpoints using HTTP requests for queue-based and load-balanced configurations. (8271 bytes)
+- [Execution model](pages/flash/execution-model.md): Understand how Flash executes your code on Runpod's infrastructure. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7557 bytes)
+- [Troubleshooting](pages/flash/troubleshooting.md): Monitor, debug, and troubleshoot Flash deployments. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (19989 bytes)
+- [Generate text with Flash and transformers](pages/tutorials/flash/text-generation-with-transformers.md): Learn how to use Flash with Hugging Face transformers to build a GPU-accelerated text generation application. (14684 bytes)
+- [Generate images with Flash and SDXL](pages/tutorials/flash/image-generation-with-sdxl.md): Learn how to use Flash with Stable Diffusion XL to generate high-quality images from text prompts. Follow the implementation steps in this Runpod tutorial. (19520 bytes)
+- [Build a REST API with Flash](pages/tutorials/flash/build-rest-api-with-load-balancer.md): Learn how to build a production-ready REST API using Flash load-balanced endpoints with custom HTTP routes. (21847 bytes)
 
 ## Serverless
 
@@ -286,16 +286,16 @@
 
 ## Flash CLI
 
-- [CLI overview](pages/flash/cli/overview.md): Learn how to use the Flash CLI for local development and deployment. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (3843 bytes)
-- [init](pages/flash/cli/init.md): Initialize a Flash project with a FastAPI server, example GPU and CPU workers, configuration files, and a ready-to-run directory structure. (4452 bytes)
-- [login](pages/flash/cli/login.md): Authenticate the Flash CLI with Runpod, save your API key locally, and configure browser-based authorization options and timeouts. (3685 bytes)
-- [dev](pages/flash/cli/dev.md): Run a local Flash development server, test Endpoint functions on Runpod Serverless, and configure provisioning, ports, and updates. (7394 bytes)
-- [build](pages/flash/cli/build.md): Build a deployment-ready Flash application artifact without deploying, with controls for dependencies, exclusions, and output files. (10396 bytes)
-- [deploy](pages/flash/cli/deploy.md): Build and deploy a Flash application to Runpod Serverless, select an environment, preview the build, and control packaged dependencies. (8967 bytes)
-- [env](pages/flash/cli/env.md): Create, inspect, list, and delete isolated Flash deployment environments for development, staging, and production applications. (7634 bytes)
-- [app](pages/flash/cli/app.md): Create, inspect, list, and delete Flash applications that organize deployment environments, build artifacts, and configuration. (9032 bytes)
-- [undeploy](pages/flash/cli/undeploy.md): List or delete Runpod Serverless endpoints created by Flash, including individual deployments and local development resources. (5439 bytes)
-- [update](pages/flash/cli/update.md): Update the Flash CLI to the latest or a selected version, understand automatic update checks, and configure when those checks run. (2202 bytes)
+- [CLI overview](pages/flash/cli/overview.md): Learn how to use the Flash CLI for local development and deployment. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (3897 bytes)
+- [init](pages/flash/cli/init.md): Initialize a Flash project with a FastAPI server, example GPU and CPU workers, configuration files, and a ready-to-run directory structure. (4506 bytes)
+- [login](pages/flash/cli/login.md): Authenticate the Flash CLI with Runpod, save your API key locally, and configure browser-based authorization options and timeouts. (3739 bytes)
+- [dev](pages/flash/cli/dev.md): Run a local Flash development server, test Endpoint functions on Runpod Serverless, and configure provisioning, ports, and updates. (7448 bytes)
+- [build](pages/flash/cli/build.md): Build a deployment-ready Flash application artifact without deploying, with controls for dependencies, exclusions, and output files. (10450 bytes)
+- [deploy](pages/flash/cli/deploy.md): Build and deploy a Flash application to Runpod Serverless, select an environment, preview the build, and control packaged dependencies. (9021 bytes)
+- [env](pages/flash/cli/env.md): Create, inspect, list, and delete isolated Flash deployment environments for development, staging, and production applications. (7688 bytes)
+- [app](pages/flash/cli/app.md): Create, inspect, list, and delete Flash applications that organize deployment environments, build artifacts, and configuration. (9086 bytes)
+- [undeploy](pages/flash/cli/undeploy.md): List or delete Runpod Serverless endpoints created by Flash, including individual deployments and local development resources. (5493 bytes)
+- [update](pages/flash/cli/update.md): Update the Flash CLI to the latest or a selected version, understand automatic update checks, and configure when those checks run. (2256 bytes)
 
 ## Runpod CLI
 
@@ -482,4 +482,4 @@
 
 ## Release notes
 
-- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (34831 bytes)
+- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (34914 bytes)

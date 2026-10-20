@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/vms.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/host/vms.mdx)
+> Pinned source for Vast.ai main: [host/vms.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/host/vms.mdx)
 > Canonical documentation: https://docs.vast.ai/host/vms
 
 # VMs
@@ -28,20 +28,11 @@ VM support will allow your machine to take advantage of demand for use cases tha
 
 VMs support the following features/use-cases that Docker-based instances do not:
 
-Feature
-Use-case
-
-Systemd/Docker
-
-Multi-Application Server Tooling and DevOps (e.g., Docker Compose, Kubernetes, Docker Build)
-
-Non-Linux OSes
-
-Windows Graphics (e.g., for rendering or cloud gaming)
-
-ptrace
-
-Program analysis for CUDA-performance optimization (e.g., via Nvidia NSight)
+| Feature        | Use-case                                                                                     |
+| -------------- | -------------------------------------------------------------------------------------------- |
+| Systemd/Docker | Multi-Application Server Tooling and DevOps (e.g., Docker Compose, Kubernetes, Docker Build) |
+| Non-Linux OSes | Windows Graphics (e.g., for rendering or cloud gaming)                                       |
+| ptrace         | Program analysis for CUDA-performance optimization (e.g., via Nvidia NSight)                 |
 
 Currently no other peer-to-peer GPU rental marketplace offers full VMs; instead full VMs are only available from traditional providers at much higher costs.
 Thus we believe that hosts who have VMs enabled can expect to command a substantial preumium.
@@ -49,7 +40,8 @@ Thus we believe that hosts who have VMs enabled can expect to command a substant
 ### Drawbacks
 
 - Due to greater user control over hardware, VM support requires IOMMU settings for securing PCIe communications that can degrade the performance of NCCL on non-RTX 40X0 multi-GPU machines that rely on PCI-based GPU peer-to-peer communication.
-- VMs require more disk space than Docker containers as they do not share components with the host OS. Hosts with VMs enabled may want to set higher disk and internet bandwidth prices.
+- VMs require more disk space than Docker containers as they do not share components with the host OS. Hosts with VMs enabled may want to set higher disk prices.
+- VMs cannot earn revenue from bandwidth. Bandwidth revenue is only earned from Docker-based instances.
 
 ### Summary
 

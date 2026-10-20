@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/sdk/show-maints.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/host/sdk/show-maints.mdx)
+> Pinned source for Vast.ai main: [host/sdk/show-maints.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/host/sdk/show-maints.mdx)
 > Canonical documentation: https://docs.vast.ai/host/sdk/show-maints
 
 # VastAI.show_maints

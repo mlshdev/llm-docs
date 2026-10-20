@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/apps/initialize-project.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/flash/apps/initialize-project.mdx)
+> Pinned source for Runpod main: [flash/apps/initialize-project.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/flash/apps/initialize-project.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/apps/initialize-project
 
 # Initialize a Flash app project
@@ -7,7 +7,7 @@ Use flash init to create a new Flash project with a ready-to-use structure. Revi
 
 > **Warning**
 >
-> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
+> Flash is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `runpod-flash` package, which stops getting fixes and updates after its [deprecation date](https://docs.runpod.io/flash/overview). For new projects, use the [Runpod SDK](https://docs.runpod.io/sdk/overview). To see how Flash commands and imports map to the SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 The `flash init` command creates a new Flash project with a complete project structure, including example load balancing endpoints and queue-based endpoints, and configuration files. This gives you a working starting point for building Flash applications.
 

@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.5.0: [README.md](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/README.md)
+> Pinned source for Apple container 1.6.0: [README.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/README.md)
 
 # container
 
@@ -8,13 +8,13 @@ The tool consumes and produces [OCI-compatible container images](https://github.
 
 `container` uses the [Containerization](https://github.com/apple/containerization) Swift package for low-level container, image, and process management.
 
-![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/d265d669ecae041bf338cb3b39c4118316d138f0/docs/assets/landing-movie.gif)
+![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/assets/landing-movie.gif)
 
 ## Get started
 
 ### Requirements
 
-You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md) document.
+You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/BUILDING.md) document.
 
 `container` is supported on macOS 26, since it takes advantage of new features and enhancements to virtualization and networking in this release. We do not support older versions of macOS and the `container` maintainers typically will not address issues that cannot be reproduced on macOS 26.
 
@@ -37,7 +37,7 @@ container run --rm alpine echo hello
 ```
 
 This pulls the `alpine` image, runs it in a lightweight Linux VM, prints `hello`, and
-removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md)
+removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/tutorials/start-here.md)
 for a fuller walkthrough that builds and publishes an image of your own.
 
 ### Upgrade or downgrade
@@ -85,11 +85,11 @@ To retain your user data so that it is available should you reinstall later, run
 
 ## Next steps
 
-- Take [a guided tour of `container`](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
-- Learn how to [use various `container` features](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/how-to.md).
-- Read a brief description and [technical overview](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/technical-overview.md) of `container`.
-- Browse the [full command reference](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/command-reference.md).
-- [Build and run](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/BUILDING.md) `container` on your own development system.
+- Take [a guided tour of `container`](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
+- Learn how to [use various `container` features](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/how-to.md).
+- Read a brief description and [technical overview](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/technical-overview.md) of `container`.
+- Browse the [full command reference](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/command-reference.md).
+- [Build and run](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/BUILDING.md) `container` on your own development system.
 - View the project [API documentation](https://apple.github.io/container/documentation/).
 
 ## Contributing

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/deployment/dev-branches.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/dev-branches.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/deployment/dev-branches.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/deployment/dev-branches.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/dev-branches
 
 # Development branches

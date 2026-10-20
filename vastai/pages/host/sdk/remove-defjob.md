@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/sdk/remove-defjob.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/host/sdk/remove-defjob.mdx)
+> Pinned source for Vast.ai main: [host/sdk/remove-defjob.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/host/sdk/remove-defjob.mdx)
 > Canonical documentation: https://docs.vast.ai/host/sdk/remove-defjob
 
 # VastAI.remove_defjob

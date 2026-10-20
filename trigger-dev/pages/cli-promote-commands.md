@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/cli-promote-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-promote-commands.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/cli-promote-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/cli-promote-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-promote-commands
 
 # CLI promote command
@@ -37,7 +37,12 @@ The name of the config file.
 
 **Property (type: -e, --env \<env>)**
 
-The environment to promote in: `prod`, `staging` or `preview`. Defaults to `prod`.
+The environment to promote in: `prod`, `staging` or `preview`. Defaults to the environment of the
+API key in `TRIGGER_ACCESS_TOKEN`, otherwise `prod`.
+
+**Property (type: --prod)**
+
+Promote in the `prod` environment. Shorthand for `--env prod`.
 
 **Property (type: -b, --branch \<branch>)**
 

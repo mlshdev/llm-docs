@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/hello-world.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/api-reference/hello-world.mdx)
+> Pinned source for Vast.ai main: [api-reference/hello-world.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/api-reference/hello-world.mdx)
 > Canonical documentation: https://docs.vast.ai/api-reference/hello-world
 
 # API Hello World

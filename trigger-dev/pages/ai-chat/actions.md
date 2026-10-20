@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/ai-chat/actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/ai-chat/actions.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/ai-chat/actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/ai-chat/actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/actions
 
 # Actions
@@ -74,11 +74,16 @@ onAction: async ({ action }) => {
       chat.history.slice(0, -1);
       chat.inject([{ role: "system", content: "Answer formally this time." }]);
       return chat.turn(); // with a one-shot instruction
+
+    case "ask":
+      return chat.turn(action.question); // answer a new user message
   }
 }
 ```
 
-`run()` receives the edited history with no incoming user message, the same shape as a `regenerate-message` turn, and its `trigger` is `"action-turn"`, so a `run()` that returns early on `"action"` (the pre-May behaviour, when actions invoked `run()` directly) still answers. Returning anything other than `chat.turn()` or nothing is an error; a response can no longer be returned from `onAction` directly.
+`chat.turn(message)` appends `message` (a string, or a `UIMessage`) to the history as a user message after the edit, and the turn answers it. That is how a button click becomes a question, such as a follow-up suggestion in [Slack](https://trigger.dev/docs/webhooks/slack#buttons-that-send-the-agent-an-action).
+
+Without a message, `run()` receives the edited history with no incoming user message, the same shape as a `regenerate-message` turn, and its `trigger` is `"action-turn"`, so a `run()` that returns early on `"action"` (the pre-May behaviour, when actions invoked `run()` directly) still answers. Returning anything other than `chat.turn()` or nothing is an error; a response can no longer be returned from `onAction` directly.
 
 ### Actions and persistence
 

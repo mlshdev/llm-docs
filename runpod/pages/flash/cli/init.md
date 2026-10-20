@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/cli/init.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/flash/cli/init.mdx)
+> Pinned source for Runpod main: [flash/cli/init.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/flash/cli/init.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/init
 
 # init
@@ -7,7 +7,7 @@ Initialize a Flash project with a FastAPI server, example GPU and CPU workers, c
 
 > **Warning**
 >
-> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
+> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which stops getting fixes and updates after its [deprecation date](https://docs.runpod.io/flash/overview). For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
 
 Create a new Flash project with a ready-to-use template structure including a FastAPI server, example GPU and CPU workers, and configuration files.
 

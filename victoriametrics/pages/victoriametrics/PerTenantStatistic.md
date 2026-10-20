@@ -1,6 +1,6 @@
-> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/PerTenantStatistic.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/PerTenantStatistic.md)
+> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/PerTenantStatistic.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/PerTenantStatistic.md)
 
-![cluster-per-tenant-stat](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/PerTenantStatistic-stats.webp)
+![cluster-per-tenant-stat](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/PerTenantStatistic-stats.webp)
 
 ***The per-tenant statistic is a part of [enterprise package](https://docs.victoriametrics.com/victoriametrics/enterprise/). It is available for download and evaluation at [releases page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest).
 To get the license key you can request a [free trial license](https://victoriametrics.com/products/enterprise/trial/).***

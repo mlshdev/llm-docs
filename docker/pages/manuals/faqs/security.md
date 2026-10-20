@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/security.md](https://github.com/docker/docs/blob/7efe90099b0a1ac8295c099f13abf8ac173ec46b/content/manuals/faqs/security.md)
+> Pinned source for Docker main: [content/manuals/faqs/security.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/faqs/security.md)
 
 # Security FAQs
 
@@ -134,7 +134,7 @@ must already be members, have a pending invitation, or be provisioned through
 SCIM. Users who don't meet these criteria get an "Access denied" error and
 need an administrator to invite them.
 
-See [SSO authentication with JIT provisioning disabled](https://docs.docker.com/security/provisioning/just-in-time/#sso-authentication-with-jit-provisioning-disabled).
+See [Disable JIT provisioning](https://docs.docker.com/security/provisioning/just-in-time/#disable).
 
 ### Can someone join an organization without an invitation?
 

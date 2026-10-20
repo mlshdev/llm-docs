@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/apikeys.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/apikeys.mdx)
 > Canonical documentation: https://trigger.dev/docs/apikeys
 
 # API keys
@@ -69,15 +69,17 @@ The default API URL is `https://api.trigger.dev`.
 
 Access presets define what a key can do. On the Free and Hobby plans only the **No restrictions** preset is available. All other presets require the Pro or Enterprise plan.
 
-| Preset              | Access                                                                                                                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Trigger only**    | Trigger runs and batches for all or selected tasks. Trigger responses include scoped public access tokens for the runs and batches they create |
-| **Task operator**   | Trigger all or selected tasks and inspect or operate on their runs                                                                             |
-| **Observer**        | Read runs, tasks, batches, logs, traces, and queues                                                                                            |
-| **Operator**        | Observe and operate on runs and queues, and trigger tasks                                                                                      |
-| **Deploy only**     | Deploy versions, sync environment variables, and manage Preview branches                                                                       |
-| **Variables only**  | Read and write environment variables in this environment                                                                                       |
-| **No restrictions** | Full access to the environment                                                                                                                 |
+| Preset              | Access                                                                                                                                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Trigger only**    | Trigger runs and batches for all or selected tasks. Trigger responses include scoped public access tokens for the runs and batches they create                                                          |
+| **Task operator**   | Trigger all or selected tasks and inspect or operate on their runs                                                                                                                                      |
+| **Observer**        | Read runs, tasks, batches, logs, traces, queues, errors, and webhooks                                                                                                                                   |
+| **Operator**        | Observe and operate on runs, queues, errors, and webhooks, and trigger tasks                                                                                                                            |
+| **Webhooks only**   | Read and write [webhooks](https://trigger.dev/docs/webhooks/overview), which are in private beta. Replaying deliveries that trigger tasks and creating webhook waiters require task or waitpoint scopes |
+| **Waitpoints only** | Create, list, and retrieve [waitpoint tokens](https://trigger.dev/docs/wait-for-token). No task or run access                                                                                           |
+| **Deploy only**     | Deploy versions, sync environment variables, and manage Preview branches                                                                                                                                |
+| **Variables only**  | Read and write environment variables in this environment                                                                                                                                                |
+| **No restrictions** | Full access to the environment                                                                                                                                                                          |
 
 **Trigger only** and **Task operator** can be restricted to selected tasks, up to 10 tasks per key. Task restrictions use task identifiers, such as `send-email`. A request involving multiple tasks — such as a batch trigger — succeeds only when the key can access every task in the request, so a task-restricted key can batch-trigger only its selected tasks.
 
@@ -86,10 +88,10 @@ Access presets define what a key can do. On the Free and Hobby plans only the **
 Set a key in `TRIGGER_ACCESS_TOKEN` to authenticate `trigger deploy` without logging in.
 
 ```bash npm
-TRIGGER_ACCESS_TOKEN="tr_prod_sk_…" npx trigger.dev@latest deploy
+TRIGGER_ACCESS_TOKEN="tr_prod_sk_…" npx trigger.dev@latest deploy --env prod
 ```
 
-The key must belong to the target environment. Use a Production key for the default deployment, a Staging key with `--env staging`, or a key from the Preview environment with `--env preview`. A Preview deployment key can create and archive Preview branches and sync their environment variables.
+The key must belong to the target environment. Use a Production key with `--env prod`, a Staging key with `--env staging`, or a key from the Preview environment with `--env preview`. If you leave out `--env`, the CLI deploys to the key's environment, and a `--env` that doesn't match the key is an error. A Preview deployment key can create and archive Preview branches and sync their environment variables.
 
 > **Note**
 >

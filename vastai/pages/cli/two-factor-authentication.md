@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/two-factor-authentication.mdx](https://github.com/vast-ai/docs/blob/e0e0293c3626e419c16dcfc6f799976252de5c5f/cli/two-factor-authentication.mdx)
+> Pinned source for Vast.ai main: [cli/two-factor-authentication.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/cli/two-factor-authentication.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/two-factor-authentication
 
 # Two-Factor Authentication

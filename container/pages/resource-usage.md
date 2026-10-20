@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.5.0: [docs/resource-usage.md](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/resource-usage.md)
+> Pinned source for Apple container 1.6.0: [docs/resource-usage.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/resource-usage.md)
 
 # Resource usage
 
@@ -13,7 +13,7 @@ Since the containers created by `container` are lightweight virtual machines, co
 container run --rm --cpus 8 --memory 32g big
 ```
 
-See [Resource limits (ulimits)](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
+See [Resource limits (ulimits)](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
 
 ## Configure memory and CPUs for large builds
 
@@ -159,5 +159,5 @@ container builder stop
 container builder delete
 ```
 
-See [Mounts and volumes](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/volumes.md) for bind mounts, named volumes, and tmpfs
+See [Mounts and volumes](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/volumes.md) for bind mounts, named volumes, and tmpfs
 mounts.

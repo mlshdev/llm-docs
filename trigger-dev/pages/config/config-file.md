@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/config/config-file.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/config/config-file.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/config/config-file.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/config/config-file.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/config-file
 
 # The trigger.config.ts file
@@ -117,7 +117,7 @@ Read more about task lifecycle functions in the [tasks overview](https://trigger
 
 We use OpenTelemetry (OTEL) for our run logs. This means you get a lot of information about your tasks with no effort. But you probably want to add more information to your logs. For example, here's all the Prisma calls automatically logged:
 
-![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/auto-instrumentation.png)
+![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/166db1ca0781345894af115bc877081a9546a44c/docs/images/auto-instrumentation.png)
 
 Here we add Prisma and OpenAI instrumentations to your `trigger.config.ts` file.
 
@@ -263,6 +263,64 @@ export default defineConfig({
   },
 });
 ```
+
+### Span processors
+
+Span processors run on every span before it is exported, to Trigger.dev and to any `exporters` you configure. Use them to redact or drop span content before it reaches the run trace.
+
+```ts trigger.config.ts
+import { defineConfig } from "@trigger.dev/sdk";
+import type { AttributeValue, Attributes } from "@opentelemetry/api";
+import type { SpanProcessor } from "@opentelemetry/sdk-trace-base";
+
+const EMAIL = /[\w.+-]+@[\w-]+\.[\w.]+/g;
+
+function redact(value: AttributeValue | undefined): AttributeValue | undefined {
+  if (typeof value === "string") return value.replace(EMAIL, "[email]");
+  // Some attributes are string arrays, like the messages sent mid-turn
+  if (Array.isArray(value)) {
+    return value.map((item) =>
+      typeof item === "string" ? item.replace(EMAIL, "[email]") : item
+    ) as AttributeValue;
+  }
+  return value;
+}
+
+function scrub(attributes: Attributes) {
+  for (const key of Object.keys(attributes)) attributes[key] = redact(attributes[key]);
+}
+
+const redactEmails: SpanProcessor = {
+  onStart: () => {},
+  // The span is complete here and still writable
+  onEnding: (span) => {
+    scrub(span.attributes);
+    for (const event of span.events) scrub(event.attributes ?? {});
+  },
+  onEnd: () => {},
+  forceFlush: async () => {},
+  shutdown: async () => {},
+};
+
+export default defineConfig({
+  project: "<project ref>",
+  telemetry: {
+    spanProcessors: [redactEmails],
+  },
+});
+```
+
+Your processors run ahead of ours, so they also see the in-progress copy of each span that the dashboard shows while a span is open. Redact in `onEnding`:
+
+- `onStart` runs before we add the run context, so it sees only the attributes the span was started with.
+- In `onEnd` the span is read-only and `setAttribute` does nothing. Writing to `span.attributes` directly still works.
+- Content can also sit in span events (exceptions, for example). Events are on `span.events`.
+
+After each call we restore the few attributes we use to link a span to its run, such as the run, task and attempt ids. Everything else can be redacted, including run tags and idempotency keys. If a processor throws, the error is reported and the span is still exported.
+
+> **Note**
+>
+> Span processors only change span content. Run payloads and outputs, and the messages on a chat agent's session streams, are stored as sent. For chat agents, see [Redact chat content from traces](https://trigger.dev/docs/ai-chat/patterns/redacting-telemetry).
 
 ## Runtime
 

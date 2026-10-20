@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.0: [docs/victoriametrics/Quick-Start.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/Quick-Start.md)
+> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/Quick-Start.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/Quick-Start.md)
 
 There are two ways to get started with VictoriaMetrics:
 
@@ -76,7 +76,7 @@ Now that metrics are being collected, it's time to look at them.
 Open <http://localhost:8428/vmui> in your browser to access [vmui](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#vmui) -
 the built-in UI for querying and graphing metrics. You should see its query page:
 
-![vmui query page](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/29c43cd2fee05409499a4d1b38e950e1b7f13bd4/docs/victoriametrics/quick-start-vmui.webp)
+![vmui query page](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/quick-start-vmui.webp)
 
 Self-scraped metrics become queryable within \~30 seconds after the start.
 

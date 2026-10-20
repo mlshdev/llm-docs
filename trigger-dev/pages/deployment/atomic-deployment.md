@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/deployment/atomic-deployment.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/deployment/atomic-deployment.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/deployment/atomic-deployment.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/deployment/atomic-deployment.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/atomic-deployment
 
 # Atomic deployments
@@ -57,7 +57,7 @@ This works identically in production, staging and preview (including per-branch 
 The id is free-form and opaque to Trigger.dev — a commit SHA, a release tag, a CI run id, anything up to **128 characters**. The only rule is that both halves carry the **same value**.
 
 1. ```bash
-   npx trigger.dev@latest deploy --external-id "$(git rev-parse HEAD)"
+   npx trigger.dev@latest deploy --env prod --external-id "$(git rev-parse HEAD)"
    ```
 2. Set this in your hosting platform's runtime environment variables, alongside `TRIGGER_SECRET_KEY`:
 
@@ -228,7 +228,7 @@ Read the commit in the place where it *is* available, and write it into both hal
 
 ```bash
 # 1. Deploy side — name the deployment after the commit.
-npx trigger.dev@latest deploy --external-id "$(git rev-parse HEAD)"
+npx trigger.dev@latest deploy --env prod --external-id "$(git rev-parse HEAD)"
 
 # 2. Application side — give the running app the same value.
 TRIGGER_EXTERNAL_DEPLOYMENT_ID=<the-same-commit-sha>
@@ -373,7 +373,7 @@ If you filter deploys by path, derive the id from the same filter on both sides 
 
 ```bash
 TASK_ID=$(git log -1 --format=%H -- trigger/)
-npx trigger.dev@latest deploy --external-id "$TASK_ID"
+npx trigger.dev@latest deploy --env prod --external-id "$TASK_ID"
 ```
 
 Compute the same value where you set your app's variable. In GitHub Actions this needs `fetch-depth: 0` on `actions/checkout` — the default shallow clone can't see far enough back.

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/ai-chat/transcript-storage.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/ai-chat/transcript-storage.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/ai-chat/transcript-storage.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/ai-chat/transcript-storage.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/transcript-storage
 
 # Transcript storage
@@ -227,7 +227,7 @@ A few things to get right:
 ## Guarantees and limits
 
 - Crash recovery of a half-written answer is runtime-owned in every configuration. It comes from the durable session stream, which no application database can reconstruct. A storage holds settled turns; the runtime overlays the recovered tail and hands it to `save` like any other change.
-- Bringing your own database does not remove platform custody. Session streams still hold message content for their retention window.
+- Bringing your own database does not remove platform custody. Session streams still hold message content for their retention window. To keep content out of the run trace, see [Redact chat content from traces](https://trigger.dev/docs/ai-chat/patterns/redacting-telemetry).
 - The default storage rewrites the whole conversation each turn. A row-per-message storage writes only what changed. That is the reason to plug in your own.
 
 ## Migrating from hydrateMessages

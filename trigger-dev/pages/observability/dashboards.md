@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/observability/dashboards.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/observability/dashboards.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/observability/dashboards.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/observability/dashboards.mdx)
 > Canonical documentation: https://trigger.dev/docs/observability/dashboards
 
 # Dashboards
@@ -17,7 +17,7 @@ Trigger.dev automatically collects process metrics (CPU, memory) and Node.js run
 
 All of this data is available in the `metrics` table for use in dashboard widgets. See [Logging, tracing & metrics](https://trigger.dev/docs/logging#metrics) for the full list of automatic metrics and how to create custom ones, or the [Query page](https://trigger.dev/docs/observability/query#metrics-table-columns) for the `metrics` table schema.
 
-![The built-in Metrics dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/images/metrics-built-in.png)
+![The built-in Metrics dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/166db1ca0781345894af115bc877081a9546a44c/docs/images/metrics-built-in.png)
 
 ### Visualization types
 
@@ -46,6 +46,68 @@ You can also filter the data by:
 3. From the top-right you can "Add chart" or "Add title".
 4. For charts you write [TRQL queries](https://trigger.dev/docs/observability/query) and choose a visualization type.
 5. You can resize and reposition widgets on your dashboards.
+
+## Managing dashboards with the SDK
+
+Custom dashboards can also be created and edited from code, so you can keep them in your repository and set them up from CI or a script. `query.dashboards` covers the same operations as the dashboard UI.
+
+```ts scripts/dashboards.ts
+import { query } from "@trigger.dev/sdk";
+
+const dashboard = await query.dashboards.create({
+  title: "Email tasks",
+  widgets: [
+    { title: "Overview", display: { type: "title" } },
+    {
+      title: "Total runs",
+      query: "SELECT count() AS total FROM runs WHERE task_identifier = 'send-email'",
+      display: { type: "bignumber", column: "total", aggregation: "sum" },
+    },
+    {
+      title: "Runs per day",
+      query:
+        "SELECT timeBucket(), count() AS runs FROM runs WHERE task_identifier = 'send-email' GROUP BY timeBucket ORDER BY timeBucket",
+      display: {
+        type: "chart",
+        chartType: "bar",
+        xAxisColumn: "timebucket",
+        yAxisColumns: ["runs"],
+        groupByColumn: null,
+        stacked: false,
+        sortByColumn: null,
+        sortDirection: "asc",
+        aggregation: "sum",
+      },
+    },
+  ],
+});
+
+console.log(dashboard.id); // dashboard_...
+```
+
+Widgets without a `position` are stacked full width in the order you list them. Pass `position: { x, y, w, h }` on a 12-column grid to place a widget yourself.
+
+To keep a dashboard in sync with code, replace all of its widgets in one call. Widgets you keep, matched by `id`, stay where they are unless you pass a new `position`:
+
+```ts scripts/dashboards.ts
+const current = await query.dashboards.retrieve(dashboard.id);
+
+await query.dashboards.replace(dashboard.id, {
+  widgets: [
+    {
+      id: "failures",
+      title: "Failed runs",
+      query: "SELECT count() AS failed FROM runs WHERE status = 'Failed'",
+      display: { type: "bignumber", column: "failed", aggregation: "sum" },
+    },
+  ],
+  revision: current.revision,
+});
+```
+
+`revision` is optional. When you pass the revision you last read, the write fails with a 409 if someone changed the dashboard in the meantime, instead of overwriting their change.
+
+Every widget query is checked against the queryable tables when you save it, so a typo in a table or column name fails the request with the list of valid columns. `query.dashboards.widgets.add`, `widgets.update` and `widgets.del` change one widget at a time. Creating a dashboard or widget past your plan's limits returns a 403. See the [Query API reference](https://trigger.dev/docs/management/query/create-dashboard) for every endpoint.
 
 ## Performance considerations
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/release-notes.mdx)
+> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/release-notes.mdx)
 > Canonical documentation: https://docs.runpod.io/release-notes
 
 # Product updates
@@ -11,7 +11,7 @@ New features, fixes, and improvements for the Runpod platform. Review setup, con
 
 \*\*\*\* [runpod 2.0 CLI changes](https://docs.runpod.io/sdk/migrate-from-flash) `runpod` 2.0 removes the `runpod config`, `runpod project`, and `runpod exec` commands. Use `rp login` to authenticate and `rp flash` commands to develop and deploy apps.
 
-\*\*\*\* [Standalone Flash package](https://docs.runpod.io/sdk/migrate-from-flash) The `runpod-flash` package no longer gets new features, and the runpod/flash repository will be archived. Existing Flash code and deployed endpoints keep working. To move a project to the Runpod SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
+\*\*\*\* [Standalone Flash package](https://docs.runpod.io/sdk/migrate-from-flash) The `runpod-flash` package no longer gets new features and is deprecated on **October 29, 2026**, after which it gets no fixes or updates. Existing Flash code and deployed endpoints keep working, and the runpod/flash repository will be archived. To move a project to the Runpod SDK, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 **October 13, 2026**
 

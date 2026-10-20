@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/cli/dev.mdx](https://github.com/runpod/docs/blob/d53e0557ab43204135d5bc362bfaf2baca752af4/flash/cli/dev.mdx)
+> Pinned source for Runpod main: [flash/cli/dev.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/flash/cli/dev.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/dev
 
 # dev
@@ -7,7 +7,7 @@ Run a local Flash development server, test Endpoint functions on Runpod Serverle
 
 > **Warning**
 >
-> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which keeps working but no longer gets new features. For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
+> The Flash CLI is now part of the `rp` CLI that ships with the [Runpod SDK](https://docs.runpod.io/sdk/overview). This page documents the standalone `flash` command from the `runpod-flash` package, which stops getting fixes and updates after its [deprecation date](https://docs.runpod.io/flash/overview). For new projects, use the [`rp` CLI](https://docs.runpod.io/sdk/cli). To see how `flash` commands map to `rp flash`, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash#step-2-update-your-cli-commands).
 
 Start the Flash development server for local testing with automatic updates. A local development server provides a unified interface for testing while `@Endpoint` functions execute on Runpod Serverless.
 

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/bbd37149e4b1bd9730a70f06b72d1c1f9b95bc0f/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -517,7 +517,8 @@ the `multiple_requests` option, as well as setting
 - cookies
   Set the cookies to be sent in future requests. The format of each cookie is the
   same as the value of a Set-Cookie HTTP response field. Multiple cookies can be
-  delimited by a newline character.
+  delimited by a newline character. A cookie without a Domain attribute is only
+  sent to the host of the URL it is set for.
 
 - icy
   If set to 1 request ICY (SHOUTcast) metadata from the server. If the server
@@ -665,7 +666,7 @@ wget --post-file=somefile.ogg http://*server*:*port*
 
 Some HTTP requests will be denied unless cookie values are passed in with the
 request. The `cookies` option allows these cookies to be specified. At
-the very least, each cookie must specify a value along with a path and domain.
+the very least, each cookie must specify a value.
 HTTP requests that match both the domain and path will automatically include the
 cookie value in the HTTP Cookie header field. Multiple cookies can be delimited
 by a newline.

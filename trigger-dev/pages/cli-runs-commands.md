@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.4: [docs/cli-runs-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/7bbcf0073ef3d32f0306ffbb4622cf5b5314ad43/docs/cli-runs-commands.mdx)
+> Pinned source for Trigger.dev v4.7.6: [docs/cli-runs-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/cli-runs-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-runs-commands
 
 # CLI runs commands
@@ -85,7 +85,7 @@ The project ref. Required if there is no config file.
 
 **Property (type: --branch | -b)**
 
-Required when using `--env preview`. Specify the branch, e.g. `--branch my-branch` or `-b my-branch`.
+Required when using `--env preview`. Specify the branch, e.g. `--branch my-branch` or `-b my-branch`. With `--env dev`, it defaults to the same [dev branch](https://trigger.dev/docs/deployment/dev-branches) as the dev command.
 
 ### Common options
 

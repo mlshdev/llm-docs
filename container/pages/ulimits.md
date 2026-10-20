@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.5.0: [docs/ulimits.md](https://github.com/apple/container/blob/d265d669ecae041bf338cb3b39c4118316d138f0/docs/ulimits.md)
+> Pinned source for Apple container 1.6.0: [docs/ulimits.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/ulimits.md)
 
 # Resource limits (ulimits)
 
