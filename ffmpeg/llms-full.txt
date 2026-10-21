@@ -2,13 +2,13 @@
 
 Source repository: https://github.com/FFmpeg/FFmpeg
 Tracked branch: master
-Source commit: 69ad29bdad39878c70eeb07ec5e2f66e25908078
+Source commit: 9bab434b5f618e145a2a0e16911b539a481d29c4
 
 # Document: Synopsis
 
 Source path: doc/ffmpeg.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg.texi
 Description: ffmpeg \[global\options] {\[input\file\options] -i inputurl} ... {\[output\file\options] outputurl} ...
 
 # Synopsis
@@ -518,8 +518,11 @@ of the other. Its audio counterpart is the `amix` filter.
 While decoders are normally associated with demuxer streams, it is also possible
 to create "loopback" decoders that decode the output from some encoder and allow
 it to be fed back to complex filtergraphs. This is done with the `-dec`
-directive, which takes as a parameter the index of the output stream that should
-be decoded. Every such directive creates a new loopback decoder, indexed with
+directive, which takes as a parameter *output\_file\_index*:*stream\_index*
+to select the output stream that should be decoded. Both indices are zero-based
+integers: the first identifies the output file and the second identifies the
+stream within that file. Stream specifiers such as `v:0` are not supported.
+Every such directive creates a new loopback decoder, indexed with
 successive integers starting at zero. These indices should then be used to refer
 to loopback decoders in complex filtergraph link labels, as described in the
 documentation for `-filter_complex`.
@@ -3949,8 +3952,8 @@ Maintainers for the specific components are listed in the file
 # Document: Synopsis
 
 Source path: doc/ffplay.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffplay.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffplay.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffplay.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffplay.texi
 Description: ffplay \[options] \[inputurl]
 
 # Synopsis
@@ -4708,8 +4711,8 @@ Maintainers for the specific components are listed in the file
 # Document: Synopsis
 
 Source path: doc/ffprobe.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffprobe.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffprobe.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffprobe.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffprobe.texi
 Description: ffprobe \[options] inputurl
 
 # Synopsis
@@ -5817,8 +5820,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-utils.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-utils.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-utils.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-utils.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-utils.texi
 Description: This document describes some generic features and utilities provided by the libavutil library.
 
 # Description
@@ -6989,8 +6992,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-scaler.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-scaler.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-scaler.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-scaler.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-scaler.texi
 Description: The FFmpeg rescaler provides a high-level interface to the libswscale library image conversion utilities. In particular it allows one to perform image rescaling and pixel format conversion.
 
 # Description
@@ -7239,8 +7242,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-resampler.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-resampler.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-resampler.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-resampler.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-resampler.texi
 Description: The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio…
 
 # Description
@@ -7499,8 +7502,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-codecs.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-codecs.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-codecs.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-codecs.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-codecs.texi
 Description: This document describes the codecs (decoders and encoders) provided by the libavcodec library.
 
 # Description
@@ -13937,8 +13940,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-formats.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-formats.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-formats.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-formats.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-formats.texi
 Description: This document describes the supported formats (muxers and demuxers) provided by the libavformat library.
 
 # Description
@@ -19952,8 +19955,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-devices.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-devices.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-devices.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-devices.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-devices.texi
 Description: This document describes the input and output devices provided by the libavdevice library.
 
 # Description
@@ -22036,8 +22039,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-filters.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-filters.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-filters.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-filters.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-filters.texi
 Description: This document describes filters, sources, and sinks provided by the libavfilter library.
 
 # Description
@@ -57012,8 +57015,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-protocols.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-protocols.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-protocols.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-protocols.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-protocols.texi
 Description: This document describes the input and output protocols provided by the libavformat library.
 
 # Description
@@ -58770,11 +58773,17 @@ some risk of collision if the same URL is used for different content (e.g.
 as a result of extra POST data being used to select the stream ID). To avoid
 this, make sure to only use this protocol for URLs that uniquely identify
 the content; otherwise you may get a garbled mix of sources.
+This includes content selected by request options such as headers, cookies or
+credentials: data cached for one user is returned to every other user of the
+same cache directory.
 
 The accepted options are:
 
 - cache\_dir
   Path to the directory where cache files are stored. This option is required.
+  Anyone who can write to this directory or to `metadata_dir` can alter
+  the data read by all users of the cache, or make them crash, so neither may be
+  writable by untrusted users.
 
 - metadata\_dir
   Path to the directory where metadata files are stored. Optional. If not
@@ -59637,8 +59646,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-bitstream-filters.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-bitstream-filters.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-bitstream-filters.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-bitstream-filters.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-bitstream-filters.texi
 Description: This document describes the bitstream filters provided by the libavcodec library.
 
 # Description
@@ -60934,8 +60943,8 @@ Maintainers for the specific components are listed in the file
 # Document: Introduction
 
 Source path: doc/developer.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/developer.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/developer.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/developer.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/developer.texi
 Description: This text is concerned with the development of FFmpeg itself. Information on using the FFmpeg libraries in other programs can be found elsewhere, e.g. in: ----------------------------------------------------------------…
 
 # Introduction
@@ -62217,8 +62226,8 @@ Send an announcement to the mailing list.
 # Document: General Questions
 
 Source path: doc/faq.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/faq.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/faq.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/faq.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/faq.texi
 Description: Because no one has taken on that task yet. FFmpeg development is driven by the tasks that are important to the individual developers. If there is a feature that is important to you, the best way to get it implemented is…
 
 # General Questions
@@ -62893,8 +62902,8 @@ causing FATE to not find files. Just replace `~` by the full path.
 # Document: Introduction
 
 Source path: doc/fate.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/fate.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/fate.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/fate.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/fate.texi
 Description: FATE is an extended regression suite on the client-side and a means for results aggregation and presentation on the server-side.
 
 # Introduction
@@ -63174,8 +63183,8 @@ make V=1 SAMPLES=/var/fate/samples THREADS=2 CPUFLAGS=mmx fate
 # Document: External libraries
 
 Source path: doc/general.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/general.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/general.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/general.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/general.texi
 Description: FFmpeg can be hooked up with a number of external libraries to add support for more formats. None of them are used by default, their use has to be explicitly requested by passing the appropriate flags to ./configure.
 
 # External libraries
@@ -64799,7 +64808,6 @@ performance on systems without hardware floating point support).
 - LIBCDIO            |  X
 - LIBDC1394          |  X       |
 - OpenAL             |  X
-- OpenGL             |          |  X
 - OSS                |  X       |  X
 - PulseAudio         |  X       |  X
 - SDL                |          |  X
@@ -64824,8 +64832,8 @@ performance on systems without hardware floating point support).
 # Document: Organisation
 
 Source path: doc/community.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/community.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/community.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/community.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/community.texi
 Description: The FFmpeg project is organized through a community working on global consensus.
 
 <a id="organisation"></a>
@@ -65016,8 +65024,8 @@ Finally, keep in mind the immortal words of Bill and Ted,
 # Document: Introduction
 
 Source path: doc/git-howto.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/git-howto.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/git-howto.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/git-howto.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/git-howto.texi
 Description: This document aims in giving some quick references on a set of useful Git commands. You should always use the extensive and detailed documentation provided directly by Git:
 
 # Introduction
@@ -65483,8 +65491,8 @@ problems with the Git server.
 # Document: General Questions
 
 Source path: doc/mailing-list-faq.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/mailing-list-faq.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/mailing-list-faq.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/mailing-list-faq.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/mailing-list-faq.texi
 Description: A mailing list is not much different than emailing someone, but the main difference is that your message is received by everyone who subscribes to the list. It is somewhat like a forum but in email form.
 
 # General Questions
@@ -65896,8 +65904,8 @@ Send a message to <ffmpeg-user-owner@ffmpeg.org>.
 # Document: Unix-like
 
 Source path: doc/platform.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/platform.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/platform.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/platform.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/platform.texi
 Description: If you compiled FFmpeg libraries statically and you want to use them to build your own shared library, you may need to force PIC support (with --enable-pic during FFmpeg configure) and add the following option to your p…
 
 # Unix-like
@@ -66165,8 +66173,8 @@ changes.)
 # Document: FFmpeg README
 
 Source path: README.md
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/README.md
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/README.md
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/README.md
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/README.md
 Description: FFmpeg is a collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata.
 
 # FFmpeg README
@@ -66219,8 +66227,8 @@ See <https://ffmpeg.org/developer.html> for more information.
 # Document: Installing FFmpeg
 
 Source path: INSTALL.md
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/INSTALL.md
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/INSTALL.md
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/INSTALL.md
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/INSTALL.md
 Description: configure can be launched from a directory different from the FFmpeg sources to build the objects out of tree. To do this, use an absolute path when launching configure, e.g. /ffmpegdir/ffmpeg/configure.
 
 # Installing FFmpeg
@@ -66252,8 +66260,8 @@ Description: configure can be launched from a directory different from the FFmpe
 # Document: Note to Github users
 
 Source path: CONTRIBUTING.md
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/CONTRIBUTING.md
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/CONTRIBUTING.md
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/CONTRIBUTING.md
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/CONTRIBUTING.md
 Description: Patches should be submitted to Forgejo or the ffmpeg-devel mailing list using git format-patch or git send-email. Github pull requests should be avoided because they are not part of our review process and will be ignore…
 
 # Note to Github users
@@ -66266,8 +66274,8 @@ See <https://ffmpeg.org/developer.html> for more information.
 # Document: Build System.Txt
 
 Source path: doc/build_system.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/build_system.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/build_system.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/build_system.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/build_system.txt
 Description: FFmpeg currently uses a custom build system, this text attempts to document some of its obscure features and options.
 
 FFmpeg currently uses a custom build system, this text attempts to document
@@ -66342,8 +66350,8 @@ sometimes but note that it will still not run all reg tests.
 # Document: Filter design
 
 Source path: doc/filter_design.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/filter_design.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/filter_design.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/filter_design.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/filter_design.txt
 Description: This document explains guidelines that should be observed (or ignored with good reason) when writing filters for libavfilter.
 
 # Filter design
@@ -66640,8 +66648,8 @@ the work.
 # Document: FFmpeg Infrastructure:
 
 Source path: doc/infra.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/infra.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/infra.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/infra.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/infra.txt
 Description: Trademark:
 
 # FFmpeg Infrastructure:
@@ -66838,8 +66846,8 @@ Wikipedia entry:
 # Document: FFmpeg's bug/feature request tracker manual
 
 Source path: doc/issue_tracker.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/issue_tracker.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/issue_tracker.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/issue_tracker.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/issue_tracker.txt
 Description: FFmpeg uses Trac for tracking issues, new issues and changes to existing issues can be done through a web interface.
 
 # FFmpeg's bug/feature request tracker manual
@@ -67058,8 +67066,8 @@ issues related to the wiki
 # Document: FFmpeg multithreading methods
 
 Source path: doc/multithreading.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/multithreading.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/multithreading.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/multithreading.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/multithreading.txt
 Description: FFmpeg provides two methods for multithreading codecs.
 
 # FFmpeg multithreading methods
@@ -67133,8 +67141,8 @@ Before accessing a reference frame or its MVs, call ff\_progress\_frame\_await()
 # Document: optimization Tips (for libavcodec):
 
 Source path: doc/optimization.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/optimization.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/optimization.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/optimization.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/optimization.txt
 Description: If you plan to do non-x86 architecture specific optimizations (SIMD normally), then take a look in the x86/ directory, as most important functions are already optimized for x86.
 
 # optimization Tips (for libavcodec):
@@ -67410,8 +67418,8 @@ a bit old (note "+" is valid for input-output, even though the next disagrees)
 # Document: Rate Distortion.Txt
 
 Source path: doc/rate_distortion.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/rate_distortion.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/rate_distortion.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/rate_distortion.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/rate_distortion.txt
 Description: A Quick Description Of Rate Distortion Theory.
 
 A Quick Description Of Rate Distortion Theory.
@@ -67478,8 +67486,8 @@ Copyright: LGPL
 # Document: Tablegen.Txt
 
 Source path: doc/tablegen.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/tablegen.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/tablegen.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/tablegen.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/tablegen.txt
 Description: Writing a table generator
 
 Writing a table generator
@@ -67557,8 +67565,8 @@ under the "ifdef CONFIG\_HARDCODED\_TABLES" section in the Makefile.
 # Document: Transforms
 
 Source path: doc/transforms.md
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/transforms.md
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/transforms.md
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/transforms.md
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/transforms.md
 Description: The basis transforms used for FFT and various other derived functions are based on the following unrollings. The functions can be easily adapted to double precision floats as well.
 
 # Transforms
@@ -68603,8 +68611,8 @@ static av_always_inline void fft15(TXComplex *out, TXComplex *in,
 # Document: Bootstrap
 
 Source path: doc/writing_filters.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/writing_filters.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/writing_filters.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/writing_filters.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/writing_filters.txt
 Description: This document is a tutorial/initiation for writing simple filters in libavfilter.
 
 This document is a tutorial/initiation for writing simple filters in

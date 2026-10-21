@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_policy_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_policy_ls.yaml)
 
 # sbx policy ls
 
@@ -34,6 +34,7 @@ rule.
 | `--include-inactive` |         | Show inactive policy rules hidden by remote governance                                     |
 | `--json`             |         | Output in JSON format                                                                      |
 | `--protocol`         |         | Filter network rules by protocol: tcp or udp                                               |
+| `-q`, `--quiet`      |         | Only display rule IDs (network patterns with --cloud)                                      |
 | `--source`           |         | Filter policies by source: "local", "org", or "kit"                                        |
 | `--type`             | `all`   | Filter policies by type: "all", "network", "filesystem" (default "all")                    |
 | `--wide`             |         | Show detailed rule-level output with rule IDs and resources                                |
@@ -59,6 +60,9 @@ rule.
 
   # Output filtered rules as JSON
   sbx policy ls --json
+
+  # List only rule IDs
+  sbx policy ls -q
 
   # List only network policies
   sbx policy ls --type network

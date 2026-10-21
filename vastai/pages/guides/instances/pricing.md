@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/pricing.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/guides/instances/pricing.mdx)
+> Pinned source for Vast.ai main: [guides/instances/pricing.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/guides/instances/pricing.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/pricing
 
 # Pricing
@@ -38,7 +38,6 @@ Key advantages:
 
 - Direct competition between hosts drives rates lower
 - Real-time supply and demand optimizes pricing
-- No markup layered on top of host-set prices
 - Global GPU supply improves availability and cost
 
 Check current market rates in the [Dashboard](https://cloud.vast.ai/create/) or query programmatically via the [CLI](https://docs.vast.ai/cli/reference/search-offers) or [API](https://docs.vast.ai/api-reference/hello-world).

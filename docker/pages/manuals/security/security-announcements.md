@@ -1,8 +1,61 @@
-> Pinned source for Docker main: [content/manuals/security/security-announcements.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/security/security-announcements.md)
+> Pinned source for Docker main: [content/manuals/security/security-announcements.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/security/security-announcements.md)
 
 # Docker security announcements
 
 [Subscribe to security RSS feed](https://docs.docker.com/security/security-announcements/index.xml)
+
+## Docker Sandboxes response to eMudhra CA compromise
+
+*Last updated October 21, 2026*
+
+Following the eMudhra certificate authority compromise, Docker rebuilt the
+sandbox template images for all built-in kits with updated CA certificates.
+Refresh cached images and update existing sandboxes to receive this protection.
+
+On October 20, 2026, researchers disclosed the compromise of private keys for
+eight eMudhra intermediate certificate authorities. An attacker with these keys
+could impersonate websites or services to clients that still trust the
+compromised certificates. See the
+[incident report](https://emudhra.we-have-a-problem.com/) for details.
+
+Updating the `sbx` CLI alone doesn't update existing sandboxes.
+
+### Recreate sandboxes with updated images
+
+Recreate each sandbox using `--pull always` to fetch the updated images instead
+of reusing cached copies. For example, for a Codex sandbox, run these commands
+on your host:
+
+```console
+$ sbx stop <sandbox-name>
+$ sbx rm <sandbox-name>
+$ sbx create --name <sandbox-name> --pull always codex <workspace-path>
+```
+
+Replace `codex` with your agent and restore any options you used to create the
+sandbox, such as `--clone` or additional kits. Before removing a sandbox, save
+any files you need from inside it, including unpushed commits in clone mode.
+Removing a sandbox deletes its filesystem.
+
+Use `--pull always` when creating additional sandboxes from built-in kits.
+Pulling updated images doesn't change sandboxes that already exist.
+
+### Update CA certificates in existing sandboxes
+
+If you need to keep an existing sandbox, update its `ca-certificates` package.
+For Ubuntu-based Docker templates, run these commands on your host while the
+sandbox is running:
+
+```console
+$ sbx exec <sandbox-name> -- sudo apt-get update
+$ sbx exec <sandbox-name> -- sudo apt-get install --only-upgrade -y ca-certificates
+```
+
+Restart applications in the sandbox after updating. Tools that bundle their
+own CA certificates may also need updates. See the incident report's
+[patched software versions](https://emudhra.we-have-a-problem.com/#developers).
+For custom templates, update the trust store using the base distribution's
+security updates and rebuild the images before creating more sandboxes.
 
 ## Docker Sandboxes 0.42.0 security update: CVE-2026-77179 and CVE-2026-79994
 

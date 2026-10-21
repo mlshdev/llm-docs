@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/general.texi)
 
 # External libraries
 
@@ -1621,7 +1621,6 @@ performance on systems without hardware floating point support).
 - LIBCDIO            |  X
 - LIBDC1394          |  X       |
 - OpenAL             |  X
-- OpenGL             |          |  X
 - OSS                |  X       |  X
 - PulseAudio         |  X       |  X
 - SDL                |          |  X

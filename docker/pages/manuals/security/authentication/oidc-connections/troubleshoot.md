@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/oidc-connections/troubleshoot.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/security/authentication/oidc-connections/troubleshoot.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/oidc-connections/troubleshoot.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/security/authentication/oidc-connections/troubleshoot.md)
 
 # Troubleshoot OIDC connections
 
@@ -140,7 +140,7 @@ exchange fails before Docker evaluates your rulesets.
 
 ### Causes
 
-- The `username` input to `docker/login-action` is a personal Docker Hub
+- The `username` input to `docker/login-action` is an individual Docker Hub
   account instead of an organization name.
 - Only organization accounts can sign in with OIDC connections.
 

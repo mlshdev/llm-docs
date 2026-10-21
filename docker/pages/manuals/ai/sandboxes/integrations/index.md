@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/_index.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/ai/sandboxes/integrations/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/_index.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/ai/sandboxes/integrations/_index.md)
 
 **Docker Sandboxes SSH requirements**
 
@@ -117,10 +117,10 @@ $ ssh demo.sbx
 
 Connecting an app to a sandbox selects the remote environment, but it might not
 open the primary workspace automatically. The initial folder depends on the
-client. A remote folder picker might open at the sandbox user's home directory,
-`/home/agent`, while an interactive `ssh` shell might start in
-`/home/agent/workspace`. Select the intended folder explicitly instead of
-relying on the initial location.
+client. An interactive SSH shell starts in the sandbox workspace, matching
+`sbx exec`. An editor's remote folder picker might open at the sandbox user's
+home directory, `/home/agent`. Select the intended folder explicitly in the
+editor instead of relying on its initial location.
 
 For a sandbox with a primary workspace, each workspace path appears inside the
 sandbox at the same absolute path as on the host. For example, if you pass
@@ -135,6 +135,7 @@ a mountless sandbox that uses a Docker-provided agent template, select
 - [Claude Desktop](https://docs.docker.com/ai/sandboxes/integrations/claude-desktop/)
 - [ChatGPT](https://docs.docker.com/ai/sandboxes/integrations/chatgpt/)
 - [T3 Code](https://docs.docker.com/ai/sandboxes/integrations/t3-code/)
+- [Orca](https://docs.docker.com/ai/sandboxes/integrations/orca/)
 
 ## How SSH connections work
 

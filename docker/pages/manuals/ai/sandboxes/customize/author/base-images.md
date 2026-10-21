@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/base-images.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/ai/sandboxes/customize/author/base-images.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/base-images.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/ai/sandboxes/customize/author/base-images.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -19,7 +19,8 @@ To save and reuse an environment you've configured interactively, see
 Docker's sandbox templates are published as
 `docker/sandbox-templates:<variant>`. They are based on Ubuntu and run as a
 non-root `agent` user with sudo access. Most variants include Git, Docker
-CLI, and common development tools like Node.js, Python, Go, and Java.
+CLI, and common development tools like Node.js, Python, Go, and Java. Full
+templates also include a C/C++ compiler toolchain for building native code.
 
 | Variant               | Agent                                                                |
 | --------------------- | -------------------------------------------------------------------- |

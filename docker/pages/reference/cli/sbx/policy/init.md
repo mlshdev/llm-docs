@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_init.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_policy_init.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_init.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_policy_init.yaml)
 
 # sbx policy init
 
@@ -8,23 +8,18 @@ Initialize the global network policy
 
 ## Description
 
-Initialize the global network policy that applies to all sandboxes.
+Initialize the global network policy before starting a sandbox or adding
+custom rules. Per-sandbox rules apply on top of this policy.
 
-This sets the initial global network policy and must be run before adding
-custom allow/deny rules or starting a sandbox for the first time. It is a
-one-time setup: once initialized, use "sbx policy reset" to start over.
+Choose a policy:
 
-This is the initial global policy, not a per-sandbox default; you can change
-it later. Per-sandbox rules, including those added by kits such as the
-built-in agent kits, apply on top for individual sandboxes.
+- allow-all: Allow all outbound network traffic.
+- balanced: Allow typical development traffic, including AI services and package registries.
+- deny-all: Block all outbound network traffic.
 
-Available policies:
-allow-all   All outbound network traffic is allowed
-balanced    Typical development traffic is allowed, such as AI services and package registries
-deny-all    All outbound network traffic is blocked
-
-After initializing, use "sbx policy allow/deny/rm" to change the global policy.
-Use "sbx policy reset" to clear all policies and start over.
+After initialization, use sbx policy allow/deny/rm to change the rules.
+Initialization is a one-time setup. Use sbx policy reset to clear all policies
+and start over.
 
 With --cloud:
 Set the default network mode of the cloud policy.

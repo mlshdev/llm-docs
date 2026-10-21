@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg.texi)
 
 # Synopsis
 
@@ -507,8 +507,11 @@ of the other. Its audio counterpart is the `amix` filter.
 While decoders are normally associated with demuxer streams, it is also possible
 to create "loopback" decoders that decode the output from some encoder and allow
 it to be fed back to complex filtergraphs. This is done with the `-dec`
-directive, which takes as a parameter the index of the output stream that should
-be decoded. Every such directive creates a new loopback decoder, indexed with
+directive, which takes as a parameter *output\_file\_index*:*stream\_index*
+to select the output stream that should be decoded. Both indices are zero-based
+integers: the first identifies the output file and the second identifies the
+stream within that file. Stream specifiers such as `v:0` are not supported.
+Every such directive creates a new loopback decoder, indexed with
 successive integers starting at zero. These indices should then be used to refer
 to loopback decoders in complex filtergraph link labels, as described in the
 documentation for `-filter_complex`.

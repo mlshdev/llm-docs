@@ -1,16 +1,17 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/_index.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/subscription-billing/plans/_index.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/_index.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/subscription-billing/plans/_index.md)
 
 # Plans
 
 > \[!TIP]
 > Interested in pricing details? Check out the <a id="dkr_docs_index_pricing"></a>pricing page to compare plans.
 
-Docker plans attach to a personal account, an organization, or a specific
-product. Personal plans (Docker Personal and Docker Pro) upgrade an individual
-account. Organization plans (Docker Team and Docker Business) upgrade an
-organization. Product add-ons add usage or features without changing that
-account's Docker plan type: Gordon increases usage on a personal account, and
-DHI, AI Governance, and DVP add product features on an organization.
+Docker plans attach to an individual account, an organization, or a specific
+product. Docker Personal and Docker Pro are subscriptions for individual
+accounts. Docker Team and Docker Business are subscriptions for organization
+accounts. Product add-ons add usage or features without changing that
+account's Docker plan type: Gordon and Docker Agentic Platform attach to an
+individual account, and DHI, AI Governance, and DVP add product features on an
+organization.
 
 Topping up extends a plan's entitlements, such as seats, licenses, or
 minutes, without changing the plan type. For the units you can top up, see
@@ -24,6 +25,7 @@ options. To add or upgrade a plan, see
 
 - [Docker](https://docs.docker.com/subscription-billing/plans/docker/): Personal and organization plans, including build and runtime minutes.
 - [Gordon plans](https://docs.docker.com/subscription-billing/plans/gordon/): Usage plans that increase your Gordon allowance.
+- [Docker Agentic Platform](https://docs.docker.com/subscription-billing/plans/docker-agentic-platform/): Pay-as-you-go cloud compute for personal accounts.
 - [Docker Hardened Images (DHI)](https://docs.docker.com/subscription-billing/plans/dhi/): Hardened image repositories for organization accounts.
 - [AI Governance](https://docs.docker.com/subscription-billing/plans/ai-governance/): Licenses for organization-wide AI policy enforcement.
 - [Docker Verified Publisher (DVP)](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/): Publisher analytics and reporting plans for organization accounts.

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/architecture.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/guides/serverless/architecture.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/architecture.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/guides/serverless/architecture.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/architecture
 
 # Architecture
@@ -7,9 +7,9 @@ Learn how Vast Serverless operates and understand its major components.
 
 The Vast.ai Serverless architecture is a **multi-component system** that manages GPU-backed workers to efficiently serve applications. It automatically scales up or down based on **endpoint parameters**, **workergroup parameters**, and **measured load** reported by workers.
 
-![Serverless Architecture](https://raw.githubusercontent.com/vast-ai/docs/d157814df41bf9eb85ed0ef988b9a83b851710d7/images/serverless-architecture-light.svg)
+![Serverless Architecture](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/serverless-architecture-light.svg)
 
-![Serverless Architecture](https://raw.githubusercontent.com/vast-ai/docs/d157814df41bf9eb85ed0ef988b9a83b851710d7/images/serverless-architecture-dark.svg)
+![Serverless Architecture](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/serverless-architecture-dark.svg)
 
 ## Primary Components
 

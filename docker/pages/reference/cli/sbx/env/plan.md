@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env_plan.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_env_plan.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env_plan.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_env_plan.yaml)
 
 # sbx env plan
 
@@ -26,23 +26,10 @@ Each PATH may be a directory (the file is <PATH>/sbxenv.yaml) or the
 path to the environment file itself. Passing more than one PATH deep-merges them
 in order, matching the other "sbx env" subcommands.
 
-A directory resolves to the sbxenv.yaml in it and to no other name; any
-other file is read only when a PATH names it. The hidden .sbxenv.yaml was once
-read as a directory's own environment too, so a project still holding one now
-reads as having none.
-
-With no PATH, an existing .sbxenv.yaml in your home directory is merged
-underneath as a base layer for defaults shared across projects; naming any
-PATH skips the layer. It may not set "name:", which identifies a single
-project, and its "workspace:" must be rooted at ${{ env.projectDir }} — for
-the base that is always the directory the invocation runs from, since naming
-any PATH skips it — so the base mounts each project's own directory rather
-than one directory under all of them. Changing its "agent:"
-changes the derived <agent>-<directory-basename> sandbox name, leaving
-sandboxes created under the previous name for "sbx env rm" to miss.
-
-A list such as "ports" or "mcp.servers" concatenates across layers rather
-than overriding, so an entry declared in both appears twice.
+A directory PATH selects sbxenv.yaml; a file PATH selects that file.
+With no PATH, \~/.sbxenv.yaml supplies shared defaults when present.
+Explicit PATHs skip those defaults. Later files override earlier values;
+lists such as ports and mcp.servers are concatenated.
 
 ## Options
 

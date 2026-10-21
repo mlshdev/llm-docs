@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/team/roles-full](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/api-reference/openapi.yaml%23get%20/api/v0/team/roles-full)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/team/roles-full](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/api-reference/openapi.yaml%23get%20/api/v0/team/roles-full)
 > Canonical documentation: https://docs.vast.ai/api-reference/team/show-team-roles
 
 # show team roles

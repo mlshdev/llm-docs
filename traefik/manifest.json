@@ -6,10 +6,10 @@
   "title": "Traefik Proxy",
   "homepage": "https://doc.traefik.io/traefik/",
   "repository": "traefik/traefik",
-  "tag": "v3.7.15",
-  "releaseId": 413923855,
-  "releasePublishedAt": "2026-10-15T14:41:49Z",
-  "sourceCommit": "351a5ab1e884a6be95d02997016cbb2751106bc0",
+  "tag": "v3.7.16",
+  "releaseId": 418549528,
+  "releasePublishedAt": "2026-10-20T15:19:30Z",
+  "sourceCommit": "af6d927c51191ae1df104aaf907793386b816c28",
   "documentCount": 162,
   "indexComplete": true,
   "corpusVolumes": [
@@ -17,10 +17,10 @@
       "name": "llms-full.txt",
       "byteLength": 2629777,
       "documentCount": 162,
-      "sha256": "9d598f6da51233c814cbab9fe27dcb09243cca02952fbe066108f5c3816d2cd0"
+      "sha256": "96126bb4c316fd2ff10e387167ba40a9a45e4e367a1dfa5c714aa7aec9be44c1"
     }
   ],
-  "outputDigest": "2f3d2708d301decdcf0febff0906b512754027727da737c7bbd2e30666abcd5e",
+  "outputDigest": "54735483bf98d26f60a49c7cf5924348bf33655e9fec87f25535641f460e8413",
   "notes": [
     "Pages follow docs/mkdocs.yml navigation order from the immutable release tag.",
     "MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted."

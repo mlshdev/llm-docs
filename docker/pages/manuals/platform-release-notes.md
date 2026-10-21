@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/platform-release-notes.md)
+> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/platform-release-notes.md)
 
 # Accounts and admin release notes
 
@@ -44,7 +44,7 @@ and subscriptions.
 
 - You can now subscribe to the
   [Docker Agentic Platform](https://docs.docker.com/subscription-billing/plans/docker-agentic-platform/)
-  pay-as-you-go plan with a personal account to run agents in cloud
+  pay-as-you-go plan with an individual account to run agents in cloud
   sandboxes. Compute is metered by the second while a sandbox runs.
 
 ### Bug fixes and enhancements
@@ -113,7 +113,7 @@ and subscriptions.
 
 - You can now purchase
   [Gordon Plus, Max, and Ultra plans](https://docs.docker.com/subscription-billing/plans/gordon/)
-  for personal accounts from the billing portal in Docker Home.
+  for individual accounts from the billing portal in Docker Home.
 - Organizations can now purchase
   [DHI Select](https://docs.docker.com/subscription-billing/plans/dhi/) repositories via
   self-serve from the billing portal in Docker Home.

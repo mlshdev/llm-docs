@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_push.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_kit_push.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_push.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_kit_push.yaml)
 
 # sbx kit push
 
@@ -11,31 +11,15 @@ Push a kit artifact to an OCI registry
 
 ## Description
 
-Package and push a kit artifact directory to an OCI registry.
+Package a kit directory containing spec.yaml and push it to an OCI registry.
+Use a registry/repo:tag reference. The kit's schema selects the artifact format.
 
-The directory must contain a valid spec.yaml. The reference should be
-in the format "registry/repo:tag" (e.g., "ghcr.io/myorg/my-plugin:1.0").
+Every push attaches provenance. Use --sign to also sign the manifest and
+provenance; signing is keyless unless --key is supplied.
 
-The OCI artifact format is selected from the kit's spec.yaml:
-schemaVersion: "1"  → legacy ZIP-based artifact
-schemaVersion: "2"  → v2 tar+gzip layer with the spec in the manifest
-config blob and standard OCI annotations (so
-distribution tooling can read kit metadata
-without pulling layers)
-
-With --sign, the pushed manifest is signed and the Sigstore bundle is
-attached to the kit as an OCI referrer. Signing is keyless (Fulcio +
-Rekor) unless --key is given for key-based signing.
-
-Every push also attaches a SLSA provenance attestation as an OCI
-referrer, recording the kit's content digests, the declared sandbox
-image, and the source git commit when the directory is a working tree.
-The provenance is unsigned unless --sign is given, in which case it is
-signed as a DSSE in-toto attestation with the same identity or key.
-
-Authentication: the Docker Hub session from sbx login and sbx registry
-secrets (sbx secret set --registry) take priority, falling back to the
-Docker credential store.
+For Docker Hub, the sbx login session takes priority. Other registries use
+secrets set with sbx secret set --registry. Both fall back to Docker credentials.
+The registry must support HTTPS.
 
 ## Options
 

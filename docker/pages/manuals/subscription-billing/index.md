@@ -1,8 +1,8 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/_index.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/subscription-billing/_index.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/_index.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/subscription-billing/_index.md)
 
 # Subscription and billing
 
-A Docker plan is a subscription tied to a personal account, an organization
+A Docker plan is a subscription tied to an individual account, an organization
 account, or a specific product. When you upgrade a plan, you expand your
 usage entitlements and feature sets. You can also top up some plans,
 extending usage without changing your plan type.
@@ -11,13 +11,14 @@ extending usage without changing your plan type.
 
 The following table summarizes the available plans.
 
-| Plans                                                                                                            | Billing model                                             | Types                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| [Docker](https://docs.docker.com/subscription-billing/plans/docker/)                                             | Flat-rate plans for personal and organization accounts    | Docker Personal, Docker Pro, Docker Team, Docker Business |
-| [Docker Hardened Images (DHI)](https://docs.docker.com/subscription-billing/plans/dhi/)                          | Graduated security features for hardened container images | DHI Community, DHI Select, DHI Enterprise                 |
-| [Gordon](https://docs.docker.com/subscription-billing/plans/gordon/)                                             | Prepaid usage for the Gordon AI agent                     | Gordon Plus, Gordon Max, Gordon Ultra                     |
-| [AI Governance](https://docs.docker.com/subscription-billing/plans/ai-governance/)                               | Purchase set amount of licenses                           | AI Governance                                             |
-| [Docker Verified Publisher (DVP)](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/) | Annual plans based on consuming domains                   | DVP Starter, DVP Growth                                   |
+| Plans                                                                                                            | Billing model                                                                                           | Types                                                     |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| [Docker](https://docs.docker.com/subscription-billing/plans/docker/)                                             | Flat-rate plans for personal and organization accounts                                                  | Docker Personal, Docker Pro, Docker Team, Docker Business |
+| [Docker Hardened Images (DHI)](https://docs.docker.com/subscription-billing/plans/dhi/)                          | Annual plans billed per repository. DHI Community is free.                                              | DHI Community, DHI Select, DHI Enterprise                 |
+| [Gordon](https://docs.docker.com/subscription-billing/plans/gordon/)                                             | Monthly plans that raise your Gordon usage allowance                                                    | Gordon Plus, Gordon Max, Gordon Ultra                     |
+| [Docker Agentic Platform](https://docs.docker.com/subscription-billing/plans/docker-agentic-platform/)           | Pay-as-you-go cloud compute, billed monthly                                                             | Pay-as-you-go                                             |
+| [AI Governance](https://docs.docker.com/subscription-billing/plans/ai-governance/)                               | Licenses purchased through Docker sales. <a id="dkr_docs_cs_index_aigov"></a>Contact sales to add more. | AI Governance                                             |
+| [Docker Verified Publisher (DVP)](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/) | Flat-rate annual plans. DVP Growth lets you add consuming domains in blocks of 25.                      | DVP Starter, DVP Growth                                   |
 
 Docker plans that upgrade your account (Docker Pro, Team, and Business) cover
 most use cases. Some product plans require an upgraded Docker account. Others
@@ -29,13 +30,13 @@ let you subscribe without one. For details, see
 Plans come with usage entitlements that can be extended without upgrading to
 a different plan.
 
-| Unit                                                                                                                     | Description                                                                           | Examples                      |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- | ----------------------------- |
-| [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/)                                              | Each seat extends entitlements to one more member.                                    | Docker Team, Docker Business  |
-| [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/)                                        | Access to specific products or features.                                              | AI Governance, Docker Offload |
-| [Minutes](https://docs.docker.com/subscription-billing/plans/docker/#docker-build-cloud-minutes)                         | Cloud build capacity, sold in blocks and consumed within the billing period.          | Docker Build Cloud            |
-| [Repositories](https://docs.docker.com/subscription-billing/plans/dhi/)                                                  | Additional container repositories covered by security scanning and analysis features. | DHI                           |
-| [Consuming domains](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/#add-consuming-domains) | Additional consuming domains tracked in publisher analytics, sold in blocks of 25.    | DVP Starter, DVP Growth       |
+| Unit                                                                                                                     | Description                                                                             | Examples                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/)                                              | Each seat extends entitlements to one more member.                                      | Docker Team, Docker Business                                                                                                        |
+| [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/)                                        | Access to specific products or features.                                                | AI Governance, Docker Offload                                                                                                       |
+| [Minutes](https://docs.docker.com/subscription-billing/plans/docker/#docker-build-cloud-minutes)                         | Build and test runtime capacity, sold in blocks and consumed within the billing period. | Docker Build Cloud, [Testcontainers Cloud](https://docs.docker.com/subscription-billing/plans/docker/#testcontainers-cloud-minutes) |
+| [Repositories](https://docs.docker.com/subscription-billing/plans/dhi/)                                                  | Additional container repositories covered by security scanning and analysis features.   | DHI                                                                                                                                 |
+| [Consuming domains](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/#add-consuming-domains) | Additional consuming domains tracked in publisher analytics, sold in blocks of 25.      | DVP Growth                                                                                                                          |
 
 ## Manage your plans
 

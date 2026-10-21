@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/scout/docker_scout_enroll.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/cli/scout/docker_scout_enroll.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_enroll.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/cli/scout/docker_scout_enroll.yaml)
 
 # docker scout enroll
 

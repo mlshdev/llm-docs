@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/base-images.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/build/building/base-images.md)
+> Pinned source for Docker main: [content/manuals/build/building/base-images.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/build/building/base-images.md)
 
 All Dockerfiles start from a base image.
 A base is the image that your image extends.

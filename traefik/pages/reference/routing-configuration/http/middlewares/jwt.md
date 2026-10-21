@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.15: [docs/content/reference/routing-configuration/http/middlewares/jwt.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/reference/routing-configuration/http/middlewares/jwt.md)
+> Pinned source for Traefik Proxy v3.7.16: [docs/content/reference/routing-configuration/http/middlewares/jwt.md](https://github.com/traefik/traefik/blob/af6d927c51191ae1df104aaf907793386b816c28/docs/content/reference/routing-configuration/http/middlewares/jwt.md)
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).

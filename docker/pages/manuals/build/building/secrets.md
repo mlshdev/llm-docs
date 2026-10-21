@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/secrets.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/build/building/secrets.md)
+> Pinned source for Docker main: [content/manuals/build/building/secrets.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/build/building/secrets.md)
 
 A build secret is any piece of sensitive information, such as a password or API
 token, consumed as part of your application's build process.
@@ -181,6 +181,13 @@ $ docker build https://github.com/example/todo-app.git
 To authenticate the builder to GitHub, set the `GIT_AUTH_TOKEN`
 environment variable to contain a valid GitHub access token, and pass it as a
 secret to the build:
+
+> \[!NOTE]
+>
+> `GIT_AUTH_TOKEN` and `GIT_AUTH_HEADER` are not compatible with GitLab's
+> `CI_JOB_TOKEN`. GitLab CI job tokens require Basic authentication with the
+> username `gitlab-ci-token`, but BuildKit always uses `x-access-token` as the
+> username for Basic auth. Use a Personal Access Token instead.
 
 ```console
 $ GIT_AUTH_TOKEN=$(gh auth token) docker build \

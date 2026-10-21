@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/accounts/organization/manage/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/accounts/organization/manage/_index.md)
 
 # Manage your organization
 
@@ -30,12 +30,12 @@ and [Manage licenses](https://docs.docker.com/accounts/organization/manage/manag
 
 Explore the following sections to manage your organization.
 
+- [Information](https://docs.docker.com/accounts/organization/manage/general-settings/): Update your organization's general information and settings.
 - [Members](https://docs.docker.com/accounts/organization/manage/members/): Invite, manage, and assign roles to your organization members.
 - [Teams](https://docs.docker.com/accounts/organization/manage/manage-a-team/): Create teams and manage repository access for groups of members.
-- [Products](https://docs.docker.com/accounts/organization/manage/manage-products/): Manage access and view usage for Docker products across your organization.
 - [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/): View your license inventory and assign licenses to teams or individual members.
 - [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/): Add or remove seats for Docker Team and Business subscriptions.
-- [Information](https://docs.docker.com/accounts/organization/manage/general-settings/): Update your organization's general information and settings.
+- [Products](https://docs.docker.com/accounts/organization/manage/manage-products/): Manage access and view usage for Docker products across your organization.
 - [Deactivation](https://docs.docker.com/accounts/organization/manage/deactivate-account/): Deactivate an organization after completing the required steps.
 - [Security](https://docs.docker.com/security/): Configure single sign-on, provisioning, and access management.
 - [Billing](https://docs.docker.com/subscription-billing/): Manage payment methods and view billing history.

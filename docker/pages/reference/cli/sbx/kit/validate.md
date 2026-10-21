@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_validate.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_kit_validate.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_validate.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_kit_validate.yaml)
 
 # sbx kit validate
 
@@ -19,6 +19,11 @@ A kit that declares required arguments is invalid until they are
 supplied, so pass the same --kit-arg values you would pass to sbx
 create.
 
+\--offline skips the daemon-backed kit policy (kit.allowedSources,
+kit.allowLocalKits, kit.requireSignature) so the command needs neither
+sandboxd nor a signed-in session; it only accepts a local directory or
+ZIP reference, since those are the only ones this check applies to.
+
 ## Options
 
 | Option            | Default | Description                                                                                                                    |
@@ -27,6 +32,7 @@ create.
 | `--json`          |         | Output in JSON format                                                                                                          |
 | `--kit-arg`       |         | Value for an argument the kit declares, as name=value for every kit or kit.name=value for one (can be repeated) (Experimental) |
 | `--kit-args-file` |         | File of name=value kit arguments, one per line (can be repeated); --kit-arg overrides (Experimental)                           |
+| `--offline`       |         | Skip the daemon-backed kit policy check; local directory or ZIP references only                                                |
 
 ## Global options
 
@@ -43,4 +49,7 @@ sbx kit validate ./my-kit
 
   # Supply the arguments a kit declares
   sbx kit validate ./my-kit --kit-arg region=eu
+
+  # Validate without sandboxd running or a Docker sign-in
+  sbx kit validate ./my-kit --offline
 ```

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/cache/garbage-collection.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/build/cache/garbage-collection.md)
+> Pinned source for Docker main: [content/manuals/build/cache/garbage-collection.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/build/cache/garbage-collection.md)
 
 While [`docker builder prune`](https://docs.docker.com/reference/cli/docker/builder/prune/)
 or [`docker buildx prune`](https://docs.docker.com/reference/cli/docker/buildx/prune/)
@@ -47,7 +47,7 @@ cache.
 
 The default GC policies are (approximately):
 
-1. Remove cache that can be easily regenerated, such as build contexts from
+1. Remove cache that can be regenerated, such as build contexts from
    local directories or remote Git repositories, and cache mounts, if hasn't
    been used for more than 48 hours.
 2. Remove cache that hasn't been used in a build for more than 60 days.

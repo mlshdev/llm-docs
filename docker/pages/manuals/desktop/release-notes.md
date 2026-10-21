@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/desktop/release-notes.md)
+> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -9,6 +9,35 @@ Releases are gradually rolled out to ensure quality control. If the latest versi
 Docker Desktop versions older than 6 months from the latest release are not available for download. Previous release notes are available in our [documentation repository](https://github.com/docker/docs/tree/main/content/manuals/desktop/previous-versions).
 
 For more frequently asked questions, see the [FAQs](https://docs.docker.com/desktop/troubleshoot-and-support/faqs/releases/).
+
+## 4.96.1
+
+**Release date:** 2026-10-21
+
+Download Docker Desktop:
+
+- [Windows](https://desktop.docker.com/win/main/amd64/244132/Docker%20Desktop%20Installer.exe)
+- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/244132/Docker%20Desktop%20Installer.exe)
+- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/244132/Docker.dmg)
+- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/244132/Docker.dmg)
+- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/244132/docker-desktop-amd64.deb)
+- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/244132/docker-desktop-x86_64.rpm)
+- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/244132/docker-desktop-x86_64.pkg.tar.zst)
+
+### Updates
+
+- [Docker Engine 29.9.2](https://github.com/docker/docker/releases/tag/29.9.2)
+- [Docker Buildx v0.38.1](https://github.com/docker/buildx/releases/tag/v0.38.1)
+- [Credential helpers to v0.9.12](https://github.com/docker/docker-credential-helpers/releases/tag/v0.9.12)
+- Docker Offload `v0.7.16`
+
+### Security
+
+- Removed trust for certificates issued by the compromised [eMudhra intermediate CA compromise](https://emudhra.we-have-a-problem.com/). An attacker with network access could have used these certificates to intercept TLS connections made by non-browser clients, such as the Docker CLI and daemon.
+
+> \[!IMPORTANT]
+>
+> This fix is being rolled out in batches as individual Docker Desktop components are updated. Upcoming patch releases will cover the remaining components. We recommend updating to each patch release as soon as it’s available.
 
 ## 4.96.0
 

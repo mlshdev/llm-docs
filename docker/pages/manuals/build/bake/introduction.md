@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [content/manuals/build/bake/introduction.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/build/bake/introduction.md)
+> Pinned source for Docker main: [content/manuals/build/bake/introduction.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/build/bake/introduction.md)
 
 # Introduction to Bake
 
-Bake is an abstraction for the `docker build` command that lets you more easily
-manage your build configuration (CLI flags, environment variables, etc.) in a
-consistent way for everyone on your team.
+Bake is an abstraction for the `docker build` command that lets you manage your
+build configuration (CLI flags, environment variables, etc.) in a consistent
+way for everyone on your team.
 
 Bake is a command built into the Buildx CLI, so as long as you have Buildx
 installed, you also have access to bake, via the `docker buildx bake` command.
@@ -40,7 +40,7 @@ $ docker buildx bake myapp
 
 For simple builds, the difference between `docker build` and `docker buildx
 bake` is minimal. However, as your build configuration grows more complex, Bake
-provides a more structured way to manage that complexity, that would be
+provides a more structured way to manage that complexity, which would be
 difficult to manage with CLI flags for the `docker build`. It also provides a
 way to share build configurations across your team, so that everyone is
 building images in a consistent way, with the same configuration.

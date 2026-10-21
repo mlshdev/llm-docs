@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/exporters/oci-docker.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/build/exporters/oci-docker.md)
+> Pinned source for Docker main: [content/manuals/build/exporters/oci-docker.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/build/exporters/oci-docker.md)
 
 # OCI and Docker exporters
 
@@ -34,7 +34,7 @@ The following table describes the available parameters:
 | `compression-level` | `0..22`                                |         | Compression level, see [compression][1]                                                                                                        |
 | `force-compression` | `true`,`false`                         | `false` | Forcefully apply compression, see [compression][1]                                                                                             |
 | `oci-mediatypes`    | `true`,`false`                         |         | Use OCI media types in exporter manifests. Defaults to `true` for `type=oci`, and `false` for `type=docker`. See [OCI Media types][2]          |
-| `annotation.<key>`  | String                                 |         | Attach an annotation with the respective `key` and `value` to the built image,see [annotations][3]                                             |
+| `annotation.<key>`  | String                                 |         | Attach an annotation with the respective `key` and `value` to the built image, see [annotations][3]                                            |
 | `rewrite-timestamp` | `true`,`false`                         | `false` | Rewrite the file timestamps to the `SOURCE_DATE_EPOCH` value. See [build reproducibility][4] for how to specify the `SOURCE_DATE_EPOCH` value. |
 
 [1]: _index.md#compression

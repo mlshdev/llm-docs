@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/ai/sandboxes/configuration/environment-files.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/ai/sandboxes/configuration/environment-files.md)
 
 A sandbox environment file captures the setup for a local or cloud sandbox in a
 `sbxenv.yaml` file. Share the file with project contributors so they use the
@@ -340,6 +340,10 @@ Nested mappings merge by key, lists concatenate, and values from later files
 replace earlier scalar values. In this example, the sandbox has four CPUs,
 12 GB of memory, and both environment variables. Each relative workspace path
 resolves from the directory of the file that declares it.
+
+Each source file must contain valid fields and values before merging. A later
+override can't repair an invalid value in an earlier file. This also applies
+to [user defaults](#set-user-defaults) loaded from `~/.sbxenv.yaml`.
 
 ### Work across multiple repositories
 

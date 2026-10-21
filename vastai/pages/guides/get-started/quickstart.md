@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/get-started/quickstart.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/guides/get-started/quickstart.mdx)
+> Pinned source for Vast.ai main: [guides/get-started/quickstart.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/guides/get-started/quickstart.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/get-started/quickstart
 
 # Sign up and rent your first GPU
@@ -12,10 +12,10 @@ This Quickstart will guide you through setting up your Vast.ai account and runni
 - Go to [**Billing**](https://docs.vast.ai/guides/reference/billing) → **Add Credit** and top up using [credit card, BitPay, or Crypto.com](https://docs.vast.ai/guides/reference/billing#payment-methods).
 - Learn about [autobilling](https://docs.vast.ai/guides/reference/billing#autobilling-credit-card-only) to avoid interruptions.
 
-  ![Billing](https://raw.githubusercontent.com/vast-ai/docs/d157814df41bf9eb85ed0ef988b9a83b851710d7/images/guides-overview-quick-start.webp)
+  ![Billing](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/guides-overview-quick-start.webp)
 - Your balance appears at the top right of the dashboard.
 
-  ![](https://raw.githubusercontent.com/vast-ai/docs/d157814df41bf9eb85ed0ef988b9a83b851710d7/images/guides-overview-quick-start-2.webp)
+  ![](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/guides-overview-quick-start-2.webp)
 
 > **Note**
 >
@@ -25,7 +25,7 @@ This Quickstart will guide you through setting up your Vast.ai account and runni
 
 - **For SSH access**: generate an [SSH key pair](https://docs.vast.ai/guides/instances/connect/ssh#quick-start-generate-and-add-your-ssh-key-to-your-vast-account) following our [complete SSH guide](https://docs.vast.ai/guides/instances/connect/ssh) and upload your **public key** in [Keys page](https://cloud.vast.ai/manage-keys/) or via [account settings](https://docs.vast.ai/guides/reference/keys).
 
-  ![Keys](https://raw.githubusercontent.com/vast-ai/docs/d157814df41bf9eb85ed0ef988b9a83b851710d7/images/guides-overview-quick-start-3.webp)
+  ![Keys](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/guides-overview-quick-start-3.webp)
 - **For Jupyter access**: download and install the provided [TSL certificate](https://docs.vast.ai/guides/instances/connect/jupyter#installing-the-tls-certificate) following our [Jupyter setup guide](https://docs.vast.ai/guides/instances/connect/jupyter) (needed for secure browser access).
 
 > **Note**
@@ -51,7 +51,7 @@ This Quickstart will guide you through setting up your Vast.ai account and runni
 - Use **Stop** to pause GPU billing ([storage still accrues charges](https://docs.vast.ai/guides/instances/storage/types#storage-costs)). Learn about the [instance lifecycle](https://docs.vast.ai/guides/instances/manage-instances#instance-operations).
 - Use **Delete** when finished to stop *all* charges. See [data movement](https://docs.vast.ai/guides/instances/storage/data-movement) if you need to save data first.
 
-![Manage or End Your Instance](https://raw.githubusercontent.com/vast-ai/docs/d157814df41bf9eb85ed0ef988b9a83b851710d7/images/guides-overview-quick-start-4.webp)
+![Manage or End Your Instance](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/guides-overview-quick-start-4.webp)
 
 ## Common Questions
 

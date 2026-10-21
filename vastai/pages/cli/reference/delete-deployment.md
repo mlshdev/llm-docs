@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/delete-deployment.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/cli/reference/delete-deployment.mdx)
+> Pinned source for Vast.ai main: [cli/reference/delete-deployment.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/cli/reference/delete-deployment.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/delete-deployment
 
 # vastai delete deployment

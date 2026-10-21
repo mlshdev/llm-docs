@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_settings_ls.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_settings_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_settings_ls.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_settings_ls.yaml)
 
 # sbx settings ls
 
@@ -18,11 +18,12 @@ keep the table readable; use --no-trunc or --format json for complete output. Us
 
 ## Options
 
-| Option       | Default | Description                                              |
-| ------------ | ------- | -------------------------------------------------------- |
-| `--format`   |         | Output format: table, json or yaml                       |
-| `--json`     |         | Output in JSON format                                    |
-| `--no-trunc` |         | Show full values and descriptions, one setting per block |
+| Option          | Default | Description                                              |
+| --------------- | ------- | -------------------------------------------------------- |
+| `--format`      |         | Output format: table, json or yaml                       |
+| `--json`        |         | Output in JSON format                                    |
+| `--no-trunc`    |         | Show full values and descriptions, one setting per block |
+| `-q`, `--quiet` |         | Only display setting keys                                |
 
 ## Global options
 
@@ -39,4 +40,7 @@ keep the table readable; use --no-trunc or --format json for complete output. Us
 
   # List settings as JSON
   sbx settings ls --format json
+
+  # List only setting keys
+  sbx settings ls -q
 ```

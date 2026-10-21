@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/gordon.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/subscription-billing/plans/gordon.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/gordon.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/subscription-billing/plans/gordon.md)
 
 # Gordon plans
 
@@ -16,9 +16,9 @@ To upgrade to a Gordon paid plan, see [Manage plans](https://docs.docker.com/sub
 Gordon usage is measured in questions. When you upgrade from Gordon Base to a paid plan, your usage multiplies the Base allowance. Usage is capped across three time windows: 4-hour, daily, and monthly. For full limit details, see [Gordon usage limits](https://docs.docker.com/ai/gordon/usage-limits/).
 
 > \[!IMPORTANT]
-> Gordon plans apply to personal Docker accounts only. If you purchase a Gordon
+> Gordon plans apply to individual Docker accounts only. If you purchase a Gordon
 > plan while signed in with an organization account, the plan applies
-> to your personal account automatically.
+> to your individual account automatically.
 
 ## Billing cycle
 

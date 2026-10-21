@@ -1,8 +1,8 @@
-> Pinned source for Traefik Proxy v3.7.15: [docs/content/contributing/maintainers-guidelines.md](https://github.com/traefik/traefik/blob/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/contributing/maintainers-guidelines.md)
+> Pinned source for Traefik Proxy v3.7.16: [docs/content/contributing/maintainers-guidelines.md](https://github.com/traefik/traefik/blob/af6d927c51191ae1df104aaf907793386b816c28/docs/content/contributing/maintainers-guidelines.md)
 
 # Maintainer's Guidelines
 
-![Maintainer's Guidelines](https://raw.githubusercontent.com/traefik/traefik/351a5ab1e884a6be95d02997016cbb2751106bc0/docs/content/assets/img/maintainers-guidelines.png)
+![Maintainer's Guidelines](https://raw.githubusercontent.com/traefik/traefik/af6d927c51191ae1df104aaf907793386b816c28/docs/content/assets/img/maintainers-guidelines.png)
 
 Welcome to the Traefik Community.
 

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/creating-and-using-templates-with-api.mdx](https://github.com/vast-ai/docs/blob/d157814df41bf9eb85ed0ef988b9a83b851710d7/api-reference/creating-and-using-templates-with-api.mdx)
+> Pinned source for Vast.ai main: [api-reference/creating-and-using-templates-with-api.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/api-reference/creating-and-using-templates-with-api.mdx)
 > Canonical documentation: https://docs.vast.ai/api-reference/creating-and-using-templates-with-api
 
 # Creating and Using Templates with API
@@ -49,15 +49,15 @@ When creating a template, the following fields can be configured:
 
 Templates have two primary identifiers:
 
-| Identifier | Type    | Description                                                           |
-| ---------- | ------- | --------------------------------------------------------------------- |
-| `id`       | integer | Numeric identifier. Used for deleting templates                       |
-| `hash_id`  | string  | Content-based hash. Used for creating instances and editing templates |
+| Identifier | Type    | Description                                                                         |
+| ---------- | ------- | ----------------------------------------------------------------------------------- |
+| `id`       | integer | Numeric identifier of one template version. Used for editing and deleting templates |
+| `hash_id`  | string  | Content-based hash. Used for creating instances and editing templates               |
 
 **Usage by operation:**
 
 - **Create instance**: Use `template_hash_id`
-- **Edit template**: Use `hash_id` (via PUT)
+- **Edit template**: Use `id` and `hash_id` together (via `PUT /api/v1/template/`)
 - **Delete template**: Use numeric `id`
 
 ## Precedence Rules
@@ -280,16 +280,29 @@ Here's a complete template creation request with all common fields:
 
 ### Edit a Template
 
-Edit an existing template using its `hash_id`. You only need to include the fields you want to change - unchanged fields retain their existing values.
+Editing creates a new version of the template. Send the template's numeric `id` and current `hash_id` together with the full set of fields the new version should have; fields you leave out are not carried over. The response contains the new version with its new `id` and `hash_id`. The previous version keeps its identifiers, so running instances and shared links that reference it stay valid.
 
 ```bash curl
-curl -X PUT "https://console.vast.ai/api/v0/template/" \
+curl -X PUT "https://console.vast.ai/api/v1/template/" \
   -H "Authorization: Bearer $VAST_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
+    "id": 123456,
     "hash_id": "5915f1dc1ce881defb572015eb9d8178",
+    "name": "Example Template",
     "desc": "Updated description",
-    "recommended_disk_space": 16
+    "image": "vllm/vllm-openai",
+    "tag": "latest",
+    "env": "-e MODEL_ID=deepseek-ai/DeepSeek-R1-Distill-Llama-8B -p 8000:8000",
+    "onstart": "echo \"Starting vLLM server\"; vllm serve $MODEL_ID",
+    "runtype": "ssh",
+    "ssh_direct": true,
+    "use_ssh": true,
+    "docker_login_repo": "",
+    "docker_login_user": "",
+    "docker_login_pass": "",
+    "recommended_disk_space": 64,
+    "private": true
   }'
 ```
 
@@ -298,27 +311,45 @@ import requests
 
 api_key = "your_api_key"
 
-# Edit template - only include fields you want to change
+# Edit template - send the full template, not only the changed fields
 response = requests.put(
-    "https://console.vast.ai/api/v0/template/",
+    "https://console.vast.ai/api/v1/template/",
     headers={
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     },
     json={
+        "id": 123456,
         "hash_id": "5915f1dc1ce881defb572015eb9d8178",
+        "name": "Example Template",
         "desc": "Updated description",
-        "recommended_disk_space": 16
+        "image": "vllm/vllm-openai",
+        "tag": "latest",
+        "env": "-e MODEL_ID=deepseek-ai/DeepSeek-R1-Distill-Llama-8B -p 8000:8000",
+        "onstart": 'echo "Starting vLLM server"; vllm serve $MODEL_ID',
+        "runtype": "ssh",
+        "ssh_direct": True,
+        "use_ssh": True,
+        "docker_login_repo": "",
+        "docker_login_user": "",
+        "docker_login_pass": "",
+        "recommended_disk_space": 64,
+        "private": True
     }
 )
 
 result = response.json()
-print(f"Updated template: {result['template']['hash_id']}")
+print(f"New template ID: {result['template']['id']}")
+print(f"New hash ID: {result['template']['hash_id']}")
 ```
 
 > **Note**
 >
-> The `hash_id` will change after editing since it is derived from the template content.
+> The new version gets a new `hash_id` since it is derived from the template content. Sending a body that hashes to the current `hash_id` creates nothing and the response reports that no edits were made. Editing a template created by someone else creates the new version as your own copy.
+
+> **Warning**
+>
+> `PUT /api/v0/template/` is deprecated and returns `410 Gone`. Use `PUT /api/v1/template/` as shown above.
 
 ### Delete a Template
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/ai/sandboxes/workflows/git.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/ai/sandboxes/workflows/git.md)
 
 # Use Git with sandboxes
 
@@ -182,6 +182,20 @@ yourself after reviewing the changes.
    $ git push -u origin feat/my-feature
    $ gh pr create
    ```
+
+## Git ignore rules
+
+Git inside a local sandbox preserves host-specific ignore decisions for paths
+that exist when you create the sandbox. This applies when the primary workspace
+is at a Git repository root.
+
+The sandbox receives a snapshot of ignored paths, not the host-specific patterns.
+Those patterns don't apply to files created later, but ignored directories still
+cover files added inside them. Additional repositories and primary workspaces
+below a repository root don't receive this snapshot. Repository `.gitignore`
+files continue to work as usual.
+
+Git ignore rules don't restrict the agent's access to files in the workspace.
 
 ## Commit signing
 

@@ -1,16 +1,17 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_load.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_mcp_load.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_load.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_mcp_load.yaml)
 
 # sbx mcp load
 
-Load an already-registered MCP server into a running sandbox
+Load an already-registered MCP server into a sandbox
 
 **Usage:** `sbx mcp load NAME --sandbox SANDBOX [flags]`
 
 ## Description
 
-Attach a previously-registered MCP server to a running sandbox's gateway.
-Connected agents see the new server's tools immediately via the standard MCP
-tools/list\_changed notification — no agent restart required.
+Attach a previously-registered MCP server to a sandbox's gateway.
+In a running sandbox, connected agents see the new server's tools immediately
+via the standard MCP tools/list\_changed notification — no agent restart
+required. A stopped sandbox gets the server the next time it starts.
 
 The server must already exist in the local MCP store (register first with
 'sbx mcp add'). Both remote/hosted and local-stdio servers are supported.

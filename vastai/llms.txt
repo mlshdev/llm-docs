@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `d157814df41bf9eb85ed0ef988b9a83b851710d7`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `626149741ba46f195c775b2f4c89b7329de2d902`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -22,7 +22,7 @@
 ## Instances
 
 - [Overview](pages/guides/instances/overview.md): Instances are Docker containers that give you exclusive GPU access for training, inference, and development. Pay by the second, connect via SSH or Jupyter. (2468 bytes)
-- [Pricing](pages/guides/instances/pricing.md): Understand Vast.ai's marketplace pricing model, rental types, reserved discounts, and costs for GPU instances. (5734 bytes)
+- [Pricing](pages/guides/instances/pricing.md): Understand Vast.ai's marketplace pricing model, rental types, reserved discounts, and costs for GPU instances. (5688 bytes)
 - [Choosing Instances Overview](pages/guides/instances/choosing/overview.md): Learn the complete process of selecting and renting a GPU instance on Vast.ai, from choosing templates to configuring and launching. (2661 bytes)
 - [Finding & Renting Instances](pages/guides/instances/choosing/find-and-rent.md): Find and rent GPU instances on Vast.ai. Learn how to search, filter, understand offer cards, and configure your instance. (6800 bytes)
 - [Instance Types](pages/guides/instances/choosing/instance-types.md): Understand Vast.ai instance types - On-demand, Reserved, and Interruptible. Learn how each type works, their differences, and when to use each. (4820 bytes)
@@ -126,7 +126,7 @@
 - [CLI Authentication](pages/cli/authentication.md): Every request to the Vast.ai API requires an API key. The CLI stores your key locally and includes it automatically in every command. This page covers how to set up, verify, and manage API keys through the CLI. (2819 bytes)
 - [CLI Permissions](pages/cli/permissions.md): Every API key has a set of permissions that control which endpoints it can access. This page covers permission categories, how to build scoped keys, and how to manage team roles through the CLI. (5774 bytes)
 - [CLI Rate Limits and Errors](pages/cli/rate-limits.md): The Vast.ai CLI automatically retries rate-limited requests. You do not need to implement your own retry logic -- the CLI handles HTTP 429 responses with exponential backoff out of the box. (3232 bytes)
-- [CLI Templates](pages/cli/templates.md): A template is a configuration bundle that stores default settings for instance creation. Instead of passing every parameter each time you create an instance, you define a template once and reference it by its hashid. Yo… (13692 bytes)
+- [CLI Templates](pages/cli/templates.md): A template is a configuration bundle that stores default settings for instance creation. Instead of passing every parameter each time you create an instance, you define a template once and reference it by its hashid. Yo… (14798 bytes)
 - [vastai create api-key](pages/cli/reference/create-api-key.md): Create a new api-key with restricted permissions. Can be sent to other users and teammates (1355 bytes)
 - [vastai delete api-key](pages/cli/reference/delete-api-key.md): Remove an api-key (829 bytes)
 - [vastai set api-key](pages/cli/reference/set-api-key.md): Set api-key (get your api-key from the console/CLI) (886 bytes)
@@ -186,7 +186,7 @@
 - [vastai search templates](pages/cli/reference/search-templates.md): Search for template results using custom query (3165 bytes)
 - [vastai search volumes](pages/cli/reference/search-volumes.md): Search for volume offers using custom query (5328 bytes)
 - [vastai create template](pages/cli/reference/create-template.md): Create a new template (2869 bytes)
-- [vastai update template](pages/cli/reference/update-template.md): Update an existing template (2946 bytes)
+- [vastai update template](pages/cli/reference/update-template.md): Update an existing template (2992 bytes)
 - [vastai delete template](pages/cli/reference/delete-template.md): Delete a Template (974 bytes)
 - [vastai create endpoint](pages/cli/reference/create-endpoint.md): Create a new endpoint group (1983 bytes)
 - [vastai update endpoint](pages/cli/reference/update-endpoint.md): Update an existing endpoint group (2099 bytes)
@@ -340,7 +340,7 @@
 - [VastAI.search_templates](pages/sdk/python/reference/search-templates.md): Search for templates. (448 bytes)
 - [VastAI.search_volumes](pages/sdk/python/reference/search-volumes.md): Search for volume offers. (993 bytes)
 - [VastAI.create_template](pages/sdk/python/reference/create-template.md): Create a new template. (3046 bytes)
-- [VastAI.update_template](pages/sdk/python/reference/update-template.md): Update an existing template. (3121 bytes)
+- [VastAI.update_template](pages/sdk/python/reference/update-template.md): Update an existing template by creating a new version of it with a new hash\id. (3173 bytes)
 - [VastAI.delete_template](pages/sdk/python/reference/delete-template.md): Delete a template by ID or hash. (512 bytes)
 - [VastAI.create_endpoint](pages/sdk/python/reference/create-endpoint.md): Create a new serverless endpoint. (1826 bytes)
 - [VastAI.update_endpoint](pages/sdk/python/reference/update-endpoint.md): Update an existing endpoint. (2026 bytes)
@@ -429,7 +429,7 @@
 ## Common workflows
 
 - [Creating Instances with the API](pages/api-reference/creating-instances-with-api.md): Instance creation on Vast.ai follows a two-step process: first find an offer (an available machine), then accept that offer to create an instance. You can configure instances in two ways: (27299 bytes)
-- [Creating and Using Templates with API](pages/api-reference/creating-and-using-templates-with-api.md): A template in the Vast.ai API is a configuration bundle that stores default settings for instance creation. Instead of specifying every parameter each time you create an instance, you can reference a template by its has… (25162 bytes)
+- [Creating and Using Templates with API](pages/api-reference/creating-and-using-templates-with-api.md): A template in the Vast.ai API is a configuration bundle that stores default settings for instance creation. Instead of specifying every parameter each time you create an instance, you can reference a template by its has… (26794 bytes)
 
 ## Concepts
 
@@ -573,7 +573,6 @@
 - [create team role](pages/api-reference/team/create-team-role.md): POST /api/v0/team/roles (1585 bytes)
 - [search templates](pages/api-reference/search/search-templates.md): GET /api/v0/template (2267 bytes)
 - [create template](pages/api-reference/templates/create-template.md): POST /api/v0/template (4151 bytes)
-- [edit template](pages/api-reference/templates/edit-template.md): PUT /api/v0/template (1545 bytes)
 - [delete template](pages/api-reference/templates/delete-template.md): DELETE /api/v0/template (836 bytes)
 - [delete api key](pages/api-reference/accounts/delete-api-key.md): DELETE /api/v0/auth/apikeys/{id} (1473 bytes)
 - [update workergroup](pages/api-reference/serverless/update-workergroup.md): PUT /api/v0/workergroups/{id} (2304 bytes)
@@ -589,6 +588,7 @@
 - [manage instance](pages/api-reference/instances/manage-instance.md): PUT /api/v0/instances/{id} (1692 bytes)
 - [destroy instance](pages/api-reference/instances/destroy-instance.md): DELETE /api/v0/instances/{id} (1464 bytes)
 - [detach ssh-key](pages/api-reference/instances/detach-ssh-key.md): DELETE /api/v0/instances/{id}/ssh/{sshkeyid} (1708 bytes)
+- [edit template](pages/api-reference/templates/edit-template.md): PUT /api/v1/template (4962 bytes)
 - [execute](pages/api-reference/instances/execute.md): PUT /api/v0/instances/command/{id} (2237 bytes)
 - [get workergroup logs](pages/api-reference/serverless/get-workergroup-logs.md): POST /getworkergrouplogs (1031 bytes)
 - [get workergroup workers](pages/api-reference/serverless/get-workergroup-workers.md): POST /getworkergroupworkers (1392 bytes)

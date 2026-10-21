@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_pull.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_kit_pull.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_pull.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_kit_pull.yaml)
 
 # sbx kit pull
 
@@ -11,18 +11,15 @@ Pull a kit artifact from an OCI registry
 
 ## Description
 
-Pull a kit artifact from an OCI registry and save its layer payload to a file.
+Pull a kit artifact from an OCI registry and save its payload to a file.
+Use a registry/repo:tag or registry/repo\@sha256:digest reference.
 
-The reference should be in the format "registry/repo:tag" or
-"registry/repo\@sha256:digest" (e.g., "ghcr.io/myorg/my-plugin:1.0").
+The output extension follows the resolved artifact format: .zip for v1,
+or .tar.gz for v2. Use --output to choose the file path.
 
-The file extension is chosen automatically based on the kit's format:
-schemaVersion: "1"  → <name>.zip      (legacy ZIP archive)
-schemaVersion: "2"  → <name>.tar.gz   (standard OCI tar+gzip layer)
-
+For Docker Hub, the sbx login session takes priority. Other registries use
+secrets set with sbx secret set --registry. Both fall back to Docker credentials.
 The registry must support HTTPS.
-
-Authentication: sbx registry secrets (sbx secret set --registry) take priority, falling back to the Docker credential store.
 
 ## Options
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_inspect.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_kit_inspect.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_inspect.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_kit_inspect.yaml)
 
 # sbx kit inspect
 
@@ -18,6 +18,11 @@ The reference can be a local directory, ZIP file path, OCI registry reference, o
 Pass --kit-arg to preview how the kit resolves with a given set of
 arguments; the output shows the substituted content.
 
+\--offline skips the daemon-backed kit policy (kit.allowedSources,
+kit.allowLocalKits, kit.requireSignature) so the command needs neither
+sandboxd nor a signed-in session; it only accepts a local directory or
+ZIP reference, since those are the only ones this check applies to.
+
 ## Options
 
 | Option            | Default | Description                                                                                                                    |
@@ -26,6 +31,7 @@ arguments; the output shows the substituted content.
 | `--json`          |         | Output in JSON format                                                                                                          |
 | `--kit-arg`       |         | Value for an argument the kit declares, as name=value for every kit or kit.name=value for one (can be repeated) (Experimental) |
 | `--kit-args-file` |         | File of name=value kit arguments, one per line (can be repeated); --kit-arg overrides (Experimental)                           |
+| `--offline`       |         | Skip the daemon-backed kit policy check; local directory or ZIP references only                                                |
 
 ## Global options
 
@@ -42,4 +48,7 @@ sbx kit inspect ./my-kit
 
   # Machine-readable output
   sbx kit inspect ghcr.io/myorg/my-kit:1.0 --format json
+
+  # Inspect without sandboxd running or a Docker sign-in
+  sbx kit inspect ./my-kit --offline
 ```

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/contexts.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/build/bake/contexts.md)
+> Pinned source for Docker main: [content/manuals/build/bake/contexts.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/build/bake/contexts.md)
 
 In addition to the main `context` key that defines the build context, each
 target can also define additional named contexts with a map defined with key
@@ -78,4 +78,4 @@ target "app" {
 
 In most cases you should just use a single multi-stage Dockerfile with multiple
 targets for similar behavior. This case is only recommended when you have
-multiple Dockerfiles that can't be easily merged into one.
+multiple Dockerfiles that can't be merged into one.

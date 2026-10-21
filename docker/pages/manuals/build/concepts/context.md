@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/concepts/context.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/build/concepts/context.md)
+> Pinned source for Docker main: [content/manuals/build/concepts/context.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/build/concepts/context.md)
 
 The `docker build` and `docker buildx build` commands build Docker images from
 a [Dockerfile](https://docs.docker.com/reference/dockerfile/) and a context.
@@ -289,7 +289,7 @@ $ docker buildx build 'https://github.com/user/myrepo.git?tag=v0.1.0&commit=dead
 By default, BuildKit doesn't keep the `.git` directory when using Git contexts.
 You can configure BuildKit to keep the directory by setting the
 [`BUILDKIT_CONTEXT_KEEP_GIT_DIR` build argument](https://docs.docker.com/reference/dockerfile/#buildkit-built-in-build-args).
-This can be useful to if you want to retrieve Git information during your build:
+This can be useful if you want to retrieve Git information during your build:
 
 ```dockerfile
 # syntax=docker/dockerfile:1
@@ -336,8 +336,8 @@ $ GIT_AUTH_TOKEN=<token> docker buildx build \
 
 ### Remote context with Dockerfile from stdin
 
-Use the following syntax to build an image using files on your local
-filesystem, while using a Dockerfile from stdin.
+Use the following syntax to build an image using files from a remote URL,
+while using a Dockerfile from stdin.
 
 ```console
 $ docker build -f- <URL>

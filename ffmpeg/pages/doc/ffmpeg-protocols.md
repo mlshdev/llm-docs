@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/69ad29bdad39878c70eeb07ec5e2f66e25908078/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1754,11 +1754,17 @@ some risk of collision if the same URL is used for different content (e.g.
 as a result of extra POST data being used to select the stream ID). To avoid
 this, make sure to only use this protocol for URLs that uniquely identify
 the content; otherwise you may get a garbled mix of sources.
+This includes content selected by request options such as headers, cookies or
+credentials: data cached for one user is returned to every other user of the
+same cache directory.
 
 The accepted options are:
 
 - cache\_dir
   Path to the directory where cache files are stored. This option is required.
+  Anyone who can write to this directory or to `metadata_dir` can alter
+  the data read by all users of the cache, or make them crash, so neither may be
+  writable by untrusted users.
 
 - metadata\_dir
   Path to the directory where metadata files are stored. Optional. If not

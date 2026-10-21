@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_template_save.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_template_save.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_template_save.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_template_save.yaml)
 
 # sbx template save
 
@@ -8,16 +8,11 @@ Save a snapshot of the sandbox as a template
 
 ## Description
 
-Save a snapshot of the sandbox as a template.
+Save a sandbox snapshot as a template in the local image store.
+Use --pull never when creating a sandbox from the saved template.
 
-The saved image is stored in the sandbox runtime's image store and can be
-used as a template for new sandboxes with:
-sbx run --pull never -t TAG AGENT \[WORKSPACE]
-
-Use --pull never to use the saved image without trying to pull it from a registry.
-
-Use --output to also export the image to a tar file that can be shared
-and loaded on another host with: sbx template load FILE
+Use --output to export a tar file for loading on another host with
+sbx template load.
 
 With --cloud:
 Snapshot a running cloud sandbox into a cloud-managed template. The
@@ -52,6 +47,9 @@ minutes to complete. See <https://docs.docker.com/ai/sandboxes/> for the snapsho
 ```console
 # Save as a template for new sandboxes on this host
   sbx template save my-sandbox myimage:v1.0
+
+  # Create a sandbox from the saved template
+  sbx run --pull never -t myimage:v1.0 claude ./project
 
   # Also export to a shareable tar file
   sbx template save my-sandbox myimage:v1.0 --output /tmp/myimage.tar

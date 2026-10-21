@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_settings_set.yaml](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/data/sbx_cli/sbx_settings_set.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_settings_set.yaml](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/data/sbx_cli/sbx_settings_set.yaml)
 
 # sbx settings set
 
@@ -8,21 +8,14 @@ Set a setting override
 
 ## Description
 
-Set a user override for a setting.
+Set a user override for a setting. Values are parsed according to the
+setting's type: bool (true or false), int, float, string, or raw JSON.
 
-Administrator constraints apply to saved overrides. A conflicting value is rejected.
-
-The value is parsed according to the setting's type:
-bool   "true" or "false"
-int    integer value
-float  floating-point value
-string plain text
-json   raw JSON
-
+Administrator constraints apply; conflicting values are rejected.
 Environment variables take precedence over user overrides.
 
-Most changes take effect within about five seconds. If a daemon restart is
-required, this command tells you to run 'sbx daemon restart'.
+Most changes take effect within about five seconds. This command reports
+when a daemon restart is required.
 
 ## Global options
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/d8edfe0d28dd00fa8ab175d94fe3375731689d4f/content/manuals/ai/sandboxes/cloud/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/ai/sandboxes/cloud/usage.md)
 
 # Use cloud sandboxes
 
@@ -127,6 +127,9 @@ $ ssh sbx_01abc123@sbx_cloud
 
 Replace the example with `ssh <sandbox-id>@sbx_cloud`, using the
 `sbx_`-prefixed ID from `sbx --cloud ls`.
+
+Cloud SSH honors your host's configured upstream proxy. If the proxy refuses
+SSH connections, see [Cloud SSH proxy configuration](https://docs.docker.com/ai/sandboxes/configuration/upstream-proxy/#cloud-ssh).
 
 ## Transfer files
 
