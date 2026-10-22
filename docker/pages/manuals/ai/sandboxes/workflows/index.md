@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/_index.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/ai/sandboxes/workflows/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/_index.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/ai/sandboxes/workflows/_index.md)
 
 # Workflow patterns
 
@@ -11,7 +11,9 @@ local sandboxes in automation. For command syntax and lifecycle basics, see
 Your workspace strategy determines when an agent's changes appear on the host.
 Direct mode edits the host working tree in place. Clone mode keeps changes in a
 private clone until you fetch or push them. Host worktrees provide branch
-isolation while keeping Git operations on the host. See [Git workflows](https://docs.docker.com/ai/sandboxes/workflows/git/)
+isolation while keeping Git operations on the host. Mountless sandboxes keep
+repositories inside the sandbox, with branches pushed to a Git remote for
+review or use on the host. See [Git workflows](https://docs.docker.com/ai/sandboxes/workflows/git/)
 to choose a strategy for single or parallel tasks.
 
 ## Develop in the sandbox

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/runtime/networking/tcp.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/networking/tcp.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/runtime/networking/tcp.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/networking/tcp.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/networking/tcp
 
 # TCP
@@ -94,9 +94,7 @@ Bun.listen({
 `Bun.listen` returns a server that conforms to the `TCPSocketListener` interface.
 
 ```ts server.ts icon="/icons/typescript.svg"
-const server = Bun.listen({
-  /* config*/
-});
+const server = Bun.listen({/* config*/});
 
 // stop listening
 // parameter determines whether active connections are closed
@@ -150,9 +148,7 @@ const socket = await Bun.connect({
 You can hot reload both TCP servers and sockets with new handlers.
 
 ```ts server.ts icon="/icons/typescript.svg"
-const server = Bun.listen({
-  /* config */
-});
+const server = Bun.listen({/* config */});
 
 // reloads handlers for all active server-side sockets
 server.reload({
@@ -165,9 +161,7 @@ server.reload({
 ```
 
 ```ts client.ts icon="/icons/typescript.svg"
-const socket = await Bun.connect({
-  /* config */
-});
+const socket = await Bun.connect({/* config */});
 
 socket.reload({
   data() {

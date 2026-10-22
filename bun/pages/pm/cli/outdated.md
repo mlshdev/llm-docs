@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/pm/cli/outdated.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/cli/outdated.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/pm/cli/outdated.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/cli/outdated.mdx)
 > Canonical documentation: https://bun.com/docs/pm/cli/outdated
 
 # bun outdated
@@ -30,7 +30,9 @@ The output table shows three version columns:
 
 - **Current**: The version currently installed
 - **Update**: The latest version that satisfies your package.json version range
-- **Latest**: The latest version published to the registry
+- **Latest**: The version that the `latest` tag in the registry points to
+
+A dependency that is ahead of `latest`, such as a prerelease, is listed when `bun update` would change its version.
 
 ### Dependency Filters
 
@@ -90,6 +92,32 @@ bun outdated '!@types/*'
 | prettier (dev)                 | 3.4.2   | 3.5.0     | 3.5.0      |
 | tsup (dev)                     | 8.3.5   | 8.3.6     | 8.3.6      |
 | typescript (dev)               | 5.7.2   | 5.7.3     | 5.7.3      |
+```
+
+With several patterns, a dependency is listed when at least one of them matches it. A pattern that starts with `!` removes the dependencies it matches:
+
+```sh terminal icon="terminal"
+bun outdated typescript 'eslint*' '!eslint-plugin-sonarjs'
+```
+
+```txt
+| Package                        | Current | Update | Latest     |
+| ------------------------------ | ------- | ------ | ---------- |
+| eslint (dev)                   | 8.57.1  | 8.57.1 | 9.20.0     |
+| eslint-plugin-security (dev)   | 2.1.1   | 2.1.1  | 3.0.1      |
+| typescript (dev)               | 5.7.2   | 5.7.3  | 5.7.3      |
+```
+
+An aliased dependency such as `"lodash3": "npm:lodash@^3.0.0"` is listed with both of its names, and a pattern selects it by either name:
+
+```sh terminal icon="terminal"
+bun outdated lodash
+```
+
+```txt
+| Package              | Current | Update | Latest  |
+| -------------------- | ------- | ------ | ------- |
+| lodash3@npm:lodash   | 3.10.1  | 3.10.1 | 4.17.21 |
 ```
 
 ### Workspace Filters
@@ -188,6 +216,14 @@ Specify path to config file (`bunfig.toml`)
 
 Set a specific cwd
 
+**Property (type: string)**
+
+Load environment variables from the specified file(s)
+
+**Property (type: boolean)**
+
+Disable automatic loading of .env files
+
 **Property (type: boolean)**
 
 Print this help menu
@@ -272,13 +308,17 @@ Provide a Certificate Authority signing certificate
 
 Same as `--ca`, but as a file path to the certificate
 
+**Property (type: boolean)**
+
+Use the system's trusted certificate authorities
+
 **Property (type: string)**
 
 Use a specific registry by default, overriding `.npmrc`, `bunfig.toml` and environment variables
 
 **Property (type: number)**
 
-Maximum number of concurrent network requests (default 48)
+Maximum number of concurrent network requests (default 64)
 
 ### Caching
 

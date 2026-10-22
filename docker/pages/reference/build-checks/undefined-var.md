@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/undefined-var.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/undefined-var.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/undefined-var.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/undefined-var.md)
 
 # UndefinedVar
 

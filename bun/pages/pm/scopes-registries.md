@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/pm/scopes-registries.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/scopes-registries.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/pm/scopes-registries.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/scopes-registries.mdx)
 > Canonical documentation: https://bun.com/docs/pm/scopes-registries
 
 The default registry is `registry.npmjs.org`. To change it globally, set it in `bunfig.toml`:
@@ -27,6 +27,10 @@ To configure a private registry scoped to a particular organization:
 # registry with token
 "@myorg3" = { token = "$npm_token", url = "https://registry.myorg.com/" }
 ```
+
+If the environment variable is not set, Bun warns and treats the field as empty. It then uses the credentials `.npmrc` has for that registry, if any.
+
+Credentials written into a URL are percent-encoded, like the rest of the URL: the password `p@ss` is written `p%40ss`. Bun decodes them before it sends them. The `username`, `password` and `token` fields are sent as written.
 
 ### `.npmrc`
 

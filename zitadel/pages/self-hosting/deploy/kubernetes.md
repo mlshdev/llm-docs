@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.5: [apps/docs/content/self-hosting/deploy/kubernetes/index.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/self-hosting/deploy/kubernetes/index.mdx)
+> Pinned source for ZITADEL v4.20.0: [apps/docs/content/self-hosting/deploy/kubernetes/index.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/self-hosting/deploy/kubernetes/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/deploy/kubernetes
 
 This guide takes you from zero to a running ZITADEL instance on Kubernetes and then shows you how to harden it for production.

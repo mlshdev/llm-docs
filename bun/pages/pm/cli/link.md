@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/pm/cli/link.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/cli/link.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/pm/cli/link.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/cli/link.mdx)
 > Canonical documentation: https://bun.com/docs/pm/cli/link
 
 Use `bun link` in a local directory to register the current package as a "linkable" package.
@@ -27,7 +27,11 @@ cd /path/to/my-app
 bun link cool-pkg
 ```
 
-The `--save` flag also adds `cool-pkg` to the `dependencies` field of your app's package.json, with a version specifier that tells Bun to load from the registered local directory instead of installing from `npm`:
+Pass `--save` to also add `cool-pkg` to the `dependencies` field of your app's package.json, with a version specifier that tells Bun to load from the registered local directory instead of installing from `npm`:
+
+```bash terminal icon="terminal"
+bun link --save cool-pkg
+```
 
 ```json package.json icon="file-json"
 {
@@ -38,6 +42,24 @@ The `--save` flag also adds `cool-pkg` to the `dependencies` field of your app's
   }
 }
 ```
+
+## Linking a directory by path
+
+`link:` also accepts a path, as in Yarn and pnpm. The path is relative to the `package.json` that declares it, and Bun installs a symlink to that directory. Nothing has to be registered with `bun link` first.
+
+```json package.json icon="file-json"
+{
+  "dependencies": {
+    "design-tokens": "link:./vendor/design-tokens",
+    "shared": "link:../shared"
+  }
+}
+```
+
+- Anything that is not a package name is a path: `link:./dir`, `link:../dir`, `link:vendor/dir`, an absolute path. `link:dir` and `link:@scope/dir` are names registered with `bun link`; write `link:./dir` for the directory.
+- The directory must exist. It does not need a `package.json`.
+- The directory's own dependencies are not installed. Use `file:` for a copy whose dependencies are installed, or make the directory a [workspace](https://bun.com/docs/pm/workspaces).
+- Only your project may use a path: the root `package.json`, a workspace, a `file:` directory one of them depends on, or a top-level `overrides` / `resolutions` entry. `bun install` fails when a package from the registry, git or a tarball declares one, so replace a `link:` path before you publish a package.
 
 ## Unlinking
 
@@ -65,7 +87,7 @@ bun link <packages>
 
 **Property (type: boolean)**
 
-Install globally. Alias: `-g`
+Has no effect: `bun link` always registers packages in the global folder. Alias: `-g`
 
 ### Dependency Management
 
@@ -97,11 +119,11 @@ Generate a lockfile without installing dependencies
 
 **Property (type: boolean)**
 
-Has no effect. `bun link` updates `package.json` and the lockfile only with `--save`
+Don't update `package.json` or save a lockfile (the default)
 
 **Property (type: boolean)**
 
-Save to `package.json`
+Update `package.json` and save a lockfile (false by default)
 
 **Property (type: boolean)**
 
@@ -144,6 +166,10 @@ Provide a Certificate Authority signing certificate
 **Property (type: string)**
 
 Same as `--ca`, but as a file path to the certificate
+
+**Property (type: boolean)**
+
+Use the system's trusted certificate authorities
 
 **Property (type: string)**
 
@@ -204,6 +230,10 @@ all)
 Override operating system for optional dependencies (e.g., `linux`, `darwin`, `*` for
 all)
 
+**Property (type: string)**
+
+Override libc for optional dependencies (e.g., `glibc`, `musl`, `*` for all)
+
 ### Global Configuration & Context
 
 **Property (type: string)**
@@ -213,6 +243,14 @@ Specify path to config file (`bunfig.toml`). Alias: `-c`
 **Property (type: string)**
 
 Set a specific current working directory
+
+**Property (type: string)**
+
+Load environment variables from the specified file(s)
+
+**Property (type: boolean)**
+
+Disable automatic loading of .env files
 
 ### Help
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/get-started/agent-skills.mdx)
+> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/b11699791551b579e4ca3548476e106db24f350c/get-started/agent-skills.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/agent-skills
 
 # Agent skills for AI coding tools
@@ -121,7 +121,7 @@ codex plugin marketplace add https://github.com/runpod/runpod-plugins-official.g
 Run `codex /plugins`, open the **Runpod** tab, and install (reload if prompted). If the Runpod MCP tools don't appear, add the hosted server manually:
 
 ```bash
-codex mcp add runpod --url https://mcp.getrunpod.io/
+codex mcp add runpod --url https://mcp.runpod.io/
 ```
 
 ### Gemini
@@ -139,7 +139,7 @@ npx @runpod/mcp-server@latest add
 The installer authenticates the MCP server for you. To reuse the API key you already set instead, pass it as a bearer header when you add the server. For example, in Claude Code:
 
 ```bash
-claude mcp add --transport http runpod -s user https://mcp.getrunpod.io/ \
+claude mcp add --transport http runpod -s user https://mcp.runpod.io/ \
   --header "Authorization: Bearer $RUNPOD_API_KEY"
 ```
 

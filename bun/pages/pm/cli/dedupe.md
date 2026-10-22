@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/pm/cli/dedupe.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/cli/dedupe.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/pm/cli/dedupe.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/cli/dedupe.mdx)
 > Canonical documentation: https://bun.com/docs/pm/cli/dedupe
 
 # bun dedupe
@@ -21,6 +21,8 @@ bun dedupe v1.4.0 (abc12345)
 Each row is a version Bun removed and the version its dependents now use.
 
 `bun dedupe` only chooses between versions already in the lockfile and never modifies `package.json`. It never fetches new versions from the registry and never moves a dependency outside its range. Use [`bun update`](https://bun.com/docs/pm/cli/update) for that.
+
+`bun install` and `bun update` do the same for the versions they add, so a fresh install has no duplicates that one version could cover. They leave versions already in `bun.lock` alone; only `bun dedupe` removes those.
 
 ### `--check` and `--dry-run`
 

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/pm/cli/remove.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/cli/remove.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/pm/cli/remove.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/cli/remove.mdx)
 > Canonical documentation: https://bun.com/docs/pm/cli/remove
 
 # bun remove
@@ -120,6 +120,10 @@ Provide a Certificate Authority signing certificate
 
 Same as `--ca`, but as a file path to the certificate
 
+**Property (type: boolean)**
+
+Use the system's trusted certificate authorities
+
 **Property (type: string)**
 
 Use a specific registry by default, overriding `.npmrc`, `bunfig.toml` and environment variables
@@ -128,8 +132,8 @@ Use a specific registry by default, overriding `.npmrc`, `bunfig.toml` and envir
 
 **Property (type: boolean)**
 
-Resolve the change but don't remove packages, update `package.json`, or save a lockfile (the project's own
-lifecycle scripts still run)
+Resolve the change but don't remove packages, update `package.json`, save a lockfile, or run the project's
+lifecycle scripts
 
 **Property (type: boolean)**
 
@@ -187,6 +191,14 @@ Install globally. Alias: `-g`
 
 Set a specific cwd
 
+**Property (type: string)**
+
+Load environment variables from the specified file(s)
+
+**Property (type: boolean)**
+
+Disable automatic loading of .env files
+
 ### Advanced & Performance
 
 **Property (type: string)**
@@ -196,4 +208,4 @@ macOS), `hardlink` (default on Linux and Windows), `symlink`, `copyfile`
 
 **Property (type: number)**
 
-Maximum number of concurrent network requests (default 48)
+Maximum number of concurrent network requests (default 64)

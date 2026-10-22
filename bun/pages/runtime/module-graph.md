@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/runtime/module-graph.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/module-graph.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/runtime/module-graph.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/module-graph.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/module-graph
 
 # ModuleGraph
@@ -35,7 +35,7 @@ A graph has a context of its own for timers and I/O. Everything its code opens b
 - timers
 - `Bun.serve` and `Bun.listen` servers, sockets, `fetch()` requests, WebSockets
 - watchers
-- child processes, including `Bun.$`
+- child processes, including `Bun.$`, and `Bun.Terminal` terminals
 - workers
 - database connections
 - files opened through `Bun.file().writer()`, `bun:sqlite` and `node:sqlite`

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/get-a-cluster.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/api-reference-v2/clusters/get-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/get-a-cluster.mdx](https://github.com/runpod/docs/blob/b11699791551b579e4ca3548476e106db24f350c/api-reference-v2/clusters/get-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/get-a-cluster
 
 # Get A Cluster

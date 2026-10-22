@@ -6,21 +6,21 @@
   "title": "Bun",
   "homepage": "https://bun.com/docs",
   "repository": "oven-sh/bun",
-  "tag": "bun-v1.4.3",
-  "releaseId": 408543611,
-  "releasePublishedAt": "2026-10-10T05:24:54Z",
-  "sourceCommit": "c6da4a4d3010e5553438c60f6bd76d981976867c",
-  "documentCount": 322,
+  "tag": "bun-v1.4.4",
+  "releaseId": 420500253,
+  "releasePublishedAt": "2026-10-22T10:11:32Z",
+  "sourceCommit": "38afee6c84fcf48c0edb2466aa4b27d287a59c30",
+  "documentCount": 331,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2063151,
-      "documentCount": 322,
-      "sha256": "092e818cd15a9465921d7406b9aab4e6928695a267d32400ca1dda6879079091"
+      "byteLength": 2654008,
+      "documentCount": 331,
+      "sha256": "227fb12cd7aa1881d79a63c9f0b2e3af8d806e49879fecdbd3283b639828de76"
     }
   ],
-  "outputDigest": "d117ecf931804e9198ed3af5aef9d25bbc8e8d4c650c0b0858df411c28b63b9b",
+  "outputDigest": "380bb0620e3a635be123e4b39c6ba0251774c5225b968eec43bf5a86262c503a",
   "notes": [
     "Pages and their order come from the release-tagged Mintlify navigation in docs/docs.json; unreferenced files are excluded and snippets are inlined rather than published as duplicate pages.",
     "Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.",

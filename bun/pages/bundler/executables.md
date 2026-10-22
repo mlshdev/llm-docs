@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/bundler/executables.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/bundler/executables.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/bundler/executables.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/bundler/executables.mdx)
 > Canonical documentation: https://bun.com/docs/bundler/executables
 
 Bun's bundler implements a `--compile` flag for generating a standalone binary from a TypeScript or JavaScript file.
@@ -616,7 +616,7 @@ When you add multiple entrypoints to a standalone executable, Bun bundles each o
 
 We may eventually detect statically-known paths in `new Worker(path)` and bundle them automatically. For now, you need to list the worker file as an entrypoint, as in the earlier example.
 
-If you use a relative path to a file not included in the standalone executable, Bun loads that path from disk relative to the process's current working directory, and errors if it doesn't exist.
+If you use a relative path to a file not included in the standalone executable, Bun loads that path from disk relative to the process's current working directory, and errors if it doesn't exist. With [`--disallow-code-generation-from-strings=strict`](https://bun.com/docs/runtime/code-generation-from-strings#files-on-disk-are-not-part-of-the-program), Bun refuses it.
 
 ***
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.6: [docs/errors-retrying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/166db1ca0781345894af115bc877081a9546a44c/docs/errors-retrying.mdx)
+> Pinned source for Trigger.dev v4.7.7: [docs/errors-retrying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/errors-retrying.mdx)
 > Canonical documentation: https://trigger.dev/docs/errors-retrying
 
 # Errors & Retrying

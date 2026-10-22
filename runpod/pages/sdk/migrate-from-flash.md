@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/migrate-from-flash.mdx](https://github.com/runpod/docs/blob/d83395f928bd3bd0f862b1c40d662baf9924c1d1/sdk/migrate-from-flash.mdx)
+> Pinned source for Runpod main: [sdk/migrate-from-flash.mdx](https://github.com/runpod/docs/blob/b11699791551b579e4ca3548476e106db24f350c/sdk/migrate-from-flash.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/migrate-from-flash
 
 # Migrate from Flash to the Runpod SDK

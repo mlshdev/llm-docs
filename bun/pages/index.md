@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/index.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/index.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/index.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/index.mdx)
 > Canonical documentation: https://bun.com/docs/
 
 # Welcome to Bun
@@ -38,6 +38,8 @@ Bun ships as a single, dependency-free binary and includes a runtime, package ma
 - Test Runner: Jest-compatible, TypeScript-first tests with snapshots, DOM, and watch mode.
 - Bundler: Native bundling for JS/TS/JSX with splitting, plugins, and HTML imports.
 - Type Checker: Check a TypeScript project on every CPU core with [`bun check`](https://bun.com/docs/runtime/check).
+- Linter: Find bugs with 1,000 built-in rules and no configuration with [`bun lint`](https://bun.com/docs/lint).
+- Formatter: Format JavaScript, TypeScript, CSS, JSON, Markdown, and more with [`bun fmt`](https://bun.com/docs/format).
 
 Explore each area using the cards above. Each section is structured with an overview, short examples, reference, and best practices for fast scanning and deep dives.
 

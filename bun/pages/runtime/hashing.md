@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/runtime/hashing.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/hashing.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/runtime/hashing.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/hashing.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/hashing
 
 # Hashing
@@ -50,9 +50,7 @@ The `verify` function detects the algorithm from the input hash, whether PHC- or
 ```ts
 const password = "super-secure-pa$$word";
 
-const hash = await Bun.password.hash(password, {
-  /* config */
-});
+const hash = await Bun.password.hash(password, {/* config */});
 
 const isMatch = await Bun.password.verify(password, hash);
 // => true
@@ -63,9 +61,7 @@ Synchronous versions of all functions are also available. These functions are co
 ```ts
 const password = "super-secure-pa$$word";
 
-const hash = Bun.password.hashSync(password, {
-  /* config */
-});
+const hash = Bun.password.hashSync(password, {/* config */});
 
 const isMatch = Bun.password.verifySync(password, hash);
 // => true

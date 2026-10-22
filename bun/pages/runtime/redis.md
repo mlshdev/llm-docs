@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/runtime/redis.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/redis.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/runtime/redis.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/redis.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/redis
 
 # Redis
@@ -410,6 +410,7 @@ const client = new RedisClient("redis://localhost:6379", {
   //   ca: "path/to/ca.pem",
   //   cert: "path/to/cert.pem",
   //   key: "path/to/key.pem",
+  //   serverName: "redis.example.com", // SNI and the name the certificate must match (default: the URL host)
   // }
 });
 ```

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/local-vs-cloud.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/ai/sandboxes/cloud/local-vs-cloud.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/local-vs-cloud.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/ai/sandboxes/cloud/local-vs-cloud.md)
 
 # Compare local and cloud sandboxes
 
@@ -38,7 +38,7 @@ following local features don't apply in cloud mode:
 
 The CLI rejects local-only flags used with `--cloud` instead of ignoring them.
 
-You can use [environment files](https://docs.docker.com/ai/sandboxes/configuration/environment-files/#use-a-cloud-environment)
+You can use [environment files](https://docs.docker.com/ai/sandboxes/cloud/environment-files/)
 with `sbx --cloud env`. Cloud environments support a subset of the local
 configuration fields, including agents, environment variables, resource limits,
 and credentials. Remove host workspace and port mappings before using a local

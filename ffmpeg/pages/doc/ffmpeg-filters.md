@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/179d08349347e00b2a24593cfa8b3cbbde2a6cfb/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -7736,6 +7736,9 @@ Default value: `"auto"`
 - format
   The destination format string; it could be "text" (only the transcribed text
   will be sent to the destination), "srt" (subtitle format) or "json".
+  JSON segments include a `language` field containing the language
+  code reported by whisper.cpp for the transcription chunk, or `unknown`
+  if none is available. All segments from the same chunk have the same language.
   Default value: `"text"`
 
 - max\_len

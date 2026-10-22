@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/bundler/esbuild.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/bundler/esbuild.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/bundler/esbuild.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/bundler/esbuild.mdx)
 > Canonical documentation: https://bun.com/docs/bundler/esbuild
 
 Bun's bundler API is heavily inspired by esbuild. This page is a side-by-side comparison of the two APIs.
@@ -204,26 +204,12 @@ const myPlugin: BunPlugin = {
     builder.onStart(() => {
       /* called when the bundle starts */
     });
-    builder.onResolve(
-      {
-        /* onResolve.options */
-      },
-      args => {
-        return {
-          /* onResolve.results */
-        };
-      },
-    );
-    builder.onLoad(
-      {
-        /* onLoad.options */
-      },
-      args => {
-        return {
-          /* onLoad.results */
-        };
-      },
-    );
+    builder.onResolve({/* onResolve.options */}, args => {
+      return {/* onResolve.results */};
+    });
+    builder.onLoad({/* onLoad.options */}, args => {
+      return {/* onLoad.results */};
+    });
     builder.onEnd(result => {
       /* called when the bundle is complete */
     });

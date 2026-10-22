@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.5: [apps/docs/content/concepts/features/actions_v2.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/concepts/features/actions_v2.mdx)
+> Pinned source for ZITADEL v4.20.0: [apps/docs/content/concepts/features/actions_v2.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/concepts/features/actions_v2.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/features/actions_v2
 
 By using ZITADEL Actions v2, you can modify ZITADEL's behavior on specific API calls, events, or functions. This is useful when you have special business requirements that ZITADEL does not support out-of-the-box.

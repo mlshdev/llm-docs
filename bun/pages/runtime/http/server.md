@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/runtime/http/server.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/http/server.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/runtime/http/server.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/http/server.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/http/server
 
 # Server
@@ -106,7 +106,13 @@ Read the chosen port from the server's `port` or `url` property.
 
 ```ts
 console.log(server.port); // 3000
-console.log(server.url); // http://localhost:3000
+console.log(server.url.href); // http://localhost:3000/
+```
+
+`server.url` is a `URL`, and its `href` ends with `/`. To build the URL of a path, resolve the path against it. `${server.url}/users` is `http://localhost:3000//users`, with two slashes.
+
+```ts
+await fetch(new URL("/users", server.url)); // http://localhost:3000/users
 ```
 
 ### Configuring a default port
@@ -348,7 +354,7 @@ await server.stop();
 await server.stop(true);
 ```
 
-By default, `stop()` allows in-flight requests and WebSocket connections to complete. The server closes idle keep-alive connections immediately. Connections with a request in flight close once the server has sent their response. Pass `true` to immediately terminate all connections instead. The returned promise resolves once every connection has closed.
+By default, `stop()` allows in-flight requests and WebSocket connections to complete. The server closes idle keep-alive connections immediately. Connections with a request in flight close once the server has sent their response. Pass `true` to immediately terminate all connections instead. Open WebSockets close with code `1001`. The returned promise resolves once every connection has closed.
 
 ### `server.closeIdleConnections()`
 
@@ -540,7 +546,7 @@ import type { Post } from "./types.ts";
 import { Database } from "bun:sqlite";
 
 const db = new Database("posts.db");
-db.exec(`
+db.run(`
   CREATE TABLE IF NOT EXISTS posts (
     id TEXT PRIMARY KEY,
     title TEXT NOT NULL,
@@ -608,7 +614,7 @@ export interface Post {
 interface Server extends Disposable {
   /**
    * Stop the server from accepting new connections.
-   * @param closeActiveConnections If true, immediately terminates all connections
+   * @param closeActiveConnections If true, immediately terminates all connections (WebSockets close with code 1001)
    * @returns Promise that resolves when the server has stopped
    */
   stop(closeActiveConnections?: boolean): Promise<void>;
@@ -645,11 +651,12 @@ interface Server extends Disposable {
 
   /**
    * Publish a message to all WebSocket clients subscribed to a topic.
+   * @param compress Defaults to true, unlike ws.send() and ws.publish(). Only applies to clients that negotiated perMessageDeflate
    * @returns Bytes sent, 0 if dropped, -1 if backpressure applied
    */
   publish(
     topic: string,
-    data: string | ArrayBufferView | ArrayBuffer | SharedArrayBuffer,
+    data: string | ArrayBufferView | ArrayBuffer | SharedArrayBuffer | Blob,
     compress?: boolean,
   ): ServerWebSocketSendStatus;
 
@@ -703,10 +710,10 @@ interface Server extends Disposable {
 }
 
 interface WebSocketHandler<T = undefined> {
-  /** Maximum WebSocket message size in bytes */
+  /** Maximum size of a received message in bytes (default 16 MB) */
   maxPayloadLength?: number;
 
-  /** Bytes of queued messages before applying backpressure */
+  /** Bytes buffered on one connection before send() drops messages (default 16 MB, 0 for no limit) */
   backpressureLimit?: number;
 
   /** Whether to close connection when backpressure limit hit */
@@ -715,7 +722,7 @@ interface WebSocketHandler<T = undefined> {
   /** Called when backpressure is relieved */
   drain?(ws: ServerWebSocket<T>): void | Promise<void>;
 
-  /** Seconds before idle timeout */
+  /** Seconds before idle timeout, 0 to 960 (default 120, 0 to disable) */
   idleTimeout?: number;
 
   /** Enable per-message deflate compression */
@@ -726,7 +733,7 @@ interface WebSocketHandler<T = undefined> {
         decompress?: WebSocketCompressor | boolean;
       };
 
-  /** Send ping frames to keep connection alive */
+  /** Send a ping frame before the idle timeout to keep the connection alive */
   sendPings?: boolean;
 
   /** Whether ws.publish() also sends the message to the socket that published it, if subscribed */
@@ -736,7 +743,7 @@ interface WebSocketHandler<T = undefined> {
   open?(ws: ServerWebSocket<T>): void | Promise<void>;
 
   /** Called when message received */
-  message(ws: ServerWebSocket<T>, message: string | Buffer): void | Promise<void>;
+  message?(ws: ServerWebSocket<T>, message: string | Buffer): void | Promise<void>;
 
   /** Called when connection closed */
   close?(ws: ServerWebSocket<T>, code: number, reason: string): void | Promise<void>;
@@ -746,6 +753,9 @@ interface WebSocketHandler<T = undefined> {
 
   /** Called when pong frame received */
   pong?(ws: ServerWebSocket<T>, data: Buffer): void | Promise<void>;
+
+  /** Called when one of the other handlers throws */
+  error?(error: Error, ws: ServerWebSocket<T>): void | Promise<void>;
 }
 
 interface TLSOptions {
@@ -754,6 +764,9 @@ interface TLSOptions {
 
   /** Server certificate */
   cert?: string | Buffer | BunFile | Array<string | Buffer | BunFile>;
+
+  /** Certificate revocation lists */
+  crl?: string | Buffer | BunFile | Array<string | Buffer | BunFile>;
 
   /** Path to DH parameters file */
   dhParamsFile?: string;
@@ -766,6 +779,12 @@ interface TLSOptions {
 
   /** Private key passphrase */
   passphrase?: string;
+
+  /** Refuse a peer whose certificate does not verify (default: true) */
+  rejectUnauthorized?: boolean;
+
+  /** Ask clients for a certificate (default: false) */
+  requestCert?: boolean;
 
   /** OpenSSL options flags */
   secureOptions?: number;

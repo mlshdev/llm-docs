@@ -1,19 +1,19 @@
-# yt-dlp 2026.08.19
+# yt-dlp 2026.10.21
 
-> Documentation generated from the latest stable release of [yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp) and pinned to immutable source commit `3a08beaf031ab68f966401ead017ac81fe8486cf`.
+> Documentation generated from the latest stable release of [yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp) and pinned to immutable source commit `6ccd977303412151ee23352c6257dd658ffc1987`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for yt-dlp 2026.08.19.
+- [Full documentation](llms-full.txt): Complete normalized corpus for yt-dlp 2026.10.21.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Release-authored Markdown is normalized directly; generated binaries, man pages, and shell completions are omitted.
 - The supported-site catalog is retained as a separate reference page.
 
 ## Manual
 
-- [INSTALLATION](pages/README.md): ![Release version](#installation "Installation") ![Python Version](https://github.com/yt-dlp/yt-dlp/blob/master/pyproject.toml "Python Version") ![PyPI](https://pypi.org/project/yt-dlp "PyPI") ![Discord](https://discord… (178162 bytes)
+- [INSTALLATION](pages/README.md): ![Release version](#installation "Installation") ![Python Version](https://github.com/yt-dlp/yt-dlp/blob/master/pyproject.toml "Python Version") ![PyPI](https://pypi.org/project/yt-dlp "PyPI") ![Discord](https://discord… (178223 bytes)
 
 ## Reference
 
 - [CONTRIBUTING TO YT-DLP](pages/CONTRIBUTING.md): This project strictly forbids the usage of LLMs, agents, or any other AI tools for any kind of contribution. (39385 bytes)
 - [Maintainers](pages/Maintainers.md): This file lists the maintainers of yt-dlp and their major contributions. See the Changelog for more details. (4843 bytes)
-- [Changelog](pages/Changelog.md): Adds support for HTTPS proxies and persistent connections (keep-alive) (774018 bytes)
-- [Supported sites](pages/supportedsites.md): Below is a list of all extractors that are currently included with yt-dlp. If a site is not listed here, it might still be supported by yt-dlp's embed extraction or generic extractor. Not all sites listed here are guara… (57175 bytes)
+- [Changelog](pages/Changelog.md): Adds support for HTTPS proxies and persistent connections (keep-alive) (784761 bytes)
+- [Supported sites](pages/supportedsites.md): Below is a list of all extractors that are currently included with yt-dlp. If a site is not listed here, it might still be supported by yt-dlp's embed extraction or generic extractor. Not all sites listed here are guara… (57234 bytes)

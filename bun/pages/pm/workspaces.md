@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/pm/workspaces.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/workspaces.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/pm/workspaces.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/workspaces.mdx)
 > Canonical documentation: https://bun.com/docs/pm/workspaces
 
 Bun supports [`workspaces`](https://docs.npmjs.com/cli/v9/using-npm/workspaces?v=true#description) in `package.json`. With workspaces, you develop several independent packages in a single repository, a *monorepo*.
@@ -52,6 +52,8 @@ The `"workspaces"` key in the root `package.json` lists the subdirectories to tr
 }
 ```
 
+A negative pattern removes what the globs match, wherever it is in the list. `!dir/**` removes `dir` and everything below it. A negative pattern does not remove a directory that is listed by its path. `bun run --filter` and `--workspaces` skip the excluded packages too.
+
 Each workspace has its own `package.json`. To reference another package in the monorepo, use a semver range or the workspace protocol (for example `workspace:*`) as the version in your `package.json`.
 
 ```json packages/pkg-a/package.json icon="file-json"
@@ -63,6 +65,12 @@ Each workspace has its own `package.json`. To reference another package in the m
   }
 }
 ```
+
+`workspace:*` on the name of the root package links the root package.
+
+A workspace needs a `"name"`. Bun skips a matched `package.json` that has no `"name"`, such as a test fixture containing only `{ "type": "module" }`. Bun does not link the skipped directory into `node_modules` and does not install its dependencies. If the skipped `package.json` declares dependencies, `bun install` prints a warning that names the directory.
+
+A workspace can be outside the directory of the root `package.json`, for example `"../shared"` or a symlink that points there. It works like any other workspace: other packages can depend on it, `bun.lock` lists it, and `bun install` installs its dependencies and runs its scripts. Another project may own that directory, so [`bun prune`](https://bun.com/docs/pm/cli/prune) doesn't clean its `node_modules`, and switching linkers doesn't move it aside.
 
 `bun install` installs dependencies for all workspaces in the monorepo, de-duplicating packages if possible. To install dependencies for specific workspaces only, use the `--filter` flag.
 
@@ -86,6 +94,21 @@ A specific version takes precedence over the package's `package.json` version:
 
 ```
 "workspace:1.0.2" -> "1.0.2" // Even if current version is 1.0.1
+```
+
+You can also reference a workspace package by the path of its directory. The path is relative to the `package.json` that declares the dependency. Bun publishes the version of the package in that directory. When the dependency name differs from the package name, Bun publishes an `npm:` alias:
+
+```
+"pkg-b": "workspace:../pkg-b" -> "pkg-b": "1.0.1"
+"b": "workspace:../pkg-b"     -> "b": "npm:pkg-b@1.0.1"
+```
+
+To install a workspace package under a different name, put the package name in front of the version: `workspace:<name>@<version>`. Bun publishes these as `npm:` aliases too:
+
+```
+"b": "workspace:pkg-b@*"     -> "b": "npm:pkg-b@1.0.1"
+"b": "workspace:pkg-b@^"     -> "b": "npm:pkg-b@^1.0.1"
+"b": "workspace:pkg-b@1.0.1" -> "b": "npm:pkg-b@1.0.1"
 ```
 
 Workspaces have a few major benefits.

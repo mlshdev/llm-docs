@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/runtime/glob.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/glob.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/runtime/glob.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/glob.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/glob
 
 # Glob
@@ -28,6 +28,8 @@ const glob = new Glob("*.ts");
 glob.match("index.ts"); // => true
 glob.match("index.js"); // => false
 ```
+
+To match many paths against one pattern, create the `Glob` once and reuse it. With any pattern, the time `match()` takes grows linearly with the length of the path.
 
 The `Glob` class implements the following interface:
 
@@ -141,7 +143,43 @@ glob.match("c.ts"); // => true
 glob.match("d.ts"); // => false
 ```
 
-You can nest these patterns up to 10 levels deep, and they can contain any of the earlier wildcards.
+You can nest these patterns to any depth, and they can contain any of the other wildcards.
+
+### `{1..3}` - Match a range of numbers or letters
+
+```ts
+const glob = new Glob("v{1..3}.ts");
+glob.match("v1.ts"); // => true
+glob.match("v3.ts"); // => true
+glob.match("v4.ts"); // => false
+```
+
+| Pattern     | Matches                             |
+| ----------- | ----------------------------------- |
+| `{1..3}`    | `1`, `2`, `3`                       |
+| `{01..10}`  | `01`, `02`, ..., `10` (zero-padded) |
+| `{1..9..2}` | `1`, `3`, `5`, `7`, `9` (step of 2) |
+| `{a..e}`    | `a`, `b`, `c`, `d`, `e`             |
+
+### `@(a|b)` - Extended glob patterns
+
+A `?`, `*`, `+`, `@` or `!` directly before a parenthesized list of patterns says how many of them to match.
+
+| Pattern   | Matches                                        |
+| --------- | ---------------------------------------------- |
+| `?(a\|b)` | zero or one of the patterns                    |
+| `*(a\|b)` | zero or more of the patterns                   |
+| `+(a\|b)` | one or more of the patterns                    |
+| `@(a\|b)` | exactly one of the patterns                    |
+| `!(a\|b)` | anything in a path segment except the patterns |
+
+```ts
+const glob = new Glob("!(*.test).ts");
+glob.match("index.ts"); // => true
+glob.match("index.test.ts"); // => false
+```
+
+Parentheses without one of these prefixes are literal, so `app/(marketing)/**` matches the directory `app/(marketing)`.
 
 ### `!` - Negates the result at the start of a pattern
 

@@ -1,4 +1,4 @@
-> Pinned source for yt-dlp 2026.08.19: [supportedsites.md](https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/supportedsites.md)
+> Pinned source for yt-dlp 2026.10.21: [supportedsites.md](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/supportedsites.md)
 
 # Supported sites
 
@@ -627,8 +627,10 @@ The only reliable way to check if a site is supported is to try it.
 - **Kenh14Video**
 - **khanacademy**
 - **khanacademy:unit**
+- **kick:clip**
 - **kick:clips**
 - **kick:live**
+- **kick:videos**
 - **kick:vod**
 - **Kicker**
 - **KickStarter**
@@ -885,6 +887,7 @@ The only reliable way to check if a site is supported is to try it.
 - **nhl.com**
 - **nick.com**
 - **niconico**: [*niconico*](#supported-sites "netrc machine") ニコニコ動画
+- **niconico:channel**: [*niconico*](#supported-sites "netrc machine")
 - **niconico:history**: NicoNico user history or likes. Requires cookies.
 - **niconico:live**: [*niconico*](#supported-sites "netrc machine") ニコニコ生放送
 - **niconico:playlist**
@@ -1431,7 +1434,7 @@ The only reliable way to check if a site is supported is to try it.
 - **Tube8**: (**Currently broken**)
 - **TubeTuGraz**: [*tubetugraz*](#supported-sites "netrc machine") tube.tugraz.at
 - **TubeTuGrazSeries**: [*tubetugraz*](#supported-sites "netrc machine")
-- **tubitv**: [*tubitv*](#supported-sites "netrc machine")
+- **tubitv**
 - **tubitv:series**
 - **Tumblr**: [*tumblr*](#supported-sites "netrc machine")
 - **tunein:embed**

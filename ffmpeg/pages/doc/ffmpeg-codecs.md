@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/9bab434b5f618e145a2a0e16911b539a481d29c4/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/179d08349347e00b2a24593cfa8b3cbbde2a6cfb/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -5290,6 +5290,679 @@ MPEG-2 video encoder.
 - a53cc *boolean*
   Import closed captions (which must be ATSC compatible format) into output.
   Default is 1 (on).
+
+## NVENC encoders
+
+The `h264_nvenc`, `hevc_nvenc` and `av1_nvenc` encoders use
+NVIDIA NVENC hardware to encode H.264, HEVC and AV1 video, respectively.
+Building them requires the `ffnvcodec` headers provided by
+[nv-codec-headers](https://code.ffmpeg.org/FFmpeg/nv-codec-headers).
+They are autodetected by configure; they can also be enabled explicitly
+with `--enable-ffnvcodec` and `--enable-nvenc`.
+
+Available options and values depend on the SDK version exposed by the headers
+at build time. Feature checks in `libavcodec/nvenc.h` distinguish SDK
+versions 12.0, 12.1, 12.2, 13.0 and 13.1. Runtime support also depends on the
+GPU and driver. Use `ffmpeg -h encoder=hevc_nvenc`, or substitute
+`h264_nvenc` or `av1_nvenc`, to list the options, devices and pixel
+formats available in a particular build.
+
+### Hardware input and devices
+
+These encoders accept system-memory frames and CUDA hardware frames
+(`AV_PIX_FMT_CUDA`). Builds using SDK 13.1 or newer also accept CUDA array
+frames (`AV_PIX_FMT_CUARRAY`). Builds with `d3d11va` support accept
+D3D11 hardware frames (`AV_PIX_FMT_D3D11`). The input pixel format and
+encoding features must be supported by the selected GPU.
+
+For CUDA decoding followed by encoding, use the input options
+`-hwaccel cuda -hwaccel_output_format cuda` to keep decoded frames on
+the device. A hardware device can also be created with `-init_hw_device`
+and supplied to the encoder, directly or through its hardware frames context.
+For system-memory input without a supplied hardware device, the encoder
+option `gpu` selects the device. See its entry under
+nvenc\_other\_options below.
+
+### Generic options
+
+Several generic encoding options are mapped to NVENC settings. The bitrate
+options `b`, `maxrate` and `bufsize` set the average
+bitrate, the maximum bitrate and the VBV buffer size; the NVENC default for
+`b` is `2M`. `g` sets the GOP length, with 0 requesting
+intra-only encoding. `bf` sets the number of B-frames between
+non-B-frames. `refs` sets the number of reference frames in each
+reference list. `g` and `bf` default to `-1` and
+`refs` defaults to 0; these defaults leave the values of the preset
+unchanged.
+
+The generic `qmin` and `qmax` options are honoured in VBR mode
+with a warning; API users should set the encoder options of the same names
+listed below instead.
+
+Only applications calling the libavcodec API can change
+`AVCodecContext.bit_rate`, `AVCodecContext.rc_max_rate` and
+`AVCodecContext.rc_buffer_size` during encoding. The encoder checks
+these fields before encoding each frame. When dynamic bitrate changes are
+supported and rate control is not `constqp`, changed positive values
+trigger reconfiguration, reset the encoder and force an IDR.
+A change to the display aspect ratio also triggers reconfiguration.
+
+### Common options
+
+The following option names are shared by all three encoders. Differences in
+values and build requirements are noted below. Boolean options accept 0
+(disabled) and 1 (enabled), unless otherwise stated.
+
+#### Presets and tuning
+
+- preset *integer*
+  Select the encoding preset using a named value from the table (recommended)
+  or its integer. The range is `0` to `9`; the default is
+  `p4` (6).
+
+  - slow
+    Deprecated alias for high quality with two passes (0).
+  - medium
+    Deprecated alias for high quality with one pass (1).
+  - fast
+    Deprecated alias for high performance with one pass (2).
+  - p1
+    Fastest, lowest quality (3).
+  - p2
+    Faster, lower quality (4).
+  - p3
+    Fast, low quality (5).
+  - p4
+    Medium (6); the default.
+  - p5
+    Slow, good quality (7).
+  - p6
+    Slower, better quality (8).
+  - p7
+    Slowest, best quality (9).
+
+Use `p1` through `p7` with `tune` and `multipass`
+instead of the deprecated aliases.
+
+- tune *integer*
+  Select encoding tuning using a named value from the table (recommended)
+  or its integer. The default is `hq` (1).
+
+H.264 accepts `1` to `4`; HEVC and AV1 also expose `uhq` when
+built with the required SDK.
+
+- hq
+  High quality (1).
+- ll
+  Low latency (2).
+- ull
+  Ultra low latency (3).
+- lossless
+  Lossless (4).
+- uhq
+  Ultra high quality (5).
+
+HEVC requires SDK 12.2 or newer; AV1 requires SDK 13.0 or newer. Not available
+for H.264.
+
+#### Rate control
+
+- rc *integer*
+  Override preset rate control using a named value from the table
+  (recommended) or its integer. The range is `-1` to `INT_MAX`;
+  the default is `-1` (no explicit override).
+
+  - constqp
+    Constant QP (0).
+  - vbr
+    Variable bitrate (1).
+  - cbr
+    Constant bitrate (2).
+
+- multipass *integer*
+  Select multipass encoding using a named value from the table (recommended)
+  or its integer. The range is `0` to `2`; the default is
+  `disabled` (0).
+
+  - disabled
+    Single pass (0).
+  - qres
+    Two passes, with the first pass at quarter resolution (1).
+  - fullres
+    Two passes, with the first pass at full resolution (2).
+
+- cq *float*
+  Set the target quality for constant quality mode in VBR rate control.
+  The default is 0 (automatic).
+
+The range is `0` to `51` for H.264 and HEVC, or `0` to
+`63` for AV1.
+
+- qp *integer*
+  Set the constant quantization parameter. The default is `-1` (unset).
+
+The range is `-1` to `51` for H.264 and HEVC, or `-1` to
+`255` for AV1.
+
+- init\_qpP *integer*
+- init\_qpB *integer*
+- init\_qpI *integer*
+  Set the initial QP for P-, B- and I-frames, respectively. Each defaults to
+  `-1` (unset).
+
+The range is `-1` to `51` for H.264 and HEVC, or `-1` to
+`255` for AV1.
+
+- qmin *integer*
+- qmax *integer*
+  Set the minimum and maximum QP used for rate control. Each defaults to
+  `-1` (unset).
+
+The range is `-1` to `51` for H.264 and HEVC, or `-1` to
+`255` for AV1.
+
+- qp\_cb\_offset *integer*
+
+- qp\_cr\_offset *integer*
+  Set the chroma QP offsets for the Cb and Cr channels, respectively. Each
+  accepts `-12` to `12` and defaults to 0.
+
+- strict\_gop *boolean*
+  Minimize GOP-to-GOP rate fluctuations. The default is 0.
+
+- ldkfs *integer*
+  Set the low-delay keyframe scale, which specifies the scene-change frame
+  size increase allowed with a single-frame VBV buffer and CBR. The range is
+  `0` to `255` and the default is 0.
+
+- cbr\_padding *boolean*
+  Pad the bitstream to prevent the bitrate falling below the target in CBR
+  mode. The default is 0.
+
+#### Lookahead, adaptive quantization and B-frames
+
+- rc-lookahead *integer*
+  Set the number of frames to look ahead for rate control. The range is `0`
+  to `INT_MAX` and the default is 0.
+
+- lookahead\_level *integer*
+  Set the lookahead level using a named value from the table (recommended)
+  or its integer. Higher levels may improve quality at the expense of
+  performance. Requires SDK 12.2 or newer. The range is `-1` to
+  `15`; the default is `-1` (no override).
+
+  - 0
+  - 1
+  - 2
+  - 3
+    Select the corresponding lookahead level.
+  - auto
+    Automatic selection (15).
+
+- no-scenecut *boolean*
+  Disable adaptive I-frame insertion at scene cuts when lookahead is enabled.
+  The default is 0.
+
+- b\_adapt *boolean*
+  Enable adaptive B-frame decisions when lookahead is enabled. The default is 1.
+
+- spatial-aq *boolean*
+  Enable spatial adaptive quantization. The default is 0.
+
+- temporal-aq *boolean*
+  Enable temporal adaptive quantization. The default is 0.
+
+- aq-strength *integer*
+  Set spatial adaptive quantization strength when `spatial-aq` is
+  enabled, from `1` (low) to `15` (aggressive). The default is 8.
+
+- b\_ref\_mode *integer*
+  Select the use of B-frames as references using a named value from the table
+  (recommended) or its integer. The default is `-1` (no override).
+
+H.264 and HEVC accept `-1` to `2`. AV1 accepts `-1` to
+`4` with SDK 13.1 or newer, or `-1` to `2` with older headers.
+
+- disabled
+  Do not use B-frames as references (0).
+- each
+  Use each B-frame as a reference (1).
+- middle
+  For H.264 and HEVC, use only half the B-frames as references (2).
+
+For AV1, use every other B-frame as an Altref2 reference (2), except the last
+in the Altref interval.
+
+- hierarchical
+  Use B-frames as references hierarchically (4).
+
+AV1 only; requires SDK 13.1 or newer.
+
+- weighted\_pred *integer*
+  Enable weighted prediction with 1, or disable it with 0 (the default).
+
+This is a boolean option for AV1.
+
+- tf\_level *integer*
+  Set temporal filtering strength. The range is `-1` to `INT_MAX`; the
+  default is `-1` (no override).
+
+Requires SDK 12.2 or newer for HEVC, or SDK 13.0 or newer for H.264 and AV1.
+
+- 0
+- 4
+  Select the corresponding temporal filtering strength.
+
+#### SEI and side data
+
+- extra\_sei *boolean*
+  Pass extra frame side data. The default is 1.
+
+H.264 and HEVC use SEI payloads; AV1 uses metadata OBUs. This gates the
+payload array used for `a53cc`, HEVC and AV1 `s12m_tc`, and
+H.264 and HEVC `udu_sei`.
+
+- a53cc *boolean*
+  Use `AV_FRAME_DATA_A53_CC` side data for A53 closed captions when
+  available. Requires `extra_sei`. The default is 1.
+
+H.264 and HEVC carry it in ITU-T T.35 registered user-data SEI;
+AV1 uses an ITU-T T.35 metadata OBU.
+
+- s12m\_tc *boolean*
+  Use `AV_FRAME_DATA_S12M_TIMECODE` side data when available.
+  The default is 1.
+
+H.264 uses picture timing and requires SDK 12.2 or newer; HEVC uses timecode
+SEI; AV1 uses timecode metadata OBUs. The HEVC and AV1 paths require
+`extra_sei`; the H.264 path is independent of it.
+
+With SDK 13.0 or newer, HEVC and AV1 also support mastering-display and
+content-light-level metadata. The corresponding
+`AV_FRAME_DATA_MASTERING_DISPLAY_METADATA` and
+`AV_FRAME_DATA_CONTENT_LIGHT_LEVEL` entries in
+`AVCodecContext.decoded_side_data` enable output at initialization.
+Frame side data supplies per-frame values, falling back to those stream
+values when absent. This path is independent of `extra_sei`.
+
+<a id="nvencotheroptions"></a>
+
+#### Other common options
+
+- level *integer*
+  Set the encoding level restriction using a named value (recommended) or
+  its integer. The tables below list the values, numeric ranges and default
+  integers for each codec. The default is `auto` (0 for H.264 and HEVC,
+  24 for AV1).
+
+- gpu *integer*
+  Select the NVENC-capable GPU for system-memory input without a supplied
+  hardware device using a named value from the table (recommended) or its
+  integer. Device indices start at 0. The range is `-2` to
+  `INT_MAX` and the default is `any` (-1).
+
+  - list
+    List the available devices (-2).
+  - any
+    Use the first available device (-1).
+
+- surfaces *integer*
+  Set the number of concurrent surfaces, from `0` to `64`. The default
+  is 0 (automatic).
+
+- delay *integer*
+  Delay frame output by the specified number of frames, from `0` to
+  `INT_MAX`. The default is `INT_MAX`; the actual delay is limited
+  by the number of surfaces.
+
+- rgb\_mode *integer*
+  Select how packed RGB input is handled using a named value from the table
+  (recommended) or its integer. The range is `0` to `INT_MAX`;
+  the default is `yuv420` (1).
+
+  - disabled
+    Reject packed RGB input (0).
+  - yuv420
+    Convert to YUV 4:2:0 (1).
+  - yuv444
+    Convert to YUV 4:4:4 (2).
+
+- highbitdepth *boolean*
+  Enable 10-bit encoding for 8-bit input. The default is 0.
+
+For H.264 this requires SDK 13.0 or newer.
+
+- forced-idr *boolean*
+  When forcing keyframes, force IDR frames. The range is `-1` to `1` and
+  the default is 0. A value of `-1` leaves the picture-type decision to
+  the encoder.
+
+- zerolatency *boolean*
+  Request zero-latency operation with no reordering delay. The default is 0.
+
+- nonref\_p *boolean*
+  Enable automatic insertion of non-reference P-frames. The default is 0.
+
+- dpb\_size *integer*
+  Set the decoded picture buffer size, from `0` to `INT_MAX`. The
+  default is 0 (automatic).
+
+- intra-refresh *boolean*
+  Use periodic intra refresh instead of IDR frames. The default is 0.
+
+### H.264 and HEVC options
+
+The following options are available for `h264_nvenc` and
+`hevc_nvenc` only.
+
+- aud *boolean*
+  Use access unit delimiters. The default is 0.
+
+- bluray-compat *boolean*
+  Enable Blu-ray compatibility workarounds. The default is 0.
+
+- udu\_sei *boolean*
+  Pass `AV_FRAME_DATA_SEI_UNREGISTERED` frame side data as unregistered
+  user-data SEI. Requires `extra_sei`. The default is 0.
+
+- single-slice-intra-refresh *boolean*
+  Use single-slice intra refresh. This also enables `intra-refresh`.
+  The default is 0.
+
+- max\_slice\_size *integer*
+  Set the maximum encoded slice size in bytes, from `0` to `INT_MAX`.
+  The default is 0 (no override).
+
+- constrained-encoding *boolean*
+  Enable constrained-frame encoding, making each slice in a constrained
+  picture independent of the other slices. The default is 0.
+
+### HEVC and AV1 options
+
+The following option is available for `hevc_nvenc` and
+`av1_nvenc` only.
+
+- split\_encode\_mode *integer*
+  Set split-frame encoding mode using a named value from the table
+  (recommended) or its integer. Requires SDK 12.1 or newer. The range is
+  `0` to `15` and the default is `auto` (0).
+
+  - auto
+    Enable or disable it according to the preset and tuning (0).
+  - forced
+    Enable it with the number of horizontal strips selected by the driver (1).
+  - 2
+    Force two horizontal strips when more than one NVENC engine is available (2).
+  - 3
+    Force three horizontal strips when more than two NVENC engines are
+    available (3).
+  - 4
+    Force four horizontal strips when more than three NVENC engines are
+    available (4). Requires SDK 13.0 or newer.
+  - disabled
+    Disable split encoding (15).
+
+### H.264 options
+
+- profile *integer*
+  Set the H.264 profile using a named value from the table (recommended)
+  or its integer. The default is `high` (2).
+
+  - baseline
+    baseline profile (0).
+  - main
+    main profile (1).
+  - high
+    high profile (2).
+  - high10
+    high10 profile (3).
+  - high422
+    high422 profile (4).
+  - high444p
+    high444p profile (5).
+
+The `high10` and `high422` values require SDK 13.0 or newer.
+With headers older than SDK 13.0, `high444p` has integer value 3
+instead of 5.
+
+- level *integer*
+  Set the H.264 level restriction using a named value from the table
+  (recommended) or its integer. The range is `0` to `62`; the
+  default is `auto` (0).
+
+  - auto
+    Automatic selection (0).
+  - 1b
+    Level 1b (9).
+  - 1.0b
+    Level 1.0b (9).
+  - 1
+    Level 1 (10).
+  - 1.0
+    Level 1.0 (10).
+  - 1.1
+    Level 1.1 (11).
+  - 1.2
+    Level 1.2 (12).
+  - 1.3
+    Level 1.3 (13).
+  - 2
+    Level 2 (20).
+  - 2.0
+    Level 2.0 (20).
+  - 2.1
+    Level 2.1 (21).
+  - 2.2
+    Level 2.2 (22).
+  - 3
+    Level 3 (30).
+  - 3.0
+    Level 3.0 (30).
+  - 3.1
+    Level 3.1 (31).
+  - 3.2
+    Level 3.2 (32).
+  - 4
+    Level 4 (40).
+  - 4.0
+    Level 4.0 (40).
+  - 4.1
+    Level 4.1 (41).
+  - 4.2
+    Level 4.2 (42).
+  - 5
+    Level 5 (50).
+  - 5.0
+    Level 5.0 (50).
+  - 5.1
+    Level 5.1 (51).
+  - 5.2
+    Level 5.2 (52).
+  - 6.0
+    Level 6.0 (60).
+  - 6.1
+    Level 6.1 (61).
+  - 6.2
+    Level 6.2 (62).
+
+- coder *integer*
+  Set the entropy coder using a named value from the table (recommended)
+  or its integer. The range is `-1` to `2`; the default is
+  `default` (-1).
+
+  - default
+    Leave the preset entropy coding mode unchanged (-1).
+  - auto
+    Automatic selection (0).
+  - cabac
+  - ac
+    CABAC (1).
+  - cavlc
+  - vlc
+    CAVLC (2).
+
+### HEVC options
+
+- profile *integer*
+  Set the HEVC profile using a named value from the table (recommended)
+  or its integer. The default is `main` (0).
+
+  - main
+    main profile (0).
+  - main10
+    main10 profile (1).
+  - rext
+    rext profile (2).
+  - mv
+    mv profile (3).
+
+The `mv` value requires SDK 13.0 or newer.
+
+- level *integer*
+  Set the HEVC level restriction using a named value from the table
+  (recommended) or its integer. The range is `0` to `186`; the
+  default is `auto` (0).
+
+  - auto
+    Automatic selection (0).
+  - 1
+    Level 1 (30).
+  - 1.0
+    Level 1.0 (30).
+  - 2
+    Level 2 (60).
+  - 2.0
+    Level 2.0 (60).
+  - 2.1
+    Level 2.1 (63).
+  - 3
+    Level 3 (90).
+  - 3.0
+    Level 3.0 (90).
+  - 3.1
+    Level 3.1 (93).
+  - 4
+    Level 4 (120).
+  - 4.0
+    Level 4.0 (120).
+  - 4.1
+    Level 4.1 (123).
+  - 5
+    Level 5 (150).
+  - 5.0
+    Level 5.0 (150).
+  - 5.1
+    Level 5.1 (153).
+  - 5.2
+    Level 5.2 (156).
+  - 6
+    Level 6 (180).
+  - 6.0
+    Level 6.0 (180).
+  - 6.1
+    Level 6.1 (183).
+  - 6.2
+    Level 6.2 (186).
+
+- tier *integer*
+  Set the HEVC encoding tier using a named value from the table (recommended)
+  or its integer. The range is `0` to `1`; the default is
+  `main` (0).
+
+  - main
+    Main tier (0).
+  - high
+    High tier (1).
+
+- unidir\_b *boolean*
+  Enable unidirectional B-frames. Requires SDK 12.2 or newer. The default is 0.
+
+### AV1 options
+
+- level *integer*
+  Set the AV1 level restriction using a named value from the table
+  (recommended) or its integer. The range is `0` to `24`; the
+  default is `auto` (24).
+
+  - 2
+    Level 2 (0).
+  - 2.0
+    Level 2.0 (0).
+  - 2.1
+    Level 2.1 (1).
+  - 2.2
+    Level 2.2 (2).
+  - 2.3
+    Level 2.3 (3).
+  - 3
+    Level 3 (4).
+  - 3.0
+    Level 3.0 (4).
+  - 3.1
+    Level 3.1 (5).
+  - 3.2
+    Level 3.2 (6).
+  - 3.3
+    Level 3.3 (7).
+  - 4
+    Level 4 (8).
+  - 4.0
+    Level 4.0 (8).
+  - 4.1
+    Level 4.1 (9).
+  - 4.2
+    Level 4.2 (10).
+  - 4.3
+    Level 4.3 (11).
+  - 5
+    Level 5 (12).
+  - 5.0
+    Level 5.0 (12).
+  - 5.1
+    Level 5.1 (13).
+  - 5.2
+    Level 5.2 (14).
+  - 5.3
+    Level 5.3 (15).
+  - 6
+    Level 6 (16).
+  - 6.0
+    Level 6.0 (16).
+  - 6.1
+    Level 6.1 (17).
+  - 6.2
+    Level 6.2 (18).
+  - 6.3
+    Level 6.3 (19).
+  - 7
+    Level 7 (20).
+  - 7.0
+    Level 7.0 (20).
+  - 7.1
+    Level 7.1 (21).
+  - 7.2
+    Level 7.2 (22).
+  - 7.3
+    Level 7.3 (23).
+  - auto
+    Automatic selection (24).
+
+- tier *integer*
+  Set the AV1 encoding tier, from `0` to `1`. The default is 0.
+
+  - 0
+    Tier 0.
+  - 1
+    Tier 1.
+
+- tile-rows *integer*
+
+- tile-columns *integer*
+  Set the number of tile rows and columns, respectively. Each accepts
+  `-1` to `64` and defaults to `-1` (no override).
+
+- timing-info *boolean*
+  Include timing information in sequence and frame headers. The default is 0.
 
 ## png
 

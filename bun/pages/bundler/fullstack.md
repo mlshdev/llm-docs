@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/bundler/fullstack.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/bundler/fullstack.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/bundler/fullstack.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/bundler/fullstack.mdx)
 > Canonical documentation: https://bun.com/docs/bundler/fullstack
 
 To get started, import HTML files and pass them to the `routes` option in `Bun.serve()`.
@@ -554,7 +554,7 @@ import dashboard from "./public/dashboard.html";
 
 // Initialize database
 const db = new Database("app.db");
-db.exec(`
+db.run(`
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,

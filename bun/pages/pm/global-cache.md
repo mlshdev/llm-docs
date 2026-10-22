@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/pm/global-cache.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/global-cache.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/pm/global-cache.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/global-cache.mdx)
 > Canonical documentation: https://bun.com/docs/pm/global-cache
 
 Bun stores every package downloaded from the registry in a global cache at `~/.bun/install/cache`, or the path set by the `BUN_INSTALL_CACHE_DIR` environment variable. Packages live in subdirectories named like `${name}@${version}`, so Bun can cache multiple versions of a package.
@@ -8,8 +8,8 @@ Bun stores every package downloaded from the registry in a global cache at `~/.b
 # the directory to use for the cache
 dir = "~/.bun/install/cache"
 
-# when true, don't load from the global cache.
-# Bun may still write to node_modules/.cache
+# when true, don't use the global cache or cached registry metadata (same as `cache = false`).
+# Bun extracts packages to node_modules/.cache instead
 disable = false
 
 # when true, always resolve the latest versions from the registry
@@ -24,7 +24,7 @@ When installing a package, if the cache already contains a version in the range 
 
 If the semver version has a pre-release suffix (`1.0.0-beta.0`) or a build suffix (`1.0.0+20220101`), Bun replaces the suffix with a hash of that value instead, to reduce the chance of errors from long file paths.
 
-When the `node_modules` folder exists, before installing, Bun checks that `node_modules` contains all expected packages with appropriate versions. If so, `bun install` completes. Bun uses a custom JSON parser which stops parsing as soon as it finds `"name"` and `"version"`.
+When the `node_modules` folder exists, before installing, Bun checks that `node_modules` contains all expected packages with appropriate versions. If so, `bun install` completes. The hoisted linker reads `"name"` and `"version"` from each installed `package.json`; the isolated linker checks only that the package's [store entry](https://bun.com/docs/pm/isolated-installs#resolution-algorithm) exists.
 
 If a package is missing or has a version incompatible with the `package.json`, Bun checks for a compatible module in the cache. If the cache has one, Bun installs it into `node_modules`. Otherwise, Bun downloads the package from the registry, then installs it.
 
@@ -48,7 +48,9 @@ Configure this with the `--backend` flag, which all of Bun's package management 
 - **`clonefile`**: Default on macOS.
 - **`clonefile_each_dir`**: Similar to `clonefile`, except it clones each file individually per directory. It is only available on macOS and tends to perform slower than `clonefile`.
 - **`copyfile`**: The fallback used when any of the above fail. It is the slowest option. On macOS, it uses `fcopyfile()`; on Linux it uses `copy_file_range()`.
-- **`symlink`**: Symlinks each file instead of copying it. Only hoisted installs use it: `--backend=symlink` applies it to every package (macOS and Linux; Windows ignores the flag); without the flag, Bun uses it only for `file:` dependencies outside the project directory (for example `file:../foo`) and for transitive `file:` dependencies.
+- **`symlink`**: Symlinks each file instead of copying it. Only hoisted installs use it: `--backend=symlink` applies it to every package (macOS and Linux; Windows ignores the flag); without the flag, Bun uses it only for a package that depends on itself (`"pkg": "file:."`).
+
+`file:` folders, inside or outside the project directory, are hardlinked (copied where that is not possible) without their `node_modules`. `bun install` installs a folder again when a file in it was added, removed or replaced. The packages that a folder lists in `bundleDependencies` are symlinked from its `node_modules`. A folder that a published package ships inside itself (`"dep": "file:./vendor/dep"`) is installed as a single symlink to that folder.
 
 If you install with `--backend=symlink`, Node.js doesn't resolve node\_modules of dependencies unless each dependency has its own `node_modules` folder or you pass `--preserve-symlinks` to `node`. See [Node.js documentation on `--preserve-symlinks`](https://nodejs.org/api/cli.html#--preserve-symlinks).
 

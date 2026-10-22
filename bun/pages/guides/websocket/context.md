@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/guides/websocket/context.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/websocket/context.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/guides/websocket/context.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/guides/websocket/context.mdx)
 > Canonical documentation: https://bun.com/docs/guides/websocket/context
 
 # Set per-socket contextual data on a WebSocket
@@ -36,7 +36,7 @@ Bun.serve({
 
 ***
 
-It's common to read cookies/headers from the incoming request to identify the connecting client.
+It's common to read cookies/headers from the incoming request to identify the connecting client. If you authenticate with a cookie, [check the `Origin` header](https://bun.com/docs/runtime/http/websockets#contextual-data) before calling `server.upgrade()`.
 
 ```ts server.ts icon="/icons/typescript.svg"
 type WebSocketData = {

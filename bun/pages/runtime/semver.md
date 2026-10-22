@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/runtime/semver.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/semver.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/runtime/semver.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/semver.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/semver
 
 # Semver
@@ -35,6 +35,8 @@ semver.satisfies("1.0.0", "1.0.0 - 1.0.1"); // true
 ```
 
 `satisfies` returns `false` if `version` is invalid, or if either argument contains a non-ASCII character. Bun ignores the parts of `range` that it cannot parse. A `range` with no parseable part behaves like `*`.
+
+A major, minor, or patch number above 2^64 - 1 makes a version invalid. No version satisfies a `range` that has such a number before any wildcard.
 
 ## `Bun.semver.order(versionA: string, versionB: string): 0 | 1 | -1`
 

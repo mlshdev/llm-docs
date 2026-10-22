@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/dhi-vex-walkthrough.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/guides/dhi-vex-walkthrough.md)
+> Pinned source for Docker main: [content/guides/dhi-vex-walkthrough.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/guides/dhi-vex-walkthrough.md)
 
 # Explore VEX statements in Docker Hardened Images
 

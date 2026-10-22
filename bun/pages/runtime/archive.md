@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/runtime/archive.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/runtime/archive.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/runtime/archive.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/archive.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/archive
 
 # Archive
@@ -398,10 +398,7 @@ await Bun.write("my-project.tar.gz", archive);
 
 ```ts
 type ArchiveInput =
-  | Record<string, string | Blob | Bun.ArrayBufferView | ArrayBufferLike>
-  | Blob
-  | Bun.ArrayBufferView
-  | ArrayBufferLike;
+  Record<string, string | Blob | Bun.ArrayBufferView | ArrayBufferLike> | Blob | Bun.ArrayBufferView | ArrayBufferLike;
 
 type ArchiveOptions = {
   /** Compression algorithm. Currently only "gzip" is supported. */

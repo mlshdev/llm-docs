@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.5: [apps/docs/content/guides/integrate/token-exchange.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/guides/integrate/token-exchange.mdx)
+> Pinned source for ZITADEL v4.20.0: [apps/docs/content/guides/integrate/token-exchange.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/guides/integrate/token-exchange.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/token-exchange
 
 The Token Exchange grant implements [RFC 8693, OAuth 2.0 Token Exchange](https://www.rfc-editor.org/rfc/rfc8693) and can be used to exchange tokens to a different scope, audience or subject. Changing the subject of an authenticated token is called impersonation or delegation. This guide will explain how token exchange is implemented inside ZITADEL and gives some usage examples.
@@ -110,7 +110,7 @@ We currently allow all token types, except refresh tokens, to be used as subject
 
 The actor parameters are optional and enable impersonation and delegation. At ZITADEL we don't make any distinction between the two concepts, so we call both cases impersonation from this point.The `actor_token` and `actor_token_type` come in a pair. If the actor token is provided, the actor token type must also be specified.
 
-Currently only a valid access token or ID token are allowed as actor token. The user represented by the actor token must have the [impersonation permission](#impersonation-permissions) set, or else the request will be rejected and an error returned.
+Currently only a valid access token or ID token are allowed as actor token. The user represented by the actor token must have the [impersonation permission](#impersonation-permissions) set, or else the request will be rejected and an error returned. Note that `*_END_USER_IMPERSONATOR` roles can only impersonate users without memberships. To impersonate a user with any administrative membership, or for a machine user impersonating itself, an admin impersonator role such as `ORG_ADMIN_IMPERSONATOR` or `IAM_ADMIN_IMPERSONATOR` is required.
 
 #### Requested token type
 
@@ -208,7 +208,7 @@ Next we need to select an application that is allowed to perform Token Exchange.
 >
 > ZITADEL allows any application to use Token Exchange, however we strongly recommend to only configure confidential clients (using either client credentials or JWT assertion) with the Token Exchange grant type. This is because there is some trust placed in the application when it comes to defining scope and that it obtained tokens in a legitimate way. For example, if the app possesses a token of an admin user with impersonation permissions it can obtain tokens for any other user in your instance. It is your responsibility to make sure the application can be trusted with this kind of powers. If you configure a public client with the Token Exchange grant, you risk a leaked token can be used by an attacker who knows the client ID of a granted public client.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/token-exchange/app-token-exchange-grant.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/token-exchange/app-token-exchange-grant.png)
 
 #### Organization layout
 
@@ -466,7 +466,7 @@ We continue with the same application and project layout from the above examples
 
 If you want to impersonate users by Token Exchange, the security settings of the instance must be configured to allow this. Go to "Default settings" and in the sidebar select "Security Settings". Enable the "Allow Impersonation" setting.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/token-exchange/instance-security-impersonation.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/token-exchange/instance-security-impersonation.png)
 
 #### Impersonation permissions
 
@@ -479,9 +479,11 @@ Next, we need to configure which users are allowed to impersonate other users. Z
 | Org Admin Impersonator      | ORG\_ADMIN\_IMPERSONATOR     | Allow impersonation of admin and end users from the organization  |
 | Org Impersonator            | ORG\_END\_USER\_IMPERSONATOR | Allow impersonation of end users from the organization            |
 
+The `*_END_USER_IMPERSONATOR` roles only work for users who have no memberships. If the impersonated user has any administrative membership, you must use an admin impersonator role instead, such as `ORG_ADMIN_IMPERSONATOR` or `IAM_ADMIN_IMPERSONATOR`. The same applies when a machine user impersonates itself: use an admin impersonator role.
+
 In this example we will assign the `ORG_END_USER_IMPERSONATOR` role to a user:
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/token-exchange/org-role-end-user-impersonator.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/token-exchange/org-role-end-user-impersonator.png)
 
 #### Authenticated impersonator tokens
 
@@ -883,7 +885,7 @@ In the user view of the management console, we can see whenever a new access tok
 The existing `Access Token created` event is also used in the case of a token exchange.
 When there was an `actor_token` present during token exchange, we also log a `User impersonated` event.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/token-exchange/user-audit-log.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/token-exchange/user-audit-log.png)
 
 In the [instance event list](https://zitadel.com/docs/concepts/eventstore/overview) the `User impersonated` carries the actor in the payload:
 

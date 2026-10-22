@@ -1,7 +1,7 @@
-> Pinned source for ZITADEL v4.19.5: [apps/docs/content/sdk-examples/client-libraries/php.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/sdk-examples/client-libraries/php.mdx)
+> Pinned source for ZITADEL v4.20.0: [apps/docs/content/sdk-examples/client-libraries/php.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/sdk-examples/client-libraries/php.mdx)
 > Canonical documentation: https://zitadel.com/docs/sdk-examples/client-libraries/php
 
-![php logo](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/tech/php.svg)
+![php logo](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/tech/php.svg)
 
 This guide covers the official Zitadel Management API Client for PHP, which allows you to programmatically manage resources in your Zitadel instance.
 

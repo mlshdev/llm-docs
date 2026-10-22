@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/deactivate-account.md](https://github.com/docker/docs/blob/226023fc89bdeb3f051c4c8c697d04ed5f5bcd2c/content/manuals/accounts/organization/manage/deactivate-account.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/deactivate-account.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/accounts/organization/manage/deactivate-account.md)
 
 # Deactivate an organization
 

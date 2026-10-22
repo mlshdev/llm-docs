@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/test/index.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/test/index.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/test/index.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/test/index.mdx)
 > Canonical documentation: https://bun.com/docs/test
 
 Bun ships with a fast, built-in, Jest-compatible test runner. Tests run in the Bun runtime and support the following features.
@@ -437,7 +437,7 @@ Every shard must read the *same set* of timings files for the shards to add up t
 
 Bun's test runner is fast.
 
-![Running 266 React SSR tests faster than Jest can print its version number.](https://raw.githubusercontent.com/oven-sh/bun/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/images/buntest.jpeg)
+![Running 266 React SSR tests faster than Jest can print its version number.](https://raw.githubusercontent.com/oven-sh/bun/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/images/buntest.jpeg)
 
 ## AI Agent Integration
 

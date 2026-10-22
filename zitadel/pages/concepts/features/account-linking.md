@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.5: [apps/docs/content/concepts/features/account-linking.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/concepts/features/account-linking.mdx)
+> Pinned source for ZITADEL v4.20.0: [apps/docs/content/concepts/features/account-linking.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/concepts/features/account-linking.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/features/account-linking
 
 ZITADEL supports linking user accounts from different external identity providers, such as social logins or enterprise IdPs, to a single ZITADEL user profile. This enables users to be recognized as the same user in your applications, regardless of which external account they use to log in.

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/pm/bunx.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/pm/bunx.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/pm/bunx.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/bunx.mdx)
 > Canonical documentation: https://bun.com/docs/pm/bunx
 
 > **Note**
@@ -56,7 +56,11 @@ Run these executables with `bunx`:
 bunx my-cli
 ```
 
-As with `npx`, `bunx` checks for a locally installed package first, then falls back to auto-installing it from `npm`. `bunx` stores installed packages in Bun's [global cache](https://bun.com/docs/pm/global-cache) for future use.
+As with `npx`, `bunx` checks for a locally installed package first, then falls back to auto-installing it from `npm`. With a version (`bunx my-cli@2`), it does not use the local package. `bunx` stores installed packages in Bun's [global cache](https://bun.com/docs/pm/global-cache) for future use.
+
+On macOS and Linux, if the project has the package but the file of its executable is missing or has no execute permission, `bunx my-cli` exits with an error that names the file. It does not download another copy.
+
+`bunx my-cli` asks the registry for newer versions of the package and of its dependencies once a day. If the registry cannot be reached or answers with a 5xx, 429 or 408 status, it warns and runs the version it has. `bunx my-cli@latest` asks on every run.
 
 ## Arguments and flags
 
@@ -92,6 +96,12 @@ bunx -p renovate renovate-config-validator
 bunx --package @angular/cli ng
 ```
 
+As with `npx`, the command can be any program. It finds the package's binaries first on its `PATH`:
+
+```bash terminal icon="terminal"
+bunx -p typescript sh -c "tsc --version"
+```
+
 To force a script to always run with Bun, give it a `bun` shebang.
 
 ```js dist/index.js icon="/icons/javascript.svg"
@@ -122,6 +132,22 @@ Specify package to install when binary name differs from package name
 **Property (type: boolean)**
 
 Skip installation if package is not already installed
+
+**Property (type: string)**
+
+Set the working directory
+
+**Property (type: string)**
+
+Load environment variables from the specified file(s)
+
+**Property (type: number)**
+
+Only install packages published at least N seconds ago (security feature)
+
+**Property (type: boolean)**
+
+Run the lifecycle scripts of the package and of **all** of its dependencies during installation
 
 **Property (type: boolean)**
 

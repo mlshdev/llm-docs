@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `d83395f928bd3bd0f862b1c40d662baf9924c1d1`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `b11699791551b579e4ca3548476e106db24f350c`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -16,8 +16,8 @@
 - [Choose a workflow](pages/get-started/connect-to-runpod.md): Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod. (2219 bytes)
 - [Concepts](pages/get-started/concepts.md): Key concepts and terminology for understanding Runpod's platform and products. Review setup steps and core concepts for building on Runpod. (2935 bytes)
 - [Manage credentials](pages/get-started/credentials.md): Create and manage your API keys, SSH keys, S3 API keys, container registry credentials, and secrets from the Credentials page. (7235 bytes)
-- [Agent skills for AI coding tools](pages/get-started/agent-skills.md): Manage GPU workloads on Runpod with coding agents like Claude Code, Codex, and Cursor. Review setup steps and core concepts for building on Runpod. (8787 bytes)
-- [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (10078 bytes)
+- [Agent skills for AI coding tools](pages/get-started/agent-skills.md): Manage GPU workloads on Runpod with coding agents like Claude Code, Codex, and Cursor. Review setup steps and core concepts for building on Runpod. (8781 bytes)
+- [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (10194 bytes)
 - [Early access features](pages/get-started/early-access.md): Opt in to experimental Runpod console features before they're generally available. Review setup steps and core concepts for building on Runpod. (1730 bytes)
 
 ## Runpod SDK (Beta)

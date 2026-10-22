@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.5: [apps/docs/content/guides/manage/console/administrators.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/guides/manage/console/administrators.mdx)
+> Pinned source for ZITADEL v4.20.0: [apps/docs/content/guides/manage/console/administrators.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/guides/manage/console/administrators.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/console/administrators
 
 > **Terminology update**
@@ -21,14 +21,14 @@ Only the Administrators on the instance level can view resources, such as users,
 To configure administrators in ZITADEL, go to the resource where you like to add it (e.g., Instance, Organization, Project, GrantedProject).
 In the right part of the management console you can find **ADMINISTRATORS** in the details part. Here you have a list of the current administrators and can add a new one.
 
-![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/console/administrators.png)
+![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/console/administrators.png)
 
 When adding a new administrator, you can select multiple roles, some of which are only allowed to read data.
 This can be especially useful if you add service account for one of your projects where you only need read access.
 
 By default, you will only search for users within the selected organization. If you like to give a role to a user outside the organization, you need to switch to the global search and type the exact loginname of the users. This will prevent users from guessing users from other organizations.
 
-![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/public/img/guides/console/add_administrator.png)
+![Administrators](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/console/add_administrator.png)
 
 > **Note**
 >

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/guides/http/stream-file.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/http/stream-file.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/guides/http/stream-file.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/guides/http/stream-file.mdx)
 > Canonical documentation: https://bun.com/docs/guides/http/stream-file
 
 # Stream a file as an HTTP Response

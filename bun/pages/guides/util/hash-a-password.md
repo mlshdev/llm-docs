@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.3: [docs/guides/util/hash-a-password.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/util/hash-a-password.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/guides/util/hash-a-password.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/guides/util/hash-a-password.mdx)
 > Canonical documentation: https://bun.com/docs/guides/util/hash-a-password
 
 # Hash a password

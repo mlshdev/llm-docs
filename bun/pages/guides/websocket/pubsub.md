@@ -1,11 +1,11 @@
-> Pinned source for Bun bun-v1.4.3: [docs/guides/websocket/pubsub.mdx](https://github.com/oven-sh/bun/blob/c6da4a4d3010e5553438c60f6bd76d981976867c/docs/guides/websocket/pubsub.mdx)
+> Pinned source for Bun bun-v1.4.4: [docs/guides/websocket/pubsub.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/guides/websocket/pubsub.mdx)
 > Canonical documentation: https://bun.com/docs/guides/websocket/pubsub
 
 # Build a publish-subscribe WebSocket server
 
 Bun's server-side `WebSocket` API includes native pub-sub. Subscribe a socket to a set of named channels with `socket.subscribe(<name>)`; publish a message to a channel with `server.publish(<name>, <message>)`.
 
-This code snippet implements a single-channel chat server.
+This code snippet implements a single-channel chat server. It identifies users with a cookie, so a real server should [check the `Origin` header](https://bun.com/docs/runtime/http/websockets#contextual-data) before calling `server.upgrade()`.
 
 ```ts server.ts icon="/icons/typescript.svg"
 const server = Bun.serve({
@@ -33,7 +33,6 @@ const server = Bun.serve({
     close(ws) {
       const msg = `${ws.data.username} has left the chat`;
       server.publish("the-group-chat", msg);
-      ws.unsubscribe("the-group-chat");
     },
   },
 });

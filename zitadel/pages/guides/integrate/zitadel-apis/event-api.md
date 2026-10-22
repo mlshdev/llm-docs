@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.19.5: [apps/docs/content/guides/integrate/zitadel-apis/event-api.mdx](https://github.com/zitadel/zitadel/blob/a618740b578627b7b9acbbb111a6948882d6f5dc/apps/docs/content/guides/integrate/zitadel-apis/event-api.mdx)
+> Pinned source for ZITADEL v4.20.0: [apps/docs/content/guides/integrate/zitadel-apis/event-api.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/guides/integrate/zitadel-apis/event-api.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/zitadel-apis/event-api
 
 ZITADEL leverages the power of eventsourcing, meaning every action and change within the system generates a corresponding event that is stored in the database.
