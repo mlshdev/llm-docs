@@ -6,21 +6,21 @@
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
   "repository": "triggerdotdev/trigger.dev",
-  "tag": "v4.7.7",
-  "releaseId": 420483269,
-  "releasePublishedAt": "2026-10-22T08:39:41Z",
-  "sourceCommit": "ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72",
-  "documentCount": 354,
+  "tag": "v4.8.1",
+  "releaseId": 421940695,
+  "releasePublishedAt": "2026-10-23T14:28:11Z",
+  "sourceCommit": "bd2a14e6ad83fbe056a473b0082ff4110747fa38",
+  "documentCount": 365,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 3087370,
-      "documentCount": 354,
-      "sha256": "302773e3f6ebc2684278005e589c6e3d16cf9bd68c9367b0d880f9d6837b2ad1"
+      "byteLength": 3245884,
+      "documentCount": 365,
+      "sha256": "a6f1dbe9bb841086cc8b16ea94ef07dba48843a7dc8ce7e04ff0f602211ea4b2"
     }
   ],
-  "outputDigest": "04738e3a7a2916a15df4f4452250120f5b06fe3b6f0599bd7e3737c354d615df",
+  "outputDigest": "a645675734acf5f37e8ff013a60a816cbcbaabb56fe035baf1c0f9bf69ec6c88",
   "quarantined": [
     {
       "sourcePath": "deploy-environment-variables.mdx",
@@ -29,50 +29,6 @@
     {
       "sourcePath": "management/runs/retrieve-trace.mdx",
       "reason": "Unable to convert Trigger.dev page management/runs/retrieve-trace.mdx: Unhandled MDX component <RollingOut> in management/runs/retrieve-trace.mdx"
-    },
-    {
-      "sourcePath": "webhooks/channels.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/channels.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/connect.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/connect.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/deliveries.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/deliveries.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/filters.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/filters.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/human-in-the-loop.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/human-in-the-loop.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/linear.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/linear.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/overview.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/overview.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/session-routing.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/session-routing.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/slack.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/slack.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/sources.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/sources.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
-    },
-    {
-      "sourcePath": "webhooks/waiters.mdx",
-      "reason": "Unable to convert Trigger.dev page webhooks/waiters.mdx: Unhandled MDX component <PrivateBeta> in snippets/webhooks-beta-banner.mdx"
     }
   ],
   "notes": [

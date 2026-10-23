@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/manage/history.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/subscription-billing/manage/history.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/manage/history.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/subscription-billing/manage/history.md)
 
 # Billing and invoice history
 
@@ -11,7 +11,7 @@ needed.
 Individual accounts and organization accounts use the same steps to view billing
 history. To view your billing history:
 
-1. Sign in to [Docker Home](https://app.docker.com/) and select your personal
+1. Sign in to [Docker Home](https://app.docker.com/) and select your individual
    account or organization account.
 2. Select **Billing**, then **Invoices**.
 3. View an individual invoice by selecting:

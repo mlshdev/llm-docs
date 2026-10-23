@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `b11699791551b579e4ca3548476e106db24f350c`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `880233fccf4e38598203496f69190ca6b180ea19`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -134,9 +134,9 @@
 
 ## Pods
 
-- [Overview](pages/pods/overview.md): Get on-demand access to powerful computing resources. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (3873 bytes)
-- [Pricing](pages/pods/pricing.md): Explore pricing options for Pods, including on-demand and savings plans. Review setup, configuration, and operations guidance for Runpod Pods. (3791 bytes)
-- [Choose a Pod](pages/pods/choose-a-pod.md): Select the right Pod by evaluating your resource requirements. Review setup, configuration, and operations guidance for Runpod Pods. (5355 bytes)
+- [Overview](pages/pods/overview.md): Get on-demand access to powerful computing resources. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (3748 bytes)
+- [Pricing](pages/pods/pricing.md): Explore pricing options for Pods, including on-demand pricing and storage costs. Review setup, configuration, and operations guidance for Runpod Pods. (3075 bytes)
+- [Choose a Pod](pages/pods/choose-a-pod.md): Select the right Pod by evaluating your resource requirements. Review setup, configuration, and operations guidance for Runpod Pods. (5186 bytes)
 - [Manage Pods](pages/pods/manage-pods.md): Create, start, stop, and terminate Pods using the Runpod console or CLI. Review setup, configuration, and operations guidance for Runpod Pods. (7523 bytes)
 - [Maintenance, outages, and data safety](pages/pods/maintenance-and-outages.md): Understand how Runpod handles planned and unplanned maintenance and how to protect your data. See setup and usage details for Runpod Pods. (3577 bytes)
 - [Connection options](pages/pods/connect-to-a-pod.md): Explore Pod connection options, including the web terminal, SSH, JupyterLab, and VSCode/Cursor. See setup and usage details for Runpod Pods. (2941 bytes)
@@ -216,7 +216,7 @@
 ## Accounts and billing
 
 - [Manage accounts](pages/accounts-billing/manage-accounts.md): Create accounts, manage teams, and configure user permissions in Runpod. Review account, billing, and management details for Runpod. (7588 bytes)
-- [Billing overview](pages/accounts-billing/billing.md): Understand how Runpod billing works, manage your credits, and configure payment methods. Review account, billing, and management details for Runpod. (7553 bytes)
+- [Billing overview](pages/accounts-billing/billing.md): Understand how Runpod billing works, manage your credits, and configure payment methods. Review account, billing, and management details for Runpod. (7548 bytes)
 - [Cost centers](pages/accounts-billing/cost-centers.md): Track and organize Runpod spending by team, project, or department. Review account, billing, and management details for Runpod. (6433 bytes)
 - [Referral, affiliate, and creator programs](pages/accounts-billing/referrals.md): Earn additional revenue through Runpod's referral, affiliate, and creator programs. Review account, billing, and management details for Runpod. (6036 bytes)
 - [Troubleshoot payment card declines](pages/accounts-billing/manage-payment-cards.md): Resolve declined payment cards and prevent service interruptions on Runpod. Review account, billing, and management details for Runpod. (4017 bytes)

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/mcp-tools.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/mcp-tools.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/mcp-tools.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/mcp-tools.mdx)
 > Canonical documentation: https://trigger.dev/docs/mcp-tools
 
 # MCP Tools
@@ -391,11 +391,6 @@ Append one record to a named side channel's `in` stream. Sends control input to 
 
 ## Webhook Tools
 
-> **Note**
->
-> Webhooks are in private beta. [Request access](https://trigger.dev/webhooks-beta) and we'll turn them on for your
-> organization.
-
 Set up and debug [hosted webhook endpoints](https://trigger.dev/docs/webhooks/overview). Endpoint ids start with `wh_` and delivery ids with `whd_`; endpoint tools also accept an endpoint's declared id. The same operations are on the [Webhooks API](https://trigger.dev/docs/management/webhooks/list-endpoints).
 
 ### list\_webhook\_endpoints
@@ -467,6 +462,11 @@ Generate a new signing secret for an endpoint and return it once, for providers 
 **Parameters:**
 
 - `endpointId` (required): the endpoint's declared id (such as `payments`) or `wh_` id
+- `previousSecretTtlSeconds` (optional): keep accepting the replaced secret for this many seconds (up to 604800, 7 days) while the provider switches to the new one. Omit it, or pass `0`, to replace the secret immediately, for example when it leaked. The response says when the old secret stops working.
+
+**Example usage:**
+
+- `"Rotate the GitHub endpoint's secret and keep the old one working for a day"`
 
 ### set\_webhook\_secret
 
@@ -476,6 +476,7 @@ Store a signing secret or public key the provider issued, such as Stripe's `whse
 
 - `endpointId` (required): the endpoint's declared id (such as `payments`) or `wh_` id
 - `secret` (required): the secret or public key
+- `previousSecretTtlSeconds` (optional): keep accepting the replaced secret for this many seconds (up to 604800, 7 days) while the provider switches to the new one. Omit it, or pass `0`, to replace the secret immediately, for example when it leaked. The response says when the old secret stops working.
 
 > **Warning**
 >

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/choose-a-pod.mdx](https://github.com/runpod/docs/blob/b11699791551b579e4ca3548476e106db24f350c/pods/choose-a-pod.mdx)
+> Pinned source for Runpod main: [pods/choose-a-pod.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/pods/choose-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/choose-a-pod
 
 # Choose a Pod
@@ -65,9 +65,7 @@ For data-intensive workloads, ensure sufficient volume disk or network volume ca
 
 ## Optimize for cost
 
-1. **Right-size your resources**: Start with the minimum viable configuration, then scale up based on actual usage. Development and testing often need less power than production.
-
-2. **Consider savings plans**: For extended usage, Runpod's [savings plans](https://docs.runpod.io/pods/pricing#savings-plans) reduce costs for committed usage.
+Right-size your resources. Start with the minimum viable configuration, then scale up based on actual usage. Development and testing often need less power than production.
 
 ## Secure Cloud vs Community Cloud
 

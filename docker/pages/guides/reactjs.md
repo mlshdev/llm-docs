@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/reactjs.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/guides/reactjs.md)
+> Pinned source for Docker main: [content/guides/reactjs.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/guides/reactjs.md)
 
 The React.js language-specific guide shows you how to containerize a React.js application using Docker, following best practices for creating efficient, production-ready containers.
 

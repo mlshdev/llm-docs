@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/database-connections.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/database-connections.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/database-connections.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/database-connections.mdx)
 > Canonical documentation: https://trigger.dev/docs/database-connections
 
 # Database connections
@@ -173,13 +173,13 @@ A chat agent runs one long-lived worker per conversation and suspends between me
 
 ```ts /trigger/chat.ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText } from "ai";
+
 import { openai } from "@ai-sdk/openai";
 import { prisma } from "@/lib/db";
 
 export const myChat = chat.agent({
   id: "my-chat",
-  run: async ({ messages, clientData, signal }) => {
+  run: async ({ messages, clientData, signal, streamText }) => {
     const user = await prisma.user.findUnique({ where: { id: clientData.userId } });
     // The connection is back in the pool before the model stream starts.
     return streamText({

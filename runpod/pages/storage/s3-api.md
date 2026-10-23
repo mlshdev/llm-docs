@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/s3-api.mdx](https://github.com/runpod/docs/blob/b11699791551b579e4ca3548476e106db24f350c/storage/s3-api.mdx)
+> Pinned source for Runpod main: [storage/s3-api.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/storage/s3-api.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/s3-api
 
 # S3-compatible API

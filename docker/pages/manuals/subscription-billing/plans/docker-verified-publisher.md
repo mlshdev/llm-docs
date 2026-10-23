@@ -1,6 +1,10 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/docker-verified-publisher.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/subscription-billing/plans/docker-verified-publisher.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/docker-verified-publisher.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/subscription-billing/plans/docker-verified-publisher.md)
 
 # Docker Verified Publisher plans
+
+> \[!TIP]
+> DVP plans require an approved application before you can subscribe.
+> See [Apply for DVP Starter or Growth](#apply-for-dvp-starter-or-growth).
 
 [Docker Verified Publisher (DVP)](https://docs.docker.com/docker-hub/repos/manage/trusted-content/dvp-program/)
 is a program for commercial publishers who distribute content on Docker
@@ -16,10 +20,6 @@ publisher analytics and reporting to verified publisher status.
 
 For a plan comparison, see the
 [DVP landing page](https://hub.docker.com/publisher-program).
-
-> \[!TIP]
-> DVP plans require an approved application before you can subscribe.
-> See [Apply for DVP Starter or Growth](#apply-for-dvp-starter-or-growth).
 
 ## Usage
 
@@ -77,7 +77,9 @@ portal:
 
 DVP Starter and DVP Growth are billed annually. You can upgrade from
 DVP Starter to DVP Growth without a new application. Upgrades take
-effect immediately.
+effect immediately. Downgrades take effect at the end of the annual
+period. For steps, see
+[Upgrade or downgrade](#upgrade-or-downgrade).
 
 On DVP Growth, consuming domain add-ons are prorated from the purchase
 date through the rest of your billing period, and they expire at the
@@ -87,6 +89,25 @@ any time. Removals take effect at the end of the current billing cycle.
 > \[!IMPORTANT]
 > No mid-cycle refunds are issued when you reduce consuming domain
 > add-ons or end a DVP plan.
+
+## Upgrade or downgrade
+
+You can move between DVP Starter and DVP Growth from the billing portal.
+
+1. Sign in to [Docker Home](https://app.docker.com/) and go to
+   **Billing**.
+2. From **Active plans**, select **Manage** next to **Docker Verified
+   Publisher**.
+3. Choose the change you want:
+   - To upgrade, select **Upgrade to Growth**, then verify your billing
+     details, continue to payment, and complete checkout. The upgrade
+     takes effect immediately.
+   - To downgrade, select **Downgrade to Starter**. The downgrade is
+     scheduled for the end of the annual period, and you keep DVP Growth
+     until then.
+
+If a downgrade is scheduled and you change your mind, select **Manage**,
+then **Cancel scheduled downgrade** to keep DVP Growth after renewal.
 
 ## Disable auto-renewal
 
@@ -101,3 +122,6 @@ auto-renewal:
 3. Select **Disable auto-renewal**.
 4. Optional. To remove consuming domains, select **Remove consuming
    domains**, then choose the number to remove.
+
+If you disabled auto-renewal and the plan is still active, **Manage**
+includes **Enable auto-renewal**.

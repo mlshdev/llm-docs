@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/management/webhooks/create-waiter.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/management/webhooks/create-waiter.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/management/webhooks/create-waiter.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/management/webhooks/create-waiter.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/webhooks/create-waiter
 
 # Create a webhook waiter
@@ -7,7 +7,6 @@
 
 **Create a webhook waiter**
 
-**Private beta:** [request access](https://trigger.dev/webhooks-beta) to use webhooks.
 Create a waiter on an endpoint. A waiter is a waitpoint that completes when a matching delivery arrives on the endpoint, so a run waiting on its id resumes with the verified event. It only matches deliveries that arrive after it was created. Omit `match` to get a waiter with its own `url`, for providers that take a webhook URL per request.
 
 **Authentication:** `secretKey`

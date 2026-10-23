@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/pending-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/pending-messages.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/pending-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/pending-messages.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/pending-messages
 
 # Pending Messages
@@ -13,7 +13,7 @@ By default (without `pendingMessages`), a message sent while the agent is respon
 
 The `pendingMessages` option enables steering instead, injecting user messages between tool-call steps via the AI SDK's `prepareStep`. Messages that arrive during streaming are queued and injected at the next step boundary. A message that is not injected becomes the next turn instead, whether that is because `shouldInject` returned `false` or because there were no more step boundaries (single-step response or final text generation). The backend handles that, so no client-side re-send is involved.
 
-Messages from a [channel](https://trigger.dev/docs/webhooks/channels) such as [Slack](https://trigger.dev/docs/webhooks/slack) are offered the same way, with `metadata.source` set to `"channel"` so `shouldInject` can tell them apart. A channel's stop control and approval clicks are never offered. The connector acknowledges a channel message as soon as it arrives (Slack reacts with 👀, Linear posts a thought), before `shouldInject` decides, so the acknowledgement is the same whether the message is folded in or answered next. Channels are part of the [webhooks private beta](https://trigger.dev/webhooks-beta).
+Messages from a [channel](https://trigger.dev/docs/webhooks/channels) such as [Slack](https://trigger.dev/docs/webhooks/slack) are offered the same way, with `metadata.source` set to `"channel"` so `shouldInject` can tell them apart. A channel's stop control and approval clicks are never offered. The connector acknowledges a channel message as soon as it arrives (Slack reacts with 👀, Linear posts a thought), before `shouldInject` decides, so the acknowledgement is the same whether the message is folded in or answered next.
 
 Use the `streamText` passed to your agent's `run` callback. It wires up pending-message injection automatically. If you import `streamText` directly from `ai`, spread `chat.toStreamTextOptions()` into its options to connect injection.
 

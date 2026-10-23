@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/docker-agentic-platform.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/subscription-billing/plans/docker-agentic-platform.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/docker-agentic-platform.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/subscription-billing/plans/docker-agentic-platform.md)
 
 # Docker Agentic Platform plans
 
@@ -53,6 +53,8 @@ For example:
 - Your invoice can take up to 24 hours after your billing date to
   appear.
 
+Credits are applied to your costs at the end of the billing period.
+
 ## Cancel a plan
 
 Canceling Docker Agentic Platform disables subscription renewal at the
@@ -66,9 +68,21 @@ the plan period.
 3. Select **Cancel subscription**.
 4. Review your usage, then select **Cancel subscription** to confirm.
 
+## Re-enable renewal
+
+After you cancel, you can re-enable renewal at any time before the
+current period ends. Your subscription then continues past the renewal
+date.
+
+1. Sign in to [Docker Home](https://app.docker.com/) and go to
+   **Billing**.
+2. From **Active subscriptions**, select **Manage** next to
+   **Docker Agentic Platform**.
+3. Select **Re-enable renewal**.
+
 ## Next steps
 
-- To add or cancel a plan, see
+- To add a plan, see
   [Manage plans](https://docs.docker.com/subscription-billing/manage/plans/)
 - To track usage across plans, see
   [Usage](https://docs.docker.com/subscription-billing/manage/#usage)

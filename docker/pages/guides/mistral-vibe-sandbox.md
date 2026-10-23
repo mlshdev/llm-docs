@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/mistral-vibe-sandbox.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/guides/mistral-vibe-sandbox.md)
+> Pinned source for Docker main: [content/guides/mistral-vibe-sandbox.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/guides/mistral-vibe-sandbox.md)
 
 Mistral Vibe is Mistral's open source coding agent. This guide shows how to
 package it as a Docker Sandbox agent so it runs in an isolated microVM instead
@@ -252,7 +252,7 @@ requests. The following capture shows this check in the sample workspace
 used in the next section. Vibe displays the mounted workspace's path; your
 path and account greeting will differ from the screenshots:
 
-![Vibe 2.25.8 displaying MISTRAL\_API\_KEY=proxy-managed inside the sandbox](https://raw.githubusercontent.com/docker/docs/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/guides/images/mistral-vibe-sandbox-credential.jpg)
+![Vibe 2.25.8 displaying MISTRAL\_API\_KEY=proxy-managed inside the sandbox](https://raw.githubusercontent.com/docker/docs/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/guides/images/mistral-vibe-sandbox-credential.jpg)
 
 ## Try a coding task
 
@@ -309,7 +309,7 @@ Approve the shell commands and edits when Vibe asks. The failing test checks
 incomplete tasks. A correct repair changes `if completed:` to
 `if completed is not None:`.
 
-![Vibe explaining the boolean-filter bug, its application-code repair, and that all three tests pass](https://raw.githubusercontent.com/docker/docs/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/guides/images/mistral-vibe-sandbox-repair.jpg)
+![Vibe explaining the boolean-filter bug, its application-code repair, and that all three tests pass](https://raw.githubusercontent.com/docker/docs/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/guides/images/mistral-vibe-sandbox-repair.jpg)
 
 Check the test suite yourself at the Vibe prompt:
 
@@ -333,7 +333,7 @@ Optional. Run `/model` inside Vibe and select **GLM 5.2 (Mistral hosted)**.
 The sample adds `zai-glm-5-2` to `app/.vibe/config.toml`; the local kit you
 built earlier doesn't add this model configuration.
 
-![Vibe's model menu showing Mistral Medium 3.5 and GLM 5.2 hosted by Mistral](https://raw.githubusercontent.com/docker/docs/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/guides/images/mistral-vibe-sandbox-models.jpg)
+![Vibe's model menu showing Mistral Medium 3.5 and GLM 5.2 hosted by Mistral](https://raw.githubusercontent.com/docker/docs/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/guides/images/mistral-vibe-sandbox-models.jpg)
 
 ## Troubleshoot and iterate
 

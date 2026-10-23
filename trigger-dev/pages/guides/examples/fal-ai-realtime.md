@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/guides/examples/fal-ai-realtime.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/guides/examples/fal-ai-realtime.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/guides/examples/fal-ai-realtime.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/guides/examples/fal-ai-realtime.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/fal-ai-realtime
 
 # Generate an image from a prompt using Fal.ai and Trigger.dev Realtime

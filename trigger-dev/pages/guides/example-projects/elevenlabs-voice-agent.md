@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/guides/example-projects/elevenlabs-voice-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/guides/example-projects/elevenlabs-voice-agent.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/guides/example-projects/elevenlabs-voice-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/guides/example-projects/elevenlabs-voice-agent.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/example-projects/elevenlabs-voice-agent
 
 # ElevenLabs Voice agent
@@ -49,7 +49,7 @@ The agent is a single [`chat.agent()`](https://trigger.dev/docs/ai-chat/overview
 
 ```ts trigger/chat.ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { stepCountIs, streamText } from "ai";
+import { stepCountIs } from "ai";
 import { HISTORY_TURNS, MAX_REPLY_TOKENS, SYSTEM_PROMPT } from "../lib/voice-config";
 import { chatModel } from "../lib/model";
 
@@ -69,10 +69,8 @@ export const voiceChat = chat.agent({
     return firstUser > 0 ? windowed.slice(firstUser) : windowed;
   },
 
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
-      // Spread first: wires up compaction, steering and telemetry.
-      ...chat.toStreamTextOptions(),
       model: chatModel,
       system: SYSTEM_PROMPT,
       maxOutputTokens: MAX_REPLY_TOKENS,

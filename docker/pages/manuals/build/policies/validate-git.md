@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/validate-git.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/build/policies/validate-git.md)
+> Pinned source for Docker main: [content/manuals/build/policies/validate-git.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/build/policies/validate-git.md)
 
 Git repositories often appear in Docker builds as source code inputs. The `ADD`
 instruction can clone repositories, and build contexts can reference Git URLs.

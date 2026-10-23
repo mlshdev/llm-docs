@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/patterns/version-upgrades.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/patterns/version-upgrades.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/patterns/version-upgrades.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/patterns/version-upgrades.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/version-upgrades
 
 # Version upgrades
@@ -101,7 +101,7 @@ On the agent side, declare which versions the current code supports:
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText } from "ai";
+
 import { anthropic } from "@ai-sdk/anthropic";
 
 // The set of frontend protocol versions this agent code supports.
@@ -122,7 +122,7 @@ export const myChat = chat
         chat.requestUpgrade();
       }
     },
-    run: async ({ messages, signal }) => {
+    run: async ({ messages, signal, streamText }) => {
       return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
     },
   });
@@ -185,7 +185,7 @@ export const myChat = chat
         chat.requestUpgrade();
       }
     },
-    run: async ({ messages, signal }) => {
+    run: async ({ messages, signal, streamText }) => {
       return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
     },
   });

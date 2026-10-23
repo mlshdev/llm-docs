@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/billing.mdx](https://github.com/runpod/docs/blob/b11699791551b579e4ca3548476e106db24f350c/accounts-billing/billing.mdx)
+> Pinned source for Runpod main: [accounts-billing/billing.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/accounts-billing/billing.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/billing
 
 # Billing overview
@@ -88,7 +88,7 @@ Each Runpod product has its own pricing structure. See the detailed pricing page
 
 - [Pods pricing](https://docs.runpod.io/pods/pricing)
 
-  On-demand and savings plan pricing for GPU Pods.
+  On-demand and storage pricing for GPU Pods.
 - [Serverless pricing](https://docs.runpod.io/serverless/pricing)
 
   Pay-per-second pricing for flex and active workers.

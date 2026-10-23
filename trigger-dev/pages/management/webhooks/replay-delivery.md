@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/management/webhooks/replay-delivery.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/management/webhooks/replay-delivery.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/management/webhooks/replay-delivery.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/management/webhooks/replay-delivery.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/webhooks/replay-delivery
 
 # Replay a webhook delivery
@@ -7,7 +7,6 @@
 
 **Replay a webhook delivery**
 
-**Private beta:** [request access](https://trigger.dev/webhooks-beta) to use webhooks.
 Route a delivery's stored event again as a new delivery. Without `targetId` every current subscriber is checked against its filter again. With `targetId` the event goes to that one subscriber, even if its filter skipped it. A replay never resumes waiting runs. Replays start real runs, so the key needs permission to trigger every task the replay runs, and to write sessions if it reaches an agent's subscriber.
 
 **Authentication:** `secretKey`

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/management/webhooks/retrieve-delivery.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/management/webhooks/retrieve-delivery.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/management/webhooks/retrieve-delivery.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/management/webhooks/retrieve-delivery.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/webhooks/retrieve-delivery
 
 # Retrieve a webhook delivery
@@ -7,7 +7,6 @@
 
 **Retrieve a webhook delivery**
 
-**Private beta:** [request access](https://trigger.dev/webhooks-beta) to use webhooks.
 Retrieve one delivery: its status and error, the event body and headers it carried, and a `targets` entry per subscriber with the run or session it started or why its filter skipped the event. When the delivery resumed waiting runs, one more entry summarizes them.
 
 **Authentication:** `secretKey`

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/secrets/docker_pass_rm.yaml](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/data/cli/secrets/docker_pass_rm.yaml)
+> Pinned source for Docker main: [data/cli/secrets/docker_pass_rm.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/cli/secrets/docker_pass_rm.yaml)
 
 # docker pass rm
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/client-protocol.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/client-protocol.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/client-protocol.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/client-protocol.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/client-protocol
 
 # Client Protocol
@@ -317,12 +317,13 @@ If nothing arrives by the deadline, the server sends `data: [DONE]` and closes. 
 
 ### Stream format (S2)
 
-The output stream uses [S2](https://s2.dev) under the hood and follows the standard SSE wire format ([WHATWG spec](https://html.spec.whatwg.org/multipage/server-sent-events.html#parsing-an-event-stream)). Three event types arrive on the wire:
+The output stream uses [S2](https://s2.dev) under the hood and follows the standard SSE wire format ([WHATWG spec](https://html.spec.whatwg.org/multipage/server-sent-events.html#parsing-an-event-stream)). Four event types arrive on the wire:
 
 | Event                                | Meaning                                                                                                                                                                                                                                                                                 |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `batch`                              | One or more records. The records you actually care about.                                                                                                                                                                                                                               |
 | `ping`                               | Keepalive (\~every 5s on idle). Body is `{"timestamp": <ms>}`, and on backends that report it a `tail` (same `{seq_num, timestamp}` shape as a batch tail). The tail is what lets you tell you have caught up to the live edge; if you don't need caught-up detection, ignore the ping. |
+| `error`                              | The read failed after the stream started, for example while the stream backend restarts. Body is a plain-text reason. The connection then closes **without** `[DONE]`. Treat it like a dropped connection and [resume](#resuming-a-stream) from the last `seq_num` you processed.       |
 | *(no `event:`, just `data: [DONE]`)* | Stream is closing — server sends this once before EOF.                                                                                                                                                                                                                                  |
 
 A `batch` event in raw SSE format looks like this — note the `data` is a single line of JSON, no embedded newlines (per the SSE spec):
@@ -445,7 +446,7 @@ while (true) {
 
 ### Self-contained parser (for custom transports)
 
-If you're building a transport in another language or don't want the dependency, here's a complete reader. It handles the SSE framing, the comma-separated `id:` line, batch unwrapping, the inner `body` string, and `ping` / `[DONE]` events:
+If you're building a transport in another language or don't want the dependency, here's a complete reader. It handles the SSE framing, the comma-separated `id:` line, batch unwrapping, the inner `body` string, and `ping` / `error` / `[DONE]` events:
 
 ```ts
 async function* readSessionOut(
@@ -488,6 +489,8 @@ async function* readSessionOut(
       if (!data) continue;
 
       if (eventType === "ping") continue;
+      // The read failed mid-stream. Reconnect from your last seq_num.
+      if (eventType === "error") throw new Error(`Stream read failed: ${data}`);
       if (data === "[DONE]") return;
 
       if (eventType === "batch") {
@@ -626,7 +629,7 @@ The built-in clients handle this transparently.
 
 ### Resuming a stream
 
-If the SSE connection drops, reconnect with the `Last-Event-ID` header set to the **last `record.seq_num` you successfully processed** (decoded from the batch body — not the SSE `id:` line, which is a comma-list internal to S2):
+If the SSE connection drops, or the server sends an `error` event, reconnect with the `Last-Event-ID` header set to the **last `record.seq_num` you successfully processed** (decoded from the batch body, not the SSE `id:` line, which is a comma-list internal to S2):
 
 ```
 GET /realtime/v1/sessions/{sessionId}/out

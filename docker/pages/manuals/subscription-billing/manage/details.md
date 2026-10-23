@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/manage/details.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/subscription-billing/manage/details.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/manage/details.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/subscription-billing/manage/details.md)
 
 # Update your billing details
 
@@ -10,7 +10,7 @@ You can update your billing details for Docker individual accounts and Docker or
 
 To update your billing information from **Settings** in Docker Home:
 
-1. Sign in to [Docker Home](https://app.docker.com/) and select your personal or organization
+1. Sign in to [Docker Home](https://app.docker.com/) and select your individual or organization
    account.
 2. Select **Billing**, then go to **Settings**.
 3. Select **Edit** to make your changes.

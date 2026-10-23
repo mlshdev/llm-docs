@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/patterns/native-compaction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/patterns/native-compaction.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/patterns/native-compaction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/patterns/native-compaction.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/native-compaction
 
 # Native compaction & provider fallback
@@ -32,7 +32,7 @@ The fix: read the `appliedEdits` counts as they stream in `onStepFinish`, then a
 
 ```ts /trigger/native-persist.ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, stepCountIs, tool, type UIMessage } from "ai";
+import { stepCountIs, tool, type UIMessage } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
 
@@ -76,7 +76,7 @@ export const nativePersist = chat.agent({
   id: "native-persist",
   idleTimeoutInSeconds: 120,
   tools: { fetchRecord },
-  run: async ({ messages, chatId, tools, signal }) => {
+  run: async ({ messages, chatId, tools, signal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-5"),
       messages,
@@ -133,7 +133,7 @@ OpenAI's `store: true` keeps the thread server-side and returns a `responseId`. 
 
 ```ts /trigger/openai-store.ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, stepCountIs, type ModelMessage } from "ai";
+import { stepCountIs, type ModelMessage } from "ai";
 import { openai } from "@ai-sdk/openai";
 
 // Persist the stored-response handle between turns. Replace with your database.
@@ -152,7 +152,7 @@ function messagesSinceLastAssistant(messages: ModelMessage[]): ModelMessage[] {
 export const openaiStore = chat.agent({
   id: "openai-store",
   idleTimeoutInSeconds: 120,
-  run: async ({ messages, chatId, signal }) => {
+  run: async ({ messages, chatId, signal, streamText }) => {
     const native = nativeStore.get(chatId);
     const outbound = native ? messagesSinceLastAssistant(messages) : messages;
 
@@ -187,7 +187,7 @@ A native handle is a per-provider cache. An OpenAI `previousResponseId` means no
 
 ```ts /trigger/resilient-chat.ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, generateText, stepCountIs, generateId, type ModelMessage } from "ai";
+import { generateText, stepCountIs, generateId, type ModelMessage } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { openai } from "@ai-sdk/openai";
 
@@ -242,7 +242,7 @@ export const resilientChat = chat.agent({
     if (chatId) nativeStore.delete(chatId);
   },
 
-  run: async ({ messages, chatId, signal }) => {
+  run: async ({ messages, chatId, signal, streamText }) => {
     let lastError: unknown;
     for (const providerId of FALLBACK_ORDER) {
       const native = nativeStore.get(chatId);

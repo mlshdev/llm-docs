@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/best-practices.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/compose/how-tos/environment-variables/best-practices.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/best-practices.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/compose/how-tos/environment-variables/best-practices.md)
 
 # Best practices for working with environment variables in Docker Compose
 

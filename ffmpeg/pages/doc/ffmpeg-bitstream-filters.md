@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/179d08349347e00b2a24593cfa8b3cbbde2a6cfb/doc/ffmpeg-bitstream-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/19c06936fd78b9249fc65045c9d855b6c28758e1/doc/ffmpeg-bitstream-filters.texi)
 
 # Description
 
@@ -1037,6 +1037,31 @@ ffmpeg -i INPUT -c:a copy -bsf:a setts=pts=DTS out.mkv
 
 Log basic packet information. Mainly useful for testing, debugging,
 and development.
+
+## side\_data
+
+Remove side data from packets and from the stream, or select packets by their
+side data.
+
+It accepts the following parameters:
+
+- remove
+  Set the side data types to remove, joined with `+`, from the packets and
+  from the side data of the stream. Each type is given by its handle;
+  `ffmpeg -h bsf=side_data` lists them.
+
+- select
+  Set the side data types of the packets to keep, joined with `+`. A packet
+  is kept if it carries any of them, and dropped otherwise. The selection looks
+  at the side data before `remove` applies. Dropping a packet breaks the
+  decoding of the packets that depend on it, so this is meant for analysis or for
+  streams where each packet decodes on its own.
+
+For example, to drop the display matrix and the replay gain of a stream:
+
+```text
+ffmpeg -i INPUT -c copy -bsf:v side_data=remove=displaymatrix+replaygain output.mkv
+```
 
 ## smpte436m\_to\_eia608
 

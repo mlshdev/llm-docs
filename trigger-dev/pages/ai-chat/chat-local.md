@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/chat-local.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/chat-local.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/chat-local.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/chat-local.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/chat-local
 
 # chat.local
@@ -17,7 +17,7 @@ Declare locals at module level with a unique `id`, then initialize them inside a
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, tool, stepCountIs } from "ai";
+import { tool, stepCountIs } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
 import { db } from "@/lib/db";
@@ -45,7 +45,7 @@ export const myChat = chat.agent({
       messageCount: user.messageCount,
     });
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     userContext.messageCount++;
 
     return streamText({
@@ -89,7 +89,7 @@ When you use `ai.toolExecute()` inside AI SDK `tool()` to expose a subtask, chat
 ```ts
 import { chat, ai } from "@trigger.dev/sdk/ai";
 import { schemaTask } from "@trigger.dev/sdk";
-import { streamText, tool } from "ai";
+import { tool, stepCountIs } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
 
@@ -116,7 +116,7 @@ export const myChat = chat.agent({
   onBoot: async ({ clientData }) => {
     userContext.init({ name: "Alice", plan: "pro" });
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-5"),
       messages,

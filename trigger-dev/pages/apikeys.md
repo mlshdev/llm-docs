@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/apikeys.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/apikeys.mdx)
 > Canonical documentation: https://trigger.dev/docs/apikeys
 
 # API keys
@@ -69,17 +69,17 @@ The default API URL is `https://api.trigger.dev`.
 
 Access presets define what a key can do. On the Free and Hobby plans only the **No restrictions** preset is available. All other presets require the Pro or Enterprise plan.
 
-| Preset              | Access                                                                                                                                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Trigger only**    | Trigger runs and batches for all or selected tasks. Trigger responses include scoped public access tokens for the runs and batches they create                                                          |
-| **Task operator**   | Trigger all or selected tasks and inspect or operate on their runs                                                                                                                                      |
-| **Observer**        | Read runs, tasks, batches, logs, traces, queues, errors, and webhooks                                                                                                                                   |
-| **Operator**        | Observe and operate on runs, queues, errors, and webhooks, and trigger tasks                                                                                                                            |
-| **Webhooks only**   | Read and write [webhooks](https://trigger.dev/docs/webhooks/overview), which are in private beta. Replaying deliveries that trigger tasks and creating webhook waiters require task or waitpoint scopes |
-| **Waitpoints only** | Create, list, and retrieve [waitpoint tokens](https://trigger.dev/docs/wait-for-token). No task or run access                                                                                           |
-| **Deploy only**     | Deploy versions, sync environment variables, and manage Preview branches                                                                                                                                |
-| **Variables only**  | Read and write environment variables in this environment                                                                                                                                                |
-| **No restrictions** | Full access to the environment                                                                                                                                                                          |
+| Preset              | Access                                                                                                                                                                       |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Trigger only**    | Trigger runs and batches for all or selected tasks. Trigger responses include scoped public access tokens for the runs and batches they create                               |
+| **Task operator**   | Trigger all or selected tasks and inspect or operate on their runs                                                                                                           |
+| **Observer**        | Read runs, tasks, batches, logs, traces, queues, errors, and webhooks                                                                                                        |
+| **Operator**        | Observe and operate on runs, queues, errors, and webhooks, and trigger tasks                                                                                                 |
+| **Webhooks only**   | Read and write [webhooks](https://trigger.dev/docs/webhooks/overview). Replaying deliveries that trigger tasks and creating webhook waiters require task or waitpoint scopes |
+| **Waitpoints only** | Create, list, and retrieve [waitpoint tokens](https://trigger.dev/docs/wait-for-token). No task or run access                                                                |
+| **Deploy only**     | Deploy versions, sync environment variables, and manage Preview branches                                                                                                     |
+| **Variables only**  | Read and write environment variables in this environment                                                                                                                     |
+| **No restrictions** | Full access to the environment                                                                                                                                               |
 
 **Trigger only** and **Task operator** can be restricted to selected tasks, up to 10 tasks per key. Task restrictions use task identifiers, such as `send-email`. A request involving multiple tasks — such as a batch trigger — succeeds only when the key can access every task in the request, so a task-restricted key can batch-trigger only its selected tasks.
 

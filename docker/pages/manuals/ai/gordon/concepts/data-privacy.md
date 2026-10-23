@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/gordon/concepts/data-privacy.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/ai/gordon/concepts/data-privacy.md)
+> Pinned source for Docker main: [content/manuals/ai/gordon/concepts/data-privacy.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/ai/gordon/concepts/data-privacy.md)
 
 # Data privacy and Gordon
 
@@ -49,7 +49,7 @@ Gordon sessions. Your queries, Gordon's responses, and any code or files
 processed are not stored. This applies to all paid subscriptions: Docker
 Desktop plans (Pro, Team, Business) and Gordon plans (Plus, Max, Ultra).
 
-### Personal (free) subscription
+### Base tier (free)
 
 Anonymized conversation threads are stored for 5 days to help guarantee
 quality of service and fight abuse. Individual queries and responses are

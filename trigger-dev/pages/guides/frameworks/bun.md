@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/guides/frameworks/bun.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/guides/frameworks/bun.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/guides/frameworks/bun.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/guides/frameworks/bun.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/bun
 
 # Bun guide
@@ -99,12 +99,12 @@ This guide will show you how to setup Trigger.dev in your existing Bun project, 
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/test-dashboard.png)
 
 1. Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/terminal-completed-run.png)

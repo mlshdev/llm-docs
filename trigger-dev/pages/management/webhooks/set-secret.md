@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/management/webhooks/set-secret.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/management/webhooks/set-secret.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/management/webhooks/set-secret.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/management/webhooks/set-secret.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/webhooks/set-secret
 
 # Set a webhook signing secret
@@ -7,8 +7,7 @@
 
 **Set a webhook signing secret**
 
-**Private beta:** [request access](https://trigger.dev/webhooks-beta) to use webhooks.
-Store the signing secret or public key the provider issued for this endpoint, such as the `whsec_` secret Stripe returns when you create a webhook endpoint. It replaces any existing secret.
+Store the signing secret or public key the provider issued for this endpoint, such as the `whsec_` secret Stripe returns when you create a webhook endpoint. It replaces the existing secret. Pass `previousSecretTtlSeconds` to keep accepting the old secret for a while, for example while the provider rolls its secret.
 
 **Authentication:** `secretKey`
 
@@ -23,6 +22,8 @@ Store the signing secret or public key the provider issued for this endpoint, su
   - Schema (object)
     - `secret` (required; string; minimum length: `1`; maximum length: `4096`): The signing secret or public key. Leading and trailing whitespace is trimmed.
       - Example: `whsec_5f2b...`
+    - `previousSecretTtlSeconds` (integer; minimum: `0`; maximum: `604800`): How long, in seconds, the secret being replaced keeps verifying deliveries (at most 7 days). Omit it or pass 0 to replace the secret immediately, for example when it leaked.
+      - Example: `3600`
 
 **Responses**
 
@@ -32,6 +33,8 @@ Store the signing secret or public key the provider issued for this endpoint, su
       - `id` (required; string): The endpoint's `wh_` id.
         - Example: `wh_cm1a2b3c4d5e6f`
       - `secretSet` (required; boolean)
+      - `previousSecretExpiresAt` (string; format: date-time): When the replaced secret stops verifying deliveries. Absent when it was replaced immediately.
+        - Example: `2026-10-21T12:00:00.000Z`
 - `400`: Invalid request body
 - `401`: Unauthorized request
 - `404`: Endpoint not found

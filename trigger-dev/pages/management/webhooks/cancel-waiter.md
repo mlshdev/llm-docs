@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/management/webhooks/cancel-waiter.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/management/webhooks/cancel-waiter.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/management/webhooks/cancel-waiter.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/management/webhooks/cancel-waiter.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/webhooks/cancel-waiter
 
 # Cancel a webhook waiter
@@ -7,7 +7,6 @@
 
 **Cancel a webhook waiter**
 
-**Private beta:** [request access](https://trigger.dev/webhooks-beta) to use webhooks.
 Cancel a waiter. It stops matching deliveries, frees its slot toward the endpoint's limit, and fails the run's wait. If a delivery already claimed the waiter, the cancel is too late: the response has `cancelled: false` with `reason: "too_late"`, and the run resumes with that delivery's event.
 
 **Authentication:** `secretKey`

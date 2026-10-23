@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/machines.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/machines.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/machines.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/machines.mdx)
 > Canonical documentation: https://trigger.dev/docs/machines
 
 # Machines
@@ -886,7 +886,7 @@ export const resourceMonitorTest = task({
 
 This will produce logs that look like this:
 
-![Resource monitor logs](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/machines-resource-monitor-logs.png)
+![Resource monitor logs](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/machines-resource-monitor-logs.png)
 
 If you are spawning a child process and you want to monitor its memory usage, you can pass the `processName` option to the `ResourceMonitor` class:
 
@@ -899,7 +899,7 @@ const resourceMonitor = new ResourceMonitor({
 
 This will produce logs that includes the memory and CPU usage of the `ffmpeg` process:
 
-![Resource monitor logs](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/machines-resource-monitor-ffmpeg.png)
+![Resource monitor logs](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/machines-resource-monitor-ffmpeg.png)
 
 ### Explicit OOM errors
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/dhi.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/subscription-billing/plans/dhi.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/dhi.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/subscription-billing/plans/dhi.md)
 
 # DHI plans
 
@@ -26,7 +26,18 @@ For details on setting up and managing repositories, see [Get started with DHI S
 
 ## Billing cycle
 
-DHI Select is an annual plan billed per repository from the date your plan starts. Repositories added mid-cycle are prorated for the remainder of the billing period. You can add more repositories to your DHI Select plan by going to **Active plans** in the billing portal. For steps, see [Manage plans](https://docs.docker.com/subscription-billing/manage/plans/#upgrade-plans).
+DHI Select is an annual plan billed per repository from the date your plan starts. Repositories added mid-cycle are prorated for the remainder of the billing period. For steps, see [Add repositories](#add-repositories).
+
+## Add repositories
+
+Repositories you add take effect immediately and are prorated for the rest
+of the billing period.
+
+1. Sign in to [Docker Home](https://app.docker.com/) and go to **Billing**.
+2. From **Active plans**, select **Manage** next to **Hardened Images**.
+3. Select **Add repositories**.
+4. Choose the number of repositories, verify your billing details, continue
+   to payment, and complete checkout.
 
 ## Disable auto-renewal
 
@@ -35,6 +46,8 @@ If you want to revert your plan to DHI Community, you must disable auto-renewal.
 1. Sign in to [Docker Home](https://app.docker.com/) and go to **Billing**.
 2. From **Active plans**, select **Manage** next to **Hardened Images**.
 3. Select **Disable auto-renewal**.
+
+If you disabled auto-renewal and the plan is still active, **Manage** includes **Enable auto-renewal**.
 
 ## Remove repositories
 

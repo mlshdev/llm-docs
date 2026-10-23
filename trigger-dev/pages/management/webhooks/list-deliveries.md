@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/management/webhooks/list-deliveries.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/management/webhooks/list-deliveries.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/management/webhooks/list-deliveries.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/management/webhooks/list-deliveries.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/webhooks/list-deliveries
 
 # List webhook deliveries
@@ -7,7 +7,6 @@
 
 **List webhook deliveries**
 
-**Private beta:** [request access](https://trigger.dev/webhooks-beta) to use webhooks.
 List the verified events providers sent to the environment's endpoints, newest first. Filter by endpoint, status and time range, and page with `page[after]` and `page[before]`.
 
 **Authentication:** `secretKey`

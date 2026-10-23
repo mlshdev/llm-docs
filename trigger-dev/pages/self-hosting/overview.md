@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/self-hosting/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/self-hosting/overview.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/self-hosting/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/self-hosting/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/overview
 
 # Self-hosting overview
@@ -35,7 +35,7 @@ The self-hosted version is a set of containers running on your own infrastructur
 - **Webapp**: includes the dashboard and other services like Redis and Postgres.
 - **Worker**: includes the supervisor and the runners that execute your tasks.
 
-![Self-hosting architecture](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/self-hosting/architecture.png)
+![Self-hosting architecture](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/self-hosting/architecture.png)
 
 ## Feature comparison
 
@@ -120,6 +120,8 @@ You own a custom base image. It must provide:
 - glibc, so native modules built in the build stage load at runtime
 
 A `DEPLOY_BUILD_BASE_IMAGES` image needs everything the base image provides, plus `python3`, `make` and `g++`. Build extensions that add image instructions are replayed on it. Without an entry, the build stage uses the published build image, except for projects whose build extensions add image instructions: those build from your base image and install the toolchain with `apt-get`, so that base must be Debian-based. To avoid the published images entirely, set both variables.
+
+A custom image is yours to harden. Deploys on the published images remove trust in publicly compromised certificate authorities and point Node.js and Python at the OS trust store. Stages built on a custom image get neither, and run with the certificate settings the image ships with. Keeping a custom image patched, trust store included, is your responsibility.
 
 > **Warning**
 >

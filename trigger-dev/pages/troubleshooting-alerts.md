@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/troubleshooting-alerts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/troubleshooting-alerts.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/troubleshooting-alerts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/troubleshooting-alerts.mdx)
 > Canonical documentation: https://trigger.dev/docs/troubleshooting-alerts
 
 # Alerts
@@ -22,17 +22,17 @@ The first three are created from the **Alerts** page. The fourth — an **Error 
 ## How to setup alerts
 
 1. Click on "Alerts" in the left hand side menu, then click on "New alert" to open the new alert modal.
-   ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/troubleshooting-alerts-blank.png)
+   ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/troubleshooting-alerts-blank.png)
 2. Choose to be notified by email, Slack notification or webhook whenever:
 
    - a run fails
    - a deployment fails
    - a deployment succeeds
 
-     ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/troubleshooting-alerts-modal.png)
+     ![Email alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/troubleshooting-alerts-modal.png)
 3. Click on the triple dot menu on the right side of the table row and select "Disable" or "Delete".
 
-   ![Disable and delete alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/troubleshooting-alerts-disable-delete.png)
+   ![Disable and delete alerts](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/troubleshooting-alerts-disable-delete.png)
 
 ## Error group alerts
 

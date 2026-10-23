@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [pods/pricing.mdx](https://github.com/runpod/docs/blob/b11699791551b579e4ca3548476e106db24f350c/pods/pricing.mdx)
+> Pinned source for Runpod main: [pods/pricing.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/pods/pricing.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/pricing
 
 # Pricing
 
-Explore pricing options for Pods, including on-demand and savings plans. Review setup, configuration, and operations guidance for Runpod Pods.
+Explore pricing options for Pods, including on-demand pricing and storage costs. Review setup, configuration, and operations guidance for Runpod Pods.
 
 > **Tip**
 >
@@ -12,12 +12,6 @@ Explore pricing options for Pods, including on-demand and savings plans. Review 
 Pods are billed by the second for compute and storage, with no fees for data ingress or egress. Find the latest GPU pricing on the [Runpod console](https://www.console.runpod.io/pods) during Pod deployment.
 
 ## Pricing options
-
-|                | On-demand                                | Savings plan                      |
-| -------------- | ---------------------------------------- | --------------------------------- |
-| **Pricing**    | Standard hourly rate                     | Discounted (prepaid)              |
-| **Commitment** | None                                     | 3 or 6 months upfront             |
-| **Best for**   | Development, testing, variable workloads | Long-running production workloads |
 
 ### On-demand
 
@@ -29,11 +23,7 @@ Pay-as-you-go pricing. Resources are dedicated to your Pod and cannot be displac
 
 ### Savings plans
 
-Commit to a 3-month or 6-month term upfront for significant discounts on compute costs. When you stop a Pod, the savings plan automatically applies to your next deployment of the same GPU type.
-
-> **Warning**
->
-> Savings plans only cover GPU compute costs—[storage costs](https://docs.runpod.io/pods/storage/types) are billed at standard rates. Storage charges continue to accrue on stopped Pods. If your balance reaches $0, your Pods stop: those with a network volume are preserved, while those without one are terminated and their data cannot be recovered. Plans are non-refundable and have fixed expiration dates.
+Savings plans are deprecated and can no longer be purchased. If you bought a savings plan before deprecation, it stays active until its expiration date. The plan applies to your Pods of the same GPU type and covers GPU compute costs only. [Storage costs](https://docs.runpod.io/pods/storage/types) are billed at standard rates. Plans are non-refundable.
 
 ## Storage pricing
 
@@ -57,5 +47,5 @@ Storage is billed per-second for container and volume disks, and hourly for netw
 
 ## Track your costs
 
-- **Savings plans**: Monitor active plans, commitment periods, and expiration dates in the [Savings plans](https://www.console.runpod.io/savings-plans) section.
+- **Existing savings plans**: If you have an active savings plan, monitor its commitment period and expiration date in the [Savings plans](https://www.console.runpod.io/savings-plans) section.
 - **Billing**: Track usage and charges in the [Billing section](https://www.console.runpod.io/user/billing).

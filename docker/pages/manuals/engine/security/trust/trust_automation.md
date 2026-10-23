@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/security/trust/trust_automation.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/engine/security/trust/trust_automation.md)
+> Pinned source for Docker main: [content/manuals/engine/security/trust/trust_automation.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/engine/security/trust/trust_automation.md)
 
 It is very common for Docker Content Trust to be built into existing automation
 systems. To allow tools to wrap Docker and push trusted content, there are

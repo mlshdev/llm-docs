@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/management/sessions/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/management/sessions/list.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/management/sessions/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/management/sessions/list.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/sessions/list
 
 # List sessions

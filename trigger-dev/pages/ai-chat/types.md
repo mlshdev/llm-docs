@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/types.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/types.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/types.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/types.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/types
 
 # Types
@@ -57,7 +57,7 @@ Call `withUIMessage` **once**, then chain `.agent({ ... })` instead of `chat.age
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, tool } from "ai";
+import { tool } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
 import type { MyChatUIMessage } from "./my-chat-types";
@@ -91,7 +91,7 @@ export const myChat = chat
         data: { status: "preparing" },
       });
     },
-    run: async ({ messages, tools, signal }) => {
+    run: async ({ messages, tools, signal, streamText }) => {
       // `tools` is myTools, typed, handed back on the payload
       return streamText({
         model: anthropic("claude-sonnet-4-5"),
@@ -157,7 +157,7 @@ export const myChat = chat
       // clientData is typed as { userId: string; model?: string }
       await initUser(clientData.userId);
     },
-    run: async ({ messages, clientData, signal }) => {
+    run: async ({ messages, clientData, signal, streamText }) => {
       return streamText({
         model: getModel(clientData.model),
         messages,
@@ -194,7 +194,7 @@ export const myChat = chat
   })
   .agent({
     id: "my-chat",
-    run: async ({ messages, signal }) => {
+    run: async ({ messages, signal, streamText }) => {
       return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
     },
   });
@@ -219,7 +219,7 @@ chat
       // Runs second — task-specific logic
       await createChatRecord(event.chatId);
     },
-    run: async ({ messages, signal }) => {
+    run: async ({ messages, signal, streamText }) => {
       return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
     },
   });

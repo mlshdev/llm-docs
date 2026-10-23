@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/backend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/backend.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/backend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/backend.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/backend
 
 # Backend
@@ -273,7 +273,7 @@ export const myChat = chat.agent({
 });
 ```
 
-The managed `streamText` carries the stored prompt's `system`, `model` (resolved through the agent's `registry`), sampling config, and `experimental_telemetry`. Options you pass at the call site win, apart from `system`, which throws when the prompt already set one.
+The managed `streamText` carries the stored prompt's `system`, `model` (resolved through the agent's `registry`), sampling config, and `experimental_telemetry`. AI SDK telemetry is on even without a stored prompt, so model steps and tool calls show in the run trace. Options you pass at the call site win, apart from `system`, which throws when the prompt already set one.
 
 `chat.toStreamTextOptions()` remains available for the same job, and is the only option in a [custom agent](#custom-agents), which has no `run` argument to take a bound `streamText` from. A `chat.headStart` route does get one, and there it also owns `messages`, `stopWhen` and `abortSignal`, since the handover depends on them. Pass `{ registry }` when a prompt names a provider-prefixed model, and `{ tools }` when you want HITL tool approvals, so the SDK knows which calls pause on `needsApproval`.
 
@@ -499,11 +499,6 @@ Custom actions let the frontend send structured commands (undo, rollback, edit, 
 See [Actions](https://trigger.dev/docs/ai-chat/actions).
 
 ### Webhook events and channels
-
-> **Note**
->
-> Webhooks are in private beta. [Request access](https://trigger.dev/webhooks-beta) and we'll turn them on for your
-> organization.
 
 Two `chat.agent()` options wire an agent to verified inbound webhooks. `events` claims [`chat.event(...)`](https://trigger.dev/docs/webhooks/session-routing) descriptors: each verified delivery is routed to this agent's session and arrives at `onAction` as an action (not a turn), so [session routing](https://trigger.dev/docs/webhooks/session-routing) decides which conversation it lands on. `channels` claims channel connectors that turn an external chat surface into a frontend for the agent: an inbound message runs as a turn through `run()` and the reply is posted back. `slack()` ships in `@trigger.dev/slack`, and `chat.channels.custom(...)` builds a connector for any endpoint without a preset.
 

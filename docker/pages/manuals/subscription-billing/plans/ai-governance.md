@@ -1,11 +1,11 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/ai-governance.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/subscription-billing/plans/ai-governance.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/ai-governance.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/subscription-billing/plans/ai-governance.md)
 
 # AI Governance plan
 
-[AI Governance](https://docs.docker.com/ai/sandboxes/governance/) lets organization owners enforce policies for members across supported Docker AI products, like [Docker Sandbox](https://docs.docker.com/ai/sandboxes/). When you add an AI Governance plan, you work with your Docker sales representative to determine the number of licenses needed, which are applied to your account.
-
 > \[!TIP]
 > To subscribe to AI Governance, <a id="dkr_docs_cs_plans_aigov"></a>contact sales.
+
+[AI Governance](https://docs.docker.com/ai/sandboxes/governance/) lets organization owners enforce policies for members across supported Docker AI products, like [Docker Sandbox](https://docs.docker.com/ai/sandboxes/). When you add an AI Governance plan, you work with your Docker sales representative to determine the number of licenses needed, which are applied to your account.
 
 ## Usage
 

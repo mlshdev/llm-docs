@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai/prompts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai/prompts.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai/prompts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai/prompts.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai/prompts
 
 # Prompts
@@ -220,8 +220,9 @@ Prompts integrate with `chat.agent()` via `chat.prompt` — a run-scoped store f
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
 import { prompts } from "@trigger.dev/sdk";
-import { streamText, createProviderRegistry } from "ai";
+import { createProviderRegistry, stepCountIs } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
+import { z } from "zod";
 
 const registry = createProviderRegistry({ anthropic });
 
@@ -235,13 +236,14 @@ const systemPrompt = prompts.define({
 
 export const myChat = chat.agent({
   id: "my-chat",
+  registry,
+  clientDataSchema: z.object({ name: z.string() }),
   onChatStart: async ({ clientData }) => {
     const resolved = await systemPrompt.resolve({ name: clientData.name });
     chat.prompt.set(resolved);
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
-      ...chat.toStreamTextOptions({ registry }),
       messages,
       abortSignal: signal,
       stopWhen: stepCountIs(15),
@@ -250,9 +252,11 @@ export const myChat = chat.agent({
 });
 ```
 
+The `streamText` passed to `run()` applies the stored prompt: its system text, its model (resolved through the agent's `registry`), its `config`, and telemetry that links each generation to the prompt version. Options you pass at the call site win, apart from `system`, which throws when a prompt already sets one.
+
 ### chat.toStreamTextOptions()
 
-Returns an options object ready to spread into `streamText()`. When a prompt is stored via `chat.prompt.set()`, it includes:
+Inside a `chat.agent` you don't need this: the `streamText` passed to `run()` applies the same options. Use `chat.toStreamTextOptions()` when you call `streamText` yourself, as in a [custom agent](https://trigger.dev/docs/ai-chat/custom-agents). It returns an options object ready to spread into `streamText()`. When a prompt is stored via `chat.prompt.set()`, it includes:
 
 - `system` — the compiled prompt text
 - `model` — resolved via the `registry` when provided
@@ -278,14 +282,13 @@ const options = chat.toStreamTextOptions();
 Access the stored prompt from anywhere in the run:
 
 ```ts
-run: async ({ messages, signal }) => {
+run: async ({ messages, signal, streamText }) => {
   const prompt = chat.prompt(); // Throws if not set
   console.log(prompt.text);     // The compiled prompt
   console.log(prompt.model);    // "anthropic:claude-sonnet-4-5"
   console.log(prompt.version);  // 3
 
   return streamText({
-    ...chat.toStreamTextOptions({ registry }),
     messages,
     abortSignal: signal,
     stopWhen: stepCountIs(15),

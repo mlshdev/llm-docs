@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/migrating-from-v3.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/migrating-from-v3.mdx)
 > Canonical documentation: https://trigger.dev/docs/migrating-from-v3
 
 # Migrating from v3
@@ -36,10 +36,10 @@ What's new in v4, how to migrate, and breaking changes.
 
 Trigger.dev runs your deployed tasks on one of these runtimes:
 
-- Node.js `node` — the default, tracks the current Node.js LTS (today `24.18.0`)
-- Node.js `node-22` — `22.16.0`
-- Node.js `node-24` — `24.18.0`
-- Node.js `node-26` — `26.4.0`
+- Node.js `node` — the default, tracks the current Node.js LTS (today `24.22.1`)
+- Node.js `node-22` — `22.23.4`
+- Node.js `node-24` — `24.22.1`
+- Node.js `node-26` — `26.12.1`
 - Bun `bun` — `1.3.3`
 
 If you don't set a `runtime`, or you set `runtime: "node"`, your tasks run on the current Node.js LTS. That version moves forward as new LTS releases land, so set an explicit version — for example `runtime: "node-24"` — if you need it to stay fixed.

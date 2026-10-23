@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/patterns/sub-agents.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/patterns/sub-agents.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/patterns/sub-agents.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/patterns/sub-agents.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/sub-agents
 
 # Sub-Agents
@@ -277,7 +277,7 @@ const tools = { research: researchTool };
 export const myAgent = chat.agent({
   id: "orchestrator",
   tools, // declare here so toModelOutput survives across turns
-  run: async ({ messages, tools, stopSignal }) => {
+  run: async ({ messages, tools, stopSignal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-6"),
       messages,

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/management/webhooks/list-endpoints.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/management/webhooks/list-endpoints.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/management/webhooks/list-endpoints.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/management/webhooks/list-endpoints.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/webhooks/list-endpoints
 
 # List webhook endpoints
@@ -7,7 +7,6 @@
 
 **List webhook endpoints**
 
-**Private beta:** [request access](https://trigger.dev/webhooks-beta) to use webhooks.
 List the hosted webhook endpoints in the environment, ordered by declared id. Each endpoint includes its webhook URL and whether its signing secret is set. The secret itself is never returned.
 
 **Authentication:** `secretKey`

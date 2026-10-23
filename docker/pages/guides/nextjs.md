@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/nextjs.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/guides/nextjs.md)
+> Pinned source for Docker main: [content/guides/nextjs.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/guides/nextjs.md)
 
 This guide shows you how to containerize a Next.js application using Docker, following best practices for creating efficient, production-ready containers.
 

@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `09d7cacc04ae5b1298b811fa31cfb830f3ef194f`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `1d503f8b7c2b2008da6cbc08bb5be163666c84bf`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -268,7 +268,7 @@
 - [User Prompt Tool](pages/manuals/ai/docker-agent/tools/user-prompt/index.md): Ask the user questions and collect interactive input during agent execution. (4707 bytes)
 - [Webhook Tool](pages/manuals/ai/docker-agent/tools/webhook/index.md): Reliable outbound notifications to Slack, Discord, Telegram, IFTTT, and more. (5349 bytes)
 - [Gordon's capabilities](pages/manuals/ai/gordon/concepts/capabilities.md): Gordon requirements (3133 bytes)
-- [Data privacy and Gordon](pages/manuals/ai/gordon/concepts/data-privacy.md): Gordon requirements (3956 bytes)
+- [Data privacy and Gordon](pages/manuals/ai/gordon/concepts/data-privacy.md): Gordon requirements (3944 bytes)
 - [Using Gordon via CLI](pages/manuals/ai/gordon/how-to/cli.md): Gordon requirements (1632 bytes)
 - [Configure Gordon's tools](pages/manuals/ai/gordon/how-to/configure-tools.md): Gordon requirements (2607 bytes)
 - [Using Gordon in Docker Desktop](pages/manuals/ai/gordon/how-to/docker-desktop.md): Gordon requirements (1679 bytes)
@@ -629,7 +629,7 @@
 - [General FAQs for Desktop](pages/manuals/desktop/troubleshoot-and-support/faqs/general.md): Yes, you can use Docker Desktop offline. However, you cannot access features that require an active internet connection. Additionally, any functionality that requires you to sign in won't work while using Docker Desktop… (5570 bytes)
 - [FAQs for Docker Desktop for Linux](pages/manuals/desktop/troubleshoot-and-support/faqs/linuxfaqs.md): Docker Desktop for Linux runs a Virtual Machine (VM) for the following reasons: (7624 bytes)
 - [FAQs for Docker Desktop for Mac](pages/manuals/desktop/troubleshoot-and-support/faqs/macfaqs.md): HyperKit is a legacy hypervisor built on top of Hypervisor.framework in macOS. Previous versions of Docker Desktop for Mac used HyperKit to run the Linux VM. (7495 bytes)
-- [FAQs on Docker Desktop releases](pages/manuals/desktop/troubleshoot-and-support/faqs/releases.md): New releases are available every week, unless there are critical fixes that need to be released sooner. (956 bytes)
+- [FAQs on Docker Desktop releases](pages/manuals/desktop/troubleshoot-and-support/faqs/releases.md): New releases are available every week, unless there are critical fixes that need to be released sooner. (3766 bytes)
 - [FAQs for Docker Desktop for Windows](pages/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md): Yes, you can run VirtualBox along with Docker Desktop if you have enabled the Windows Hypervisor Platform feature on your machine. (3696 bytes)
 - [Give feedback](pages/manuals/desktop/troubleshoot-and-support/feedback.md): There are many ways you can provide feedback on Docker Desktop or Docker Desktop features. (1215 bytes)
 - [Troubleshoot Docker Desktop](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/index.md): This page contains information on how to diagnose and troubleshoot Docker Desktop, and how to check the logs. (7408 bytes)
@@ -1050,7 +1050,7 @@
 - [Migrate JIT to SCIM](pages/manuals/security/provisioning/scim/migrate-scim.md): SSO requirements (4398 bytes)
 - [Set up SCIM provisioning](pages/manuals/security/provisioning/scim/provision-scim.md): SSO requirements (15890 bytes)
 - [Troubleshoot provisioning](pages/manuals/security/provisioning/troubleshoot-provisioning.md): This page helps troubleshoot common user provisioning issues including user roles, attributes, and unexpected account behavior with SCIM and Just-in-Time (JIT) provisioning. (4132 bytes)
-- [Docker core roles and permissions](pages/manuals/security/roles-and-permissions/core-roles.md): General admin requirements (7638 bytes)
+- [Docker core roles and permissions](pages/manuals/security/roles-and-permissions/core-roles.md): General admin requirements (7740 bytes)
 - [Custom roles and permissions overview](pages/manuals/security/roles-and-permissions/custom-roles/index.md): Custom roles requirements (1208 bytes)
 - [Manage custom roles in Docker Home](pages/manuals/security/roles-and-permissions/custom-roles/manage.md): Custom roles requirements (4909 bytes)
 - [Custom role permissions reference](pages/manuals/security/roles-and-permissions/custom-roles/permissions-reference.md): Custom roles requirements (6302 bytes)
@@ -1060,21 +1060,21 @@
 ## Subscription Billing
 
 - [Docker Desktop license agreement](pages/manuals/subscription-billing/desktop-license.md): Docker Desktop is licensed under the Docker Subscription Service Agreement. When you download and install Docker Desktop, you're asked to agree to these terms. (1700 bytes)
-- [Subscription and billing](pages/manuals/subscription-billing/index.md): A Docker plan is a subscription tied to an individual account, an organization account, or a specific product. When you upgrade a plan, you expand your usage entitlements and feature sets. You can also top up some plans… (6290 bytes)
+- [Docker subscriptions and billing](pages/manuals/subscription-billing/index.md): Docker subscriptions determine the products, features, and usage included with an individual account or organization. This section explains the available plans and how to manage subscriptions and billing. (1872 bytes)
 - [Use 3D Secure authentication for Docker billing](pages/manuals/subscription-billing/manage/3d-secure.md): Docker supports 3D Secure (3DS), an extra layer of authentication required for certain credit card payments. If your bank or card issuer requires 3DS, you may need to verify your identity before your payment can be comp… (1800 bytes)
-- [Update your billing details](pages/manuals/subscription-billing/manage/details.md): You can update your billing contact information, address, and notification email at any time. Existing invoices, whether paid or unpaid, cannot be updated. Changes only apply to future invoices. (1495 bytes)
-- [Billing and invoice history](pages/manuals/subscription-billing/manage/history.md): Docker issues an invoice each time a subscription to a Docker plan renews or changes. You can track invoices issued to your account so you can review the plans you've subscribed to over time, check payment status, and d… (3790 bytes)
-- [Manage billing](pages/manuals/subscription-billing/manage/index.md): You manage Docker plans, payment methods, invoices, credits, and taxes from Docker Home. Billing is scoped to the account you select. To manage billing: (2523 bytes)
+- [Update your billing details](pages/manuals/subscription-billing/manage/details.md): You can update your billing contact information, address, and notification email at any time. Existing invoices, whether paid or unpaid, cannot be updated. Changes only apply to future invoices. (1497 bytes)
+- [Billing and invoice history](pages/manuals/subscription-billing/manage/history.md): Docker issues an invoice each time a subscription to a Docker plan renews or changes. You can track invoices issued to your account so you can review the plans you've subscribed to over time, check payment status, and d… (3792 bytes)
+- [Manage billing](pages/manuals/subscription-billing/manage/index.md): You manage Docker plans, payment methods, invoices, usage, costs, credits, and billing details from Billing in Docker Home. Billing applies to the account you select, either your individual account or an organization. (3703 bytes)
 - [Add or update a payment method](pages/manuals/subscription-billing/manage/payment-method.md): Docker supports several payment methods for paid individual accounts and organizations. This page describes supported payment types, how to manage payments from Docker Home, and how to set up pay by invoice. (5701 bytes)
-- [Manage plans](pages/manuals/subscription-billing/manage/plans.md): You can add and manage your plans from the billing portal in Docker Home. Within the billing portal, you use the product catalog to view self-serve Docker products, while the Overview page shows your active plans with o… (3616 bytes)
+- [Manage plans](pages/manuals/subscription-billing/manage/plans.md): You can add and manage your plans from the billing portal in Docker Home. Within the billing portal, you use the product catalog to view self-serve Docker products, while the Overview page shows your active plans with o… (2641 bytes)
 - [Sales tax exemption and VAT](pages/manuals/subscription-billing/manage/tax-certificate.md): Depending on your location, Docker may collect sales tax or VAT on your subscription. Tax relief is the same idea in both cases, but the process differs: (3081 bytes)
 - [AI Governance plan](pages/manuals/subscription-billing/plans/ai-governance.md): AI Governance lets organization owners enforce policies for members across supported Docker AI products, like Docker Sandbox. When you add an AI Governance plan, you work with your Docker sales representative to determi… (1300 bytes)
-- [DHI plans](pages/manuals/subscription-billing/plans/dhi.md): Docker Hardened Images (DHI) are secure, minimal, production-ready container images maintained by Docker. (3524 bytes)
-- [Docker Agentic Platform plans](pages/manuals/subscription-billing/plans/docker-agentic-platform.md): Docker Agentic Platform is a pay-as-you-go plan for running agent and tool workloads in isolated sandboxes with Docker-managed cloud infrastructure. You pay for the usage you accrue without a recurring subscription fee. (2830 bytes)
-- [Docker Verified Publisher plans](pages/manuals/subscription-billing/plans/docker-verified-publisher.md): Docker Verified Publisher (DVP) is a program for commercial publishers who distribute content on Docker Hub. DVP Starter and DVP Growth are paid organization plans that add publisher analytics and reporting to verified… (4106 bytes)
-- [Docker plans](pages/manuals/subscription-billing/plans/docker.md): Docker plans upgrade your account from the free Docker Personal plan to a paid plan with higher usage limits, commercial licensing, and expanded features. (5913 bytes)
-- [Gordon plans](pages/manuals/subscription-billing/plans/gordon.md): Gordon is an AI assistant for Docker workflows. For pricing details, see the Gordon product page. (2632 bytes)
-- [Plans](pages/manuals/subscription-billing/plans/index.md): Docker plans attach to an individual account, an organization, or a specific product. Docker Personal and Docker Pro are subscriptions for individual accounts. Docker Team and Docker Business are subscriptions for organ… (1933 bytes)
+- [DHI plans](pages/manuals/subscription-billing/plans/dhi.md): Docker Hardened Images (DHI) are secure, minimal, production-ready container images maintained by Docker. (3888 bytes)
+- [Docker Agentic Platform plans](pages/manuals/subscription-billing/plans/docker-agentic-platform.md): Docker Agentic Platform is a pay-as-you-go plan for running agent and tool workloads in isolated sandboxes with Docker-managed cloud infrastructure. You pay for the usage you accrue without a recurring subscription fee. (3261 bytes)
+- [Docker Verified Publisher plans](pages/manuals/subscription-billing/plans/docker-verified-publisher.md): Docker Verified Publisher (DVP) is a program for commercial publishers who distribute content on Docker Hub. DVP Starter and DVP Growth are paid organization plans that add publisher analytics and reporting to verified… (5101 bytes)
+- [Docker plans](pages/manuals/subscription-billing/plans/docker.md): Docker plans upgrade your account from the free Docker Personal plan to a paid plan with higher usage limits, commercial licensing, and expanded features. (6627 bytes)
+- [Gordon plans](pages/manuals/subscription-billing/plans/gordon.md): Gordon is an AI assistant for Docker workflows. For pricing details, see the Gordon product page. (3313 bytes)
+- [Plans](pages/manuals/subscription-billing/plans/index.md): Docker plans attach to an individual account, an organization, or a specific product. Plans make up your subscription. (5473 bytes)
 
 ## Support
 

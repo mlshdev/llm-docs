@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/ai-chat/side-channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/ai-chat/side-channels.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/side-channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/side-channels.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/side-channels
 
 # Side channels
@@ -39,12 +39,12 @@ Inside a `chat.agent` run, `chat.channel(...)` opens a channel on the current ru
 
 ```ts /trigger/browser-agent.ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText } from "ai";
+
 import { screenshots } from "./channels";
 
 export const browserAgent = chat.agent({
   id: "browser-agent",
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     const frames = chat.channel(screenshots);
 
     frames.in.on((control) => setPaused(control.paused)); // control: ViewportControl

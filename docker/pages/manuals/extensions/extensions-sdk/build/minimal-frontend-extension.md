@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/minimal-frontend-extension.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/extensions/extensions-sdk/build/minimal-frontend-extension.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/minimal-frontend-extension.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/extensions/extensions-sdk/build/minimal-frontend-extension.md)
 
 To start creating your extension, you first need a directory with files which range from the extension’s source code to the required extension-specific files. This page provides information on how to set up a minimal frontend extension based on plain HTML.
 
@@ -90,7 +90,7 @@ To preview the extension in Docker Desktop, close and open the Docker Desktop Da
 
 The left-hand menu displays a new tab with the name of your extension.
 
-![Minimal frontend extension](https://raw.githubusercontent.com/docker/docs/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/extensions/extensions-sdk/build/images/ui-minimal-extension.png)
+![Minimal frontend extension](https://raw.githubusercontent.com/docker/docs/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/extensions/extensions-sdk/build/images/ui-minimal-extension.png)
 
 ## What's next?
 

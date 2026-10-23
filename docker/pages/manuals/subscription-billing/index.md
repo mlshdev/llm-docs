@@ -1,54 +1,30 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/_index.md](https://github.com/docker/docs/blob/09d7cacc04ae5b1298b811fa31cfb830f3ef194f/content/manuals/subscription-billing/_index.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/_index.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/subscription-billing/_index.md)
 
-# Subscription and billing
+# Docker subscriptions and billing
 
-A Docker plan is a subscription tied to an individual account, an organization
-account, or a specific product. When you upgrade a plan, you expand your
-usage entitlements and feature sets. You can also top up some plans,
-extending usage without changing your plan type.
+> \[!TIP]
+>
+> Compare plan features and prices on the <a id="dkr_docs_index_pricing"></a>Docker pricing page.
 
-## Docker plans
+Docker subscriptions determine the products, features, and usage included with
+an individual account or organization. This section explains the available
+plans and how to manage subscriptions and billing.
 
-The following table summarizes the available plans.
+Use these docs to:
 
-| Plans                                                                                                            | Billing model                                                                                           | Types                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| [Docker](https://docs.docker.com/subscription-billing/plans/docker/)                                             | Flat-rate plans for personal and organization accounts                                                  | Docker Personal, Docker Pro, Docker Team, Docker Business |
-| [Docker Hardened Images (DHI)](https://docs.docker.com/subscription-billing/plans/dhi/)                          | Annual plans billed per repository. DHI Community is free.                                              | DHI Community, DHI Select, DHI Enterprise                 |
-| [Gordon](https://docs.docker.com/subscription-billing/plans/gordon/)                                             | Monthly plans that raise your Gordon usage allowance                                                    | Gordon Plus, Gordon Max, Gordon Ultra                     |
-| [Docker Agentic Platform](https://docs.docker.com/subscription-billing/plans/docker-agentic-platform/)           | Pay-as-you-go cloud compute, billed monthly                                                             | Pay-as-you-go                                             |
-| [AI Governance](https://docs.docker.com/subscription-billing/plans/ai-governance/)                               | Licenses purchased through Docker sales. <a id="dkr_docs_cs_index_aigov"></a>Contact sales to add more. | AI Governance                                             |
-| [Docker Verified Publisher (DVP)](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/) | Flat-rate annual plans. DVP Growth lets you add consuming domains in blocks of 25.                      | DVP Starter, DVP Growth                                   |
-
-Docker plans that upgrade your account (Docker Pro, Team, and Business) cover
-most use cases. Some product plans require an upgraded Docker account. Others
-let you subscribe without one. For details, see
-[Plans](https://docs.docker.com/subscription-billing/plans/).
-
-## Top up your plan
-
-Plans come with usage entitlements that can be extended without upgrading to
-a different plan.
-
-| Unit                                                                                                                     | Description                                                                             | Examples                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/)                                              | Each seat extends entitlements to one more member.                                      | Docker Team, Docker Business                                                                                                        |
-| [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/)                                        | Access to specific products or features.                                                | AI Governance, Docker Offload                                                                                                       |
-| [Minutes](https://docs.docker.com/subscription-billing/plans/docker/#docker-build-cloud-minutes)                         | Build and test runtime capacity, sold in blocks and consumed within the billing period. | Docker Build Cloud, [Testcontainers Cloud](https://docs.docker.com/subscription-billing/plans/docker/#testcontainers-cloud-minutes) |
-| [Repositories](https://docs.docker.com/subscription-billing/plans/dhi/)                                                  | Additional container repositories covered by security scanning and analysis features.   | DHI                                                                                                                                 |
-| [Consuming domains](https://docs.docker.com/subscription-billing/plans/docker-verified-publisher/#add-consuming-domains) | Additional consuming domains tracked in publisher analytics, sold in blocks of 25.      | DVP Growth                                                                                                                          |
-
-## Manage your plans
-
-To subscribe to a new plan or upgrade an active plan, see
-[Manage plans](https://docs.docker.com/subscription-billing/manage/plans/). See
-[Docker plans](https://docs.docker.com/subscription-billing/plans/docker/) to learn about
-Docker Team, Business, and Pro. You can also <a id="dkr_docs_index_sales"></a>contact sales.
-
-To update payment methods, review usage and credits, or download invoices, see
-[Manage billing](https://docs.docker.com/subscription-billing/manage/).
+- Compare Docker account plans and product-specific plans, including their
+  billing models, usage entitlements, and available add-ons. You can also
+  review Docker Desktop licensing requirements.
+- Purchase a plan and manage an active subscription by upgrading, downgrading,
+  adding seats or usage, managing auto-renewal, or canceling the plan.
+- Manage payment methods and billing details, review invoices and taxes, and
+  track usage, costs, and credits for an account in Docker Home.
 
 ## Next steps
 
-- [Explore plans](https://docs.docker.com/subscription-billing/plans/): Browse available Docker plans and add-ons for individuals, teams, and organizations.
-- [Manage billing](https://docs.docker.com/subscription-billing/manage/): Manage payment methods, invoices, credits, and billing details in the billing portal.
+- [Plans](https://docs.docker.com/subscription-billing/plans/): Compare billing models and tiers for Docker, Docker Hardened Images, Gordon, Docker Agentic Platform, AI Governance, and DVP.
+- [Manage plans](https://docs.docker.com/subscription-billing/manage/plans/): Subscribe to a new plan, upgrade an active plan, or cancel auto-renewal.
+- [Billing overview](https://docs.docker.com/subscription-billing/manage/): Open Billing in Docker Home to review active plans, usage, costs, and credits for an account.
+- [Payment methods](https://docs.docker.com/subscription-billing/manage/payment-method/): Add or update a card, US bank account, or Stripe Link, or set up pay by invoice for annual organization plans.
+- [Invoices](https://docs.docker.com/subscription-billing/manage/history/): View billing history and download past invoices.
+- [3D Secure authentication](https://docs.docker.com/subscription-billing/manage/3d-secure/): Learn how 3DS works and how to troubleshoot card verification.

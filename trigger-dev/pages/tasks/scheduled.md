@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/tasks/scheduled.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/tasks/scheduled.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/tasks/scheduled.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/tasks/scheduled.mdx)
 > Canonical documentation: https://trigger.dev/docs/tasks/scheduled
 
 # Scheduled tasks (cron)
@@ -257,9 +257,9 @@ You need to attach a schedule to a task before it will run on a schedule. You ca
 
 1. In the sidebar select the "Tasks" page, then select the scheduled task you want to attach a
    schedule to (scheduled tasks have a clock icon, and you can filter the list to Scheduled).
-   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/schedules-blank.png)
+   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/schedules-blank.png)
 2. Press the "Create schedule" button, fill in the form, and press "Create schedule" when you're
-   done. ![Create schedule form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/schedules-create.png)
+   done. ![Create schedule form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/schedules-create.png)
 
    These are the options when creating a schedule:
 
@@ -402,9 +402,9 @@ You can test a scheduled task in the dashboard. Note that the `scheduleId` will 
 > open it on the Tasks page and press the "Test schedule" button.
 
 1. On the "Tasks" page, open your scheduled task and press the "Test schedule" button.
-   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/schedules-test.png)
+   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/schedules-test.png)
 2. Fill in the form \[1]. You can select from a recent run \[2] to pre-populate the fields. Press "Run
-   test" when you're ready ![Schedule test form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/images/schedules-test-form.png)
+   test" when you're ready ![Schedule test form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/schedules-test-form.png)
 
 ## Managing schedules with the SDK
 

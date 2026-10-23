@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/179d08349347e00b2a24593cfa8b3cbbde2a6cfb/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/19c06936fd78b9249fc65045c9d855b6c28758e1/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1776,7 +1776,7 @@ The accepted options are:
   when an existing cache file was created, the previously specified value will
   be used instead.
 
-- read\_only
+- cache\_read\_only
   If true, use the shared cache for reads but don't write any new blocks to it.
   Default is false. Note that even with this option enabled, the cache file will
   be initialized if it does not already exist.
@@ -1818,8 +1818,9 @@ to try and fetch the same missing blocks themselves. Defaults to 10000 (10 ms).
   limit.
 
 Once this limit is reached, the protocol switches to read-only mode (see
-`read_only`). Already cached data is never evicted, so once this limit
-is reached, no new data will ever be cached until the cache file is deleted.
+`cache_read_only`). Already cached data is never evicted, so once this
+limit is reached, no new data will ever be cached until the cache file is
+deleted.
 
 Note that this option is best-effort only, and may over-write up to N-1
 blocks, where N is the number of concurrent processes using the same cache

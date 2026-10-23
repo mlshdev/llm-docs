@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/179d08349347e00b2a24593cfa8b3cbbde2a6cfb/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/19c06936fd78b9249fc65045c9d855b6c28758e1/doc/general.texi)
 
 # External libraries
 
@@ -644,6 +644,8 @@ library:
   \|  A format used by libvpx
 - Internet Video Recording   |     |  X
 - IRCAM                      |  X  |  X
+- JPEG Multi-Picture Format  |  X  |  X
+  \|  Includes JPEG Ultra HDR (ISO 21496-1 gain map) images.
 - LAF                        |     |  X
   \|  Limitless Audio Format
 - LATM                       |  X  |  X

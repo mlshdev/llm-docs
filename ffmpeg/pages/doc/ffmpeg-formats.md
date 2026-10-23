@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/179d08349347e00b2a24593cfa8b3cbbde2a6cfb/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/19c06936fd78b9249fc65045c9d855b6c28758e1/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -1017,6 +1017,29 @@ terminating with the ".png" suffix:
 ```text
 ffmpeg -framerate 10 -pattern_type glob -i "*.png" out.mkv
 ```
+
+## jpeg\_mpf
+
+JPEG Multi-Picture Format demuxer.
+
+Exposes each JPEG image stored in a CIPA DC-007 MP file as a separate stream,
+in the order of the MP Entries, with the First Individual Image flagged as the
+default stream. If the file contains an ISO 21496-1 gain map, as is the case
+for JPEG Ultra HDR, the primary image and the gain map are linked by a
+`gain_map` stream group, and the gain map parameters are exported as
+frame side data by the decoder.
+
+Images of any other type (e.g. large thumbnails or multi-view images) are
+exposed as additional streams.
+
+This demuxer accepts the following options, which behave like the options of
+the same name of the `image2` demuxer:
+
+- framerate
+  Set the frame rate of the video streams. The default is 25.
+- loop
+  If set to 1, loop over the images in the file. The default is 0. This requires
+  seekable input.
 
 ## ktx
 

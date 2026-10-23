@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.7.7: [docs/guides/ai-agents/chat-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ffc950ee0d4fb2bdfbc0d368bba8d6e25e8d6e72/docs/guides/ai-agents/chat-agent.mdx)
+> Pinned source for Trigger.dev v4.8.1: [docs/guides/ai-agents/chat-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/guides/ai-agents/chat-agent.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/chat-agent
 
 # Build a chat agent
@@ -13,20 +13,17 @@ Build a **durable, multi-turn chat agent**. A durable session owns the conversat
 
 ## A minimal agent
 
-Define an agent with `chat.agent()`. The `run` function receives the conversation `messages` (already converted from the frontend's `UIMessage[]`) and an abort `signal`. Return a `StreamTextResult` and it's piped to the frontend automatically.
+Define an agent with `chat.agent()`. The `run` function receives the conversation `messages` (already converted from the frontend's `UIMessage[]`), an abort `signal`, and a `streamText` to call. Return its result and it's piped to the frontend automatically.
 
 ```typescript trigger/chat.ts
 import { chat } from "@trigger.dev/sdk/ai";
 import { anthropic } from "@ai-sdk/anthropic";
-import { streamText, stepCountIs } from "ai";
+import { stepCountIs } from "ai";
 
 export const myChat = chat.agent({
   id: "my-chat",
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
-      // Spread chat.toStreamTextOptions() FIRST: it wires up prepareStep
-      // (compaction, steering, background injection) and telemetry.
-      ...chat.toStreamTextOptions(),
       model: anthropic("claude-sonnet-4-5"),
       messages,
       abortSignal: signal,
@@ -36,11 +33,11 @@ export const myChat = chat.agent({
 });
 ```
 
-> **Warning**
+> **Note**
 >
-> Always spread `chat.toStreamTextOptions()` into your `streamText` call, and spread it first. It
-> wires up the `prepareStep` callback that drives compaction, mid-turn steering and background
-> injection. Those features silently no-op if the spread is missing.
+> Call the `streamText` passed to `run()`, not one imported from `ai`. It wires up the `prepareStep`
+> callback that drives compaction, mid-turn steering and background injection, and records each model
+> step and tool call as a span. With the imported `streamText`, those features don't run.
 
 ## Add tools
 
@@ -49,7 +46,7 @@ A chat agent uses tools exactly like any other AI SDK agent. Declare them on the
 ```typescript trigger/chat.ts
 import { chat } from "@trigger.dev/sdk/ai";
 import { anthropic } from "@ai-sdk/anthropic";
-import { streamText, stepCountIs, tool } from "ai";
+import { stepCountIs, tool } from "ai";
 import { z } from "zod";
 
 const getCurrentTime = tool({
@@ -62,12 +59,9 @@ export const myChat = chat.agent({
   id: "my-chat",
   // Declared here so tool results survive history re-conversion across turns.
   tools: { getCurrentTime },
-  run: async ({ messages, tools, signal }) => {
+  run: async ({ messages, tools, signal, streamText }) => {
     return streamText({
-      // Pass tools INTO toStreamTextOptions (not separately to streamText): it
-      // merges them with any auto-injected skill tools and sets streamText's
-      // `tools`. Passing tools separately after the spread drops the skill tools.
-      ...chat.toStreamTextOptions({ tools }),
+      tools,
       model: anthropic("claude-sonnet-4-5"),
       messages,
       stopWhen: stepCountIs(15),
