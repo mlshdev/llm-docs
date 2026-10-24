@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/reverse-proxy/access-logs.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/reverse-proxy/access-logs.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/reverse-proxy/access-logs.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/reverse-proxy/access-logs.mdx)
 
 # Reverse Proxy Access Logs
 
@@ -8,7 +8,7 @@ NetBird logs every request and connection that passes through your reverse proxy
 
 Access logs are available in the NetBird dashboard under **Reverse Proxy** > **Access Logs**. This view displays a table of all HTTP requests and L4 connections that have passed through your reverse proxy services, with filters to narrow down results by time range, status, or other fields.
 
-![Proxy Events table showing reverse proxy access log entries](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/access-logs/proxy-events-table.png)
+![Proxy Events table showing reverse proxy access log entries](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/access-logs/proxy-events-table.png)
 
 You can also retrieve access logs programmatically using the API:
 
@@ -32,9 +32,10 @@ Every log entry (HTTP and L4) shares a common set of fields. Some fields are onl
 | **Bytes Downloaded** | Bytes sent from backend to client                                                                                                                                                                                                                                                                                                                    |     Yes     |             Yes             |
 | **Source IP**        | The client's IP address                                                                                                                                                                                                                                                                                                                              |     Yes     |             Yes             |
 | **Location**         | Country, city, and subdivision based on source IP geolocation                                                                                                                                                                                                                                                                                        |     Yes     |             Yes             |
-| **Auth Method**      | Raw `auth_method_used` value: `oidc` (shown as SSO in the dashboard), `password`, `pin`, or `header`. For denied requests, carries the restriction code instead (e.g. `ip_restricted`, `crowdsec_ban`). Omitted from the API response when empty                                                                                                     |     Yes     | Restriction code on denials |
+| **Auth Method**      | Raw `auth_method_used` value: `oidc` (shown as SSO in the dashboard), `password`, `pin`, `header`, or a target access action such as `path_bypass` or `path_block`. For denied requests, carries the restriction code instead (e.g. `ip_restricted`, `crowdsec_ban`). Omitted from the API response when empty                                       |     Yes     | Restriction code on denials |
 | **User**             | The authenticated user's ID, set when `oidc` authentication was used. Omitted from the API response when empty                                                                                                                                                                                                                                       |     Yes     |             N/A             |
 | **Reason**           | Exactly one of two values: `Authentication failed` when authentication or an access restriction rejected the request, or `Request failed` when an authenticated request returned `4xx`/`5xx`. Set for HTTP entries only and omitted from the API response when empty. Never a specific denial code: see the note under [Deny reasons](#deny-reasons) |     Yes     |           Omitted           |
+| **Metadata**         | Additional decision details. Target access records `access_action` as `bypass`, `block`, or `invalid_path` (an ambiguous request path rejected with `400`); CrowdSec records its mode and verdict here                                                                                                                                               |     Yes     |             Yes             |
 
 ## Understanding log entries
 
@@ -42,8 +43,8 @@ Every log entry (HTTP and L4) shares a common set of fields. Some fields are onl
 
 HTTP log entries fall into three categories based on the status code:
 
-- **Allowed requests**: successful requests show a `2xx` status code along with the authentication method used to access the service.
-- **Denied requests**: failed authentication or access restriction blocks show `401` or `403` status codes with `reason` set to `Authentication failed`. The specific cause (invalid password, missing SSO session, IP restricted, country restricted, CrowdSec verdict) is carried in `auth_method_used`, not in `reason`.
+- **Allowed requests**: successful requests show a `2xx` status code along with the authentication method used to access the service. A target that bypasses authentication records `path_bypass`. The dashboard marks these entries with a small open-lock icon in the **User** column, at the right end of the row, labeled **Auth Bypassed** on hover.
+- **Denied requests**: failed authentication, access restriction blocks, and blocked target paths show `401` or `403` status codes with `reason` set to `Authentication failed`. The specific cause (invalid password, missing SSO session, blocked path, IP restricted, country restricted, CrowdSec verdict) is carried in `auth_method_used`, not in `reason`. A blocked target path records `path_block`. The dashboard marks these entries with a small shield icon in the **User** column, at the right end of the row, labeled **Path Blocked** on hover.
 - **Errors**: backend errors or proxy issues show `5xx` status codes. These typically indicate that the target service is unreachable or returned an error.
 
 ### L4 log entries
@@ -58,6 +59,7 @@ The following deny reasons identify why a connection was rejected. Note that for
 
 | Reason                 | Description                                                                                      |
 | ---------------------- | ------------------------------------------------------------------------------------------------ |
+| `path_block`           | The matching HTTP target is configured to block access                                           |
 | `ip_restricted`        | The client IP was blocked by a CIDR access restriction                                           |
 | `country_restricted`   | The client's country was blocked by a country access restriction                                 |
 | `geo_unavailable`      | Country restrictions are configured but the GeoIP database is unavailable (fail-closed)          |

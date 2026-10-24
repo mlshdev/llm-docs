@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/windows.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/windows.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/windows.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/windows.mdx)
 
 # Windows Installation
 
@@ -17,11 +17,19 @@ The NetBird client allows a peer to join a pre-existing NetBird deployment. If a
 
 > **Note**
 >
+> Open a new terminal before running `netbird` commands. The installer adds `C:\Program Files\NetBird` to the system `PATH`, but terminals that were already open keep the old `PATH`.
+
+> **Note**
+>
 > To uninstall the client and service, you can use Add/Remove programs
 
 ## Silent and Automated Installation
 
 Both installers support silent (unattended) installation for use with RMM tools, MDM platforms, and scripted deployments.
+
+> **Note**
+>
+> Silent installation writes to `C:\Program Files` and registers a Windows service, so it requires an elevated administrator or `SYSTEM` context. Make sure the deployment job runs elevated: tools such as PDQ, Intune, and Group Policy typically install as `SYSTEM` when targeting computers, but a job configured to run in the user's context is not elevated and fails with exit code `1625` (`This installation is forbidden by system policy`). A standard user running the installer interactively is prompted for elevation instead.
 
 ### EXE Installer (NSIS)
 
@@ -67,6 +75,40 @@ netbird up --setup-key <SETUP KEY>
 >
 > For MDM-specific deployment guides, see [Deploy with Intune](https://docs.netbird.io/manage/peers/mdm-deployment/intune-netbird-integration) or [Deploy with Acronis](https://docs.netbird.io/manage/for-partners/acronis-integration).
 
+## Updating an Existing Installation
+
+There is no separate update package. The same installer upgrades an existing installation in place: run the newer version and it replaces the installed one, keeping the peer's registration and configuration under `C:\ProgramData\Netbird`. There is no need to re-run `netbird up` or pass a setup key again after an upgrade.
+
+```bash
+netbird_installer_<VERSION>_windows_amd64.exe /S
+```
+
+Or with the MSI installer:
+
+```bash
+msiexec /i netbird_installer_<VERSION>_windows_amd64.msi /quiet /norestart /L*v netbird_upgrade.log
+```
+
+The `/L*v` log is optional but makes a failed silent upgrade far easier to diagnose.
+
+Like the initial install, an upgrade requires an elevated context, so the upgrade job must run as administrator or `SYSTEM`. Two more things the upgrade job must get right:
+
+- **Use the same installer type you deployed with.** Neither installer detects an installation made by the other, so switching from EXE to MSI (or back) produces a second, overlapping installation instead of an upgrade.
+- **Use a job that runs the installer even when NetBird is already present.** Some install jobs deliberately skip machines where the application is already installed, and a job like that will never upgrade. The script in the [Group Policy deployment guide](https://docs.netbird.io/manage/peers/mdm-deployment/windows-gpo-deployment), for example, exits early if NetBird is already installed, so use an upgrade-capable job for updates.
+
+> **Note**
+>
+> The upgrade stops and restarts the NetBird service, so the peer briefly disconnects during the install. This also applies when you push the upgrade over the NetBird tunnel itself: the session drops mid-install and comes back once the service restarts.
+
+> **Note**
+>
+> Alternatively, an administrator can enable [Automatic Updates](https://docs.netbird.io/manage/peers/auto-update) under **Settings » Clients** (requires v0.61.0 or later on the clients and, when self-hosting, on the Management server). Clients then prompt the user to install the configured version and the NetBird service performs the install, with no administrator rights required from the user; the **Force Automatic Updates** toggle (v0.67.0 or later, again on both the clients and the Management server) installs without prompting. If you deploy and hold a specific version with the installer while Automatic Updates is set to **Latest Version**, clients will be prompted, or with Force updated, past the version you are holding, so pin a **Custom Version** instead.
+
+The two installers treat downgrades differently:
+
+- **The MSI refuses to downgrade.** Installing an MSI older than the installed version changes nothing and fails with *"A newer version of NetBird is already installed"*. In quiet mode `msiexec` exits with `1603`, but `1603` is Windows Installer's generic fatal-error code and also fires on unrelated failures, so confirm a suspected downgrade attempt in the `/L*v` log rather than from the exit code alone. To roll back an MSI installation, uninstall NetBird and then install the older MSI; the uninstall leaves the configuration under `C:\ProgramData\Netbird` in place, so the peer keeps its identity.
+- **The EXE does not check versions.** It removes the existing EXE installation and installs the packaged version even when that version is older, so rolling back an EXE installation is just a normal silent run of the older installer.
+
 ## Running NetBird with SSO Login
 
 ### Desktop UI Application
@@ -81,9 +123,11 @@ Alternatively, you could use command line. Simply run
 netbird up
 ```
 
-> It will open your browser, and you will be prompt for email and password. Follow the instructions.
+> **Note**
+>
+> It will open your browser and prompt you for your email and password. Follow the instructions.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
 
 Check connection status:
 
@@ -113,6 +157,8 @@ Alternatively, if you are hosting your own Management Service provide `--managem
   netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
 ```
 
+> **Note**
+>
 > You could also omit the `--setup-key` property. In this case, the tool will prompt for the key.
 
 2. Check connection status:

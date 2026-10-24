@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/activity/event-streaming/datadog.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/activity/event-streaming/datadog.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/activity/event-streaming/datadog.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/activity/event-streaming/datadog.mdx)
 
 # Stream Network Activity to Datadog Cloud SIEM
 
@@ -12,7 +12,7 @@ search, filter, and analyze them right away.
 
 > **Note**
 >
-> This feature is only available in the cloud version of NetBird.
+> This feature is available in the cloud version of NetBird and in self-hosted deployments with an [enterprise license](https://docs.netbird.io/selfhosted/enterprise).
 
 ## Prerequisites
 
@@ -33,16 +33,16 @@ Before you start creating and configuring a Datadog event streaming integration,
 
 - Navigate to the [Integrations » Event Streaming](https://preview.netbird.io/integrations) tab in the NetBird Dashboard
 
-![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
+![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
 
 - Enable and configure the Datadog integration
   - First select the region of your Datadog account (for more details see [Datadog Documentation](https://docs.datadoghq.com/getting_started/site/))
 
-![datadog-region-select](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/datadog/datadog-region-select.png)
+![datadog-region-select](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/datadog/datadog-region-select.png)
 
 - Then enter the API key you created in Step 1 and click `Connect`
 
-![datadog-api-key](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/datadog/datadog-api-key.png)
+![datadog-api-key](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/datadog/datadog-api-key.png)
 
 ## Verify the Integration
 
@@ -53,7 +53,7 @@ in the Log Explorer:
 - `integration test`
 - `integration created`
 
-![verify-datadog-integration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/datadog/verify-datadog-integration.png)
+![verify-datadog-integration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/datadog/verify-datadog-integration.png)
 
 The `integration test` event is sent to validate whether the provided credentials are correct and NetBird can stream events.
 The `integration created` event is sent when the integration is successfully created.

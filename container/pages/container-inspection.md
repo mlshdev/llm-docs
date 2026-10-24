@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.0: [docs/container-inspection.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/container-inspection.md)
+> Pinned source for Apple container 1.6.1: [docs/container-inspection.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-inspection.md)
 
 # Inspecting containers and images
 
@@ -70,5 +70,5 @@ Use the `list` command with the `--format` option to display information for all
 ]
 </pre>
 
-See [Networking](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/networking.md) for how to publish ports, reach the host from a
+See [Networking](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md) for how to publish ports, reach the host from a
 container, set a custom MAC address, and create isolated networks.

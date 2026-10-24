@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/msp.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/msp.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/msp.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/msp.mdx)
 
 ## Get MSP tenants   (GET /api/integrations/msp/tenants)
 
@@ -788,6 +788,158 @@ echo $response;
   "invited_at": "string",
   "status": "string"
 }
+```
+
+***
+
+## Delete MSP tenant   (DELETE /api/integrations/msp/tenants/{id})
+
+### Path Parameters
+
+**id (type: string; required)**
+
+The unique identifier of a tenant account
+
+**DELETE /api/integrations/msp/tenants/{id} Request**
+
+**cURL**
+
+```bash
+curl -X DELETE https://api.netbird.io/api/integrations/msp/tenants/{id} \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'delete',
+  maxBodyLength: Infinity,
+  url: '/api/integrations/msp/tenants/{id}',
+  headers: {         
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/integrations/msp/tenants/{id}"
+
+headers = {     
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("DELETE", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/integrations/msp/tenants/{id}"
+  method := "DELETE"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/integrations/msp/tenants/{id}")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Delete.new(url)
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/integrations/msp/tenants/{id}")
+  .method("DELETE")    
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/integrations/msp/tenants/{id}',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'DELETE',  
+  CURLOPT_HTTPHEADER => array(        
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
 ```
 
 ***

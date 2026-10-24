@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [docs/agent-networks/modules/33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/33-proxy-runtime.md)
+> Pinned source for NetBird v0.81.4: [docs/agent-networks/modules/33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/33-proxy-runtime.md)
 
 # proxy/runtime — translate + serve + log
 
@@ -197,6 +197,6 @@ The integration test runs in a few seconds with no external infrastructure — e
 
 ## Cross-references
 
-- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/10-shared-api.md), [proxy/middleware-framework](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/30-proxy-middleware-framework.md), [proxy/middleware-builtin](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md), [proxy/llm-parsers](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/32-proxy-llm-parsers.md)
-- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/01-end-to-end-flows.md)
-- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/00-overview.md)
+- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/10-shared-api.md), [proxy/middleware-framework](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/30-proxy-middleware-framework.md), [proxy/middleware-builtin](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/31-proxy-middleware-builtin.md), [proxy/llm-parsers](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/32-proxy-llm-parsers.md)
+- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/01-end-to-end-flows.md)
+- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/00-overview.md)

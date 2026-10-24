@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/identity-providers/advanced/pocketid.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/identity-providers/advanced/pocketid.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/identity-providers/advanced/pocketid.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/identity-providers/advanced/pocketid.mdx)
 
 # PocketID SSO with NetBird Self-Hosted (Advanced)
 
@@ -43,7 +43,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **PKCE**: On
 4. Click **Save**
 
-![Create OIDC client](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/pocketid-create-oidc-client.png)
+![Create OIDC client](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/pocketid-create-oidc-client.png)
 
 5. Copy **Client ID** for later use
 
@@ -57,7 +57,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Description**: `NetBird Management Token`
 4. Click **Save**
 
-![Create API token](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/pocketid-create-api-token.png)
+![Create API token](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/pocketid/pocketid-create-api-token.png)
 
 5. Copy **API Key** for later use
 

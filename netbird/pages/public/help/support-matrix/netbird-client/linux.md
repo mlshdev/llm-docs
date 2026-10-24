@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/help/support-matrix/netbird-client/linux.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/help/support-matrix/netbird-client/linux.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/support-matrix/netbird-client/linux.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/support-matrix/netbird-client/linux.mdx)
 
 # Linux
 
@@ -7,7 +7,7 @@ NetBird's Linux support depends on the client mode you run:
 - **Userspace mode** is supported wherever the Go toolchain is supported. The kernel floor for each NetBird release follows Go's minimum OS requirements (see the table below).
 - **Kernel mode** depends on the iptables / nftables features available on the host distribution.
 
-The NetBird team's end-to-end tests cover the distributions below — **Ubuntu 20.04** is the oldest tested release:
+The NetBird team's end-to-end tests cover the distributions below. **Ubuntu 20.04** is the oldest tested release:
 
 - Ubuntu 20.04, 22.04, 24.04
 - Debian 12
@@ -18,16 +18,16 @@ Other distributions are not actively tested; their compatibility follows the mod
 
 > **Warning**
 >
-> The kernel range below is derived from Go's [minimum OS requirements](https://go.dev/wiki/MinimumRequirements) per NetBird release's Go version, and applies to userspace mode. Kernel mode may have stricter requirements depending on the distribution — confirm with the team for production deployments.
+> The kernel range below is derived from Go's [minimum OS requirements](https://go.dev/wiki/MinimumRequirements) per NetBird release's Go version, and applies to userspace mode. Kernel mode may have stricter requirements depending on the distribution, so confirm with the team for production deployments.
 
 ## Linux kernel (userspace mode)
 
 | Kernel range  | NetBird release range      |
 | ------------- | -------------------------- |
 | 3.2 and newer | v0.60.3 onwards (Go 1.24+) |
-| 2.6.32 – 3.1  | ≤ v0.60.2 (Go ≤1.23)       |
+| 2.6.32 to 3.1 | ≤ v0.60.2 (Go ≤1.23)       |
 
-The 2.6.32 floor primarily affected RHEL 6, CentOS 6, Ubuntu 14.04, and Debian 8 — all upstream EOL.
+The 2.6.32 floor primarily affected RHEL 6, CentOS 6, Ubuntu 14.04, and Debian 8, all of which are upstream EOL.
 
 ## Reporting compatibility issues
 

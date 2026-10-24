@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/reverse-proxy/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/reverse-proxy/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/reverse-proxy/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/reverse-proxy/index.mdx)
 
 # Reverse Proxy
 
@@ -20,7 +20,7 @@ NetBird Reverse Proxy lets you expose internal services running on peers or behi
 
 When you create a reverse proxy service, NetBird provisions a public domain with an automatic TLS certificate. Incoming traffic to that domain is received at the NetBird proxy cluster, then forwarded through an encrypted NetBird tunnel to the target peer or network resource running your application. The target service only needs to be reachable within your NetBird network: it does not need a public IP address or open ports.
 
-![Reverse proxy traffic flow diagram showing User to Proxy Service (TLS) through WireGuard tunnel to either a NetBird Peer directly or via a Routing Peer to a Network Resource](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-diagram.png)
+![Reverse proxy traffic flow diagram showing User to Proxy Service (TLS) through WireGuard tunnel to either a NetBird Peer directly or via a Routing Peer to a Network Resource](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-diagram.png)
 
 NetBird supports two categories of service:
 
@@ -50,15 +50,26 @@ The service mode determines how the proxy handles traffic between clients and yo
 | Mode     | Layer | Description                                                                                                                                                                            |
 | -------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **HTTP** | L7    | TLS termination at the proxy, HTTP-level forwarding. Supports path-based routing, host header forwarding, redirect rewriting, and browser-based authentication (SSO, password, PIN).   |
-| **TCP**  | L4    | Raw TCP relay. The proxy accepts TCP connections on a dedicated port and forwards them to your backend.                                                                                |
-| **UDP**  | L4    | UDP relay with session tracking. The proxy accepts UDP packets on a dedicated port and forwards them to your backend. Sessions are reaped after an idle timeout.                       |
+| **TCP**  | L4    | Raw TCP relay. The proxy accepts TCP connections on the service's listen port and forwards them to your backend.                                                                       |
+| **UDP**  | L4    | UDP relay with session tracking. The proxy accepts UDP packets on the service's listen port and forwards them to your backend. Sessions are reaped after an idle timeout.              |
 | **TLS**  | L4    | TLS passthrough with SNI-based routing. The proxy inspects the TLS ClientHello to read the SNI hostname and forwards the encrypted connection to your backend without terminating TLS. |
 
-L4 services (TCP, UDP, TLS) listen on a dedicated port on the proxy cluster. Depending on the cluster, the port may be auto-assigned or you can specify one manually. The proxy cluster's `supports_custom_ports` capability determines whether manual port selection is available.
+L4 services (TCP, UDP, TLS) listen on a port on the proxy cluster, and several services can share a port. TCP and UDP services can have their port auto-assigned or, on clusters that support custom ports (`supports_custom_ports`), chosen by you. TLS services always need a port you choose. See [Port allocation for L4 services](#port-allocation-for-l4-services) and [How services share ports](#how-services-share-ports).
 
 > **Note**
 >
 > L4 services do not support browser-based authentication (SSO, password, PIN) or header authentication because there is no HTTP layer. You can use [access restrictions](https://docs.netbird.io/manage/reverse-proxy/authentication#access-restrictions) (IP CIDR, country, and CrowdSec rules) to protect L4 services.
+
+### Protocol support
+
+HTTP services carry WebSocket connections and Server-Sent Events streams, and serve clients over HTTP/2 or HTTP/1.1. HTTP/3 is not advertised.
+
+Toward the backend, the proxy uses HTTP/2 only over TLS: a target with protocol `http` is always reached over HTTP/1.1, even if the backend supports HTTP/2 without TLS (h2c). This matters for gRPC, which runs over HTTP/2:
+
+- **gRPC backend with TLS**: use an HTTP service with an `https` target.
+- **gRPC backend without TLS**: use a TCP service, which relays the connection unchanged.
+
+TCP services relay other TCP protocols the same way, such as SSH and RDP.
 
 ### Targets
 
@@ -79,6 +90,7 @@ Target properties vary by service mode:
 - **Path** (optional) - a URL path prefix for path-based routing (e.g., `/api`). See [Path-based routing](#path-based-routing) below.
 - **Protocol** - `HTTP` or `HTTPS`, depending on what the backend service speaks
 - **Port** - the port on the target machine (defaults to `80` for HTTP, `443` for HTTPS)
+- **Access** (optional) - use the service authentication, bypass authentication, or block access for the target's matching path. Configure this under **Optional Settings**. See [Per-target access actions](https://docs.netbird.io/manage/reverse-proxy/authentication#per-target-access-actions).
 - **Enabled/Disabled toggle** - individually enable or disable targets without removing them
 
 **L4 services (TCP, UDP, TLS):**
@@ -245,12 +257,13 @@ In the **Details** tab:
 4. For L4 services, set the **listen port** that the proxy will accept connections on. Some clusters auto-assign ports; others allow you to specify one manually.
 5. Click **Add Target** to define where traffic should be sent.
 
-![Add Service modal showing the Details tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-details.png)
+![Add Service modal showing the Details tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-details.png)
 
 6. In the target configuration, select the **type** (Peer, Host, Domain, Subnet, or Proxy Cluster), then choose the specific peer, resource, or cluster.
 7. For HTTP services, set the **protocol** (HTTP or HTTPS) and **port** for the target. Optionally, enter a **path** for path-based routing. For L4 services, set the target **host/IP** and **port**. For **Proxy Cluster** targets, the host field accepts any hostname or IP the cluster's embedded proxy can resolve from its own host stack — see [Private services](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy#private-services-net-bird-only-access) for details.
+8. For an HTTP target, expand **Optional Settings** and choose an **Access** action if this path should differ from the service default. **Use service authentication** is the default. See [Per-target access actions](https://docs.netbird.io/manage/reverse-proxy/authentication#per-target-access-actions).
 
-![Add Target configuration modal showing the unified Peer / Resource / Proxy Cluster picker](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-target.png)
+![Add Target configuration modal showing the unified Peer / Resource / Proxy Cluster picker](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-target.png)
 
 You can add multiple targets. HTTP services support path-based routing across targets.
 
@@ -258,7 +271,7 @@ You can add multiple targets. HTTP services support path-based routing across ta
 
 Switch to the **Authentication** tab to configure how users are authenticated before reaching your service. This tab is only available for HTTP services.
 
-![Add Service modal showing the Authentication tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-auth.png)
+![Add Service modal showing the Authentication tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-auth.png)
 
 - Enable **NetBird-Only Access** to make the service reachable only from peers in the selected NetBird groups (private service). Only appears when the selected base domain is on a cluster that advertises the `Private` capability. Picking this method hides the operator auth options below — the two modes are mutually exclusive.
 - Enable **SSO** to require users to authenticate through your identity provider. Optionally restrict access to specific groups.
@@ -291,11 +304,11 @@ Access restrictions are evaluated before authentication: if a connection is bloc
 
 Switch to the **Settings** tab to adjust advanced proxy behavior. The available settings depend on the service mode.
 
-![Add Service modal showing the Settings tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-settings.png)
+![Add Service modal showing the Settings tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-settings.png)
 
 The per-service options differ between HTTP and L4 (TCP/UDP/TLS) services and apply at different points along the request path:
 
-![Diagram showing per-service options: HTTP services (Pass Host Header, Rewrite Redirects) and L4 services (PROXY Protocol v2, Session Idle Timeout) and where each applies between the user, proxy service, and backend](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/reverse-proxy/reverse-proxy-service-options-diagram.png)
+![Diagram showing per-service options: HTTP services (Pass Host Header, Rewrite Redirects) and L4 services (PROXY Protocol v2, Session Idle Timeout) and where each applies between the user, proxy service, and backend](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-service-options-diagram.png)
 
 **HTTP services:**
 
@@ -340,16 +353,18 @@ Within a service, you can:
 
 ## Port allocation for L4 services
 
-L4 services (TCP, UDP, TLS) require a dedicated port on the proxy cluster. How ports are assigned depends on whether the proxy cluster supports custom port selection:
+L4 services (TCP, UDP, TLS) listen on a port on the proxy cluster. How ports are assigned depends on whether the proxy cluster supports custom port selection:
 
 - **Custom port selection available**: you choose the exact port the proxy listens on. This is useful when clients expect a well-known port (e.g., 5432 for PostgreSQL, 3306 for MySQL). Self-hosted proxy clusters support this when configured to allow it.
-- **Auto-assigned ports only**: the proxy cluster automatically assigns an available port. This is the case for NetBird's shared cloud proxy clusters, where port allocation is managed to avoid conflicts between accounts. The assigned port is shown in the service details after creation.
+- **Auto-assigned ports only**: the proxy cluster automatically assigns an available port to TCP and UDP services. This is the case for NetBird's shared cloud proxy clusters, where port allocation is managed to avoid conflicts between accounts. The assigned port is shown in the service details after creation.
 
-The dashboard indicates whether a proxy cluster supports custom ports when you select the domain. If custom ports are not supported, the listen port field is read-only and populated after creation.
+TLS services are the exception: they always need a listen port that you choose, including on clusters without custom port selection, because TLS services share ports by SNI hostname. Creating a TLS service without a listen port fails.
+
+The dashboard indicates whether a proxy cluster supports custom ports when you select the domain. If custom ports are not supported, the listen port field of a TCP or UDP service is read-only and populated after creation. For a TLS service, the field stays editable.
 
 > **Warning**
 >
-> Each port on a proxy cluster can only be used by one service at a time. If you specify a port that is already in use by another service, creation will fail. L4 listen ports also cannot conflict with the proxy's tunnel port.
+> A port on a proxy cluster can be shared by any number of TLS services, told apart by their SNI hostname, plus at most one TCP service and at most one UDP service. The TCP service receives every connection that matches no TLS service (or, on the main port, no HTTP service). Creating a TCP or UDP service fails if the port already has one of that protocol, and creating any service fails if another service already uses its domain. L4 listen ports also cannot conflict with the proxy's tunnel port.
 
 > **Note**
 >
@@ -357,7 +372,7 @@ The dashboard indicates whether a proxy cluster supports custom ports when you s
 
 > **Warning**
 >
-> **Self-hosted Docker deployments:** The default Docker Compose configuration only routes port 443 (via Traefik TLS passthrough) to the proxy container. L4 services that listen on additional TCP or UDP ports require you to manually expose those ports in your `docker-compose.yml`. See the [migration guide](https://docs.netbird.io/selfhosted/migration/enable-reverse-proxy#exposing-l4-ports) for instructions.
+> **Self-hosted Docker deployments:** The default Docker Compose configuration only routes port 443 (via Traefik TLS passthrough) to the proxy container, where the proxy's main port is `8443` (`NB_PROXY_ADDRESS`). A TLS service given listen port `443` in such a deployment therefore listens on a custom port inside the container, not on the main port. L4 services that listen on additional TCP or UDP ports require you to manually expose those ports in your `docker-compose.yml`. See the [migration guide](https://docs.netbird.io/selfhosted/migration/enable-reverse-proxy#exposing-l4-ports) for instructions. A Bring Your Own Proxy deployment has the same requirement; see [Expose TCP and UDP services](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy#expose-tcp-and-udp-services). In both cases, running the proxy on the host network removes the per-port Docker step.
 
 ### How services share ports
 
@@ -368,32 +383,38 @@ The proxy's main port always runs an SNI router that peeks at the TLS ClientHell
 - Each incoming connection is matched against configured domains.
 - If the SNI hostname matches an **HTTP** service, the connection is forwarded to the HTTP reverse proxy for L7 handling.
 - If the SNI hostname matches a **TLS** service, the encrypted connection is passed through directly to the backend without TLS termination.
-- If the SNI hostname does not match any service, the connection falls through to the HTTP reverse proxy, which returns an error since no matching service exists.
-- Connections with no SNI (e.g., TLS 1.3 with Encrypted Client Hello) follow the same fallback path.
+- If the SNI hostname does not match any service, the connection goes to the TCP service on that port if there is one, and otherwise falls through to the HTTP reverse proxy, which returns an error since no matching service exists.
+- Connections with no SNI, and connections that are not TLS at all, follow the same fallback path.
 
 > **Warning**
 >
-> Do not configure an HTTP and a TLS service with the same hostname. The HTTP route takes priority and the TLS service becomes unreachable. Use different domain names for each.
+> A domain can belong to only one service, so an HTTP and a TLS service cannot share a hostname: creating the second one fails with `domain already taken`. Use a different domain for each.
 
-**On custom ports**, TLS and TCP services can coexist:
+**On custom ports**, any number of TLS services and at most one TCP service can share the same port:
 
 - TLS connections are matched by SNI and passed through to the backend.
 - Connections that do not match any SNI route (or are not TLS at all) fall back to the TCP relay.
 - This is useful for running a TLS passthrough alongside a plain TCP catch-all on the same port.
+- If the port has no TCP service, connections that match no TLS service are dropped.
+- HTTP services are served only on the main port. On a custom port, a request for an HTTP service's hostname matches no route, so it goes to the TCP service if there is one and is dropped otherwise.
 
 ## Path-based routing
 
-When a service has multiple targets, you can assign each target a unique path prefix to route different URL paths to different backends. For example:
+When a service has multiple targets, you can assign each target a unique path prefix to route different URL paths to different backends. Each HTTP target can also choose what happens after its path matches:
 
-| Path    | Target               | Description          |
-| ------- | -------------------- | -------------------- |
-| `/`     | Peer A (port 3000)   | Main web application |
-| `/api`  | Peer B (port 8080)   | API service          |
-| `/docs` | Resource C (port 80) | Documentation server |
+| Path       | Target               | Access                     | Example result                                                   |
+| ---------- | -------------------- | -------------------------- | ---------------------------------------------------------------- |
+| `/`        | Peer A (port 3000)   | Use service authentication | `/account` uses the authentication configured on the service     |
+| `/public/` | Peer B (port 8080)   | Bypass authentication      | `/public/logo.svg` reaches Peer B without service authentication |
+| `/admin/`  | Resource C (port 80) | Block access               | `/admin/users` returns `403`; Resource C is not contacted        |
 
-Incoming requests are matched against the configured path prefixes and forwarded to the corresponding target. Each path must be unique within a service.
+Incoming requests are matched against the configured path prefixes. When an enabled target uses **Bypass authentication** or **Block access**, all enabled target paths must be unique within the service. If more than one prefix matches, the **longest matching prefix** wins. In the example above, `/public/logo.svg` matches both `/` and `/public/`, so the `/public/` target and its access action are selected.
 
 This is useful for consolidating multiple internal services under a single public domain, reducing the number of domains and TLS certificates you need to manage.
+
+Prefix matching is literal and case-sensitive. Glob patterns such as `*` or `**` and regular expressions are not supported. Prefixes match the request path as text, not by path segment, so a target on `/api` also receives `/api-docs`. To match a whole segment, end the path with a slash: a target on `/api/` receives `/api/x`, but not `/api-docs` or `/api` itself. Likewise, `/Public/x` does not match `/public/`.
+
+The access action does not change how paths are forwarded. By default, the matched prefix is removed before the request reaches the backend: `/api/x` arrives as `/x`, and `/api-docs` as `/-docs`. To keep the full path, use the existing **Preserve Full Path** target setting (`path_rewrite: preserve` in the API).
 
 ## Integration with Networks
 
@@ -423,6 +444,7 @@ For the complete guide including setup, authentication options, session lifecycl
 
 - [Expose from CLI](https://docs.netbird.io/manage/reverse-proxy/expose-from-cli) - expose local services from the command line using `netbird expose`
 - [Multiple Proxy Instances](https://docs.netbird.io/selfhosted/maintenance/scaling/multiple-proxy-instances) - deploy multiple proxy instances for high availability and redundancy
+- [Reverse Proxy on OpenShift](https://docs.netbird.io/manage/reverse-proxy/openshift) - run the rootless UBI proxy image on OpenShift with automatic certificates
 - [Custom Domains](https://docs.netbird.io/manage/reverse-proxy/custom-domains) - configure your own domain names for reverse proxy services
 - [Authentication](https://docs.netbird.io/manage/reverse-proxy/authentication) - SSO, password, PIN, header authentication, and access restrictions
 - [Access Logs](https://docs.netbird.io/manage/reverse-proxy/access-logs) - monitor and audit traffic to your reverse proxy services

@@ -1,8 +1,8 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/identity-providers/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/identity-providers/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/identity-providers/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/identity-providers/index.mdx)
 
 # Authentication and Identity Providers (IdPs)
 
-![Identity Providers List](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/idp-main.png)
+![Identity Providers List](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/idp-main.png)
 
 NetBird's self-hosted implementation uses the OpenID Connect (OIDC) protocol for authentication, an industry-standard
 identity layer built on top of OAuth 2.0. OIDC is used both for user authentication to access the Management Service
@@ -58,7 +58,7 @@ NetBird supports any OIDC-compliant identity providers. Here are some popular pr
 
 #### Via Dashboard
 
-![Identity Providers List](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/idp-list.png)
+![Identity Providers List](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/idp-list.png)
 
 1. Log in to your NetBird Dashboard
 2. Navigate to **Settings** → **Identity Providers**
@@ -83,7 +83,7 @@ When editing an existing provider, the **Provider Type** cannot be changed after
 >
 > If you plan to use the [Reverse Proxy](https://docs.netbird.io/manage/reverse-proxy) SSO feature with an external identity provider, you also need to register the reverse proxy callback URL with your IdP. See [Configure SSO for external identity providers](https://docs.netbird.io/selfhosted/migration/enable-reverse-proxy#configure-sso-for-external-identity-providers) for details.
 
-![Identity Providers List](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/add-idp.png)
+![Identity Providers List](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/add-idp.png)
 
 #### Via API
 
@@ -132,7 +132,7 @@ curl -X DELETE "https://netbird.example.com/api/identity-providers/{id}" \
 
 Users who authenticate via an external identity provider appear in your Users list with a badge showing their identity provider.
 
-![Identity Providers List](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/user-list.png)
+![Identity Providers List](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/user-list.png)
 
 ### Multiple Identity Providers
 
@@ -145,7 +145,7 @@ You can configure **multiple identity providers simultaneously**:
 
 This allows you to support different authentication methods for different user groups.
 
-![Multiple Identity Providers](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/idp-login.png)
+![Multiple Identity Providers](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/idp-login.png)
 
 ### User Provisioning
 
@@ -154,7 +154,7 @@ This allows you to support different authentication methods for different user g
 If you've connected an external IdP, NetBird can optionally fetch a user's groups via JWT claim. These groups automatically obtain representations within NetBird and will be applied to the corresponding NetBird user. To enable JWT group sync,
 navigate to Settings > Groups and toggle 'Enable JWT group sync'.
 
-![JWT Group Sync Settings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/jwt-group-sync.png)
+![JWT Group Sync Settings](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/jwt-group-sync.png)
 
 Specify the JWT claim to be used as the user's groups list (normally 'groups'). You can optionally specify a 'JWT allow groups' - this group will need to exist in your chosen claim for the user in order for that user to be granted access to NetBird.
 Your IdP may require specific configuration in order to pass a groups claim to NetBird. For detailed per-IdP implementation steps, see below. If your IdP isn't on the list, refer to the project's documentation.

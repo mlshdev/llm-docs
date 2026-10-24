@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/list-pods.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/api-reference-v2/pods/list-pods.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/list-pods.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/pods/list-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/list-pods
 
 # List Pods
@@ -111,7 +111,7 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
                               - `username` (required; string): SSH username. For the proxy this is an opaque routing token, not a user account on the pod.
                               - `command` (required; string): The equivalent `ssh` invocation, ready to run. Add `-i <path>` if the matching private key is not one of your default identities, and `-o StrictHostKeyChecking=no` to skip the host-key prompt on short-lived pods.
                             - `variant 2` (null)
-                        - `direct` (required): Connection straight to the pod's sshd over its published `22/tcp` mapping. Supports the full SSH feature set. Null unless `22/tcp` is in `ports` and the running pod has been assigned a public port for it — so it is absent while the pod is provisioning or stopped.
+                        - `direct` (required): Connection straight to the pod's sshd over its published `22/tcp` mapping. Supports the full SSH feature set. Null unless `22/tcp` is in `ports` and the running pod has been assigned a public port for it — so it is absent while the pod is provisioning or stopped. Also null when listing pods with `GET /v2/pods`; fetch a single pod by ID to obtain the live mapping.
                           - anyOf:
                             - `variant 1` (object): One way to reach the pod over SSH, as both its parts and a ready-to-run invocation.
                               - `host` (required; string): Hostname or IP to connect to.
@@ -135,7 +135,7 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
                     - `enabled` (required; boolean): Whether global networking is enabled, giving the pod a private IP reachable across data centers. Derived from whether the pod has an assigned global-network address.
                     - `ip` (string): The pod's assigned global-networking IP. Present only when enabled.
                     - `internalDns` (string): Internal DNS name (`<podId>.runpod.internal`), reachable from other globally-networked pods in the same account. Present only when enabled.
-                  - `runtime` (required): Live utilization metrics. Null when the pod is not RUNNING.
+                  - `runtime` (required): Live utilization metrics. Null when the pod is not RUNNING, and when listing pods with `GET /v2/pods`; fetch a single pod by ID to obtain metrics.
                     - anyOf:
                       - `variant 1` (object): Live utilization metrics for a running pod.
                         - `uptime` (integer): Seconds since the container started
@@ -160,7 +160,7 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
           - `pagination` (required; object): Cursor-pagination metadata, uniform across list endpoints. Every response carries it: follow `nextCursor` while `hasNextPage` is true to walk the full result set.
             - `nextCursor` (required; nullable): Pass as the `cursor` query parameter to fetch the next page. Null on the last page.
             - `hasNextPage` (required; boolean): Whether more items exist after this page.
-    - Example `pods`: `{"pods":[{"id":"7h9k2m4n6p","name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"ports":["8888/http","22/tcp"],"env":{"MODEL_NAME":"llama-3"},"registry":null,"status":"RUNNING","actions":["stop","restart","terminate"],"mounts":{"persistent":{"size":20,"path":"/workspace"}},"gpu":{"id":"NVIDIA GeForce RTX 4090","count":1,"vcpuCount":16,"memory":64},"cloud":"SECURE","dataCenterId":"US-KS-2","cudaVersion":"12.8","ssh":{"proxy":{"host":"ssh.runpod.io","port":22,"username":"7h9k2m4n6p-64411eb2","command":"ssh 7h9k2m4n6p-64411eb2@ssh.runpod.io"},"direct":{"host":"195.26.233.3","port":34446,"username":"root","command":"ssh root@195.26.233.3 -p 34446"}},"template":"9x4m2p7v","cost":0.44,"locked":false,"globalNetworking":{"enabled":false},"runtime":{"uptime":3600,"ports":[{"private":22,"public":34446,"type":"tcp","ip":"195.26.233.3"}]},"createdAt":"2026-06-01T12:00:00Z","startedAt":"2026-06-01T12:02:00Z"}],"pagination":{"nextCursor":null,"hasNextPage":false}}`
+    - Example `pods`: `{"pods":[{"id":"7h9k2m4n6p","name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"ports":["8888/http","22/tcp"],"env":{"MODEL_NAME":"llama-3"},"registry":null,"status":"RUNNING","actions":["stop","restart","terminate"],"mounts":{"persistent":{"size":20,"path":"/workspace"}},"gpu":{"id":"NVIDIA GeForce RTX 4090","count":1,"vcpuCount":16,"memory":64},"cloud":"SECURE","dataCenterId":"US-KS-2","cudaVersion":"12.8","ssh":{"proxy":{"host":"ssh.runpod.io","port":22,"username":"7h9k2m4n6p-64411eb2","command":"ssh 7h9k2m4n6p-64411eb2@ssh.runpod.io"},"direct":null},"template":"9x4m2p7v","cost":0.44,"locked":false,"globalNetworking":{"enabled":false},"runtime":null,"createdAt":"2026-06-01T12:00:00Z","startedAt":"2026-06-01T12:02:00Z"}],"pagination":{"nextCursor":null,"hasNextPage":false}}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)

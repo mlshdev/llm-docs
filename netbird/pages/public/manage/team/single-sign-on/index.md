@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/single-sign-on/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/single-sign-on/index.mdx)
 
 # Authenticate to NetBird with Single Sign On (SSO)
 
@@ -20,7 +20,7 @@ though some additional configuration is required to complete the integration.
 If you're using Google Workspace, Microsoft Entra ID, or a supported social login, you can simply sign in with no extra
 setup—just click the appropriate button on the [login page](https://app.netbird.io/):
 
-![netbird-login](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/netbird-login.png)
+![The NetBird login page with Google, Microsoft, and GitHub sign-in buttons](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/netbird-login.png)
 
 ## Okta
 
@@ -43,6 +43,7 @@ to integrate with NetBird. Below are the steps to set up different OIDC-complian
 >
 > Support for OIDC-compliant IdPs is available on the Team plan and higher.
 > The Free plan supports Google, Microsoft, and social logins.
+> Self-hosted deployments support OIDC-compliant IdPs in both the open source Community Edition and the [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise). See [self-hosted identity providers](https://docs.netbird.io/selfhosted/identity-providers).
 
 ### Authentik
 

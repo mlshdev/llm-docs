@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/bootstrap-via-config-file.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/bootstrap-via-config-file.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/bootstrap-via-config-file.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/bootstrap-via-config-file.mdx)
 
 # Bootstrap peers via config file
 
@@ -30,8 +30,8 @@ A representative `default.json`:
 
 ```json
 {
-  "ManagementURL": "https://api.netbird.io:443",
-  "AdminURL": "https://app.netbird.io:443",
+  "ManagementURL": { "Scheme": "https", "Host": "api.netbird.io:443" },
+  "AdminURL": { "Scheme": "https", "Host": "app.netbird.io:443" },
   "WgIface": "wt0",
   "IFaceBlackList": ["docker", "br-", "veth"],
   "BlockInbound": false,
@@ -42,9 +42,20 @@ A representative `default.json`:
 }
 ```
 
+> **Warning**
+>
+> `ManagementURL` and `AdminURL` are objects, not strings. Writing `"ManagementURL": "https://api.netbird.io:443"` stops the daemon from starting at all:
+>
+> ```shell
+> FATL failed to start daemon: failed to get config:
+>      json: cannot unmarshal string into Go struct field Config.ManagementURL of type url.URL
+> ```
+>
+> The same applies to every field: a value of the wrong JSON type fails the whole file, not just that key, and the daemon exits instead of falling back to defaults. Start the client after writing the file and confirm it is running.
+
 Notable fields:
 
-- `ManagementURL` and `AdminURL` — only needed when you point at a self-hosted deployment. The cloud defaults are `https://api.netbird.io:443` and `https://app.netbird.io:443`.
+- `ManagementURL` and `AdminURL` — only needed when you point at a self-hosted deployment. The cloud defaults are `https://api.netbird.io:443` and `https://app.netbird.io:443`. `Scheme` and `Host` are enough; the client rewrites the object with the remaining URL fields on first start.
 - `WgIface` — WireGuard interface name (defaults to `wt0`).
 - `IFaceBlackList` — interfaces the client should ignore when listening for connections.
 - `BlockInbound`, `BlockLANAccess`, `RosenpassEnabled` — feature toggles that mirror the [`netbird up` flags](https://docs.netbird.io/get-started/cli#up).
@@ -66,18 +77,33 @@ The setup key is **not** stored in `default.json`. Pass it per-launch so it can 
 
 ### Docker
 
-Mount a pre-baked `default.json` into the volume the daemon reads from, and inject the setup key from your shell or a secret store:
+Put `default.json` in a directory and mount **the directory**, writable, at `/var/lib/netbird/`. It has to be writable because the daemon keeps its state there: it rewrites `default.json` and creates `active_profile.json` beside it. Inject the setup key from your shell or a secret store:
 
 ```shell
+mkdir -p netbird-state
+cp default.json netbird-state/
+
 docker run -d --name netbird --cap-add=NET_ADMIN \
-  -v "$(pwd)/default.json:/var/lib/netbird/default.json:ro" \
+  -v "$(pwd)/netbird-state:/var/lib/netbird" \
   -e NB_SETUP_KEY="$NB_SETUP_KEY" \
   netbirdio/netbird:latest
 ```
 
+> **Warning**
+>
+> Do not bind-mount the single file (`-v "$(pwd)/default.json:/var/lib/netbird/default.json"`). The daemon rewrites `default.json` on first start, because it has a private key and a generated SSH key to add, and it writes it by creating a temporary file and renaming it into place. A rename cannot replace a bind-mounted file, so the daemon exits:
+>
+> ```shell
+> FATL failed to start daemon: failed to get config:
+>      move /var/lib/netbird/.1478389823default.json to /var/lib/netbird/default.json:
+>      device or resource busy
+> ```
+>
+> Adding `:ro` does not help: it fails at the same point with the same error.
+
 ### Kubernetes
 
-Bake the config into a `ConfigMap`, source the setup key from a `Secret`, and mount both into the pod. Pair this with the liveness, readiness, and startup probes from [Deploy routing peers to a Kubernetes cluster](https://docs.netbird.io/use-cases/kubernetes/routing-peers-and-kubernetes) for a complete deployment.
+A `ConfigMap` is mounted read-only, so it cannot be the state directory: the daemon has to rewrite `default.json` and create `active_profile.json` next to it. Copy the `ConfigMap` into a writable `emptyDir` with an init container, then mount that `emptyDir` at `/var/lib/netbird/`. Source the setup key from a `Secret`. Pair this with the liveness, readiness, and startup probes from [Deploy routing peers to a Kubernetes cluster](https://docs.netbird.io/use-cases/kubernetes/routing-peers-and-kubernetes) for a complete deployment.
 
 ```yaml
 apiVersion: v1
@@ -87,8 +113,8 @@ metadata:
 data:
   default.json: |
     {
-      "ManagementURL": "https://api.netbird.io:443",
-      "AdminURL": "https://app.netbird.io:443",
+      "ManagementURL": { "Scheme": "https", "Host": "api.netbird.io:443" },
+      "AdminURL": { "Scheme": "https", "Host": "app.netbird.io:443" },
       "WgIface": "wt0",
       "BlockInbound": false,
       "BlockLANAccess": false,
@@ -106,6 +132,15 @@ stringData:
 ---
 # Pod spec excerpt
 spec:
+  initContainers:
+    - name: seed-config
+      image: busybox:1.36
+      command: ["sh", "-c", "cp /config/default.json /state/default.json"]
+      volumeMounts:
+        - name: config
+          mountPath: /config
+        - name: state
+          mountPath: /state
   containers:
     - name: netbird
       image: netbirdio/netbird:latest
@@ -116,14 +151,21 @@ spec:
               name: netbird-setup-key
               key: NB_SETUP_KEY
       volumeMounts:
-        - name: config
-          mountPath: /var/lib/netbird/default.json
-          subPath: default.json
+        - name: state
+          mountPath: /var/lib/netbird
   volumes:
     - name: config
       configMap:
         name: netbird-config
+    - name: state
+      emptyDir: {}
 ```
+
+> **Note**
+>
+> An `emptyDir` lives and dies with the pod, so every new pod re-seeds from the `ConfigMap` and registers a fresh peer. That is the right behavior for a stateless workload: create the setup key with [Ephemeral peers](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys#ephemeral-peers) enabled so the old entries are cleaned up. If you need a peer identity to survive restarts, use a `PersistentVolumeClaim` instead of the `emptyDir` and seed it only when `default.json` is absent.
+
+Mounting the `ConfigMap` directly at `/var/lib/netbird/default.json` with `subPath` does not work: that is a read-only single-file mount, and it fails the same way as the Docker case above.
 
 ## Backing up `default.json`
 

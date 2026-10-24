@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/security/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/security/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/security/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/security/index.mdx)
 
 # Security Use Cases
 
@@ -24,7 +24,7 @@ NetBird is built on zero trust principles:
 
 ### Security Guides
 
-- **Items:** \[Implement Zero Trust]\(/use-cases/security/implement-zero-trust) - Step-by-step guide to implementing zero trust networking with NetBird; \[Private Proxy Without Inbound Ports]\(/use-cases/security/private-no-inbound) - Publish internal services through a reverse proxy with no public inbound ports; \[Posture Checks]\(/manage/access-control/posture-checks) - Verify device compliance before allowing network access; \[EDR/MDM Integration]\(/manage/access-control/endpoint-detection-and-response) - Integrate with CrowdStrike, Intune, SentinelOne, and other security tools
+- **Items:** \[Implement Zero Trust]\(/use-cases/security/implement-zero-trust) - Step-by-step guide to implementing zero trust networking with NetBird; \[Private Proxy Without Inbound Ports]\(/use-cases/security/private-no-inbound) - Publish internal services through a reverse proxy with no public inbound ports; \[Private Proxy with LEGO]\(/use-cases/security/private-proxy-with-lego) - Full Docker Compose walkthrough: wildcard certificates over DNS-01 with LEGO and automated renewal; \[Posture Checks]\(/manage/access-control/posture-checks) - Verify device compliance before allowing network access; \[EDR/MDM Integration]\(/manage/access-control/endpoint-detection-and-response) - Integrate with CrowdStrike, Intune, SentinelOne, and other security tools
 
 ## Security Best Practices
 

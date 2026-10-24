@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [docs/agent-networks/modules/30-proxy-middleware-framework.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/30-proxy-middleware-framework.md)
+> Pinned source for NetBird v0.81.4: [docs/agent-networks/modules/30-proxy-middleware-framework.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/30-proxy-middleware-framework.md)
 
 # proxy/middleware-framework — generic plugin system
 
@@ -211,8 +211,8 @@ The framework explicitly aborts capture (and increments `proxy.middleware.captur
 
 ## Cross-references
 
-- Upstream wire shape: [../modules/10-shared-api.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/10-shared-api.md) (Spec/RawConfig encoding from management).
-- Built-in middlewares using this framework: [../modules/31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
-- Runtime wiring (where `Manager`, `Chain`, and `bodytap` are consumed by the HTTP handler): [../modules/33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/33-proxy-runtime.md).
-- End-to-end request flow including capture + chain dispatch: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/01-end-to-end-flows.md).
-- Top-level architecture: [../00-overview.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/00-overview.md).
+- Upstream wire shape: [../modules/10-shared-api.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/10-shared-api.md) (Spec/RawConfig encoding from management).
+- Built-in middlewares using this framework: [../modules/31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
+- Runtime wiring (where `Manager`, `Chain`, and `bodytap` are consumed by the HTTP handler): [../modules/33-proxy-runtime.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/33-proxy-runtime.md).
+- End-to-end request flow including capture + chain dispatch: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/01-end-to-end-flows.md).
+- Top-level architecture: [../00-overview.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/00-overview.md).

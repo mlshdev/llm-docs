@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.0: [docs/volumes.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/volumes.md)
+> Pinned source for Apple container 1.6.1: [docs/volumes.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/volumes.md)
 
 # Mounts and volumes
 
@@ -172,7 +172,7 @@ tmpfs on /sys/firmware type tmpfs (ro,nosuid,nodev,noexec,relatime)
 ```
 
 The last two entries are runtime defaults, present in every container. See
-[Runtime configuration](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/runtime-configuration.md#mask-and-protect-paths-inside-a-container)
+[Runtime configuration](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/runtime-configuration.md#mask-and-protect-paths-inside-a-container)
 for what mounts `/sys/firmware` read-only.
 
 Mount a `tmpfs` filesystem with a 512 MiB size limit using `--mount`:

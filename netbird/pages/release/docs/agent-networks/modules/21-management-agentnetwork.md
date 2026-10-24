@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [docs/agent-networks/modules/21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/21-management-agentnetwork.md)
+> Pinned source for NetBird v0.81.4: [docs/agent-networks/modules/21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/21-management-agentnetwork.md)
 
 # management/agentnetwork — domain layer + synth pipeline
 
@@ -317,7 +317,7 @@ At request time the path is independent: the proxy calls `SelectPolicyForRequest
 
 ## Cross-references
 
-- **Upstream:** [shared/api](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/10-shared-api.md), [management/store](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/20-management-store.md), reverseproxy `service`/`proxy`/`sessionkey` packages, `management/server/permissions` + `activity`.
-- **Downstream:** [management/handlers (HTTP wiring)](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/22-management-handlers-wiring.md), [proxy/middleware-builtin](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md), network-map controller (`injectAllProxyPolicies` fan-out).
-- **End-to-end flow:** [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/01-end-to-end-flows.md) — "Provider create → reconcile → proxy push → peer map refresh" and "request → policy select → record" diagrams.
-- **Top-level:** [../00-overview.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/00-overview.md)
+- **Upstream:** [shared/api](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/10-shared-api.md), [management/store](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/20-management-store.md), reverseproxy `service`/`proxy`/`sessionkey` packages, `management/server/permissions` + `activity`.
+- **Downstream:** [management/handlers (HTTP wiring)](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/22-management-handlers-wiring.md), [proxy/middleware-builtin](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/31-proxy-middleware-builtin.md), network-map controller (`injectAllProxyPolicies` fan-out).
+- **End-to-end flow:** [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/01-end-to-end-flows.md) — "Provider create → reconcile → proxy push → peer map refresh" and "request → policy select → record" diagrams.
+- **Top-level:** [../00-overview.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/00-overview.md)

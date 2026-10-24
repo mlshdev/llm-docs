@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/register-machines-using-setup-keys.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/register-machines-using-setup-keys.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/register-machines-using-setup-keys.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/register-machines-using-setup-keys.mdx)
 
 # Automate Deployments and Onboard Machines at Scale with Setup Keys
 
@@ -36,7 +36,7 @@ Setup keys are available in the NetBird Management Dashboard under `Settings` �
 Use [this page](https://app.netbird.io/settings?tab=setup-keys) to view and manage your setup keys.
 From there, you can add new keys or revoke existing ones.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/register-machines-using-setup-keys/setup-keys.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/register-machines-using-setup-keys/setup-keys.png)
 
 > **Note**
 >
@@ -74,7 +74,7 @@ To configure `Auto-assign groups`, open `Settings` → `Setup Keys` and create o
 Then use this key to enroll new machines.
 You can also edit the auto-assigned groups of an existing key directly from the `Groups` column of the setup keys table, provided your role allows updating setup keys.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/register-machines-using-setup-keys/netbird-peer-auto-tagging-newkey.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/register-machines-using-setup-keys/netbird-peer-auto-tagging-newkey.png)
 
 > **Note**
 >
@@ -90,8 +90,8 @@ The defaults are suitable for most cases. For security reasons, we recommend usi
 >
 > You can also generate a setup key while adding a peer. Go to `Peers` → `Add Peer` and click `Generate Key`. This is the most common path when enrolling a new server or routing peer. It creates a one-off key that expires in 24 hours with no auto-assigned groups. To control the key type, expiration, usage limit, or auto-groups, create the key from `Settings` → `Setup Keys` instead.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/register-machines-using-setup-keys/add-setup-key.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/register-machines-using-setup-keys/add-setup-key.png)
 
 Once the key has been created, copy it and store it in a secure location.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/register-machines-using-setup-keys/setup-key-created.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/register-machines-using-setup-keys/setup-key-created.png)

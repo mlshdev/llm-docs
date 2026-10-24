@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/selfhosted-guide.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/selfhosted-guide.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/selfhosted-guide.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/selfhosted-guide.mdx)
 
 # Advanced guide
 
@@ -144,7 +144,7 @@ NetBird supports generic OpenID (OIDC) protocol allowing integration with any ID
 
 NetBird's management service integrates with some of the most popular IDP APIs, allowing the service to cache and display user names and email addresses without storing sensitive data.
 
-Pick the one that suits your needs, follow the **Standalone Setup (Advanced)** section in each guide, and continue with this guide:
+Pick the one that suits your needs, follow the **Standalone Setup (Advanced)** section in each guide (except Google, see the note below), and continue with this guide:
 
 **Self-hosted options**
 
@@ -156,7 +156,7 @@ Pick the one that suits your needs, follow the **Standalone Setup (Advanced)** s
 **Managed options**
 
 - [Microsoft Entra ID](https://docs.netbird.io/selfhosted/identity-providers/managed/microsoft-entra-id) - Azure AD / Microsoft 365
-- [Google Workspace](https://docs.netbird.io/selfhosted/identity-providers/managed/google-workspace) - Google accounts
+- [Google Workspace](https://docs.netbird.io/selfhosted/identity-providers/managed/google-workspace#management-setup-recommended) - Google accounts. Not recommended as a standalone IdP; use the Management Setup (Recommended) instead
 - [Okta](https://docs.netbird.io/selfhosted/identity-providers/managed/okta) - Enterprise SSO
 - [Auth0](https://docs.netbird.io/selfhosted/identity-providers/managed/auth0) - Flexible auth platform
 - [JumpCloud](https://docs.netbird.io/selfhosted/identity-providers/managed/jumpcloud) - Cloud directory
@@ -164,6 +164,8 @@ Pick the one that suits your needs, follow the **Standalone Setup (Advanced)** s
 > **Note**
 >
 > Each provider page includes both "Management Setup (Recommended)" (for use with the embedded IdP) and "Standalone Setup (Advanced)" sections. For this guide, follow the **Standalone Setup (Advanced)** section.
+>
+> Google is the exception: its standalone setup is not recommended. Deploy with the [Quickstart guide](https://docs.netbird.io/selfhosted/selfhosted-quickstart), which uses the embedded IdP, and add Google with the [Management Setup (Recommended)](https://docs.netbird.io/selfhosted/identity-providers/managed/google-workspace#management-setup-recommended) section instead of continuing with this guide.
 
 ### Step 4: Disable single account mode (optional)
 

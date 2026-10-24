@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/account/replace-registered-ssh-public-keys.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/api-reference-v2/account/replace-registered-ssh-public-keys.mdx)
+> Pinned source for Runpod main: [api-reference-v2/account/replace-registered-ssh-public-keys.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/account/replace-registered-ssh-public-keys.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/account/replace-registered-ssh-public-keys
 
 # Replace Registered Ssh Public Keys
@@ -31,6 +31,17 @@ Replaces the account's full set of registered SSH public keys. Existing keys not
       - `keys` (required; array): The account's registered SSH public keys, one authorized\_keys-style entry per element (`<type> <base64-key> [comment]`).
         - `items` (string)
     - Example `keys`: `{"keys":["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILXGDN/SclOozk1xsDztpmhGiKkkrfQB9SKoO8dSIQQZ me@example.com"]}`
+- `400`: The request could not be processed because it is malformed or conflicts with request rules.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `badRequest`: `{"title":"Bad Request","status":400,"detail":"request could not be processed"}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)
@@ -51,6 +62,17 @@ Replaces the account's full set of registered SSH public keys. Existing keys not
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
+- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when its expanded upstream request is too large, even if the incoming body is within the limit.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `requestTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Request body exceeds the 1048576 byte limit."}`
 - `422`: The request body or parameters were syntactically valid but failed validation.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)

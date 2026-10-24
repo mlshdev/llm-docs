@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/jobs.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/jobs.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/jobs.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/jobs.mdx)
 
 ## List Jobs   (GET /api/peers/{peerId}/jobs)
 
@@ -201,7 +201,9 @@ echo $response;
             "bundle_for": true,
             "bundle_for_time": 2,
             "log_file_count": 100,
-            "anonymize": false
+            "anonymize": false,
+            "anonymize_level": "strict",
+            "upload_url": "https://upload.debug.netbird.io"
           },
           "result": {
             "upload_key": "upload_key_123"
@@ -238,7 +240,9 @@ echo $response;
             "bundle_for": "boolean",
             "bundle_for_time": "integer",
             "log_file_count": "integer",
-            "anonymize": "boolean"
+            "anonymize": "boolean",
+            "anonymize_level": "string",
+            "upload_url": "string"
           },
           "result": {
             "upload_key": "string"
@@ -290,7 +294,9 @@ curl -X POST https://api.netbird.io/api/peers/{peerId}/jobs \
           "bundle_for": true,
           "bundle_for_time": 2,
           "log_file_count": 100,
-          "anonymize": false
+          "anonymize": false,
+          "anonymize_level": "strict",
+          "upload_url": "https://upload.debug.netbird.io"
         }
       }
     ],
@@ -315,7 +321,9 @@ let data = JSON.stringify({
           "bundle_for": true,
           "bundle_for_time": 2,
           "log_file_count": 100,
-          "anonymize": false
+          "anonymize": false,
+          "anonymize_level": "strict",
+          "upload_url": "https://upload.debug.netbird.io"
         }
       }
     ],
@@ -362,7 +370,9 @@ payload = json.dumps({
           "bundle_for": true,
           "bundle_for_time": 2,
           "log_file_count": 100,
-          "anonymize": false
+          "anonymize": false,
+          "anonymize_level": "strict",
+          "upload_url": "https://upload.debug.netbird.io"
         }
       }
     ],
@@ -409,7 +419,9 @@ func main() {
           "bundle_for": true,
           "bundle_for_time": 2,
           "log_file_count": 100,
-          "anonymize": false
+          "anonymize": false,
+          "anonymize_level": "strict",
+          "upload_url": "https://upload.debug.netbird.io"
         }
       }
     ],
@@ -475,7 +487,9 @@ request.body = JSON.dump({
           "bundle_for": true,
           "bundle_for_time": 2,
           "log_file_count": 100,
-          "anonymize": false
+          "anonymize": false,
+          "anonymize_level": "strict",
+          "upload_url": "https://upload.debug.netbird.io"
         }
       }
     ],
@@ -504,7 +518,9 @@ RequestBody body = RequestBody.create(mediaType, '{
           "bundle_for": true,
           "bundle_for_time": 2,
           "log_file_count": 100,
-          "anonymize": false
+          "anonymize": false,
+          "anonymize_level": "strict",
+          "upload_url": "https://upload.debug.netbird.io"
         }
       }
     ],
@@ -549,7 +565,9 @@ curl_setopt_array($curl, array(
           "bundle_for": true,
           "bundle_for_time": 2,
           "log_file_count": 100,
-          "anonymize": false
+          "anonymize": false,
+          "anonymize_level": "strict",
+          "upload_url": "https://upload.debug.netbird.io"
         }
       }
     ],
@@ -780,7 +798,9 @@ echo $response;
           "bundle_for": true,
           "bundle_for_time": 2,
           "log_file_count": 100,
-          "anonymize": false
+          "anonymize": false,
+          "anonymize_level": "strict",
+          "upload_url": "https://upload.debug.netbird.io"
         },
         "result": {
           "upload_key": "upload_key_123"
@@ -815,7 +835,9 @@ echo $response;
           "bundle_for": "boolean",
           "bundle_for_time": "integer",
           "log_file_count": "integer",
-          "anonymize": "boolean"
+          "anonymize": "boolean",
+          "anonymize_level": "string",
+          "upload_url": "string"
         },
         "result": {
           "upload_key": "string"

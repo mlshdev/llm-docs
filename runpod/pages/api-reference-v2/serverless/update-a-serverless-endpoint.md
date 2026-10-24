@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/update-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/api-reference-v2/serverless/update-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/update-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/serverless/update-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/update-a-serverless-endpoint
 
 # Update A Serverless Endpoint
@@ -245,6 +245,17 @@ keep the previous version until they are replaced. Track rollout via
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
+- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when its expanded upstream request is too large, even if the incoming body is within the limit.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `requestTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Request body exceeds the 1048576 byte limit."}`
 - `422`: The request body or parameters were syntactically valid but failed validation.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)

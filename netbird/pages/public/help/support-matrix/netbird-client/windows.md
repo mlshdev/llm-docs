@@ -1,21 +1,21 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/help/support-matrix/netbird-client/windows.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/help/support-matrix/netbird-client/windows.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/support-matrix/netbird-client/windows.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/support-matrix/netbird-client/windows.mdx)
 
 # Windows
 
-Windows 10 and 11 run on the latest NetBird client. Windows 7 and 8 are frozen at NetBird **v0.25.3** — the last release built with Go 1.20, the last Go toolchain to target those Windows versions. Older Windows releases may continue to work on pinned client versions but are not covered by bug fixes or security updates.
+Windows 10 and 11 run on the latest NetBird client. Windows 7 and 8 are frozen at NetBird **v0.25.3**, the last release built with Go 1.20, the last Go toolchain to target those Windows versions. Older Windows releases may continue to work on pinned client versions but are not covered by bug fixes or security updates.
 
 > **Warning**
 >
-> The version cutoffs below are derived from the [Go toolchain's minimum OS requirements](https://go.dev/wiki/MinimumRequirements) for each NetBird release's Go version. NetBird may have stricter requirements than Go — confirm with the team before relying on them.
+> The version cutoffs below are derived from the [Go toolchain's minimum OS requirements](https://go.dev/wiki/MinimumRequirements) for each NetBird release's Go version. NetBird may have stricter requirements than Go, so confirm with the team before relying on them.
 
 ## Windows versions
 
-| Version                            | Architectures  | Version Supported |
-| ---------------------------------- | -------------- | ----------------- |
-| Windows 11                         | x86\_64, arm64 | NetBird latest    |
-| Windows 10 / Server 2016 and newer | x86\_64, arm64 | NetBird latest    |
-| Windows 8 / Server 2012 / 2012 R2  | all            | ≤ v0.25.3         |
-| Windows 7 / Server 2008 R2         | all            | ≤ v0.25.3         |
+| Version                            | Architectures                  | Version Supported |
+| ---------------------------------- | ------------------------------ | ----------------- |
+| Windows 11                         | x86\_64, arm64 (since v0.54.0) | NetBird latest    |
+| Windows 10 / Server 2016 and newer | x86\_64, arm64 (since v0.54.0) | NetBird latest    |
+| Windows 8 / Server 2012 / 2012 R2  | all                            | ≤ v0.25.3         |
+| Windows 7 / Server 2008 R2         | all                            | ≤ v0.25.3         |
 
 ## Reporting compatibility issues
 

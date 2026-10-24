@@ -1,116 +1,96 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx)
 
 # Connecting from the office
 
-A typical scenario administrators have is accessing their office networks remotely. With [Routes](https://docs.netbird.io/manage/network-routes), NetBird makes this easy. Still, administrators often want to avoid routing their users’ traffic via NetBird when they are in the office.
-To solve this, administrators can leverage the power of [Posture Checks](https://docs.netbird.io/manage/access-control/posture-checks) and create policies that allow connection to the routing peers only if they are outside the office by using
-a [Peer Network Range](https://docs.netbird.io/manage/access-control/posture-checks#peer-network-range) posture check with a block action.
+Remote access to an office network is straightforward with [Networks](https://docs.netbird.io/manage/networks): a routing peer inside the office opens the LAN to your overlay network. The awkward part is what happens when a user walks into that office. Their device is already on the LAN, but the route distributed by NetBird is still installed, so traffic to a machine one switch away can leave over the tunnel, reach the routing peer, and come back. You pay latency and bandwidth for a trip the device never needed to make.
 
-## Example
+The fix is to stop distributing the route to devices that are already on site. A **Peer Network Range** posture check with the `Block` action, attached to the access policy that grants access to the resource, does exactly that: while the device's own address falls inside the office subnet, the policy does not apply to it, the route is not distributed, and the operating system uses its local link. When the user leaves, the route comes back on its own.
 
-In the following scenario, our office network is on the subnet `192.168.1.0/24`. Let's assume all users will be part of the group `route-users`, and the routing peer for our office will be inside the group `route-nodes`.
-With this in mind, the goal is to create a Posture Check, create a Policy and assign a Posture Check to it, and finally create a Network Route that will expose the office subnet.
+## The scenario
 
-### Create a Posture Check
+One office LAN, `192.168.1.0/24`, reached through a routing peer named `router-01`. The users who need it are in the group `route-users`. Everything below is built around that example.
 
-To create a Posture Check, navigate to the `Access Control -> Posture Checks` section in the NetBird dashboard and click on **Add Posture Check**.
+Three things to create, in order:
 
-Select `Peer Network Range`.
+1. A posture check that recognizes the office subnet.
+2. A Network holding the office resource and the routing peer.
+3. An access policy from `route-users` to that resource, carrying the posture check.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-new-block-network-range.png)
+## Create the posture check
 
-Select the `Block` action and click on `Add Network Range` to input your office subbnet `192.168.1.0/24`.
+Navigate to `Access Control` > `Posture Checks` in the NetBird dashboard and click `Add Posture Check`. Select `Peer Network Range`.
 
-> **Note**
->
-> Note that if you have multiple locations that you want to see excluded, you can add multiple network ranges.
+![Selecting the Peer Network Range posture check in the NetBird dashboard](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-new-block-network-range.png)
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-block-network-range.png)
-
-Click `Save`, then click `Continue` and fill out `Name of the Posture Check` with "Exclude Office subnet”.
-
-After we conclude this step, we are ready to create a policy and assign this posture check.
-
-### Create a Policy
-
-We start by creating a simple policy that will allow access from group `route-users` to group `route-nodes`.
-This is needed to establish the connection between the users and the routing peer.
-
-Navigate to the `Access Control -> Policies` section in the NetBird dashboard and click on `Add Policy`.
-
-On the `Source` field, select the group `route-user`, and on the `Destination` field, select the group `route-nodes`.
-Choose `UDP` for the protocol and type `1`on Ports. Click `Continue`.
+Select the `Block` action, then click `Add Network Range` and enter the office subnet `192.168.1.0/24`.
 
 > **Note**
 >
-> Note that the protocol and port are arbitrary and can be changed according to your needs. An usual choice is to allow ICMP traffic for troubleshooting purposes.
+> If you have several sites to exclude, add one network range per site to the same posture check.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-office-subnet-with-posturecheck.png)
+![Peer Network Range posture check with the Block action and the office subnet 192.168.1.0/24](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-block-network-range.png)
 
-In this step, we'll click `Browse Checks` and select the posture check we created earlier, `Exclude Office subnet`.
+Click `Save`, then `Continue`, and name the check "Exclude office subnet".
 
-Click `Add Posture Checks` and then click `Continue`.
+## Create the Network and its resource
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-with-network-posturecheck-added.png)
+Create a Network for the office and add `router-01` as its routing peer, then add the office LAN as a resource. The full walkthrough is on the [Networks](https://docs.netbird.io/manage/networks) page.
 
-Give your policy the name "Allow users to route-nodes" and click on `Add Policy`.
+For this use case the resource is the office subnet `192.168.1.0/24`, because the whole point is to route that range only when the user is remote. Everywhere else, prefer single-host `/32` resources: a policy then grants access to one machine instead of a whole subnet.
 
-We are now ready for the final step of creating the office route.
+> **Warning**
+>
+> Resources are not members of the built-in `All` group, so nothing behind the routing peer is reachable until a policy allows it. That policy is the next step, and it is where the posture check goes.
 
-### Create a Network Route
+## Create the access policy and attach the check
 
-Now, let's create a [Network Route](https://docs.netbird.io/manage/network-routes) that will expose the local office subnet `192.168.1.0/24`,
-which will be distributed to all peers members of the group `route-users`. In this example, we will be using a routing peer named `router-01`,
-which is a member of the group `route-nodes`, this way, the policy we just created goes into effect, and all peers from the group `route-users` will be able to reach
-`router-01` only if they are not in the office network, due to our posture check.
+Navigate to `Access Control` > `Policies` and click `Add Policy`. Set the source to the group `route-users` and the destination to the office resource (or to a resource group that contains it), then choose the protocols and ports you want to allow.
 
-To get started navigate to the `Network Routing` → `Routes` menu on the NetBird dashboard and click on **Add Route**. Fill out the fields as shown in the image below, and click `Continue`:
+Click `Browse Checks`, select `Exclude office subnet`, and click `Add Posture Checks`.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/create-route-with-posturecheck.png)
+![An access policy with the Exclude office subnet posture check attached](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-with-network-posturecheck-added.png)
 
-Next assign `route-users` do `Distribution Groups`.
+Name the policy "Office network access" and save it. Peers in `route-users` now receive the office route only while they are outside `192.168.1.0/24`.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/distribute-to-groups-posturechecks.png)
+## Verify it
 
-Click `Continue` and assign the name "Office network access" to `Network Identifier`, click `Continue` again and in the final step, finish this process by clicking `Add Route`.
+The example below uses a macOS client named `client-01` in the group `route-users`, so the NetBird interface appears as `utun100` and the local link as `en0`. On Windows and Linux the NetBird interface is `wt0` by default. The screenshots use the older `netbird routes list` alias of `netbird networks list`, which still works.
 
-### Testing Posture Check
+**Inside the office.** The device holds an address inside the office subnet.
 
-Now that we have created the Posture Check, the Policy, and the Network Route, we can test this configuration. In the following example, we will be testing this Posture Check from a macOS client named `client-01`, and as stated earlier, it belongs to the group `route-users`.
+![macOS Wi-Fi details showing the client with the address 192.168.1.68 on the office network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/wifi-inside-office-subnet.png)
 
-#### While connect from inside our office:
+`netbird networks list` does not show the office network, and the system route table sends `192.168.1.0/24` over the local interface `en0`.
 
-Our local connection shows that we are connected to local office WiFi and and we are part of that subnet.
+![The NetBird client reporting no available routes while the device is on site](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-local.png)
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/wifi-inside-office-subnet.png)
+![netstat output showing 192.168.1.0/24 reached over the local interface en0](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-local.png)
 
-When we are connected from inside the office, we can observe that the NetBird route is not available and that the subnet `192.168.1` is using local network interface `en0` to route traffic.
+**Outside the office.** The office network is distributed again and shows as selected, and the same destination now goes over the NetBird interface `utun100`.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-local.png)
+![The NetBird client listing 192.168.1.0/24 as an available and selected route while the device is remote](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-external.png)
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-local.png)
+![netstat output showing 192.168.1.0/24 reached over the NetBird interface utun100](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-external.png)
 
-#### When connected outside the office, we can observe:
+## Limits worth knowing
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-external.png)
+**Re-evaluation after a network change is automatic, but not immediate.** When a device switches network, for example from cellular to office Wi-Fi, the client reports its new addresses and the management server rebuilds the network map before the route is added or withdrawn. Expect a short gap during which the previous route set is still in place.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-external.png)
+**An IP range is not an identity.** The check can only compare addresses, so it cannot tell two networks apart that use the same range. An office on `192.168.1.0/24` and a home network on `192.168.1.0/24` look identical to it, and blocking one blocks the other. If your office range collides with the ranges your users have at home, match on the office public IP instead, as described below.
 
-Notice that subnet `192.168.1.0/24` is routed through our Wireguard interface (`utun100`).
-
-As you can see, the Posture Check is working as expected, and the traffic is being routed through NetBird only when the client is outside the office network.
+**Platform coverage.** Matching a device's local interface addresses depends on the client reporting them. See [Peer Network Range Check on Android](https://docs.netbird.io/manage/access-control/posture-checks#peer-network-range-check-on-android) for the platform details.
 
 ## Matching by office public IP
 
-The example above relies on the office LAN subnet showing up on the peer's local network interface. In some deployments this isn't practical — for example, when the office hands out an opaque DHCP range that overlaps with common home-network subnets, or when peers connect through a guest network that doesn't expose the production LAN on the device.
+The example above relies on the office LAN subnet showing up on the peer's local network interface. In some deployments this isn't practical, for example when the office hands out an opaque DHCP range that overlaps with common home-network subnets, or when peers connect through a guest network that doesn't expose the production LAN on the device.
 
-In these cases you can match the peer's **public egress IP** instead — the source IP the NetBird management server observes when the peer connects. The Peer Network Range posture check evaluates this IP automatically against any range in the list and matches when the IP is contained in the range, so you can use a single-host prefix for one address or a CIDR for a whole block.
+In these cases you can match the peer's **public egress IP** instead: the source IP the NetBird management server observes when the peer connects. The Peer Network Range posture check evaluates this IP automatically against any range in the list and matches when the IP is contained in the range, so you can use a single-host prefix for one address or a CIDR for a whole block.
 
 ### IPv4 example
 
-If your office's public IPv4 address is `203.0.113.10`, create a Peer Network Range posture check with the `Block` action and add `203.0.113.10/32` to the list. Peers connecting from that egress IP will be blocked from the route, while peers connecting from anywhere else will reach it.
+If your office's public IPv4 address is `203.0.113.10`, create a Peer Network Range posture check with the `Block` action and add `203.0.113.10/32` to the list. Peers connecting from that egress IP will be blocked from the resource, while peers connecting from anywhere else will reach it.
 
-If your office (or your ISP) hands out an entire public block, you can add the block directly — for example `1.0.0.0/24` or `3.0.0.0/23`. Any peer whose connection IP falls in that range will match.
+If your office (or your ISP) hands out an entire public block, you can add the block directly, for example `198.51.100.0/24` or `203.0.113.0/24`. Any peer whose connection IP falls in that range will match.
 
 ### IPv6 example
 
@@ -118,10 +98,15 @@ If your office also (or only) has an IPv6 egress, add the address as a `/128`, f
 
 > **Note**
 >
-> For this to work, the NetBird management server must see the peer's real source IP. When running self-hosted behind a reverse proxy or load balancer, ensure the proxy is configured to forward the client IP (PROXY protocol or `X-Forwarded-For`). The country and city shown on the peer in the dashboard are a quick sanity check — if they reflect your proxy's datacenter rather than the peer's actual location, the source IP isn't being forwarded correctly.
+> For this to work, the NetBird management server must see the peer's real source IP. When running self-hosted behind a reverse proxy or load balancer, ensure the proxy is configured to forward the client IP (PROXY protocol or `X-Forwarded-For`). The country and city shown on the peer in the dashboard are a quick sanity check: if they reflect your proxy's datacenter rather than the peer's actual location, the source IP isn't being forwarded correctly.
 
 > **Note**
 >
-> Mobile peers connecting through cellular networks normally have a different egress IP than your office, so they will not be matched. However, if a phone joins the office Wi-Fi, its egress IP becomes the office IP and the block will apply — usually the desired behavior.
+> Mobile peers connecting through cellular networks normally have a different egress IP than your office, so they will not be matched. However, if a phone joins the office Wi-Fi, its egress IP becomes the office IP and the block will apply, which is usually the desired behavior.
 
-This concludes this Posture Check example.
+## Summary
+
+- A routing peer in the office publishes `192.168.1.0/24` as a resource in a Network.
+- One access policy grants `route-users` access to that resource.
+- A Peer Network Range posture check with the `Block` action for `192.168.1.0/24` is attached to that policy.
+- On site, the policy does not apply, so the route is never installed and the device reaches the LAN over its local link. Off site, the route returns and traffic takes the NetBird interface.

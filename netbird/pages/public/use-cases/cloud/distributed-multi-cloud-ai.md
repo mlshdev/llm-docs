@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/cloud/distributed-multi-cloud-ai.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/cloud/distributed-multi-cloud-ai.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/cloud/distributed-multi-cloud-ai.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/cloud/distributed-multi-cloud-ai.mdx)
 
 # Open Source Distributed AI Stack: ArgoCD, MicroK8s, vLLM, and NetBird
 
@@ -8,7 +8,7 @@ We are building a distributed AI infrastructure project that connects GPU cluste
 >
 > This document is actively being changed and tested. Please see 'Known Issues and Future Improvements' at the bottom of the page.
 
-![geolocation dns](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/distributed-ai-argo/ai-infra.jpg)
+![geolocation dns](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/use-cases/distributed-ai-argo/ai-infra.jpg)
 
 ## Architecture Components
 
@@ -193,7 +193,7 @@ In the NetBird dashboard, create two groups and configure policies:
 
 Where argocd group is applied to the GKE Cluster running Argo, microK8s GPU is applied to other provider GPU enabled VMs, agro-access is the group created by the operator.
 
-![argo netbird policies](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/distributed-ai-argo/argo-access-policy.png)
+![argo netbird policies](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/use-cases/distributed-ai-argo/argo-access-policy.png)
 
 ## Part 2: MicroK8s Edge Cluster Setup
 
@@ -611,7 +611,7 @@ kubectl apply -f application-set.yaml
 
 Geographic DNS routing ensures users connect to the nearest cluster for optimal latency.
 
-![geolocation dns](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/distributed-ai-argo/llm-geo.jpg)
+![geolocation dns](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/use-cases/distributed-ai-argo/llm-geo.jpg)
 
 ### GCP Cloud DNS Configuration
 

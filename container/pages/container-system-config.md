@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.0: [docs/container-system-config.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/container-system-config.md)
+> Pinned source for Apple container 1.6.1: [docs/container-system-config.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md)
 
 # `config.toml` reference
 
@@ -7,9 +7,9 @@
 >
 > Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
 
-For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/tutorials/container-system-config-tutorial.md).
+For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/container-system-config-tutorial.md).
 
-Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/Sources/ContainerPersistence/ContainerSystemConfig.swift).
+Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/ContainerSystemConfig.swift).
 
 ## Viewing your configuration
 
@@ -97,11 +97,11 @@ Defaults applied when `container run` / `container create` is invoked without `-
 
 | Key      | Type      | Default | Description                                                                                                                                                                                                                                                                                                                                                                      |
 | -------- | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
+| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
 
 ## `[kernel]`
 
-Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
+Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
 
 | Key          | Type     | Default                                                                                                          | Description                                                                                            |
 | ------------ | -------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -157,7 +157,7 @@ All units are **binary** (powers of 1024), even when written with `kb`/`mb`/`gb`
 
 A bare integer (e.g. `"2048"`) parses as bytes.
 
-Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/Sources/ContainerPersistence/Measurement%2BParse.swift).
+Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/Measurement%2BParse.swift).
 
 ### `CIDRv4` / `CIDRv6`
 

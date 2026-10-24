@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/openwrt.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/openwrt.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/openwrt.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/openwrt.mdx)
 
 # OpenWrt Installation
 
@@ -47,7 +47,7 @@ NetBird is available in the official OpenWrt package feed. The packaged version 
    apk add netbird
    ```
 
-   ![Updating the package lists on an OpenWrt router before installing NetBird](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/openwrt/openwrt-package-update.png)
+   ![Updating the package lists on an OpenWrt router before installing NetBird](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/openwrt/openwrt-package-update.png)
 
 3. **Enable and start the NetBird service**
 
@@ -58,7 +58,7 @@ NetBird is available in the official OpenWrt package feed. The packaged version 
    /etc/init.d/netbird start
    ```
 
-   ![NetBird installed and running on OpenWrt, waiting for login before connecting](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/openwrt/netbird-installed.png)
+   ![NetBird installed and running on OpenWrt, waiting for login before connecting](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/openwrt/netbird-installed.png)
 
 ## Connect the router to your NetBird network
 
@@ -80,7 +80,7 @@ Verify the connection:
 netbird status -d
 ```
 
-![NetBird connected on OpenWrt after authenticating with a setup key](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/openwrt/netbird-connected-setup-key.png)
+![NetBird connected on OpenWrt after authenticating with a setup key](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/openwrt/netbird-connected-setup-key.png)
 
 Once connected, the router appears on the **Peers** page in the NetBird dashboard. NetBird creates a WireGuard interface named `wt0` and manages it directly. Do not configure `wt0` through the OpenWrt WireGuard UI or LuCI, NetBird fully manages the interface and keys.
 

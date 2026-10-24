@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/remote-access/clientless-rdp.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/remote-access/clientless-rdp.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/clientless-rdp.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/clientless-rdp.mdx)
 
 # Clientless RDP Access for Third Parties
 
@@ -161,7 +161,7 @@ This step is the same for both use cases.
 2. Add an **IP allow rule** for the firm's egress addresses only:
    `203.0.113.40/32`.
 
-![TCP service Access Control tab with an Allow Only rule for the IP address 203.0.113.40/32 and CrowdSec IP Reputation disabled](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/use-cases/clientless-rdp/tcp-service-access-control.png)
+![TCP service Access Control tab with an Allow Only rule for the IP address 203.0.113.40/32 and CrowdSec IP Reputation disabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/use-cases/clientless-rdp/tcp-service-access-control.png)
 
 With a strict single-IP allowlist like this one, that rule alone does the
 work. If your allow rules are broader (country rules or wide CIDR ranges),

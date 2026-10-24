@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/help/troubleshooting-client.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/help/troubleshooting-client.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/troubleshooting-client.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/troubleshooting-client.mdx)
 
 # Troubleshooting client issues
 
@@ -286,7 +286,7 @@ Upload file key:
 
 The desktop app can create and optionally upload a debug bundle without using the CLI. Open **Settings → Troubleshoot**.
 
-![Troubleshoot settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/help/troubleshooting-client/ui-settings.png)
+![Troubleshoot settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/help/troubleshooting-client/ui-settings.png)
 
 Choose the data and capture behavior that fits the issue:
 
@@ -298,7 +298,7 @@ Choose the data and capture behavior that fits the issue:
 - **Capture packets** adds a packet capture while collecting new logs. Packet captures are excluded from anonymized bundles because they contain raw packets.
 - **Capture duration** accepts 1–30 minutes.
 
-![Debug bundle capture options in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/help/troubleshooting-client/ui-bundle-wizard.png)
+![Debug bundle capture options in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/help/troubleshooting-client/ui-bundle-wizard.png)
 
 Click **Create debug bundle**. You can cancel while logs are being collected. When the operation finishes:
 
@@ -307,7 +307,7 @@ Click **Create debug bundle**. You can cancel while logs are being collected. Wh
 
 In both cases, the ZIP is stored locally in the platform's temporary directory listed above.
 
-![Completed debug bundle uploaded with a key in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/help/troubleshooting-client/ui-bundle-success.png)
+![Completed debug bundle uploaded with a key in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/help/troubleshooting-client/ui-bundle-success.png)
 
 If you kept the bundle local, attach the ZIP through the support channel you are using.
 
@@ -431,6 +431,67 @@ You must run the client in foreground mode and set the environment variable `NB_
 sudo netbird service stop
 sudo bash -c 'NB_WG_KERNEL_DISABLED=true netbird up -F'  > /tmp/netbird.log
 ```
+
+## When the client cannot manage firewall rules
+
+On Linux the client installs its own `nftables` or `iptables` rules to filter traffic and, on a routing peer, to forward
+routed traffic. Some hosts are missing the netfilter modules those rules depend on, such as the `mark` match used for
+policy routing or `ipset` used to match sets of addresses. The client reports this and carries on without the native
+firewall:
+
+```
+WARN client/firewall/create_linux.go:55: failed to create native firewall:
+init firewall: router init: create containers: add static nat rules:
+add outbound masquerade rule: running [/sbin/iptables -t nat
+-A NETBIRD-RT-NAT -m mark --mark 0x1bd21 ! -o lo -j MASQUERADE --wait]:
+exit status 2: iptables v1.8.3 (legacy):
+Couldn't load match `mark':No such file or directory
+. Proceeding with userspace
+```
+
+NetBird keeps working after this. Filtering moves to the userspace packet filter, and on a routing peer the forwarding
+path moves to userspace as well, which is slower than letting the kernel forward. Appliance and NAS firmware is where
+this usually shows up.
+
+To get the kernel path back, start with the narrower options, because they keep NetBird in charge of filtering:
+
+- Load the missing module on the host if the firmware ships it, for example `xt_mark` for the `mark` match above.
+- `NB_SKIP_NFTABLES_CHECK` sends the client straight to the iptables backend, which helps when nftables is present but
+  non-functional.
+- `NB_USE_LEGACY_ROUTING` falls back to the simpler routing method, which does not rely on `fwmark` or `ip rule`.
+
+Both variables are described in [Client Environment Variables](https://docs.netbird.io/client/environment-variables).
+
+If the host cannot support the client's rules and you would rather use the firewall tooling it does have, stop the
+client from managing rules at all:
+
+```shell
+netbird up --disable-firewall
+```
+
+> **Warning**
+>
+> This flag is not the same as the automatic fallback above. With `--disable-firewall` the client does not manage host
+> firewall rules and the userspace packet filter does not take over, so NetBird enforces no access control on this peer.
+> The policies you configure in NetBird are not applied here, and any peer that can reach this one over the tunnel is
+> unfiltered until you recreate those restrictions with the host's own firewall. Only use it where you will do that.
+
+You then cover the two jobs the client was doing.
+
+1. Turn on forwarding, if this peer routes traffic for others:
+
+```shell
+sudo sysctl -w net.ipv4.ip_forward=1
+sudo sysctl -w net.ipv6.conf.all.forwarding=1
+```
+
+2. Replace the access control NetBird was enforcing with your own filtering rules for the NetBird interface (`wt0`),
+   using whatever the host does provide, such as iptables, nftables, or the appliance's own firewall interface. Mirror the
+   access you intended in your NetBird policies, and default to denying anything you have not explicitly allowed.
+
+To confirm the result, check forwarding with `sysctl net.ipv4.ip_forward`, then test the traffic you actually care about
+from another peer. A tunnel can come up and report healthy in `netbird status -d` while filtering or forwarding is still
+missing.
 
 ## Debugging GRPC
 

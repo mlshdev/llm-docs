@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/remote-jobs.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/remote-jobs.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/remote-jobs.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/remote-jobs.mdx)
 
 # Remote Jobs
 
@@ -7,6 +7,10 @@ Remote Jobs allow administrators to trigger actions on connected peers without r
 > **Note**
 >
 > Remote Jobs require the target peer to be **online** and running **NetBird v0.64.0 or later**.
+
+> **Note**
+>
+> Remote Jobs are **opt-in on the peer** and disabled by default. A peer accepts remote jobs only when started with `--allow-remote-jobs`, or when the `allowRemoteJobs` [MDM policy](https://docs.netbird.io/client/mdm-integration) is set. Enabling it is a privileged operation on the client (like enabling the embedded SSH server). Peers that have not opted in report this to Management, and the Dashboard disables the **Run Remote Job** button for them.
 
 ## Overview
 
@@ -52,11 +56,13 @@ The Debug Bundle job remotely collects diagnostic information from a peer, inclu
 
 **Parameters:**
 
-| Parameter       | Description                                                | Range         | Default  |
-| --------------- | ---------------------------------------------------------- | ------------- | -------- |
-| Log File Count  | Number of log files to include                             | 1 - 1000      | 10       |
-| Bundle Duration | Time period to collect logs before creating the bundle     | 1 - 5 minutes | Disabled |
-| Anonymize       | Remove sensitive information (IP addresses, domains, etc.) | On / Off      | Off      |
+| Parameter           | Description                                                                                                                                                                                                | Range                | Default               |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | --------------------- |
+| Log File Count      | Number of log files to include                                                                                                                                                                             | 1 - 1000             | 10                    |
+| Bundle Duration     | Time period to collect logs before creating the bundle                                                                                                                                                     | 1 - 5 minutes        | Disabled              |
+| Anonymize           | Remove sensitive information (IP addresses, domains, etc.)                                                                                                                                                 | On / Off             | Off                   |
+| Anonymization Level | With Anonymize on, `default` keeps internal (private) IP ranges readable; `strict` also anonymizes private, CGNAT and link-local addresses                                                                 | `default` / `strict` | `default`             |
+| Upload URL          | Upload service the peer requests an upload URL from (must be an `https` URL). A peer with the `debugBundleUploadURL` [MDM policy](https://docs.netbird.io/client/mdm-integration) set overrides this value | https URL            | Default upload server |
 
 **Result:**
 
@@ -76,11 +82,11 @@ On success, the job returns an **upload key** that can be used to retrieve the d
    - Toggle **Anonymize Log Data** to strip sensitive information
 6. Click **Create Debug Bundle**
 
-![create debug bundle modal](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/remote-jobs/debug-bundle.png)
+![create debug bundle modal](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/remote-jobs/debug-bundle.png)
 
 > **Note**
 >
-> The **Run Remote Job** button is disabled when the peer is offline or when you lack the required permissions.
+> The **Run Remote Job** button is disabled when the peer is offline, when the peer has not opted into remote jobs, or when you lack the required permissions.
 
 ### Viewing Job History
 
@@ -92,7 +98,7 @@ The **Remote Jobs** tab on the peer detail page shows all jobs for that peer, so
 - **Parameters** - Hover to view the full parameter configuration
 - **Output** - On success, the result (e.g., upload key with copy button). On failure, the error reason.
 
-![remote job history table](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/remote-jobs/remote-job-history.png)
+![remote job history table](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/remote-jobs/remote-job-history.png)
 
 ## Using the API
 
@@ -133,6 +139,7 @@ curl https://api.netbird.io/api/peers/{peerId}/jobs/{jobId} \
 ## Limitations
 
 - The target peer must be **online and connected** to the management server
+- The target peer must have **opted into remote jobs** (`--allow-remote-jobs` or the `allowRemoteJobs` MDM policy)
 - Only **one pending job** per peer at a time
 - Peers must be running **NetBird v0.64.0 or later**
 - Jobs time out after **5 minutes** if the peer does not respond

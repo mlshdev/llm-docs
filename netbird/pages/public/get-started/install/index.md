@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/index.mdx)
 
 # Install NetBird
 
@@ -20,6 +20,7 @@ The NetBird client allows a peer to join a pre-existing NetBird deployment. If a
 
 - [Install on Synology](https://docs.netbird.io/get-started/install/synology)
 - [Install on TrueNAS](https://docs.netbird.io/get-started/install/truenas)
+- [Install on Unraid](https://docs.netbird.io/get-started/install/unraid)
 - [Install on pfSense](https://docs.netbird.io/get-started/install/pfsense)
 - [Install on OPNSense](https://docs.netbird.io/get-started/install/opnsense)
 - [Install on OpenWrt](https://docs.netbird.io/get-started/install/openwrt)
@@ -41,9 +42,11 @@ Alternatively, you could use command line. Simply run
 netbird up
 ```
 
-> It will open your browser, and you will be prompt for email and password. Follow the instructions.
+> **Note**
+>
+> It will open your browser and prompt you for your email and password. Follow the instructions.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
 
 Check connection status:
 
@@ -71,7 +74,9 @@ For **Docker**, you can run with the following command:
 docker run --network host --privileged --rm -d -e NB_SETUP_KEY=<SETUP KEY> -v netbird-client:/var/lib/netbird netbirdio/netbird:<TAG>
 ```
 
-> TAG > 0.6.0 version
+> **Note**
+>
+> Replace `<TAG>` with a version newer than 0.6.0.
 
 Alternatively, if you are hosting your own Management Service provide `--management-url` property pointing to your Management Service:
 
@@ -79,6 +84,8 @@ Alternatively, if you are hosting your own Management Service provide `--managem
   netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
 ```
 
+> **Note**
+>
 > You could also omit the `--setup-key` property. In this case, the tool will prompt for the key.
 
 2. Check connection status:

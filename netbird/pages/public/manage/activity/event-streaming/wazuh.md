@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/activity/event-streaming/wazuh.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/activity/event-streaming/wazuh.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/activity/event-streaming/wazuh.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/activity/event-streaming/wazuh.mdx)
 
 # Stream Activity Events to Wazuh
 
@@ -23,7 +23,7 @@ In **<https://app.netbird.io>**:
 3. Leave **Headers** and **Body Template** at their defaults.
 4. **Save Changes**.
 
-![NetBird Generic HTTP integration configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/wazuh/netbird-generic-http-config.png)
+![NetBird Generic HTTP integration configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/wazuh/netbird-generic-http-config.png)
 
 > **Note**
 >
@@ -93,7 +93,7 @@ NetBird emits **two distinct event shapes** through the same integration. Both a
 - **`ID` may be a number or a string** (test events use a string identifier; real audit events use a numeric ID). Wazuh normalises both to strings in the indexed `data.nb.ID`, so KQL queries don't need to handle the mixed type.
 - **`Message`** is the most reliable field to pivot rules on; it's a stable English phrase like "peer added" or "policy created".
 - **`reference`** is the canonical URL into NetBird's activity log; useful as a click-through pivot from a Wazuh alert back to the source event.
-- **`meta` is event-type-specific.** Peer events carry `meta.name`, setup-key events carry `meta.type`, integration events carry `meta.platform`. Treat unknown keys as opaque.
+- **`meta` is event-type-specific.** Peer events carry `meta.fqdn` and `meta.ip`, setup-key events carry `meta.type`, integration events carry `meta.platform`. Any `name` or `email` key is removed before streaming. Treat unknown keys as opaque.
 
 ### Traffic events
 

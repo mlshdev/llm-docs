@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/auth0.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/auth0.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/single-sign-on/auth0.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/single-sign-on/auth0.mdx)
 
 # Auth0 on NetBird Cloud
 
@@ -10,7 +10,7 @@ You can use Auth0 as your Identity Provider with NetBird, but it will require so
 
 3. Enter **NetBird** as the name, select **Single Page Web Applications** as the application type and click **Create**
 
-![auth0-application-create](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/auth0-idp/application-create.png)
+![The Auth0 Create Application dialog with NetBird entered as the name](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/auth0-idp/application-create.png)
 
 4. On the New Application screen, go to the Settings tab and under Application URIs set the following values:
 
@@ -19,13 +19,13 @@ You can use Auth0 as your Identity Provider with NetBird, but it will require so
 - Allowed Logout URLs: <https://app.netbird.io>
 - Allowed Web Origins: <https://app.netbird.io>
 
-![auth0-application-configure](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/auth0-idp/application-configure.png)
+![The Auth0 Application URIs section filled in with the NetBird login, callback, logout, and web origin URLs](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/auth0-idp/application-configure.png)
 
 6. Record the **Client ID** and **Client Secret** that Auth0 generates for your application.
 
 7. Retrieve Application's **Domain** from the **Basic Information** tab
 
-![auth0-application-domain](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/auth0-idp/application-domain.png)
+![The Auth0 Basic Information tab showing the application Domain](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/auth0-idp/application-domain.png)
 
 8. Share following with our team. Please use a secure method for sharing the sensitive parts of this information:
    1. Application's **Domain**,

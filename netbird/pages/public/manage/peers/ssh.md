@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/ssh.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/ssh.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/ssh.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/ssh.mdx)
 
 # SSH Access
 
@@ -78,14 +78,14 @@ On the machine you want to access via SSH, enable the NetBird SSH server.
 > On a machine where you do not have those rights, which is the normal case for a
 > managed workstation, you cannot enable the SSH server yourself: an administrator
 > has to run the command. For the SSH server itself there is also
-> [`allowServerSSH`](https://docs.netbird.io/client/mdm-integration#policy-keys-reference), which the client
+> [`allowServerSSH`](https://docs.netbird.io/client/mdm-integration#allowServerSSH), which the client
 > applies from MDM policy and so needs nothing from you; root login and SSH
 > authentication have no policy key and must be set on the machine. A switch already in its safe
 > state stays operable: you can turn the SSH server off, turn root login off, or
 > re-enable SSH authentication without privileges. Only the change that could hand out
 > a shell needs them.
 
-![SSH server settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/ssh/ssh-client.png)
+![SSH server settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/ssh/ssh-client.png)
 
 **Using the CLI:**
 
@@ -139,7 +139,7 @@ Create an ACL policy to allow SSH access:
 
 4. Save the policy
 
-![netbird ssh access policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/ssh/ssh-access-policy.png)
+![netbird ssh access policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/ssh/ssh-access-policy.png)
 
 ## Using NetBird SSH
 
@@ -327,7 +327,7 @@ When creating or editing an SSH policy in the Dashboard:
    - Add multiple local users per group as needed (e.g., `ashley`, `root`)
 7. Enable the policy and click **Continue**
 
-![netbird ssh fine grained access policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/ssh/ssh-fine-grained-access-policy.png)
+![netbird ssh fine grained access policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/ssh/ssh-fine-grained-access-policy.png)
 
 **Example configuration:**
 

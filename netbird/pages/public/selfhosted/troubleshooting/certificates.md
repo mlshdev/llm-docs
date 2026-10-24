@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/troubleshooting/certificates.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/troubleshooting/certificates.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/troubleshooting/certificates.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/troubleshooting/certificates.mdx)
 
 # Certificate issues
 
@@ -24,7 +24,7 @@ Deployments created before NetBird switched to Traefik may still run Caddy, whic
 
 **Likely causes and fixes** (most common first):
 
-1. **Let's Encrypt is still enabled, so two components fight over TLS.** Set `NETBIRD_DISABLE_LETSENCRYPT=true` so NetBird stops managing certificates and leaves termination to your proxy.
+1. **NetBird is also terminating TLS, so two components fight over it.** Installs from `getting-started.sh` with options 1 to 5 don't do this: netbird-server serves plain HTTP behind your proxy. If you wrote `config.yaml` yourself, leave `server.tls.certFile` empty and `server.tls.letsencrypt.enabled` set to `false`. On older deployments installed with `configure.sh`, set `NETBIRD_DISABLE_LETSENCRYPT=true` in `setup.env`.
 2. **Forwarded headers are missing.** Set `X-Forwarded-For` and `X-Forwarded-Proto` on the proxy so NetBird sees the original scheme and client.
 3. **gRPC fails without HTTP/2.** The Management gRPC endpoints need HTTP/2; enable it on the proxy.
 

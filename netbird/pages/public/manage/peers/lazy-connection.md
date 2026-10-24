@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/lazy-connection.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/lazy-connection.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/lazy-connection.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/lazy-connection.mdx)
 
 # Lazy Connections
 
@@ -6,7 +6,7 @@ Lazy connections reduce resource use in large NetBird networks by opening peer c
 
 > **Note**
 >
-> Lazy connections require NetBird v0.50.1 or later on the client, the peers it communicates with, and self-hosted Management and Signal servers.
+> Lazy connections require NetBird v0.50.1 or later on the client and on the peers it communicates with. If you self-host NetBird, your Management and Signal servers must also run v0.50.1 or later. NetBird Cloud already meets this requirement.
 
 ## How Lazy Connections Work
 
@@ -23,13 +23,30 @@ The default inactivity threshold is `15m`. Change it with `NB_LAZY_CONN_INACTIVI
 
 > **Note**
 >
-> The first request to an idle peer can take slightly longer while NetBird establishes the connection.
+> The first request to an idle peer can take slightly longer while NetBird establishes the connection. Since NetBird v0.74.0, the packet that triggers the connection is delivered once the connection is up instead of being dropped.
 
 ### DNS warm-up
 
-When the local NetBird resolver returns an A or AAAA record for an idle peer, it starts waking that peer before the application sends its first packet. The resolver waits for up to two seconds by default for one matching peer to connect, reducing the chance that the application's first request races the lazy connection.
+When the local NetBird resolver answers with two or more A or AAAA records that point at idle peers, it wakes those peers before the application sends its first packet. The answer waits up to two seconds by default for one of them to connect, so the first request does not race the connection.
+
+Warm-up only applies to names in [custom DNS zones](https://docs.netbird.io/manage/dns/custom-zones) and in the zones NetBird creates for [private services](https://docs.netbird.io/manage/reverse-proxy/authentication#net-bird-only-access-private-services). A name with a single record does not trigger it, and neither does a peer's own name, such as `peer-a.netbird.cloud`. Peer names are excluded on purpose: otherwise every lookup would wake idle connections across the network.
 
 Set `NB_DNS_LAZY_WARMUP_TIMEOUT` on the daemon to change this per-query wait. The value must be a positive Go duration, for example `5s`. Invalid, zero, or negative values fall back to the `2s` default.
+
+### When the Signal server is down
+
+A Signal outage usually comes with a Management outage, for example while a single self-hosted server restarts.
+
+Opening a connection needs Signal, because the two peers exchange connection offers through it. Keeping a connection open does not: its traffic goes directly between the peers or through a Relay server. So while Signal is down:
+
+- Open direct connections stay up.
+- Open relayed connections stay up if Relay runs separately from Signal, as on NetBird Cloud and in self-hosted deployments with [external relays](https://docs.netbird.io/selfhosted/maintenance/scaling/set-up-external-relays). In the default self-hosted deployment, Relay runs in the same `netbird-server` container as Signal, so relayed connections drop.
+- Restarting the NetBird client, or the device it runs on, closes every connection on that device, and none reopens until Signal is back.
+- No connection can open. That includes one that dropped (for example after a network change), one to a peer the device has never connected to, and one that lazy connections closed for inactivity.
+
+With lazy connections on, an idle connection, direct or relayed, still closes after the inactivity threshold (15 minutes by default) if either peer runs userspace WireGuard, as the Windows and macOS clients always do. It cannot reopen until Signal is back. If both peers run kernel WireGuard (possible only on Linux), the connection does not close when idle. A connection in use stays up.
+
+Once Signal is back, every connection that could not open opens on the next traffic to its peer. You don't need to restart anything.
 
 ## Enable Lazy Connections in Management
 
@@ -55,13 +72,35 @@ sudo netbird service reconfigure --service-env NB_LAZY_CONN=on
 sudo netbird service reconfigure --service-env NB_LAZY_CONN=off
 ```
 
-`on` and `off` override Management in both directions; boolean values such as `true`/`false` or `1`/`0` are also accepted. Leave the variable unset to follow the Management setting. See [Client Environment Variables](https://docs.netbird.io/client/environment-variables#ice-and-connectivity) for service configuration details.
+`on` and `off` override Management in both directions; boolean values such as `true`/`false` or `1`/`0` are also accepted. Leave the variable unset to follow the Management setting. Any other value logs a warning and is treated as unset. See [Client Environment Variables](https://docs.netbird.io/client/environment-variables#ice-and-connectivity) for service configuration details.
 
 On MDM-managed clients, the boolean `lazyConnection` policy key provides the same local override: `true` forces lazy connections on, `false` forces them off, and an absent key defers to Management. If both are configured, `NB_LAZY_CONN` takes precedence over MDM.
 
+To check a peer, run `netbird status` on it. The `Lazy connection` line shows whether lazy connections are on for that peer, with any override applied.
+
 > **Note**
 >
-> The deprecated `NB_ENABLE_EXPERIMENTAL_LAZY_CONN` variable is no longer used. The deprecated `netbird up --enable-lazy-connection` flag is also inert in v0.75. Use the Management setting, `NB_LAZY_CONN`, or the MDM policy instead.
+> NetBird v0.74.1 removed the `Enable Lazy Connections` checkbox from the desktop client's `Settings` menu and made the `netbird up --enable-lazy-connection` flag inert; the flag now only prints a deprecation warning. Both could turn lazy connections on, but neither could turn them off once Management had enabled them. `NB_LAZY_CONN` replaces both. The deprecated `NB_ENABLE_EXPERIMENTAL_LAZY_CONN` variable is no longer used.
+
+### Each peer decides for its own connections
+
+Whether it comes from Management or from `NB_LAZY_CONN`, the setting only controls the peer it applies to. A peer with lazy connections off connects to every peer your policies let it reach, and a lazy peer accepts that connection when asked. So turning lazy connections on for a routing peer does not make the devices that use it lazy.
+
+An unused connection only stays closed when both of its ends are lazy. If only one end is lazy, that end closes the connection after the inactivity threshold, the other end reopens it shortly afterwards, and the cycle repeats. This is also what happens between every lazy peer and a peer you opt out with `NB_LAZY_CONN=off` while the account has lazy connections on. Keep two limits in mind:
+
+- For a few seconds after each close, the non-lazy end still treats the connection as up, and traffic it sends in that window is dropped.
+- A lazy peer running kernel WireGuard does not detect idle connections itself, so its connection to a non-lazy peer stays up instead of cycling.
+
+### Try lazy connections on a few peers
+
+To try lazy connections before turning them on for the whole account, leave the Management setting off and set `NB_LAZY_CONN=on` on every peer in the test, for example two peers that talk to each other:
+
+```bash
+# On both peers
+sudo netbird service reconfigure --service-env NB_LAZY_CONN=on
+```
+
+The connection between the two then opens on demand and closes after the inactivity threshold. Their connections to other peers keep closing and reopening, as described above, because the other end is not lazy. When the test is over, turn the Management setting on or remove `NB_LAZY_CONN` from the test peers.
 
 ## Get started
 

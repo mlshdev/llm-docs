@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/add-users-to-your-network.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/add-users-to-your-network.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/add-users-to-your-network.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/add-users-to-your-network.mdx)
 
 # Add users to your network
 
@@ -26,11 +26,13 @@ The domain can fall into one of the following categories - `public`, `private`, 
 The domains of the private category are the ones that are automatically grouped under the same account.
 Public domains are the ones of the public email providers like Gmail.
 
+Users on any other domain your organization uses, such as `company.co.uk` or a subsidiary's domain, don't join automatically. Add and verify those domains as [sign-in domains](https://docs.netbird.io/manage/team/sign-in-domains) so their users join your account too.
+
 > **Note**
 >
 > It might happen (unlikely) that the domain classification system didn't classify your company's domain as private.
 > Our system was unsure about your domain and assigned an unclassified or public category to be on the safe side.
-> Just email us at <hello@netbird.io> or ping us on Slack to fix this.
+> Just [contact NetBird Support](https://docs.netbird.io/help/netbird-support) to fix this.
 
 ## Direct user invites
 
@@ -41,12 +43,13 @@ A window will appear, allowing you to specify the name and email address of the 
 The invited users will receive an email invitation that they have to confirm.
 After logging in to the system, they will join your network automatically.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/user-invites.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/user-invites.png)
 
 > **Note**
 >
-> If a user already has a NetBird account, you can't invite them.
-> This is a limitation that is likely to be removed in future versions.
+> On NetBird Cloud, you can't invite someone who already has a NetBird account, for example one they created by signing in before you invited them. The invite fails with a `409` error. See [User already belongs to another NetBird account](https://docs.netbird.io/help/troubleshooting-user-in-another-account) to move them into your account.
+>
+> On self-hosted NetBird with the embedded identity provider, a `409` means the email address already belongs to a user in your account. Look for them under **Team → Users** instead.
 
 ## Identity Provider (IdP) Sync
 
@@ -54,7 +57,7 @@ NetBird's IdP-Sync automates user access management by integrating with your IdP
 provisioning users and groups. You can enable this feature from the `Users` tab by clicking the `Identity Provider Sync`
 button.
 
-![idp-sync-reference](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync-reference.png)
+![idp-sync-reference](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync-reference.png)
 
 See the [Provision Users and Groups From Your Identity Provider](https://docs.netbird.io/manage/team/idp-sync) section for more details.
 

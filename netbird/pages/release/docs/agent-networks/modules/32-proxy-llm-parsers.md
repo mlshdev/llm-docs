@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [docs/agent-networks/modules/32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/32-proxy-llm-parsers.md)
+> Pinned source for NetBird v0.81.4: [docs/agent-networks/modules/32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/32-proxy-llm-parsers.md)
 
 # proxy/llm-parsers — SDK adapters + pricing + SSE
 
@@ -10,7 +10,7 @@ cached-prompt **subset** vs Anthropic's cache\_read **additive** model). The
 pricing table's per-provider cost formula is the highest-leverage place a
 small bug would silently mis-bill operators.
 
-Sibling module: [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
+Sibling module: [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
 — the 8 middlewares that consume this package's parsers + pricing table.
 
 ***
@@ -33,7 +33,7 @@ proxy-framework dependencies:
 
 The package carries zero proxy-framework dependencies so the same parsers can
 be reused later by a WASM adapter
-([parser.go:1–6](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/parser.go)).
+([parser.go:1–6](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/parser.go)).
 
 ## Files
 
@@ -75,15 +75,15 @@ flowchart TD
 ```
 
 OpenAI's URL hints
-([openai.go:27–33](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/openai.go)) include
+([openai.go:27–33](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/openai.go)) include
 both `/v1/chat/completions` and the bare `/chat/completions` — the latter
 covers Cloudflare AI Gateway, which rewrites the canonical version segment.
 Anthropic's hints are `/v1/messages` and `/v1/complete`
-([anthropic.go:14–17](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/anthropic.go)).
+([anthropic.go:14–17](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/anthropic.go)).
 Both implementations use case-insensitive substring matching so a proxy prefix
 strip / rewrite doesn't defeat detection.
 
-`ParserByName` ([parser.go:93–103](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/parser.go))
+`ParserByName` ([parser.go:93–103](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/parser.go))
 is the **agent-network bypass**: the synthesiser knows which parser to use
 because it built the synth service from the catalog, so it stamps
 `provider_id` on the parser config and the middleware skips URL sniffing
@@ -98,7 +98,7 @@ request middleware extracts them directly (`parseVertexPath` /
 segment picks the parser (`anthropic` → Anthropic parser; `google`/Gemini →
 none, request denied as unmeterable). For Bedrock the dedicated `BedrockParser`
 handles the response. Full treatment in
-[50-path-routed-providers.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/50-path-routed-providers.md).
+[50-path-routed-providers.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/50-path-routed-providers.md).
 
 ## Streaming response → SSE chunker → response parser → completion + token count
 
@@ -123,12 +123,12 @@ sequenceDiagram
 ```
 
 `Scanner.Next`
-([sse.go:44–87](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/sse.go)) returns one
+([sse.go:44–87](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/sse.go)) returns one
 event per `\n\n` boundary; multiple `data:` lines join with `\n`; comment lines
 (starting with `:`) are skipped per the SSE spec; a trailing event without a
 closing blank line is still returned before `io.EOF` so a server that closes
 the connection cleanly doesn't lose the last frame
-([sse.go:55–58](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/sse.go)). CRLF is
+([sse.go:55–58](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/sse.go)). CRLF is
 normalised in `trimEOL` so fixtures captured from live servers replay
 unchanged.
 
@@ -136,13 +136,13 @@ unchanged.
 
 ### OpenAI
 
-[openai.go:54–67](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/openai.go) defines
+[openai.go:54–67](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/openai.go) defines
 `openAIRequest` with three prompt fields: `messages` (Chat Completions),
 `prompt` (legacy), `input` (Responses API). The decoder uses
 `json.RawMessage` so each shape is parsed lazily.
 
 `ParseResponse`
-([openai.go:117–146](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/openai.go))
+([openai.go:117–146](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/openai.go))
 accepts both naming conventions: Chat Completions returns
 `prompt_tokens`/`completion_tokens`, Responses API returns
 `input_tokens`/`output_tokens`. `pickInt64` prefers Responses-API names and
@@ -156,13 +156,13 @@ responses where `cached > total`.
 
 ### Anthropic
 
-[anthropic.go:37–49](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/anthropic.go)
+[anthropic.go:37–49](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/anthropic.go)
 defines `anthropicRequest` covering Messages API (`system` + `messages[]`)
 and legacy `/v1/complete` (`prompt` string). `ExtractPrompt` emits
 `system: <text>` first when present, then per-message `role: content`.
 
 `ParseResponse`
-([anthropic.go:82–104](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/anthropic.go))
+([anthropic.go:82–104](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/anthropic.go))
 fills three independent token buckets: `InputTokens`, `CacheReadInputTokens`,
 `CacheCreationInputTokens`. Latter two are **additive** (not subset).
 `TotalTokens` sums all four so downstream dashboards render one "tokens"
@@ -173,10 +173,10 @@ non-empty text with newlines, falling back to legacy `completion`.
 
 ### Bedrock
 
-[bedrock.go](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/bedrock.go) implements the
+[bedrock.go](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/bedrock.go) implements the
 `Parser` interface for the AWS Bedrock runtime. Bedrock is **path-routed**: the
 model lives in the URL (`/model/{id}/{action}`), so the request middleware
-extracts it (see [50-path-routed-providers.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/50-path-routed-providers.md))
+extracts it (see [50-path-routed-providers.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/50-path-routed-providers.md))
 and `ParseRequest` is a deliberate no-op. The parser's real work is on the
 response leg, covering both Bedrock body shapes:
 
@@ -200,11 +200,11 @@ AWS binary event-stream content-type (`application/vnd.amazon.eventstream`,
 
 `Scanner` is `bufio`-backed, 64 KiB read buffer, 1 MiB max line so a
 malicious upstream can't blow process memory
-([sse.go:33–38, 97–100](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/sse.go)).
+([sse.go:33–38, 97–100](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/sse.go)).
 `splitField` strips one space after the `:` per the SSE spec. Documented
 `not safe for concurrent use`; every consumer creates a fresh scanner per
 response body. Streaming accumulators live in the middleware package
-([llm\_response\_parser/streaming.go](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/middleware/builtin/llm_response_parser/streaming.go))
+([llm\_response\_parser/streaming.go](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/middleware/builtin/llm_response_parser/streaming.go))
 but use `llm.NewScanner` so the framing contract stays here.
 
 ### Pricing table
@@ -214,14 +214,14 @@ price list and reads no pricing file: the whole table arrives inside
 `cost_meter`'s `ConfigJSON` on the ordinary mapping push, and a price change
 is just another push — the chain rebuild constructs a fresh `Table`, so there
 is nothing to reload
-([pricing.go:1–7](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)). The
+([pricing.go:1–7](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)). The
 management side of the contract (catalog defaults, the operator's stored
 per-provider prices, and `AgentNetwork.PricingDefaultsFile`) is covered in the
 management-side module guide; `cost_meter`'s wire shape is in
-[31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
+[31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/31-proxy-middleware-builtin.md).
 
 `EntryJSON`
-([pricing.go:36–45](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)) is the
+([pricing.go:36–45](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)) is the
 management→proxy contract — five USD-per-1k rates under `input_per_1k`,
 `output_per_1k`, `cached_input_per_1k`, `cache_read_per_1k`,
 `cache_creation_per_1k`. Management's `pricing.Entry` marshals the identical
@@ -230,7 +230,7 @@ direct struct conversion rather than field-by-field copying (a new rate can't
 be silently dropped in transit).
 
 `EntryCosts`
-([pricing.go:183–234](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go))
+([pricing.go:183–234](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go))
 is the cost formula — most security-relevant math in this module. The
 **surface** (the `llm.provider` value the request parser stamped) selects the
 formula, never the tier the entry came from: a per-provider-record override on
@@ -243,7 +243,7 @@ an Anthropic route still bills its cache buckets additively.
 | default                | `inTokens × InputPer1K + outTokens × OutputPer1K`                                                                                       |
 
 `bedrock` shares the Anthropic additive-cache formula
-([pricing.go:214–229](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)):
+([pricing.go:214–229](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)):
 Anthropic-on-Bedrock reports the same additive cache buckets, while non-Anthropic
 Bedrock models (Nova, Llama) simply report zero in those buckets so cost reduces
 to `input + output`.
@@ -252,7 +252,7 @@ Each per-bucket rate falls back to `InputPer1K` when zero — operators opt in
 to discounts by setting the field.
 
 `Costs`
-([pricing.go:143–163](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)) is the
+([pricing.go:143–163](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)) is the
 per-request split. The four per-bucket fields are the base; `TotalUSD` and
 `CacheUSD` are **derived** in `newCosts` so the aggregates can never drift from
 the breakdown. `InputUSD` is always the non-cached input bucket on both
@@ -261,7 +261,7 @@ provider shapes, so input and cached-input never double-count.
 ## Public contracts
 
 **`Parser` interface**
-([parser.go:50–66](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/parser.go)):
+([parser.go:50–66](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/parser.go)):
 
 ```go
 type Parser interface {
@@ -276,18 +276,18 @@ type Parser interface {
 ```
 
 Adding a provider means implementing this interface and appending to the
-slice returned by `Parsers()` ([parser.go:78–84](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/parser.go)).
+slice returned by `Parsers()` ([parser.go:78–84](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/parser.go)).
 Order matters: `DetectFromURL` ties resolve by registration order.
 `Parsers()` today returns `{OpenAIParser, AnthropicParser, BedrockParser}`.
 
 **`Provider` enum**
-([parser.go:8–18](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/parser.go)):
+([parser.go:8–18](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/parser.go)):
 `ProviderUnknown = 0`, `ProviderOpenAI = 1`, `ProviderAnthropic = 2`,
 `ProviderBedrock = 3`. Numeric values are persisted in nothing today but treat
 them as wire-stable — new providers must take fresh numbers.
 
 **`Pricing` construction + lookup**
-([pricing.go:60–130](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)):
+([pricing.go:60–130](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)):
 
 ```go
 func NewEntries(raw map[string]map[string]EntryJSON) (map[string]map[string]Entry, error)
@@ -307,7 +307,7 @@ build rather than mispricing silently. Nil input yields an empty,
 never-matching table.
 
 Nil-safe: `t.Cost`/`t.Lookup` on a nil receiver returns `ok=false`
-([pricing.go:96–99](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)).
+([pricing.go:96–99](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)).
 `ok=false` means the surface or model is absent from the table management sent;
 the caller emits `cost.skipped=unknown_model`.
 
@@ -321,13 +321,13 @@ the caller emits `cost.skipped=unknown_model`.
 
 2. **SSE scanner handles partial chunks.** A buffered prefix that doesn't end
    in `\n\n` still yields its accumulated event before `io.EOF`
-   ([sse.go:55–58](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/sse.go)). Tests:
+   ([sse.go:55–58](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/sse.go)). Tests:
    `TestSSEScanner_OpenAIFixture`, `TestSSEScanner_AnthropicFixture`,
    `TestSSEScanner_MultilineData`, `TestSSEScanner_CRLF`. The streaming
    accumulators ride on this: `accumulateAnthropicStream` and
    `accumulateOpenAIStream` `break` on any scanner error to return partial
    usage rather than aborting
-   ([streaming.go:68–73, 144–150](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/middleware/builtin/llm_response_parser/streaming.go)).
+   ([streaming.go:68–73, 144–150](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/middleware/builtin/llm_response_parser/streaming.go)).
 
 3. **Management is the only source of rates.** `Table` has no constructor that
    invents prices: the only way in is `NewTable`/`NewEntries` over the wire map
@@ -338,7 +338,7 @@ the caller emits `cost.skipped=unknown_model`.
 4. **Tables are immutable once built.** `Table.entries` is written only in
    `NewEntries` and never mutated afterwards, and `cost_meter`'s `perRecord`
    map is likewise build-time-only
-   ([pricing.go:47–52](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)). This
+   ([pricing.go:47–52](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)). This
    is what makes the no-reload design safe: a price change arrives as a mapping
    push that builds a new middleware instance over a new table, so concurrent
    readers can't observe a half-updated price list and no atomic swap or lock
@@ -346,7 +346,7 @@ the caller emits `cost.skipped=unknown_model`.
 
 5. **Rate validation happens at chain-build time, not per request.**
    `NewEntries` rejects negative, NaN, and ±Inf rates field by field
-   ([pricing.go:60–83](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)), naming
+   ([pricing.go:60–83](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)), naming
    the offending surface/model/field in the error. Management enforces the same
    constraints at its API boundary and in its YAML parser, so this is
    defense-in-depth — but it means a corrupt push fails loudly at build instead
@@ -356,7 +356,7 @@ the caller emits `cost.skipped=unknown_model`.
 6. **New rates must be added to `Entry`, `EntryJSON`, *and* management's
    `pricing.Entry` together.** `NewEntries` converts by direct struct
    conversion `Entry(e)`
-   ([pricing.go:76–78](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)), which
+   ([pricing.go:76–78](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)), which
    only compiles while the two structs stay field-identical — so the proxy half
    is compiler-enforced. The management half is not: a rate added there but not
    here unmarshals into nothing and prices that bucket at `InputPer1K`.
@@ -364,9 +364,9 @@ the caller emits `cost.skipped=unknown_model`.
 ## Things to scrutinise
 
 **Correctness.** Verify the OpenAI cached-prompt clamp at
-[pricing.go:203–206](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)
+[pricing.go:203–206](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)
 short-circuits before subtraction. Negative token counts are clamped to zero up
-front ([pricing.go:186–197](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/proxy/internal/llm/pricing/pricing.go)) so
+front ([pricing.go:186–197](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/proxy/internal/llm/pricing/pricing.go)) so
 no formula can yield a negative cost. `Anthropic.TotalTokens` sums all four
 buckets (in + out + cache\_read + cache\_creation) — downstream dashboards
 need to know this differs from `input + output`.
@@ -422,12 +422,12 @@ it in-process from a wire-shape map.
 
 ## Cross-references
 
-- Sibling: [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
+- Sibling: [31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
   — the chain that calls `llm.Parsers()`, `llm.ParserByName`,
   `llm.NewScanner`, `pricing.NewTable` / `pricing.NewEntries`.
 - Path-routed providers (Vertex AI + Bedrock), credential syntax, and the
   Bedrock AWS event-stream accumulator:
-  [50-path-routed-providers.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/50-path-routed-providers.md).
+  [50-path-routed-providers.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/50-path-routed-providers.md).
 - Direct callers: `llm_request_parser/middleware.go:82–94`,
   `llm_response_parser/middleware.go:113–123`,
   `llm_response_parser/streaming.go:65, 142`, `cost_meter/factory.go:49–57`.

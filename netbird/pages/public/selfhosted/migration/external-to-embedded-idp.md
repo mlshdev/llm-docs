@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/migration/external-to-embedded-idp.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/migration/external-to-embedded-idp.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/migration/external-to-embedded-idp.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/migration/external-to-embedded-idp.mdx)
 
 # Migration Guide: External IdP to Embedded IdP
 
@@ -149,6 +149,24 @@ With the client id and client secret from the previous step, you can create the 
 >
 > - "issuer": is the root domain of your zitadel instance, make sure you don't have any trailing slashes (e.g. <https://zitadel.example.com>)
 > - "clientID" and "clientSecret": are the values you copy when creating the OAuth app
+
+> **Note**
+>
+> For Google, use the `google` connector type, which needs no issuer. It uses the same Google account ID as the standalone Google setup, so existing users keep their NetBird accounts:
+>
+> ```json
+> {
+>   "type": "google",
+>   "name": "Google",
+>   "id": "google",
+>   "config": {
+>     "clientID": "my-client-id",
+>     "clientSecret": "my-client-secret"
+>   }
+> }
+> ```
+>
+> In the Google Cloud Console, add `https://<your-domain>/oauth2/callback` to the OAuth client's **Authorized redirect URIs**.
 
 2. Encode and store it in the `NETBIRD_IDP_SEED_INFO` environment variable:
 

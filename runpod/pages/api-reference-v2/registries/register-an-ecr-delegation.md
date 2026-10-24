@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/registries/register-an-ecr-delegation.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/api-reference-v2/registries/register-an-ecr-delegation.mdx)
+> Pinned source for Runpod main: [api-reference-v2/registries/register-an-ecr-delegation.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/registries/register-an-ecr-delegation.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/registries/register-an-ecr-delegation
 
 # Register An Ecr Delegation
@@ -34,6 +34,17 @@ Register an Amazon ECR delegation that lets Runpod pull private container images
       - `awsRegion` (required; string): AWS region
       - `dockerRegistryUri` (string): Formatted ECR registry URI for Docker login
       - `createdAt` (required; string; format: date-time): When the delegation was created
+- `400`: The request could not be processed because it is malformed or conflicts with request rules.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `badRequest`: `{"title":"Bad Request","status":400,"detail":"request could not be processed"}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)
@@ -54,6 +65,17 @@ Register an Amazon ECR delegation that lets Runpod pull private container images
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
+- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when its expanded upstream request is too large, even if the incoming body is within the limit.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `requestTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Request body exceeds the 1048576 byte limit."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
   - Header `RateLimit` (string)

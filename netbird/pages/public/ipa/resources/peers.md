@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/peers.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/peers.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/peers.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/peers.mdx)
 
 ## List all Peers   (GET /api/peers)
 
@@ -13,6 +13,10 @@ Filter peers by name
 **ip (type: string; optional)**
 
 Filter peers by IP address
+
+**mac (type: string; optional)**
+
+Filter peers by MAC address of a network interface
 
 **GET /api/peers Request**
 
@@ -175,6 +179,12 @@ echo $response;
     "created_at": "2023-05-05T09:00:35.477782Z",
     "ip": "10.64.0.1",
     "ipv6": "fd00:4e42:ab12::1",
+    "network_addresses": [
+      {
+        "net_ip": "192.168.0.11/24",
+        "mac": "00:93:37:bd:83:0f"
+      }
+    ],
     "connection_ip": "35.64.0.1",
     "connected": true,
     "last_seen": "2023-05-05T10:05:26.420578Z",
@@ -216,6 +226,7 @@ echo $response;
       "rosenpass_enabled": true,
       "rosenpass_permissive": false,
       "server_ssh_allowed": true,
+      "remote_jobs_allowed": true,
       "disable_client_routes": false,
       "disable_server_routes": false,
       "disable_dns": false,
@@ -239,6 +250,12 @@ echo $response;
     "created_at": "string",
     "ip": "string",
     "ipv6": "string",
+    "network_addresses": [
+      {
+        "net_ip": "string",
+        "mac": "string"
+      }
+    ],
     "connection_ip": "string",
     "connected": "boolean",
     "last_seen": "string",
@@ -277,6 +294,7 @@ echo $response;
       "rosenpass_enabled": "boolean",
       "rosenpass_permissive": "boolean",
       "server_ssh_allowed": "boolean",
+      "remote_jobs_allowed": "boolean",
       "disable_client_routes": "boolean",
       "disable_server_routes": "boolean",
       "disable_dns": "boolean",
@@ -462,6 +480,12 @@ echo $response;
   "created_at": "2023-05-05T09:00:35.477782Z",
   "ip": "10.64.0.1",
   "ipv6": "fd00:4e42:ab12::1",
+  "network_addresses": [
+    {
+      "net_ip": "192.168.0.11/24",
+      "mac": "00:93:37:bd:83:0f"
+    }
+  ],
   "connection_ip": "35.64.0.1",
   "connected": true,
   "last_seen": "2023-05-05T10:05:26.420578Z",
@@ -503,6 +527,7 @@ echo $response;
     "rosenpass_enabled": true,
     "rosenpass_permissive": false,
     "server_ssh_allowed": true,
+    "remote_jobs_allowed": true,
     "disable_client_routes": false,
     "disable_server_routes": false,
     "disable_dns": false,
@@ -523,6 +548,12 @@ echo $response;
   "created_at": "string",
   "ip": "string",
   "ipv6": "string",
+  "network_addresses": [
+    {
+      "net_ip": "string",
+      "mac": "string"
+    }
+  ],
   "connection_ip": "string",
   "connected": "boolean",
   "last_seen": "string",
@@ -561,6 +592,7 @@ echo $response;
     "rosenpass_enabled": "boolean",
     "rosenpass_permissive": "boolean",
     "server_ssh_allowed": "boolean",
+    "remote_jobs_allowed": "boolean",
     "disable_client_routes": "boolean",
     "disable_server_routes": "boolean",
     "disable_dns": "boolean",
@@ -835,6 +867,12 @@ echo $response;
   "created_at": "2023-05-05T09:00:35.477782Z",
   "ip": "10.64.0.1",
   "ipv6": "fd00:4e42:ab12::1",
+  "network_addresses": [
+    {
+      "net_ip": "192.168.0.11/24",
+      "mac": "00:93:37:bd:83:0f"
+    }
+  ],
   "connection_ip": "35.64.0.1",
   "connected": true,
   "last_seen": "2023-05-05T10:05:26.420578Z",
@@ -876,6 +914,7 @@ echo $response;
     "rosenpass_enabled": true,
     "rosenpass_permissive": false,
     "server_ssh_allowed": true,
+    "remote_jobs_allowed": true,
     "disable_client_routes": false,
     "disable_server_routes": false,
     "disable_dns": false,
@@ -896,6 +935,12 @@ echo $response;
   "created_at": "string",
   "ip": "string",
   "ipv6": "string",
+  "network_addresses": [
+    {
+      "net_ip": "string",
+      "mac": "string"
+    }
+  ],
   "connection_ip": "string",
   "connected": "boolean",
   "last_seen": "string",
@@ -934,6 +979,7 @@ echo $response;
     "rosenpass_enabled": "boolean",
     "rosenpass_permissive": "boolean",
     "server_ssh_allowed": "boolean",
+    "remote_jobs_allowed": "boolean",
     "disable_client_routes": "boolean",
     "disable_server_routes": "boolean",
     "disable_dns": "boolean",

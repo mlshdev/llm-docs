@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/help/support-matrix/netbird-client/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/help/support-matrix/netbird-client/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/support-matrix/netbird-client/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/support-matrix/netbird-client/index.mdx)
 
 # NetBird Client Support Matrix
 
@@ -14,15 +14,16 @@ The NetBird client runs across desktop, mobile, and TV platforms. Pick an OS fam
 
 ## Go toolchain
 
-The client is built with the Go versions listed below. Building from source against an unsupported Go release is not guaranteed to succeed. Each Go version sets a floor on OS support for that NetBird release — see the per-OS pages above for the resulting cutoffs.
+The client is built with the Go versions listed below. Building from source against an unsupported Go release is not guaranteed to succeed. Each Go version sets a floor on OS support for that NetBird release. See the per-OS pages above for the resulting cutoffs.
 
 | NetBird client version | Go version |
 | ---------------------- | ---------- |
-| v0.20.0 – v0.25.3      | 1.20       |
-| v0.25.4 – v0.29.1      | 1.21       |
-| v0.29.2 – v0.60.2      | 1.23       |
-| v0.60.3 – v0.62.3      | 1.24       |
-| v0.63.0 – current      | 1.25       |
+| v0.20.0 to v0.25.3     | 1.20       |
+| v0.25.4 to v0.29.1     | 1.21       |
+| v0.29.2 to v0.60.2     | 1.23       |
+| v0.60.3 to v0.62.1     | 1.24       |
+| v0.62.2 to v0.77.1     | 1.25       |
+| v0.78.0 to current     | 1.26       |
 
 ## Reporting compatibility issues
 

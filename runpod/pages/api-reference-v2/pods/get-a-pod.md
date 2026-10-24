@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/get-a-pod.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/api-reference-v2/pods/get-a-pod.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/get-a-pod.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/pods/get-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/get-a-pod
 
 # Get A Pod
@@ -96,7 +96,7 @@ Returns a single pod by ID.
                       - `username` (required; string): SSH username. For the proxy this is an opaque routing token, not a user account on the pod.
                       - `command` (required; string): The equivalent `ssh` invocation, ready to run. Add `-i <path>` if the matching private key is not one of your default identities, and `-o StrictHostKeyChecking=no` to skip the host-key prompt on short-lived pods.
                     - `variant 2` (null)
-                - `direct` (required): Connection straight to the pod's sshd over its published `22/tcp` mapping. Supports the full SSH feature set. Null unless `22/tcp` is in `ports` and the running pod has been assigned a public port for it — so it is absent while the pod is provisioning or stopped.
+                - `direct` (required): Connection straight to the pod's sshd over its published `22/tcp` mapping. Supports the full SSH feature set. Null unless `22/tcp` is in `ports` and the running pod has been assigned a public port for it — so it is absent while the pod is provisioning or stopped. Also null when listing pods with `GET /v2/pods`; fetch a single pod by ID to obtain the live mapping.
                   - anyOf:
                     - `variant 1` (object): One way to reach the pod over SSH, as both its parts and a ready-to-run invocation.
                       - `host` (required; string): Hostname or IP to connect to.
@@ -120,7 +120,7 @@ Returns a single pod by ID.
             - `enabled` (required; boolean): Whether global networking is enabled, giving the pod a private IP reachable across data centers. Derived from whether the pod has an assigned global-network address.
             - `ip` (string): The pod's assigned global-networking IP. Present only when enabled.
             - `internalDns` (string): Internal DNS name (`<podId>.runpod.internal`), reachable from other globally-networked pods in the same account. Present only when enabled.
-          - `runtime` (required): Live utilization metrics. Null when the pod is not RUNNING.
+          - `runtime` (required): Live utilization metrics. Null when the pod is not RUNNING, and when listing pods with `GET /v2/pods`; fetch a single pod by ID to obtain metrics.
             - anyOf:
               - `variant 1` (object): Live utilization metrics for a running pod.
                 - `uptime` (integer): Seconds since the container started

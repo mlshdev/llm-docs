@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/about-netbird/self-hosted-vs-cloud.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/about-netbird/self-hosted-vs-cloud.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/about-netbird/self-hosted-vs-cloud.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/about-netbird/self-hosted-vs-cloud.mdx)
 
 # Self-hosted vs. Cloud-hosted NetBird
 
@@ -60,7 +60,7 @@ some additional features that are targeted at business customers and help with n
 
 > **Note**
 >
-> SCIM provisioning and some enterprise features require a [Commercial License](https://netbird.io/pricing#on-prem) for self-hosted deployments.
+> Users and groups provisioning (including SCIM), traffic events logging, event streaming, EDR integrations, and peer approval are also available in self-hosted deployments with an [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise). The MSP functionality is available only in NetBird Cloud.
 
 ## Geo Distributed Relay Servers
 

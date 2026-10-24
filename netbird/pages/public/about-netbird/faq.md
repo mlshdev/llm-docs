@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/about-netbird/faq.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/about-netbird/faq.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/about-netbird/faq.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/about-netbird/faq.mdx)
 
 # FAQ
 
@@ -41,6 +41,8 @@ We are collecting the following metrics:
 - Number of reverse proxy services (total, enabled, by status, by target type, by auth type)
 - Number of service targets (by type: peer, host, domain, subnet)
 - Number of custom domains (total and validated)
+- Number of Agent Network accounts, providers, policies, and budget rules, and number of accounts with Agent Network log collection enabled
+- Agent Network usage totals (input tokens, output tokens, and cost in USD)
 - Rosenpass usage
 - IdP manager type and embedded IdP provider breakdown
 - Store engine type

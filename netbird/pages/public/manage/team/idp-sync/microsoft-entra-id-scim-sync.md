@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/idp-sync/microsoft-entra-id-scim-sync.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/idp-sync/microsoft-entra-id-scim-sync.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/idp-sync/microsoft-entra-id-scim-sync.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/idp-sync/microsoft-entra-id-scim-sync.mdx)
 
 # Provision Users and Groups From Microsoft Entra ID via SCIM
 
@@ -31,7 +31,7 @@ Before you begin the integration process, ensure you have the necessary admin pe
 
 To enable SCIM synchronization in NetBird, navigate to `Integrations > Identity Provider Sync` in your NetBird dashboard.
 
-![Microsoft Entra ID SCIM Integration Connection](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-connect.png)
+![The Connect Entra ID (SCIM) button on the NetBird Identity Provider Sync tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-connect.png)
 
 > **Note**
 >
@@ -42,49 +42,31 @@ To enable SCIM synchronization in NetBird, navigate to `Integrations > Identity 
 Click the `Connect Microsoft Entra ID` button to begin the configuration process.
 This action will trigger a pop-up window that will present you with a user-friendly wizard, guiding you through the synchronization process between NetBird and Entra ID.
 
-![Microsoft Entra ID SCIM Getting Started Wizard](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-scim-getting-started.png)
-
 ## Configure SCIM Provisioning in Microsoft Entra ID
 
 Click on the `Get Started` button to initiate the integration process.
-A new wizard screen will appear, offering step-by-step instructions for creating and configuring your Microsoft Entra ID application. To simplify the process, the wizard also provides quick-copy buttons for essential information:
+A new wizard screen will appear, offering step-by-step instructions for creating and configuring your Microsoft Entra ID application. To simplify the process, the wizard also provides quick-copy buttons for the values you will enter in Entra ID, including the SCIM Token Key.
 
-![Microsoft Entra ID SCIM Configuration Setup](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-configure-scim.png)
+![The NetBird SCIM setup wizard step with quick-copy buttons for the values needed in Entra ID](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-configure-scim.png)
 
 > **Note**
 >
 > If you already have a NetBird Enterprise Application in Entra ID with provisioning available, you can configure SCIM on it directly without creating a new one. The App Registration used by the legacy NetBird API integration is a different application type and cannot be reused for SCIM.
 
-In the [Azure portal](https://portal.azure.com), navigate to `Azure Active Directory` → `Enterprise applications`.
-
-![Microsoft Entra ID Enterprise Applications](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-enterprise-applications.png)
-
-Click `New application` to create a new enterprise application.
-
-![Microsoft Entra ID New Application Creation](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-new-application.png)
-
-Click `Create your own application`.
+In the [Azure portal](https://portal.azure.com), navigate to `Azure Active Directory` → `Enterprise applications`. Click `New application`, then `Create your own application`.
 
 Fill out the application form with the following details:
 
 - **What's the name of your app?**: `NetBird SCIM`
 - **What are you looking to do with your application?**: Select `Integrate any other application you don't find in the gallery (Non-gallery)`
 
-![Microsoft Entra ID Application Form](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-application-form.png)
-
 Click `Create`.
-
-![Microsoft Entra ID Application Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-application-created.png)
 
 ### Enable Provisioning
 
 On the NetBird dashboard click the Continue → button. A new wizard screen will appear, offering step-by-step instructions for enabling provisioning.
 
-![Microsoft Entra ID Enable Provisioning Setup](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-enable-provisioning.png)
-
 Once the application is created, click `Manage`, then click `Provisioning`.
-
-![Microsoft Entra ID Provisioning Get Started](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-provisioning-get-started.png)
 
 Under the `Create configuration` section, click `connect your application`.
 
@@ -100,28 +82,22 @@ Fill out the `New provisioning configuration` form with the following details:
 > Without this flag, Entra ID uses non-standard PATCH operations that can cause provisioning issues such as incorrect boolean values and malformed group membership updates.
 > See [Microsoft's SCIM compatibility documentation](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-config-problem-scim-compatibility#flags-to-alter-the-scim-behavior) for more details.
 
-![Microsoft Entra ID Connect Application Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-connect-application.png)
+![The Entra ID New provisioning configuration form with Bearer authentication, the NetBird Tenant URL, and the Secret token](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-connect-application.png)
 
 Click `Test Connection` to verify the SCIM connection. If the connection is successful, click `Create` to save the configuration.
-
-![Microsoft Entra ID Connection Success](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-connection-success.png)
 
 ### Configure Attribute Mapping
 
 On the NetBird dashboard click the Continue → button. A new wizard screen will appear, offering step-by-step instructions for configuring attribute mapping.
 
-![Microsoft Entra ID Configure Attribute Mapping](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-configure-attribute-mapping.png)
-
 After creating the provisioning configuration, you need to configure the attribute mappings for both groups and users.
 Navigate to the `Attribute mapping` section.
-
-![Microsoft Entra ID Attribute Mapping](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/attribute-mapping.png)
 
 #### Group Attribute Mapping
 
 Select the `Groups` tab to configure the group attribute mapping.
 
-![Microsoft Entra ID Group Attribute Mapping](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-group-attribute-mapping.png)
+![The Groups attribute mapping list in Entra ID with the externalId row to delete](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-group-attribute-mapping.png)
 
 In the attribute mappings list, locate the `externalId` row and click `Delete`.
 
@@ -129,13 +105,9 @@ NetBird matches synchronized groups by `displayName`. Removing the `externalId` 
 
 Click `Save` to apply the updated group attribute mapping configuration.
 
-![Microsoft Entra ID Group Attribute Mapping After Deletion](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-group-attribute-mapping-updated.png)
-
 #### User Attribute Mapping
 
 Select the `Users` tab to configure the user attribute mapping.
-
-![Microsoft Entra ID Default User Attribute Mapping](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-user-attribute-mapping.png)
 
 > **Note**
 >
@@ -153,7 +125,7 @@ Remove all attribute mappings except for the following:
 
 Click `Save` to apply the updated user attribute mapping configuration.
 
-![Microsoft Entra ID Updated User Attribute Mapping](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-user-attribute-mapping-clean.png)
+![The Users attribute mapping reduced to the seven attributes NetBird consumes](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-user-attribute-mapping-clean.png)
 
 In the attribute mappings list, locate the `externalId` row and click `Edit`.
 
@@ -161,17 +133,13 @@ Change the **Source attribute** from `mailNickname` to `objectId`.
 
 `externalId` is the stable identifier NetBird uses to link a SCIM user record to its Entra user. The Entra default of `mailNickname` is not guaranteed to be set on every user, is not guaranteed to be unique in the directory, and can change. `objectId` is the immutable Entra GUID and is the correct stable identifier. This ensures NetBird continues to recognize the same user across email address or display name changes.
 
-![Microsoft Entra ID Edit External ID Attribute](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-edit-externalid.png)
+![Editing the externalId mapping with the Source attribute set to objectId](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-edit-externalid.png)
 
 Click `Apply` to save the change, then click `Save` to apply the final user attribute mapping configuration.
-
-![Microsoft Entra ID Final User Attribute Mapping](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-user-attribute-mapping-updated.png)
 
 ## Assign Users and Groups
 
 On the NetBird dashboard click the Continue → button. A new wizard screen will appear, offering step-by-step instructions for assigning users and groups.
-
-![Microsoft Entra ID Assign Users and Groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-assign-users-and-groups.png)
 
 To enable SCIM synchronization of users and groups to NetBird, you need to assign them to the NetBird enterprise application.
 
@@ -182,17 +150,13 @@ In the Azure portal, navigate to your NetBird enterprise application:
 - Select the users and groups you want to synchronize to NetBird
 - Click `Assign` to save the assignments
 
-![Microsoft Entra ID Assign Users and Groups Interface](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-assign-users-groups.png)
-
 ## Start Provisioning
 
 On the NetBird dashboard click the Continue → button. A new wizard screen will appear, offering step-by-step instructions for starting the provisioning.
 
-![Microsoft Entra ID Run Provisioning](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-run-provisioning.png)
-
 After assigning users and groups, navigate back to the provisioning configuration, click `Overview`, then click the `Start provisioning` button to enable automatic synchronization. The first sync will begin shortly after provisioning is started.
 
-![Microsoft Entra ID Provisioning Started](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-provisioning-started.png)
+![The provisioning Overview page in Entra ID after clicking Start provisioning](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-provisioning-started.png)
 
 Once started, Microsoft Entra ID will automatically synchronize the assigned users and groups to NetBird.
 
@@ -221,24 +185,20 @@ have been successfully synchronized by navigating to `Team > Users` in your NetB
 You can access some configuration settings inside the NetBird Dashboard. E.g. if you want to regenerate the authentication token or want to filter users and groups based on a specific prefix.
 Simply go to the Integrations page and click the settings icon of your integration.
 
-![Microsoft Entra ID SCIM Configuration Options](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-configuration-options.png)
+![The enabled Entra ID SCIM integration on the NetBird Integrations page with its settings icon](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-configuration-options.png)
 
 ### Regenerate Auth Token
 
 If your authentication token has expired or you need to update it, click **Regenerate Auth Token** in the configuration window to generate a new token.
 
-![Microsoft Entra ID Regenerate Authentication Token](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-regenerate-auth-token.png)
-
 ### Groups to be synchronized
 
 By default, all groups assigned to the NetBird application in Entra will be synchronized. If you want to synchronize only assigned groups that start with a specific prefix, you can specify them in the filter. Keep in mind that the prefix matching is case-sensitive.
 
-![Microsoft Entra ID Group Prefix Filter](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-group-prefix.png)
+![The group prefix filter in the NetBird SCIM integration settings](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-group-prefix.png)
 
 Click `Continue` to proceed to the next step.
 
 ### Users to be synchronized
 
 By default, all users from the groups assigned to the NetBird application in Entra will be synchronized. If you want to further filter and synchronize only users from specific assigned groups, you can specify those group names in the filter. The group name matching is case-sensitive.
-
-![Microsoft Entra ID User Prefix Filter](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/entra-id-scim-sync/entra-user-prefix.png)

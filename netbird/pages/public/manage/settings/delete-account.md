@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/settings/delete-account.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/settings/delete-account.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/settings/delete-account.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/settings/delete-account.mdx)
 
 # Delete your NetBird account
 
@@ -12,17 +12,17 @@ To delete your NetBird organization account, you must be a user with the [owner 
 
 Go to the `Settings` tab, then click on `Danger zone`. Review the message and click on the `Delete Account` button.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/account-settings-danger-zone.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/settings/account-settings-danger-zone.png)
 
 To confirm, click on the `Delete` button.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/settings/account-settings-delete-account-confirm.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/settings/account-settings-delete-account-confirm.png)
 
 After you delete your account, your session will end, and you will be redirected to the login page.
 
 > **Note**
 >
-> If you log in again, a new account will be created.
+> If you log in again, a new account will be created. The exception on NetBird Cloud is an email domain that already belongs to another account, either as its signup domain or as a verified [sign-in domain](https://docs.netbird.io/manage/team/sign-in-domains). In that case you join that account instead, and may need an admin to approve you.
 
 ## Get started
 

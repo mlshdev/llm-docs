@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/remote-access/exit-nodes.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/remote-access/exit-nodes.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/exit-nodes.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/exit-nodes.mdx)
 
 # Configuring Exit Nodes for Internet Traffic
 
@@ -19,6 +19,17 @@ When [IPv6 overlay addressing](#ipv6-support) is enabled for the peer, the manag
 ### Routing Peer
 
 The routing peer acts as the exit node for internet traffic. It applies masquerading so that traffic appears to originate from the routing peer's public IP address.
+
+> **Warning**
+>
+> An exit node route (`0.0.0.0/0`) matches all traffic, not just internet-bound traffic. Peers using the exit node can reach any network the routing peer can reach, including its local LAN.
+
+You can limit this in two ways:
+
+- Enable **Block LAN access** on the routing peer (in the peer's settings, or with `netbird up --block-lan-access`) to block forwarded traffic to its local networks. It breaks site-to-site or LAN routes served by the same peer, so enable it only on a dedicated exit node. It does not restrict remote networks reachable through the exit node's upstream gateway.
+- Place the exit node on an isolated network segment (a DMZ or dedicated VLAN) that can only reach the internet. This enforces the restriction outside the peer and also covers upstream networks.
+
+Both options assume the exit node does nothing else. If peers also need to reach resources on that site's LAN, serve those through a separate routing peer using a [Network](https://docs.netbird.io/manage/networks) with scoped access policies instead of the exit node's broad route. For the full setup combining both, see [Selective Internal Access Behind an Exit Node](#selective-internal-access-behind-an-exit-node) below.
 
 > **Note**
 >
@@ -57,23 +68,23 @@ Clients running v0.55.0 or later auto-apply these routes unless the user has exp
 
 Navigate to the NetBird dashboard and open **Peers** (exit nodes are typically unattended machines like a VPS, router, or always-on host).
 
-![Dashboard peers view](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers.png)
+![Dashboard peers view](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers.png)
 
 ### 2. Select the Routing Peer
 
 Choose the peer that will serve as your exit node.
 
-![Routing peer selection](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer.png)
+![Routing peer selection](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer.png)
 
 ### 3. Configure the Exit Node
 
 Click **Add Exit Node**. In the dialog, assign one or more distribution groups to specify which peers should use this exit node.
 
-![Add exit node dialog](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-add-exit-node.png)
+![Add exit node dialog](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-add-exit-node.png)
 
 To make the exit node available without automatic activation, disable **Auto Apply**. Users can then enable it manually.
 
-![Auto Apply option](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/exit-node-auto-apply.png)
+![Auto Apply option](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/exit-node-auto-apply.png)
 
 Click **Add Exit Node** to complete the configuration. Masquerading is enabled by default.
 
@@ -81,7 +92,7 @@ Click **Add Exit Node** to complete the configuration. Masquerading is enabled b
 
 Check the peer view to confirm the routing peer is marked as an exit node.
 
-![Exit node confirmation](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer-exit-node.png)
+![Exit node confirmation](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer-exit-node.png)
 
 ### 5. Configure DNS
 
@@ -103,17 +114,19 @@ Set up one routing peer in each region as described in the [configuration steps]
 
 ### 2. Add both peers to the same exit node
 
-In the exit node's configuration, add both routing peers and leave the metric identical on both. Adding them as two separate exit node entries does not work: metrics and nearest-peer selection only apply between routing peers of the same route, so separate entries give every device both default routes with no coordinated selection.
+In the exit node's configuration, add both routing peers and leave the metric identical on both.
 
-![One exit node entry with two routing peers at equal metrics, distributed to the remote-workers group](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/regional-exit-nodes-equal-metrics.png)
+Adding the regions as two separate exit nodes does not work, and fails in a way that is easy to miss. Metrics and nearest-peer selection only apply between routing peers of the same exit node. Separate exit nodes instead appear on each device as independent choices in its exit node selector, and with [Auto Apply](#exit-node-selection-and-auto-apply) enabled (the default) the client activates exactly one: whichever exit node's name sorts first alphabetically. Metrics and latency play no part in that choice. If the activated exit node's routing peer goes offline, the device keeps it selected and loses internet access entirely, even while another exit node's routing peer is online and connected. One exit node with multiple routing peers gives you selection and failover; separate exit nodes give you neither.
 
-The finished state: one exit node entry, both regional routing peers under it with the same metric, and the distribution group on each.
+![One exit node with two routing peers at equal metrics, distributed to the remote-workers group](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/regional-exit-nodes-equal-metrics.png)
+
+The finished state: one exit node, both regional routing peers under it with the same metric, and the distribution group on each.
 
 ### 3. Keep the distribution group and access policy scoped
 
 Use a dedicated distribution group for the devices that should full-tunnel rather than the built-in All group, and keep the access policy one-directional from that group to the routing peers. Every device in the distribution group sends all of its internet traffic through whichever exit node it selects.
 
-![Access control policy with the remote-workers group as source and the exit-nodes group as destination, one-directional](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/regional-exit-nodes-access-policy.png)
+![Access control policy with the remote-workers group as source and the exit-nodes group as destination, one-directional](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/regional-exit-nodes-access-policy.png)
 
 The policy that makes the exit nodes reachable: the distribution group as the source, the routing peers' group as the destination, one direction only.
 
@@ -123,9 +136,9 @@ On an east-coast device, run `netbird status -d`: the peer carrying the `0.0.0.0
 
 ### What this does and does not do
 
-This is nearest-exit selection plus automatic failover, not load balancing: each device follows its own lowest-latency exit node, and traffic is not spread evenly across the exit nodes. See [Latency switching](https://docs.netbird.io/manage/networks/how-routing-peers-work#latency-switching-equal-metrics) for the selection mechanism.
+This is nearest-exit selection plus automatic failover, not load balancing: each device follows its own lowest-latency exit node, and traffic is not spread evenly across the exit nodes. See [Nearest routing peer](https://docs.netbird.io/manage/networks/how-routing-peers-work#nearest-routing-peer-equal-metrics) for the selection mechanism.
 
-Latency-based selection is also not a guarantee of *which* exit node a given user lands on. If a rule must always hold, such as certain users always exiting in a specific country, use separate exit nodes with per-group distribution, or posture checks as in [Geo-Based Exit Node Routing](#geo-based-exit-node-routing) below.
+Latency-based selection is also not a guarantee of *which* exit node a given user lands on. If a rule must always hold, such as certain users always exiting in a specific country, use separate exit nodes with per-group distribution, or posture checks as in [Geo-Based Exit Node Routing](#geo-based-exit-node-routing) below. Make sure each device receives at most one exit node with [Auto Apply](#exit-node-selection-and-auto-apply) enabled: enable it on one exit node per distribution group, and keep those groups from overlapping — more than one auto-applied exit node on a device is the failure mode described in step 2 above. Offer any additional exit nodes with Auto Apply disabled; users can switch between exit nodes manually in the client either way.
 
 Traffic to your own sites is unaffected by any of this: routes to specific internal ranges are more specific than `0.0.0.0/0`, so devices reach those resources directly through the routing peer that advertises them, regardless of which exit node carries their internet traffic.
 
@@ -133,11 +146,13 @@ Traffic to your own sites is unaffected by any of this: routes to specific inter
 
 Some compliance setups require a device's location to decide its tunnel mode. A common example: company devices must send all internet traffic through a corporate exit node while traveling abroad, but keep a normal split tunnel at home, where only internal resources go through NetBird.
 
-You can build this with a [Country and Region posture check](https://docs.netbird.io/manage/access-control/posture-checks#country-and-region) attached to the access policy of a `0.0.0.0/0` [Network resource](https://docs.netbird.io/manage/networks). In the Networks model, a posture check on the access policy controls whether a peer receives the resource's routes at all. Peers that pass the check receive the default route and switch to a full tunnel. Peers that fail it never receive the route and keep their split tunnel, with direct internet access and all other NetBird resources working as before. When a peer's location or the check itself changes, connected peers converge to the new state within about a minute, without reconnecting.
+You can build this with a [Country and Region posture check](https://docs.netbird.io/manage/access-control/posture-checks#country-and-region) attached to the access policy that connects your users' group to the exit node's group. NetBird distributes a route only from a routing peer the device is allowed to connect to. When the posture check fails, the policy stops applying, the exit node peer drops out of the device's peer list, and the default route is withdrawn with it.
 
-> **Note**
+Devices that pass the check receive the default route and switch to a full tunnel. Devices that fail it do not receive the route, or lose it, and keep their split tunnel, with direct internet access and all other NetBird resources working as before. When the check changes, connected devices converge to the new state within about a minute, without reconnecting. A device is also re-evaluated each time it reconnects.
+
+> **Warning**
 >
-> Build this in **Networks**. Adding a posture check to an exit node created as a [Route](https://docs.netbird.io/manage/network-routes) does not work: the default route still installs on every peer in the distribution groups, and devices failing the check lose internet entirely.
+> Attach the posture check to the policy between the users and the exit node peer, not to the exit node route's **Access Control Groups**. A check in that position only blocks traffic at the exit node: the default route still installs on every device in the distribution groups, and a device failing the check loses internet entirely.
 
 The following example builds this goal: any device outside the United States sends all its internet traffic through the exit node, while devices inside the US keep their split tunnel. Traveling employees' devices are in the group `remote-workers`, and the exit node peer is in the group `exit-nodes`.
 
@@ -145,29 +160,31 @@ The following example builds this goal: any device outside the United States sen
 
 Navigate to **Access Control** → **Posture Checks**, click **Add Posture Check**, and select **Country and Region**. On the **Block** tab, add United States, then save the check as "Outside the US".
 
-Peers located in a blocked country fail the check, so the full-tunnel policy below stops applying to them and they keep their split tunnel. Peers anywhere else pass the check and get the full tunnel. NetBird determines the location from the public IP the peer uses to reach the management service, resolved with MaxMind's GeoLite2 City database, and shows it as country and city on the peer in the dashboard. On self-hosted deployments, the management server needs the database configured; see [Geolocation Database](https://docs.netbird.io/selfhosted/maintenance/geo-support).
+Peers located in a blocked country fail the check, so the policy below stops applying to them and they keep their split tunnel. Peers anywhere else pass the check and get the full tunnel. NetBird determines the location from the public IP the peer uses to reach the management service, resolved with MaxMind's GeoLite2 City database, and shows it as country and city on the peer in the dashboard. On self-hosted deployments, the management server needs the database configured; see [Geolocation Database](https://docs.netbird.io/selfhosted/maintenance/geo-support).
 
-### 2. Create the Network Resource
+### 2. Configure the Exit Node
 
-Navigate to **Networks** and create a network for the location that hosts your exit node, for example `us-datacenter`, or reuse an existing network if the exit node peer already routes one. Add a resource named `internet-egress` with the address `0.0.0.0/0`, optionally assign it to a new group `internet-egress`, and add your exit node peer as the routing peer. Keep **Masquerade** enabled: without it, forwarded traffic leaves the exit node with the device's overlay IP as its source address, and replies never find their way back.
-
-> **Note**
->
-> If you create the resource through the [API](https://docs.netbird.io/ipa/resources/networks), set `"enabled": true` explicitly on the resource and `"masquerade": true` on the routing peer. The API reference marks both fields as required; when omitted, the API currently defaults them to disabled.
+Add the exit node as described in the [configuration steps](#configuration-steps) above, with `remote-workers` as the distribution group and **Auto Apply** enabled, so the full tunnel activates on its own whenever the route arrives. Leave the route's **Access Control Groups** empty; the policy in the next step does the gating.
 
 ### 3. Create the Access Policy
 
-Navigate to **Access Control** → **Policies** and add a policy from `remote-workers` to the `internet-egress` group (or the resource directly, if you skipped the group), protocol **ALL**. Before saving, open **Posture Checks**, browse for "Outside the US", and attach it.
+Navigate to **Access Control** → **Policies** and add a policy from `remote-workers` to `exit-nodes`, protocol **ALL**. Before saving, open **Posture Checks**, browse for "Outside the US", and attach it.
 
-This policy is all the exit node needs to forward internet traffic; no additional policy to the routing peer itself is required.
+This must be the only policy that connects `remote-workers` to the exit node peer. If another policy also allows that connection, for example a broad **All** to **All** rule, the peer stays reachable through it, the route keeps arriving, and the posture check has no effect on the tunnel mode. Scope any other policies so they do not cover the exit node peer.
 
 Also set a DNS server with match domain `ALL`; see [Configure DNS](#5-configure-dns) above. Without it, devices keep sending DNS queries to their local resolver outside the tunnel, so a full-tunnel device still reveals its location through DNS even though all other traffic is tunneled. The nameserver applies to the whole group, and both tunnel modes handle it correctly: full-tunnel devices reach it through the exit node, while split-tunnel devices reach the same nameserver over their normal direct path. Resolution keeps working on both.
 
 ### 4. Verify
 
-On a device outside the US, run `netbird networks ls` and confirm the `internet-egress` network is selected. Then check the device's public IP (for example with `curl ifconfig.me`): it should be the exit node's IP.
+On a device outside the US, run `netbird networks ls` and confirm the exit node is listed and selected. Then check the device's public IP (for example with `curl ifconfig.me`): it should be the exit node's IP.
 
-On a device inside the US, the same checks show no `internet-egress` network, the device's own public IP, and working internet. Internal NetBird resources remain reachable on both devices.
+On a device inside the US, the same checks show no exit node entry, the device's own public IP, and working internet. `netbird status` no longer lists the exit node peer. Internal NetBird resources remain reachable on both devices.
+
+### Switching the Exit Node Off Inside the Office
+
+The same shape solves a different everyday need: keep NetBird connected while a laptop is in the office, but send internet traffic through the office gateway instead of the exit node, and switch the exit node back on when the laptop leaves. Replace the Country and Region check with a [Peer Network Range](https://docs.netbird.io/manage/access-control/posture-checks#peer-network-range) check with the **Block** action and your office subnet, for example `192.168.1.0/24`, and attach it to the same policy. While the laptop's own address is inside that range, the exit node is withdrawn and the operating system uses its local gateway. When the laptop connects from anywhere else, the route returns and Auto Apply activates the exit node again.
+
+The check compares the device's local interface addresses, as reported when the client connects, and the public IP it connects from. A local interface counts as its whole subnet, so the range you enter must be at least as wide as the netmask the office hands out: `192.168.1.0/24` matches a device on that `/24`, while a `/32` or a `/25` never will. See [Peer Network Range](https://docs.netbird.io/manage/access-control/posture-checks#peer-network-range) for the matching rules. Windows and macOS clients reconnect on their own when the network changes, so the check is re-evaluated within seconds of the laptop moving. Linux clients do not, and are re-evaluated on their next `netbird up` or service restart. Android clients cannot report local ranges; see [Peer Network Range Check on Android](https://docs.netbird.io/manage/access-control/posture-checks#peer-network-range-check-on-android).
 
 ## Enforcing the Exit Node on Managed Devices
 
@@ -185,7 +202,7 @@ Set up the exit node as described in the [configuration steps](#configuration-st
 
 ### 2. Lock network selection on the devices
 
-Deliver `disableNetworks: true` to the devices through your device management tooling: a registry policy or Intune profile on Windows, a configuration profile on macOS. See [MDM Integration](https://docs.netbird.io/client/mdm-integration) for the payload formats and delivery options per platform. The daemon re-reads the policy about once a minute, so it takes effect without restarting NetBird.
+Deliver `disableNetworks: true` to the devices through your device management tooling: a registry policy or Intune profile on Windows, a configuration profile on macOS. See [MDM Integration](https://docs.netbird.io/client/mdm-integration) for how the client applies a policy, and the [Windows](https://docs.netbird.io/manage/peers/mdm-deployment/windows-mdm-policy), [macOS](https://docs.netbird.io/manage/peers/mdm-deployment/macos-mdm-policy), and [iOS](https://docs.netbird.io/manage/peers/mdm-deployment/ios-mdm-policy) pages for the payload formats and delivery options. The daemon re-reads the policy about once a minute, so it takes effect without restarting NetBird.
 
 On Linux devices and servers, where there is no MDM channel, set the equivalent flag when installing the service:
 
@@ -216,7 +233,61 @@ On a locked device, `netbird networks list` returns the "network selection is di
 
 With Auto Apply and `disableNetworks` in place, every device in `remote-workers` routes its internet traffic through the exit node, and no user can select, deselect, or switch exit nodes from the device. Enforcement lives in the daemon, so the CLI and the UI are equally locked.
 
-It does not make the tunnel itself mandatory. A user can still disconnect NetBird entirely with `netbird down`, and a user with administrator rights on the device can stop or remove the service; NetBird has no always-on or kill-switch mode. Enforce that layer with the operating system: run devices with standard user accounts, manage the NetBird service through your MDM, and design your access policies so that disconnecting from NetBird costs the user access to company resources instead of freeing them from restrictions. The `disableUpdateSettings` and `disableProfiles` keys close the remaining side doors of reconfiguring the client or switching to an unmanaged profile; see [MDM Integration](https://docs.netbird.io/client/mdm-integration#policy-keys-reference).
+It does not make the tunnel itself mandatory. A user can still disconnect NetBird entirely with `netbird down`, and a user with administrator rights on the device can stop or remove the service; NetBird has no always-on or kill-switch mode. Enforce that layer with the operating system: run devices with standard user accounts, manage the NetBird service through your MDM, and design your access policies so that disconnecting from NetBird costs the user access to company resources instead of freeing them from restrictions. The `disableUpdateSettings` and `disableProfiles` keys close the remaining side doors of reconfiguring the client or switching to an unmanaged profile; see [Lock the client app](https://docs.netbird.io/client/mdm-integration#lock-the-client-app).
+
+## Selective Internal Access Behind an Exit Node
+
+An exit node grants more than internet access. Its `0.0.0.0/0` route matches all traffic, so devices using it can reach any network the exit node's host can route to, including internal networks you never exposed as a resource. If your users need specific internal resources plus a full tunnel, but must not reach everything the site's routers can see, the exit node's route cannot express that on its own.
+
+The fix is an architecture, not a setting: split the roles across two routing peers. Serve the internal resources from a routing peer inside the data center, where specific routes and access policies decide exactly what is reachable. Run the exit node on a host that can reach only the internet, so its unbounded route has nothing internal to expose.
+
+The running example: devices in the group `remote-workers` must reach `10.60.0.0/20` and the single host `10.70.5.20`, must not reach `10.90.0.0/20`, and send all internet traffic through the company exit node. The data center's routers can reach all three networks.
+
+### 1. Serve the internal resources from a routing peer inside the data center
+
+Create a [Network](https://docs.netbird.io/manage/networks) (for example `datacenter`) with a routing peer that sits inside the data center. Add exactly the resources users need: one for `10.60.0.0/20`, and one for the single host `10.70.5.20`. Grant access with a one-directional policy from `remote-workers` to those resources.
+
+Create no resource for `10.90.0.0/20`. NetBird denies by default: a subnet you never add as a resource gets no route and no accept rule, so this peer cannot take users there.
+
+### 2. Deploy the exit node where it cannot reach the internal networks
+
+Run the exit node on its own host, and place that host in a network segment with internet-only egress: a DMZ subnet, a dedicated VLAN, or cloud egress rules that keep private ranges unreachable. Configure the exit node as described in the [configuration steps](#configuration-steps), with `remote-workers` as the distribution group.
+
+This placement is the actual enforcement. Traffic to `10.90.0.0/20` still matches the default route and arrives at the exit node, but the host has no path to the destination, and nothing configured in NetBird can reopen it.
+
+Two shortcuts do not achieve this, and both are worth naming:
+
+- **Block LAN access alone is not enough.** As noted [above](#routing-peer), it blocks only the networks on the exit node's own interfaces. A network one gateway hop away, like `10.90.0.0/20` behind the data center router, is still forwarded.
+- **Host firewall rules on the exit node are not a reliable substitute.** To keep routing working alongside firewalls such as ufw or firewalld, NetBird inserts allow rules for its own interface at the top of forward chains on the host, including chains created after it starts. Filtering added there does not take effect for tunneled traffic. Restrict the host at the network layer instead: an upstream ACL, the VLAN, or the cloud egress rules.
+
+The two allowed resources are unaffected by any of this: their routes are more specific than `0.0.0.0/0`, so devices reach them through the data center routing peer no matter which exit node carries their internet traffic.
+
+### 3. Enable Block LAN access on the exit node
+
+With the segment doing the real work, enable **Block LAN access** in the exit node peer's settings as an additional guard for the one network the segment cannot remove: the exit node's own subnet. Since this exit node serves no LAN resources, the setting costs nothing here.
+
+When setting it from the CLI on a peer that is already connected, disconnect first. `netbird up --block-lan-access` on a connected peer reports `Already connected` and does not apply the flag:
+
+```bash
+netbird down
+netbird up --block-lan-access
+```
+
+### 4. Verify
+
+The design rests on one property, so test that property directly on the exit node's host: try to reach an address inside `10.90.0.0/20`, for example with `curl --max-time 5 10.90.0.10` or a ping. If the host can reach it, tunneled devices can too, and the segment's egress restriction needs fixing before anything else matters.
+
+Then confirm the user-visible behavior from a device in `remote-workers`:
+
+- The allowed resources respond: a host in `10.60.0.0/20` and the host `10.70.5.20` are reachable.
+- The forbidden network does not respond: connections to addresses in `10.90.0.0/20` fail. Depending on how the segment enforces egress, they time out, are rejected, or report an unreachable route; any of these is the correct result.
+- Internet traffic exits through the exit node: the device's public IP (for example with `curl ifconfig.me`) matches the exit node's public IP.
+
+### What this does and does not do
+
+Users get precisely the two internal resources and a full tunnel, and the forbidden network stays unreachable even though every packet toward it still arrives at the exit node. That restriction is enforced by where the exit node lives, so no dashboard change, policy mistake, or client setting can expose the forbidden network through it.
+
+It does not restrict what the data center routing peer exposes: that peer's host can reach `10.90.0.0/20`, and only its resource list and policies keep users out. Keep those scoped to exact prefixes and single hosts, and treat any new resource on that peer as a deliberate access decision.
 
 ## Performance Expectations
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/maintenance-and-outages.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/pods/maintenance-and-outages.mdx)
+> Pinned source for Runpod main: [pods/maintenance-and-outages.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/pods/maintenance-and-outages.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/maintenance-and-outages
 
 # Maintenance, outages, and data safety

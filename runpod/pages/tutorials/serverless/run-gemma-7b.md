@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/run-gemma-7b.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/tutorials/serverless/run-gemma-7b.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/run-gemma-7b.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/tutorials/serverless/run-gemma-7b.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/run-gemma-7b
 
 # Deploy a Gemma 3 chatbot with the OpenAI API
@@ -52,7 +52,7 @@ Your endpoint will begin initializing. This may take several minutes while Runpo
 
 Once your endpoint is deployed, make a note of your **Endpoint ID** from the endpoint details page. You'll need this to construct your API base URL.
 
-![](https://raw.githubusercontent.com/runpod/docs/880233fccf4e38598203496f69190ca6b180ea19/images/4a0706af-serverless-endpoint-id.png)
+![](https://raw.githubusercontent.com/runpod/docs/2f1d12b792818b3af3edd8d503a5e35f760d1410/images/4a0706af-serverless-endpoint-id.png)
 
 Your API base URL will follow this pattern:
 

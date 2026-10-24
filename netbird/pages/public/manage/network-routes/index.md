@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/network-routes/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/network-routes/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/network-routes/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/network-routes/index.mdx)
 
 # Routes
 
@@ -8,7 +8,9 @@
 
 Routes let you route traffic from NetBird peers to private networks without installing the NetBird client on every device. A routing peer forwards packets between your NetBird mesh network and your internal networks (LANs, VPCs, data centers).
 
-![Routes diagram](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes.png)
+Routes also power [exit nodes](https://docs.netbird.io/use-cases/remote-access/exit-nodes): a default route (`0.0.0.0/0`) that sends all internet traffic from peers in its distribution groups through a routing peer. That route grants access to any network the routing peer can reach; see the [exit nodes guide](https://docs.netbird.io/use-cases/remote-access/exit-nodes#routing-peer) for how to limit this with **Block LAN access**.
+
+![Routes diagram](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes.png)
 
 > **Note**
 >
@@ -76,7 +78,7 @@ Instead of specifying network ranges directly, you can use DNS routes. Add domai
 
 For example, route traffic to `website.com` or `api.website.com` through a specific machine by configuring DNS routes for these domains instead of specifying IP ranges.
 
-![DNS Routes diagram](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-dns-routes.png)
+![DNS Routes diagram](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-dns-routes.png)
 
 By default, DNS routes resolve every 60 seconds. Adjust this interval with the `--dns-router-interval` flag:
 
@@ -104,7 +106,7 @@ A network route describes a network you want to connect with your NetBird peers.
 
 Access **Network Routing** → **Routes** and click **Add Route**.
 
-![Add route button](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-add-button.png)
+![Add route button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-add-button.png)
 
 Enter your route details. In this example:
 
@@ -114,11 +116,11 @@ Enter your route details. In this example:
 - **Routing peer:** `ec2-demo-node`
 - **Distribution Groups:** `All`
 
-![Create network route form](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-create.png)
+![Create network route form](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-create.png)
 
 Click **Add Route** to save.
 
-![Saved network route](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-saved-new.png)
+![Saved network route](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-saved-new.png)
 
 Peers connected to your routing peer can now send traffic to your external network.
 
@@ -128,11 +130,11 @@ Select the **Peer group** tab when creating a route to use a peer group as your 
 
 Groups with multiple peers automatically provide [high availability](#high-availability).
 
-![Create route with peer group](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-groups-create.png)
+![Create route with peer group](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-groups-create.png)
 
 Click **Add Route** to save.
 
-![Saved route with peer group](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-groups-saved-new.png)
+![Saved route with peer group](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-groups-saved-new.png)
 
 ### Creating Highly Available Routes
 
@@ -149,11 +151,11 @@ To add individual peers, click **Add Peer** in the High Availability column. Sel
 
 This example adds `aws-nb-europe-router-az-b` to the `aws-eu-central-1-vpc` route:
 
-![Add HA peer to route](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-create-ha.png)
+![Add HA peer to route](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-create-ha.png)
 
 Peers connected to either `aws-nb-europe-router-az-a` or `aws-nb-europe-router-az-b` now have highly available access to `172.31.0.0/16`.
 
-![Saved HA route](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-saved-new-ha.png)
+![Saved HA route](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-saved-new-ha.png)
 
 > **Note**
 >
@@ -167,7 +169,7 @@ Ensure access control rules allow connectivity between these peers and the routi
 
 In this example, peers in `berlin-office` use `aws-nb-europe-router-az-a` to access `aws-eu-central-1-vpc`, while peers in `london-office` use `aws-nb-europe-router-az-b`:
 
-![Group attribution for routes](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-groups-attribution.png)
+![Group attribution for routes](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-groups-attribution.png)
 
 ### Routes Without Masquerading
 
@@ -175,7 +177,7 @@ Disable masquerade when you need source IP transparency or want to manage routin
 
 This requires configuring your external network router with a return route to your NetBird network through the routing peer. Devices without the client can then communicate with your NetBird peers.
 
-![Routes without masquerading](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-masquerading.png)
+![Routes without masquerading](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/netbird-network-routes-masquerading.png)
 
 ## Network Routes Caveats
 
@@ -187,11 +189,11 @@ This limitation led to the creation of [Networks](https://docs.netbird.io/manage
 
 Consider a Network Route distributed through `Group R` (Routing Peer) to `Group A` (intended client):
 
-![Route IP address configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/route-ip-address.png)
+![Route IP address configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/route-ip-address.png)
 
 After creating an Access Policy granting only `ICMP` access from `Group A` to `Group R`:
 
-![ICMP policy from group A to R](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/policy-icmp-group-r.png)
+![ICMP policy from group A to R](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/policy-icmp-group-r.png)
 
 You might expect only ICMP traffic to work. However, all traffic to the routed network succeeds because Routes only require connectivity to the Routing Peer to activate:
 
@@ -219,11 +221,11 @@ When using both Routes and Networks with the same Routing Peer, permissions can 
 
 In this example, a Network Resource for `*.nb.test` uses ACL group `manual:srvs`:
 
-![Wildcard domain resource](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/resource-domain.png)
+![Wildcard domain resource](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/resource-domain.png)
 
 An HTTP-only policy grants access from `manual:client`:
 
-![HTTP-only policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/policy-http.png)
+![HTTP-only policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/policy-http.png)
 
 HTTP access works as expected:
 
@@ -268,9 +270,9 @@ The Routing Peer belongs to both routing groups:
 1. `m:group-r` for the Network Route
 2. `manual:router:srvs` for the Network and its domain Resource
 
-![Network routers configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/network-routers.png)
+![Network routers configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/network-routers.png)
 
-![Routing peer groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/concepts/routing-peer-groups.png)
+![Routing peer groups](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/concepts/routing-peer-groups.png)
 
 The Network Route grants unrestricted access to the network range, bypassing the HTTP-only restriction on the Network Resource.
 

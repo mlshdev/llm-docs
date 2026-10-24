@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/integrations/kimi.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/integrations/kimi.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/integrations/kimi.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/integrations/kimi.mdx)
 
 # Kimi (Moonshot AI)
 
@@ -35,7 +35,7 @@ calls picks the shape, and NetBird forwards that path through to Moonshot unchan
 5. Save the provider. The key is now held server-side. The next step authorizes who can use
    it.
 
-![Connect the Kimi (Moonshot AI) provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/integrations/agent-network-connect-kimi.png)
+![Connect the Kimi (Moonshot AI) provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/integrations/agent-network-connect-kimi.png)
 
 > **Note**
 >

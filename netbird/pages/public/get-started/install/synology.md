@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/synology.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/synology.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/synology.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/synology.mdx)
 
 # Synology Installation
 
@@ -52,6 +52,13 @@ fi
 
 4. If you’d like to see the logs for this task, select the task you create and click on Settings. Check the box that says Save output results, select a save location, and click OK. Now, if you select the task and **Action > View Result**, you’ll see any error logs and status.
 
+> **Note**
+>
+> Synology devices do not always expose every kernel module NetBird uses. Alongside the `tun` module above, the
+> netfilter match modules behind the client's firewall rules can be missing, `mark` and `ipset` in particular. The
+> client then logs a `failed to create native firewall` warning and falls back to userspace filtering. See
+> [When the client cannot manage firewall rules](https://docs.netbird.io/help/troubleshooting-client#when-the-client-cannot-manage-firewall-rules).
+
 ## Running with a Setup Key
 
 In case you are activating a server peer, you can use a [setup key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys) as described in the steps below.
@@ -70,6 +77,8 @@ Alternatively, if you are hosting your own Management Service provide `--managem
   netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
 ```
 
+> **Note**
+>
 > You could also omit the `--setup-key` property. In this case, the tool will prompt for the key.
 
 2. Check connection status:
@@ -88,8 +97,17 @@ Alternatively, if you are hosting your own Management Service provide `--managem
 
 If you used the one-command script to install, you can follow this to update:
 
+1. SSH into your Synology NAS: If you haven't already, enable SSH in your Synology's Control Panel under Terminal & SNMP. Then, use an SSH client to connect to your NAS. Switch to the root user:
+
+```bash
+sudo -i
+```
+
+2. Download and run the upgrade script: Once connected, execute the following command:
+
 ```bash
 netbird down
+cd /tmp
 curl -fsSLO https://pkgs.netbird.io/install.sh
 chmod +x install.sh
 ./install.sh --update

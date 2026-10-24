@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/api-reference-v2/pods/create-a-pod.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/pods/create-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/create-a-pod
 
 # Create A Pod
@@ -65,8 +65,9 @@ Which failures are worth retrying:
 | `429`  | Rate limited.                                                                                                                                      | Back off using `Retry-After`, then resume. |
 | `5xx`  | Transient upstream failure.                                                                                                                        | Retry the same candidate with backoff.     |
 
-Requests larger than 102400 bytes receive `413` before authentication
-or processing. Reduce the serialized JSON request body and retry.
+Requests larger than 102400 bytes receive `413` after authentication
+and rate limiting, before deployment processing. Reduce the serialized
+JSON request body and retry.
 
 This limit also applies to the deployment request built from your input
 and any referenced template. A small request can therefore receive `413`
@@ -226,7 +227,7 @@ request rather than as absent capacity.
                       - `username` (required; string): SSH username. For the proxy this is an opaque routing token, not a user account on the pod.
                       - `command` (required; string): The equivalent `ssh` invocation, ready to run. Add `-i <path>` if the matching private key is not one of your default identities, and `-o StrictHostKeyChecking=no` to skip the host-key prompt on short-lived pods.
                     - `variant 2` (null)
-                - `direct` (required): Connection straight to the pod's sshd over its published `22/tcp` mapping. Supports the full SSH feature set. Null unless `22/tcp` is in `ports` and the running pod has been assigned a public port for it — so it is absent while the pod is provisioning or stopped.
+                - `direct` (required): Connection straight to the pod's sshd over its published `22/tcp` mapping. Supports the full SSH feature set. Null unless `22/tcp` is in `ports` and the running pod has been assigned a public port for it — so it is absent while the pod is provisioning or stopped. Also null when listing pods with `GET /v2/pods`; fetch a single pod by ID to obtain the live mapping.
                   - anyOf:
                     - `variant 1` (object): One way to reach the pod over SSH, as both its parts and a ready-to-run invocation.
                       - `host` (required; string): Hostname or IP to connect to.
@@ -250,7 +251,7 @@ request rather than as absent capacity.
             - `enabled` (required; boolean): Whether global networking is enabled, giving the pod a private IP reachable across data centers. Derived from whether the pod has an assigned global-network address.
             - `ip` (string): The pod's assigned global-networking IP. Present only when enabled.
             - `internalDns` (string): Internal DNS name (`<podId>.runpod.internal`), reachable from other globally-networked pods in the same account. Present only when enabled.
-          - `runtime` (required): Live utilization metrics. Null when the pod is not RUNNING.
+          - `runtime` (required): Live utilization metrics. Null when the pod is not RUNNING, and when listing pods with `GET /v2/pods`; fetch a single pod by ID to obtain metrics.
             - anyOf:
               - `variant 1` (object): Live utilization metrics for a running pod.
                 - `uptime` (integer): Seconds since the container started
@@ -271,7 +272,7 @@ request rather than as absent capacity.
               - `variant 2` (null)
           - `createdAt` (required; string; format: date-time)
           - `startedAt` (required; format: date-time; nullable)
-    - Example `pod`: `{"id":"7h9k2m4n6p","name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"ports":["8888/http","22/tcp"],"env":{"MODEL_NAME":"llama-3"},"registry":null,"status":"PROVISIONING","actions":["start","terminate"],"mounts":{"persistent":{"size":20,"path":"/workspace"}},"gpu":{"id":"NVIDIA GeForce RTX 4090","count":1,"vcpuCount":16,"memory":64},"cloud":"SECURE","dataCenterId":"US-KS-2","cudaVersion":"12.8","ssh":{"proxy":{"host":"ssh.runpod.io","port":22,"username":"7h9k2m4n6p-64411eb2","command":"ssh 7h9k2m4n6p-64411eb2@ssh.runpod.io"},"direct":null},"template":"9x4m2p7v","cost":0.44,"locked":false,"globalNetworking":{"enabled":false},"runtime":{},"createdAt":"2026-06-01T12:00:00Z","startedAt":null}`
+    - Example `pod`: `{"id":"7h9k2m4n6p","name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"ports":["8888/http","22/tcp"],"env":{"MODEL_NAME":"llama-3"},"registry":null,"status":"PROVISIONING","actions":["start","terminate"],"mounts":{"persistent":{"size":20,"path":"/workspace"}},"gpu":{"id":"NVIDIA GeForce RTX 4090","count":1,"vcpuCount":16,"memory":64},"cloud":"SECURE","dataCenterId":"US-KS-2","cudaVersion":"12.8","ssh":{"proxy":{"host":"ssh.runpod.io","port":22,"username":"7h9k2m4n6p-64411eb2","command":"ssh 7h9k2m4n6p-64411eb2@ssh.runpod.io"},"direct":null},"template":"9x4m2p7v","cost":0.44,"locked":false,"globalNetworking":{"enabled":false},"runtime":null,"createdAt":"2026-06-01T12:00:00Z","startedAt":null}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)
@@ -315,6 +316,8 @@ request rather than as absent capacity.
         - `items` (string)
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
 - `413`: The incoming request body or expanded upstream request exceeds the 102400 byte limit, or the upstream rejects the request as too large.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/accounts.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/accounts.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/accounts.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/accounts.mdx)
 
 ## List all Accounts   (GET /api/accounts)
 
@@ -198,6 +198,7 @@ echo $response;
       "auto_update_version": "0.51.2",
       "auto_update_always": false,
       "metrics_push_enabled": false,
+      "peer_hostname_collision_rejected": false,
       "agent_network_only": false,
       "dashboard_features": {
         "agent_network": true
@@ -260,6 +261,7 @@ echo $response;
       "auto_update_version": "string",
       "auto_update_always": "boolean",
       "metrics_push_enabled": "boolean",
+      "peer_hostname_collision_rejected": "boolean",
       "agent_network_only": "boolean",
       "dashboard_features": {
         "agent_network": "boolean"
@@ -555,6 +557,10 @@ When true, updates are installed automatically in the background. When false, up
 
 Enables or disables client metrics push for all peers in the account
 
+**peer\_hostname\_collision\_rejected (type: boolean; optional)**
+
+When enabled, registering or renaming a peer to a hostname already used by another peer in the account fails instead of receiving an IP-based suffix. Applies to ephemeral peers as well.
+
 **agent\_network\_only (type: boolean; optional)**
 
 Limits the dashboard to the Agent Network surface for this account. Set for accounts created via netbird.ai signups and can be disabled later. Enabling this requires dashboard\_features.agent\_network to be true in the same request.
@@ -642,6 +648,7 @@ curl -X PUT https://api.netbird.io/api/accounts/{accountId} \
     "auto_update_version": "0.51.2",
     "auto_update_always": false,
     "metrics_push_enabled": false,
+    "peer_hostname_collision_rejected": false,
     "agent_network_only": false,
     "dashboard_features": {
       "agent_network": true
@@ -700,6 +707,7 @@ let data = JSON.stringify({
     "auto_update_version": "0.51.2",
     "auto_update_always": false,
     "metrics_push_enabled": false,
+    "peer_hostname_collision_rejected": false,
     "agent_network_only": false,
     "dashboard_features": {
       "agent_network": true
@@ -780,6 +788,7 @@ payload = json.dumps({
     "auto_update_version": "0.51.2",
     "auto_update_always": false,
     "metrics_push_enabled": false,
+    "peer_hostname_collision_rejected": false,
     "agent_network_only": false,
     "dashboard_features": {
       "agent_network": true
@@ -860,6 +869,7 @@ func main() {
     "auto_update_version": "0.51.2",
     "auto_update_always": false,
     "metrics_push_enabled": false,
+    "peer_hostname_collision_rejected": false,
     "agent_network_only": false,
     "dashboard_features": {
       "agent_network": true
@@ -959,6 +969,7 @@ request.body = JSON.dump({
     "auto_update_version": "0.51.2",
     "auto_update_always": false,
     "metrics_push_enabled": false,
+    "peer_hostname_collision_rejected": false,
     "agent_network_only": false,
     "dashboard_features": {
       "agent_network": true
@@ -1021,6 +1032,7 @@ RequestBody body = RequestBody.create(mediaType, '{
     "auto_update_version": "0.51.2",
     "auto_update_always": false,
     "metrics_push_enabled": false,
+    "peer_hostname_collision_rejected": false,
     "agent_network_only": false,
     "dashboard_features": {
       "agent_network": true
@@ -1099,6 +1111,7 @@ curl_setopt_array($curl, array(
     "auto_update_version": "0.51.2",
     "auto_update_always": false,
     "metrics_push_enabled": false,
+    "peer_hostname_collision_rejected": false,
     "agent_network_only": false,
     "dashboard_features": {
       "agent_network": true
@@ -1172,6 +1185,7 @@ echo $response;
     "auto_update_version": "0.51.2",
     "auto_update_always": false,
     "metrics_push_enabled": false,
+    "peer_hostname_collision_rejected": false,
     "agent_network_only": false,
     "dashboard_features": {
       "agent_network": true
@@ -1232,6 +1246,7 @@ echo $response;
     "auto_update_version": "string",
     "auto_update_always": "boolean",
     "metrics_push_enabled": "boolean",
+    "peer_hostname_collision_rejected": "boolean",
     "agent_network_only": "boolean",
     "dashboard_features": {
       "agent_network": "boolean"

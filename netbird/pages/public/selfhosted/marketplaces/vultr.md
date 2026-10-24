@@ -1,10 +1,10 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/marketplaces/vultr.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/marketplaces/vultr.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/marketplaces/vultr.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/marketplaces/vultr.mdx)
 
 # Deploy NetBird on Vultr
 
 Launch a self-hosted NetBird control plane directly from the [Vultr Marketplace](https://www.vultr.com/marketplace/). The marketplace image is one of the fastest ways to get a production-ready NetBird instance running. You provide a domain and email in Vultr's deploy form, set two DNS records, and the install script handles the rest. No terminal required to get started.
 
-![NetBird on the Vultr Marketplace](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/marketplaces/vultr-marketplace.png)
+![NetBird on the Vultr Marketplace](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/marketplaces/vultr-marketplace.png)
 
 ## What's included
 
@@ -72,15 +72,16 @@ The Vultr instance ships with a root password. Before relying on the deployment,
 
 ## Maintaining your deployment
 
-The NetBird stack lives in **`/opt/netbird`** on the instance, including the `docker-compose.yml` and environment files. If the dashboard shows an **Update available** banner, SSH in and upgrade by pulling the latest images and restarting the containers:
+The NetBird stack lives in **`/opt/netbird`** on the instance, including the `docker-compose.yml` and environment files. SSH in and run the [Upgrade guide](https://docs.netbird.io/selfhosted/maintenance/upgrade) from that directory, starting with a backup and release-note review:
 
 ```bash
 cd /opt/netbird
-docker compose pull
-docker compose up -d
+docker compose config --images
 ```
 
-Refresh the dashboard and the banner should clear. See the [Upgrade guide](https://docs.netbird.io/selfhosted/maintenance/upgrade) for the full procedure, including migration notes and rollback steps.
+The dashboard's **Update available** indicator covers NetBird components. Traefik, CrowdSec, and the optional dashboard AppSec plugin need separate update checks. Follow [Upgrading Traefik and CrowdSec](https://docs.netbird.io/selfhosted/maintenance/upgrade#upgrading-traefik-and-crowd-sec) for version selection, targeted updates, verification, and rollback.
+
+An updated marketplace image does not change an existing instance's Compose file or image tags. Maintain the running deployment with these steps rather than redeploying it from a newer image.
 
 ## Next steps
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/posture-checks.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/posture-checks.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/posture-checks.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/posture-checks.mdx)
 
 ## List all Posture Checks   (GET /api/posture-checks)
 
@@ -211,6 +211,11 @@ echo $response;
             "windows_path": "C: rogramDataetBird\netbird.exe"
           }
         ]
+      },
+      "certificate_check": {
+        "ca_certificates": [
+          "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+        ]
       }
     }
   }
@@ -268,6 +273,11 @@ echo $response;
             "mac_path": "string",
             "windows_path": "string"
           }
+        ]
+      },
+      "certificate_check": {
+        "ca_certificates": [
+          "string"
         ]
       }
     }
@@ -399,6 +409,14 @@ Path to the process executable file in a Mac operating system
 
 Path to the process executable file in a Windows operating system
 
+**certificate\_check (type: object; optional)**
+
+**Posture check for a certificate held by the peer that chains to one of the given CA certificates. Not supported on mobile devices (iOS and Android), which always fail this check and are denied access**
+
+**ca\_certificates (type: string\[]; required)**
+
+PEM encoded CA certificates the peer's certificate must chain to
+
 **POST /api/posture-checks Request**
 
 **cURL**
@@ -459,6 +477,11 @@ curl -X POST https://api.netbird.io/api/posture-checks \
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 }'
@@ -516,6 +539,11 @@ let data = JSON.stringify({
           "mac_path": "/Applications/NetBird.app/Contents/MacOS/netbird",
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
       ]
     }
   }
@@ -597,6 +625,11 @@ payload = json.dumps({
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 })
@@ -676,6 +709,11 @@ func main() {
           "mac_path": "/Applications/NetBird.app/Contents/MacOS/netbird",
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
       ]
     }
   }
@@ -776,6 +814,11 @@ request.body = JSON.dump({
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 })
@@ -837,6 +880,11 @@ RequestBody body = RequestBody.create(mediaType, '{
           "mac_path": "/Applications/NetBird.app/Contents/MacOS/netbird",
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
       ]
     }
   }
@@ -916,6 +964,11 @@ curl_setopt_array($curl, array(
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 }',
@@ -989,6 +1042,11 @@ echo $response;
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 }
@@ -1044,6 +1102,11 @@ echo $response;
           "mac_path": "string",
           "windows_path": "string"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "string"
       ]
     }
   }
@@ -1268,6 +1331,11 @@ echo $response;
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 }
@@ -1323,6 +1391,11 @@ echo $response;
           "mac_path": "string",
           "windows_path": "string"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "string"
       ]
     }
   }
@@ -1459,6 +1532,14 @@ Path to the process executable file in a Mac operating system
 
 Path to the process executable file in a Windows operating system
 
+**certificate\_check (type: object; optional)**
+
+**Posture check for a certificate held by the peer that chains to one of the given CA certificates. Not supported on mobile devices (iOS and Android), which always fail this check and are denied access**
+
+**ca\_certificates (type: string\[]; required)**
+
+PEM encoded CA certificates the peer's certificate must chain to
+
 **PUT /api/posture-checks/{postureCheckId} Request**
 
 **cURL**
@@ -1519,6 +1600,11 @@ curl -X PUT https://api.netbird.io/api/posture-checks/{postureCheckId} \
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 }'
@@ -1576,6 +1662,11 @@ let data = JSON.stringify({
           "mac_path": "/Applications/NetBird.app/Contents/MacOS/netbird",
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
       ]
     }
   }
@@ -1657,6 +1748,11 @@ payload = json.dumps({
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 })
@@ -1736,6 +1832,11 @@ func main() {
           "mac_path": "/Applications/NetBird.app/Contents/MacOS/netbird",
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
       ]
     }
   }
@@ -1836,6 +1937,11 @@ request.body = JSON.dump({
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 })
@@ -1897,6 +2003,11 @@ RequestBody body = RequestBody.create(mediaType, '{
           "mac_path": "/Applications/NetBird.app/Contents/MacOS/netbird",
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
       ]
     }
   }
@@ -1976,6 +2087,11 @@ curl_setopt_array($curl, array(
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 }',
@@ -2049,6 +2165,11 @@ echo $response;
           "windows_path": "C: rogramDataetBird\netbird.exe"
         }
       ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "-----BEGIN CERTIFICATE-----\nMIIB...\n-----END CERTIFICATE-----"
+      ]
     }
   }
 }
@@ -2104,6 +2225,11 @@ echo $response;
           "mac_path": "string",
           "windows_path": "string"
         }
+      ]
+    },
+    "certificate_check": {
+      "ca_certificates": [
+        "string"
       ]
     }
   }

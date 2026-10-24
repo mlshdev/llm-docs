@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/integrations/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/integrations/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/integrations/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/integrations/index.mdx)
 
 # Integrations
 
@@ -16,6 +16,8 @@ Replace `<your-endpoint>` in the snippets below with the endpoint shown on the
 - [Codex](https://docs.netbird.io/agent-network/integrations/codex): point the Codex CLI at the endpoint.
 - [LiteLLM](https://docs.netbird.io/agent-network/integrations/litellm): use a LiteLLM gateway with identity-based
   attribution and budgets.
+- [agentgateway](https://docs.netbird.io/agent-network/integrations/agentgateway): route OpenAI and Anthropic
+  requests through a private listener with trusted NetBird identity headers.
 - [vLLM](https://docs.netbird.io/agent-network/integrations/vllm): connect a self-hosted, OpenAI-compatible vLLM
   server.
 - [Google Vertex AI](https://docs.netbird.io/agent-network/integrations/vertex-ai): connect Gemini and Claude on

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/for-partners/msp-portal.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/for-partners/msp-portal.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/for-partners/msp-portal.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/for-partners/msp-portal.mdx)
 
 # NetBird MSP Portal for Managed Service Providers
 
@@ -9,13 +9,13 @@ configure network settings, billing, and control network access for each tenant 
 An MSP account is a standard NetBird account with the added 'Tenants' section, allowing for the management of customer networks.
 With an MSP account, you can also manage your own internal network, just like with a regular NetBird account.
 
-![tenants](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/tenants.png)
+![tenants](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/tenants.png)
 
 The MSP Portal is designed to help you efficiently manage multiple tenant networks, providing a seamless experience for
 switching between tenants and your MSP account. You can do so without the need to log in and out of different accounts
 or inconvenient customer-specific URLs.
 
-![tenant-switch](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/tenant-switch.png)
+![tenant-switch](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/tenant-switch.png)
 
 > **Note**
 >
@@ -43,12 +43,12 @@ In the 'Tenants' section of your dashboard, click on the 'Add Tenant' button to 
 
 1. Provide the tenant's name and domain:
 
-![add-new-tenant-name-domain](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/add-new-tenant-name-domain.png)
+![add-new-tenant-name-domain](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/add-new-tenant-name-domain.png)
 
 2. Define who can access the tenant account by selecting the user groups of your account and the applicable [user role](https://docs.netbird.io/manage/team/user-roles) when they switch to the tenant. Only users from the selected groups will
    be able to switch to and manage the tenant account.
 
-![add-new-tenant-permissions](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/add-new-tenant-permissions.png)
+![add-new-tenant-permissions](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/add-new-tenant-permissions.png)
 
 > **Note**
 >
@@ -61,11 +61,11 @@ In the 'Tenants' section of your dashboard, click on the 'Add Tenant' button to 
 3. To ensure that you have rights to manage the tenant, you need to verify the ownership of the tenant domain by adding
    a TXT DNS record to the tenant's domain:
 
-![add-new-tenant-verify-domain](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/add-new-tenant-verify-domain.png)
+![add-new-tenant-verify-domain](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/add-new-tenant-verify-domain.png)
 
 4. Once the domain is verified, select a plan for the tenant. Each tenant can subscribe to either a Team or a Business plan.
 
-![add-new-tenant-plan](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/add-new-tenant-plan.png)
+![add-new-tenant-plan](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/add-new-tenant-plan.png)
 
 ### Existing Account
 
@@ -75,11 +75,11 @@ The current account owner will be prompted to grant this access the next time th
 
 1. Press the "Request Access" button if the account already exists:
 
-![tenant-already-exists](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/tenant-already-exists.png)
+![tenant-already-exists](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/tenant-already-exists.png)
 
 2. Ask the account owner to log in to the dashboard and press "Grant Access"
 
-![tenant-grant-or-deny](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/tenant-grant-or-deny.png)
+![tenant-grant-or-deny](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/tenant-grant-or-deny.png)
 
 > **Note**
 >
@@ -93,7 +93,7 @@ accounts using the tenant switcher in the top right corner.
 Choose the tenant you want to manage from the dropdown list to switch to the tenant account and the system will redirect
 you to the tenant's network.
 
-![tenant-switch](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/tenant-switch.png)
+![tenant-switch](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/tenant-switch.png)
 
 > **Note**
 >
@@ -107,7 +107,7 @@ Your user will have the 'Admin' role within the tenant account, granting you ful
 Note that your user will not appear in the 'Team' -> 'Users' section of the tenant account, as user management is handled
 through the MSP account. However, your user will be visible in the Audit Log, labeled as 'External.'
 
-![audit-log](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/tenant-audit-log.png)
+![audit-log](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/tenant-audit-log.png)
 
 ## Tenant Usage, Billing and Subscription Management
 
@@ -119,7 +119,7 @@ This is because the MSP portal shows billable usage — meaning only active user
 The usage data is refreshed once per day and reflects the number of users and peers that will be included in your billing at the end of the cycle.
 You can export the usage data to CSV or PDF from the 'Tenants' overview page, or retrieve it programmatically via the [API](https://docs.netbird.io/api/guides/msp-api-access).
 
-![tenant-usage](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/for-partners/msp-portal/tenant-usage.png)
+![tenant-usage](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/for-partners/msp-portal/tenant-usage.png)
 
 Each tenant you add is treated as an individual Stripe subscription under your MSP account. When you go to Manage Plan
 in the 'Plans & Billing' section, you'll see a list of subscriptions — one for each tenant.
@@ -158,6 +158,16 @@ Use email subaddressing to create a user inside the tenant for your MSP engineer
 2. Go to **Team** → **Users**.
 3. Click **Invite User** on the right.
 4. Enter the subaddressed email (e.g. `engineer+clientname@yourcompany.com`).
+
+> **Warning**
+>
+> The invitation email arrives in your own inbox, where your browser is likely still signed in to your MSP account. Opening the invitation link there signs you back in to the MSP account instead of accepting the invite. To accept it as the new user:
+>
+> 1. Copy the link from the invitation email's button and open it in a private browser window.
+> 2. Enter the subaddressed email and click **Continue**. Don't use Google, Microsoft, or another social login, because those sign you in with your main address.
+> 3. Set a password from the email you receive.
+>
+> If you already tried to sign up with the subaddressed email and got **Invalid sign up**, the account exists already. Use **Forgot password** on the login page with the same address to set your password.
 
 This is the recommended approach as it gives the MSP engineer a proper identity inside the tenant. Use NetBird's [profile switching](https://docs.netbird.io/client/profiles) feature to easily switch between your MSP account and client tenant connections on the same device.
 

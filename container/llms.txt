@@ -1,8 +1,8 @@
-# Apple container 1.6.0
+# Apple container 1.6.1
 
-> Documentation generated from the latest stable release of [apple/container](https://github.com/apple/container) and pinned to immutable source commit `ca4884f8f3a13b62c90ea2fb3834f214d61fb91c`.
+> Documentation generated from the latest stable release of [apple/container](https://github.com/apple/container) and pinned to immutable source commit `aa8d76b44a834eee3ebf6a0bc577e376f65f6361`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple container 1.6.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple container 1.6.1.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Release-authored Markdown includes the repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference.
 - Relative links, source references, and assets resolve against the immutable release commit.
@@ -13,17 +13,17 @@
 
 ## Getting started
 
-- [container](pages/index.md): container is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon. (5373 bytes)
+- [container](pages/index.md): container is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon. (5377 bytes)
 
 ## Guides
 
 - [DNS architecture](pages/architecture/dns.md): This document describes the DNS architecture of container. It covers: (14106 bytes)
+- [Container cluster](pages/cluster.md): Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With container, you can run local Kubernetes clusters for de… (7967 bytes)
 - [Inspecting containers and images](pages/container-inspection.md): Get detailed, machine-readable information about your containers and images. (2051 bytes)
 - [Container machine](pages/container-machine.md): Container machine provides a highly integrated Linux environment that works seamlessly on your Mac. Container machines are fast, lightweight and persistent. They're based on standard OCI images you can build and share.… (9533 bytes)
 - [config.toml reference](pages/container-system-config.md): For a guided walk-through on setting default values, see Container system config tutorial. (11098 bytes)
 - [Host integration](pages/host-integration.md): Bridge your container and your Mac: forward your SSH agent in, or reach a host service from inside a container. (3724 bytes)
-- [How-to](pages/how-to.md): container has a lot of surface area beyond the basic tutorial. Each topic below has its own guide — pick the one that matches what you're trying to do. (3638 bytes)
-- [Kubernetes clusters](pages/kubernetes.md): Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With container, you can run local Kubernetes clusters for de… (7810 bytes)
+- [How-to](pages/how-to.md): container has a lot of surface area beyond the basic tutorial. Each topic below has its own guide — pick the one that matches what you're trying to do. (3633 bytes)
 - [Logs](pages/logs.md): View output from your containerized applications, VM boot logs, and the container system's own logs. (4200 bytes)
 - [Multiplatform images](pages/multiplatform-images.md): Build, run, and publish container images that support both Apple silicon and x86-64. (1598 bytes)
 - [Networking](pages/networking.md): Learn how container networks containers with one another, with the host, and with external systems. (12223 bytes)
@@ -39,7 +39,7 @@
 
 ## Command reference
 
-- [Container CLI Command Reference](pages/command-reference.md): Command availability may vary depending on your macOS version. (55907 bytes)
+- [Container CLI Command Reference](pages/command-reference.md): Command availability may vary depending on your macOS version. (56272 bytes)
 
 ## Architecture
 

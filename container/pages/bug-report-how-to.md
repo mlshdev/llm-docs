@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.0: [docs/bug-report-how-to.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/bug-report-how-to.md)
+> Pinned source for Apple container 1.6.1: [docs/bug-report-how-to.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/bug-report-how-to.md)
 
 # How to file effective bug reports
 
@@ -131,7 +131,7 @@ For Container CLI issues, run commands with verbose output:
 container --debug <command>
 ```
 
-You can also use the `container logs` command to get logs from running containers. See the [container logs](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/command-reference.md#container-logs) documentation for full details.
+You can also use the `container logs` command to get logs from running containers. See the [container logs](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/command-reference.md#container-logs) documentation for full details.
 
 ```bash
 container logs <container-id>
@@ -139,7 +139,7 @@ container logs <container-id>
 
 ### System logs
 
-For system-level container issues, use the built-in system logs command. See the [container system logs](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/command-reference.md#container-system-logs) documentation for full details.
+For system-level container issues, use the built-in system logs command. See the [container system logs](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/command-reference.md#container-system-logs) documentation for full details.
 
 ```bash
 container system logs

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/help/support-matrix/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/help/support-matrix/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/support-matrix/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/support-matrix/index.mdx)
 
 # Support Matrix
 
@@ -16,8 +16,8 @@ Each sub-page is maintained alongside its component and updated when support win
 
 ## How to read these tables
 
-- **Supported** — covered by bug fixes and security updates.
-- **Best-effort** — known to work; issues triaged but not prioritized.
-- **Unsupported** — outside the support window; upgrade recommended.
+- **Supported**: covered by bug fixes and security updates.
+- **Best-effort**: known to work; issues triaged but not prioritized.
+- **Unsupported**: outside the support window; upgrade recommended.
 
 If you need help confirming compatibility for a version not listed, see [Report bugs and issues](https://docs.netbird.io/help/report-bug-issues).

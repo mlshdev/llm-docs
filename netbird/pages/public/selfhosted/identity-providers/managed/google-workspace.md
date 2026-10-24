@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/identity-providers/managed/google-workspace.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/identity-providers/managed/google-workspace.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/identity-providers/managed/google-workspace.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/identity-providers/managed/google-workspace.mdx)
 
 # Google Workspace SSO with NetBird Self-Hosted
 
@@ -20,7 +20,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 3. Navigate to **APIs & Services** → **Credentials**
 4. Click **Create Credentials** → **OAuth client ID**
 
-![OAuth client ID](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/1_0auth-client-id-google.png)
+![OAuth client ID](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/1_0auth-client-id-google.png)
 
 5. If prompted, configure the OAuth consent screen first:
    - Choose **Internal** (for Workspace) or **External** (for any Google account)
@@ -51,7 +51,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 
 5. **Copy the Redirect URL** that NetBird displays (but don't click **Add Provider** yet)
 
-![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/2_copy-redirect-google.png)
+![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/2_copy-redirect-google.png)
 
 ### Step 3: Complete Google OAuth Client Setup
 
@@ -59,7 +59,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 2. Under **Authorized redirect URIs**, click **Add URI**
 3. Paste the redirect URL you copied from NetBird
 
-![Paste URI](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/3_paste-uri-google.png)
+![Paste URI](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/3_paste-uri-google.png)
 
 4. Click **Create**
 
@@ -69,14 +69,14 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 
 5. Note the **Client ID** and **Client Secret** — you'll need these for Step 4
 
-![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/4_0auth-client-created-google.png)
+![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/4_0auth-client-created-google.png)
 
 ### Step 4: Complete NetBird Setup
 
 1. Return to the NetBird tab
 2. Fill in the **Client ID** and **Client Secret** from Step 3
 
-![NetBird complete configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/5_netbird-complete-google.png)
+![NetBird complete configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/5_netbird-complete-google.png)
 
 3. Click **Add Provider**
 
@@ -129,13 +129,15 @@ This approach works well for smaller teams where group membership doesn't change
 
 ***
 
-## Standalone Setup (Advanced)
+## Standalone Setup (Not Recommended)
 
-Use Google Workspace as your primary identity provider instead of NetBird's embedded IdP. This option gives you full control over authentication and user management, is recommended for experienced Google Workspace administrators as it also requires additional setup and ongoing maintenance.
+> **Warning**
+>
+> Using Google directly as NetBird's identity provider, instead of the embedded IdP, is not recommended. It relies on the Management service sending the client secret to every NetBird client, which is deprecated and will be removed in a future release, and it does not support the device authorization flow used by headless Linux and FreeBSD peers. Use the [Management Setup (Recommended)](#management-setup-recommended) above instead.
+>
+> If you already run this standalone setup, migrate to the embedded IdP with the [External IdP to Embedded IdP migration guide](https://docs.netbird.io/selfhosted/migration/external-to-embedded-idp). Existing users keep signing in with their Google accounts.
 
-For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/identity-providers/local) is the simpler choice — it's built into NetBird, fully integrated, and requires minimal configuration to get started. For this implementation, go back up to the [Management Setup (Recommended)](#management-setup-recommended) section above.
-
-For detailed instructions on the standalone setup, see the [Google Workspace SSO with NetBird Self-Hosted (Legacy)](https://docs.netbird.io/selfhosted/identity-providers/managed/advanced/google-workspace) documentation.
+For reference, the standalone setup instructions are kept in the [Google Workspace SSO with NetBird Self-Hosted (Legacy)](https://docs.netbird.io/selfhosted/identity-providers/managed/advanced/google-workspace) documentation.
 
 > **Note**
 >

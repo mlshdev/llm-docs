@@ -8,11 +8,11 @@
       "sourceCommit": "af6d927c51191ae1df104aaf907793386b816c28"
     },
     "netbird": {
-      "tag": "v0.77.1",
-      "releaseId": 374532818,
-      "releasePublishedAt": "2026-08-21T16:25:22Z",
-      "sourceCommit": "79a06720b684768b421f0a54f3bb14f22704994f",
-      "docsCommit": "d905fda2a3f04a2066746875d09e51a3fe62dfed"
+      "tag": "v0.81.4",
+      "releaseId": 422688382,
+      "releasePublishedAt": "2026-10-24T11:24:02Z",
+      "sourceCommit": "7e791d3e2972ddb763bb0e5c3bff4f9e14f70033",
+      "docsCommit": "238224712cf7639036ed39fa8873d777b8822273"
     },
     "podman": {
       "tag": "v6.1.4",
@@ -29,10 +29,10 @@
       "documentationDigest": "4ff7253574287777e32e615f7e4d862b4b112401815be76fd5e0726ce962fd41"
     },
     "container": {
-      "tag": "1.6.0",
-      "releaseId": 417901251,
-      "releasePublishedAt": "2026-10-20T02:10:40Z",
-      "sourceCommit": "ca4884f8f3a13b62c90ea2fb3834f214d61fb91c"
+      "tag": "1.6.1",
+      "releaseId": 422348370,
+      "releasePublishedAt": "2026-10-23T23:26:12Z",
+      "sourceCommit": "aa8d76b44a834eee3ebf6a0bc577e376f65f6361"
     },
     "n8n": {
       "tag": "main",
@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "19c06936fd78b9249fc65045c9d855b6c28758e1",
       "sourceCommittedAt": "2026-10-04T16:50:55Z",
-      "observedCommit": "19c06936fd78b9249fc65045c9d855b6c28758e1",
+      "observedCommit": "46bd2205b9f8292ee8264c6ee16ce33302834f11",
       "documentationDigest": "eb1f7108500e778a35f1578247802b684bd81c06649c8f1182b400b6ab5b151d"
     },
     "yt-dlp": {
@@ -103,7 +103,7 @@
       "branch": "master",
       "sourceCommit": "1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4",
       "sourceCommittedAt": "2026-10-17T18:30:22Z",
-      "observedCommit": "629368e40c2aa4edffb05636a8bbc23d2eaa5923",
+      "observedCommit": "ef0ec03da02b62d0a977264cb90a0833dfe001ae",
       "documentationDigest": "65c3c45c5518b3de315871bf303795c988811b73420e31aa503108912ca74c7a"
     },
     "bun": {
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "880233fccf4e38598203496f69190ca6b180ea19",
-      "sourceCommittedAt": "2026-10-23T17:07:33Z",
-      "observedCommit": "880233fccf4e38598203496f69190ca6b180ea19",
-      "documentationDigest": "05ff0045673ebc2d4a57dfe1780e91b0cedfd3b7c4e0afb65205286f361ca1b5"
+      "sourceCommit": "2f1d12b792818b3af3edd8d503a5e35f760d1410",
+      "sourceCommittedAt": "2026-10-23T22:51:31Z",
+      "observedCommit": "2f1d12b792818b3af3edd8d503a5e35f760d1410",
+      "documentationDigest": "094e25756a84dfceaf94fb43a67e5ca5d42d4acdb32a01d00312440b975c4c6f"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

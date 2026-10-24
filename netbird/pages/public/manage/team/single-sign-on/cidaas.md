@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/cidaas.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/cidaas.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/single-sign-on/cidaas.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/single-sign-on/cidaas.mdx)
 
 # cidaas on NetBird Cloud
 
@@ -8,6 +8,7 @@ You can use [cidaas](https://www.cidaas.com/) as your Identity Provider with Net
 >
 > Support for OIDC-compliant IdPs is available on the Team plan and higher.
 > The Free plan supports Google, Microsoft, and social logins.
+> Self-hosted deployments support OIDC-compliant IdPs in both the open source Community Edition and the [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise). See [self-hosted identity providers](https://docs.netbird.io/selfhosted/identity-providers).
 
 ## Step 1: Create a New Application
 
@@ -24,7 +25,7 @@ Configure the App Details section with the following settings:
 - **App Logo URL**: `https://netbird.io/_next/static/media/netbird-logo.46570303.svg`
 - **App Type**: `Regular`
 
-![cidaas-app-details](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-details.png)
+![cidaas App Details form with App Type set to Regular](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-details.png)
 
 Click **Next** to proceed to App Settings.
 
@@ -38,7 +39,7 @@ Configure the App Settings section with the following settings:
 - **Redirect URLs**: `https://login.netbird.io/login/callback`
 - **Allow Logout URLs**: `https://login.netbird.io/oauth/revoke`
 
-![cidaas-app-settings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-settings.png)
+![cidaas App Settings with scopes, OAuth standard, redirect URLs, and logout URLs filled in](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-settings.png)
 
 Click **Next** to proceed to Company Settings.
 
@@ -53,17 +54,13 @@ Configure the App Settings section with the following settings:
 - **Privacy Policy URL**: `https://netbird.io/privacy`
 - **Imprint URL**: `https://netbird.io/imprint`
 
-![cidaas-company-settings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/company-settings.png)
-
 Click **Submit** to create the application. You should see an **App created successfully** confirmation.
-
-![cidaas-app-created](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-created.png)
 
 ## Step 5: Verify the Application Status
 
 Ensure the application status is set to **Active**. If it is not active, select **Active** from the status dropdown.
 
-![cidaas-app-status](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-status.png)
+![cidaas application status dropdown set to Active](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-status.png)
 
 ## Step 6: Copy the Client Credentials
 

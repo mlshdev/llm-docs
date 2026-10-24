@@ -1,8 +1,376 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/agent-network.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/agent-network.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/agent-network.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/agent-network.mdx)
+
+## Provision a managed Agent Network gateway   (POST /api/integrations/agent-network/managed-proxy)
+
+Starts provisioning of a NetBird-managed Agent Network gateway for the account, allocating its endpoint under the managed zone on the first call. Idempotent — answers 202 when this call started (or, after a failure, restarted) provisioning and 200 when a deployment already exists, reporting current state either way. A disabled deployment answers 200 with state `disabled` and stays disabled. Returns 409 when the account already has an Agent Network endpoint that managed provisioning does not own, and 503 when endpoint allocation is temporarily exhausted.
+
+**POST /api/integrations/agent-network/managed-proxy Request**
+
+**cURL**
+
+```bash
+curl -X POST https://api.netbird.io/api/integrations/agent-network/managed-proxy \
+-H 'Accept: application/json' \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: '/api/integrations/agent-network/managed-proxy',
+  headers: {     
+    'Accept': 'application/json',    
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/integrations/agent-network/managed-proxy"
+
+headers = {     
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("POST", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/integrations/agent-network/managed-proxy"
+  method := "POST"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/integrations/agent-network/managed-proxy")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/integrations/agent-network/managed-proxy")
+  .method("POST")    
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/integrations/agent-network/managed-proxy',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',  
+  CURLOPT_HTTPHEADER => array(        
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+{
+  "id": "d1m3kebd9pcs0c1pnu7g",
+  "state": "ready",
+  "endpoint": "brave-otter.gateway.netbird.io",
+  "region": "us-east",
+  "message": {
+    "type": "string",
+    "description": "Failure detail reported by the rollout. Only set when state is `failed`."
+  }
+}
+```
+
+**Schema**
+
+```json
+{
+  "id": "string",
+  "state": "string",
+  "endpoint": "string",
+  "region": "string",
+  "message": "string"
+}
+```
+
+***
+
+## Retrieve managed Agent Network gateway status   (GET /api/integrations/agent-network/managed-proxy)
+
+Reports the account's managed gateway deployment and its derived state, including `disabled` for a deployment that is turned off. Returns 404 when the account has no managed deployment.
+
+**GET /api/integrations/agent-network/managed-proxy Request**
+
+**cURL**
+
+```bash
+curl -X GET https://api.netbird.io/api/integrations/agent-network/managed-proxy \
+-H 'Accept: application/json' \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: '/api/integrations/agent-network/managed-proxy',
+  headers: {     
+    'Accept': 'application/json',    
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/integrations/agent-network/managed-proxy"
+
+headers = {     
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/integrations/agent-network/managed-proxy"
+  method := "GET"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/integrations/agent-network/managed-proxy")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Get.new(url)
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/integrations/agent-network/managed-proxy")
+  .method("GET")    
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/integrations/agent-network/managed-proxy',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',  
+  CURLOPT_HTTPHEADER => array(        
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+{
+  "id": "d1m3kebd9pcs0c1pnu7g",
+  "state": "ready",
+  "endpoint": "brave-otter.gateway.netbird.io",
+  "region": "us-east",
+  "message": {
+    "type": "string",
+    "description": "Failure detail reported by the rollout. Only set when state is `failed`."
+  }
+}
+```
+
+**Schema**
+
+```json
+{
+  "id": "string",
+  "state": "string",
+  "endpoint": "string",
+  "region": "string",
+  "message": "string"
+}
+```
+
+***
 
 ## List Agent Network access logs   (GET /api/agent-network/access-logs)
 
-Returns a paginated, server-side-filtered list of agent-network (LLM) access log entries. Available only when the account has log collection enabled; otherwise entries are not retained.
+Returns a paginated, server-side-filtered list of agent-network (LLM) access log entries. Available only when the account has log collection enabled; otherwise entries are not retained. Callers without the account-wide grant are not denied - the response is scoped to their own requests (any user\_id or group\_id filter is overridden).
 
 ### Query Parameters
 
@@ -350,7 +718,7 @@ echo $response;
 
 ## List Agent Network access logs grouped by session   (GET /api/agent-network/access-log-sessions)
 
-Returns a paginated, server-side-filtered list of agent-network (LLM) access logs grouped by session. The page unit is a session (total\_records counts sessions); each session carries an aggregate summary and its ordered entries. Requests the client sent no session id for each form their own singleton group. Accepts the same filters as the flat access-logs endpoint. Available only when the account has log collection enabled.
+Returns a paginated, server-side-filtered list of agent-network (LLM) access logs grouped by session. The page unit is a session (total\_records counts sessions); each session carries an aggregate summary and its ordered entries. Requests the client sent no session id for each form their own singleton group. Accepts the same filters as the flat access-logs endpoint. Available only when the account has log collection enabled. Callers without the account-wide grant are not denied - the response is scoped to their own requests (any user\_id or group\_id filter is overridden).
 
 ### Query Parameters
 
@@ -767,7 +1135,7 @@ echo $response;
 
 ## Agent Network usage overview   (GET /api/agent-network/usage/overview)
 
-Returns agent-network token and cost usage aggregated into time buckets, server-side filtered. Usage is always collected (independent of log collection).
+Returns agent-network token and cost usage aggregated into time buckets, server-side filtered. Usage is always collected (independent of log collection). Callers without the account-wide grant are not denied - the response is scoped to their own usage (any user\_id or group\_id filter is overridden).
 
 ### Query Parameters
 
@@ -1192,6 +1560,209 @@ echo $response;
     "updated_at": "string"
   }
 ]
+```
+
+***
+
+## Retrieve the caller's Agent Network agent config   (GET /api/agent-network/agent-config)
+
+Returns everything the caller needs to configure a local AI tool and nothing more - the account's Agent Network endpoint plus the providers and models the caller's own policies allow. Available to every authenticated user regardless of role; the response never contains provider credentials, policy or guardrail configuration, or providers the caller cannot reach.
+
+**GET /api/agent-network/agent-config Request**
+
+**cURL**
+
+```bash
+curl -X GET https://api.netbird.io/api/agent-network/agent-config \
+-H 'Accept: application/json' \
+-H 'Authorization: Token <TOKEN>' 
+```
+
+```js
+const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: '/api/agent-network/agent-config',
+  headers: {     
+    'Accept': 'application/json',    
+    'Authorization': 'Token <TOKEN>'
+  }  
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/agent-network/agent-config"
+
+headers = {     
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/agent-network/agent-config"
+  method := "GET"
+  
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, nil)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+    
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/agent-network/agent-config")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Get.new(url)
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/agent-network/agent-config")
+  .method("GET")    
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/agent-network/agent-config',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',  
+  CURLOPT_HTTPHEADER => array(        
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+{
+  "configured": {
+    "type": "boolean",
+    "description": "False only when the account has no Agent Network set up. A caller that no policy covers yet still reads as configured, with an empty providers list."
+  },
+  "endpoint": "https://calm-otter.proxy.example.com",
+  "providers": [
+    {
+      "name": "Bedrock prod",
+      "catalog_id": "bedrock_api",
+      "api_flavor": "anthropic",
+      "all_models_allowed": {
+        "type": "boolean",
+        "description": "True when no model allowlist restricts this provider for the caller; models then lists the declared or catalog models as a courtesy."
+      },
+      "models": [
+        "anthropic.claude-sonnet-4-5"
+      ]
+    }
+  ]
+}
+```
+
+**Schema**
+
+```json
+{
+  "configured": "boolean",
+  "endpoint": "string",
+  "providers": [
+    {
+      "name": "string",
+      "catalog_id": "string",
+      "api_flavor": "string",
+      "all_models_allowed": "boolean",
+      "models": [
+        "string"
+      ]
+    }
+  ]
+}
 ```
 
 ***
@@ -3851,6 +4422,271 @@ echo $response;
 
 ***
 
+## Discover the models a provider credential can reach   (POST /api/agent-network/catalog/providers/models)
+
+Asks the vendor which models the supplied credential can actually use, so the provider form can offer a live list instead of only the static catalog. The endpoint, auth header and response shape are taken from the catalog entry, never from the request.
+
+Supply either an api\_key together with the upstream\_url being configured (before the provider is saved), or a provider\_id of an existing record to reuse its stored credential.
+
+Returns 422 for a catalog provider that has no listing endpoint (most gateways); the caller should fall back to the catalog's own model list. A model whose price the shipped table does not know is returned with pricing\_known false, and the operator must set rates for it.
+
+### Request-Body Parameters
+
+**catalog\_provider\_id (type: string; required)**
+
+Catalog provider to query (AgentNetworkCatalogProvider.id). Determines the listing endpoint, the auth header and the response shape.
+
+**upstream\_url (type: string; optional)**
+
+The upstream being configured. Used to reach vendors that serve their listing from the same host as inference, and to read back the region for those whose host embeds one. Sent alongside provider\_id, it overrides the stored upstream, so an edit can be listed against the URL on the form before it is saved.
+
+**api\_key (type: string; optional)**
+
+Credential to query the vendor with, for a provider that has not been saved yet. Mutually exclusive with provider\_id.
+
+**provider\_id (type: string; optional)**
+
+Existing Agent Network provider record to query with. Its stored credential is used, and its upstream unless upstream\_url overrides it, so the form can refresh the list without the client holding the key.
+
+**POST /api/agent-network/catalog/providers/models Request**
+
+**cURL**
+
+```bash
+curl -X POST https://api.netbird.io/api/agent-network/catalog/providers/models \
+-H 'Accept: application/json' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Token <TOKEN>' \
+--data-raw '{
+  "catalog_provider_id": "bedrock_api",
+  "upstream_url": "https://bedrock-runtime.eu-central-1.amazonaws.com",
+  "api_key": "sk-...",
+  "provider_id": "ch8i4ug6lnn4g9hqv7m0"
+}'
+```
+
+```js
+const axios = require('axios');
+let data = JSON.stringify({
+  "catalog_provider_id": "bedrock_api",
+  "upstream_url": "https://bedrock-runtime.eu-central-1.amazonaws.com",
+  "api_key": "sk-...",
+  "provider_id": "ch8i4ug6lnn4g9hqv7m0"
+});
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: '/api/agent-network/catalog/providers/models',
+  headers: {     
+    'Accept': 'application/json',    
+    'Content-Type': 'application/json',
+    'Authorization': 'Token <TOKEN>'
+  },  
+  data : data
+};
+
+axios(config)
+.then((response) => {
+  console.log(JSON.stringify(response.data));
+})
+.catch((error) => {
+  console.log(error);
+});
+```
+
+```python
+import requests
+import json
+
+url = "https://api.netbird.io/api/agent-network/catalog/providers/models"
+payload = json.dumps({
+  "catalog_provider_id": "bedrock_api",
+  "upstream_url": "https://bedrock-runtime.eu-central-1.amazonaws.com",
+  "api_key": "sk-...",
+  "provider_id": "ch8i4ug6lnn4g9hqv7m0"
+})
+headers = {   
+  'Content-Type': 'application/json',  
+  'Accept': 'application/json',
+  'Authorization': 'Token <TOKEN>'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+```go
+package main
+
+import (
+  "fmt"
+  "strings"
+  "net/http"
+  "io/ioutil"
+)
+
+func main() {
+
+  url := "https://api.netbird.io/api/agent-network/catalog/providers/models"
+  method := "POST"
+  
+  payload := strings.NewReader(`{
+  "catalog_provider_id": "bedrock_api",
+  "upstream_url": "https://bedrock-runtime.eu-central-1.amazonaws.com",
+  "api_key": "sk-...",
+  "provider_id": "ch8i4ug6lnn4g9hqv7m0"
+}`)
+  client := &http.Client {
+  }
+  req, err := http.NewRequest(method, url, payload)
+
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  
+  
+  req.Header.Add("Content-Type", "application/json")  
+  req.Header.Add("Accept", "application/json")
+  req.Header.Add("Authorization", "Token <TOKEN>")
+
+  res, err := client.Do(req)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer res.Body.Close()
+
+  body, err := ioutil.ReadAll(res.Body)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(string(body))
+}
+```
+
+```ruby
+require "uri"
+require "json"
+require "net/http"
+
+url = URI("https://api.netbird.io/api/agent-network/catalog/providers/models")
+
+https = Net::HTTP.new(url.host, url.port)
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request["Content-Type"] = "application/json"
+request["Accept"] = "application/json"
+request["Authorization"] = "Token <TOKEN>"
+
+request.body = JSON.dump({
+  "catalog_provider_id": "bedrock_api",
+  "upstream_url": "https://bedrock-runtime.eu-central-1.amazonaws.com",
+  "api_key": "sk-...",
+  "provider_id": "ch8i4ug6lnn4g9hqv7m0"
+})
+response = https.request(request)
+puts response.read_body
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("application/json");
+RequestBody body = RequestBody.create(mediaType, '{
+  "catalog_provider_id": "bedrock_api",
+  "upstream_url": "https://bedrock-runtime.eu-central-1.amazonaws.com",
+  "api_key": "sk-...",
+  "provider_id": "ch8i4ug6lnn4g9hqv7m0"
+}');
+Request request = new Request.Builder()
+  .url("https://api.netbird.io/api/agent-network/catalog/providers/models")
+  .method("POST", body)  
+  .addHeader("Content-Type", "application/json")  
+  .addHeader("Accept", "application/json")
+  .addHeader("Authorization: Token <TOKEN>")
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.netbird.io/api/agent-network/catalog/providers/models',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',  
+  CURLOPT_POSTFIELDS => '{
+  "catalog_provider_id": "bedrock_api",
+  "upstream_url": "https://bedrock-runtime.eu-central-1.amazonaws.com",
+  "api_key": "sk-...",
+  "provider_id": "ch8i4ug6lnn4g9hqv7m0"
+}',
+  CURLOPT_HTTPHEADER => array(    
+    'Content-Type: application/json',    
+    'Accept: application/json',
+    'Authorization: Token <TOKEN>'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+```
+
+**Response**
+
+**Example**
+
+```json
+{
+  "models": [
+    {
+      "id": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "label": "EU Anthropic Claude Haiku 4.5",
+      "pricing_known": true,
+      "input_per_1k": 0.005,
+      "output_per_1k": 0.015,
+      "cached_input_per_1k": 0.000075,
+      "cache_read_per_1k": 0.0003,
+      "cache_creation_per_1k": 0.00375
+    }
+  ]
+}
+```
+
+**Schema**
+
+```json
+{
+  "models": [
+    {
+      "id": "string",
+      "label": "string",
+      "pricing_known": "boolean",
+      "input_per_1k": "number",
+      "output_per_1k": "number",
+      "cached_input_per_1k": "number",
+      "cache_read_per_1k": "number",
+      "cache_creation_per_1k": "number"
+    }
+  ]
+}
+```
+
+***
+
 ## List all Agent Network Providers   (GET /api/agent-network/providers)
 
 Returns a list of all Agent Network AI providers configured for the account.
@@ -4082,6 +4918,12 @@ echo $response;
 ## Create an Agent Network Provider   (POST /api/agent-network/providers)
 
 Connects a new Agent Network AI provider for the account.
+
+The credential is checked against the vendor's model listing before the provider is stored, so a record the vendor will not accept is refused rather than saved. A rejected credential, a listing endpoint that does not resolve or answer, a vendor outage, and a timeout all block the write and return 422.
+
+What that proves about the upstream URL is narrower than the URL itself. Only its host is used: the listing is requested over HTTPS at the path the catalog entry declares, so a configured scheme or path is neither used nor validated here. Where the catalog entry has a listing host of its own — Bedrock, whose listing comes from the control plane — even the host is only resolved, never contacted, so a public host that does not answer is still stored.
+
+Only what cannot be checked at all is exempt and stored unverified: a catalog provider with no listing endpoint, one with no host to derive a listing from, an upstream resolving to a private address the management service will not dial, and a provider configured to skip TLS verification.
 
 ### Request-Body Parameters
 
@@ -4780,6 +5622,8 @@ echo $response;
 ## Update an Agent Network Provider   (PUT /api/agent-network/providers/{providerId})
 
 Update an existing Agent Network AI provider.
+
+When the upstream URL, the API key or the catalog provider changes, the record is checked against the vendor before the change is stored, and a refusal returns 422 without replacing what was there. Switching TLS verification back on is the fourth trigger: a provider exempt from the check was stored unverified, so the edit that ends the exemption is the first opportunity to check it. Where one of the four does fire, an update that omits the API key is checked against the stored one. Edits touching none of them — a rename, model rows, price edits — are stored without a check, as are the cases the create description lists as unverifiable.
 
 ### Path Parameters
 

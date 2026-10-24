@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/dns/internal-dns-servers.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/dns/internal-dns-servers.mdx)
 
 # Internal DNS Servers
 
@@ -48,16 +48,16 @@ To resolve internal domains through NetBird, create a **match domain** Nameserve
 1. Go to **DNS** → **Nameservers** → **Add Nameserver**
 2. Choose **Custom DNS**
 
-![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
+![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
 
 3. Add the IP addresses of your internal DNS servers (e.g., `192.168.0.32`)
 4. Select the **Distribution Groups** — the peer groups that should use this nameserver
 
-![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
+![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
 
 5. Under **Domains**, add a **Match Domain** and enter your internal domains (e.g., `corp.local`, `company.internal`)
 
-![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
+![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
 
 6. Save the nameserver
 
@@ -99,6 +99,14 @@ For details, see [Manage Network Access](https://docs.netbird.io/manage/access-c
 
 A primary nameserver does more than catch unmatched queries. On macOS, a match-domain-only configuration registers a *scoped* resolver through system APIs and leaves the nameservers in `/etc/resolv.conf` untouched. Applications that use the system resolver follow the scoped entry, but tools that read `resolv.conf` directly (`dig`, `host`, and some language runtimes) keep querying your LAN or public nameservers and get `NXDOMAIN` for internal names. Adding a primary group puts NetBird's resolver into `resolv.conf`, so both kinds of tools query the same server. If your users report that browsers resolve internal names but `dig` does not, see [dig and host fail, but browsers and curl work](https://docs.netbird.io/manage/dns/troubleshooting#issue-5-dig-and-host-fail-but-browsers-and-curl-work-mac-os).
 
+> **Note**
+>
+> From client **v0.78.0**, on Windows a primary nameserver makes NetBird the **exclusive** resolver while the peer is connected. Earlier clients only set the resolver on the tunnel adapter, leaving Windows free to query the other adapters' resolvers alongside it. Windows otherwise queries the resolvers of every network adapter in parallel and keeps the first answer that arrives, which both leaks queries to the local network and lets another resolver answer for a name NetBird is authoritative for. The client prevents that with a Name Resolution Policy Table rule covering every namespace.
+>
+> The cost is that names only the local network's resolver knows — a home router's own zone, or an internal domain not reachable through NetBird — stop resolving while connected. Declare those zones as match domain nameservers: a more specific rule takes precedence over the catch-all, so a declared zone keeps resolving. `.local` is exempt, so multicast DNS names keep working. Short names can also stop expanding when another adapter is preferred — see the note under [Search Domains](#search-domains).
+>
+> Setting `NB_USE_LEGACY_DNS_RESOLUTION=true` on a peer restores the pre-v0.78.0 behaviour — see [Client Environment Variables](https://docs.netbird.io/client/environment-variables).
+
 ### Search Domains
 
 Toggle **Mark match domains as search domains** to enable domain suffix searching. When enabled, typing `server` expands to `server.company.internal`. Only applies to match domain nameservers.
@@ -106,6 +114,12 @@ Toggle **Mark match domains as search domains** to enable domain suffix searchin
 > **Note**
 >
 > **Don't convert a match-domain group to primary by emptying its domains.** Removing the match domains also removes the search domains, so short names like `server` stop expanding. Domain-joined Windows machines hide the regression because Active Directory supplies its own suffix, so it surfaces as "short names broke for some users." To add a primary, create a **second** nameserver group with the same servers and leave the existing match-domain group in place.
+
+> **Note**
+>
+> **On Windows, from client v0.78.0**, making NetBird the exclusive resolver also ends the suffix search early. A short name is expanded by the DNS client using the suffix list of the **preferred** network interface — the one with the lowest interface metric — and Windows no longer falls through to another interface's suffixes when the name is not found there. So when an adapter other than NetBird's is preferred, a short name fails while its fully qualified form still resolves. Earlier clients kept searching the other adapters' suffixes, so the same short name resolved.
+>
+> NetBird's interface is usually the preferred one, but a tie on the metric is enough to lose it. When that happens, declaring the local network's zone as a match domain with search domains enabled puts both suffixes in the same list, and short names resolve again for either zone. Otherwise use the fully qualified name, or set `NB_USE_LEGACY_DNS_RESOLUTION=true` to go back to shared resolution.
 
 ### Split-Horizon DNS
 
@@ -133,7 +147,7 @@ If you are migrating from a VPN that pushed your internal DNS servers for everyt
 
 **Match domain (internal)**: Same servers. Add match domain `company.internal`. Enable search domains.
 
-![Two nameserver groups pointing at the same internal DNS servers: one primary with no match domains, one with match domain company.internal and search domains enabled](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/nameservers-route-all-internal.png)
+![Two nameserver groups pointing at the same internal DNS servers: one primary with no match domains, one with match domain company.internal and search domains enabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/nameservers-route-all-internal.png)
 
 Result:
 

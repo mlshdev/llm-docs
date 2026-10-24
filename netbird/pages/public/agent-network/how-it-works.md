@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/how-it-works.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/how-it-works.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/how-it-works.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/how-it-works.mdx)
 
 # How Agent Network Works
 
@@ -34,9 +34,10 @@ upstream API or gateway. The proxy can also inject the calling agent's identity 
 request, so the gateway itself can attribute usage and enforce its own limits based on the
 agent's group membership. For example, with a LiteLLM gateway it writes the agent's IdP groups
 into `metadata.tags` and its identity into the `x-litellm-end-user-id` header, so LiteLLM
-can apply tag budgets and per-user attribution.
+can apply tag budgets and per-user attribution. With agentgateway, NetBird uses the trusted
+`x-netbird-user-id` and `x-netbird-groups` headers for request attribution.
 
-![agent network LLM request path through the NetBird proxy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/how-it-works/agent-network-diagram-llm-apis.png)
+![agent network LLM request path through the NetBird proxy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/how-it-works/agent-network-diagram-llm-apis.png)
 
 - **NetBird client**: the agent's device joins the overlay as a peer. Its requests to
   the endpoint are routed through the WireGuard tunnel, not the public internet.
@@ -70,7 +71,7 @@ flowing straight between the two peers. Because NetBird is a peer-to-peer networ
 also works in reverse, so a resource can reach back to an agent when needed, such as to
 deliver a callback or webhook.
 
-![agent network internal resource request path through WireGuard overlay](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/how-it-works/agent-network-diagram-internal-resources.png)
+![agent network internal resource request path through WireGuard overlay](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/how-it-works/agent-network-diagram-internal-resources.png)
 
 ## The Lifecycle of an LLM Request
 
@@ -96,10 +97,11 @@ upstream:
    the request is denied here. See [Policies, Limits, and
    Guardrails](#policies-limits-and-guardrails).
 5. **Stamp identity for the gateway.** Add the caller's identity to the upstream request
-   (for example into `metadata.tags` and `x-litellm-end-user-id`) for gateways that key
-   their own budgets and attribution off it, or into a provider's own cost-allocation
-   metadata such as AWS Bedrock's `X-Amzn-Bedrock-Request-Metadata`. This is on by default
-   and can be turned off per provider. See [Identity
+   (for example into `metadata.tags` and `x-litellm-end-user-id`, or agentgateway's
+   `x-netbird-user-id` and `x-netbird-groups` headers) for gateways that key their own
+   budgets and attribution off it, or into a provider's own cost-allocation metadata such
+   as AWS Bedrock's `X-Amzn-Bedrock-Request-Metadata`. This is on by default and can be
+   turned off per provider. See [Identity
    Metadata](https://docs.netbird.io/agent-network/providers#identity-metadata).
 6. **Apply guardrails.** Enforce the model allowlist and the prompt-capture rules.
 

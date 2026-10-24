@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/network-routes/overlapping-routes.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/network-routes/overlapping-routes.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/network-routes/overlapping-routes.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/network-routes/overlapping-routes.mdx)
 
 # Resolving Overlapping Routes
 
@@ -61,7 +61,7 @@ netbird routes select -a route3
 
 Open the desktop app, switch to **Advanced** view, and select **Resources**. Use the **Overlapping** filter to narrow the list, then toggle each resource you want to use. You can also search by name and use **Enable all** or **Disable all** for bulk changes.
 
-![Overlapping resource selection in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/network-routes/overlapping-routes/select-network-routes.png)
+![Overlapping resource selection in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/overlapping-routes/select-network-routes.png)
 
 ### Enabling All Routes
 

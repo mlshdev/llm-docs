@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/mdm-deployment/intune-netbird-integration.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/mdm-deployment/intune-netbird-integration.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/mdm-deployment/intune-netbird-integration.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/mdm-deployment/intune-netbird-integration.mdx)
 
 # Deploying NetBird with Intune
 
@@ -15,6 +15,8 @@ NetBird enhances this security ecosystem by providing a WireGuard-based overlay 
 This division of security responsibilities creates a comprehensive zero trust implementation in which devices are verified as compliant before they can establish network connections to protected resources.
 
 In this hands-on tutorial, you'll learn how to deploy NetBird with Intune to grant tailored access permissions for different teams.
+
+This page installs the NetBird client. To enforce its settings once it is installed, such as pinning the management server or making settings read-only, follow [Enforce NetBird Settings on Windows](https://docs.netbird.io/manage/peers/mdm-deployment/windows-mdm-policy), which uses an Intune configuration profile.
 
 ## Prerequisites
 
@@ -39,17 +41,19 @@ Let's create a policy that enables the `Development` team to access the `Servers
 - Set the source group to `Development` (or the appropriate team group synchronized from Entra ID) and the destination group to `Servers`
 - Configure the protocol and port settings based on required access patterns (e.g., TCP 22 for SSH access to servers)
 
-![Create Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-01.png)
+![Create Access Control Policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-01.png)
 
 Provide a descriptive name for the policy, such as "Dev Team Server Access" that indicates its purpose, and click `Save` to create and activate the policy.
 
-![New control access policy](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-02.png)
+![New control access policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-02.png)
 
 This access policy will automatically apply to all devices enrolled in Intune that belong to users in the `Development` group (as synchronized from **Entra ID**), providing them secure access to designated resources while preventing lateral movement to unauthorized systems.
 
 Moreover, users will only gain this network access when using compliant devices that meet your organization's security standards, creating a true zero trust environment where user identity and device security status are verified before granting resource access.
 
-> **Note**: For maximum security, create separate policies rather than overly broad policies for each distinct access requirement. This approach minimizes your attack surface by ensuring precise access controls aligned with job responsibilities.
+> **Note**
+>
+> For maximum security, create separate policies rather than overly broad policies for each distinct access requirement. This approach minimizes your attack surface by ensuring precise access controls aligned with job responsibilities.
 
 With these access policies in place, we can now proceed to configure the automated deployment of NetBird through Intune, ensuring that all team members have the required secure connectivity client installed on their devices.
 
@@ -70,21 +74,21 @@ Using the Win32 method requires you to convert either NetBird's `.exe` or `.msi`
 
 - Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com), navigate to `Apps`, and click the `Windows` button.
 
-![Adding Windows App](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-03.png)
+![Adding Windows App](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-03.png)
 
 - Click the `+ Create` button to add a new Windows application
 
-![Create Windows App](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-04.png)
+![Create Windows App](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-04.png)
 
 - In the `App type` dropdown, select `Windows app (Win32)` and click `Select`
 
-![Win32 app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-14.png)
+![Win32 app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-14.png)
 
 - On the `Add App` screen, click `Select app package file` and browse to the location of the NetBird `.intunewin` file you created earlier
 
 - Select the `.intunewin` file and click `OK`
 
-![Upload NetBird Intunewin](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-15.png)
+![Upload NetBird Intunewin](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-15.png)
 
 - On the `App information` tab, configure NetBird with the following values:
 
@@ -106,7 +110,7 @@ Using the Win32 method requires you to convert either NetBird's `.exe` or `.msi`
 
 You can leave the rest of the fields empty.
 
-![NetBird Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-16.png)
+![NetBird Configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-16.png)
 
 - Click `Next` to advance to the `Program` tab. Use the following commands in the install and uninstall fields:
 
@@ -114,11 +118,13 @@ You can leave the rest of the fields empty.
 
 - **Uninstall command:** `"%ProgramFiles%\Netbird\netbird_uninstall.exe" /S`
 
-> **Note:** The commands above assume a standard installation using the `/S` flag to specify silent mode. Change them accordingly if you require NetBird installed on a different path. Starting with v0.75.0, the installer does not create a machine-wide UI autostart entry. The desktop app manages **Launch NetBird UI at Login** per user; use the [`disableAutostart` MDM setting](https://docs.netbird.io/client/mdm-integration#disableAutostart) when administrators need to suppress it.
+> **Note**
+>
+> The commands above assume a standard installation using the `/S` flag to specify silent mode. Change them accordingly if you require NetBird installed on a different path. Starting with v0.75.0, the installer does not create a machine-wide UI autostart entry. The desktop app manages **Launch NetBird UI at Login** per user; use the [`disableAutostart` MDM setting](https://docs.netbird.io/client/mdm-integration#disableAutostart) when administrators need to suppress it.
 
 For this example, leave the rest of the configuration unchanged. Note that you can change the install behavior and users' ability to uninstall NetBird if required.
 
-![Program tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-17.png)
+![Program tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-17.png)
 
 - Click `Next` to advance to the `Requirements` tab. Here you can specify the architecture and minimum OS version required for installing NetBird. For instance:
 
@@ -126,7 +132,7 @@ For this example, leave the rest of the configuration unchanged. Note that you c
 
 - **Minimum operating system:** Windows 10 22H2
 
-![Requirements tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-18.png)
+![Requirements tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-18.png)
 
 - Click `Next` to advance to the `Detection rules` tab. Intune lets you choose between **using a custom detection script** or **manually configuring detection rules**. Select the latter and configure it as follows:
 
@@ -142,7 +148,7 @@ For this example, leave the rest of the configuration unchanged. Note that you c
 
 Click `OK` when ready.
 
-![Detection Rules tab](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-19.png)
+![Detection Rules tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-19.png)
 
 For examples on registry-based detection rules, refer to [Intune documentation](https://learn.microsoft.com/en-us/intune/intune-service/apps/apps-win32-add#step-4-detection-rules)
 
@@ -152,19 +158,19 @@ For examples on registry-based detection rules, refer to [Intune documentation](
 
 - On the `Assignments` tab, under `Required`, click `+ Add group`
 
-![Add Groups to NetBird App](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-20.png)
+![Add Groups to NetBird App](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-20.png)
 
 - Select the appropriate group that contains your users (like the `Development` group synchronized from Entra ID) and click `Select`
 
-![Assign Groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-09.png)
+![Assign Groups](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-09.png)
 
 - To continue, click `Next`. Review your configuration in the `Review + create` tab, then click `Create` to add NetBird to your Intune app catalog.
 
-![Review Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-21.png)
+![Review Configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-21.png)
 
 - To verify that NetBird was added to Intune, navigate to `Apps > All Apps` to see your Windows applications:
 
-![Windows App Catalog](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-22.png)
+![Windows App Catalog](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-22.png)
 
 ## Deploying NetBird as a Line-of-business (LOB) App
 
@@ -175,20 +181,20 @@ As a simpler alternative to the Win32 method described previously, you can deplo
 - Download the NetBird Windows MSI installer from the [NetBird installation documentation](https://docs.netbird.io/get-started/install/windows)
 - Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com), navigate to `Apps`, and click the `Windows` button.
 
-![Adding Windows App](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-03.png)
+![Adding Windows App](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-03.png)
 
 - Click the `+ Create` button to add a new Windows application
 
-![Create Windows App](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-04.png)
+![Create Windows App](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-04.png)
 
 - In the `App type` dropdown, select `Line-of-business app` and click `Select`
 
-![LOB app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-05.png)
+![LOB app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-05.png)
 
 - On the `Add App` screen, click `Select app package file` and browse to the location of the NetBird MSI file you downloaded earlier
 - Select the NetBird MSI installer and click `OK`
 
-![Upload NetBird MSI](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-06.png)
+![Upload NetBird MSI](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-06.png)
 
 Click `Next` to configure NetBird with the following details:
 
@@ -196,7 +202,7 @@ Click `Next` to configure NetBird with the following details:
 - **Description**: NetBird
 - **Publisher**: NetBird
 - **App install context**: Device
-- **Ignore app version**: No (This ensures updates will be applied when available)
+- **Ignore app version**: No if Intune owns updates (so Intune applies new MSI versions). Yes if NetBird owns updates via [Automatic Updates](https://docs.netbird.io/manage/peers/auto-update), so Intune only checks that NetBird is installed. Pick one owner: see [Roll Out with MDM](https://docs.netbird.io/use-cases/deployment/mdm-rollout#step-5-pick-one-owner-for-updates).
 - **Command-line arguments**: Leave empty. The v0.75 MSI has no `AUTOSTART` property; manage launch at login with the `disableAutostart` MDM setting instead.
 - **Category**: Select any category that fits your needs (optional)
 - **Show this as a featured app in the Company Portal**: Yes
@@ -204,30 +210,34 @@ Click `Next` to configure NetBird with the following details:
 
 You can leave the rest of the fields empty.
 
-![NetBird Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-07.png)
+![NetBird Configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-07.png)
 
 When ready, click `Next` to proceed to the `Assignments` tab. Under `Required`, click `+ Add group`
 
-![Add Groups to NetBird App](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-08.png)
+![Add Groups to NetBird App](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-08.png)
 
 - Select the appropriate group that contains your users (like the `Development` group synchronized from Entra ID) and click `Select`
 
-![Assign Groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-09.png)
+![Assign Groups](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-09.png)
 
 - To continue, click `Next`. Review your configuration in the `Review + create` tab, then click `Create` to add NetBird to your Intune app catalog.
 
-![Review Configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-11.png)
+![Review Configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-11.png)
 
 After adding NetBird, you'll see an overview screen for the NetBird app, showing deployment status and management options.
 
-![NetBird App Overview](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-12.png)
+![NetBird App Overview](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-12.png)
 
 To verify that NetBird was added to Intune, navigate to `Home > Apps | Windows` to see all your Windows applications:
 
-![Windows App Catalog](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-13.png)
+![Windows App Catalog](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-13.png)
 
 ### Deploying NetBird to Other Platforms
 
 While each platform has slightly different configuration options, adding NetBird and assigning it to groups follows the same pattern across Intune. For more information, refer to [Intune app management](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-management).
 
 With NetBird successfully deployed through Intune, your organization has the foundation for implementing a comprehensive zero trust access model that verifies user identity and device compliance before granting network access.
+
+## Next: enforce the client's settings
+
+With the client installed, use an Intune configuration profile to pin its settings, such as the management server, and to stop users changing them: see [Enforce NetBird Settings on Windows](https://docs.netbird.io/manage/peers/mdm-deployment/windows-mdm-policy).

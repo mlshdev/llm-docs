@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/reverse-proxy/troubleshooting.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/reverse-proxy/troubleshooting.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/reverse-proxy/troubleshooting.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/reverse-proxy/troubleshooting.mdx)
 
 # Reverse Proxy Troubleshooting
 
@@ -308,6 +308,21 @@ Once you regain access to the dashboard, you can re-enable geo-restrictions on t
 
 - Leave geo-restrictions disabled on services that the management server needs to reach internally (such as your IdP).
 - Use a separate network path for the IdP that doesn't pass through the reverse proxy's geo-restriction layer.
+
+### Issue 4: TCP service is active but connections get no response
+
+**Symptoms**:
+
+- A TCP service shows as active and its listen port accepts connections
+- Clients connect but receive no response
+
+**Cause**:
+
+A service's status reflects the proxy's listener, not the backend: a TCP service stays active and keeps accepting connections even when nothing listens on its target port.
+
+**Solution**:
+
+Check the backend, not the service status: on the target host, confirm that the application is listening on the target port and binds to an interface the proxy can reach (step 6 of the [Quick Diagnostics Checklist](#quick-diagnostics-checklist), and Issue 2).
 
 ## Advanced Debugging with Packet Capture
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/iij-id.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/iij-id.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/single-sign-on/iij-id.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/single-sign-on/iij-id.mdx)
 
 # IIJ ID on NetBird Cloud
 
@@ -10,6 +10,7 @@ NetBird integrates with IIJ ID as a custom OpenID Connect application.
 >
 > Support for OIDC-compliant IdPs is available on the Team plan and higher.
 > The Free plan supports Google, Microsoft, and social logins.
+> Self-hosted deployments support OIDC-compliant IdPs in both the open source Community Edition and the [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise). See [self-hosted identity providers](https://docs.netbird.io/selfhosted/identity-providers).
 
 ## Step 1: Create a Custom OpenID Connect Application
 
@@ -17,7 +18,7 @@ Log in to the IIJ ID console and navigate to `Application` > `Application Manage
 
 Select `OpenID Connect Application` and click `Next`.
 
-![iij-id-create-custom-app](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/iij-id-idp/create-custom-app.png)
+![The IIJ ID custom application picker with OpenID Connect Application selected](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/iij-id-idp/create-custom-app.png)
 
 Fill out the application information:
 
@@ -27,7 +28,7 @@ Fill out the application information:
 
 Click `Add Application`.
 
-![iij-id-application-information](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/iij-id-idp/application-information.png)
+![The IIJ ID application information form filled in for NetBird](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/iij-id-idp/application-information.png)
 
 ## Step 2: Configure the Federation Settings
 
@@ -39,7 +40,7 @@ Open the newly created application, click `Edit`, and select the `Federation` ta
 
 Click `Update` to apply the configuration.
 
-![iij-id-federation-settings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/iij-id-idp/federation-settings.png)
+![The IIJ ID federation settings with the NetBird redirect URI and OIDC options](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/iij-id-idp/federation-settings.png)
 
 ## Step 3: Retrieve the Client Credentials
 
@@ -55,7 +56,7 @@ NetBird uses the Discovery endpoint to automatically resolve the Authorization, 
 
 Assign access to the NetBird application so users can sign in to NetBird with IIJ ID. Open the application, select `Application User`, and click `Add Application User`. Select the users or groups that should have access, choose whether the application appears in **My Applications**, and click `Add Application User`.
 
-![iij-id-assign-users](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/iij-id-idp/assign-users.png)
+![The IIJ ID Application User screen for assigning users and groups to NetBird](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/iij-id-idp/assign-users.png)
 
 ## Step 5: Share Configuration with NetBird
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/approve-peers.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/approve-peers.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/approve-peers.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/approve-peers.mdx)
 
 # Approve peers
 
@@ -10,7 +10,7 @@ Administrators then can assess whether the peer is eligible to join the network.
 
 > **Note**
 >
-> This feature is only available in the [NetBird cloud](https://app.netbird.io/) version.
+> This feature is available in [NetBird Cloud](https://app.netbird.io/) on the [Business plan](https://netbird.io/pricing) and in self-hosted deployments with an [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise). The open source Community Edition does not include it.
 
 ## Related Video Content
 
@@ -22,7 +22,7 @@ For details on the peer approval feature, part of our "Getting started with NetB
 
 To enable peer approval, navigate to [Settings » Authentication](https://app.netbird.io/settings) and enable 'Peer approval'.
 
-![peer-approval-settings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/approve-peers/peer-approval-settings.png)
+![peer-approval-settings](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/approve-peers/peer-approval-settings.png)
 
 > **Note**
 >
@@ -32,7 +32,7 @@ To enable peer approval, navigate to [Settings » Authentication](https://app.ne
 
 To approve a peer, navigate to the [Peers section](https://app.netbird.io/peers) and click the `Approve` button on the right side of the peers table.
 
-![peer-needs-approval](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/approve-peers/peer-needs-approval.png)
+![peer-needs-approval](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/approve-peers/peer-needs-approval.png)
 
 ## Automate peer approval with EDR integrations
 

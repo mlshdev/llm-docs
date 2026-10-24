@@ -5,10 +5,10 @@
 ## Projects
 
 - [Traefik Proxy v3.7.16](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
-- [NetBird v0.77.1](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
+- [NetBird v0.81.4](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
 - [Podman v6.1.4](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
 - [Docker main](docker/llms.txt): [full corpus](docker/llms-full.txt), [manifest](docker/manifest.json)
-- [Apple container 1.6.0](container/llms.txt): [full corpus](container/llms-full.txt), [manifest](container/manifest.json)
+- [Apple container 1.6.1](container/llms.txt): [full corpus](container/llms-full.txt), [manifest](container/manifest.json)
 - [n8n main](n8n/llms.txt): [full corpus](n8n/llms-full.txt), [manifest](n8n/manifest.json)
 - [Grafana v13.2.4](grafana/llms.txt): [full corpus](grafana/llms-full.txt), [manifest](grafana/manifest.json)
 - [VictoriaMetrics v1.154.1](victoriametrics/llms.txt): [full corpus](victoriametrics/llms-full.txt), [manifest](victoriametrics/manifest.json)

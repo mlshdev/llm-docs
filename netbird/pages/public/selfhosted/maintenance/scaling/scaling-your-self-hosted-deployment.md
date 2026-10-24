@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/maintenance/scaling/scaling-your-self-hosted-deployment.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/maintenance/scaling/scaling-your-self-hosted-deployment.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/maintenance/scaling/scaling-your-self-hosted-deployment.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/maintenance/scaling/scaling-your-self-hosted-deployment.mdx)
 
 # Splitting Your Self-Hosted Deployment
 
@@ -23,11 +23,13 @@ The default single-server deployment runs all services on one machine: **Traefik
 and a **combined netbird-server** container that includes Management, Signal, and Relay + STUN as components. Traefik handles TLS termination on ports 80/443, while STUN listens on UDP port 3478. The Management server uses a **SQLite** database by default.
 
 After splitting, the **main server** keeps Traefik, Dashboard, Management, and optionally Signal.
-The **relay servers** run independently on different machines, each handling relay (port 443) and STUN (port 3478) traffic. Peers receive relay addresses from the Management server and connect to them directly. Optionally, the SQLite database can be migrated to **PostgreSQL** on a dedicated server, and Signal can also be extracted to its own machine.
+The **relay servers** run independently on different machines, each handling relay (port 443, TCP for WebSocket and UDP for QUIC) and STUN (port 3478/udp) traffic. Peers receive relay addresses from the Management server and connect to them directly. Optionally, the SQLite database can be migrated to **PostgreSQL** on a dedicated server, and Signal can also be extracted to its own machine.
 
 ## Guides
 
 - [Set Up External Relay Servers](https://docs.netbird.io/selfhosted/maintenance/scaling/set-up-external-relays) — Deploy relay and STUN servers on separate machines and configure the main server to use them
+- [Hairpin NAT and Split DNS for Self-Hosted NetBird](https://docs.netbird.io/selfhosted/maintenance/scaling/hairpin-nat-and-split-dns) — Let peers inside the server's network reach it and keep direct connections to remote peers
+- [External Relays on a Commercial License](https://docs.netbird.io/selfhosted/enterprise/external-relays) — What differs on NetBird Enterprise, where the shared secret is also used by traffic flow
 - [Migrate from SQLite to PostgreSQL](https://docs.netbird.io/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql) — Move the Management database to a dedicated PostgreSQL instance (optional)
 - [Set Up External Signal Server](https://docs.netbird.io/selfhosted/maintenance/scaling/set-up-external-signal) — Extract the Signal server to its own machine (optional)
 
@@ -35,18 +37,19 @@ The **relay servers** run independently on different machines, each handling rel
 
 ### Relay Server Environment Variables
 
-| Variable                 | Required | Description                                              |
-| ------------------------ | -------- | -------------------------------------------------------- |
-| `NB_LISTEN_ADDRESS`      | Yes      | Address to listen on (e.g., `:443`)                      |
-| `NB_EXPOSED_ADDRESS`     | Yes      | Public relay URL (`rels://` for TLS, `rel://` for plain) |
-| `NB_AUTH_SECRET`         | Yes      | Shared authentication secret                             |
-| `NB_ENABLE_STUN`         | No       | Enable embedded STUN server (`true`/`false`)             |
-| `NB_STUN_PORTS`          | No       | STUN UDP port(s), default `3478`                         |
-| `NB_LETSENCRYPT_DOMAINS` | No       | Domain(s) for automatic Let's Encrypt certificates       |
-| `NB_LETSENCRYPT_EMAIL`   | No       | Email for Let's Encrypt notifications                    |
-| `NB_TLS_CERT_FILE`       | No       | Path to TLS certificate (alternative to Let's Encrypt)   |
-| `NB_TLS_KEY_FILE`        | No       | Path to TLS private key                                  |
-| `NB_LOG_LEVEL`           | No       | Log level: `debug`, `info`, `warn`, `error`              |
+| Variable                 | Required | Description                                                                                              |
+| ------------------------ | -------- | -------------------------------------------------------------------------------------------------------- |
+| `NB_LISTEN_ADDRESS`      | Yes      | Address to listen on (e.g., `:443`)                                                                      |
+| `NB_EXPOSED_ADDRESS`     | Yes      | Public relay URL (`rels://` for TLS, `rel://` for plain)                                                 |
+| `NB_AUTH_SECRET`         | Yes      | Shared authentication secret                                                                             |
+| `NB_ENABLE_STUN`         | No       | Enable embedded STUN server (`true`/`false`)                                                             |
+| `NB_STUN_PORTS`          | No       | STUN UDP port(s), default `3478`                                                                         |
+| `NB_LETSENCRYPT_DOMAINS` | No       | Domain(s) for automatic Let's Encrypt certificates                                                       |
+| `NB_LETSENCRYPT_EMAIL`   | No       | Email for Let's Encrypt notifications                                                                    |
+| `NB_TLS_CERT_FILE`       | No       | Path to TLS certificate (alternative to Let's Encrypt)                                                   |
+| `NB_TLS_KEY_FILE`        | No       | Path to TLS private key                                                                                  |
+| `NB_TRUSTED_PROXIES`     | No       | Comma-separated IPs or CIDRs whose `X-Real-Ip` and `X-Real-Port` headers the relay trusts. Since v0.75.0 |
+| `NB_LOG_LEVEL`           | No       | Log level: `debug`, `info`, `warn`, `error`                                                              |
 
 ### Main Server config.yaml - External Services
 

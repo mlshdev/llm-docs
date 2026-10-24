@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/dns/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/dns/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/dns/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/dns/index.mdx)
 
 # DNS in NetBird
 
@@ -20,13 +20,15 @@ Starting with [v0.11.0](https://github.com/netbirdio/netbird/releases), NetBird 
 >
 > Available on both NetBird Cloud and self-hosted versions running v0.11.0 or later.
 
+By default, a peer that registers with a hostname whose DNS name another peer already has gets an IP-based suffix, such as `my-server-12-7.netbird.cloud`, and so does every ephemeral peer, even one whose DNS name no other peer has. With the `Reject Hostname Collisions` toggle on (Settings > Clients, under [Unique Peer Hostnames](https://docs.netbird.io/manage/settings/clients#unique-peer-hostnames)), a peer whose DNS name another peer already has is rejected, and every other new peer, ephemeral peers included, registers with its plain name. Peers that already have a suffix keep it.
+
 ## How NetBird Handles DNS
 
 NetBird gives you centralized control over DNS resolution for all peers in your network, solving common challenges with split-horizon DNS, private networks, and secure name resolution.
 
 ### Architecture Overview
 
-![NetBird DNS Diagram](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/netbird-dns-diagram.png)
+![NetBird DNS Diagram](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-dns-diagram.png)
 
 #### NetBird's DHCP Role
 

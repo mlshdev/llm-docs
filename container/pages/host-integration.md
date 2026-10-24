@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.0: [docs/host-integration.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/host-integration.md)
+> Pinned source for Apple container 1.6.1: [docs/host-integration.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/host-integration.md)
 
 # Host integration
 
@@ -87,5 +87,5 @@ hello
 ```
 
 This uses the same underlying DNS mechanism described in [Networking: Set up DNS-based
-container names](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/networking.md#set-up-dns-based-container-names), just with
+container names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#set-up-dns-based-container-names), just with
 `--localhost` pointing the domain at a host address instead of a container.

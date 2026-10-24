@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/model-caching-text.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/tutorials/serverless/model-caching-text.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/model-caching-text.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/tutorials/serverless/model-caching-text.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/model-caching-text
 
 # Deploy Phi-3 using model caching

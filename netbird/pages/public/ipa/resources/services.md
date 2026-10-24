@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/services.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/services.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/services.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/services.mdx)
 
 ## List available proxy clusters   (GET /api/reverse-proxies/clusters)
 
@@ -519,6 +519,7 @@ echo $response;
         "target_id": "cs8i4ug6lnn4g9hqv7mg",
         "target_type": "subnet",
         "path": "/",
+        "access_action": "inherit",
         "protocol": "http",
         "host": "10.10.0.1",
         "port": 8080,
@@ -620,6 +621,7 @@ echo $response;
         "target_id": "string",
         "target_type": "string",
         "path": "string",
+        "access_action": "string",
         "protocol": "string",
         "host": "string",
         "port": "integer",
@@ -740,6 +742,10 @@ Target type
 **path (type: string; optional)**
 
 URL path prefix for this target (HTTP only)
+
+**access\_action (type: string; optional; values: inherit, bypass, block)**
+
+Access action applied after this target's HTTP path prefix is selected. "inherit" uses the service authentication configuration, "bypass" skips service authentication, and "block" denies access. HTTP services only.
 
 **protocol (type: string; required; values: http, https, tcp, udp)**
 
@@ -919,6 +925,7 @@ curl -X POST https://api.netbird.io/api/reverse-proxies/services \
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -1008,6 +1015,7 @@ let data = JSON.stringify({
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -1119,6 +1127,7 @@ payload = json.dumps({
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -1230,6 +1239,7 @@ func main() {
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -1360,6 +1370,7 @@ request.body = JSON.dump({
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -1453,6 +1464,7 @@ RequestBody body = RequestBody.create(mediaType, '{
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -1562,6 +1574,7 @@ curl_setopt_array($curl, array(
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -1668,6 +1681,7 @@ echo $response;
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -1767,6 +1781,7 @@ echo $response;
       "target_id": "string",
       "target_type": "string",
       "path": "string",
+      "access_action": "string",
       "protocol": "string",
       "host": "string",
       "port": "integer",
@@ -2026,6 +2041,7 @@ echo $response;
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -2125,6 +2141,7 @@ echo $response;
       "target_id": "string",
       "target_type": "string",
       "path": "string",
+      "access_action": "string",
       "protocol": "string",
       "host": "string",
       "port": "integer",
@@ -2250,6 +2267,10 @@ Target type
 **path (type: string; optional)**
 
 URL path prefix for this target (HTTP only)
+
+**access\_action (type: string; optional; values: inherit, bypass, block)**
+
+Access action applied after this target's HTTP path prefix is selected. "inherit" uses the service authentication configuration, "bypass" skips service authentication, and "block" denies access. HTTP services only.
 
 **protocol (type: string; required; values: http, https, tcp, udp)**
 
@@ -2429,6 +2450,7 @@ curl -X PUT https://api.netbird.io/api/reverse-proxies/services/{serviceId} \
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -2518,6 +2540,7 @@ let data = JSON.stringify({
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -2629,6 +2652,7 @@ payload = json.dumps({
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -2740,6 +2764,7 @@ func main() {
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -2870,6 +2895,7 @@ request.body = JSON.dump({
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -2963,6 +2989,7 @@ RequestBody body = RequestBody.create(mediaType, '{
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -3072,6 +3099,7 @@ curl_setopt_array($curl, array(
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -3178,6 +3206,7 @@ echo $response;
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -3277,6 +3306,7 @@ echo $response;
       "target_id": "string",
       "target_type": "string",
       "path": "string",
+      "access_action": "string",
       "protocol": "string",
       "host": "string",
       "port": "integer",
@@ -3921,6 +3951,7 @@ echo $response;
       "target_id": "cs8i4ug6lnn4g9hqv7mg",
       "target_type": "subnet",
       "path": "/",
+      "access_action": "inherit",
       "protocol": "http",
       "host": "10.10.0.1",
       "port": 8080,
@@ -4020,6 +4051,7 @@ echo $response;
       "target_id": "string",
       "target_type": "string",
       "path": "string",
+      "access_action": "string",
       "protocol": "string",
       "host": "string",
       "port": "integer",
@@ -4104,7 +4136,7 @@ echo $response;
 
 ## Delete a Custom domain   (DELETE /api/reverse-proxies/domains/{domainId})
 
-Delete an existing service custom domain
+Delete an existing service custom domain after removing or moving all services that use it or its subdomains, including disabled services.
 
 ### Path Parameters
 

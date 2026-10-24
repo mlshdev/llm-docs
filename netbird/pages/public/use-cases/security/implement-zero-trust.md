@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/security/implement-zero-trust.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/security/implement-zero-trust.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/security/implement-zero-trust.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/security/implement-zero-trust.mdx)
 
 # Implementing Zero Trust with NetBird
 
@@ -13,6 +13,10 @@ Before you start planning or changing policies, confirm the basics.
 ### 0.1 Required NetBird plan and features
 
 This guide uses features from both the **Team** and **Business** plans. Check that your deployment includes what you need.
+
+> **Note**
+>
+> Team and Business are NetBird Cloud plans. On a self-hosted deployment, IdP user and group provisioning, traffic events logging, and event streaming require an [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise). Audit event logging and posture checks are included in the open source Community Edition.
 
 **Team plan**
 
@@ -53,7 +57,7 @@ NetBird peers do not need inbound ports open. They initiate outbound connections
 - **HTTPS (TCP/443)**: Secure web protocol used for control plane communication
 - **STUN/TURN (UDP)**: Protocols used for NAT traversal, helping peers connect through firewalls and routers
 
-![NetBird architecture showing Management, Signal, and Relay services](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/high-level-dia.png)
+![NetBird architecture showing Management, Signal, and Relay services](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/high-level-dia.png)
 
 > **Note**
 >
@@ -226,9 +230,9 @@ Use groups for two things:
 - Source groups: who is initiating the connection (users, teams, service accounts)
 - Resource groups: what is being accessed (servers, apps, Networks)
 
-![User groups for source groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/user-groups.png)
+![User groups for source groups](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/user-groups.png)
 
-![Peer groups for resource groups](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/peer-groups.png)
+![Peer groups for resource groups](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/peer-groups.png)
 
 Where to manage groups: [Access Control → Groups](https://docs.netbird.io/manage/access-control).
 
@@ -296,7 +300,7 @@ NetBird is deny-by-default. Without policies, peers cannot talk to each other.
 
 To avoid early confusion, NetBird creates a Default policy in new environments that allows every peer to communicate with every other peer on all protocols and ports. This is useful only as a temporary onboarding aid.
 
-![Default all-to-all policy in NetBird UI](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/all-all-policy.png)
+![Default all-to-all policy in NetBird UI](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/all-all-policy.png)
 
 Where to see and edit policies: [Access Control → Policies](https://docs.netbird.io/manage/access-control).
 
@@ -338,7 +342,7 @@ Recommended posture checks per policy:
 
 > **Note**
 >
-> On Android, the **Peer Network Range (CIDR)** posture check cannot evaluate the device's local network interfaces, so ranges intended to match local LANs (e.g. `192.168.1.0/24`) will not match. The same applies to iOS clients older than 0.69.0. Ranges that target the peer's **public connection IP** (e.g. `203.0.113.10/32` or a public CIDR like `1.0.0.0/24`) still work on every platform, because the management server observes that source IP itself. For mobile-only deployments that need country-level restrictions, **Geolocation** remains a good alternative. See [Peer Network Range Check on Android](https://docs.netbird.io/manage/access-control/posture-checks#peer-network-range-check-on-android) for details.
+> On Android clients older than 0.77.1, the **Peer Network Range (CIDR)** posture check cannot evaluate the device's local network interfaces, so ranges intended to match local LANs (e.g. `192.168.1.0/24`) will not match. The same applies to iOS clients older than 0.69.0. Ranges that target the peer's **public connection IP** (e.g. `203.0.113.10/32` or a public CIDR like `198.51.100.0/24`) work on every platform and every version, because the management server observes that source IP itself. For mobile-only deployments that need country-level restrictions, **Geolocation** remains a good alternative. See [Peer Network Range Check on Android](https://docs.netbird.io/manage/access-control/posture-checks#peer-network-range-check-on-android) for details.
 
 Example posture combinations:
 
@@ -366,7 +370,7 @@ In NetBird:
 - "All" protocol policies are broad. Limit them to very specific scopes or emergency use.
 - Portless rules are effectively "all ports" and should be treated as wide open. These are not recommended for Zero Trust.
 
-![Policy directionality showing unidirectional and bidirectional traffic](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/access-control/policy-direction.gif)
+![Policy directionality showing unidirectional and bidirectional traffic](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/policy-direction.gif)
 
 Where to do this: create or edit policies in **[Access Control → Policies](https://docs.netbird.io/manage/access-control)**, choose **Source group**, **Destination group**, then restrict **Protocol** and **Ports**.
 
@@ -502,7 +506,7 @@ A routing peer is a NetBird peer that:
 - Has network access to one or more internal subnets (for example `10.10.0.0/16`)
 - Is selected as a routing peer in a [Network](https://docs.netbird.io/manage/networks) or [Network Route](https://docs.netbird.io/manage/network-routes) configuration
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/networks/netbird-network-routes.png)
+![Three NetBird peers on the overlay network connect through a WireGuard tunnel to a routing peer in a private network. Access policies on the routing peer allow a database on TCP 5432, a web app on TCP 443, and an RDP workstation on TCP/UDP 3389; a printer with no policy is unreachable.](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/networks/networks-overview.png)
 
 ### 5.2 Direction of traffic with routing peers
 
@@ -520,7 +524,7 @@ Routed environments almost always rely on internal DNS (Domain Name System), whi
 
 With Networks and domain resources, NetBird can route both IP ranges (like `10.10.0.0/16`) and DNS-based resources (like `*.corp.internal`), and can forward DNS lookups through the routing peer.
 
-![NetBird DNS resolution through routing peers](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/dns/netbird-dns-diagram.png)
+![NetBird DNS resolution through routing peers](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-dns-diagram.png)
 
 General rules:
 
@@ -677,7 +681,7 @@ This turns "guessing the flows" into a data-driven process.
 
 NetBird's [Control Center](https://docs.netbird.io/manage/control-center) provides a topological view of who can reach what, based on policies, groups, and Networks. Access control policies can be edited directly from the Control Center.
 
-![Control Center peer view showing peer access topology](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/control-center/control-center-peer-view.png)
+![Control Center peer view showing peer access topology](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-peer-view.png)
 
 Where to access: **Control Center** in the dashboard.
 
@@ -688,12 +692,12 @@ Use it for:
 - **Users view**
   - Select a user and see all their peers and which resources they can access through which policies.
 
-![Control Center groups view showing which resources a group can access](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/control-center/control-center-groups-view.png)
+![Control Center groups view showing which resources a group can access](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-groups-view.png)
 
 - **Groups view**
   - Select a group and see which resources its members can reach and through which policies.
 
-![Control Center network view showing network access topology](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/control-center/control-center-network-view.png)
+![Control Center network view showing network access topology](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-network-view.png)
 
 - **Network view**
   - Select a Network and see which groups have access and on which ports.

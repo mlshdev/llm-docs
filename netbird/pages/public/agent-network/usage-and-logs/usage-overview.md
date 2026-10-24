@@ -1,11 +1,11 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/agent-network/usage-and-logs/usage-overview.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/agent-network/usage-and-logs/usage-overview.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/usage-and-logs/usage-overview.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/usage-and-logs/usage-overview.mdx)
 
 # Usage Overview
 
 The Usage tab shows account consumption over time as a per-day chart with a
 Tokens / Cost switch, plus a breakdown table.
 
-![agent network usage overview chart and table](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/agent-network/usage-and-logs/agent-network-usage-overview.png)
+![agent network usage overview chart and table](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/usage-and-logs/agent-network-usage-overview.png)
 
 ## Filters
 
@@ -18,6 +18,10 @@ Filter the view by:
 - **Model**
 
 Filters apply to both the chart and the table.
+
+## Who can see what
+
+`Owner`, `Admin`, `Auditor`, `Agent Network Admin`, and `Usage Viewer` see usage for the whole account. Every other user sees only their own usage. See [User Roles](https://docs.netbird.io/manage/team/user-roles#agent-network-permissions).
 
 ## Tokens vs. Cost
 

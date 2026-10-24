@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/maintenance/configuration-files.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/maintenance/configuration-files.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/maintenance/configuration-files.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/maintenance/configuration-files.mdx)
 
 # Self-Hosted Deployment Configuration Files Reference
 
@@ -347,11 +347,11 @@ Configures the database backend for storing all NetBird management data includin
 
 **server.store.engine (type: string)**
 
-Database engine. Options: `sqlite`, `postgres`, `mysql`. Default: `sqlite`.
+Database engine. Options: `sqlite`, `postgres`, `mysql`. Default: `sqlite`. `mysql` is deprecated, see [Migrate from MySQL to PostgreSQL](https://docs.netbird.io/selfhosted/migration/mysql-to-postgresql).
 
 **server.store.dsn (type: string)**
 
-Connection string for postgres or mysql engines. For postgres: `host=localhost user=netbird password=secret dbname=netbird port=5432`. Alternatively, use the `NETBIRD_STORE_ENGINE_POSTGRES_DSN` or `NETBIRD_STORE_ENGINE_MYSQL_DSN` environment variables.
+Connection string for the postgres engine, or the deprecated mysql engine. For postgres: `host=localhost user=netbird password=secret dbname=netbird port=5432`. Alternatively, use the `NETBIRD_STORE_ENGINE_POSTGRES_DSN` environment variable (`NETBIRD_STORE_ENGINE_MYSQL_DSN` for mysql).
 
 **server.store.encryptionKey (type: string)**
 
@@ -372,9 +372,9 @@ base64 string of a 32-byte (256-bit) encryption key for sensitive data at rest. 
 | ---------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SQLite (default) | `/var/lib/netbird/` volume | File-based database stored in the `netbird_data` Docker volume. Zero configuration required, but does not support concurrent writes or running multiple management instances. Best for testing or small deployments. |
 | PostgreSQL       | External database server   | Recommended for production deployments. Supports concurrent access, enabling multiple management instances for high availability.                                                                                    |
-| MySQL            | External database server   | Alternative to PostgreSQL for organizations that have standardized on MySQL/MariaDB. Provides similar benefits including concurrent access.                                                                          |
+| MySQL            | External database server   | Deprecated and will be removed in an upcoming release. See [Migrate from MySQL to PostgreSQL](https://docs.netbird.io/selfhosted/migration/mysql-to-postgresql).                                                     |
 
-For PostgreSQL or MySQL, set the connection string via the `server.store.dsn` field in `config.yaml` or environment variables on the `netbird-server` container. See [Using an External Database](#using-an-external-database) below.
+For PostgreSQL, or the deprecated MySQL engine, set the connection string via the `server.store.dsn` field in `config.yaml` or environment variables on the `netbird-server` container. See [Using an External Database](#using-an-external-database) below.
 
 See [Management Postgres Store](https://docs.netbird.io/selfhosted/maintenance/postgres-store) for detailed PostgreSQL setup.
 
@@ -513,8 +513,6 @@ Alternatively, you can use an environment variable instead of putting the DSN in
 netbird-server:
   environment:
     - NETBIRD_STORE_ENGINE_POSTGRES_DSN=host=db-server user=netbird password=secret dbname=netbird port=5432
-    # Or for MySQL:
-    # - NETBIRD_STORE_ENGINE_MYSQL_DSN=user:password@tcp(host:3306)/netbird
 ```
 
 See [Management Postgres Store](https://docs.netbird.io/selfhosted/maintenance/postgres-store) for detailed setup.

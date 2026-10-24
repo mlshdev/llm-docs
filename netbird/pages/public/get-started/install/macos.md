@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/get-started/install/macos.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/get-started/install/macos.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/macos.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/macos.mdx)
 
 # MacOS Installation
 
@@ -23,6 +23,8 @@ This installs the full NetBird application, including the desktop UI and the dae
 3. This will install the NetBird app into /Applications and add the daemon service
 4. After installing, you can follow the steps from [Running NetBird with SSO Login](#running-netbird-with-sso-login) steps.
 
+> **Note**
+>
 > To uninstall the client remove the app from /Applications
 
 ### Homebrew install
@@ -38,6 +40,8 @@ sudo netbird service uninstall
 brew unlink netbird
 ```
 
+> **Note**
+>
 > netbird will copy any existing configuration from the netbird's default configuration paths to the new NetBird's default location
 
 3. Install the client
@@ -134,9 +138,11 @@ Alternatively, you could use command line. Simply run
 netbird up
 ```
 
-> It will open your browser, and you will be prompt for email and password. Follow the instructions.
+> **Note**
+>
+> It will open your browser and prompt you for your email and password. Follow the instructions.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
 
 Check connection status:
 
@@ -164,6 +170,8 @@ Alternatively, if you are hosting your own Management Service provide `--managem
   netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
 ```
 
+> **Note**
+>
 > You could also omit the `--setup-key` property. In this case, the tool will prompt for the key.
 
 2. Check connection status:

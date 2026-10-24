@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/client-metrics.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/client-metrics.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/client-metrics.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/client-metrics.mdx)
 
 # Client Metrics
 
@@ -52,3 +52,10 @@ The `NB_METRICS_PUSH_ENABLED` environment variable on the client takes precedenc
 
 You can additionally set `NB_METRICS_INTERVAL` to a duration value (e.g., `30m`, `1h`) to override how often metrics
 are pushed.
+
+## Scraping metrics locally
+
+Independently of metrics push, a client can expose the same connection stage, sync, and login metrics, plus live
+connectivity and per-peer latency gauges, on a local Prometheus endpoint that you scrape yourself. The data never
+leaves the machine unless your own scraper collects it. See
+[Local Metrics Endpoint](https://docs.netbird.io/client/local-metrics).

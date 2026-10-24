@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/keycloak.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/keycloak.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/single-sign-on/keycloak.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/single-sign-on/keycloak.mdx)
 
 # Keycloak on NetBird Cloud
 
@@ -6,17 +6,13 @@ You can use Keycloak as your Identity Provider with NetBird, but it will require
 
 1. You need to create a new client
 
-   - Browse to the clients Administration menu and then click in Create client:
+   - Browse to the Clients section of the Administration console and click Create client.
 
-![new-client](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/keycloak-idp/1-new-client.png)
+2. Set the client type to OpenID Connect and enter any client ID and name for the client.
 
-2. Create a client with the type OpenID Connect and add any client ID and name for the client:
+3. Click Next. Under Capability config, turn on Client authentication, leave Authorization off, and select only Standard flow under Authentication flow:
 
-![new-client](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/keycloak-idp/2-new-client-type.png)
-
-3. Click Next and enable the following options for Capability config:
-
-![new-client](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/keycloak-idp/3-new-client-capability.png)
+![Keycloak Capability config with Client authentication on and only Standard flow selected](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/keycloak-idp/3-new-client-capability.png)
 
 4. Click Next and fill the following fields:
 
@@ -24,13 +20,13 @@ You can use Keycloak as your Identity Provider with NetBird, but it will require
 
    Web origins: `+`
 
-![new-client](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/keycloak-idp/4-new-client-callback.png)
+![Keycloak login settings with the NetBird callback as valid redirect URI and web origins set to plus](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/keycloak-idp/4-new-client-callback.png)
 
 5. Click Save.
 
 6. Next we need to retrieve the secret for the client, you can get that in the Credentials tab for the client:
 
-![new-client](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/keycloak-idp/5-new-client-credentials.png)
+![Keycloak client Credentials tab showing the client secret](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/keycloak-idp/5-new-client-credentials.png)
 
 7. Then, share the following information with the NetBird support team at <support@netbird.io>:
 

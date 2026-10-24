@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/security/private-no-inbound.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/security/private-no-inbound.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/security/private-no-inbound.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/security/private-no-inbound.mdx)
 
 # Private Proxy Without Public Inbound Ports
 
@@ -75,6 +75,7 @@ curl -v https://app.proxy.example.com/
 
 ## Related
 
+- [NetBird Reverse Proxy with LEGO DNS Challenge](https://docs.netbird.io/use-cases/security/private-proxy-with-lego) — a complete Docker Compose walkthrough of this pattern with LEGO, a wildcard certificate directory, and automated renewal.
 - [Bring Your Own Proxy](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy) — full BYOP setup and the account-scoped proxy token.
 - [TLS certificate configuration](https://docs.netbird.io/manage/reverse-proxy#tls-certificate-configuration) — all certificate modes (ACME, static, wildcard).
 - [NetBird-Only Access](https://docs.netbird.io/manage/reverse-proxy/authentication#net-bird-only-access-private-services) — restrict services to your NetBird network.

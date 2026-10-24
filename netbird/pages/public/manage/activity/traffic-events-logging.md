@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/activity/traffic-events-logging.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/activity/traffic-events-logging.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/activity/traffic-events-logging.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/activity/traffic-events-logging.mdx)
 
 # Traffic Events Logging
 
@@ -32,7 +32,7 @@ connection on both the user's machine and the CRM server. If the connection was 
 [policy](https://docs.netbird.io/manage/access-control/manage-network-access#managing-policies) that restricts access to the CRM server,
 NetBird would log the blocked event on the peer that refused the connection.
 
-![traffic-events-p2p-diagram](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/p2p-traffic-events.png)
+![traffic-events-p2p-diagram](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/p2p-traffic-events.png)
 
 #### Successful P2P Connection Events
 
@@ -41,7 +41,7 @@ NetBird helps you better understand connection flows by aggregating related even
 For example, in a successful peer-to-peer connection scenario, a user initiates a connection from the peer `Alice` to the peer `server`.
 This is illustrated in the screenshot below.
 
-![traffic-events-p2p-successful-connection](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/p2p-successful-connection.png)
+![traffic-events-p2p-successful-connection](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/p2p-successful-connection.png)
 
 You'll see two aggregated flow records, one reported by each peer (source and destination). The record from `Alice` counts the connection start and end from the initiator's perspective.
 
@@ -59,7 +59,7 @@ The initiating peer `Alice` will still report the connection attempt but won't b
 In this scenario, the `IT Admins to Servers` policy is configured to allow only ping requests (`ICMP`),
 meaning all `HTTP` requests are intentionally not allowed. The screenshot below illustrates this behavior.
 
-![traffic-events-p2p-blocked-connection](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/p2p-blocked-connection.png)
+![traffic-events-p2p-blocked-connection](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/p2p-blocked-connection.png)
 
 ### Peer-to-Network Resource Connections
 
@@ -72,7 +72,7 @@ you used the [NetBird Networks feature](https://docs.netbird.io/manage/networks)
 and port 443, NetBird would log the traffic events for that connection on the user's machine and the routing peer that
 routed the connection to the CRM server. If the connection was blocked, NetBird would log the blocked event on the routing peer.
 
-![traffic-events-routed-diagram](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/routed-traffic-events.png)
+![traffic-events-routed-diagram](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/routed-traffic-events.png)
 
 #### Successful Peer-to-Network Resource Events
 
@@ -81,7 +81,7 @@ The traffic is routed through a routing peer, which logs the connection event an
 The access is permitted by the policy `IT Admins to AWS Servers`, which allows connections over the `TCP` protocol on port `443`.
 Note the `ROUTER` column in the table, which identifies the routing peer responsible for routing to the internal network resource.
 
-![network-resource-succesful-connection](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/network-resource-successful-connection.png)
+![network-resource-succesful-connection](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/network-resource-successful-connection.png)
 
 > **Note**
 >
@@ -94,7 +94,7 @@ The screenshot below demonstrates this behavior: the routing peer blocks a conne
 the policy `IT Admins to AWS Servers` does not permit connections over the `HTTP` protocol on port `6432`.
 The routing peer's aggregate shows the number of dropped attempts, so repeated application retries increase the drop count instead of creating one top-level row for every attempt.
 
-![network-resource-succesful-connection](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/network-resource-blocked-connection.png)
+![network-resource-succesful-connection](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/network-resource-blocked-connection.png)
 
 > **Note**
 >
@@ -125,7 +125,7 @@ However, packet size reporting at the kernel level is disabled by default to min
 > You can optionally enable `Traffic Reporting (Kernel)` to capture additional details, such as network packet sizes,
 > at the kernel level. Be aware that enabling this option may lead to higher CPU usage on the NetBird client.
 
-![traffic-events-logging-settings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/traffic-events-logging-settings.png)
+![traffic-events-logging-settings](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/traffic-events-logging-settings.png)
 
 ### Limiting Traffic Events to Specific Groups
 
@@ -137,13 +137,17 @@ You can scope traffic events logging to only the peers that belong to specific g
 To configure this setting, navigate to `Settings > Networks` in the Experimental section, open the Group Selector under `Enable Traffic Events`
 choose the groups you want to include, and click `Save Groups`.
 
-![traffic-events-groups-logging-settings](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/traffic-events-groups-logging-settings.png)
+![traffic-events-groups-logging-settings](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/traffic-events-groups-logging-settings.png)
+
+Changes to these settings, including the group scope, are pushed to connected peers and take effect without restarting the NetBird client. Every change is also recorded in the [audit events log](https://docs.netbird.io/manage/activity).
 
 ## Log Retention
 
 While in experimental mode, logs are retained for **seven days**.
 Additionally, the current API returns a maximum of **50,000 flow records**.
 This limit may change.
+
+In self-hosted Enterprise deployments, the retention period is set by `NB_PERSISTENCE_RETENTION_PERIOD` on the enricher service. The installer sets it to `168h` (seven days).
 
 ## Report rate
 
@@ -156,6 +160,27 @@ By enabling this feature, you can seamlessly monitor and analyze NetBird network
 enhancing your ability to detect and respond to security events.
 
 For detailed instructions on supported integrations and how to set them up, refer to the [integrations guide](https://docs.netbird.io/manage/activity/event-streaming).
+
+### Streamed event fields
+
+A streamed traffic event uses the same envelope as a streamed audit event: an event ID, a timestamp, and a message. Clients from v0.75 send aggregated events, whose message is always `TYPE_UNKNOWN`, so read activity from the `num_of_*` counts instead. The initiator and target fields are empty, and the reference field is empty or, for Datadog, omitted. Envelope field names depend on the integration: Datadog uses `id` and `timestamp`, Generic HTTP uses `ID` and `Timestamp`. The flow details are in `meta`, under the same keys for every integration unless you set a custom Generic HTTP body template:
+
+- **User**: `user_id`, the ID of the user associated with the source peer.
+- **Flow**: `flow_id`, `reporter_id` (the peer that reported the event), `protocol`, `direction`, `policy_id`, `policy_name`, `icmp_type`, and `icmp_code`.
+- **Source and destination**: `source_id`, `source_name`, `source_addr`, `source_dns_label`, `source_connection_ip`, `source_geo_city`, and `source_geo_country`, with the same set of `destination_*` fields.
+- **Volume**: `rx_bytes`, `rx_packets`, `tx_bytes`, and `tx_packets`.
+- **Counts**: `num_of_starts`, `num_of_ends`, and `num_of_drops`.
+- **Timing**: `received_timestamp`, the time the event reached the NetBird servers.
+
+Compared with API responses, streamed events do not include the user's name or email, the aggregation window start and end, or the operating system of the source and destination. `user_id` is empty when the source peer has no associated user, such as a peer registered with a [setup key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys), and when the source is not a peer.
+
+### Streaming delivery
+
+Each traffic event is saved to the traffic events store before it is streamed, so an event that fails to stream is still visible in the Dashboard and API. The NetBird client resends each event until the NetBird servers acknowledge it. Once an event reaches the servers, every step up to saving it is retried: the servers acknowledge an event only after queueing it, and remove it from the queue only after saving it. If server processing falls behind, events wait in the queue and arrive late rather than being dropped.
+
+In rare cases, such as a server restart while an event is being processed, the same event can be streamed twice. Deduplicate on the event ID.
+
+Changes to a stream destination take up to five minutes to apply, and what happens when the destination is unreachable depends on the integration; see [Delivery](https://docs.netbird.io/manage/activity/event-streaming#delivery).
 
 ## Traffic Events Data
 
@@ -180,7 +205,7 @@ In addition to the data collected by the peers, the NetBird API provides additio
 - **Peer ID**: The unique identifier of the peer.
 - **Resource name**: The name of the resource or network route.
 - **Policy Name**: The name of the policy that allowed the flow.
-- **User ID, name, and email**: The name and email of the user associated with the source peer.
+- **User ID, name, and email**: The name and email of the user associated with the source peer. The API looks these up when you query it; [streamed events](#streamed-event-fields) carry the user ID only.
 - **Reporter ID**: The unique identifier of the peer that reported the traffic event.
 - **Received timestamp**: The timestamp when the event was received by the NetBird servers.
 
@@ -280,13 +305,13 @@ You can use endpoint addresses, destination ports, and the other flow fields to 
 
 The peer Maycons-MacBook-Pro.local initiates a connection to the Web server on destination port TCP/80. A successful aggregate has non-zero start and end counters and totals the packets and bytes transferred in the reporting window:
 
-![P2P TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/p2p-tcp-allow.png)
+![P2P TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/p2p-tcp-allow.png)
 
 Use the reporter, source, destination, direction, protocol, and destination port to align the two perspectives. An end can be reported in a later window when the operating system keeps the TCP session open.
 
 The UDP connection is very similar:
 
-![P2P UDP Allowed](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/p2p-udp-allow.png)
+![P2P UDP Allowed](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/p2p-udp-allow.png)
 
 > **Note**
 >
@@ -296,11 +321,11 @@ When a connection is blocked, you may see similar entries to the following event
 
 **TCP**:
 
-![P2P TCP Blocked](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/p2p-tcp-blocked.png)
+![P2P TCP Blocked](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/p2p-tcp-blocked.png)
 
 **UDP**:
 
-![P2P UDP Blocked](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/p2p-udp-blocked.png)
+![P2P UDP Blocked](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/p2p-udp-blocked.png)
 
 On the refusing side, retries increase `num_of_drops`; the client does not record a successful start or end for traffic it rejected.
 
@@ -312,7 +337,7 @@ On the refusing side, retries increase `num_of_drops`; the client does not recor
 
 ICMP events are similar to TCP and UDP events. The main difference is that ICMP doesn't have ports:
 
-![P2P ICMP Allowed](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/p2p-icmp-allowed.png)
+![P2P ICMP Allowed](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/p2p-icmp-allowed.png)
 
 > **Note**
 >
@@ -324,17 +349,17 @@ Routed events follow the same pattern as P2P events. The main difference is that
 
 **ICMP**:
 
-![Routed ICMP Allowed](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/routed-icmp-allowed.png)
+![Routed ICMP Allowed](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/routed-icmp-allowed.png)
 
 **TCP**:
 
-![Routed TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/routed-tcp-allowed.png)
+![Routed TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/routed-tcp-allowed.png)
 
 For routed aggregates, the source or destination can be a resource or network route. The record identifies the routing peer that reported it. The source or destination identifier can be unknown on the routing-peer side for DNS resources.
 
 For site-2-site connections, the events will be similar to the above examples, but you will see a routing peer for each event:
 
-![S2S TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/traffic-events-logging/s2s-tcp-allowed.png)
+![S2S TCP Allowed](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/traffic-events-logging/s2s-tcp-allowed.png)
 
 ## Limitations
 
@@ -347,6 +372,14 @@ On Linux, you can force a routing peer into userspace mode with three [environme
 ```bash
 sudo netbird service reconfigure --service-env NB_WG_KERNEL_DISABLED=true,NB_FORCE_USERSPACE_FIREWALL=true,NB_FORCE_USERSPACE_ROUTER=true
 ```
+
+### Traffic that is not recorded
+
+Some traffic never produces a traffic event, whatever the peer mode:
+
+- **DNS queries over UDP.** The NetBird client does not record UDP traffic to port `53`, or to ports `5353` and `22054`, which the NetBird DNS forwarder uses on routing peers. This also applies to other UDP traffic on these ports, such as mDNS. DNS over TCP is recorded as an ordinary flow.
+- **Traffic through an exit node.** Flows matched to an exit node route (`0.0.0.0/0`) are not recorded, on the client or on the exit node. Traffic to a destination covered by a more specific route or Networks resource is still recorded.
+- **Access withdrawn by a failed posture check.** When a peer fails a [posture check](https://docs.netbird.io/manage/access-control/posture-checks), the policy stops applying and the connection between the peers is removed. No traffic reaches either peer's firewall, so there is nothing to record as allowed or blocked.
 
 ## Conclusion
 

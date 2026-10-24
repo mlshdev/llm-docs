@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/about-netbird/how-netbird-works.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/about-netbird/how-netbird-works.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/about-netbird/how-netbird-works.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/about-netbird/how-netbird-works.mdx)
 
 # How NetBird Works
 
@@ -16,12 +16,12 @@ users (or machines) have access to the resources for which they are authorized.
 A **Peer** is a machine or any device that is connected to the network.
 It can be a Linux server running in the cloud or on-premises, a personal laptop, mobile phone, or even a Raspberry Pi.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/high-level-dia.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/high-level-dia.png)
 
 With NetBird clients installed and authorized on the Management service, machines form a mesh network connecting
 to each other directly via an encrypted point-to-point WireGuard tunnel.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/mesh.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/mesh.png)
 
 While it is possible to create a full mesh network, it might be not a desirable outcome.
 In this case, [groups and access controls](https://docs.netbird.io/manage/access-control/manage-network-access) can be utilized to limit the access to certain machines.
@@ -40,6 +40,8 @@ The Management Service's responsibilities include:
 - **Keeping the network map.** The Management service stores information about all the registered peers including WireGuard public key that was sent during the registration process.
 - **Managing private IP addresses.** Each peer receives a unique private IP with which it can be identified in the network.
   We use [Carrier Grade NAT](https://en.wikipedia.org/wiki/Carrier-grade_NAT) address space with an allocated address block 100.64.0.0/10.
+  Each account gets its own range inside this block, a randomly chosen /16 by default, and each new peer receives a randomly chosen free address from it.
+  When a peer is deleted, its address is released immediately and can be assigned to a later peer; there is no holding period.
 - **Synchronizing network changes to peers.** The Management Service keeps a control channel open to each peer sending network updates.
   Whenever a new peer joins the network, all other peers that are authorized to connect to it receive an update.
   After that, they are able to establish a connection to the new peer.
@@ -50,7 +52,7 @@ The Management Service's responsibilities include:
 
 The Management service runs in the cloud NetBird-managed. It can also be self-hosted.
 
-![management-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/management.png)
+![management-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/management.png)
 
 ## Client Application
 
@@ -68,7 +70,7 @@ The Client's roles are the following:
 - **Receiving network updates from the Management service.**
   Each peer receives initial configuration and a list of peers with corresponding public keys and IP addresses so that it can establish a point-to-point connection.
 - **Establishing point-to-point WireGuard connection.** To establish a connection with a remote peer, the Client first discovers the most suitable connection candidate, or simply address (IP:port) that other peers can use to connect to it.
-  It then sends it to the remote peer via Signal. This message is encrypted with the peer's private key and a public key of the remote peer.
+  It then sends it to the remote peer via Signal. The message body is encrypted end to end with a shared key that each peer derives from its own private key and the other peer's public key (NaCl `box`: Curve25519, XSalsa20, Poly1305). Signal sees the two peers' public keys, so it knows who is talking to whom, but never the contents. The same shared key also authenticates the message, so there is no separate signature step.
   The remote peer does the same and once the peers can reach each other, they establish an encrypted WireGuard tunnel.
 - **Applying access control policies.** The client application applies access control rules that are received from the Management service.
   The client uses a system's available firewall manager like `nftables` to apply the rules.
@@ -90,7 +92,7 @@ Signal's sole responsibility is:
   peers need to find each other and exchange the most suitable connection candidates.
   This is done through Signal. After a connection has been established, Signal steps out.
 
-![signal-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/signal.png)
+![signal-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/signal.png)
 
 > **Note**
 >
@@ -105,7 +107,7 @@ The Relay service is a [TURN server](https://webrtc.org/getting-started/turn-ser
 In fact, we use an open-source implementation called [Coturn](https://github.com/coturn/coturn).
 The purpose of the Relay service is to gracefully implement a "Plan B" by relaying traffic between peers when a direct point-to-point connection is not possible. However, starting with v0.29.0, a new WebSocket-based relay has been introduced with the intent of replacing the previous TURN relay (Coturn). [More info](https://netbird.io/knowledge-hub/september-newsletter).
 
-![relay-dia](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/about-netbird/relay.png)
+![relay-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/relay.png)
 
 > **Note**
 >

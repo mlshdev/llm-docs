@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/auto-update.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/auto-update.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/auto-update.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/auto-update.mdx)
 
 # Client Automatic Updates
 
@@ -16,7 +16,7 @@ The Automatic Updates feature allows the NetBird client to notify users when a n
 
 ## Enable Automatic Updates
 
-![Automatic Updates](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/peers/auto-update/dashboard.png)
+![Automatic Updates](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/auto-update/dashboard.png)
 
 To enable client auto updates, navigate to **Settings » Clients** in your NetBird dashboard ([app.netbird.io/settings](https://app.netbird.io/settings) on NetBird Cloud, or your own Management dashboard when self-hosting) and select an update method under **Automatic Updates**:
 
@@ -47,9 +47,13 @@ When you need updates to be installed without user interaction, enable the **For
 3. **Update Process**:
    1. If the Peer is running an older version than specified, it will prompt the user to install the update via a system notification and an install entry in the NetBird tray menu.
    2. Client will then download the update package from the official NetBird repository.
-   3. The Peer will then install the update and restart itself to apply the changes.
+   3. The NetBird background service, which runs with system privileges, installs the update and restarts the client to apply it.
 
 When **Force Automatic Updates** is enabled, step 3.1 is skipped, the update is installed automatically in the background without user interaction.
+
+> **Note**
+>
+> Accepting a prompted update does **not** require the user to have administrator rights. The installation in step 3.3 is performed by the NetBird background service, which already runs with system privileges, not by the logged-in user. This is the same install mechanism as a forced update; the only difference is who triggers it. Manually running the installer instead (for example, from the tray's download link when Automatic Updates is off) is a per-machine install and does require elevation.
 
 ## Supported Platforms
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/single-sign-on/duo-security.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/single-sign-on/duo-security.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/single-sign-on/duo-security.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/single-sign-on/duo-security.mdx)
 
 # Duo Security on NetBird Cloud
 
@@ -8,6 +8,7 @@ You can use Duo Security as your Identity Provider with NetBird, but it will req
 >
 > Support for OIDC-compliant IdPs is available on the Team plan and higher.
 > The Free plan supports Google, Microsoft, and social logins.
+> Self-hosted deployments support OIDC-compliant IdPs in both the open source Community Edition and the [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise). See [self-hosted identity providers](https://docs.netbird.io/selfhosted/identity-providers).
 
 ## Prerequisites
 
@@ -19,7 +20,7 @@ Before you start using Duo Single Sign-On, make sure to meet all the requirement
 
 Log in to the [Duo Admin Panel](https://admin.duosecurity.com/). Navigate to **Applications** in the left sidebar, then click **Applications**. Click **+ Add Application** which will open the Application Catalog. Search for **Generic OIDC**, then click **+ Add** next to it.
 
-![duo-select-application](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-select-application.png)
+![The Duo Application Catalog with Generic OIDC selected](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-select-application.png)
 
 ## Step 2: Configure Basic Settings
 
@@ -29,7 +30,7 @@ Configure the Basic Configuration section with the following settings:
 - **Application Type**: Generic OIDC Relying Party - Single Sign-On
 - **User access**: `Enable for all users` (if applicable to all users) or `Enable only for permitted groups` (for fine-grained access control)
 
-![duo-basic-configuration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-basic-configuration.png)
+![The Duo basic configuration form with the application name, type, and user access settings](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-basic-configuration.png)
 
 ## Step 3: Configure Relying Party Settings
 
@@ -38,7 +39,7 @@ Configure the Relying Party section with the following settings:
 - **Grant Type**: Authorization Code, Refresh Tokens
 - **Sign-In Redirect URLs**: `https://login.netbird.io/login/callback`
 
-![duo-relying-party](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-relying-party.png)
+![The Duo Relying Party settings with the authorization code grant type and the NetBird sign-in redirect URL](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-relying-party.png)
 
 ## Step 4: Configure OIDC Response
 
@@ -46,7 +47,7 @@ Configure the OIDC Response section with the following scopes:
 
 - **Scopes**: openid, profile, email
 
-![duo-oidc-response](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-oidc-response.png)
+![The Duo OIDC Response section with the openid, profile, and email scopes selected](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/duo-idp/duo-oidc-response.png)
 
 Click **Save** to complete the application configuration.
 

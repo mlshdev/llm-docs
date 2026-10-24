@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/use-cases/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/use-cases/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/index.mdx)
 
 # Use Cases
 
@@ -46,6 +46,13 @@ You know what you want to achieve; this page finds the guide that gets you there
 | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Implement Zero Trust networking step by step            | [Implement Zero Trust](https://docs.netbird.io/use-cases/security/implement-zero-trust)              |
 | Publish internal services without opening inbound ports | [Private Proxy Without Inbound Ports](https://docs.netbird.io/use-cases/security/private-no-inbound) |
+
+### Roll NetBird out to company devices
+
+| I want to...                                                   | Guide                                                                         |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Install and configure NetBird on every company laptop with MDM | [Roll Out with MDM](https://docs.netbird.io/use-cases/deployment/mdm-rollout) |
+| Stop users changing NetBird's settings on managed devices      | [MDM Integration](https://docs.netbird.io/client/mdm-integration)             |
 
 ### Run NetBird at home
 

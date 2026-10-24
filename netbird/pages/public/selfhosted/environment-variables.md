@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/environment-variables.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/environment-variables.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/environment-variables.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/environment-variables.mdx)
 
 # Environment Variables Configuration
 
@@ -52,12 +52,12 @@ These variables are set in your `setup.env` file before running the configuratio
 
 ### Database Configuration
 
-| Variable                            | Default        | Description                                    |
-| ----------------------------------- | -------------- | ---------------------------------------------- |
-| `NETBIRD_STORE_CONFIG_ENGINE`       | `sqlite`       | Store engine: `sqlite`, `postgres`, or `mysql` |
-| `NETBIRD_STORE_ENGINE_POSTGRES_DSN` | -              | PostgreSQL connection string                   |
-| `NETBIRD_STORE_ENGINE_MYSQL_DSN`    | -              | MySQL connection string                        |
-| `NETBIRD_DATASTORE_ENC_KEY`         | Auto-generated | Encryption key for sensitive data              |
+| Variable                            | Default        | Description                                                                                                                                   |
+| ----------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NETBIRD_STORE_CONFIG_ENGINE`       | `sqlite`       | Store engine: `sqlite`, `postgres`, or `mysql` (deprecated)                                                                                   |
+| `NETBIRD_STORE_ENGINE_POSTGRES_DSN` | -              | PostgreSQL connection string                                                                                                                  |
+| `NETBIRD_STORE_ENGINE_MYSQL_DSN`    | -              | MySQL connection string. Deprecated, see [Migrate from MySQL to PostgreSQL](https://docs.netbird.io/selfhosted/migration/mysql-to-postgresql) |
+| `NETBIRD_DATASTORE_ENC_KEY`         | Auto-generated | Encryption key for sensitive data                                                                                                             |
 
 > **Note**
 >

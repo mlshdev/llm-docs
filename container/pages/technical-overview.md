@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.0: [docs/technical-overview.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/technical-overview.md)
+> Pinned source for Apple container 1.6.1: [docs/technical-overview.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/technical-overview.md)
 
 # Technical Overview
 
@@ -52,7 +52,7 @@ When `container-apiserver` starts, it launches an XPC helper `container-core-ima
 
 ## What limitations does `container` have today?
 
-With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
+With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
 
 ### Releasing container memory to macOS
 

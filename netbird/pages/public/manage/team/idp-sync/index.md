@@ -1,8 +1,8 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/team/idp-sync/index.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/team/idp-sync/index.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/idp-sync/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/idp-sync/index.mdx)
 
 # Provision Users and Groups From Your Identity Provider
 
-![supported-identity-providers](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/supported-identity-providers.png)
+![The Identity Provider Sync tab showing a card for each supported provider](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/supported-identity-providers.png)
 
 Managing private network access in a business environment is a critical yet often cumbersome task.
 As companies grow and evolve, the manual process of granting access for new employees and revoking it for
@@ -20,7 +20,11 @@ eliminating the need for manual grouping.
 
 > **Note**
 >
-> This feature is only available in the cloud version of NetBird in the [Team plan](https://netbird.io/pricing) and above.
+> This feature is available in NetBird Cloud on the [Team plan](https://netbird.io/pricing) and above, and in self-hosted deployments with an [Enterprise Commercial License](https://docs.netbird.io/selfhosted/enterprise). The open source Community Edition does not include it.
+
+> **Note**
+>
+> **Before you roll out on NetBird Cloud**: IdP sync can't add a user who already belongs to another NetBird account, for example because they signed in early with an email domain your account doesn't know yet. Add every domain your users sign in with as a [sign-in domain](https://docs.netbird.io/manage/team/sign-in-domains) first. If a user still doesn't sync, see [User already belongs to another NetBird account](https://docs.netbird.io/help/troubleshooting-user-in-another-account).
 
 This video guide walks you through an example integration with Microsoft Entra ID, covering both user onboarding and
 offboarding scenarios:
@@ -66,4 +70,4 @@ SCIM is a standardized protocol that works with most modern identity providers, 
 
 If your provider is not listed above, contact us at <support@netbird.io> for assistance with your specific IdP setup.
 
-![generic-scim](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/team/idp-sync/generic-scim.png)
+![The Generic SCIM setup dialog in the NetBird dashboard](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/generic-scim.png)

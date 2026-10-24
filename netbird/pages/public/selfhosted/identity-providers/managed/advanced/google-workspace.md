@@ -1,16 +1,16 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/identity-providers/managed/advanced/google-workspace.mdx)
 
 # Google Workspace SSO with NetBird Self-Hosted (Legacy)
 
 > **Warning**
 >
-> The client secret has been removed from the authentication flow. The secret was originally included to support providers like Google Workspace that don't offer a proper PKCE flow, but this is no longer necessary with the embedded IdP.
+> **Using Google directly as NetBird's identity provider is not recommended.** Use the [embedded IdP with Google as an external provider](https://docs.netbird.io/selfhosted/identity-providers/managed/google-workspace#management-setup-recommended) instead. If you already run this standalone setup, migrate with the [External IdP to Embedded IdP migration guide](https://docs.netbird.io/selfhosted/migration/external-to-embedded-idp).
 >
-> If you are using this standalone Google Workspace setup, we strongly recommend migrating to the [embedded IdP setup with Google as an external provider](https://docs.netbird.io/selfhosted/identity-providers/managed/google-workspace#management-setup-recommended). The embedded IdP approach is simpler, fully supported, and does not rely on the deprecated client secret.
+> Google requires a client secret to issue tokens, even with PKCE, so this setup relies on the Management service sending the client secret to every NetBird client. Sending the client secret to clients is deprecated and will be removed in a future release. With the embedded IdP, clients authenticate against NetBird's own IdP, which brokers the login to Google and keeps the client secret on the server.
 
 Use Google accounts for authentication with NetBird. This supports both personal Google accounts and Google Workspace (formerly G Suite) organizations.
 
-## Standalone Setup (Advanced)
+## Standalone Setup (Not Recommended)
 
 > **Note**
 >
@@ -18,11 +18,15 @@ Use Google accounts for authentication with NetBird. This supports both personal
 >
 > We highly recommend using the simpler setup that adds Google as an external IdP directly in the NetBird Management Dashboard. This approach requires minimal configuration, works alongside local users, and doesn't require replacing your embedded IdP. See the [Management Setup (Recommended)](https://docs.netbird.io/selfhosted/identity-providers/managed/google-workspace#management-setup-recommended) section in the main Google Workspace documentation.
 >
-> The standalone setup below replaces your embedded IdP entirely and is only recommended for experienced Google Workspace administrators who need full control over authentication and user management.
+> The standalone setup below replaces your embedded IdP entirely and is not recommended for new or existing deployments.
 
-Use Google Workspace as your primary identity provider instead of NetBird's embedded IdP. This option gives you full control over authentication and user management, is recommended for experienced Google Workspace administrators as it also requires additional setup and ongoing maintenance.
+Use Google Workspace as your primary identity provider instead of NetBird's embedded IdP. This option requires additional setup and ongoing maintenance, depends on the deprecated client secret delivery described above, and has the limitations listed below.
 
-For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/identity-providers/local) is the simpler choice — it's built into NetBird, fully integrated, and requires minimal configuration to get started. For this implementation, go back up to the Management Setup (Recommended) section above.
+For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/identity-providers/local) is the simpler choice — it's built into NetBird, fully integrated, and requires minimal configuration to get started. For this implementation, see the [Management Setup (Recommended)](https://docs.netbird.io/selfhosted/identity-providers/managed/google-workspace#management-setup-recommended) section in the main Google Workspace documentation.
+
+### Limitation: No Device Authorization Flow
+
+Google's device flow requires a client secret when polling for the token, and NetBird clients do not send one, so this setup disables the device flow (`NETBIRD_AUTH_DEVICE_AUTH_PROVIDER="none"` in [Step 7](#step-7-configure-netbird)). Linux and FreeBSD peers without a graphical session, such as servers or SSH sessions, use only the device flow, so they cannot log in with SSO (`netbird login`, `netbird up`) or authenticate with `netbird ssh`. Register those peers with [setup keys](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys), or migrate to the embedded IdP, which supports the device flow.
 
 > **Note**
 >
@@ -40,7 +44,7 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 1. Navigate to [OAuth consent](https://console.cloud.google.com/apis/credentials/consent)
 2. Select **Internal** User Type and click **Create**
 
-![Consent screen type](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-type.png)
+![Consent screen type](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-type.png)
 
 3. Fill in the form:
    - **App name**: `Netbird`
@@ -52,12 +56,12 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 6. Select `/auth/userinfo.email`, `/auth/userinfo.profile`, and `openid`
 7. Click **UPDATE**
 
-![Consent screen scopes](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-scopes.png)
+![Consent screen scopes](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-scopes.png)
 
 8. Click **SAVE AND CONTINUE**
 9. Review the summary and click **BACK TO DASHBOARD**
 
-![Consent screen summary](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-summary.png)
+![Consent screen summary](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-consent-screen-summary.png)
 
 ### Step 2: Create OAuth 2.0 Credentials
 
@@ -73,11 +77,11 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
      - `http://localhost:53000`
 4. Click **CREATE**
 
-![OAuth client](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-oauth-client.png)
+![OAuth client](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-oauth-client.png)
 
 5. Note **Client ID** and **Client Secret**
 
-![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-oauth-client-created.png)
+![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-oauth-client-created.png)
 
 ### Step 3: Create Service Account
 
@@ -89,14 +93,14 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
 4. Note the service account email address
 5. Click **DONE**
 
-![Create service account](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-service-account-create.png)
+![Create service account](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-service-account-create.png)
 
 ### Step 4: Create Service Account Keys
 
 1. Navigate to [API Credentials](https://console.cloud.google.com/apis/credentials)
 2. Under **Service Accounts**, click **netbird** to edit
 
-![Edit service account](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-edit-service-account.png)
+![Edit service account](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-edit-service-account.png)
 
 3. Click the **Keys** tab
 4. Click **Add key** → **Create new key**
@@ -118,22 +122,22 @@ For most deployments, the [embedded IdP](https://docs.netbird.io/selfhosted/iden
    - **Description**: `User Management ReadOnly`
 5. Click **CONTINUE**
 
-![New role info](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-new-role-info.png)
+![New role info](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-new-role-info.png)
 
 6. Scroll to **Admin API privileges** and add:
    - **Users**: `Read`
 7. Click **CONTINUE**
 
-![Privileges review](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-privileges-review.png)
+![Privileges review](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-privileges-review.png)
 
 8. Click **CREATE ROLE**
 9. Click **Assign service accounts**
 10. Add the service account email address
 11. Click **ADD** then **ASSIGN ROLE**
 
-![Assign role](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-assign-role.png)
+![Assign role](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-assign-role.png)
 
-![Service account privileges](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-service-account-privileges.png)
+![Service account privileges](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/advanced/google-service-account-privileges.png)
 
 12. Navigate to [Account Settings](https://admin.google.com/ac/accountsettings/profile) and note the **Customer ID**
 

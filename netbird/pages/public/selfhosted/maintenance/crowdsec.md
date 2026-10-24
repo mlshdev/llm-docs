@@ -1,12 +1,14 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/maintenance/crowdsec.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/maintenance/crowdsec.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/maintenance/crowdsec.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/maintenance/crowdsec.mdx)
 
 # CrowdSec IP Reputation
 
-![CrowdSec IP Reputation Overview](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/maintenance/crowdsec-overview.png)
+![CrowdSec IP Reputation Overview](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/maintenance/crowdsec-overview.png)
 
 [CrowdSec](https://www.crowdsec.net) is an open-source security engine that combines local detection with a crowdsourced threat feed. Agents installed across the CrowdSec community share decisions about malicious IPs, and that shared intelligence is redistributed as blocklists that any CrowdSec instance can consume. NetBird Proxy integrates with CrowdSec to check every incoming client IP against a local decision cache and block connections from flagged addresses before they reach your services. For background on the wider CrowdSec platform, see the [CrowdSec documentation](https://docs.crowdsec.net).
 
 This page covers how the integration works and how to operate it. For full setup instructions, see [Step 7: Enable CrowdSec IP reputation](https://docs.netbird.io/selfhosted/migration/enable-reverse-proxy#step-7-optional-enable-crowdsec-ip-reputation) in the Enable Reverse Proxy guide.
+
+For version selection and updates to an existing deployment, see [Upgrading Traefik and CrowdSec](https://docs.netbird.io/selfhosted/maintenance/upgrade#upgrading-traefik-and-crowd-sec).
 
 > **Note**
 >
@@ -48,7 +50,7 @@ CrowdSec decisions include several remediation types (ban, captcha, throttle). T
 
 Observe-mode verdicts are recorded in the NetBird proxy access logs, not in the CrowdSec Console. When a service is in observe mode and CrowdSec flags an IP, the connection is allowed and the verdict is attached to the log entry as metadata (`crowdsec_mode` and `crowdsec_verdict`), with no deny reason contributed by CrowdSec. In the dashboard's reverse proxy event log, these entries render with an observe-mode badge on the reason cell and show the decision type (ban, captcha, throttle, unavailable) so you can audit what would have been blocked before switching the service to enforce. The CrowdSec Console shows the aggregate view of community decisions and scenarios but does not know which of your proxy requests the bouncer was consulted on.
 
-![CrowdSec observe-mode badge in proxy event logs](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/maintenance/crowdsec-observe-badge.png)
+![CrowdSec observe-mode badge in proxy event logs](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/maintenance/crowdsec-observe-badge.png)
 
 Access restrictions are evaluated in a fixed order: CIDR, then country, then CrowdSec. A denial at any earlier layer short-circuits the rest, and CrowdSec can never relax a CIDR or country decision. See the [restriction evaluation order](https://docs.netbird.io/manage/reverse-proxy/authentication#restriction-evaluation-order) reference for the full precedence table and worked examples.
 
@@ -171,6 +173,6 @@ docker compose exec crowdsec cscli alerts list
 docker compose exec crowdsec cscli decisions delete --ip <the-ip>
 ```
 
-`cscli alerts list` includes a `kind` column that identifies which component generated the alert: `crowdsec` for local log detection, `waf` for an AppSec match, and `cscli` for a manually added decision. AppSec matches block the individual request but do not create an IP decision, so they never appear in `cscli decisions list`; use `cscli metrics show appsec` to inspect those instead.
+`cscli alerts list` includes a `kind` column that identifies which component generated the alert: `crowdsec` for local log detection, `waf` for an AppSec match, and `cscli` for a manually added decision. An individual AppSec match blocks only that request and does not appear in `cscli decisions list`; use `cscli metrics show appsec` to inspect those instead. If you installed the `crowdsecurity/appsec-virtual-patching` collection for [dashboard protection](https://docs.netbird.io/selfhosted/maintenance/crowdsec-dashboard), matches against two different AppSec rules from the same IP within about a minute trigger the `crowdsecurity/appsec-vpatch` scenario, which creates a regular 4-hour IP ban that does appear in `cscli decisions list`. Loopback and private IPv4 addresses are exempt from this ban through the default `crowdsecurity/whitelists` parser, although their individual matching requests are still blocked.
 
 For dashboard lockouts specifically, see [Recovering from a dashboard lockout](https://docs.netbird.io/selfhosted/maintenance/crowdsec-dashboard#recovering-from-a-dashboard-lockout).

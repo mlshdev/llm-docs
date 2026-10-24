@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/vllm/get-started.mdx](https://github.com/runpod/docs/blob/880233fccf4e38598203496f69190ca6b180ea19/serverless/vllm/get-started.mdx)
+> Pinned source for Runpod main: [serverless/vllm/get-started.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/serverless/vllm/get-started.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/vllm/get-started
 
 # Deploy vLLM on Runpod Serverless
@@ -51,13 +51,13 @@ Your endpoint will now begin initializing. This may take several minutes while R
 
 Once deployment is complete, make a note of your **Endpoint ID**, as you'll need this to make API requests.
 
-![](https://raw.githubusercontent.com/runpod/docs/880233fccf4e38598203496f69190ca6b180ea19/images/4a0706af-serverless-endpoint-id.png)
+![](https://raw.githubusercontent.com/runpod/docs/2f1d12b792818b3af3edd8d503a5e35f760d1410/images/4a0706af-serverless-endpoint-id.png)
 
 ## Step 4: Send a test request using the UI
 
 To test your worker, click the **Requests** tab in the endpoint detail page:
 
-![Runpod serverless endpoint details page](https://raw.githubusercontent.com/runpod/docs/880233fccf4e38598203496f69190ca6b180ea19/images/8f34ba77-serverless-get-started-endpoint-details.png)
+![Runpod serverless endpoint details page](https://raw.githubusercontent.com/runpod/docs/2f1d12b792818b3af3edd8d503a5e35f760d1410/images/8f34ba77-serverless-get-started-endpoint-details.png)
 
 On the left you should see the default test request:
 

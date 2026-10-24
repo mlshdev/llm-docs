@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/selfhosted-quickstart.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/selfhosted-quickstart.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/selfhosted-quickstart.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/selfhosted-quickstart.mdx)
 
 # Self-Hosting Quickstart Guide (5 min)
 
@@ -104,7 +104,7 @@ See an example `config.yaml` file in the [NetBird GitHub repository](https://git
 
 The script deploys NetBird **without any users**. Once complete, you'll need to create your first user:
 
-![NetBird setup page](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/quickstart/setup.png)
+![NetBird setup page](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/quickstart/setup.png)
 
 1. Open your browser and navigate to `https://netbird.example.com`
 2. You'll be redirected to the setup page (`/setup`)
@@ -122,6 +122,51 @@ You can then log in with your email and password.
 
 For automated deployments, you can create the first owner user through the setup API and optionally receive a Personal Access Token for bootstrapping resources. See [Automated setup with a Personal Access Token](https://docs.netbird.io/selfhosted/automated-setup).
 
+## Unattended installation
+
+When you install from cloud-init, a CI pipeline, or a Terraform provisioner, nobody is there to answer the script's questions. Answer them in advance with environment variables instead, and the script installs without prompting.
+
+For each question, the script uses the matching environment variable if it is set and not empty. An empty variable counts as unset: the script asks on the terminal, or, when there is no terminal, uses the default, or stops if the answer is required. So with no terminal at all, the script runs unattended on its own. Set `NETBIRD_NON_INTERACTIVE=true` if your automation attaches a terminal that nobody is watching.
+
+This installs the setup from the steps above (built-in Traefik with a Let's Encrypt certificate) with no prompts:
+
+```bash
+export NETBIRD_DOMAIN=netbird.my-domain.com
+export NETBIRD_LETSENCRYPT_EMAIL=admin@my-domain.com
+export NETBIRD_NON_INTERACTIVE=true
+curl -fsSL https://github.com/netbirdio/netbird/releases/latest/download/getting-started.sh | bash
+```
+
+> **Note**
+>
+> The variables must be set for `bash`, not `curl`. Export them first, as above, or set them after the pipe: `curl -fsSL <url> | NETBIRD_DOMAIN=netbird.my-domain.com bash`. If you set them before `curl`, only `curl` sees them, and the script stops with `NETBIRD_DOMAIN is required for a non-interactive install.`
+
+| Variable                           | Default                                                        | Used with                 | What it sets                                                                                   |
+| ---------------------------------- | -------------------------------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------- |
+| `NETBIRD_DOMAIN`                   | Required                                                       | Every option              | The domain of your NetBird server, for example `netbird.my-domain.com`                         |
+| `NETBIRD_LETSENCRYPT_EMAIL`        | Required                                                       | Option `0`                | The email address for Let's Encrypt certificate notifications                                  |
+| `NETBIRD_REVERSE_PROXY_TYPE`       | `0`                                                            | Every option              | The reverse proxy option, `0` to `5`, from [Reverse Proxy Selection](#reverse-proxy-selection) |
+| `NETBIRD_ENABLE_PROXY`             | `false`                                                        | Option `0`                | Whether to enable the [NetBird Proxy service](#enable-the-netbird-proxy-service)               |
+| `NETBIRD_ENABLE_CROWDSEC`          | `false`                                                        | Option `0`, proxy enabled | Whether to add [CrowdSec IP reputation](#crowdsec-ip-reputation-optional)                      |
+| `NETBIRD_TRAEFIK_EXTERNAL_NETWORK` | Empty                                                          | Option `1`                | The Docker network of your existing Traefik                                                    |
+| `NETBIRD_TRAEFIK_ENTRYPOINT`       | `websecure`                                                    | Option `1`                | The entrypoint of your existing Traefik                                                        |
+| `NETBIRD_TRAEFIK_CERTRESOLVER`     | Empty                                                          | Option `1`                | The certificate resolver of your existing Traefik                                              |
+| `NETBIRD_BIND_LOCALHOST_ONLY`      | `true`                                                         | Options `2` to `5`        | Whether NetBird's HTTP ports listen on `127.0.0.1` only                                        |
+| `NETBIRD_EXTERNAL_PROXY_NETWORK`   | Empty                                                          | Options `2` to `4`        | The Docker network your reverse proxy runs on                                                  |
+| `NETBIRD_TRUSTED_PEERS`            | The built-in Traefik's address for option `0`, empty otherwise | Every option              | The address your reverse proxy reaches the NetBird server from, for example `172.20.0.5/32`    |
+| `NETBIRD_NON_INTERACTIVE`          | Not set                                                        | Every option              | `true` never prompts, even when a terminal is available                                        |
+
+The comment block at the top of [`getting-started.sh`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/getting-started.sh) is the authoritative list. It also has `NETBIRD_AGENT_NETWORK`, which installs the [Agent Network](https://docs.netbird.io/agent-network/how-it-works) preset instead of this setup. The variables need NetBird v0.77.1 or later, and `NETBIRD_TRUSTED_PEERS` needs v0.79.0 or later.
+
+Before you automate the install, know that:
+
+- **An invalid domain stops the script.** Unattended, a domain with a scheme (`https://`) or a port, a bare IP address, or the placeholder `netbird.example.com` ends the run instead of asking for another. A domain that does not resolve yet only prints a warning, but certificate issuance and client connections fail until it does, so create the DNS record first.
+- **Set `NETBIRD_TRUSTED_PEERS` if you use your own reverse proxy (options `1` to `5`).** Without it, the NetBird server trusts forwarded client IP headers from any source, not only from your proxy. The script only prints a warning, which is easy to miss in an unattended run.
+- **The script does not wait for your reverse proxy.** Interactively, options `2`, `4` and `5` pause until you confirm that your proxy is configured. Unattended, the script starts the containers straight away, and you configure the proxy afterwards.
+- **A rerun never overwrites an installation.** If the directory already has a generated `config.yaml`, the script stops and lists the files to remove. Run it in a fresh directory.
+
+Like the interactive install, an unattended install creates no users. Create the first user in the browser, as described in [Initial setup](#initial-setup-onboarding), or from your automation with the [setup API](https://docs.netbird.io/selfhosted/automated-setup).
+
 ## Add More Users
 
 NetBird includes built-in local user management powered by an embedded [Dex](https://dexidp.io/) server, allowing you to create and manage users directly from the Dashboard without requiring an external identity provider. You can also add external identity providers for SSO authentication alongside local users.
@@ -135,10 +180,12 @@ NetBird includes built-in local user management powered by an embedded [Dex](htt
 
 Once your NetBird instance is running, refer to these guides for ongoing maintenance:
 
+Traefik and CrowdSec are updated separately from NetBird. See [Upgrading Traefik and CrowdSec](https://docs.netbird.io/selfhosted/maintenance/upgrade#upgrading-traefik-and-crowd-sec) for version selection, update steps, and verification, including the optional dashboard AppSec plugin.
+
 ### Tiles
 
 - **Id:** maintenance
-- **Items:** \[Backup]\(/selfhosted/maintenance/backup) - Back up your NetBird configuration and data to protect against data loss.; \[Upgrade]\(/selfhosted/maintenance/upgrade) - Upgrade your NetBird installation to the latest version.
+- **Items:** \[Backup]\(/selfhosted/maintenance/backup) - Back up your NetBird configuration and data to protect against data loss.; \[Upgrade]\(/selfhosted/maintenance/upgrade) - Upgrade NetBird, Traefik, and CrowdSec, and verify your deployment.
 
 ### Tiles
 

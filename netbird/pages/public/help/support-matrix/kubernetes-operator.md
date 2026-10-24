@@ -1,10 +1,10 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/help/support-matrix/kubernetes-operator.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/help/support-matrix/kubernetes-operator.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/support-matrix/kubernetes-operator.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/support-matrix/kubernetes-operator.mdx)
 
 # Kubernetes Operator Support Matrix
 
 ## Kubernetes compatibility
 
-The NetBird Kubernetes operator targets the Kubernetes minor versions that are currently receiving patch releases from upstream. The [Kubernetes release policy](https://kubernetes.io/releases/) keeps release branches active for the three most recent minor versions, with roughly one year of patch support each — the operator tracks that same window.
+The NetBird Kubernetes operator targets the Kubernetes minor versions that are currently receiving patch releases from upstream. The [Kubernetes release policy](https://kubernetes.io/releases/) keeps release branches active for the three most recent minor versions, with roughly one year of patch support each. The operator tracks that same window.
 
 In practice this means the operator avoids depending on Kubernetes APIs or features that are not yet available across every supported minor version. When upstream drops a minor version from patch support, the operator may begin adopting capabilities that became generally available during that version's lifetime.
 
@@ -12,6 +12,20 @@ In practice this means the operator avoids depending on Kubernetes APIs or featu
 
 The operator is developed against the latest NetBird control-plane release. Older control-plane versions may continue to work, but compatibility is not actively verified outside the current release.
 
+## NetBird client compatibility
+
+Each operator release is built and tested against a specific NetBird release, and it deploys that exact NetBird client by default. The current operator release, `v0.8.0`, is tested and supported with NetBird `v0.72.4`. Newer NetBird client releases may work, but they are not tested against the operator and are not officially supported.
+
+| NetBird Kubernetes operator | Tested NetBird client |
+| --------------------------- | --------------------- |
+| `v0.8.0`                    | `v0.72.4`             |
+| `v0.7.0`                    | `v0.72.4`             |
+| `v0.6.0`                    | `v0.71.4`             |
+| `v0.5.0`                    | `v0.71.2`             |
+| `v0.4.0`, `v0.4.1`          | `v0.70.4`             |
+
+Each release pins the client image to its tested version by digest, so a default install already runs the supported combination. Operator `v0.8.0` deploys `ghcr.io/netbirdio/netbird:0.72.4`. Overriding the image with `routingClientImage` in the Helm chart values can be done, but is neither supported nor tested.
+
 ## Reporting compatibility issues
 
-If you hit a problem on a supported combination, see [Report bugs and issues](https://docs.netbird.io/help/report-bug-issues). Include your operator version, Kubernetes version (`kubectl version`), and NetBird control-plane version.
+If you hit a problem on a supported combination, see [Report bugs and issues](https://docs.netbird.io/help/report-bug-issues). Include your operator version, Kubernetes version (`kubectl version`), NetBird control-plane version, and the NetBird client version, along with any `routingClientImage` override you have set.

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/activity/event-streaming/amazon-firehose.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/activity/event-streaming/amazon-firehose.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/activity/event-streaming/amazon-firehose.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/activity/event-streaming/amazon-firehose.mdx)
 
 # Stream Network Activity to Amazon Data Firehose
 
@@ -8,7 +8,7 @@ to ingest, transform and analyze your network activity events.
 
 > **Note**
 >
-> This feature is only available in the cloud version of NetBird.
+> This feature is available in the cloud version of NetBird and in self-hosted deployments with an [enterprise license](https://docs.netbird.io/selfhosted/enterprise).
 
 ## Prerequisites
 
@@ -59,17 +59,17 @@ If you don't have the required permissions, ask your AWS administrator to grant 
 
 - Navigate to the [Integrations » Event Streaming](https://preview.netbird.io/integrations) tab in the NetBird dashboard
 
-![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
+![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
 
 - Enable and configure the `Amazon Data Firehose` integration
 - First select the region your Firehose stream is created in
 
-![firehose-region-select](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/amazon-firehose/firehose-region-select.png)
+![firehose-region-select](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/amazon-firehose/firehose-region-select.png)
 
 - Then enter the Firehose stream name you created in Step 1 and click `Next`
 
-![firehose-stream-name](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/amazon-firehose/firehose-stream-name.png)
+![firehose-stream-name](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/amazon-firehose/firehose-stream-name.png)
 
 - Enter the `Access key` and `Secret access key` you created in Step 2 and click `Connect`
 
-![firehose-iam-credentials](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/manage/activity/event-streaming/amazon-firehose/firehose-iam-credentials.png)
+![firehose-iam-credentials](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/amazon-firehose/firehose-iam-credentials.png)

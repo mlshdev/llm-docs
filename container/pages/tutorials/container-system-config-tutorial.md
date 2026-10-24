@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.0: [docs/tutorials/container-system-config-tutorial.md](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/tutorials/container-system-config-tutorial.md)
+> Pinned source for Apple container 1.6.1: [docs/tutorials/container-system-config-tutorial.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/container-system-config-tutorial.md)
 
 # Customize `container` default configuration values
 
@@ -16,7 +16,7 @@ The `container` service loads values from these TOML files at startup, with firs
 1. Your user file at `~/.config/container/config.toml`.
 2. An optional file shipped with the `container` package install at `<installRoot>/etc/container/config.toml`.
 
-Any key absent from both files falls back to a hardcoded default. For the full schema and defaults, see the [`config.toml` reference](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/container-system-config.md).
+Any key absent from both files falls back to a hardcoded default. For the full schema and defaults, see the [`config.toml` reference](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md).
 
 ## Create a custom user TOML configuration file
 
@@ -46,7 +46,7 @@ memory = "4g"
 domain = "test"
 ```
 
-Each top-level table maps directly to a section of [ContainerSystemConfig](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/container-system-config.md).
+Each top-level table maps directly to a section of [ContainerSystemConfig](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md).
 
 ### Restart the `container` service
 
@@ -67,7 +67,7 @@ sudo container system dns create test
 ```
 
 Enter your administrator password when prompted. See [Networking: Set up DNS-based
-container names](https://github.com/apple/container/blob/ca4884f8f3a13b62c90ea2fb3834f214d61fb91c/docs/networking.md#set-up-dns-based-container-names) for what this step
+container names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#set-up-dns-based-container-names) for what this step
 does.
 
 ### Verify the values are loaded

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.77.1: [agent-network/README.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/agent-network/README.md)
+> Pinned source for NetBird v0.81.4: [agent-network/README.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/agent-network/README.md)
 
 # NetBird Agent Network
 
@@ -42,6 +42,35 @@ You can then use this private endpoint to configure your AI agents, whether that
 Full step-by-step setup:
 **<https://docs.netbird.io/agent-network/quickstart>**
 
+## Client settings that don't follow the endpoint
+
+Most of an agent's traffic follows the base URL you hand it, but a few
+client-side checks call their vendor directly and never reach the proxy. On a
+network that blocks direct egress they fail even though inference works, so
+they are worth setting once when you roll the endpoint out.
+
+For Claude Code:
+
+- **Fast mode** checks availability against `api.anthropic.com` rather than the
+  configured base URL. Set `CLAUDE_CODE_SKIP_FAST_MODE_ORG_CHECK=1` when the
+  agent authenticates with `ANTHROPIC_AUTH_TOKEN` alone (the usual shape when
+  the proxy injects the real provider key) or when a TLS-inspecting proxy
+  answers the check itself. Set
+  `CLAUDE_CODE_SKIP_FAST_MODE_NETWORK_ERRORS=1` when the network refuses the
+  connection outright. Fast mode is an Anthropic-API feature, so it is
+  unavailable on a Bedrock- or Vertex-backed endpoint whatever you set.
+- **Model discovery** is off by default. Set
+  `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` for the picker to list the
+  models your policies authorise; the proxy filters the response to that set.
+  The client gives discovery a three-second budget and treats any redirect as
+  a failure, so the endpoint must serve `/v1/models` directly.
+- **The WebFetch domain safety check** also calls `api.anthropic.com` directly
+  and is unaffected by the variables above.
+
+Allowing direct egress to `api.anthropic.com` covers the network cases but not
+the credential one, where the check reaches Anthropic and is rejected because
+the agent presents a proxy-issued key.
+
 ## Architecture
 
 Agent Network is built on two existing NetBird capabilities:
@@ -67,6 +96,42 @@ components:
 - `management/internals/modules/reverseproxy/`
   — the management-side control plane: providers, policies, guardrails, limits, routing,
   and usage/access logs.
+
+## Access roles
+
+Agent Network permissions build on the account permission matrix
+(`management/server/permissions/`). The
+`agent_network` area is split into dotted submodules (`agent_network.providers`,
+`.policies`, `.guardrails`, `.budgets`, `.usage`, `.logs`, `.settings`); a role may
+grant a single submodule or the parent, which cascades to all of them.
+
+Two roles delegate Agent Network access without account-admin rights:
+
+- **`agent_network_admin`** — full control over the whole `agent_network` area plus
+  read-only users, groups, peers, and account info (needed to build policies).
+  Nothing else in the account.
+- **`usage_viewer`** — the regular User baseline plus read on
+  `agent_network.usage` (the aggregated usage and cost overview) and
+  `agent_network.logs` (the account-wide request-level access logs, which can
+  contain captured prompts), and read-only access to the resources those
+  filters resolve against: users, groups, peers, and the provider list
+  (connection config redacted — no upstream URLs or operator-supplied header
+  values). No policies, guardrails, budgets, or settings.
+
+Every authenticated user, regardless of role, can read the caller-scoped
+self-service endpoint `GET /api/agent-network/agent-config` (the endpoint, providers,
+and models the caller's own policies allow — what a local AI tool needs and nothing
+more). The regular usage and access-log endpoints self-scope instead of denying:
+a caller without the account-wide grant gets their own rows back, so "my usage"
+and "my requests" are the same endpoints the admin dashboard uses. The provider
+list self-scopes the same way — a caller without the providers grant gets the
+providers their own policies authorize, reduced to the display surface, with
+each provider's model list cut to what the caller's policy guardrails and the
+provider's declared models effectively permit (the same computation the setup
+answer and the proxy use). This feeds the dashboard's provider and model
+filters. Role
+definitions live in
+`management/server/permissions/roles/`.
 
 ## Documentation
 

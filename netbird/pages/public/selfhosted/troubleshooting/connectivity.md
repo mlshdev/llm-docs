@@ -1,22 +1,36 @@
-> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/selfhosted/troubleshooting/connectivity.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/selfhosted/troubleshooting/connectivity.mdx)
+> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/troubleshooting/connectivity.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/troubleshooting/connectivity.mdx)
 
 # Connectivity issues
 
 Peer connectivity and relay problems on a self-hosted deployment. For other areas, start from [Troubleshooting](https://docs.netbird.io/selfhosted/troubleshooting).
 
+## Debugging relay connections
+
+When peers can't establish a direct connection, they fall back to the NetBird relay. In the combined setup, netbird-server runs the relay itself and serves it at `/relay` on TCP/443 through your reverse proxy. It also runs STUN on UDP/3478. There is no TURN server.
+
+To check the relay, run `netbird status -d` on a client and read the `Relays:` list. A working setup lists your STUN server and relay as available:
+
+```text
+Relays:
+  [stun:netbird.example.com:3478] is Available
+  [rels://netbird.example.com:443] is Available via ws
+```
+
+If it reads `Unavailable, reason: ...`, the reason names the failure. The most common cause is a reverse proxy that doesn't route `/relay` to netbird-server or doesn't allow the WebSocket upgrade. Compare your proxy with the routes in [External Reverse Proxy Setup](https://docs.netbird.io/selfhosted/external-reverse-proxy).
+
 ## Debugging TURN connections
 
-When peers can't establish a direct connection, they fall back to the TURN (relay) server. If the connection still fails with relay, confirm your TURN configuration is correct and reachable.
+This section applies to older multi-container deployments that run Coturn, configured in the `TURNConfig` section of `management.json`. The combined setup has no TURN server; use [Debugging relay connections](#debugging-relay-connections) instead.
 
-To test it, open the [Trickle ICE test tool](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice). In the **ICE servers** box, remove the default server and add your TURN server. Replace netbird.DOMAIN.com and PASSWORD with your STUN/TURN details from your configuration (`config.yaml` for the combined setup, or the `TURNConfig` section in `management.json` for older multi-container setups), then click Add server.
+To test it, open the [Trickle ICE test tool](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice). In the **ICE servers** box, remove the default server and add your TURN server. Replace netbird.DOMAIN.com and PASSWORD with your STUN/TURN details from the `TURNConfig` section in `management.json`, then click Add server.
 
-![The Trickle ICE test tool with a NetBird STUN/TURN server added to the ICE servers list](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/troubleshooting/turn.png)
+![The Trickle ICE test tool with a NetBird STUN/TURN server added to the ICE servers list](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/troubleshooting/turn.png)
 
 *Add your STUN/TURN server in the ICE servers box, then click Add server.*
 
 Gather candidates and read the result:
 
-![Trickle ICE test output listing host, srflx, and relay candidate types](https://raw.githubusercontent.com/netbirdio/docs/d905fda2a3f04a2066746875d09e51a3fe62dfed/public/docs-static/img/selfhosted/troubleshooting/turn-test-out.png)
+![Trickle ICE test output listing host, srflx, and relay candidate types](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/troubleshooting/turn-test-out.png)
 
 *A working TURN server returns `srflx` and `relay` candidates.*
 
@@ -28,7 +42,7 @@ The candidate types are `host` (local address), `srflx` (STUN reflexive address)
 
 **Likely causes and fixes** (most common first):
 
-1. **STUN/TURN is unreachable.** Confirm UDP/3478 (STUN/TURN) is open, then verify the relay path with the [TURN test above](#debugging-turn-connections).
+1. **STUN or the relay is unreachable.** Confirm UDP/3478 (STUN) and TCP/443 are open, then check the relay with [Debugging relay connections](#debugging-relay-connections).
 2. **A host firewall is dropping traffic** on one or both peers. Check the local firewall rules on each peer.
 3. **The peer itself is unhealthy.** Run `netbird status -d` on both peers and check the connection type and last handshake.
 
@@ -42,6 +56,6 @@ The candidate types are `host` (local address), `srflx` (STUN reflexive address)
 
 1. **TCP/443 is blocked** between the client and the server. Confirm the port is open end to end.
 2. **DNS doesn't resolve your domain** to the server's public IP. Check resolution from the client.
-3. **Management is down or erroring.** Review `docker compose logs management`, and test the endpoint directly: `curl -v https://YOUR_DOMAIN/api/health`.
+3. **Management is down or erroring.** Review `docker compose logs netbird-server` (`management` on installs from before v0.65.0), and test the endpoint through your proxy: `curl -s https://YOUR_DOMAIN/api/instance`.
 
-**Confirm**: `curl https://YOUR_DOMAIN/api/health` returns a healthy response, and `netbird status` shows `Management: Connected`.
+**Confirm**: `curl -s https://YOUR_DOMAIN/api/instance` returns JSON with a `setup_required` field, and `netbird status` shows `Management: Connected`.
