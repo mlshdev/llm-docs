@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/19c06936fd78b9249fc65045c9d855b6c28758e1/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/46f23be8b1976ed4c8ec85584daabcf0e57a7b9e/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -30568,6 +30568,8 @@ window matching the provided regular expressions is captured.
 This source does NOT hold a stable FPS. It returns frames at whatever rate the compositor
 provides them, only capped by the `max_framerate`.
 If you need a stable rate, you need to add an fps filter to drop/duplicate frames as needed.
+Note that a static source may not deliver any frames at all, which also stalls
+the fps filter; see `dup_frames`.
 
 If the capture source disappears mid-capture (window closed, monitor disconnected), the filter will return EOF.
 
@@ -30641,6 +30643,13 @@ See `resize_mode`.
 - premultiplied
   If set to 1, return frames with premultiplied alpha. Default is 0 (straight
   alpha).
+
+- dup\_frames
+  If enabled (the default), the last frame is output again whenever the source
+  delivered no new frame within one `max_framerate` interval, and black
+  frames are output until the source delivered its first frame. This keeps the
+  output flowing while the captured content is static. The output rate is still
+  not constant, add an `fps` filter if needed.
 
 - resize\_mode
   Defines how the captured content is fitted into the output canvas size.
