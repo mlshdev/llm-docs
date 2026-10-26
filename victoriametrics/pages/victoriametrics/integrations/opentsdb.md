@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/integrations/opentsdb.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/integrations/opentsdb.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/integrations/opentsdb.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/integrations/opentsdb.md)
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive inserts via
 [telnet put protocol](http://opentsdb.net/docs/build/html/api_telnet/put.html) and [HTTP /api/put requests](http://opentsdb.net/docs/build/html/api_http/put.html)

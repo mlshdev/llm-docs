@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/vllm/environment-variables.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/serverless/vllm/environment-variables.mdx)
+> Pinned source for Runpod main: [serverless/vllm/environment-variables.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/serverless/vllm/environment-variables.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/vllm/environment-variables
 
 # vLLM environment variables
@@ -8,6 +8,13 @@ Configure your vLLM workers using environment variables. Review setup, configura
 Environment variables let you configure your vLLM workers without rebuilding your Docker image. You can customize model behavior, performance settings, and other deployment options to suit your needs.
 
 To set environment variables, go to your [endpoint settings](https://docs.runpod.io/serverless/endpoints/overview#edit-an-endpoint) and add them under **Environment Variables**.
+
+The latest vLLM worker release, [v2.30.1](https://github.com/runpod-workers/worker-vllm/releases), is built on vLLM v0.32.0. The tables below list common settings, but you're not limited to them:
+
+- Any environment variable named after a `vllm serve` flag in upper snake case becomes that flag. For example, `MAX_MODEL_LEN=4096` becomes `--max-model-len 4096`.
+- `VLLM_EXTRA_ARGS` passes extra flags straight to `vllm serve`. They're added last, so they override any earlier setting. Use it for flags that don't have an environment variable, for example `VLLM_EXTRA_ARGS="--tool-call-parser qwen3_coder --enable-auto-tool-choice"`.
+
+You can use any tool-call parser or speculative decoding method that vLLM v0.32.0 supports, such as MTP, even if the tables below don't list it.
 
 ## LLM settings
 

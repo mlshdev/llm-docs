@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [public-endpoints/models/wan-2-5.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/public-endpoints/models/wan-2-5.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/wan-2-5.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/public-endpoints/models/wan-2-5.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/wan-2-5
 
 # WAN 2.5
 
 Image-to-video generation model with prompt expansion support. Review inputs and output formats for this model on Runpod Public Endpoints.
 
-WAN 2.5 is Alibaba's image-to-video generation model that creates videos from static images. It features optional prompt expansion to automatically enhance your prompts for better results.
+WAN 2.5 is Alibaba's image-to-video generation model that creates videos from static images, with synchronized audio. It features optional prompt expansion to automatically enhance your prompts for better results.
 
 - [Try in playground](https://console.runpod.io/hub/playground/video/wan-2-5)
 
@@ -31,15 +31,19 @@ URL of the source image to animate.
 
 **Property (type: string)**
 
+URL of an audio file to guide generation. WAN 2.5 generates synchronized audio on its own when you omit this.
+
+**Property (type: string)**
+
 Elements to exclude from the video.
 
 **Property (type: string)**
 
-Video dimensions in format "width\*height".
+Video resolution. Options: `480p`, `720p`, `1080p`. The older `size` field is still accepted as an alias.
 
 **Property (type: integer)**
 
-Video duration in seconds.
+Video duration in seconds (3-10).
 
 **Property (type: integer)**
 
@@ -62,7 +66,7 @@ curl -X POST "https://api.runpod.ai/v2/wan-2-5/runsync" \
       "prompt": "A stand-up comedian delivering a dad joke",
       "image": "https://example.com/comedian.png",
       "negative_prompt": "",
-      "size": "1280*720",
+      "resolution": "720p",
       "duration": 5,
       "seed": -1,
       "enable_prompt_expansion": false,
@@ -85,7 +89,7 @@ response = requests.post(
             "prompt": "A stand-up comedian delivering a dad joke",
             "image": "https://example.com/comedian.png",
             "negative_prompt": "",
-            "size": "1280*720",
+            "resolution": "720p",
             "duration": 5,
             "seed": -1,
             "enable_prompt_expansion": False,
@@ -95,7 +99,7 @@ response = requests.post(
 )
 
 result = response.json()
-print(result["output"]["video_url"])
+print(result["output"]["result"])
 ```
 
 ```javascript JavaScript
@@ -112,7 +116,7 @@ const response = await fetch(
         prompt: "A stand-up comedian delivering a dad joke",
         image: "https://example.com/comedian.png",
         negative_prompt: "",
-        size: "1280*720",
+        resolution: "720p",
         duration: 5,
         seed: -1,
         enable_prompt_expansion: false,
@@ -123,7 +127,7 @@ const response = await fetch(
 );
 
 const result = await response.json();
-console.log(result.output.video_url);
+console.log(result.output.result);
 ```
 
 ## Response
@@ -152,7 +156,7 @@ Identifier of the worker that processed the request.
 
 The generation result containing the video URL and cost.
 
-**output.video\_url (type: string)**
+**output.result (type: string)**
 
 URL of the generated video. This URL expires after 7 days.
 
@@ -168,7 +172,7 @@ Cost of the generation in USD.
   "executionTime": 78901,
   "workerId": "oqk7ao1uomckye",
   "output": {
-    "video_url": "https://video.runpod.ai/abc123/output.mp4",
+    "result": "https://video.runpod.ai/abc123/output.mp4",
     "cost": 0.50
   }
 }

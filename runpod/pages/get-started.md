@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/get-started.mdx)
+> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/get-started.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started
 
 # Deploy your first Pod
@@ -43,6 +43,8 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
    - **Recent**: shows all GPUs you've deployed in the last 7 days. This tab only appears if you have a recent deployment history.
 
    Use the search box, **Network volume** filter, **Filter** button, or **Sort by** dropdown to narrow the list. Click **Compare GPUs** to ask the Runpod assistant for a comparison of the selected GPUs.
+
+   To choose between Secure Cloud and Community Cloud, click **Filter** and set **Cloud type** to **Secure** or **Community**. Organization accounts can deploy only to Secure Cloud, so the option isn't shown for them.
 
    The **Network volume** filter narrows the GPU list to compatible GPUs by filtering for GPUs that are in the same data center as the selected network volume. Select any network volume, and GPU availability updates to match it. GPUs that aren't compatible with the selected volume move to the incompatible section of the **All** tab.
 

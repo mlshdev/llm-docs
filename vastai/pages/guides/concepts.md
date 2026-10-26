@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/concepts.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/guides/concepts.mdx)
+> Pinned source for Vast.ai main: [guides/concepts.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/concepts.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/concepts
 
 # Concepts

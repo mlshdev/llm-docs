@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/vmbackupmanager.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmbackupmanager.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmbackupmanager.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmbackupmanager.md)
 
 ## vmbackupmanager
 
@@ -109,11 +109,11 @@ The result on the GCS bucket
 
 - The root folder
 
-![root folder](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmbackupmanager_root_folder.webp)
+![root folder](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmbackupmanager_root_folder.webp)
 
 - The latest folder
 
-![latest folder](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmbackupmanager_latest_folder.webp)
+![latest folder](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmbackupmanager_latest_folder.webp)
 
 `vmbackupmanager` uses [smart backups](https://docs.victoriametrics.com/victoriametrics/vmbackup/#smart-backups) technique in order
 to accelerate backups and save both data transfer costs and data copying costs. This includes server-side copy of already existing
@@ -140,7 +140,7 @@ Backup retention policy is controlled by:
 
 Let’s assume we have a backup manager collecting daily backups for the past 10 days.
 
-![retention policy daily before retention cycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmbackupmanager_rp_daily_1.webp)
+![retention policy daily before retention cycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmbackupmanager_rp_daily_1.webp)
 
 We enable backup retention policy for backup manager by using following configuration:
 
@@ -165,7 +165,7 @@ info    app/vmbackupmanager/retention.go:106    daily backups to delete [daily/2
 
 The result on the GCS bucket. We see only 3 daily backups:
 
-![retention policy daily after retention cycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmbackupmanager_rp_daily_2.webp "retention policy daily after retention cycle")
+![retention policy daily after retention cycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmbackupmanager_rp_daily_2.webp "retention policy daily after retention cycle")
 
 #### Retention by using object storage lifecycle rules
 

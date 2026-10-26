@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/anomaly-detection/components/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/anomaly-detection/components/_index.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/anomaly-detection/components/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/components/_index.md)
 
 This chapter describes the configuration sections used to run VictoriaMetrics Anomaly Detection, or [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/):
 
@@ -26,7 +26,7 @@ The required path is `config.yml` → Scheduler → Reader → Model → Writer.
 
 Solid nodes and arrows show the required anomaly-detection path. Dashed nodes and arrows show optional self-monitoring integrations.
 
-![vmanomaly component interaction: the Scheduler starts Reader, Model, and Writer work against a configured datasource; Monitoring is optional](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/anomaly-detection/components/vmanomaly-components.svg)
+![vmanomaly component interaction: the Scheduler starts Reader, Model, and Writer work against a configured datasource; Monitoring is optional](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/components/vmanomaly-components.svg)
 
 ## Example config
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert.md)
 
 `vmalert` executes a list of the given [alerting](https://docs.victoriametrics.com/victoriametrics/vmalert/#alerting-rules)
 or [recording](https://docs.victoriametrics.com/victoriametrics/vmalert/#recording-rules)
@@ -43,7 +43,7 @@ To start using `vmalert` you will need the following things:
 - remote write address \[optional] - [remote write](https://docs.victoriametrics.com/victoriametrics/vmagent/#victoriametrics-remote-write-protocol)
   compatible storage to persist rules and alerts state info. To persist results to multiple destinations use vmagent
   configured with multiple remote writes as a proxy;
-- remote read address \[optional] - MetricsQL compatible datasource to restore alerts state from.
+- remote read address \[optional] - Prometheus querying API compatible datasource to restore alerts state from.
 
 You can use the existing [docker-compose environment](https://github.com/VictoriaMetrics/VictoriaMetrics/tree/master/deployment/docker#victoriametrics-single-server)
 as an example. It already contains vmalert configured with the list of alerting rules and integrated with Alert Manager and VictoriaMetrics.
@@ -64,7 +64,7 @@ Then run `vmalert`:
     -notifier.url=http://localhost:9093 \    # AlertManager URL (required if alerting rules are used)
     -notifier.url=http://127.0.0.1:9093 \    # AlertManager replica URL
     -remoteWrite.url=http://localhost:8428 \ # Remote write compatible storage to persist rules and alerts state info (required if recording rules are used)
-    -remoteRead.url=http://localhost:8428 \  # MetricsQL compatible datasource to restore alerts state from
+    -remoteRead.url=http://localhost:8428 \  # Prometheus querying API compatible datasource to restore alerts state from
     -external.label=cluster=east-1 \         # External label to be applied for each rule
     -external.label=replica=a                # Multiple external labels may be set
 ```
@@ -426,7 +426,7 @@ to the remote database via the following flags:
   `ALERTS` and `ALERTS_FOR_STATE` via remote-write protocol.
   These time series can be queried from VictoriaMetrics just as any other time series.
   The state will be persisted to the configured address on each evaluation.
-- `-remoteRead.url` - URL to VictoriaMetrics (Single) or vmselect (Cluster). `vmalert` will try to restore alerts state
+- `-remoteRead.url` - URL to VictoriaMetrics (Single), vmselect (Cluster) or Prometheus. `vmalert` will try to restore alerts state
   from the configured address by querying time series with name `ALERTS_FOR_STATE`. The restore happens only once when
   `vmalert` process starts, and only for the configured rules. Config [hot reload](#hot-config-reload) doesn't trigger
   state restore.
@@ -619,7 +619,7 @@ rules execution, storing recording rules results and alerts state.
     -notifier.url=http://alertmanager:9093          # AlertManager addr to send alerts when they trigger
 ```
 
-![vmalert single](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert_single.webp)
+![vmalert single](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert_single.webp)
 
 ### Cluster VictoriaMetrics
 
@@ -639,7 +639,7 @@ Cluster mode could have multiple `vminsert` and `vmselect` components.
     -notifier.url=http://alertmanager:9093                      # AlertManager addr to send alerts when they trigger
 ```
 
-![vmalert cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert_cluster.webp)
+![vmalert cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert_cluster.webp)
 
 In case when you want to spread the load on these components - add balancers before them and configure
 `vmalert` with balancer addresses. Please, see more about [VictoriaMetrics cluster architecture](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#architecture-overview).
@@ -662,7 +662,7 @@ Alertmanagers.
     -notifier.url=http://alertmanagerN:9093         # The same alert will be sent to all configured notifiers
 ```
 
-![vmalert ha](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert_ha.webp)
+![vmalert ha](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert_ha.webp)
 
 To avoid recording rules results and alerts state duplication in VictoriaMetrics server
 don't forget to configure [deduplication](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#deduplication).
@@ -738,7 +738,7 @@ or reducing resolution) and push results to "cold" cluster.
     -remoteWrite.url=http://aggregated-cluster-vminsert:8480/insert/0/prometheus    # vminsert addr to persist recording rules results
 ```
 
-![vmalert multi cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert_multicluster.webp)
+![vmalert multi cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert_multicluster.webp)
 
 Please note, [replay](#rules-backfilling) feature may be used for transforming historical data.
 
@@ -752,7 +752,7 @@ For persisting recording or alerting rule results `vmalert` requires `-remoteWri
 But this flag supports only one destination. To persist rule results to multiple destinations
 we recommend using [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) as fan-out proxy:
 
-![vmalert multiple remote write destinations](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert_multiple_rw.webp)
+![vmalert multiple remote write destinations](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert_multiple_rw.webp)
 
 In this topology, `vmalert` is configured to persist rule results to `vmagent`. And `vmagent`
 is configured to fan-out received data to two or more destinations.
@@ -1023,7 +1023,7 @@ for each rule. You can see these updates in vmalert's [web UI](#web):
 2. Find the Group and rule you're interested in
 3. Click the `Details` link next to rule's name and look at the `Last N updates` section:
 
-![vmalert state](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert_state.webp)
+![vmalert state](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert_state.webp)
 
 The rows in this section show the rule's evaluations in order, along with their results.
 
@@ -1087,12 +1087,12 @@ Data delay is one of the most common problems when running rules.
 vmalert runs the configured rules at specific timestamps.
 It expects that the needed data is already available in the configured `-datasource.url` **at the time** the rule is evaluated.
 
-![vmalert expected evaluation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert_ts_normal.gif)
+![vmalert expected evaluation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert_ts_normal.gif)
 
 Usually, troubles begin when data in `-datasource.url` is delayed or absent. In such cases, evaluations
 may get an empty response from the datasource, produce empty recording rules or reset alerts state:
 
-![vmalert evaluation when data is delayed](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmalert_ts_data_delay.gif)
+![vmalert evaluation when data is delayed](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmalert_ts_data_delay.gif)
 
 > Please note, data delay is inevitable in distributed systems. And it is better to account for it rather than ignore it.
 
@@ -1598,7 +1598,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
   -remoteRead.tlsServerName string
      Optional TLS server name to use for connections to -remoteRead.url. By default, the server name from -remoteRead.url is used
   -remoteRead.url string
-     Optional URL to datasource compatible with MetricsQL. It can be single node VictoriaMetrics or vmselect. Remote read is used to restore alerts state. This configuration makes sense only if vmalert was configured with '-remoteWrite.url' before and has been successfully persisted its state. Supports address in the form of IP address with a port (e.g., http://127.0.0.1:8428) or DNS SRV record. See also '-remoteRead.disablePathAppend', '-remoteRead.showURL'.
+     Optional URL to datasource compatible with Prometheus querying API. It can be single node VictoriaMetrics, vmselect or Prometheus. Remote read is used to restore alerts state. This configuration makes sense only if vmalert was configured with '-remoteWrite.url' before and has been successfully persisted its state. Supports address in the form of IP address with a port (e.g., http://127.0.0.1:8428) or DNS SRV record. See also '-remoteRead.disablePathAppend', '-remoteRead.showURL'.
   -remoteWrite.basicAuth.password string
      Optional basic auth password for -remoteWrite.url
   -remoteWrite.basicAuth.passwordFile string

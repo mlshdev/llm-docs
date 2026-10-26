@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/overrides.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/build/bake/overrides.md)
+> Pinned source for Docker main: [content/manuals/build/bake/overrides.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/build/bake/overrides.md)
 
 Bake supports loading build definitions from files, but sometimes you need even
 more flexibility to configure these definitions. For example, you might want to
@@ -30,6 +30,7 @@ To override these attributes, you can use the following methods:
 
 - [File overrides](#file-overrides)
 - [CLI overrides](#command-line)
+- [Variable overrides](#variables)
 - [Environment variable overrides](#environment-variables)
 
 ## File overrides
@@ -240,6 +241,21 @@ Complete list of attributes that can be overridden with `--set` are:
 - `ssh`
 - `tags`
 - `target`
+
+## Variables
+
+Use `--var NAME=value` to override a declared Bake variable for a single
+invocation. For example, set `TAG` without exporting it in your shell:
+
+```console
+$ docker buildx bake --var TAG=dev webapp
+```
+
+The value takes precedence over an environment variable with the same name.
+Unlike `--set webapp.tags=...`, this changes the variable wherever the Bake
+definition uses it. See
+[Override variable values](https://docs.docker.com/build/bake/variables/#override-variable-values) for
+precedence, types, and repeated flags.
 
 ## Environment variables
 

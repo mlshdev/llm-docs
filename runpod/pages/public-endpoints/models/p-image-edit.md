@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/p-image-edit.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/public-endpoints/models/p-image-edit.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/p-image-edit.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/public-endpoints/models/p-image-edit.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/p-image-edit
 
 # P-Image Edit
@@ -75,7 +75,7 @@ response = requests.post(
 )
 
 result = response.json()
-print(result["output"]["image_url"])
+print(result["output"]["result"])
 ```
 
 ```javascript JavaScript
@@ -99,7 +99,7 @@ const response = await fetch(
 );
 
 const result = await response.json();
-console.log(result.output.image_url);
+console.log(result.output.result);
 ```
 
 ## Response
@@ -116,7 +116,7 @@ Request status. Returns `COMPLETED` on success, `FAILED` on error.
 
 The generation result containing the image URL and cost.
 
-**output.image\_url (type: string)**
+**output.result (type: string)**
 
 URL of the edited image. This URL expires after 7 days.
 
@@ -131,7 +131,7 @@ Cost of the generation in USD.
   "delayTime": 12,
   "executionTime": 2456,
   "output": {
-    "image_url": "https://image.runpod.ai/abc123/output.png",
+    "result": "https://image.runpod.ai/abc123/output.png",
     "cost": 0.01
   }
 }

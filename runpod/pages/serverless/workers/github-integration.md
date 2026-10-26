@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/workers/github-integration.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/serverless/workers/github-integration.mdx)
+> Pinned source for Runpod main: [serverless/workers/github-integration.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/serverless/workers/github-integration.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/workers/github-integration
 
 # Deploy workers from GitHub
@@ -16,6 +16,8 @@ To deploy a worker from GitHub, you need:
 - A working [handler function](https://docs.runpod.io/serverless/workers/handler-functions) in a GitHub repository.
 - A Dockerfile in your repository. See [Creating a Dockerfile](https://docs.runpod.io/serverless/workers/deploy#creating-a-dockerfile) for details.
 - A GitHub account.
+
+You don't need a `.runpod` directory (`hub.json`, `tests.json`) to deploy from GitHub. Those files are only required to list the repo on the [Runpod Hub](https://docs.runpod.io/hub/publishing-guide).
 
 > **Tip**
 >

@@ -1,8 +1,8 @@
-# vmestimator v0.1.17
+# vmestimator v0.1.18
 
-> Documentation generated from the latest stable release of [VictoriaMetrics/vmestimator](https://github.com/VictoriaMetrics/vmestimator) and pinned to immutable source commit `48cf2fbe31c2431b852d235f684481b05a9b44f7`.
+> Documentation generated from the latest stable release of [VictoriaMetrics/vmestimator](https://github.com/VictoriaMetrics/vmestimator) and pinned to immutable source commit `0f135ada5a362e41d6144e4821950a13566bedac`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for vmestimator v0.1.17.
+- [Full documentation](llms-full.txt): Complete normalized corpus for vmestimator v0.1.18.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.
 - Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.

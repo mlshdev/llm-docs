@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/relabeling.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/relabeling.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/relabeling.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/relabeling.md)
 
 The relabeling cookbook provides practical examples and patterns for
 transforming your metrics data as it flows through VictoriaMetrics, helping you
@@ -493,7 +493,7 @@ URLs for scrape targets are composed of the following parts:
     [scrape\_config](https://docs.victoriametrics.com/victoriametrics/sd_configs/#scrape_configs)
     or by updating/setting the corresponding `__param_*` labels during
     relabeling.
-- Unix domain socket path (e.g. `/var/run/node_exporter.sock`) can be configured during target relabeling via a special label - `__unix_socket__`. If this label is set, `vmagent` tunnels the scrape request through the specified Unix domain socket instead of connecting to a TCP socket. The `__address__` label is still used to populate the `instance` label and construct the HTTP request URL, but the actual network connection goes through the Unix socket.
+- Unix domain socket path (e.g. `/var/run/node_exporter.sock`) can be configured during target relabeling via a special label - `__unix_socket__`. If this label is set, `vmagent` tunnels the scrape request through the specified Unix domain socket instead of connecting to a TCP socket. The `__address__` label is still used to populate the `instance` label and construct the HTTP request URL, but the actual network connection goes through the Unix socket. See [Scraping targets via unix sockets](https://docs.victoriametrics.com/victoriametrics/vmagent/#scraping-targets-via-unix-sockets).
 
 The resulting scrape URL looks like the following:
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_rm.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_mcp_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_rm.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_mcp_rm.yaml)
 
 # sbx mcp rm
 
@@ -6,11 +6,24 @@ Remove a registered MCP server
 
 **Usage:** `sbx mcp rm NAME [flags]`
 
+## Description
+
+Remove a registered MCP server and its OAuth credential.
+
+Use --registration-only to remove the local registration without starting the
+daemon or accessing credentials. This also removes the registration's saved
+environment ownership and approval, including damaged or orphaned registrations. Stored credentials are
+kept, and MCP processes already running in sandbox gateways are not stopped.
+For an untrusted registration, first stop the selected daemon; this interrupts
+all of its sandbox gateways. A later approved env run can register a declared
+server again.
+
 ## Options
 
-| Option          | Default | Description               |
-| --------------- | ------- | ------------------------- |
-| `-f`, `--force` |         | Skip confirmation prompts |
+| Option                | Default | Description                                                                                                |
+| --------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| `-f`, `--force`       |         | Skip confirmation prompts                                                                                  |
+| `--registration-only` |         | Remove only the local registration without starting the daemon; keep credentials and running MCP processes |
 
 ## Global options
 
@@ -23,4 +36,5 @@ Remove a registered MCP server
 
 ```console
 sbx mcp rm notion
+  sbx mcp rm --registration-only notion
 ```

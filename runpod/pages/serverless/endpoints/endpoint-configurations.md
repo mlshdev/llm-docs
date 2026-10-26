@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/serverless/endpoints/endpoint-configurations.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/serverless/endpoints/endpoint-configurations.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/endpoint-configurations
 
 # Endpoint settings

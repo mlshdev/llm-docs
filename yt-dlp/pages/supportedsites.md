@@ -1,4 +1,4 @@
-> Pinned source for yt-dlp 2026.10.21: [supportedsites.md](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/supportedsites.md)
+> Pinned source for yt-dlp 2026.10.26: [supportedsites.md](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/supportedsites.md)
 
 # Supported sites
 

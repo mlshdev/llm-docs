@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/funcs.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/build/bake/funcs.md)
+> Pinned source for Docker main: [content/manuals/build/bake/funcs.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/build/bake/funcs.md)
 
 HCL functions are great for when you need to manipulate values in your build
 configuration in more complex ways than just concatenation or interpolation.

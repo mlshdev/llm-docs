@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/network-volumes/POST/networkvolumes/networkVolumeId/update.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference/network-volumes/POST/networkvolumes/networkVolumeId/update.mdx)
+> Pinned source for Runpod main: [api-reference/network-volumes/POST/networkvolumes/networkVolumeId/update.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference/network-volumes/POST/networkvolumes/networkVolumeId/update.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/network-volumes/POST/networkvolumes/networkVolumeId/update
 
 # Update a network volume

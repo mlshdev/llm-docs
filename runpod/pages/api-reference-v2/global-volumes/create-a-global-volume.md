@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/global-volumes/create-a-global-volume.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/global-volumes/create-a-global-volume.mdx)
+> Pinned source for Runpod main: [api-reference-v2/global-volumes/create-a-global-volume.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/global-volumes/create-a-global-volume.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/global-volumes/create-a-global-volume
 
 # Create A Global Volume
 
-Create a Runpod global volume for use by Pods and Serverless workers in any data center.
+Create a named Runpod global volume through the REST API for storage that Pods and Serverless workers can access across data centers.
 
 `POST /v2/global-volumes`
 

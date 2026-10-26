@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/pods/create-a-pod.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/pods/create-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/create-a-pod
 
 # Create A Pod
@@ -105,7 +105,7 @@ request rather than as absent capacity.
               - `items` (string)
           - `variant 2` (object)
             - `registry` (nullable): Container registry credential ID (for private images)
-      - `variant 2` (object): Request body for creating a pod. Exactly one of `gpu` or `cpu` must be set — enforced at the handler layer. For CPU pods, memory is derived by the API from the selected flavor's RAM multiplier; clients provide only CPU flavor and vCPU count. CPU pods support container disk and network volumes only; `mounts.persistent` is invalid when `cpu` is set. `image` is required unless `templateId` is set.
+      - `variant 2` (object): Request body for creating a pod. Exactly one of `gpu` or `cpu` must be set — enforced at the handler layer. For CPU pods, memory is derived by the API from the selected flavor's RAM multiplier; clients provide only CPU flavor and vCPU count. CPU pods support container disk, network volumes, and a global volume; `mounts.persistent` is invalid when `cpu` is set. `image` is required unless `templateId` is set.
         - `name` (required; string; minimum length: `1`)
         - `cloud` (default: `SECURE`): Cloud tier. Defaults to `SECURE` when omitted.
           - allOf:
@@ -227,7 +227,7 @@ request rather than as absent capacity.
                       - `username` (required; string): SSH username. For the proxy this is an opaque routing token, not a user account on the pod.
                       - `command` (required; string): The equivalent `ssh` invocation, ready to run. Add `-i <path>` if the matching private key is not one of your default identities, and `-o StrictHostKeyChecking=no` to skip the host-key prompt on short-lived pods.
                     - `variant 2` (null)
-                - `direct` (required): Connection straight to the pod's sshd over its published `22/tcp` mapping. Supports the full SSH feature set. Null unless `22/tcp` is in `ports` and the running pod has been assigned a public port for it — so it is absent while the pod is provisioning or stopped. Also null when listing pods with `GET /v2/pods`; fetch a single pod by ID to obtain the live mapping.
+                - `direct` (required): Connection straight to the pod's sshd over its published `22/tcp` mapping. Supports the full SSH feature set. Null unless `22/tcp` is in `ports` and the running pod has been assigned a public port for it — so it is usually absent while the pod is provisioning or stopped. It can still appear on a stopped pod, so check that `status` is `RUNNING` before connecting. Also null when listing pods with `GET /v2/pods`; fetch a single pod by ID to obtain the live mapping.
                   - anyOf:
                     - `variant 1` (object): One way to reach the pod over SSH, as both its parts and a ready-to-run invocation.
                       - `host` (required; string): Hostname or IP to connect to.
@@ -245,7 +245,7 @@ request rather than as absent capacity.
                     - `variant 1` (string; enum: `SLURM_CONTROLLER`, `SLURM_COMPUTE`, `RAY_HEAD`, `RAY_WORKER`): A cluster member's role. Assigned for SLURM and RAY clusters; omitted for TRAINING/APPLICATION members.
                 - `ip` (string): The pod's address on the cluster's private overlay network; omitted until the address is assigned.
           - `template` (required; nullable): ID of the template this pod was created from
-          - `cost` (required; number; format: float): Current cost in USD per hour (0.0 when EXITED or TERMINATED)
+          - `cost` (required; number; format: float): The Pod's hourly compute rate in USD. It's returned in every status, including `EXITED`, so it isn't what you're paying right now: a stopped Pod isn't billed for compute, only for its volume disk.
           - `locked` (required; boolean): Whether the pod is locked (prevents stopping or resetting)
           - `globalNetworking` (required; object)
             - `enabled` (required; boolean): Whether global networking is enabled, giving the pod a private IP reachable across data centers. Derived from whether the pod has an assigned global-network address.

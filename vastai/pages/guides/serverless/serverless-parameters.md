@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/serverless-parameters.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/guides/serverless/serverless-parameters.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/serverless-parameters.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/serverless/serverless-parameters.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/serverless-parameters
 
 # Endpoint Parameters
@@ -9,9 +9,9 @@ Vast Serverless offers unmatched control over endpoint scaling behavior. The fol
 
 When creating or editing an endpoint, parameters are split into two sections. The main section contains the most commonly adjusted parameters, while the **Advanced** section (expanded by clicking "Advanced") contains additional fine-tuning controls.
 
-![Edit Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/serverless/edit_endpoint_light.webp)
+![Edit Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/images/serverless/edit_endpoint_light.webp)
 
-![Edit Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/serverless/edit_endpoint_dark.webp)
+![Edit Endpoint dialog](https://raw.githubusercontent.com/vast-ai/docs/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/images/serverless/edit_endpoint_dark.webp)
 
 ## Main Parameters
 
@@ -73,9 +73,9 @@ If not specified during endpoint creation, the default value is `0.9`.
 
 The following parameters are available under the **Advanced** section of the endpoint creation and edit dialogs.
 
-![Edit Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/serverless/edit_endpoint_advanced_light.webp)
+![Edit Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/images/serverless/edit_endpoint_advanced_light.webp)
 
-![Edit Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/626149741ba46f195c775b2f4c89b7329de2d902/images/serverless/edit_endpoint_advanced_dark.webp)
+![Edit Endpoint advanced parameters](https://raw.githubusercontent.com/vast-ai/docs/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/images/serverless/edit_endpoint_advanced_dark.webp)
 
 ### Cold Multiplier (`cold_mult`)
 

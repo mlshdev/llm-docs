@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [instant-clusters/configuration.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/instant-clusters/configuration.mdx)
+> Pinned source for Runpod main: [instant-clusters/configuration.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/instant-clusters/configuration.mdx)
 > Canonical documentation: https://docs.runpod.io/instant-clusters/configuration
 
 # Configuration reference
@@ -45,6 +45,12 @@ Instant Clusters support up to 8 high-bandwidth interfaces per node. The `PRIMAR
 > **Warning**
 >
 > Do not use `eth0` for inter-node communication. The 172.xxx IP addresses on `eth0` are reserved for internet connectivity only and will result in connection timeouts for distributed workloads.
+
+### RDMA
+
+Where the hardware supports it, traffic between nodes uses RDMA (InfiniBand or RoCE) instead of TCP. Runpod sets up each Pod for this: it adds the `/dev/infiniband/uverbs*` devices, removes the memlock limit, and sets `NCCL_IB_HCA` and `NCCL_IB_DISABLE=0` (plus `NCCL_IB_GID_INDEX` on RoCE). NCCL then uses RDMA without any extra configuration. On hosts without RDMA, NCCL falls back to TCP over the `ens` interfaces.
+
+GPUDirect RDMA is also enabled on the hosts, so libraries that register GPU memory directly with the verbs API, such as KV cache transfer libraries, can work. Runpod tests NCCL, not these libraries. Before relying on one, check that it can see the `mlx5` devices and that `NCCL_IB_HCA` is set.
 
 ## NCCL configuration
 

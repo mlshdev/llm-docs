@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/goals.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/goals.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/goals.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/goals.md)
 
 ## Goals
 
@@ -51,3 +51,11 @@
   Happy users are eager to become happy [customers](https://docs.victoriametrics.com/victoriametrics/enterprise/)
   over time. This increases long-term profit.
   Upset users may be forced to become customers, but they will constantily search for the opportunity to switch to competing solutions.
+
+## Join the team
+
+If these goals resonate with you, consider joining the VictoriaMetrics team. We're hiring engineers motivated to improve our products and help users get the most out of them.
+
+Already contributing to VictoriaMetrics? We'd be especially happy to hear from you.
+
+[Explore open roles.](https://careers.victoriametrics.com/)

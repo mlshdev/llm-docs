@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/anomaly-detection/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/anomaly-detection/_index.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/anomaly-detection/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/_index.md)
 
 In today's fast-paced and complex landscape of system monitoring, [VictoriaMetrics Anomaly Detection](https://victoriametrics.com/products/enterprise/anomaly-detection/) (`vmanomaly`), a part of our [Enterprise offering](https://victoriametrics.com/products/enterprise/), serves as an **observability layer** for SREs and DevOps teams atop of collected data to **automate the detection of anomalies in time-series data**, reducing manual efforts required to identify abnormal system behavior.
 
@@ -20,7 +20,7 @@ Key functions:
 
 The diagram below illustrates how `vmanomaly` fits into an observability setup, such as detecting anomalies in metrics collected by `node_exporter`:
 
-![Typical vmanomaly observability pipeline using node-exporter, vmagent, VictoriaMetrics, Grafana, vmalert, and Alertmanager](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_overview.svg)
+![Typical vmanomaly observability pipeline using node-exporter, vmagent, VictoriaMetrics, Grafana, vmalert, and Alertmanager](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_overview.svg)
 
 ## How does it work?
 
@@ -37,7 +37,7 @@ The required path is `config.yml` → Scheduler → Reader → Model → Writer.
 
 Solid nodes and arrows show the required anomaly-detection path. Dashed nodes and arrows show optional self-monitoring integrations.
 
-![vmanomaly component interaction: the Scheduler starts Reader, Model, and Writer work against a configured datasource; Monitoring is optional](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/anomaly-detection/components/vmanomaly-components.svg)
+![vmanomaly component interaction: the Scheduler starts Reader, Model, and Writer work against a configured datasource; Monitoring is optional](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/components/vmanomaly-components.svg)
 
 ## Key benefits
 
@@ -47,7 +47,7 @@ Solid nodes and arrows show the required anomaly-detection path. Dashed nodes an
 
 - **Handling complex metrics** – effectively detects anomalies in **trending, seasonal, or dynamically scaling data**, where **fixed thresholds and simpler models usually fail**.
 
-- **Detecting anomalies in interconnected metrics** – supports **[multivariate anomaly detection](http://docs.victoriametrics.com/anomaly-detection/components/models#multivariate-models)**, identifying patterns across **related metrics** instead of treating them in isolation as [univariate metrics](http://docs.victoriametrics.com/anomaly-detection/components/models#univariate-models).
+- **Different ways to detect anomalies** – use [univariate models](https://docs.victoriametrics.com/anomaly-detection/components/models/#univariate-models) for each metric independently, [multivariate models](https://docs.victoriametrics.com/anomaly-detection/components/models/#multivariate-models) for relationships across related metrics, or [peer-group models](https://docs.victoriametrics.com/anomaly-detection/components/models/#peer-group-models) *(available from vmanomaly v1.31.0)* to find unusual members among comparable replicas or hosts, even as membership changes.
 
 ## Practical guides and installation
 

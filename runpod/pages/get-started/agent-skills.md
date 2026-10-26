@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/get-started/agent-skills.mdx)
+> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/get-started/agent-skills.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/agent-skills
 
 # Agent skills for AI coding tools
@@ -11,31 +11,28 @@ It works with [Claude Code](https://code.claude.com/docs), [Codex](https://githu
 
 ## Quick start
 
-Install the skills with a single command that works with every agent:
+> **Tip**
+>
+> **Setting this up from a coding agent?** Point it at [agents.runpod.io](https://agents.runpod.io/) (also at [/agent-setup](https://docs.runpod.io/agent-setup)). It's the single onboarding path for agents, with exact commands for each client.
+
+Install the skills. Pass your agent's id with `--agent` (for example `cursor`, `codex`, or `opencode`) so the installer targets only that agent:
 
 ```bash
-npx skills add runpod/runpod-plugins-official
+npx skills add runpod/runpod-plugins-official --skill '*' --agent <agent-id> --global
 ```
 
-Next, install the Runpod CLI that the skills rely on (skip this if you already have it):
+In Claude Code, install the plugin instead, which also connects the MCP server: `claude plugin marketplace add runpod/runpod-plugins-official`, then `claude plugin install runpod@runpod`.
+
+Then connect the hosted MCP server and sign in with Runpod (see [Connecting the MCP server on other agents](#connecting-the-mcp-server-on-other-agents)). Sign-in uses OAuth, so you don't need an API key to start.
+
+You don't need to install the Runpod CLI or Flash now. The skills install them the first time a task needs them, such as a file transfer, SSH, or a Flash deploy, and ask for a [Runpod API key](https://docs.runpod.io/get-started/credentials#api-keys) at that point. The same key works for the CLI, Flash, and the MCP server. To set it up ahead of time:
 
 ```bash
-curl -sSL https://cli.runpod.net | bash
-# or with Homebrew:
-brew install runpod/runpodctl/runpodctl
+curl -sSL https://cli.runpod.net | bash   # or: brew install runpod/runpodctl/runpodctl
+export RUNPOD_API_KEY=<key>               # add to ~/.zshrc or ~/.bashrc to persist
 ```
 
-Then authenticate with your [Runpod API key](https://docs.runpod.io/get-started/credentials#api-keys). The same key works for the CLI, Flash, and the bundled MCP server:
-
-```bash
-# Set the key for the current shell (add to ~/.zshrc or ~/.bashrc to persist):
-export RUNPOD_API_KEY=<key>
-
-# Or save it permanently to ~/.runpod/config.toml:
-runpodctl doctor
-```
-
-That's it — restart your agent and [get started](#getting-started).
+That's it. Restart your agent and [get started](#getting-started).
 
 ## Getting started
 
@@ -43,21 +40,23 @@ There are no commands to memorize: describe what you want, and the router picks 
 
 - "List my Runpod endpoints"
 
-If your endpoints come back, you're set — see [What you can do](#what-you-can-do) for more examples.
+If your endpoints come back, you're set. See [What you can do](#what-you-can-do) for more examples.
 
 ## What's included
 
 The plugin installs a router and a set of focused skills:
 
-| Skill              | Description                                                                                                                                                     |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **runpod**         | Router and entry point. Reads your task and hands it to the right skill.                                                                                        |
-| **runpod-mcp**     | Manages Pods, endpoints, templates, network volumes, registries, and billing through the Runpod MCP server.                                                     |
-| **runpodctl**      | Manages the same resources from the [Runpod CLI](https://docs.runpod.io/runpodctl/overview), plus Hub deployments, file transfers, SSH keys, and model caching. |
-| **flash**          | Writes and deploys your own Python code to Runpod Serverless using the [runpod-flash](https://docs.runpod.io/flash/overview) SDK.                               |
-| **companion-clis** | Uses supporting CLIs such as Hugging Face, Docker, and the AWS CLI when a task needs them.                                                                      |
-| **runpod-usage**   | Provides conceptual knowledge about Pods, Serverless, storage, and GPU selection.                                                                               |
-| **runpod-migrate** | Migrates a codebase from the GraphQL API or REST v1 to REST v2. It inventories which API each call site uses, rewrites the call sites, and verifies the result. |
+| Skill                     | Description                                                                                                                                                     |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **runpod**                | Router and entry point. Reads your task and hands it to the right skill.                                                                                        |
+| **runpod-mcp**            | Manages Pods, endpoints, templates, network volumes, registries, and billing through the Runpod MCP server.                                                     |
+| **runpodctl**             | Manages the same resources from the [Runpod CLI](https://docs.runpod.io/runpodctl/overview), plus Hub deployments, file transfers, SSH keys, and model caching. |
+| **flash**                 | Writes and deploys your own Python code to Runpod Serverless using the [runpod-flash](https://docs.runpod.io/flash/overview) SDK.                               |
+| **companion-clis**        | Uses supporting CLIs such as Hugging Face, Docker, and the AWS CLI when a task needs them.                                                                      |
+| **runpod-usage**          | Provides conceptual knowledge about Pods, Serverless, storage, and GPU selection.                                                                               |
+| **runpod-templates**      | Picks and configures Runpod's official Pod templates, such as ComfyUI and PyTorch, and fixes problems with a running template.                                  |
+| **runpod-build-template** | Builds a complete template project (Dockerfile and app files) for Pods or Serverless from a request, local code, or a GitHub repo.                              |
+| **runpod-migrate**        | Migrates a codebase from the GraphQL API or REST v1 to REST v2. It inventories which API each call site uses, rewrites the call sites, and verifies the result. |
 
 The plugin also includes a collection of worked, end-to-end reference tasks, such as deploying a Whisper endpoint or running a model on a Pod, that guide your agent through common workflows.
 
@@ -130,13 +129,15 @@ Gemini can install the plugin natively through the bundled `gemini-extension.jso
 
 ## Connecting the MCP server on other agents
 
-The hosted Runpod MCP server gives your agent structured control-plane tools for managing Pods, endpoints, and other resources. Claude Code sets it up automatically during a native install. On other agents, run the guided installer, which detects your agent and configures the connection:
+The hosted Runpod MCP server gives your agent structured control-plane tools for managing Pods, endpoints, and other resources. Claude Code and Codex set it up automatically when you install the plugin. On other agents, run the installer with your agent's id. It writes the config without prompts:
 
 ```bash
-npx @runpod/mcp-server@latest add
+npx @runpod/mcp-server@latest add --client <id>
 ```
 
-The installer authenticates the MCP server for you. To reuse the API key you already set instead, pass it as a bearer header when you add the server. For example, in Claude Code:
+Run `npx @runpod/mcp-server@latest add --list` to see the supported ids (Cursor, Windsurf, VS Code, opencode, Pi, and Claude Desktop). For other agents, see [Onboard your agent to Runpod](https://docs.runpod.io/agent-setup#2-register-the-mcp-server).
+
+You sign in with Runpod in the browser the first time the agent calls a Runpod tool. To use an API key instead, pass it as a bearer header when you add the server. For example, in Claude Code:
 
 ```bash
 claude mcp add --transport http runpod -s user https://mcp.runpod.io/ \

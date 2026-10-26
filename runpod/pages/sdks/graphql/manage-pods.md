@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdks/graphql/manage-pods.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/sdks/graphql/manage-pods.mdx)
+> Pinned source for Runpod main: [sdks/graphql/manage-pods.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/sdks/graphql/manage-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/sdks/graphql/manage-pods
 
 # Manage Pods
@@ -16,6 +16,7 @@ For the complete schema, see the [GraphQL Spec](https://graphql-spec.runpod.io/)
 | Create Pod     | `podFindAndDeployOnDemand`   |
 | Start Pod      | `podResume`                  |
 | Stop Pod       | `podStop`                    |
+| Terminate Pod  | `podTerminate`               |
 | List all Pods  | `myself { pods { ... } }`    |
 | Get Pod by ID  | `pod(input: {podId: "..."})` |
 | List GPU types | `gpuTypes`                   |
@@ -189,6 +190,25 @@ mutation {
   }
 }
 ```
+
+## Terminate a Pod
+
+Terminating a Pod permanently deletes it, along with its container disk and volume disk. Network volumes attached to the Pod are not deleted. This can't be undone.
+
+```bash
+curl --request POST \
+  --header 'content-type: application/json' \
+  --url 'https://api.runpod.io/graphql?api_key=${YOUR_API_KEY}' \
+  --data '{"query": "mutation { podTerminate(input: {podId: \"YOUR_POD_ID\"}) }"}'
+```
+
+```graphql
+mutation {
+  podTerminate(input: { podId: "YOUR_POD_ID" })
+}
+```
+
+`podTerminate` returns no fields, so don't add a selection set. The REST equivalent is [`DELETE /v2/pods/{podId}`](https://docs.runpod.io/api-reference-v2/pods/terminate-a-pod).
 
 ## Query Pods
 

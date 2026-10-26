@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/s3-api.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/storage/s3-api.mdx)
+> Pinned source for Runpod main: [storage/s3-api.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/storage/s3-api.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/s3-api
 
 # S3-compatible API
@@ -43,9 +43,13 @@ Create your network volume in a supported datacenter to use the S3-compatible AP
 2. Next, you'll need to generate a new key called an "S3 API key" (this is separate from your Runpod API key).
 
    1. Go to the [Credentials page](https://console.runpod.io/user/credentials) in the Runpod console.
-   2. Select the **S3 API Keys** tab and click **Create an S3 API key**.
+   2. Select the **S3 API keys** tab and click **Create an S3 API key**.
    3. Name your key and select **Create**.
    4. Save the **access key** (e.g., `user_***...`) and **secret** (e.g., `rps_***...`) to use in the next step.
+
+   > **Note**
+   >
+   > On a team account, the **S3 API keys** tab appears only for members with the **Admin** role and permission to view S3 API keys. Creating a key also needs permission to create S3 API keys. If you don't see the tab, ask a team owner to change your role.
 
    > **Warning**
    >
@@ -55,7 +59,7 @@ Create your network volume in a supported datacenter to use the S3-compatible AP
    1. If you haven't already, [install the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) on your local machine.
    2. Run the command `aws configure` in your terminal.
    3. Provide the following when prompted:
-      - **AWS Access Key ID**: Enter your Runpod user ID. You can find this in the [Credentials page](https://console.runpod.io/user/credentials) under **S3 API Keys**, in the description of your S3 API key. By default, the description will look similar to: `Shared Secret for user_2f21CfO73Mm2Uq2lEGFiEF24IPw 1749176107073`. `user_2f21CfO73Mm2Uq2lEGFiEF24IPw` is the user ID (yours will be different).
+      - **AWS Access Key ID**: Enter your Runpod user ID. You can find this in the [Credentials page](https://console.runpod.io/user/credentials) under **S3 API keys**, in the description of your S3 API key. By default, the description will look similar to: `Shared Secret for user_2f21CfO73Mm2Uq2lEGFiEF24IPw 1749176107073`. `user_2f21CfO73Mm2Uq2lEGFiEF24IPw` is the user ID (yours will be different).
       - **AWS Secret Access Key**: Enter your Runpod S3 API key's secret access key.
       - **Default Region name**: You can leave this blank.
       - **Default output format**: You can leave this blank or set it to `json`.

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/execution-model.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/flash/execution-model.mdx)
+> Pinned source for Runpod main: [flash/execution-model.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/flash/execution-model.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/execution-model
 
 # Execution model

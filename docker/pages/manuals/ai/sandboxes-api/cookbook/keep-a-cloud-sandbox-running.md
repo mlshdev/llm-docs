@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/keep-a-cloud-sandbox-running.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/ai/sandboxes-api/cookbook/keep-a-cloud-sandbox-running.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/keep-a-cloud-sandbox-running.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/ai/sandboxes-api/cookbook/keep-a-cloud-sandbox-running.md)
 
 # Keep a cloud sandbox running
 

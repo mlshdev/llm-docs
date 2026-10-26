@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/enterprise-deployment/ms-store.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/desktop/enterprise/enterprise-deployment/ms-store.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/enterprise-deployment/ms-store.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/desktop/enterprise/enterprise-deployment/ms-store.md)
 
 # Install Docker Desktop from the Microsoft Store on Windows
 
@@ -45,3 +45,5 @@ If using Intune to manage Docker Desktop for Windows:
 ## Installation mode
 
 Available with Docker Desktop version 4.85 and later, fresh installations from the Microsoft Store use per-user install mode by default, which removes the need for admin privileges.
+
+With version 4.97 and later, per-user installations from the Microsoft Store can use the Docker VMM (Beta) backend in addition to WSL 2. For more information, see [Virtual Machine Manager](https://docs.docker.com/desktop/features/vmm/).

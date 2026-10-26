@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_rm.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_rm.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_rm.yaml)
 
 # sbx rm
 
@@ -8,12 +8,14 @@ Remove one or more sandboxes
 
 ## Description
 
-Remove one or more sandboxes and all associated resources. Or — with --cloud — the cloud sandbox
+Remove one or more sandboxes. Or — with --cloud — the cloud sandbox
 ID (sbx\_\*) or name from "sbx --cloud ls".
 
 For local sandboxes, stops them, removes their containers, cleans up any Git
 worktrees, deletes sandbox state, and deletes secrets scoped to each removed
-sandbox. This action cannot be undone. With --cloud, deletes
+sandbox. Host-mount directories and persistent volume\@1 storage created with
+retention support are kept; creating the same sandbox name with the same kit
+reattaches its persistent volumes. This action cannot be undone. With --cloud, deletes
 the sandbox in Docker Sandboxes Cloud. This action cannot be undone. Once the
 server accepts the request, rm waits up to 60 seconds per sandbox for the
 deletion. A removal still completing after that exits 0. Verify it later with

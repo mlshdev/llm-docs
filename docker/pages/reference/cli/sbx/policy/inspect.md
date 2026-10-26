@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_inspect.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_policy_inspect.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_inspect.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_policy_inspect.yaml)
 
 # sbx policy inspect
 
@@ -14,7 +14,7 @@ The selector may be a policy ID, policy name, rule ID, or rule name.
 Selecting a policy lists every resource with its decision, rule, and status,
 plus a rule table showing each rule's RULE\_ID, whether it is editable, and
 either the exact removal command or the reason it is read-only. Selecting a
-rule shows just that rule with the same editability detail. RULE\_ID is the
+rule shows only that rule with the same editability detail. RULE\_ID is the
 identifier accepted by "sbx policy rm network --id" (local rules only). Use
 "sbx policy ls" to find policy names and "sbx policy ls --wide" to find rule
 IDs and resource values.

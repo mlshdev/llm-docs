@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/guides/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/guides/_index.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/guides/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/guides/_index.md)
 
 - [Kubernetes monitoring via VictoriaMetrics Single](https://docs.victoriametrics.com/guides/k8s-monitoring-via-vm-single/)
 - [Kubernetes monitoring with VictoriaMetrics Cluster](https://docs.victoriametrics.com/guides/k8s-monitoring-via-vm-cluster/)
@@ -16,4 +16,5 @@
 - [Collecting OpenShift logs with Victoria Logs](https://docs.victoriametrics.com/guides/collecting-openshift-logs-with-victoria-logs/)
 - [Headlamp Kubernetes UI and VictoriaMetrics](https://docs.victoriametrics.com/guides/k8s-ui-headlamp/)
 - [VictoriaMetrics topologies](https://docs.victoriametrics.com/guides/vm-architectures/)
+- [How to recover missing metrics](https://docs.victoriametrics.com/guides/recovering-missing-metrics/)
 - [Datasource-Managed Alerts with vmalert and Grafana](https://docs.victoriametrics.com/guides/vmalert-datasource-managed-alerts-grafana/)

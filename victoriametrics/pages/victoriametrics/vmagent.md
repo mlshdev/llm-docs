@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmagent.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmagent.md)
 
 `vmagent` is a tiny agent that helps you collect metrics from various sources,
 [relabel and filter the collected metrics](https://docs.victoriametrics.com/victoriametrics/relabeling/)
@@ -8,7 +8,7 @@ or via the [VictoriaMetrics `remote_write` protocol](#victoriametrics-remote-wri
 
 See [Quick Start](#quick-start) for details.
 
-![vmagent](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmagent.webp)
+![vmagent](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmagent.webp)
 
 ## Motivation
 
@@ -1021,6 +1021,22 @@ scrape_configs:
   - "Proxy-Auth: top-secret"
 ```
 
+## Scraping targets via unix sockets
+
+`vmagent` can scrape targets listening on a Unix domain socket. The socket path must be set in the `__unix_socket__` label:
+
+```yaml
+scrape_configs:
+- job_name: node_exporter
+  static_configs:
+  - targets: ["node_exporter:9100"]
+    labels:
+      __unix_socket__: /var/run/node_exporter.sock
+```
+
+The connection goes through the socket, while `__address__` is still used for the scrape URL and the `instance` label.
+`proxy_url` cannot be used for such targets.
+
 ## On-disk persistence
 
 `vmagent` stores pending data that cannot be sent to the configured remote storage systems in a timely manner.
@@ -1224,7 +1240,11 @@ If you have suggestions for improvements or have found a bug, please open an iss
 - If `vmagent` uses too much RAM or CPU, then follow [these recommendations](#performance-optimizations).
 
 - When `vmagent` scrapes many unreliable targets, it can flood the error log with scrape errors. It is recommended to investigate and fix these errors.
-  If it is unfeasible to fix all the reported errors, then they can be suppressed by passing the `-promscrape.suppressScrapeErrors` command-line flag to `vmagent`.
+  If it is unfeasible to fix all the reported errors, then scrape errors logging can be disabled completely by passing the `-promscrape.suppressScrapeErrors` command-line flag to `vmagent`.
+  Repeated errors for failed scrapes (such as network errors or timeouts) per each target can be logged less frequently with the `-promscrape.suppressScrapeErrorsDelay` command-line flag.
+  This flag doesn't apply to errors when parsing the scraped response.
+  The number of logged parse errors per each scrape of a target is limited by the `-promscrape.maxParseErrorsPerScrape` command-line flag *(available from v1.155.0)*;
+  the number of suppressed parse errors is logged after the scrape.
   The most recent scrape error for each target can be observed at `http://vmagent-host:8429/targets` and `http://vmagent-host:8429/api/v1/targets`.
 
 - The `http://vmagent-host:8429/config` page shows the current active `-promscrape.config` configuration.

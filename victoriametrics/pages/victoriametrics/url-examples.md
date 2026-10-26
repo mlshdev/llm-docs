@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/url-examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/url-examples.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/url-examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/url-examples.md)
 
 ## General information
 
@@ -866,6 +866,23 @@ curl 'http://<vm>:<http-port>/health'
 ```
 
 Where `<vm>` is any of VictoriaMetrics services. And `<http-port>` is `-httpListenAddr` value.
+
+The same binary with `-healthcheck` *(available from v1.155.0)* command-line flag checks that the running process accepts connections at `-httpListenAddr`.
+It exits with non-zero code if the check fails, so it can be used in Docker Compose `healthcheck` without `curl`:
+
+```yaml
+healthcheck:
+  test: ["CMD", "/victoria-metrics-prod", "-healthcheck"]
+```
+
+Pass the same `-httpListenAddr` as the checked process has.
+If the process is configured via [environment variables](https://docs.victoriametrics.com/victoriametrics/#environment-variables), then add `-envflag.enable` to the healthcheck command,
+so it reads the same environment variables. For example:
+
+```yaml
+healthcheck:
+  test: ["CMD", "/victoria-metrics-prod", "-healthcheck", "-envflag.enable"]
+```
 
 ### /-/healthy
 

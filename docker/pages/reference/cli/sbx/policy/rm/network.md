@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_rm_network.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_policy_rm_network.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_rm_network.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_policy_rm_network.yaml)
 
 # sbx policy rm network
 
@@ -22,6 +22,10 @@ Use "sbx policy ls --wide" to see active rule IDs and resources, or
 "sbx policy ls --json" for the filtered rules; network values are printed in
 the form the CLI accepts back.
 
+Use --method to add an HTTP rule. --method accepts comma-separated HTTP
+methods or ANY; --path defaults to /\*\*. Repeat --query name=value to require
+query parameters.
+
 With --cloud:
 Remove a cloud network rule by pattern.
 
@@ -32,12 +36,15 @@ sandbox. Use "sbx --cloud policy ls" to see the current rules.
 
 ## Options
 
-| Option          | Default | Description                                                      |
-| --------------- | ------- | ---------------------------------------------------------------- |
-| `-f`, `--force` |         | Skip confirmation prompts                                        |
-| `--id`          |         | Remove by rule ID                                                |
-| `--resource`    |         | Remove by resource value(s), comma-separated                     |
-| `--sandbox`     |         | Scope the removal to a specific sandbox (default: global policy) |
+| Option          | Default | Description                                                                             |
+| --------------- | ------- | --------------------------------------------------------------------------------------- |
+| `-f`, `--force` |         | Skip confirmation prompts                                                               |
+| `--id`          |         | Remove by rule ID                                                                       |
+| `--method`      |         | Restrict the rule to these HTTP methods (comma-separated); use ANY to match all methods |
+| `--path`        |         | Restrict the rule to this HTTP path glob (e.g. /repos/**); defaults to /**              |
+| `--query`       |         | Require an HTTP query parameter (name=value pattern); repeatable                        |
+| `--resource`    |         | Remove by resource value(s), comma-separated                                            |
+| `--sandbox`     |         | Scope the removal to a specific sandbox (default: global policy)                        |
 
 ## Global options
 
@@ -60,6 +67,9 @@ sandbox. Use "sbx --cloud policy ls" to see the current rules.
 
   # Remove a sandbox-scoped rule by resource
   sbx policy rm network --sandbox my-sandbox --resource api.example.com
+
+  # Remove an HTTP rule by resource, method, and path
+  sbx policy rm network --resource api.example.com --method GET --path '/v1/**'
 
   # Remove a cloud rule by pattern, from the allow or deny list it is in
   sbx --cloud policy rm network --resource api.example.com

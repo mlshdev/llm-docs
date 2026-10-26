@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/troubleshooting/zero-gpus.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/pods/troubleshooting/zero-gpus.mdx)
+> Pinned source for Runpod main: [pods/troubleshooting/zero-gpus.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/pods/troubleshooting/zero-gpus.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/troubleshooting/zero-gpus
 
 # Zero GPU Pods on restart
@@ -17,11 +17,12 @@ When this happens, Runpod gives you the option to start the Pod with zero GPUs. 
 
 ## What are my options?
 
-If you encounter this situation, you have three choices:
+If you encounter this situation, you have four choices:
 
-1. **Start with zero GPUs for data access**: Start the Pod without a GPU to access its local storage. This is useful for retrieving files, but the Pod will have limited CPU resources and is not suitable for compute tasks. You should use this option to back up or transfer your data before terminating the Pod.
+1. **Start with zero GPUs for data access**: Click **Start** and choose **CPU Only** in the GPU count selector to start the Pod without a GPU and access its local storage. With the GraphQL API, use `mutation { podResumeZeroGpu(input: { podId: "YOUR_POD_ID" }) { id desiredStatus } }`. The REST API's `start` action can't do this: it returns an error when the machine's GPU is taken. This is useful for retrieving files, but the Pod will have limited CPU resources and is not suitable for compute tasks. You should use this option to back up or transfer your data before terminating the Pod.
 2. **Wait and retry**: You can wait and try to restart the Pod again later. The GPU may become available if the other user stops their Pod, but there is no guarantee of when that will happen.
-3. **Terminate and redeploy**: If you need a GPU immediately, terminate the current Pod and deploy a new one with the same configuration. The new Pod will be scheduled on any machine in the Runpod network with an available GPU of your chosen type.
+3. **Migrate the Pod**: Let Runpod create a new Pod on a machine with a free GPU and copy your volume disk (`/workspace`) to it. See [Pod migration](https://docs.runpod.io/pods/troubleshooting/pod-migration).
+4. **Terminate and redeploy**: If you need a GPU immediately and don't need the data on the volume disk, terminate the current Pod and deploy a new one with the same configuration. The new Pod will be scheduled on any machine in the Runpod network with an available GPU of your chosen type.
 
 ## How do I prevent this?
 

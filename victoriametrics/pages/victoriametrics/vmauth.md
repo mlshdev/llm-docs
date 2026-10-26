@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/vmauth.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmauth.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmauth.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmauth.md)
 
 `vmauth` is an HTTP proxy, which can [authorize](https://docs.victoriametrics.com/victoriametrics/vmauth/#authorization), [route](https://docs.victoriametrics.com/victoriametrics/vmauth/#routing), and [load balance](https://docs.victoriametrics.com/victoriametrics/vmauth/#load-balancing) requests across [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) components or any other HTTP backends.
 
@@ -282,6 +282,7 @@ Set `oidc.issuer` to the base URL of the OIDC provider. `vmauth` will:
 
 1. Fetch `{issuer}/.well-known/openid-configuration` to discover the `jwks_uri`.
 2. Download the JSON Web Key Set (JWKS) from the `jwks_uri` to obtain the public keys used to verify JWT signatures.
+   Only `RSA` and `EC` (`P-256`, `P-384`, `P-521`) keys are supported. Keys of other types, such as `OKP` (Ed25519), and keys with missing or invalid members are skipped with a warning.
 3. Automatically refresh the keys every 5 minutes to handle key rotation.
 
 JWT tokens must contain an `iss` claim that matches the configured `issuer` value exactly.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/ai/sandboxes/cloud/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/ai/sandboxes/cloud/usage.md)
 
 # Use cloud sandboxes
 
@@ -107,6 +107,20 @@ $ sbx --cloud ls
 
 Most cloud commands accept either the sandbox name or the `sbx_`-prefixed ID
 shown in the output.
+
+Inspect a sandbox's state, template, resources, timeout settings, and
+published port URLs:
+
+```console
+$ sbx --cloud inspect cloud-project
+```
+
+Use `--format json` or `--format yaml` for structured output. For example,
+retrieve the published port URLs in a script:
+
+```console
+$ sbx --cloud inspect cloud-project --format json | jq -r '.ports[]? | .url // empty'
+```
 
 ## Run commands
 

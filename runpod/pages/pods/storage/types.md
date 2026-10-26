@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/pods/storage/types.mdx)
+> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/pods/storage/types.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/storage/types
 
 # Storage options
@@ -11,16 +11,16 @@ For a comparison of persistent storage across Pods, Serverless, and the Runpod S
 
 ## Comparison
 
-|                 | Container disk        | Volume disk                   | Network volume                      | Global volume                                                               |
-| --------------- | --------------------- | ----------------------------- | ----------------------------------- | --------------------------------------------------------------------------- |
-| **Persistence** | Lost on stop/restart  | Retained until Pod deleted    | Retained independently              | Retained independently                                                      |
-| **Mount path**  | System-managed        | `/workspace` (default)        | `/workspace` (replaces volume disk) | `/workspace`, or `/workspace-global` when a network volume is also attached |
-| **Performance** | Fastest (local)       | Fast (local)                  | Variable (network)                  | Variable (optimized for reads)                                              |
-| **Shareable**   | No                    | No                            | Yes (across Pods)                   | Yes (across Pods in any data center)                                        |
-| **Resizable**   | Yes                   | Increase only                 | Yes                                 | Automatic (grows with stored data)                                          |
-| **Cost**        | $0.10/GB/month        | $0.10/GB/month (running)      | $0.07/GB/month                      | $0.09/GB/month + IOPS                                                       |
-|                 |                       | $0.20/GB/month (stopped)      |                                     |                                                                             |
-| **Best for**    | OS, temp files, cache | Models, datasets, checkpoints | Shared data, portable storage       | Model weights, read-heavy shared assets                                     |
+|                 | Container disk        | Volume disk                   | Network volume                                     | Global volume                                                               |
+| --------------- | --------------------- | ----------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Persistence** | Lost on stop/restart  | Retained until Pod deleted    | Retained independently                             | Retained independently                                                      |
+| **Mount path**  | System-managed        | `/workspace` (default)        | `/workspace` (replaces volume disk)                | `/workspace`, or `/workspace-global` when a network volume is also attached |
+| **Performance** | Fastest (local)       | Fast (local)                  | Variable (network)                                 | Variable (optimized for reads)                                              |
+| **Shareable**   | No                    | No                            | Yes (across Pods)                                  | Yes (across Pods in any data center)                                        |
+| **Resizable**   | Yes                   | Increase only                 | Yes                                                | Automatic (grows with stored data)                                          |
+| **Cost**        | $0.10/GB/month        | $0.10/GB/month (running)      | $0.07/GB/month (first 1 TB), $0.05/GB/month beyond | $0.09/GB/month + IOPS                                                       |
+|                 |                       | $0.20/GB/month (stopped)      |                                                    |                                                                             |
+| **Best for**    | OS, temp files, cache | Models, datasets, checkpoints | Shared data, portable storage                      | Model weights, read-heavy shared assets                                     |
 
 ## Container disk
 

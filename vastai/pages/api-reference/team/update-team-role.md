@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/team/roles/{name}](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/api-reference/openapi.yaml%23put%20/api/v0/team/roles/%7Bname%7D)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/team/roles/{name}](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/api-reference/openapi.yaml%23put%20/api/v0/team/roles/%7Bname%7D)
 > Canonical documentation: https://docs.vast.ai/api-reference/team/update-team-role
 
 # update team role

@@ -6,21 +6,21 @@
   "title": "yt-dlp",
   "homepage": "https://github.com/yt-dlp/yt-dlp#readme",
   "repository": "yt-dlp/yt-dlp",
-  "tag": "2026.10.21",
-  "releaseId": 420093571,
-  "releasePublishedAt": "2026-10-21T21:54:37Z",
-  "sourceCommit": "6ccd977303412151ee23352c6257dd658ffc1987",
+  "tag": "2026.10.26",
+  "releaseId": 424834875,
+  "releasePublishedAt": "2026-10-26T22:25:26Z",
+  "sourceCommit": "f264a6cbd1f630894da0f368df00f8aae50140e0",
   "documentCount": 5,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 1066844,
+      "byteLength": 1070515,
       "documentCount": 5,
-      "sha256": "557f42dab6e36122493cb2e50a1dbdfa1e2b98cea218b2aab96cf78ef2535fe3"
+      "sha256": "a3fff67f44417a09a18e9daaecdd1b29e58b0a7b1e953b3d9b93f32bdecba495"
     }
   ],
-  "outputDigest": "90190ad17d4c7721cf55081bfe78dc68863eefe046c4f9fc67c792b676954dbd",
+  "outputDigest": "1d8ed80a723a2b09693d1644fccb0f9e172e2dad47d7b9bb17c57b8b6f71f71e",
   "notes": [
     "Release-authored Markdown is normalized directly; generated binaries, man pages, and shell completions are omitted.",
     "The supported-site catalog is retained as a separate reference page."

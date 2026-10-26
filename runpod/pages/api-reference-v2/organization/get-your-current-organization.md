@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/organization/get-your-current-organization.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/organization/get-your-current-organization.mdx)
+> Pinned source for Runpod main: [api-reference-v2/organization/get-your-current-organization.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/organization/get-your-current-organization.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/organization/get-your-current-organization
 
 # Get Your Current Organization
 
-Get the ID and name of the organization you belong to.
+Retrieve the ID and name of your current Runpod organization through the REST API, including membership requirements and error responses.
 
 `GET /v2/organization`
 

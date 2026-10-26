@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/Cluster-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/Cluster-VictoriaMetrics.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/Cluster-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/Cluster-VictoriaMetrics.md)
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
@@ -42,7 +42,7 @@ Each service may scale independently and may run on the most suitable hardware.
 This is a [shared nothing architecture](https://en.wikipedia.org/wiki/Shared-nothing_architecture).
 It increases cluster availability, and simplifies cluster maintenance as well as cluster scaling.
 
-![Cluster Scheme](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/Cluster-VictoriaMetrics-components.webp)
+![Cluster Scheme](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/Cluster-VictoriaMetrics-components.webp)
 
 > Further reading, deep dives into how each service works internally:
 >
@@ -323,6 +323,7 @@ If you need multi-AZ setup, then it is recommended running independent clusters 
 [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) in front of these clusters, so it could replicate incoming data
 into all the cluster - see [these docs](https://docs.victoriametrics.com/victoriametrics/vmagent/#multitenancy) for details.
 Then an additional `vmselect` nodes can be configured for reading the data from multiple clusters according to [these docs](#multi-level-cluster-setup).
+If one cluster misses samples that are available in another, see [how to recover missing metrics](https://docs.victoriametrics.com/guides/recovering-missing-metrics/).
 
 See [VMDistributed](https://docs.victoriametrics.com/operator/resources/vmdistributed/) Kubernetes operator resource for an example.
 
@@ -673,7 +674,8 @@ Also in the cluster version the `/prometheus/api/v1` endpoint ingests  `jsonl`, 
   be used on a regular basis, since it carries non-zero overhead.
 
 - URL for listing [tenants](#multitenancy) with the ingested data on the given time range: `http://<vmselect>:8481/admin/tenants?start=...&end=...`.
-  The `start` and `end` query args are optional. If they are missing, then all the tenants with at least one sample stored in VictoriaMetrics are returned.
+  The `start` and `end` query args must be specified together. If both are missing, then only the tenants for the current day are returned.
+  In order to get all tenants, specify both `start` and `end` so that the resulting time range includes the entire `-retentionPeriod`.
 
 - URL for accessing [vmalerts](https://docs.victoriametrics.com/victoriametrics/vmalert/) UI: `http://<vmselect>:8481/select/<accountID>/prometheus/vmalert/`.
   This URL works only when `-vmalert.proxyURL` flag is set. See more about [vmalert](#vmalert).

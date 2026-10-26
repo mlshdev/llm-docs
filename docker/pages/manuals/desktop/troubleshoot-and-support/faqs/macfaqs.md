@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/faqs/macfaqs.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/desktop/troubleshoot-and-support/faqs/macfaqs.md)
+> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/faqs/macfaqs.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/desktop/troubleshoot-and-support/faqs/macfaqs.md)
 
 # FAQs for Docker Desktop for Mac
 

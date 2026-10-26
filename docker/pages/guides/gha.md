@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/guides/gha.md)
+> Pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/guides/gha.md)
 
 # Introduction to GitHub Actions with Docker
 

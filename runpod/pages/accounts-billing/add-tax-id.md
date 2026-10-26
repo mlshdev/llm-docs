@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [accounts-billing/add-tax-id.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/accounts-billing/add-tax-id.mdx)
+> Pinned source for Runpod main: [accounts-billing/add-tax-id.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/accounts-billing/add-tax-id.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/add-tax-id
 
 # Adding your tax ID
 
-Add a tax ID to your Runpod account to update how tax is applied to your purchases.
+Add or update the tax ID on your Runpod account through checkout or account settings, and review the supported countries.
 
 A tax ID is a number your government assigns to your business when you register for tax. Adding a valid tax ID to your account may exempt you from tax.
 

@@ -1,9 +1,9 @@
-> Pinned source for Docker main: [content/manuals/build/bake/variables.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/build/bake/variables.md)
+> Pinned source for Docker main: [content/manuals/build/bake/variables.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/build/bake/variables.md)
 
 You can define and use variables in a Bake file to set attribute values,
 interpolate them into other values, and perform arithmetic operations.
 Variables can be defined with default values, and can be overridden with
-environment variables.
+the `--var` flag or environment variables.
 
 ## Using variables as attribute values
 
@@ -24,6 +24,25 @@ target "webapp" {
   tags = [ TAG ]
 }
 ```
+
+## Override variable values
+
+Use `--var NAME=value` to override a declared variable for one Bake invocation
+without changing your shell's environment:
+
+```console
+$ docker buildx bake --var TAG=docker.io/username/webapp:dev webapp
+```
+
+Repeat the flag to set multiple variables. If you repeat a name, the last
+value wins. Explicit `--var` values take precedence over environment variables
+with the same name and over defaults in the Bake file. Values are converted
+to the declared variable type.
+
+This flag also works when environment-based variable lookups are disabled
+with `BUILDX_BAKE_DISABLE_VARS_ENV_LOOKUP=1`. Use `--var` to set a variable
+used in expressions throughout the definition; use `--set` to override a
+specific target attribute. See [Overriding configurations](https://docs.docker.com/build/bake/overrides/).
 
 ## Interpolate variables into values
 

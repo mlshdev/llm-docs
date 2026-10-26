@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_env.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_env.yaml)
 
 # sbx env
 
@@ -18,9 +18,15 @@ Use create to provision the sandbox, run to start or join its agent session,
 exec to run a command, and rm to remove it and its provisioned secrets.
 Use plan to preview changes. Changes require approval; --force skips the prompt.
 
-Lifecycle commands and command-based secrets execute on the host with your
-permissions. Keep secret helpers and their dependencies outside writable
-sandbox mounts, and use absolute helper paths.
+Lifecycle commands, command-based secrets, and command-backed MCP servers execute
+on the host with your permissions. Keep secret helpers and their dependencies
+outside writable sandbox mounts, and use absolute helper paths.
+
+MCP command approval persists across sandbox and daemon restarts. Use
+\--skip-host-commands to skip lifecycle commands and disable owned host MCP
+commands until a later "sbx env run" without the flag. If initialize creates
+a missing MCP executable or changes its resolved path, a second approval is
+required before registration or sandbox creation.
 
 The environment file is mounted read-only by default when shared with the
 sandbox. Set sandboxOptions.writableEnvFiles only when you trust the agent

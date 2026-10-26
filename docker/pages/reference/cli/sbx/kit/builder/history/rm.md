@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder_history_rm.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_kit_builder_history_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder_history_rm.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_kit_builder_history_rm.yaml)
 
 # sbx kit builder history rm
 
@@ -11,9 +11,9 @@ Remove kit build records
 
 ## Options
 
-| Option        | Default | Description                                                                    |
-| ------------- | ------- | ------------------------------------------------------------------------------ |
-| `-y`, `--yes` |         | Skip confirmation prompt (buildx --force still controls running build records) |
+| Option        | Default | Description              |
+| ------------- | ------- | ------------------------ |
+| `-y`, `--yes` |         | Skip confirmation prompt |
 
 ## Global options
 

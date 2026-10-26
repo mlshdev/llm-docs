@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/build/building/variables.md)
+> Pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/build/building/variables.md)
 
 In Docker Build, build arguments (`ARG`) and environment variables (`ENV`)
 both serve as a means to pass information into the build process.
@@ -551,6 +551,9 @@ Usage:
 ```console
 $ export BUILDX_CONFIG=/usr/local/etc
 ```
+
+For repository- and scope-specific credentials stored under this directory,
+see [Registry authentication](https://docs.docker.com/build/building/registry-auth/).
 
 ### BUILDX\_CPU\_PROFILE
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/migrate-from-v1.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/migrate-from-v1.mdx)
+> Pinned source for Runpod main: [api-reference-v2/migrate-from-v1.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/migrate-from-v1.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/migrate-from-v1
 
 # Migrate from API v1

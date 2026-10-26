@@ -1,4 +1,4 @@
-> Pinned source for yt-dlp 2026.10.21: [README.md](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/README.md)
+> Pinned source for yt-dlp 2026.10.26: [README.md](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/README.md)
 
 <div align="center">
 
@@ -8,12 +8,12 @@
 [![Python Version](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fyt-dlp%2Fyt-dlp%2Frefs%2Fheads%2Fmaster%2Fpyproject.toml\&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/blob/master/pyproject.toml "Python Version")
 [![PyPI](https://img.shields.io/badge/-PyPI-blue.svg?logo=pypi\&labelColor=555555\&style=for-the-badge)](https://pypi.org/project/yt-dlp "PyPI")
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?\&logo=discord\&logoColor=white\&style=for-the-badge)](https://discord.gg/H5MNcFW63r "Discord")
-[![License: Unlicense](https://img.shields.io/badge/-Unlicense-red.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/LICENSE "License")
+[![License: Unlicense](https://img.shields.io/badge/-Unlicense-red.svg?style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/LICENSE "License")
 [![Commits](https://img.shields.io/github/commit-activity/m/yt-dlp/yt-dlp?label=commits\&style=for-the-badge)](https://github.com/yt-dlp/yt-dlp/commits "Commit History")
 
 </div>
 
-yt-dlp is a feature-rich command-line audio/video downloader with support for [thousands of sites](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/supportedsites.md). The project is a fork of [youtube-dl](https://github.com/ytdl-org/youtube-dl) based on the now inactive [youtube-dlc](https://github.com/blackjack4494/yt-dlc).
+yt-dlp is a feature-rich command-line audio/video downloader with support for [thousands of sites](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/supportedsites.md). The project is a fork of [youtube-dl](https://github.com/ytdl-org/youtube-dl) based on the now inactive [youtube-dlc](https://github.com/blackjack4494/yt-dlc).
 
 - [INSTALLATION](#installation)
   - [Detailed instructions](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
@@ -61,9 +61,9 @@ yt-dlp is a feature-rich command-line audio/video downloader with support for [t
   - [New features](#new-features)
   - [Differences in default behavior](#differences-in-default-behavior)
   - [Deprecated options](#deprecated-options)
-- [CONTRIBUTING](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/CONTRIBUTING.md#contributing-to-yt-dlp)
-  - [Opening an Issue](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/CONTRIBUTING.md#opening-an-issue)
-  - [Developer Instructions](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/CONTRIBUTING.md#developer-instructions)
+- [CONTRIBUTING](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/CONTRIBUTING.md#contributing-to-yt-dlp)
+  - [Opening an Issue](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/CONTRIBUTING.md#opening-an-issue)
+  - [Developer Instructions](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/CONTRIBUTING.md#developer-instructions)
 - [WIKI](https://github.com/yt-dlp/yt-dlp/wiki)
   - [FAQ](https://github.com/yt-dlp/yt-dlp/wiki/FAQ)
 
@@ -86,28 +86,28 @@ You can install yt-dlp using [the binaries](#release-files), [pip](https://pypi.
 | File                                                                                    | Description                                                                                                                             |
 | :-------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp)              | Platform-independent [zipimport](https://docs.python.org/3/library/zipimport.html) binary. Needs Python (recommended for **Linux/BSD**) |
-| [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)      | Windows (Win8+) standalone x64 binary (recommended for **Windows**)                                                                     |
+| [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)      | Windows (Win10+) standalone x64 binary (recommended for **Windows**)                                                                    |
 | [yt-dlp\_macos](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos) | Universal MacOS (10.15+) standalone executable (recommended for **MacOS**)                                                              |
 
 #### Alternatives
 
-| File                                                                                                                     | Description                                                         |
-| :----------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ |
-| [yt-dlp\_linux](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux)                                  | Linux (glibc 2.17+) standalone x86\_64 binary                       |
-| [yt-dlp\_linux.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux.zip)                          | Unpackaged Linux (glibc 2.17+) x86\_64 executable (no auto-update)  |
-| [yt-dlp\_linux\_aarch64](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarch64)                 | Linux (glibc 2.17+) standalone aarch64 binary                       |
-| [yt-dlp\_linux\_aarch64.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarch64.zip)         | Unpackaged Linux (glibc 2.17+) aarch64 executable (no auto-update)  |
-| [yt-dlp\_linux\_armv7l.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_armv7l.zip)           | Unpackaged Linux (glibc 2.31+) armv7l executable (no auto-update)   |
-| [yt-dlp\_musllinux](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_musllinux)                          | Linux (musl 1.2+) standalone x86\_64 binary                         |
-| [yt-dlp\_musllinux.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_musllinux.zip)                  | Unpackaged Linux (musl 1.2+) x86\_64 executable (no auto-update)    |
-| [yt-dlp\_musllinux\_aarch64](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_musllinux_aarch64)         | Linux (musl 1.2+) standalone aarch64 binary                         |
-| [yt-dlp\_musllinux\_aarch64.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_musllinux_aarch64.zip) | Unpackaged Linux (musl 1.2+) aarch64 executable (no auto-update)    |
-| [yt-dlp\_x86.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_x86.exe)                              | Windows (Win8+) standalone x86 (32-bit) binary                      |
-| [yt-dlp\_win\_x86.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win_x86.zip)                     | Unpackaged Windows (Win8+) x86 (32-bit) executable (no auto-update) |
-| [yt-dlp\_arm64.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_arm64.exe)                          | Windows (Win10+) standalone ARM64 binary                            |
-| [yt-dlp\_win\_arm64.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win_arm64.zip)                 | Unpackaged Windows (Win10+) ARM64 executable (no auto-update)       |
-| [yt-dlp\_win.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win.zip)                              | Unpackaged Windows (Win8+) x64 executable (no auto-update)          |
-| [yt-dlp\_macos.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos.zip)                          | Unpackaged MacOS (10.15+) executable (no auto-update)               |
+| File                                                                                                                     | Description                                                          |
+| :----------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| [yt-dlp\_linux](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux)                                  | Linux (glibc 2.17+) standalone x86\_64 binary                        |
+| [yt-dlp\_linux.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux.zip)                          | Unpackaged Linux (glibc 2.17+) x86\_64 executable (no auto-update)   |
+| [yt-dlp\_linux\_aarch64](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarch64)                 | Linux (glibc 2.17+) standalone aarch64 binary                        |
+| [yt-dlp\_linux\_aarch64.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_aarch64.zip)         | Unpackaged Linux (glibc 2.17+) aarch64 executable (no auto-update)   |
+| [yt-dlp\_linux\_armv7l.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux_armv7l.zip)           | Unpackaged Linux (glibc 2.31+) armv7l executable (no auto-update)    |
+| [yt-dlp\_musllinux](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_musllinux)                          | Linux (musl 1.2+) standalone x86\_64 binary                          |
+| [yt-dlp\_musllinux.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_musllinux.zip)                  | Unpackaged Linux (musl 1.2+) x86\_64 executable (no auto-update)     |
+| [yt-dlp\_musllinux\_aarch64](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_musllinux_aarch64)         | Linux (musl 1.2+) standalone aarch64 binary                          |
+| [yt-dlp\_musllinux\_aarch64.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_musllinux_aarch64.zip) | Unpackaged Linux (musl 1.2+) aarch64 executable (no auto-update)     |
+| [yt-dlp\_x86.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_x86.exe)                              | Windows (Win10+) standalone x86 (32-bit) binary                      |
+| [yt-dlp\_win\_x86.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win_x86.zip)                     | Unpackaged Windows (Win10+) x86 (32-bit) executable (no auto-update) |
+| [yt-dlp\_arm64.exe](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_arm64.exe)                          | Windows (Win10+) standalone ARM64 binary                             |
+| [yt-dlp\_win\_arm64.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win_arm64.zip)                 | Unpackaged Windows (Win10+) ARM64 executable (no auto-update)        |
+| [yt-dlp\_win.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_win.zip)                              | Unpackaged Windows (Win10+) x64 executable (no auto-update)          |
+| [yt-dlp\_macos.zip](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos.zip)                          | Unpackaged MacOS (10.15+) executable (no auto-update)                |
 
 #### Misc
 
@@ -130,15 +130,15 @@ gpg --verify SHA2-512SUMS.sig SHA2-512SUMS
 
 #### Licensing
 
-While yt-dlp is licensed under the [Unlicense](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/LICENSE), many of the release files contain code from other projects with different licenses.
+While yt-dlp is licensed under the [Unlicense](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/LICENSE), many of the release files contain code from other projects with different licenses.
 
 Most notably, the PyInstaller-bundled executables include GPLv3+ licensed code, and as such the combined work is licensed under [GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html).
 
 The zipimport Unix executable (`yt-dlp`) and release tarball (`yt-dlp.tar.gz`) contain [ISC](https://github.com/meriyah/meriyah/blob/main/LICENSE.md) licensed code from [`meriyah`](https://github.com/meriyah/meriyah) and [MIT](https://github.com/davidbonnet/astring/blob/main/LICENSE) licensed code from [`astring`](https://github.com/davidbonnet/astring).
 
-See [THIRD\_PARTY\_LICENSES.txt](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/THIRD_PARTY_LICENSES.txt) for more details.
+See [THIRD\_PARTY\_LICENSES.txt](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/THIRD_PARTY_LICENSES.txt) for more details.
 
-The git repository, the PyPI source distribution and the PyPI built distribution (wheel) only contain code licensed under the [Unlicense](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/LICENSE).
+The git repository, the PyPI source distribution and the PyPI built distribution (wheel) only contain code licensed under the [Unlicense](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/LICENSE).
 
 **Note**: The manpages, shell completion (autocomplete) files etc. are available inside the [source tarball](https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.tar.gz)
 
@@ -185,7 +185,7 @@ You can suppress this warning by adding `--no-update` to your command or configu
 
 ## DEPENDENCIES
 
-Python versions 3.10+ (CPython) and 3.11+ (PyPy) are supported. Other versions and implementations may or may not work correctly.
+Python versions 3.11+ (CPython and PyPy) are supported. Other versions and implementations may or may not work correctly.
 
 While all the other dependencies are optional, `ffmpeg`, `ffprobe`, `yt-dlp-ejs` and a supported JavaScript runtime/engine are highly recommended
 
@@ -263,7 +263,7 @@ On some systems, you may need to use `py` or `python3` instead of `python`.
 
 ### Platform-independent Binary (UNIX)
 
-You will need the build tools `python` (3.10+), `zip`, `make` (GNU), `pandoc`\* and `pytest`\*.
+You will need the build tools `python` (3.11+), `zip`, `make` (GNU), `pandoc`\* and `pytest`\*.
 
 After installing these, simply run `make`.
 
@@ -281,7 +281,7 @@ Note: See their `--help` for more info.
 
 ### Forking the project
 
-If you fork the project on GitHub, you can run your fork's [build workflow](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/.github/workflows/build.yml) to automatically build the selected version(s) as artifacts. Alternatively, you can run the [release workflow](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/.github/workflows/release.yml) or enable the [nightly workflow](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/.github/workflows/release-nightly.yml) to create full (pre-)releases.
+If you fork the project on GitHub, you can run your fork's [build workflow](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/.github/workflows/build.yml) to automatically build the selected version(s) as artifacts. Alternatively, you can run the [release workflow](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/.github/workflows/release.yml) or enable the [nightly workflow](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/.github/workflows/release-nightly.yml) to create full (pre-)releases.
 
 # USAGE AND OPTIONS
 
@@ -2148,7 +2148,7 @@ with YoutubeDL() as ydl:
     ydl.download(URLS)
 ```
 
-Most likely, you'll want to use various options. For a list of options available, have a look at [`yt_dlp/YoutubeDL.py`](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/yt_dlp/YoutubeDL.py#L183) or `help(yt_dlp.YoutubeDL)` in a Python shell. If you are already familiar with the CLI, you can use [`devscripts/cli_to_api.py`](https://github.com/yt-dlp/yt-dlp/blob/master/devscripts/cli_to_api.py) to translate any CLI switches to `YoutubeDL` params.
+Most likely, you'll want to use various options. For a list of options available, have a look at [`yt_dlp/YoutubeDL.py`](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/yt_dlp/YoutubeDL.py#L183) or `help(yt_dlp.YoutubeDL)` in a Python shell. If you are already familiar with the CLI, you can use [`devscripts/cli_to_api.py`](https://github.com/yt-dlp/yt-dlp/blob/master/devscripts/cli_to_api.py) to translate any CLI switches to `YoutubeDL` params.
 
 **Tip**: If you are porting your code from youtube-dl to yt-dlp, one important point to look out for is that we do not guarantee the return value of `YoutubeDL.extract_info` to be json serializable, or even be a dictionary. It will be dictionary-like, but if you want to ensure it is a serializable dictionary, pass it through `YoutubeDL.sanitize_info` as shown in the [example below](#extracting-information)
 
@@ -2355,7 +2355,7 @@ with yt_dlp.YoutubeDL(ydl_opts) as ydl:
 
 - **Multi-threaded fragment downloads**: Download multiple fragments of m3u8/mpd videos in parallel. Use `--concurrent-fragments` (`-N`) option to set the number of threads used
 
-- **New and fixed extractors**: Many new extractors have been added and a lot of existing ones have been fixed. See the [changelog](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/Changelog.md) or the [list of supported sites](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/supportedsites.md)
+- **New and fixed extractors**: Many new extractors have been added and a lot of existing ones have been fixed. See the [changelog](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/Changelog.md) or the [list of supported sites](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/supportedsites.md)
 
 - **New MSOs**: Philo, Spectrum, SlingTV, Cablevision, RCN etc.
 
@@ -2377,7 +2377,7 @@ with yt_dlp.YoutubeDL(ydl_opts) as ydl:
 
 - **Automated builds**: [Nightly/master builds](#update) can be used with `--update-to nightly` and `--update-to master`
 
-See [changelog](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/Changelog.md) or [commits](https://github.com/yt-dlp/yt-dlp/commits) for the full list of changes
+See [changelog](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/Changelog.md) or [commits](https://github.com/yt-dlp/yt-dlp/commits) for the full list of changes
 
 Features marked with a **\*** have been back-ported to youtube-dl
 
@@ -2385,7 +2385,7 @@ Features marked with a **\*** have been back-ported to youtube-dl
 
 Some of yt-dlp's default options are different from that of youtube-dl and youtube-dlc:
 
-- yt-dlp supports only Python 3.10+, and will remove support for more versions as they [become EOL](https://devguide.python.org/versions/#python-release-cycle); while [youtube-dl still supports Python 2.6+ and 3.2+](https://github.com/ytdl-org/youtube-dl/issues/30568#issue-1118238743)
+- yt-dlp supports only [Python 3.11+](#dependencies), and will remove support for more versions as they [become EOL](https://devguide.python.org/versions/#python-release-cycle); while [youtube-dl still supports Python 2.6+ and 3.2+](https://github.com/ytdl-org/youtube-dl/issues/30568#issue-1118238743)
 - Some options no longer work. See [removed options](#removed) for details
 - `avconv` is not supported as an alternative to `ffmpeg`
 - yt-dlp stores config files in slightly different locations to youtube-dl. See [CONFIGURATION](#configuration) for a list of correct locations
@@ -2593,7 +2593,7 @@ These aliases have been removed and may be reused. Please update your scripts an
 
 # CONTRIBUTING
 
-See [CONTRIBUTING.md](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/CONTRIBUTING.md#contributing-to-yt-dlp) for instructions on [Opening an Issue](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/CONTRIBUTING.md#opening-an-issue) and [Contributing code to the project](https://github.com/yt-dlp/yt-dlp/blob/6ccd977303412151ee23352c6257dd658ffc1987/CONTRIBUTING.md#developer-instructions)
+See [CONTRIBUTING.md](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/CONTRIBUTING.md#contributing-to-yt-dlp) for instructions on [Opening an Issue](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/CONTRIBUTING.md#opening-an-issue) and [Contributing code to the project](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/CONTRIBUTING.md#developer-instructions)
 
 # WIKI
 

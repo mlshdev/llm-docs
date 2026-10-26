@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/account/list-secrets.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/account/list-secrets.mdx)
+> Pinned source for Runpod main: [api-reference-v2/account/list-secrets.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/account/list-secrets.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/account/list-secrets
 
 # List Secrets
 
-List the encrypted secrets on your Runpod account that Pods, Serverless endpoints, and templates reference from environment variables. Values are never returned.
+List encrypted secrets referenced by Runpod Pods, Serverless endpoints, and templates through environment variables. Secret values are never returned.
 
 `GET /v2/account/secrets`
 

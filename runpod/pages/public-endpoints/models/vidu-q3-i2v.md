@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/vidu-q3-i2v.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/public-endpoints/models/vidu-q3-i2v.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/vidu-q3-i2v.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/public-endpoints/models/vidu-q3-i2v.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/vidu-q3-i2v
 
 # Vidu Q3 I2V
@@ -95,7 +95,7 @@ response = requests.post(
 )
 
 result = response.json()
-print(result["output"]["video_url"])
+print(result["output"]["result"])
 ```
 
 ```javascript JavaScript
@@ -123,7 +123,7 @@ const response = await fetch(
 );
 
 const result = await response.json();
-console.log(result.output.video_url);
+console.log(result.output.result);
 ```
 
 ## Response
@@ -148,7 +148,7 @@ Time in milliseconds the model took to generate the video.
 
 The generation result containing the video URL and cost.
 
-**output.video\_url (type: string)**
+**output.result (type: string)**
 
 URL of the generated video. This URL expires after 7 days.
 
@@ -163,7 +163,7 @@ Cost of the generation in USD.
   "delayTime": 32,
   "executionTime": 45678,
   "output": {
-    "video_url": "https://video.runpod.ai/abc123/output.mp4",
+    "result": "https://video.runpod.ai/abc123/output.mp4",
     "cost": 0.75
   }
 }

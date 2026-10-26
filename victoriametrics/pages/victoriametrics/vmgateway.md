@@ -1,10 +1,10 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/vmgateway.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmgateway.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmgateway.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmgateway.md)
 
 ***vmgateway is a part of [enterprise package](https://docs.victoriametrics.com/victoriametrics/enterprise/).
 It is available for download and evaluation at [releases page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest).
 See how to request a free [trial license](https://victoriametrics.com/products/enterprise/trial/).***
 
-![vmgateway](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmgateway-overview.webp)
+![vmgateway](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmgateway-overview.webp)
 
 `vmgateway` is a proxy for the VictoriaMetrics Time Series Database (TSDB). It provides the following features:
 
@@ -21,7 +21,7 @@ See how to request a free [trial license](https://victoriametrics.com/products/e
 
 > vmgateway access control feature has been deprecated. Consider using vmauth as [JWT Token auth proxy](https://docs.victoriametrics.com/victoriametrics/vmauth/#jwt-token-auth-proxy) instead. See [migration](https://docs.victoriametrics.com/victoriametrics/vmgateway/#access-control-migration-to-vmauth) docs.
 
-![vmgateway-ac](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmgateway-access-control.webp)
+![vmgateway-ac](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmgateway-access-control.webp)
 
 `vmgateway` supports JWT-based authentication. With JWT, the payload can be configured to grant access to specific tenants and labels, as well as read/write access.
 
@@ -100,7 +100,7 @@ curl 'http://localhost:8431/api/v1/series/count' -H 'Authorization: Bearer incor
 
 Rate limiting only works for the [cluster version of VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/). It supports read and write limiting by tenant.
 
-![vmgateway-rl](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmgateway-rate-limiting.webp)
+![vmgateway-rl](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmgateway-rate-limiting.webp)
 
 `vmgateway` needs a datasource for rate limit queries. It can be either a single-node or a cluster version of `victoria-metrics`.
 The datasource needs to include metrics for the vmcluster you want to rate limit.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_cp.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_cp.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_cp.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_cp.yaml)
 
 # sbx cp
 
@@ -16,6 +16,10 @@ Sandboxes Cloud file API instead of the local sandboxd.
 When copying a directory, the directory itself is placed at the destination.
 If the destination path does not exist it is created; if it already exists
 as a directory, the source is placed inside it.
+
+When a local path is inside a sandbox workspace, sbx cp refuses symbolic
+links that lead out of the workspace, even with --follow-link, including
+when the workspace is reached through a symbolic link or junction to it.
 
 ## Options
 

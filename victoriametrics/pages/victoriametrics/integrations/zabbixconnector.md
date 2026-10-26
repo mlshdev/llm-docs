@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/integrations/zabbixconnector.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/integrations/zabbixconnector.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/integrations/zabbixconnector.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/integrations/zabbixconnector.md)
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive data from
 [Zabbix Connector streaming protocol](https://www.zabbix.com/documentation/current/en/manual/config/export/streaming#protocol)

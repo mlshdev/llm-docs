@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/globalvolume/globalvolume-pods.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/storage/globalvolume/globalvolume-pods.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/globalvolume-pods.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/storage/globalvolume/globalvolume-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/globalvolume-pods
 
 # Global volumes for Pods
@@ -11,7 +11,7 @@ Attach a global volume to a GPU Pod for elastic, region-independent storage that
 
 Attaching a global volume to a Pod gives it access to elastic, region-independent storage without being locked to a specific data center. The volume persists when the Pod is stopped or deleted, so your data is available the next time you deploy.
 
-If you don't have a global volume yet, [create one first](https://docs.runpod.io/storage/globalvolume#create-a-global-volume).
+If you don't have a global volume yet, [create one first](https://docs.runpod.io/storage/globalvolume/overview#create-a-global-volume).
 
 ## Attach a global volume to a Pod
 
@@ -46,9 +46,9 @@ ls /workspace-global
 
 - **One volume of each type per Pod:** Each Pod supports a maximum of one global volume and one network volume at a time.
 
-For more limitations that apply to Pods, see [Global volumes — Limitations](https://docs.runpod.io/storage/globalvolume#limitations).
+For more limitations that apply to Pods, see [Global volumes: limitations](https://docs.runpod.io/storage/globalvolume/overview#limitations).
 
 ## Next steps
 
-- [Migrate data from a network volume](https://docs.runpod.io/storage/globalvolume#migrate-data-from-a-network-volume)
+- [Migrate data from a network volume](https://docs.runpod.io/storage/globalvolume/overview#migrate-data-from-a-network-volume)
   - [Deploy a Pod](https://docs.runpod.io/pods/manage-pods)

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/load-balancing/overview.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/serverless/load-balancing/overview.mdx)
+> Pinned source for Runpod main: [serverless/load-balancing/overview.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/serverless/load-balancing/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/load-balancing/overview
 
 # Overview
@@ -106,11 +106,13 @@ Unhealthy workers are automatically removed from the routing pool.
 
 ## Environment variables
 
-| Variable            | Default        | Description                                         |
-| ------------------- | -------------- | --------------------------------------------------- |
-| `PORT`              | `80`           | Main application server port                        |
-| `PORT_HEALTH`       | Same as `PORT` | Health check endpoint port                          |
-| `HEALTH_CHECK_PATH` | `/ping`        | Path the load balancer polls to check worker health |
+| Variable            | Default | Description                                         |
+| ------------------- | ------- | --------------------------------------------------- |
+| `PORT`              | `80`    | Main application server port                        |
+| `PORT_HEALTH`       | `80`    | Health check endpoint port                          |
+| `HEALTH_CHECK_PATH` | `/ping` | Path the load balancer polls to check worker health |
+
+Changing `PORT` doesn't change `PORT_HEALTH`: each defaults to `80` separately. If you set `PORT` to another port, set `PORT_HEALTH` too, usually to the same value. Otherwise the load balancer checks health on port 80, gets no answer, and the worker never becomes ready.
 
 If using a custom port, add it to your endpoint's environment variables and expose it in container configuration (under **Expose HTTP Ports (Max 10)**).
 

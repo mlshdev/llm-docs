@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_deny_network.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_policy_deny_network.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_deny_network.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_policy_deny_network.yaml)
 
 # sbx policy deny network
 
@@ -20,12 +20,19 @@ for its resolved IP address.
 The rule applies globally to all sandboxes by default. Use --sandbox to add
 the rule to policy "local" scoped to a single sandbox instead.
 
+Use --method to add an HTTP rule. --method accepts comma-separated HTTP
+methods or ANY; --path defaults to /\*\*. Repeat --query name=value to require
+query parameters.
+
 ## Options
 
-| Option       | Default | Description                                                     |
-| ------------ | ------- | --------------------------------------------------------------- |
-| `--protocol` |         | Restrict the rule to one protocol: tcp or udp (default tcp,udp) |
-| `--sandbox`  |         | Scope the rule to a specific sandbox (default: all sandboxes)   |
+| Option       | Default | Description                                                                             |
+| ------------ | ------- | --------------------------------------------------------------------------------------- |
+| `--method`   |         | Restrict the rule to these HTTP methods (comma-separated); use ANY to match all methods |
+| `--path`     |         | Restrict the rule to this HTTP path glob (e.g. /repos/**); defaults to /**              |
+| `--protocol` |         | Restrict the rule to one protocol: tcp or udp (default tcp,udp)                         |
+| `--query`    |         | Require an HTTP query parameter (name=value pattern); repeatable                        |
+| `--sandbox`  |         | Scope the rule to a specific sandbox (default: all sandboxes)                           |
 
 ## Global options
 
@@ -48,4 +55,7 @@ the rule to policy "local" scoped to a single sandbox instead.
 
   # Block only UDP to a host
   sbx policy deny network --protocol udp media.example.com
+
+  # Block POST requests to a path
+  sbx policy deny network api.example.com --method POST --path '/admin/**'
 ```

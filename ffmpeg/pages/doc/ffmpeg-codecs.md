@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/46f23be8b1976ed4c8ec85584daabcf0e57a7b9e/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/ab0eeb03cc63c3399ebcbca68b972586066e3ca9/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -1415,6 +1415,23 @@ the undocumented RealAudio 3 (a.k.a. dnet).
   - drc\_scale > 1
     DRC enabled. Applies drc\_scale asymmetrically.
     Loud sounds are fully compressed.  Soft sounds are enhanced.
+
+## dca
+
+DCA (DTS Coherent Acoustics) audio decoder, including the DTS-HD extensions.
+
+### DCA Decoder Options
+
+- -downmix *channel\_layout*
+  Request a smaller channel layout from the decoder: `stereo`,
+  `5.0(side)`, `5.1(side)` or `7.1`.
+
+A DTS:X stream in the standard presentation decodes to 7.1.4 by default. Its
+four height channels are carried in an extension at the end of each lossless
+(XLL) frame, and the encoder also folds them into the 7.1 bed, so the decoder
+removes them from the bed when it outputs them. Requesting `7.1` outputs
+the bed as coded instead, with the heights folded in, and so does every
+smaller layout. A `7.1` request has no effect on other streams.
 
 ## flac
 

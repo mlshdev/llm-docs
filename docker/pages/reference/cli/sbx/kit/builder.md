@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_kit_builder.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_kit_builder.yaml)
 
 # sbx kit builder
 
@@ -15,7 +15,7 @@ Manage the kit builder sandbox.
 
 Source-form kit builds (a local directory or git reference) run inside a
 shared builder sandbox named sbx-kit-builder, created on first
-use. Its Docker engine store doubles as the kit build cache, so removing
+use. Its Docker Engine store doubles as the kit build cache, so removing
 the builder is how the cache is reclaimed; the next source-form build
 recreates it.
 

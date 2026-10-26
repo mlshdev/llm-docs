@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-permission-requirements.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/desktop/setup/install/mac-permission-requirements.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-permission-requirements.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/desktop/setup/install/mac-permission-requirements.md)
 
 # Understand permission requirements for Docker Desktop on Mac
 
@@ -45,6 +45,10 @@ It is your responsibility to ensure that localhost is resolved to `127.0.0.1` an
 ### Binding privileged ports
 
 You can choose to enable privileged port mapping during installation (version 4.88.0 and earlier), or from the **Advanced** page in **Settings** post-installation. Docker Desktop requires authorization to confirm this choice.
+
+With version 4.97 and later, Docker Desktop binds privileged ports directly and doesn't require authorization. By default, privileged ports are only reachable through loopback addresses, such as `127.0.0.1`. Publishing a privileged port on a specific non-loopback IP address, for example `-p 192.168.1.10:80:80`, fails with an error.
+
+To expose privileged ports to other machines on your local network, go to **Settings** > **Advanced** and select **Allow privileged port forwarding to external machines**.
 
 ## Local Network permission
 

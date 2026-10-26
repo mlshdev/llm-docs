@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder_history.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_kit_builder_history.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder_history.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_kit_builder_history.yaml)
 
 # sbx kit builder history
 
@@ -14,7 +14,7 @@ Show kit build history in the builder sandbox
 Inspect kit build history in the builder sandbox.
 
 Each subcommand runs the matching docker buildx history command inside
-the builder sandbox, against the buildx instance kit builds use. Flags
+the builder sandbox, against the Buildx instance kit builds use. Flags
 and arguments pass through verbatim.
 
 ## Global options

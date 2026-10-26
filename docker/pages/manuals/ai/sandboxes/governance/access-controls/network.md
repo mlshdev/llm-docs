@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/network.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/ai/sandboxes/governance/access-controls/network.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/access-controls/network.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/ai/sandboxes/governance/access-controls/network.md)
 
 # Network access policies
 
@@ -9,8 +9,8 @@ use separate network policy configuration. See
 Network access policies control outbound connections from sandboxes. Each
 policy contains one or more rules that allow the domains, IP ranges, and ports a
 workflow needs, or block destinations that should stay unavailable. Rules can
-also match the HTTP method and path of a request, so a policy can allow part of
-an API without allowing all of it.
+also match the HTTP method, path, and query parameters of a request, so a policy
+can allow part of an API without allowing all of it.
 
 You can configure network access in two places:
 
@@ -59,7 +59,7 @@ Configure them in either place:
 - Organization policies, in the network rule composer in Docker Home. Set the
   rule **Type** to **HTTP**, then select the methods and path patterns. See
   [Add a network rule](https://docs.docker.com/ai/sandboxes/governance/access-controls/organization/#add-a-network-rule).
-- Local policies, with `--method` and `--path` on `sbx policy`. See
+- Local policies, with `--method`, `--path`, and `--query` on `sbx policy`. See
   [HTTP method and path rules](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#http-method-and-path-rules).
 
 ## Local network rules

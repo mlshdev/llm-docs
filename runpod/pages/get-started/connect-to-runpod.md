@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/connect-to-runpod.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/get-started/connect-to-runpod.mdx)
+> Pinned source for Runpod main: [get-started/connect-to-runpod.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/get-started/connect-to-runpod.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/connect-to-runpod
 
 # Choose a workflow

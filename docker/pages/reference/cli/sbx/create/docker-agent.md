@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_create_docker-agent.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_create_docker-agent.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_create_docker-agent.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_create_docker-agent.yaml)
 
 # sbx create docker-agent
 
@@ -32,7 +32,8 @@ Cloud sandboxes use cloud network policies. Host network and HTTP policies
 do not apply. Set cloud account defaults with
 "sbx --cloud policy init \<allow-all|balanced|deny-all>".
 
-Use "sbx --cloud run --name SANDBOX" to attach to the agent after creation.
+Use "sbx --cloud run <agent> --name SANDBOX" to attach to the agent after
+creation: cloud needs the agent, since a name alone is not a unique handle.
 
 ## Global options
 
@@ -51,6 +52,7 @@ Use "sbx --cloud run --name SANDBOX" to attach to the agent after creation.
 | `--kit-arg`        |         | Value for an argument the kit declares, as name=value for every kit or kit.name=value for one (can be repeated) (Experimental)                                                                                                                                                                                                                                                                                                |
 | `--kit-args-file`  |         | File of name=value kit arguments, one per line (can be repeated); --kit-arg overrides (Experimental)                                                                                                                                                                                                                                                                                                                          |
 | `-m`, `--memory`   |         | Memory limit in binary units (e.g., 512m, 8g). Minimum: 512 MiB. Default: 50% of host memory, clamped to 512 MiB–32 GiB. Maximum: max(75% of host memory, 512 MiB)                                                                                                                                                                                                                                                            |
+| `--mount`          |         | Bind a host directory to a kit host-mount\@1 path (can be repeated): HOST:SANDBOX\_PATH. Can only be used when creating a new sandbox.                                                                                                                                                                                                                                                                                        |
 | `--name`           |         | Name for the sandbox (defaults to <agent>-<workdir>; at least two characters, starting with a letter or number, containing only letters, numbers, hyphens and periods (periods are rejected with --cloud); 'default' is reserved)                                                                                                                                                                                             |
 | `--no-progress`    |         | Suppress progress output                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `--on-timeout`     |         | What happens when --ttl lapses: 'stop' stops the sandbox in place so it can be started again later, 'restart' keeps it running by stopping and immediately starting it, or 'delete' removes it. Omit the flag and the server stops the sandbox when it can be started again later, and deletes it otherwise. With 'restart' a supplied --ttl must be at least 1h (cloud only).                                                |

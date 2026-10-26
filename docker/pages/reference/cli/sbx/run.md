@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_run.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_run.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_run.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_run.yaml)
 
 # sbx run
 
@@ -14,7 +14,10 @@ The first positional argument identifies the agent to run. It may be a built-in
 agent name or a sandbox kit reference. Sandbox kit references may be local
 directories, ZIP files, git repositories, or OCI references. Relative local
 references must be explicit paths such as ./my-kit or ../my-kit.zip; bare values
-retain their agent or sandbox-name meaning. To re-attach to an existing sandbox
+retain their agent or sandbox-name meaning. A kit.shortcuts.<agent> setting (sbx
+settings set kit.shortcuts.claude sbx/claude:latest) makes that agent name
+resolve to the configured kit reference instead for local sandboxes; cloud
+sandboxes ignore it. To re-attach to an existing sandbox
 by name, use --name; the agent positional is optional when the named sandbox
 already exists and is read from its spec.
 
@@ -73,6 +76,7 @@ must already exist in the cloud registry; the CLI does not upload it. See
 | `--kit-arg`        |         | Value for an argument the kit declares, as name=value for every kit or kit.name=value for one (can be repeated) (Experimental)                                                                                                                                                                                                                                                                                                                                            |
 | `--kit-args-file`  |         | File of name=value kit arguments, one per line (can be repeated); --kit-arg overrides (Experimental)                                                                                                                                                                                                                                                                                                                                                                      |
 | `-m`, `--memory`   |         | Memory limit in binary units (e.g., 512m, 8g). Minimum: 512 MiB. Default: 50% of host memory, clamped to 512 MiB–32 GiB. Maximum: max(75% of host memory, 512 MiB)                                                                                                                                                                                                                                                                                                        |
+| `--mount`          |         | Bind a host directory to a kit host-mount\@1 path (can be repeated): HOST:SANDBOX\_PATH. Can only be used when creating a new sandbox.                                                                                                                                                                                                                                                                                                                                    |
 | `--name`           |         | Name for the sandbox (default: <agent>-<workdir>)                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `--new`            |         | Always create a new cloud sandbox instead of prompting to reuse an existing one (cloud only)                                                                                                                                                                                                                                                                                                                                                                              |
 | `--on-timeout`     |         | What happens when --ttl lapses: 'stop' stops the sandbox in place so it can be started again later, 'restart' keeps it running by stopping and immediately starting it, or 'delete' removes it. Omit the flag and the server stops the sandbox when it can be started again later, and deletes it otherwise. With 'restart' a supplied --ttl must be at least 1h (cloud only).                                                                                            |

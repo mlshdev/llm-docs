@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env_rm.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_env_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env_rm.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_env_rm.yaml)
 
 # sbx env rm
 
@@ -36,7 +36,7 @@ lists such as ports and mcp.servers are concatenated.
 | `-f`, `--force`        |         | Skip confirmation prompts and delete even if in use (e.g. an open SSH connection)                                                                                      |
 | `--name`               |         | Name for the sandbox, overriding 'name:' in sbxenv.yaml and the derived <agent>-<directory> (every 'sbx env' command addressing this environment needs the same value) |
 | `--prune-bindings`     |         | Also remove this environment's bindings from the global credentials.yaml                                                                                               |
-| `--skip-host-commands` |         | Skip the host lifecycle commands the environment declares                                                                                                              |
+| `--skip-host-commands` |         | Skip host preRemove commands and disable owned host MCP commands; successful environment removal deletes their registrations                                           |
 
 ## Global options
 

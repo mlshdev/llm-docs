@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/minimax-speech.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/public-endpoints/models/minimax-speech.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/minimax-speech.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/public-endpoints/models/minimax-speech.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/minimax-speech
 
 # Minimax Speech 02 HD
@@ -93,7 +93,7 @@ response = requests.post(
 )
 
 result = response.json()
-print(result["output"]["audio_url"])
+print(result["output"]["result"])
 ```
 
 ```javascript JavaScript
@@ -120,7 +120,7 @@ const response = await fetch(
 );
 
 const result = await response.json();
-console.log(result.output.audio_url);
+console.log(result.output.result);
 ```
 
 ## Response
@@ -149,7 +149,7 @@ Identifier of the worker that processed the request.
 
 The generation result containing the audio URL and cost.
 
-**output.audio\_url (type: string)**
+**output.result (type: string)**
 
 URL of the generated audio file. This URL expires after 7 days.
 
@@ -165,7 +165,7 @@ Cost of the generation in USD.
   "executionTime": 3456,
   "workerId": "oqk7ao1uomckye",
   "output": {
-    "audio_url": "https://audio.runpod.ai/abc123/output.mp3",
+    "result": "https://audio.runpod.ai/abc123/output.mp3",
     "cost": 0.0055
   }
 }

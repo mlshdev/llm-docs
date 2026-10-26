@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/_index.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/ai/sandboxes/governance/audit/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/audit/_index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/ai/sandboxes/governance/audit/_index.md)
 
 # AI Governance Audit Logs
 
@@ -84,4 +84,5 @@ Policy](https://www.docker.com/legal/privacy/).
 - [Configure audit delivery](https://docs.docker.com/ai/sandboxes/governance/audit/configure/)
 - [View and export audit events](https://docs.docker.com/ai/sandboxes/governance/audit/view-export/)
 - [SIEM forwarding](https://docs.docker.com/ai/sandboxes/governance/audit/siem/)
+- [Retrieve audit events with the API](https://docs.docker.com/ai/sandboxes/governance/audit/api/)
 - [Audit record reference](https://docs.docker.com/ai/sandboxes/governance/audit/record-reference/)

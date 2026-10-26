@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/verification-stages.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/host/verification-stages.mdx)
+> Pinned source for Vast.ai main: [host/verification-stages.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/host/verification-stages.mdx)
 > Canonical documentation: https://docs.vast.ai/host/verification-stages
 
 # Verification Stages
@@ -135,6 +135,11 @@ Your machine must meet all of the following.
 > restricted on the marketplace and can lose verification. See
 > [Upgrade the Kernel](https://docs.vast.ai/host/upgrade-kernel).
 
+> **Note**
+>
+> Vast asks hosts to run at least a minimum NVIDIA driver version. See
+> [Upgrade the NVIDIA Driver](https://docs.vast.ai/host/upgrade-nvidia-driver).
+
 > **Warning**
 >
 > SSH password login must be disabled for security. SSH password login enabled
@@ -153,6 +158,12 @@ Your machine must meet all of the following.
 | Storage type                                 | SSD     |
 | Dedicated drive for Docker container storage | 200 GB  |
 | Root partition free space                    | 20 GB   |
+
+> **Note**
+>
+> A drive that is wearing out or throwing media errors fails container starts and
+> costs the machine its verification, often while it still reports as healthy.
+> See [Check SSD Health](https://docs.vast.ai/host/ssd-health).
 
 #### Reliability
 

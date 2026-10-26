@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/manuals/ai/sandboxes/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/ai/sandboxes/usage.md)
 
 # Usage
 
@@ -436,10 +436,15 @@ recipes, see
 
 While a sandbox exists, installed packages, Docker images, configuration
 changes, command history, and mountless workspace files all persist across
-stops and restarts. When you remove a sandbox, everything inside is deleted.
+stops and restarts. Removing a sandbox deletes its container filesystem.
 Host workspace files, including repositories used as clone sources, and the
-[shared agent skills store](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/) remain on your host. To
-capture changes in the container filesystem, [save a template](#saving-a-sandbox-as-a-template).
+[shared agent skills store](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/) remain on your host.
+Persistent kit volumes in local sandboxes also survive removal. See
+[Keep kit data when recreating a sandbox](https://docs.docker.com/ai/sandboxes/customize/use-kits/#keep-kit-data-when-recreating-a-sandbox)
+for how to reattach them.
+
+To capture changes in the container filesystem,
+[save a template](#saving-a-sandbox-as-a-template).
 For a reproducible environment defined in source,
 [author a kit](https://docs.docker.com/ai/sandboxes/customize/author/).
 

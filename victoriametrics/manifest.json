@@ -6,21 +6,21 @@
   "title": "VictoriaMetrics",
   "homepage": "https://docs.victoriametrics.com/",
   "repository": "VictoriaMetrics/VictoriaMetrics",
-  "tag": "v1.154.1",
-  "releaseId": 417313952,
-  "releasePublishedAt": "2026-10-20T07:49:10Z",
-  "sourceCommit": "64c2e75fe7dc4f16fe73ba060ea383c73b1a8628",
-  "documentCount": 114,
+  "tag": "v1.155.0",
+  "releaseId": 422094225,
+  "releasePublishedAt": "2026-10-26T13:40:31Z",
+  "sourceCommit": "3fec2f72414d00d1acda807c8818d7af90cc966d",
+  "documentCount": 115,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 5571152,
-      "documentCount": 114,
-      "sha256": "b9ee5e662ff4421781bed6c37da92e8c4a2c2b7ea750433be97bbc5a1420c7e5"
+      "byteLength": 5668396,
+      "documentCount": 115,
+      "sha256": "51f83b57d5df96839330333e4044041e959b213b100836f754a3f48677cf929a"
     }
   ],
-  "outputDigest": "01066656840a3d5e2a2662b635065d260a89ec25235447564513d11cdd8b2a9e",
+  "outputDigest": "82aa18fce8c10ba02bb2ac8c683fa5b68d63548b7283f1c786f81ede09e0346f",
   "quarantined": [
     {
       "sourcePath": "docs/playgrounds/_index.md",

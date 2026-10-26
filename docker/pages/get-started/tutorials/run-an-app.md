@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/tutorials/run-an-app.md](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/content/get-started/tutorials/run-an-app.md)
+> Pinned source for Docker main: [content/get-started/tutorials/run-an-app.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/get-started/tutorials/run-an-app.md)
 
 # Build and share a containerized application
 

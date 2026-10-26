@@ -6,10 +6,10 @@
   "title": "vmestimator",
   "homepage": "https://docs.victoriametrics.com/victoriametrics/vmestimator/",
   "repository": "VictoriaMetrics/vmestimator",
-  "tag": "v0.1.17",
-  "releaseId": 413986867,
-  "releasePublishedAt": "2026-10-15T15:44:58Z",
-  "sourceCommit": "48cf2fbe31c2431b852d235f684481b05a9b44f7",
+  "tag": "v0.1.18",
+  "releaseId": 424390861,
+  "releasePublishedAt": "2026-10-26T15:43:01Z",
+  "sourceCommit": "0f135ada5a362e41d6144e4821950a13566bedac",
   "documentCount": 1,
   "indexComplete": true,
   "corpusVolumes": [
@@ -17,10 +17,10 @@
       "name": "llms-full.txt",
       "byteLength": 50513,
       "documentCount": 1,
-      "sha256": "0d744a28119a467978cd26826d2b599714ff1bcddc76c0d9c905e7b8a2808241"
+      "sha256": "de8a96dfa101ecfdf07b47a095ac03e1bb50aaba9ff35ebf4c2401b5d7537d87"
     }
   ],
-  "outputDigest": "54098966433f1b5fdda1e452816408395604bd6979b6a110b1905338fc0de802",
+  "outputDigest": "c73ca96d5c272c97230d6d8c545d0d7f561d20dcc235a9a0316299a62ac2c062",
   "notes": [
     "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
     "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",

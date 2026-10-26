@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/upgrade-docker-and-packages.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/host/upgrade-docker-and-packages.mdx)
+> Pinned source for Vast.ai main: [host/upgrade-docker-and-packages.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/host/upgrade-docker-and-packages.mdx)
 > Canonical documentation: https://docs.vast.ai/host/upgrade-docker-and-packages
 
 # Upgrade Docker and System Packages
@@ -316,21 +316,6 @@ Both must equal the `Candidate` from step 2.
 >
 > If Ubuntu asks which services to restart, do not choose "restart all". Do not
 > run `needrestart -r a` or `apt autoremove`.
-
-Check how the NVIDIA kernel module is delivered on this machine:
-
-```bash
-dpkg -l | grep -E '^ii +(nvidia-dkms|linux-modules-nvidia)'
-```
-
-```text nocopy
-ii  linux-modules-nvidia-595-open-7.0.0-31-generic   7.0.0-31.31~24.04.1  amd64  Linux kernel nvidia modules for version 7.0.0-31
-ii  linux-modules-nvidia-595-open-generic-hwe-24.04  7.0.0-31.31~24.04.1  amd64  Extra drivers for nvidia-595-open for the generic-hwe-24.04 flavour
-```
-
-`linux-modules-nvidia-*` means prebuilt: nothing is compiled. `nvidia-dkms-*`
-means the module is compiled during the upgrade, which takes several minutes.
-Remember which one you have for the recovery section.
 
 Upgrade. `NEEDRESTART_MODE=l` lists services needing a restart instead of
 restarting them:

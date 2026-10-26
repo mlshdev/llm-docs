@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/permissions.mdx](https://github.com/vast-ai/docs/blob/626149741ba46f195c775b2f4c89b7329de2d902/api-reference/permissions.mdx)
+> Pinned source for Vast.ai main: [api-reference/permissions.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/api-reference/permissions.mdx)
 > Canonical documentation: https://docs.vast.ai/api-reference/permissions
 
 # Permissions

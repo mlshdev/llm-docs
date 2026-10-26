@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/global-volumes/delete-a-global-volume.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/api-reference-v2/global-volumes/delete-a-global-volume.mdx)
+> Pinned source for Runpod main: [api-reference-v2/global-volumes/delete-a-global-volume.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/global-volumes/delete-a-global-volume.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/global-volumes/delete-a-global-volume
 
 # Delete A Global Volume
 
-Permanently delete a Runpod global volume and its stored data.
+Permanently delete a Runpod global volume and its stored data through the REST API after removing Pod and Serverless attachments.
 
 `DELETE /v2/global-volumes/{id}`
 

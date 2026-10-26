@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/concepts.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/get-started/concepts.mdx)
+> Pinned source for Runpod main: [get-started/concepts.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/get-started/concepts.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/concepts
 
 # Concepts
@@ -13,9 +13,13 @@ The web interface for managing your compute resources, account, teams, and billi
 
 A pay-as-you-go compute solution designed for dynamic autoscaling in production AI/ML apps.
 
+## [Runpod SDK](https://docs.runpod.io/sdk/overview)
+
+The `runpod` Python package, the single SDK for building on Runpod. Define GPU functions with decorators such as `@app.queue`, `@app.task`, and `@app.api` on a `runpod.App`, deploy them as apps, call existing Serverless endpoints, build Serverless workers, and manage Pods and other resources. It includes the `rp` command-line interface.
+
 ## [Flash](https://docs.runpod.io/flash/overview)
 
-A framework for building distributed GPU applications using local Python scripts. Write functions with the `@Endpoint` decorator, and Flash automatically executes them on Runpod's infrastructure.
+The decorator-based framework that is now part of the [Runpod SDK](https://docs.runpod.io/sdk/overview). The standalone `runpod-flash` package gets no fixes or updates after October 29, 2026. For new projects, use the Runpod SDK; to move existing code, see [Migrating from Flash](https://docs.runpod.io/sdk/migrate-from-flash).
 
 ## [Pod](https://docs.runpod.io/pods/overview)
 

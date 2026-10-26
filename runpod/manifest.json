@@ -8,26 +8,20 @@
   "repository": "runpod/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-10-23T22:51:31Z",
-  "documentationDigest": "094e25756a84dfceaf94fb43a67e5ca5d42d4acdb32a01d00312440b975c4c6f",
-  "sourceCommit": "2f1d12b792818b3af3edd8d503a5e35f760d1410",
-  "documentCount": 364,
+  "sourceCommittedAt": "2026-10-26T22:18:41Z",
+  "documentationDigest": "0a3f0eb351f76c36ce7af05e1efb6567f81e40bde5db4958e0f2fa9161288f95",
+  "sourceCommit": "25ec0e5ebf1cdc72fae35ed21b489444a68e9cad",
+  "documentCount": 365,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2816775,
-      "documentCount": 364,
-      "sha256": "7ffedfccc700fedd17f3ef0308d5cd1504ae17e5d5525abdd63ff2e45471f631"
+      "byteLength": 2838697,
+      "documentCount": 365,
+      "sha256": "f571a2cdc784084c82f9bb3c1ed129dbb9cbc64089cff9c90e1dc68cb65084c3"
     }
   ],
-  "outputDigest": "749c0c23bb9f017b7e8742484c25d23f6275645817613fd5b360776b551ed3aa",
-  "quarantined": [
-    {
-      "sourcePath": "api-reference-v2/audit-logs/list-audit-logs.mdx",
-      "reason": "Nested mappings are not allowed in compact mappings at line 2, column 14: description: List the audit trail of your Runpod account: who performed which a… ^"
-    }
-  ],
+  "outputDigest": "ad3feda7b443f71f7ace0af08e91335d3a96749249a8ac2664528b0db55bb2a4",
   "notes": [
     "Pages follow the navigation declared in docs.json at the pinned commit; snippets are inlined into the pages that import them rather than published separately.",
     "API reference pages are rendered from the OpenAPI specification in the directory the page lives under, since the upstream page carries no prose of its own.",

@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `626149741ba46f195c775b2f4c89b7329de2d902`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `2b2d9a04e7cb542f3305c0c148c2395b0cfab86e`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -440,7 +440,7 @@
 ## Guides
 
 - [Optimize Your Earnings](pages/host/optimization-guide.md): A guide to the key settings, tradeoffs, and strategies that determine how much your machines earn. Your hardware is only half the equation; how you configure your listings is the other. (11997 bytes)
-- [Verification Stages](pages/host/verification-stages.md): States: Unverified → Verified → (potentially) Deverified → Unverified → ... (9236 bytes)
+- [Verification Stages](pages/host/verification-stages.md): States: Unverified → Verified → (potentially) Deverified → Unverified → ... (9640 bytes)
 - [How to Self-Test](pages/host/how-to-self-test.md): Before your machine can be verified on Vast.ai, it must meet all minimum quality and reliability benchmarks. Verification confirms that your machine is stable, performant, and properly configured to run client workloads. (3207 bytes)
 - [Using Your Own Machine](pages/host/using-your-own-machine.md): Run your own workloads on your machines as a host: default jobs fill idle time, and self-rentals give you the machine on demand. (8688 bytes)
 - [Host Notifications](pages/host/notifications.md): Choose which Vast.ai host machine, verification, and maintenance events reach you by email or through webhooks. (6509 bytes)
@@ -452,8 +452,10 @@
 - [VMs](pages/host/vms.md): Vast now supports VM instances running on Kernel Virtual Machine (KVM) in addition to Docker container based instances. VM support is currently an optional feature for hosts as it usually requires additional configurati… (5735 bytes)
 - [Set a Maintenance Window](pages/host/set-maintenance-window.md): Schedule a maintenance window on one machine or on many at once from the Machines page, so renters are warned before you take hardware down. (7429 bytes)
 - [Upgrade the Kernel](pages/host/upgrade-kernel.md): Check whether your host machine's kernel is up to date, install the update, and confirm the machine came back online. (15951 bytes)
-- [Upgrade Docker and System Packages](pages/host/upgrade-docker-and-packages.md): Safely upgrade Docker, containerd, the NVIDIA stack, and other system packages on a Vast.ai host machine without disrupting clients. (15995 bytes)
+- [Upgrade the NVIDIA Driver](pages/host/upgrade-nvidia-driver.md): Bring a host machine up to the minimum NVIDIA driver version Vast asks for, built by DKMS and held at that version. (12447 bytes)
+- [Upgrade Docker and System Packages](pages/host/upgrade-docker-and-packages.md): Safely upgrade Docker, containerd, the NVIDIA stack, and other system packages on a Vast.ai host machine without disrupting clients. (15346 bytes)
 - [Disable SSH Password Login](pages/host/disable-ssh-password-login.md): Turn off SSH password login to protect your machine. (5167 bytes)
+- [Check SSD Health](pages/host/ssd-health.md): Read the SMART data on your machine's drives, tell a worn drive from a failing one, and replace one before it takes instances down with it. (29480 bytes)
 - [Offline Machine - Troubleshooting Steps](pages/host/machine-offline.md): Steps to identify and resolve connectivity, service, and GPU-related issues when a Vast.ai host machine shows as Offline. (11863 bytes)
 
 ## AI/ML frameworks

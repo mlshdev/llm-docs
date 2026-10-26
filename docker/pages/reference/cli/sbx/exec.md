@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_exec.yaml](https://github.com/docker/docs/blob/1d503f8b7c2b2008da6cbc08bb5be163666c84bf/data/sbx_cli/sbx_exec.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_exec.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_exec.yaml)
 
 # sbx exec
 
@@ -15,6 +15,10 @@ Flags match the behavior of "docker exec", except detached exec (-d/--detach)
 is not supported. Some flags (-d, --user, --privileged)
 are not supported with --cloud and are rejected rather than silently ignored.
 \--detach-keys applies only to an interactive (-i/-t) cloud exec.
+
+Exit status is that of the command. sbx exits 125 if it could not run the command,
+for example because the sandbox does not exist. A missing command exits 127,
+unless a cloud backend reports it as an error rather than a status, which exits 125.
 
 ## Options
 

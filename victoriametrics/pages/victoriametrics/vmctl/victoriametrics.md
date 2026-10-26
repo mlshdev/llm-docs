@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.154.1: [docs/victoriametrics/vmctl/victoriametrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/64c2e75fe7dc4f16fe73ba060ea383c73b1a8628/docs/victoriametrics/vmctl/victoriametrics.md)
+> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmctl/victoriametrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmctl/victoriametrics.md)
 
 The simplest way to migrate data between VictoriaMetrics installations is [to copy data between instances](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#data-migration) or [to run single-node and cluster together](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#from-single-node-to-cluster).
 But when simple copy isn't possible (migration between single-node and cluster, or re-sharding) or when data needs to be
@@ -23,6 +23,7 @@ Migration in `vm-native` mode takes two steps:
     --vm-native-src-addr=http://127.0.0.1:8481/select/0/prometheus \ # migrate from
     --vm-native-dst-addr=http://localhost:8428 \                     # migrate to
     --vm-native-filter-time-start='2022-11-20T00:00:00Z' \           # starting from
+    --vm-native-filter-time-end='2022-11-30T23:59:59Z' \             # ending at
     --vm-native-filter-match='{__name__!~"vm_.*"}'                   # match only metrics without `vm_` prefix
 VictoriaMetrics Native import mode
 

@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [pods/manage-pods.mdx](https://github.com/runpod/docs/blob/2f1d12b792818b3af3edd8d503a5e35f760d1410/pods/manage-pods.mdx)
+> Pinned source for Runpod main: [pods/manage-pods.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/pods/manage-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/manage-pods
 
 # Manage Pods
 
-Create, start, stop, and terminate Pods using the Runpod console or CLI. Review setup, configuration, and operations guidance for Runpod Pods.
+Create, start, stop, restart, and terminate Pods using the Runpod console or CLI. Review setup, configuration, and operations guidance for Runpod Pods.
 
 This page covers the core Pod management operations. For CLI usage, first [install the Runpod CLI](https://docs.runpod.io/runpodctl/overview) and configure your API key:
 
@@ -18,6 +18,7 @@ runpodctl config --apiKey RUNPOD_API_KEY
 | **Deploy**    | [Pods page](https://www.console.runpod.io/pods) → Deploy | `runpodctl pod create --name NAME --gpu-id "GPU" --image "IMAGE"` |
 | **Start**     | Expand Pod → Play icon                                   | `runpodctl pod start POD_ID`                                      |
 | **Stop**      | Expand Pod → Stop icon                                   | `runpodctl pod stop POD_ID`                                       |
+| **Restart**   | Three-dot menu → Restart Pod                             | `runpodctl pod restart POD_ID`                                    |
 | **Update**    | Three-dot menu → Edit Pod                                | `runpodctl pod update POD_ID`                                     |
 | **Terminate** | Expand Pod → Trash icon                                  | `runpodctl pod delete POD_ID`                                     |
 | **List**      | [Pods page](https://www.console.runpod.io/pods)          | `runpodctl pod list`                                              |
@@ -127,6 +128,25 @@ runpodctl pod start $RUNPOD_POD_ID
 curl --request POST \
   --url "https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID/start" \
   --header 'Authorization: Bearer RUNPOD_API_KEY'
+```
+
+## Restart a Pod
+
+Restarting reboots a running Pod's container on the same machine. The Pod keeps its GPU, so it's a safe way to reload a process, such as one running as PID 1. Unlike stopping and starting, restarting can't leave you with [zero GPUs](https://docs.runpod.io/pods/troubleshooting/zero-gpus).
+
+1. Open the [Pods page](https://www.console.runpod.io/pods).
+2. Open the Pod's three-dot menu and click **Restart Pod**.
+
+```sh
+runpodctl pod restart $RUNPOD_POD_ID
+```
+
+```bash
+curl --request POST \
+  --url "https://api.runpod.io/v2/pods/$RUNPOD_POD_ID/action" \
+  --header 'Authorization: Bearer RUNPOD_API_KEY' \
+  --header 'Content-Type: application/json' \
+  --data '{"action": "restart"}'
 ```
 
 ## Update a Pod
