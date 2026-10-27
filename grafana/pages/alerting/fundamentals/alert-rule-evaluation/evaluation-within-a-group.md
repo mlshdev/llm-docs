@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/fundamentals/alert-rule-evaluation/evaluation-within-a-group.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/fundamentals/alert-rule-evaluation/evaluation-within-a-group.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/fundamentals/alert-rule-evaluation/evaluation-within-a-group.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/fundamentals/alert-rule-evaluation/evaluation-within-a-group.md)
 
 # How rules are evaluated within a group
 
@@ -12,4 +12,6 @@ Rules within the same evaluation group can be evaluated simultaneously or sequen
 
 - **Data source-managed** rules within the same group are evaluated sequentially, one after the other—this is useful to ensure that recording rules are evaluated before alert rules.
 
-- **Grafana-managed rules [imported from data source-managed rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/alerting-migration/)** are also evaluated sequentially.
+- **Grafana-managed rules [imported from data source-managed rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/alerting-migration/)** are also evaluated sequentially, in the order they appear in the original rule group. Grafana runs them as an evaluation sequence: each rule starts after the previous one finishes. This preserves the evaluation order when a rule depends on a preceding recording rule.
+
+For Grafana-managed rules that depend on recording rule results, you can define an explicit evaluation order with a rule sequence. The sequence evaluates recording rules first, followed by alert rules, at a shared interval. For instructions, refer to [Configure rule sequences](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/rule-sequences/).

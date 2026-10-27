@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/aws-cloudwatch/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/aws-cloudwatch/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/troubleshooting/index.md)
 
 # Troubleshoot Amazon CloudWatch data source issues
 
-This document provides solutions to common issues you may encounter when configuring or using the Amazon CloudWatch data source. For configuration instructions, refer to [Configure CloudWatch](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/).
+This document provides solutions to common issues you may encounter when configuring or using the Amazon CloudWatch data source. For configuration instructions, refer to [Configure CloudWatch](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/).
 
 > **Note**
 >
@@ -31,7 +31,7 @@ These errors occur when AWS credentials are invalid, missing, or don't have the 
 
 | Cause                                            | Solution                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IAM policy missing required permissions          | Attach the appropriate IAM policy to your user or role. For metrics, you need `cloudwatch:ListMetrics`, `cloudwatch:GetMetricData`, and related permissions. For logs, you need `logs:DescribeLogGroups`, `logs:StartQuery`, `logs:GetQueryResults`, and related permissions. Refer to [Configure CloudWatch](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/) for complete policy examples. |
+| IAM policy missing required permissions          | Attach the appropriate IAM policy to your user or role. For metrics, you need `cloudwatch:ListMetrics`, `cloudwatch:GetMetricData`, and related permissions. For logs, you need `logs:DescribeLogGroups`, `logs:StartQuery`, `logs:GetQueryResults`, and related permissions. Refer to [Configure CloudWatch](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/) for complete policy examples. |
 | Incorrect access key or secret key               | Verify the credentials in the AWS Console under **IAM** > **Users** > your user > **Security credentials**. Generate new credentials if necessary.                                                                                                                                                                                                                                                                        |
 | Credentials have expired                         | For temporary credentials, generate new ones. For access keys, verify they haven't been deactivated or deleted.                                                                                                                                                                                                                                                                                                           |
 | Wrong AWS region                                 | Verify the default region in the data source configuration matches where your resources are located.                                                                                                                                                                                                                                                                                                                      |
@@ -106,7 +106,7 @@ These errors occur when AWS credentials are invalid, missing, or don't have the 
 | Cause                                                   | Solution                                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | The connection test only validates the assume-role step | When you configure an **Assume Role ARN**, **Save & test** confirms that the primary credentials can perform `sts:AssumeRole`. It doesn't verify that the assumed role has CloudWatch or Logs permissions. Attach the required query permissions to the assumed role, not only to the primary credentials.                 |
-| The assumed role is missing CloudWatch permissions      | Add the metrics and logs actions, such as `cloudwatch:ListMetrics`, `cloudwatch:GetMetricData`, `logs:DescribeLogGroups`, and `logs:StartQuery`, to the assumed role's policy. Refer to [Configure CloudWatch](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/) for complete policy examples. |
+| The assumed role is missing CloudWatch permissions      | Add the metrics and logs actions, such as `cloudwatch:ListMetrics`, `cloudwatch:GetMetricData`, `logs:DescribeLogGroups`, and `logs:StartQuery`, to the assumed role's policy. Refer to [Configure CloudWatch](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/) for complete policy examples. |
 | Permissions are attached to the wrong identity          | Confirm that the policy is attached to the role named in **Assume Role ARN**, not to the IAM user or role that provides the primary credentials.                                                                                                                                                                           |
 
 ### Data source stops working after about an hour
@@ -121,7 +121,7 @@ These errors occur when AWS credentials are invalid, missing, or don't have the 
 
 | Cause                                               | Solution                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Temporary credentials expired and weren't refreshed | Methods that use temporary credentials, such as Assume Role or STS, issue short-lived tokens. If the data source uses static temporary credentials, switch to an authentication method that refreshes automatically, such as Assume Role with long-lived base credentials or an EKS/EC2 instance role. Refer to [AWS authentication](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/). |
+| Temporary credentials expired and weren't refreshed | Methods that use temporary credentials, such as Assume Role or STS, issue short-lived tokens. If the data source uses static temporary credentials, switch to an authentication method that refreshes automatically, such as Assume Role with long-lived base credentials or an EKS/EC2 instance role. Refer to [AWS authentication](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/). |
 
 ### Access blocked by a VPC endpoint policy or service control policy
 
@@ -156,7 +156,7 @@ These errors occur when AWS credentials are invalid, missing, or don't have the 
    - ECS task role (if running in ECS)
    - EKS service account (if running in EKS)
 3. Ensure the Grafana process has permission to read the credentials file.
-4. For EKS with IRSA, set the pod's security context to allow user `472` (`grafana`) to access the projected token. Refer to [AWS authentication](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/) for details.
+4. For EKS with IRSA, set the pod's security context to allow user `472` (`grafana`) to access the projected token. Refer to [AWS authentication](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/) for details.
 
 ### Credentials file not found
 
@@ -242,7 +242,7 @@ These errors occur when querying CloudWatch Metrics.
 1. Verify the metric exists in the selected region.
 2. For custom metrics, add the namespace to **Namespaces of Custom Metrics** in the data source configuration.
 3. Check that the IAM policy includes `cloudwatch:ListMetrics` permission.
-4. CloudWatch limits `ListMetrics` to 500 results per page. To retrieve more metrics, increase the `list_metrics_page_limit` setting in the [Grafana configuration file](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/#configure-the-data-source-with-grafanaini).
+4. CloudWatch limits `ListMetrics` to 500 results per page. To retrieve more metrics, increase the `list_metrics_page_limit` setting in the [Grafana configuration file](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/#configure-the-data-source-with-grafanaini).
 5. Type the metric name directly into the **Metric name** field. For some AWS namespaces, the data source uses a predefined metric list, so newer or less common metrics might not appear in the drop-down even though you can still query them. If the metric exists in your CloudWatch console, enter its exact name to query it.
 6. Use the Query Inspector to verify the API request and response.
 
@@ -324,7 +324,7 @@ These errors occur when querying CloudWatch Logs.
 2. Narrow the time range to reduce the amount of data scanned.
 3. Add filters to your query to limit results.
 4. Break complex queries into smaller, more focused queries.
-5. For alerting, the timeout defined in the [Grafana configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#unified_alerting) takes precedence.
+5. For alerting, the timeout defined in the [Grafana configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#unified_alerting) takes precedence.
 
 ### Log groups not appearing in selector
 
@@ -390,7 +390,7 @@ These errors occur when using template variables with the CloudWatch data source
 3. For dependent variables, ensure parent variables have valid selections.
 4. Verify the region is set correctly (use "default" for the data source's default region).
 
-For more information on template variables, refer to [CloudWatch template variables](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/template-variables/).
+For more information on template variables, refer to [CloudWatch template variables](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/template-variables/).
 
 ### Multi-value template variables cause query failures
 

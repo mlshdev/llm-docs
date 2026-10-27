@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/query-transform-data/share-query/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/query-transform-data/share-query/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/query-transform-data/share-query/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/query-transform-data/share-query/index.md)
 
 # Share query results with another panel
 
@@ -8,13 +8,13 @@ The Dashboard data source lets you select a panel in your dashboard that contain
 
 This strategy can drastically reduce the number of queries being made when you for example have several panels visualizing the same data.
 
-1. [Create a dashboard](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/create-dashboard/).
+1. [Create a dashboard](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/create-dashboard/).
 
 2. Create a panel.
 
 3. Change the panel title to "Source panel". You'll use this panel as a source for the other panels.
 
-4. Define the [query](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/#add-a-query) or queries that you want share.
+4. Define the [query](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#add-a-query) or queries that you want share.
 
    If you don't have a data source available, use the **Grafana** data source, which returns a random time series that you can use for testing.
 

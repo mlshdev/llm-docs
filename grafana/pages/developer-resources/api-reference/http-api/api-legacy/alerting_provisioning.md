@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/api-legacy/alerting_provisioning.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/api-legacy/alerting_provisioning.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/alerting_provisioning.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/alerting_provisioning.md)
 
 # Alerting provisioning HTTP API
 
@@ -8,15 +8,15 @@
 >
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
-> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 The Alerting Provisioning HTTP API can be used to create, modify, and delete resources relevant to Grafana-managed alerts. This API is the one used by our [Grafana Terraform provider](https://registry.terraform.io/providers/grafana/grafana/latest/docs).
 
-> If you are running Grafana Enterprise, you need to add specific permissions for some endpoints. For more information, refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
+> If you are running Grafana Enterprise, you need to add specific permissions for some endpoints. For more information, refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
 
 > **Warning**
 >
-> The contact points, notification policies, notification template groups, and mute timings endpoints in this API are deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/notifications.alerting.grafana.app-v1beta1.json) instead.
+> The contact points, notification policies, notification template groups, and mute timings endpoints in this API are deprecated and will be removed in a future release. These endpoints don't return resources from a staged Alertmanager configuration. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/notifications.alerting.grafana.app-v1beta1.json) instead.
 
 ## Grafana-managed endpoints
 
@@ -24,7 +24,7 @@ The Alerting Provisioning HTTP API can be used to create, modify, and delete res
 >
 > In the Alerting provisioning HTTP API, the endpoints use a JSON format that differs from the format returned by the `export` endpoints.
 >
-> The `export` endpoints allow you to export alerting resources in a JSON format suitable for [provisioning via files](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning/). However, this format cannot be used to update resources via the HTTP API.
+> The `export` endpoints allow you to export alerting resources in a JSON format suitable for [provisioning via files](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning/). However, this format cannot be used to update resources via the HTTP API.
 
 ### Alert rules
 
@@ -325,6 +325,8 @@ Content-Type: application/json
 
 ### Contact points
 
+The contact point endpoints support only v1 integrations. `GET` requests omit integrations that use another version. `PUT` and `DELETE` requests for those integrations return `404 Not Found`.
+
 | Method | URI                                        | Name                                     | Summary                                                |
 | ------ | ------------------------------------------ | ---------------------------------------- | ------------------------------------------------------ |
 | DELETE | /api/v1/provisioning/contact-points/:uid   | [route delete contactpoints](#route)     | Delete a contact point.                                |
@@ -623,7 +625,7 @@ DELETE /api/v1/provisioning/alert-rules/:uid
 
 > **Warning**
 >
-> This API is deprecated and will be removed in a future release. Use the Grafana App Platform alerting APIs instead: `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/alertrules/{name}` for alert rules and `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/recordingrules/{name}` for recording rules.
+> This API is deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/rules.alerting.grafana.app-v1beta1.json) instead: `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/alertrules/{name}` for alert rules and `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/recordingrules/{name}` for recording rules.
 
 #### Parameters
 
@@ -654,7 +656,7 @@ DELETE /api/v1/provisioning/folder/:folderUid/rule-groups/:group
 
 > **Warning**
 >
-> This API is deprecated and will be removed in a future release. Use the Grafana App Platform alerting APIs instead: `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/recordingrules` for recording rules.
+> This API is deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/rules.alerting.grafana.app-v1beta1.json) instead: `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/recordingrules` for recording rules.
 
 #### Parameters
 
@@ -814,7 +816,7 @@ GET /api/v1/provisioning/alert-rules/:uid
 
 > **Warning**
 >
-> This API is deprecated and will be removed in a future release. Use the Grafana App Platform alerting APIs instead: `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/alertrules/{name}` for alert rules and `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/recordingrules/{name}` for recording rules.
+> This API is deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/rules.alerting.grafana.app-v1beta1.json) instead: `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/alertrules/{name}` for alert rules and `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/recordingrules/{name}` for recording rules.
 
 #### Parameters
 
@@ -859,7 +861,7 @@ GET /api/v1/provisioning/alert-rules/:uid/export
 - `text/yaml`
 - `text/hcl`
 
-These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
+These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
 
 #### Parameters
 
@@ -900,7 +902,7 @@ GET /api/v1/provisioning/folder/:folderUid/rule-groups/:group
 
 > **Warning**
 >
-> This API is deprecated and will be removed in a future release. Use the Grafana App Platform alerting APIs instead: `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/recordingrules` for recording rules.
+> This API is deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/rules.alerting.grafana.app-v1beta1.json) instead: `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/recordingrules` for recording rules.
 
 #### Parameters
 
@@ -946,7 +948,7 @@ GET /api/v1/provisioning/folder/:folderUid/rule-groups/:group/export
 - `text/yaml`
 - `text/hcl`
 
-These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
+These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
 
 #### Parameters
 
@@ -988,7 +990,7 @@ GET /api/v1/provisioning/alert-rules
 
 > **Warning**
 >
-> This API is deprecated and will be removed in a future release. Use the Grafana App Platform alerting APIs instead: `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/recordingrules` for recording rules.
+> This API is deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/rules.alerting.grafana.app-v1beta1.json) instead: `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/recordingrules` for recording rules.
 
 #### All responses
 
@@ -1020,7 +1022,7 @@ GET /api/v1/provisioning/alert-rules/export
 - `text/yaml`
 - `text/hcl`
 
-These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
+These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
 
 #### Parameters
 
@@ -1098,7 +1100,7 @@ GET /api/v1/provisioning/contact-points/export
 - `text/yaml`
 - `text/hcl`
 
-These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
+These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
 
 #### Parameters
 
@@ -1381,7 +1383,7 @@ GET /api/v1/provisioning/mute-timings/export
 - `text/yaml`
 - `text/hcl`
 
-These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
+These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
 
 #### Parameters
 
@@ -1429,7 +1431,7 @@ GET /api/v1/provisioning/mute-timings/:name/export
 - `text/yaml`
 - `text/hcl`
 
-These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
+These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
 
 #### Parameters
 
@@ -1504,7 +1506,7 @@ GET /api/v1/provisioning/policies/export
 - `text/yaml`
 - `text/hcl`
 
-These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
+These outputs are for [file provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning) or [Terraform provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/file-provisioning), and they-including the JSON output—cannot be used to update resources via the HTTP API.
 
 #### Parameters
 
@@ -1612,7 +1614,7 @@ POST /api/v1/provisioning/alert-rules
 
 > **Warning**
 >
-> This API is deprecated and will be removed in a future release. Use the Grafana App Platform alerting APIs instead: `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/recordingrules` for recording rules.
+> This API is deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/rules.alerting.grafana.app-v1beta1.json) instead: `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/recordingrules` for recording rules.
 
 This action creates a new alert rule.
 
@@ -1744,7 +1746,7 @@ PUT /api/v1/provisioning/alert-rules/:uid
 
 > **Warning**
 >
-> This API is deprecated and will be removed in a future release. Use the Grafana App Platform alerting APIs instead: `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/alertrules/{name}` for alert rules and `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/recordingrules/{name}` for recording rules.
+> This API is deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/rules.alerting.grafana.app-v1beta1.json) instead: `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/alertrules/{name}` for alert rules and `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/recordingrules/{name}` for recording rules.
 
 #### Parameters
 
@@ -1787,7 +1789,7 @@ PUT /api/v1/provisioning/folder/:folderUid/rule-groups/:group
 
 > **Warning**
 >
-> This API is deprecated and will be removed in a future release. Use the Grafana App Platform alerting APIs instead: `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v0alpha1/namespaces/{namespace}/recordingrules` for recording rules.
+> This API is deprecated and will be removed in a future release. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/rules.alerting.grafana.app-v1beta1.json) instead: `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/alertrules` for alert rules and `/apis/rules.alerting.grafana.app/v1beta1/namespaces/{namespace}/recordingrules` for recording rules.
 
 This action also changes the provenance setting (`X-Disable-Provenance`) for all alert rules in the alert group.
 

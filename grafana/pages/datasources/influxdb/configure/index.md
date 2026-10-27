@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/influxdb/configure/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/influxdb/configure/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/influxdb/configure/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/influxdb/configure/_index.md)
 
 # Configure the InfluxDB data source
 
@@ -104,7 +104,7 @@ The following table shows which query languages are available for each InfluxDB 
 Toggle **Advanced HTTP Settings** to expand optional settings for more control over your data source.
 
 - **Allowed cookies** - Defines which cookies are forwarded to the data source. All other cookies are deleted by default.
-- **Timeout** - Sets the HTTP request timeout in seconds. If you don't set a value, Grafana uses the `timeout` setting in the `dataproxy` section of the [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#dataproxy), which defaults to `30` seconds. Increase this value if complex queries or large result sets fail with timeout errors such as `context deadline exceeded`. Alert rule evaluations use the same timeout, so increasing it also gives alert queries more time to complete.
+- **Timeout** - Sets the HTTP request timeout in seconds. If you don't set a value, Grafana uses the `timeout` setting in the `dataproxy` section of the [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#dataproxy), which defaults to `30` seconds. Increase this value if complex queries or large result sets fail with timeout errors such as `context deadline exceeded`. Alert rule evaluations use the same timeout, so increasing it also gives alert queries more time to complete.
 
 **Custom HTTP headers**
 
@@ -197,7 +197,7 @@ Click **Manage private data source connect** to go to your PDC connection page, 
 
 > **Caution**
 >
-> When you use PDC, don't set the InfluxDB URL to `127.0.0.1` or `localhost`. PDC tunnels traffic through a SOCKS proxy, which can't resolve loopback addresses. Use the machine's LAN IP address or a hostname that's resolvable from the network where the PDC agent runs. Refer to [PDC connection fails with "no such host"](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/troubleshooting/#pdc-connection-fails-with-no-such-host) for more information.
+> When you use PDC, don't set the InfluxDB URL to `127.0.0.1` or `localhost`. PDC tunnels traffic through a SOCKS proxy, which can't resolve loopback addresses. Use the machine's LAN IP address or a hostname that's resolvable from the network where the PDC agent runs. Refer to [PDC connection fails with "no such host"](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/troubleshooting/#pdc-connection-fails-with-no-such-host) for more information.
 
 PDC agent deployment, proxy configuration, and network and token management are covered in the PDC documentation, not here. Refer to [Configure PDC](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/configure-pdc/) for setup and [Troubleshoot PDC issues](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/troubleshooting/) for agent errors, log interpretation, and failure modes.
 
@@ -213,7 +213,7 @@ A successful test returns one of the following messages depending on your query 
 | InfluxQL       | `datasource is working. X measurements found` |
 | SQL            | `OK`                                          |
 
-If the test fails, refer to [Troubleshoot InfluxDB data source issues](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/troubleshooting/) for help resolving common connection and authentication errors.
+If the test fails, refer to [Troubleshoot InfluxDB data source issues](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/troubleshooting/) for help resolving common connection and authentication errors.
 
 ### Min time interval
 
@@ -238,7 +238,7 @@ You can also override this setting in a dashboard panel under its data source op
 
 You can define and configure the data source in YAML files as part of the Grafana provisioning system.
 For more information about provisioning, and for available configuration options, refer
-to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#provision-grafana).
+to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#provision-grafana).
 
 > **Note**
 >

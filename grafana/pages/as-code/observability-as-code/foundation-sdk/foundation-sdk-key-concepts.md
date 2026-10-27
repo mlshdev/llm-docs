@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/foundation-sdk/foundation-sdk-key-concepts.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/foundation-sdk/foundation-sdk-key-concepts.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/foundation-sdk/foundation-sdk-key-concepts.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/foundation-sdk/foundation-sdk-key-concepts.md)
 
 # Foundation SDK key concepts
 
@@ -63,7 +63,7 @@ Most builder methods accept simple values like strings or numbers, but others ex
 
 - `ReduceDataOptions` - How to reduce time series data into single values (e.g. last, avg).
 - `VizLegendOptions` - Configure how the legend of a panel is displayed.
-- `CanvasElementOptions` - Define how the the various components of a Canvas panel should be displayed.
+- `CanvasElementOptions` - Define how the various components of a Canvas panel should be displayed.
 
 Example using options:
 

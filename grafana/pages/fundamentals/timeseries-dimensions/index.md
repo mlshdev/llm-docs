@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/timeseries-dimensions/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/timeseries-dimensions/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/timeseries-dimensions/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/timeseries-dimensions/index.md)
 
 # Time series dimensions
 
-In [Introduction to time series](https://grafana.com/docs/grafana/v13.2/fundamentals/timeseries/#time-series-databases), the concept of *labels*, also called *tags*, is introduced:
+In [Introduction to time series](https://grafana.com/docs/grafana/v13.3/fundamentals/timeseries/#time-series-databases), the concept of *labels*, also called *tags*, is introduced:
 
 > Another feature of a TSDB is the ability to filter measurements using *tags*. Each data point is labeled with a tag that adds context information, such as where the measurement was taken.
 
@@ -75,7 +75,7 @@ In this case the labels that represent the dimensions will have two keys based o
 > **Note**
 >
 > Multiple dimensions are not supported in a way that maps to multiple alerts in Grafana, but rather they are treated as multiple conditions to a single alert.
-> For more information, see the documentation on [creating alerts with multiple series](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/#single-and-multi-dimensional-rule).
+> For more information, see the documentation on [creating alerts with multiple series](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/#single-and-multi-dimensional-rule).
 
 ### Multiple values
 

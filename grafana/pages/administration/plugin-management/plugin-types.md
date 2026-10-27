@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/plugin-management/plugin-types.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/plugin-management/plugin-types.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/plugin-management/plugin-types.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/plugin-management/plugin-types.md)
 
 # Types of plugins
 
@@ -28,7 +28,7 @@ Use data source plugins when you want to query data from external or third-party
 
 ### Managing access for data source plugins
 
-Administrators can grant access to data source plugins with [LBAC](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/).
+Administrators can grant access to data source plugins with [LBAC](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/).
 
 Label Based Access Control (LBAC) customizes access rights based on team memberships, ensuring that users only query data relevant to their assigned permissions.
 
@@ -42,7 +42,7 @@ Use app plugins when you want an out-of-the-box monitoring experience.
 
 ### Managing access for app plugins
 
-Customize access to app plugins with [RBAC](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-for-app-plugins/).
+Customize access to app plugins with [RBAC](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-for-app-plugins/).
 
 By default, the Viewer, Editor and Admin roles have access to all app plugins that their Organization role allows them to access.
 
@@ -50,4 +50,4 @@ Access is granted by the `fixed:plugins.app:reader` role.
 
 > **Note**
 >
-> To prevent users from seeing an app plugin, refer to [these permissions scenarios](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/#prevent-viewers-from-accessing-an-app-plugin).
+> To prevent users from seeing an app plugin, refer to [these permissions scenarios](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/#prevent-viewers-from-accessing-an-app-plugin).

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/roles-and-permissions/access-control/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/roles-and-permissions/access-control/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/roles-and-permissions/access-control/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/roles-and-permissions/access-control/troubleshooting/index.md)
 
 # Troubleshooting RBAC
 
@@ -17,7 +17,7 @@ filters = accesscontrol:debug accesscontrol.evaluator:debug dashboard.permission
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
 
 You can enable auditing in the Grafana configuration file.
 
@@ -27,11 +27,11 @@ enabled = true
 ```
 
 All permission and role updates, and role assignments are added to audit logs.
-Learn more about [access control audit logs](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/audit-grafana/#access-control).
+Learn more about [access control audit logs](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/audit-grafana/#access-control).
 
 ## Missing dashboard, folder or data source permissions
 
-[Dashboard and folder permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#dashboard-permissions) and [data source permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#data-source-permissions) can go out of sync if a Grafana instance version is upgraded, downgraded and then upgraded again.
+[Dashboard and folder permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#dashboard-permissions) and [data source permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#data-source-permissions) can go out of sync if a Grafana instance version is upgraded, downgraded and then upgraded again.
 This happens when an instance is downgraded from a version that uses RBAC to a version that uses the legacy access control, and dashboard, folder or data source permissions are updated.
 These permission updates will not be applied to RBAC, so permissions will be out of sync when the instance is next upgraded to a version with RBAC.
 

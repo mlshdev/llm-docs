@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/build/building/variables.md)
+> Pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/build/building/variables.md)
 
 In Docker Build, build arguments (`ARG`) and environment variables (`ENV`)
 both serve as a means to pass information into the build process.
@@ -300,6 +300,7 @@ They're used to configure the Buildx client, or the BuildKit daemon.
 | [BUILDKIT\_TTY\_LOG\_LINES](#buildkitttyloglines)                           | String            | Number of log lines (for active steps in TTY mode).             |
 | [BUILDX\_BAKE\_FILE](#buildxbakefile)                                       | String            | Specify the build definition file(s) for `docker buildx bake`.  |
 | [BUILDX\_BAKE\_FILE\_SEPARATOR](#buildxbakefileseparator)                   | String            | Specify the file-path separator for `BUILDX_BAKE_FILE`.         |
+| [BUILDX\_BAKE\_GIT\_ADVICE](#buildxbakegitadvice)                           | Boolean           | Show Git advice when fetching remote Bake definitions.          |
 | [BUILDX\_BAKE\_GIT\_AUTH\_HEADER](#buildxbakegitauthheader)                 | String            | HTTP authentication scheme for remote Bake files.               |
 | [BUILDX\_BAKE\_GIT\_AUTH\_TOKEN](#buildxbakegitauthtoken)                   | String            | HTTP authentication token for remote Bake files.                |
 | [BUILDX\_BAKE\_GIT\_SSH](#buildxbakegitssh)                                 | String            | SSH authentication for remote Bake files.                       |
@@ -471,6 +472,28 @@ This is useful if your file paths contain the default separator character or if 
 export BUILDX_BAKE_PATH_SEPARATOR=@
 export BUILDX_BAKE_FILE=file1.hcl@file2.hcl
 ```
+
+### BUILDX\_BAKE\_GIT\_ADVICE
+
+Set `BUILDX_BAKE_GIT_ADVICE=1` to show Git advice messages while fetching a
+remote Bake definition. Advice includes messages such as Git's detached HEAD
+notice. Advice is disabled by default.
+
+```console
+$ BUILDX_BAKE_GIT_ADVICE=1 docker buildx bake --progress=plain \
+    https://github.com/user/myrepo.git
+```
+
+This variable controls fetching the Bake definition. To show advice for Git
+build contexts, pass the `BUILDKIT_GIT_ADVICE` build argument instead:
+
+```console
+$ docker buildx build --progress=plain --build-arg BUILDKIT_GIT_ADVICE=1 \
+    https://github.com/user/myrepo.git
+```
+
+See the
+[built-in arguments](https://docs.docker.com/reference/dockerfile/#buildkit-built-in-build-args).
 
 ### BUILDX\_BAKE\_GIT\_AUTH\_HEADER
 

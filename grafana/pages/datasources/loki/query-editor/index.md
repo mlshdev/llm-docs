@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/loki/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/loki/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/loki/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/loki/query-editor/index.md)
 
 # Loki query editor
 
 The Loki data source's query editor helps you create [log](#create-a-log-query) and [metric](#create-a-metric-query) queries that use the Loki query language, [LogQL](https://grafana.com/docs/loki/latest/logql/).
 
-For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 ## Choose a query editing mode
 
@@ -19,13 +19,17 @@ To run a query, select **Run queries** located at the top of the editor.
 
 > **Note**
 >
-> To run Loki queries in [Explore](https://grafana.com/docs/grafana/v13.2/explore/), select **Run query**.
+> To run Loki queries in [Explore](https://grafana.com/docs/grafana/v13.3/explore/), select **Run query**.
 
 Each mode is synchronized, so you can switch between them without losing your work, although there are some limitations. Builder mode doesn't support some complex queries.
 When you switch from Code mode to Builder mode with such a query, the editor displays a warning message that explains how you might lose parts of the query if you continue.
 You can then decide whether you still want to switch to Builder mode.
 
-You can also augment queries by using [template variables](https://grafana.com/docs/grafana/v13.2/datasources/loki/template-variables/).
+You can also augment queries by using [template variables](https://grafana.com/docs/grafana/v13.3/datasources/loki/template-variables/).
+
+To see example LogQL log and metric queries, explore this demo dashboard on Grafana Play. Open any panel's editor to view its query:
+
+[Loki NGINX Service Mesh - Pattern version in Grafana Play](https://play.grafana.org/d/-lPcmrp7z/)
 
 ## Toolbar elements
 
@@ -172,7 +176,7 @@ The following options are the same for both **Builder** and **Code** mode:
 ## Create a log query
 
 Loki log queries return the contents of the log lines.
-You can query and display log data from Loki via [Explore](https://grafana.com/docs/grafana/v13.2/explore/), and with the [Logs panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/logs/) in dashboards.
+You can query and display log data from Loki via [Explore](https://grafana.com/docs/grafana/v13.3/explore/), and with the [Logs panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/logs/) in dashboards.
 
 To display the results of a log query, select the Loki data source, then enter a LogQL query.
 
@@ -232,7 +236,7 @@ To reset filters and use the initial log context query, click the **Revert to in
 
 ### Tail live logs
 
-Loki supports live tailing of logs in real-time in [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
+Loki supports live tailing of logs in real-time in [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
 
 Live tailing relies on two WebSocket connections: one between the browser and Grafana server, and another between the Grafana server and Loki server.
 
@@ -333,8 +337,8 @@ To keep large queries responsive, Grafana automatically splits Loki queries that
 
 ## Structured metadata
 
-Loki stores three types of labels: indexed labels, parsed fields, and structured metadata. The query editor and log details treat all three types as labels you can filter on and use in [derived fields](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure/#derived-fields). For more information, refer to the [Loki structured metadata documentation](https://grafana.com/docs/loki/latest/get-started/labels/structured-metadata/).
+Loki stores three types of labels: indexed labels, parsed fields, and structured metadata. The query editor and log details treat all three types as labels you can filter on and use in [derived fields](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/#derived-fields). For more information, refer to the [Loki structured metadata documentation](https://grafana.com/docs/loki/latest/get-started/labels/structured-metadata/).
 
 ## Apply annotations
 
-You can use Loki log queries as a source for dashboard annotations. For details, refer to [Loki annotations](https://grafana.com/docs/grafana/v13.2/datasources/loki/annotations/).
+You can use Loki log queries as a source for dashboard annotations. For details, refer to [Loki annotations](https://grafana.com/docs/grafana/v13.3/datasources/loki/annotations/).

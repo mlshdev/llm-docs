@@ -1,9 +1,9 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/azure-monitor/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/azure-monitor/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/azure-monitor/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/azure-monitor/configure/index.md)
 
 # Configure the Azure Monitor data source
 
 This document explains how to configure the Azure Monitor data source and the available configuration options.
-For general information about data sources, refer to [Grafana data sources](https://grafana.com/docs/grafana/v13.2/datasources/) and [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+For general information about data sources, refer to [Grafana data sources](https://grafana.com/docs/grafana/v13.3/datasources/) and [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 ## Before you begin
 
@@ -252,7 +252,7 @@ managed_identity_client_id = <USER_ASSIGNED_IDENTITY_CLIENT_ID>
 >
 > If you've customized the `forward_settings_to_plugins` setting under `[azure]`, verify that `grafana-azure-monitor-datasource` is included. This setting controls which plugins receive the Azure configuration from the Grafana server. By default, all Grafana Labs Azure plugins are included. Missing this setting causes `401 Unauthorized` errors even when Managed Identity is correctly configured on your Azure resource.
 
-Refer to [Grafana Azure configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#azure) for more details.
+Refer to [Grafana Azure configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#azure) for more details.
 
 #### Managed Identity UI configuration
 
@@ -314,7 +314,7 @@ workload_identity_token_file = <TOKEN_FILE_PATH>      # Path to the token file
 >
 > If you've customized the `forward_settings_to_plugins` setting under `[azure]`, verify that `grafana-azure-monitor-datasource` is included. Refer to [Managed Identity Grafana server configuration](#managed-identity-grafana-server-configuration) for details.
 
-Refer to [Grafana Azure configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#azure) and the [Azure workload identity documentation](https://azure.github.io/azure-workload-identity/docs/) for more details.
+Refer to [Grafana Azure configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#azure) and the [Azure workload identity documentation](https://azure.github.io/azure-workload-identity/docs/) for more details.
 
 #### Workload Identity UI configuration
 
@@ -352,7 +352,7 @@ Forward the logged-in Grafana user's Azure credentials to the data source for us
 
 #### Current User prerequisites
 
-Your Grafana instance must be configured with Microsoft Entra ID authentication. Refer to the [Microsoft Entra ID authentication documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-authentication/azuread/).
+Your Grafana instance must be configured with Microsoft Entra ID authentication. Refer to the [Microsoft Entra ID authentication documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-authentication/azuread/).
 
 #### Configure your Azure App Registration
 
@@ -413,7 +413,7 @@ To support these features, you must configure **fallback service credentials**, 
 
 > **Caution**
 >
-> If you use Current User authentication without configuring fallback service credentials, alerting rules, recording rules, and reports fail with authentication errors. Refer to the [alerting documentation](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/alerting/) for more details.
+> If you use Current User authentication without configuring fallback service credentials, alerting rules, recording rules, and reports fail with authentication errors. Refer to the [alerting documentation](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/alerting/) for more details.
 
 > **Note**
 >
@@ -563,7 +563,7 @@ If the test fails, verify:
 ## Provision the data source
 
 You can define and configure the Azure Monitor data source in YAML files as part of the Grafana provisioning system.
-For more information about provisioning, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information about provisioning, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### Provision quick reference
 

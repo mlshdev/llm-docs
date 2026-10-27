@@ -1,26 +1,26 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/_index.md)
 
 # Configure authentication
 
 Grafana provides many ways to authenticate users. Some authentication integrations also enable syncing user permissions and org memberships.
 
-The following table shows all supported authentication methods and the features available for them. [Team sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/), [active sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/enhanced-ldap/#active-ldap-synchronization), and [SAML](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/) are available in Grafana Enterprise and Grafana Cloud. They aren't available in Grafana open source.
+The following table shows all supported authentication methods and the features available for them. [Team sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/), [active sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/enhanced-ldap/#active-ldap-synchronization), and [SAML](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/) are available in Grafana Enterprise and Grafana Cloud. They aren't available in Grafana open source.
 
 | Authentication method                                                                                                               | Multi Org Mapping | Enforce Sync | Role Mapping | Grafana Admin Mapping | Team Sync | Allowed groups | Active Sync | Skip OrgRole Sync | Auto Login | Single Logout | SCIM support |
 | :---------------------------------------------------------------------------------------------------------------------------------- | :---------------- | :----------- | :----------- | :-------------------- | :-------- | :------------- | :---------- | :---------------- | :--------- | :------------ | :----------- |
-| [Anonymous access](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/anonymous-auth/)  | N/A               | N/A          | N/A          | N/A                   | N/A       | N/A            | N/A         | N/A               | N/A        | N/A           | N/A          |
-| [Auth Proxy](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/auth-proxy/)            | no                | yes          | yes          | no                    | yes       | no             | N/A         | no                | N/A        | N/A           | N/A          |
-| [Entra ID OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/)           | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | N/A          |
-| [Basic auth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/grafana/)               | yes               | N/A          | yes          | yes                   | N/A       | N/A            | N/A         | N/A               | N/A        | N/A           | N/A          |
-| [Generic OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/)      | yes               | yes          | yes          | yes                   | yes       | no             | N/A         | yes               | yes        | yes           | N/A          |
-| [GitHub OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/github/)              | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | N/A          |
-| [GitLab OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/gitlab/)              | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | N/A          |
-| [Google OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/google/)              | yes               | no           | no           | no                    | yes       | no             | N/A         | no                | yes        | yes           | N/A          |
-| [Grafana.com OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/grafana-cloud/)  | no                | no           | yes          | no                    | N/A       | N/A            | N/A         | yes               | yes        | yes           | N/A          |
-| [Okta OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/okta/)                  | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | N/A          |
-| [SAML](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/) (Enterprise and Cloud) | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | yes          |
-| [LDAP](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/ldap/)                        | yes               | yes          | yes          | yes                   | yes       | yes            | yes         | no                | N/A        | N/A           | N/A          |
-| [JWT Proxy](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/jwt/)                    | no                | yes          | yes          | yes                   | no        | no             | N/A         | no                | N/A        | N/A           | N/A          |
+| [Anonymous access](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/anonymous-auth/)  | N/A               | N/A          | N/A          | N/A                   | N/A       | N/A            | N/A         | N/A               | N/A        | N/A           | N/A          |
+| [Auth Proxy](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/auth-proxy/)            | no                | yes          | yes          | no                    | yes       | no             | N/A         | no                | N/A        | N/A           | N/A          |
+| [Entra ID OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/azuread/)           | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | N/A          |
+| [Basic auth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/grafana/)               | yes               | N/A          | yes          | yes                   | N/A       | N/A            | N/A         | N/A               | N/A        | N/A           | N/A          |
+| [Generic OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/)      | yes               | yes          | yes          | yes                   | yes       | no             | N/A         | yes               | yes        | yes           | N/A          |
+| [GitHub OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/github/)              | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | N/A          |
+| [GitLab OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/gitlab/)              | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | N/A          |
+| [Google OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/google/)              | yes               | no           | no           | no                    | yes       | no             | N/A         | no                | yes        | yes           | N/A          |
+| [Grafana.com OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/grafana-cloud/)  | no                | no           | yes          | no                    | N/A       | N/A            | N/A         | yes               | yes        | yes           | N/A          |
+| [Okta OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/okta/)                  | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | N/A          |
+| [SAML](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/) (Enterprise and Cloud) | yes               | yes          | yes          | yes                   | yes       | yes            | N/A         | yes               | yes        | yes           | yes          |
+| [LDAP](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/ldap/)                        | yes               | yes          | yes          | yes                   | yes       | yes            | yes         | no                | N/A        | N/A           | N/A          |
+| [JWT Proxy](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/jwt/)                    | no                | yes          | yes          | yes                   | no        | no             | N/A         | no                | N/A        | N/A           | N/A          |
 
 Fields explanation:
 
@@ -49,7 +49,7 @@ Fields explanation:
 ## Configuring multiple identity providers
 
 Grafana allows you to configure more than one authentication provider, however it is not possible to configure the same type of authentication provider twice.
-For example, you can have [SAML](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/) (Enterprise and Cloud) and [Generic OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/) configured, but you cannot have two different [Generic OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/) configurations.
+For example, you can have [SAML](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/) (Enterprise and Cloud) and [Generic OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/) configured, but you cannot have two different [Generic OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/) configurations.
 
 > Note: Grafana does not support multiple identity providers resolving the same user. Make sure no user account overlaps between the different providers.
 
@@ -57,7 +57,7 @@ In scenarios where you have multiple identity providers of the same type, there 
 
 - Use different Grafana instances, each configured with a given identity provider.
 - Check if the identity provider supports account federation. In such cases, you can configure it once and let your identity provider federate the accounts from different providers.
-- If SAML is supported by the identity provider, you can configure one [Generic OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/) and one [SAML](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/) (Enterprise and Cloud).
+- If SAML is supported by the identity provider, you can configure one [Generic OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/) and one [SAML](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/) (Enterprise and Cloud).
 
 ## Using the same email address to login with different identity providers
 
@@ -115,7 +115,7 @@ When using SSO (Single Sign-On) authentication methods, Grafana handles sessions
 
 - After successful SAML authentication, Grafana creates a session with the default session lifetime.
 - If SAML Single Logout (SLO) is properly configured, the session will be revoked when the user's access is revoked on the IdP side.
-- If SAML Single Logout (SLO) is properly configured, the session will be revoked when the user's access is revoked on the IdP side. For more information on configuring SAML and SLO, refer to the [SAML configuration documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/#configure-single-logout).
+- If SAML Single Logout (SLO) is properly configured, the session will be revoked when the user's access is revoked on the IdP side. For more information on configuring SAML and SLO, refer to the [SAML configuration documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/#configure-single-logout).
 
 ## Settings
 
@@ -166,7 +166,7 @@ You can also enable email lookup using the API:
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana/v13.2/introduction/grafana-cloud/) since Grafana v10.4.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana/v13.3/introduction/grafana-cloud/) since Grafana v10.4.
 
 ```
 curl --request PUT \
@@ -232,7 +232,7 @@ a Grafana admin user, you can also do the same for any user from the Server Admi
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana/v13.2/introduction/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana/v13.3/introduction/grafana-cloud/).
 
 By default, after you configure an authorization provider, Grafana will adopt existing users into the new authentication scheme. For example, if you have created a user with basic authentication having the login `jsmith@example.com`, then set up SAML authentication where `jsmith@example.com` is an account, the user's authentication type will be changed to SAML if they perform a SAML sign-in.
 

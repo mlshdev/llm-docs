@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/fundamentals/alert-rule-evaluation/alert-rule-state-and-health.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/fundamentals/alert-rule-evaluation/alert-rule-state-and-health.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/fundamentals/alert-rule-evaluation/alert-rule-state-and-health.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/fundamentals/alert-rule-evaluation/alert-rule-state-and-health.md)
 
 # Alert rule state and health
 
-Each alert rule can generate one or more alert instances—one alert instance for each series or dimension, as shown in the [multi-dimensional alert example](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/multi-dimensional-alerts/).
+Each alert rule can generate one or more alert instances—one alert instance for each series or dimension, as shown in the [multi-dimensional alert example](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/multi-dimensional-alerts/).
 
 Each alert instance of the same alert rule represents a different target and can be in a different state; for example, one alert instance may be **Normal** while another is **Alerting**.
 
 ![Multi dimensional alert rule. The alert rule state and alert rule health are determined by the state of the alert instances.](https://grafana.com/media/docs/alerting/alert-rule-example-multiple-alert-instances.png)
 
-The alert rule state and alert rule health are determined by the [state of the alert instances](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#alert-instance-states).
+The alert rule state and alert rule health are determined by the [state of the alert instances](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#alert-instance-states).
 
 ## Alert rule states
 

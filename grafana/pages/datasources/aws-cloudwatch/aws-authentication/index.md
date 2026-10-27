@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/aws-cloudwatch/aws-authentication/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/aws-cloudwatch/aws-authentication/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/aws-authentication/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/aws-authentication/index.md)
 
 # Configure AWS authentication
 
@@ -20,7 +20,7 @@ This document explores the following topics:
 
 Available authentication methods depend on your configuration and the environment where Grafana runs.
 
-Open source Grafana enables the `AWS SDK Default`, `Credentials file`, and `Access & secret key` methods by default. Cloud Grafana enables `Access & secret key` and `Grafana Assume Role` by default. Users with server configuration access can enable or disable specific auth providers as needed. For more information, refer to the [`allowed_auth_providers` documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#allowed_auth_providers).
+Open source Grafana enables the `AWS SDK Default`, `Credentials file`, and `Access & secret key` methods by default. Cloud Grafana enables `Access & secret key` and `Grafana Assume Role` by default. Users with server configuration access can enable or disable specific auth providers as needed. For more information, refer to the [`allowed_auth_providers` documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#allowed_auth_providers).
 
 - `AWS SDK Default` uses the [default provider](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html) from the [AWS SDK for Go](https://github.com/aws/aws-sdk-go) without custom configuration.
   This method requires configuring AWS credentials outside Grafana through [the CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html), or by [attaching credentials directly to an EC2 instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html), [in an ECS task](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html), or for a [Service Account in a Kubernetes cluster](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html). You can attach permissions directly to the data source with AWS SDK Default or combine it with the optional [`Assume Role ARN`](#assume-a-role) field.
@@ -30,7 +30,7 @@ Open source Grafana enables the `AWS SDK Default`, `Credentials file`, and `Acce
   This option provides no fallback to other credential providers and fails if the file credentials are invalid.
 - `Access & secret key` corresponds to the [StaticProvider](https://docs.aws.amazon.com/sdk-for-go/api/aws/credentials/#StaticProvider) and authenticates using a specified access key ID and secret key pair.
   This method doesn't provide fallback authentication and fails if the key pair is invalid. It's available in Grafana Cloud, though `Grafana Assume Role` is recommended there because it avoids managing long-term access keys.
-- `Grafana Assume Role` - With this authentication method, Grafana Cloud users create an AWS IAM role that has a trust relationship with the Grafana AWS account. Grafana uses [STS](https://docs.aws.amazon.com/STS/latest/APIReference/welcome.html) to generate temporary credentials on its behalf. This method eliminates the need to generate secret and access keys for users. Refer to [Use Grafana Assume Role](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/#use-grafana-assume-role) for more information.
+- `Grafana Assume Role` - With this authentication method, Grafana Cloud users create an AWS IAM role that has a trust relationship with the Grafana AWS account. Grafana uses [STS](https://docs.aws.amazon.com/STS/latest/APIReference/welcome.html) to generate temporary credentials on its behalf. This method eliminates the need to generate secret and access keys for users. Refer to [Use Grafana Assume Role](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/#use-grafana-assume-role) for more information.
 - `Workspace IAM Role` corresponds to the [EC2RoleProvider](https://docs.aws.amazon.com/sdk-for-go/api/aws/credentials/ec2rolecreds/#EC2RoleProvider).
   The EC2RoleProvider retrieves credentials from a role attached to the EC2 instance running Grafana.
   While AWS SDK Default can achieve similar results, this option provides no fallback authentication. Amazon Managed Grafana enables this option by default.
@@ -47,7 +47,7 @@ Instead, assume role functionality lets you use one set of AWS credentials acros
 
 If the **Assume Role ARN** field is left empty, Grafana uses the provided credentials from the selected authentication method directly, and permissions to AWS data must be attached directly to those credentials. The **Assume Role ARN** field is optional for all authentication methods except for Grafana Assume Role.
 
-To disable this feature in open source Grafana or Grafana Enterprise, refer to [`assume_role_enabled`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#assume_role_enabled).
+To disable this feature in open source Grafana or Grafana Enterprise, refer to [`assume_role_enabled`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#assume_role_enabled).
 
 ### Use an external ID
 

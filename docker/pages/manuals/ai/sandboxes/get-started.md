@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/ai/sandboxes/get-started.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/ai/sandboxes/get-started.md)
 
 # Get started with local Docker Sandboxes
 
@@ -49,27 +49,15 @@ $ cd ~/my-project
 $ sbx run --name my-sandbox claude
 ```
 
-The first time you run a sandbox, the CLI prompts you to choose a default
-network preset:
+In an interactive terminal, the CLI prompts you to choose a preset if the
+global network policy hasn't been initialized. Select **Balanced** to permit traffic to common development
+services while blocking other destinations unless you approve them. If a policy
+is already configured, the CLI uses it without prompting.
 
-```plaintext
-Initialize the global network policy for your sandboxes:
-
-  Applies to all sandboxes, current and future — change it later with
-  "sbx policy allow/deny/rm". Kits, including built-in agent kits, may
-  also add per-sandbox rules.
-
-     1. Open         — All network traffic allowed, no restrictions.
-  ❯  2. Balanced     — Default deny, with common dev sites allowed.
-     3. Locked Down  — All network traffic blocked unless you allow it.
-
-  Use ↑/↓ or 1–3 to navigate, Enter to confirm, Esc to cancel.
-```
-
-**Balanced** is a good starting point — it permits traffic to common
-development services while blocking everything else. You can adjust individual
-rules later. See [Local policy](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) for a full
-description of each option.
+To initialize the policy without an interactive prompt, run
+`sbx policy init balanced` before `sbx run`. See
+[Local policy](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) for the available presets
+and how to change an existing policy.
 
 Replace `claude` with the agent you want to use — see [Agents](https://docs.docker.com/ai/sandboxes/agents/) for the
 full list.
@@ -118,8 +106,8 @@ when running several agents on one repository — use
 ## Control what the agent can reach
 
 Isolation isn't only about the filesystem. You also control what the sandbox
-can reach on the network. You chose a default policy before the sandbox
-started, and you can inspect or adjust it at any time.
+can reach on the network. You can inspect or adjust the active policy at any
+time.
 
 Check which rules are in effect:
 
@@ -133,9 +121,9 @@ To allow a specific host:
 $ sbx policy allow network registry.npmjs.org
 ```
 
-With **Locked Down**, even your model provider API is blocked unless you
-explicitly allow it. With **Balanced**, common development services are
-permitted by default. See
+With Balanced, common development services are permitted by default. With
+Locked Down, destinations need an allow rule from you or a kit. Built-in agent
+kits can add rules for their model providers. See
 [local policy](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) for the full rule set
 and how to customize it.
 
@@ -169,7 +157,7 @@ Run `sbx` with no arguments to open the interactive dashboard: a live view of
 every sandbox where you can attach to agents, open shells, and manage network
 rules from one place.
 
-![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
+![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
 
 Then explore:
 

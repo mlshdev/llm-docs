@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/graphite/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/graphite/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/graphite/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/graphite/_index.md)
 
 # Graphite data source
 
@@ -6,9 +6,7 @@ Graphite is an open source time series database that stores numeric metrics. Gra
 
 The Graphite data source includes a query editor for building metric queries and supports template variables, annotations, tag-based queries, and Grafana Alerting.
 
-For instructions on how to add a data source to Grafana, refer to the [administration documentation](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
-
-[Graphite: Sample Website Dashboard in Grafana Play](https://play.grafana.org/d/000000003/)
+For instructions on how to add a data source to Grafana, refer to the [administration documentation](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 ## Supported features
 
@@ -26,29 +24,29 @@ The Graphite data source supports the following features:
 
 The following documents help you set up and use the Graphite data source:
 
-- [Configure the Graphite data source](https://grafana.com/docs/grafana/v13.2/datasources/graphite/configure/)
-- [Graphite query editor](https://grafana.com/docs/grafana/v13.2/datasources/graphite/query-editor/)
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/graphite/template-variables/)
-- [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/graphite/annotations/)
-- [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/graphite/alerting/)
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/graphite/troubleshooting/)
+- [Configure the Graphite data source](https://grafana.com/docs/grafana/v13.3/datasources/graphite/configure/)
+- [Graphite query editor](https://grafana.com/docs/grafana/v13.3/datasources/graphite/query-editor/)
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/graphite/template-variables/)
+- [Annotations](https://grafana.com/docs/grafana/v13.3/datasources/graphite/annotations/)
+- [Alerting](https://grafana.com/docs/grafana/v13.3/datasources/graphite/alerting/)
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/graphite/troubleshooting/)
 
 ## Additional features
 
 After you configure the Graphite data source, you can:
 
-- Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to query data without building a dashboard
-- Build a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/)
-- Add [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/) to manipulate query results
-- Configure [template variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) for dynamic, reusable dashboards
+- Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to query data without building a dashboard
+- Build a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/)
+- Add [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/) to manipulate query results
+- Configure [template variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) for dynamic, reusable dashboards
 
 ## Send Grafana metrics to Graphite
 
-Grafana can report its own internal metrics to a Graphite backend. In the `[metrics.graphite]` section of the Grafana configuration file, set `address` to your Carbon host and port, for example `localhost:2003`. For the full list of internal metrics settings, refer to [Set up Grafana monitoring](https://grafana.com/docs/grafana/v13.2/setup-grafana/set-up-grafana-monitoring/).
+Grafana can report its own internal metrics to a Graphite backend. In the `[metrics.graphite]` section of the Grafana configuration file, set `address` to your Carbon host and port, for example `localhost:2003`. For the full list of internal metrics settings, refer to [Set up Grafana monitoring](https://grafana.com/docs/grafana/v13.3/setup-grafana/set-up-grafana-monitoring/).
 
 ## Graphite and Loki integration
 
-When you change the data source selection in [Explore](https://grafana.com/docs/grafana/v13.2/explore/), Graphite queries are converted to Loki queries.
+When you change the data source selection in [Explore](https://grafana.com/docs/grafana/v13.3/explore/), Graphite queries are converted to Loki queries.
 Grafana extracts Loki label names and values from the Graphite queries according to mappings provided in the Graphite data source configuration. Grafana automatically transforms queries using tags with `seriesByTag()` without requiring additional setup.
 
 ## Pre-built dashboards

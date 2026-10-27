@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/fundamentals/alert-rules/queries-conditions.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/fundamentals/alert-rules/queries-conditions.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/fundamentals/alert-rules/queries-conditions.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/fundamentals/alert-rules/queries-conditions.md)
 
 # Queries and conditions
 
@@ -16,14 +16,14 @@ Alerting periodically runs the queries and expressions, evaluating the condition
 
 Alerting queries are the same as the queries used in Grafana panels, but Grafana-managed alerts are limited to querying [data sources that have Alerting enabled](https://grafana.com/grafana/plugins/data-source-plugins/?features=alerting).
 
-Queries in Grafana can be applied in various ways, depending on the data source and query language being used. Each data source’s query editor provides a customized user interface to help you write queries that take advantage of its unique capabilities. For details about query editors and syntax in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/).
+Queries in Grafana can be applied in various ways, depending on the data source and query language being used. Each data source’s query editor provides a customized user interface to help you write queries that take advantage of its unique capabilities. For details about query editors and syntax in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/).
 
 Alerting can work with two types of data:
 
 1. **Time series data** — The query returns a collection of time series, where each series must be [reduced](#reduce) to a single numeric value for evaluating the alert condition.
-2. **Tabular data** — The query must return data in a table format with only one numeric column. Each row must have a value in that column, used to evaluate the alert condition. See a [tabular data example](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/table-data/).
+2. **Tabular data** — The query must return data in a table format with only one numeric column. Each row must have a value in that column, used to evaluate the alert condition. See a [tabular data example](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/table-data/).
 
-Each time series or table row is evaluated as a separate [alert instance](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/#alert-instances).
+Each time series or table row is evaluated as a separate [alert instance](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/#alert-instances).
 
 ![](https://grafana.com/media/docs/alerting/alerting-query-conditions-default-options.png)
 
@@ -57,9 +57,9 @@ The following expressions are available:
 
 Aggregates time series values within the selected time range into a single number.
 
-Reduce takes one or more time series and transform each series into a single number, which can then be compared in the alert condition.
+Reduce takes one or more time series and transforms each series into a single number, which can then be compared in the alert condition.
 
-The following aggregations functions are included: `Min`, `Max`, `Mean`, `Median`, `Sum`, `Count`, and `Last`. For more details, refer to the [Reduce documentation](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/expression-queries/#reduce).
+The following aggregations functions are included: `Min`, `Max`, `Mean`, `Median`, `Sum`, `Count`, and `Last`. For more details, refer to the [Reduce documentation](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/expression-queries/#reduce).
 
 ### Math
 
@@ -73,25 +73,25 @@ If queries being compared have **multiple series in their results**, series from
 
 In this case, only series with matching labels are joined, and the operation is calculated between them.
 
-For additional scenarios on how Math handles different data types, refer to the [Math documentation](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/expression-queries/#math).
+For additional scenarios on how Math handles different data types, refer to the [Math documentation](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/expression-queries/#math).
 
 You can also use a Math expression to define the **alert condition**. For example:
 
 - `$B > 70` should fire if the value of B (query or expression) is more than 70.
 - `$B < $C * 100` should fire if the value of B is less than the value of C multiplied by 100.
-- Compare matching series from two queries, as shown in the [dynamic threshold example](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/dynamic-thresholds/).
+- Compare matching series from two queries, as shown in the [dynamic threshold example](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/dynamic-thresholds/).
 
 ### Resample
 
-Realigns a time range to a new set of timestamps, this is useful when comparing time series data from different data sources where the timestamps would otherwise not align.
+Realigns a time range to a new set of timestamps. This is useful when comparing time series data from different data sources where the timestamps would otherwise not align.
 
-For more details, refer to the [Resample documentation](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/expression-queries/#resample).
+For more details, refer to the [Resample documentation](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/expression-queries/#resample).
 
 ### SQL
 
 Transforms the results of previous queries or expressions using MySQL-like syntax, which is useful for filtering rows, joining data from multiple queries, and aggregating results before evaluating the alert condition.
 
-For more details, refer to the [SQL expressions documentation](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/sql-expressions/).
+For more details, refer to the [SQL expressions documentation](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/sql-expressions/).
 
 ### Threshold
 
@@ -102,7 +102,7 @@ The threshold expression allows the comparison between two single values. Availa
 - **Is above**: `$A > 5`
 - **Is below**: `$B < 3`
 - **Is equal to**: `$A == 2`
-- **Is not equal to**: `$B =! 4`
+- **Is not equal to**: `$B != 4`
 - **Is above or equal to**: `$A >= 8`
 - **Is below or equal to**: `$B <= 16`
 - **Is within range**: `$A > 0 AND $A < 10`

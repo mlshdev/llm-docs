@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/loki/annotations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/loki/annotations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/loki/annotations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/loki/annotations/index.md)
 
 # Loki annotations
 
-[Annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) overlay rich event information on top of graphs. With the Loki data source, annotations are built from log queries: each log line that a LogQL query returns within the dashboard time range becomes an annotation, so you can correlate log events with the rest of your dashboard data.
+[Annotations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/) overlay rich event information on top of graphs. With the Loki data source, annotations are built from log queries: each log line that a LogQL query returns within the dashboard time range becomes an annotation, so you can correlate log events with the rest of your dashboard data.
 
 ## Before you begin
 
 Before you create Loki annotations, ensure you have:
 
-- A [configured Loki data source](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure/).
+- A [configured Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/).
 - A [LogQL](https://grafana.com/docs/loki/latest/logql/) log query that returns the events you want to annotate.
 
 ## How Loki annotations work
@@ -64,7 +64,7 @@ If annotations don't appear as expected, try the following solutions.
 
 ### Annotations don't appear
 
-- Verify the log query returns results in [Explore](https://grafana.com/docs/grafana/v13.2/explore/) for the same time range. Annotations come from returned log lines, so a query that returns no logs produces no annotations.
+- Verify the log query returns results in [Explore](https://grafana.com/docs/grafana/v13.3/explore/) for the same time range. Annotations come from returned log lines, so a query that returns no logs produces no annotations.
 - Confirm the query is a log query, not a metric query.
 - Widen the dashboard time range to include the log events you expect.
 
@@ -75,6 +75,6 @@ If annotations don't appear as expected, try the following solutions.
 
 ## Related resources
 
-- [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/)
-- [Loki query editor](https://grafana.com/docs/grafana/v13.2/datasources/loki/query-editor/)
-- [Configure the Loki data source](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure/)
+- [Annotate visualizations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/)
+- [Loki query editor](https://grafana.com/docs/grafana/v13.3/datasources/loki/query-editor/)
+- [Configure the Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/)

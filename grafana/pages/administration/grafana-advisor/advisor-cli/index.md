@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/grafana-advisor/advisor-cli/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/grafana-advisor/advisor-cli/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/grafana-advisor/advisor-cli/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/grafana-advisor/advisor-cli/_index.md)
 
 # Manage Grafana Advisor using the Grafana CLI
 
@@ -6,7 +6,7 @@
 >
 > Grafana Advisor performs regular checks on data sources, plugins, and your Grafana instance, but will expand its capabilities in future releases to cover more aspects of your Grafana environment. You can suggest new checks and provide feedback through this [form](https://docs.google.com/forms/d/e/1FAIpQLSf8T-xMZauFXZ1uHw09OjZLT_AaiY-cl-hJGwC6Krkj0ThmZQ/viewform).
 
-`gcx`, the Grafana CLI tool, is a command-line tool for managing Grafana resources as code. To install and configure it, refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/).
+`gcx`, the Grafana CLI tool, is a command-line tool for managing Grafana resources as code. To install and configure it, refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/).
 
 You can use `gcx` to manage Advisor `checks` and `checktypes`.
 

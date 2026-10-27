@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/postgres/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/postgres/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/postgres/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/postgres/troubleshooting/index.md)
 
 # Troubleshoot PostgreSQL data source issues
 
@@ -283,7 +283,7 @@ This was fixed with a quote-aware comment-stripping parser (PR #121772). The fix
 2. Ensure the column name passed to the macro exists in your table.
 3. Check that the macro isn't inside a SQL comment (`--` or `/* */`). Grafana strips comments before expanding macros, so macros inside comments are silently ignored.
 4. Use the **Preview** toggle in Builder mode to see the expanded query.
-5. Open the [Query inspector](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/#query-inspector) to view the exact SQL sent to PostgreSQL after macro expansion.
+5. Open the [Query inspector](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#query-inspector) to view the exact SQL sent to PostgreSQL after macro expansion.
 6. For time-based macros, ensure the column contains timestamp data.
 
 ## Performance issues
@@ -346,7 +346,7 @@ The following errors occur when provisioning the data source via YAML.
 2. Verify the database name is **not** included in the URL.
 3. Use the correct format for the URL: `hostname:port`.
 4. Check that string values are properly quoted in the YAML file.
-5. Refer to the [provisioning example](https://grafana.com/docs/grafana/v13.2/datasources/postgres/configure/#provision-the-data-source) for the correct format.
+5. Refer to the [provisioning example](https://grafana.com/docs/grafana/v13.3/datasources/postgres/configure/#provision-the-data-source) for the correct format.
 
 Example correct configuration:
 

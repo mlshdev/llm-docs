@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/index.md)
 
 # Provisioning RBAC with Terraform
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
 
 You can create, change or remove [Custom roles](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/role) and create or remove [role assignments](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/role_assignment), by using [Terraform's Grafana provider](https://registry.terraform.io/providers/grafana/grafana/latest/docs).
 
-Before you provision roles and assignments, decide which roles to create and how to assign them to users and teams. For planning guidance, refer to [Plan your RBAC rollout strategy](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/).
+Before you provision roles and assignments, decide which roles to create and how to assign them to users and teams. For planning guidance, refer to [Plan your RBAC rollout strategy](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/).
 
 ## Before you begin
 
@@ -16,19 +16,19 @@ Before you provision roles and assignments, decide which roles to create and how
 
 - Ensure you are using Grafana 9.2 or higher.
 
-- Decide how to authenticate the provider. We recommend a [service account token](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/) for self-managed Grafana and Grafana Cloud. For more information, refer to [Create a service account token for provisioning](#create-a-service-account-token-for-provisioning).
+- Decide how to authenticate the provider. We recommend a [service account token](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/) for self-managed Grafana and Grafana Cloud. For more information, refer to [Create a service account token for provisioning](#create-a-service-account-token-for-provisioning).
 
 ## Create a service account token for provisioning
 
-We recommend using service account tokens for provisioning. [Service accounts](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/) support fine grained permissions, which allows you to easily authenticate and use the minimum set of permissions needed to provision your RBAC infrastructure.
+We recommend using service account tokens for provisioning. [Service accounts](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/) support fine grained permissions, which allows you to easily authenticate and use the minimum set of permissions needed to provision your RBAC infrastructure.
 
 To create a service account token for provisioning, complete the following steps.
 
-1. [Create a new service account](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/#create-a-service-account-in-grafana) for your CI pipeline.
-2. [Assign permissions to service account](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/#assign-roles-to-a-service-account-in-grafana):
+1. [Create a new service account](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/#create-a-service-account-in-grafana) for your CI pipeline.
+2. [Assign permissions to service account](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/#assign-roles-to-a-service-account-in-grafana):
    - You will need roles “Role reader”, "Role writer" and roles including any permissions that will be provisioned. For example, to create or assign a role that allows creating users, a service account needs permissions to create users.
    - Alternatively, you can assign "Admin" basic role to the service account.
-3. [Create a new service account token](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/#to-add-a-token-to-a-service-account) for use in Terraform.
+3. [Create a new service account token](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/#to-add-a-token-to-a-service-account) for use in Terraform.
 
 Alternatively, you can use basic authentication. To view all the supported authentication formats, refer to the [provider authentication documentation](https://registry.terraform.io/providers/grafana/grafana/latest/docs#authentication).
 
@@ -70,7 +70,7 @@ Alternatively, set the `url` and `auth` attributes directly in the `provider` bl
 
 Basic roles (`None`, `Viewer`, `Editor`, `Admin`, and `Grafana Admin`) correspond to a user's or service account's organization role. A basic role's permissions are derived from the organization role, so you manage basic roles by setting the organization role rather than by creating an RBAC role assignment. The `grafana_role_assignment` resource only assigns fixed and custom roles.
 
-To change which permissions a basic role grants, rather than who has the role, edit the basic role's permissions instead. For more information, refer to [Manage RBAC roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/manage-rbac-roles/).
+To change which permissions a basic role grants, rather than who has the role, edit the basic role's permissions instead. For more information, refer to [Manage RBAC roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/manage-rbac-roles/).
 
 > **Note**
 >
@@ -102,7 +102,7 @@ resource "grafana_organization" "org" {
 }
 ```
 
-**Grafana Cloud:** the `grafana_organization` resource isn't supported, and no Terraform resource currently sets an individual user's organization role. Manage organization roles with the `PATCH /api/org/users/{user_id}` [Organization HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/org/#updates-the-given-user) endpoint, or through SCIM provisioning or SAML or OIDC role mapping.
+**Grafana Cloud:** the `grafana_organization` resource isn't supported, and no Terraform resource currently sets an individual user's organization role. Manage organization roles with the `PATCH /api/org/users/{user_id}` [Organization HTTP API](https://grafana.com/docs/grafana/v13.3/developers/http_api/org/#updates-the-given-user) endpoint, or through SCIM provisioning or SAML or OIDC role mapping.
 
 ### Assign a fixed or custom role to a team
 
@@ -163,7 +163,7 @@ resource "grafana_role" "my_new_role" {
 }
 ```
 
-For a reference of the available actions and scopes that you can grant in a custom role, refer to [RBAC actions and scopes](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
+For a reference of the available actions and scopes that you can grant in a custom role, refer to [RBAC actions and scopes](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
 
 2. Run the command `terraform apply`.
 3. Go to Grafana's UI and check that the new role appears in the role picker:
@@ -210,12 +210,12 @@ resource "grafana_role_assignment" "my_new_role_assignment" {
    ![Service Account Role Assignment](https://grafana.com/static/img/docs/enterprise/tf_service_account_role_assignment.png)
 
 Note that instead of using a provisioned role, you can also look up the `uid` of an already existing fixed or custom role and use that instead.
-You can use the [API endpoint for listing roles](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#create-and-manage-custom-roles) to look up role `uid`s.
+You can use the [API endpoint for listing roles](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#create-and-manage-custom-roles) to look up role `uid`s.
 Similarly, you can look up and use `id`s of users, teams and service accounts that have not been provisioned to assign roles to them.
 
 ## Useful links
 
-- [Plan your RBAC rollout strategy](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/)
-- [Manage RBAC roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/manage-rbac-roles/)
-- [RBAC setup with Grafana provisioning](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/)
+- [Plan your RBAC rollout strategy](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/)
+- [Manage RBAC roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/manage-rbac-roles/)
+- [RBAC setup with Grafana provisioning](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/)
 - [Grafana Cloud Terraform provisioning](https://grafana.com/docs/grafana-cloud/developer-resources/infrastructure-as-code/terraform/)

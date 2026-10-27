@@ -1,19 +1,19 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/roles-and-permissions/access-control/create-custom-roles/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/roles-and-permissions/access-control/create-custom-roles/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/roles-and-permissions/access-control/create-custom-roles/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/roles-and-permissions/access-control/create-custom-roles/index.md)
 
 # Create custom RBAC roles
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
-Create a custom RBAC role when basic roles and fixed roles do not meet your permissions requirements. For a list of the actions and scopes you can customize a role with, refer to [Grafana RBAC permission actions and scopes](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
+Create a custom RBAC role when basic roles and fixed roles do not meet your permissions requirements. For a list of the actions and scopes you can customize a role with, refer to [Grafana RBAC permission actions and scopes](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
 
 > **Caution**
 >
 > **Before creating custom roles**, consider whether you can meet your access requirements using:
 >
-> - **[Folder permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/folder-access-control/)**: Control access to dashboards, alert rules, and other resources by folder
-> - **[Fixed roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/)**: Pre-built roles for common access patterns
+> - **[Folder permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/folder-access-control/)**: Control access to dashboards, alert rules, and other resources by folder
+> - **[Fixed roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/)**: Pre-built roles for common access patterns
 >
 > Use custom roles only when you need fine-grained control that these options don't provide.
 
@@ -27,15 +27,15 @@ Creating and editing custom roles is not currently possible in the Grafana UI. I
 
 Before you begin, keep in mind the following:
 
-- [Plan your RBAC rollout strategy](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/).
-- Determine which permissions you want to add to the custom role. To see a list of actions and scope, refer to [RBAC permissions, actions, and scopes](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
+- [Plan your RBAC rollout strategy](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/).
+- Determine which permissions you want to add to the custom role. To see a list of actions and scope, refer to [RBAC permissions, actions, and scopes](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
 - Ensure that you have permissions to create a custom role.
   - By default, the Grafana Admin role has permission to create custom roles.
   - A Grafana Admin can delegate the custom role privilege to another user by creating a custom role with the relevant permissions and adding the `permissions:type:delegate` scope.
 
 ## Create custom roles using the HTTP API
 
-The following examples show you how to create a custom role using the Grafana HTTP API. For more information about the HTTP API, refer to [Create a new custom role](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#create-a-new-custom-role).
+The following examples show you how to create a custom role using the Grafana HTTP API. For more information about the HTTP API, refer to [Create a new custom role](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#create-a-new-custom-role).
 
 > **Note**
 >
@@ -86,11 +86,11 @@ curl --location --request POST '<grafana_url>/api/access-control/roles/' \
 }
 ```
 
-Refer to the [RBAC HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#create-a-new-custom-role) for more details.
+Refer to the [RBAC HTTP API](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#create-a-new-custom-role) for more details.
 
 ## Create custom roles using Terraform
 
-You can use the [Grafana Terraform provider](https://registry.terraform.io/providers/grafana/grafana/latest/docs) to manage custom roles and their assignments. This is the recommended method for Grafana Cloud users who want to manage RBAC as code. For more information, refer to [Provisioning RBAC with Terraform](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/).
+You can use the [Grafana Terraform provider](https://registry.terraform.io/providers/grafana/grafana/latest/docs) to manage custom roles and their assignments. This is the recommended method for Grafana Cloud users who want to manage RBAC as code. For more information, refer to [Provisioning RBAC with Terraform](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/).
 
 The following example creates a custom role and assigns it to a team:
 
@@ -123,7 +123,7 @@ For more information, refer to the [`grafana_role`](https://registry.terraform.i
 
 ## Create custom roles using file-based provisioning
 
-You can use [file-based provisioning](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/) to create custom roles for self-managed instances.
+You can use [file-based provisioning](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/) to create custom roles for self-managed instances.
 
 1. Open the YAML configuration file and locate the `roles` section.
 
@@ -133,7 +133,7 @@ You can use [file-based provisioning](https://grafana.com/docs/grafana/v13.2/adm
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `name`        | A human-friendly identifier for the role that helps administrators understand the purpose of a role. `name` is required and cannot be longer than 190 characters. We recommend that you use ASCII characters. Role names must be unique within an organization.                                                                                                                                                                                                                                                          |
 | `uid`         | A unique identifier associated with the role. The UID enables you to change or delete the role. You can either generate a UID yourself, or let Grafana generate one for you. You cannot use the same UID within the same Grafana instance.                                                                                                                                                                                                                                                                               |
-| `orgId`       | Identifies the organization to which the role belongs. The [default org ID](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#auto_assign_org_id) is used if you do not specify `orgId`.                                                                                                                                                                                                                                                                                                           |
+| `orgId`       | Identifies the organization to which the role belongs. The [default org ID](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#auto_assign_org_id) is used if you do not specify `orgId`.                                                                                                                                                                                                                                                                                                           |
 | `global`      | Global roles are not associated with any specific organization, which means that you can reuse them across all organizations. This setting overrides `orgId`.                                                                                                                                                                                                                                                                                                                                                            |
 | `displayName` | Human-friendly text that is displayed in the UI. Role display name cannot be longer than 190 ASCII-based characters. For fixed roles, the display name is shown as specified. If you do not set a display name the display name replaces `':'` (a colon) with `' '` (a space).                                                                                                                                                                                                                                           |
 | `description` | Human-friendly text that describes the permissions a role provides.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -143,11 +143,11 @@ You can use [file-based provisioning](https://grafana.com/docs/grafana/v13.2/adm
 | `state`       | State of the role. Defaults to `present`, but if set to `absent` the role will be removed.                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `force`       | Can be used in addition to state `absent`, to force the removal of a role and all its assignments.                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `from`        | An optional list of roles from which you want to copy permissions.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `permissions` | Provides users access to Grafana resources. For a list of permissions, refer to [RBAC permissions actions and scopes](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/). If you do not know which permissions to assign, you can create and assign roles without any permissions as a placeholder. Using the `from` attribute, you can specify additional permissions or permissions to remove by adding a `state` to your permission list. |
+| `permissions` | Provides users access to Grafana resources. For a list of permissions, refer to [RBAC permissions actions and scopes](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/). If you do not know which permissions to assign, you can create and assign roles without any permissions as a placeholder. Using the `from` attribute, you can specify additional permissions or permissions to remove by adding a `state` to your permission list. |
 
 1. Reload the provisioning configuration file.
 
-   For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations](https://grafana.com/docs/grafana/v13.2/developers/http_api/admin/#reload-provisioning-configurations).
+   For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations](https://grafana.com/docs/grafana/v13.3/developers/http_api/admin/#reload-provisioning-configurations).
 
 The following example creates a local role:
 
@@ -238,7 +238,7 @@ Delete a custom role when you no longer need it. When you delete a custom role, 
 
 3. Reload the provisioning configuration file.
 
-   For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations](https://grafana.com/docs/grafana/v13.2/developers/http_api/admin/#reload-provisioning-configurations).
+   For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations](https://grafana.com/docs/grafana/v13.3/developers/http_api/admin/#reload-provisioning-configurations).
 
 The following example deletes a custom role:
 
@@ -253,4 +253,4 @@ roles:
     force: true
 ```
 
-You can also delete a custom role using the API. Refer to the [RBAC HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#delete-a-custom-role) for more details.
+You can also delete a custom role using the API. Refer to the [RBAC HTTP API](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#delete-a-custom-role) for more details.

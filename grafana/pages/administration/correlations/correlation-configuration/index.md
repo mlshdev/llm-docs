@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/correlations/correlation-configuration/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/correlations/correlation-configuration/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/correlations/correlation-configuration/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/correlations/correlation-configuration/index.md)
 
 # Correlation
 
@@ -22,13 +22,13 @@ Each correlation is configured with the following options:
 **Transformations**
 : Optional manipulations to the source data included passed to the target query
 
-Learn how to create correlations using the [Administration page](https://grafana.com/docs/grafana/v13.2/administration/correlations/create-a-new-correlation/#create-a-correlation-in-administration-page) or with [provisioning](https://grafana.com/docs/grafana/v13.2/administration/correlations/create-a-new-correlation/#create-a-correlation-with-provisioning).
+Learn how to create correlations using the [Administration page](https://grafana.com/docs/grafana/v13.3/administration/correlations/create-a-new-correlation/#create-a-correlation-in-administration-page) or with [provisioning](https://grafana.com/docs/grafana/v13.3/administration/correlations/create-a-new-correlation/#create-a-correlation-with-provisioning).
 
 ## Source data source and result field
 
 Links are shown in Explore visualizations for the results from the correlation’s source data source.
 A link is assigned to one of the fields from the result provided in the correlation configuration (the results field).
-Each visualization displays fields with links in a different way ([Correlations in Logs Panel](https://grafana.com/docs/grafana/v13.2/administration/correlations/use-correlations-in-visualizations/#correlations-in-logs-panel) and see [Correlations in Table](https://grafana.com/docs/grafana/v13.2/administration/correlations/use-correlations-in-visualizations/#correlations-in-table)).
+Each visualization displays fields with links in a different way ([Correlations in Logs Panel](https://grafana.com/docs/grafana/v13.3/administration/correlations/use-correlations-in-visualizations/#correlations-in-logs-panel) and see [Correlations in Table](https://grafana.com/docs/grafana/v13.3/administration/correlations/use-correlations-in-visualizations/#correlations-in-table)).
 
 ## Target query
 
@@ -37,10 +37,10 @@ The target query is run when a link is clicked in the visualization. You can use
 ### Correlation Variables
 
 You can use variables inside the target query to access the source data related to the query.
-Correlations use [Grafana variable syntax](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/).
+Correlations use [Grafana variable syntax](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/).
 Variables are filled with values from the source results when the link is clicked. There are two types of variables you can use:
 
-- [field variables](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/#field-variables) (allows to access field values and labels)
+- [field variables](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/#field-variables) (allows to access field values and labels)
 - correlation variables (allows to access field values and transformations)
 
 Example: If source results contain a field called “employee”, the value of the field can be accessed with:
@@ -50,9 +50,9 @@ Example: If source results contain a field called “employee”, the value of t
 
 In addition to mapping field values to shorter variable names, more correlation variables can be created by applying transformations to existing fields
 
-For more details, please see the example in [Use variables and transformations in a correlation](https://grafana.com/docs/grafana/v13.2/administration/correlations/use-variables-and-transformations/).
+For more details, please see the example in [Use variables and transformations in a correlation](https://grafana.com/docs/grafana/v13.3/administration/correlations/use-variables-and-transformations/).
 
-Correlation creates a data link only if all variables have values in the selected data row. [Global variables](https://grafana.com/docs/grafana/latest/dashboards/variables/add-template-variables/#global-variables) are exception to this rule and are not required to be filled in from the returned data. These variables are interpolated automatically by data sources.
+Correlation creates a data link only if all variables have values in the selected data row. [Built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables) are exception to this rule and are not required to be filled in from the returned data. These variables are interpolated automatically by data sources.
 
 ### Correlation Transformations
 
@@ -62,7 +62,7 @@ There are two types of transformations: logfmt and regular expression.
 
 Each transformation uses a selected field value as the input. The output of a transformation is a set of new variables based on the type and options of the transformation.
 
-For more details, please see the example in [Use variables and transformations in a correlation](https://grafana.com/docs/grafana/v13.2/administration/correlations/use-variables-and-transformations/) for more details.
+For more details, please see the example in [Use variables and transformations in a correlation](https://grafana.com/docs/grafana/v13.3/administration/correlations/use-variables-and-transformations/) for more details.
 
 ### Logfmt transformation
 

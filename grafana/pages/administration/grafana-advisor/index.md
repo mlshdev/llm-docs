@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/grafana-advisor/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/grafana-advisor/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/grafana-advisor/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/grafana-advisor/_index.md)
 
 # Grafana Advisor
 
@@ -40,7 +40,7 @@ For each item, one or more buttons appear:
 - Retry the check.
 - Hide the error. If you hide an error you can see it again by clicking the **Hide/Show silenced errors** eye icon on the top right corner.
 
-For details on how to update your plugins, refer to [Manage your plugins](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/#manage-your-plugins) if you're using OSS/Enterprise, or refer to [Find and use Grafana plugins](https://grafana.com/docs/grafana-cloud/introduction/find-and-use-plugins/) if you're using Grafana Cloud.
+For details on how to update your plugins, refer to [Manage your plugins](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/#manage-your-plugins) if you're using OSS/Enterprise, or refer to [Find and use Grafana plugins](https://grafana.com/docs/grafana-cloud/introduction/find-and-use-plugins/) if you're using Grafana Cloud.
 
 ### Investigation needed
 
@@ -76,4 +76,4 @@ To maintain system reliability and keep your Grafana instance secure and up to d
 - **Systematic Review:** After fixing flagged issues, use the "Refresh" button to confirm all checks pass.
 - **Proactive Updates:** Address plugin update recommendations under "Investigation needed" even if they haven't caused failures yet.
 
-You can also set up your own alerts with **Grafana Alerting**, which allows you to monitor your incoming data and set up alerts for specific events or circumstances. You can then create, manage, and take action on your alerts from a single, consolidated view. Refer to the [Grafana Alerting documentation](https://grafana.com/docs/grafana/v13.2/alerting/) for more information. To learn how to create an alert based on Grafana Advisor results, refer to [Create an alert based on Grafana Advisor results](https://grafana.com/docs/grafana/v13.2/administration/grafana-advisor/advisor-create-alert/).
+You can also set up your own alerts with **Grafana Alerting**, which allows you to monitor your incoming data and set up alerts for specific events or circumstances. You can then create, manage, and take action on your alerts from a single, consolidated view. Refer to the [Grafana Alerting documentation](https://grafana.com/docs/grafana/v13.3/alerting/) for more information. To learn how to create an alert based on Grafana Advisor results, refer to [Create an alert based on Grafana Advisor results](https://grafana.com/docs/grafana/v13.3/administration/grafana-advisor/advisor-create-alert/).

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/template-notifications/manage-notification-templates.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/template-notifications/manage-notification-templates.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/template-notifications/manage-notification-templates.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/template-notifications/manage-notification-templates.md)
 
 # Manage notification templates
 
@@ -39,6 +39,8 @@ In Grafana, custom notification templates (`{{define "<NAME>"}}`) are created wi
 
 Your notification template name (`{{define "<NAME>"}}`) must be unique. You cannot have two templates with the same name in the same notification template group or in different notification template groups. Therefore, avoid using names already defined as default templates, such as: `__subject`, `__text_values_list`, `__text_alert_list`, `default.title` and `default.message`.
 
+In Grafana Cloud, you can create up to 30 notification templates by default. Template changes can take 1 to 2 minutes to take effect while a background job synchronizes them with storage.
+
 To create a notification template in Grafana, complete the following steps.
 
 1. Click **Alerts & IRM** -> **Contact points**.
@@ -63,7 +65,7 @@ To create a notification template group that contains more than one notification
 
 4. Save your changes.
 
-For more details on how to write notification templates, refer to the [template reference](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/reference/) and [examples](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/examples/).
+For more details on how to write notification templates, refer to the [template reference](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/reference/) and [examples](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/examples/).
 
 ## Preview a notification template
 

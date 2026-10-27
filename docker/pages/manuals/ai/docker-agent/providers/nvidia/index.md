@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/nvidia/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/providers/nvidia/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/nvidia/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/providers/nvidia/index.md)
 
 # NVIDIA NIM
 
@@ -30,7 +30,7 @@ The simplest way to use NVIDIA NIM:
 ```yaml
 agents:
   root:
-    model: nvidia/nvidia/nemotron-3-super-120b-a12b
+    model: nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b
     description: Assistant using NVIDIA NIM
     instruction: You are a helpful assistant.
 ```
@@ -43,7 +43,7 @@ For more control over parameters:
 models:
   nemotron:
     provider: nvidia
-    model: nvidia/nemotron-3-super-120b-a12b
+    model: nvidia/nemotron-3.5-super-vl-120b-a12b
     temperature: 0.7
     max_tokens: 8192
 
@@ -60,12 +60,12 @@ NVIDIA NIM hosts Nemotron alongside many other open models (Llama, Qwen,
 DeepSeek, Mistral, ...). Check the [NVIDIA API catalog](https://build.nvidia.com/)
 for the current model list.
 
-| Model                                 | Description                                |
-| ------------------------------------- | ------------------------------------------ |
-| `nvidia/nemotron-3-super-120b-a12b`   | Nemotron 3 Super, reasoning + tool calling |
-| `nvidia/nemotron-3-nano-30b-a3b`      | Nemotron 3 Nano, smaller/faster            |
-| `meta/llama-3.3-70b-instruct`         | Llama 3.3 70B instruction-tuned            |
-| `qwen/qwen3-coder-480b-a35b-instruct` | Qwen3 Coder, code-focused                  |
+| Model                                    | Description                                     |
+| ---------------------------------------- | ----------------------------------------------- |
+| `nvidia/nemotron-3.5-super-vl-120b-a12b` | Nemotron 3.5 Super VL, reasoning + tool calling |
+| `nvidia/nemotron-3-nano-30b-a3b`         | Nemotron 3 Nano, smaller/faster                 |
+| `meta/llama-3.3-70b-instruct`            | Llama 3.3 70B instruction-tuned                 |
+| `qwen/qwen3-coder-480b-a35b-instruct`    | Qwen3 Coder, code-focused                       |
 
 ## On-Prem / Self-Hosted NIM
 
@@ -98,7 +98,7 @@ request.
 ```yaml
 agents:
   coder:
-    model: nvidia/nvidia/nemotron-3-super-120b-a12b
+    model: nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b
     description: Code assistant using Nemotron
     instruction: |
       You are an expert programmer using NVIDIA Nemotron.

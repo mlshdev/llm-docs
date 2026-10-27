@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/azure-monitor/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/azure-monitor/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/azure-monitor/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/azure-monitor/template-variables/index.md)
 
 # Azure Monitor template variables
 
@@ -6,11 +6,11 @@ Instead of hard-coding details such as resource group or resource name values in
 This helps you create more interactive, dynamic, and reusable dashboards.
 Grafana refers to such variables as template variables.
 
-For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ## Before you begin
 
-- Ensure you have [configured the Azure Monitor data source](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/configure/).
+- Ensure you have [configured the Azure Monitor data source](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/configure/).
 - If you want template variables to auto-populate subscriptions, set a **Default Subscription** in the data source configuration.
 
 ## Create a template variable
@@ -164,7 +164,7 @@ You can enable **Multi-value** selection for **Resource Groups** and **Resource 
 
 ## Troubleshoot template variables
 
-If you encounter issues with template variables, try the following solutions. For additional troubleshooting, refer to the [Azure Monitor troubleshooting guide](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/troubleshooting/#template-variable-errors).
+If you encounter issues with template variables, try the following solutions. For additional troubleshooting, refer to the [Azure Monitor troubleshooting guide](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/troubleshooting/#template-variable-errors).
 
 ### Variable returns no values
 
@@ -179,7 +179,7 @@ If you encounter issues with template variables, try the following solutions. Fo
 
 ### Variables break after a Grafana upgrade
 
-If template variables return errors such as `Properties found in series but missing valueProp and textProp` after upgrading Grafana, this typically indicates a version-specific bug. Update to the latest patch release for your Grafana version. For Grafana Cloud, verify you're on the **stable** release channel. Refer to [Template variable errors](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/troubleshooting/#template-variable-errors) for detailed solutions.
+If template variables return errors such as `Properties found in series but missing valueProp and textProp` after upgrading Grafana, this typically indicates a version-specific bug. Update to the latest patch release for your Grafana version. For Grafana Cloud, verify you're on the **stable** release channel. Refer to [Template variable errors](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/troubleshooting/#template-variable-errors) for detailed solutions.
 
 ### Multi-value selection not working in queries
 

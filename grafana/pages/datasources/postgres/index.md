@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/postgres/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/postgres/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/postgres/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/postgres/_index.md)
 
 # PostgreSQL data source
 
@@ -46,25 +46,25 @@ The PostgreSQL plugin uses the [PGX driver](https://github.com/jackc/pgx) for da
 
 The following documents help you get started with the PostgreSQL data source:
 
-- [Configure the PostgreSQL data source](https://grafana.com/docs/grafana/v13.2/datasources/postgres/configure/) - Set up authentication and connect to PostgreSQL.
-- [PostgreSQL query editor](https://grafana.com/docs/grafana/v13.2/datasources/postgres/query-editor/) - Create and edit queries with time series, table, and EXPLAIN formats.
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/postgres/template-variables/) - Create dynamic dashboards with PostgreSQL variables.
-- [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/postgres/annotations/) - Overlay PostgreSQL events on your dashboard graphs.
-- [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/postgres/alerting/) - Create alerts based on PostgreSQL query results.
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/postgres/troubleshooting/) - Solve common configuration and query errors.
+- [Configure the PostgreSQL data source](https://grafana.com/docs/grafana/v13.3/datasources/postgres/configure/) - Set up authentication and connect to PostgreSQL.
+- [PostgreSQL query editor](https://grafana.com/docs/grafana/v13.3/datasources/postgres/query-editor/) - Create and edit queries with time series, table, and EXPLAIN formats.
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/postgres/template-variables/) - Create dynamic dashboards with PostgreSQL variables.
+- [Annotations](https://grafana.com/docs/grafana/v13.3/datasources/postgres/annotations/) - Overlay PostgreSQL events on your dashboard graphs.
+- [Alerting](https://grafana.com/docs/grafana/v13.3/datasources/postgres/alerting/) - Create alerts based on PostgreSQL query results.
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/postgres/troubleshooting/) - Solve common configuration and query errors.
 
 ## Additional features
 
 After you configure the PostgreSQL data source, you can:
 
-- Add [annotations](https://grafana.com/docs/grafana/v13.2/datasources/postgres/annotations/) to overlay PostgreSQL events on your graphs.
-- Set up [alerting](https://grafana.com/docs/grafana/v13.2/datasources/postgres/alerting/) rules based on your time series queries.
-- Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to investigate your PostgreSQL data without building a dashboard.
-- Add [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/) to process query results.
+- Add [annotations](https://grafana.com/docs/grafana/v13.3/datasources/postgres/annotations/) to overlay PostgreSQL events on your graphs.
+- Set up [alerting](https://grafana.com/docs/grafana/v13.3/datasources/postgres/alerting/) rules based on your time series queries.
+- Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to investigate your PostgreSQL data without building a dashboard.
+- Add [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/) to process query results.
 
 To see the PostgreSQL data source in action, explore the demo dashboard on Grafana Play:
 
-[PostgreSQL Overview in Grafana Play](https://play.grafana.org/d/ddvpgdhiwjvuod/postgresql-overview)
+[PostgreSQL Overview in Grafana Play](https://play.grafana.org/d/dbg1erw7kech6oe/placeholder-dashboard)
 
 ## Plugin updates
 
@@ -72,12 +72,12 @@ Starting with Grafana v13.2, the PostgreSQL data source is a standalone plugin, 
 
 To adjust this behavior:
 
-- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 - **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
 
 The standalone plugin requires Grafana 12.3.0 or later. The PostgreSQL data source bundled with Grafana 13.1 and earlier continues to work as before. These versions are unaffected by the externalization.
 
-Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/):
 
 ```ini
 [plugin.grafana-postgresql-datasource]
@@ -94,9 +94,29 @@ preinstall_sync = grafana-postgresql-datasource
 
 [//]: # "This shared file is included in these locations:"
 
-[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+[//]: # "/docs/sources/datasources/aws-cloudwatch/_index.md"
+
+[//]: # "/docs/sources/datasources/azure-monitor/_index.md"
+
+[//]: # "/docs/sources/datasources/elasticsearch/_index.md"
+
+[//]: # "/docs/sources/datasources/google-cloud-monitoring/_index.md"
+
+[//]: # "/docs/sources/datasources/influxdb/_index.md"
+
+[//]: # "/docs/sources/datasources/loki/_index.md"
+
+[//]: # "/docs/sources/datasources/mssql/_index.md"
 
 [//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: # "/docs/sources/datasources/postgres/_index.md"
+
+[//]: # "/docs/sources/datasources/prometheus/_index.md"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/tempo/_index.md"
 
 [//]: #
 
@@ -108,7 +128,7 @@ preinstall_sync = grafana-postgresql-datasource
 
 You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
 
-`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
 
 For example, to explore and query your PostgreSQL data source, use the `gcx datasources postgres` commands:
 

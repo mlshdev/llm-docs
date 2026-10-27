@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/user-management/server-user-management/assign-remove-server-admin-privileges/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/user-management/server-user-management/assign-remove-server-admin-privileges/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/user-management/server-user-management/assign-remove-server-admin-privileges/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/user-management/server-user-management/assign-remove-server-admin-privileges/index.md)
 
 # Assign or remove Grafana server administrator privileges
 
-Grafana server administrators are responsible for creating users, organizations, and managing permissions. For more information about the server administration role, refer to [Grafana server administrators](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators).
+Grafana server administrators are responsible for creating users, organizations, and managing permissions. For more information about the server administration role, refer to [Grafana server administrators](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators).
 
 > **Note**
 >
@@ -10,7 +10,7 @@ Grafana server administrators are responsible for creating users, organizations,
 
 ## Before you begin
 
-- [Add a user](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/#add-a-user)
+- [Add a user](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/#add-a-user)
 - Ensure you have Grafana server administrator privileges
 
 **To assign or remove Grafana administrator privileges**:

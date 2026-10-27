@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/guides/best-practices.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/guides/best-practices.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/guides/best-practices.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/guides/best-practices.md)
 
 # Alerting best practices
 
@@ -36,7 +36,7 @@ Use confidence in user impact to drive escalation and avoid unnecessary pages.
 
 ## Scope alerts for scalability and actionability
 
-In distributed systems, avoid creating separate alert rules for every host, service, or endpoint. Instead, define alert rules that scale automatically using [multi-dimensional alert rules](https://grafana.com/docs/grafana/v13.2/alerting/examples/multi-dimensional-alerts/). This reduces rule duplication and allows alerting to scale as the system grows.
+In distributed systems, avoid creating separate alert rules for every host, service, or endpoint. Instead, define alert rules that scale automatically using [multi-dimensional alert rules](https://grafana.com/docs/grafana/v13.3/alerting/examples/multi-dimensional-alerts/). This reduces rule duplication and allows alerting to scale as the system grows.
 
 Start simple. Default to a single dimension such as `service` or `endpoint` to keep alerts manageable. Add dimensions only when they improve actionability. For example, when missing a dimension like `region` hides failures or doesn't provide enough information to act quickly.
 
@@ -46,7 +46,7 @@ Additional dimensions like `region` or `instance` can help identify the root cau
 
 Alerts should be designed for the first responder, not the person who created the alert. Anyone on call should be able to understand what's wrong and what to do next without deep knowledge of the system or alert configuration.
 
-Avoid vague alerts that force responders to spend time figuring out context. Every alert should clearly explain why it exists, what triggered it, and how to investigate. Use [annotations](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#annotations) to link to relevant dashboards and runbooks, which are essential for faster resolution.
+Avoid vague alerts that force responders to spend time figuring out context. Every alert should clearly explain why it exists, what triggered it, and how to investigate. Use [annotations](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#annotations) to link to relevant dashboards and runbooks, which are essential for faster resolution.
 
 Alerts should indicate a real problem and be actionable, even if the impact is low. Informational alerts add noise without improving reliability.
 
@@ -64,7 +64,7 @@ Alerts must also define a system scope, such as a service or infrastructure comp
 
 After scope, ownership, and alert priority are defined, routing determines where alerts go and how they escalate. **Notification routing is as important as the alerts**.
 
-Alerts should be delivered to the right team and channel based on priority, ownership, and team workflows. Use [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) to define a routing tree that matches the context of your service or scope:
+Alerts should be delivered to the right team and channel based on priority, ownership, and team workflows. Use [notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) to define a routing tree that matches the context of your service or scope:
 
 - Define a parent policy for default routing within the scope.
 - Define nested policies for specific cases or higher-priority issues.
@@ -75,17 +75,17 @@ Without alert grouping, responders can receive many notifications for the same u
 
 For example, a database failure can trigger several alerts at the same time like increased latency, higher error rates, and internal errors. Paging separately for each symptom quickly turns into notification spam, even though there is a single root cause.
 
-[Notification grouping](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/) consolidates related alerts into a single notification. Instead of receiving multiple pages for the same issue, responders get one alert that represents the incident and includes all related firing alerts.
+[Notification grouping](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/) consolidates related alerts into a single notification. Instead of receiving multiple pages for the same issue, responders get one alert that represents the incident and includes all related firing alerts.
 
 Grouping should follow operational boundaries such as service or owner, as defined by notification policies. Downstream or cascading failures should be grouped together so they surface as one issue rather than many.
 
-There is also a limit to how many notifications can be sent out per second. You can configure your Contact Point settings to reduce the email expenditure by setting up single email notifications rather than individual email notifications. To configure this, go to your desired email Contact Point and enable **Single email** in the [optional settings](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-email/#optional-settings).
+There is also a limit to how many notifications can be sent out per second. You can configure your Contact Point settings to reduce the email expenditure by setting up single email notifications rather than individual email notifications. To configure this, go to your desired email Contact Point and enable **Single email** in the [optional settings](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-email/#optional-settings).
 
 ## Mitigate flapping alerts
 
 Short-lived failure spikes often trigger alerts that auto-resolve quickly. Alerting on transient failures creates noise and leads responders to ignore them.
 
-Require issues to persist before alerting. Set a [pending period](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/#pending-period) to define how long a condition must remain true before firing. For example, instead of alerting immediately on high error rate, require it to stay above the threshold for some minutes.
+Require issues to persist before alerting. Set a [pending period](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/#pending-period) to define how long a condition must remain true before firing. For example, instead of alerting immediately on high error rate, require it to stay above the threshold for some minutes.
 
 Also, stabilize alerts by tuning query ranges and aggregations. Using raw data makes alerts sensitive to noise. Instead, evaluate over a time window and aggregate the data to smooth short spikes.
 
@@ -103,11 +103,11 @@ For latency and error-based alerts, percentiles are often more useful than avera
 quantile_over_time(0.95, http_duration_seconds[5m]) > 3
 ```
 
-Finally, avoid rapid resolve-and-fire notifications by using [`keep_firing_for`](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/#keep-firing-for) or [recovery thresholds](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/queries-conditions/#recovery-threshold) to keep alerts active briefly during recovery. Both options reduce flapping and unnecessary notifications.
+Finally, avoid rapid resolve-and-fire notifications by using [`keep_firing_for`](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/#keep-firing-for) or [recovery thresholds](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/queries-conditions/#recovery-threshold) to keep alerts active briefly during recovery. Both options reduce flapping and unnecessary notifications.
 
 ## Graduate symptom-based alerts into SLOs
 
-When a symptom-based alert fires frequently, it usually indicates a reliability concern that should be measured and managed more deliberately. This is often a sign that the alert could evolve into an [service level objective (SLO)](https://grafana.com/docs/grafana-cloud/alerting-and-irm/slo/introduction).
+When a symptom-based alert fires frequently, it usually indicates a reliability concern that should be measured and managed more deliberately. This is often a sign that the alert could evolve into a [service level objective (SLO)](https://grafana.com/docs/grafana-cloud/alerting-and-irm/slo/introduction).
 
 Traditional alerts create pressure to react immediately, while error budgets introduce a buffer of time to act, changing how urgency is handled. Alerts can then be defined in terms of error budget burn rate rather than reacting to every minor deviation.
 
@@ -115,7 +115,7 @@ SLOs also align distinct teams around common reliability goals by providing a sh
 
 For example, instead of several teams alerting on high latency, a single SLO can be used across teams to capture overall API performance.
 
-For other use cases, refer to [when alerts need an SLO](https://grafana.com/docs/grafana/v13.2/alerting/guides/when-slos-reduce-alert-noise/).
+For other use cases, refer to [when alerts need an SLO](https://grafana.com/docs/grafana/v13.3/alerting/guides/when-slos-reduce-alert-noise/).
 
 ## Integrate alerting into incident post-mortems
 
@@ -123,7 +123,7 @@ Every incident is an opportunity to improve alerting. After each incident, evalu
 
 Assess which alerts fired, and how they influenced incident response. Review whether alerts triggered too late, too early, or without enough context, and adjust thresholds, priority, or escalation based on what actually happened.
 
-Use [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) during active incidents to reduce repeated notifications, but scope them carefully to avoid silencing unrelated alerts.
+Use [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/) during active incidents to reduce repeated notifications, but scope them carefully to avoid silencing unrelated alerts.
 
 Post-mortems should evaluate alerts with root causes and lessons learned. If responders lacked key information during the incident, enrich alerts with additional context, dashboards, or better guidance.
 

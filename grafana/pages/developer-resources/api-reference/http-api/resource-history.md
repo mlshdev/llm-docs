@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/resource-history.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/resource-history.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/resource-history.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/resource-history.md)
 
 # Resource History HTTP API
 
@@ -6,7 +6,7 @@
 >
 > Available in Grafana 12 and later.
 >
-> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis).
+> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis).
 
 The new Grafana APIs track version history for resources. You can retrieve the history of any resource by using the standard List endpoint with specific query parameters. This page documents how to list resource history, using dashboards as an example. The same pattern applies to any resource.
 
@@ -107,7 +107,7 @@ Each item in the `items` array represents a historical version of the resource. 
 - **`metadata.resourceVersion`**: A unique identifier for this specific version. Use this for pagination and change detection.
 - **`metadata.creationTimestamp`**: When this specific version was saved.
 - **`metadata.annotations.grafana.app/updatedBy`**: The user who saved this version, in the format `<user-type>:<uid>`.
-- **`metadata.annotations.grafana.app/message`**: An optional commit message set during the update. You can set this annotation when [updating a resource](https://grafana.com/docs/grafana/v13.2/developers/http_api/dashboard/#update-dashboard).
+- **`metadata.annotations.grafana.app/message`**: An optional commit message set during the update. You can set this annotation when [updating a resource](https://grafana.com/docs/grafana/v13.3/developers/http_api/dashboard/#update-dashboard).
 - **`spec`**: The full resource spec as it existed at that version.
 
 ## Pagination

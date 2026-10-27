@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/graphite/annotations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/graphite/annotations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/graphite/annotations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/graphite/annotations/index.md)
 
 # Graphite annotations
 
 Annotations overlay event data on your dashboard graphs, helping you correlate events with metrics. You can use Graphite as a data source for annotations to display events such as deployments, incidents, or maintenance windows on your visualizations.
 
-For general information about annotations in Grafana, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/).
+For general information about annotations in Grafana, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/).
 
 ## Common use cases
 
@@ -190,7 +190,7 @@ Events query with a variable:
 deploy $environment
 ```
 
-For more information about template variables, refer to [Graphite template variables](https://grafana.com/docs/grafana/v13.2/datasources/graphite/template-variables/).
+For more information about template variables, refer to [Graphite template variables](https://grafana.com/docs/grafana/v13.3/datasources/graphite/template-variables/).
 
 ## End-to-end example: correlate deployments with latency
 
@@ -261,4 +261,4 @@ The following section addresses common issues you might encounter when using Gra
 
 In events query mode, Grafana uses the event's `what` value as the title. Ensure the `what` field is populated when you create events in Graphite.
 
-For more troubleshooting guidance, refer to [Troubleshoot Graphite data source issues](https://grafana.com/docs/grafana/v13.2/datasources/graphite/troubleshooting/).
+For more troubleshooting guidance, refer to [Troubleshoot Graphite data source issues](https://grafana.com/docs/grafana/v13.3/datasources/graphite/troubleshooting/).

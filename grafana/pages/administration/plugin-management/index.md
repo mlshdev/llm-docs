@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/plugin-management/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/plugin-management/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/plugin-management/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/plugin-management/_index.md)
 
 # Plugin management
 
@@ -14,7 +14,7 @@ Read on for an overview on how to get started with plugins:
 
 - Customize where app plugin pages appear in the navigation menu.
 - Configure backend communication between installed plugins.
-- Improve security by isolating plugins with the Plugin Frontend Sandbox.
+- Improve security with the Plugins Frontend Sandbox.
 
 ## Types of plugins
 
@@ -24,11 +24,11 @@ Grafana supports three types of plugins:
 - [Data sources](https://grafana.com/grafana/plugins/data-source-plugins) - These plugins allow you to pull data from various data sources such as databases, APIs, log files, and so on, and display it in the form of graphs, charts, and dashboards in Grafana.
 - [Apps](https://grafana.com/grafana/plugins/app-plugins) - These plugins enable the bundling of data sources, panels, dashboards, and Grafana pages into a cohesive experience.
 
-Read more in [Types of plugins](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/plugin-types/).
+Read more in [Types of plugins](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/plugin-types/).
 
 ## Access the Plugin catalog
 
-You can install and manage plugins from within Grafana. You need to have a Grafana Server administrator or Organization administrator role to access and use the plugin catalog. For more information about Grafana roles and permissions, refer to [Roles and permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/).
+You can install and manage plugins from within Grafana. You need to have a Grafana Server administrator or Organization administrator role to access and use the plugin catalog. For more information about Grafana roles and permissions, refer to [Roles and permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/).
 
 For app plugins, the following access rules apply:
 
@@ -48,7 +48,7 @@ If you're not logged in, you can also access the list of available plugins in th
 
 ## Manage your plugins
 
-We strongly recommend running the latest plugin version. Use [Grafana Advisor](https://grafana.com/docs/grafana/v13.2/administration/grafana-advisor) to check the status of your data sources and plugins.
+We strongly recommend running the latest plugin version. Use [Grafana Advisor](https://grafana.com/docs/grafana/v13.3/administration/grafana-advisor) to check the status of your data sources and plugins.
 
 ### Install a plugin
 
@@ -61,7 +61,7 @@ The default way to install a plugin is through the Grafana UI.
 
 > **Note**
 >
-> To see additional ways to install plugins refer to [Install a plugin](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/plugin-install/).
+> To see additional ways to install plugins refer to [Install a plugin](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/plugin-install/).
 
 ### Update a plugin
 
@@ -95,28 +95,21 @@ When the update is complete, a confirmation message will indicate the installati
 
 ### Verify your plugins
 
-Plugin signature verification, also known as *signing*, is a security measure to make sure plugins haven't been tampered with. Upon loading, Grafana checks to see if a plugin is signed or unsigned. Read more in [Plugin signatures](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/plugin-sign/).
+Plugin signature verification, also known as *signing*, is a security measure to make sure plugins haven't been tampered with. Upon loading, Grafana checks to see if a plugin is signed or unsigned. Read more in [Plugin signatures](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/plugin-sign/).
 
 ## Advanced options
 
 ### Customize navigation placement of plugin pages
 
-You can relocate app plugin pages to customize the navigation menu structure, as explained in [Customize navigation placement of plugin pages](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/customize-nav-bar/).
+You can relocate app plugin pages to customize the navigation menu structure, as explained in [Customize navigation placement of plugin pages](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/customize-nav-bar/).
 
 ### Allow plugin backend communication
 
-You can configure your Grafana instance to let the frontends of installed plugins directly communicate locally with the backends of other installed plugins. See how in [Configure backend communication between installed plugins](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/plugin-integrate/).
+You can configure your Grafana instance to let the frontends of installed plugins directly communicate locally with the backends of other installed plugins. See how in [Configure backend communication between installed plugins](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/plugin-integrate/).
 
-### Isolate plugin code with the Frontend Sandbox
+### Improve security with the Plugins Frontend Sandbox
 
-You can use the [Plugin Frontend Sandbox](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/plugin-frontend-sandbox/) to securely isolate plugin frontend code from the main Grafana application.
-
-When enabled, plugins run in a separate JavaScript context, which provides several security benefits:
-
-- Prevents plugins from modifying parts of the Grafana interface outside their designated areas
-- Stops plugins from interfering with other plugins functionality
-- Protects core Grafana features from being altered by plugins
-- Prevents plugins from modifying global browser objects and behaviors
+You can use the [Plugins Frontend Sandbox](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/plugin-frontend-sandbox/) as an additional layer alongside standard plugin trust and review practices.
 
 ### Learn more
 

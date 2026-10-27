@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/user-management/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/user-management/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/user-management/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/user-management/_index.md)
 
 # User management
 
@@ -10,7 +10,7 @@ Watch the following video to learn how to manage users and permissions in Grafan
 
 The following topics describe how to use permissions to control user access to data sources, dashboards, users, and teams.
 
-- [Server user management](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/)
-- [Manage user preferences](https://grafana.com/docs/grafana/v13.2/administration/user-management/user-preferences/)
-- [Manage users in an organization](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-org-users/)
-- [Manage dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-dashboard-permissions/)
+- [Server user management](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/)
+- [Manage user preferences](https://grafana.com/docs/grafana/v13.3/administration/user-management/user-preferences/)
+- [Manage users in an organization](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-org-users/)
+- [Manage dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-dashboard-permissions/)

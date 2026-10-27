@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/fundamentals/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/fundamentals/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/fundamentals/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/fundamentals/_index.md)
 
 # Introduction to Grafana Alerting
 
@@ -8,7 +8,7 @@ Built on the Prometheus alerting model, it integrates with the Grafana stack to 
 
 > **Tip**
 >
-> For a hands-on introduction, refer to [Getting started with Grafana Alerting tutorials](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/tutorials/).
+> For a hands-on introduction, refer to [Getting started with Grafana Alerting tutorials](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/tutorials/).
 
 ## How it works at a glance
 
@@ -25,13 +25,13 @@ The following concepts are key to your understanding of how Grafana Alerting wor
 
 ### Alert rules
 
-An [alert rule](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/) consists of one or more queries and expressions that select the data you want to measure. It also contains a condition, which is the threshold that an alert rule must meet or exceed to fire.
+An [alert rule](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/) consists of one or more queries and expressions that select the data you want to measure. It also contains a condition, which is the threshold that an alert rule must meet or exceed to fire.
 
 In the alert rule, choose the contact point or notification policies to determine how to receive the alert notifications.
 
 ### Alert rule evaluation
 
-[Alert rules are frequently evaluated](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/rule-evaluation/) and the state of their alert instances is updated accordingly. Only alert instances that are in a firing or resolved state are sent in notifications.
+[Alert rules are frequently evaluated](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/rule-evaluation/) and the state of their alert instances is updated accordingly. Only alert instances that are in a firing or resolved state are sent in notifications.
 
 ### Alert instances
 
@@ -47,11 +47,11 @@ A rule using the PromQL expression above creates as many alert instances as the 
 
 ![Multiple alert instances from a single alert rule](https://grafana.com/static/img/docs/alerting/unified/multi-dimensional-alert.png)
 
-*For a demo, see the [multi-dimensional alerts example](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/multi-dimensional-alerts/).*
+*For a demo, see the [multi-dimensional alerts example](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/multi-dimensional-alerts/).*
 
 ### Contact points
 
-[Contact points](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/contact-points/) determine the notification message and where notifications are sent. For example, you might have a contact point that sends notifications to an email address, to Slack, to an incident management system (IRM) such as Grafana IRM or PagerDuty, or to a webhook.
+[Contact points](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/contact-points/) determine the notification message and where notifications are sent. For example, you might have a contact point that sends notifications to an email address, to Slack, to an incident management system (IRM) such as Grafana IRM or PagerDuty, or to a webhook.
 
 ### Notification messages
 
@@ -61,7 +61,7 @@ In the alert rule, you can choose a contact point to receive the alert notificat
 
 ### Notification policies
 
-[Notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) are an advanced option for handling alert notifications by distinct scopes, such as by team or service—ideal for managing large alerting systems.
+[Notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) are an advanced option for handling alert notifications by distinct scopes, such as by team or service—ideal for managing large alerting systems.
 
 Notification policies routes alerts to contact points via label matching. They are defined in a tree structure, where the root of the notification policy tree is the **Default notification policy**, which ensures all alert instances are handled.
 
@@ -75,8 +75,8 @@ Each notification policy decides where to send the alert (contact point) and whe
 
 ### Notification grouping
 
-To reduce alert noise, Grafana Alerting [groups related firing alerts into a single notification](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/) by default. You can customize this behavior in the alert rule or notification policy settings.
+To reduce alert noise, Grafana Alerting [groups related firing alerts into a single notification](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/) by default. You can customize this behavior in the alert rule or notification policy settings.
 
 ### Silences and mute timings
 
-[Silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) and [mute timings](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) allow you to pause notifications without interrupting alert rule evaluation. Use a silence to pause notifications on a one-time basis, such as during a maintenance window; and use mute timings to pause notifications at regular intervals, such as evenings and weekends.
+[Silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/) and [mute timings](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/) allow you to pause notifications without interrupting alert rule evaluation. Use a silence to pause notifications on a one-time basis, such as during a maintenance window; and use mute timings to pause notifications at regular intervals, such as evenings and weekends.

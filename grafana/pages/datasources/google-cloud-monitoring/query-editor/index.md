@@ -1,9 +1,9 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/google-cloud-monitoring/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/google-cloud-monitoring/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/google-cloud-monitoring/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/google-cloud-monitoring/query-editor/index.md)
 
 # Google Cloud Monitoring query editor
 
 This topic explains querying specific to the Google Cloud Monitoring data source.
-For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 ## Query types
 
@@ -131,7 +131,7 @@ The default values for "cloud monitoring auto" are:
 
 The other automatic option is "grafana auto", which automatically sets the Group By time depending on the time range chosen and width of the time series panel.
 
-For more information about "grafana auto", refer to [Interval variable](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#add-an-interval-variable).
+For more information about "grafana auto", refer to [Interval variable](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#add-an-interval-variable).
 
 You can also choose fixed time intervals to group by, like `1h` or `1d`.
 

@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/enterprise-licensing/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/enterprise-licensing/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/enterprise-licensing/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/enterprise-licensing/_index.md)
 
 # Grafana Enterprise license
 
-When you become a Grafana Enterprise customer, you gain access to Grafana's premium observability features, including enterprise data source plugins, reporting, and role-based access control. In order to use these [enhanced features of Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/), you must purchase and activate a Grafana Enterprise license.
+When you become a Grafana Enterprise customer, you gain access to Grafana's premium observability features, including enterprise data source plugins, reporting, and role-based access control. In order to use these [enhanced features of Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/), you must purchase and activate a Grafana Enterprise license.
 
 To purchase a license directly from Grafana Labs, [Contact a Grafana Labs representative](https://grafana.com/contact?about=grafana-enterprise). To activate an Enterprise license purchased from Grafana Labs, refer to [Activate an Enterprise license](#activate-an-enterprise-license).
 
-You can also purchase a Grafana Enterprise license through the AWS Marketplace. To learn more about activating a license purchased through AWS, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace](https://grafana.com/docs/grafana/v13.2/administration/enterprise-licensing/activate-aws-marketplace-license/).
+You can also purchase a Grafana Enterprise license through the AWS Marketplace. To learn more about activating a license purchased through AWS, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace](https://grafana.com/docs/grafana/v13.3/administration/enterprise-licensing/activate-aws-marketplace-license/).
 
-- [Activate a Grafana Enterprise license purchased through AWS Marketplace](https://grafana.com/docs/grafana/v13.2/administration/enterprise-licensing/activate-aws-marketplace-license/)
+- [Activate a Grafana Enterprise license purchased through AWS Marketplace](https://grafana.com/docs/grafana/v13.3/administration/enterprise-licensing/activate-aws-marketplace-license/)
 
 ## Activate an Enterprise license
 
@@ -22,7 +22,7 @@ To download your Grafana Enterprise license:
 2. Go to **My Account** and select an organization from the drop-down menu at the top left of the page. On the Overview page for each organization, you can see a section for Grafana Enterprise licenses. Click **Details** next to a license.
 3. If the license shows "License not configured" or if the URL is listed as "-", you need to update the details. This requires the Admin role.
    1. Click **Update** next to License Details. *If the **Update** button isn't visible, contact the Grafana account team.*
-   2. Enter the URL. It must match the effective [`root_url`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#root_url) configuration setting (including the trailing slash) of the Grafana Enterprise instance. It should be the URL that users type in their browsers to access the frontend, not the node hostname. The URL must start with "https\://", and it can't be `localhost` or contain wildcards.
+   2. Enter the URL. It must match the effective [`root_url`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#root_url) configuration setting (including the trailing slash) of the Grafana Enterprise instance. It should be the URL that users type in their browsers to access the frontend, not the node hostname. The URL must start with "https\://", and it can't be `localhost` or contain wildcards.
    3. (Optional) Edit the license name. This name is only used for display purposes.
    4. Click **Save**.
 4. At the bottom of the license details page, select **Download token** to download the `license.jwt` file that contains your license.
@@ -35,7 +35,7 @@ You must install a Grafana Enterprise build to use the enterprise features, whic
 >
 > If you already use Grafana OSS, you can replace it with the same version of Grafana Enterprise.
 > Ensure that you back up the configuration and database before proceeding.
-> For more information, refer to [Back up Grafana](https://grafana.com/docs/grafana/v13.2/administration/back-up-grafana/).
+> For more information, refer to [Back up Grafana](https://grafana.com/docs/grafana/v13.3/administration/back-up-grafana/).
 
 There is more than one way to add the license to a Grafana instance:
 
@@ -76,9 +76,9 @@ environment variable.
 
 ### Step 3. Ensure that the license file's root URL matches the root\_url configuration option
 
-Update the [`root_url`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#root_url) in your configuration. It should be the URL that users type in their browsers to access the frontend, not the node hostname(s).
+Update the [`root_url`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#root_url) in your configuration. It should be the URL that users type in their browsers to access the frontend, not the node hostname(s).
 
-This is important, because as part of the validation checks at startup, Grafana compares the license URL to the [`root_url`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#root_url) in your configuration.
+This is important, because as part of the validation checks at startup, Grafana compares the license URL to the [`root_url`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#root_url) in your configuration.
 
 In your configuration file:
 
@@ -95,7 +95,7 @@ GF_SERVER_ROOT_URL=https://grafana.example.com/
 
 ### Step 4. Restart Grafana
 
-To finalize the installation of Grafana Enterprise, restart Grafana to enable all Grafana Enterprise features. Refer to [restart Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/start-restart-grafana/) for more information.
+To finalize the installation of Grafana Enterprise, restart Grafana to enable all Grafana Enterprise features. Refer to [restart Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/start-restart-grafana/) for more information.
 
 ## License expiration
 
@@ -105,7 +105,7 @@ If your license has expired, most of Grafana keeps working as normal. Some enter
 
 ### Update your license
 
-1. Locate your current `license.jwt` file. In a standard installation it is stored inside the Grafana data directory, which on a typical Linux installation is in `/var/lib/grafana/data`. This location might be overridden in the ini file [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+1. Locate your current `license.jwt` file. In a standard installation it is stored inside the Grafana data directory, which on a typical Linux installation is in `/var/lib/grafana/data`. This location might be overridden in the ini file [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 
    ```ini
    [enterprise]
@@ -120,7 +120,7 @@ If your license has expired, most of Grafana keeps working as normal. Some enter
 
 4. Replace the current `license.jwt`-file with the one you've just downloaded.
 
-5. [Restart Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/start-restart-grafana/).
+5. [Restart Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/start-restart-grafana/).
 
 ### If your license expires
 
@@ -256,7 +256,7 @@ License token renewal requires internet access, and requires that the `auto_refr
 
 **Grafana License URL:** Your license does not work with an instance of Grafana with a different root URL.
 
-The License URL is the complete URL of your Grafana instance, for example `https://grafana.your-company.com/`. It is defined in the [root\_url](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#root_url) configuration setting.
+The License URL is the complete URL of your Grafana instance, for example `https://grafana.your-company.com/`. It is defined in the [root\_url](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#root_url) configuration setting.
 
 **Concurrent sessions limit**: As of Grafana Enterprise 7.5, users can initiate up to three concurrent sessions of Grafana.
 
@@ -276,7 +276,7 @@ Standard Grafana Enterprise licenses include a certain number of seats that can 
 
 For those use-cases we support usage-based billing, where your license includes a certain number of included users and you are billed on a monthly basis for any excess active users during the month.
 
-Usage billing involves a contractual agreement between you and Grafana Labs and an update to your license, and it is only available if Grafana Enterprise version 10.0.0 or higher is configured to [automatically refresh its license token](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/enterprise-configuration/#auto_refresh_license).
+Usage billing involves a contractual agreement between you and Grafana Labs and an update to your license, and it is only available if Grafana Enterprise version 10.0.0 or higher is configured to [automatically refresh its license token](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/enterprise-configuration/#auto_refresh_license).
 
 ### User deduplication
 

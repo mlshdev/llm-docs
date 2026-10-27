@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/grafana-cli/grafanactl/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/grafana-cli/grafanactl/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/grafana-cli/grafanactl/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/grafana-cli/grafanactl/_index.md)
 
 # Install and set up the `grafanactl` CLI
 
 > **Caution**
 >
-> `grafanactl` is being deprecated, and we're bringing all our learning and experience into the new, improved CLI tool [`gcx`](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx). The `grafanactl` repository in GitHub will be archived on June 1, 2026.
+> `grafanactl` is being deprecated, and we're bringing all our learning and experience into the new, improved CLI tool [`gcx`](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx). The `grafanactl` repository in GitHub is scheduled to be archived; check the [repository](https://github.com/grafana/grafanactl) for its current status.
 >
 > To migrate from `grafanactl` to `gcx`, search-and-replace `grafanactl` with `gcx`. For `grafanactl resources serve`, use `gcx dev serve` instead.
 

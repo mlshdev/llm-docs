@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/explore/logs-integration.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/explore/logs-integration.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/explore/logs-integration.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/explore/logs-integration.md)
 
 # Logs in Explore
 
 Explore is a powerful tool for logging and log analysis. It allows you to investigate logs from different data sources including:
 
-- [Loki](https://grafana.com/docs/grafana/v13.2/datasources/loki/)
-- [Elasticsearch](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/)
-- [Cloudwatch](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/)
-- [InfluxDB](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/)
-- [Azure Monitor](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/)
+- [Loki](https://grafana.com/docs/grafana/v13.3/datasources/loki/)
+- [Elasticsearch](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/)
+- [Cloudwatch](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/)
+- [InfluxDB](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/)
+- [Azure Monitor](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/)
 - [ClickHouse](https://github.com/grafana/clickhouse-datasource)
 
 With Explore, you can efficiently monitor, troubleshoot, and respond to incidents by analyzing your logs and identifying the root causes. It also helps you to correlate logs with other telemetry signals such as metrics, traces or profiles, by viewing them side-by-side.
@@ -172,7 +172,7 @@ Click **Copy log line** to copy the content of a selected log line to the clipbo
 
 ### Copy link to log line
 
-Linking log lines in Grafana allows you to quickly navigate to specific log entries for detailed and precise analysis. Click **Copy shortlink** to generate and copy a [short URL](https://grafana.com/docs/grafana/v13.2/developers/http_api/short_url/) that provides direct access to the exact log entry within an absolute time range. When you open the link, Grafana automatically scrolls to the corresponding log line and highlights it in blue, making it easy to identify and focus on relevant information.
+Linking log lines in Grafana allows you to quickly navigate to specific log entries for detailed and precise analysis. Click **Copy shortlink** to generate and copy a [short URL](https://grafana.com/docs/grafana/v13.3/developers/http_api/short_url/) that provides direct access to the exact log entry within an absolute time range. When you open the link, Grafana automatically scrolls to the corresponding log line and highlights it in blue, making it easy to identify and focus on relevant information.
 
 > **Note**
 >

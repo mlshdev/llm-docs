@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/create-silence.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/create-silence.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/create-silence.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/create-silence.md)
 
 # Configure silences
 
@@ -6,13 +6,13 @@ Silences stop notifications from being created for a specified time window but d
 
 > **Note**
 >
-> Silences are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alertmanager/) and only suppress notifications for alerts managed by that Alertmanager.
+> Silences are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alertmanager/) and only suppress notifications for alerts managed by that Alertmanager.
 >
-> In Grafana Cloud, the standalone Alertmanager UI is deprecated and no longer available. Manage silences here in the Grafana Alerting UI instead. For details, refer to [Configure Alertmanagers](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alertmanager/).
+> In Grafana Cloud, the standalone Alertmanager UI is deprecated and no longer available. Manage silences here in the Grafana Alerting UI instead. For details, refer to [Configure Alertmanagers](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alertmanager/).
 
 ## Mute timings and active time intervals vs silences
 
-[Mute timings and active time intervals](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) and [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) are distinct methods to suppress notifications. They do not prevent alert rules from being evaluated or stop alert instances from appearing in the user interface; they only prevent notifications from being created.
+[Mute timings and active time intervals](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/) and [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/) are distinct methods to suppress notifications. They do not prevent alert rules from being evaluated or stop alert instances from appearing in the user interface; they only prevent notifications from being created.
 
 The following table highlights the key differences between mute timings and silences.
 
@@ -23,7 +23,7 @@ The following table highlights the key differences between mute timings and sile
 
 \[//]: <> (
 
-The function of [Mute timing and active timing](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) differs from [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/), as they are two are distinct methods to suppress notifications. They do not prevent alert rules from being evaluated or stop alert instances from appearing in the user interface; they only prevent notifications from being created.
+The function of [Mute timing and active timing](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/) differs from [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/), as they are two are distinct methods to suppress notifications. They do not prevent alert rules from being evaluated or stop alert instances from appearing in the user interface; they only prevent notifications from being created.
 
 The following table highlights the key differences of mute timing and active timing compared with silences.
 
@@ -66,9 +66,9 @@ To add a silence, complete the following steps.
 
    **How label matching works**
 
-   Use [labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
+   Use [labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
 
-   A label matchers consists of 3 distinct parts, the **label**, the **value** and the **operator**.
+   A label matcher consists of 3 distinct parts, the **label**, the **value** and the **operator**.
 
    - The **Label** field is the name of the label to match. It must exactly match the label name.
 
@@ -117,7 +117,7 @@ To add a silence, complete the following steps.
 
 **How label matching works**
 
-Use [labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
+Use [labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
 
 A label matchers consists of 3 distinct parts, the **label**, the **value** and the **operator**.
 
@@ -215,9 +215,9 @@ As opposed to general silences, rule-specific silence access is tied directly to
 
 Default notification messages often include a link to silence alerts.
 
-In custom notification templates, you can use [`.Alert.SilenceURL`](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/reference/#alert) to redirect users to the UI where they can silence the given alert.
+In custom notification templates, you can use [`.Alert.SilenceURL`](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/reference/#alert) to redirect users to the UI where they can silence the given alert.
 
-If [`.Alert.SilenceURL`](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/reference/#alert) doesn’t fit your specific use case, you can also create a custom silence link for your custom templates.
+If [`.Alert.SilenceURL`](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/reference/#alert) doesn’t fit your specific use case, you can also create a custom silence link for your custom templates.
 
 **Create a custom silence link**
 
@@ -229,4 +229,4 @@ To link to a new silence page for an external Alertmanager, add a `alertmanager`
 
 ## Inhibition rules
 
-Inhibition rules suppress notifications for target alerts when a related source alert is already firing. For more information, refer to [Configure inhibition rules](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/inhibition-rules/).
+Inhibition rules suppress notifications for target alerts when a related source alert is already firing. For more information, refer to [Configure inhibition rules](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/inhibition-rules/).

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/configure-data-links/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/configure-data-links/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/configure-data-links/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/configure-data-links/index.md)
 
 # Configure data links and actions
 
@@ -23,39 +23,39 @@ If there's only one data link in the visualization, clicking anywhere on the vis
 
 You can configure data links for the following visualizations:
 
-- [Bar chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-chart/)
-- [Bar gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-gauge/)
-- [Candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/)
-- [Canvas](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/canvas/)
-- [Gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/gauge/)
-- [Geomap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/geomap/)
-- [Heatmap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/heatmap/)
-- [Histogram](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/histogram/)
-- [Pie chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/pie-chart/)
-- [Stat](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/stat/)
-- [State timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/)
-- [Status history](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/status-history/)
-- [Table](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/)
-- [Time series](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/)
-- [Trend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/trend/)
-- [XY chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/xy-chart/)
+- [Bar chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-chart/)
+- [Bar gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-gauge/)
+- [Candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/)
+- [Canvas](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/canvas/)
+- [Gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/gauge/)
+- [Geomap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/geomap/)
+- [Heatmap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/heatmap/)
+- [Histogram](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/histogram/)
+- [Pie chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/pie-chart/)
+- [Stat](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/stat/)
+- [State timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/)
+- [Status history](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/status-history/)
+- [Table](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/)
+- [Time series](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/)
+- [Trend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/trend/)
+- [XY chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/xy-chart/)
 
 ## Actions
 
-Using actions, you can trigger processes like starting or shutting down a server, directly from a dashboard panel. [API settings](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/canvas/#button-api-options) are configured in the **Add action** dialog box. You can also pass variables in the API editor.
+Using actions, you can trigger processes like starting or shutting down a server, directly from a dashboard panel. [API settings](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/canvas/#button-api-options) are configured in the **Add action** dialog box. You can also pass variables in the API editor.
 
 ### Supported visualizations
 
 You can configure actions for the following visualizations:
 
-- [Bar chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-chart/)
-- [Candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/)
-- [State timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/)
-- [Status history](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/status-history/)
-- [Table](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/)
-- [Time series](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/)
-- [Trend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/trend/)
-- [XY chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/xy-chart/)
+- [Bar chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-chart/)
+- [Candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/)
+- [State timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/)
+- [Status history](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/status-history/)
+- [Table](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/)
+- [Time series](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/)
+- [Trend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/trend/)
+- [XY chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/xy-chart/)
 
 ## Data link and action variables {#data-link-variables}
 
@@ -65,11 +65,11 @@ To see a list of available variables, enter `$` in the data link or action **URL
 
 > **Note**
 >
-> These variables changed in 6.4 so if you have an older version of Grafana, then use the version picker to select docs for an older version of Grafana.
+> These variables changed in 6.4 so if you have a previous version of Grafana, then use the version picker to select docs for a previous version of Grafana.
 
-Azure Monitor, [CloudWatch](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/query-editor/#deep-link-grafana-panels-to-the-cloudwatch-console-1), and [Google Cloud Monitoring](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/query-editor/#deep-link-from-grafana-panels-to-the-google-cloud-console-metrics-explorer) have pre-configured data links called *deep links*.
+Azure Monitor, [CloudWatch](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/query-editor/#deep-link-grafana-panels-to-the-cloudwatch-console-1), and [Google Cloud Monitoring](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/query-editor/#deep-link-from-grafana-panels-to-the-google-cloud-console-metrics-explorer) have pre-configured data links called *deep links*.
 
-You can also use template variables in your data links or actions URLs. For more information, refer to [Templates and variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/).
+You can also use template variables in your data links or actions URLs. For more information, refer to [Templates and variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/).
 
 ### Time range panel variables
 
@@ -83,7 +83,7 @@ These variables allow you to include the current time range in the data link or 
 
 When you create data links and actions using time range variables like `__url_time_range` in the URL, you have to form the query parameter syntax yourself; that is, you must format the URL by appending query parameters using the question mark (`?`) and ampersand (`&`) syntax. These characters aren't automatically generated.
 
-For more information about these variables, refer to the [Global variables documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/global-variables/#__from-and-__to).
+For more information about these variables, refer to the [Built-in variables documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables/#__from-and-__to).
 
 ### Series variables
 
@@ -209,7 +209,7 @@ To add a data link, follow these steps:
 
     > **Note**
     >
-    > Actions are not supported for all visualizations. For the list of supported visualizations, refer to [Supported visualizations](#supported-visualizations-1).
+    > Actions aren't supported for all visualizations. For the list of supported visualizations, refer to [Supported visualizations](#supported-visualizations-1).
 
     To add an action, by follow these steps:
 
@@ -246,17 +246,17 @@ To add a data link, follow these steps:
 
     10. Click **Back** and then **Exit edit**.
 
-If you add multiple data links or actions, you can control the order in which they appear in the visualization. To do this, click and drag the data link or action to the desired position.
+If you add multiple data links or actions, you can control the order in which they appear in the visualization. To reorder items, drag the data link or action to the desired position.
 
 ## Panel-to-panel filtering
 
-You can use data links to link back to the dashboard you are currently on. This enables "panel-to-panel filtering," where clicking a data point in one panel updates the dashboard variables and filters the rest of the dashboard.
+You can use data links to link back to the dashboard you're on. This enables "panel-to-panel filtering," where clicking a data point in one panel updates the dashboard variables and filters the rest of the dashboard.
 
 To preserve the context of the current dashboard:
 
 - **Time range:** You must explicitly include the current time range in the link.
-- **Variables:** You must enable **Include all variables** to preserve existing selections.
-- **Ordering:** Ensure that **Include all variables** is placed before the specific variable you are defining in the link.
+- **Variables:** You must enable **Include all variables** to preserve current selections.
+- **Ordering:** Place **Include all variables** before the specific variable you define in the link.
 
 Filters on the current dashboard are automatically preserved.
-Learn more in [Create dashboard URL variables > Filters](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/#filters).
+Learn more in [Create dashboard URL variables > Filters](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/#filters).

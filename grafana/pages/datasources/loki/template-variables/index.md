@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/loki/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/loki/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/loki/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/loki/template-variables/index.md)
 
 # Loki template variables
 
@@ -6,7 +6,7 @@ Instead of hard-coding details such as server, application, and sensor names in 
 Grafana lists these variables in dropdown select boxes at the top of the dashboard to help you change the data displayed in your dashboard.
 Grafana refers to such variables as template variables.
 
-For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/) documentation.
+For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/) documentation.
 
 ## Use query variables
 
@@ -48,7 +48,7 @@ By default, the Loki data source formats variable values based on the variable's
 - A single-value variable is inserted as-is, without escaping.
 - A **Multi-value** or **Include All** variable has each value escaped for use in a regular expression and joined with `|`, for example `payments|checkout`.
 
-This default suits the regular expression match operator `=~`, but it can produce unexpected results when a custom or static value contains characters that Grafana escapes, or when you insert a value into a context that isn't a regular expression. To control the formatting, use a [format option](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/#advanced-variable-format-options) in the variable syntax:
+This default suits the regular expression match operator `=~`, but it can produce unexpected results when a custom or static value contains characters that Grafana escapes, or when you insert a value into a context that isn't a regular expression. To control the formatting, use a [format option](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/#advanced-variable-format-options) in the variable syntax:
 
 | Syntax         | Result                                                                                                     |
 | -------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -62,7 +62,7 @@ For example, to use a raw custom value in an exact-match selector:
 {app="${app:raw}"}
 ```
 
-For the complete list of format options, refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/#advanced-variable-format-options).
+For the complete list of format options, refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/#advanced-variable-format-options).
 
 ## Use ad hoc filters
 
@@ -70,11 +70,11 @@ Loki supports ad hoc filters. Use them to specify any number of key/value filter
 
 For example, if you add an ad hoc filter for `level = error`, Grafana appends the matcher to the stream selector of every Loki query on the dashboard, so a query like `{app="payments"}` runs as `{app="payments", level="error"}`.
 
-For more information, refer to [Add ad hoc filters](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#add-ad-hoc-filters).
+For more information, refer to [Add ad hoc filters](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#add-ad-hoc-filters).
 
 ## Use the `$__auto` variable for Loki metric queries
 
-Consider using the `$__auto` variable in your Loki metric queries, which will automatically be substituted with the [step value](https://grafana.com/docs/grafana/v13.2/datasources/loki/query-editor/#options) for range queries, and with the selected time range's value (computed from the starting and ending times) for instant queries.
+Consider using the `$__auto` variable in your Loki metric queries, which will automatically be substituted with the [step value](https://grafana.com/docs/grafana/v13.3/datasources/loki/query-editor/#options) for range queries, and with the selected time range's value (computed from the starting and ending times) for instant queries.
 
 Use it as the range in a range aggregation:
 
@@ -86,7 +86,7 @@ sum(rate({app="payments"} |= `error` [$__auto]))
 >
 > Prefer `$__auto` over `$__range` for the range in a metric query. The `$__range` variable resolves to the entire selected time range, so using it as a range vector, such as `[$__range]`, makes each data point aggregate over the whole window. This can scan far more data and look back further than you intend.
 
-For more information about variables, refer to [Global built-in variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#global-variables).
+For more information about variables, refer to [Global built-in variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#global-variables).
 
 ## Known limitations
 

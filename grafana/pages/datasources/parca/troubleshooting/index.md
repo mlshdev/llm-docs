@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/parca/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/parca/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/parca/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/parca/troubleshooting/index.md)
 
 # Troubleshoot Parca data source issues
 
@@ -6,7 +6,7 @@
 >
 > This plugin is deprecated and will only receive critical security updates. Support will end on January 2, 2027.
 
-This page provides solutions to common issues you might encounter when configuring or using the Parca data source. For configuration instructions, refer to [Configure the Parca data source](https://grafana.com/docs/grafana/v13.2/datasources/parca/configure/).
+This page provides solutions to common issues you might encounter when configuring or using the Parca data source. For configuration instructions, refer to [Configure the Parca data source](https://grafana.com/docs/grafana/v13.3/datasources/parca/configure/).
 
 ## Connection errors
 
@@ -84,7 +84,7 @@ These errors occur when running queries against the Parca data source.
 | No profile type selected        | Select a profile type from the drop-down menu. This field is required -- queries silently return empty data without it.                                                                                                     |
 | Time range doesn't contain data | Expand the dashboard time range or verify that profiling data exists for the selected period.                                                                                                                               |
 | Label selector too restrictive  | Remove or broaden label filters to verify that matching profiles exist.                                                                                                                                                     |
-| Label selector syntax error     | Verify the label selector uses valid syntax (for example, `{job="my-service"}`). Refer to the [query editor documentation](https://grafana.com/docs/grafana/v13.2/datasources/parca/query-editor/) for supported operators. |
+| Label selector syntax error     | Verify the label selector uses valid syntax (for example, `{job="my-service"}`). Refer to the [query editor documentation](https://grafana.com/docs/grafana/v13.3/datasources/parca/query-editor/) for supported operators. |
 | Parca isn't scraping targets    | Check your Parca configuration to verify that targets are being scraped and profiles collected.                                                                                                                             |
 
 ## Query editor issues
@@ -115,7 +115,7 @@ These issues relate to the query editor interface.
 
 **Solution:**
 
-This is expected behavior. The **Both** query type is only available in [Explore](https://grafana.com/docs/grafana/v13.2/explore/). Dashboard panels support only one visualization type, so Grafana limits the options to **Metric** or **Profile**. If a query set to **Both** in Explore is used in a dashboard, Grafana automatically changes it to **Profile**.
+This is expected behavior. The **Both** query type is only available in [Explore](https://grafana.com/docs/grafana/v13.3/explore/). Dashboard panels support only one visualization type, so Grafana limits the options to **Metric** or **Profile**. If a query set to **Both** in Explore is used in a dashboard, Grafana automatically changes it to **Profile**.
 
 ### Autocomplete suggestions don't appear
 
@@ -159,7 +159,7 @@ These issues relate to using template variables with the Parca data source.
 
 **Solution:**
 
-Parca doesn't support query-type variables. You can't use the Parca data source to dynamically populate variable drop-downs. Use **Custom** variables with manually defined values, **Text box** variables for free-form input, or a different data source for query-type variables. Refer to [Parca template variables](https://grafana.com/docs/grafana/v13.2/datasources/parca/template-variables/) for supported variable types and examples.
+Parca doesn't support query-type variables. You can't use the Parca data source to dynamically populate variable drop-downs. Use **Custom** variables with manually defined values, **Text box** variables for free-form input, or a different data source for query-type variables. Refer to [Parca template variables](https://grafana.com/docs/grafana/v13.3/datasources/parca/template-variables/) for supported variable types and examples.
 
 ## Enable debug logging
 

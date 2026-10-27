@@ -1,11 +1,11 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/permissions-git.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/permissions-git.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/permissions-git.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/permissions-git.md)
 
 # Configure Git repository protection
 
 For Git Sync to work correctly you need to configure permissions at two layers:
 
 - At your Git provider level, to protect your repository, as described in this document.
-- At the Grafana level for repository management and resource access. Refer to [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana) for more information.
+- At the Grafana level for repository management and resource access. Refer to [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-grafana) for more information.
 
 When you use Git Sync, your dashboard configurations are stored as code in a Git repository. You can configure Git repository protection to control who can access this source code and who can modify it. Repository protection works as an additional security layer after Grafana internal permissions.
 
@@ -28,7 +28,7 @@ Git Sync authentication credentials must have specific permissions at your Git p
 
 - Permission to create and manage webhooks
 
-Refer to the [Git Sync setup documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup) for detailed instructions on configuring authentication for your Git provider.
+Refer to the [Git Sync setup documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup) for detailed instructions on configuring authentication for your Git provider.
 
 ## Control access to the dashboards source code
 
@@ -61,7 +61,7 @@ You can modify dashboard source code through the files endpoint if you have **Ed
 
 When you save changes through this endpoint, Git Sync commits those changes to the Git repository (or creates pull requests if branch protection is enabled), subject to Git repository permissions.
 
-For detailed information about configuring folder and dashboard permissions in Grafana, refer to [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana).
+For detailed information about configuring folder and dashboard permissions in Grafana, refer to [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-grafana).
 
 ## Control access to your Git repository
 
@@ -85,7 +85,7 @@ Write access controls who can push changes to your repository. This determines w
 
 **Protected branches**: Branch protection rules can restrict direct writes and require changes to go through pull requests with review and approval, even for users with write access.
 
-Refer to the [Git Sync setup documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup) for detailed instructions on configuring authentication for your Git provider.
+Refer to the [Git Sync setup documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup) for detailed instructions on configuring authentication for your Git provider.
 
 ## Control how changes are written in Git Sync
 
@@ -133,4 +133,4 @@ Refer to your Git provider's documentation for instructions on configuring `CODE
 
 ## Troubleshooting
 
-For permissions troubleshooting refer to [Troubleshoot permissions](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana#troubleshoot-permissions) in the Git Sync permissions documentation.
+For permissions troubleshooting refer to [Troubleshoot permissions](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-grafana#troubleshoot-permissions) in the Git Sync permissions documentation.

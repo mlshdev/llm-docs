@@ -1,12 +1,12 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/explore/trace-integration.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/explore/trace-integration.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/explore/trace-integration.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/explore/trace-integration.md)
 
 # Traces in Explore
 
 You can use Explore to query and visualize traces from tracing data sources. Supported data sources include:
 
-- [Tempo](https://grafana.com/docs/grafana/v13.2/datasources/tempo/)
-- [Jaeger](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/)
-- [Zipkin](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/)
+- [Tempo](https://grafana.com/docs/grafana/v13.3/datasources/tempo/)
+- [Jaeger](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/)
+- [Zipkin](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/)
 - [X-Ray](https://grafana.com/grafana/plugins/grafana-x-ray-datasource)
 - [Azure Monitor](https://grafana.com/docs/grafana/latest/datasources/azure-monitor/)
 - [ClickHouse](https://github.com/grafana/clickhouse-datasource)
@@ -138,7 +138,7 @@ You can add one or more of the following filters:
 
 To only show the spans you have matched, toggle **Show matches only**.
 
-Refer to [Span filters](https://grafana.com/docs/grafana/v13.2/datasources/tempo/span-filters/) for more in depth information.
+Refer to [Span filters](https://grafana.com/docs/grafana/v13.3/datasources/tempo/span-filters/) for more in depth information.
 
 ### Trace to logs
 
@@ -158,21 +158,21 @@ You can navigate from a span in a trace view directly to metrics relevant for th
 This feature is available for the Tempo, Jaeger, and Zipkin data sources.
 
 Refer to each individual data source's documentation for configuration instructions.
-For Tempo, refer to [Trace to metrics configuration](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/).
+For Tempo, refer to [Trace to metrics configuration](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/).
 
 ### Trace to profiles
 
 Using Trace to profiles, you can use Grafana’s ability to correlate different signals by adding the functionality to link between traces and profiles.
 
-For Tempo, refer to [Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/) for configuration instructions.
+For Tempo, refer to [Trace to profiles](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/) for configuration instructions.
 
 ![Selecting a link in the span queries the profile data source](https://grafana.com/static/img/docs/tempo/profiles/tempo-trace-to-profile.png)
 
 ### Trace correlations
 
-You can use [correlations](https://grafana.com/docs/grafana/v13.2/administration/correlations/) to define custom links that appear in the trace view based on trace and span information.
+You can use [correlations](https://grafana.com/docs/grafana/v13.3/administration/correlations/) to define custom links that appear in the trace view based on trace and span information.
 
-For Tempo, refer to [Trace correlations](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/trace-correlations/) for configuration instructions.
+For Tempo, refer to [Trace correlations](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/trace-correlations/) for configuration instructions.
 
 ![Using correlations for a trace](https://grafana.com/media/docs/tempo/screenshot-grafana-trace-view-correlations.png)
 
@@ -180,11 +180,11 @@ For Tempo, refer to [Trace correlations](https://grafana.com/docs/grafana/v13.2/
 
 You can also expand the node graph for a displayed trace. If the data source supports it, this displays spans of the trace as nodes in the graph, or provides additional context, such as a service graph based on the current trace.
 
-Refer to [Node graph](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/) for additional information.
+Refer to [Node graph](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/) for additional information.
 
 > **Note**
 >
-> The node graph requires data to be returned from the data source in a specific format to display correctly. Refer to [Data API](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/#data-api), [Nodes data frame structure](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/node-graph/#nodes-data-frame-structure) and [Node graph data requirements](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/node-graph/#data-requirements) for additional information and configuration instructions.
+> The node graph requires data to be returned from the data source in a specific format to display correctly. Refer to [Data API](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/#data-api), [Nodes data frame structure](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/node-graph/#nodes-data-frame-structure) and [Node graph data requirements](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/node-graph/#data-requirements) for additional information and configuration instructions.
 
 ![](https://grafana.com/media/docs/tempo/screenshot-grafana-node-graph.png)
 
@@ -197,7 +197,7 @@ After the requirements are configured, this pre-configured view is immediately a
 
 For additional information refer to the following documentation:
 
-- [Service Graph and Service Graph view](https://grafana.com/docs/grafana/v13.2/datasources/tempo/service-graph/)
+- [Service Graph and Service Graph view](https://grafana.com/docs/grafana/v13.3/datasources/tempo/service-graph/)
 - [Service graph view](https://grafana.com/docs/tempo/latest/metrics-generator/service-graph-view/) in Tempo documentation
 
 ![](https://grafana.com/static/img/docs/grafana-cloud/apm-overview.png)

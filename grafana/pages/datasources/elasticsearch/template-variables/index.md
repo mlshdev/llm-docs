@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/elasticsearch/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/elasticsearch/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/elasticsearch/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/elasticsearch/template-variables/index.md)
 
 # Elasticsearch template variables
 
@@ -6,7 +6,7 @@ Instead of hard-coding details such as server, application, and sensor names in 
 Grafana lists these variables in drop-down select boxes at the top of the dashboard to help you change the data displayed in your dashboard.
 Grafana refers to such variables as template variables.
 
-For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/) documentation.
+For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/) documentation.
 
 ## Use filters
 
@@ -24,7 +24,7 @@ Filters support the following operators:
 | `>`      | Greater than. Adds `AND field:>value` to the query.           |
 | `<`      | Less than. Adds `AND field:<value` to the query.              |
 
-For more information, refer to the [Filter and Group by documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/).
+For more information, refer to the [Filter and Group by documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/).
 
 ## Choose a variable syntax
 
@@ -34,7 +34,7 @@ The Elasticsearch data source supports two variable syntaxes for use in the **Qu
 - `[[varname]]`, such as `hostname:[[hostname]]`
 
 When the *Multi-value* or *Include all value* options are enabled, Grafana converts the labels from plain text to a Lucene-compatible condition.
-For details, refer to the [Multi-value variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#multi-value-variables) documentation.
+For details, refer to the [Multi-value variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/#multi-value-variables) documentation.
 
 ## Use variables in queries
 

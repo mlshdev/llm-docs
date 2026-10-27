@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/configure-tooltips/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/configure-tooltips/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/configure-tooltips/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/configure-tooltips/index.md)
 
 # Configure tooltips
 
@@ -8,17 +8,17 @@ When you hover your cursor over a visualization, Grafana can display tooltips th
 
 You can configure tooltips for the following visualizations:
 
-- [Bar chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-chart/)
-- [Candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/)
-- [Heatmap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/heatmap/)
-- [Pie chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/pie-chart/)
-- [State timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/)
-- [Status history](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/status-history/)
-- [Time series](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/)
-- [Trend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/trend/)
-- [XY chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/xy-chart/)
+- [Bar chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-chart/)
+- [Candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/)
+- [Heatmap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/heatmap/)
+- [Pie chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/pie-chart/)
+- [State timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/)
+- [Status history](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/status-history/)
+- [Time series](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/)
+- [Trend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/trend/)
+- [XY chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/xy-chart/)
 
-Some visualizations, for example [candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/) and [flame graph](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/), have tooltips, but they aren't configurable. These visualizations don't have a **Tooltip** section in the panel editor pane. [Geomaps](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/geomap/#tooltip) provide you the option to have tooltips triggered upon click or hover under the **Map controls** options in the panel editor pane.
+Some visualizations, for example [candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/) and [flame graph](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/), have tooltips, but they aren't configurable. These visualizations don't have a **Tooltip** section in the panel editor pane. [Geomaps](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/geomap/#tooltip) provide you the option to have tooltips triggered upon click or hover under the **Map controls** options in the panel editor pane.
 
 ## Tooltip options
 
@@ -36,7 +36,7 @@ Choose how tooltips behave with the following options:
 - **All** - The tooltip shows all series in the visualization. Grafana highlights the series that you are hovering over in bold in the series list in the tooltip.
 - **Hidden** - Tooltips aren't displayed when you interact with the visualization.
 
-You can use a [field override](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/) to hide individual series from the tooltip.
+You can use a [field override](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/) to hide individual series from the tooltip.
 
 ### Values sort order
 

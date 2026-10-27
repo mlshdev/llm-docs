@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/concepts.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/concepts.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/concepts.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/concepts.md)
 
 # Data sources, plugins, and integrations
 
@@ -144,12 +144,12 @@ For detailed documentation and how-to guides related to data sources, plugins, a
 
 **Data sources**:
 
-- [Manage data sources](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/)
+- [Manage data sources](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/)
 
 **Plugins**:
 
 - [Browse the Grafana plugin catalog](https://grafana.com/grafana/plugins/)
-- [Manage plugins](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/)
+- [Manage plugins](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/)
 
 **Integrations**:
 

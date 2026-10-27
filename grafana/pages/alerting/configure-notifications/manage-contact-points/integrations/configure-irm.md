@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-irm.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-irm.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-irm.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-irm.md)
 
 [//]: <> "The IRM instructions are different for Grafana Cloud, so this page is currently skipped from Cloud docs."
 
@@ -56,8 +56,8 @@ After configuring the contact point in Grafana Alerting and the integration in G
 
 For more information, see:
 
-- **[Configure contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/)** – Learn how to test the integration and enable notifications in Alerting.
-- **[Webhook contact point](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/webhook-notifier)** – Learn the format of the webhook payload and additional settings in Alerting.
+- **[Configure contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/)** – Learn how to test the integration and enable notifications in Alerting.
+- **[Webhook contact point](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/webhook-notifier)** – Learn the format of the webhook payload and additional settings in Alerting.
 - **[Configure IRM alert templates](https://grafana.com/docs/grafana-cloud/alerting-and-irm/irm/configure/escalation-routing/alert-templates/)** – Learn how to process the incoming webhook messages in IRM.
 
 ## Enable heartbeat monitoring in Grafana IRM (optional)
@@ -84,7 +84,7 @@ Follow the same steps as before to create a webhook contact point in Grafana Ale
 5. In the **URL** field, enter the endpoint URL of the heartbeat.
 6. Click **Save contact point**.
 
-You can now click the **Test** button to send an alert to the heartbeat endpoint. In **IRM**, verify the heartbeat status in the **Hearbeat** column on the **Integrations** page.
+You can now click the **Test** button to send an alert to the heartbeat endpoint. In **IRM**, verify the heartbeat status in the **Heartbeat** column on the **Integrations** page.
 
 ![](https://grafana.com/media/docs/alerting/view-heartbeat-status-on-irm.png)
 
@@ -92,14 +92,14 @@ You can now click the **Test** button to send an alert to the heartbeat endpoint
 
 #### Create an alert rule in Grafana Alerting
 
-Create a [Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/) with the following settings:
+Create a [Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/) with the following settings:
 
 - **Always firing** – Use a query and alert condition that constantly fire. For example, select a Prometheus data source and set the query to `vector(1) > 0`.
-- Configure a [pending period](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/#pending-period) that is shorter than the **hearbeat interval**.
+- Configure a [pending period](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/#pending-period) that is shorter than the **heartbeat interval**.
 - Choose the **webhook contact point** you created for the heartbeat to forward alerts.
-- Adjust [timing options](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/#timing-options) in the alert rule or notification policy to ensure alerts are forwarded before the **heartbeat interval** elapses:
+- Adjust [timing options](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/#timing-options) in the alert rule or notification policy to ensure alerts are forwarded before the **heartbeat interval** elapses:
   - **Group wait**: `0s`
   - **Group interval**: `1s`
-  - **Repeat interval**: shorter than the **hearbeat interval**.
+  - **Repeat interval**: shorter than the **heartbeat interval**.
 
 After it's created, the alert rule acts as a heartbeat, verifying that Grafana Alerting is running and sending alerts to Grafana IRM.

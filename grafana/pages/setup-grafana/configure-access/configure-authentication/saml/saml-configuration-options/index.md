@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/saml-configuration-options/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/saml/saml-configuration-options/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/saml-configuration-options/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/saml/saml-configuration-options/_index.md)
 
 # SAML configuration options
 
 This page provides a comprehensive guide to configuring SAML authentication in Grafana. You'll find detailed configuration examples, available settings, and their descriptions to help you set up and customize SAML authentication for your Grafana instance.
 
-The table below describes all SAML configuration options. Continue reading below for details on specific options. Like any other Grafana configuration, you can apply these options as [environment variables](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
+The table below describes all SAML configuration options. Continue reading below for details on specific options. Like any other Grafana configuration, you can apply these options as [environment variables](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
 
 | Setting                                                    | Required | Description                                                                                                                                                                                                  | Default                                               |
 | ---------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
@@ -42,6 +42,12 @@ The table below describes all SAML configuration options. Continue reading below
 | `client_secret`                                            | No       | Client secret of the IdP service application used to retrieve more information about the user from the IdP. (Microsoft Entra ID only)                                                                        |                                                       |
 | `token_url`                                                | No       | URL to retrieve the access token from the IdP. (Microsoft Entra ID only)                                                                                                                                     |                                                       |
 | `force_use_graph_api`                                      | No       | Whether to use the IdP service application retrieve more information about the user from the IdP. (Microsoft Entra ID only)                                                                                  | `false`                                               |
+
+## Rotating credentials
+
+Grafana can store these options in its database, where they override the configuration file. If SAML was configured through the SSO Settings API, the SAML UI, Terraform, or [settings updates at runtime](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/settings-updates-at-runtime/), rotating a credential in the file has no effect until you remove the stored value. This applies to the `certificate`, `private_key`, and `idp_metadata` options even when the stored settings don't set them.
+
+Refer to [Check for stored settings](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/settings-updates-at-runtime/#check-for-stored-settings).
 
 ## Example SAML configuration
 
@@ -97,4 +103,4 @@ resource "grafana_sso_settings" "saml_sso_settings" {
 }
 ```
 
-Go to [Terraform Registry](https://registry.terraform.io/providers/grafana/grafana/v13.2/docs/resources/sso_settings) for a complete reference on using the `grafana_sso_settings` resource.
+Go to [Terraform Registry](https://registry.terraform.io/providers/grafana/grafana/v13.3/docs/resources/sso_settings) for a complete reference on using the `grafana_sso_settings` resource.

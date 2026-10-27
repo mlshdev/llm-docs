@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/elasticsearch/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/elasticsearch/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/elasticsearch/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/elasticsearch/alerting/index.md)
 
 # Elasticsearch alerting
 
 You can use Grafana Alerting with Elasticsearch to create alerts based on your Elasticsearch data. This allows you to monitor metrics, detect anomalies, and receive notifications when specific conditions are met.
 
-For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 ## Before you begin
 
@@ -50,7 +50,7 @@ To create an alert rule using Elasticsearch:
 8. Configure notifications and labels.
 9. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example alert queries
 

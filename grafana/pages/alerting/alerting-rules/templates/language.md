@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/templates/language.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/templates/language.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/templates/language.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/templates/language.md)
 
 # Alerting template language
 
@@ -8,8 +8,8 @@ Both types of templates can use the same keywords, functions, and comparison ope
 
 However, it's important to note that because notifications and alert rules operate in distinct contexts, some additional variables and functions are only available for either notification or alert rule templates. Refer to:
 
-- [Annotation and label template reference](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/)
-- [Notification template reference](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/reference/)
+- [Annotation and label template reference](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/)
+- [Notification template reference](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/reference/)
 
 This documentation provides an overview of the functions and operators of the Go template language that are available for both notification and alert rule templates.
 
@@ -28,13 +28,13 @@ To print the value of something, use `{{` and `}}`. You can print the value of a
 
 In `text/template`, there is a special cursor called dot, written as `.`. You can think of this cursor as a variable whose value changes depending on where in the template it is used.
 
-At the start of notification templates, dot (`.`) refers to [Notification Data](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/reference/#notification-data).
+At the start of notification templates, dot (`.`) refers to [Notification Data](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/reference/#notification-data).
 
 ```go
 {{ .Alerts }}
 ```
 
-In annotation and label templates, dot (`.`) is initialized with all alert data. It’s recommended to use the [`$labels` and `$values` variables](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/#variables) instead to directly access the alert labels and query values.
+In annotation and label templates, dot (`.`) is initialized with all alert data. It’s recommended to use the [`$labels` and `$values` variables](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/#variables) instead to directly access the alert labels and query values.
 
 > **Note**
 >

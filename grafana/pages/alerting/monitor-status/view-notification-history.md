@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/monitor-status/view-notification-history.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/monitor-status/view-notification-history.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/monitor-status/view-notification-history.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/monitor-status/view-notification-history.md)
 
 # View notification history
 
@@ -6,9 +6,9 @@ View notifications that Grafana Alerting sent for your Grafana-managed alert rul
 
 Grafana records a notification event each time it attempts to send a notification to a contact point for a group of alerts. Both firing and resolved notifications are recorded, so you'll see a complete delivery history even when an alert has already recovered.
 
-Notification history is different from [active notifications](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-active-notifications/). Active notifications show alerts that are currently grouped and waiting to be sent. Notification history shows notifications that were already sent.
+Notification history is different from [active notifications](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-active-notifications/). Active notifications show alerts that are currently grouped and waiting to be sent. Notification history shows notifications that were already sent.
 
-The **History** page also includes an **Alert events** tab for [alert state history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/).
+The **History** page also includes an **Alert events** tab for [alert state history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/).
 
 > **Note**
 >
@@ -39,7 +39,7 @@ Replace `http://localhost:3100` with the URL of your Loki instance.
 
 You can attach extra labels to every notification history record with the `[unified_alerting.notification_history.external_labels]` section.
 
-In Grafana Cloud, notification history is managed for you. Contact support to enable it for your stack.
+In Grafana Cloud, notification history is managed for you.
 
 ## View from the History page
 
@@ -91,10 +91,10 @@ The tab shows the same notification list as the **History** page, pre-filtered t
 
 ## Explore and query notification history
 
-Because notification history is stored in Loki, you can query it directly in Loki through [Grafana Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/). Use Explore to build custom dashboards or run free-form investigations of your notification delivery.
+Because notification history is stored in Loki, you can query it directly in Loki through [Grafana Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/). Use Explore to build custom dashboards or run free-form investigations of your notification delivery.
 
 ## Next steps
 
-- Refer to [View alert state history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/) to review alert state changes on the **Alert events** tab of the **History** page.
-- Refer to [View active notifications](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-active-notifications/) to inspect alerts that are currently grouped and waiting to be sent.
-- Refer to [Manage contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/) to configure where notifications are delivered.
+- Refer to [View alert state history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/) to review alert state changes on the **Alert events** tab of the **History** page.
+- Refer to [View active notifications](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-active-notifications/) to inspect alerts that are currently grouped and waiting to be sent.
+- Refer to [Manage contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/) to configure where notifications are delivered.

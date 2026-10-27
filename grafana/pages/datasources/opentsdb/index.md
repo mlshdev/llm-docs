@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/opentsdb/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/opentsdb/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/opentsdb/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/opentsdb/_index.md)
 
 # OpenTSDB data source
 
@@ -32,10 +32,10 @@ The data source supports OpenTSDB versions 2.1 through 2.4. Some features are ve
 
 The following documents help you get started with the OpenTSDB data source:
 
-- [Configure the OpenTSDB data source](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/configure/) - Set up authentication and connect to OpenTSDB.
-- [OpenTSDB query editor](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/query-editor/) - Create and edit queries with aggregation, downsampling, and filtering.
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/template-variables/) - Create dynamic dashboards with OpenTSDB variables.
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/troubleshooting/) - Solve common configuration and query errors.
+- [Configure the OpenTSDB data source](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/configure/) - Set up authentication and connect to OpenTSDB.
+- [OpenTSDB query editor](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/query-editor/) - Create and edit queries with aggregation, downsampling, and filtering.
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/template-variables/) - Create dynamic dashboards with OpenTSDB variables.
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/troubleshooting/) - Solve common configuration and query errors.
 
 ## Plugin updates
 
@@ -43,12 +43,12 @@ Starting with Grafana v13.2, the OpenTSDB data source is a standalone plugin, pr
 
 To adjust this behavior:
 
-- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 - **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
 
 The standalone plugin requires Grafana 12.3.0 or later. The OpenTSDB data source bundled with Grafana 12.2 and earlier continues to work as before. These versions are unaffected by the externalization.
 
-Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with these versions, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with these versions, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/):
 
 ```ini
 [plugin.opentsdb]
@@ -65,10 +65,10 @@ preinstall_sync = opentsdb
 
 After you have configured the OpenTSDB data source, you can:
 
-- Add [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/annotations/) to overlay OpenTSDB events on your graphs.
-- Configure and use [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/template-variables/) for dynamic dashboards.
-- Set up [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/alerting/) rules based on your time series queries.
-- Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to investigate your OpenTSDB data without building a dashboard.
+- Add [Annotations](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/annotations/) to overlay OpenTSDB events on your graphs.
+- Configure and use [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/template-variables/) for dynamic dashboards.
+- Set up [Alerting](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/alerting/) rules based on your time series queries.
+- Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to investigate your OpenTSDB data without building a dashboard.
 
 ## Related resources
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/correlations/create-a-new-correlation/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/correlations/create-a-new-correlation/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/correlations/create-a-new-correlation/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/correlations/create-a-new-correlation/index.md)
 
 # Create a new correlation
 
@@ -8,7 +8,7 @@ Make sure you have permission to add new correlations. Only users with write per
 
 ## Create a correlation in Explore's correlations editor
 
-To learn more, refer to Explore's [documentation](https://grafana.com/docs/grafana/v13.2/explore/correlations-editor-in-explore/) about building correlations in Explore.
+To learn more, refer to Explore's [documentation](https://grafana.com/docs/grafana/v13.3/explore/correlations-editor-in-explore/) about building correlations in Explore.
 
 ## Create a correlation in Administration page
 

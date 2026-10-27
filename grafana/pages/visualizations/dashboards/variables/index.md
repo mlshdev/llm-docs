@@ -1,11 +1,11 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/variables/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/variables/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/variables/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/variables/_index.md)
 
 # Variables
 
 A variable is a placeholder for a value that you can use in dashboard queries, panel titles, links, and other dashboard elements.
 When you change the value of a variable, Grafana updates every dashboard element that uses that variable.
 
-Variables are displayed as drop-down lists (or in some cases text fields) at the top of the dashboard.
+Variables display as drop-down lists—or in some cases text fields—at the top of the dashboard.
 These controls let viewers change what the dashboard displays without editing the dashboard.
 
 For example, if you need to monitor several servers, you *could* make a dashboard for each server.
@@ -23,11 +23,11 @@ This reduces dashboard duplication and maintenance.
 You can use variables in:
 
 - Data source queries
-- [Panel repeating options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-panel-options/#configure-repeating-panels)
-- [Dashboard and panel links](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/)
+- [Panel repeating options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-panel-options/#configure-repeating-panels)
+- [Dashboard and panel links](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/)
 - Titles
 - Descriptions
-- [Transformations](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/transform-data/)
+- [Transformations](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/transform-data/)
 
 To work with variables, you typically do the following:
 
@@ -40,14 +40,17 @@ To see variable settings, click **Edit** in the top-right corner of the dashboar
 
 [Templating - Interactive dashboard in Grafana Play](https://play.grafana.org/goto/B9Xog68Hg?orgId=1)
 
-## Variables you create and global variables
+## Variables you create and built-in variables
 
 Grafana supports two broad kinds of variables:
 
-- **Variables you create**: Dashboard-specific variables that you define and configure. Use these variables when viewers need to choose values such as a server, data source, region, environment, or interval. For configuration steps, refer to [Add variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/).
-- **Global variables**: Built-in variables that Grafana provides automatically, such as the current time range, dashboard name, organization, or signed-in user. For the full reference, refer to [Global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/global-variables/).
+- **User-defined variables**: Variables that you define and configure. Use these variables when viewers need to choose values such as a server, data source, region, environment, or interval. These fall into two categories:
+  - **Dashboard-scoped variables**: Variables that you create within a dashboard. For configuration steps, refer to [Add variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/).
+  - **Cross-dashboard variables**: Variables already defined by your organization that you can use across dashboards either globally or by folder. For configuration steps, refer to [Cross-dashboard variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/cross-dashboard-variables/).
 
-## Choose a variable type
+- **Built-in variables**: Built-in variables that Grafana provides automatically, such as the current time range, dashboard name, organization, or signed-in user. For the full reference, refer to [Built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables/).
+
+## Variable types
 
 Choose a variable type based on how you want Grafana to get the value and how users interact with it.
 
@@ -62,17 +65,13 @@ Choose a variable type based on how you want Grafana to get the value and how us
 | Filters       | Viewers need dashboard-wide key/value filters for supported data sources.                                             |
 | Switch        | Viewers need to toggle between two configured values.                                                                 |
 
-For the complete list of variable settings and type-specific steps, refer to [Add variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/).
+For the complete list of variable settings and type-specific steps, refer to [Add variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/).
 
 ## Template variables {#templates}
 
 A *template* is any query that contains a variable.
 Queries with text that starts with `$` are templates.
 For example, if you administer a dashboard that monitors several servers, it can have panels that use a template query like this one:
-
-> **Note**
->
-> Grafana documentation and the application typically refer to a *template query* as a *query*, but the terms *variable* and *template variable* are often used interchangeably.
 
 ```text
 groupByNode(movingAverage(apps.$app.$server.counters.requests.count, 10), 2, 'sum')
@@ -88,7 +87,7 @@ The following image shows a panel in edit mode using the query:
 
 ### Variables in URLs
 
-By default, variable values are synced to the URL using [query parameter syntax](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/variable-syntax/#query-parameters), `var-<varname>=value`.
+By default, Grafana syncs variable values to the URL using [query parameter syntax](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/variable-syntax/#query-parameters), `var-<varname>=value`.
 For example:
 
 ```text
@@ -97,15 +96,15 @@ https://play.grafana.org/d/HYaGDGIMk/templating-global-variables-and-interpolati
 
 In the preceding example, the variables and values are `var-Server=CCC` and `var-MyCustomDashboardVariable=Hello%20World%21`.
 
-You can prevent a variable from being synced to the URL by setting `skipUrlSync` to `true` in the variable definition within the dashboard JSON model. When set, the variable value won't appear as a `var-` query parameter in the URL.
+You can prevent variables from syncing to the URL by setting `skipUrlSync` to `true` in the variable definition within the dashboard JSON model. When set, the variable value won't appear as a `var-` query parameter in the URL.
 
 This is useful when you want to keep URLs clean, prevent users from overriding a variable value through the URL, or avoid exposing sensitive values in shared links.
 
 > **Note**
 >
-> Constant variables have `skipUrlSync` set to `true` by default, since their value is fixed and not intended to be changed through the URL.
+> Constant variables have `skipUrlSync` set to `true` by default, because their value is fixed and shouldn't be changed through the URL.
 
-For more information about URL variables, shared links, time ranges, and filters, refer to [Create dashboard URL variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/).
+For more information about URL variables, shared links, time ranges, and filters, refer to [Create dashboard URL variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/).
 
 ## Additional examples
 
@@ -113,22 +112,23 @@ The following dashboards in Grafana Play provide examples of template variables:
 
 - [Templating - Repeated panels](https://play.grafana.org/goto/yfZOReUNR?orgId=1) - Using query variables to control how many panels appear in a dashboard.
 - [Templating - Nested Variables Drilldown](https://play.grafana.org/d/testdata-nested-variables-drilldown/) - Demonstrates how changing one variable value can change the values available in a nested variable.
-- [Templating - Global variables and interpolation](https://play.grafana.org/d/HYaGDGIMk/) - Shows you how the syntax for Grafana variables works.
+- [Templating - Built-in variables and interpolation](https://play.grafana.org/d/HYaGDGIMk/) - Shows you how the syntax for Grafana variables works.
 
 ## Next steps
 
 Use the following topics based on what you want to do next:
 
-- To create dashboard-specific variables, refer to [Add variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/).
-- To use built-in variables for time ranges, users, organizations, or query intervals, refer to [Global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/global-variables/).
-- To configure chained variables, multi-property variables, or regular expression filtering, refer to [Advanced variable usage](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/advanced-variables/).
-- To control how Grafana interpolates variable values, refer to [Variable syntax](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/variable-syntax/).
-- To reorder, clone, delete, or inspect variable dependencies, refer to [Manage and inspect variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/inspect-variable/).
+- To create dashboard-specific variables, refer to [Add variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/).
+- To use built-in variables for time ranges, users, organizations, or query intervals, refer to [Built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables/).
+- To configure chained variables, multi-property variables, or regular expression filtering, refer to [Advanced variable usage](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/advanced-variables/).
+- To control how Grafana interpolates variable values, refer to [Variable syntax](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/variable-syntax/).
+- To reorder, clone, delete, or inspect variable dependencies, refer to [Manage and inspect variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/inspect-variable/).
 
 The following pages contain the full variables documentation:
 
-- [Add variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/)
-- [Global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/global-variables/)
-- [Advanced variable configurations](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/advanced-variables/)
-- [Variable syntax](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/variable-syntax/)
-- [Manage and inspect variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/inspect-variable/)
+- [Add variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/)
+- [Cross-dashboard variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/cross-dashboard-variables/)
+- [Built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables/)
+- [Advanced variable configurations](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/advanced-variables/)
+- [Variable syntax](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/variable-syntax/)
+- [Manage and inspect variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/inspect-variable/)

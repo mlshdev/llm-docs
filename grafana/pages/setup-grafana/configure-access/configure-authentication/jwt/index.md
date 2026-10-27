@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/jwt/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/jwt/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/jwt/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/jwt/index.md)
 
 # Configure JWT authentication
 
@@ -20,7 +20,7 @@ authentication in an app embedding Grafana.
 
 To use JWT authentication:
 
-1. Enable JWT in the [main config file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+1. Enable JWT in the [main config file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 2. Specify the header name that contains a token.
 
 ```ini
@@ -88,7 +88,7 @@ you can use JWT authentication to authenticate the iframe.
 > **Note**
 >
 > For Grafana Cloud, or scenarios where verifying viewer identity is not required,
-> embed [shared dashboards](https://grafana.com/docs/grafana/v13.2/dashboards/share-dashboards-panels/shared-dashboards/).
+> embed [shared dashboards](https://grafana.com/docs/grafana/v13.3/dashboards/share-dashboards-panels/shared-dashboards/).
 
 In this scenario, you will need to configure Grafana to accept a JWT
 provided in the HTTP header and a reverse proxy should rewrite requests to the
@@ -96,7 +96,7 @@ Grafana instance to include the JWT in the request's headers.
 
 > **Note**
 >
-> For embedding to work, you must enable `allow_embedding` in the [security section](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#allow_embedding). This setting is not available in Grafana Cloud.
+> For embedding to work, you must enable `allow_embedding` in the [security section](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#allow_embedding). This setting is not available in Grafana Cloud.
 
 In a scenario where it is not possible to rewrite the request headers you
 can use URL login instead.
@@ -226,7 +226,7 @@ expect_claims = {"iss": "https://your-token-issuer", "your-custom-claim": "foo"}
 Grafana checks for the presence of a role using the [JMESPath](http://jmespath.org/examples.html) specified via the `role_attribute_path` configuration option. The JMESPath is applied to JWT token claims. The result after evaluation of the `role_attribute_path` JMESPath expression should be a valid Grafana role, for example, `None`, `Viewer`, `Editor` or `Admin`.
 
 To assign the role to a specific organization include the `X-Grafana-Org-Id` header along with your JWT when making API requests to Grafana.
-To learn more about the header, please refer to the [documentation](https://grafana.com/docs/grafana/v13.2/developers/http_api/#x-grafana-org-id-header).
+To learn more about the header, please refer to the [documentation](https://grafana.com/docs/grafana/v13.3/developers/http_api/#x-grafana-org-id-header).
 
 ### Configure role mapping
 
@@ -235,7 +235,7 @@ Unless `skip_org_role_sync` option is enabled, the user's role will be set to th
 The user's role is retrieved using a [JMESPath](http://jmespath.org/examples.html) expression from the `role_attribute_path` configuration option.
 To map the server administrator role, use the `allow_assign_grafana_admin` configuration option.
 
-If no valid role is found, the user is assigned the role specified by [the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#auto_assign_org_role).
+If no valid role is found, the user is assigned the role specified by [the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#auto_assign_org_role).
 You can disable this default role assignment by setting `role_attribute_strict = true`. This setting denies user access if no role or an invalid role is returned after evaluating the `role_attribute_path` and the `org_mapping` expressions.
 
 You can use the `org_attribute_path` and `org_mapping` configuration options to assign the user to organizations and specify their role. For more information, refer to Org roles mapping example. If both org role mapping (`org_mapping`) and the regular role mapping (`role_attribute_path`) are specified, then the user will get the highest of the two mapped roles.

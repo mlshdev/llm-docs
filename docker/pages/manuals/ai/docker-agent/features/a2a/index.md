@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/a2a/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/features/a2a/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/a2a/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/features/a2a/index.md)
 
 *Expose Docker Agent agents via Google's Agent-to-Agent (A2A) protocol for interoperability with other agent frameworks.*
 
@@ -26,25 +26,7 @@ $ docker agent serve a2a myorg/agent:tag
 
 ## Flags
 
-| Flag                         | Default                 | Description                                                                                                      |
-| ---------------------------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `-l, --listen <addr>`        | `127.0.0.1:8082`        | Address to listen on.                                                                                            |
-| `-a, --agent <name>`         | (first agent)           | Name of the agent to expose when the config contains multiple agents. Defaults to the team's first agent.        |
-| `-s, --session-db <path>`    | `<data-dir>/session.db` | Path to the SQLite session database.                                                                             |
-| `--working-dir <path>`       | current dir             | Working directory the agent runs in.                                                                             |
-| `--env-from-file <file>`     | (none)                  | Load additional environment variables from a `.env` file (repeatable).                                           |
-| `--models-gateway <url>`     | (none)                  | Route all provider traffic through a models gateway URL.                                                         |
-| `--code-mode-tools`          | `false`                 | Expose tools as a single "code" toolset that accepts a JavaScript snippet to run.                                |
-| `--hook-pre-tool-use <cmd>`  | (none)                  | Add a pre-tool-use hook (repeatable). See [Hooks](https://docs.docker.com/ai/docker-agent/configuration/hooks/). |
-| `--hook-post-tool-use <cmd>` | (none)                  | Add a post-tool-use hook (repeatable).                                                                           |
-| `--hook-session-start <cmd>` | (none)                  | Add a session-start hook (repeatable).                                                                           |
-| `--hook-session-end <cmd>`   | (none)                  | Add a session-end hook (repeatable).                                                                             |
-| `--hook-on-user-input <cmd>` | (none)                  | Add an on-user-input hook (repeatable).                                                                          |
-| `--hook-stop <cmd>`          | (none)                  | Add a stop hook, fired when the model finishes responding (repeatable).                                          |
-| `--auth-token <token>`       | (none)                  | Bearer token required for agent-card and invocation requests.                                                    |
-| `--cors-origin <origins>`    | (none)                  | Allowed browser origins, comma-separated; empty disables CORS.                                                   |
-| `--insecure-no-auth`         | `false`                 | Allow an unauthenticated non-loopback listener (unsafe).                                                         |
-| `--safety <policy>`          | `restricted`            | Tool safety policy; `autonomous` is permitted only through this explicit CLI flag.                               |
+See the [CLI reference](https://docs.docker.com/ai/docker-agent/features/cli/#docker-agent-serve-a2a) for all flags, defaults, and shared runtime options.
 
 ## Authentication and network exposure
 
@@ -78,9 +60,21 @@ database has a newer schema (`ErrNewerDatabase`). Restore an older database, or
 use a binary that includes the migration. Revert changes without removing the
 migration catalogue entry.
 
+## Resuming conversations
+
+Invocations with the same A2A context ID resume the stored conversation. Before
+each resumed run, Docker Agent reapplies the selected agent's `max_iterations`,
+`max_consecutive_tool_calls`, `max_old_tool_call_tokens` and
+`max_tool_result_tokens`. This restores limits that are not persisted and uses
+the currently loaded configuration rather than stale session values. Zero or
+negative values retain their documented default/unlimited semantics.
+
+Resuming retains conversation history, title and workspace. The existing safety
+policy is preserved or tightened to the server's safety ceiling, never relaxed.
+
 ## Features
 
-- **Auto port selection** — Picks an available port if not specified
+- **Configurable listener** — Listens on `127.0.0.1:8082` by default; use `--listen` to choose another address or port
 - **Agent card** — Provides standard A2A agent metadata
 - **Full Docker Agent features** — Supports all tools, models, and gateway features
 - **Multiple sources** — Load agents from files or OCI registries

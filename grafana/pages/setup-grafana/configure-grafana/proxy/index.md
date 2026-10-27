@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-grafana/proxy/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-grafana/proxy/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-grafana/proxy/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-grafana/proxy/index.md)
 
 # Configure a data source SOCKS5 connection proxy
 
@@ -31,6 +31,6 @@ To complete this task, you must first have a SOCKS5 proxy server running, using 
 
 2. Set up a data source and configure it to send data source connections through the proxy.
 
-   To configure your data sources to send connections through the proxy, `enableSecureSocksProxy=true` must be specified in the data source json. You can do this in the [API](https://grafana.com/docs/grafana/v13.2/developers/http_api/data_source/) or use [file based provisioning](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+   To configure your data sources to send connections through the proxy, `enableSecureSocksProxy=true` must be specified in the data source json. You can do this in the [API](https://grafana.com/docs/grafana/v13.3/developers/http_api/data_source/) or use [file based provisioning](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
    Additionally, if using SOCKS5 authentication, you can set the SOCKS5 username and password by adding `secureSocksProxyUsername` in the data source's `jsonData` field and `secureSocksProxyPassword` in the data source's `secureJsonData` field.

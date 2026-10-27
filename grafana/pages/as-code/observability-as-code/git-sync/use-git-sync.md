@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/use-git-sync.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/use-git-sync.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/use-git-sync.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/use-git-sync.md)
 
 # Work with provisioned repositories in Git Sync
 
@@ -12,7 +12,7 @@ After you sync your resources, Git Sync creates a dashboard that provides a summ
 2. Select **Administration > General > Provisioning** in the left-side menu to access the Git Sync configuration screen.
 3. Go to the **Repositories** tab, and locate the repository you want to work with. You can view the current status of the sync, run pulls, or update your settings.
 
-Refer to [Work with provisioned dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/provisioned-dashboards) for more information about working with provisioned files.
+Refer to [Work with provisioned dashboards](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/provisioned-dashboards) for more information about working with provisioned files.
 
 ## View the current status of your synchronized repository
 
@@ -26,7 +26,7 @@ Use the **View** section to see detailed information about the current status of
 
 > **Note**
 >
-> Before you proceed to troubleshoot, understand the [Usage and performance known limitations](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/usage-limits/).
+> Before you proceed to troubleshoot, understand the [Usage and performance known limitations](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/usage-limits/).
 
 Monitor the **View** status page for synchronization issues and status updates. The status page displays the following events:
 
@@ -78,7 +78,7 @@ By default, users keep their roles in folders provisioned with Git Sync.
 | Editor       | Editor            |
 | Viewer       | Viewer            |
 
-Refer to [Git Sync permissions](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana) to understand and set up permissions in Git Sync.
+Refer to [Git Sync permissions](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-grafana) to understand and set up permissions in Git Sync.
 
 ### Modify folder permissions
 
@@ -89,8 +89,8 @@ Refer to [Git Sync permissions](https://grafana.com/docs/grafana/v13.2/as-code/o
 Folder permissions attach to the folder's UID (stored in `_folder.json`), not to its repository path, so you can only set them after Git Sync has created the folder. To add or modify folder permissions:
 
 - From the UI, select **Folder actions > Manage permissions** on the top right corner.
-- Using the API, refer to [Dashboard Permissions API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/dashboard_permissions/).
-- As code with Terraform, using the folder UID from `_folder.json`. Refer to [Modify folder-level permissions](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana/#modify-folder-level-permissions) for manual and Terraform examples.
+- Using the API, refer to [Dashboard Permissions API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/dashboard_permissions/).
+- As code with Terraform, using the folder UID from `_folder.json`. Refer to [Modify folder-level permissions](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-grafana/#modify-folder-level-permissions) for manual and Terraform examples.
 
 ### The Git Sync folder metadata file
 

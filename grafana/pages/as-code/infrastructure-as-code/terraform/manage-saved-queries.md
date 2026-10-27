@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/manage-saved-queries.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/manage-saved-queries.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/manage-saved-queries.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/manage-saved-queries.md)
 
 # Manage saved queries using Terraform
 
-This guide shows you how to manage [saved queries](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries), also known as the query library, using the [Grafana Terraform provider](https://registry.terraform.io/providers/grafana/grafana/latest/docs). Managing saved queries as code lets you version-control your query library and keep it consistent across Grafana instances.
+This guide shows you how to manage [saved queries](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries), also known as the query library, using the [Grafana Terraform provider](https://registry.terraform.io/providers/grafana/grafana/latest/docs). Managing saved queries as code lets you version-control your query library and keep it consistent across Grafana instances.
 
 > **Note**
 >
@@ -14,7 +14,7 @@ Before you begin, ensure you have the following:
 
 - A Grafana Enterprise or Grafana Cloud instance. For more information on setting up a Grafana Cloud account, refer to [Get started](https://grafana.com/docs/grafana-cloud/get-started/).
 - Terraform installed on your machine. For more information on how to install Terraform, refer to the [Terraform install documentation](https://developer.hashicorp.com/terraform/install).
-- A service account token with the **Writer** role for saved queries. For more information, refer to [Roles, permissions, and RBAC](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#roles-permissions-and-rbac) and [Service account tokens](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/#service-account-tokens).
+- A service account token with the **Writer** role for saved queries. For more information, refer to [Roles, permissions, and RBAC](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#roles-permissions-and-rbac) and [Service account tokens](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/#service-account-tokens).
 
 ## Configure the Grafana provider
 
@@ -99,4 +99,4 @@ terraform import grafana_apps_queries_query_v1.example example-saved-query
 
 In this guide, you learned how to create and import saved queries using Terraform.
 
-To learn more about saved queries, refer to [Saved queries](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries).
+To learn more about saved queries, refer to [Saved queries](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries).

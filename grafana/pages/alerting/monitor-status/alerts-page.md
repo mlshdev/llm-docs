@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/monitor-status/alerts-page.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/monitor-status/alerts-page.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/monitor-status/alerts-page.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/monitor-status/alerts-page.md)
 
 > **Public preview**
 >
@@ -19,6 +19,17 @@ The Alerts page only shows alerts from Grafana-managed alert rules. Grafana uses
 > **Note**
 >
 > OSS users need to manually configure this. To configure alert state history for OSS, refer to the <a href="https://grafana.com/docs/grafana/latest/alerting/set-up/configure-alert-state-history/#configure-loki-and-prometheus-for-alert-state">configure Loki and Prometheus for alert state</a> documentation.
+
+## Required permissions
+
+To see alerts in the Alerts page, you need both of the following permissions:
+
+- **`alert.rules:read`**: Read the alert rules in the folders that contain them.
+- **`datasources:query`**: Query the data source that records alert state history. In Grafana Cloud, this is the provisioned Prometheus data source that stores the `GRAFANA_ALERTS` metric.
+
+The page queries the alert state history data source directly, so it can't display any alerts without the `datasources:query` permission for that data source. This applies even when you can read the alert rules and view them in the **Alert rules** page.
+
+For more information about alerting permissions, refer to [Configure role-based access control](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-rbac/). To find out which data source records alert state history in your Grafana instance, refer to [Configure alert state history](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alert-state-history/).
 
 ## Filter alerts in the Alerts page
 

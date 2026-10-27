@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/set-up-grafana-live.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/set-up-grafana-live.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/set-up-grafana-live.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/set-up-grafana-live.md)
 
 # Set up Grafana Live
 
@@ -124,7 +124,7 @@ Grafana Live uses persistent connections (WebSocket at the moment) to deliver re
 
 WebSocket is a persistent connection that starts with an HTTP Upgrade request (using the same HTTP port as the rest of Grafana) and then switches to a TCP mode where WebSocket frames can travel in both directions between a client and a server. Each logged-in user opens a WebSocket connection – one per browser tab.
 
-The number of maximum WebSocket connections users can establish with Grafana is limited to 100 by default. See [max\_connections](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#max_connections) option.
+The number of maximum WebSocket connections users can establish with Grafana is limited to 100 by default. See [max\_connections](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#max_connections) option.
 
 In case you want to increase this limit, ensure that your server and infrastructure allow handling more connections. The following sections discuss several common problems which could happen when managing persistent connections, in particular WebSocket connections.
 
@@ -132,9 +132,9 @@ In case you want to increase this limit, ensure that your server and infrastruct
 
 To avoid hijacking of WebSocket connection Grafana Live checks the Origin request header sent by a client in an HTTP Upgrade request. Requests without Origin header pass through without any origin check.
 
-By default, Live accepts connections with Origin header that matches configured [root\_url](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#root_url) (which is a public Grafana URL).
+By default, Live accepts connections with Origin header that matches configured [root\_url](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#root_url) (which is a public Grafana URL).
 
-It is possible to provide a list of additional origin patterns to allow WebSocket connections from. This can be achieved using the [allowed\_origins](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#allowed_origins) option of Grafana Live configuration.
+It is possible to provide a list of additional origin patterns to allow WebSocket connections from. This can be achieved using the [allowed\_origins](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#allowed_origins) option of Grafana Live configuration.
 
 #### Resource usage
 
@@ -240,7 +240,7 @@ ha_engine = redis
 ha_engine_address = 127.0.0.1:6379
 ```
 
-For additional information, refer to the [ha\_engine](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#ha_engine) and [ha\_engine\_address](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#ha_engine_address) options.
+For additional information, refer to the [ha\_engine](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#ha_engine) and [ha\_engine\_address](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#ha_engine_address) options.
 
 After running:
 

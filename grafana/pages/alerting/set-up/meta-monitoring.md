@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/meta-monitoring.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/meta-monitoring.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/set-up/meta-monitoring.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/set-up/meta-monitoring.md)
 
 # Meta monitoring
 
@@ -28,7 +28,7 @@ You need a Prometheus-compatible server to collect and store these metrics.
 
 ### `GRAFANA_ALERTS` metric
 
-If you have configured [Prometheus for alert state history](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alert-state-history/), Grafana writes alert state changes to the `ALERTS` metric:
+If you have configured [Prometheus for alert state history](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alert-state-history/), Grafana writes alert state changes to the `ALERTS` metric:
 
 ```
 GRAFANA_ALERTS{alertname="", alertstate="", grafana_alertstate="", grafana_rule_uid="", <additional alert labels>}
@@ -115,7 +115,7 @@ For example, you might want to create an alert that fires when `grafana_alerting
 
 ## Logs for Grafana-managed alerts
 
-If you have configured [Loki for alert state history](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alert-state-history/), logs related to state changes in Grafana-managed alerts are stored in the Loki data source.
+If you have configured [Loki for alert state history](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alert-state-history/), logs related to state changes in Grafana-managed alerts are stored in the Loki data source.
 
 You can use **Grafana Explore** and the Loki query editor to search for alert state changes.
 
@@ -140,9 +140,9 @@ In the **Logs** view, you can review details for individual alerts by selecting 
 - `labels_alertname`, `labels_new_label`, and `labels_grafana_folder`.
 - Additional available fields.
 
-Alternatively, you can access the [History page](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/) in Grafana to visualize and filter state changes for individual alerts or all alerts.
+Alternatively, you can access the [History page](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/) in Grafana to visualize and filter state changes for individual alerts or all alerts.
 
-If you have enabled notification history, you can also refer to [View notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/) to review sent notifications and delivery outcomes in the **History** page **Notifications** tab.
+If you have enabled notification history, you can also refer to [View notification history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-notification-history/) to review sent notifications and delivery outcomes in the **History** page **Notifications** tab.
 
 ## Metrics for Mimir-managed alerts
 

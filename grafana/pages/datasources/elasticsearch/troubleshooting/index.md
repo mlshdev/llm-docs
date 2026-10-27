@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/elasticsearch/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/elasticsearch/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/elasticsearch/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/elasticsearch/troubleshooting/index.md)
 
 # Troubleshoot issues with the Elasticsearch data source
 
@@ -154,7 +154,7 @@ The following errors occur when there are issues with query syntax or configurat
 2. Increase the date histogram interval (for example, change from `10s` to `1m`). For nested aggregations with **Interval** set to `Auto`, newer plugin versions widen the auto interval when the query would exceed `max_buckets`.
 3. Add filters to reduce the number of documents being aggregated.
 4. Increase the `search.max_buckets` setting in Elasticsearch (requires cluster administrator access).
-5. Update the Elasticsearch plugin if you are on an older version. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/#plugin-updates).
+5. Update the Elasticsearch plugin if you are on an older version. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/#plugin-updates).
 
 ### Required field missing
 
@@ -202,7 +202,7 @@ The following errors occur when there are Elasticsearch version compatibility is
 
 **Solution:**
 
-1. Update the Elasticsearch plugin to **12.8.0** or later. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/#plugin-updates).
+1. Update the Elasticsearch plugin to **12.8.0** or later. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/#plugin-updates).
 2. Confirm `preinstall_auto_update` is enabled so Grafana installs the latest plugin on restart, or update manually from **Plugins and data** > **Plugins**.
 3. Click **Save & test** again after the plugin update.
 

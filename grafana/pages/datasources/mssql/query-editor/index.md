@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mssql/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mssql/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mssql/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mssql/query-editor/index.md)
 
 # Microsoft SQL Server query editor
 
-The MSSQL query editor lets you write Transact-SQL queries directly in Grafana, with built-in macros and formatting options designed for time series and table visualizations. You can open it from [Explore](https://grafana.com/docs/grafana/v13.2/explore/) or from any dashboard panel in edit mode.
+The MSSQL query editor lets you write Transact-SQL queries directly in Grafana, with built-in macros and formatting options designed for time series and table visualizations. You can open it from [Explore](https://grafana.com/docs/grafana/v13.3/explore/) or from any dashboard panel in edit mode.
 
-This page covers MSSQL-specific query features. For general querying concepts shared across all data sources, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/). For Transact-SQL syntax, refer to [Write Transact-SQL statements](https://learn.microsoft.com/en-us/sql/t-sql/tutorial-writing-transact-sql-statements?view=sql-server-ver17) and [Transact-SQL reference](https://learn.microsoft.com/en-us/sql/t-sql/language-reference?view=sql-server-ver17) in the Microsoft documentation.
+This page covers MSSQL-specific query features. For general querying concepts shared across all data sources, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/). For Transact-SQL syntax, refer to [Write Transact-SQL statements](https://learn.microsoft.com/en-us/sql/t-sql/tutorial-writing-transact-sql-statements?view=sql-server-ver17) and [Transact-SQL reference](https://learn.microsoft.com/en-us/sql/t-sql/language-reference?view=sql-server-ver17) in the Microsoft documentation.
 
 The Microsoft SQL Server query editor has two modes:
 
@@ -129,7 +129,7 @@ The query editor includes a **Generated SQL** link that appears after you run a 
 
 ## Table queries
 
-To create a Table query, set the **Format** option in the query editor to [**Table**](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/). This allows you to write any valid SQL query, and the Table panel displays the results using the returned columns and rows.
+To create a Table query, set the **Format** option in the query editor to [**Table**](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/). This allows you to write any valid SQL query, and the Table panel displays the results using the returned columns and rows.
 
 **Example:**
 
@@ -216,7 +216,7 @@ For backward compatibility, there's an exception to the above rule for queries t
 Instead of transforming the `metric` column into field labels, it becomes the field name, and then the series name is formatted as the value of the `metric` column.
 Refer to the example with the `metric` column below.
 
-To optionally customize the default series name formatting, refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#display-name).
+To optionally customize the default series name formatting, refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/#display-name).
 
 **Example with `metric` column:**
 
@@ -262,7 +262,7 @@ GROUP BY
 ORDER BY 1
 ```
 
-Given the data frame result in the following example and using the graph panel, you get two series named *value 10.0.1.1* and *value 10.0.1.2*. To render the series with a name of *10.0.1.1* and *10.0.1.2*, use a [Standard options definitions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#display-name) display name value of `${__field.labels.hostname}`.
+Given the data frame result in the following example and using the graph panel, you get two series named *value 10.0.1.1* and *value 10.0.1.2*. To render the series with a name of *10.0.1.1* and *10.0.1.2*, use a [Standard options definitions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/#display-name) display name value of `${__field.labels.hostname}`.
 
 Data frame result:
 
@@ -305,7 +305,7 @@ Data frame result:
 
 ## Annotations
 
-You can use Microsoft SQL Server queries as annotation sources to overlay events on your dashboard graphs. For detailed instructions, query examples, and best practices, refer to [Microsoft SQL Server annotations](https://grafana.com/docs/grafana/v13.2/datasources/mssql/annotations/).
+You can use Microsoft SQL Server queries as annotation sources to overlay events on your dashboard graphs. For detailed instructions, query examples, and best practices, refer to [Microsoft SQL Server annotations](https://grafana.com/docs/grafana/v13.3/datasources/mssql/annotations/).
 
 ## Use stored procedures
 
@@ -462,7 +462,7 @@ EXEC dbo.sp_test_datetime @from, @to
 
 After building your queries, you can:
 
-- [Use template variables](https://grafana.com/docs/grafana/v13.2/datasources/mssql/template-variables/) to create dynamic, reusable dashboards
-- [Add annotations](https://grafana.com/docs/grafana/v13.2/datasources/mssql/annotations/) to overlay SQL Server events on your graphs
-- [Set up alerting](https://grafana.com/docs/grafana/v13.2/datasources/mssql/alerting/) to create alert rules based on your query results
-- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.2/datasources/mssql/troubleshooting/) if queries return unexpected results
+- [Use template variables](https://grafana.com/docs/grafana/v13.3/datasources/mssql/template-variables/) to create dynamic, reusable dashboards
+- [Add annotations](https://grafana.com/docs/grafana/v13.3/datasources/mssql/annotations/) to overlay SQL Server events on your graphs
+- [Set up alerting](https://grafana.com/docs/grafana/v13.3/datasources/mssql/alerting/) to create alert rules based on your query results
+- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.3/datasources/mssql/troubleshooting/) if queries return unexpected results

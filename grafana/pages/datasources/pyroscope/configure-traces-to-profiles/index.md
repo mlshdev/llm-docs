@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/pyroscope/configure-traces-to-profiles/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/pyroscope/configure-traces-to-profiles/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/pyroscope/configure-traces-to-profiles/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/pyroscope/configure-traces-to-profiles/index.md)
 
 # Configure Trace to profiles
 
@@ -48,7 +48,7 @@ There are two ways to configure the trace to profiles feature:
 
 To use Trace to profiles, you need:
 
-- A [Grafana Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/grafana-pyroscope/) connected to your Pyroscope instance.
+- A [Grafana Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/grafana-pyroscope/) connected to your Pyroscope instance.
 - A Tempo data source configured with the Trace to profiles settings described on this page.
 - Your application instrumented with all three of the following:
   1. **Profiling**: A Pyroscope SDK or Grafana Alloy sending profiling data to Pyroscope. Refer to [Configure the client to send profiles](https://grafana.com/docs/pyroscope/latest/configure-client/) for setup instructions.
@@ -98,7 +98,7 @@ To use a custom query with the configuration, follow these steps:
 
    These tags can be used in the custom query with `${__tags}` variable. This variable interpolates the mapped tags as list in an appropriate syntax for the data source. Only tags present in the span are included. Tags that aren't present are omitted.
 
-   You can also configure a name for the tag. Tag names are useful where the tag has dots in the name and the target data source doesn't allow using dots in labels. For example, you can remap `service.name` to `service_name`. If you don't map any tags here, you can still use any tag in the query, for example: `method="${__span.tags.method}"`. Learn more about [custom query variables](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#custom-query-variables).
+   You can also configure a name for the tag. Tag names are useful where the tag has dots in the name and the target data source doesn't allow using dots in labels. For example, you can remap `service.name` to `service_name`. If you don't map any tags here, you can still use any tag in the query, for example: `method="${__span.tags.method}"`. Learn more about [custom query variables](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#custom-query-variables).
 
 6. Select a profile type to use in the query. Select the drop-down and choose an option from the menu.
 

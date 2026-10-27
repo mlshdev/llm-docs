@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/jaeger/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/jaeger/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/jaeger/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/jaeger/query-editor/index.md)
 
 # Jaeger query editor
 
 This document explains how to use the Jaeger query editor to search for traces, query by trace ID, visualize service dependencies, and import trace files.
 
-For general information about querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+For general information about querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 ## Before you begin
 
-- Ensure you have [configured the Jaeger data source](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/configure/).
+- Ensure you have [configured the Jaeger data source](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/configure/).
 - Verify the connection is working by clicking **Save & test** in the data source settings.
 
 ## Query types
@@ -54,7 +54,7 @@ To query a specific trace:
 
 ## Visualize the dependency graph
 
-The dependency graph query type displays service dependencies as a [Node Graph](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/). It shows how services communicate and the volume of calls between them.
+The dependency graph query type displays service dependencies as a [Node Graph](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/). It shows how services communicate and the volume of calls between them.
 
 To visualize the dependency graph:
 
@@ -150,7 +150,7 @@ To enable gRPC querying for Jaeger within Grafana, enable the `jaegerEnableGrpcE
 
 ## Use template variables
 
-The Jaeger query editor supports [Grafana template variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) for creating dynamic, reusable dashboards. You can use template variables in the following query fields:
+The Jaeger query editor supports [Grafana template variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) for creating dynamic, reusable dashboards. You can use template variables in the following query fields:
 
 - **Service Name**
 - **Operation Name**

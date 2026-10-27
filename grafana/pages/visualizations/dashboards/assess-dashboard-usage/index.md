@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md)
 
 # Assess dashboard usage
 
@@ -6,7 +6,7 @@ Usage insights enables you to have a better understanding of how your Grafana in
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 > Grafana Cloud insights logs include additional fields with their own dashboards.
 > Read more in the [Grafana Cloud documentation](https://grafana.com/docs/grafana-cloud/account-management/usage-insights/).
 
@@ -23,7 +23,7 @@ The aggregated data provides you access to several features:
 - [Sort dashboards by using insights data](#sort-dashboards-by-using-insights-data)
 - [Visualize usage insight data in a dashboard](#visualize-usage-insights-data)
 
-This feature also generates detailed logs that can be exported to Loki. Refer to [Export logs of usage insights](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/export-logs/).
+This feature also generates detailed logs that can be exported to Loki. Refer to [Export logs of usage insights](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/export-logs/).
 
 ## Dashboard and data source insights
 
@@ -44,7 +44,7 @@ Dashboard insights show the following information:
 
 ![Users and activity tab](https://grafana.com/static/img/docs/enterprise/dashboard_insights_users.png)
 
-If [dashboard sharing](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#public_dashboards) is enabled, you'll also see a **Shared dashboards** tab in your analytics.
+If [dashboard sharing](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#public_dashboards) is enabled, you'll also see a **Shared dashboards** tab in your analytics.
 
 ### Data source insights
 
@@ -71,7 +71,7 @@ When there are more active users on a dashboard than can fit within the presence
 
 ![Presence indicator icons](https://grafana.com/static/img/docs/enterprise/presence_indicators.png)
 
-To change *recent* to something other than the past 10 minutes, edit the [configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) file:
+To change *recent* to something other than the past 10 minutes, edit the [configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) file:
 
 ```ini
 [analytics.views]
@@ -80,7 +80,7 @@ To change *recent* to something other than the past 10 minutes, edit the [config
 recent_users_age = 10m
 ```
 
-To disable the presence indicator, edit the [configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) file as follows:
+To disable the presence indicator, edit the [configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) file as follows:
 
 ```ini
 [analytics.views]
@@ -110,13 +110,13 @@ Because today's activity isn't included yet, these numbers can be lower than the
 Grafana starts counting from the first time it aggregates data for a dashboard. That first pass looks back 30 days, so any activity older than that isn't included.
 
 For activity closer to the present, use **Views 30 days** or **Errors 30 days**, or open [dashboard insights](#dashboard-insights) on a specific dashboard to see today's views.
-To get same-day detail across all dashboards, [export logs of usage insights](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/export-logs/) and [visualize the exported logs](#visualize-usage-insights-data).
+To get same-day detail across all dashboards, [export logs of usage insights](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/export-logs/) and [visualize the exported logs](#visualize-usage-insights-data).
 
 ![Open list of dashboard sort options](https://grafana.com/media/docs/grafana/dashboards/screenshot-dashboard-sort-9.5.png)
 
 ## Visualize usage insights data
 
-If you set up your installation to [export logs of usage insights](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/export-logs/), there are two dashboards to help you take advantage of this data.
+If you set up your installation to [export logs of usage insights](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/export-logs/), there are two dashboards to help you take advantage of this data.
 
 1. [Usage Insights overview](https://grafana.com/grafana/dashboards/13785) provides a top-level perspective of user activity.
 2. [Data source details](https://grafana.com/grafana/dashboards/13786) dashboard provides a view of data source activity and health.

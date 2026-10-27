@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-security/secret-scan.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-security/secret-scan.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-security/secret-scan.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-security/secret-scan.md)
 
 # Configure Grafana secret scanning and notifications
 
-With Grafana, you can use the GitHub Secret Scanning service to determine if your [service account tokens](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/) have been leaked on GitHub.
+With Grafana, you can use the GitHub Secret Scanning service to determine if your [service account tokens](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/) have been leaked on GitHub.
 
 When GitHub Secret Scanning detects a Grafana secret, its hash is stored in Grafana Labs' secret scanning service.
 
@@ -37,7 +37,7 @@ Grafana has revoked this token",
 ## Before you begin
 
 - Ensure all your API keys have been migrated to service accounts.
-  For more information about service account migration, refer to [Migrate API keys to Grafana service accounts](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/migrate-api-keys/).
+  For more information about service account migration, refer to [Migrate API keys to Grafana service accounts](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/migrate-api-keys/).
 
 ## Configure secret scanning
 

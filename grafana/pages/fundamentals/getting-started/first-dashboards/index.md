@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/getting-started/first-dashboards/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/getting-started/first-dashboards/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/getting-started/first-dashboards/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/getting-started/first-dashboards/_index.md)
 
 # Build your first dashboard
 
-This topic helps you get started with Grafana and build your first dashboard using the built-in `Grafana` data source. To learn more about Grafana, refer to [Introduction to Grafana](https://grafana.com/docs/grafana/v13.2/introduction/).
+This topic helps you get started with Grafana and build your first dashboard using the built-in `Grafana` data source. To learn more about Grafana, refer to [Introduction to Grafana](https://grafana.com/docs/grafana/v13.3/introduction/).
 
 > **Note**
 >
@@ -10,7 +10,7 @@ This topic helps you get started with Grafana and build your first dashboard usi
 
 #### Install Grafana
 
-Grafana can be installed on many different operating systems. For a list of the minimum hardware and software requirements, as well as instructions on installing Grafana, refer to [Install Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/installation/).
+Grafana can be installed on many different operating systems. For a list of the minimum hardware and software requirements, as well as instructions on installing Grafana, refer to [Install Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/installation/).
 
 #### Sign in to Grafana
 
@@ -34,7 +34,7 @@ To sign in to Grafana for the first time:
 
 #### Create a dashboard
 
-If you've already set up a data source that you know how to query, refer to [Create a dashboard](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/create-dashboard/) instead.
+If you've already set up a data source that you know how to query, refer to [Create a dashboard](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/create-dashboard/) instead.
 
 To create your first dashboard using the built-in `-- Grafana --` data source:
 
@@ -51,7 +51,7 @@ To create your first dashboard using the built-in `-- Grafana --` data source:
 
 2. In the **Queries** tab, click the **Data source** drop-down list, enter `-- Grafana --`, and select that data source.
 
-   This configures your [query](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/#add-a-query) and generates the Random Walk dashboard.
+   This configures your [query](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#add-a-query) and generates the Random Walk dashboard.
 
 3. In the panel edit pane, select the **Time series** visualization.
 
@@ -61,7 +61,7 @@ To create your first dashboard using the built-in `-- Grafana --` data source:
 
    Alternatively, click **Back** if you want to see your changes applied to the dashboard first. Then click **Save** when you're ready.
 
-6. Add a descriptive title for the dashboard, or have Grafana create one using [generative AI features](https://grafana.com/docs/grafana/v13.2/dashboards/manage-dashboards#set-up-generative-ai-features-for-dashboards), and then click **Save**.
+6. Add a descriptive title for the dashboard, or have Grafana create one using [generative AI features](https://grafana.com/docs/grafana/v13.3/dashboards/manage-dashboards#set-up-generative-ai-features-for-dashboards), and then click **Save**.
 
 7. Click **Back** and then **Exit edit**.
 
@@ -69,22 +69,22 @@ Congratulations, you have created your first dashboard and it's displaying resul
 
 #### Next steps
 
-Continue to experiment with what you have built, try the [explore workflow](https://grafana.com/docs/grafana/v13.2/explore/) or another visualization feature. Refer to [Data sources](https://grafana.com/docs/grafana/v13.2/datasources/) for a list of supported data sources and instructions on how to [add a data source](https://grafana.com/docs/grafana/v13.2/datasources/#add-a-data-source). The following topics will be of interest to you:
+Continue to experiment with what you have built, try the [explore workflow](https://grafana.com/docs/grafana/v13.3/explore/) or another visualization feature. Refer to [Data sources](https://grafana.com/docs/grafana/v13.3/datasources/) for a list of supported data sources and instructions on how to [add a data source](https://grafana.com/docs/grafana/v13.3/datasources/#add-a-data-source). The following topics will be of interest to you:
 
-- [Panels and visualizations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/)
-- [Dashboards](https://grafana.com/docs/grafana/v13.2/dashboards/)
-- [Keyboard shortcuts](https://grafana.com/docs/grafana/v13.2/dashboards/use-dashboards/#keyboard-shortcuts)
+- [Panels and visualizations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/)
+- [Dashboards](https://grafana.com/docs/grafana/v13.3/dashboards/)
+- [Keyboard shortcuts](https://grafana.com/docs/grafana/v13.3/dashboards/use-dashboards/#keyboard-shortcuts)
 - [Plugins](https://grafana.com/grafana/plugins?orderBy=weight\&direction=asc)
 
 ##### Admins
 
 The following topics are of interest to Grafana server admin users:
 
-- [Grafana configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/)
-- [Authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/)
-- [User permissions and roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/)
-- [Provisioning](https://grafana.com/docs/grafana/v13.2/administration/provisioning/)
-- [Grafana CLI](https://grafana.com/docs/grafana/v13.2/cli/)
+- [Grafana configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/)
+- [Authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/)
+- [User permissions and roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/)
+- [Provisioning](https://grafana.com/docs/grafana/v13.3/administration/provisioning/)
+- [Grafana CLI](https://grafana.com/docs/grafana/v13.3/cli/)
 
 ## Frequently asked questions
 

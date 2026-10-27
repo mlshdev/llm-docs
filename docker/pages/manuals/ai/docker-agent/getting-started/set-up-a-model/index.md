@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/set-up-a-model/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/getting-started/set-up-a-model/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/set-up-a-model/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/getting-started/set-up-a-model/index.md)
 
 *Most agents need a model to think with: connect a built-in cloud provider, run a model locally with Docker Model Runner, or register a custom OpenAI-compatible endpoint. This page walks through each path end to end — plus the exception: agents that delegate to the Claude Code CLI on a Claude subscription, which need no model at all.*
 
@@ -84,7 +84,7 @@ Docker Model Runner
   Status: not installed (https://docs.docker.com/ai/model-runner/get-started/)
 
 Model auto-selection
-  auto -> anthropic/claude-sonnet-4-6
+  auto -> anthropic/claude-sonnet-5
 
 No issues found.
 ```
@@ -267,4 +267,4 @@ It exits non-zero when something would block a run, which makes it usable as a C
 - [**Quick Start**](https://docs.docker.com/ai/docker-agent/getting-started/quickstart/) — run your first agent now that a model is available.
 - [**Models**](https://docs.docker.com/ai/docker-agent/concepts/models/) — inline vs. named models, fallbacks, and `auto` selection.
 - [**Managing Secrets**](https://docs.docker.com/ai/docker-agent/guides/secrets/) — every way to store credentials, compared.
-- [**Troubleshooting**](https://docs.docker.com/ai/docker-agent/community/troubleshooting/#missing-credentials-or-model-errors) — decode "no model available" and credential errors.
+- [**Troubleshooting**](https://docs.docker.com/ai/docker-agent/guides/troubleshooting/#missing-credentials-or-model-errors) — decode "no model available" and credential errors.

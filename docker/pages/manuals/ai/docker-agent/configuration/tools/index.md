@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/tools/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/configuration/tools/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/tools/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/configuration/tools/index.md)
 
 # Tool Configuration
 
@@ -10,14 +10,18 @@ Built-in tools are included with Docker Agent and require no external dependenci
 
 | Type                | Description                                                                                                  | Page                                                                                  |
 | ------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| `file`              | Read, write, and edit individual files                                                                       | [File](https://docs.docker.com/ai/docker-agent/tools/file/)                           |
 | `filesystem`        | Read, write, list, search, navigate                                                                          | [Filesystem](https://docs.docker.com/ai/docker-agent/tools/filesystem/)               |
 | `git`               | Read-only repository inspection (status, log, branches, show, blame)                                         | [Git](https://docs.docker.com/ai/docker-agent/tools/git/)                             |
 | `shell`             | Execute shell commands synchronously                                                                         | [Shell](https://docs.docker.com/ai/docker-agent/tools/shell/)                         |
 | `background_jobs`   | Run and manage long-running shell commands                                                                   | [Background Jobs](https://docs.docker.com/ai/docker-agent/tools/background-jobs/)     |
 | `scheduler`         | Schedule instructions to run at a time or on a recurring interval                                            | [Scheduler](https://docs.docker.com/ai/docker-agent/tools/scheduler/)                 |
+| `environment`       | Report the OS and resolved shell (read-only, no arguments, auto-approved)                                    | [Environment](https://docs.docker.com/ai/docker-agent/tools/environment/)             |
+| `datetime`          | Current date and time in a model-chosen format and timezone (read-only)                                      | [Date and Time](https://docs.docker.com/ai/docker-agent/tools/datetime/)              |
+| `calculator`        | Exact arithmetic without code execution                                                                      | [Calculator](https://docs.docker.com/ai/docker-agent/tools/calculator/)               |
 | `think`             | Reasoning scratchpad                                                                                         | [Think](https://docs.docker.com/ai/docker-agent/tools/think/)                         |
+| `random`            | Random integers with agent-chosen inclusive bounds                                                           | [Random](https://docs.docker.com/ai/docker-agent/tools/random/)                       |
 | `plan`              | Shared persistent scratchpad for multi-agent collaboration                                                   | [Plan](https://docs.docker.com/ai/docker-agent/tools/plan/)                           |
-| `session_plan`      | Per-session markdown plan for the draft-review-execute workflow                                              | [Session Plan](https://docs.docker.com/ai/docker-agent/tools/session_plan/)           |
 | `session_context`   | Reference a previous session as context (read-only)                                                          | [Session Context](https://docs.docker.com/ai/docker-agent/tools/session_context/)     |
 | `todo`              | Task list management                                                                                         | [Todo](https://docs.docker.com/ai/docker-agent/tools/todo/)                           |
 | `memory`            | Persistent key-value storage (SQLite)                                                                        | [Memory](https://docs.docker.com/ai/docker-agent/tools/memory/)                       |
@@ -62,73 +66,15 @@ Extend agents with external tools via the [Model Context Protocol](https://model
 
 ### Docker MCP (Recommended)
 
-Run MCP servers as secure Docker containers via the [MCP Gateway](https://github.com/docker/mcp-gateway):
-
-```yaml
-toolsets:
-  - type: mcp
-    ref: docker:duckduckgo # web search
-  - type: mcp
-    ref: docker:github-official # GitHub integration
-```
-
-Browse available tools at the [Docker MCP Catalog](https://hub.docker.com/search?q=\&type=mcp).
-
-| Property      | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ref`         | string | Docker MCP reference (`docker:name`)                                                                                                                                                                                                                                                                                                                                                                   |
-| `tools`       | array  | Optional: only expose these tools                                                                                                                                                                                                                                                                                                                                                                      |
-| `instruction` | string | Custom instructions injected into the agent's context                                                                                                                                                                                                                                                                                                                                                  |
-| `config`      | any    | MCP server-specific configuration (passed during initialization)                                                                                                                                                                                                                                                                                                                                       |
-| `working_dir` | string | Working directory for the MCP gateway subprocess. Only applies when the catalog entry runs as a local process (not remote). Relative paths are resolved against the agent's working directory. Supports `${env.VAR}` (canonical), plus `~` and shell-style `$VAR`/`${VAR}` expansion ([details](https://docs.docker.com/ai/docker-agent/configuration/overview/#variable-expansion-in-config-fields)). |
+Use `ref: docker:<name>` to run a catalog server through the MCP Gateway. See [Docker MCP](https://docs.docker.com/ai/docker-agent/tools/mcp/#docker-mcp-recommended) for examples and the property reference.
 
 ### Local MCP (stdio)
 
-Run MCP servers as local processes communicating over stdin/stdout:
-
-```yaml
-toolsets:
-  - type: mcp
-    command: python
-    args: ["-m", "mcp_server"]
-    tools: ["search", "fetch"]
-    env:
-      API_KEY: value
-```
-
-| Property      | Type   | Description                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `command`     | string | Command to execute the MCP server                                                                                                                                                                                                                                                                                                                                                |
-| `args`        | array  | Command arguments                                                                                                                                                                                                                                                                                                                                                                |
-| `tools`       | array  | Optional: only expose these tools                                                                                                                                                                                                                                                                                                                                                |
-| `env`         | object | Environment variables (key-value pairs)                                                                                                                                                                                                                                                                                                                                          |
-| `working_dir` | string | Working directory for the MCP server process. Relative paths are resolved against the agent's working directory. Defaults to the agent's working directory when omitted. Supports `${env.VAR}` (canonical), plus `~` and shell-style `$VAR`/`${VAR}` expansion ([details](https://docs.docker.com/ai/docker-agent/configuration/overview/#variable-expansion-in-config-fields)). |
-| `instruction` | string | Custom instructions injected into the agent's context                                                                                                                                                                                                                                                                                                                            |
-| `version`     | string | Package reference for [auto-installing](#auto-installing-tools) the command binary                                                                                                                                                                                                                                                                                               |
+Use `command`, `args`, and `env` to run a local subprocess. See [Local MCP](https://docs.docker.com/ai/docker-agent/tools/mcp/#local-mcp-stdio) for the property reference; [auto-installation](#auto-installing-tools) can provide the command binary.
 
 ### Remote MCP (Streamable HTTP / SSE)
 
-Connect to MCP servers over the network:
-
-```yaml
-toolsets:
-  - type: mcp
-    remote:
-      url: "https://mcp-server.example.com"
-      transport_type: "streamable"
-      headers:
-        Authorization: "Bearer your-token"
-    # Optional: allow OAuth helper requests to reach private/internal IPs.
-    allow_private_ips: true
-    tools: ["search_web", "fetch_url"]
-```
-
-| Property                | Type    | Description                                                                                                                                                                                                                                                                                    |
-| ----------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `remote.url`            | string  | URL of the MCP server. Accepts `https://`, `http://`, and `unix://` (Unix domain socket) schemes.                                                                                                                                                                                              |
-| `remote.transport_type` | string  | `streamable` or `sse`                                                                                                                                                                                                                                                                          |
-| `remote.headers`        | object  | HTTP headers sent on every request. Values support `${env.VAR}` and `${headers.NAME}` placeholders, resolved per request. `${env.VAR}` reads an environment variable; `${headers.NAME}` forwards a header from the caller's incoming request (useful when Docker Agent runs as an API server). |
-| `allow_private_ips`     | boolean | Permit remote MCP OAuth helper requests to dial non-public IP addresses. Use only for trusted internal servers.                                                                                                                                                                                |
+Use `remote.url` to connect to a hosted MCP server or Unix socket. See [Remote MCP](https://docs.docker.com/ai/docker-agent/tools/mcp/#remote-mcp-streamable-http--sse) for the property reference, and [Remote MCP Servers](https://docs.docker.com/ai/docker-agent/features/remote-mcp/) for OAuth recipes and public endpoints.
 
 ## Auto-Installing Tools
 
@@ -168,6 +114,10 @@ toolsets:
     command: gopls  # auto-detected as golang/tools
     args: ["mcp"]
 ```
+
+### Extraction Safety
+
+GitHub release archives and raw binaries are written through a rooted filesystem handle. Destination paths cannot escape the package directory through `..` or symlinks, including symlinks replaced during extraction. Relative symlinks contained within the package directory are allowed; absolute symlinks are rejected.
 
 ### Checksum Verification
 
@@ -249,7 +199,8 @@ Any field set on `lifecycle` overrides the profile preset, so you can mix-and-ma
 ```yaml
 toolsets:
   - type: mcp
-    command: ["docker", "mcp", "gateway"]
+    command: docker
+    args: ["mcp", "gateway"]
     lifecycle:
       profile: resilient
       max_restarts: 10        # keep trying longer than the default of 5
@@ -291,7 +242,7 @@ See [`examples/lifecycle.yaml`](https://github.com/docker/docker-agent/blob/main
 
 ## TOON-Encoded Tool Outputs
 
-Many MCP servers return verbose JSON responses that consume a lot of context budget. The `toon` field on a toolset transparently re-encodes matching tools' JSON output as [TOON](https://github.com/alpkeskin/gotoon) — a compact, model-friendly key/value format — before the result is shown to the model.
+Many MCP servers return verbose JSON responses that consume a lot of context budget. The `toon` field on a toolset transparently re-encodes matching tools' top-level JSON object output as [TOON](https://github.com/alpkeskin/gotoon) — a compact, model-friendly key/value format — before the result is shown to the model.
 
 ```yaml
 toolsets:
@@ -303,16 +254,16 @@ toolsets:
     toon: "list_.*,get_.*" # only toonify list_/get_ tools
 ```
 
-| Property | Type   | Description                                                                                                                                                                           |
-| -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `toon`   | string | Comma-delimited list of regular expressions matching tool names whose JSON output should be re-encoded as TOON. Non-JSON outputs and non-matching tools are passed through untouched. |
+| Property | Type   | Description                                                                                                                                                                                                                                                                                        |
+| -------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `toon`   | string | Comma-delimited regular expressions matching tool names whose top-level JSON object output should be re-encoded as TOON. Top-level arrays, non-null scalars, invalid JSON, and non-matching outputs pass through unchanged. A matching tool returning JSON `null` currently produces empty output. |
 
 When a tool's output is not valid JSON, it is returned unchanged — TOON encoding is best-effort and never breaks tools that emit plain text.
 
 > \[!NOTE]
 > **When to use TOON**
 >
-> TOON typically yields 30-60% smaller payloads than equivalent JSON for MCP tools that return arrays of records (issue lists, search results, file listings, …). It works best when the schema is regular; one-off responses with deeply nested or heterogeneous shapes may benefit less.
+> TOON can reduce payload size for MCP tools returning JSON objects, including objects containing arrays of records. Top-level arrays currently pass through unchanged. It works best when the schema is regular; one-off responses with deeply nested or heterogeneous shapes may benefit less.
 
 ## Per-Toolset Model Routing
 
@@ -452,6 +403,27 @@ When an entire toolset is deferred (`defer: true`), the deferred toolset exposes
 These tools let the agent browse a large toolset on-demand without activating every tool upfront.
 
 See [`examples/deferred.yaml`](https://github.com/docker/docker-agent/blob/main/examples/deferred.yaml) for a complete example.
+
+### Provider-Native Tool Search (OpenAI)
+
+On OpenAI models that support it, the deferred catalog can instead be searched by OpenAI's hosted [tool search](https://developers.openai.com/api/docs/guides/tools-tool-search). Opt in per model with `provider_opts.native_tool_search`:
+
+```yaml
+models:
+  gpt:
+    provider: openai
+    model: gpt-5.6-sol
+    provider_opts:
+      native_tool_search: true
+```
+
+Every deferred tool is then declared to the API with `defer_loading: true` next to a server-executed `tool_search` tool, so the model discovers and calls deferred tools directly, without a `search_tool`/`add_tool` round trip. `search_tool` and `add_tool` stay available. Toolset `tools`, `read_only`, and skill allow-lists apply to the catalog exactly as they do to regular tools, and so do permissions.
+
+The option is ignored, and the legacy behaviour kept, for models without support (only `openai` models that support deferred tools qualify; the `chatgpt` provider and OpenAI-compatible endpoints, including `openai` with a custom `base_url`, do not), on Chat Completions requests, and on fallback models without the option. Agents using `code_mode_tools` keep the legacy behaviour: wrapped tools are reachable through `run_tools_with_javascript`, while todo and repeatable tools remain directly callable.
+
+Native search also enables ordered response replay, including encrypted reasoning. For native-only workflows, tell the agent to prefer native tool search over `search_tool`/`add_tool`; those tools remain available for fallback models.
+
+See [`examples/deferred_native_tool_search.yaml`](https://github.com/docker/docker-agent/blob/main/examples/deferred_native_tool_search.yaml) for a complete example.
 
 ## Combined Example
 

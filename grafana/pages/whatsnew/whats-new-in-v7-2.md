@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/whatsnew/whats-new-in-v7-2.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/whatsnew/whats-new-in-v7-2.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/whatsnew/whats-new-in-v7-2.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/whatsnew/whats-new-in-v7-2.md)
 
 # What's new in Grafana v7.2
 
@@ -34,7 +34,7 @@ This screenshot shows both a custom full date format with a 12 hour clock and am
 
 *Custom date time formats*
 
-Date formats are set for a Grafana instance by adjusting [server-wide settings](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#date_formats) in the Grafana configuration file. We hope to add org- and user-level settings in the future.
+Date formats are set for a Grafana instance by adjusting [server-wide settings](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#date_formats) in the Grafana configuration file. We hope to add org- and user-level settings in the future.
 
 ```
 [date_formats]
@@ -49,7 +49,7 @@ interval_year = YYYY
 
 There is also experimental support to use the browser location and language to dynamically change the current date format for each user. This feature is disabled by default.
 
-The [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#date_formats) topic has been updated as a result of this change.
+The [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#date_formats) topic has been updated as a result of this change.
 
 ## Field options are out of beta!
 
@@ -63,7 +63,7 @@ You can now dynamically apply value filters to any table column. This option can
 
 *Table column filters*
 
-[Filter table columns](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/#filter-table-columns) has been added as a result of this feature.
+[Filter table columns](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/#filter-table-columns) has been added as a result of this feature.
 
 ### New field override selection options
 
@@ -73,8 +73,8 @@ You can now add override rules that use a regex matcher to choose which fields t
 
 Grafana 7.2 includes the following transformation enhancements:
 
-- A new [Group By](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#group-by) transformation that allows you to group by multiple fields and add any number of aggregations for other fields.
-- The [Labels to fields](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#labels-to-fields) transformation now allows you to pick one label and use that as the name of the value field.
+- A new [Group By](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/#group-by) transformation that allows you to group by multiple fields and add any number of aggregations for other fields.
+- The [Labels to fields](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/#labels-to-fields) transformation now allows you to pick one label and use that as the name of the value field.
 - You can drag transformations to reorder them. Remember that transformations are processed in the order they are listed in the UI, so think before you move something!
 
 ![](https://grafana.com/static/img/docs/v72/transformations.gif)
@@ -89,15 +89,15 @@ The up and down arrows, which were previously the only way to change query order
 
 *Drag to reorder queries*
 
-The [Queries](https://grafana.com/docs/grafana/v13.2/panels-visualizations/#add-a-query) topic has been updated as a result of this change.
+The [Queries](https://grafana.com/docs/grafana/v13.3/panels-visualizations/#add-a-query) topic has been updated as a result of this change.
 
 ## Inspect queries in Explore
 
-You can enjoy all the details query inspector gave you in dashboards now in Explore as well. You can open query inspector tab with the button next to query history. See [Query inspector in Explore](https://grafana.com/docs/grafana/v13.2/explore/#query-inspector) for more details.
+You can enjoy all the details query inspector gave you in dashboards now in Explore as well. You can open query inspector tab with the button next to query history. See [Query inspector in Explore](https://grafana.com/docs/grafana/v13.3/explore/#query-inspector) for more details.
 
 ## $\_\_rate\_interval for Prometheus
 
-You can now use the new variable `$__rate_interval` in Prometheus for rate functions mainly. `$__rate_interval` in general is one scrape interval larger than `$__interval` but is never smaller than four times the scrape interval (which is 15s by default). See the [Prometheus data source](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/#using-__rate_interval-variable) for more details.
+You can now use the new variable `$__rate_interval` in Prometheus for rate functions mainly. `$__rate_interval` in general is one scrape interval larger than `$__interval` but is never smaller than four times the scrape interval (which is 15s by default). See the [Prometheus data source](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/#using-__rate_interval-variable) for more details.
 
 ## Toggle parsed log fields
 
@@ -107,7 +107,7 @@ With this awesome contribution from one of our community members, you can now to
 
 *Toggling parsed fields in Explore*
 
-The [Toggle parsed fields](https://grafana.com/docs/grafana/v13.2/explore/#toggle-detected-fields) section has been added to [Explore](https://grafana.com/docs/grafana/v13.2/explore/) as a result of this feature.
+The [Toggle parsed fields](https://grafana.com/docs/grafana/v13.3/explore/#toggle-detected-fields) section has been added to [Explore](https://grafana.com/docs/grafana/v13.3/explore/) as a result of this feature.
 
 ## Sensitive alert channel settings are now encrypted
 
@@ -119,9 +119,9 @@ These features are included in the Grafana Enterprise edition software.
 
 ### Report and export dashboards in grid layout
 
-A new layout option is available when rendering reports: the grid layout. With this option, your report uses the panel layout from your dashboard, so that what you see is what you get. Learn more about the [grid layout](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/create-reports/#5-attachments) in the documentation.
+A new layout option is available when rendering reports: the grid layout. With this option, your report uses the panel layout from your dashboard, so that what you see is what you get. Learn more about the [grid layout](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/create-reports/#5-attachments) in the documentation.
 
-The grid layout is also available for the [Export dashboard as PDF](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/share-dashboards-panels/#export-a-dashboard-as-pdf) feature.
+The grid layout is also available for the [Export dashboard as PDF](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/share-dashboards-panels/#export-a-dashboard-as-pdf) feature.
 
 ![Report in grid layout](https://grafana.com/static/img/docs/enterprise/reports_grid_landscape_preview.png)
 
@@ -129,7 +129,7 @@ The grid layout is also available for the [Export dashboard as PDF](https://graf
 
 You can now generate a report with a different time range from the dashboard it is based on. This means that you no longer have to apply workarounds, such as copying dashboards or carefully aligning report generation with the end of the month, to generate reports that cover the period you want.
 
-For more information, refer to [Reports time range](https://grafana.com/docs/grafana/v13.2/dashboards/share-dashboards-panels/#report-time-range).
+For more information, refer to [Reports time range](https://grafana.com/docs/grafana/v13.3/dashboards/share-dashboards-panels/#report-time-range).
 
 ### Organization-wide report settings
 
@@ -139,7 +139,7 @@ You can now configure organization-wide report settings, such as report branding
 
 *Reports settings*
 
-For more information, refer to [Report settings](https://grafana.com/docs/grafana/v13.2/dashboards/share-dashboards-panels/#report-settings).
+For more information, refer to [Report settings](https://grafana.com/docs/grafana/v13.3/dashboards/share-dashboards-panels/#report-settings).
 
 ## Changelog
 

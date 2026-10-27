@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/panel-overview/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/panel-overview/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/panel-overview/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/panel-overview/index.md)
 
 # Panel overview
 
-A Grafana panel is a visual representation of data composed of a [query](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/) and a [visualization](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/). Within panels, you can apply [transformations](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/transform-data/), which process the results of a query before they're passed on for visualization. You can also further customize a panel by formatting data and configuring visualization options.
+A Grafana panel is a visual representation of data composed of a [query](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/) and a [visualization](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/). Within panels, you can apply [transformations](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/transform-data/), which process the results of a query before they're passed on for visualization. You can also further customize a panel by formatting data and configuring visualization options.
 
 Each panel has a query editor specific to the data source selected in the panel. The query editor allows you to build a query that returns the data you want to visualize.
 
@@ -10,12 +10,12 @@ Panels offer a wide variety of formatting and styling options, from applying col
 
 To get started adding panels, ensure that you have configured a data source:
 
-- For details about using data sources, refer to [Data sources](https://grafana.com/docs/grafana/v13.2/datasources/).
-- For more information about managing data sources as an administrator, refer to [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+- For details about using data sources, refer to [Data sources](https://grafana.com/docs/grafana/v13.3/datasources/).
+- For more information about managing data sources as an administrator, refer to [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
   > **Note**
   >
-  > [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/) is only available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+  > [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/) is only available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
 ## Panel feature overview
 
@@ -23,12 +23,12 @@ The following image and descriptions highlight the panel features:
 
 ![Annotated panel with time series visualization](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-panel-overview-ann-v11.0.png)
 
-1. **Panel title** - You can create your own panel titles or have Grafana create them for you using [generative AI features](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
-2. **Panel description** - You can create your own panel descriptions or have Grafana create them for you using [generative AI features](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards)
-3. **Links** - Add [panel links](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/#panel-links) to other dashboards, panels, or external sites.
+1. **Panel title** - You can create your own panel titles or have Grafana create them for you using [generative AI features](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
+2. **Panel description** - You can create your own panel descriptions or have Grafana create them for you using [generative AI features](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards)
+3. **Links** - Add [panel links](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/#panel-links) to other dashboards, panels, or external sites.
 4. **Panel menu** - In the [panel menu](#panel-menu), access actions such as **View**, **Edit**, **Inspect**, and **Remove**.
-5. **Legend** - Change series colors, y-axis, and series visibility directly from the [legend](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-legend/).
-6. **Tooltips** - View [tooltips](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-tooltips/) to get more information about data points.
+5. **Legend** - Change series colors, y-axis, and series visibility directly from the [legend](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-legend/).
+6. **Tooltips** - View [tooltips](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-tooltips/) to get more information about data points.
 
 ## Panel menu
 
@@ -46,16 +46,16 @@ If an option is only available in view mode or edit mode, that's indicated:
   - **Data**: Open the **Inspect** drawer in the **Data** tab.
   - **Query**: Open the **Inspect** drawer in the **Query** tab.
   - **Panel JSON**: Open the **Inspect** drawer in the **JSON** tab.
-- **Time settings**: Opens the **Panel time settings** drawer where you can set panel-specific time options. Public preview. For more information, refer to [Panel time settings](#panel-time-settings).
-- **Styles**: Edit mode only. Copy and paste styles from one panel to another in the same dashboard. For more information, refer to [Copy and paste panel styles](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/panel-editor-overview/#copy-and-paste-panel-styles).
+- **Time settings**: Opens the **Panel time settings** drawer where you can set panel-specific time options. For more information, refer to [Panel time settings](#panel-time-settings).
+- **Styles**: Edit mode only. Copy and paste styles from one panel to another in the same dashboard. For more information, refer to [Copy and paste panel styles](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/panel-editor-overview/#copy-and-paste-panel-styles).
 - **Assistant**: View mode only. Access Grafana Assistant help options. This option is only available on Grafana Cloud.
-- **Metrics drilldown**: Open the panel in the **Drilldown > Metrics** feature for further exploration. For more information, refer to [Metrics drilldown](https://grafana.com/docs/grafana/v13.2/visualizations/simplified-exploration/metrics/).
+- **Metrics drilldown**: Open the panel in the **Drilldown > Metrics** feature for further exploration. For more information, refer to [Metrics drilldown](https://grafana.com/docs/grafana/v13.3/visualizations/simplified-exploration/metrics/).
 - **Extensions**: View mode only. Access other actions provided by installed applications, such as declaring an incident. This option is only available in view mode and only appears if you have app plugins installed that contribute an [extension](https://grafana.com/developers/plugin-tools/key-concepts/ui-extensions) to the panel menu.
 - **More**: Access other panel actions.
-  - **Duplicate**: Edit mode only. Make a copy of the panel. Duplicated panels query data separately from the original panel. You can use the special `Dashboard` data source to [share the same query results across panels](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/share-query/) instead.
+  - **Duplicate**: Edit mode only. Make a copy of the panel. Duplicated panels query data separately from the original panel. You can use the special `Dashboard` data source to [share the same query results across panels](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/share-query/) instead.
   - **Copy**: Copy the panel to the clipboard.
   - **New library panel**: Edit mode only. Create a panel that can be imported into other dashboards.
-  - **New alert rule**: Open the alert rule configuration page in **Alerting**, where you can [create a Grafana-managed alert](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/#create-alerts-from-panels) based on the panel queries.
+  - **New alert rule**: Open the alert rule configuration page in **Alerting**, where you can [create a Grafana-managed alert](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/#create-alerts-from-panels) based on the panel queries.
   - **Hide/Show legend**: Hide or show the panel legend.
   - **Get help**: Send a snapshot or panel data to Grafana Labs Technical Support.
 - **Remove**: Edit mode only. Remove the panel from the dashboard.
@@ -71,6 +71,9 @@ If an option is only available in view mode or edit mode, that's indicated:
 When you open a panel in full-screen view mode, Grafana displays a **View panel** sidebar with controls for adjusting the panel.
 These controls make it easier to view specific data or identify patterns and correlations.
 Because these controls exist in view mode, you don't need edit permissions to use them, and the changes you make don't affect the saved dashboard.
+
+After you close the sidebar, it stays closed when you view a panel again.
+Select **View panel controls** in the toolbar to reopen it and turn automatic opening back on.
 
 The sidebar includes the following controls:
 
@@ -127,18 +130,15 @@ By hovering over a panel with the mouse you can use some shortcuts that target t
 
 ## Panel time settings
 
-> **Public preview**
->
-> Panel time settings is in public preview. Enable it with the `panelTimeSettings` feature toggle.
-
 You can configure the following settings to control the time range for a panel:
 
-| Option                | Description                                                                                                                                                              |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Panel time range      | Overrides the dashboard time range. Use one of the preset values or enter a custom value like `5m` or `2h`.                                                              |
-| Time shift            | Adds a time shift relative to the dashboard or panel time range. Use one of the preset values or enter a custom value like `5m` or `2h`.                                 |
-| Time comparison       | <p>Compare data between two time ranges. Applied after **Time shift** when used together.</p><p>To try out this feature, enable the `timeComparison` feature toggle.</p> |
-| Hide panel time range | Don't show the panel time range in the panel header.                                                                                                                     |
+| Option                         | Description                                                                                                                                                                                                                                                     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Panel time range               | Overrides the dashboard time range. Use one of the preset values or enter a custom value like `5m` or `2h`.                                                                                                                                                     |
+| Time shift                     | Adds a time shift relative to the dashboard or panel time range. Use one of the preset values or enter a custom value like `5m` or `2h`.                                                                                                                        |
+| Time comparison                | Compares data with an earlier time range, such as the day or week before. Applied after **Time shift** when used together.                                                                                                                                      |
+| Comparison tooltip delta color | Colors the change between the original and comparison values in the tooltip. An increase is green with **Standard**, red with **Inverted**, or the series color with **Same as value**. Only shown for time series visualizations with **Time comparison** set. |
+| Hide panel time range          | Don't show the panel time range in the panel header.                                                                                                                                                                                                            |
 
 ## Pan and zoom panel time range
 
@@ -219,11 +219,11 @@ To add a panel to an existing dashboard, follow these steps:
 
 To configure panels, refer to the following subtopics:
 
-- [Configure panel options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-panel-options/)
-- [Configure standard options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-standard-options/)
-- [Configure a legend](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-legend/)
-- [Configure tooltips](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-tooltips/)
-- [Configure data links](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-data-links/)
-- [Configure value mappings](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-value-mappings/)
-- [Configure thresholds](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-thresholds/)
-- [Configure field overrides](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-overrides/)
+- [Configure panel options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-panel-options/)
+- [Configure standard options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-standard-options/)
+- [Configure a legend](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-legend/)
+- [Configure tooltips](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-tooltips/)
+- [Configure data links](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-data-links/)
+- [Configure value mappings](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-value-mappings/)
+- [Configure thresholds](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-thresholds/)
+- [Configure field overrides](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-overrides/)

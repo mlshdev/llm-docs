@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-security/export-logs.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-security/export-logs.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-security/export-logs.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-security/export-logs.md)
 
 # Export logs of usage insights
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
 
 By exporting usage logs to Loki, you can directly query them and create dashboards of the information that matters to you most, such as dashboard errors, most active organizations, or your top-10 most-used queries. This configuration is done for you in Grafana Cloud, with provisioned dashboards. Read about them in the [Grafana Cloud documentation](https://grafana.com/docs/grafana-cloud/usage-insights/).
 
@@ -56,7 +56,7 @@ Logs of usage insights contain the following fields, where the fields followed b
 >
 > Grafana Cloud provides provisioned dashboards for usage insights. Refer to the [Grafana Cloud documentation](https://grafana.com/docs/grafana-cloud/usage-insights/) for more information. If you export usage insights to a separate Loki instance, these dashboards stop receiving usage insights data. This is a current limitation of the feature in Grafana Cloud.
 
-To export your logs, enable the usage insights feature and [configure](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) an export location in the configuration file:
+To export your logs, enable the usage insights feature and [configure](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) an export location in the configuration file:
 
 ```ini
 [usage_insights.export]
@@ -94,7 +94,7 @@ batch_wait_duration = 5s
 batch_size_bytes = 102400 # 100KiB
 ```
 
-Using `logger` will print usage insights to your [Grafana server log](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#log).
+Using `logger` will print usage insights to your [Grafana server log](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#log).
 There is no option for configuring the `logger` storage type.
 
 ## Visualize Loki usage insights in Grafana
@@ -108,4 +108,4 @@ If you export logs into Loki, you can build Grafana dashboards to understand you
 3. Play with usage insights to understand them:
    - In Explore, you can use the query `{datasource="gdev-loki",kind="usage_insights"}` to retrieve all logs related to your `gdev-loki` data source.
    - In a dashboard, you can build a table panel with the query `topk(10, sum by (error) (count_over_time({kind="usage_insights", datasource="gdev-prometheus"} | json | error != "" [$__interval])))` to display the 10 most common errors your users see using the `gdev-prometheus` data source.
-   - In a dashboard, you can build a graph panel with the queries `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error != "" [$__interval]))` and `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error = "" [$__interval]))` to show the evolution of the data request count over time. Using `by (host)` allows you to have more information for each Grafana server you have if you have set up Grafana for [high availability](https://grafana.com/docs/grafana/v13.2/setup-grafana/set-up-for-high-availability/).
+   - In a dashboard, you can build a graph panel with the queries `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error != "" [$__interval]))` and `sum by(host) (count_over_time({kind="usage_insights"} | json | eventName="data-request" | error = "" [$__interval]))` to show the evolution of the data request count over time. Using `by (host)` allows you to have more information for each Grafana server you have if you have set up Grafana for [high availability](https://grafana.com/docs/grafana/v13.3/setup-grafana/set-up-for-high-availability/).

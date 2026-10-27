@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/jaeger/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/jaeger/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/jaeger/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/jaeger/configure/index.md)
 
 # Configure the Jaeger data source
 
@@ -82,7 +82,7 @@ Click **Manage private data source connect** to open your PDC connection page an
 
 *Trace to logs configuration settings*
 
-The **Trace to logs** setting configures the [trace to logs feature](https://grafana.com/docs/grafana/v13.2/explore/trace-integration/) that links trace spans to related log entries.
+The **Trace to logs** setting configures the [trace to logs feature](https://grafana.com/docs/grafana/v13.3/explore/trace-integration/) that links trace spans to related log entries.
 
 > **Note**
 >
@@ -91,7 +91,7 @@ The **Trace to logs** setting configures the [trace to logs feature](https://gra
 There are two ways to configure trace to logs:
 
 - **Simple configuration:** Use a default query with tag-based filtering.
-- **Custom query:** Write a query using [template variable syntax](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/) to interpolate values from the trace or span.
+- **Custom query:** Write a query using [template variable syntax](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/) to interpolate values from the trace or span.
 
 ### Use a simple configuration
 
@@ -161,7 +161,7 @@ Each linked query consists of:
 
 The **Node graph** setting is located under **Additional settings**, which is collapsed by default. Expand the **Additional settings** section on the data source configuration page to access it.
 
-The **Node graph** setting enables the [Node Graph visualization](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/), which is disabled by default.
+The **Node graph** setting enables the [Node Graph visualization](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/), which is disabled by default.
 
 When enabled, Grafana displays the Node Graph above the trace view, showing the relationships between services in the trace.
 
@@ -187,11 +187,11 @@ The **Enable Time Parameters** toggle controls whether Grafana sends `start` and
 
 Click **Save & test** to verify the data source connection. A successful test displays the message **Data source is working**.
 
-If the test fails, refer to [Troubleshoot Jaeger data source issues](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/troubleshooting/) for help resolving common errors.
+If the test fails, refer to [Troubleshoot Jaeger data source issues](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/troubleshooting/) for help resolving common errors.
 
 ## Provision the data source
 
-You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### Provisioning example
 

@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/user-management/server-user-management/add-remove-user-to-org/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/user-management/server-user-management/add-remove-user-to-org/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/user-management/server-user-management/add-remove-user-to-org/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/user-management/server-user-management/add-remove-user-to-org/index.md)
 
 # Add or remove a user in an organization
 
-Server administrators can add and remove users in organizations. To do this as an organization administrator, see [Manage users in an organization](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-org-users/).
+Server administrators can add and remove users in organizations. To do this as an organization administrator, see [Manage users in an organization](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-org-users/).
 
 ## Add a user to an organization
 
@@ -12,9 +12,9 @@ You are required to specify an Admin role for each organization. The first user 
 
 ### Before you begin
 
-- [Create an organization](https://grafana.com/docs/grafana/v13.2/administration/organization-management/#create-an-organization)
-- [Add a user](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/add-remove-user-to-org/#add-a-user) to Grafana
-- Ensure you have [Grafana server administrator privileges](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/assign-remove-server-admin-privileges/)
+- [Create an organization](https://grafana.com/docs/grafana/v13.3/administration/organization-management/#create-an-organization)
+- [Add a user](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/add-remove-user-to-org/#add-a-user) to Grafana
+- Ensure you have [Grafana server administrator privileges](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/assign-remove-server-admin-privileges/)
 
 **To add a user to an organization**:
 
@@ -28,7 +28,7 @@ You are required to specify an Admin role for each organization. The first user 
 
 5. Select an organization and a role.
 
-   For more information about user permissions, refer to [Organization roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles).
+   For more information about user permissions, refer to [Organization roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles).
 
 6. Click **Add to organization**.
 
@@ -36,7 +36,7 @@ The next time the user signs in, they will be able to navigate to their new orga
 
 > **Note**
 >
-> If you have [organization administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles) permissions and *not* [server administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can still [invite a user to join an organization](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-org-users/#invite-a-user-to-join-an-organization).
+> If you have [organization administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles) permissions and *not* [server administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can still [invite a user to join an organization](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-org-users/#invite-a-user-to-join-an-organization).
 
 ## Remove a user from an organization
 
@@ -54,4 +54,4 @@ Remove a user from an organization when they no longer require access to the das
 4. In the Organization section, click **Remove from organization** next to the organization from which you want to remove the user.
 5. Click **Confirm removal**.
 
-> **Note:** If you have [organization administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles) permissions and *not* [server administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can still [remove a user from an organization](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-org-users/#remove-a-user-from-an-organization) in the Users section of organization configuration.
+> **Note:** If you have [organization administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles) permissions and *not* [server administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can still [remove a user from an organization](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-org-users/#remove-a-user-from-an-organization) in the Users section of organization configuration.

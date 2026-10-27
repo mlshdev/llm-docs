@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/import-dashboards/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/import-dashboards/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/import-dashboards/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/import-dashboards/index.md)
 
 # Import dashboards
 
-You can import preconfigured dashboards into your Grafana instance or Cloud stack using the UI or the [HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/).
+You can import preconfigured dashboards into your Grafana instance or Cloud stack using the UI or the [HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/).
 
 ## Import a dashboard
 
@@ -29,7 +29,7 @@ The [Dashboards page](https://grafana.com/grafana/dashboards/) on grafana.com pr
 
 ![Preconfigured dashboards on grafana.com](https://grafana.com/media/docs/grafana/dashboards/screenshot-gcom-dashboards.png)
 
-You can also add to this library by exporting one of your own dashboards. For more information, refer to [Share dashboards and panels](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/share-dashboards-panels/).
+You can also add to this library by exporting one of your own dashboards. For more information, refer to [Share dashboards and panels](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/share-dashboards-panels/).
 
 ## More examples
 

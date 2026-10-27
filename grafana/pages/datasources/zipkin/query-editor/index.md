@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/zipkin/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/zipkin/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/zipkin/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/zipkin/query-editor/index.md)
 
 # Zipkin query editor
 
 This document explains how to use the Zipkin query editor to query and visualize traces. You can look up traces by ID, browse available traces using the cascading service and span selector, or upload a JSON trace file for visualization.
 
-For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 ## Query by trace ID
 
@@ -16,7 +16,7 @@ To query a specific trace by its ID:
 
 Zipkin trace IDs are 16 or 32 character hexadecimal strings, for example `efe9cb8857f68c8f` or `463ac35c9f6413ad48485a3953bb6124`.
 
-You can also use [template variables](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/template-variables/) in the trace ID field. For example, `${traceId}` is replaced with the variable's current value when the query runs.
+You can also use [template variables](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/template-variables/) in the trace ID field. For example, `${traceId}` is replaced with the variable's current value when the query runs.
 
 ## Query by trace selector
 
@@ -136,14 +136,14 @@ To only show the spans you have matched, toggle on **Show matches only**.
 
 You can link to Zipkin traces from logs in Loki, Elasticsearch, Splunk, and other logs data sources by configuring an internal link.
 
-To configure this feature, refer to the [Derived fields](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure-loki-data-source/#derived-fields) section of the Loki data source docs or the [Data links](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/configure/#data-links) section of the Elasticsearch or Splunk data source docs.
+To configure this feature, refer to the [Derived fields](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure-loki-data-source/#derived-fields) section of the Loki data source docs or the [Data links](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/configure/#data-links) section of the Elasticsearch or Splunk data source docs.
 
 ## Link to a trace ID from metrics
 
 You can link to Zipkin traces from metrics in Prometheus data sources by configuring an exemplar.
 
-To configure this feature, refer to the [introduction to exemplars](https://grafana.com/docs/grafana/v13.2/fundamentals/exemplars/) documentation.
+To configure this feature, refer to the [introduction to exemplars](https://grafana.com/docs/grafana/v13.3/fundamentals/exemplars/) documentation.
 
 ## Troubleshoot query issues
 
-If you encounter issues with queries, refer to [Troubleshoot Zipkin data source issues](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/troubleshooting/).
+If you encounter issues with queries, refer to [Troubleshoot Zipkin data source issues](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/troubleshooting/).

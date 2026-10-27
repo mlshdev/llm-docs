@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/graphite/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/graphite/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/graphite/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/graphite/configure/index.md)
 
 # Configure the Graphite data source
 
-This document provides instructions for configuring the Graphite data source and explains available configuration options. For general information on managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+This document provides instructions for configuring the Graphite data source and explains available configuration options. For general information on managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 ## Before you begin
 
@@ -103,7 +103,7 @@ After configuring your Graphite data source options, click **Save & test** at th
 ## Provision the data source
 
 You can define and configure the data source in YAML files as part of the Grafana provisioning system.
-For more information about provisioning, and for lists of common configuration options and JSON data options, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information about provisioning, and for lists of common configuration options and JSON data options, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### YAML example
 

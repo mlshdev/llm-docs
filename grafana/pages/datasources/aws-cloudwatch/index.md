@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/aws-cloudwatch/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/aws-cloudwatch/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/_index.md)
 
 # Amazon CloudWatch data source
 
@@ -20,13 +20,13 @@ Grafana includes native support for the Amazon CloudWatch plugin, so there's no 
 
 The following documents will help you get started working with the CloudWatch data source:
 
-- [Configure the CloudWatch data source](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/)
-- [CloudWatch query editor](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/query-editor/)
-- [Templates and variables](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/template-variables/)
-- [Configure AWS authentication](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/)
-- [CloudWatch annotations](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/annotations/)
-- [CloudWatch alerting](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/alerting/)
-- [Troubleshoot CloudWatch issues](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/troubleshooting/)
+- [Configure the CloudWatch data source](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/)
+- [CloudWatch query editor](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/query-editor/)
+- [Templates and variables](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/template-variables/)
+- [Configure AWS authentication](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/)
+- [CloudWatch annotations](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/annotations/)
+- [CloudWatch alerting](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/alerting/)
+- [Troubleshoot CloudWatch issues](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/troubleshooting/)
 
 ## Import pre-configured dashboards
 
@@ -56,12 +56,12 @@ To customize one of these dashboards, Grafana recommends saving it under a diffe
 
 After installing and configuring the Amazon CloudWatch data source, you can:
 
-- Create a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/)
-- Configure and use [templates and variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/)
-- Add [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/)
-- Add [annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/)
-- Set up [alerting](https://grafana.com/docs/grafana/v13.2/alerting/)
-- Optimize performance with [query caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching)
+- Create a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/)
+- Configure and use [templates and variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/)
+- Add [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/)
+- Add [annotations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/)
+- Set up [alerting](https://grafana.com/docs/grafana/v13.3/alerting/)
+- Optimize performance with [query caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching)
 
 ## Control pricing
 
@@ -93,10 +93,71 @@ For more information, refer to the AWS documentation for [Service Quotas](https:
 
 The CloudWatch plugin enables you to monitor and troubleshoot applications across multiple regional accounts. Using cross-account observability, you can seamlessly search, visualize and analyze metrics and logs without worrying about account boundaries.
 
-To use this feature, configure a monitoring and source account in the [AWS console under CloudWatch Settings](https://aws.amazon.com/blogs/aws/new-amazon-cloudwatch-cross-account-observability/), and then add the necessary IAM permissions. Refer to [Permissions reference](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/#permissions-reference) for the cross-account observability actions.
+To use this feature, configure a monitoring and source account in the [AWS console under CloudWatch Settings](https://aws.amazon.com/blogs/aws/new-amazon-cloudwatch-cross-account-observability/), and then add the necessary IAM permissions. Refer to [Permissions reference](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/#permissions-reference) for the cross-account observability actions.
+
+[//]: # "Shared note: querying a data source with the gcx Grafana CLI."
+
+[//]: # "This shared file is included in these locations:"
+
+[//]: # "/docs/sources/datasources/aws-cloudwatch/_index.md"
+
+[//]: # "/docs/sources/datasources/azure-monitor/_index.md"
+
+[//]: # "/docs/sources/datasources/elasticsearch/_index.md"
+
+[//]: # "/docs/sources/datasources/google-cloud-monitoring/_index.md"
+
+[//]: # "/docs/sources/datasources/influxdb/_index.md"
+
+[//]: # "/docs/sources/datasources/loki/_index.md"
+
+[//]: # "/docs/sources/datasources/mssql/_index.md"
+
+[//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: # "/docs/sources/datasources/postgres/_index.md"
+
+[//]: # "/docs/sources/datasources/prometheus/_index.md"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/tempo/_index.md"
+
+[//]: #
+
+[//]: # "If you make changes to this file, verify that the meaning and content are not changed in any place where the file is included."
+
+[//]: # "Any links should be fully qualified and not relative: /docs/grafana/ instead of ../grafana/."
+
+## Query with the Grafana CLI
+
+You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
+
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+
+For example, to explore and query your CloudWatch data source, use the `gcx datasources cloudwatch` commands:
+
+```sh
+# Discover the regions, namespaces, and metrics available to the data source
+gcx datasources cloudwatch list-regions -d <DATASOURCE_UID>
+gcx datasources cloudwatch list-namespaces -d <DATASOURCE_UID> --region us-east-1
+gcx datasources cloudwatch list-metrics -d <DATASOURCE_UID> --region us-east-1 --namespace AWS/EC2
+
+# List the dimension keys for a metric
+gcx datasources cloudwatch list-dimensions -d <DATASOURCE_UID> --region us-east-1 --namespace AWS/EC2 --metric CPUUtilization
+
+# List AWS accounts available through cross-account monitoring
+gcx datasources cloudwatch list-accounts -d <DATASOURCE_UID> --region us-east-1
+
+# Run a structured metric query
+gcx datasources cloudwatch query -d <DATASOURCE_UID> --region us-east-1 --namespace AWS/EC2 --metric CPUUtilization \
+  --dimensions InstanceId=i-0123456789abcdef0 --since 1h
+```
+
+Replace *`<DATASOURCE_UID>`* with the UID of your CloudWatch data source. You can omit the `-d` flag when `datasources.cloudwatch` is configured in your `gcx` context. CloudWatch queries are structured rather than expression-based, so `--region`, `--namespace`, and `--metric` are required. The `list-accounts` command returns data only for data sources configured for cross-account monitoring.
 
 ## Related resources
 
 - [Amazon CloudWatch documentation](https://docs.aws.amazon.com/cloudwatch/)
-- [Troubleshoot CloudWatch issues](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/troubleshooting/)
+- [Troubleshoot CloudWatch issues](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/troubleshooting/)
 - [Grafana community forum](https://community.grafana.com/)

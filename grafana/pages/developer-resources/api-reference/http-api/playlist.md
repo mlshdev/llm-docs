@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/playlist.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/playlist.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/playlist.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/playlist.md)
 
 # Playlist API
 
@@ -6,7 +6,7 @@
 >
 > Available in Grafana 12 and later.
 >
-> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis).
+> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis).
 >
 > **This document may not contain the latest version of the API. For the most up-to-date list of available endpoints, refer to [playlist.grafana.app/v1](https://play.grafana.org/swagger?api=playlist.grafana.app-v1) in Swagger.**
 
@@ -16,7 +16,7 @@
 
 Lists all playlists in the specified namespace.
 
-- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 
 **Example Request**:
 
@@ -71,7 +71,7 @@ Content-Type: application/json
 
 Retrieves a specific playlist by name.
 
-- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - `name`: The UID of the playlist.
 
 **Example Request**:
@@ -120,7 +120,7 @@ Content-Type: application/json
 
 Creates a new playlist.
 
-- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 
 **Example Request**:
 
@@ -191,7 +191,7 @@ Content-Type: application/json
 
 Updates an existing playlist. The entire playlist spec must be provided.
 
-- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - `name`: The UID of the playlist.
 
 **Example Request**:
@@ -273,7 +273,7 @@ Content-Type: application/json
 
 Deletes a playlist.
 
-- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - `name`: The UID of the playlist.
 
 **Example Request**:

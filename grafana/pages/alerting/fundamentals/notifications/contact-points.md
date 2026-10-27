@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/fundamentals/notifications/contact-points.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/fundamentals/notifications/contact-points.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/fundamentals/notifications/contact-points.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/fundamentals/notifications/contact-points.md)
 
 # Contact points
 
@@ -34,4 +34,4 @@ For example, a contact point could contain a PagerDuty integration; an email and
 
 Each contact point integration can also define the notification message to be sent, which can use the predefined message, a custom message, or notification templates.
 
-For a complete list of supported integrations and more details about contact points, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points).
+For a complete list of supported integrations and more details about contact points, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points).

@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/roles-and-permissions/access-control/manage-rbac-roles/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/roles-and-permissions/access-control/manage-rbac-roles/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/roles-and-permissions/access-control/manage-rbac-roles/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/roles-and-permissions/access-control/manage-rbac-roles/index.md)
 
 # Manage RBAC roles
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
 This section includes instructions for how to view permissions associated with roles, create custom roles, and update and delete roles.
 
@@ -39,9 +39,9 @@ https://<your-stack-name>.grafana.net/api/access-control/roles/basic_viewer
 
 This works when logged in as an Admin user.
 
-For more information, refer to [Get a role](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#get-a-role).
+For more information, refer to [Get a role](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#get-a-role).
 
-For a reference of basic and fixed role assignments, refer to [RBAC role definitions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/).
+For a reference of basic and fixed role assignments, refer to [RBAC role definitions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/).
 
 ## Update role permissions
 
@@ -49,23 +49,23 @@ If the default basic role permissions don't meet your requirements you can chang
 
 Basic roles are mutable. You can add or remove individual permissions on the `Viewer`, `Editor`, `Admin`, and `Grafana Admin` roles without creating a custom role. Each permission is a combination of an `action` and a `scope`. For example, you can remove access to a specific app plugin from all viewers by removing the relevant permissions from the `basic:viewer` role.
 
-Before you change basic role permissions, decide which roles to modify and how the change affects your users and teams. For planning guidance, refer to [Plan your RBAC rollout strategy](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/).
+Before you change basic role permissions, decide which roles to modify and how the change affects your users and teams. For planning guidance, refer to [Plan your RBAC rollout strategy](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/plan-rbac-rollout-strategy/).
 
 > **Caution**
 >
-> Changes that you make to a basic role apply to every [organization](https://grafana.com/docs/grafana/v13.2/administration/organization-management/) in the Grafana instance. For example, if you add the `fixed:users:writer` role's permissions to the `Viewer` basic role, all viewers in every organization in the instance can create users.
+> Changes that you make to a basic role apply to every [organization](https://grafana.com/docs/grafana/v13.3/administration/organization-management/) in the Grafana instance. For example, if you add the `fixed:users:writer` role's permissions to the `Viewer` basic role, all viewers in every organization in the instance can create users.
 >
 > Basic role changes are scoped to a single Grafana instance. On Grafana Cloud, each stack is a separate instance, so you must apply the change to each stack individually.
 
 > **Note**
 >
-> If you only need to change access for specific users or teams rather than for every viewer, editor, or admin, leave the basic roles unchanged. Instead, assign the `No Basic Role` organization role and grant fixed or custom roles to those users or teams. For more information, refer to [Assign RBAC roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/assign-rbac-roles/).
+> If you only need to change access for specific users or teams rather than for every viewer, editor, or admin, leave the basic roles unchanged. Instead, assign the `No Basic Role` organization role and grant fixed or custom roles to those users or teams. For more information, refer to [Assign RBAC roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/assign-rbac-roles/).
 
 You can change basic roles' permissions [via the configuration file](#update-basic-role-permissions-in-the-configuration-file) or [using the RBAC API](#update-basic-role-permissions-using-the-rbac-api).
 
 ### Update basic role permissions in the configuration file
 
-Before you begin, determine the permissions you want to add or remove from a basic role. For more information about the permissions associated with basic roles, refer to [RBAC role definitions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/#basic-role-assignments).
+Before you begin, determine the permissions you want to add or remove from a basic role. For more information about the permissions associated with basic roles, refer to [RBAC role definitions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/#basic-role-assignments).
 
 > **Note**
 >
@@ -86,7 +86,7 @@ To change permissions for a basic role:
    | `from`                | List of roles from which to copy permissions.                                                                                                             |
    | `permissions > state` | The state of the permission. You can set it to `absent` to ensure it exclusion from the copy list.                                                        |
 
-3. Reload the provisioning configuration file. For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/admin/#reload-provisioning-configurations).
+3. Reload the provisioning configuration file. For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/admin/#reload-provisioning-configurations).
 
 #### Example: Modify the Grafana Admin role
 
@@ -135,12 +135,12 @@ roles:
 
 Use the RBAC HTTP API when you want to change basic role permissions programmatically, for example from a script or a CI pipeline. The API uses two endpoints:
 
-- `GET /api/access-control/roles/{roleUID}` returns a basic role and all of its permissions. Refer to [Get a role](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#get-a-role).
-- `PUT /api/access-control/roles/{roleUID}` replaces the role's permissions with the set that you send. Refer to [Update a role](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#update-a-role).
+- `GET /api/access-control/roles/{roleUID}` returns a basic role and all of its permissions. Refer to [Get a role](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#get-a-role).
+- `PUT /api/access-control/roles/{roleUID}` replaces the role's permissions with the set that you send. Refer to [Update a role](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#update-a-role).
 
 Basic role UIDs follow the pattern `basic_<role>`, where `<role>` is `viewer`, `editor`, `admin`, or `grafana_admin`.
 
-Because `PUT` replaces the entire permission set, fetch the current role first, modify its permissions, increment its `version`, and then send the result back. Each request authenticates with a [service account token](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/) that has the `Role writer` role, or with basic authentication as a `Grafana Admin`.
+Because `PUT` replaces the entire permission set, fetch the current role first, modify its permissions, increment its `version`, and then send the result back. Each request authenticates with a [service account token](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/) that has the `Role writer` role, or with basic authentication as a `Grafana Admin`.
 
 > **Note**
 >
@@ -224,7 +224,7 @@ Replace the following placeholders:
 - *`<SERVICE_ACCOUNT_TOKEN>`*: A service account token with permission to read and write roles.
 - *`<GRAFANA_URL>`*: The base URL of your Grafana instance.
 
-To find the IDs of other app plugins, refer to [RBAC for app plugins](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-for-app-plugins/). That page also explains how to grant fine-grained app plugin access to specific users and teams without changing the basic roles.
+To find the IDs of other app plugins, refer to [RBAC for app plugins](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-for-app-plugins/). That page also explains how to grant fine-grained app plugin access to specific users and teams without changing the basic roles.
 
 ## Reset basic roles to their default
 
@@ -236,7 +236,7 @@ You have two options to reset the basic roles permissions to their default.
 
 > Warning: If this option is left to true, permissions will be reset on every boot.
 
-Use the [`reset_basic_roles`](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/configure-rbac/#configure-rbac-in-grafana) option to reset basic roles permissions to their default on Grafana instance boot up.
+Use the [`reset_basic_roles`](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/configure-rbac/#configure-rbac-in-grafana) option to reset basic roles permissions to their default on Grafana instance boot up.
 
 1. Open you configuration file and update the rbac section as follow:
 
@@ -268,4 +268,4 @@ An alternative to the configuration option is to use the HTTP endpoint.
            scope: 'permissions:type:escalate'
    ```
 
-3. As a `Grafana Admin`, call the API endpoint to reset the basic roles to their default. Refer to the [RBAC HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#reset-basic-roles-to-their-default) for more details.
+3. As a `Grafana Admin`, call the API endpoint to reset the basic roles to their default. Refer to the [RBAC HTTP API](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#reset-basic-roles-to-their-default) for more details.

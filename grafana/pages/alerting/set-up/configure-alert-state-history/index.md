@@ -1,11 +1,11 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/configure-alert-state-history/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/configure-alert-state-history/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/set-up/configure-alert-state-history/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/set-up/configure-alert-state-history/index.md)
 
 # Configure alert state history
 
 Alerting can record all alert rule state changes for your Grafana managed alert rules in a Loki or Prometheus instance, or in both.
 
 - With Prometheus, you can query the `GRAFANA_ALERTS` metric for alert state changes in **Grafana Explore**.
-- With Loki, you can query and view alert state changes in **Grafana Explore** and the [Grafana Alerting History views](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/).
+- With Loki, you can query and view alert state changes in **Grafana Explore** and the [Grafana Alerting History views](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/).
 
 ## Configure Loki for alert state
 
@@ -40,9 +40,9 @@ The following steps describe a basic configuration:
 
 3. **Configure the Loki data source in Grafana**
 
-   Add the [Loki data source](https://grafana.com/docs/grafana/v13.2/datasources/loki/) to Grafana.
+   Add the [Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/) to Grafana.
 
-If everything is set up correctly, you can access the [History view and History page](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/) to view and filter alert state history. You can also use **Grafana Explore** to query the Loki instance, see [Alerting Meta monitoring](https://grafana.com/docs/grafana/v13.2/alerting/monitor/) for details.
+If everything is set up correctly, you can access the [History view and History page](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/) to view and filter alert state history. You can also use **Grafana Explore** to query the Loki instance, see [Alerting Meta monitoring](https://grafana.com/docs/grafana/v13.3/alerting/monitor/) for details.
 
 ## Configure Prometheus for alert state (GRAFANA\_ALERTS metric)
 
@@ -62,9 +62,9 @@ The following steps describe a basic configuration:
 
 2. **Configure the Prometheus data source in Grafana**
 
-   Add the [Prometheus data source](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/) to Grafana.
+   Add the [Prometheus data source](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/) to Grafana.
 
-   In the [Prometheus data source configuration options](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/), set the **Prometheus type** to match your Prometheus instance type. Grafana Alerting uses this option to identify the remote write endpoint.
+   In the [Prometheus data source configuration options](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/), set the **Prometheus type** to match your Prometheus instance type. Grafana Alerting uses this option to identify the remote write endpoint.
 
 3. **Configure Grafana**
 
@@ -83,7 +83,9 @@ The following steps describe a basic configuration:
    # prometheus_write_timeout = 10s
    ```
 
-You can then use **Grafana Explore** to query the alert state metric. For details, refer to [Alerting Meta monitoring](https://grafana.com/docs/grafana/v13.2/alerting/monitor/).
+Grafana reads alert state history from the same data source, so users need the `datasources:query` permission for it to view the [Alerts page](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/alerts-page/).
+
+You can then use **Grafana Explore** to query the alert state metric. For details, refer to [Alerting Meta monitoring](https://grafana.com/docs/grafana/v13.3/alerting/monitor/).
 
 ```promQL
 GRAFANA_ALERTS{alertstate='firing'}

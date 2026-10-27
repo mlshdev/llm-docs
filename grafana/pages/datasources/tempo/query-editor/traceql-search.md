@@ -1,22 +1,22 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/query-editor/traceql-search.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/query-editor/traceql-search.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/query-editor/traceql-search.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/query-editor/traceql-search.md)
 
 # Search traces using the query builder
 
 The **Search** query builder lets you create TraceQL queries using drop-down lists and text fields instead of writing syntax directly.
 Each selection you make generates a TraceQL query behind the scenes.
-You can view the generated query and copy it to the [TraceQL editor](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-editor/) at any time.
+You can view the generated query and copy it to the [TraceQL editor](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-editor/) at any time.
 
 Use Search when you're exploring data or learning TraceQL patterns.
-For complex queries involving structural operators, aggregations, or features that Search doesn't support, use the [TraceQL editor](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-editor/).
+For complex queries involving structural operators, aggregations, or features that Search doesn't support, use the [TraceQL editor](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-editor/).
 To learn the full query syntax, refer to [Construct a TraceQL query](https://grafana.com/docs/tempo/latest/traceql/construct-traceql-queries/).
 
-If queries return no results, check that your [Tempo data source is configured and connected](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/).
+If queries return no results, check that your [Tempo data source is configured and connected](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/).
 
 ## Enable Search with the query builder
 
 This feature is automatically available in Grafana 10 (and newer) and Grafana Cloud.
 
-To enable the TraceQL query builder in self-managed Grafana through version 10.1, [enable the `traceqlSearch` feature toggle](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/feature-toggles/).
+To enable the TraceQL query builder in self-managed Grafana through version 10.1, [enable the `traceqlSearch` feature toggle](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/feature-toggles/).
 
 [//]: # "Shared content for the Search - TraceQL query builder"
 
@@ -191,7 +191,7 @@ For example, query A runs and then query B.
 You can reorder the queries by dragging and dropping them above or below other queries.
 Select **+ Add query** to add another query block.
 
-For more information, refer to [Use query types together](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/).
+For more information, refer to [Use query types together](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/).
 
 ## Run queries and view results
 
@@ -209,7 +209,7 @@ The Tempo data source supports streaming responses to TraceQL queries so you can
 
 When active, all configured Tempo data sources attempt to use streaming.
 You can activate and control which Tempo data sources do and don't attempt to stream results at the per-data source level using the **Streaming** section of the Tempo data source configuration.
-For more information, refer to the [Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#streaming) documentation.
+For more information, refer to the [Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#streaming) documentation.
 
 Streaming is available for both the **Search** and **TraceQL** query types.
 You'll get immediate visibility of incoming traces on the results table.
@@ -267,12 +267,12 @@ Generated query:
 { span.http.response.status_code >= 500 }
 ```
 
-For more query examples, refer to [TraceQL query examples](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-query-examples/).
+For more query examples, refer to [TraceQL query examples](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-query-examples/).
 
 ## Next steps
 
-- [TraceQL query examples](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-query-examples/): Copy-paste query examples for common use cases
-- [Write TraceQL queries with the editor](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-editor/): For complex queries the Search builder doesn't support
+- [TraceQL query examples](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-query-examples/): Copy-paste query examples for common use cases
+- [Write TraceQL queries with the editor](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-editor/): For complex queries the Search builder doesn't support
 - [Construct a TraceQL query](https://grafana.com/docs/tempo/latest/traceql/construct-traceql-queries/): Full TraceQL syntax reference
-- [Service Graph and Service Graph view](https://grafana.com/docs/grafana/v13.2/datasources/tempo/service-graph/): Visualize service dependencies
-- [Span filters](https://grafana.com/docs/grafana/v13.2/datasources/tempo/span-filters/): Refine results in the trace detail view
+- [Service Graph and Service Graph view](https://grafana.com/docs/grafana/v13.3/datasources/tempo/service-graph/): Visualize service dependencies
+- [Span filters](https://grafana.com/docs/grafana/v13.3/datasources/tempo/span-filters/): Refine results in the trace detail view

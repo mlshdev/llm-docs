@@ -1,11 +1,11 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-org-mapping/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-org-mapping/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-org-mapping/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-org-mapping/_index.md)
 
 # Configure organization mapping for SAML
 
 Organization mapping allows you to assign users to a particular organization in Grafana depending on attribute value obtained from the identity provider.
 
-1. In configuration file, set [`assertion_attribute_org`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/enterprise-configuration/#assertion_attribute_org) to the attribute name you store organization info in. This attribute can be an array if you want a user to be in multiple organizations.
-2. Set [`org_mapping`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/enterprise-configuration/#org_mapping) option to the comma-separated list of `Organization:OrgId` pairs to map organization from IdP to Grafana organization specified by ID. If you want users to have different roles in multiple organizations, you can set this option to a comma-separated list of `Organization:OrgId:Role` mappings.
+1. In configuration file, set [`assertion_attribute_org`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/enterprise-configuration/#assertion_attribute_org) to the attribute name you store organization info in. This attribute can be an array if you want a user to be in multiple organizations.
+2. Set [`org_mapping`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/enterprise-configuration/#org_mapping) option to the comma-separated list of `Organization:OrgId` pairs to map organization from IdP to Grafana organization specified by ID. If you want users to have different roles in multiple organizations, you can set this option to a comma-separated list of `Organization:OrgId:Role` mappings.
 
 For example, use following configuration to assign users from `Engineering` organization to the Grafana organization with ID `2` as Editor and users from `Sales` - to the org with ID `3` as Admin, based on `Org` assertion attribute value:
 
@@ -17,7 +17,7 @@ org_mapping = Engineering:2:Editor, Sales:3:Admin
 
 > **Warning**
 >
-> The `org_mapping` option stores mappings in the database as JSON. Size limits depend on your database. In MySQL before Grafana 12.3, the limit is 65,535 bytes. From Grafana 12.3, the column uses `MEDIUMTEXT`, raising the MySQL limit to 16,777,215 bytes (\~16 MB). If you need to split users into more granular control, we suggest using [Role and Team Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/) instead.
+> The `org_mapping` option stores mappings in the database as JSON. Size limits depend on your database. In MySQL before Grafana 12.3, the limit is 65,535 bytes. From Grafana 12.3, the column uses `MEDIUMTEXT`, raising the MySQL limit to 16,777,215 bytes (\~16 MB). If you need to split users into more granular control, we suggest using [Role and Team Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/) instead.
 
 Starting from Grafana version 11.5, you can use the organization name instead of the organization ID in the `org_mapping` option. Ensure that the organization name you configure matches exactly with the organization name in Grafana, as it is case-sensitive. If the organization name is not found in Grafana, the mapping will be ignored. If the external organization or the organization name contains spaces, use the JSON syntax for the `org_mapping` option:
 

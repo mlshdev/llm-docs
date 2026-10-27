@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/visualizations/geomap/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/visualizations/geomap/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/visualizations/geomap/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/visualizations/geomap/index.md)
 
 # Geomap
 
@@ -99,16 +99,16 @@ If you want to use other codes or give the field a custom name, you can follow t
 ### Panel options
 
 In the **Panel options** section of the panel editor pane, set options like the panel title, description, and show/hide rules.
-To learn more, refer to [Configure panel options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-panel-options/).
+To learn more, refer to [Configure panel options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-panel-options/).
 
-| Option                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Title                  | Text entered in this field appears at the top of your panel in the panel editor and in the dashboard. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) or [global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#global-variables).                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Description            | Add a description to a panel to share with users any important information about it, such as its purpose. Text entered in this field appears in a tooltip in the upper-left corner of the panel. Conversely, toggle on the **Use as subtitle** switch to display the description just below the panel title instead. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) or dashboard-scoped [global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#global-variables) (such as `$__from`, `$__to`, `$__dashboard`, `$__org`, and `$__user`). Query-scoped global variables (such as `$__interval` and `$__interval_ms`) are not available in this field. |
-| Transparent background | Toggle this switch on and off to control whether or not the panel has the same background color as the dashboard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Panel links            | Add [links to the panel](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/#panel-links) to create shortcuts to other dashboards, panels, and external websites. Access panel links by clicking the icon next to the panel title.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Repeat options         | Set whether to repeat the panel for each value in the selected variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Show/hide rules        | Set whether to show or hide panels based on various rules.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Option                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title                  | Text entered in this field appears at the top of your panel in the panel editor and in the dashboard. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) or [built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables).                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Description            | Add a description to a panel to share with users any important information about it, such as its purpose. Text entered in this field appears in a tooltip in the upper-left corner of the panel. Conversely, toggle on the **Use as subtitle** switch to display the description just below the panel title instead. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) or dashboard-scoped [built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables) (such as `$__from`, `$__to`, `$__dashboard`, `$__org`, and `$__user`). Query-scoped global variables (such as `$__interval` and `$__interval_ms`) are not available in this field. |
+| Transparent background | Toggle this switch on and off to control whether or not the panel has the same background color as the dashboard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Panel links            | Add [links to the panel](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/#panel-links) to create shortcuts to other dashboards, panels, and external websites. Access panel links by clicking the icon next to the panel title.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Repeat options         | Set whether to repeat the panel for each value in the selected variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Show/hide rules        | Set whether to show or hide panels based on various rules.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ### Map view options
 
@@ -368,7 +368,7 @@ The Photos layer renders a photo at each data point.
 
 #### Network layer
 
-The Network layer renders a network graph. This layer supports the same [data format supported by the node graph visualization](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/#data-api) with the addition of [geospatial data](#location-mode) included in the nodes data. The geospatial data is used to locate and render the nodes on the map.
+The Network layer renders a network graph. This layer supports the same [data format supported by the node graph visualization](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/#data-api) with the addition of [geospatial data](#location-mode) included in the nodes data. The geospatial data is used to locate and render the nodes on the map.
 
 ![Geomap network layer](https://grafana.com/media/docs/grafana/screenshot-grafana-10-1-geomap-network-layer-v2.png)
 
@@ -520,7 +520,7 @@ The default basemap layer uses the CARTO map. You can define custom default base
 
 #### Configure the default base layer with provisioning
 
-You can configure the default base map using config files with Grafana’s provisioning system. For more information on all the settings, refer to the [provisioning docs page](https://grafana.com/docs/grafana/v13.2/administration/provisioning/).
+You can configure the default base map using config files with Grafana’s provisioning system. For more information on all the settings, refer to the [provisioning docs page](https://grafana.com/docs/grafana/v13.3/administration/provisioning/).
 
 Use the JSON configuration option `default_baselayer_config` to define the default base map. There are currently five base map options to choose from: `carto`, `esri-xyz`, `osm-standard`, `xyz`, `maplibre`. Here are some provisioning examples for each base map option.
 
@@ -694,7 +694,7 @@ When a data point on the geomap represents one row—that is, only a single row 
 
 When a data point represents more than one row—that is, different rows but with the same geographical information—then each row appears as a single entry:
 
-![A data point with mulitple rows of associated data](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-multiple-row-marker-v12.1.png)
+![A data point with multiple rows of associated data](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-multiple-row-marker-v12.1.png)
 
 The text displayed in each tooltip row is associated with the first field value in each data row.
 Click it to expand and display the full details of the data row.
@@ -705,7 +705,7 @@ Click it to expand and display the full details of the data row.
 
 ### Standard options
 
-**Standard options** in the panel editor pane let you change how field data is displayed in your visualizations. When you set a standard option, the change is applied to all fields or series. For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+**Standard options** in the panel editor pane let you change how field data is displayed in your visualizations. When you set a standard option, the change is applied to all fields or series. For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/).
 
 | Option        | Description                                                                                                                                       |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -717,7 +717,7 @@ Click it to expand and display the full details of the data row.
 | Color scheme  | Set single or multiple colors for your entire visualization.                                                                                      |
 | No value      | Enter what Grafana should display if the field value is empty or null. The default value is a hyphen (-).                                         |
 
-To learn more, refer to [Configure standard options](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/).
+To learn more, refer to [Configure standard options](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/).
 
 ### Data links and actions
 
@@ -734,7 +734,7 @@ For each data link, set the following options:
 - **URL**
 - **Open in new tab**
 
-To learn more, refer to [Configure data links and actions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/).
+To learn more, refer to [Configure data links and actions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/).
 
 ### Value mappings
 
@@ -751,7 +751,7 @@ For each value mapping, set the following options:
 - **Color** (Optional)
 - **Icon** (Canvas only)
 
-To learn more, refer to [Configure value mappings](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-value-mappings/).
+To learn more, refer to [Configure value mappings](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-value-mappings/).
 
 ### Thresholds
 
@@ -764,7 +764,7 @@ For each threshold, set the following options:
 | Value           | Set the value for each threshold.            |
 | Thresholds mode | Choose from **Absolute** and **Percentage**. |
 
-To learn more, refer to [Configure thresholds](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-thresholds/).
+To learn more, refer to [Configure thresholds](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-thresholds/).
 
 ### Field overrides
 
@@ -780,4 +780,4 @@ Choose from the following override options:
 | Fields returned by query       | Select all fields returned by a specific query, such as A, B, or C.                                           |
 | Fields with values             | Select all fields returned by your defined reducer condition, such as **Min**, **Max**, **Count**, **Total**. |
 
-To learn more, refer to [Configure field overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+To learn more, refer to [Configure field overrides](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/).

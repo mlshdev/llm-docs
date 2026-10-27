@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/back-up-grafana/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/back-up-grafana/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/back-up-grafana/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/back-up-grafana/index.md)
 
 # Back up Grafana
 
@@ -13,7 +13,7 @@ The Grafana configuration files are located in the following directories:
 - Default configuration: `$WORKING_DIR/defaults.ini` (Don't change this file)
 - Custom configuration: `$WORKING_DIR/custom.ini`
 
-For more information on where to find configuration files, refer to [Configuration file location](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location).
+For more information on where to find configuration files, refer to [Configuration file location](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location).
 
 > **Note**
 >

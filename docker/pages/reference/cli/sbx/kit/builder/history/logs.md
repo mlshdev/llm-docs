@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder_history_logs.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_kit_builder_history_logs.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_builder_history_logs.yaml](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/data/sbx_cli/sbx_kit_builder_history_logs.yaml)
 
 # sbx kit builder history logs
 

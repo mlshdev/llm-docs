@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/modify-dashboard-settings/index.md)
 
 # Modify dashboard settings
 
@@ -88,13 +88,13 @@ When you're on the **Dashboards** page, any tags you've entered show up under th
 
 Annotations setup has been removed from dashboard settings.
 You can now add and manage annotation queries in the dashboard sidebar.
-For more information, refer to [Add annotation queries](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-annotation-queries).
+For more information, refer to [Add annotation queries](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-annotation-queries).
 
 ## Add a variable
 
 Variables setup has been removed from dashboard settings.
 You can now add and manage variables in the dashboard sidebar.
-For more information, refer to [Add variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables).
+For more information, refer to [Add variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables).
 
 ## Add a link
 
@@ -110,7 +110,7 @@ Dashboard links enable you to place links to other dashboards and web sites dire
 
 5. Set the rest of the link options.
 
-   For more detailed directions on creating links, refer to [Dashboard links](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/manage-dashboard-links/#dashboard-links)
+   For more detailed directions on creating links, refer to [Dashboard links](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/manage-dashboard-links/#dashboard-links)
 
 6. Click **Save**.
 
@@ -126,4 +126,4 @@ A dashboard in Grafana is represented by a JSON object, which stores metadata of
 
 To view a dashboard JSON model, on the **Settings** page, click the **JSON Model** tab.
 
-For more information about the JSON fields, refer to [JSON fields](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/view-dashboard-json-model/#json-fields).
+For more information about the JSON fields, refer to [JSON fields](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/view-dashboard-json-model/#json-fields).

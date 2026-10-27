@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/view-dashboard-json-model/index.md)
 
 # Dashboard JSON model
 
@@ -161,7 +161,7 @@ Each field in the dashboard JSON is explained below with its usage:
 | **time**          | time range for dashboard, i.e. last 6 hours, last 7 days, etc                                                                                            |
 | **timepicker**    | timepicker metadata, see [timepicker section](#timepicker) for details                                                                                   |
 | **templating**    | templating metadata, see [templating section](#templating) for details                                                                                   |
-| **annotations**   | annotations metadata, see [annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) for how to add them |
+| **annotations**   | annotations metadata, see [annotations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/) for how to add them |
 | **refresh**       | auto-refresh interval                                                                                                                                    |
 | **schemaVersion** | version of the JSON schema (integer), incremented each time a Grafana update brings changes to said schema                                               |
 | **version**       | version of the dashboard (integer), incremented each time the dashboard is updated                                                                       |

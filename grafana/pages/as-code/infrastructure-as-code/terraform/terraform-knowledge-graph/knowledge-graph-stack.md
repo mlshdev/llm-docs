@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack.md)
 
 # Configure the Knowledge Graph stack using Terraform
 
@@ -12,7 +12,7 @@ Before you begin, ensure you have the following:
 
 - A Grafana Cloud account, as shown in [Get started](https://grafana.com/docs/grafana-cloud/get-started/)
 - [Terraform](https://www.terraform.io/downloads) installed on your machine
-- The Grafana Terraform provider configured, as shown in [Get started with Terraform for Knowledge Graph](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
+- The Grafana Terraform provider configured, as shown in [Get started with Terraform for Knowledge Graph](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
 - A Cloud Access Policy with the following scopes: `stacks:read`, `metrics:read`, `metrics:write`
 
 ## Dataset types
@@ -299,7 +299,7 @@ output "stack_version" {
 ## Related documentation
 
 - [Knowledge Graph documentation](https://grafana.com/docs/grafana-cloud/knowledge-graph/)
-- [Get started with Terraform for Knowledge Graph](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
+- [Get started with Terraform for Knowledge Graph](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
 - [Grafana Terraform Provider documentation](https://registry.terraform.io/providers/grafana/grafana/latest/docs)
 - [Cloud Access Policies](https://grafana.com/docs/grafana-cloud/account-management/authentication-and-permissions/access-policies/)
 - [Service accounts](https://grafana.com/docs/grafana/latest/administration/service-accounts/)

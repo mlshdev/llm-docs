@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/cli.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/cli.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/cli.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/cli.md)
 
 # Administer Grafana with the Grafana server CLI
 
@@ -135,7 +135,7 @@ grafana cli --homepath "/usr/share/grafana" admin reset-admin-password <new pass
 
 ### Override config file
 
-`--config value` overrides the default location where Grafana expects the configuration file. Refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) for more information about configuring Grafana and default configuration file locations.
+`--config value` overrides the default location where Grafana expects the configuration file. Refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) for more information about configuring Grafana and default configuration file locations.
 
 **Example:**
 
@@ -145,7 +145,7 @@ grafana cli --config "/etc/configuration/" admin reset-admin-password mynewpassw
 
 ## Plugins commands
 
-Grafana CLI allows you to install, upgrade, and manage your Grafana plugins. For more information about installing plugins, refer to [plugins page](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/).
+Grafana CLI allows you to install, upgrade, and manage your Grafana plugins. For more information about installing plugins, refer to [plugins page](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/).
 
 All listed commands apply to the Grafana default repositories and directories. You can override the defaults with [Global Options](#global-options).
 
@@ -217,7 +217,7 @@ grafana cli --homepath "/usr/share/grafana" admin reset-admin-password <new pass
 
 If you have not lost the admin password, we recommend that you change the user password either in the User Preferences or in the **Server Admin > User** tab.
 
-If you need to set the password in a script, then you can use the [Grafana User API](https://grafana.com/docs/grafana/v13.2/administration/developers/http_api/user/#change-password).
+If you need to set the password in a script, then you can use the [Grafana User API](https://grafana.com/docs/grafana/v13.3/administration/developers/http_api/user/#change-password).
 
 #### Reset admin password
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/ansible/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/ansible/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/ansible/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/ansible/_index.md)
 
 # Grafana Ansible collection
 
@@ -16,7 +16,7 @@ If your resources aren't currently available in the Grafana Ansible collection, 
 
 ## Learn more
 
-Refer to [Create and manage a Grafana Cloud stack using Ansible](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/ansible/ansible-cloud-stack/) to learn how to create a Grafana Cloud stack and add a data source and dashboard using [Ansible](https://www.ansible.com/).
+Refer to [Create and manage a Grafana Cloud stack using Ansible](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/ansible/ansible-cloud-stack/) to learn how to create a Grafana Cloud stack and add a data source and dashboard using [Ansible](https://www.ansible.com/).
 
 To learn more about managing Grafana with Infrastructure as code:
 

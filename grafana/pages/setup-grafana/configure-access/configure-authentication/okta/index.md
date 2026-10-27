@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/okta/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/okta/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/okta/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/okta/index.md)
 
 # Configure Okta OIDC authentication
 
@@ -6,11 +6,11 @@ There are numerous authentication methods available in Grafana to verify user id
 You can also configure Grafana to automatically update users' roles and team memberships in Grafana based on the information returned by the auth provider integration.
 
 When deciding on an authentication method, it's important to take into account your current identity and access management system as well as the specific authentication and authorization features you require.
-For a complete list of the available authentication options and the features they support, refer to [Configure authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication).
+For a complete list of the available authentication options and the features they support, refer to [Configure authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication).
 
 > **Note**
 >
-> If Users use the same email address in Okta that they use with other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that the users are matched correctly. Please refer to the [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) documentation for more information.
+> If Users use the same email address in Okta that they use with other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that the users are matched correctly. Please refer to the [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) documentation for more information.
 
 ## Before you begin
 
@@ -136,7 +136,7 @@ Go to [Terraform Registry](https://registry.terraform.io/providers/grafana/grafa
 
 ## Configure Okta authentication client using the Grafana configuration file
 
-Ensure that you have access to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location).
+Ensure that you have access to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location).
 
 ### Steps
 
@@ -237,17 +237,17 @@ scopes = openid profile email groups
 
 The user's role is retrieved using a [JMESPath](http://jmespath.org/examples.html) expression from the `role_attribute_path` configuration option against the `api_url` (`/userinfo` OIDC endpoint) endpoint payload.
 
-If no valid role is found, the user is assigned the role specified by [the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#auto_assign_org_role).
+If no valid role is found, the user is assigned the role specified by [the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#auto_assign_org_role).
 You can disable this default role assignment by setting `role_attribute_strict = true`. This setting denies user access if no role or an invalid role is returned after evaluating the `role_attribute_path` and the `org_mapping` expressions.
 
 You can use the `org_attribute_path` and `org_mapping` configuration options to assign the user to organizations and specify their role. For more information, refer to [Org roles mapping example](#org-roles-mapping-example). If both org role mapping (`org_mapping`) and the regular role mapping (`role_attribute_path`) are specified, then the user will get the highest of the two mapped roles.
 
 To allow mapping Grafana server administrator role, use the `allow_assign_grafana_admin` configuration option.
-Refer to [configuration options](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/#configuration-options) for more information.
+Refer to [configuration options](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/#configuration-options) for more information.
 
 In [Create an Okta app](#create-an-okta-app), you created a custom attribute in Okta to store the role. You can use this attribute to map the role to a Grafana role by setting the `role_attribute_path` configuration option to the custom attribute name: `role_attribute_path = grafana_role`.
 
-If you want to map the role based on the user's group, you can use the `groups` attribute from the user info endpoint. An example of this is `role_attribute_path = contains(groups[*], 'Example::DevOps') && 'Admin' || 'None'`. You can find more examples of JMESPath expressions on the Generic OAuth page for [JMESPath examples](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/#role-mapping-examples).
+If you want to map the role based on the user's group, you can use the `groups` attribute from the user info endpoint. An example of this is `role_attribute_path = contains(groups[*], 'Example::DevOps') && 'Admin' || 'None'`. You can find more examples of JMESPath expressions on the Generic OAuth page for [JMESPath examples](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/#role-mapping-examples).
 
 To learn about adding custom claims to the user info in Okta, refer to [add custom claims](https://developer.okta.com/docs/guides/customize-tokens-returned-from-okta/main/#add-a-custom-claim-to-a-token).
 
@@ -270,7 +270,7 @@ org_mapping = ["Group 1:org_foo:Viewer", "Group 2:org_bar:Editor", "*:3:Editor"]
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/products/cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/products/cloud/).
 
 By using Team Sync, you can link your Okta groups to teams within Grafana. This will automatically assign users to the appropriate teams.
 
@@ -279,11 +279,11 @@ the correct teams.
 
 Okta groups can be referenced by group names, like `Admins` or `Editors`.
 
-To learn more about Team Sync, refer to [Configure Team Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/).
+To learn more about Team Sync, refer to [Configure Team Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/).
 
 ## Configuration options
 
-The following table outlines the various Okta OIDC configuration options. You can apply these options as environment variables, similar to any other configuration within Grafana. For more information, refer to [Override configuration with environment variables](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
+The following table outlines the various Okta OIDC configuration options. You can apply these options as environment variables, similar to any other configuration within Grafana. For more information, refer to [Override configuration with environment variables](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
 
 > **Note**
 >

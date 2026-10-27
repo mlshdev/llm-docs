@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/roles-and-permissions/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/roles-and-permissions/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/roles-and-permissions/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/roles-and-permissions/_index.md)
 
 # Roles and permissions
 
@@ -8,7 +8,7 @@ You can assign a user one of three types of permission sets:
 
 - **Grafana server administrator permissions** to manage Grafana server-wide settings and resources.
 - **Organization permissions** to manage access to dashboards, alerts, plugins, teams, playlists, and other resources for an entire organization. The available roles are Viewer, Editor, and Admin.
-- **Dashboard and folder permissions** to manage access to dashboards and folders. For a detailed explanation of how folders work as the primary permission boundary, refer to [Folder access control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/folder-access-control/).
+- **Dashboard and folder permissions** to manage access to dashboards and folders. For a detailed explanation of how folders work as the primary permission boundary, refer to [Folder access control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/folder-access-control/).
 
 > **Note**
 >
@@ -28,7 +28,7 @@ A server administrator can perform the following tasks:
 
 - Manage users and permissions
 - Create, edit, and delete organizations
-- View server-wide settings defined in the [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) file
+- View server-wide settings defined in the [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) file
 - View Grafana server statistics, including total users and active sessions
 - Upgrade the server to Grafana Enterprise.
 
@@ -36,7 +36,7 @@ A server administrator can perform the following tasks:
 >
 > The server administrator (Grafana Admin) role does not exist in Grafana Cloud.
 
-To assign or remove server administrator privileges, see [Server user management](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/assign-remove-server-admin-privileges/).
+To assign or remove server administrator privileges, see [Server user management](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/assign-remove-server-admin-privileges/).
 
 ## Organization users and permissions
 
@@ -56,7 +56,7 @@ Permissions assigned to a user within an organization control the extent to whic
 - Library panels
 - Service accounts
 
-For more information about managing organization users, refer to [User management](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-org-users/).
+For more information about managing organization users, refer to [User management](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-org-users/).
 
 ### Organization roles
 
@@ -64,7 +64,7 @@ For more information about managing organization users, refer to [User managemen
 >
 > If you're using Grafana Cloud, Grafana Support is not authorised to make any organization role changes. Instead, contact your org administrator.
 
-Organization role-based permissions are global, which means that each permission level applies to all Grafana resources within an given organization. For example, an editor can see and update *all* dashboards in an organization, unless those dashboards have been specifically restricted using [dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-dashboard-permissions/).
+Organization role-based permissions are global, which means that each permission level applies to all Grafana resources within an given organization. For example, an editor can see and update *all* dashboards in an organization, unless those dashboards have been specifically restricted using [dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-dashboard-permissions/).
 
 Grafana uses the following roles to control user access:
 
@@ -108,9 +108,9 @@ You can specify the following permissions to dashboards and folders.
 
 > Important: When a user creates a dashboard or folder at the top level, they are automatically granted Admin permissions for it. This does not apply to dashboards within a folder or to subfolders.
 
-For more information about assigning dashboard folder permissions, refer to [Grant dashboard folder permissions](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-dashboard-permissions/#grant-dashboard-folder-permissions).
+For more information about assigning dashboard folder permissions, refer to [Grant dashboard folder permissions](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-dashboard-permissions/#grant-dashboard-folder-permissions).
 
-For more information about assigning dashboard permissions, refer to [Grant dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-dashboard-permissions/#grant-dashboard-permissions).
+For more information about assigning dashboard permissions, refer to [Grant dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-dashboard-permissions/#grant-dashboard-permissions).
 
 ## Teams and permissions
 
@@ -123,13 +123,13 @@ You can assign a team member one of the following permissions:
 
 Because teams exist inside an organization, the organization administrator can manage all teams.
 
-For details on managing teams, see [Team management](https://grafana.com/docs/grafana/v13.2/administration/team-management/).
+For details on managing teams, see [Team management](https://grafana.com/docs/grafana/v13.3/administration/team-management/).
 
 ## Grafana Enterprise user permissions features
 
 While Grafana OSS includes a robust set of permissions and settings that you can use to manage user access to server and organization resources, you might find that you require additional capabilities.
 
-[Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) provides the following permissions-related features:
+[Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) provides the following permissions-related features:
 
 - Data source permissions
 - Role-based access control (RBAC)
@@ -138,13 +138,13 @@ While Grafana OSS includes a robust set of permissions and settings that you can
 
 By default, a user can query any data source in an organization, even if the data source is not linked to the user's dashboards.
 
-Data source permissions enable you to restrict data source query permissions to specific **Users**, **Service Accounts**, **Teams**, and basic roles (**Viewer**, **Editor**, and **Admin**). For more information about assigning data source permissions, refer to [Data source permissions](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#data-source-permissions/).
+Data source permissions enable you to restrict data source query permissions to specific **Users**, **Service Accounts**, **Teams**, and basic roles (**Viewer**, **Editor**, and **Admin**). For more information about assigning data source permissions, refer to [Data source permissions](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#data-source-permissions/).
 
 ### Role-based access control
 
 RBAC provides you a way of granting, changing, and revoking user read and write access to Grafana resources, such as users, reports, and authentication.
 
-For more information about RBAC, refer to [Role-based access control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/).
+For more information about RBAC, refer to [Role-based access control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/).
 
 ### Learn more
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/upgrade-guide/when-to-upgrade/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/upgrade-guide/when-to-upgrade/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/upgrade-guide/when-to-upgrade/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/upgrade-guide/when-to-upgrade/index.md)
 
 # Strategies for upgrading your self-managed Grafana instance
 
@@ -29,8 +29,7 @@ Whether it’s knowing that a bug has been fixed, seeing that a security vulnera
 
 We provide release documentation in multiple places to address different needs:
 
-- [**What’s new**](https://grafana.com/docs/grafana/latest/whatsnew/?pg=blog\&plcmt=body-txt) outlines new features debuting in each major and minor release.
-- [**Breaking changes**](https://grafana.com/docs/grafana/latest/breaking-changes/?pg=blog\&plcmt=body-txt) notify you of updates included in major releases that could impact you and provide mitigation recommendations when needed.
+- [**What’s new**](https://grafana.com/docs/grafana/latest/whatsnew/?pg=blog\&plcmt=body-txt) outlines new features debuting in each major and minor release, along with breaking changes that could impact you and recommendations to mitigate them.
 - [**Upgrade guides**](https://grafana.com/docs/grafana/latest/upgrade-guide/?pg=blog\&plcmt=body-txt) instruct you on how to upgrade to a newer minor or major version.
 - And finally, a [**changelog**](https://github.com/grafana/grafana/blob/main/CHANGELOG.md) is generated for every release (major, minor, patching, security) and outlines all changes included in that release.
 

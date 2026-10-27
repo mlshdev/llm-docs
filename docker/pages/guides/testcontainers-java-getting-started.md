@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/testcontainers-java-getting-started.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/guides/testcontainers-java-getting-started.md)
+> Pinned source for Docker main: [content/guides/testcontainers-java-getting-started.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/guides/testcontainers-java-getting-started.md)
 
 # Getting started with Testcontainers for Java
 

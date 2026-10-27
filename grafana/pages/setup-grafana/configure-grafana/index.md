@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-grafana/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-grafana/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-grafana/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-grafana/_index.md)
 
 # Configure Grafana
 
@@ -8,12 +8,18 @@ Grafana has default and custom configuration files.
 
 You can customize your Grafana instance by modifying the custom configuration file or by using environment variables.
 
-- To see the list of settings for a Grafana instance, refer to [View server settings](https://grafana.com/docs/grafana/v13.2/administration/stats-and-license#view-server-settings).
+- To see the list of settings for a Grafana instance, refer to [View server settings](https://grafana.com/docs/grafana/v13.3/administration/stats-and-license#view-server-settings).
 - After you add custom options, [uncomment](#remove-comments-in-the-ini-files) the relevant sections of the configuration file and restart Grafana for your changes to take effect.
 
 > **Note**
 >
-> For basic configuration provisioning refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning).
+> For basic configuration provisioning refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning).
+
+## Authentication settings stored in the database take precedence
+
+Grafana stores SAML, OAuth, and LDAP settings in its database when you configure them through the [SSO Settings API](https://grafana.com/docs/grafana/v13.3/developers/http_api/sso-settings/), the SAML or OAuth UI, Terraform, or [settings updates at runtime](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/settings-updates-at-runtime/). Stored values override this file, and nothing in the UI or the file says so, which most often surprises people during credential rotation.
+
+If a change to this file appears to have no effect, refer to [Check for stored settings](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/settings-updates-at-runtime/#check-for-stored-settings).
 
 ## Configuration file location
 
@@ -30,7 +36,7 @@ This path is specified in the Grafana init.d script using `--config` option.
 
 ### Docker
 
-Refer to [Configure a Grafana Docker image](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-docker/) for information about environmental variables, persistent storage, and building custom Docker images.
+Refer to [Configure a Grafana Docker image](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-docker/) for information about environmental variables, persistent storage, and building custom Docker images.
 
 ### Windows
 
@@ -143,7 +149,7 @@ The `vault` provider lets manage your secrets with [Hashicorp Vault](https://www
 >
 > The `vault` provider is only available in Grafana Enterprise.
 >
-> For more information, refer to [Integrate Grafana with Hashicorp Vault](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/integrate-with-hashicorp-vault).
+> For more information, refer to [Integrate Grafana with Hashicorp Vault](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/integrate-with-hashicorp-vault).
 
 ## Configuration options
 
@@ -196,13 +202,21 @@ Override log path using the command line argument `cfg:default.paths.logs`:
 
 #### `plugins`
 
-Directory where Grafana automatically scans and looks for plugins. For information about manually or automatically installing plugins, refer to [Install Grafana plugins](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/#install-grafana-plugins).
+Directory where Grafana automatically scans and looks for plugins. For information about manually or automatically installing plugins, refer to [Install Grafana plugins](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/#install-grafana-plugins).
 
 **macOS:** By default, the Mac plugin location is: `/usr/local/var/lib/grafana/plugins`.
 
+#### `bundled_plugins`
+
+Directory where Grafana looks for the plugins that ship with the Grafana distribution, such as the Prometheus and PostgreSQL data sources. Defaults to `data/plugins-bundled`, relative to the Grafana home path.
+
+The Debian and RPM packages install these plugins under `/var/lib/grafana/plugins-bundled` so that Grafana can update them, and the `grafana-server` systemd unit passes a matching `cfg:default.paths.bundled_plugins` argument. If you override this option, or you edit the systemd unit, keep the two values in step. When they disagree, Grafana finds no bundled plugins and the data sources they provide stop working.
+
+Grafana downloads any missing bundled plugin from `grafana.com` on startup, so a mismatch is easy to miss on a host with internet access. On an air-gapped host, this directory decides whether the bundled data sources work at all. For information about installing plugins yourself, refer to [Install Grafana plugins](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/#install-grafana-plugins).
+
 #### `provisioning`
 
-Directory that contains [provisioning](https://grafana.com/docs/grafana/v13.2/administration/provisioning/) configuration files that Grafana applies on startup.
+Directory that contains [provisioning](https://grafana.com/docs/grafana/v13.3/administration/provisioning/) configuration files that Grafana applies on startup.
 Dashboards are reloaded when the JSON files change.
 
 <hr />
@@ -477,7 +491,7 @@ Set to `true` to add metrics and tracing for database queries. The default value
 
 ### `[remote_cache]`
 
-Caches authentication tokens and other temporary authentication-related data in the configured database, Redis, or Memcached. This setting doesn't configure [Query Caching in Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching).
+Caches authentication tokens and other temporary authentication-related data in the configured database, Redis, or Memcached. This setting doesn't configure [Query Caching in Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching).
 
 > **Note**
 >
@@ -763,6 +777,12 @@ When `false`, the HTTP header `X-Frame-Options: deny` is set in Grafana HTTP res
 The main goal is to mitigate the risk of [Clickjacking](https://owasp.org/www-community/attacks/Clickjacking).
 Default is `false`.
 
+#### `asset_sri_checks_enabled`
+
+Set to `true` to enable [Subresource Integrity (SRI)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) checks on Grafana's own JavaScript assets. This helps protect against tampered or poisoned JavaScript assets being served to your users. Default is `false`.
+
+Don't enable this setting if a reverse proxy, CDN, or other network intermediary rewrites the contents of JavaScript responses, because doing so causes the integrity checks to fail and Grafana to stop loading.
+
 #### `strict_transport_security`
 
 Set to `true` if you want to enable HTTP `Strict-Transport-Security` (HSTS) response header. Only use this when HTTPS is enabled in your configuration, or when there is another upstream system that ensures your application does HTTPS (like a frontend load balancer). HSTS tells browsers that the site should only be accessed using HTTPS.
@@ -785,6 +805,10 @@ Set to `true` to enable the HSTS includeSubDomains option. Only applied if `stri
 Set to `false` to disable the X-Content-Type-Options response header. The X-Content-Type-Options response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. The default value is `true`.
 
 #### `x_xss_protection`
+
+> **Warning**
+>
+> This setting will be removed in a future major version. Support for it has been removed by browsers. Consider disabling it in the meantime and using `content_security_policy` instead.
 
 Set to `false` to disable the X-XSS-Protection header, which tells browsers to stop pages from loading when they detect reflected cross-site scripting (XSS) attacks. The default value is `true`.
 
@@ -878,17 +902,19 @@ This also limits the refresh interval options in Explore.
 
 #### `default_home_dashboard_path`
 
-Path to the default home dashboard. If this value is empty, then Grafana uses StaticRootPath + "dashboards/home.json".
+Path to a custom default home dashboard. If this value is empty, Grafana uses the unified homepage.
+
+Grafana no longer ships a bundled `home.json`. Replacing `public/dashboards/home.json` on disk is not supported. If you previously customized home that way, set this option to the path of your JSON file.
 
 The file may contain either a classic dashboard JSON or a Kubernetes-format dashboard resource exported from the `dashboard.grafana.app` API (with top-level `apiVersion`, `kind`, `metadata` and `spec` fields). The Kubernetes-format is required for `v2` dashboard schemas.
 
-> **Note**
->
-> On Linux, Grafana uses `/usr/share/grafana/public/dashboards/home.json` as the default home dashboard location.
-
 #### `default_preload`
 
-Instance-wide default for panel preloading, applied only to dashboards that do not explicitly set the `preload` property in their JSON. When `true`, all panels start loading as soon as the dashboard loads instead of lazy loading as they scroll into view. An explicit `preload` value in the dashboard JSON always takes precedence over this default. Default is `false`.
+The `preload` value given to newly created dashboards. When `true`, a new dashboard starts with all panels loading as soon as it opens, instead of lazy loading them as they scroll into view. Default is `false`.
+
+The value is written into the dashboard when it is created, so authors can change it in dashboard settings afterwards and their choice wins.
+
+This setting only applies to dashboards created after you set it. Existing dashboards keep whatever `preload` value they already have, so turning it on never changes how they behave. It applies to dashboards created in the UI; dashboards created through the API or provisioning use the `preload` value in the payload.
 
 ### `[dashboard_cleanup]`
 
@@ -906,6 +932,14 @@ Number of deleted dashboards to process in each batch during the cleanup process
 Default: `10`, Minimum: `5`, Maximum: `200`.
 
 Increasing this value allows processing more dashboards in each cleanup cycle but may impact system performance.
+
+<hr />
+
+### `[folder]`
+
+#### `deleted_resource_cleanup_interval`
+
+How often the background job deletes resources (alert rules, library panels) whose folder no longer exists. Requires the `deletedFolderResourceCleanup` feature toggle. Default and minimum: `5m`.
 
 <hr />
 
@@ -942,7 +976,7 @@ For SQL data sources (MySql, Postgres, MSSQL) you can override the default maxim
 Set to `false` to prohibit users from being able to sign up or create user accounts.
 Default is `false`.
 A Grafana Admin can still create users.
-For more information about creating a user, refer to [Add a user](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/#add-a-user).
+For more information about creating a user, refer to [Add a user](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/#add-a-user).
 
 #### `allow_org_create`
 
@@ -1000,7 +1034,7 @@ The default is `en-US`.
 
 #### `home_page`
 
-Path to a custom home page. Users are only redirected to this if the default home dashboard is used. It should match a frontend route and contain a leading slash.
+Path to a custom home page. Users are only redirected to this when no home dashboard UID is configured. It should match a frontend route and contain a leading slash.
 
 #### `External user management`
 
@@ -1012,7 +1046,7 @@ If you manage users externally you can replace the user invite button for organi
 >
 > This option is deprecated - assign your viewers as editors, if you are using RBAC assign the data sources explorer role to your users.
 
-Viewers can access and use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) and perform temporary edits on panels in dashboards they have access to. They cannot save their changes. Default is `false`.
+Viewers can access and use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) and perform temporary edits on panels in dashboards they have access to. They cannot save their changes. Default is `false`.
 
 #### `user_invite_max_lifetime_duration`
 
@@ -1038,9 +1072,19 @@ This is a comma-separated list of usernames. Users specified here are hidden in 
 
 <hr>
 
+### `[service_accounts]`
+
+#### `token_expiration_day_limit`
+
+The maximum number of days a new service account token can be valid for. When set, Grafana rejects new tokens that have no expiration date or that expire later than this limit. Existing tokens aren't affected. By default, there is no limit.
+
+For more information, refer to [Service account token expiration dates](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/#service-account-token-expiration-dates).
+
+<hr>
+
 ### `[auth]`
 
-Grafana provides many ways to authenticate users. Refer to the Grafana [Authentication overview](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/) and other authentication documentation for detailed instructions on how to set up and configure authentication.
+Grafana provides many ways to authenticate users. Refer to the Grafana [Authentication overview](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/) and other authentication documentation for detailed instructions on how to set up and configure authentication.
 
 #### `login_cookie_name`
 
@@ -1101,9 +1145,13 @@ A custom error message for when users are unauthorized. Default is a key for an 
 
 Minimum wait time in milliseconds for the server lock retry mechanism. Default is `1000` (milliseconds). The server lock retry mechanism is used to prevent multiple Grafana instances from simultaneously refreshing OAuth tokens. This mechanism waits at least this amount of time before retrying to acquire the server lock.
 
-There are five retries in total, so with the default value, the total wait time (for acquiring the lock) is at least 5 seconds (the wait time between retries is calculated as random(n, n + 500)), which means that the maximum token refresh duration must be less than 5-6 seconds.
+The wait time between retries is calculated as `random(n, n * 1.5)`. Values below `100` are treated as `100`. Retries stop once [`oauth_refresh_token_server_lock_wait_budget_ms`](#oauthrefreshtokenserverlockwaitbudgetms) is spent. A lower value lets a request continue sooner after another instance finishes refreshing the token, at the cost of more lock checks while it waits.
 
-If you experience issues with the OAuth token refresh mechanism, you can increase this value to allow more time for the token refresh to complete.
+#### `oauth_refresh_token_server_lock_wait_budget_ms`
+
+Maximum total time in milliseconds that a request waits to acquire the OAuth token refresh server lock. Default is `5000` (milliseconds). If the lock is still held by another instance when the budget is spent, the request fails.
+
+If you experience issues with the OAuth token refresh mechanism, for example because your identity provider is slow to refresh tokens, you can increase this value to allow more time for the token refresh to complete.
 
 #### `oauth_skip_org_role_update_sync`
 
@@ -1245,25 +1293,25 @@ Set to `true` to enable the use of managed service accounts for plugin authentic
 
 ### `[auth.anonymous]`
 
-Refer to [Anonymous authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/grafana/#anonymous-authentication) for detailed instructions.
+Refer to [Anonymous authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/grafana/#anonymous-authentication) for detailed instructions.
 
 <hr />
 
 ### `[auth.github]`
 
-Refer to [GitHub OAuth2 authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/github/) for detailed instructions.
+Refer to [GitHub OAuth2 authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/github/) for detailed instructions.
 
 <hr />
 
 ### `[auth.gitlab]`
 
-Refer to [GitLab OAuth 2.0 authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/gitlab/) for detailed instructions.
+Refer to [GitLab OAuth 2.0 authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/gitlab/) for detailed instructions.
 
 <hr />
 
 ### `[auth.google]`
 
-Refer to [Google OAuth2 authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/google/) for detailed instructions.
+Refer to [Google OAuth2 authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/google/) for detailed instructions.
 
 <hr />
 
@@ -1281,37 +1329,37 @@ Legacy key names, still in the configuration file so they work in environment va
 
 ### `[auth.azuread]`
 
-Refer to [Entra ID OAuth2 authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/) for detailed instructions.
+Refer to [Entra ID OAuth2 authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/azuread/) for detailed instructions.
 
 <hr />
 
 ### `[auth.okta]`
 
-Refer to [Okta OAuth2 authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/okta/) for detailed instructions.
+Refer to [Okta OAuth2 authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/okta/) for detailed instructions.
 
 <hr />
 
 ### `[auth.generic_oauth]`
 
-Refer to [Generic OAuth authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/) for detailed instructions.
+Refer to [Generic OAuth authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/) for detailed instructions.
 
 <hr />
 
 ### `[auth.basic]`
 
-Refer to [Basic authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/#basic-authentication) for detailed instructions.
+Refer to [Basic authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/#basic-authentication) for detailed instructions.
 
 <hr />
 
 ### `[auth.proxy]`
 
-Refer to [Auth proxy authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/auth-proxy/) for detailed instructions.
+Refer to [Auth proxy authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/auth-proxy/) for detailed instructions.
 
 <hr />
 
 ### `[auth.ldap]`
 
-Refer to [LDAP authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/ldap/) for detailed instructions.
+Refer to [LDAP authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/ldap/) for detailed instructions.
 
 ### `[aws]`
 
@@ -1474,7 +1522,7 @@ Disabled by default, needs to be explicitly enabled.
 
 ### `[auth.jwt]`
 
-Refer to [JWT authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/jwt/) for more information.
+Refer to [JWT authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/jwt/) for more information.
 
 <hr />
 
@@ -1709,6 +1757,10 @@ Maximum requests accepted per short interval of time for Grafana backend log ing
 
 Enables the bot filter for the Grafana Faro JavaScript agent integration. Default is `false`. When enabled, it will filter out requests from known bots and crawlers.
 
+#### `track_resources`
+
+Controls which resource timings the Grafana Faro JavaScript agent tracks. Leave empty, the default, to track only `fetch` and `xhr` resource timings. Set to `true` to track all resources, including images, stylesheets, and fonts. Set to `false` to track no resource timings at all.
+
 <hr>
 
 ### `[quota]`
@@ -1779,7 +1831,7 @@ Limit the number of query evaluation results per alert rule. If the condition qu
 
 ### `[unified_alerting]`
 
-For more information about the Grafana alerts, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+For more information about the Grafana alerts, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 #### `enabled`
 
@@ -1831,7 +1883,7 @@ or a list of comma-separated addresses if using Redis Cluster/Sentinel.
 
 > **Note**
 >
-> For more information on Redis, refer to [Enable alerting high availability using Redis](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-high-availability/#enable-alerting-high-availability-using-redis).
+> For more information on Redis, refer to [Enable alerting high availability using Redis](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-high-availability/#enable-alerting-high-availability-using-redis).
 
 #### `ha_redis_cluster_mode_enabled`
 
@@ -1960,7 +2012,7 @@ Enable single-node evaluation mode for alerting in high availability. When enabl
 
 Requires high availability clustering to be configured (either Memberlist or Redis).
 
-For more information, refer to [Single-node evaluation mode](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-high-availability/#single-node-evaluation-mode).
+For more information, refer to [Single-node evaluation mode](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-high-availability/#single-node-evaluation-mode).
 
 #### `ha_single_evaluation_alert_broadcast_queue_size`
 
@@ -2052,7 +2104,7 @@ The default value is `false`.
 
 ### `[unified_alerting.screenshots]`
 
-For more information about screenshots, refer to [Images in notifications](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/images-in-notifications/).
+For more information about screenshots, refer to [Images in notifications](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/images-in-notifications/).
 
 #### `capture`
 
@@ -2064,6 +2116,11 @@ For more information, refer to [`[rendering]`](#rendering).
 
 The timeout for capturing screenshots. If a screenshot cannot be captured within the timeout then the notification is sent without a screenshot.
 The maximum duration is 30 seconds. This timeout should be less than the minimum Interval of all Evaluation Groups to avoid back pressure on alert rule evaluation.
+
+#### `include_alert_history`
+
+Include alert state-history annotations in screenshots. The default is `true`.
+Set this option to `false` to skip fetching alert state-history annotations. Manual annotations remain included.
 
 #### `max_concurrent_screenshots`
 
@@ -2091,7 +2148,7 @@ For example: `disabled_labels=grafana_folder`
 
 ### `[unified_alerting.state_history]`
 
-This section configures where Grafana Alerting writes alert state history. Refer to [Configure alert state history](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alert-state-history/) for end-to-end setup and examples.
+This section configures where Grafana Alerting writes alert state history. Refer to [Configure alert state history](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alert-state-history/) for end-to-end setup and examples.
 
 #### `enabled `
 
@@ -2143,7 +2200,7 @@ Configures max number of alert annotations that Grafana stores. Default value is
 
 ### `[unified_alerting.prometheus_conversion]`
 
-This section applies only to rules imported as Grafana-managed rules. For more information about the import process, refer to [Import data source-managed rules to Grafana-managed rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/alerting-migration/).
+This section applies only to rules imported as Grafana-managed rules. For more information about the import process, refer to [Import data source-managed rules to Grafana-managed rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/alerting-migration/).
 
 #### `rule_query_offset`
 
@@ -2156,6 +2213,18 @@ Set the default data source UID to use for query execution when importing Promet
 #### `max_request_body_bytes`
 
 Set the maximum allowed request body size in bytes for Prometheus conversion API POST endpoints. This limits the size of rule group and Alertmanager configuration payloads that can be imported. Set to `0` to disable the limit. The default value is `52428800` (50 MB).
+
+<hr>
+
+### `[recording_rules]`
+
+#### `max_write_batch_size`
+
+Set the maximum size, in bytes (estimated from label names and values), of a single recording rule write request. Grafana splits larger payloads into several requests sent in parallel, so a failure can leave a partial write. The default value of `0` disables splitting. Any other value must be at least `65536` (64 KiB).
+
+#### `max_write_concurrency`
+
+Set the maximum number of requests of a split recording rule write that may be in flight at once. This setting has no effect unless `max_write_batch_size` is set. The default value of `0` uses the client default. The value must be between `0` and `32`.
 
 <hr>
 
@@ -2199,7 +2268,7 @@ Configures max number of API annotations that Grafana keeps. Default value is 0,
 
 ### `[explore]`
 
-For more information about this feature, refer to [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
+For more information about this feature, refer to [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
 
 #### `enabled`
 
@@ -2272,7 +2341,7 @@ A negative value such as `-1` disables expiry.
 
 ### `[metrics]`
 
-For detailed instructions, refer to [Internal Grafana metrics](https://grafana.com/docs/grafana/v13.2/setup-grafana/set-up-grafana-monitoring/).
+For detailed instructions, refer to [Internal Grafana metrics](https://grafana.com/docs/grafana/v13.3/setup-grafana/set-up-grafana-monitoring/).
 
 #### `enabled`
 
@@ -2713,11 +2782,51 @@ Default is `false`.
 
 Set to `true` if you want to test alpha plugins that are not yet ready for general usage. Default is `false`.
 
+#### `enable_local_plugin_auth`
+
+Set to `false` to stop Grafana from signing access tokens for the backend plugins it starts when no external plugin token signer is configured.
+Default is `true`.
+Local signing also requires the `appplugins.loadAppManifest` feature toggle, which is off by default.
+
+With local signing, Grafana passes each plugin process the public key that verifies Grafana's requests, and gives app plugins with an app manifest credentials to call the Grafana API.
+When you set this to `false`, plugins get neither, and the Grafana API doesn't accept locally signed plugin tokens.
+Plugins that verify requests then reject requests from Grafana, unless they skip authentication for local development.
+
+#### `local_api_url`
+
+The URL that app plugins started by this Grafana process use to call the Grafana API and to get access tokens for it.
+Grafana uses this setting only when no external plugin token signer is configured.
+That's when neither `v3_cap_token` nor `v3_token_exchange_url` is set in `[plugins]`, `jwks_url` isn't set in `[auth.extended_jwt]`, and neither the `GRAFANA_JWKS` nor the `GRAFANA_JWKS_URL` environment variable is set.
+Default is empty.
+
+When it's empty, Grafana derives a loopback URL, such as `http://127.0.0.1:3000`, from `[server]` settings.
+This works when `protocol` is `http`, `http_addr` is empty, a loopback address, or all interfaces, and `http_port` is a fixed port.
+If `serve_from_sub_path` is `true`, the URL includes the sub-path from `root_url`.
+
+Set `local_api_url` when Grafana can't derive the URL, for example when it serves HTTPS, listens on a socket or a specific address, or has `enforce_domain` enabled.
+The URL must reach this Grafana process directly, not a load balancer, because each Grafana process signs its own tokens.
+Include the port and any sub-path.
+
+The following example sets the URL for a Grafana process that serves HTTPS on an internal host name:
+
+```ini
+[plugins]
+local_api_url = https://<GRAFANA_HOST>:8443/grafana
+```
+
+Replace *`<GRAFANA_HOST>`* with a host name that resolves to this Grafana process and matches its TLS certificate.
+If `enforce_domain` is enabled, the host must match `[server] domain`.
+
+Grafana doesn't start if `local_api_url` is invalid.
+If it's empty and Grafana can't derive a URL, Grafana logs a warning and app plugins can't call its API.
+The same happens if `[auth.extended_jwt] audiences` doesn't include `grafana`, which it does by default.
+Grafana still authenticates its own requests to plugins.
+
 #### `allow_loading_unsigned_plugins`
 
 Enter a comma-separated list of plugin identifiers to identify plugins to load even if they are unsigned. Plugins with modified signatures are never loaded.
 
-We do *not* recommend using this option. For more information, refer to [Plugin signatures](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/#plugin-signatures).
+We do *not* recommend using this option. For more information, refer to [Plugin signatures](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/#plugin-signatures).
 
 #### `plugin_admin_enabled`
 
@@ -2725,7 +2834,7 @@ Available to Grafana administrators only, enables installing, uninstalling, and 
 Set to `true` by default.
 Setting it to `false` hides the controls.
 
-For more information, refer to [Plugin catalog](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/#access-the-plugin-catalog).
+For more information, refer to [Plugin catalog](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/#access-the-plugin-catalog).
 
 #### `plugin_admin_external_manage_enabled`
 
@@ -2793,12 +2902,20 @@ To prevent automatic updates for specific plugins, pin them to a specific versio
 
 <hr>
 
-### `[marketplace]`
+### `[plugins_marketplace]`
 
 #### `license_directory`
 
 Directory containing Marketplace license files for plugins. Name each file `license-<PLUGIN_ID>.jwt`.
 Defaults to the Grafana data path, alongside the default Enterprise `license.jwt` file.
+
+#### `renewal_enabled`
+
+Available in Grafana Enterprise and Grafana Pro.
+
+Controls periodic renewal of persisted Marketplace plugin licenses. The default is `true`.
+
+Set this option to `false` to disable automatic renewal network requests.
 
 <hr>
 
@@ -2808,7 +2925,7 @@ Defaults to the Grafana data path, alongside the default Enterprise `license.jwt
 
 The `max_connections` option specifies the maximum number of connections to the Grafana Live WebSocket endpoint per Grafana server instance. Default is `100`.
 
-Refer to [Grafana Live configuration documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/set-up-grafana-live/) if you specify a number higher than default since this can require some operating system and infrastructure tuning.
+Refer to [Grafana Live configuration documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/set-up-grafana-live/) if you specify a number higher than default since this can require some operating system and infrastructure tuning.
 
 0 disables Grafana Live, -1 means unlimited connections.
 
@@ -2833,7 +2950,7 @@ allowed_origins = "https://*.example.com"
 
 The high availability (HA) engine name for Grafana Live. By default, it's not set. The only possible value is `redis`.
 
-For more information, refer to the [Configure Grafana Live HA setup](https://grafana.com/docs/grafana/v13.2/setup-grafana/set-up-grafana-live/#configure-grafana-live-ha-setup).
+For more information, refer to the [Configure Grafana Live HA setup](https://grafana.com/docs/grafana/v13.3/setup-grafana/set-up-grafana-live/#configure-grafana-live-ha-setup).
 
 #### `ha_engine_address`
 
@@ -2872,6 +2989,8 @@ Whether image rendering is allowed for dashboard previews. Requires the image re
 
 Whether to allow `http://` repository URLs together with a configured token. Because this sends the token in cleartext on every Git operation, it's rejected by default. Intended for local and development use only. It's also implicitly allowed when `app_mode = development`. Default is `false`.
 
+It also allows `http://` authorization and token endpoints on `gitOAuth` connections, which sends the OAuth client secret and tokens in cleartext.
+
 #### `allowed_git_urls`
 
 While public addresses are always allowed, to prevent server-side request forgery (SSRF), repository URLs that resolve to loopback, private (RFC 1918), link-local, or unspecified addresses are rejected by default.
@@ -2889,6 +3008,12 @@ The minimum sync interval that you can set for a repository. Indicates how often
 List of enabled repository types, separated by `|`. When empty, defaults are applied by each subsystem.
 
 Supported types: `local`, `git`, `github`. Grafana Enterprise additionally supports `bitbucket` and `gitlab`.
+
+#### `connection_types`
+
+List of enabled connection types, separated by `|`. When empty, defaults are applied by each subsystem.
+
+Supported types: `github`, `githubOAuth`, and `gitOAuth`. Grafana Enterprise additionally supports `githubEnterprise`, `githubEnterpriseOAuth`, `bitbucketOAuth`, and `gitlabOAuth`.
 
 #### `max_repositories`
 
@@ -2935,15 +3060,17 @@ Properties described in this section are available for all plugins, but you must
 
 If `true`, propagate the tracing context to the plugin backend and enable tracing (if the backend supports it).
 
-### `as_external`
+#### `as_external`
 
-Load an external version of a core plugin if it has been installed.
+If `true`, load the standalone (external) version of a core plugin instead of the core version.
+For most plugins this requires the standalone plugin to be installed. Some plugins, such as
+[canvas](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/canvas/), default to `true` and are bundled with Grafana.
 
 <hr>
 
 ### `[plugin.grafana-image-renderer]`
 
-For more information, refer to [Image rendering](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/).
+For more information, refer to [Image rendering](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/).
 
 #### `rendering_timezone`
 
@@ -3050,7 +3177,7 @@ Change the listening port of the gRPC server. Default port is `0` and uses a por
 
 ### `[enterprise]`
 
-For more information about Grafana Enterprise, refer to [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/).
+For more information about Grafana Enterprise, refer to [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/).
 
 <hr>
 
@@ -3118,7 +3245,7 @@ This section controls system-wide defaults for the time picker, such as the defa
 
 Set the default set of quick relative offset time ranges that show up in the right column of the time picker. Each configuration entry must have a `from`, `to`, and `display` field. Any configuration for this field must be in valid JSON format made up of a list of quick range configurations.
 
-The `from` and `to` fields should be valid relative time ranges. For more information the relative time formats, refer to [Time units and relative ranges.](https://grafana.com/docs/grafana/v13.2/dashboards/use-dashboards/#time-units-and-relative-ranges). The `from` field is required, but omitting `to` will result in the `from` value being used in both fields.
+The `from` and `to` fields should be valid relative time ranges. For more information the relative time formats, refer to [Time units and relative ranges.](https://grafana.com/docs/grafana/v13.3/dashboards/use-dashboards/#time-units-and-relative-ranges). The `from` field is required, but omitting `to` will result in the `from` value being used in both fields.
 
 If no configuration is provided, the default time ranges will be used.
 
@@ -3187,7 +3314,7 @@ Set this to `false` to disable loading other custom base maps and hide them in t
 
 ### `[rbac]`
 
-Refer to [Role-based access control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/) for more information.
+Refer to [Role-based access control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/) for more information.
 
 #### `plugins_cleanup`
 
@@ -3212,7 +3339,7 @@ Format: `<pageUrl> = <sectionId> <sortWeight>`
 
 ### `[public_dashboards]`
 
-This section configures the [shared dashboards](https://grafana.com/docs/grafana/v13.2/dashboards/share-dashboards-panels/shared-dashboards/) feature.
+This section configures the [shared dashboards](https://grafana.com/docs/grafana/v13.3/dashboards/share-dashboards-panels/shared-dashboards/) feature.
 
 #### `enabled`
 

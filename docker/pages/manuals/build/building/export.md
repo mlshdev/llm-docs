@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/export.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/build/building/export.md)
+> Pinned source for Docker main: [content/manuals/build/building/export.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/build/building/export.md)
 
 Did you know that you can use Docker to build your application to standalone
 binaries? Sometimes, you don’t want to package and distribute your application

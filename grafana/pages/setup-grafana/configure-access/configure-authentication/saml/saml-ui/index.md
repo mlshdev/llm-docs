@@ -1,12 +1,12 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/saml-ui/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/saml/saml-ui/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/saml-ui/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/saml/saml-ui/_index.md)
 
 # Configure SAML authentication using the Grafana user interface
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) version 10.0 and later, and to customers on select Grafana Cloud plans. For pricing information, visit [Pricing](https://grafana.com/pricing/) or contact our sales team.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) version 10.0 and later, and to customers on select Grafana Cloud plans. For pricing information, visit [Pricing](https://grafana.com/pricing/) or contact our sales team.
 
-You can configure SAML authentication in Grafana using the configuration file, Terraform, the API, or the UI. Refer to [Set up options for SAML authentication in Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml#set-up-options-for-saml-authentication-in-grafana) for more details. Configuration in the API or UI takes precedence over the configuration in the Grafana configuration file. For more information on how Grafana determines the order of precedence for its settings, refer to the [SSO Settings API](https://grafana.com/docs/grafana/v13.2/developers/http_api/sso-settings/).
+You can configure SAML authentication in Grafana using the configuration file, Terraform, the API, or the UI. Refer to [Set up options for SAML authentication in Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml#set-up-options-for-saml-authentication-in-grafana) for more details. Configuration in the API or UI takes precedence over the configuration in the Grafana configuration file. For more information on how Grafana determines the order of precedence for its settings, refer to the [SSO Settings API](https://grafana.com/docs/grafana/v13.3/developers/http_api/sso-settings/).
 
 The Grafana SAML UI provides the following advantages over configuring SAML in the Grafana configuration file:
 
@@ -21,9 +21,9 @@ To configure SAML authentication from the UI, sign in to Grafana and navigate to
 
 To follow this guide, you need:
 
-- Knowledge of SAML authentication. Refer to [SAML authentication in Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/) for an overview of the SAML integration in Grafana.
+- Knowledge of SAML authentication. Refer to [SAML authentication in Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/) for an overview of the SAML integration in Grafana.
 - Permissions `settings:read` and `settings:write` with scope `settings:auth.saml:*` that allow you to read and update SAML authentication settings, which are granted by `fixed:authentication.config:writer` role. By default, this role is granted to Grafana server administrator in self-hosted instances and to Organization admins in Grafana Cloud instances.
-- A Grafana instance running Grafana version 10.0 or later with [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/), or a select Grafana Cloud account.
+- A Grafana instance running Grafana version 10.0 or later with [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/), or a select Grafana Cloud account.
 
 ## General Settings
 
@@ -31,8 +31,8 @@ Complete the **General settings** fields:
 
 - **Allow signup:** If enabled, you can create users through SAML login. If it's disabled, only existing Grafana users can log in with SAML.
 - **Auto login:** If enabled, Grafana automatically logs in with SAML, skipping the login screen.
-- **Single logout:** The SAML single logout feature enables users to log out from all applications associated with the current IdP session established using SAML SSO. For more information, refer to [SAML single logout documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-single-logout/).
-- **Identity provider initiated login:** Enables users to log in to Grafana directly from the SAML IdP. For more information, refer to [IdP initiated login documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/#idp-initiated-single-sign-on-sso).
+- **Single logout:** The SAML single logout feature enables users to log out from all applications associated with the current IdP session established using SAML SSO. For more information, refer to [SAML single logout documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-single-logout/).
+- **Identity provider initiated login:** Enables users to log in to Grafana directly from the SAML IdP. For more information, refer to [IdP initiated login documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/#idp-initiated-single-sign-on-sso).
 
 ## Sign Requests
 
@@ -44,7 +44,7 @@ If you select to sign them:
 
   Use the [PKCS #8](https://en.wikipedia.org/wiki/PKCS_8) format to issue the private key.
 
-  For more information, refer to an [example on how to generate SAML credentials](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-signing-encryption/#example-of-private-key-generation-for-saml-authentication).
+  For more information, refer to an [example on how to generate SAML credentials](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-signing-encryption/#example-of-private-key-generation-for-saml-authentication).
 
   Alternatively, you can generate a new private key and certificate pair directly from the UI. Click the `Generate key and certificate` button to open a form where you provide information to embed in the new certificate.
 
@@ -71,9 +71,9 @@ Finish configuring Grafana using IdP data:
 
 ### Assertion mapping
 
-If you want to [map user information from SAML assertions](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml#assertion-mapping), complete the **Assertion attributes mappings** section.
+If you want to [map user information from SAML assertions](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml#assertion-mapping), complete the **Assertion attributes mappings** section.
 
-- To use team sync you need to configure the **Groups attribute** field. Team sync automatically maps users to Grafana teams based on their SAML group membership. Learn more about [team sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/) and [configuring team sync for SAML](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/#configure-team-sync).
+- To use team sync you need to configure the **Groups attribute** field. Team sync automatically maps users to Grafana teams based on their SAML group membership. Learn more about [team sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/) and [configuring team sync for SAML](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/#configure-team-sync).
 
 ### Role mapping
 
@@ -81,7 +81,7 @@ If you want to automatically assign users' roles based on their SAML roles, comp
 
 First, you need to configure the **Role attribute** field to specify which SAML attribute should be used to retrieve SAML role information. Then enter the SAML roles that you want to map to Grafana roles in **Role mapping** section. If you want to map multiple SAML roles to a Grafana role, separate them by a comma and a space. For example, `Editor: editor, developer`.
 
-Role mapping automatically updates user's [basic role](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/#basic-roles) based on their SAML roles every time the user logs in to Grafana. Learn more about [SAML role synchronization](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/#configure-role-sync).
+Role mapping automatically updates user's [basic role](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/#basic-roles) based on their SAML roles every time the user logs in to Grafana. Learn more about [SAML role synchronization](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/#configure-role-sync).
 
 ### Mapping with Entra ID
 
@@ -119,7 +119,7 @@ First, you need to configure the **Org attribute** field to specify which SAML a
 Now fill in the **Org mapping** field with mappings from SAML organization to Grafana organization. For example, `Org mapping: Engineering:2, Sales:2` will map users who belong to `Engineering` or `Sales` organizations in SAML to Grafana organization with ID 2.
 If you want users to have different roles in different organizations, you can additionally specify a role. For example, `Org mapping: Engineering:2:Editor` will map users who belong to `Engineering` organizations in SAML to Grafana organization with ID 2 and assign them Editor role.
 
-Organization mapping automatically updates user's organization memberships (and roles, if they've been configured) based on their SAML organization every time the user logs in to Grafana. Learn more about [SAML organization mapping](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-org-mapping/).
+Organization mapping automatically updates user's organization memberships (and roles, if they've been configured) based on their SAML organization every time the user logs in to Grafana. Learn more about [SAML organization mapping](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-org-mapping/).
 
 If you want to limit the access to Grafana based on user's SAML organization membership, fill in the **Allowed organizations** field.
 

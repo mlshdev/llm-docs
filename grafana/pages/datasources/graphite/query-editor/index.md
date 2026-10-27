@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/graphite/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/graphite/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/graphite/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/graphite/query-editor/index.md)
 
 # Graphite query editor
 
@@ -6,7 +6,7 @@ Grafana includes a Graphite-specific query editor to help you build queries.
 The query editor helps you quickly navigate the metric space, add functions, and change function parameters.
 It supports a variety of Graphite queries, including complex nested queries, through the use of query references.
 
-For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 ## Query editor elements
 
@@ -171,9 +171,9 @@ sumSeries(#A)
 
 ## Apply annotations
 
-[Annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) overlay rich event information on top of graphs. Graphite supports two ways to query annotations: a regular metric query and a Graphite events query.
+[Annotations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/) overlay rich event information on top of graphs. Graphite supports two ways to query annotations: a regular metric query and a Graphite events query.
 
-For details on both modes, example queries, and how to create events in Graphite, refer to [Graphite annotations](https://grafana.com/docs/grafana/v13.2/datasources/graphite/annotations/).
+For details on both modes, example queries, and how to create events in Graphite, refer to [Graphite annotations](https://grafana.com/docs/grafana/v13.3/datasources/graphite/annotations/).
 
 ## Integration with Loki
 

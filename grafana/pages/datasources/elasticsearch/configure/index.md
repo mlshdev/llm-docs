@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/elasticsearch/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/elasticsearch/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/elasticsearch/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/elasticsearch/configure/index.md)
 
 # Configure the Elasticsearch data source
 
-Grafana ships with the Elasticsearch data source preinstalled. You can create a variety of queries to visualize logs or metrics stored in Elasticsearch, and annotate graphs with log events stored in Elasticsearch. For details about updating the standalone plugin, refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/#plugin-updates).
+Grafana ships with the Elasticsearch data source preinstalled. You can create a variety of queries to visualize logs or metrics stored in Elasticsearch, and annotate graphs with log events stored in Elasticsearch. For details about updating the standalone plugin, refer to [Plugin updates](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/#plugin-updates).
 
-For instructions on how to add a data source to Grafana, refer to the [administration documentation](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+For instructions on how to add a data source to Grafana, refer to the [administration documentation](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 Administrators can also [configure the data source via YAML](#provision-the-data-source) with the Grafana provisioning system.
 
 ## Before you begin
@@ -84,7 +84,7 @@ If you still connect the Grafana Elasticsearch data source to a domain that requ
 
 For details on AWS SigV4, refer to the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 
-To sign requests, enable SigV4 in the Grafana [configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#sigv4_auth_enabled). After SigV4 is enabled, configure it on the Elasticsearch data source configuration page. For more information about AWS authentication options, refer to [AWS authentication](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/).
+To sign requests, enable SigV4 in the Grafana [configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#sigv4_auth_enabled). After SigV4 is enabled, configure it on the Elasticsearch data source configuration page. For more information about AWS authentication options, refer to [AWS authentication](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/).
 
 ![](https://grafana.com/static/img/docs/v73/elasticsearch-sigv4-config-editor.png)
 
@@ -162,7 +162,7 @@ For example, set this to `1m` if Elasticsearch writes data every minute.
 
 You can also override this setting in a dashboard panel under its data source options. The default is `10s`.
 
-- **X-Pack enabled** - Toggle to enable `X-Pack`-specific features and options, which provide the [query editor](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/query-editor/) with additional aggregations, such as `Rate` and `Top Metrics`.
+- **X-Pack enabled** - Toggle to enable `X-Pack`-specific features and options, which provide the [query editor](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/query-editor/) with additional aggregations, such as `Rate` and `Top Metrics`.
 
 - **Include frozen indices** - Toggle on when the `X-Pack enabled` setting is active. Includes frozen indices in searches. You can configure Grafana to include [frozen indices](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/frozen-indices.html) when performing search requests.
 
@@ -176,7 +176,7 @@ Configure which fields the data source uses for log messages and log levels.
 
 - **Message field name** - The field that contains the log message content.
 
-- **Level field name** - The field that contains log level or severity information. When specified, Grafana uses this field to determine the log level and color-code each log line. If the log doesn't have a level field, Grafana tries to match the content against [supported expressions](https://grafana.com/docs/grafana/v13.2/explore/logs-integration/#log-level). If Grafana can't determine the log level, it displays as unknown.
+- **Level field name** - The field that contains log level or severity information. When specified, Grafana uses this field to determine the log level and color-code each log line. If the log doesn't have a level field, Grafana tries to match the content against [supported expressions](https://grafana.com/docs/grafana/v13.3/explore/logs-integration/#log-level). If Grafana can't determine the log level, it displays as unknown.
 
 ### Data links
 
@@ -207,7 +207,7 @@ After you have configured your Elasticsearch data source options, click **Save &
 ## Provision the data source
 
 You can define and configure the data source in YAML files as part of the Grafana provisioning system.
-For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/).
+For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/).
 
 > **Note**
 >

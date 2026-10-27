@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/validate-images.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/build/policies/validate-images.md)
+> Pinned source for Docker main: [content/manuals/build/policies/validate-images.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/build/policies/validate-images.md)
 
 Container images are the most common build inputs. Every `FROM` instruction
 pulls an image, and `COPY --from` references pull additional images. Validating
@@ -328,6 +328,33 @@ decision := {"allow": allow}
 
 The `hasProvenance` field is `true` when the image has provenance or SBOM
 [attestations](https://docs.docker.com/build/metadata/attestations/).
+
+### Check provenance metadata
+
+Use `input.image.provenance` to check how an image was built. For example,
+require provenance that declares a hermetic build with all dependencies
+recorded:
+
+```rego
+package docker
+
+default allow := false
+
+allow if input.local
+
+allow if {
+  input.image.provenance.hermetic == true
+  input.image.provenance.completeness.materials == true
+}
+
+decision := {"allow": allow}
+```
+
+An image with missing fields fails these conditions. Other provenance fields
+include the builder identity, build arguments, and build definition source;
+see the [provenance input reference](https://docs.docker.com/build/policies/inputs/#inputimageprovenance).
+Pair these checks with signature verification when you need to trust the
+attestation's origin.
 
 ## Verify GitHub Actions signatures
 

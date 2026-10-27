@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/deepseek/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/providers/deepseek/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/deepseek/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/providers/deepseek/index.md)
 
 # DeepSeek
 
@@ -29,7 +29,7 @@ The simplest way to use DeepSeek:
 ```yaml
 agents:
   root:
-    model: deepseek/deepseek-chat
+    model: deepseek/deepseek-v4-pro
     description: Assistant using DeepSeek
     instruction: You are a helpful assistant.
 ```
@@ -42,7 +42,7 @@ For more control over parameters:
 models:
   deepseek_model:
     provider: deepseek
-    model: deepseek-chat
+    model: deepseek-v4-pro
     temperature: 0.7
     max_tokens: 8192
 
@@ -59,10 +59,11 @@ DeepSeek exposes a small, vendor-controlled model lineup. Check the
 [DeepSeek models documentation](https://api-docs.deepseek.com/quick_start/pricing)
 for current model IDs, context limits, and pricing.
 
-| Model               | Description                                        |
-| ------------------- | -------------------------------------------------- |
-| `deepseek-chat`     | DeepSeek-V3, general-purpose chat and tool calling |
-| `deepseek-reasoner` | DeepSeek-R1, extended-reasoning model              |
+| Model                          | Description                                                                |
+| ------------------------------ | -------------------------------------------------------------------------- |
+| `deepseek-v4-pro`              | DeepSeek V4 Pro, extended-reasoning model with tool calling                |
+| `deepseek-v4-flash`            | DeepSeek V4 Flash, fast general-purpose model with tool calling            |
+| `deepseek-v4-flash-vision-exp` | DeepSeek V4 Flash Vision (experimental), multimodal model with image input |
 
 > Model IDs are case-sensitive and must be passed exactly as the catalogue lists
 > them.
@@ -80,8 +81,8 @@ DeepSeek is implemented as a built-in alias in Docker Agent:
 ```yaml
 agents:
   coder:
-    model: deepseek/deepseek-chat
-    description: Code assistant using DeepSeek-V3
+    model: deepseek/deepseek-v4-pro
+    description: Code assistant using DeepSeek V4 Pro
     instruction: |
       You are an expert programmer.
       Write clean, well-documented code and follow language best practices.

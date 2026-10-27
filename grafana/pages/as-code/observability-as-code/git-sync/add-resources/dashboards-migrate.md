@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate.md)
 
 # Migrate existing dashboards to Git Sync
 
@@ -6,7 +6,7 @@
 >
 > At the moment Git Sync only manages dashboards and folders. Alerts, data sources, and library panels are **not** supported yet. Refer to [Before you begin](#before-you-begin) for details.
 >
-> To copy a specific dashboard, refer to [Cherry-pick and copy individual dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-copy).
+> To copy a specific dashboard, refer to [Cherry-pick and copy individual dashboards](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources/dashboards-copy).
 
 If you migrate your existing non-provisioned dashboards under Git Sync, dashboards keep their UIDs, so existing links, references, and bookmarks keep working. Because the UID is preserved, Git Sync adopts the resource in place, and you must delete the original resource so Git Sync can take over its UID.
 
@@ -60,7 +60,7 @@ You can export existing dashboards from the terminal or from agentic coding tool
 
 > **Note**
 >
-> For more information, refer to the [`gcx` documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for setup and usage information.
+> For more information refer to the [`gcx` documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/).
 
 To export dashboards with `gcx`, follow these steps:
 
@@ -110,7 +110,7 @@ To export a dashboard as a JSON file it must follow this CRD structure:
 
 The structure includes:
 
-- `apiVersion`: Specifies the API version. Both classic and `v2` JSON models are supported. For more information, refer to [Dashboard JSON model](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/view-dashboard-json-model/).
+- `apiVersion`: Specifies the API version. Both classic and `v2` JSON models are supported. For more information, refer to [Dashboard JSON model](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/view-dashboard-json-model/).
 - `kind`: Identifies the resource type. For example, dashboard.
 - `metadata`: Contains the dashboard identifier `name`, which must match the original dashboard UID so Git Sync can adopt it. You can find the identifier in the dashboard's URL or in the exported JSON.
 - `spec`: Wraps your original dashboard JSON.
@@ -123,7 +123,7 @@ When you delete a dashboard, keep in mind the following:
 
 - You cannot restore deleted resources from the UI.
 - Dashboard version history does not carry over.
-- You need to reapply custom folder permissions. Refer to [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana) for more details.
+- You need to reapply custom folder permissions. Refer to [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-grafana) for more details.
 
 ### Manage migrated folders
 
@@ -154,7 +154,7 @@ To avoid losing unsupported resources, complete these steps for each folder **be
 - Move alert rules and library panels out of the folder **before** you delete the folder, since Git Sync does not recreate alerts or library panels.
 
 1. Delete the original folder. Its dashboards should already be exported to the repository from [Step 1](#step-1-export-the-resources-to-your-repository).
-2. Reapply any custom permissions on the new provisioned folder, as folder permissions don't carry over. Refer to [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana).
+2. Reapply any custom permissions on the new provisioned folder, as folder permissions don't carry over. Refer to [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-grafana).
 
 ### Reuse the original folder's UID
 

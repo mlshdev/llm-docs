@@ -6,35 +6,35 @@
   "title": "Grafana",
   "homepage": "https://grafana.com/docs/grafana/latest/",
   "repository": "grafana/grafana",
-  "tag": "v13.2.4",
-  "releaseId": 411610692,
-  "releasePublishedAt": "2026-10-13T11:41:03Z",
-  "sourceCommit": "af4a33e3786594ad72f72d97e6744010330c2977",
-  "documentCount": 685,
+  "tag": "v13.3.0",
+  "releaseId": 425347741,
+  "releasePublishedAt": "2026-10-27T11:08:50Z",
+  "sourceCommit": "752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a",
+  "documentCount": 677,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 554,
       "documentCount": 0,
-      "sha256": "a5243d783667a21e4599c23ff0e45149197c432c381f2360e607862a034203ff"
+      "sha256": "0c8d983bb06e24c0aab2a15bba3c4dbe77533d14d4c9d38bc8d96e29600e6f97"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8362857,
-      "documentCount": 669,
-      "sha256": "94daaa3b315d78bf95c541e3cc2a5bb5fac4f1a8a463b498375260416cce3a82"
+      "byteLength": 8378755,
+      "documentCount": 662,
+      "sha256": "4e23c0bbfec6d567748356a58d5c35fcdde46ef41beec4ce9634b2e4c09f8812"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 248112,
-      "documentCount": 16,
-      "sha256": "b30490f50ea13c73622be5efe1b09cbb76c7b9103ae726584546fa9a4700a729"
+      "byteLength": 192907,
+      "documentCount": 15,
+      "sha256": "831ddb706e3ca3bcf88c97dfc901e4d2d2f13198ee93b0a2d27a081623c7eca2"
     }
   ],
-  "outputDigest": "a85687b3db077078cd1a056a9e9870fbde344d00b689216fc40f01bf626bd31e",
+  "outputDigest": "63996cf31818ddd2d29204faa483556dd77ba5a522d0ef5a49ce5de82b622420",
   "notes": [
-    "Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against https://grafana.com/docs/grafana/v13.2/.",
+    "Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against https://grafana.com/docs/grafana/v13.3/.",
     "Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.",
     "Hugo shortcodes are expanded to plain Markdown; version placeholders are replaced with the pinned release version.",
     "Content that only exists as a website widget is omitted: `docs/ignore` blocks, the `docs/whats-new` release feed, and shared fragments owned by other Grafana products."

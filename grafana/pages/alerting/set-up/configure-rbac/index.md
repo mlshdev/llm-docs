@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/configure-rbac/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/configure-rbac/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/set-up/configure-rbac/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/set-up/configure-rbac/_index.md)
 
 # Configure RBAC
 
@@ -56,7 +56,7 @@ Permissions for managing Grafana-managed alert rules.
 | Action               | Applicable scope               | Description                                                                                                                                                                                                                                       |
 | -------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `alert.rules:create` | `folders:*`<br>`folders:uid:*` | Create Grafana alert rules in a folder and its subfolders. Combine this permission with `folders:read` in a scope that includes the folder and `datasources:query` in the scope of data sources the user can query.                               |
-| `alert.rules:read`   | `folders:*`<br>`folders:uid:*` | Read Grafana alert rules in a folder and its subfolders. Combine this permission with `folders:read` in a scope that includes the folder.                                                                                                         |
+| `alert.rules:read`   | `folders:*`<br>`folders:uid:*` | Read Grafana alert rules in a folder and its subfolders. Combine this permission with `folders:read` in a scope that includes the folder. To view alert state history, add `datasources:query` in the scope of the data source that records it.   |
 | `alert.rules:write`  | `folders:*`<br>`folders:uid:*` | Update Grafana alert rules in a folder and its subfolders. Combine this permission with `folders:read` in a scope that includes the folder. To allow query modifications add `datasources:query` in the scope of data sources the user can query. |
 | `alert.rules:delete` | `folders:*`<br>`folders:uid:*` | Delete Grafana alert rules in a folder and its subfolders. Combine this permission with `folders:read` in a scope that includes the folder.                                                                                                       |
 

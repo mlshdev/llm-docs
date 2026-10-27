@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/use-dashboards/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/use-dashboards/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/use-dashboards/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/use-dashboards/index.md)
 
 # Use dashboards
 
@@ -17,11 +17,11 @@ Hover your cursor over a number to display information about the dashboard eleme
 
 **Dashboard folder**
 
-Click the dashboard folder name to access the folder and perform other [folder management tasks](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/manage-dashboards/).
+Click the dashboard folder name to access the folder and perform other [folder management tasks](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/manage-dashboards/).
 
 **Dashboard title**
 
-Create your own dashboard titles or have Grafana create them for you using [generative AI features](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
+Create your own dashboard titles or have Grafana create them for you using [generative AI features](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
 
 **Mark as favorite**
 
@@ -29,7 +29,7 @@ Mark the dashboard as one of your favorites to include it in your list of **Star
 
 **Public label**
 
-[Externally shared dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/share-dashboards-panels/shared-dashboards/), it's marked with the **Public** label.
+[Externally shared dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/share-dashboards-panels/shared-dashboards/), it's marked with the **Public** label.
 
 **Grafana Assistant**
 
@@ -41,11 +41,11 @@ Invite new users to join your Grafana organization.
 
 **Variables and filters**
 
-Use [variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) and [filters](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/), to create more interactive and dynamic dashboards.
+Use [variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) and [filters](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/), to create more interactive and dynamic dashboards.
 
 **Dashboard links**
 
-Link to other dashboards, panels, and external websites. Learn more about [dashboard links](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/).
+Link to other dashboards, panels, and external websites. Learn more about [dashboard links](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/).
 
 **Current dashboard time range and time picker**
 
@@ -66,7 +66,7 @@ Select a dashboard auto refresh time interval.
 
 **Share dashboard**
 
-Access [dashboard sharing](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/share-dashboards-panels/) options.
+Access [dashboard sharing](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/share-dashboards-panels/) options.
 
 **Edit**
 
@@ -74,7 +74,7 @@ Enter edit mode, so you can make changes and access dashboard settings.
 
 **Export**
 
-Access [dashboard exporting](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/share-dashboards-panels/#export-dashboards) options.
+Access [dashboard exporting](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/share-dashboards-panels/#export-dashboards) options.
 
 **Content outline**
 
@@ -82,11 +82,11 @@ The outline provides a tree-like structure that lets you quickly navigate the da
 
 **Filters overview**
 
-Open the [filters](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/) overview drawer.
+Open the [filters](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/) overview drawer.
 
 **Dashboard insights**
 
-View [dashboard analytics](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/assess-dashboard-usage/) including information about users, activity, query counts.
+View [dashboard analytics](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/assess-dashboard-usage/) including information about users, activity, query counts.
 
 **Hide**
 
@@ -98,19 +98,19 @@ The dashboard toolbar.
 
 **Row title**
 
-A row is one way you can [group panels](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/#panel-groupings) in a dashboard.
+A row is one way you can [group panels](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/#panel-groupings) in a dashboard.
 
 **Tab title**
 
-A tab is one way you can [group panels](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/#panel-groupings) in a dashboard.
+A tab is one way you can [group panels](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/#panel-groupings) in a dashboard.
 
 **Panel title**
 
-Create your own panel titles or have Grafana create them for you using [generative AI features](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
+Create your own panel titles or have Grafana create them for you using [generative AI features](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
 
 **Dashboard panel**
 
-The [panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/panel-overview/) is the primary building block of a dashboard.
+The [panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/panel-overview/) is the primary building block of a dashboard.
 
 **Panel legend**
 
@@ -306,4 +306,4 @@ Filters help you narrow the data displayed in a dashboard.
 After you've added a filter in the dashboard settings, you can create label/value filter pairs on the dashboard.
 These filters are applied to all metric queries that use the specified data source and to all panels on the dashboard.
 
-To learn more, refer to the [Filter and Group by documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/).
+To learn more, refer to the [Filter and Group by documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/).

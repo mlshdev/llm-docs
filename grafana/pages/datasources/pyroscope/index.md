@@ -1,9 +1,9 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/pyroscope/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/pyroscope/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/pyroscope/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/pyroscope/_index.md)
 
 # Pyroscope data source
 
 Grafana Pyroscope is a horizontally scalable, highly available, multi-tenant, OSS, continuous profiling aggregation system.
-Add a Pyroscope data source to query your profiles in [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
+Add a Pyroscope data source to query your profiles in [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
 
 Grafana includes built-in support for Pyroscope, so you don't need to install a plugin. The Pyroscope data source requires Grafana v12.3 or later.
 
@@ -27,12 +27,16 @@ The Pyroscope data source returns profiling data visualized as flame graphs and 
 
 The following documents help you get started with the Pyroscope data source:
 
-- [Configure the Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure/)
-- [Query profile data](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/query-editor/)
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/template-variables/)
-- [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/troubleshooting/)
+- [Configure the Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/configure/)
+- [Query profile data](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/query-editor/)
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/template-variables/)
+- [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/troubleshooting/)
 
 Before you query profiles, [configure your application to send profiles](https://grafana.com/docs/pyroscope/latest/configure-client/) to Pyroscope.
+
+To explore profiling data from a Pyroscope data source, try Grafana Profiles Drilldown on Grafana Play:
+
+[Grafana Profiles Drilldown in Grafana Play](https://play.grafana.org/a/grafana-pyroscope-app/explore)
 
 ## Continuous profiling
 
@@ -50,7 +54,7 @@ These dimensions, coupled with the detailed nature of performance profiles, make
 
 ### Flame graphs
 
-Flame graphs help you visualize resource allocation and performance bottlenecks. For more information about the visualization and its features, refer to the [Flame graph panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/).
+Flame graphs help you visualize resource allocation and performance bottlenecks. For more information about the visualization and its features, refer to the [Flame graph panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/).
 
 ## Grafana Cloud-only features
 
@@ -62,7 +66,7 @@ Some Pyroscope features are available only in Grafana Cloud:
 ## Integrate profiles into dashboards
 
 Using the Pyroscope data source, you can integrate profiles into your dashboards.
-For example, you can embed flame graphs using the [flame graph panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/).
+For example, you can embed flame graphs using the [flame graph panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/).
 
 This example shows memory profiles alongside panels for logs and metrics, which helps you debug out of memory (OOM) errors together with the associated logs and metrics.
 
@@ -76,7 +80,7 @@ Combined traces and profiles let you see granular line-level detail when availab
 
 ![trace-profiler-view](https://grafana.com/static/img/pyroscope/pyroscope-trace-profiler-view-2023-11-30.png)
 
-For more information, refer to [Configure Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure-traces-to-profiles/) and [Link tracing and profiling with span profiles](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/).
+For more information, refer to [Configure Trace to profiles](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/configure-traces-to-profiles/) and [Link tracing and profiling with span profiles](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/).
 
 [Watch the video on YouTube](https://www.youtube.com/watch?v=AG8VzfFMLxo)
 
@@ -84,9 +88,29 @@ For more information, refer to [Configure Trace to profiles](https://grafana.com
 
 [//]: # "This shared file is included in these locations:"
 
-[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+[//]: # "/docs/sources/datasources/aws-cloudwatch/_index.md"
+
+[//]: # "/docs/sources/datasources/azure-monitor/_index.md"
+
+[//]: # "/docs/sources/datasources/elasticsearch/_index.md"
+
+[//]: # "/docs/sources/datasources/google-cloud-monitoring/_index.md"
+
+[//]: # "/docs/sources/datasources/influxdb/_index.md"
+
+[//]: # "/docs/sources/datasources/loki/_index.md"
+
+[//]: # "/docs/sources/datasources/mssql/_index.md"
 
 [//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: # "/docs/sources/datasources/postgres/_index.md"
+
+[//]: # "/docs/sources/datasources/prometheus/_index.md"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/tempo/_index.md"
 
 [//]: #
 
@@ -98,7 +122,7 @@ For more information, refer to [Configure Trace to profiles](https://grafana.com
 
 You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
 
-`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
 
 For example, to run a profiling query against your Pyroscope data source, use `gcx datasources pyroscope query`:
 

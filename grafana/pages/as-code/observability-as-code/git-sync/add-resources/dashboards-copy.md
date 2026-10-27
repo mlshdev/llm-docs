@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/add-resources/dashboards-copy.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/add-resources/dashboards-copy.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/add-resources/dashboards-copy.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/add-resources/dashboards-copy.md)
 
 # Cherry-pick and copy individual dashboards
 
@@ -6,7 +6,7 @@
 >
 > At the moment Git Sync only manages dashboards and folders. Alerts, data sources, and library panels are **not** supported yet.
 >
-> To migrate your existing dashboards, refer to [Migrate existing dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate).
+> To migrate your existing dashboards, refer to [Migrate existing dashboards](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate).
 
 Use these methods to add a copy of one or more dashboards to a folder provisioned with Git Sync. Each copy is created with a new UID, so the original dashboards stay exactly as they are and nothing needs to be deleted. Existing links continue to point to the original dashboards, not the copies.
 
@@ -34,7 +34,7 @@ Keep in mind the following:
 - UIDs are globally unique per org. Two repositories with dashboards sharing a UID will conflict.
 - Two dashboards can share a title as long as they live at different paths in the repository. If a file with the same name already exists at the target path, the import is stopped before it overwrites anything.
 
-For more information refer to [Import dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/import-dashboards/) in the Data Visualization documentation.
+For more information refer to [Import dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/import-dashboards/) in the Data Visualization documentation.
 
 > **Note**
 >

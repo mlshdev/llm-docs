@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/testdata/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/testdata/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/testdata/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/testdata/configure/index.md)
 
 # Configure the TestData data source
 
 This document explains how to configure the TestData data source. TestData requires no external connection or authentication, so configuration is minimal.
 
-For general information on managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+For general information on managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 ## Before you begin
 
@@ -37,11 +37,11 @@ Click **Save & test** to verify the data source. A successful test displays the 
 
 **Data source is working**
 
-If the test fails, refer to [Troubleshoot TestData](https://grafana.com/docs/grafana/v13.2/datasources/testdata/troubleshooting/) for common issues and solutions.
+If the test fails, refer to [Troubleshoot TestData](https://grafana.com/docs/grafana/v13.3/datasources/testdata/troubleshooting/) for common issues and solutions.
 
 ## Provision the data source
 
-You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 TestData doesn't require any `jsonData` or `secureJsonData` fields.
 
@@ -73,7 +73,7 @@ For all available configuration options, refer to the [Grafana provider data sou
 
 After configuring your TestData data source, you can:
 
-- [Write queries](https://grafana.com/docs/grafana/v13.2/datasources/testdata/query-editor/) using the 33 available scenarios to generate simulated data.
-- [Use template variables](https://grafana.com/docs/grafana/v13.2/datasources/testdata/template-variables/) to create dynamic, reusable dashboards.
-- [Set up alerting](https://grafana.com/docs/grafana/v13.2/datasources/testdata/alerting/) to prototype and test alert rules with simulated data.
-- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.2/datasources/testdata/troubleshooting/) if you encounter problems with your data source.
+- [Write queries](https://grafana.com/docs/grafana/v13.3/datasources/testdata/query-editor/) using the 33 available scenarios to generate simulated data.
+- [Use template variables](https://grafana.com/docs/grafana/v13.3/datasources/testdata/template-variables/) to create dynamic, reusable dashboards.
+- [Set up alerting](https://grafana.com/docs/grafana/v13.3/datasources/testdata/alerting/) to prototype and test alert rules with simulated data.
+- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.3/datasources/testdata/troubleshooting/) if you encounter problems with your data source.

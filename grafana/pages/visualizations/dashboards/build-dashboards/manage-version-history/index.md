@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/manage-version-history/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/manage-version-history/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/manage-version-history/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/manage-version-history/index.md)
 
 # Manage dashboard version history
 
@@ -6,7 +6,7 @@ Whenever you save a version of your dashboard, a copy of that version is saved s
 
 ![Dashboards versions list](https://grafana.com/media/docs/grafana/dashboards/screenshot-dashboard-version-list-11.2.png)
 
-The dashboard version history feature lets you compare dashboards and restore previously saved dashboard versions. Grafana saves 20 versions by default. To change this limit, configure the [`[dashboards] versions_to_keep`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#dashboards) setting.
+The dashboard version history feature lets you compare dashboards and restore previously saved dashboard versions. Grafana saves 20 versions by default. To change this limit, configure the [`[dashboards] versions_to_keep`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#dashboards) setting.
 
 ## Compare two dashboard versions
 

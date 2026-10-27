@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/installation/windows/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/installation/windows/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/installation/windows/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/installation/windows/index.md)
 
 # Install Grafana on Windows
 
@@ -37,7 +37,7 @@ You install Grafana using the Windows installer or using the standalone Windows 
 Start Grafana by executing `grafana-server.exe`, located in the `bin` directory, preferably from the command line. If you want to run Grafana as a Windows service, then download
 [NSSM](https://nssm.cc/). It is very easy to add Grafana as a Windows service using that tool.
 
-1. To run Grafana, open your browser and go to the Grafana port (<http://localhost:3000/> is default) and then follow the instructions in [Getting Started](https://grafana.com/docs/grafana/v13.2/getting-started/build-first-dashboard/).
+1. To run Grafana, open your browser and go to the Grafana port (<http://localhost:3000/> is default) and then follow the instructions in [Getting Started](https://grafana.com/docs/grafana/v13.3/getting-started/build-first-dashboard/).
 
    > **Note:** The default Grafana port is `3000`. This port might require extra permissions on Windows. If it does not appear in the default port, you can change the port number.
 
@@ -57,4 +57,4 @@ Start Grafana by executing `grafana-server.exe`, located in the `bin` directory,
 
 ## Next steps
 
-- [Start the Grafana server](https://grafana.com/docs/grafana/v13.2/setup-grafana/start-restart-grafana/)
+- [Start the Grafana server](https://grafana.com/docs/grafana/v13.3/setup-grafana/start-restart-grafana/)

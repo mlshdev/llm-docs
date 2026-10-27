@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/fundamentals/notifications/notification-policies.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/fundamentals/notifications/notification-policies.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/fundamentals/notifications/notification-policies.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/fundamentals/notifications/notification-policies.md)
 
 # Notification policies
 
 Notification policies provide you with a flexible way of designing how to handle notifications and minimize alert noise.
 
-Using label matchers, alert instances are [routed to notification policies](#routing). The notification policy can then [group multiple alert instances into a single notification](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/) and deliver it to the contact point.
+Using label matchers, alert instances are [routed to notification policies](#routing). The notification policy can then [group multiple alert instances into a single notification](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/) and deliver it to the contact point.
 
 ![How Alerting works](https://grafana.com/media/docs/alerting/how-alerting-works.png)
 
@@ -18,9 +18,9 @@ Each policy consists of a set of label matchers (0 or more) that specify which a
 
 **How label matching works**
 
-Use [labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
+Use [labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
 
-A label matchers consists of 3 distinct parts, the **label**, the **value** and the **operator**.
+A label matcher consists of 3 distinct parts, the **label**, the **value** and the **operator**.
 
 - The **Label** field is the name of the label to match. It must exactly match the label name.
 
@@ -39,7 +39,7 @@ A label matchers consists of 3 distinct parts, the **label**, the **value** and 
 >
 > If you are using multiple label matchers, they are combined using the AND logical operator. This means that all matchers must match to link a rule to a policy.
 
-By default, Grafana uses a single notification policy tree for all alert routing. There is also the option to set up and configure multiple notification policies with the [multiple policy feature](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-notification-policy/), which allows you to split routing logic into separate, independently managed routing trees.
+By default, Grafana uses a single notification policy tree for all alert routing. You can also create [multiple notification policy trees](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-notification-policy/#manage-multiple-notification-policy-trees) to split routing logic into separate, independently managed trees.
 
 **Label matching example**
 
@@ -71,7 +71,7 @@ Here is an example that shows how to exclude the label `Team`. You can choose be
 
 **How label matching works**
 
-Use [labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
+Use [labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/) and label matchers to link alert rules to [notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) and [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/). This allows for a flexible way to manage your alert instances, specify which policy should handle them, and which alerts to silence.
 
 A label matchers consists of 3 distinct parts, the **label**, the **value** and the **operator**.
 
@@ -166,9 +166,9 @@ In addition to child policies being a useful concept for routing alert instances
 
 By default, a child policy inherits the following notification properties from its parent:
 
-- [Contact point](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/contact-points/)
-- [Grouping options](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/)
-- [Timing options](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/#timing-options)
+- [Contact point](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/contact-points/)
+- [Grouping options](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/)
+- [Timing options](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/#timing-options)
 
 Then, each policy can overwrite these properties if needed.
 

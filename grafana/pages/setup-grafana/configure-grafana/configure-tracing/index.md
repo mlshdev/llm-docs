@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-grafana/configure-tracing/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-grafana/configure-tracing/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-grafana/configure-tracing/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-grafana/configure-tracing/index.md)
 
 # Configure profiling and tracing to troubleshoot Grafana
 
@@ -113,6 +113,6 @@ To turn it on, set a `path` in the `[tracing.opentelemetry.file]` section. Grafa
 path = /var/lib/grafana/traces/capture.json
 ```
 
-For the available options, refer to [`[tracing.opentelemetry.file]`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#tracingopentelemetryfile) in the configuration reference.
+For the available options, refer to [`[tracing.opentelemetry.file]`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#tracingopentelemetryfile) in the configuration reference.
 
 To view the captured file, open Grafana, go to **Explore**, select a Tempo data source, and select **Import trace**.

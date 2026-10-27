@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/commands/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/configuration/commands/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/commands/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/configuration/commands/index.md)
 
 *Define slash commands that send prompts, open URLs, or switch agents.*
 
@@ -20,6 +20,8 @@ Commands come in three shapes:
 > **Behavior differs by frontend**
 >
 > `url` and `agent` are only fully honored in the **full TUI**, which checks `url` before `agent` (a URL command opens the browser and stops there; an agent-switching command switches before sending any instruction). The **lean TUI** doesn't special-case either field — it only resolves a command's expanded text and sends it as a chat message, so a URL-only command silently sends whatever trailing text followed the slash (often nothing, opening no browser) and an agent-switching command sends its instruction to the *current* agent instead of the target. The **CLI** (`docker agent run agent.yaml /command`) switches agents like the full TUI, but has no browser to open, so `url` has no effect there. The **HTTP API** (`POST /api/sessions/:id/agent/:agent`) resolves agent-switching commands server-side: if the message content starts with a slash command whose `agent` field is set, the active agent is switched and the message is rewritten before the turn runs. Prompt-only and URL commands are not resolved server-side and pass through to the model unchanged.
+
+The **ACP frontend** supports literal-prompt and agent-switch commands, preserving trailing arguments and attachments. It does not execute URL-opening or dynamic JavaScript/bang-tool commands; those are excluded from discovery and rejected when invoked. Discovery never expands instructions or starts tools. ACP commands use normal session turn admission rather than the full TUI's immediate-command behavior. See [ACP slash commands](https://docs.docker.com/ai/docker-agent/features/acp/#slash-commands) for built-ins and limitations.
 
 ## Prompt Commands
 

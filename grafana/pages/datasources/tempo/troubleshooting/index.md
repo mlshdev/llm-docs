@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/troubleshooting/index.md)
 
 # Troubleshoot Tempo data source issues
 
@@ -45,10 +45,10 @@ These errors occur when Grafana cannot establish or maintain a connection to the
 **Solution:**
 
 1. Verify that the Tempo instance is running and accessible from the Grafana server.
-2. Check that the URL is correct in the [data source configuration](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/). The default Tempo HTTP port is `3200`. Common URL mistakes include:
+2. Check that the URL is correct in the [data source configuration](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/). The default Tempo HTTP port is `3200`. Common URL mistakes include:
    - Adding trailing path segments, for example, `/api` or `/tempo`, to self-managed Tempo URLs. The correct format is `http://<HOST>:3200` with no path. The `/tempo` suffix is only used for Grafana Cloud Traces URLs.
    - Using the gRPC port (`9095`) instead of the HTTP port (`3200`). The Tempo data source URL must be the HTTP endpoint. Grafana derives the gRPC connection for streaming from the same URL.
-   - Refer to the [Connection](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) section for URL format examples by environment.
+   - Refer to the [Connection](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) section for URL format examples by environment.
 3. Ensure there are no firewall rules blocking the connection between Grafana and Tempo.
 4. For Grafana Cloud users connecting to a self-managed Tempo instance, ensure you have configured [Private data source connect](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/) if Tempo isn't publicly accessible.
 5. Verify the protocol (HTTP or HTTPS) matches your Tempo configuration.
@@ -63,7 +63,7 @@ These errors occur when Grafana cannot establish or maintain a connection to the
 
 1. Check the network latency between Grafana and Tempo.
 2. Verify that Tempo isn't overloaded or experiencing performance issues. If you have [Tempo mixin dashboards](https://grafana.com/docs/tempo/latest/operations/monitor/) installed, check them for resource saturation or elevated error rates.
-3. Increase the **Timeout** setting in the [data source configuration](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/) under **Additional settings**.
+3. Increase the **Timeout** setting in the [data source configuration](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/) under **Additional settings**.
 4. Check if any network devices (load balancers, proxies) are timing out the connection.
 5. For large trace queries, consider reducing the time range or adding more specific filters.
 
@@ -75,9 +75,9 @@ These errors occur when Grafana cannot establish or maintain a connection to the
 
 **Solution:**
 
-1. Verify that Tempo has a [valid TLS certificate if HTTPS is enabled](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#authentication).
+1. Verify that Tempo has a [valid TLS certificate if HTTPS is enabled](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#authentication).
 2. Check that the certificate is trusted by the Grafana server.
-3. If using a self-signed certificate, configure the **TLS/SSL Auth Details** in the [data source settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#authentication).
+3. If using a self-signed certificate, configure the **TLS/SSL Auth Details** in the [data source settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#authentication).
 4. Ensure the certificate's Common Name (CN) or Subject Alternative Name (SAN) matches the hostname used in the URL.
 
 For additional information on setting up TLS encryption with Tempo, refer to [Configure TLS communication](https://grafana.com/docs/tempo/latest/configuration/network/tls/).
@@ -94,7 +94,7 @@ These errors occur when there are issues with authentication credentials or perm
 
 **Solution:**
 
-1. Verify that the authentication credentials (username/password or API key) are correct in the [data source settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#authentication).
+1. Verify that the authentication credentials (username/password or API key) are correct in the [data source settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#authentication).
 2. Check that the user or service account has the required permissions.
 3. Ensure the authentication method selected in the data source matches what Tempo expects.
 4. For Grafana Cloud, verify that your Cloud Access Policy token has the `traces:read` scope. Refer to [Create a Cloud Access Policy token](https://grafana.com/docs/grafana-cloud/send-data/traces/set-up/add-access-policy/) for setup instructions. To find your stack URL and credentials, refer to [Locate your stack URL, user, and password](https://grafana.com/docs/grafana-cloud/send-data/traces/set-up/locate-url-user-password/).
@@ -108,9 +108,9 @@ These errors occur when there are issues with authentication credentials or perm
 
 **Solution:**
 
-1. Verify that the URL doesn't include trailing path segments. For self-managed Tempo, the URL should be `http://<HOST>:3200` with no path. Refer to the [Connection](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) section for the correct format.
+1. Verify that the URL doesn't include trailing path segments. For self-managed Tempo, the URL should be `http://<HOST>:3200` with no path. Refer to the [Connection](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) section for the correct format.
 2. If a reverse proxy sits between Grafana and Tempo, check whether the proxy is returning the 404. Tempo itself ignores unexpected auth headers, but a proxy may reject them.
-3. If Tempo doesn't require authentication, select **No authentication** in the [data source settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#authentication).
+3. If Tempo doesn't require authentication, select **No authentication** in the [data source settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#authentication).
 4. Check that the authentication credentials are entered in the correct fields. For Grafana Cloud, the **User** field is the instance ID (not your Grafana login), and the **Password** is a Cloud Access Policy token.
 
 ### Multi-tenant authentication issues
@@ -121,7 +121,7 @@ These errors occur when there are issues with authentication credentials or perm
 
 **Solution:**
 
-1. In the Tempo data source settings, verify that the `X-Scope-OrgID` header is configured under **Authentication > HTTP Headers**. Refer to [Multi-tenancy](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) for data source configuration steps.
+1. In the Tempo data source settings, verify that the `X-Scope-OrgID` header is configured under **Authentication > HTTP Headers**. Refer to [Multi-tenancy](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) for data source configuration steps.
 2. On the write path, verify that the same `X-Scope-OrgID` header is set in your Alloy or OpenTelemetry Collector configuration so traces are ingested under the correct tenant.
 3. Check that the authenticated user has access to the specified tenant.
 4. For cross-tenant queries, ensure all specified tenants are accessible.
@@ -150,9 +150,9 @@ These errors occur when there are issues with TraceQL queries or trace lookups.
 
 3. Check that the trace is within the configured retention period for Tempo.
 
-4. If using time range restrictions, expand the time range in the [**TraceID query** settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/#traceid-query).
+4. If using time range restrictions, expand the time range in the [**TraceID query** settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/#traceid-query).
 
-5. Enable **Use time range in query** in the [TraceID query settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/#traceid-query) and adjust the time shift values to search a broader range.
+5. Enable **Use time range in query** in the [TraceID query settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/#traceid-query) and adjust the time shift values to search a broader range.
 
 6. Verify the trace was successfully ingested by Tempo. You can run a broad query to check for recent traces:
 
@@ -189,8 +189,8 @@ These errors occur when there are issues with TraceQL queries or trace lookups.
 3. Check that the attribute names match exactly, as they're case-sensitive.
 4. Use the **Search** query builder to explore available attributes and values.
 5. Start with a broader query and progressively add filters to narrow results.
-6. Try [Grafana Traces Drilldown](https://grafana.com/docs/grafana/v13.2/explore/simplified-exploration/traces/), a queryless app that lets you explore tracing data using RED metrics without writing TraceQL.
-7. Note that Tempo search is non-deterministic—identical queries can return different results because Tempo scans in parallel and returns the first matching traces. Refer to [Understand search behavior](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/) for details.
+6. Try [Grafana Traces Drilldown](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/traces/), a queryless app that lets you explore tracing data using RED metrics without writing TraceQL.
+7. Note that Tempo search is non-deterministic—identical queries can return different results because Tempo scans in parallel and returns the first matching traces. Refer to [Understand search behavior](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/) for details.
 8. Verify traces are being ingested into Tempo by querying for a known trace ID.
 
 ### Traces not appearing after successful connection
@@ -242,7 +242,7 @@ These errors occur when there are issues with TraceQL queries or trace lookups.
 
 Streaming displays TraceQL query results as they become available. Without streaming, you don't see results until the query completes. Streaming is available for Grafana Cloud users by default. For self-managed Tempo, search streaming requires Tempo v2.2 or later, and metrics streaming requires Tempo v2.7 or later. Both require `stream_over_http_enabled: true` in the Tempo configuration.
 
-For more information, refer to [Streaming](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#streaming).
+For more information, refer to [Streaming](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#streaming).
 
 ### Streaming not working
 
@@ -251,7 +251,7 @@ For more information, refer to [Streaming](https://grafana.com/docs/grafana/v13.
 **Solution:**
 
 1. For self-managed Tempo, verify that you're using the required Tempo version (v2.2 or later for search streaming, v2.7 or later for metrics streaming) and that streaming is enabled in your configuration (`stream_over_http_enabled: true`). Refer to [Tempo gRPC API](https://grafana.com/docs/tempo/latest/api_docs/#tempo-grpc-api) in the Tempo documentation. Streaming is available for Grafana Cloud users by default.
-2. Verify that **Streaming** is enabled in your [Tempo data source settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#streaming). The **Search queries** and **Metrics queries** toggles are independent—check that the toggle for the query type you're using is enabled.
+2. Verify that **Streaming** is enabled in your [Tempo data source settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#streaming). The **Search queries** and **Metrics queries** toggles are independent—check that the toggle for the query type you're using is enabled.
 3. If your Tempo instance is behind a load balancer or proxy that doesn't support gRPC or HTTP2, streaming may not work. Disable streaming and use standard HTTP queries instead.
 4. If you're using [Private data source connect (PDC)](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/) to reach Tempo, verify that the PDC tunnel is running and the Tempo instance is reachable from the PDC agent. PDC connectivity issues can present as streaming timeouts.
 
@@ -264,7 +264,7 @@ For more information, refer to [Streaming](https://grafana.com/docs/grafana/v13.
 **Solution:**
 
 1. Configure TLS between Grafana and Tempo. Refer to [Configure TLS communication](https://grafana.com/docs/tempo/latest/configuration/network/tls/).
-2. If TLS isn't an option, disable streaming in the [Tempo data source settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#streaming) and use standard HTTP queries instead.
+2. If TLS isn't an option, disable streaming in the [Tempo data source settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#streaming) and use standard HTTP queries instead.
 
 ### Partial results or streaming errors
 
@@ -281,7 +281,7 @@ For more information, refer to [Streaming](https://grafana.com/docs/grafana/v13.
 
 ## Service graph issues
 
-The Service Graph visualizes service dependencies and highlights request rate, error rate, and duration (RED metrics) across connections. It requires a linked Prometheus data source with service graph metrics generated by the Tempo metrics generator or Grafana Alloy. For more information, refer to [Service Graph and Service Graph view](https://grafana.com/docs/grafana/v13.2/datasources/tempo/service-graph/).
+The Service Graph visualizes service dependencies and highlights request rate, error rate, and duration (RED metrics) across connections. It requires a linked Prometheus data source with service graph metrics generated by the Tempo metrics generator or Grafana Alloy. For more information, refer to [Service Graph and Service Graph view](https://grafana.com/docs/grafana/v13.3/datasources/tempo/service-graph/).
 
 ### Service graph not displaying
 
@@ -289,7 +289,7 @@ The Service Graph visualizes service dependencies and highlights request rate, e
 
 **Solution:**
 
-1. Verify that a Prometheus data source is linked in the Tempo data source **Service Graph** settings under [Additional settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/).
+1. Verify that a Prometheus data source is linked in the Tempo data source **Service Graph** settings under [Additional settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/).
 
 2. For self-managed Tempo, check that the metrics generator is configured to produce service graph metrics. Refer to [Service graph metrics](https://grafana.com/docs/tempo/latest/metrics-generator/service-graph-view/) in the Tempo documentation.
 
@@ -341,7 +341,7 @@ The Service Graph visualizes service dependencies and highlights request rate, e
 
 ## Trace to logs/metrics/profiles issues
 
-These issues relate to the correlation features that link traces to other telemetry signals. For configuration details, refer to [Trace to logs](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/), [Trace to metrics](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/), and [Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/).
+These issues relate to the correlation features that link traces to other telemetry signals. For configuration details, refer to [Trace to logs](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/), [Trace to metrics](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/), and [Trace to profiles](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/).
 
 ### Trace to logs link not appearing
 
@@ -349,12 +349,12 @@ These issues relate to the correlation features that link traces to other teleme
 
 **Solution:**
 
-1. Verify that a Loki or other log data source is configured in the [Trace to logs](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/) settings.
+1. Verify that a Loki or other log data source is configured in the [Trace to logs](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/) settings.
 2. Check that the configured tags exist in your spans.
 3. Ensure at least one mapped tag has a non-empty value in the span.
 4. If using a custom query, verify the query syntax is valid for the target data source.
 5. Check that **Filter by trace ID** or **Filter by span ID** aren't enabled when using a custom query.
-6. If using **Filter by trace ID** with Loki derived fields, verify that the derived field regular expression matches the trace ID field name used in your logs. Different instrumentation libraries use different field names (`traceID`, `trace_id`, or `traceId`). Refer to [Trace to logs](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/) for common regular expression patterns by instrumentation format.
+6. If using **Filter by trace ID** with Loki derived fields, verify that the derived field regular expression matches the trace ID field name used in your logs. Different instrumentation libraries use different field names (`traceID`, `trace_id`, or `traceId`). Refer to [Trace to logs](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/) for common regular expression patterns by instrumentation format.
 
 ### Loki log lines don't show a trace link
 
@@ -365,7 +365,7 @@ These issues relate to the correlation features that link traces to other teleme
 1. Verify that a derived field is configured in the Loki data source under **Additional settings > Derived fields**. The derived field extracts the trace ID from log lines and creates a link to Tempo.
 2. Check that the derived field regular expression matches the trace ID format in your logs. Use **Show example log message** in the derived field settings to test the regular expression against a sample log line.
 3. Confirm the **Internal link** toggle is enabled and points to the correct Tempo data source.
-4. If different services use different trace ID field names, you need a separate derived field entry for each format. Refer to [Trace to logs](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/) for regular expression patterns by format.
+4. If different services use different trace ID field names, you need a separate derived field entry for each format. Refer to [Trace to logs](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/) for regular expression patterns by format.
 
 ### Trace to metrics link not appearing
 
@@ -373,7 +373,7 @@ These issues relate to the correlation features that link traces to other teleme
 
 **Solution:**
 
-1. Verify that a Prometheus or other metrics data source is configured in the [Trace to metrics](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/) settings.
+1. Verify that a Prometheus or other metrics data source is configured in the [Trace to metrics](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/) settings.
 2. Check that the configured tags exist in your spans.
 3. If using custom queries, verify they're valid PromQL.
 4. Ensure the `$__tags` variable is correctly placed in custom queries.
@@ -384,7 +384,7 @@ These issues relate to the correlation features that link traces to other teleme
 
 **Solution:**
 
-1. Verify that a Grafana Pyroscope data source is configured in the [Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/) settings.
+1. Verify that a Grafana Pyroscope data source is configured in the [Trace to profiles](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/) settings.
 2. Check that the configured tags exist in your spans.
 3. Verify that the configured profile type matches what Pyroscope has data for (for example, `process_cpu:cpu:nanoseconds:cpu:nanoseconds`). A mismatch between the configured profile type and the available data causes the link to not appear.
 4. Tighten the **Span start time shift** and **Span end time shift** values. Profiles are sampled at intervals, so a narrow time window around the span is more likely to match profile data than a wide one.
@@ -440,7 +440,7 @@ The following issues don't produce specific error messages but are commonly enco
 
 **Solution:**
 
-1. Verify that **Node graph** is enabled in the Tempo data source settings under [Additional settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/).
+1. Verify that **Node graph** is enabled in the Tempo data source settings under [Additional settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/).
 2. Check that the trace contains multiple spans with parent-child relationships. Spans must include `traceID` and `spanID`, and non-root spans must include `parentSpanID` to establish hierarchy. If these identifiers are missing, the trace data is incomplete at the instrumentation level and the graph can't be rendered.
 
 ### Autocomplete not working
@@ -450,7 +450,7 @@ The following issues don't produce specific error messages but are commonly enco
 **Solution:**
 
 1. For self-managed Tempo, verify that the storage backend supports tag search. Tempo requires `vParquet` format or later for tag-based search and autocomplete. Refer to [Parquet configuration](https://grafana.com/docs/tempo/latest/configuration/parquet/) for details. Grafana Cloud Traces supports autocomplete by default.
-2. Check the **Tags time range** setting in the [data source settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/) to ensure it covers a period with recent trace data.
+2. Check the **Tags time range** setting in the [data source settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/) to ensure it covers a period with recent trace data.
 3. Increase the **Tag limit** setting if you have many unique attributes.
 4. Verify the Tempo data source connection is working by selecting **Save & test** in the data source settings.
 
@@ -462,8 +462,8 @@ You can tell a data source is provisioned if the settings form is read-only and 
 
 **Solution:**
 
-1. To change settings permanently, edit the provisioning YAML file and restart Grafana (or wait for the provisioning system to reload). Any setting available in the UI can be set in the YAML file, including trace-to-logs, trace-to-metrics, and service graph configuration. Refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/) for the full YAML reference.
-2. For Grafana Cloud, you can clone the provisioned data source to create an editable copy that persists UI changes. Refer to [Clone a provisioned data source for Grafana Cloud](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud) for the steps.
+1. To change settings permanently, edit the provisioning YAML file and restart Grafana (or wait for the provisioning system to reload). Any setting available in the UI can be set in the YAML file, including trace-to-logs, trace-to-metrics, and service graph configuration. Refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/) for the full YAML reference.
+2. For Grafana Cloud, you can clone the provisioned data source to create an editable copy that persists UI changes. Refer to [Clone a provisioned data source for Grafana Cloud](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud) for the steps.
 
 ### TraceQL alerting not available
 
@@ -471,7 +471,7 @@ You can tell a data source is provisioned if the settings form is read-only and 
 
 **Solution:**
 
-TraceQL metrics queries (such as `{ } | rate()` or `{ status = error } | count_over_time()`) return numeric time series and can drive alert thresholds directly. However, TraceQL alerting requires the experimental `tempoAlerting` feature flag, which is disabled by default. To enable it, set the [`tempoAlerting` feature flag](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#feature_toggles) in your Grafana configuration. For Grafana Cloud, contact Support to enable it. For step-by-step setup, refer to [Trace-based alerts](https://grafana.com/docs/grafana/v13.2/alerting/examples/trace-based-alerts/).
+TraceQL metrics queries (such as `{ } | rate()` or `{ status = error } | count_over_time()`) return numeric time series and can drive alert thresholds directly. However, TraceQL alerting requires the experimental `tempoAlerting` feature flag, which is disabled by default. To enable it, set the [`tempoAlerting` feature flag](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#feature_toggles) in your Grafana configuration. For Grafana Cloud, contact Support to enable it. For step-by-step setup, refer to [Trace-based alerts](https://grafana.com/docs/grafana/v13.3/alerting/examples/trace-based-alerts/).
 
 > **Caution**
 >
@@ -481,7 +481,7 @@ Alternatively, use the Tempo metrics generator to produce Prometheus metrics fro
 
 1. Configure the Tempo [metrics generator](https://grafana.com/docs/tempo/latest/metrics-generator/) (using the `service-graphs`, `span-metrics`, or `local-blocks` processor) to produce metrics from traces and remote-write them to a Prometheus-compatible backend.
 2. Create alert rules against the Prometheus data source that receives those metrics. For example, alert on high error rates using `traces_spanmetrics_calls_total` with a `status_code="STATUS_CODE_ERROR"` filter.
-3. Refer to the feature support table in the [Tempo data source overview](https://grafana.com/docs/grafana/v13.2/datasources/tempo/) for details on alerting support.
+3. Refer to the feature support table in the [Tempo data source overview](https://grafana.com/docs/grafana/v13.3/datasources/tempo/) for details on alerting support.
 
 ### Switching between multiple Tempo instances
 
@@ -489,9 +489,9 @@ Alternatively, use the Tempo metrics generator to produce Prometheus metrics fro
 
 **Workaround:**
 
-1. In dashboards, create a [data source template variable](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#add-a-data-source-variable) filtered to `tempo` type. This adds a dropdown that lets viewers switch between Tempo instances without editing the dashboard.
+1. In dashboards, create a [data source template variable](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#add-a-data-source-variable) filtered to `tempo` type. This adds a dropdown that lets viewers switch between Tempo instances without editing the dashboard.
 2. In Explore, use the data source picker in the top bar to switch between configured Tempo data sources.
-3. For multi-tenant setups on a single Tempo instance, consider using the `X-Scope-OrgID` header instead of separate data sources. Refer to [Multi-tenancy](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) for configuration details.
+3. For multi-tenant setups on a single Tempo instance, consider using the `X-Scope-OrgID` header instead of separate data sources. Refer to [Multi-tenancy](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) for configuration details.
 
 ## Private data source connect issues (*Grafana Cloud only*)
 
@@ -568,7 +568,7 @@ If you continue to experience issues after following this troubleshooting guide:
 3. Ask questions in the [Grafana community forums](https://community.grafana.com/) or the [Grafana Community Slack](https://slack.grafana.com/).
 4. Review the [Grafana GitHub issues](https://github.com/grafana/grafana/issues) for known bugs.
 5. Review the [Tempo GitHub issues](https://github.com/grafana/tempo/issues) for Tempo-specific bugs.
-6. Enable [debug logging](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#log) in Grafana to capture detailed error information.
+6. Enable [debug logging](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#log) in Grafana to capture detailed error information.
 7. Check [Tempo server logs](https://grafana.com/docs/tempo/latest/operations/monitor/) for additional error details.
 8. Contact [Grafana Support](https://grafana.com/contact/) if you're an Enterprise, Cloud Pro, or Cloud Contracted user.
 

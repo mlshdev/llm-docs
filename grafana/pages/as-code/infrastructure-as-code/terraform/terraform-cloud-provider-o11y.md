@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-provider-o11y.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-provider-o11y.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-provider-o11y.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-provider-o11y.md)
 
 # Manage Cloud Provider Observability in Grafana Cloud using Terraform
 
@@ -26,7 +26,7 @@ The Grafana Provider is a logical abstraction of an upstream API that you can us
 You must configure it with the following information:
 
 - A Grafana Cloud access policy token that includes the permissions the provider needs to access the Grafana Cloud Provider API.
-- A regional cloud provider API endpoint to establish which Grafana Cloud stack you are accessing.
+- A regional Cloud Provider API endpoint to establish which Grafana Cloud stack you are accessing.
 
 To configure authentication for the Grafana Provider:
 
@@ -51,7 +51,7 @@ To configure authentication for the Grafana Provider:
 
 2. Obtain the regional Cloud Provider API endpoint.
 
-   - To obtain the regional Cloud provider API endpoint, use your access policy token and the following command to return a list of all of the Grafana stacks you own, along with their respective Cloud Provider API hostnames:
+   - To obtain the regional Cloud Provider API endpoint, use your access policy token and the following command to return a list of all of the Grafana stacks you own, along with their respective Cloud Provider API hostnames:
 
    ```bash
    curl -sH "Authorization: Bearer @@@GRAFANA_CLOUD_ACCESS_POLICY_TOKEN@@@" "https://grafana.com/api/instances" | \
@@ -75,12 +75,12 @@ To configure authentication for the Grafana Provider:
    }
 
    provider "grafana" {
-       cloud_api_url      = "<@@@CLOUD_PROVIDER_API_URL@@@"
+       cloud_provider_url      = "<@@@CLOUD_PROVIDER_URL@@@"
        cloud_access_policy_token     = "@@@CLOUD_ACCESS_POLICY_TOKEN@@@>"
    }
    ```
 
-4. Create a `variables.tf` file and paste the `CLOUD_ACCESS_POLICY_TOKEN` and `CLOUD_PROVIDER_API_URL` variables with your values.
+4. Create a `variables.tf` file and paste the `CLOUD_ACCESS_POLICY_TOKEN` and `CLOUD_PROVIDER_URL` variables with your values.
 
 5. Run the following Terraform command:
    ```tf

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/intro-histograms/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/intro-histograms/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/intro-histograms/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/intro-histograms/index.md)
 
 # Introduction to histograms and heatmaps
 
@@ -21,7 +21,7 @@ Here is an example showing height distribution of people.
 
 *Bar chart example*
 
-For more information about histogram visualization options, refer to [Histogram](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/histogram/).
+For more information about histogram visualization options, refer to [Histogram](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/histogram/).
 
 Histograms only look at *value distributions* over a specific time range. The problem with histograms is that you cannot see any trends or changes in the distribution over time. This is where heatmaps become useful.
 
@@ -33,7 +33,7 @@ In this example, you can clearly see what values are more common and how they tr
 
 ![Heatmap example](https://grafana.com/static/img/docs/v43/heatmap_histogram_over_time.png)
 
-For more information about heatmap visualization options, refer to [Heatmap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/heatmap/).
+For more information about heatmap visualization options, refer to [Heatmap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/heatmap/).
 
 ## Pre-bucketed data
 

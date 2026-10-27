@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/api-legacy/admin.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/api-legacy/admin.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/admin.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/admin.md)
 
 # Admin API
 
@@ -8,15 +8,15 @@
 >
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
-> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 ## Requirements
 
 **To use the Admin API endpoints you have to use Basic authentication, and the Grafana user must have the Grafana server administrator permission**. The `admin` user that Grafana is provisioned with by default has permissions to use these API endpoints.
 
-You can't authenticate to the Admin HTTP API with service account tokens. Service accounts are limited to an organization and an organization role, and can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators).
+You can't authenticate to the Admin HTTP API with service account tokens. Service accounts are limited to an organization and an organization role, and can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators).
 
-If you're running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+If you're running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Fetch settings
 
@@ -24,7 +24,7 @@ If you're running Grafana Enterprise, for some endpoints you'll need to have spe
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action        | Scope                                                                               |
 | ------------- | ----------------------------------------------------------------------------------- |
@@ -197,9 +197,11 @@ Updates/removes and reloads database settings. You must provide either `updates`
 
 This endpoint only supports changes to `auth.saml` configuration.
 
+This endpoint writes to Grafana's settings table, where values override the configuration file, environment variables, and command line arguments until you remove them with `removals`. Grafana gives no indication that a stored value is in effect, so a credential rotation done by editing the configuration file silently keeps using the old value. The SSO Settings API, the user interfaces, and Terraform write a different table; for SAML, `DELETE /api/v1/sso-settings/saml` clears both. Refer to [Check for stored settings](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/settings-updates-at-runtime/#check-for-stored-settings).
+
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action         | Scope                                                                               |
 | -------------- | ----------------------------------------------------------------------------------- |
@@ -251,7 +253,7 @@ Status codes:
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action            | Scope |
 | ----------------- | ----- |
@@ -293,7 +295,7 @@ Previews usage report to be sent to vendor.
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 **Example Request**:
 
@@ -335,7 +337,7 @@ Creates new user.
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action       | Scope |
 | ------------ | ----- |
@@ -357,7 +359,7 @@ Content-Type: application/json
 }
 ```
 
-Note that `OrgId` is an optional parameter that can be used to assign a new user to a different organization when [auto\_assign\_org](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#auto-assign-org) is set to `true`.
+Note that `OrgId` is an optional parameter that can be used to assign a new user to a different organization when [auto\_assign\_org](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#auto-assign-org) is set to `true`.
 
 **Example Response**:
 
@@ -376,7 +378,7 @@ Changes password for a specific user.
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action               | Scope           |
 | -------------------- | --------------- |
@@ -407,7 +409,7 @@ Content-Type: application/json
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action                  | Scope           |
 | ----------------------- | --------------- |
@@ -438,7 +440,7 @@ Content-Type: application/json
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action       | Scope           |
 | ------------ | --------------- |
@@ -469,7 +471,7 @@ Returns a list of all auth tokens (devices) that the user currently have logged 
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action               | Scope           |
 | -------------------- | --------------- |
@@ -526,7 +528,7 @@ and will be required to authenticate again upon next activity.
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action                | Scope           |
 | --------------------- | --------------- |
@@ -564,7 +566,7 @@ and will be required to authenticate again upon next activity.
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action       | Scope           |
 | ------------ | --------------- |
@@ -607,7 +609,7 @@ polling for changes in dashboard files and then restart it with new configuratio
 
 **Required permissions**
 
-Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
+Only works with Basic Authentication (username and password). Refer to [Requirements](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin#requirements) for more information.
 
 | Action              | Scope                      | Provision entity |
 | ------------------- | -------------------------- | ---------------- |
@@ -655,7 +657,7 @@ Content-Type: application/json
 
 `POST /api/admin/encryption/rotate-data-keys`
 
-[Rotates](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/#rotate-data-keys) the data encryption keys.
+[Rotates](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/#rotate-data-keys) the data encryption keys.
 
 **Example Request**:
 
@@ -676,7 +678,7 @@ Content-Type: application/json
 
 `POST /api/admin/encryption/reencrypt-data-keys`
 
-[Re-encrypts](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/#re-encrypt-data-keys) the data encryption keys.
+[Re-encrypts](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/#re-encrypt-data-keys) the data encryption keys.
 
 **Example Request**:
 
@@ -697,7 +699,7 @@ Content-Type: application/json
 
 `POST /api/admin/encryption/reencrypt-secrets`
 
-[Re-encrypts](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/#re-encrypt-secrets) secrets.
+[Re-encrypts](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/#re-encrypt-secrets) secrets.
 
 **Example Request**:
 
@@ -718,7 +720,7 @@ Content-Type: application/json
 
 `POST /api/admin/encryption/rollback-secrets`
 
-[Rolls back](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/#roll-back-secrets) secrets.
+[Rolls back](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/#roll-back-secrets) secrets.
 
 **Example Request**:
 

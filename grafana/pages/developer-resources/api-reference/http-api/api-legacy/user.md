@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md)
 
 # User API
 
@@ -8,7 +8,7 @@
 >
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
-> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 The User API is a special, instance-wide endpoint that lists users across every organization on all its Grafana instances.
 
@@ -18,15 +18,15 @@ The User API is a special, instance-wide endpoint that lists users across every 
 
 To use these API endpoints you must have the Grafana server administrator permissions.
 
-In Grafana OSS, the default `admin` user has permissions to use these API endpoints. If you're running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+In Grafana OSS, the default `admin` user has permissions to use these API endpoints. If you're running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
-Because Grafana Cloud stacks are multi-tenant, **no Grafana Cloud account is allowed to call these endpoints**. That level of access is reserved only for Grafana platform operators. If you're a Grafana Cloud user, refer to the [Organization HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/http_api/api-legacy/org/) instead.
+Because Grafana Cloud stacks are multi-tenant, **no Grafana Cloud account is allowed to call these endpoints**. That level of access is reserved only for Grafana platform operators. If you're a Grafana Cloud user, refer to the [Organization HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/http_api/api-legacy/org/) instead.
 
 ## Authentication
 
-**You need basic authentication to use this API**, you can't authenticate with service account tokens. Service accounts are limited to an organization and an organization role, and can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators).
+**You need basic authentication to use this API**, you can't authenticate with service account tokens. Service accounts are limited to an organization and an organization role, and can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators).
 
-Alternatively, you can use the [Organization HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/org/#current-organization-api) with service account tokens to manage users in a specific organization
+Alternatively, you can use the [Organization HTTP API](https://grafana.com/docs/grafana/v13.3/developers/http_api/org/#current-organization-api) with service account tokens to manage users in a specific organization
 
 ## Search users
 

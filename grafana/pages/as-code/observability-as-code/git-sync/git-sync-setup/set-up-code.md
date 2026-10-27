@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code.md)
 
 # Set up Git Sync as code
 
@@ -6,17 +6,17 @@ You can also configure Git Sync using `gcx`, the Grafana CLI. Since Git Sync con
 
 For more information, refer to the following documents:
 
-- [Repository resource](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts#git-sync-repository-resource) and [Connection resource](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts#git-sync-repository-resource) overview
-- [Dashboard CRD Format](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate)
-- [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/)
+- [Repository resource](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts#git-sync-repository-resource) and [Connection resource](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts#git-sync-repository-resource) overview
+- [Dashboard CRD Format](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate)
+- [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/)
 
-To provision resources from a local file system as code instead of a Git repository, refer to [Set up file provisioning as code](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/file-path-setup#set-up-file-provisioning-as-code).
+To provision resources from a local file system as code instead of a Git repository, refer to [Set up file provisioning as code](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/file-path-setup#set-up-file-provisioning-as-code).
 
 ## Set up Git Sync as code with the Grafana CLI
 
 To set up Git Sync as code with `gcx`, follow these steps:
 
-1. Understand [Usage and performance limitations](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/usage-limits)
+1. Understand [Usage and performance limitations](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/usage-limits)
 2. [Create the connection and repository CRDs](#create-the-resources-crds)
 3. [Push the CRDs to Grafana](#push-the-resources-to-grafana)
 4. [Manage repository resources](#manage-repository-resources)
@@ -24,9 +24,9 @@ To set up Git Sync as code with `gcx`, follow these steps:
 
 ## Create the resources CRDs
 
-If you're connecting with any of the [supported Git providers](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/usage-limits#compatible-git-providers) using a Personal Access Token, you need to create a repository resource to define the connection between your repositories and your Grafana instance.
+If you're connecting with any of the [supported Git providers](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/usage-limits#compatible-git-providers) using a Personal Access Token, you need to create a repository resource to define the connection between your repositories and your Grafana instance.
 
-If you're connecting to Git Sync with GitHub App, in addition to the repository resource you need to create a connection resource as well.
+If you're connecting to Git Sync with GitHub App or an OAuth App, in addition to the repository resource you need to create a connection resource as well.
 
 ### Create the connection resource
 
@@ -59,6 +59,55 @@ Replace the placeholders with your values:
 - *`<GITHUB_INSTALL_ID>`*: GitHub App installation id
 - *`<GITHUB_PRIVATE_KEY>`*: GitHub Private Key
 
+### Create an OAuth App connection resource
+
+If you're connecting Git Sync with an [OAuth App](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-before/#create-an-oauth-app), create a `connection.yaml` file with the client ID and secret of the app, and the fields for your provider:
+
+```yaml
+apiVersion: provisioning.grafana.app/v0alpha1
+kind: Connection
+metadata:
+  name: '<OAUTH_CONNECTION_NAME>'
+  namespace: default
+spec:
+  title: '<CONNECTION_TITLE>'
+  type: '<CONNECTION_TYPE>' # githubOAuth, githubEnterpriseOAuth, gitlabOAuth, bitbucketOAuth, or gitOAuth
+  oauth:
+    clientID: '<CLIENT_ID>'
+  # GitHub Enterprise only:
+  githubEnterpriseOAuth:
+    serverUrl: '<GITHUB_ENTERPRISE_SERVER_URL>'
+  # Bitbucket only:
+  bitbucket:
+    workspace: '<BITBUCKET_WORKSPACE>'
+  # Pure Git only:
+  gitOAuth:
+    authURL: '<AUTHORIZATION_URL>'
+    tokenURL: '<TOKEN_URL>'
+    scopes:
+      - '<SCOPE>'
+secure:
+  clientSecret:
+    create: '<CLIENT_SECRET>'
+```
+
+Replace the placeholders with your values:
+
+- *`<OAUTH_CONNECTION_NAME>`*: The name of your OAuth App connection
+- *`<CONNECTION_TITLE>`*: Human-readable name displayed in Grafana UI
+- *`<CONNECTION_TYPE>`*: The OAuth connection type for your provider
+- *`<CLIENT_ID>`*: The client ID of the OAuth App
+- *`<CLIENT_SECRET>`*: The client secret of the OAuth App
+- *`<GITHUB_ENTERPRISE_SERVER_URL>`*: The URL of your GitHub Enterprise instance
+- *`<BITBUCKET_WORKSPACE>`*: The workspace that the OAuth consumer belongs to
+- *`<AUTHORIZATION_URL>`*, *`<TOKEN_URL>`*, *`<SCOPE>`*: The OAuth endpoints of your Git provider, and the scopes that grant read and write access to your repositories
+
+An OAuth App connection needs a user to approve access in the browser. After you push the connection, it shows as **Disconnected** until you authorize it:
+
+1. Select **Administration > General > Provisioning** and go to the **Connections** tab.
+2. Select the connection and click **Reauthorize**.
+3. Approve the access in the provider tab that opens.
+
 ### Create the repository resource
 
 Next, create a `repository.yaml` file defining your Git Sync configuration. Depending on your Git provider and authentication method, add your Personal Access Token information or the connection name.
@@ -85,7 +134,7 @@ spec:
     url: '<GIT_REPO_URL>'
     branch: '<BRANCH>'
     path: grafana/
-  # GitHub App connection only:
+  # GitHub App or OAuth App connection only:
   connection:
     name: '<GITHUB_CONNECTION_NAME>'
 # GitHub Personal Access Token only:
@@ -137,6 +186,8 @@ secure:
   token: { create: 'GIT_PAT' }
 ```
 
+To use an OAuth App connection, set `spec.connection.name` instead of `secure.token`. The repository type must match the connection type: `githubOAuth` for `github`, `githubEnterpriseOAuth` for `githubEnterprise`, `gitlabOAuth` for `gitlab`, `bitbucketOAuth` for `bitbucket`, and `gitOAuth` for `git`.
+
 Replace the placeholders with your values:
 
 - *`<REPOSITORY_NAME>`*: Unique identifier for this repository resource
@@ -149,7 +200,7 @@ Replace the placeholders with your values:
 
 > **Note**
 >
-> Git Sync supports two sync targets: `target: folder` (the default) creates a folder named after the repository and places synced resources inside it, while `target: folderless` places synced resources at the top level without creating a wrapper folder. Refer to [Sync targets](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts/#sync-targets) for details.
+> Git Sync supports two sync targets: `target: folder` (the default) creates a folder named after the repository and places synced resources inside it, while `target: folderless` places synced resources at the top level without creating a wrapper folder. Refer to [Sync targets](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts/#sync-targets) for details.
 
 ### Configuration parameters
 
@@ -172,7 +223,7 @@ The following configuration parameters are available:
 
 ## Push the resources to Grafana
 
-Before pushing any resources, configure `gcx` with your Grafana instance details. Refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/) for setup instructions.
+Before pushing any resources, configure `gcx` with your Grafana instance details. Refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/) for setup instructions.
 
 Push the repository configuration. If you're using GitHub App to connect Git Sync, push the connection resource configuration file as well.
 

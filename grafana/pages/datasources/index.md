@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/_index.md)
 
 # Data sources
 
@@ -12,9 +12,9 @@ Each data source comes with a *query editor*,
 which formulates custom queries according to the source's structure.
 After you add and configure a data source, you can use it as an input for many operations, including:
 
-- Query the data with [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
-- Visualize it in [panels](https://grafana.com/docs/grafana/v13.2/panels-visualizations/).
-- Create rules for [alerts](https://grafana.com/docs/grafana/v13.2/alerting/).
+- Query the data with [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
+- Visualize it in [panels](https://grafana.com/docs/grafana/v13.3/panels-visualizations/).
+- Create rules for [alerts](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 This documentation describes how to manage data sources in general,
 and how to configure or query the built-in data sources.
@@ -27,12 +27,12 @@ For other available plugins, refer to the list of [documented plugins](https://g
 
 ## Manage data sources
 
-Only users with the [organization administrator role](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles) can add or remove data sources.
+Only users with the [organization administrator role](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles) can add or remove data sources.
 To access data source management tools in Grafana as an administrator, navigate to **Connections > Data sources** in the left-side menu.
 
-For details on data source management, including instructions on how to configure user permissions for queries, refer to the [administration documentation](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+For details on data source management, including instructions on how to configure user permissions for queries, refer to the [administration documentation](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
-By default, any user in an organization can query any data source in that organization. With [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) or Grafana Cloud, you can configure **data source permissions** to restrict query, edit, and admin access to specific users, teams, or roles. Refer to the [data source management documentation](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/) for details.
+By default, any user in an organization can query any data source in that organization. With [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) or Grafana Cloud, you can configure **data source permissions** to restrict query, edit, and admin access to specific users, teams, or roles. Refer to the [data source management documentation](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/) for details.
 
 ## Add a data source
 
@@ -54,18 +54,18 @@ You can mark one data source as the **Default** by toggling the option on its co
 ## Query editors
 
 Each data source's **query editor** provides a customized user interface that helps you write queries that take advantage of its unique capabilities.
-You use a data source's query editor when you create queries in [dashboard panels](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/) or [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
+You use a data source's query editor when you create queries in [dashboard panels](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/) or [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
 
 Because of the differences between query languages, each data source query editor looks and functions differently.
 Depending on your data source, the query editor might provide auto-completion features, metric names, variable suggestions, or a visual query-building interface.
 
-For general information about querying in Grafana, and common options and user interface elements across all query editors, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+For general information about querying in Grafana, and common options and user interface elements across all query editors, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 ## Provision data sources
 
 You can define and manage data sources as code using the Grafana provisioning system. This lets you configure data sources through YAML files or Terraform instead of the Grafana UI, which is useful for automated deployments and version-controlled configuration.
 
-For more information, refer to [Provision data sources](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information, refer to [Provision data sources](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ## Special data sources
 
@@ -73,7 +73,7 @@ Grafana includes three special data sources:
 
 ### Grafana
 
-This built-in data source generates random walk data and can poll the [TestData](https://grafana.com/docs/grafana/v13.2/datasources/testdata/) data source. It can also list files and retrieve other data from a Grafana installation, making it useful for testing visualizations and running experiments.
+This built-in data source generates random walk data and can poll the [TestData](https://grafana.com/docs/grafana/v13.3/datasources/testdata/) data source. It can also list files and retrieve other data from a Grafana installation, making it useful for testing visualizations and running experiments.
 
 In a panel query, the Grafana data source supports the following query types, which you select in the query editor:
 
@@ -107,12 +107,12 @@ This data source reuses the result set from another panel in the same dashboard.
 
 Because it depends on another panel in the same dashboard, the **Dashboard** data source is only available when you edit a panel within a dashboard. It doesn't appear in Explore.
 
-The Dashboard data source references the complete output of another panel. It doesn't chain one query into another within a single panel, so you can't feed the results of one query into a second query as an input. To reshape or narrow the referenced data, apply [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/) in the panel that uses the Dashboard data source.
+The Dashboard data source references the complete output of another panel. It doesn't chain one query into another within a single panel, so you can't feed the results of one query into a second query as an input. To reshape or narrow the referenced data, apply [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/) in the panel that uses the Dashboard data source.
 
 Use the Dashboard data source when you want to:
 
-- **Share query results:** Point several panels at one source panel so Grafana runs a single query and reuses the results, which reduces the number of queries sent to your backend. For details, refer to [Share query results with another panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/share-query/).
-- **Filter unsupported data:** Reference a panel whose data source doesn't support the use of filters, then filter the referenced data in the new panel. For details, refer to [Filter any data using the Dashboard data source](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/#filter-any-data-using-the-dashboard-data-source).
+- **Share query results:** Point several panels at one source panel so Grafana runs a single query and reuses the results, which reduces the number of queries sent to your backend. For details, refer to [Share query results with another panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/share-query/).
+- **Filter unsupported data:** Reference a panel whose data source doesn't support the use of filters, then filter the referenced data in the new panel. For details, refer to [Filter any data using the Dashboard data source](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/#filter-any-data-using-the-dashboard-data-source).
 
 When you configure the Dashboard data source, you set the following options:
 
@@ -127,42 +127,42 @@ Grafana ships with the following core data sources, organized by their primary u
 
 ### Metrics and time series
 
-- [AWS CloudWatch](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/)
-- [Azure Monitor](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/)
-- [Google Cloud Monitoring](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/)
-- [Graphite](https://grafana.com/docs/grafana/v13.2/datasources/graphite/)
-- [InfluxDB](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/)
-- [OpenTSDB](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/)
-- [Prometheus](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/)
+- [AWS CloudWatch](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/)
+- [Azure Monitor](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/)
+- [Google Cloud Monitoring](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/)
+- [Graphite](https://grafana.com/docs/grafana/v13.3/datasources/graphite/)
+- [InfluxDB](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/)
+- [OpenTSDB](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/)
+- [Prometheus](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/)
 
 ### Logs
 
-- [Elasticsearch](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/)
-- [Loki](https://grafana.com/docs/grafana/v13.2/datasources/loki/)
+- [Elasticsearch](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/)
+- [Loki](https://grafana.com/docs/grafana/v13.3/datasources/loki/)
 
 ### Traces
 
-- [Jaeger](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/)
-- [Tempo](https://grafana.com/docs/grafana/v13.2/datasources/tempo/)
-- [Zipkin](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/)
+- [Jaeger](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/)
+- [Tempo](https://grafana.com/docs/grafana/v13.3/datasources/tempo/)
+- [Zipkin](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/)
 
 ### Profiles
 
-- [Pyroscope](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/)
+- [Pyroscope](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/)
 
 ### SQL databases
 
-- [Microsoft SQL Server (MSSQL)](https://grafana.com/docs/grafana/v13.2/datasources/mssql/)
-- [MySQL](https://grafana.com/docs/grafana/v13.2/datasources/mysql/)
-- [PostgreSQL](https://grafana.com/docs/grafana/v13.2/datasources/postgres/)
+- [Microsoft SQL Server (MSSQL)](https://grafana.com/docs/grafana/v13.3/datasources/mssql/)
+- [MySQL](https://grafana.com/docs/grafana/v13.3/datasources/mysql/)
+- [PostgreSQL](https://grafana.com/docs/grafana/v13.3/datasources/postgres/)
 
 ### Alerting
 
-- [Alertmanager](https://grafana.com/docs/grafana/v13.2/datasources/alertmanager/)
+- [Alertmanager](https://grafana.com/docs/grafana/v13.3/datasources/alertmanager/)
 
 ### Testing and debugging
 
-- [TestData](https://grafana.com/docs/grafana/v13.2/datasources/testdata/)
+- [TestData](https://grafana.com/docs/grafana/v13.3/datasources/testdata/)
 
 ## Add additional data source plugins
 
@@ -171,10 +171,10 @@ You can add additional data sources as plugins (that aren't available in core Gr
 ### Find data source plugins in the plugin catalog
 
 To view available data source plugins, go to the [plugin catalog](https://grafana.com/grafana/plugins/?type=datasource) and select the "Data sources" filter.
-For details about the plugin catalog, refer to [Plugin management](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/).
+For details about the plugin catalog, refer to [Plugin management](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/).
 
 You can further filter the plugin catalog's results for data sources provided by the Grafana community, Grafana Labs, and partners.
-If you use [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/), you can also filter by Enterprise-supported plugins.
+If you use [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/), you can also filter by Enterprise-supported plugins.
 
 For more documentation on a specific data source plugin's features, including its query language and editor, refer to its plugin catalog page.
 
@@ -189,11 +189,11 @@ Grafana lets you link related data across different data sources so you can jump
 You can set up these links in two ways:
 
 - **Data source configuration:** Tracing data sources like Tempo, Jaeger, and Zipkin include built-in settings for trace-to-logs, trace-to-metrics, and trace-to-profiles links.
-- **Correlations:** A more flexible, general-purpose feature that lets you define rules to link data between any data sources. Refer to [Correlations](https://grafana.com/docs/grafana/v13.2/administration/correlations/) for details.
+- **Correlations:** A more flexible, general-purpose feature that lets you define rules to link data between any data sources. Refer to [Correlations](https://grafana.com/docs/grafana/v13.3/administration/correlations/) for details.
 
 ## Troubleshoot data sources
 
-If you run into issues with a data source, refer to [Troubleshoot data sources](https://grafana.com/docs/grafana/v13.2/datasources/troubleshooting/) for solutions to common problems like connection errors, authentication failures, and empty query results.
+If you run into issues with a data source, refer to [Troubleshoot data sources](https://grafana.com/docs/grafana/v13.3/datasources/troubleshooting/) for solutions to common problems like connection errors, authentication failures, and empty query results.
 
 Each built-in data source also has its own troubleshooting page with guidance specific to that data source.
 
@@ -201,10 +201,10 @@ Each built-in data source also has its own troubleshooting page with guidance sp
 
 After you've configured a data source, you can:
 
-- **Build a dashboard:** Click the **Build a dashboard** drop-down list on the data source configuration page and select **From suggestions** to open a dialog box with suggested dashboards based on the data source type. For more information, refer to [Create dashboards from suggestions](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-template-dashboards/) or [Create a dashboard](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/create-dashboard/).
-- **Explore your data:** Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to run free-form queries without creating a dashboard.
-- **Set up alerts:** Create [alert rules](https://grafana.com/docs/grafana/v13.2/alerting/) to get notified when your data meets certain conditions.
-- **Use template variables:** Create dynamic, reusable dashboards with [template variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/).
-- **Add annotations:** Overlay [annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) on your graphs to mark events and correlate them with metrics.
-- **Transform query results:** Apply [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/) to manipulate and combine data from multiple sources.
-- **Enable query caching:** Improve dashboard performance and reduce backend load with [query and resource caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching) (available in Grafana Enterprise and Grafana Cloud).
+- **Build a dashboard:** Click the **Build a dashboard** drop-down list on the data source configuration page and select **From suggestions** to open a dialog box with suggested dashboards based on the data source type. For more information, refer to [Create dashboards from suggestions](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-template-dashboards/) or [Create a dashboard](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/create-dashboard/).
+- **Explore your data:** Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to run free-form queries without creating a dashboard.
+- **Set up alerts:** Create [alert rules](https://grafana.com/docs/grafana/v13.3/alerting/) to get notified when your data meets certain conditions.
+- **Use template variables:** Create dynamic, reusable dashboards with [template variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/).
+- **Add annotations:** Overlay [annotations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/) on your graphs to mark events and correlate them with metrics.
+- **Transform query results:** Apply [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/) to manipulate and combine data from multiple sources.
+- **Enable query caching:** Improve dashboard performance and reduce backend load with [query and resource caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching) (available in Grafana Enterprise and Grafana Cloud).

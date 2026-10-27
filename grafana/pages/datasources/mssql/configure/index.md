@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mssql/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mssql/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mssql/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mssql/configure/index.md)
 
 # Configure the Microsoft SQL Server data source
 
-This document provides instructions for configuring the Microsoft SQL Server data source and explains available configuration options. For general information on adding and managing data sources, refer to [Grafana data sources](https://grafana.com/docs/grafana/v13.2/datasources/) and [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+This document provides instructions for configuring the Microsoft SQL Server data source and explains available configuration options. For general information on adding and managing data sources, refer to [Grafana data sources](https://grafana.com/docs/grafana/v13.3/datasources/) and [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 > **Note**
 >
@@ -12,7 +12,7 @@ This document provides instructions for configuring the Microsoft SQL Server dat
 
 Before configuring the Microsoft SQL Server data source, ensure you have the following:
 
-- **Grafana permissions:** You must have the `Organization administrator` role to add and configure data sources. Users with the `Editor` or `Viewer` role cannot access the data source configuration form unless granted additional permissions through [RBAC](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/). Organization administrators can also [configure the data source via YAML](#provision-the-data-source) with the Grafana provisioning system.
+- **Grafana permissions:** You must have the `Organization administrator` role to add and configure data sources. Users with the `Editor` or `Viewer` role cannot access the data source configuration form unless granted additional permissions through [RBAC](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/). Organization administrators can also [configure the data source via YAML](#provision-the-data-source) with the Grafana provisioning system.
 
 - **A running SQL Server instance:** Microsoft SQL Server 2012 or newer, Azure SQL Database, or Azure SQL Managed Instance.
 
@@ -27,7 +27,7 @@ Before configuring the Microsoft SQL Server data source, ensure you have the fol
 
 > **Note**
 >
-> The Microsoft SQL Server data source plugin is preinstalled in Grafana, so no additional installation is required. As of Grafana 13.2, it's packaged as a standalone plugin that updates independently of Grafana releases. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/mssql/#plugin-updates) for details.
+> The Microsoft SQL Server data source plugin is preinstalled in Grafana, so no additional installation is required. As of Grafana 13.2, it's packaged as a standalone plugin that updates independently of Grafana releases. Refer to [Plugin updates](https://grafana.com/docs/grafana/v13.3/datasources/mssql/#plugin-updates) for details.
 
 > **Tip**
 >
@@ -116,7 +116,7 @@ When **Encrypt** is set to **True**, the following additional TLS options are av
 | **Windows AD** (Keytab)                               | Authenticates a domain user using a keytab file.                                                                                | **Username**: `user@example.com`. **Keytab file path**: Path to your keytab file.                                                                                                                             |
 | **Windows AD** (Credential Cache)                     | Uses a Kerberos credential cache already loaded in memory (for example, from a prior `kinit` command). No file needed.          | **Credential cache path**: Path to in-memory credential (for example, `/tmp/krb5cc_1000`).                                                                                                                    |
 | **Windows AD** (Credential Cache File)                | Authenticates a domain user using a credential cache file (`.ccache`).                                                          | **Username**: `user@example.com`. **Credential cache file path**: for example, `/home/grot/cache.json`.                                                                                                       |
-| **Azure Entra ID (formerly Azure AD) Authentication** | Authenticates the data source using Azure authentication methods. The UI label is **Azure AD Authentication**.                  | For supported methods and configuration steps, refer to [Azure Entra ID authentication](https://grafana.com/docs/grafana/v13.2/datasources/mssql/configure/#azure-entra-id-formerly-azure-ad-authentication). |
+| **Azure Entra ID (formerly Azure AD) Authentication** | Authenticates the data source using Azure authentication methods. The UI label is **Azure AD Authentication**.                  | For supported methods and configuration steps, refer to [Azure Entra ID authentication](https://grafana.com/docs/grafana/v13.3/datasources/mssql/configure/#azure-entra-id-formerly-azure-ad-authentication). |
 
 > **Note**
 >
@@ -235,7 +235,7 @@ Depending on the method you choose, additional flags are required (documented in
 
 This is the recommended authentication mechanism when working with SQL Server instances that are hosted in Azure. It allows users to be authenticated to and query the database using their own credentials rather than long-lived credentials.
 
-This authentication method requires your Grafana instance to be configured with Azure Entra ID (formerly Active Directory) authentication for login. With Azure Entra ID login, this method can be used to forward the currently logged in user's credentials to the data source. The user's credentials are then used when requesting data from the data source. For details on how to configure your Grafana instance using Azure Entra, refer to the [documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/).
+This authentication method requires your Grafana instance to be configured with Azure Entra ID (formerly Active Directory) authentication for login. With Azure Entra ID login, this method can be used to forward the currently logged in user's credentials to the data source. The user's credentials are then used when requesting data from the data source. For details on how to configure your Grafana instance using Azure Entra, refer to the [documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/azuread/).
 
 > **Note**
 >
@@ -262,7 +262,7 @@ This method of authentication doesn't inherently support all backend functionali
 
 **To enable current user authentication for Grafana:**
 
-1. Set the `user_identity_enabled` flag in the `[azure]` section of the [Grafana server configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#azure).
+1. Set the `user_identity_enabled` flag in the `[azure]` section of the [Grafana server configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#azure).
 
    ```ini
    [azure]
@@ -323,7 +323,7 @@ For details on Azure managed identities, refer to the [Azure documentation](http
 
 **To enable managed identity for Grafana:**
 
-1. Set both `azure_auth_enabled` and `managed_identity_enabled` in the `[azure]` section of the [Grafana server configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#azure):
+1. Set both `azure_auth_enabled` and `managed_identity_enabled` in the `[azure]` section of the [Grafana server configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#azure):
 
    ```ini
    [azure]
@@ -349,7 +349,7 @@ You can connect to an Azure SQL database using the username and password of a us
 
 **To enable Azure Entra password for Grafana:**
 
-1. Set the `azure_entra_password_credentials_enabled` flag in the `[azure]` section of the [Grafana server configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#azure).
+1. Set the `azure_entra_password_credentials_enabled` flag in the `[azure]` section of the [Grafana server configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#azure).
 
    ```ini
    [azure]
@@ -366,7 +366,7 @@ You can connect to an Azure SQL database using the username and password of a us
 
 ### Min time interval
 
-The **Min time interval** setting defines a lower limit for the [`$__interval`](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#__interval) and [`$__interval_ms`](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#__interval_ms) variables.
+The **Min time interval** setting defines a lower limit for the [`$__interval`](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#__interval) and [`$__interval_ms`](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#__interval_ms) variables.
 
 This value *must* be formatted as a number followed by a valid time identifier:
 
@@ -405,7 +405,7 @@ Grafana recommends that you use the latest available service pack for optimal co
 
 ### Provision the data source
 
-You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, and for available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/).
+You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, and for available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/).
 
 #### Example
 
@@ -468,8 +468,8 @@ For all available configuration options, refer to the [Grafana provider data sou
 
 After configuring your Microsoft SQL Server data source, you can:
 
-- [Write queries](https://grafana.com/docs/grafana/v13.2/datasources/mssql/query-editor/) using the query editor to explore and visualize your data
-- [Create template variables](https://grafana.com/docs/grafana/v13.2/datasources/mssql/template-variables/) to build dynamic, reusable dashboards
-- [Add annotations](https://grafana.com/docs/grafana/v13.2/datasources/mssql/annotations/) to overlay SQL Server events on your graphs
-- [Set up alerting](https://grafana.com/docs/grafana/v13.2/datasources/mssql/alerting/) to create alert rules based on your SQL Server data
-- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.2/datasources/mssql/troubleshooting/) if you encounter problems with your data source
+- [Write queries](https://grafana.com/docs/grafana/v13.3/datasources/mssql/query-editor/) using the query editor to explore and visualize your data
+- [Create template variables](https://grafana.com/docs/grafana/v13.3/datasources/mssql/template-variables/) to build dynamic, reusable dashboards
+- [Add annotations](https://grafana.com/docs/grafana/v13.3/datasources/mssql/annotations/) to overlay SQL Server events on your graphs
+- [Set up alerting](https://grafana.com/docs/grafana/v13.3/datasources/mssql/alerting/) to create alert rules based on your SQL Server data
+- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.3/datasources/mssql/troubleshooting/) if you encounter problems with your data source

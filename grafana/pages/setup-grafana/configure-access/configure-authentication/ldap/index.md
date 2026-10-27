@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/ldap/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/ldap/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/ldap/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/ldap/index.md)
 
 # Configure LDAP authentication
 
@@ -7,9 +7,9 @@ group memberships and Grafana Organization user roles.
 
 > **Note**
 >
-> [Enhanced LDAP authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/enhanced-ldap/) is available in [Grafana Cloud](https://grafana.com/docs/grafana-cloud/) and in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/).
+> [Enhanced LDAP authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/enhanced-ldap/) is available in [Grafana Cloud](https://grafana.com/docs/grafana-cloud/) and in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/).
 
-Refer to [Role-based access control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/) to understand how you can control access with role-based permissions.
+Refer to [Role-based access control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/) to understand how you can control access with role-based permissions.
 
 ## Supported LDAP Servers
 
@@ -19,7 +19,7 @@ This means that you should be able to configure LDAP integration using any compl
 
 ## Enable LDAP
 
-In order to use LDAP integration you'll first need to enable LDAP in the [main config file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) as well as specify the path to the LDAP
+In order to use LDAP integration you'll first need to enable LDAP in the [main config file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) as well as specify the path to the LDAP
 specific configuration file (default: `/etc/grafana/ldap.toml`).
 
 After enabling LDAP, the default behavior is for Grafana users to be created automatically upon successful LDAP authentication. If you prefer for only existing Grafana users to be able to sign in, you can change `allow_sign_up` to `false` in the `[auth.ldap]` section.
@@ -123,7 +123,7 @@ email =  "email"
 
 ### Using the Grafana user interface
 
-You can configure LDAP using the Grafana user interface by navigating to **Administration > Authentication > LDAP**. Please refer to the [LDAP user interface](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/ldap-ui/) documentation for more information.
+You can configure LDAP using the Grafana user interface by navigating to **Administration > Authentication > LDAP**. Please refer to the [LDAP user interface](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/ldap-ui/) documentation for more information.
 
 ### Using environment variables
 
@@ -384,7 +384,7 @@ Inspect your Active Directory configuration and documentation to find the correc
 
 ## Troubleshooting
 
-To troubleshoot and get more log information, enable LDAP debug logging in the [`grafana.ini` or `custom.ini`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) file:
+To troubleshoot and get more log information, enable LDAP debug logging in the [`grafana.ini` or `custom.ini`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) file:
 
 ```bash
 [log]

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md)
 
 # Reporting API
 
@@ -8,7 +8,7 @@
 >
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
-> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 This API allows you to interact programmatically with the [Reporting](https://grafana.com/docs/grafana/latest/dashboards/create-reports/) feature.
 
@@ -96,7 +96,7 @@ Content-Length: 1840
 ### Status Codes
 
 - **200** – OK
-- **401** - Authentication failed, refer to [Authentication](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/authentication/).
+- **401** - Authentication failed, refer to [Authentication](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/authentication/).
 - **500** – Unexpected error or server misconfiguration. Refer to server logs for more details.
 
 ## Get a report
@@ -180,7 +180,7 @@ Content-Length: 940
 
 - **200** – OK
 - **400** – Bad request (invalid report ID).
-- **401** - Authentication failed, refer to [Authentication](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/authentication/).
+- **401** - Authentication failed, refer to [Authentication](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/authentication/).
 - **403** – Forbidden (access denied to a report or a dashboard used in the report).
 - **404** – Not found (such report does not exist).
 - **500** – Unexpected error or server misconfiguration. Refer to server logs for more details.
@@ -270,7 +270,7 @@ Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
 
 | Field name                     | Data type | Description                                                                                                                                                   |
 | ------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dashboard.uid                  | string    | Dashboard [UID](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/dashboard_versions/).                            |
+| dashboard.uid                  | string    | Dashboard [UID](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/dashboard_versions/).                            |
 | timeRange.from                 | string    | Dashboard time range from.                                                                                                                                    |
 | timeRange.to                   | string    | Dashboard time range to.                                                                                                                                      |
 | reportVariables.<variableName> | string    | Key-value pairs containing the template variables for this report, in JSON format. If empty, the template variables from the report's dashboard will be used. |

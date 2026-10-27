@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics.md)
 
 # Configure trace to metrics correlation
 
@@ -14,7 +14,7 @@ The metrics generator creates *new* metrics from trace data; trace to metrics li
 
 To configure trace to metrics, you need:
 
-- A [Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) configured in Grafana
+- A [Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) configured in Grafana
 - A Prometheus-compatible metrics data source configured in Grafana
 - Metrics that correspond to your traced services (for example, `requests_total`, `request_duration_seconds`)
 - Editor or Admin permissions in Grafana
@@ -22,13 +22,13 @@ To configure trace to metrics, you need:
 > **Note**
 >
 > You can't modify a provisioned data source from the Grafana UI. If you're using Grafana Cloud Traces (the pre-configured tracing data source in Grafana Cloud), its settings are read-only.
-> To configure trace to metrics, [clone the data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud) to create an editable copy, or update the provisioning file for self-managed instances.
+> To configure trace to metrics, [clone the data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud) to create an editable copy, or update the provisioning file for self-managed instances.
 > Refer to the [Provisioning](#provisioning) section for details.
 
 There are two ways to configure the trace to metrics feature:
 
 - Use a basic configuration with a default query.
-- Configure one or more custom queries where you can use a [template language](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/) to interpolate variables from the trace or span.
+- Configure one or more custom queries where you can use a [template language](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/) to interpolate variables from the trace or span.
 
 ![Trace to metrics settings in the Tempo data source](https://grafana.com/media/docs/grafana/data-sources/tempo/tempo-data-source-trace-to-metrics.png)
 
@@ -67,7 +67,7 @@ To use custom queries with the configuration, follow these steps:
 
 2. Optional: Choose any tags to use in the query. Click **Add tag** to add a tag mapping.
 
-   These tags can be used in the custom query with the `${__tags}` variable. This variable interpolates the mapped tags as a list in an appropriate syntax for the data source and only includes the tags that were present in the span, omitting those that weren't present. You can optionally configure a new name for the tag. This is useful in cases where the tag has dots in the name and the target data source doesn't allow using dots in labels. For example, you can remap `service.name` to `service_name`. If you don't map any tags here, you can still use any tag in the query like this: `method="${__span.tags.method}"`. Refer to [Custom query variables](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#custom-query-variables) for the full list of available variables.
+   These tags can be used in the custom query with the `${__tags}` variable. This variable interpolates the mapped tags as a list in an appropriate syntax for the data source and only includes the tags that were present in the span, omitting those that weren't present. You can optionally configure a new name for the tag. This is useful in cases where the tag has dots in the name and the target data source doesn't allow using dots in labels. For example, you can remap `service.name` to `service_name`. If you don't map any tags here, you can still use any tag in the query like this: `method="${__span.tags.method}"`. Refer to [Custom query variables](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#custom-query-variables) for the full list of available variables.
 
 3. Click **Add query** to add a custom query.
 
@@ -98,20 +98,20 @@ The following table describes options for configuring the **Trace to metrics** s
 ## Provisioning
 
 You can provision the trace to metrics configuration using the `tracesToMetrics` block in your data source YAML file.
-For the full provisioning YAML example including all Tempo settings, refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/).
+For the full provisioning YAML example including all Tempo settings, refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/).
 
 ## Link from metrics to traces
 
-To navigate in the reverse direction, from a metric to its associated trace, configure exemplars in your Prometheus data source. Refer to [Exemplars](https://grafana.com/docs/grafana/v13.2/fundamentals/exemplars/) for setup instructions.
+To navigate in the reverse direction, from a metric to its associated trace, configure exemplars in your Prometheus data source. Refer to [Exemplars](https://grafana.com/docs/grafana/v13.3/fundamentals/exemplars/) for setup instructions.
 
 ## Troubleshooting
 
-If trace to metrics links aren't appearing or return no data, refer to [Trace to logs/metrics/profiles issues](https://grafana.com/docs/grafana/v13.2/datasources/tempo/troubleshooting/#trace-to-logsmetricsprofiles-issues) in the troubleshooting guide.
+If trace to metrics links aren't appearing or return no data, refer to [Trace to logs/metrics/profiles issues](https://grafana.com/docs/grafana/v13.3/datasources/tempo/troubleshooting/#trace-to-logsmetricsprofiles-issues) in the troubleshooting guide.
 
 If the configuration fields are greyed out, your data source is provisioned. Refer to the [Provisioning](#provisioning) section for how to update the configuration via YAML.
 
 ## Next steps
 
-- [Configure trace to logs correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/): Navigate from spans to related logs in Loki.
-- [Configure trace to profiles correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope.
-- [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/): Configure the Tempo data source using a YAML file.
+- [Configure trace to logs correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/): Navigate from spans to related logs in Loki.
+- [Configure trace to profiles correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope.
+- [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/): Configure the Tempo data source using a YAML file.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/concepts/agents/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/concepts/agents/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/concepts/agents/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/concepts/agents/index.md)
 
 *Agents are the core building blocks of Docker Agent. Each agent is an AI-powered entity with a model, instructions, tools, and optional sub-agents.*
 
@@ -37,19 +37,19 @@ Every Docker Agent configuration has a **root agent** — the entry point that r
 
 ## Agent Properties
 
-| Property               | Type            | Required | Description                                                                                                                |
-| ---------------------- | --------------- | -------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `model`                | string          | ✓        | Model reference (inline like `openai/gpt-5` or a named model)                                                              |
-| `description`          | string          | ✓        | What the agent does — used by other agents for delegation                                                                  |
-| `instruction`          | string          | ✓        | System prompt defining behavior                                                                                            |
-| `toolsets`             | array           | ✗        | List of tool configurations                                                                                                |
-| `sub_agents`           | array           | ✗        | Names of agents this agent can delegate to                                                                                 |
-| `fallback`             | object          | ✗        | Fallback model configuration for resilience                                                                                |
-| `add_date`             | boolean         | ✗        | Include current date in context                                                                                            |
-| `add_environment_info` | boolean         | ✗        | Include OS, working directory, git info in context                                                                         |
-| `max_iterations`       | int             | ✗        | Max tool-calling loops (default: unlimited)                                                                                |
-| `commands`             | object          | ✗        | Named prompts callable via `/command`                                                                                      |
-| `skills`               | boolean \| list | ✗        | Enable skill discovery and loading. `true` = `["local"]`; list values may combine `"local"` with remote skill-server URLs. |
+| Property               | Type            | Required                | Description                                                                                                                |
+| ---------------------- | --------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `model`                | string          | unless `harness` is set | Model reference (inline like `openai/gpt-5` or a named model)                                                              |
+| `description`          | string          | ✗                       | What the agent does — used by other agents for delegation                                                                  |
+| `instruction`          | string          | ✗                       | System prompt defining behavior                                                                                            |
+| `toolsets`             | array           | ✗                       | List of tool configurations                                                                                                |
+| `sub_agents`           | array           | ✗                       | Names of agents this agent can delegate to                                                                                 |
+| `fallback`             | object          | ✗                       | Fallback model configuration for resilience                                                                                |
+| `add_date`             | boolean         | ✗                       | Include current date in context                                                                                            |
+| `add_environment_info` | boolean         | ✗                       | Include OS, working directory, git info in context                                                                         |
+| `max_iterations`       | int             | ✗                       | Max tool-calling loops (default: unlimited)                                                                                |
+| `commands`             | object          | ✗                       | Named prompts callable via `/command`                                                                                      |
+| `skills`               | boolean \| list | ✗                       | Enable skill discovery and loading. `true` = `["local"]`; list values may combine `"local"` with remote skill-server URLs. |
 
 ## Model Fallbacks
 

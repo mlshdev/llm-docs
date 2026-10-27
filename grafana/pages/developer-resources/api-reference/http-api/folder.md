@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/folder.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/folder.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/folder.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/folder.md)
 
 # Folder APIs
 
@@ -6,13 +6,13 @@
 >
 > Available in Grafana 12 and later.
 >
-> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 >
 > **This document may not contain the latest version of the API. For the most up-to-date list of available endpoints, refer to [folder.grafana.app/v1](https://play.grafana.org/swagger?api=folder.grafana.app-v1) in Swagger.**
 
 ## Requirements
 
-If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Endpoints
 
@@ -30,7 +30,7 @@ If you're running Grafana Enterprise, you'll need to have specific permissions f
 
 Returns all folders that the authenticated user has permission to view within the given organization. Use the `limit` query parameter to control the maximum number of dashboards returned. To retrieve additional dashboards, utilize the `continue` token provided in the response to fetch the next page.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 **Query parameters**:
 
@@ -146,7 +146,7 @@ Status Codes:
 
 Will return the folder given the folder uid.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 - uid: the unique identifier of the folder to update. this will be the *name* in the folder response
 
 **Required permissions**
@@ -208,7 +208,7 @@ Status Codes:
 
 Creates a new folder.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 **Required permissions**
 
@@ -294,7 +294,7 @@ Status Codes:
 
 Updates an existing folder identified by uid.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 - uid: the unique identifier of the folder to update. this will be the *name* in the folder response
 
 **Required permissions**
@@ -390,9 +390,9 @@ Content-Length: 97
 
 Deletes an existing folder identified by UID along with all dashboards (and their alerts) stored in the folder. This operation cannot be reverted.
 
-If [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting) is enabled, you can set an optional query parameter `forceDeleteRules=false` so that requests will fail with 400 (Bad Request) error if the folder contains any Grafana alerts. However, if this parameter is set to `true` then it will delete any Grafana alerts under this folder.
+If [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting) is enabled, you can set an optional query parameter `forceDeleteRules=false` so that requests will fail with 400 (Bad Request) error if the folder contains any Grafana alerts. However, if this parameter is set to `true` then it will delete any Grafana alerts under this folder.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 - uid: the unique identifier of the folder to delete. this will be the *name* in the folder response
 
 **Required permissions**

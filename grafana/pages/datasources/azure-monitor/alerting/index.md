@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/azure-monitor/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/azure-monitor/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/azure-monitor/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/azure-monitor/alerting/index.md)
 
 # Azure Monitor alerting
 
-The Azure Monitor data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/) and [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/), allowing you to create alert rules based on Azure metrics, logs, traces, and resource data. You can monitor your Azure environment and receive notifications when specific conditions are met.
+The Azure Monitor data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/) and [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/), allowing you to create alert rules based on Azure metrics, logs, traces, and resource data. You can monitor your Azure environment and receive notifications when specific conditions are met.
 
 ## Before you begin
 
 - Ensure you have the appropriate permissions to create alert rules in Grafana.
 - Verify your Azure Monitor data source is configured and working correctly.
-- Familiarize yourself with [Grafana Alerting concepts](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/).
+- Familiarize yourself with [Grafana Alerting concepts](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/).
 - **Important**: Verify your data source uses a supported authentication method. Refer to [Authentication requirements](#authentication-requirements).
 
 ## Supported query types for alerting
@@ -40,7 +40,7 @@ Alerting and recording rules run as background processes without a user context.
 
 > **Note**
 >
-> If you use **Current User** authentication, you must configure **fallback service credentials** for alerting and recording rules to function. User credentials aren't available for background operations, so Grafana uses the fallback credentials instead. Refer to [configure the data source](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/configure/) for details on setting up fallback credentials.
+> If you use **Current User** authentication, you must configure **fallback service credentials** for alerting and recording rules to function. User credentials aren't available for background operations, so Grafana uses the fallback credentials instead. Refer to [configure the data source](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/configure/) for details on setting up fallback credentials.
 
 ## Create an alert rule
 
@@ -61,7 +61,7 @@ To create an alert rule using Azure Monitor data:
 6. Add labels and annotations to provide context for notifications.
 7. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example: VM CPU usage alert
 
@@ -196,17 +196,17 @@ If you see authentication errors when alerts evaluate:
 
 ### Query timeout errors
 
-- **Increase the data source timeout.** The default timeout is 30 seconds, but Azure Log Analytics queries can take up to 3 minutes. Open the Azure Monitor data source settings, scroll to **Misc**, and set **Timeout** to `300`. Refer to [Query timeout](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/configure/#query-timeout).
+- **Increase the data source timeout.** The default timeout is 30 seconds, but Azure Log Analytics queries can take up to 3 minutes. Open the Azure Monitor data source settings, scroll to **Misc**, and set **Timeout** to `300`. Refer to [Query timeout](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/configure/#query-timeout).
 - Simplify complex KQL queries.
 - Reduce the time range in Log Analytics queries.
 - Add more specific filters to narrow result sets.
 - Ensure the alert evaluation interval is long enough to accommodate the query duration.
 
-For additional troubleshooting help, refer to [Troubleshoot Azure Monitor](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/troubleshooting/).
+For additional troubleshooting help, refer to [Troubleshoot Azure Monitor](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/troubleshooting/).
 
 ## Additional resources
 
-- [Grafana Alerting documentation](https://grafana.com/docs/grafana/v13.2/alerting/)
-- [Create alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/)
-- [Azure Monitor query editor](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/query-editor/)
-- [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/)
+- [Grafana Alerting documentation](https://grafana.com/docs/grafana/v13.3/alerting/)
+- [Create alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/)
+- [Azure Monitor query editor](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/query-editor/)
+- [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/)

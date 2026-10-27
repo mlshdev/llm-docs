@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mssql/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mssql/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mssql/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mssql/_index.md)
 
 # Microsoft SQL Server data source
 
@@ -43,18 +43,18 @@ The Microsoft SQL Server data source supports the following authentication metho
 >
 > Azure Entra ID (Current User) authentication doesn't support alerting, reporting, or recorded queries because these features run on the backend without a user session.
 
-For configuration details, refer to [Configure the Microsoft SQL Server data source](https://grafana.com/docs/grafana/v13.2/datasources/mssql/configure/).
+For configuration details, refer to [Configure the Microsoft SQL Server data source](https://grafana.com/docs/grafana/v13.3/datasources/mssql/configure/).
 
 ## Get started
 
 The following documentation helps you set up and use the Microsoft SQL Server data source:
 
-- [Configure the data source](https://grafana.com/docs/grafana/v13.2/datasources/mssql/configure/)
-- [Query editor](https://grafana.com/docs/grafana/v13.2/datasources/mssql/query-editor/)
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/mssql/template-variables/)
-- [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/mssql/annotations/)
-- [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/mssql/alerting/)
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/mssql/troubleshooting/)
+- [Configure the data source](https://grafana.com/docs/grafana/v13.3/datasources/mssql/configure/)
+- [Query editor](https://grafana.com/docs/grafana/v13.3/datasources/mssql/query-editor/)
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/mssql/template-variables/)
+- [Annotations](https://grafana.com/docs/grafana/v13.3/datasources/mssql/annotations/)
+- [Alerting](https://grafana.com/docs/grafana/v13.3/datasources/mssql/alerting/)
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/mssql/troubleshooting/)
 
 ## Plugin updates
 
@@ -62,12 +62,12 @@ Starting with Grafana 13.2, the Microsoft SQL Server data source is a standalone
 
 To adjust this behavior:
 
-- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 - **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
 
 The standalone plugin requires Grafana 12.3.0 or later. The Microsoft SQL Server data source bundled with Grafana 13.1 and earlier continues to work as before. These versions are unaffected by the change.
 
-Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/):
 
 ```ini
 [plugin.mssql]
@@ -84,18 +84,38 @@ preinstall_sync = mssql
 
 After you configure the data source, you can:
 
-- Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to query data without building a dashboard
-- Create [visualizations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/) including time series, tables, and gauges
-- Add [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/) to manipulate query results
-- Optimize performance with [query caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching) (Grafana Enterprise and Cloud)
+- Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to query data without building a dashboard
+- Create [visualizations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/) including time series, tables, and gauges
+- Add [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/) to manipulate query results
+- Optimize performance with [query caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching) (Grafana Enterprise and Cloud)
 
 [//]: # "Shared note: querying a data source with the gcx Grafana CLI."
 
 [//]: # "This shared file is included in these locations:"
 
-[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+[//]: # "/docs/sources/datasources/aws-cloudwatch/_index.md"
+
+[//]: # "/docs/sources/datasources/azure-monitor/_index.md"
+
+[//]: # "/docs/sources/datasources/elasticsearch/_index.md"
+
+[//]: # "/docs/sources/datasources/google-cloud-monitoring/_index.md"
+
+[//]: # "/docs/sources/datasources/influxdb/_index.md"
+
+[//]: # "/docs/sources/datasources/loki/_index.md"
+
+[//]: # "/docs/sources/datasources/mssql/_index.md"
 
 [//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: # "/docs/sources/datasources/postgres/_index.md"
+
+[//]: # "/docs/sources/datasources/prometheus/_index.md"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/tempo/_index.md"
 
 [//]: #
 
@@ -107,7 +127,7 @@ After you configure the data source, you can:
 
 You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
 
-`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
 
 For example, to explore and query your Microsoft SQL Server data source, use the `gcx datasources mssql` commands:
 
@@ -127,5 +147,5 @@ Replace *`<DATASOURCE_UID>`* with the UID of your Microsoft SQL Server data sour
 
 ## Related data sources
 
-- [PostgreSQL](https://grafana.com/docs/grafana/v13.2/datasources/postgres/)
-- [MySQL](https://grafana.com/docs/grafana/v13.2/datasources/mysql/)
+- [PostgreSQL](https://grafana.com/docs/grafana/v13.3/datasources/postgres/)
+- [MySQL](https://grafana.com/docs/grafana/v13.3/datasources/mysql/)

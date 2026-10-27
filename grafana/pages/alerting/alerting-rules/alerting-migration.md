@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/alerting-migration.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/alerting-migration.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/alerting-migration.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/alerting-migration.md)
 
 # Import data source-managed rules to Grafana-managed rules
 
@@ -13,6 +13,12 @@ This guide explains two methods for importing data source-managed rules:
 Importing rules is a safe operation: the original data source–managed rules remain intact in their original location. During import, the rules are converted into Grafana-managed rules while preserving their configuration and behavior.
 
 Choose the method that best fits your workflow. As a best practice, test and validate your import process before migrating all alert rules.
+
+## Import your notification configuration first
+
+Rules only tell you about a problem if the notification reaches someone. Grafana-managed rules route through the Grafana Alertmanager, not through the Alertmanager your data source-managed rules used, so imported rules notify through whatever contact points and notification policies already exist in Grafana.
+
+Consider [importing your Alertmanager configuration](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/import-alertmanager-configuration/) before you import rules. Grafana imports the configuration as it is and runs it the way your Prometheus or Mimir Alertmanager does. You can then route the rules you import through the imported policy tree.
 
 ## How it works
 
@@ -31,7 +37,7 @@ The copied rules are converted to Grafana-managed rules, preserving their behavi
 
   A query offset is applied to each rule. For example, an offset of `1m` adjusts the query's time range to `To: now-1m`.
 
-  The rule query offset is taken from the `query_offset` value in the rule group configuration. If empty, it defaults to the [`rule_query_offset` configuration setting](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#rule_query_offset), which is `1m` by default.
+  The rule query offset is taken from the `query_offset` value in the rule group configuration. If empty, it defaults to the [`rule_query_offset` configuration setting](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#rule_query_offset), which is `1m` by default.
 
 - **Rule query conversion**
 
@@ -39,7 +45,7 @@ The copied rules are converted to Grafana-managed rules, preserving their behavi
 
 - **Missing series evaluations to resolve**
 
-  The [Missing series evaluations to resolve](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/#configure-missing-series-evaluations-to-resolve) setting is set to `1` to replicate Prometheus’s alert eviction behavior.
+  The [Missing series evaluations to resolve](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/#configure-missing-series-evaluations-to-resolve) setting is set to `1` to replicate Prometheus’s alert eviction behavior.
 
 - **Rule group labels**
 
@@ -47,7 +53,7 @@ The copied rules are converted to Grafana-managed rules, preserving their behavi
 
 - **Sequential evaluation**
 
-  Imported rules are evaluated sequentially within each rule group, mirroring Prometheus behavior. This differs from native Grafana-managed alert rules, where the evaluation order is not enforced. For more details, refer to [evaluation strategies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/).
+  Imported rules are evaluated sequentially within each rule group, mirroring Prometheus behavior. This differs from native Grafana-managed alert rules, where the evaluation order is not enforced. For more details, refer to [evaluation strategies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/).
 
 - **Feature compatibility**
 

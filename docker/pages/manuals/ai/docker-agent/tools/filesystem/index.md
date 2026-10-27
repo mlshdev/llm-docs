@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/tools/filesystem/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/tools/filesystem/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/tools/filesystem/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/tools/filesystem/index.md)
 
 # Filesystem Tool
 
@@ -10,18 +10,15 @@ The filesystem tool gives agents the ability to explore codebases, read and edit
 
 ### Path resolution
 
-Paths are resolved relative to the **working directory** (the directory where the agent session started, or the directory specified with `--workdir`):
+Paths are resolved relative to the **working directory** (the directory where the agent session started, or the directory specified with `--working-dir`):
 
 - **Relative paths** (e.g., `src/main.go`, `../README.md`) are joined with the working directory.
-- **Absolute paths** must match the host operating system:
+- **Absolute paths** are used as-is, in the host operating system's own syntax:
   - Unix/Linux/macOS: `/home/user/project/file.txt`
   - Windows: `C:\Users\user\project\file.txt` or `C:/Users/user/project/file.txt`
 - **Home directory expansion**: paths starting with `~` or `~/` expand to the user's home directory.
 
-When a file is not found, error messages include the resolved absolute path to help diagnose incorrect base directories or path formats.
-
-> \[!IMPORTANT]
-> Agents must use paths appropriate for the host OS. A Windows absolute path like `C:\file.txt` on a Unix system (or vice versa) is rejected with a clear error message.
+When a file is not found, the tool reports "not found" without further detail.
 
 ### Empty directory detection
 
@@ -48,7 +45,7 @@ This helps agents distinguish between an empty directory and a tool failure, avo
 
 ## edit\_file Validation
 
-The `edit_file` tool applies a sequence of find-and-replace edits to a file in memory, then writes the result back atomically. Each edit must provide a non-empty `oldText` value:
+The `edit_file` tool applies a sequence of find-and-replace edits to a file in memory, then writes the result once after every edit validates. Each edit must provide a non-empty `oldText` value:
 
 - **Valid**: `{"oldText": "line one", "newText": "LINE ONE"}`
 - **Invalid**: `{"oldText": "", "newText": "INJECTED"}` — rejected with error
@@ -94,7 +91,9 @@ Symlinks are resolved before the containment check, so a symlink inside an
 allowed root cannot be used to escape it. When an `allow_list` is set,
 each entry is opened as a Go [`*os.Root`](https://pkg.go.dev/os#Root) so
 that the kernel's rooted-lookup semantics also reject `..` and symlink
-escapes at I/O time, not just at resolve time.
+escapes at I/O time, not just at resolve time. With either list configured,
+dangling symlinks are rejected, including in parent directories, rather than
+treated as missing paths that a write could create.
 
 ```yaml
 toolsets:
@@ -135,6 +134,6 @@ toolsets:
 | `path`   | string | Glob pattern matched against the file path. `*.go` matches any `.go` file; `src/*/*.ts` matches `.ts` files inside `src/`. |
 | `cmd`    | string | Shell command to run. `${file}` expands to the absolute path of the just-edited file.                                      |
 
-Post-edit commands run with the same working directory as the agent. If a command exits non-zero, the error is logged and surfaced to the model as a warning, but the edit is not rolled back.
+Post-edit commands run with the same working directory as the agent. If a command exits non-zero, the tool reports that the write or edit succeeded but the post-edit command failed. The edit is not rolled back.
 
 See [`examples/post_edit.yaml`](https://github.com/docker/docker-agent/blob/main/examples/post_edit.yaml) for a complete example.

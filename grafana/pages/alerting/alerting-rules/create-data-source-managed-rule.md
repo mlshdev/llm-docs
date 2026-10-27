@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/create-data-source-managed-rule.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/create-data-source-managed-rule.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/create-data-source-managed-rule.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/create-data-source-managed-rule.md)
 
 > **Caution**
 >
@@ -16,14 +16,14 @@ Data source-managed alert rules are alert rules that are stored in the data sour
 In Grafana Alerting, you can:
 
 1. Create and edit data source-managed rules for Grafana Mimir and Grafana Loki data sources.
-2. View rules from Prometheus data sources when [Manage alerts via Alerting UI](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/) is enabled. However, you cannot create or edit these rules in Grafana.
-3. [Import data source-managed rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/alerting-migration/) from Loki, Mimir, and Prometheus into Grafana-managed rules.
+2. View rules from Prometheus data sources when [Manage alerts via Alerting UI](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/) is enabled. However, you cannot create or edit these rules in Grafana.
+3. [Import data source-managed rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/alerting-migration/) from Loki, Mimir, and Prometheus into Grafana-managed rules.
 
 > **Note**
 >
 > Data source-managed rules are supported for horizontal scalability, but they can introduce more operational complexity than Grafana-managed alert rules.
 >
-> We recommend using [Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/) whenever possible, as they provide a richer feature set and better integration with the full Grafana Alerting workflow.
+> We recommend using [Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/) whenever possible, as they provide a richer feature set and better integration with the full Grafana Alerting workflow.
 
 ## Comparison with Grafana-managed rules
 
@@ -31,17 +31,17 @@ The table below compares Grafana-managed and data source-managed alert rules.
 
 | <div style="width:200px">Feature</div>                                                                                                                                                                                                                                                                              | <div style="width:200px">Grafana-managed alert rule</div>                                                                         | <div style="width:200px">Data source-managed alert rule                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Supported data sources                                                                                                                                                                                                                                                                                              | All backend data sources enabling the [`alerting` option](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-rbac/) | Only supports creating rules for Mimir and Loki data sources                      |
+| Supported data sources                                                                                                                                                                                                                                                                                              | All backend data sources enabling the [`alerting` option](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-rbac/) | Only supports creating rules for Mimir and Loki data sources                      |
 | Mix and match data sources                                                                                                                                                                                                                                                                                          | Yes                                                                                                                               | No                                                                                |
-| Add [expressions](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/queries-conditions/#advanced-options-expressions) to transform<wbr /> your data and set [alert conditions](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/queries-conditions/#alert-condition) | Yes                                                                                                                               | No                                                                                |
-| [No data and error states](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/)                                                                                                                                                                             | Yes                                                                                                                               | No                                                                                |
-| [Stale alert instances](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/)                                                                                                                                                                                  | Yes                                                                                                                               | No                                                                                |
-| [Images in alert notifications](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/images-in-notifications/)                                                                                                                                                            | Yes                                                                                                                               | No                                                                                |
-| [Role-based access control](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-rbac/)                                                                                                                                                                                                                 | Yes                                                                                                                               | No                                                                                |
-| [Alert state history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/)                                                                                                                                                                                                     | Yes                                                                                                                               | No                                                                                |
-| [Alert version history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-rules/#view-compare-and-restore-alert-rules-versions)                                                                                                                                                             | Yes                                                                                                                               | No                                                                                |
-| [Terraform provisioning](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/terraform-provisioning/)                                                                                                                                                                               | Yes                                                                                                                               | No                                                                                |
-| [Recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/)                                                                                                                                                                                                           | Yes                                                                                                                               | Yes                                                                               |
+| Add [expressions](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/queries-conditions/#advanced-options-expressions) to transform<wbr /> your data and set [alert conditions](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/queries-conditions/#alert-condition) | Yes                                                                                                                               | No                                                                                |
+| [No data and error states](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/)                                                                                                                                                                             | Yes                                                                                                                               | No                                                                                |
+| [Stale alert instances](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/)                                                                                                                                                                                  | Yes                                                                                                                               | No                                                                                |
+| [Images in alert notifications](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/images-in-notifications/)                                                                                                                                                            | Yes                                                                                                                               | No                                                                                |
+| [Role-based access control](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-rbac/)                                                                                                                                                                                                                 | Yes                                                                                                                               | No                                                                                |
+| [Alert state history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/)                                                                                                                                                                                                     | Yes                                                                                                                               | No                                                                                |
+| [Alert version history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-rules/#view-compare-and-restore-alert-rules-versions)                                                                                                                                                             | Yes                                                                                                                               | No                                                                                |
+| [Terraform provisioning](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/terraform-provisioning/)                                                                                                                                                                               | Yes                                                                                                                               | No                                                                                |
+| [Recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/)                                                                                                                                                                                                           | Yes                                                                                                                               | Yes                                                                               |
 | Organization                                                                                                                                                                                                                                                                                                        | Organize and manage access with folders                                                                                           | Use namespaces                                                                    |
 | Alert rule evaluation                                                                                                                                                                                                                                                                                               | Alert evaluation is done in Grafana                                                                                               | Alert rule evaluation is done in the data source and allow for horizontal scaling |
 | Scaling                                                                                                                                                                                                                                                                                                             | Alert rules are stored in the Grafana database.                                                                                   | Alert rules are stored within the data source and allow for horizontal scaling    |
@@ -99,7 +99,7 @@ Define a query to get the data you want to measure and a condition that needs to
 
 ### Set alert evaluation behavior
 
-Use [alert rule evaluation](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/) to determine how frequently an alert rule should be evaluated and how quickly it should change its state.
+Use [alert rule evaluation](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/) to determine how frequently an alert rule should be evaluated and how quickly it should change its state.
 
 1. Select a namespace or click **+ New namespace**.
 
@@ -111,13 +111,13 @@ Use [alert rule evaluation](https://grafana.com/docs/grafana/v13.2/alerting/fund
 
 3. Enter a pending period.
 
-   The [pending period](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/#pending-period) is the period in which an alert rule can be in breach of the condition until it fires.
+   The [pending period](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/#pending-period) is the period in which an alert rule can be in breach of the condition until it fires.
 
    After a condition is met, the alert goes into the **Pending** state. If the condition remains active for the duration specified, the alert transitions to the **Firing** state, else it reverts to the **Normal** state.
 
 ### Configure labels and notifications
 
-Add [labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#labels) to your alert rules to set which [notification policy](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) should handle your firing alert instances.
+Add [labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#labels) to your alert rules to set which [notification policy](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) should handle your firing alert instances.
 
 All alert rules and instances, irrespective of their labels, match the default notification policy. If there are no nested policies, or no nested policies match the labels in the alert rule or alert instance, then the default notification policy is the matching policy.
 
@@ -127,9 +127,9 @@ All alert rules and instances, irrespective of their labels, match the default n
 
 ### Configure notification message
 
-Use [annotations](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#annotations) to add information to alert messages that can help respond to the alert.
+Use [annotations](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#annotations) to add information to alert messages that can help respond to the alert.
 
-Annotations are included by default in notification messages, and can use text or [templates](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) to display dynamic data from queries.
+Annotations are included by default in notification messages, and can use text or [templates](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/) to display dynamic data from queries.
 
 Grafana provides several optional annotations.
 
@@ -151,15 +151,15 @@ Grafana provides several optional annotations.
 
 5. Optional: **Link dashboard and panel**.
 
-   [Link the alert rule to a panel](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/link-alert-rules-to-panels/) to facilitate alert investigation.
+   [Link the alert rule to a panel](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/link-alert-rules-to-panels/) to facilitate alert investigation.
 
 6. Click **Save rule**.
 
 \[//]: <> (
 
-Use [annotations](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#annotations) to add information to alert messages that can help respond to the alert.
+Use [annotations](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#annotations) to add information to alert messages that can help respond to the alert.
 
-Annotations are included by default in notification messages, and can use text or [templates](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) to display dynamic data from queries.
+Annotations are included by default in notification messages, and can use text or [templates](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/) to display dynamic data from queries.
 
 Grafana provides several optional annotations.
 
@@ -181,7 +181,7 @@ Grafana provides several optional annotations.
 
 5. Optional: **Link dashboard and panel**.
 
-   [Link the alert rule to a panel](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/link-alert-rules-to-panels/) to facilitate alert investigation.
+   [Link the alert rule to a panel](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/link-alert-rules-to-panels/) to facilitate alert investigation.
 
 6. Click **Save rule**.
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/migration-guide/cloud-migration-assistant.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/migration-guide/cloud-migration-assistant.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/migration-guide/cloud-migration-assistant.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/migration-guide/cloud-migration-assistant.md)
 
 # Grafana Cloud Migration Assistant
 
@@ -38,7 +38,7 @@ To use the Grafana migration assistant, you need:
 - A self-managed Grafana instance.
 - A [Grafana Cloud Stack](https://grafana.com/docs/grafana-cloud/get-started/) you intend to migrate your resources to.
 - [`Admin`](https://grafana.com/docs/grafana-cloud/account-management/authentication-and-permissions/cloud-roles/) access to the Grafana Cloud Stack. To check your access level, go to `https://grafana.com/orgs/<YOUR-ORG-NAME>/members`.
-- [Grafana server administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators) access to your existing self-managed Grafana instance. To check your access level, go to `https://<GRAFANA-ONPREM-URL>/admin/users`.
+- [Grafana server administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators) access to your existing self-managed Grafana instance. To check your access level, go to `https://<GRAFANA-ONPREM-URL>/admin/users`.
 - Internet access from your existing self-managed Grafana instance.
 - If you're running Grafana in a [highly-available setup](https://grafana.com/docs/grafana/latest/setup-grafana/set-up-for-high-availability/), we recommend scaling Grafana down to one replica to avoid a [known bug](https://github.com/grafana/grafana/issues/107264).
 - If your network requires external services to be on an allowlist to allow access, add the following IPs and URLs to your allowlist:
@@ -57,7 +57,7 @@ In Grafana Enterprise, the server administrator has access to the migration assi
 
 > **Note**
 >
-> You must [configure RBAC](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/configure-rbac/) before you can grant other administrators access to the Grafana Migration Assistant.
+> You must [configure RBAC](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/configure-rbac/) before you can grant other administrators access to the Grafana Migration Assistant.
 
 To grant other Admins access to the migration assistant in Grafana Enterprise:
 
@@ -218,7 +218,7 @@ Because the migration assistant doesn't yet migrate teams or RBAC permissions, y
 
 ## Migrate multiple organizations
 
-If you're using the [organizations](https://grafana.com/docs/grafana/v13.2/administration/organization-management/#about-organizations) feature on your Grafana Instance and intend to migrate to Grafana Cloud, you need to plan this aspect of the migration carefully.
+If you're using the [organizations](https://grafana.com/docs/grafana/v13.3/administration/organization-management/#about-organizations) feature on your Grafana Instance and intend to migrate to Grafana Cloud, you need to plan this aspect of the migration carefully.
 
 Grafana Cloud doesn't support the organizations feature, but you can use folders and RBAC to protect and grant permissions to resources instead. The recommended path is to migrate multiple organizations to a single cloud stack. This is the simplest option and provides the best user experience.
 
@@ -230,4 +230,4 @@ The Grafana server administrator has access to the migration assistant by defaul
 
 The main driver for setting up organizations in the first place is resource isolation. In order to achieve this in Grafana Cloud, you can organize resources into folders and set up teams and permissions that correspond to your organizations.
 
-For more information about configuring teams and permissions, refer to [Configure Grafana Teams](https://grafana.com/docs/grafana/v13.2/administration/team-management/configure-grafana-teams/).
+For more information about configuring teams and permissions, refer to [Configure Grafana Teams](https://grafana.com/docs/grafana/v13.3/administration/team-management/configure-grafana-teams/).

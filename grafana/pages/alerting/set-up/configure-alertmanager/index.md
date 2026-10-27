@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/configure-alertmanager/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/configure-alertmanager/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/set-up/configure-alertmanager/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/set-up/configure-alertmanager/_index.md)
 
 > **Caution**
 >
@@ -17,7 +17,7 @@
 
 # Configure Alertmanagers
 
-Grafana Alerting is based on the architecture of the Prometheus alerting system. Grafana sends firing and resolved alerts to an Alertmanager, which is responsible for [handling notifications](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/). This architecture decouples alert rule evaluation from notification handling, improving scalability.
+Grafana Alerting is based on the architecture of the Prometheus alerting system. Grafana sends firing and resolved alerts to an Alertmanager, which is responsible for [handling notifications](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/). This architecture decouples alert rule evaluation from notification handling, improving scalability.
 
 ![A diagram with the alert generator and alert manager architecture](https://grafana.com/media/docs/alerting/alerting-alertmanager-architecture.png)
 
@@ -77,7 +77,7 @@ Alertmanagers should be configured as data sources using Grafana Configuration f
    | **HTTP URL**                    | Sets the HTTP protocol, IP, and port of your Alertmanager instance, such as `https://alertmanager.example.org:9093`                                                                         |
    | **Access**                      | Only **Server** access mode is functional                                                                                                                                                   |
 
-For provisioning instructions, refer to the [Alertmanager data source documentation](https://grafana.com/docs/grafana/v13.2/datasources/alertmanager/).
+For provisioning instructions, refer to the [Alertmanager data source documentation](https://grafana.com/docs/grafana/v13.3/datasources/alertmanager/).
 
 After adding an Alertmanager, you can use the Grafana Alerting UI to manage notification policies, contact points, silences, and other alerting resources from within Grafana.
 
@@ -111,9 +111,9 @@ To send **specific** alerts to an Alertmanager, configure the Alertmanager as a 
 
 For detailed instructions, refer to:
 
-- [Alertmanager contact point](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-alertmanager/)
-- [Configure Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/#configure-notifications)
-- [Configure notification policies](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-notification-policy/)
+- [Alertmanager contact point](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-alertmanager/)
+- [Configure Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/#configure-notifications)
+- [Configure notification policies](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-notification-policy/)
 
 ## Manage Alertmanager configurations
 
@@ -128,6 +128,6 @@ Grafana stores up to the last 100 configuration versions for the built-in Grafan
 
 To avoid losing a working configuration:
 
-- **Back up your configuration**: [Export and store](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/export-alerting-resources/) your Alertmanager configuration outside of Grafana before you automate changes or run large-scale updates.
+- **Back up your configuration**: [Export and store](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/export-alerting-resources/) your Alertmanager configuration outside of Grafana before you automate changes or run large-scale updates.
 - **Test changes in a low-impact environment**: Run automations and configuration experiments against a development or staging Grafana instance before applying them to production.
 - **Limit the frequency of automated changes**: Frequent automated updates consume the available configuration history. Batch changes where possible so that a single mistake doesn't overwrite every recoverable version.

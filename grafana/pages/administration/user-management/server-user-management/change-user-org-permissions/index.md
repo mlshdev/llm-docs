@@ -1,12 +1,12 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/user-management/server-user-management/change-user-org-permissions/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/user-management/server-user-management/change-user-org-permissions/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/user-management/server-user-management/change-user-org-permissions/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/user-management/server-user-management/change-user-org-permissions/index.md)
 
 # Change a user's organization permissions
 
-Update organization permissions when you want to enhance or restrict a user's access to organization resources. For more information about organization permissions, refer to [Organization roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles).
+Update organization permissions when you want to enhance or restrict a user's access to organization resources. For more information about organization permissions, refer to [Organization roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles).
 
 ## Before you begin
 
-- [Add a user to an organization](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/add-remove-user-to-org/)
+- [Add a user to an organization](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/add-remove-user-to-org/)
 - Ensure you have Grafana server administrator privileges
 
 **To change a user's organization permissions**:

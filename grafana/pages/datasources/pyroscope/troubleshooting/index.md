@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/pyroscope/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/pyroscope/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/pyroscope/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/pyroscope/troubleshooting/index.md)
 
 # Troubleshoot Pyroscope data source issues
 
-This document provides solutions to common issues you may encounter when configuring or using the Pyroscope data source. For configuration instructions, refer to [Configure the Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure/).
+This document provides solutions to common issues you may encounter when configuring or using the Pyroscope data source. For configuration instructions, refer to [Configure the Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/configure/).
 
 ## Connection and configuration errors
 
@@ -333,11 +333,11 @@ These errors occur when using template variables with the Pyroscope data source.
 2. When **Multi-value** or **Include All** is enabled, the variable value becomes a regular expression pattern. Use the `=~` operator instead of `=`, for example, `{service_name=~"$service"}`.
 3. Confirm the label used in the variable exists on the profiling data for the selected profile type.
 
-For more information, refer to [Pyroscope template variables](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/template-variables/).
+For more information, refer to [Pyroscope template variables](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/template-variables/).
 
 ## Profiles Drilldown issues
 
-These errors are specific to the [Profiles Drilldown](https://grafana.com/docs/grafana/v13.2/explore/simplified-exploration/profiles/) application.
+These errors are specific to the [Profiles Drilldown](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/profiles/) application.
 
 ### Profiles Drilldown not available
 
@@ -400,7 +400,7 @@ For per-language setup instructions, refer to [Link traces to profiles](https://
 4. Verify that the tags you configured in the Tempo data source match the span's attributes or resources. If they don't match, the link doesn't appear.
 5. Verify profile data exists for the time range of the trace.
 
-For more information, refer to [Configure Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure-traces-to-profiles/).
+For more information, refer to [Configure Trace to profiles](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/configure-traces-to-profiles/).
 
 ### Profile doesn't match the trace span
 

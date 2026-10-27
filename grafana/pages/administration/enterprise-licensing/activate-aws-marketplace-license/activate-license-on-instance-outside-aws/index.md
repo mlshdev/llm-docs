@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/activate-license-on-instance-outside-aws/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/activate-license-on-instance-outside-aws/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/activate-license-on-instance-outside-aws/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/activate-license-on-instance-outside-aws/index.md)
 
 # Activate a Grafana Enterprise license from AWS on an instance deployed outside of AWS
 
@@ -16,9 +16,9 @@ To activate a Grafana Enterprise license from AWS on a Grafana Enterprise instan
 
 To install Grafana, refer to the documentation specific to your implementation.
 
-- [Install Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/installation/).
-- [Run Grafana Docker image](https://grafana.com/docs/grafana/v13.2/setup-grafana/installation/docker/).
-- [Deploy Grafana on Kubernetes](https://grafana.com/docs/grafana/v13.2/setup-grafana/installation/kubernetes/#deploy-grafana-enterprise-on-kubernetes).
+- [Install Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/installation/).
+- [Run Grafana Docker image](https://grafana.com/docs/grafana/v13.3/setup-grafana/installation/docker/).
+- [Deploy Grafana on Kubernetes](https://grafana.com/docs/grafana/v13.3/setup-grafana/installation/kubernetes/#deploy-grafana-enterprise-on-kubernetes).
 
 ## Task 2: Create an AWS IAM user with access to your Grafana Enterprise license
 
@@ -91,7 +91,7 @@ To retrieve your license, Grafana Enterprise requires access to your AWS account
 
 In this task you configure Grafana Enterprise to validate the license with AWS instead of Grafana Labs.
 
-Choose one of the following options to update the [license\_validation\_type](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/enterprise-configuration/#license_validation_type) configuration to `aws`:
+Choose one of the following options to update the [license\_validation\_type](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/enterprise-configuration/#license_validation_type) configuration to `aws`:
 
 - **Option 1:** In the `[enterprise]` section of the grafana.ini configuration file, add `license_validation_type=aws`.
 
@@ -112,4 +112,4 @@ Choose one of the following options to update the [license\_validation\_type](ht
 
 To activate Grafana Enterprise features, start (or restart) Grafana.
 
-For information about restarting Grafana, refer to [Restart Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/start-restart-grafana/).
+For information about restarting Grafana, refer to [Restart Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/start-restart-grafana/).

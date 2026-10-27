@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/roles-and-permissions/access-control/plugin-role-definitions/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/roles-and-permissions/access-control/plugin-role-definitions/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/roles-and-permissions/access-control/plugin-role-definitions/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/roles-and-permissions/access-control/plugin-role-definitions/index.md)
 
 # Grafana Cloud app plugin role definitions
 
@@ -8,7 +8,7 @@
 
 This page lists the RBAC roles available for Grafana Cloud app plugins. Plugin roles control access to specific plugin features and can be assigned to users, teams, or basic roles.
 
-For general information about how RBAC works with app plugins, refer to [RBAC for app plugins](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-for-app-plugins/).
+For general information about how RBAC works with app plugins, refer to [RBAC for app plugins](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-for-app-plugins/).
 
 > **Note**
 >
@@ -388,7 +388,7 @@ To assign roles, use:
 - **UI**: Administration > Users/Teams > Select user/team > Roles tab
 - **API**: `PUT /api/access-control/users/{userId}/roles` or `PUT /api/access-control/teams/{teamId}/roles`
 
-For more information about managing RBAC roles, refer to [Manage RBAC roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/manage-rbac-roles/).
+For more information about managing RBAC roles, refer to [Manage RBAC roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/manage-rbac-roles/).
 
 ## Query plugin roles
 
@@ -402,7 +402,7 @@ curl -s -H "Authorization: Bearer YOUR_SERVICE_ACCOUNT_TOKEN" \
 
 ## Related documentation
 
-- [RBAC for app plugins](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-for-app-plugins/): Overview of how RBAC works with app plugins
-- [Folder access control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/folder-access-control/): How folders interact with plugin roles
-- [RBAC fixed role definitions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/): Fixed roles for Grafana features
-- [Manage RBAC roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/manage-rbac-roles/): How to manage role assignments
+- [RBAC for app plugins](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-for-app-plugins/): Overview of how RBAC works with app plugins
+- [Folder access control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/folder-access-control/): How folders interact with plugin roles
+- [RBAC fixed role definitions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/): Fixed roles for Grafana features
+- [Manage RBAC roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/manage-rbac-roles/): How to manage role assignments

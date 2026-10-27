@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/visualizations/status-history/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/visualizations/status-history/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/visualizations/status-history/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/visualizations/status-history/index.md)
 
 # Status history
 
@@ -10,7 +10,7 @@ For example, if you're monitoring the health status of different services, you c
 
 > **Note**
 >
-> A status history is similar to a [state timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/), but has different [configuration options](#status-history-options). Unlike state timelines, status histories don't merge consecutive values.
+> A status history is similar to a [state timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/), but has different [configuration options](#status-history-options). Unlike state timelines, status histories don't merge consecutive values.
 
 Use a status history when you need to:
 
@@ -20,7 +20,7 @@ Use a status history when you need to:
 
 ## Configure a status history
 
-Once you've [created a dashboard](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/create-dashboard/), you can use the following state timeline video as a reference for how to configure a status history:
+Once you've [created a dashboard](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/create-dashboard/), you can use the following state timeline video as a reference for how to configure a status history:
 
 [Watch the video on YouTube](https://www.youtube.com/watch?v=a9wZHM0mdxo)
 
@@ -87,7 +87,7 @@ For example, if the original time range is from 9:00 to 9:59, the time range cha
 The time range shifts by the distance you drag.
 For example, if the original time range is from 9:00 to 9:59 and you drag 30 minutes to the right, the time range changes to 9:30 to 10:29.
 
-For screen recordings showing these interactions, refer to the [Panel overview documentation](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/panel-overview/#pan-and-zoom-panel-time-range).
+For screen recordings showing these interactions, refer to the [Panel overview documentation](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/panel-overview/#pan-and-zoom-panel-time-range).
 
 ## Configuration options
 
@@ -96,16 +96,16 @@ The following section describes the configuration options available in the panel
 ### Panel options
 
 In the **Panel options** section of the panel editor pane, set options like the panel title, description, and show/hide rules.
-To learn more, refer to [Configure panel options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-panel-options/).
+To learn more, refer to [Configure panel options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-panel-options/).
 
-| Option                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Title                  | Text entered in this field appears at the top of your panel in the panel editor and in the dashboard. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) or [global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#global-variables).                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Description            | Add a description to a panel to share with users any important information about it, such as its purpose. Text entered in this field appears in a tooltip in the upper-left corner of the panel. Conversely, toggle on the **Use as subtitle** switch to display the description just below the panel title instead. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) or dashboard-scoped [global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#global-variables) (such as `$__from`, `$__to`, `$__dashboard`, `$__org`, and `$__user`). Query-scoped global variables (such as `$__interval` and `$__interval_ms`) are not available in this field. |
-| Transparent background | Toggle this switch on and off to control whether or not the panel has the same background color as the dashboard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Panel links            | Add [links to the panel](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/#panel-links) to create shortcuts to other dashboards, panels, and external websites. Access panel links by clicking the icon next to the panel title.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Repeat options         | Set whether to repeat the panel for each value in the selected variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Show/hide rules        | Set whether to show or hide panels based on various rules.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Option                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title                  | Text entered in this field appears at the top of your panel in the panel editor and in the dashboard. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) or [built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables).                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Description            | Add a description to a panel to share with users any important information about it, such as its purpose. Text entered in this field appears in a tooltip in the upper-left corner of the panel. Conversely, toggle on the **Use as subtitle** switch to display the description just below the panel title instead. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) or dashboard-scoped [built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables) (such as `$__from`, `$__to`, `$__dashboard`, `$__org`, and `$__user`). Query-scoped global variables (such as `$__interval` and `$__interval_ms`) are not available in this field. |
+| Transparent background | Toggle this switch on and off to control whether or not the panel has the same background color as the dashboard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Panel links            | Add [links to the panel](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/#panel-links) to create shortcuts to other dashboards, panels, and external websites. Access panel links by clicking the icon next to the panel title.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Repeat options         | Set whether to repeat the panel for each value in the selected variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Show/hide rules        | Set whether to show or hide panels based on various rules.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ### Status history options
 
@@ -122,9 +122,9 @@ Use these options to refine the visualization.
 
 ### Legend options
 
-When the legend option is enabled it can show either the value mappings or the threshold brackets. To show the value mappings in the legend, it's important that the **Color scheme** as referenced in [Color scheme](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#color-scheme) is set to **Single color** or **Classic palette**. To see the threshold brackets in the legend set the **Color scheme** to **From thresholds**.
+When the legend option is enabled it can show either the value mappings or the threshold brackets. To show the value mappings in the legend, it's important that the **Color scheme** as referenced in [Color scheme](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/#color-scheme) is set to **Single color** or **Classic palette**. To see the threshold brackets in the legend set the **Color scheme** to **From thresholds**.
 
-For more information about the legend, refer to [Configure a legend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-legend/).
+For more information about the legend, refer to [Configure a legend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-legend/).
 
 ### Visibility
 
@@ -201,7 +201,7 @@ When you set the **Tooltip mode** to **All**, the **Values sort order** option i
 
 ### Standard options
 
-**Standard options** in the panel editor pane let you change how field data is displayed in your visualizations. When you set a standard option, the change is applied to all fields or series. For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+**Standard options** in the panel editor pane let you change how field data is displayed in your visualizations. When you set a standard option, the change is applied to all fields or series. For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/).
 
 | Option        | Description                                                                                                                                       |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -213,7 +213,7 @@ When you set the **Tooltip mode** to **All**, the **Values sort order** option i
 | Color scheme  | Set single or multiple colors for your entire visualization.                                                                                      |
 | No value      | Enter what Grafana should display if the field value is empty or null. The default value is a hyphen (-).                                         |
 
-To learn more, refer to [Configure standard options](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/).
+To learn more, refer to [Configure standard options](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/).
 
 ### Data links and actions
 
@@ -242,7 +242,7 @@ For each action, define the following API call settings:
 | Content-Type         | Select from the following: **application/json**, **text/plain**, **application/XML**, and **application/x-www-form-urlencoded**.                                                                                                            |
 | Body                 | The body of the request.                                                                                                                                                                                                                    |
 
-To learn more, refer to [Configure data links and actions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/).
+To learn more, refer to [Configure data links and actions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/).
 
 ### Value mappings
 
@@ -259,7 +259,7 @@ For each value mapping, set the following options:
 - **Color** (Optional)
 - **Icon** (Canvas only)
 
-To learn more, refer to [Configure value mappings](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-value-mappings/).
+To learn more, refer to [Configure value mappings](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-value-mappings/).
 
 ### Thresholds
 
@@ -272,7 +272,7 @@ For each threshold, set the following options:
 | Value           | Set the value for each threshold.            |
 | Thresholds mode | Choose from **Absolute** and **Percentage**. |
 
-To learn more, refer to [Configure thresholds](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-thresholds/).
+To learn more, refer to [Configure thresholds](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-thresholds/).
 
 ### Field overrides
 
@@ -288,4 +288,4 @@ Choose from the following override options:
 | Fields returned by query       | Select all fields returned by a specific query, such as A, B, or C.                                           |
 | Fields with values             | Select all fields returned by your defined reducer condition, such as **Min**, **Max**, **Count**, **Total**. |
 
-To learn more, refer to [Configure field overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+To learn more, refer to [Configure field overrides](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/).

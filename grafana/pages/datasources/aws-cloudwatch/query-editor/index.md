@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/aws-cloudwatch/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/aws-cloudwatch/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/query-editor/index.md)
 
 # Amazon CloudWatch query editor
 
-Grafana provides a query editor for the CloudWatch data source, which allows you to query, visualize, and alert on logs and metrics stored in Amazon CloudWatch. It is located on the [Explore](https://grafana.com/docs/grafana/v13.2/explore/) page. For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+Grafana provides a query editor for the CloudWatch data source, which allows you to query, visualize, and alert on logs and metrics stored in Amazon CloudWatch. It is located on the [Explore](https://grafana.com/docs/grafana/v13.3/explore/) page. For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 ## Key concepts
 
@@ -119,7 +119,7 @@ The query returns the average CPU utilization for all EC2 instances in the defau
 
 Auto-scaling events add new instances to the graph without manual instance ID tracking. As with other metric search queries, AWS returns up to 100 metrics per `GetMetricData` request.
 
-Click the [**Query inspector**](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/#navigate-the-query-editor) button and select **Meta Data** to see the search expression that's automatically built to support wildcards.
+Click the [**Query inspector**](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#navigate-the-query-editor) button and select **Meta Data** to see the search expression that's automatically built to support wildcards.
 
 To learn more about search expressions, refer to the [CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/search-expression-syntax.html).
 The search expression is defined by default in such a way that the queried metrics must match the defined dimension names exactly.
@@ -193,7 +193,7 @@ For details about the Metrics Insights syntax, refer to the [AWS reference docum
 
 For information about Metrics Insights limits, refer to the [AWS feature documentation](https://docs.aws.amazon.com/console/cloudwatch/metricsinsights).
 
-You can also augment queries by using [template variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+You can also augment queries by using [template variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ### Use Metrics Insights keywords
 
@@ -264,7 +264,7 @@ You can also apply optional filters when specifying log groups with the **Name p
 
 Amazon CloudWatch Logs data sources categorize logs by the service or application that generates them and by the type of log. They complement log groups and let you query logs without knowing individual log group names. For details about how Amazon CloudWatch categorizes logs, refer to [Data source discovery and management](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/data-source-discovery-management.html) in the AWS documentation.
 
-Before you use the data source selector, ensure that the IAM role or IAM user for the Grafana data source has the `logs:ListAggregateLogGroupSummaries` permission. For the complete IAM policy examples, refer to [IAM policy examples](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/#iam-policy-examples).
+Before you use the data source selector, ensure that the IAM role or IAM user for the Grafana data source has the `logs:ListAggregateLogGroupSummaries` permission. For the complete IAM policy examples, refer to [IAM policy examples](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/#iam-policy-examples).
 
 To query logs by CloudWatch Logs data source, follow these steps:
 
@@ -316,7 +316,7 @@ WHERE `@message` LIKE '%Exception%'
 To reference log groups in a monitoring account, use ARNs instead of LogGroup names.
 
 You can also write queries returning time series data by using the [`stats` command](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_Insights-Visualizing-Log-Data.html).
-When making `stats` queries in [Explore](https://grafana.com/docs/grafana/v13.2/explore/), ensure you are in Metrics Explore mode.
+When making `stats` queries in [Explore](https://grafana.com/docs/grafana/v13.3/explore/), ensure you are in Metrics Explore mode.
 
 ### Create queries for alerting
 
@@ -335,7 +335,7 @@ filter @message like /Exception/
 >
 > If you receive an error like `input data must be a wide series but got ...` when trying to alert on a query, make sure that your query returns valid numeric data that can be output to a Time series panel.
 
-For more information on Grafana alerts, refer to [Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+For more information on Grafana alerts, refer to [Alerting](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 ## Common use cases
 
@@ -355,7 +355,7 @@ To enable cross-account observability, complete the following steps:
 
 1. Go to the [Amazon CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html) and follow the instructions for enabling cross-account observability.
 
-2. Add [two API actions](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/#cross-account-observability-permissions) to the IAM policy attached to the role/user running the plugin.
+2. Add [two API actions](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/#cross-account-observability-permissions) to the IAM policy attached to the role/user running the plugin.
 
 Cross-account querying is available in the plugin through the **Logs**, **Metric search**, and **Metric Insights** modes.
 After you have configured it, you'll see a **Monitoring account** badge in the query editor header.
@@ -366,4 +366,4 @@ After you have configured it, you'll see a **Monitoring account** badge in the q
 
 ## Query caching
 
-When you enable [query and resource caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching), Grafana temporarily stores the results of data source queries and resource requests. Query caching is available in CloudWatch Metrics in Grafana Cloud and Grafana Enterprise. It is not available in CloudWatch Logs Insights due to how query results are polled from AWS.
+When you enable [query and resource caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching), Grafana temporarily stores the results of data source queries and resource requests. Query caching is available in CloudWatch Metrics in Grafana Cloud and Grafana Enterprise. It is not available in CloudWatch Logs Insights due to how query results are polled from AWS.

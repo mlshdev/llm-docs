@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/correlations/use-correlations-in-visualizations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/correlations/use-correlations-in-visualizations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/correlations/use-correlations-in-visualizations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/correlations/use-correlations-in-visualizations/index.md)
 
 # Use correlations in visualizations
 
@@ -22,7 +22,7 @@
 2. Open Explore.
 3. Select a data source that you chose as the source data source of the correlation.
 4. Run a query that results in data containing fields required to build variables in the target query.
-5. Links are added to cell rows in the column representing the field with the assigned link ([the results field](https://grafana.com/docs/grafana/v13.2/administration/correlations/correlation-configuration/#source-data-source-and-result-field).
+5. Links are added to cell rows in the column representing the field with the assigned link ([the results field](https://grafana.com/docs/grafana/v13.3/administration/correlations/correlation-configuration/#source-data-source-and-result-field).
 6. Cells containing multiple links accessible with a context menu.
 
 ![](https://grafana.com/static/img/docs/correlations/correlations-in-table-10-0.png)

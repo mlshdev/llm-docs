@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/parca/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/parca/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/parca/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/parca/query-editor/index.md)
 
 # Parca query editor
 
@@ -14,7 +14,7 @@ The query editor gives you access to a profile type selector, a label selector w
 
 Before using the query editor, ensure you have:
 
-- [Configured the Parca data source](https://grafana.com/docs/grafana/v13.2/datasources/parca/configure/).
+- [Configured the Parca data source](https://grafana.com/docs/grafana/v13.3/datasources/parca/configure/).
 - Verified the connection using **Save & test**.
 
 ## Access the query editor
@@ -99,13 +99,13 @@ Expand the **Options** section to select a query type. The query type controls w
 
 > **Note**
 >
-> The **Both** option is only available in [Explore](https://grafana.com/docs/grafana/v13.2/explore/). In dashboard panels, you can select either **Metric** or **Profile** because panels support only one visualization type. If a query set to **Both** is moved from Explore to a dashboard, Grafana automatically changes it to **Profile**.
+> The **Both** option is only available in [Explore](https://grafana.com/docs/grafana/v13.3/explore/). In dashboard panels, you can select either **Metric** or **Profile** because panels support only one visualization type. If a query set to **Both** is moved from Explore to a dashboard, Grafana automatically changes it to **Profile**.
 
 ## Use template variables in queries
 
 The label selector field supports Grafana template variables. You can use variables like `$job` or `$instance` in the label selector to create dynamic, reusable dashboards.
 
-For more information about supported variable types, examples, and limitations, refer to [Parca template variables](https://grafana.com/docs/grafana/v13.2/datasources/parca/template-variables/).
+For more information about supported variable types, examples, and limitations, refer to [Parca template variables](https://grafana.com/docs/grafana/v13.3/datasources/parca/template-variables/).
 
 ## Query examples
 
@@ -157,7 +157,7 @@ The following examples show common profiling queries.
 
 ## Profile query results
 
-Profiles are visualized as a flame graph. Refer to the [flame graph documentation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/) to learn about the visualization and its features.
+Profiles are visualized as a flame graph. Refer to the [flame graph documentation](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/) to learn about the visualization and its features.
 
 Parca returns profiles aggregated over the selected time range. The absolute values in the flame graph grow as the time range gets bigger while keeping the relative values meaningful. You can zoom in on the time range to get a higher granularity profile, down to the point of a single Parca scrape interval.
 

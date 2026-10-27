@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/local/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/providers/local/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/local/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/providers/local/index.md)
 
 *Run Docker Agent with locally hosted models for privacy, offline use, or cost savings.*
 
@@ -9,6 +9,7 @@ Docker Agent can connect to any OpenAI-compatible local model server. This guide
 - **Ollama** — Easy-to-use local model runner
 - **vLLM** — High-performance inference server
 - **LocalAI** — OpenAI-compatible API for various backends
+- [**Nativ**](https://docs.docker.com/ai/docker-agent/providers/nativ/) — Local MLX models on Apple Silicon
 
 > \[!TIP]
 > **Docker Model Runner**

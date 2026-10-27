@@ -1,10 +1,10 @@
-# Grafana v13.2.4: full documentation
+# Grafana v13.3.0: full documentation
 
 Source repository: https://github.com/grafana/grafana
-Release tag: v13.2.4
-Source commit: af4a33e3786594ad72f72d97e6744010330c2977
+Release tag: v13.3.0
+Source commit: 752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a
 
 This corpus is published as 2 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-- [Volume 1](llms-full.001.txt): 669 documents, 8362857 bytes, SHA-256 `94daaa3b315d78bf95c541e3cc2a5bb5fac4f1a8a463b498375260416cce3a82`.
-- [Volume 2](llms-full.002.txt): 16 documents, 248112 bytes, SHA-256 `b30490f50ea13c73622be5efe1b09cbb76c7b9103ae726584546fa9a4700a729`.
+- [Volume 1](llms-full.001.txt): 662 documents, 8378755 bytes, SHA-256 `4e23c0bbfec6d567748356a58d5c35fcdde46ef41beec4ce9634b2e4c09f8812`.
+- [Volume 2](llms-full.002.txt): 15 documents, 192907 bytes, SHA-256 `831ddb706e3ca3bcf88c97dfc901e4d2d2f13198ee93b0a2d27a081623c7eca2`.

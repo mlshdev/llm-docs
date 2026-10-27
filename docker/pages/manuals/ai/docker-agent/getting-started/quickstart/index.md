@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/getting-started/quickstart/index.md)
 
 *Get up and running with Docker Agent in under 5 minutes. Pick whichever path suits you best.*
 
@@ -39,7 +39,7 @@ $ docker agent new --model openai/gpt-5
 $ docker agent new --model dmr/ai/gemma3-qat:12B --max-iterations 15
 ```
 
-This generates an `agent.yaml` in the current directory. Then run it:
+The builder chooses a filename based on the agent's purpose. Run the file it creates; for example, if it creates `agent.yaml`:
 
 ```bash
 $ docker agent run agent.yaml
@@ -145,4 +145,4 @@ agents:
 - [**Understand Agents**](https://docs.docker.com/ai/docker-agent/concepts/agents/) — learn how agents work and what you can configure.
 - [**Multi-Agent Systems**](https://docs.docker.com/ai/docker-agent/concepts/multi-agent/) — build teams of collaborating agents.
 - [**Configuration Reference**](https://docs.docker.com/ai/docker-agent/configuration/overview/) — full reference for all YAML and HCL options.
-- [**Troubleshooting**](https://docs.docker.com/ai/docker-agent/community/troubleshooting/) — something not working? Debug tips and common fixes.
+- [**Troubleshooting**](https://docs.docker.com/ai/docker-agent/guides/troubleshooting/) — something not working? Debug tips and common fixes.

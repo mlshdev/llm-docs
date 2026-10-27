@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/explore/get-started-with-explore.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/explore/get-started-with-explore.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/explore/get-started-with-explore.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/explore/get-started-with-explore.md)
 
 # Get started with Explore
 
@@ -15,18 +15,22 @@ With Explore you can:
 Key features include:
 
 - Query editor, based on specific data source, to create and iterate queries.
-- [Query history](https://grafana.com/docs/grafana/v13.2/explore/query-management/) to track and maintain your queries.
-- [Query inspector](https://grafana.com/docs/grafana/v13.2/explore/explore-inspector/) to help troubleshoot query performance.
+- [Query history](https://grafana.com/docs/grafana/v13.3/explore/query-management/) to track and maintain your queries.
+- [Query inspector](https://grafana.com/docs/grafana/v13.3/explore/explore-inspector/) to help troubleshoot query performance.
 
 Watch the following video to get started using Explore:
 
 [Watch the video on YouTube](https://www.youtube.com/watch?v=1q3YzX2DDM4)
 
+To try Explore with sample data, open it on Grafana Play:
+
+[Explore in Grafana Play](https://play.grafana.org/explore)
+
 ## Before you begin
 
-In order to access Explore, you must have either the `editor` or `administrator` basic role or the `data sources explore` role. Refer to [Role and permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/) for more information on what each role can access.
+In order to access Explore, you must have either the `editor` or `administrator` basic role or the `data sources explore` role. Refer to [Role and permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/) for more information on what each role can access.
 
-Refer to [Role-based access control (RBAC)](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/) in Grafana Enterprise to understand how you can manage Explore with role-based permissions.
+Refer to [Role-based access control (RBAC)](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/) in Grafana Enterprise to understand how you can manage Explore with role-based permissions.
 
 ## Explore elements
 
@@ -58,7 +62,7 @@ Use the time picker to select a time range for your query. The default is **last
 
 1. Click **Change time settings** to change the timezone or apply a fiscal year.
 
-Refer to [Set dashboard time range](https://grafana.com/docs/grafana/v13.2/dashboards/use-dashboards/#set-dashboard-time-range) for more information on absolute and relative time ranges. You can also [control the time range using a URL](https://grafana.com/docs/grafana/v13.2/dashboards/use-dashboards/#control-the-time-range-using-a-url).
+Refer to [Set dashboard time range](https://grafana.com/docs/grafana/v13.3/dashboards/use-dashboards/#set-dashboard-time-range) for more information on absolute and relative time ranges. You can also [control the time range using a URL](https://grafana.com/docs/grafana/v13.3/dashboards/use-dashboards/#control-the-time-range-using-a-url).
 
 #### Split and compare
 
@@ -88,20 +92,20 @@ When you select **Mixed**, you can select a different data source for each new q
 
 You can also reuse previously created queries with the saved queries feature.
 
-Refer to [Query editor in Explore](http://grafana.com/docs/grafana/v13.2/visualizations/explore/query-editor/) for detailed information on the query editor.
+Refer to [Query editor in Explore](http://grafana.com/docs/grafana/v13.3/visualizations/explore/query-editor/) for detailed information on the query editor.
 
 ### Query history
 
 The query history contains the list of queries that you created in Explore.
 You can also add queries from the history to your saved queries.
-Refer to [Query history](https://grafana.com/docs/grafana/v13.2/explore/query-management/#query-history) for detailed information on working with your query history.
+Refer to [Query history](https://grafana.com/docs/grafana/v13.3/explore/query-management/#query-history) for detailed information on working with your query history.
 
 ### Query inspector
 
 The query inspector provides detailed statistics regarding your query.
 Inspector functions as a kind of debugging tool that "inspects" your query.
 It provides query statistics under **Stats**, request response time under **Query**, data frame details under **{} JSON**, and the shape of your data under **Data**.
-Refer to [Query inspector in Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/explore-inspector/) for additional information.
+Refer to [Query inspector in Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/explore-inspector/) for additional information.
 
 ## Access Explore
 
@@ -119,7 +123,7 @@ To access Explore:
 
 2. Using the query editor provided for the specific data source, begin writing your query. Each query editor differs based on each data source's unique elements.
 
-Some query editors provide a **Kick start your query** option, which gives you a list of basic pre-written queries. Refer to [Use query editors](https://grafana.com/docs/grafana/v13.2/datasources/#use-query-editors) to see how to use various query editors. For general information on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+Some query editors provide a **Kick start your query** option, which gives you a list of basic pre-written queries. Refer to [Use query editors](https://grafana.com/docs/grafana/v13.3/datasources/#use-query-editors) to see how to use various query editors. For general information on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 Based on specific data source, certain query editors allow you to select the label or labels to add to your query. Labels are fields that consist of key/value pairs representing information in the data. Some data sources allow for selecting fields.
 
@@ -168,7 +172,7 @@ where:
 
 > **Note**
 >
-> The `from` and `to` also accept relative ranges defined in [Time units and relative ranges](https://grafana.com/docs/grafana/v13.2/dashboards/use-dashboards/#time-units-and-relative-ranges).
+> The `from` and `to` also accept relative ranges defined in [Time units and relative ranges](https://grafana.com/docs/grafana/v13.3/dashboards/use-dashboards/#time-units-and-relative-ranges).
 
 ## Share shortened link
 
@@ -193,8 +197,8 @@ This ensures that anyone receiving the link will see the same data you see, rega
 
 Now that you are familiar with Explore you can:
 
-- [Build dashboards](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/)
-- Create a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/)
-- [Work with logs](https://grafana.com/docs/grafana/v13.2/explore/logs-integration/)
-- [Work with traces](https://grafana.com/docs/grafana/v13.2/explore/trace-integration/)
-- [Create and use correlations](https://grafana.com/docs/grafana/v13.2/explore/correlations-editor-in-explore/)
+- [Build dashboards](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/)
+- Create a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/)
+- [Work with logs](https://grafana.com/docs/grafana/v13.3/explore/logs-integration/)
+- [Work with traces](https://grafana.com/docs/grafana/v13.3/explore/trace-integration/)
+- [Create and use correlations](https://grafana.com/docs/grafana/v13.3/explore/correlations-editor-in-explore/)

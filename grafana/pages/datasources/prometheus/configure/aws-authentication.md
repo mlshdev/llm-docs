@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/configure/aws-authentication.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/configure/aws-authentication.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/configure/aws-authentication.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/configure/aws-authentication.md)
 
 # Migrate from Prometheus SigV4 to Amazon Managed Service for Prometheus
 
@@ -99,9 +99,9 @@ The following sections cover common issues you may encounter during or after the
 
 If you need to revert migrated data sources back to the core Prometheus type:
 
-1. Set `prometheusTypeMigration` to `false` in your Grafana configuration feature toggles. For more information, refer to [Manage feature toggles](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/feature-toggles/#manage-feature-toggles).
+1. Set `prometheusTypeMigration` to `false` in your Grafana configuration feature toggles. For more information, refer to [Manage feature toggles](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/feature-toggles/#manage-feature-toggles).
 2. Restart Grafana.
-3. Obtain a bearer token with `read` and `write` permissions for the data source API. For more information, refer to [Data source API](https://grafana.com/docs/grafana/v13.2/developers/http_api/data_source/).
+3. Obtain a bearer token with `read` and `write` permissions for the data source API. For more information, refer to [Data source API](https://grafana.com/docs/grafana/v13.3/developers/http_api/data_source/).
 4. Run the following rollback script, providing your Grafana URL and bearer token:
 
 ```sh

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles.md)
 
 # Configure trace to profiles correlation
 
@@ -8,15 +8,15 @@ Trace to profiles lets you navigate from a span in a trace directly to profiling
 
 To configure trace to profiles, you need:
 
-- A [Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) configured in Grafana
-- A [Grafana Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/grafana-pyroscope/) configured in Grafana
+- A [Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) configured in Grafana
+- A [Grafana Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/grafana-pyroscope/) configured in Grafana
 - An application instrumented with the [OpenTelemetry span profiling bridge](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/) so that spans include the `pyroscope.profile.id` attribute
 - Editor or Admin permissions in Grafana
 
 > **Note**
 >
 > You can't modify a provisioned data source from the Grafana UI. If you're using Grafana Cloud Traces (the pre-configured tracing data source in Grafana Cloud), its settings are read-only.
-> To configure trace to profiles, [clone the data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud) to create an editable copy, or update the provisioning file for self-managed instances.
+> To configure trace to profiles, [clone the data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud) to create an editable copy, or update the provisioning file for self-managed instances.
 > Refer to the [Provisioning](#provisioning) section for details.
 
 [//]: # "Shared content for Trace to profiles in the Tempo data source"
@@ -59,7 +59,7 @@ There are two ways to configure the trace to profiles feature:
 
 To use Trace to profiles, you need:
 
-- A [Grafana Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/grafana-pyroscope/) connected to your Pyroscope instance.
+- A [Grafana Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/grafana-pyroscope/) connected to your Pyroscope instance.
 - A Tempo data source configured with the Trace to profiles settings described on this page.
 - Your application instrumented with all three of the following:
   1. **Profiling**: A Pyroscope SDK or Grafana Alloy sending profiling data to Pyroscope. Refer to [Configure the client to send profiles](https://grafana.com/docs/pyroscope/latest/configure-client/) for setup instructions.
@@ -109,7 +109,7 @@ To use a custom query with the configuration, follow these steps:
 
    These tags can be used in the custom query with `${__tags}` variable. This variable interpolates the mapped tags as list in an appropriate syntax for the data source. Only tags present in the span are included. Tags that aren't present are omitted.
 
-   You can also configure a name for the tag. Tag names are useful where the tag has dots in the name and the target data source doesn't allow using dots in labels. For example, you can remap `service.name` to `service_name`. If you don't map any tags here, you can still use any tag in the query, for example: `method="${__span.tags.method}"`. Learn more about [custom query variables](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#custom-query-variables).
+   You can also configure a name for the tag. Tag names are useful where the tag has dots in the name and the target data source doesn't allow using dots in labels. For example, you can remap `service.name` to `service_name`. If you don't map any tags here, you can still use any tag in the query, for example: `method="${__span.tags.method}"`. Learn more about [custom query variables](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#custom-query-variables).
 
 6. Select a profile type to use in the query. Select the drop-down and choose an option from the menu.
 
@@ -134,7 +134,7 @@ The following table describes options for configuring your **Trace to profiles**
 ## Provisioning
 
 You can provision the trace to profiles configuration using the `tracesToProfiles` block in your data source YAML file.
-For the full provisioning YAML example including all Tempo settings, refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/).
+For the full provisioning YAML example including all Tempo settings, refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/).
 
 ## Verify the integration
 
@@ -147,12 +147,12 @@ After configuring trace to profiles, verify the integration:
 
 ## Troubleshooting
 
-If trace to profiles links aren't appearing or the flame graph is empty, refer to [Trace to logs/metrics/profiles issues](https://grafana.com/docs/grafana/v13.2/datasources/tempo/troubleshooting/#trace-to-logsmetricsprofiles-issues) in the troubleshooting guide. For additional diagnosis steps, refer to [Troubleshoot trace to profiles](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/) in the Pyroscope documentation.
+If trace to profiles links aren't appearing or the flame graph is empty, refer to [Trace to logs/metrics/profiles issues](https://grafana.com/docs/grafana/v13.3/datasources/tempo/troubleshooting/#trace-to-logsmetricsprofiles-issues) in the troubleshooting guide. For additional diagnosis steps, refer to [Troubleshoot trace to profiles](https://grafana.com/docs/pyroscope/latest/configure-client/trace-span-profiles/) in the Pyroscope documentation.
 
 If the configuration fields are greyed out, your data source is provisioned. Refer to the [Provisioning](#provisioning) section for how to update the configuration via YAML.
 
 ## Next steps
 
-- [Configure trace to logs correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/): Navigate from spans to related logs in Loki.
-- [Configure trace to metrics correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus.
-- [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/): Configure the Tempo data source using a YAML file.
+- [Configure trace to logs correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/): Navigate from spans to related logs in Loki.
+- [Configure trace to metrics correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus.
+- [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/): Configure the Tempo data source using a YAML file.

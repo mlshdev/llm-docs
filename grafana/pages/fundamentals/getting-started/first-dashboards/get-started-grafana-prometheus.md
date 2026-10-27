@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-prometheus.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-prometheus.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-prometheus.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-prometheus.md)
 
 # Get started with Grafana and Prometheus
 
@@ -300,7 +300,7 @@ In your Grafana instance, go to the [Drilldown](https://www.grafana.com/docs/gra
 
 ## Start building dashboards
 
-Now that you have a curated list of queries, create [dashboards](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/dashboards/) to render system metrics monitored by Prometheus. When you install Prometheus and Node exporter or windows\_exporter, you will find recommended dashboards for use.
+Now that you have a curated list of queries, create [dashboards](https://grafana.com/docs/grafana/v13.3/fundamentals/getting-started/dashboards/) to render system metrics monitored by Prometheus. When you install Prometheus and Node exporter or windows\_exporter, you will find recommended dashboards for use.
 
 The following image shows a dashboard with three panels showing some system metrics.
 
@@ -308,5 +308,5 @@ The following image shows a dashboard with three panels showing some system metr
 
 To learn more:
 
-- Grafana documentation: [Prometheus data source](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/datasources/prometheus/)
+- Grafana documentation: [Prometheus data source](https://grafana.com/docs/grafana/v13.3/fundamentals/getting-started/datasources/prometheus/)
 - Prometheus documentation: [What is Prometheus?](https://prometheus.io/docs/introduction/overview/)

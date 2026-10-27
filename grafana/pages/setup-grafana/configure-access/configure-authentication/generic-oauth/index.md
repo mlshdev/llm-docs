@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/generic-oauth/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/generic-oauth/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/generic-oauth/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/generic-oauth/index.md)
 
 # Configure Generic OAuth authentication
 
@@ -6,17 +6,17 @@ There are numerous authentication methods available in Grafana to verify user id
 You can also configure Grafana to automatically update users' roles and team memberships in Grafana based on the information returned by the auth provider integration.
 
 When deciding on an authentication method, it's important to take into account your current identity and access management system as well as the specific authentication and authorization features you require.
-For a complete list of the available authentication options and the features they support, refer to [Configure authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication).
+For a complete list of the available authentication options and the features they support, refer to [Configure authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication).
 
 Grafana provides OAuth2 integrations for the following auth providers:
 
-- [Entra ID OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/)
-- [GitHub OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/github/)
-- [GitLab OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/gitlab/)
-- [Google OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/google/)
-- [Grafana Com OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/grafana-cloud/)
-- [Keycloak OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/keycloak/)
-- [Okta OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/okta/)
+- [Entra ID OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/azuread/)
+- [GitHub OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/github/)
+- [GitLab OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/gitlab/)
+- [Google OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/google/)
+- [Grafana Com OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/grafana-cloud/)
+- [Keycloak OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/keycloak/)
+- [Okta OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/okta/)
 
 If your OAuth2 provider is not listed, you can use Generic OAuth authentication.
 
@@ -32,7 +32,7 @@ To follow this guide:
 
 > **Note**
 >
-> If Users use the same email address in Entra ID that they use with other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that the users are matched correctly. Please refer to the [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) documentation for more information.
+> If Users use the same email address in Entra ID that they use with other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that the users are matched correctly. Please refer to the [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) documentation for more information.
 
 ## Configure generic OAuth authentication client using the Grafana UI
 
@@ -73,7 +73,7 @@ Refer to [Terraform Registry](https://registry.terraform.io/providers/grafana/gr
 
 ## Configure generic OAuth authentication client using the Grafana configuration file
 
-Ensure that you have access to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location).
+Ensure that you have access to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location).
 
 ### Steps
 
@@ -108,7 +108,7 @@ To integrate your OAuth2 provider with Grafana using our Generic OAuth authentic
 
 5. [Configure role mapping](#configure-role-mapping).
 
-6. Optional: [Configure team synchronization](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/).
+6. Optional: [Configure team synchronization](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/).
 
 7. Restart Grafana.
 
@@ -249,7 +249,7 @@ Grafana will first evaluate the expression using the OAuth2 ID token. If no role
 To map the server administrator role, use the `allow_assign_grafana_admin` configuration option.
 Refer to [configuration options](#configuration-options) for more information.
 
-If no valid role is found, the user is assigned the role specified by [the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#auto_assign_org_role).
+If no valid role is found, the user is assigned the role specified by [the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#auto_assign_org_role).
 You can disable this default role assignment by setting `role_attribute_strict = true`. This setting denies user access if no role or an invalid role is returned after evaluating the `role_attribute_path` and the `org_mapping` expressions.
 
 You can use the `org_attribute_path` and `org_mapping` configuration options to assign the user to organizations and specify their role. For more information, refer to [Org roles mapping example](#org-roles-mapping-example). If both org role mapping (`org_mapping`) and the regular role mapping (`role_attribute_path`) are specified, then the user will get the highest of the two mapped roles.
@@ -375,7 +375,7 @@ org_mapping = org_foo:org_foo:Viewer org_bar:org_bar:Editor *:org_baz:Editor
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
 
 By using Team Sync, you can link your OAuth2 groups to teams within Grafana. This will automatically assign users to the appropriate teams.
 Teams for each user are synchronized when the user logs in.
@@ -384,7 +384,7 @@ Generic OAuth groups can be referenced by group ID, such as `8bab1c86-8fba-33e5-
 Group information can be extracted from the OAuth2 ID token, user information from the UserInfo endpoint, or the OAuth2 access token.
 For information on configuring OAuth2 groups with Grafana using the `groups_attribute_path` configuration option, refer to [configuration options](#configuration-options).
 
-To learn more about Team Sync, refer to [Configure team sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/).
+To learn more about Team Sync, refer to [Configure team sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/).
 
 ### Team synchronization example
 
@@ -409,7 +409,7 @@ Payload:
 
 ## Configuration options
 
-The following table outlines the various Generic OAuth configuration options. You can apply these options as environment variables, similar to any other configuration within Grafana. For more information, refer to [Override configuration with environment variables](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
+The following table outlines the various Generic OAuth configuration options. You can apply these options as environment variables, similar to any other configuration within Grafana. For more information, refer to [Override configuration with environment variables](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
 
 > **Note**
 >
@@ -502,7 +502,7 @@ To set up Generic OAuth authentication with Descope, follow these steps:
 
 > **Note**
 >
-> Support for the Auth0 "audience" feature is not currently available in Grafana. For roles and permissions, the available options are described [here](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/).
+> Support for the Auth0 "audience" feature is not currently available in Grafana. For roles and permissions, the available options are described [here](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/).
 
 To set up Generic OAuth authentication with Auth0, follow these steps:
 

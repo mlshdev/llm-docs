@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/prometheus-rules.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/prometheus-rules.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/prometheus-rules.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/prometheus-rules.md)
 
 # Manage Prometheus rules using Terraform
 
@@ -11,7 +11,7 @@ Using the `grafana_asserts_prom_rule_file` resource, you can manage these rules 
 To manage Prometheus rules using Terraform, you need:
 
 - A Grafana Cloud stack with Knowledge Graph enabled
-- [Terraform configured for Knowledge Graph](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
+- [Terraform configured for Knowledge Graph](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
 - An understanding of PromQL and Prometheus rule concepts
 
 ## Create a basic recording rule
@@ -683,7 +683,7 @@ If you receive errors when recreating rules:
 
 ## Related documentation
 
-- [Get started with Terraform for Knowledge Graph](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
-- [Create custom model rules using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/custom-model-rules/)
+- [Get started with Terraform for Knowledge Graph](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
+- [Create custom model rules using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/custom-model-rules/)
 - [Prometheus recording rules](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)
 - [Prometheus alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)

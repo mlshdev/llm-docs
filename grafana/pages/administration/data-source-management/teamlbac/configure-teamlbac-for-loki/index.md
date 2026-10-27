@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/index.md)
 
 # Configure LBAC for a Loki data source
 
@@ -35,7 +35,7 @@ Grafana recommends that you remove all permissions for roles and teams that don'
 5. Navigate to data source permissions.
    - Go to the **Permissions** tab of the newly created Loki data source. Here, you find the LBAC for data sources rules section.
 
-For more information on how to set up LBAC for data sources rules for a Loki data source, refer to [Create LBAC for data sources rules for the Loki data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/create-teamlbac-rules/).
+For more information on how to set up LBAC for data sources rules for a Loki data source, refer to [Create LBAC for data sources rules for the Loki data source](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/create-teamlbac-rules/).
 
 ## Grafana Enterprise
 
@@ -75,11 +75,11 @@ Grafana recommends that you remove all permissions for roles and teams that don'
 3. Navigate to data source permissions.
    - Go to the **Permissions** tab of the newly created Loki data source. Here, you find the LBAC for data sources rules section.
 
-For more information on how to set up LBAC for data sources rules for a Loki data source, refer to [Create LBAC for data sources rules for the Loki data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/create-teamlbac-rules/).
+For more information on how to set up LBAC for data sources rules for a Loki data source, refer to [Create LBAC for data sources rules for the Loki data source](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/create-teamlbac-rules/).
 
 ## Examples of LBAC rules
 
-An LBAC rule is a `logql` query that filters logs based on labels. Each rule operates independently as its own filter, separate from other rules within a team. The following examples show common patterns. For more detail, refer to [Create LBAC for data sources rules for the Loki data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/create-teamlbac-rules/).
+An LBAC rule is a `logql` query that filters logs based on labels. Each rule operates independently as its own filter, separate from other rules within a team. The following examples show common patterns. For more detail, refer to [Create LBAC for data sources rules for the Loki data source](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/create-teamlbac-rules/).
 
 ### Single rule
 
@@ -120,5 +120,5 @@ Users on multiple teams receive access based on all the combined rules assigned 
 
 ## Related resources
 
-- [LBAC for data sources overview](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/) explains how LBAC works, which data sources are supported, and current limitations.
-- [Create LBAC for data sources rules for a supported data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/create-teamlbac-rules/) explains how to define and manage rules.
+- [LBAC for data sources overview](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/) explains how LBAC works, which data sources are supported, and current limitations.
+- [Create LBAC for data sources rules for a supported data source](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/create-teamlbac-rules/) explains how to define and manage rules.

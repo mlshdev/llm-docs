@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/troubleshooting/generate-diagnostic-bundle/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/troubleshooting/generate-diagnostic-bundle/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/troubleshooting/generate-diagnostic-bundle/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/troubleshooting/generate-diagnostic-bundle/index.md)
 
 # Generate a data source diagnostic bundle
 
@@ -20,9 +20,10 @@ When you generate a diagnostic bundle, Grafana re-runs the panel's queries with 
 
 To generate a diagnostic bundle, you need the following:
 
-- A self-managed Grafana instance. Diagnostic bundles aren't available in Grafana Cloud.
+- A self-managed Grafana instance running version 13.2 or later. Diagnostic bundles aren't available in Grafana Cloud, and earlier self-managed versions don't include this feature.
 - The Grafana server administrator role. The menu items described on this page don't appear for other users.
 - The `grafana.onDemandDiagnostics` feature toggle enabled.
+- A data source whose plugin supports diagnostic bundles. Refer to [Data source support for capturing upstream traffic](#data-source-support-for-capturing-upstream-traffic).
 
 ### Enable the feature toggle
 
@@ -35,7 +36,7 @@ To enable it, add the following to your Grafana configuration file and restart G
 enable = grafana.onDemandDiagnostics
 ```
 
-To set a feature toggle in other ways, such as environment variables, refer to the [`feature_toggles` section of Configure Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#feature_toggles) and [Manage feature toggles](https://grafana.com/docs/grafana/v13.2/administration/feature-toggles/#manage-feature-toggles).
+To set a feature toggle in other ways, such as environment variables, refer to the [`feature_toggles` section of Configure Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#feature_toggles) and [Manage feature toggles](https://grafana.com/docs/grafana/v13.3/administration/feature-toggles/#manage-feature-toggles).
 
 ## Generate a bundle for a single panel
 
@@ -94,19 +95,27 @@ A dashboard bundle contains a `panels/<id>-<title>/` directory holding those fil
 
 `traffic.har` is usually the most valuable file in the bundle, but it isn't available for every data source. When upstream traffic can't be captured, Grafana still generates the rest of the bundle, and `querydata.json` still shows what the data source plugin returned.
 
-### Data sources that capture upstream traffic
+### Data sources that support capture today
 
-The following data sources are built into Grafana and capture their upstream traffic with no extra configuration:
-
-- Prometheus
+- Amazon Managed Service for Prometheus
+- Azure Data Explorer
+- Azure Monitor
+- Azure Prometheus
+- CSV
+- Dynatrace
+- Elasticsearch
+- Falcon LogScale
+- Google Sheets
 - Graphite
 - InfluxDB
-- Azure Monitor
-
-### Data sources that don't capture upstream traffic
-
-- **SQL and other database data sources**, such as MySQL, PostgreSQL, Microsoft SQL Server, and MongoDB. These communicate over a database wire protocol instead of HTTP, so there's no HTTP exchange to record.
-- **Amazon CloudWatch.** Queries go through the AWS SDK, which doesn't use the instrumented HTTP client that capture depends on.
+- Jaeger
+- Loki
+- OpenTSDB
+- Prometheus
+- Sentry
+- Tempo, for its standard HTTP query path—TraceQL streaming is not supported.
+- Zabbix
+- Zipkin
 
 ## Limitations
 
@@ -135,6 +144,6 @@ As an experimental feature, on-demand data source diagnostics currently has the 
 
 ## Related resources
 
-- [Send a panel to Grafana Labs support](https://grafana.com/docs/grafana/v13.2/troubleshooting/send-panel-to-grafana-support/)
-- [Generate a HAR capture to send to Grafana Labs support](https://grafana.com/docs/grafana/v13.2/troubleshooting/har-captures/)
-- [Troubleshoot data sources](https://grafana.com/docs/grafana/v13.2/datasources/troubleshooting/)
+- [Send a panel to Grafana Labs support](https://grafana.com/docs/grafana/v13.3/troubleshooting/send-panel-to-grafana-support/)
+- [Generate a HAR capture to send to Grafana Labs support](https://grafana.com/docs/grafana/v13.3/troubleshooting/har-captures/)
+- [Troubleshoot data sources](https://grafana.com/docs/grafana/v13.3/datasources/troubleshooting/)

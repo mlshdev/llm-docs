@@ -1,13 +1,13 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/testdata/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/testdata/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/testdata/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/testdata/alerting/index.md)
 
 # TestData alerting
 
-The TestData data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/). You can use it to prototype alert rules, test threshold conditions, and verify notification pipelines without connecting to an external data source.
+The TestData data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/). You can use it to prototype alert rules, test threshold conditions, and verify notification pipelines without connecting to an external data source.
 
 ## Before you begin
 
-- [Configure the TestData data source](https://grafana.com/docs/grafana/v13.2/datasources/testdata/configure/).
-- Familiarize yourself with [alert rules](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/) and how to [create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+- [Configure the TestData data source](https://grafana.com/docs/grafana/v13.3/datasources/testdata/configure/).
+- Familiarize yourself with [alert rules](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/) and how to [create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Choose a scenario for alerting
 
@@ -43,7 +43,7 @@ To create an alert rule using TestData:
 10. Configure notifications and labels.
 11. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example: Predictable Pulse alert
 

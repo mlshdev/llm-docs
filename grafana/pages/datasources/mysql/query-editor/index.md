@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mysql/query-editor/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mysql/query-editor/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mysql/query-editor/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mysql/query-editor/_index.md)
 
 # MySQL query editor
 
-Grafana’s query editors are unique for each data source. For general information on Grafana query editors, refer to [Query editors](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/#query-editors). For general information on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+Grafana’s query editors are unique for each data source. For general information on Grafana query editors, refer to [Query editors](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#query-editors). For general information on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
-The MySQL query editor is located on the [Explore page](https://grafana.com/docs/grafana/v13.2/explore/). You can also access the MySQL query editor from a dashboard panel. Click the ellipsis in the upper right of the panel and select **Edit**.
+The MySQL query editor is located on the [Explore page](https://grafana.com/docs/grafana/v13.3/explore/). You can also access the MySQL query editor from a dashboard panel. Click the ellipsis in the upper right of the panel and select **Edit**.
 
 > **Note**
 >
@@ -175,7 +175,7 @@ Table panel result:
 
 ![output of time group macro](https://grafana.com/media/docs/grafana/data-sources/mysql/screenshot-timegroup-macro.png)
 
-Given the result in the following example, the data is grouped and aggregated within buckets with timestamps of fixed interval i.e. 5 mins. To customize the default series name formatting (optional), refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/).
+Given the result in the following example, the data is grouped and aggregated within buckets with timestamps of fixed interval i.e. 5 mins. To customize the default series name formatting (optional), refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/).
 
 **Example with `$__timeGroupAlias(dateColumn,'5m')` Macro:**
 
@@ -195,7 +195,7 @@ Table panel result:
 ![output of time group alias macro](https://grafana.com/media/docs/grafana/data-sources/mysql/screenshot-timeGroupAlias-macro.png)
 
 The following result is similar to the result of the `$__timeGroup(dateColumn,'5m')` macro, except it uses a built-in alias for the time column.
-To customize the default series name formatting (optional), refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/).
+To customize the default series name formatting (optional), refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/).
 
 **Example with `$__timeGroupAlias` Macro to convert null values to zero instead:**
 
@@ -215,7 +215,7 @@ Table panel result:
 
 ![output of null values to zero case, for time group alias macro](https://grafana.com/media/docs/grafana/data-sources/mysql/screenshot-timeGroupAlias-macro-conv-null-to-zero.png)
 
-Given the result in the following example, null values within bucket timestamps are replaced by zero and also add the `Time` column alias by default. To customize the default series name formatting (optional), refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/) to display the value of `${__field.labels.hostname}`.
+Given the result in the following example, null values within bucket timestamps are replaced by zero and also add the `Time` column alias by default. To customize the default series name formatting (optional), refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/) to display the value of `${__field.labels.hostname}`.
 
 **Example with multiple columns for `$__timeGroupAlias(dateColumn,'5m')` Macro:**
 
@@ -232,7 +232,7 @@ ORDER BY time
 
 Table panel result:
 
-![output with multiple colummns for time group alias macro](https://grafana.com/media/docs/grafana/data-sources/mysql/screenshot-timeGroupAlias-macro-multiple-columns.png)
+![output with multiple columns for time group alias macro](https://grafana.com/media/docs/grafana/data-sources/mysql/screenshot-timeGroupAlias-macro-multiple-columns.png)
 
 The query returns multiple columns representing minimum and maximum values within the defined range.
 
@@ -240,16 +240,16 @@ The query returns multiple columns representing minimum and maximum values withi
 
 Instead of hard-coding values like server, application, or sensor names in your metric queries, you can use variables. Variables appear as drop-down select boxes at the top of the dashboard, making it easy to change the data displayed in your dashboard.
 
-For detailed information on using template variables with MySQL, refer to [MySQL template variables](https://grafana.com/docs/grafana/v13.2/datasources/mysql/template-variables/).
+For detailed information on using template variables with MySQL, refer to [MySQL template variables](https://grafana.com/docs/grafana/v13.3/datasources/mysql/template-variables/).
 
 ## Annotations
 
 Annotations allow you to overlay event information on your graphs, helping you correlate events with metrics. You can write SQL queries that return event data to display as annotations on your dashboards.
 
-For detailed information on creating annotations with MySQL, refer to [MySQL annotations](https://grafana.com/docs/grafana/v13.2/datasources/mysql/annotations/).
+For detailed information on creating annotations with MySQL, refer to [MySQL annotations](https://grafana.com/docs/grafana/v13.3/datasources/mysql/annotations/).
 
 ## Alerting
 
 You can use time series queries to create Grafana-managed alert rules. Table formatted queries are not supported in alert rule conditions.
 
-For detailed information on creating alerts with MySQL, refer to [MySQL alerting](https://grafana.com/docs/grafana/v13.2/datasources/mysql/alerting/).
+For detailed information on creating alerts with MySQL, refer to [MySQL alerting](https://grafana.com/docs/grafana/v13.3/datasources/mysql/alerting/).

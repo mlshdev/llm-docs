@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/troubleshooting/index.md)
 
 # Troubleshoot Prometheus data source issues
 
@@ -165,11 +165,11 @@ General steps:
 
 1. Check the Grafana server logs for token refresh errors around the time alerts fail.
 2. Verify the data source test (**Save & test**) passes. This confirms current credentials are valid but doesn't guarantee the alerting backend has a fresh token.
-3. If the issue persists, set **Alert state if execution error or timeout** to **Keep Last State** to prevent false alarms while investigating. Refer to [Configure alert state for execution errors](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/alerting/#configure-alert-state-for-execution-errors).
+3. If the issue persists, set **Alert state if execution error or timeout** to **Keep Last State** to prevent false alarms while investigating. Refer to [Configure alert state for execution errors](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/alerting/#configure-alert-state-for-execution-errors).
 
 > **Note**
 >
-> This token caching behavior is a known issue that has received code fixes in recent Grafana releases. If you're experiencing this on an older Grafana version, upgrading may resolve it. Check the [Grafana changelog](https://grafana.com/docs/grafana/v13.2/whatsnew/) for relevant fixes.
+> This token caching behavior is a known issue that has received code fixes in recent Grafana releases. If you're experiencing this on an older Grafana version, upgrading may resolve it. Check the [Grafana changelog](https://grafana.com/docs/grafana/v13.3/whatsnew/) for relevant fixes.
 
 ### LBAC not restricting data on non-Mimir backends
 
@@ -180,7 +180,7 @@ General steps:
 **Solution:**
 
 1. Verify your backend is Grafana Cloud Metrics or GEM. If you're using a different Prometheus-compatible backend, LBAC isn't supported.
-2. For Google Managed Prometheus or other external endpoints, use [data source permissions](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#data-source-permissions) to control which teams can access the data source entirely, rather than per-label access control.
+2. For Google Managed Prometheus or other external endpoints, use [data source permissions](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#data-source-permissions) to control which teams can access the data source entirely, rather than per-label access control.
 3. If you need per-label restrictions on a non-Mimir backend, consider proxying through a Mimir instance or using a separate data source per team with different credentials scoped to the appropriate data.
 
 ### Azure AD or SigV4 authentication options not available
@@ -343,7 +343,7 @@ The following errors occur when there are issues with PromQL syntax or query exe
 | Counter reset spikes after pod restarts       | Use `$__rate_interval` or a longer range vector to smooth spikes. Investigate frequent restarts as the root cause.                                    |
 | Values differ between edit mode and dashboard | Panel width affects `$__interval` which affects `rate()` window calculations. Set a **Min step** on the query.                                        |
 
-For detailed explanations of these behaviors, refer to [Expected PromQL behaviors](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/query-editor/#expected-promql-behaviors).
+For detailed explanations of these behaviors, refer to [Expected PromQL behaviors](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/query-editor/#expected-promql-behaviors).
 
 ### Aggregation by labels with dots
 
@@ -406,7 +406,7 @@ The following errors occur when the data source is not configured correctly.
 2. Look at the expanded query sent to Prometheus. The actual interval value replacing `$__rate_interval` is visible in the request.
 3. Compare this value against your actual scrape interval. If it's smaller than your scrape interval, you need to configure the data source scrape interval or set a Min step.
 
-For detailed documentation on how `$__rate_interval` works and how to configure it, refer to [Use `$__rate_interval`](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/template-variables/#use-__rate_interval).
+For detailed documentation on how `$__rate_interval` works and how to configure it, refer to [Use `$__rate_interval`](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/template-variables/#use-__rate_interval).
 
 ## Performance issues
 
@@ -480,7 +480,7 @@ The following issues occur when using Prometheus as a data source for annotation
 >
 > Prometheus annotations create a marker for **every data point** returned by the query. There's no automatic filtering of zero values. If you only want annotations at specific moments, your PromQL expression must return data only at those times (for example, using `> 0`, `changes() > 0`, or the `ALERTS` metric).
 
-For more information on configuring annotations, refer to [Prometheus annotations](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/annotations/).
+For more information on configuring annotations, refer to [Prometheus annotations](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/annotations/).
 
 ## Alerting errors
 
@@ -509,7 +509,7 @@ This ensures the alert retains its previous state during transient errors and on
 3. The **Query timeout** setting in the data source configuration. Increase it if complex queries regularly exceed the limit.
 4. Query complexity. Simplify queries or use recording rules to pre-compute expensive expressions.
 
-For configuration details, refer to [Configure alert state for execution errors](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/alerting/#configure-alert-state-for-execution-errors).
+For configuration details, refer to [Configure alert state for execution errors](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/alerting/#configure-alert-state-for-execution-errors).
 
 ### Alert rule fails to evaluate
 
@@ -535,7 +535,7 @@ For configuration details, refer to [Configure alert state for execution errors]
 3. Ensure Grafana can access the Prometheus rules API endpoint (`/api/v1/rules`).
 4. For Prometheus (unlike Mimir), the Alerting UI only supports viewing existing rules, not creating new ones.
 
-For more information on alerting with Prometheus, refer to [Prometheus alerting](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/alerting/).
+For more information on alerting with Prometheus, refer to [Prometheus alerting](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/alerting/).
 
 ## Get additional help
 

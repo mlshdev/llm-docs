@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/set-up/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/set-up/_index.md)
 
 # Additional configuration
 
@@ -6,11 +6,11 @@ Grafana Alerting offers a variety of advanced configuration options to further t
 
 The following topics provide you with advanced configuration options for Grafana Alerting.
 
-- [Configure roles and permissions](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-roles/)
-- [Configure RBAC](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-rbac/)
-- [Configure Alertmanagers](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alertmanager/)
-- [Configure alert state history](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alert-state-history/)
-- [Provision Alerting resources](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/)
-- [Configure high availability](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-high-availability/)
-- [Meta monitoring](https://grafana.com/docs/grafana/v13.2/alerting/set-up/meta-monitoring/)
-- [Performance considerations and limitations](https://grafana.com/docs/grafana/v13.2/alerting/set-up/performance-limitations/)
+- [Configure roles and permissions](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-roles/)
+- [Configure RBAC](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-rbac/)
+- [Configure Alertmanagers](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alertmanager/)
+- [Configure alert state history](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alert-state-history/)
+- [Provision Alerting resources](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/)
+- [Configure high availability](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-high-availability/)
+- [Meta monitoring](https://grafana.com/docs/grafana/v13.3/alerting/set-up/meta-monitoring/)
+- [Performance considerations and limitations](https://grafana.com/docs/grafana/v13.3/alerting/set-up/performance-limitations/)

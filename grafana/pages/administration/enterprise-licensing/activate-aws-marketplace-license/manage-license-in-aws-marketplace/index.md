@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/manage-license-in-aws-marketplace/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/manage-license-in-aws-marketplace/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/manage-license-in-aws-marketplace/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/manage-license-in-aws-marketplace/index.md)
 
 ## Manage your Grafana Enterprise license in AWS Marketplace
 
@@ -22,4 +22,4 @@ You can use AWS Marketplace to make the following modifications to your Grafana 
 
    This action retrieves updated license information from AWS.
 
-> To learn more about licensing and active users, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace](https://grafana.com/docs/grafana/v13.2/administration/enterprise-licensing/activate-aws-marketplace-license/).
+> To learn more about licensing and active users, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace](https://grafana.com/docs/grafana/v13.3/administration/enterprise-licensing/activate-aws-marketplace-license/).

@@ -1,13 +1,13 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/testdata/annotations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/testdata/annotations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/testdata/annotations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/testdata/annotations/index.md)
 
 # TestData annotations
 
-The TestData data source can generate simulated [annotation](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) events. Use it to test how dashboards and panels render annotation markers and overlays without connecting to an external source. The generated events are created in the browser and aren't persisted.
+The TestData data source can generate simulated [annotation](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/) events. Use it to test how dashboards and panels render annotation markers and overlays without connecting to an external source. The generated events are created in the browser and aren't persisted.
 
 ## Before you begin
 
-- [Configure the TestData data source](https://grafana.com/docs/grafana/v13.2/datasources/testdata/configure/).
-- Familiarize yourself with [annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) in Grafana.
+- [Configure the TestData data source](https://grafana.com/docs/grafana/v13.3/datasources/testdata/configure/).
+- Familiarize yourself with [annotations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/) in Grafana.
 
 ## Add an annotation query
 
@@ -38,7 +38,7 @@ Because the Annotations scenario doesn't return a visible series on its own, add
 
 Grafana plots the series from the first query and overlays the annotation markers on top. If you run the Annotations scenario by itself, the query returns annotation events but the panel doesn't display a visible series.
 
-For a reference of all TestData scenarios, refer to the [TestData query editor](https://grafana.com/docs/grafana/v13.2/datasources/testdata/query-editor/).
+For a reference of all TestData scenarios, refer to the [TestData query editor](https://grafana.com/docs/grafana/v13.3/datasources/testdata/query-editor/).
 
 ## Example: Overlay annotations on a time series panel
 
@@ -67,4 +67,4 @@ Grafana draws five vertical annotation markers evenly across the time range on t
 
 - **Events are synthetic.** TestData generates fixed sample text and tags. You can't customize the event content.
 - **Events aren't persisted.** The data source builds events in the browser each time the query runs. TestData doesn't store annotations or query an external source.
-- **Not evaluated by the alerting engine.** The Annotations scenario runs in the browser, so it can't be used with [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/datasources/testdata/alerting/) or in any context that requires server-side evaluation.
+- **Not evaluated by the alerting engine.** The Annotations scenario runs in the browser, so it can't be used with [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/datasources/testdata/alerting/) or in any context that requires server-side evaluation.

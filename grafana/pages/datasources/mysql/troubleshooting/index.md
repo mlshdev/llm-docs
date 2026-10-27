@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mysql/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mysql/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mysql/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mysql/troubleshooting/index.md)
 
 # Troubleshoot MySQL data source issues
 
@@ -73,7 +73,7 @@ jsonData:
   tlsSkipVerify: true
 ```
 
-For all available TLS provisioning options, refer to the [TLS provisioning examples](https://grafana.com/docs/grafana/v13.2/datasources/mysql/configure/#mysql-provisioning-examples).
+For all available TLS provisioning options, refer to the [TLS provisioning examples](https://grafana.com/docs/grafana/v13.3/datasources/mysql/configure/#mysql-provisioning-examples).
 
 ### Connection reset by peer
 
@@ -392,7 +392,7 @@ The following issues don't produce specific error messages but are commonly enco
 
 > **Note**
 >
-> Query caching is available in Grafana Enterprise and Grafana Cloud. For more information, refer to [Query and resource caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching).
+> Query caching is available in Grafana Enterprise and Grafana Cloud. For more information, refer to [Query and resource caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching).
 
 ### An unexpected error happened
 

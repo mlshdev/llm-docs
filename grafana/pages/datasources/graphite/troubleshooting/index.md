@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/graphite/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/graphite/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/graphite/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/graphite/troubleshooting/index.md)
 
 # Troubleshoot Graphite data source issues
 
@@ -33,7 +33,7 @@ If you receive 401 or 403 errors:
 - Ensure the **With Credentials** toggle is enabled if your Graphite server requires cookies for authentication.
 - Check that your TLS client certificates are valid and match what the server expects.
 
-For detailed authentication configuration, refer to [Configure the Graphite data source](https://grafana.com/docs/grafana/v13.2/datasources/graphite/configure/).
+For detailed authentication configuration, refer to [Configure the Graphite data source](https://grafana.com/docs/grafana/v13.3/datasources/graphite/configure/).
 
 **Deprecation notice about browser access mode:**
 
@@ -81,9 +81,9 @@ Label mappings apply only when you switch between Graphite and Loki queries. If 
 - Remember that Grafana automatically maps all Graphite tags to labels, so you only need explicit mappings for non-tag metric nodes.
 - Check that multi-value patterns such as `{001,002}` map to the expected regular expression, for example `{server=~"(001|002)"}`.
 
-For details, refer to the label mappings section in [Configure the Graphite data source](https://grafana.com/docs/grafana/v13.2/datasources/graphite/configure/).
+For details, refer to the label mappings section in [Configure the Graphite data source](https://grafana.com/docs/grafana/v13.3/datasources/graphite/configure/).
 
-For query syntax help, refer to [Graphite query editor](https://grafana.com/docs/grafana/v13.2/datasources/graphite/query-editor/).
+For query syntax help, refer to [Graphite query editor](https://grafana.com/docs/grafana/v13.3/datasources/graphite/query-editor/).
 
 ## Version and feature issues
 
@@ -124,7 +124,7 @@ Use the following troubleshooting steps when dashboard variables don't behave as
 - Define the parent variable above the child variable in the dashboard variable list so it resolves first.
 - Verify the parent variable has a selected value. An empty parent produces an empty child query.
 
-For details, refer to [Graphite template variables](https://grafana.com/docs/grafana/v13.2/datasources/graphite/template-variables/).
+For details, refer to [Graphite template variables](https://grafana.com/docs/grafana/v13.3/datasources/graphite/template-variables/).
 
 ## Performance issues
 

@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/keycloak/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/keycloak/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/keycloak/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/keycloak/index.md)
 
 # Configure Keycloak OAuth2 authentication
 
 Keycloak OAuth2 authentication allows users to log in to Grafana using their Keycloak credentials. This guide explains how to set up Keycloak as an authentication provider in Grafana.
 
-Refer to [Generic OAuth authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/) for extra configuration options available for this provider.
+Refer to [Generic OAuth authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/) for extra configuration options available for this provider.
 
 > **Note**
 >
-> If you use the same email address in Keycloak as in other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that the users are matched correctly. Please refer to the [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) documentation for more information.
+> If you use the same email address in Keycloak as in other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that the users are matched correctly. Please refer to the [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) documentation for more information.
 
 You may have to set the `root_url` option of `[server]` for the callback URL to be
 correct. For example in case you are serving Grafana behind a proxy.
@@ -92,9 +92,9 @@ viewer
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/products/cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/products/cloud/).
 
-[Team Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/) is a feature that allows you to map groups from your identity provider to Grafana teams. This is useful if you want to give your users access to specific dashboards or folders based on their group membership.
+[Team Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/) is a feature that allows you to map groups from your identity provider to Grafana teams. This is useful if you want to give your users access to specific dashboards or folders based on their group membership.
 
 To enable teamsync, you need to add a `groups` mapper to the client configuration in Keycloak.
 This will add the `groups` claim to the id\_token. You can then use the `groups` claim to map groups to teams in Grafana.

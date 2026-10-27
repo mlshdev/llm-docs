@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/graphite/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/graphite/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/graphite/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/graphite/template-variables/index.md)
 
 # Graphite template variables
 
@@ -6,9 +6,7 @@ Instead of hard-coding details such as server, application, and sensor names in 
 Grafana lists these variables in drop-down selection boxes at the top of the dashboard to help you change the data displayed in your dashboard.
 Grafana refers to such variables as template variables.
 
-For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/) documentation.
-
-To view an example templated dashboard, refer to [Graphite Templated Nested dashboard](https://play.grafana.org/d/cvDFGseGz/graphite-templated-nested).
+For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/) documentation.
 
 ## Use query variables
 
@@ -69,7 +67,7 @@ server=~${servers:regex}
 
 This query tells Grafana to format the selected values in the `servers` variable as a regular expression (for example, `(server1|server2)` if two servers are selected).
 
-For more information, refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/#advanced-variable-format-options).
+For more information, refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/#advanced-variable-format-options).
 
 ### Filter with multiple expressions
 

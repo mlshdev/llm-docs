@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/openrouter/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/providers/openrouter/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/openrouter/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/providers/openrouter/index.md)
 
 # OpenRouter
 
@@ -26,12 +26,12 @@ The simplest way to use OpenRouter:
 ```yaml
 agents:
   root:
-    model: openrouter/meta-llama/llama-3.3-70b-instruct
+    model: openrouter/meta-llama/llama-4-maverick
     description: Assistant using OpenRouter
     instruction: You are a helpful assistant.
 ```
 
-OpenRouter model IDs usually include the upstream provider name, such as `anthropic/claude-sonnet-4-5` or `meta-llama/llama-3.3-70b-instruct`. Docker Agent splits only the first slash, so the full upstream model ID is preserved.
+OpenRouter model IDs usually include the upstream provider name, such as `anthropic/claude-sonnet-5` or `meta-llama/llama-4-maverick`. Docker Agent splits only the first slash, so the full upstream model ID is preserved.
 
 ### Named Model
 
@@ -41,7 +41,7 @@ For more control over parameters:
 models:
   openrouter_llama:
     provider: openrouter
-    model: meta-llama/llama-3.3-70b-instruct
+    model: meta-llama/llama-4-maverick
     temperature: 0.7
     max_tokens: 8192
 
@@ -71,7 +71,7 @@ OpenRouter is implemented as a built-in alias in Docker Agent:
 ```yaml
 agents:
   coder:
-    model: openrouter/meta-llama/llama-3.3-70b-instruct
+    model: openrouter/meta-llama/llama-4-maverick
     description: Code assistant using OpenRouter
     instruction: |
       You are an expert programmer.

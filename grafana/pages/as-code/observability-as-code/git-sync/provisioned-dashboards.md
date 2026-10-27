@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/provisioned-dashboards.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/provisioned-dashboards.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/provisioned-dashboards.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/provisioned-dashboards.md)
 
 # Work with provisioned dashboards in Git Sync
 
@@ -18,7 +18,7 @@ Using Git Sync, you can manage your dashboards in the UI and synchronize them wi
   - Use pull requests to review changes to dashboards.
   - Preview the changes before merging.
 
-Refer to [Key concepts](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts) for more details.
+Refer to [Key concepts](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts) for more details.
 
 ## Create a new dashboard
 
@@ -31,15 +31,15 @@ You have the following options to add new dashboards in your Git Sync connection
 - Create them directly within Git Sync-managed folders in the Grafana UI
 - Add them by committing JSON files to your Git repository
 
-If you want to add an existing dashboard to your provisioned resources, refer to [Export non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/export-resources/).
+If you want to add an existing dashboard to your provisioned resources, refer to [Export non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/export-resources/).
 
 ### Add a new dashboard from the Grafana UI
 
 To add a new dashboard from the Grafana UI:
 
 1. On the **Dashboards** tab, click on **New** on the top right corner and chose one of these options:
-   - **New dashboard**. When you create a new dashboard in a provisioned folder associated with a Git repository, you follow the same process you use for any new dashboard. Refer to [Create a dashboard](http://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/create-dashboard/) for more information.
-   - **Import dashboard**. Refer to [Add a dashboard using Import dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/export-resources##add-a-dashboard-using-import-dashboards) for more details.
+   - **New dashboard**. When you create a new dashboard in a provisioned folder associated with a Git repository, you follow the same process you use for any new dashboard. Refer to [Create a dashboard](http://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/create-dashboard/) for more information.
+   - **Import dashboard**. Refer to [Add a dashboard using Import dashboards](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/export-resources##add-a-dashboard-using-import-dashboards) for more details.
    - **Use template**. Create a dashboard using a Grafana template.
 
 After you create the dashboard, follow these steps:
@@ -76,11 +76,48 @@ To save dashboard changes:
 6. On the prompt, select **Open a pull request in GitHub** to open a new PR to your repository.
 7. Follow your usual Git workflow to save and merge the PR to your repository.
 
+## Preview banner
+
+This section applies to Git repository connections (GitHub, GitHub Enterprise, GitLab, Bitbucket, and plain Git). It doesn't apply to local file provisioning, which has no branches or pull requests.
+
+Whenever you're viewing a provisioned dashboard loaded from a branch other than your repository's configured branch, Grafana shows a **preview banner** at the top of the page. You'll see it right after you create, edit, delete, or move a dashboard from the Grafana UI, as well as when you open a dashboard from a pull request notification.
+
+The banner's title reflects what changed:
+
+- **A new resource has been created in a branch in your Git provider.**
+- **A resource has been updated in a branch in your Git provider.**
+- **A resource has been deleted in a branch in your Git provider.**
+- **A resource has been moved in a branch in your Git provider.**
+
+In every case, the rest of your organization keeps seeing the version on the configured branch until the branch is merged — what you're looking at is a private preview of your own change. The banner also shows the branch your change was pushed to and the branch it targets.
+
+From the banner you can:
+
+- Select **Open a pull request** (or **View pull request**, if one already exists) to open the pull request for this change, in a new tab.
+- Select **View saved version**, when editing a dashboard that already exists in Grafana, to jump back to the version currently saved on the configured branch, so you can compare it against your draft.
+
+If the branch behind the preview no longer exists in the repository, for example, the pull request was already merged or closed and its source branch deleted, selecting **Open a pull request** can't take you to a live pull request. Grafana instead shows **This branch no longer exists** and offers two ways forward:
+
+- **Save to a new branch**: Reopens the save form with your draft intact, so you can commit it to a new branch and open a new pull request.
+- **View the current version**: Navigates to the dashboard as currently saved in Grafana, if it exists.
+
+> **Note**
+>
+> How much of the banner is interactive depends on your repository type:
+>
+> - **GitHub, GitHub Enterprise, GitLab, and Bitbucket** (enhanced integrations): the source and target branch names link directly to that branch in your Git provider, and the pull request action opens (or creates) a real pull request.
+> - **Plain Git** connections: branch names are shown, but since plain Git has no pull-request concept or per-branch view, the pull request action opens the repository itself instead.
+>
+> Provisioned folders show a related banner, **This resource is behind the branch**, when the folder itself is out of sync with its configured branch. Select **Open in repository** to view the latest changes.
+
 ## Remove dashboards
 
-You can remove a provisioned dashboard by deleting the dashboard from the repository. The Grafana UI updates when the changes from the Git repository sync.
+You can remove a provisioned dashboard either from the Grafana UI or from the repository:
 
-To restore a deleted dashboard, raise a PR directly in your Git repository. Restoring resources from the UI isn't possible at the moment.
+- **From the Grafana UI**: Open the dashboard, go to its settings, and select **Delete**. On the **Provisioned dashboard** panel, choose the branch, comment, and other options the same way you would when [editing a dashboard](#edit-dashboards), then select **Delete**. On the prompt, select **Open a pull request** and follow your usual Git workflow to review and merge the change.
+- **From the repository**: Delete the dashboard's file directly in Git. The Grafana UI updates when the changes from the Git repository sync.
+
+To restore a deleted dashboard, revert the deletion (or re-add the file) directly in your Git repository and raise a PR as usual. Restoring resources from the UI isn't possible at the moment.
 
 ## Document folders with a README
 
@@ -146,4 +183,4 @@ Follow these recommendations when working with provisioned dashboards:
 - **Review the Events tab**: Monitor sync status to ensure changes are applied correctly.
 - **Add a folder README**: Document each folder's contents with a `README.md` so your teammates can find the right dashboard quickly. Use additional documents for runbooks, architectural diagrams, or onboarding guidelines that belong next to the dashboards.
 
-Refer to [Work with provisioned repositories](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/use-git-sync) for general guidance about using Git Sync.
+Refer to [Work with provisioned repositories](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/use-git-sync) for general guidance about using Git Sync.

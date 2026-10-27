@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/installation/docker/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/installation/docker/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/installation/docker/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/installation/docker/index.md)
 
 > **Caution**
 >
@@ -18,7 +18,7 @@ Grafana Docker images come in two editions:
 
 > **Note:** The recommended and default edition of Grafana is Grafana Enterprise. It is free and includes all the features of the OSS edition. Additionally, you have the option to upgrade to the [full Enterprise feature set](https://grafana.com/products/enterprise/?utm_source=grafana-install-page), which includes support for [Enterprise plugins](https://grafana.com/grafana/plugins/?enterprise=1\&utcm_source=grafana-install-page).
 
-The default images for Grafana are created using the Alpine Linux project and can be found in the Alpine official image. For instructions on configuring a Docker image for Grafana, refer to [Configure a Grafana Docker image](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-docker/).
+The default images for Grafana are created using the Alpine Linux project and can be found in the Alpine official image. For instructions on configuring a Docker image for Grafana, refer to [Configure a Grafana Docker image](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-docker/).
 
 ## Run Grafana via Docker CLI
 
@@ -108,7 +108,7 @@ docker run -d -p 3000:3000 --name=grafana \
 
 ### Use environment variables to configure Grafana
 
-Grafana supports specifying custom configuration settings using [environment variables](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
+Grafana supports specifying custom configuration settings using [environment variables](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
 
 ```bash
 # enable debug logs
@@ -122,7 +122,7 @@ docker run -d -p 3000:3000 --name=grafana \
 
 You can install plugins in Grafana from the official and community [plugins page](https://grafana.com/grafana/plugins) or by using a custom URL to install a private plugin. These plugins allow you to add new visualization types, data sources, and applications to help you better visualize your data.
 
-Grafana currently supports three types of plugins: panel, data source, and app. For more information on managing plugins, refer to [Plugin Management](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/).
+Grafana currently supports three types of plugins: panel, data source, and app. For more information on managing plugins, refer to [Plugin Management](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/).
 
 To install plugins in the Docker container, complete the following steps:
 
@@ -364,12 +364,12 @@ volumes:
 
 ## Next steps
 
-Refer to the [Getting Started](https://grafana.com/docs/grafana/v13.2/getting-started/build-first-dashboard/) guide for information about logging in, setting up data sources, and so on.
+Refer to the [Getting Started](https://grafana.com/docs/grafana/v13.3/getting-started/build-first-dashboard/) guide for information about logging in, setting up data sources, and so on.
 
 ## Configure Docker image
 
-Refer to [Configure a Grafana Docker image](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-docker/) page for details on options for customizing your environment, logging, database, and so on.
+Refer to [Configure a Grafana Docker image](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-docker/) page for details on options for customizing your environment, logging, database, and so on.
 
 ## Configure Grafana
 
-Refer to the [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) page for details on options for customizing your environment, logging, database, and so on.
+Refer to the [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) page for details on options for customizing your environment, logging, database, and so on.

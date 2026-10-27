@@ -1,18 +1,18 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/aws-cloudwatch/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/aws-cloudwatch/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/alerting/index.md)
 
 # Amazon CloudWatch alerting
 
-The Amazon CloudWatch data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/). You can create alert rules on CloudWatch metrics and CloudWatch Logs, so Grafana notifies you when a metric crosses a threshold or when a log query returns a value that meets your alert condition.
+The Amazon CloudWatch data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/). You can create alert rules on CloudWatch metrics and CloudWatch Logs, so Grafana notifies you when a metric crosses a threshold or when a log query returns a value that meets your alert condition.
 
-This is Grafana Alerting evaluated by Grafana, not CloudWatch alarms. To visualize the history of existing CloudWatch alarms instead, refer to [Amazon CloudWatch annotations](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/annotations/).
+This is Grafana Alerting evaluated by Grafana, not CloudWatch alarms. To visualize the history of existing CloudWatch alarms instead, refer to [Amazon CloudWatch annotations](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/annotations/).
 
 ## Before you begin
 
 Before you create alert rules with CloudWatch data, ensure you have:
 
-- A [configured Amazon CloudWatch data source](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/).
+- A [configured Amazon CloudWatch data source](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/).
 - Permissions to create alert rules in Grafana.
-- Familiarity with [Grafana Alerting concepts](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/).
+- Familiarity with [Grafana Alerting concepts](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/).
 
 ## Supported query types for alerting
 
@@ -46,7 +46,7 @@ To create an alert rule using CloudWatch data:
 6. Add labels and annotations to provide context for notifications.
 7. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example: metric threshold alert
 
@@ -94,7 +94,7 @@ This example alerts when the number of log entries that contain `Exception` exce
 
 ## CloudWatch Logs timeouts during alert evaluation
 
-For CloudWatch Logs queries, Grafana polls AWS until the query completes or a timeout is reached. During alert evaluation, the timeout defined in the [Grafana configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) takes precedence over the **Query Result Timeout** setting on the data source. Set the configuration timeout high enough for your log queries to finish.
+For CloudWatch Logs queries, Grafana polls AWS until the query completes or a timeout is reached. During alert evaluation, the timeout defined in the [Grafana configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) takes precedence over the **Query Result Timeout** setting on the data source. Set the configuration timeout high enough for your log queries to finish.
 
 ## Best practices
 
@@ -132,10 +132,10 @@ If your CloudWatch alerts don't work as expected, use the following sections to 
 - Increase the Grafana configuration file timeout, which takes precedence during alert evaluation.
 - Narrow the time range or add filters to reduce the volume of data the query scans.
 
-For more help, refer to [Troubleshoot Amazon CloudWatch](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/troubleshooting/).
+For more help, refer to [Troubleshoot Amazon CloudWatch](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/troubleshooting/).
 
 ## Related resources
 
-- [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/)
-- [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/)
-- [Amazon CloudWatch query editor](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/query-editor/)
+- [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/)
+- [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/)
+- [Amazon CloudWatch query editor](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/query-editor/)

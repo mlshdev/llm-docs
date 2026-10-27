@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/examples/high-cardinality-alerts.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/examples/high-cardinality-alerts.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/examples/high-cardinality-alerts.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/examples/high-cardinality-alerts.md)
 
 # Examples of high-cardinality alerts
 
@@ -78,7 +78,7 @@ For more robust alerting, you can compare your current usage to the `max_global_
 
 Instead of monitoring the total number of active series, you can fine-tune alerts to detect high cardinality within a specific scope — for example, by filtering on certain namespaces, services, or metrics known to generate many label combinations.
 
-[Multi-dimensional alerts](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/multi-dimensional-alerts/) let you evaluate each metric independently, so you can identify which metric is responsible for the label explosion instead of only tracking the overall total.
+[Multi-dimensional alerts](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/multi-dimensional-alerts/) let you evaluate each metric independently, so you can identify which metric is responsible for the label explosion instead of only tracking the overall total.
 
 You can apply label filters, or use `{__name__=~"regex"}` to select specific metrics. Then, use `count by (__name__)` to group results per metric name.
 
@@ -185,7 +185,7 @@ This alert helps you detect when your organization is ingesting data faster and 
 
 Here’s list of additional resources related to this example:
 
-- [Multi-dimensional alerting example](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/multi-dimensional-alerts/) – Learn how Grafana creates separate alert instances for each unique label set.
+- [Multi-dimensional alerting example](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/multi-dimensional-alerts/) – Learn how Grafana creates separate alert instances for each unique label set.
 - [Understand Grafana Cloud active series and DPM](https://grafana.com/docs/grafana-cloud/cost-management-and-billing/manage-invoices/understand-your-invoice/metrics-invoice/)– See how active series and data points per minute (DPM) are used to calculate metrics usage in Grafana Cloud.
 - [Create Grafana Cloud usage alerts](https://grafana.com/docs/grafana-cloud/cost-management-and-billing/usage-cost-alerts/) – Set up alerts when your usage or costs approach your predefined limits.
 - [Plan capacity for Mimir](https://grafana.com/docs/mimir/latest/manage/run-production-environment/planning-capacity/)– Learn how to plan ingestion rate and memory capacity for Mimir or Prometheus environments.

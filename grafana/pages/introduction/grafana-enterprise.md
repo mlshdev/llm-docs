@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/introduction/grafana-enterprise.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/introduction/grafana-enterprise.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/introduction/grafana-enterprise.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/introduction/grafana-enterprise.md)
 
 # Grafana Enterprise
 
@@ -12,7 +12,7 @@ To learn more about Grafana Enterprise, refer to [our product page](https://graf
 
 Many Grafana Enterprise features are also available in paid [Grafana Cloud](https://grafana.com/docs/grafana-cloud) accounts. For details, refer to [Grafana Cloud features](https://grafana.com/docs/grafana-cloud/introduction/understand-grafana-cloud-features/). For pricing and plans, refer to [Grafana Cloud pricing](https://grafana.com/pricing/).
 
-To migrate to Grafana Cloud, refer to [Migrate from Grafana Enterprise to Grafana Cloud](https://grafana.com/docs/grafana/v13.2/administration/migration-guide/)
+To migrate to Grafana Cloud, refer to [Migrate from Grafana Enterprise to Grafana Cloud](https://grafana.com/docs/grafana/v13.3/administration/migration-guide/)
 
 ## Authentication
 
@@ -20,48 +20,48 @@ Grafana Enterprise includes integrations with more ways to authenticate your use
 
 ### Team sync
 
-[Team sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/) allows you to set up synchronization between teams in Grafana and teams in your auth provider so that your users automatically end up in the right team.
+[Team sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/) allows you to set up synchronization between teams in Grafana and teams in your auth provider so that your users automatically end up in the right team.
 
 Supported auth providers:
 
-- [Auth Proxy](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/auth-proxy#team-sync-enterprise-only)
-- [Entra ID OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/#team-sync-enterprise-only)
-- [GitHub OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/github/#configure-team-synchronization)
-- [Generic OAuth integration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/#configure-team-synchronization)
-- [GitLab OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/gitlab/#configure-team-synchronization)
-- [Google OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/google/#configure-team-synchronization)
-- [LDAP](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/enhanced-ldap/#ldap-group-synchronization-for-teams)
-- [Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/okta#configure-team-synchronization-enterprise-only)
-- [SAML](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml#configure-team-sync)
+- [Auth Proxy](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/auth-proxy#team-sync-enterprise-only)
+- [Entra ID OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/azuread/#team-sync-enterprise-only)
+- [GitHub OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/github/#configure-team-synchronization)
+- [Generic OAuth integration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/#configure-team-synchronization)
+- [GitLab OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/gitlab/#configure-team-synchronization)
+- [Google OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/google/#configure-team-synchronization)
+- [LDAP](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/enhanced-ldap/#ldap-group-synchronization-for-teams)
+- [Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/okta#configure-team-synchronization-enterprise-only)
+- [SAML](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml#configure-team-sync)
 
 ### Enhanced LDAP integration
 
-With [enhanced LDAP integration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/enhanced-ldap/), you can set up active LDAP synchronization.
+With [enhanced LDAP integration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/enhanced-ldap/), you can set up active LDAP synchronization.
 
 ### SAML authentication
 
-[SAML authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/) enables users to authenticate with single sign-on services that use Security Assertion Markup Language (SAML).
+[SAML authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/) enables users to authenticate with single sign-on services that use Security Assertion Markup Language (SAML).
 
 ### Protected roles
 
-With [protected roles](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/#protected-roles), you can define user roles that are exempt from being converted from one authentication type to another when changing auth providers.
+With [protected roles](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/#protected-roles), you can define user roles that are exempt from being converted from one authentication type to another when changing auth providers.
 
 ## Enterprise features
 
 Grafana Enterprise adds the following features:
 
-- [Role-based access control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/) to control access with role-based permissions.
-- [Data source permissions](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#data-source-permissions) to restrict query access to specific teams and users.
-- [Data source query and resource caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching) to temporarily store query results in Grafana to reduce data source load and rate limiting.
-- [Reporting](https://grafana.com/docs/grafana/v13.2/dashboards/create-reports/) to generate a PDF report from any dashboard and set up a schedule to have it emailed to whomever you choose.
-- [Export dashboard as PDF](https://grafana.com/docs/grafana/v13.2/dashboards/share-dashboards-panels/#export-a-dashboard-as-pdf)
-- [Custom branding](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/configure-custom-branding/) to customize Grafana from the brand and logo to the footer links.
-- [Usage insights](https://grafana.com/docs/grafana/v13.2/dashboards/assess-dashboard-usage/) to understand how your Grafana instance is used.
-- [Recorded queries](https://grafana.com/docs/grafana/v13.2/administration/recorded-queries/) to see trends over time for your data sources.
-- [Vault integration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/#encrypting-your-database-with-a-key-from-a-key-management-service-kms) to manage your configuration or provisioning secrets with Vault.
-- [Auditing](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/audit-grafana/) tracks important changes to your Grafana instance to help you manage and mitigate suspicious activity and meet compliance requirements.
-- [Request security](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-request-security/) makes it possible to restrict outgoing requests from the Grafana server.
-- [Settings updates at runtime](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/settings-updates-at-runtime/) allows you to update Grafana settings at runtime without requiring a restart.
+- [Role-based access control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/) to control access with role-based permissions.
+- [Data source permissions](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#data-source-permissions) to restrict query access to specific teams and users.
+- [Data source query and resource caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching) to temporarily store query results in Grafana to reduce data source load and rate limiting.
+- [Reporting](https://grafana.com/docs/grafana/v13.3/dashboards/create-reports/) to generate a PDF report from any dashboard and set up a schedule to have it emailed to whomever you choose.
+- [Export dashboard as PDF](https://grafana.com/docs/grafana/v13.3/dashboards/share-dashboards-panels/#export-a-dashboard-as-pdf)
+- [Custom branding](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/configure-custom-branding/) to customize Grafana from the brand and logo to the footer links.
+- [Usage insights](https://grafana.com/docs/grafana/v13.3/dashboards/assess-dashboard-usage/) to understand how your Grafana instance is used.
+- [Recorded queries](https://grafana.com/docs/grafana/v13.3/administration/recorded-queries/) to see trends over time for your data sources.
+- [Vault integration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/#encrypting-your-database-with-a-key-from-a-key-management-service-kms) to manage your configuration or provisioning secrets with Vault.
+- [Auditing](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/audit-grafana/) tracks important changes to your Grafana instance to help you manage and mitigate suspicious activity and meet compliance requirements.
+- [Request security](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-request-security/) makes it possible to restrict outgoing requests from the Grafana server.
+- [Settings updates at runtime](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/settings-updates-at-runtime/) allows you to update Grafana settings at runtime without requiring a restart.
 
 ## Enterprise data sources
 

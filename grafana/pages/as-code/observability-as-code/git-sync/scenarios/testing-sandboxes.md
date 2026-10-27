@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/scenarios/testing-sandboxes.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/scenarios/testing-sandboxes.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/scenarios/testing-sandboxes.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/scenarios/testing-sandboxes.md)
 
 # Testing sandboxes with Git Sync
 
 Use a sandbox branch that users can push to directly, without opening a pull request for every change. A sandbox branch is a low-friction space for short-lived projects and experimentation, while keeping every dashboard version-controlled in Git. When work is ready, you promote it to the `main` branch.
 
-A sandbox is a branch in the same repository, synced to Grafana with the [`write` workflow](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/#configuration-parameters) enabled. With the `write` workflow, saving a dashboard commits directly to the sandbox branch, so the editing experience feels close to using Grafana without Git Sync. The difference is that every change is still committed to Git, so nothing is lost and history is preserved.
+A sandbox is a branch in the same repository, synced to Grafana with the [`write` workflow](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/#configuration-parameters) enabled. With the `write` workflow, saving a dashboard commits directly to the sandbox branch, so the editing experience feels close to using Grafana without Git Sync. The difference is that every change is still committed to Git, so nothing is lost and history is preserved.
 
 This scenario uses a single **shared** sandbox branch that everyone works in. A shared sandbox uses only one Repository connection regardless of how many users work in it, which keeps you well within the per-stack limit of 10 repository connections. If you need stricter isolation, you can instead give each user their own sandbox branch. Refer to [Individual or shared sandboxes](#individual-or-shared-sandboxes).
 
@@ -105,7 +105,7 @@ spec:
 
 > **Note**
 >
-> If you enable only the `write` workflow, saving a dashboard always commits directly to the sandbox branch. To also allow users to open pull requests from Grafana, add the `branch` workflow: `workflows: [write, branch]`. Refer to [Configuration parameters](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/#configuration-parameters) for details.
+> If you enable only the `write` workflow, saving a dashboard always commits directly to the sandbox branch. To also allow users to open pull requests from Grafana, add the `branch` workflow: `workflows: [write, branch]`. Refer to [Configuration parameters](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/#configuration-parameters) for details.
 
 ## How it works
 
@@ -117,7 +117,7 @@ spec:
 
 ## Individual or shared sandboxes
 
-A sandbox can be shared by everyone or scoped to a single user. Each sandbox is a branch synced through its own Repository connection, so the choice is shaped by the per-stack limit of 10 repository connections. Refer to [Usage and performance limitations](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/usage-limits/) for details.
+A sandbox can be shared by everyone or scoped to a single user. Each sandbox is a branch synced through its own Repository connection, so the choice is shaped by the per-stack limit of 10 repository connections. Refer to [Usage and performance limitations](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/usage-limits/) for details.
 
 - **Shared sandbox (recommended)**: Use a single branch, such as `sandbox`, synced through one Repository connection that all users share. This uses only one connection regardless of how many users work in it, so it scales to any number of users. Separate users' work with subfolders (for example, `alice/`, `bob/`) if you want some organization within the shared branch. The trade-off is less isolation, since everyone commits to the same branch. This is the setup described above.
 - **Individual sandboxes**: Give each user their own branch, such as `sandbox/alice` and `sandbox/bob`, each synced through a separate Repository connection. This provides the most isolation, but every sandbox consumes one of your 10 connections, so per-user sandboxes don't scale to many users. Reserve them for a small number of active users or short-lived projects, and delete the branch and its connection when the work is done to free the connection.
@@ -170,7 +170,7 @@ When `main` is synced to a production instance, treat the sandbox as the develop
 2. Promote approved dashboards to `main` using a pull request (Option 1) or by copying files into the `main` path.
 3. The production instance syncing `main` updates automatically.
 
-This mirrors the [development and production environments](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/dev-prod/) scenario, with the sandbox branch acting as the development stage.
+This mirrors the [development and production environments](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/dev-prod/) scenario, with the sandbox branch acting as the development stage.
 
 ### Option 4: Promote from the Grafana UI
 
@@ -187,8 +187,8 @@ After promotion, you can delete short-lived sandbox branches, or keep a long-liv
 
 Refer to the following documents to learn more:
 
-- [Git Sync for development and production environments](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/dev-prod/)
-- [Git Sync key concepts](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts/)
-- [Configure Git Sync as code](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/)
-- [Manage provisioned dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/provisioned-dashboards/)
-- [Usage and performance limitations](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/usage-limits/)
+- [Git Sync for development and production environments](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/dev-prod/)
+- [Git Sync key concepts](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts/)
+- [Configure Git Sync as code](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/)
+- [Manage provisioned dashboards](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/provisioned-dashboards/)
+- [Usage and performance limitations](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/usage-limits/)

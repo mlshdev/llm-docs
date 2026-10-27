@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-security/configure-database-encryption/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-security/configure-database-encryption/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-security/configure-database-encryption/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-security/configure-database-encryption/_index.md)
 
 # Configure database encryption
 
 Grafana’s database contains secrets, which are used to query data sources, send alert notifications, and perform other functions within Grafana.
 
-Grafana encrypts these secrets before they are written to the database, by using a symmetric-key encryption algorithm called Advanced Encryption Standard (AES). These secrets are signed using a [secret key](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#secret_key) that you can change when you configure a new Grafana instance.
+Grafana encrypts these secrets before they are written to the database, by using a symmetric-key encryption algorithm called Advanced Encryption Standard (AES). These secrets are signed using a [secret key](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#secret_key) that you can change when you configure a new Grafana instance.
 
 > **Note**
 >
@@ -20,16 +20,16 @@ For further details about how to operate a Grafana instance with envelope encryp
 
 > **Note**
 >
-> Since Grafana v9.0, you can turn envelope encryption off by adding the feature toggle `disableEnvelopeEncryption` to your [Grafana configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#feature_toggles).
+> Since Grafana v9.0, you can turn envelope encryption off by adding the feature toggle `disableEnvelopeEncryption` to your [Grafana configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#feature_toggles).
 
 Instead of encrypting all secrets with a single key, Grafana uses a set of keys called data encryption keys (DEKs) to encrypt them. These data encryption keys are themselves encrypted with a single key encryption key (KEK), configured through the `secret_key` attribute in your
-[Grafana configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#secret_key) or by [Encrypting your database with a key from a key management service (KMS)](#encrypting-your-database-with-a-key-from-a-key-management-service-kms).
+[Grafana configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#secret_key) or by [Encrypting your database with a key from a key management service (KMS)](#encrypting-your-database-with-a-key-from-a-key-management-service-kms).
 
 ### Implicit breaking change
 
 Envelope encryption introduces an implicit breaking change to versions of Grafana prior to v9.0, because it changes how secrets stored in the Grafana database are encrypted. Grafana administrators can upgrade to Grafana v9.0 with no action required from the database encryption perspective, but must be extremely careful if they need to roll an upgrade back to Grafana v8.5 or earlier because secrets created or modified after upgrading to Grafana v9.0 can’t be decrypted by previous versions.
 
-Grafana v8.5 implemented envelope encryption behind an optional feature toggle. Grafana administrators who need to downgrade to Grafana v8.5 can enable envelope encryption as a workaround by adding the feature toggle `envelopeEncryption` to the [Grafana configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#feature_toggles).
+Grafana v8.5 implemented envelope encryption behind an optional feature toggle. Grafana administrators who need to downgrade to Grafana v8.5 can enable envelope encryption as a workaround by adding the feature toggle `envelopeEncryption` to the [Grafana configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#feature_toggles).
 
 ## Operational work
 
@@ -47,19 +47,19 @@ You can re-encrypt secrets in order to:
 - Move already existing secrets' encryption forward from legacy to envelope encryption.
 - Re-encrypt secrets after a [data keys rotation](#rotate-data-keys).
 
-To re-encrypt secrets, use the [Grafana CLI](https://grafana.com/docs/grafana/v13.2/cli/) by running the `grafana cli admin secrets-migration re-encrypt` command or the `/encryption/reencrypt-secrets` endpoint of the Grafana [Admin API](https://grafana.com/docs/grafana/v13.2/developers/http_api/admin/#roll-back-secrets). It's safe to run more than once, more recommended under maintenance mode.
+To re-encrypt secrets, use the [Grafana CLI](https://grafana.com/docs/grafana/v13.3/cli/) by running the `grafana cli admin secrets-migration re-encrypt` command or the `/encryption/reencrypt-secrets` endpoint of the Grafana [Admin API](https://grafana.com/docs/grafana/v13.3/developers/http_api/admin/#roll-back-secrets). It's safe to run more than once, more recommended under maintenance mode.
 
 ### Roll back secrets
 
 You can roll back secrets encrypted with envelope encryption to legacy encryption. This might be necessary to downgrade to Grafana versions prior to v9.0 after an unsuccessful upgrade.
 
-To roll back secrets, use the [Grafana CLI](https://grafana.com/docs/grafana/v13.2/cli/) by running the `grafana cli admin secrets-migration rollback` command or the `/encryption/rollback-secrets` endpoint of the Grafana [Admin API](https://grafana.com/docs/grafana/v13.2/developers/http_api/admin/#re-encrypt-secrets). It's safe to run more than once, more recommended under maintenance mode.
+To roll back secrets, use the [Grafana CLI](https://grafana.com/docs/grafana/v13.3/cli/) by running the `grafana cli admin secrets-migration rollback` command or the `/encryption/rollback-secrets` endpoint of the Grafana [Admin API](https://grafana.com/docs/grafana/v13.3/developers/http_api/admin/#re-encrypt-secrets). It's safe to run more than once, more recommended under maintenance mode.
 
 ### Re-encrypt data keys
 
 You can re-encrypt data keys encrypted with a specific key encryption key (KEK). This allows you to either re-encrypt existing data keys with a new KEK version or to re-encrypt them with a completely different KEK.
 
-To re-encrypt data keys, use the [Grafana CLI](https://grafana.com/docs/grafana/v13.2/cli/) by running the `grafana cli admin secrets-migration re-encrypt-data-keys` command or the `/encryption/reencrypt-data-keys` endpoint of the Grafana [Admin API](https://grafana.com/docs/grafana/v13.2/developers/http_api/admin/#re-encrypt-data-encryption-keys). It's safe to run more than once, more recommended under maintenance mode.
+To re-encrypt data keys, use the [Grafana CLI](https://grafana.com/docs/grafana/v13.3/cli/) by running the `grafana cli admin secrets-migration re-encrypt-data-keys` command or the `/encryption/reencrypt-data-keys` endpoint of the Grafana [Admin API](https://grafana.com/docs/grafana/v13.3/developers/http_api/admin/#re-encrypt-data-encryption-keys). It's safe to run more than once, more recommended under maintenance mode.
 
 ### Rotate data keys
 
@@ -73,7 +73,7 @@ New data keys for encryption operations are generated on demand.
 > secrets still encrypted with them. To completely stop using
 > rotated data keys for both encryption and decryption, see [secrets re-encryption](#re-encrypt-secrets).
 
-To rotate data keys, use the `/encryption/rotate-data-keys` endpoint of the Grafana [Admin API](https://grafana.com/docs/grafana/v13.2/developers/http_api/admin/#rotate-data-encryption-keys). It's safe to call more than once, more recommended under maintenance mode.
+To rotate data keys, use the `/encryption/rotate-data-keys` endpoint of the Grafana [Admin API](https://grafana.com/docs/grafana/v13.3/developers/http_api/admin/#rotate-data-encryption-keys). It's safe to call more than once, more recommended under maintenance mode.
 
 ## Encrypting your database with a key from a key management service (KMS)
 
@@ -83,13 +83,13 @@ You can choose to encrypt secrets stored in the Grafana database using a key fro
 
 Grafana integrates with the following key management services:
 
-- [AWS KMS](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-aws-kms/)
-- [Azure Key Vault](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-azure-key-vault/)
-- [Google Cloud KMS](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-google-cloud-kms/)
-- [Hashicorp Key Vault](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-hashicorp-key-vault/)
+- [AWS KMS](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-aws-kms/)
+- [Azure Key Vault](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-azure-key-vault/)
+- [Google Cloud KMS](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-google-cloud-kms/)
+- [Hashicorp Key Vault](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-hashicorp-key-vault/)
 
 ## Changing your encryption mode to AES-GCM
 
 Grafana encrypts secrets using Advanced Encryption Standard in Cipher FeedBack mode (AES-CFB). You might prefer to use AES in Galois/Counter Mode (AES-GCM) instead, to meet your company’s security requirements or in order to maintain consistency with other services.
 
-To change your encryption mode, update the `algorithm` value in the `[security.encryption]` section of your Grafana configuration file. For further details, refer to [Enterprise configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/enterprise-configuration/#securityencryption).
+To change your encryption mode, update the `algorithm` value in the `[security.encryption]` section of your Grafana configuration file. For further details, refer to [Enterprise configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/enterprise-configuration/#securityencryption).

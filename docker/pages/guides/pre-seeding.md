@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/pre-seeding.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/guides/pre-seeding.md)
+> Pinned source for Docker main: [content/guides/pre-seeding.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/guides/pre-seeding.md)
 
 # Pre-seeding database with schema and data at startup for development environment
 

@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/loki/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/loki/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/loki/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/loki/troubleshooting/index.md)
 
 # Troubleshoot Loki data source issues
 
-This document provides solutions to common issues you might encounter when configuring or using the Loki data source. For configuration instructions, refer to [Configure the Loki data source](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure/).
+This document provides solutions to common issues you might encounter when configuring or using the Loki data source. For configuration instructions, refer to [Configure the Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/).
 
 > **Note**
 >
@@ -102,7 +102,7 @@ These errors occur when using template variables with the data source.
 
 ## Derived field and log-to-trace link issues
 
-These issues affect [derived fields](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure/#derived-fields), including the links from logs to traces.
+These issues affect [derived fields](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/#derived-fields), including the links from logs to traces.
 
 ### The derived field or trace link doesn't appear
 
@@ -136,7 +136,7 @@ Live tailing relies on WebSocket connections between the browser and Grafana, an
 
 **Solutions:**
 
-1. Confirm your reverse proxy forwards WebSocket connections for the tail endpoint. Refer to the proxy examples in the [Loki query editor](https://grafana.com/docs/grafana/v13.2/datasources/loki/query-editor/#tail-live-logs).
+1. Confirm your reverse proxy forwards WebSocket connections for the tail endpoint. Refer to the proxy examples in the [Loki query editor](https://grafana.com/docs/grafana/v13.3/datasources/loki/query-editor/#tail-live-logs).
 2. Verify that intermediate load balancers and firewall rules allow WebSocket upgrades.
 3. Confirm Loki itself is reachable and that the tail endpoint isn't blocked.
 
@@ -150,7 +150,7 @@ Label-based access control (LBAC) filters the logs a team can query based on lab
 >
 > You can't enable LBAC on a provisioned or auto-provisioned Loki data source. Provisioning of LBAC data sources isn't supported.
 
-To use LBAC, create a new Loki data source manually and configure it with basic authentication, using your Cloud Access Policy (CAP) token as the password. Point it at the same Loki endpoint as the provisioned data source, then define LBAC rules on the new data source's **Permissions** tab. For the full procedure, refer to [Configure LBAC for data sources for Loki](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/).
+To use LBAC, create a new Loki data source manually and configure it with basic authentication, using your Cloud Access Policy (CAP) token as the password. Point it at the same Loki endpoint as the provisioned data source, then define LBAC rules on the new data source's **Permissions** tab. For the full procedure, refer to [Configure LBAC for data sources for Loki](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/).
 
 ### Teams can still query all logs
 
@@ -158,7 +158,7 @@ To use LBAC, create a new Loki data source manually and configure it with basic 
 - Grafana permissions are additive. A user's basic role, such as Viewer, can grant access to the data source independently of team-scoped rules. Remove role and team permissions that aren't required so that only the intended teams have **Query** permission on the LBAC data source.
 - Remove any label selectors from the Cloud Access Policy used by the data source. CAP label selectors override LBAC rules.
 
-For details and limitations, refer to [LBAC for data sources](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/).
+For details and limitations, refer to [LBAC for data sources](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/).
 
 ## Enable debug logging
 

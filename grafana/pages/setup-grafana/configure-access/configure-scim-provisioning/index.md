@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-scim-provisioning/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-scim-provisioning/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-scim-provisioning/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-scim-provisioning/_index.md)
 
 # Configure SCIM provisioning
 
@@ -6,7 +6,7 @@ System for Cross-domain Identity Management (SCIM) is an open standard that allo
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
 ## Benefits
 
@@ -29,14 +29,14 @@ When you enable SCIM in Grafana, the following requirements and restrictions app
 1. **Use the same identity provider for user provisioning and for authentication flow**: You must use the same identity provider for both authentication and user provisioning.
 
 2. **Security restriction**: When using SAML, the login authentication flow requires the SAML assertion exchange between the Identity Provider and Grafana to include the `userUID` SAML assertion with the user's unique identifier at the Identity Provider.
-   - Configure `userUID` SAML assertion in [Entra ID](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-azuread/#configure-saml-assertions-when-using-scim-provisioning)
-   - Configure `userUID` SAML assertion in [Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/#configure-saml-assertions-when-using-scim-provisioning)
+   - Configure `userUID` SAML assertion in [Entra ID](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-azuread/#configure-saml-assertions-when-using-scim-provisioning)
+   - Configure `userUID` SAML assertion in [Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/#configure-saml-assertions-when-using-scim-provisioning)
 
 ### Align SAML identifier with SCIM `externalId`
 
 When you use SAML with SCIM provisioning, align the SCIM `externalId` with the SAML user identifier. Use a stable IdP attribute (for example, Entra ID `user.objectid`) as the SCIM `externalId`, and send that same value as a SAML claim. Configure Grafana to read this claim with the `assertion_attribute_external_uid` setting so SAML authentication links to the SCIM-provisioned user and its permissions.
 
-If the SAML identifier and SCIM `externalId` differ, Grafana may not link the authenticated user to the intended SCIM profile, which can result in incorrect access. Verify your IdP sends a stable, unique identifier and that it matches the SCIM `externalId`. Refer to your IdP docs and the Grafana SCIM integration guides for [Entra ID](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-entraid/) and [Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-okta/) for attribute configuration details.
+If the SAML identifier and SCIM `externalId` differ, Grafana may not link the authenticated user to the intended SCIM profile, which can result in incorrect access. Verify your IdP sends a stable, unique identifier and that it matches the SCIM `externalId`. Refer to your IdP docs and the Grafana SCIM integration guides for [Entra ID](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-entraid/) and [Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-okta/) for attribute configuration details.
 
 ## Configure SCIM using the Grafana user interface
 
@@ -68,12 +68,12 @@ The SCIM UI also displays information that may help you configure SCIM in your i
 
 After configuring SCIM in Grafana, configure your identity provider:
 
-- [Configure SCIM with Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-okta/)
-- [Configure SCIM with Entra ID](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-entraid/)
+- [Configure SCIM with Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-okta/)
+- [Configure SCIM with Entra ID](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-entraid/)
 
 ## Configure SCIM using the configuration file
 
-The table below describes all SCIM configuration options. Like any other Grafana configuration, you can apply these options as [environment variables](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
+The table below describes all SCIM configuration options. Like any other Grafana configuration, you can apply these options as [environment variables](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
 
 | Setting                        | Required | Description                                                                                                                                                                                | Default |
 | ------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
@@ -87,7 +87,7 @@ The table below describes all SCIM configuration options. Like any other Grafana
 >
 > - SCIM group sync (`group_sync_enabled = true`) and Team Sync cannot be enabled simultaneously
 > - You can use SCIM user sync (`user_sync_enabled = true`) alongside Team Sync
-> - For more details about migration and compatibility, see [SCIM vs Team Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/manage-users-teams/#scim-vs-team-sync)
+> - For more details about migration and compatibility, see [SCIM vs Team Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/manage-users-teams/#scim-vs-team-sync)
 
 ### Example SCIM configuration
 
@@ -126,8 +126,8 @@ The Terraform `grafana_scim_config` resource supports the same configuration opt
 
 The following identity providers are supported:
 
-- [Entra ID](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/)
-- [Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/)
+- [Entra ID](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/azuread/)
+- [Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/)
 
 ## How it works
 
@@ -145,10 +145,10 @@ The following table compares SCIM with other synchronization methods to help you
 | Sync Method                                                                                                                                        | Users | Teams | Roles | Automation | Key Benefits                                                             | Limitations                                                  | On-Prem | Cloud |
 | -------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ----- | ----- | ---------- | ------------------------------------------------------------------------ | ------------------------------------------------------------ | ------- | ----- |
 | SCIM                                                                                                                                               | ✅     | ✅     | ⚠️    | Full       | Complete user and team lifecycle management with automatic team creation | Requires SAML authentication; uses Role Sync for basic roles | ✅       | ✅     |
-| [Team Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/)                                            | ❌     | ⚠️    | ❌     | Partial    | Syncs team memberships to existing teams                                 | Requires manual team creation; no team lifecycle management  | ✅       | ✅     |
-| [Active LDAP Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/enhanced-ldap/)                  | ✅     | ❌     | ❌     | Full       | Background synchronization of LDAP users                                 | Limited to LDAP environments                                 | ✅       | ❌     |
-| [Role Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/#configure-role-sync)              | ❌     | ❌     | ✅     | Full       | Full automation of basic role assignment                                 | Limited to basic roles only                                  | ✅       | ✅     |
-| [Org Mapping](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/#configure-organization-mapping) | ❌     | ❌     | ⚠️    | Full       | Full automation of basic role assignment per organization                | Limited to basic roles only; on-premises only                | ⚠️      | ❌     |
+| [Team Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/)                                            | ❌     | ⚠️    | ❌     | Partial    | Syncs team memberships to existing teams                                 | Requires manual team creation; no team lifecycle management  | ✅       | ✅     |
+| [Active LDAP Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/enhanced-ldap/)                  | ✅     | ❌     | ❌     | Full       | Background synchronization of LDAP users                                 | Limited to LDAP environments                                 | ✅       | ❌     |
+| [Role Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/#configure-role-sync)              | ❌     | ❌     | ✅     | Full       | Full automation of basic role assignment                                 | Limited to basic roles only                                  | ✅       | ✅     |
+| [Org Mapping](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/#configure-organization-mapping) | ❌     | ❌     | ⚠️    | Full       | Full automation of basic role assignment per organization                | Limited to basic roles only; on-premises only                | ⚠️      | ❌     |
 
 ### Key advantages
 
@@ -159,7 +159,7 @@ The following table compares SCIM with other synchronization methods to help you
 
 ## Next steps
 
-- [Manage users and teams with SCIM provisioning](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/manage-users-teams/)
-- [Troubleshoot SCIM provisioning](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/troubleshooting/)
-- [Configure SCIM with Entra ID](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/configure-scim-with-entraid/)
-- [Configure SCIM with Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/configure-scim-with-okta/)
+- [Manage users and teams with SCIM provisioning](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/manage-users-teams/)
+- [Troubleshoot SCIM provisioning](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/troubleshooting/)
+- [Configure SCIM with Entra ID](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/configure-scim-with-entraid/)
+- [Configure SCIM with Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/configure-scim-with-okta/)

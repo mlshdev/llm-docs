@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-security/configure-request-security.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-security/configure-request-security.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-security/configure-request-security.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-security/configure-request-security.md)
 
 # Configure request security
 
@@ -8,7 +8,7 @@ This can be used to limit access to internal systems that the server Grafana run
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and to users on select Grafana Cloud account plans. For pricing information, visit our [pricing page](https://grafana.com/pricing/) or contact our sales team.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and to users on select Grafana Cloud account plans. For pricing information, visit our [pricing page](https://grafana.com/pricing/) or contact our sales team.
 
 > **Note**
 >

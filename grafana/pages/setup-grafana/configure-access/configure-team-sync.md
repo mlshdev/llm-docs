@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-team-sync.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-team-sync.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-team-sync.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-team-sync.md)
 
 # Configure Team Sync
 
@@ -6,7 +6,7 @@ Team sync lets you set up synchronization between your auth providers teams and 
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
 Grafana keeps track of all synchronized users in teams, and you can see which users have been synchronized in the team members list, see `LDAP` label in screenshot.
 This mechanism allows Grafana to remove an existing synchronized user from a team when its group membership changes. This mechanism also enables you to manually add a user as member of a team, and it will not be removed when the user signs in. This gives you flexibility to combine LDAP group memberships and Grafana team memberships.
@@ -15,15 +15,15 @@ This mechanism allows Grafana to remove an existing synchronized user from a tea
 
 ## Supported providers
 
-- [Auth Proxy](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/auth-proxy/#team-sync)
-- [Entra ID](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/#team-sync)
-- [Generic OAuth integration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/generic-oauth/#configure-team-synchronization)
-- [GitHub OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/github/#configure-team-synchronization)
-- [GitLab OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/gitlab/#configure-team-synchronization)
-- [Google OAuth](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/google/#configure-team-synchronization)
-- [LDAP](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/enhanced-ldap/)
-- [Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/okta/#configure-team-synchronization)
-- [SAML](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/)
+- [Auth Proxy](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/auth-proxy/#team-sync)
+- [Entra ID](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/azuread/#team-sync)
+- [Generic OAuth integration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/generic-oauth/#configure-team-synchronization)
+- [GitHub OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/github/#configure-team-synchronization)
+- [GitLab OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/gitlab/#configure-team-synchronization)
+- [Google OAuth](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/google/#configure-team-synchronization)
+- [LDAP](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/enhanced-ldap/)
+- [Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/okta/#configure-team-synchronization)
+- [SAML](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/)
 
 ## Synchronize a Grafana team with an external group
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/opentsdb/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/opentsdb/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/opentsdb/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/opentsdb/configure/index.md)
 
 # Configure the OpenTSDB data source
 
@@ -74,17 +74,17 @@ Select the version that matches your OpenTSDB server. If you're unsure, check yo
 
 ## Secure SOCKS proxy
 
-The OpenTSDB data source supports connecting through a secure SOCKS5 proxy. Use this to reach an OpenTSDB server hosted in a different network than Grafana without exposing it to the public internet. You configure the proxy at the Grafana instance level. For setup instructions, refer to [Configure a data source SOCKS5 connection proxy](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/proxy/).
+The OpenTSDB data source supports connecting through a secure SOCKS5 proxy. Use this to reach an OpenTSDB server hosted in a different network than Grafana without exposing it to the public internet. You configure the proxy at the Grafana instance level. For setup instructions, refer to [Configure a data source SOCKS5 connection proxy](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/proxy/).
 
 ## Verify the connection
 
 Click **Save & test** to verify that Grafana can connect to your OpenTSDB server. A successful test confirms that the URL is correct and the server is responding.
 
-If the test fails, refer to [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/troubleshooting/) for common issues and solutions.
+If the test fails, refer to [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/troubleshooting/) for common issues and solutions.
 
 ## Provision the data source
 
-You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### YAML example
 
@@ -239,8 +239,8 @@ Replace the following placeholders:
 
 Now that you've configured OpenTSDB, you can:
 
-- [Query OpenTSDB data](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/query-editor/) to build dashboards and visualizations
-- [Use template variables](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/template-variables/) to create dynamic, reusable dashboards
-- [Add annotations](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/annotations/) to overlay events on your graphs
-- [Set up alerting](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/alerting/) to get notified when metrics cross thresholds
-- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/troubleshooting/) if you encounter problems
+- [Query OpenTSDB data](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/query-editor/) to build dashboards and visualizations
+- [Use template variables](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/template-variables/) to create dynamic, reusable dashboards
+- [Add annotations](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/annotations/) to overlay events on your graphs
+- [Set up alerting](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/alerting/) to get notified when metrics cross thresholds
+- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/troubleshooting/) if you encounter problems

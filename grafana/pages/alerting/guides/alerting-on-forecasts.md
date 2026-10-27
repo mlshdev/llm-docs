@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/guides/alerting-on-forecasts.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/guides/alerting-on-forecasts.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/guides/alerting-on-forecasts.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/guides/alerting-on-forecasts.md)
 
 # Alerting on forecasts
 

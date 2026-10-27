@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/query-editor/traceql-query-examples.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/query-editor/traceql-query-examples.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/query-editor/traceql-query-examples.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/query-editor/traceql-query-examples.md)
 
 # TraceQL query examples
 
@@ -73,7 +73,7 @@ Find error spans that have an exception message:
 ## Filter by service
 
 Select spans from a specific service or match services by pattern.
-You can use the [Service Graph view](https://grafana.com/docs/grafana/v13.2/datasources/tempo/service-graph/) to identify which services have high error rates or latency, then query those services with TraceQL.
+You can use the [Service Graph view](https://grafana.com/docs/grafana/v13.3/datasources/tempo/service-graph/) to identify which services have high error rates or latency, then query those services with TraceQL.
 
 ```traceql
 { resource.service.name = "checkout" }
@@ -140,7 +140,7 @@ Narrow results to a specific cloud region or deployment environment:
 
 ## Use dashboard variables
 
-Replace hard-coded values with [dashboard variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) when using these queries in panels.
+Replace hard-coded values with [dashboard variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) when using these queries in panels.
 For example, using a `$service` variable:
 
 ```traceql
@@ -151,5 +151,5 @@ For example, using a `$service` variable:
 
 - [TraceQL cookbook for Grafana Cloud Traces](https://grafana.com/docs/grafana-cloud/send-data/traces/traces-query-editor/traceql-cookbook/) - Extended recipe collection with additional examples
 - [Construct a TraceQL query](https://grafana.com/docs/tempo/latest/traceql/construct-traceql-queries/) - Full TraceQL syntax, scopes, and operators
-- [Query tracing data](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/) - Query editor modes and options
-- [Service Graph and Service Graph view](https://grafana.com/docs/grafana/v13.2/datasources/tempo/service-graph/) - Visualize service dependencies
+- [Query tracing data](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/) - Query editor modes and options
+- [Service Graph and Service Graph view](https://grafana.com/docs/grafana/v13.3/datasources/tempo/service-graph/) - Visualize service dependencies

@@ -1,10 +1,12 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/create-reports/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/create-reports/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/create-reports/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/create-reports/_index.md)
 
 # Create and manage reports
 
 > **Note**
 >
-> The redesigned reporting feature is currently in public preview. Grafana Labs offers limited support, and breaking changes might occur prior to the feature being made generally available. To use this feature, enable the `newShareReportDrawer` feature toggle in your Grafana configuration file or, for Grafana Cloud, contact Support.
+> The redesigned reporting experience is generally available in [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+>
+> In self-managed Grafana, enable the `newShareReportDrawer` [feature toggle](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#feature_toggles) in your Grafana configuration file.
 
 **Reporting** allows you to send automated and scheduled emails from any of your dashboards.
 You can configure several elements of these reports and generate PDFs and CSV files.
@@ -16,24 +18,24 @@ Any changes you make to a dashboard used in a report are reflected the next time
 
 For Grafana Enterprise, the Reporting feature has the following requirements:
 
-- SMTP must be configured for reports to be sent. Refer to [SMTP configuration documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#smtp) for more information.
-- The [Grafana image renderer service](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/) must be set up. Refer to [Image rendering](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/) for more information.
+- SMTP must be configured for reports to be sent. Refer to [SMTP configuration documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#smtp) for more information.
+- The [Grafana image renderer service](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/) must be set up. Refer to [Image rendering](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/) for more information.
 
 ### Rendering configuration
 
 By default, attachments (PDFs, CSV files, and embedded images) larger than 10 MB are not sent, which keeps email servers from rejecting the email.
-You can increase or decrease this limit in the [reporting configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/enterprise-configuration/#max_attachment_size_mb).
+You can increase or decrease this limit in the [reporting configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/enterprise-configuration/#max_attachment_size_mb).
 
 When a report file is generated, it's temporarily written to the corresponding folder (`csv`, `pdf`, `png`) in the Grafana `data` folder.
 A background job runs every 10 minutes and removes temporary files.
-You can set how long a file should be stored before being removed by configuring the [`temp_data_lifetime`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#temp_data_lifetime) setting in your `ini` file.
+You can set how long a file should be stored before being removed by configuring the [`temp_data_lifetime`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#temp_data_lifetime) setting in your `ini` file.
 
 ## Access control
 
 Only organization administrators can create reports by default.
-You can customize who can create reports with [role-based access control (RBAC)](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/).
+You can customize who can create reports with [role-based access control (RBAC)](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/).
 
-When [RBAC](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/) is enabled, you need to have the relevant [permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/) to create and manage reports.
+When [RBAC](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/) is enabled, you need to have the relevant [permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/) to create and manage reports.
 Refer to specific guides to understand what permissions are required.
 
 ## Create a report
@@ -76,7 +78,7 @@ To create a report, follow these steps:
    - The menu icon to access the following options:
      - **Download CSV**
      - **Preview PDF**
-     - **Report settings** - Takes you to **Reporting** in a new browser tab and opens the **Report template settings** drawer, where you can configure organization-level report settings.
+     - **[Report settings](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/create-reports/report-settings/)** - Takes you to **Reporting** in a new browser tab and opens the **Report template settings** drawer, where you can configure organization-level report settings.
    - **Send preview** - Send a preview of the report to your desired recipient. You can choose to use the report recipients:
 
 ![The Send preview modal](https://grafana.com/media/docs/grafana/dashboards/screenshot-send-preview-v12.0.png)
@@ -109,7 +111,7 @@ If you click the **x** at the top of the drawer without scheduling or saving the
    - The menu icon to access the following options:
      - **Download CSV**
      - **Preview PDF**
-     - **Report settings** - Opens the **Report template settings** drawer, where you can configure organization-level report settings.
+     - **[Report settings](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/create-reports/report-settings/)** - Opens the **Report template settings** drawer, where you can configure organization-level report settings.
    - **Send preview** - Send a preview of the report to your desired recipient. You can choose to use the report recipients:
 
 ![The Send preview modal](https://grafana.com/media/docs/grafana/dashboards/screenshot-send-preview-v12.0.png)
@@ -143,7 +145,7 @@ If specified, the custom time range overrides the time range from the report's d
 
 Configure report-specific template variables for the dashboard.
 The variables that you select override the variables from the dashboard.
-For detailed information about using template variables, refer to [Variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/).
+For detailed information about using template variables, refer to [Variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/).
 
 The query variables saved with a report might become out of date if the results of that query change.
 For example, if your template variable queries for a list of hostnames and a new hostname is added, then it won't be included in the report.
@@ -178,7 +180,7 @@ If a dashboard has the **Browser Time** setting, the reports generated from that
 As a result, this time zone might not match the time zone of users creating or receiving the report.
 If you want to use a specific time zone, save the dashboard with a fixed time zone instead of **Browser Time**
 
-Each dashboard's time zone setting is visible in the [time range controls](https://grafana.com/docs/grafana/v13.2/dashboards/use-dashboards/#set-dashboard-time-range).
+Each dashboard's time zone setting is visible in the [time range controls](https://grafana.com/docs/grafana/v13.3/dashboards/use-dashboards/#set-dashboard-time-range).
 
 ### 3. Email settings
 
@@ -218,6 +220,9 @@ If you selected a PDF attachment, configure the following formatting options:
 | Show template variables                                  | Click the checkbox to show dashboard variables. This option is only displayed if the report contains variables.                                                                                                                                                                                        |
 | [Include table data as PDF appendix](#table-data-in-pdf) | Add an appendix of the dashboard table data to the report PDF. This is useful when there's more data in your table visualization than can be shown in the dashboard PDF. *Public preview only.*                                                                                                        |
 
+These options apply to one report.
+To choose which items appear in the PDF header and footer for every report in your organization, refer to [Reporting settings](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/create-reports/report-settings/).
+
 ##### Layout and orientation
 
 | Layout | Orientation | Description                                                       | Preview |
@@ -255,7 +260,7 @@ If you selected a PDF attachment, configure the following formatting options:
 
 > **Note**
 >
-> Available in public preview (`pdfTables` feature toggle) in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) with the [Grafana image renderer service](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/), as well as in [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in public preview (`pdfTables` feature toggle) in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) with the [Grafana image renderer service](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/), as well as in [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
 When there's more data in your table visualizations than can be shown in the dashboard PDF, you can select one of these two options to access all table visualization data as PDF in your reports:
 
@@ -264,7 +269,7 @@ When there's more data in your table visualizations than can be shown in the das
 
 ## Send a report using the API
 
-You can send reports programmatically with the [send report](https://grafana.com/docs/grafana/v13.2/developers/http_api/reporting/#send-a-report) endpoint using the HTTP API.
+You can send reports programmatically with the [send report](https://grafana.com/docs/grafana/v13.3/developers/http_api/reporting/#send-a-report) endpoint using the HTTP API.
 
 ## Manage reports
 
@@ -327,7 +332,7 @@ Deleting a report is irreversible.
 ## Troubleshoot Reporting
 
 To troubleshoot and get more log information, enable debug logging in the configuration file.
-Refer to the [log filters configuration documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#filters) for more information.
+Refer to the [log filters configuration documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#filters) for more information.
 
 ```bash
 [log]

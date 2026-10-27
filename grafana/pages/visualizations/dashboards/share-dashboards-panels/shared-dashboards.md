@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/share-dashboards-panels/shared-dashboards.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/share-dashboards-panels/shared-dashboards.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/share-dashboards-panels/shared-dashboards.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/share-dashboards-panels/shared-dashboards.md)
 
 # Externally shared dashboards
 
@@ -10,12 +10,12 @@ Externally shared dashboards allow you to share your Grafana dashboard with anyo
 
 If you change a dashboard, ensure that you save the changes before sharing.
 
-In order to create public dashboards, you need to be an Admin, have the `dashboards.public:write` permission, or the `fixed:dashboards.public:write` [RBAC role](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/#fixed-role-definitions).
+In order to create public dashboards, you need to be an Admin, have the `dashboards.public:write` permission, or the `fixed:dashboards.public:write` [RBAC role](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/#fixed-role-definitions).
 
 > **Warning**
 >
 > Sharing your dashboard externally could result in a large number of queries to the data sources used by your dashboard.
-> This can be mitigated by using the Enterprise [caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching) and/or rate limiting features.
+> This can be mitigated by using the Enterprise [caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching) and/or rate limiting features.
 
 ## Shared dashboards list
 
@@ -39,7 +39,7 @@ You can also click the name of the dashboard to navigate to the dashboard intern
 >
 > This feature was previously called **email sharing**.
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
 
 > **Note**
 >
@@ -181,13 +181,13 @@ You can update the access to externally shared dashboard links by following thes
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
 
 You can check usage analytics about your externally shared dashboard by clicking the insights icon in the dashboard header:
 
 ![Dashboard insights icon](https://grafana.com/media/docs/grafana/dashboards/screenshot-dashboard-insights-icon-11.2.png)
 
-Learn more about the kind of information provided in the [dashboard insights documentation](https://grafana.com/docs/grafana/v13.2/dashboards/assess-dashboard-usage/#dashboard-insights).
+Learn more about the kind of information provided in the [dashboard insights documentation](https://grafana.com/docs/grafana/v13.3/dashboards/assess-dashboard-usage/#dashboard-insights).
 
 ## Supported data sources
 
@@ -278,4 +278,4 @@ guaranteed because plugin developers can override this functionality. The follow
 
 ## Custom branding
 
-If you're a Grafana Enterprise customer, you can use custom branding to change the appearance of an externally shared dashboard footer. For more information, refer to [Custom branding](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/configure-custom-branding/).
+If you're a Grafana Enterprise customer, you can use custom branding to change the appearance of an externally shared dashboard footer. For more information, refer to [Custom branding](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/configure-custom-branding/).

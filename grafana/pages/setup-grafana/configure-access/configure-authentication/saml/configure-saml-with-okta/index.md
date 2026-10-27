@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/_index.md)
 
 # Configure SAML Okta
 
@@ -7,7 +7,7 @@ Grafana supports user authentication through Okta, which is useful when you want
 ## Before you begin
 
 - To configure SAML integration with Okta, create an app integration inside the Okta organization first. [Add app integration in Okta](https://help.okta.com/en/prod/Content/Topics/Apps/apps-overview-add-apps.htm)
-- Ensure you have permission to administer SAML authentication. For more information about roles and permissions in Grafana, refer to [Roles and permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/).
+- Ensure you have permission to administer SAML authentication. For more information about roles and permissions in Grafana, refer to [Roles and permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/).
 
 ## Set up SAML with Okta
 
@@ -48,7 +48,7 @@ Grafana supports user authentication through Okta, which is useful when you want
      | Email                       | Email - `user.email`                                 | `assertion_attribute_email = Email`       |
      | DisplayName                 | DisplayName - `user.firstName + " " + user.lastName` | `assertion_attribute_name = DisplayName`  |
 
-   - In the **GROUP ATTRIBUTE STATEMENTS (OPTIONAL)** section, enter a group attribute name (for example, `Group`, ensure it matches the `assertion_attribute_groups` setting in Grafana) and set filter to `Matches regex .*` to return all user groups. To use these groups for role assignment, refer to [Configure role sync with Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/#configure-role-sync-with-okta).
+   - In the **GROUP ATTRIBUTE STATEMENTS (OPTIONAL)** section, enter a group attribute name (for example, `Group`, ensure it matches the `assertion_attribute_groups` setting in Grafana) and set filter to `Matches regex .*` to return all user groups. To use these groups for role assignment, refer to [Configure role sync with Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/#configure-role-sync-with-okta).
 
 9. Click **Next**.
 

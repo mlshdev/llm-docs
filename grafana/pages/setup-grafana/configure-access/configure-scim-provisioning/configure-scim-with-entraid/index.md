@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-entraid/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-entraid/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-entraid/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-entraid/_index.md)
 
 # Configure SCIM with Entra ID
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
 This guide explains how to configure SCIM provisioning with Entra ID to automate user and team management in Grafana.
 
@@ -12,9 +12,9 @@ This guide explains how to configure SCIM provisioning with Entra ID to automate
 >
 > **Important SAML and SCIM Configuration:**
 > When using SAML for authentication alongside SCIM provisioning with Entra ID, it is crucial to correctly align user identifiers.
-> For detailed information on why this is critical for security and how to configure it, refer to the main [SCIM provisioning documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/).
+> For detailed information on why this is critical for security and how to configure it, refer to the main [SCIM provisioning documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/).
 >
-> Refer to the [SAML authentication with Entra ID documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-azuread/) for specific instructions on how to configure SAML claims and Grafana SAML settings for your Entra ID SCIM setup.
+> Refer to the [SAML authentication with Entra ID documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-azuread/) for specific instructions on how to configure SAML claims and Grafana SAML settings for your Entra ID SCIM setup.
 
 ## Prerequisites
 
@@ -32,11 +32,12 @@ To enable SCIM provisioning in Grafana, create a service account and generate a 
 
 1. Navigate to **Administration > Users and access > Service accounts**
 2. Click **Add service account**
-3. Create the service account with a name (for example, "SCIM provisioning")
-4. In the **Roles** dropdown, select the following roles for the service account:
-   - **User administration** — required for user sync (create, read, update, and remove users in the organization)
-   - **Teams** — required for group sync (create, read, update, and delete teams, and manage team memberships)
-5. Create a new token for the service account and save it securely. This token will be used in the Entra ID configuration
+3. Enter a display name for the service account (for example, "SCIM provisioning")
+4. In the **Role** picker, set the basic role to **No basic role**
+5. In the same **Role** picker, select the following roles for the service account:
+   - **User administration: Writer (organizational)** — required for user sync (create, read, update, and remove users in the organization)
+   - **Teams: Writer** — required for group sync (create, read, update, and delete teams, and manage team memberships)
+6. Create a new token for the service account and save it securely. This token will be used in the Entra ID configuration
 
 ## Configure SCIM in Entra ID
 

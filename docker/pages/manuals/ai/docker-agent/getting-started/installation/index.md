@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/installation/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/getting-started/installation/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/getting-started/installation/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/getting-started/installation/index.md)
 
 *Get Docker Agent running on your system in minutes.*
 
 ## Prerequisites
 
-- An API key for at least one AI provider (OpenAI, Anthropic, Google, etc.)
+- Access to a model through a provider API key, an account login, [Docker Model Runner](https://docs.docker.com/ai/docker-agent/providers/dmr/), or a [coding harness](https://docs.docker.com/ai/docker-agent/features/harnesses/)
 - **Optional:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) — for running containerized MCP tools and Docker Model Runner
 
 ## Docker Desktop (Pre-installed)
@@ -85,7 +85,7 @@ For the latest features, or to contribute, build from source:
 
 ### Prerequisites
 
-- [Go 1.26](https://go.dev/dl/) or higher
+- [Go 1.27](https://go.dev/dl/) or higher
 - [Task](https://taskfile.dev/installation/) (build tool)
 - [golangci-lint](https://golangci-lint.run/docs/welcome/install/local/) (for linting)
 
@@ -108,7 +108,7 @@ task build
 
 ## Set Up API Keys
 
-Docker Agent needs API keys for the model providers you want to use. Set them as environment variables:
+For providers that use API keys, set the keys as environment variables. Account-login and local-model options are covered in [Set Up a Model](https://docs.docker.com/ai/docker-agent/getting-started/set-up-a-model/):
 
 ```bash
 # Pick one (or more) depending on your provider
@@ -120,7 +120,7 @@ export MISTRAL_API_KEY="..."             # Mistral
 export OPENROUTER_API_KEY="..."          # OpenRouter
 ```
 
-See [Configuration Overview](https://docs.docker.com/ai/docker-agent/configuration/overview/#environment-variables) for the full list of supported providers and environment variables.
+See [Provider Credentials](https://docs.docker.com/ai/docker-agent/providers/overview/#provider-credentials) for the full list of supported providers and authentication methods.
 
 > \[!NOTE]
 > You only need the key(s) for the provider(s) you configure in your agent YAML. If you use Docker Model Runner (DMR), no API key is needed — models run locally.
@@ -141,4 +141,4 @@ $ docker agent run myorg/agent:tag
 ## What's Next?
 
 - [**Quick Start**](https://docs.docker.com/ai/docker-agent/getting-started/quickstart/) — create and run your first agent in under 5 minutes.
-- [**Troubleshooting**](https://docs.docker.com/ai/docker-agent/community/troubleshooting/) — something not working? Debug mode, common issues, and solutions.
+- [**Troubleshooting**](https://docs.docker.com/ai/docker-agent/guides/troubleshooting/) — something not working? Debug mode, common issues, and solutions.

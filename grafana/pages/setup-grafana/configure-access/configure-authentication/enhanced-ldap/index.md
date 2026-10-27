@@ -1,15 +1,15 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/enhanced-ldap/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/enhanced-ldap/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/enhanced-ldap/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/enhanced-ldap/index.md)
 
 # Configure enhanced LDAP integration
 
-The enhanced LDAP integration adds additional functionality on top of the [LDAP integration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/ldap/) available in the open source edition of Grafana.
+The enhanced LDAP integration adds additional functionality on top of the [LDAP integration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/ldap/) available in the open source edition of Grafana.
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud).
 > If you are a Grafana Cloud customer, please [open a support ticket in the Cloud Portal](https://grafana.com/profile/org#support) to request this feature.
 
-> To control user access with role-based permissions, refer to [role-based access control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/).
+> To control user access with role-based permissions, refer to [role-based access control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/).
 
 ## LDAP group synchronization for teams
 
@@ -22,7 +22,7 @@ Grafana keeps track of all synchronized users in teams, and you can see which us
 This mechanism allows Grafana to remove an existing synchronized user from a team when its LDAP group membership changes. This mechanism also allows you to manually add
 a user as member of a team, and it will not be removed when the user signs in. This gives you flexibility to combine LDAP group memberships and Grafana team memberships.
 
-[Learn more about team sync.](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync)
+[Learn more about team sync.](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync)
 
 ## Active LDAP synchronization
 
@@ -53,7 +53,7 @@ sync_cron = "0 1 * * *" # This is default value (At 1 am every day)
 active_sync_enabled = true # enabled by default
 ```
 
-Single bind configuration (as in the [Single bind example](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/ldap/#single-bind-example)) is not supported with active LDAP synchronization because Grafana needs user information to perform LDAP searches.
+Single bind configuration (as in the [Single bind example](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/ldap/#single-bind-example)) is not supported with active LDAP synchronization because Grafana needs user information to perform LDAP searches.
 
 For the synchronization to work, the `servers.search_filter` and `servers.attributes.username` in the `ldap.toml` configuration file must match. By default, the `servers.attributes.username` is `cn`, so if you use another attribute as the search filter, you must also update the username attribute.
 

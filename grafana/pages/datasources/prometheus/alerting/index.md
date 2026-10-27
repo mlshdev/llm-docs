@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/alerting/index.md)
 
 # Prometheus alerting
 
 You can use Grafana Alerting with Prometheus to create alerts based on your time-series data. This allows you to monitor metrics, detect anomalies, and receive notifications when specific conditions are met.
 
-For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 ## Before you begin
 
@@ -37,7 +37,7 @@ To create a Grafana-managed alert rule using Prometheus:
 8. Configure notifications and labels.
 9. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## View data source-managed rules
 
@@ -162,7 +162,7 @@ $A > 2 && $B > 100
 
 ## Recording rules
 
-[Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/) pre-compute expensive PromQL expressions on a schedule and write the results back to a Prometheus-compatible data source as a new metric. This lets you query the pre-aggregated metric instead of re-evaluating the expensive expression on every dashboard load or alert evaluation.
+[Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/) pre-compute expensive PromQL expressions on a schedule and write the results back to a Prometheus-compatible data source as a new metric. This lets you query the pre-aggregated metric instead of re-evaluating the expensive expression on every dashboard load or alert evaluation.
 
 ### When to use recording rules
 
@@ -205,15 +205,15 @@ $A > 2 && $B > 100
 
 ### Recording rules with PDC
 
-If your Prometheus instance is behind [Private data source connect (PDC)](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/#private-data-source-connect), Grafana can write recording rule results through the PDC tunnel. No additional configuration is needed, because PDC supports both reads and writes.
+If your Prometheus instance is behind [Private data source connect (PDC)](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/#private-data-source-connect), Grafana can write recording rule results through the PDC tunnel. No additional configuration is needed, because PDC supports both reads and writes.
 
 ### Limitations
 
 - Recording rules require the target data source to support remote write. Standard Prometheus needs the `--web.enable-remote-write-receiver` flag.
-- Thanos does not support recording rules as a write target (refer to the [Prometheus type comparison](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/#performance)).
+- Thanos does not support recording rules as a write target (refer to the [Prometheus type comparison](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/#performance)).
 - Recording rule evaluation uses the configured evaluation interval, not dashboard time ranges. Use a fixed range vector (for example, `[5m]`) rather than `$__rate_interval`.
 
-For more information, refer to [Create Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/).
+For more information, refer to [Create Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/).
 
 ## Limitations
 
@@ -240,7 +240,7 @@ When using OAuth-authenticated Prometheus endpoints (Google Managed Prometheus, 
 
 If you're using GCP, consider the **datasource-syncer** pattern, a sidecar process that refreshes OAuth tokens and updates the data source credentials on a schedule shorter than the token lifetime.
 
-For detailed troubleshooting steps, refer to [OAuth token expiration errors](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/#oauth-token-expiration-errors-gcp-and-azure).
+For detailed troubleshooting steps, refer to [OAuth token expiration errors](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/#oauth-token-expiration-errors-gcp-and-azure).
 
 ### Data source-managed rules are read-only
 
@@ -269,7 +269,7 @@ Common transient errors that trigger this behavior include:
 - "context deadline exceeded" or "i/o timeout" messages
 - HTTP 502 or 500 responses from the Prometheus server
 
-For more details on troubleshooting these errors, refer to [Troubleshoot Prometheus data source issues](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/#transient-alert-errors-triggering-false-alarms).
+For more details on troubleshooting these errors, refer to [Troubleshoot Prometheus data source issues](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/#transient-alert-errors-triggering-false-alarms).
 
 ## Best practices
 
@@ -284,4 +284,4 @@ Follow these best practices when creating Prometheus alerts:
 - **Pre-aggregate with recording rules:** For complex or frequently evaluated expressions, create recording rules and alert on the pre-aggregated metric.
 - **Use `absent()` for availability monitoring:** Detect when metrics stop being reported, which often indicates a crashed or unresponsive service.
 
-If you encounter errors when creating or evaluating alert rules, refer to [Troubleshoot Prometheus data source issues](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/#alerting-errors).
+If you encounter errors when creating or evaluating alert rules, refer to [Troubleshoot Prometheus data source issues](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/#alerting-errors).

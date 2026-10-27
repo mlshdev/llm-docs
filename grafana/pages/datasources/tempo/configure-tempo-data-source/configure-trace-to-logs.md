@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md)
 
 # Configure trace to logs correlation
 
@@ -18,15 +18,15 @@ Both sides must be configured for the correlation to work in either direction.
 
 To configure trace to logs correlation, you need:
 
-- A [Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) configured in Grafana
-- A [Loki data source](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure-loki-data-source/) configured in Grafana
+- A [Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) configured in Grafana
+- A [Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure-loki-data-source/) configured in Grafana
 - Applications that emit traces and logs with a shared identifier such as a trace ID, service name, or both
 - Editor or Admin permissions in Grafana
 
 > **Note**
 >
 > You can't modify a provisioned data source from the Grafana UI. If you're using Grafana Cloud Traces (the pre-configured tracing data source in Grafana Cloud), its settings are read-only.
-> To configure trace to logs, [clone the data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud) to create an editable copy, or update the provisioning file for self-managed instances.
+> To configure trace to logs, [clone the data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud) to create an editable copy, or update the provisioning file for self-managed instances.
 > Refer to [Provision trace to logs settings](#provision-trace-to-logs-settings) for details.
 
 ## Configure the Tempo data source
@@ -109,7 +109,7 @@ This guide uses Loki, but Trace to logs also supports Elasticsearch, Splunk, Ope
    {${__tags}} | pod=`${__span.tags["k8s.pod.name"]}` |= `${__trace.traceId}`
    ```
 
-   Refer to [Custom query variables](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/#custom-query-variables) for the full list of available variables.
+   Refer to [Custom query variables](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/#custom-query-variables) for the full list of available variables.
 
 8. Click **Save & test**.
 
@@ -158,13 +158,13 @@ These settings enable the **Tempo** link on Loki log lines, letting you navigate
 
 8. Click **Save & test**.
 
-For more details about derived field options, refer to [Derived fields](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure-loki-data-source/#derived-fields) in the Loki data source documentation.
+For more details about derived field options, refer to [Derived fields](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure-loki-data-source/#derived-fields) in the Loki data source documentation.
 
 ## Provision trace to logs settings
 
 You can provision the trace to logs configuration using the `tracesToLogsV2` block in your data source YAML file.
-For the full provisioning YAML example including all Tempo settings, refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/).
-For general provisioning instructions, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For the full provisioning YAML example including all Tempo settings, refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/).
+For general provisioning instructions, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ## Example: NGINX service
 
@@ -204,12 +204,12 @@ After configuring both data sources:
 
 ## Troubleshooting
 
-If trace to logs links aren't appearing, return no data, or only work for some services, refer to [Trace to logs/metrics/profiles issues](https://grafana.com/docs/grafana/v13.2/datasources/tempo/troubleshooting/#trace-to-logsmetricsprofiles-issues) in the troubleshooting guide.
+If trace to logs links aren't appearing, return no data, or only work for some services, refer to [Trace to logs/metrics/profiles issues](https://grafana.com/docs/grafana/v13.3/datasources/tempo/troubleshooting/#trace-to-logsmetricsprofiles-issues) in the troubleshooting guide.
 
 If the configuration fields are greyed out, your data source is provisioned. Refer to [Provision trace to logs settings](#provision-trace-to-logs-settings) for options.
 
 ## Next steps
 
-- [Configure trace to metrics correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus.
-- [Configure trace to profiles correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope.
-- [Configure the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/): Return to connection, authentication, and streaming settings.
+- [Configure trace to metrics correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus.
+- [Configure trace to profiles correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope.
+- [Configure the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/): Return to connection, authentication, and streaming settings.

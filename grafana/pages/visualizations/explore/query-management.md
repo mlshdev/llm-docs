@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/explore/query-management.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/explore/query-management.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/explore/query-management.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/explore/query-management.md)
 
 # Query management in Explore
 
@@ -6,7 +6,7 @@ Grafana Explore provides a variety of tools to help manage your queries.
 
 > **Note**
 >
-> For help with debugging queries, Explore allows you to investigate query requests and responses, as well as query statistics, via the Query inspector. Refer to [Query inspector in Explore](https://grafana.com/docs/grafana/v13.2/explore/explore-inspector/) for more information.
+> For help with debugging queries, Explore allows you to investigate query requests and responses, as well as query statistics, via the Query inspector. Refer to [Query inspector in Explore](https://grafana.com/docs/grafana/v13.3/explore/explore-inspector/) for more information.
 
 ## Query history
 
@@ -37,7 +37,7 @@ The Query history depicts a history of your queries for the past two weeks, unle
 - Copy a shortened link with the query to the clipboard.
 - Delete a query.
 - Star a query.
-- Add a query from your history to your [saved queries](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/#saved-queries).
+- Add a query from your history to your [saved queries](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#saved-queries).
 
 By default, query history shows you newest queries first. Click the sort box in the upper right to change to **Oldest first** to older queries first. You can search your queries using keywords.
 

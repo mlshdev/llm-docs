@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/postgres/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/postgres/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/postgres/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/postgres/template-variables/index.md)
 
 # PostgreSQL template variables
 
@@ -6,7 +6,7 @@ Instead of hard-coding details such as server, application, and sensor names in 
 Grafana displays these variables in drop-down select boxes at the top of the dashboard to help you change the data displayed in your dashboard.
 Grafana refers to such variables as **template variables**.
 
-For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ## Query variable
 
@@ -113,7 +113,7 @@ The PostgreSQL data source supports **multi-property variables**. Use them when 
 
 You can create a multi-property variable with either **Type: Custom** or **Type: Query**:
 
-- **Type: Custom** – In **Custom options** > **JSON**, paste your own JSON array with the mapping. Each object in the array can have any number of properties; use `text` and `value` for the label and value shown in the drop-down, and add additional properties as needed. For the JSON format and examples, refer to [Multi-property custom variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#multi-property-custom-variables) in Add and manage variables.
+- **Type: Custom** – In **Custom options** > **JSON**, paste your own JSON array with the mapping. Each object in the array can have any number of properties; use `text` and `value` for the label and value shown in the drop-down, and add additional properties as needed. For the JSON format and examples, refer to [Multi-property custom variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#multi-property-custom-variables) in Add and manage variables.
 
 - **Type: Query** – Write a SQL query that returns multiple columns. In the variable editor, set **Value field** and **Text field** to the columns that supply the value and the label for the drop-down. Add one column per property you want to reference; each column name becomes a property name. In panels and queries, reference a property with `${varName.columnName}`.
 
@@ -128,7 +128,7 @@ SELECT
 FROM environments
 ```
 
-In a panel query you might use `$env.env_aws` for an AWS-related query and `$env.env_azure` for an Azure-related query. For more on the concept, refer to [Configure multi-property variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#configure-multi-property-variables) in [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+In a panel query you might use `$env.env_aws` for an AWS-related query and `$env.env_azure` for an Azure-related query. For more on the concept, refer to [Configure multi-property variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#configure-multi-property-variables) in [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ## Use variables in queries
 
@@ -201,4 +201,4 @@ ${servers:csv}
 
 This outputs the values as an unquoted comma-separated list.
 
-Refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/#advanced-variable-format-options) for additional information.
+Refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/#advanced-variable-format-options) for additional information.

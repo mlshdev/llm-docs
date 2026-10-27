@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/cloudflare-ai-gateway/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/providers/cloudflare-ai-gateway/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/cloudflare-ai-gateway/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/providers/cloudflare-ai-gateway/index.md)
 
 # Cloudflare AI Gateway
 
@@ -35,7 +35,7 @@ and an API token with the appropriate permissions.
 ## Usage
 
 AI Gateway model IDs use the gateway's `provider/model` form (for example
-`workers-ai/@cf/meta/llama-3.1-8b-instruct` or `openai/gpt-4o`); the gateway
+`workers-ai/@cf/meta/llama-3.1-8b-instruct` or `openai/gpt-5.6-sol`); the gateway
 routes each request to the underlying provider.
 
 ### Inline Syntax

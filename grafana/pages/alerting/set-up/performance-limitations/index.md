@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/performance-limitations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/performance-limitations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/set-up/performance-limitations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/set-up/performance-limitations/index.md)
 
 # Performance considerations and limitations
 
@@ -78,9 +78,9 @@ To prevent this, Grafana can limit the number of query evaluation results a sing
 query evaluation returned too many results: 12345 (limit: 10000)
 ```
 
-The alert rule enters the [Error state](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/) and produces no alert instances for that evaluation until you reduce its result set below the limit.
+The alert rule enters the [Error state](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/) and produces no alert instances for that evaluation until you reduce its result set below the limit.
 
-In self-managed Grafana, set this limit using the [`alerting_rule_evaluation_results`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana#alerting_rule_evaluation_results) option in the `[quota]` section. The default is `-1` (unlimited). In Grafana Cloud, Grafana Labs manages this limit.
+In self-managed Grafana, set this limit using the [`alerting_rule_evaluation_results`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana#alerting_rule_evaluation_results) option in the `[quota]` section. The default is `-1` (unlimited). In Grafana Cloud, Grafana Labs manages this limit.
 
 To resolve the error, reduce the cardinality of the rule's result set:
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/data-source-management/teamlbac/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/data-source-management/teamlbac/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/data-source-management/teamlbac/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/data-source-management/teamlbac/_index.md)
 
 # Label-based access control (LBAC) for data sources
 
@@ -74,11 +74,11 @@ LBAC for data sources has the following limitations:
 
 To set up LBAC for data sources, refer to the guide for your data source:
 
-- **Loki:** [Configure LBAC for the Loki data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/)
-- **Prometheus:** [Configure LBAC for the Prometheus data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/)
-- **Tempo or Cloud Traces:** [Configure team LBAC for Tempo](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/)
+- **Loki:** [Configure LBAC for the Loki data source](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/)
+- **Prometheus:** [Configure LBAC for the Prometheus data source](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/)
+- **Tempo or Cloud Traces:** [Configure team LBAC for Tempo](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/)
 
-For guidance on writing rules for a supported data source, refer to [Create LBAC for data sources rules](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/create-teamlbac-rules/).
+For guidance on writing rules for a supported data source, refer to [Create LBAC for data sources rules](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/create-teamlbac-rules/).
 
 ## Provision LBAC rules
 
@@ -133,4 +133,4 @@ Replace the following placeholders:
 
 The `rules` argument maps each team's UID to a list of LBAC rule strings. Each string uses the same label or attribute selector syntax you use in the UI.
 
-To manage rules programmatically instead, use the [data source LBAC rules HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/datasource_lbac_rules/).
+To manage rules programmatically instead, use the [data source LBAC rules HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/datasource_lbac_rules/).

@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-teams.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-teams.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-teams.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-teams.md)
 
 # Configure Microsoft Teams for Alerting
 
 Use the Grafana Alerting - Microsoft Teams integration to receive notifications in your team’s channel when your alerts are firing.
 
-Note that you can customize the `title` and `message` of the notification using [notification templates](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/); however, you cannot modify its visual appearance with adaptive cards.
+Note that you can customize the `title` and `message` of the notification using [notification templates](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/); however, you cannot modify its visual appearance with adaptive cards.
 
 ## Before you begin
 
@@ -56,4 +56,4 @@ To add this contact point to your alert, complete the following steps.
 
 ## Troubleshooting
 
-- If Grafana reports that notification was sent successfully but it was not delivered to the channel, check the workflow's run history. You can find it in the workflow details page.
+- If Grafana reports that the notification was sent successfully but it was not delivered to the channel, check the workflow's run history. You can find it in the workflow details page.

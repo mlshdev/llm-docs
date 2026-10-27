@@ -1,16 +1,16 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/opentsdb/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/opentsdb/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/opentsdb/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/opentsdb/alerting/index.md)
 
 # OpenTSDB alerting
 
 You can use Grafana Alerting with OpenTSDB to create alerts based on your time series data. This allows you to monitor metrics, detect anomalies, and receive notifications when specific conditions are met.
 
-For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 ## Before you begin
 
 Before creating alerts with OpenTSDB, ensure you have:
 
-- An OpenTSDB data source configured in Grafana. Refer to [Configure the OpenTSDB data source](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/configure/).
+- An OpenTSDB data source configured in Grafana. Refer to [Configure the OpenTSDB data source](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/configure/).
 - Appropriate permissions to create alert rules.
 - Understanding of the metrics you want to monitor.
 
@@ -43,7 +43,7 @@ To create an alert rule using OpenTSDB:
 8. Configure notifications and labels.
 9. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example alert queries
 
@@ -135,7 +135,7 @@ Follow these best practices when creating OpenTSDB alerts:
 
 - **Use specific tag filters:** Add tag filters to focus on relevant resources and improve query performance.
 - **Match downsample interval to evaluation:** Set the downsample interval to match or be slightly smaller than your alert evaluation interval.
-- **Test queries first:** Verify your query returns expected results in [Explore](https://grafana.com/docs/grafana/v13.2/explore/) before creating an alert.
+- **Test queries first:** Verify your query returns expected results in [Explore](https://grafana.com/docs/grafana/v13.3/explore/) before creating an alert.
 - **Set realistic thresholds:** Base alert thresholds on historical data patterns to avoid false positives.
 - **Use meaningful names:** Give alert rules descriptive names that indicate what they monitor.
 - **Enable downsampling:** Always enable downsampling for alerting queries to reduce data volume and improve reliability.
@@ -143,5 +143,5 @@ Follow these best practices when creating OpenTSDB alerts:
 
 ## Next steps
 
-- [Build queries](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/query-editor/) to explore your metrics before creating alerts.
-- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.2/datasources/opentsdb/troubleshooting/) if alerts aren't firing as expected.
+- [Build queries](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/query-editor/) to explore your metrics before creating alerts.
+- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.3/datasources/opentsdb/troubleshooting/) if alerts aren't firing as expected.

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/gitlab/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/gitlab/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/gitlab/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/gitlab/index.md)
 
 # Configure GitLab OAuth authentication
 
@@ -6,13 +6,13 @@ There are numerous authentication methods available in Grafana to verify user id
 You can also configure Grafana to automatically update users' roles and team memberships in Grafana based on the information returned by the auth provider integration.
 
 When deciding on an authentication method, it's important to take into account your current identity and access management system as well as the specific authentication and authorization features you require.
-For a complete list of the available authentication options and the features they support, refer to [Configure authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication).
+For a complete list of the available authentication options and the features they support, refer to [Configure authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication).
 
 This topic describes how to configure GitLab OAuth authentication.
 
 > **Note**
 >
-> If Users use the same email address in GitLab that they use with other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that the users are matched correctly. Please refer to the [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) documentation for more information.
+> If Users use the same email address in GitLab that they use with other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that the users are matched correctly. Please refer to the [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) documentation for more information.
 
 ## Before you begin
 
@@ -68,7 +68,7 @@ Go to [Terraform Registry](https://registry.terraform.io/providers/grafana/grafa
 
 ## Configure GitLab authentication client using the Grafana configuration file
 
-Ensure that you have access to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location).
+Ensure that you have access to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location).
 
 ### Steps
 
@@ -98,7 +98,7 @@ To configure GitLab authentication with Grafana, follow these steps:
 
 4. [Configure role mapping](#configure-role-mapping).
 
-5. Optional: [Configure team synchronization](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/).
+5. Optional: [Configure team synchronization](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/).
 
 6. Restart Grafana.
 
@@ -171,7 +171,7 @@ Refer to [configuration options](#configuration-options) for more information.
 
 You can use the `org_mapping` configuration option to assign the user to multiple organizations and specify their role based on their GitLab group membership. For more information, refer to [Org roles mapping example](#org-roles-mapping-example). If the org role mapping (`org_mapping`) is specified and Entra ID returns a valid role, then the user will get the highest of the two roles.
 
-If no valid role is found, the user is assigned the role specified by [the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#auto_assign_org_role).
+If no valid role is found, the user is assigned the role specified by [the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#auto_assign_org_role).
 You can disable this default role assignment by setting `role_attribute_strict = true`. This setting denies user access if no role or an invalid role is returned after evaluating the `role_attribute_path` and the `org_mapping` expressions.
 
 To ease configuration of a proper JMESPath expression, go to [JMESPath](http://jmespath.org/) to test and evaluate expressions with custom payloads.
@@ -259,7 +259,7 @@ use_refresh_token = true
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/products/cloud/)
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/products/cloud/)
 
 By using Team Sync, you can map GitLab groups to teams within Grafana. This will automatically assign users to the appropriate teams.
 Teams for each user are synchronized when the user logs in.
@@ -268,11 +268,11 @@ GitLab groups are referenced by the group name. For example, `developers`. To re
 Note that in GitLab, the group or subgroup name does not always match its display name, especially if the display name contains spaces or special characters.
 Make sure you always use the group or subgroup name as it appears in the URL of the group or subgroup.
 
-To learn more about Team Sync, refer to [Configure team sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/).
+To learn more about Team Sync, refer to [Configure team sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/).
 
 ## Configuration options
 
-The following table describes all GitLab OAuth configuration options. You can apply these options as environment variables, similar to any other configuration within Grafana. For more information, refer to [Override configuration with environment variables](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
+The following table describes all GitLab OAuth configuration options. You can apply these options as environment variables, similar to any other configuration within Grafana. For more information, refer to [Override configuration with environment variables](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
 
 > **Note**
 >

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mysql/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mysql/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mysql/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mysql/_index.md)
 
 # MySQL data source
 
@@ -11,7 +11,7 @@ Watch the following video to learn more about using the Grafana MySQL data sourc
 
 [Watch the video on YouTube](https://www.youtube.com/watch?v=p_RDHfHS-P8)
 
-[MySQL Overview in Grafana Play](https://play.grafana.org/d/edyh1ib7db6rkb/mysql-overview)
+[MySQL Overview in Grafana Play](https://play.grafana.org/d/dbg1erw7kech6oe/placeholder-dashboard)
 
 ## Supported databases
 
@@ -41,12 +41,12 @@ The MySQL data source supports:
 
 The following documentation helps you get started with the MySQL data source:
 
-- [Configure the MySQL data source](https://grafana.com/docs/grafana/v13.2/datasources/mysql/configure/)
-- [MySQL query editor](https://grafana.com/docs/grafana/v13.2/datasources/mysql/query-editor/)
-- [MySQL template variables](https://grafana.com/docs/grafana/v13.2/datasources/mysql/template-variables/)
-- [MySQL annotations](https://grafana.com/docs/grafana/v13.2/datasources/mysql/annotations/)
-- [MySQL alerting](https://grafana.com/docs/grafana/v13.2/datasources/mysql/alerting/)
-- [Troubleshoot MySQL data source issues](https://grafana.com/docs/grafana/v13.2/datasources/mysql/troubleshooting/)
+- [Configure the MySQL data source](https://grafana.com/docs/grafana/v13.3/datasources/mysql/configure/)
+- [MySQL query editor](https://grafana.com/docs/grafana/v13.3/datasources/mysql/query-editor/)
+- [MySQL template variables](https://grafana.com/docs/grafana/v13.3/datasources/mysql/template-variables/)
+- [MySQL annotations](https://grafana.com/docs/grafana/v13.3/datasources/mysql/annotations/)
+- [MySQL alerting](https://grafana.com/docs/grafana/v13.3/datasources/mysql/alerting/)
+- [Troubleshoot MySQL data source issues](https://grafana.com/docs/grafana/v13.3/datasources/mysql/troubleshooting/)
 
 ## Plugin updates
 
@@ -54,12 +54,12 @@ Starting with Grafana 13.2, the MySQL data source is a standalone plugin, preins
 
 To adjust this behavior:
 
-- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 - **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
 
 The standalone plugin requires Grafana 12.3.0 or later. The MySQL data source bundled with Grafana 13.1 and earlier continues to work as before. These versions are unaffected by the change.
 
-Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/):
 
 ```ini
 [plugin.mysql]
@@ -76,10 +76,10 @@ preinstall_sync = mysql
 
 After configuring the MySQL data source, you can also:
 
-- Create a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/).
-- Configure and use [templates and variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/).
-- Add [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/).
-- Optimize performance with [query caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching).
+- Create a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/).
+- Configure and use [templates and variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/).
+- Add [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/).
+- Optimize performance with [query caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching).
 
 ## Pre-configured dashboards
 
@@ -107,9 +107,29 @@ For more MySQL dashboards, browse the [Grafana dashboard catalog](https://grafan
 
 [//]: # "This shared file is included in these locations:"
 
-[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+[//]: # "/docs/sources/datasources/aws-cloudwatch/_index.md"
+
+[//]: # "/docs/sources/datasources/azure-monitor/_index.md"
+
+[//]: # "/docs/sources/datasources/elasticsearch/_index.md"
+
+[//]: # "/docs/sources/datasources/google-cloud-monitoring/_index.md"
+
+[//]: # "/docs/sources/datasources/influxdb/_index.md"
+
+[//]: # "/docs/sources/datasources/loki/_index.md"
+
+[//]: # "/docs/sources/datasources/mssql/_index.md"
 
 [//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: # "/docs/sources/datasources/postgres/_index.md"
+
+[//]: # "/docs/sources/datasources/prometheus/_index.md"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/tempo/_index.md"
 
 [//]: #
 
@@ -121,7 +141,7 @@ For more MySQL dashboards, browse the [Grafana dashboard catalog](https://grafan
 
 You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
 
-`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
 
 For example, to explore and query your MySQL data source, use the `gcx datasources mysql` commands:
 
@@ -141,5 +161,5 @@ Replace *`<DATASOURCE_UID>`* with the UID of your MySQL data source. You can omi
 
 ## Related data sources
 
-- [PostgreSQL](https://grafana.com/docs/grafana/v13.2/datasources/postgres/) - For PostgreSQL databases.
-- [Microsoft SQL Server](https://grafana.com/docs/grafana/v13.2/datasources/mssql/) - For Microsoft SQL Server and Azure SQL databases.
+- [PostgreSQL](https://grafana.com/docs/grafana/v13.3/datasources/postgres/) - For PostgreSQL databases.
+- [Microsoft SQL Server](https://grafana.com/docs/grafana/v13.3/datasources/mssql/) - For Microsoft SQL Server and Azure SQL databases.

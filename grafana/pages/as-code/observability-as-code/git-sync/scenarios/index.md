@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/scenarios/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/scenarios/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/scenarios/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/scenarios/_index.md)
 
 # Git Sync deployment scenarios
 
@@ -8,19 +8,19 @@
 
 This guide shows practical deployment scenarios for Grafana’s Git Sync. Learn how to configure bidirectional synchronization between Grafana and Git repositories for teams, environments, and regions.
 
-- [Single instance](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/single-instance/)
-- [Git Sync for development and production environments](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/dev-prod/)
-- [Git Sync with regional replication](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/multi-region/)
-- [Testing sandboxes](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/testing-sandboxes/)
-- [High availability](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/high-availability/)
-- [Git Sync in a shared Grafana instance](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/multi-team/)
+- [Single instance](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/single-instance/)
+- [Git Sync for development and production environments](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/dev-prod/)
+- [Git Sync with regional replication](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/multi-region/)
+- [Testing sandboxes](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/testing-sandboxes/)
+- [High availability](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/high-availability/)
+- [Git Sync in a shared Grafana instance](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios/multi-team/)
 
 ## Learn more
 
 Refer to the following documents to learn more:
 
-- [Git Sync introduction](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/intro-git-sync/)
-- [Git Sync key concepts](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts/)
-- [Git Sync setup guide](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/git-sync-setup/)
-- [Dashboard provisioning](https://grafana.com/docs/grafana/v13.2/administration/provisioning/)
-- [Observability as Code](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/)
+- [Git Sync introduction](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/intro-git-sync/)
+- [Git Sync key concepts](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts/)
+- [Git Sync setup guide](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/git-sync-setup/)
+- [Dashboard provisioning](https://grafana.com/docs/grafana/v13.3/administration/provisioning/)
+- [Observability as Code](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/)

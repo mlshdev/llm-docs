@@ -1,16 +1,20 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/influxdb/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/influxdb/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/influxdb/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/influxdb/query-editor/index.md)
 
 # InfluxDB query editor
 
-The InfluxDB query editor helps you build and run queries against your InfluxDB data source. You can access it from the [Explore page](https://grafana.com/docs/grafana/v13.2/explore/) or from any dashboard panel by clicking the ellipsis in the upper right of the panel and selecting **Edit**.
+The InfluxDB query editor helps you build and run queries against your InfluxDB data source. You can access it from the [Explore page](https://grafana.com/docs/grafana/v13.3/explore/) or from any dashboard panel by clicking the ellipsis in the upper right of the panel and selecting **Edit**.
 
 The editor supports three query languages: SQL, InfluxQL, and Flux. Each has its own editing experience and macro system. SQL and InfluxQL provide both a visual builder mode and a code editing mode, while Flux provides a code editor only. You can also use the query editor to retrieve [log data](#query-logs).
 
-For general information about Grafana query editors, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+For general information about Grafana query editors, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
+
+To compare InfluxQL and SQL queries for the same data, explore this demo dashboard on Grafana Play:
+
+[Influx: Bar Charts and Time Series using Mixed queries in Grafana Play](https://play.grafana.org/d/dea43745-7fac-4bf4-85d0-d06b168de92b/)
 
 ## Before you begin
 
-- Ensure you have [configured the InfluxDB data source](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/configure/).
+- Ensure you have [configured the InfluxDB data source](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/configure/).
 - Verify your credentials have appropriate permissions to query the target database or bucket.
 
 ## Key concepts
@@ -27,7 +31,7 @@ If you're new to InfluxDB, these terms are used throughout the query editor:
 
 ## Choose a query editor
 
-The InfluxDB data source has three query editors, each corresponding to the query language selected in the [data source configuration](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/configure/):
+The InfluxDB data source has three query editors, each corresponding to the query language selected in the [data source configuration](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/configure/):
 
 - [InfluxQL](#influxql-query-editor)
 - [SQL](#sql-query-editor)
@@ -202,7 +206,7 @@ For the full list of supported SQL statements, operators, and functions, refer t
 ## Flux query editor
 
 Grafana supports Flux when running InfluxDB v1.8 and higher.
-If your data source is [configured for Flux](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/configure/), you can use
+If your data source is [configured for Flux](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/configure/), you can use
 the [Flux](https://docs.influxdata.com/flux/v0/) in the query editor, which serves as
 a text editor for raw Flux queries with macro support.
 
@@ -245,11 +249,11 @@ from(bucket: "grafana")
   |> yield(name: "mean")
 ```
 
-To view the interpolated version of a query with the Query inspector, refer to [Panel Inspector](https://grafana.com/docs/grafana/v13.2/panels-visualizations/panel-inspector/).
+To view the interpolated version of a query with the Query inspector, refer to [Panel Inspector](https://grafana.com/docs/grafana/v13.3/panels-visualizations/panel-inspector/).
 
 ## Query logs
 
-You can query and display log data from InfluxDB in [Explore](https://grafana.com/docs/grafana/v13.2/explore/) and in the dashboard [Logs panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/logs/).
+You can query and display log data from InfluxDB in [Explore](https://grafana.com/docs/grafana/v13.3/explore/) and in the dashboard [Logs panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/logs/).
 
 **InfluxQL:** Select an InfluxDB data source in the query editor. Under the **Select measurement field** next to the **FROM** section, choose a measurement containing your log data, then choose the appropriate fields that display the log message. Add any additional filters by clicking the **+ sign** next to the **WHERE** field. Set **FORMAT AS** to **Logs**.
 
@@ -268,6 +272,6 @@ After InfluxDB returns the results, the log panel displays log rows along with a
 
 ## Next steps
 
-- [Use template variables](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/template-variables/) for dynamic dashboards.
-- [Set up annotations](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/annotations/) to overlay events on your graphs.
-- [Create alert rules](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/alerting/) based on your InfluxDB queries.
+- [Use template variables](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/template-variables/) for dynamic dashboards.
+- [Set up annotations](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/annotations/) to overlay events on your graphs.
+- [Create alert rules](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/alerting/) based on your InfluxDB queries.

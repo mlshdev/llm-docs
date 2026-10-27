@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/entraid/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/entraid/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/entraid/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/entraid/index.md)
 
 # Configure Microsoft Entra ID OAuth authentication
 
@@ -8,7 +8,7 @@ The Microsoft Entra ID authentication allows you to use a Microsoft Entra ID (fo
 >
 > If you use the same email address in Microsoft Entra ID and in other authentication providers (such as Grafana.com), you need to do additional configuration to ensure that your users are matched correctly.
 >
-> Refer to [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) for more information.
+> Refer to [Using the same email address to login with different identity providers](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/#using-the-same-email-address-to-login-with-different-identity-providers) for more information.
 
 ## Register your application with Microsoft Entra ID
 
@@ -84,7 +84,7 @@ To enable the Entra ID OAuth, register your application with Entra ID.
 
        2. You must have set `client_authentication` (env var `GF_AUTH_AZUREAD_CLIENT_AUTHENTICATION`) under `[auth.azuread]` to `workload_identity` in the Grafana server configuration for this to work.
 
-       3. You may optionally set `workload_identity_token_file` (env var `GF_AUTH_AZUREAD_WORKLOAD_IDENTITY_TOKEN_FILE`) under `[auth.azuread]` to `/var/run/secrets/azure/tokens/azure-identity-token` in the Grafana server configuration for this to work. (Optional, defaults to `/var/run/secrets/azure/tokens/azure-identity-token`)
+       3. You may optionally set `workload_identity_token_file` under `[auth.azuread]` to `$__env{AZURE_FEDERATED_TOKEN_FILE}` in the Grafana server configuration for this to work. You may alternatively set it through the env var `GF_AUTH_AZUREAD_WORKLOAD_IDENTITY_TOKEN_FILE="${AZURE_FEDERATED_TOKEN_FILE}"`. When unset, Grafana defaults to the legacy path `/var/run/secrets/azure/tokens/azure-identity-token`.
 
        4. You must have set `client_id` (env var `GF_AUTH_AZUREAD_CLIENT_ID`) under `[auth.azuread]` in the Grafana server configuration for this to work. This must match the Entra ID/Entra ID App Registration Application (client) ID.
 
@@ -262,11 +262,11 @@ Refer to [Terraform Registry](https://registry.terraform.io/providers/grafana/gr
 
 ## Configure the Entra ID authentication client using the Grafana configuration file
 
-Ensure that you have access to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location).
+Ensure that you have access to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location).
 
 ### Enable Entra ID OAuth in Grafana
 
-Add the following to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location):
+Add the following to the [Grafana configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location):
 
 ```
 [auth.azuread]
@@ -303,7 +303,7 @@ GF_AUTH_AZUREAD_FEDERATED_CREDENTIAL_AUDIENCE
 
 > **Note**
 >
-> Verify that the Grafana [root\_url](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#root_url) is set in your Azure Application Redirect URLs.
+> Verify that the Grafana [root\_url](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#root_url) is set in your Azure Application Redirect URLs.
 
 ### Configure refresh token
 
@@ -405,19 +405,19 @@ auto_login = true
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
 
 With Team Sync you can map your Entra ID groups to teams in Grafana so that your users will automatically be added to
 the correct teams.
 
 You can reference Entra ID groups by group object ID, like `8bab1c86-8fba-33e5-2089-1d1c80ec267d`.
 
-To learn more, refer to the [Team Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync) documentation.
+To learn more, refer to the [Team Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync) documentation.
 
 ## Skip organization role sync
 
 If you don't want Entra ID authentication to sync user roles and organization membership and prevent the sync of org roles from Entra ID, set `skip_org_role_sync` to `true`. Use this if you want to manage the organization roles for your users from within Grafana or that your organization roles are synced from another provider.
-See [Configure Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#authazuread) for more details.
+See [Configure Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#authazuread) for more details.
 
 ```ini
 [auth.azuread]
@@ -428,7 +428,7 @@ skip_org_role_sync = true
 
 ## Configuration options
 
-The following table outlines the various Entra ID configuration options. You can apply these options as environment variables, similar to any other configuration within Grafana. For more information, refer to [Override configuration with environment variables](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
+The following table outlines the various Entra ID configuration options. You can apply these options as environment variables, similar to any other configuration within Grafana. For more information, refer to [Override configuration with environment variables](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
 
 | Setting                         | Required | Supported on Cloud | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Default                                              |
 | ------------------------------- | -------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
@@ -436,7 +436,7 @@ The following table outlines the various Entra ID configuration options. You can
 | `name`                          | No       | Yes                | Name that refers to the Entra ID authentication from the Grafana user interface.                                                                                                                                                                                                                                                                                                                                                                                                                | `OAuth`                                              |
 | `icon`                          | No       | Yes                | Icon used for the Entra ID authentication in the Grafana user interface.                                                                                                                                                                                                                                                                                                                                                                                                                        | `signin`                                             |
 | `client_authentication`         | Yes      | Yes                | Defines the client authentication method used to authenticate to the token endpoint. Supported values: `none`, `client_secret_post`, `managed_identity`, or `workload_identity`.                                                                                                                                                                                                                                                                                                                |                                                      |
-| `workload_identity_token_file`  | No       | Yes                | The path to the token file used to authenticate to the OAuth2 provider. This is only required when `client_authentication` is set to `workload_identity`. The token file contains the service account token projected by Kubernetes.                                                                                                                                                                                                                                                            | `/var/run/secrets/azure/tokens/azure-identity-token` |
+| `workload_identity_token_file`  | No       | Yes                | The path to the token file used to authenticate to the OAuth2 provider. This is only required when `client_authentication` is set to `workload_identity`. The token file contains the service account token projected by Kubernetes. It should have the same value as the `AZURE_FEDERATED_TOKEN_FILE` env var.                                                                                                                                                                                 | `/var/run/secrets/azure/tokens/azure-identity-token` |
 | `federated_credential_audience` | No       | Yes                | The audience of the federated identity credential of your OAuth2 app. Required when `client_authentication` is set to `managed_identity` or `workload_identity`. For public cloud, this is typically `api://AzureADTokenExchange`.                                                                                                                                                                                                                                                              | `api://AzureADTokenExchange`                         |
 | `client_id`                     | Yes      | Yes                | Client ID of the App (`Application (client) ID` on the **App registration** dashboard).                                                                                                                                                                                                                                                                                                                                                                                                         |                                                      |
 | `client_secret`                 | Yes      | Yes                | Client secret of the App.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                                                      |
@@ -492,7 +492,7 @@ Admin consent is required for the `GroupMember.Read.All` permission. To grant ad
 
 > **Note**
 >
-> You can make Grafana always get group information from the Microsoft Graph API by turning on the [`force_use_graph_api`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/entraid/#force-fetching-groups-from-microsoft-graph-api) setting in the configuration.
+> You can make Grafana always get group information from the Microsoft Graph API by turning on the [`force_use_graph_api`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/entraid/#force-fetching-groups-from-microsoft-graph-api) setting in the configuration.
 
 #### Configure the required Graph API permissions
 
@@ -525,7 +525,7 @@ force_use_graph_api = true
 By default, Entra ID authentication will map users to organization roles based on the most privileged application role assigned to the user in Entra ID.
 
 If no application role is found, the user is assigned the role specified by
-[the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#auto_assign_org_role).
+[the `auto_assign_org_role` option](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#auto_assign_org_role).
 You can disable this default role assignment by setting `role_attribute_strict = true`. This setting denies user access if no role or an invalid role is returned and the `org_mapping` expression evaluates to an empty mapping.
 
 You can use the `org_mapping` configuration option to assign the user to multiple organizations and specify their role based on their Entra ID group membership. For more information, refer to [Org roles mapping example](#org-roles-mapping-example). If the org role mapping (`org_mapping`) is specified and Entra ID returns a valid role, then the user will get the highest of the two roles.

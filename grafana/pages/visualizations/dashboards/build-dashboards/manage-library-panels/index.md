@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/manage-library-panels/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/manage-library-panels/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/manage-library-panels/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/manage-library-panels/index.md)
 
 # Manage library panels
 
@@ -8,7 +8,7 @@ You can save a library panel in a folder alongside saved dashboards.
 
 ## Role-based access control
 
-You can control permissions for library panels using [role-based access control (RBAC)](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/). RBAC provides a standardized way of granting, changing, and revoking access when it comes to viewing and modifying Grafana resources, such as dashboards, reports, and administrative settings.
+You can control permissions for library panels using [role-based access control (RBAC)](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/). RBAC provides a standardized way of granting, changing, and revoking access when it comes to viewing and modifying Grafana resources, such as dashboards, reports, and administrative settings.
 
 ## Create a library panel
 

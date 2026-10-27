@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/plugin-management/plugin-install.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/plugin-management/plugin-install.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/plugin-management/plugin-install.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/plugin-management/plugin-install.md)
 
 # Install a plugin
 
@@ -19,7 +19,7 @@ Depending on your environment or setup, you can use use the following alternativ
 
 ## Install a plugin using Grafana CLI
 
-The Grafana CLI allows you to install, upgrade, and manage your Grafana plugins using a command line tool. For more information about Grafana CLI plugin commands, refer to [Plugin commands](https://grafana.com/docs/grafana/v13.2/administration/cli/#plugins-commands).
+The Grafana CLI allows you to install, upgrade, and manage your Grafana plugins using a command line tool. For more information about Grafana CLI plugin commands, refer to [Plugin commands](https://grafana.com/docs/grafana/v13.3/administration/cli/#plugins-commands).
 
 ## Install a plugin from a ZIP file
 
@@ -31,7 +31,7 @@ Download the archive containing the plugin assets, and install it by extracting 
 unzip my-plugin-0.2.0.zip -d YOUR_PLUGIN_DIR/my-plugin
 ```
 
-The path to the plugin directory is defined in the configuration file. For more information, refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#plugins).
+The path to the plugin directory is defined in the configuration file. For more information, refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#plugins).
 
 ## Install a plugin using Grafana configuration
 
@@ -39,7 +39,7 @@ The path to the plugin directory is defined in the configuration file. For more 
 >
 > This feature requires Grafana 11.5.0 or later.
 
-You can install plugins by adding the plugin ID to the `plugins.preinstall` section in the Grafana configuration file. This prevents the plugin from being accidentally uninstalled and can be auto-updated. For more information, refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#preinstall).
+You can install plugins by adding the plugin ID to the `plugins.preinstall` section in the Grafana configuration file. This prevents the plugin from being accidentally uninstalled and can be auto-updated. For more information, refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#preinstall).
 
 ## Install a plugin in air-gapped environment
 

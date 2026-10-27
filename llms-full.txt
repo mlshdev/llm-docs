@@ -341479,7 +341479,7 @@ It may also be helpful to include a [HAR (HTTP Archive) file](https://en.wikiped
 
 
 
-# Grafana v13.2.4
+# Grafana v13.3.0
 
 Published as 2 volumes:
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_unload.yaml](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/data/sbx_cli/sbx_mcp_unload.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_unload.yaml](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/data/sbx_cli/sbx_mcp_unload.yaml)
 
 # sbx mcp unload
 

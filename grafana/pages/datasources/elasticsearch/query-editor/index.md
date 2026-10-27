@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/elasticsearch/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/elasticsearch/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/elasticsearch/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/elasticsearch/query-editor/index.md)
 
 # Elasticsearch query editor
 
@@ -13,7 +13,7 @@ For more information about query syntax, refer to [Lucene query syntax](https://
 
 *Elasticsearch query editor*
 
-For general documentation on querying data sources in Grafana, including options and functions common to all query editors, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+For general documentation on querying data sources in Grafana, including options and functions common to all query editors, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
 ## Aggregation types
 
@@ -78,7 +78,7 @@ Each group by option has a different subset of options to further narrow your qu
 
 The following options are specific to the **date histogram** bucket aggregation option.
 
-- **Time field** - The field used for time-based queries. The default can be set when configuring the data source in the **Time field name** setting under [Elasticsearch details](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/configure/#elasticsearch-details). The default is `@timestamp`.
+- **Time field** - The field used for time-based queries. The default can be set when configuring the data source in the **Time field name** setting under [Elasticsearch details](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/configure/#elasticsearch-details). The default is `@timestamp`.
 - **Interval** - The time interval for grouping data. Select from the drop-down menu or enter a custom interval such as `30d` (30 days). The default is `Auto`.
 - **Min doc count** - The minimum number of documents required to include a bucket. The default is `0`.
 - **Trim edges** - Removes partial buckets at the edges of the time range. The default is `0`.
@@ -261,7 +261,7 @@ For more information about ES|QL syntax, commands, and functions, refer to the f
 
 ## Use template variables
 
-You can also augment queries by using [template variables](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/template-variables/).
+You can also augment queries by using [template variables](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/template-variables/).
 
 Queries of `terms` have a 500-result limit by default.
 To set a custom limit, set the `size` property in your query.

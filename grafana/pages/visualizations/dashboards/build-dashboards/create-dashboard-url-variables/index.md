@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/index.md)
 
 # Dashboard URL variables
 
-Dashboard URL [variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) allow you to provide more context when you share a dashboard URL.
+Dashboard URL [variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) allow you to provide more context when you share a dashboard URL.
 
 For example, you could share a basic URL to your dashboard that looks like this:
 
@@ -52,7 +52,7 @@ Filters automatically query your data source for available dimensions and lets u
 This allows you to quickly apply filters dashboard-wide to all metric queries that use the specified data source.
 The group by function allows you to then group data by keys, letting you split it up.
 
-For more information, refer to [Filter and Group by documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by).
+For more information, refer to [Filter and Group by documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by).
 
 To pass a filter as a query parameter, use the variable syntax to pass the filter. Then provide the key, operator, and value as a pipe-separated list.
 
@@ -70,7 +70,7 @@ In this URL, the query parameter `var-filter=key|=|value` applies the configured
 
 ### Example
 
-[This dashboard in Grafana Play](https://play.grafana.org/d/p-k6QtkGz/template-redux?var-interval=$__auto\&orgId=1\&from=now-5m\&to=now\&timezone=utc\&var-query=$__all\&var-query2=$__all\&var-query3=$__all\&var-Filters=job%7C%3D%7Cmetrictank%2Ftsdb-gw\&var-textbox=foo\&var-custom=lisa\&var-datasource=grafanacloud-demoinfra-prom) passes the filter variable `Filters` with the filter value `job = metrictank/tsdb-gw`.
+[This dashboard in Grafana Play](https://play.grafana.org/d/canvvlh/filter-variables?orgId=1\&from=now-1h\&to=now\&var-filter=job%7C%3D%7Cecommerce-prod%2Fcartservice) passes the filter variable `filter` with the filter value `job = ecommerce-prod/cartservice`.
 
 ## Time range control using the URL
 
@@ -95,4 +95,4 @@ When you create dashboard links the dashboard settings, you can have current das
 
 ![Dashboard link page with variables option selected](https://grafana.com/media/docs/grafana/dashboards/screenshot-dashboard-link-variables-11.1.png)
 
-For steps to add variables to dashboard links, refer to [Manage dashboard links](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/).
+For steps to add variables to dashboard links, refer to [Manage dashboard links](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/).

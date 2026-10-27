@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/query-transform-data/sql-expressions/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/query-transform-data/sql-expressions/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/query-transform-data/sql-expressions/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/query-transform-data/sql-expressions/index.md)
 
 # SQL expressions
 
@@ -6,7 +6,7 @@ SQL Expressions are server-side expressions that manipulate and transform the re
 
 In Grafana, a server-side expression is a way to transform or calculate data after Grafana retrieves it from the data source, but before Grafana sends it to the frontend for visualization. Grafana evaluates these expressions on the server, not in the browser or at the data source.
 
-For general information on Grafana expressions, refer to [Write expression queries](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/expression-queries/).
+For general information on Grafana expressions, refer to [Write expression queries](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/expression-queries/).
 
 > **Note**
 >
@@ -14,6 +14,10 @@ For general information on Grafana expressions, refer to [Write expression queri
 > For information about the new panel query editor experience, currently in public preview, refer to the [Query and transform data documentation](https://grafana.com/docs/grafana/v13.1/visualizations/panels-visualizations/query-transform-data/).
 
 ![Example of a SQL expression](https://grafana.com/media/docs/sql-expressions/sql-expressions-example-1.png)
+
+To see examples of filtering, aggregation, and JOIN operations with SQL expressions, explore this demo dashboard on Grafana Play:
+
+[SQL Expressions Showcase in Grafana Play](https://play.grafana.org/d/mapr4nb/)
 
 ## Before you begin
 
@@ -39,7 +43,7 @@ A key capability of SQL expressions is the ability to JOIN data from multiple ta
 
 To work with SQL expressions, you must use data from a backend data source. In Grafana, a backend data source refers to a data source plugin or integration that communicates with a database, service, or API through the Grafana server, rather than directly from the browser (frontend).
 
-Frontend-only data sources, such as the **[Dashboard](https://grafana.com/docs/grafana/v13.2/datasources/#dashboard)** data source, aren't supported. Use one of the compatible data sources listed below for queries that you want to reference in a SQL expression.
+Frontend-only data sources, such as the **[Dashboard](https://grafana.com/docs/grafana/v13.3/datasources/#dashboard)** data source, aren't supported. Use one of the compatible data sources listed below for queries that you want to reference in a SQL expression.
 
 ## Compatible data sources
 
@@ -204,6 +208,7 @@ The following non-tabular formats are automatically converted to a tabular forma
 During conversion:
 
 - Label keys become column names.
+- If a label key matches a generated column name, such as `time` or `__value__`, its column is named `label_<LABEL_KEY>`, for example `label_time`. The match ignores case.
 - Label values populate the corresponding rows (null if a label is missing).
 - The `__value__` column contains the numeric metric.
 - If available, the `__display_name__` column contains a human-readable name.
@@ -272,7 +277,7 @@ Following are some best practices for alerting and recording rules:
 
 ### Query limits
 
-Grafana enforces the following limits on SQL expressions. Administrators can configure them in the `[expressions]` section of the Grafana configuration. For more information, refer to [Configure Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#expressions).
+Grafana enforces the following limits on SQL expressions. Administrators can configure them in the `[expressions]` section of the Grafana configuration. For more information, refer to [Configure Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#expressions).
 
 - **Input cells**: The total number of cells, that is rows multiplied by columns, across all referenced queries can't exceed `sql_expression_cell_limit`. The default is `100000`. If the input exceeds this limit, the query fails.
 - **Output cells**: The number of cells returned can't exceed `sql_expression_output_cell_limit`. The default is `100000`. If the output exceeds this limit, Grafana truncates the result and returns a warning.
@@ -366,13 +371,13 @@ This approach ensures that a schema exists even when one query returns no data.
 
 ## Grafana Assistant integration
 
-[Grafana Assistant](https://grafana.com/docs/grafana/v13.2/administration/assistant/) brings AI-powered assistance to your SQL expressions workflow. Assistant knows SQL expressions, so it can explain a query, fix syntax errors, and suggest improvements using the correct MySQL-dialect syntax, table references, and column conventions.
+[Grafana Assistant](https://grafana.com/docs/grafana/v13.3/administration/assistant/) brings AI-powered assistance to your SQL expressions workflow. Assistant knows SQL expressions, so it can explain a query, fix syntax errors, and suggest improvements using the correct MySQL-dialect syntax, table references, and column conventions.
 
 You can also ask Assistant to build a panel using natural language. When you ask it to combine or correlate data across multiple queries, it prefers SQL expressions over join transformations and writes the SQL expression directly into your panel.
 
 > **Note**
 >
-> Grafana Assistant is generally available on Grafana Cloud and in public preview for Grafana OSS and Grafana Enterprise. On Grafana Enterprise (version 13.1 and later), Assistant comes pre-installed, so you only need to connect your Grafana Cloud account to start using it. On Grafana OSS, install the Assistant app from the plugin catalog and connect it to a Grafana Cloud stack. For more information, refer to the [Grafana Assistant documentation](https://grafana.com/docs/grafana/v13.2/administration/assistant/).
+> Grafana Assistant is generally available on Grafana Cloud and in public preview for Grafana OSS and Grafana Enterprise. On Grafana Enterprise (version 13.1 and later), Assistant comes pre-installed, so you only need to connect your Grafana Cloud account to start using it. On Grafana OSS, install the Assistant app from the plugin catalog and connect it to a Grafana Cloud stack. For more information, refer to the [Grafana Assistant documentation](https://grafana.com/docs/grafana/v13.3/administration/assistant/).
 
 When Grafana Assistant is available on your instance, the SQL expression editor shows Assistant buttons to the right of the **Run query** button. When you use a button, Assistant opens in the sidebar with your SQL query, any query errors, and your schema column metadata already included as context, so it can reference the actual field names and types in your data. From there you get the full Assistant experience, including follow-up questions, conversation history, and access to the Assistant's built-in tools.
 

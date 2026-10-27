@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/foundation-sdk/dashboard-automation.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/foundation-sdk/dashboard-automation.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/foundation-sdk/dashboard-automation.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/foundation-sdk/dashboard-automation.md)
 
 # Automate dashboard provisioning with CI/CD
 
@@ -27,7 +27,7 @@ By the end, you'll be able to provision your dashboard as code, and every change
 
 ## 1. Generate the dashboard JSON
 
-Before deploying a dashboard, [define it as code using the Grafana Foundation SDK](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/foundation-sdk/#create-a-dashboard/).
+Before deploying a dashboard, [define it as code using the Grafana Foundation SDK](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/foundation-sdk/#create-a-dashboard/).
 
 Since Grafana exposes a Kubernetes resource compatible API, you need to make some changes to the code to output the dashboard JSON in the appropriate format.
 
@@ -131,7 +131,7 @@ console.log(`Dashboard JSON:\n${}`);
 
 ## 2. Automate deployment with GitHub Actions
 
-Next, set up GitHub Actions to automate the deployment of a Grafana dashboard using the Foundation SDK and the [`gcx` CLI tool](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/) to:
+Next, set up GitHub Actions to automate the deployment of a Grafana dashboard using the Foundation SDK and the [`gcx` CLI tool](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/) to:
 
 - Extract the dashboard name from `dashboard.json`
 - Check if the dashboard already exists within our Grafana instance

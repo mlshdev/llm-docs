@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/examples/table-data.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/examples/table-data.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/examples/table-data.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/examples/table-data.md)
 
 # Example of alerting on tabular data
 
@@ -71,7 +71,7 @@ Finally, an alert condition that checks for less than 5% of free space (`$A < 5`
 
 ## Try it with TestData
 
-To test this quickly, you can simulate the table using the [**TestData** data source](https://grafana.com/docs/grafana/v13.2/datasources/testdata/):
+To test this quickly, you can simulate the table using the [**TestData** data source](https://grafana.com/docs/grafana/v13.3/datasources/testdata/):
 
 1. Add the **TestData** data source through the **Connections** menu.
 
@@ -120,4 +120,4 @@ The key difference is the data format:
   To evaluate the alert condition, alert rules **must reduce each series to a single number** using a function like `last()`, `avg()`, or `max()`.
 - **Tabular data** doesn’t require reduction, as each row contains only a single numeric value used to evaluate the alert condition.
 
-For comparison, see the [multi-dimensional time series data example](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/multi-dimensional-alerts/).
+For comparison, see the [multi-dimensional time series data example](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/multi-dimensional-alerts/).

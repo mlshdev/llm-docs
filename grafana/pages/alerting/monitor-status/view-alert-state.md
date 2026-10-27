@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/monitor-status/view-alert-state.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/monitor-status/view-alert-state.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/monitor-status/view-alert-state.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/monitor-status/view-alert-state.md)
 
 # View alert state
 
@@ -8,9 +8,9 @@ An alert rule and its corresponding alert instances can transition through disti
 
 There are three key components that helps us understand the behavior of our alerts:
 
-- [Alert Instance State](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#alert-instance-states): Refers to the state of the individual alert instances.
-- [Alert Rule State](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/alert-rule-state-and-health/): Determined by the "worst state" among its alert instances.
-- [Alert Rule Health](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/alert-rule-state-and-health/): Indicates the status in cases of `Error` or `NoData` events.
+- [Alert Instance State](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#alert-instance-states): Refers to the state of the individual alert instances.
+- [Alert Rule State](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/alert-rule-state-and-health/): Determined by the "worst state" among its alert instances.
+- [Alert Rule Health](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/alert-rule-state-and-health/): Indicates the status in cases of `Error` or `NoData` events.
 
 ## View alert rule and instance states
 
@@ -59,7 +59,7 @@ Debug or audit using the alert rule metadata and view the alert rule annotations
 
 ## View alert state on panels
 
-When an [alert rule is linked to a time series panel](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/link-alert-rules-to-panels/), the time series panel displays the alert state and alert events.
+When an [alert rule is linked to a time series panel](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/link-alert-rules-to-panels/), the time series panel displays the alert state and alert events.
 
 A heart icon near the panel title shows the current alert state:
 
@@ -70,10 +70,10 @@ Colored annotations indicate changes in alert state, such as pending, alerting, 
 
 ![A panel with a firing alert and annotations that display the pending and alerting state changes.](https://grafana.com/media/docs/alerting/panel-displays-alert-state.png)
 
-Additionally, Grafana provides an [alert list panel](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/alert-list/) that you can add to a dashboard to display a list of alerts and their states.
+Additionally, Grafana provides an [alert list panel](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/alert-list/) that you can add to a dashboard to display a list of alerts and their states.
 
 ![Two alert list panels displaying distinct lists of alerts.](https://grafana.com/static/img/docs/alert-list-panel/alert-list-panel.png)
 
-You can configure the alert list panel with various visualization options and filters to control how alerts are displayed. For more details, refer to the [Alert list documentation](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/alert-list/).
+You can configure the alert list panel with various visualization options and filters to control how alerts are displayed. For more details, refer to the [Alert list documentation](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/alert-list/).
 
 [this demo dashboard with alert list panels and linked alert rules in Grafana Play](https://play.grafana.org/d/000000074/alerting?tech=docs\&pg=alerting-demo\&plcmt=callout-play\&cta=alert-demo-dashboard)

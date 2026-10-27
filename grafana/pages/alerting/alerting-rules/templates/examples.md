@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/templates/examples.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/templates/examples.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/templates/examples.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/templates/examples.md)
 
 # Labels and annotations template examples
 
@@ -6,23 +6,23 @@ Templating allows you to add dynamic data from queries to alert labels and annot
 
 This page provides common examples for templating labels and annotations. For more information on templating, refer to:
 
-- [Template annotations and labels](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/)
-- [Annotation and label template reference](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/)
-- [Alerting template language](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/language)
+- [Template annotations and labels](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/)
+- [Annotation and label template reference](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/)
+- [Alerting template language](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/language)
 
 ## Annotation example
 
-[Annotations](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#annotations) add extra details to alert instances and are often used to provide helpful information for identifying the issue and guiding the response.
+[Annotations](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#annotations) add extra details to alert instances and are often used to provide helpful information for identifying the issue and guiding the response.
 
 A common use case for annotations is to display the specific query value or threshold that triggered the alert.
 
-For example, you can display the query value from the [`$values`](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/#values) variable to inform about the CPU value that triggered the alert.
+For example, you can display the query value from the [`$values`](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/#values) variable to inform about the CPU value that triggered the alert.
 
 ```
 CPU usage has exceeded 80% ({{ $values.A.value }}) for the last 5 minutes.
 ```
 
-Alternatively, you can use the [`index()`](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/language/#functions) function to retrieve the query value as follows.
+Alternatively, you can use the [`index()`](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/language/#functions) function to retrieve the query value as follows.
 
 ```
 CPU usage has exceeded 80% ({{ index $values "A" }}) for the last 5 minutes.
@@ -34,7 +34,7 @@ CPU usage has exceeded 80% (81.2345) for the last 5 minutes.
 
 ### Include labels for extra details
 
-To provide additional context, you can include labels from the query using the [`$labels`](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/#labels) variable.
+To provide additional context, you can include labels from the query using the [`$labels`](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/#labels) variable.
 
 For instance, the previous case could also include the affected `instance`.
 
@@ -72,7 +72,7 @@ For range queries, reduce them from a time series to an instant vector using a r
 
 ### Humanize the value of a query
 
-To print the humanized value of an instant query, use the [`humanize`](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/#humanize) function:
+To print the humanized value of an instant query, use the [`humanize`](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/#humanize) function:
 
 ```
 {{ humanize $values.A.Value }}
@@ -88,7 +88,7 @@ Alternatively:
 554.9
 ```
 
-To print the value of an instant query as a percentage, use the [`humanizePercentage`](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/#humanizepercentage) function:
+To print the value of an instant query as a percentage, use the [`humanizePercentage`](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/#humanizepercentage) function:
 
 ```
 {{ humanizePercentage $values.A.Value }}
@@ -100,12 +100,12 @@ To print the value of an instant query as a percentage, use the [`humanizePercen
 
 For additional functions to display or format data, refer to:
 
-- [Annotation and label template functions](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/#functions)
-- [Template language functions](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/language/#functions)
+- [Annotation and label template functions](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/#functions)
+- [Template language functions](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/language/#functions)
 
 ## Label example
 
-[Labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#labels) determine how alerts are routed and managed, ensuring that notifications reach the right teams at the right time. If the labels returned by your queries don’t fully capture the necessary context, you can create a new label and sets its value based on query data.
+[Labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#labels) determine how alerts are routed and managed, ensuring that notifications reach the right teams at the right time. If the labels returned by your queries don’t fully capture the necessary context, you can create a new label and sets its value based on query data.
 
 ### Based on query value
 
@@ -131,7 +131,7 @@ You can then use the `severity` label to control how alerts are handled. For ins
 > **Note:** An alert instance is uniquely identified by its set of labels.
 >
 > - Avoid displaying query values in labels, as this can create numerous alert instances—one for each distinct label set. Instead, use annotations for query values.
-> - If a templated label's value changes, it maps to a different alert instance, and the previous instance is considered **stale**. Learn all the details in this [example using dynamic labels](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/dynamic-labels/).
+> - If a templated label's value changes, it maps to a different alert instance, and the previous instance is considered **stale**. Learn all the details in this [example using dynamic labels](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/dynamic-labels/).
 
 \[//]: <> (
 
@@ -159,7 +159,7 @@ This would print:
 - For `staging-server-1`, the label would be `staging`.
 - All other instances would be labeled `development`.
 
-To make this template more flexible, you can use a regular expression that matches the instance name with the instance name prefix using the [`match()`](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/reference/#match) function:
+To make this template more flexible, you can use a regular expression that matches the instance name with the instance name prefix using the [`match()`](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/reference/#match) function:
 
 ```go
 {{- if match "^prod-server-.*" $labels.instance -}}

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/dashboards-overview/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/dashboards-overview/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/dashboards-overview/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/dashboards-overview/index.md)
 
 # Grafana dashboards overview
 
@@ -46,7 +46,7 @@ The following image shows the Query Editor associated with the Prometheus data s
 
 ## Transformations
 
-When the data format in a visualization doesn’t meet your requirements, you can apply a [transformation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/) that manipulates the data returned by a query.
+When the data format in a visualization doesn’t meet your requirements, you can apply a [transformation](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/) that manipulates the data returned by a query.
 You might not need to transform data when you're first starting out, but they're powerful and worth mentioning.
 
 Transforming data is useful in the following kinds of situations:

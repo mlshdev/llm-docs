@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/tutorials/alerting-get-started-pt3/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/tutorials/alerting-get-started-pt3/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/tutorials/alerting-get-started-pt3/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/tutorials/alerting-get-started-pt3/index.md)
 
 This tutorial is a continuation of the [Get started with Grafana Alerting - Alert routing](http://www.grafana.com/tutorials/alerting-get-started-pt2/) tutorial.
 
@@ -128,7 +128,7 @@ To group alert rule notifications:
 
 ### Notification Policy
 
-Following the above example, [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) are created to route alert instances, which have a region label, to a specific contact point. The goal is to receive one consolidated notification per region. To demonstrate how grouping works, alert notifications for the East Coast team are not grouped. Regarding timing, a specific schedule is defined for that region. This setup overrides the parent's settings to fine-tune the behavior for specific labels (i.e., regions).
+Following the above example, [notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) are created to route alert instances, which have a region label, to a specific contact point. The goal is to receive one consolidated notification per region. To demonstrate how grouping works, alert notifications for the East Coast team are not grouped. Regarding timing, a specific schedule is defined for that region. This setup overrides the parent's settings to fine-tune the behavior for specific labels (i.e., regions).
 
 1. Sign in to Grafana:
    - **Grafana Cloud** users: Log in via Grafana Cloud.

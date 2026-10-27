@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-grafana/enterprise-configuration/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-grafana/enterprise-configuration/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-grafana/enterprise-configuration/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-grafana/enterprise-configuration/index.md)
 
 # Configure Grafana Enterprise
 
-This page describes Grafana Enterprise-specific configuration options that you can specify in a `.ini` configuration file or using environment variables. Refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) for more information about available configuration options.
+This page describes Grafana Enterprise-specific configuration options that you can specify in a `.ini` configuration file or using environment variables. Refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) for more information about available configuration options.
 
 ## \[enterprise]
 
@@ -31,7 +31,7 @@ automatically. Defaults to `true`.
 
 ### license\_validation\_type
 
-When set to `aws`, Grafana will validate its license status with Amazon Web Services (AWS) instead of with Grafana Labs. Only use this setting if you purchased an Enterprise license from AWS Marketplace. Defaults to empty, which means that by default Grafana Enterprise will validate using a license issued by Grafana Labs. For details about licenses issued by AWS, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace](https://grafana.com/docs/grafana/v13.2/administration/enterprise-licensing/activate-aws-marketplace-license/).
+When set to `aws`, Grafana will validate its license status with Amazon Web Services (AWS) instead of with Grafana Labs. Only use this setting if you purchased an Enterprise license from AWS Marketplace. Defaults to empty, which means that by default Grafana Enterprise will validate using a license issued by Grafana Labs. For details about licenses issued by AWS, refer to [Activate a Grafana Enterprise license purchased through AWS Marketplace](https://grafana.com/docs/grafana/v13.3/administration/enterprise-licensing/activate-aws-marketplace-license/).
 
 ## \[white\_labeling]
 
@@ -74,7 +74,7 @@ List the link IDs to use here. Grafana will look for matching link configuration
 
 ## \[usage\_insights.export]
 
-By [exporting usage logs](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/export-logs/), you can directly query them and create dashboards of the information that matters to you most, such as dashboard errors, most active organizations, or your top-10 most-used queries.
+By [exporting usage logs](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/export-logs/), you can directly query them and create dashboards of the information that matters to you most, such as dashboard errors, most active organizations, or your top-10 most-used queries.
 
 ### enabled
 
@@ -150,7 +150,7 @@ Enable or disable the reporting feature. When disabled, no reports are generated
 
 ### rendering\_timeout
 
-Timeout for the following reporting rendering requests: generating PDFs, generating embedded dashboard images for report emails, and generating attached CSV files. Default is 10 seconds (`10s`).
+Timeout for the following reporting rendering requests: generating PDFs, generating embedded dashboard images for report emails, and generating attached CSV files. Default is 30 seconds (`30s`).
 
 ### concurrent\_render\_limit
 
@@ -194,7 +194,7 @@ Allowed domains to receive reports. Use an asterisk (`*`) to allow all domains. 
 
 ## \[auditing]
 
-[Auditing](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/audit-grafana/) allows you to track important changes to your Grafana instance. By default, audit logs are logged to file but the auditing feature also supports sending logs directly to Loki.
+[Auditing](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/audit-grafana/) allows you to track important changes to your Grafana instance. By default, audit logs are logged to file but the auditing feature also supports sending logs directly to Loki.
 
 ### enabled
 
@@ -460,7 +460,7 @@ This value is `true` by default.
 
 > **Note**
 >
-> This setting enables the caching feature, but it does not turn on query caching for any data source. To turn on query caching for a data source, update the setting on the data source configuration page. For more information, refer to the [query caching docs](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#enable-and-configure-query-caching).
+> This setting enables the caching feature, but it does not turn on query caching for any data source. To turn on query caching for a data source, update the setting on the data source configuration page. For more information, refer to the [query caching docs](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#enable-and-configure-query-caching).
 
 ### ttl
 
@@ -543,6 +543,12 @@ The default is `25`.
 > Disabling the maximum is not recommended in production environments.
 
 ## \[caching.redis]
+
+Use these settings to configure Redis as the query caching backend.
+
+> **Note**
+>
+> Redis Sentinel isn't supported for query caching. Use a standalone Redis instance with `url`, or a Redis Cluster with `cluster`.
 
 ### url
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/activate-license-on-ecs/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/activate-license-on-ecs/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/activate-license-on-ecs/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/enterprise-licensing/activate-aws-marketplace-license/activate-license-on-ecs/index.md)
 
 # Activate a Grafana Enterprise license from AWS Marketplace on ECS
 
@@ -30,7 +30,7 @@ Grafana requires that you configure a database to hold dashboards, users, and ot
 ### Before you begin
 
 - Ensure that you have a supported Grafana database available.
-  - For a list of supported databases, refer to [Supported databases](https://grafana.com/docs/grafana/v13.2/setup-grafana/installation/#supported-databases).
+  - For a list of supported databases, refer to [Supported databases](https://grafana.com/docs/grafana/v13.3/setup-grafana/installation/#supported-databases).
   - For information about creating a database, refer to [Creating an Amazon RDS DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateDBInstance.html).
 - Review the information required to connect to the RDS DB instance. For more information, refer to [Connecting to an Amazon RDS DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.Connect.html).
 
@@ -38,7 +38,7 @@ To configure Grafana for high availability:
 
 1. In AWS ECS, use environment variables to update the `database` parameters.
 
-   For a list of database parameters, refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#database).
+   For a list of database parameters, refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#database).
 
 2. Create a revision of the task definition for the ECS Task that runs Grafana Enterprise.
 
@@ -96,4 +96,4 @@ In this task you configure Grafana Enterprise to validate the license with AWS i
 1. To restart Grafana and activate your license, update the service running Grafana to use the latest revision of the task definition that you created.
 2. After you update the service, navigate to your Grafana instance, sign in with Grafana Admin credentials, and navigate to **Administration > General > Stats and license** to validate that your license is active.
 
-For more information about validating that your license is active, refer to [Grafana Enterprise license restrictions](https://grafana.com/docs/grafana/v13.2/administration/enterprise-licensing/#grafana-enterprise-license-restrictions).
+For more information about validating that your license is active, refer to [Grafana Enterprise license restrictions](https://grafana.com/docs/grafana/v13.3/administration/enterprise-licensing/#grafana-enterprise-license-restrictions).

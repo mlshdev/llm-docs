@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/_index.md)
 
 # Introduction to Git Sync
 
@@ -16,9 +16,9 @@ Git Sync is bidirectional, so you can modify provisioned resources both from the
 
 ![Git Sync architecture](https://grafana.com/static/img/docs/ascode/gitsync-architecture.png)
 
-Git Sync is available for any Git provider through a Pure Git repository type, and has specific enhanced integrations for GitHub, GitHub Enterprise, GitLab and Bitbucket. Refer to [Usage and performance limitations](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/usage-limits) for further details, including usage tiers.
+Git Sync is available for any Git provider through a Pure Git repository type, and has specific enhanced integrations for GitHub, GitHub Enterprise, GitLab and Bitbucket. Refer to [Usage and performance limitations](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/usage-limits) for further details, including usage tiers.
 
-Refer to [key concepts](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts) for more information on how Git Sync works.
+Refer to [key concepts](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts) for more information on how Git Sync works.
 
 ### Make changes in the Grafana UI
 
@@ -29,13 +29,13 @@ Whenever you modify a dashboard directly from the UI, you can also commit those 
 Your Grafana instance polls the provisioned Git resources to synchronize. If you made any changes in your synchronized Git repositories, they will be updated in the Grafana database as well. The Grafana UI reads from the database and updates the UI to reflect these changes.
 
 - Without webhooks, Grafana polls for changes at the specified interval. The default polling interval is 60 seconds, and you can change this setting in the Grafana UI.
-- If you enable the [webhooks feature](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/#configure-webhooks-and-image-rendering), repository notifications appear almost immediately.
+- If you enable the [webhooks feature](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/#configure-webhooks-and-image-rendering), repository notifications appear almost immediately.
 
 ## Common use cases
 
 > **Note**
 >
-> Refer to [Git Sync deployment scenarios](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios) for sample scenarios, including architecture and configuration details.
+> Refer to [Git Sync deployment scenarios](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/git-sync-deployment-scenarios) for sample scenarios, including architecture and configuration details.
 
 You can use Git Sync for the following use cases:
 
@@ -74,30 +74,30 @@ If an issue arises, such as a corrupted dashboard, unintended modification, or a
 
 Because dashboards are defined in JSON files, you can enable as-code workflows where the JSON file is an output from Go, TypeScript, or another coding language in the format of a dashboard schema.
 
-To learn more about creating dashboards in a coding language to provision them for Git Sync, refer to the [Foundation SDK](https://grafana.com/docs/grafana/v13.2/observability-as-code/foundation-sdk) documentation.
+To learn more about creating dashboards in a coding language to provision them for Git Sync, refer to the [Foundation SDK](https://grafana.com/docs/grafana/v13.3/observability-as-code/foundation-sdk) documentation.
 
 ## Explore Git Sync
 
 Refer to the following documents to learn about Git Sync in depth:
 
-- [Git Sync Key concepts](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts/): Key concepts to understand how Git Sync works.
-- [Usage and performance limitations](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/usage-limits/): Git Sync usage tiers, compatible Git providers, and known limitations.
-- [Set up Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/): Instructions for setting up Git Sync, so you can provision GitHub repositories for use with Grafana.
-  - [Setup prerequisites](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-before/): Prerequisites for Git Sync, so you can provision GitHub repositories for use with Grafana.
-  - [Set up Git Sync as code](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/): Instructions for setting up Git Sync as code, so you can provision Git repositories for use with Grafana.
-  - [Set up Git Sync with Terraform](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform/): Instructions for setting up Git Sync as code, so you can provision Git repositories for use with Grafana.
-  - [Instantaneous pulling and dashboard previews](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend/): Instructions for extending Git Sync for real-time notification and image rendering.
-- [Add non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/): Export non-provisioned resources from Grafana.
-  - [Cherry-pick and copy individual dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-copy/): Cherry-pick and copy individual dashboards.
-  - [Migrate existing dashboards to Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate/): Migrate existing dashboards to Git Sync.
-- [Work with provisioned repositories in Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/use-git-sync/): Instructions for working with Git Sync to perform common tasks, such as saving dashboards to GitHub and synchronizing changes with Grafana.
-- [Work with provisioned dashboards in Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/provisioned-dashboards/): Update, save, and modify provisioned resources in Grafana using Git Sync.
-- [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-grafana/): Learn about permissions and access control for Git Sync, including required Grafana roles and repository permissions.
-- [Configure Git repository protection](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-git/): Learn how to protect your Git repository and control who can read or write dashboard source code when using Git Sync.
-- [Git Sync deployment scenarios](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/): Learn about common Git Sync deployment patterns and configurations for different organizational needs
-  - [Single instance Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/single-instance/): Synchronize a single Grafana instance with a Git repository
-  - [Git Sync for development and production environments](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/dev-prod/): Use separate Grafana instances for development and production with Git-controlled promotion
-  - [Git Sync with regional replication](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/multi-region/): Synchronize multiple regional Grafana instances from a shared Git location
-  - [Testing sandboxes Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/testing-sandboxes/): Use a shared sandbox branch for short-lived projects and experimentation before promoting changes to the main branch
-  - [Git Sync for high availability environments](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/high-availability/): Run multiple Grafana instances serving traffic simultaneously, synchronized via Git Sync
-  - [Multiple team Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/multi-team/): Use multiple Git repositories with one Grafana instance, one repository per team
+- [Git Sync Key concepts](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts/): Key concepts to understand how Git Sync works.
+- [Usage and performance limitations](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/usage-limits/): Git Sync usage tiers, compatible Git providers, and known limitations.
+- [Set up Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/): Instructions for setting up Git Sync, so you can provision GitHub repositories for use with Grafana.
+  - [Setup prerequisites](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-before/): Prerequisites for Git Sync, so you can provision GitHub repositories for use with Grafana.
+  - [Set up Git Sync as code](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-code/): Instructions for setting up Git Sync as code, so you can provision Git repositories for use with Grafana.
+  - [Set up Git Sync with Terraform](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform/): Instructions for setting up Git Sync as code, so you can provision Git repositories for use with Grafana.
+  - [Instantaneous pulling and dashboard previews](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend/): Instructions for extending Git Sync for real-time notification and image rendering.
+- [Add non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources/): Export non-provisioned resources from Grafana.
+  - [Cherry-pick and copy individual dashboards](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources/dashboards-copy/): Cherry-pick and copy individual dashboards.
+  - [Migrate existing dashboards to Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate/): Migrate existing dashboards to Git Sync.
+- [Work with provisioned repositories in Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/use-git-sync/): Instructions for working with Git Sync to perform common tasks, such as saving dashboards to GitHub and synchronizing changes with Grafana.
+- [Work with provisioned dashboards in Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/provisioned-dashboards/): Update, save, and modify provisioned resources in Grafana using Git Sync.
+- [Git Sync permissions and access control](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-grafana/): Learn about permissions and access control for Git Sync, including required Grafana roles and repository permissions.
+- [Configure Git repository protection](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-git/): Learn how to protect your Git repository and control who can read or write dashboard source code when using Git Sync.
+- [Git Sync deployment scenarios](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/): Learn about common Git Sync deployment patterns and configurations for different organizational needs
+  - [Single instance Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/single-instance/): Synchronize a single Grafana instance with a Git repository
+  - [Git Sync for development and production environments](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/dev-prod/): Use separate Grafana instances for development and production with Git-controlled promotion
+  - [Git Sync with regional replication](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/multi-region/): Synchronize multiple regional Grafana instances from a shared Git location
+  - [Testing sandboxes Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/testing-sandboxes/): Use a shared sandbox branch for short-lived projects and experimentation before promoting changes to the main branch
+  - [Git Sync for high availability environments](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/high-availability/): Run multiple Grafana instances serving traffic simultaneously, synchronized via Git Sync
+  - [Multiple team Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/multi-team/): Use multiple Git repositories with one Grafana instance, one repository per team

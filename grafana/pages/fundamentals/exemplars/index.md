@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/exemplars/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/exemplars/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/exemplars/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/exemplars/index.md)
 
 # Introduction to exemplars
 
@@ -37,7 +37,7 @@ When support for exemplar support is enabled for a Prometheus data source, you c
 ### In Explore
 
 Explore visualizes exemplar traces as highlighted stars alongside metrics data.
-For more information on how Explore visualizes trace data, refer to [Tracing in Explore](https://grafana.com/docs/grafana/v13.2/explore/trace-integration/).
+For more information on how Explore visualizes trace data, refer to [Tracing in Explore](https://grafana.com/docs/grafana/v13.3/explore/trace-integration/).
 
 To examine the details of an exemplar trace:
 
@@ -63,7 +63,7 @@ For more information on how to drill down and analyze the trace and span details
 You can also view exemplar trace details from the Loki logs in Explore.
 Use regular expressions within the Derived fields links for Loki to extract the `traceID` information.
 Now when you expand Loki logs, you can see a `traceID` property under the **Detected fields** section.
-To learn more about how to extract a part of a log message into an internal or external link, refer to [using derived fields in Loki](https://grafana.com/docs/grafana/v13.2/explore/logs-integration/).
+To learn more about how to extract a part of a log message into an internal or external link, refer to [using derived fields in Loki](https://grafana.com/docs/grafana/v13.3/explore/logs-integration/).
 
 To view the details of an exemplar trace:
 

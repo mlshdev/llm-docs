@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/fundamentals/notifications/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/fundamentals/notifications/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/fundamentals/notifications/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/fundamentals/notifications/_index.md)
 
 # Notifications
 
 Choosing how, when, and where to send your alert notifications is an important part of setting up your alerting system. These decisions have a direct impact on your team’s ability to receive the necessary information to resolve issues quickly and minimize alert noise.
 
-Start defining your [contact points](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/contact-points/) to specify how to receive your alert notifications. Then, configure your alert rules to send their alerts to either a contact point or use the [Notification Policy Tree](#notification-policies) to flexibly route alerts to contact points.
+Start defining your [contact points](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/contact-points/) to specify how to receive your alert notifications. Then, configure your alert rules to send their alerts to either a contact point or use the [Notification Policy Tree](#notification-policies) to flexibly route alerts to contact points.
 
 <br/>
 
@@ -14,7 +14,7 @@ Start defining your [contact points](https://grafana.com/docs/grafana/v13.2/aler
 
 ## How it works at a glance
 
-- Grafana alerting periodically [evaluates your alert rules](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/).
+- Grafana alerting periodically [evaluates your alert rules](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/).
 - It triggers notifications for alert instances that are **firing** or **resolved**.
 - You can configure an alert rule to send notifications to a **contact point** or route them through **notification policies** for greater flexibility.
 - To reduce the number of notifications, you can **group related alerts** into a single notification by using label grouping and notification timings.
@@ -23,7 +23,7 @@ Start defining your [contact points](https://grafana.com/docs/grafana/v13.2/aler
 
 ### Contact points
 
-[Contact points](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/contact-points/) contain the configuration for sending alert notifications, specifying destinations like email, Slack, IRM, webhooks, and their notification messages.
+[Contact points](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/contact-points/) contain the configuration for sending alert notifications, specifying destinations like email, Slack, IRM, webhooks, and their notification messages.
 
 A contact point is a list of integrations, each sending a message to a specific destination.
 
@@ -33,7 +33,7 @@ First, create the contact point and test the notifications. Then, configure the 
 
 ### Notification policies
 
-[Notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) are the backbone of a comprehensive alerting system. They provide a flexible and effective method to route alerts to distinct contact points, helping reduce alert noise while ensuring no alerts are missed.
+[Notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) are the backbone of a comprehensive alerting system. They provide a flexible and effective method to route alerts to distinct contact points, helping reduce alert noise while ensuring no alerts are missed.
 
 The notification policy tree is responsible for:
 
@@ -54,7 +54,7 @@ Each notification policy handles specific tasks:
 
 When something fails in our system, our alerting setup can easily trigger hundreds or even thousands of alert instances (notifications). Several alert rules often fail simultaneously. Additionally, each alert rule may generate multiple alert instances.
 
-[Grouping alert notifications](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/) is commonly necessary to avoid bombarding our alert inbox. Grouping combines similar alert instances in a given period into one single notification.
+[Grouping alert notifications](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/) is commonly necessary to avoid bombarding our alert inbox. Grouping combines similar alert instances in a given period into one single notification.
 
 Notification grouping uses:
 
@@ -65,9 +65,9 @@ Notification grouping uses:
 
 Grafana Alerting provides advanced notification capabilities that you’ll find useful as you and your team refine your initial alerting system.
 
-For instance, you can customize notifications with shared [templates](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/templates/) that provide actionable alert information and can be reused for multiple notifications.
+For instance, you can customize notifications with shared [templates](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/templates/) that provide actionable alert information and can be reused for multiple notifications.
 
-Additionally, you can use [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) and [mute timings](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) to pause or suppress notifications without interrupting alert evaluation.
+Additionally, you can use [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/) and [mute timings](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/) to pause or suppress notifications without interrupting alert evaluation.
 
 ## Architecture
 
@@ -78,4 +78,4 @@ Grafana Alerting is built on the Prometheus model, which separates two main comp
 
 ![A diagram with the alert generator and alert manager architecture](https://grafana.com/media/docs/alerting/alerting-alertmanager-architecture.png)
 
-Grafana includes a custom Alertmanager that extends the Prometheus Alertmanager to manage and deliver alert notifications. You can also [configure Grafana Alerting to work with other Alertmanagers](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alertmanager/).
+Grafana includes a custom Alertmanager that extends the Prometheus Alertmanager to manage and deliver alert notifications. You can also [configure Grafana Alerting to work with other Alertmanagers](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alertmanager/).

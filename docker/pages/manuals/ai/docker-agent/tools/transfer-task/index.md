@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/tools/transfer-task/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/tools/transfer-task/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/tools/transfer-task/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/tools/transfer-task/index.md)
 
 # Transfer Task Tool
 
@@ -9,6 +9,10 @@
 The `transfer_task` tool allows an agent to delegate tasks to specialized sub-agents and receive their results. This is the core mechanism for multi-agent orchestration.
 
 **You don't need to add it manually** — it's automatically available when an agent has `sub_agents` configured.
+
+## Idle stream recovery
+
+When a delegated model connection becomes idle before producing any response payload, `transfer_task` retries that stream once and emits a warning. The retry allowance belongs to the complete direct delegated child run: it can be consumed only once across all of that child's turns and fallback models. A nested native `transfer_task` starts its own child run with a fresh allowance rather than inheriting the caller's; background delegation has no allowance. The retry is skipped when cancellation or a run budget blocks it and is never attempted after partial content, reasoning, media, or tool-call data has arrived, preventing duplicate output or tool execution.
 
 ## Configuration
 

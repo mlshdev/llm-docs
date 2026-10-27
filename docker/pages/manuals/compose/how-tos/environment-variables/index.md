@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/_index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/compose/how-tos/environment-variables/_index.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/_index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/compose/how-tos/environment-variables/_index.md)
 
 # Environment variables in Compose
 

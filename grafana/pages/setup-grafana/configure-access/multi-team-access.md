@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/multi-team-access.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/multi-team-access.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/multi-team-access.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/multi-team-access.md)
 
 # Manage multi-team access in a single Grafana instance
 
@@ -35,7 +35,7 @@ Follow these suggested steps to structure, configure, and set permissions to acc
 
 For more information on how to install a Grafana instance:
 
-- If you’re using self-managed Grafana Enterprise, refer to [Configure Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- If you’re using self-managed Grafana Enterprise, refer to [Configure Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 - If you’re using Grafana Cloud, refer to [Your Grafana Cloud stack](https://grafana.com/docs/grafana-cloud/security-and-account-management/cloud-stacks).
 
 > **Note**
@@ -46,17 +46,17 @@ For more information on how to install a Grafana instance:
 
 After you’ve deployed your Grafana instance:
 
-- To follow the example in this doc, create three [Grafana Teams](https://grafana.com/docs/grafana/v13.2/administration/team-management/configure-grafana-teams/#create-a-grafana-team) and add them to the Grafana instance.
-- Determine the [RBAC](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control) strategy for your organization. RBAC extends default Grafana roles, provides more granular access rights, and simplifies how to grant, modify, or revoke user access to Grafana resources, such as users and reports.
-- Assign each user to the [relevant team](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-org-users/). By default [new users](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#auto_assign_org) are granted the **Viewer** role.
-- Assign the [**Admin** role](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/assign-rbac-roles) to Team C so that they can manage all resources in the instance.
+- To follow the example in this doc, create three [Grafana Teams](https://grafana.com/docs/grafana/v13.3/administration/team-management/configure-grafana-teams/#create-a-grafana-team) and add them to the Grafana instance.
+- Determine the [RBAC](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control) strategy for your organization. RBAC extends default Grafana roles, provides more granular access rights, and simplifies how to grant, modify, or revoke user access to Grafana resources, such as users and reports.
+- Assign each user to the [relevant team](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-org-users/). By default [new users](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#auto_assign_org) are granted the **Viewer** role.
+- Assign the [**Admin** role](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/assign-rbac-roles) to Team C so that they can manage all resources in the instance.
 
 ### Design a folder structure to match your access needs
 
-To design a [folder](https://grafana.com/docs/grafana/v13.2/dashboards/manage-dashboards/#create-a-dashboard-folder) setup that helps users quickly understand where to go, what they can access, and what they can manage:
+To design a [folder](https://grafana.com/docs/grafana/v13.3/dashboards/manage-dashboards/#create-a-dashboard-folder) setup that helps users quickly understand where to go, what they can access, and what they can manage:
 
 - Create an “Everyone” folder for shared items that all teams can manage, and grant teams Admin access to that folder.
-- For each team, create a folder that they can manage and grant them the `fixed:teams:read` [fixed role](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/assign-rbac-roles). This means they can share items in their team folder with other teams, to encourage collaboration and learning from each other.
+- For each team, create a folder that they can manage and grant them the `fixed:teams:read` [fixed role](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/assign-rbac-roles). This means they can share items in their team folder with other teams, to encourage collaboration and learning from each other.
 - For Team C, create an “Admins” folder for sensitive content only Admins can access.
 - Optionally, create a personal folder for each team member so that they can work on draft content before moving it into their team folder when ready.
 
@@ -68,9 +68,9 @@ Next, focus on how teams interact with data to decide further access needs.
 
 #### Shared baseline data access
 
-Grant the `datasources:explorer` fixed role to all teams so they can use the [Drilldown apps](https://grafana.com/docs/grafana/v13.2/explore/simplified-exploration/) for easily exploring data sources.
+Grant the `datasources:explorer` fixed role to all teams so they can use the [Drilldown apps](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/) for easily exploring data sources.
 
-However, you may need to protect data in shared resources. For example, all teams can be forwarding metrics to a shared [data source](https://grafana.com/docs/grafana/v13.2/datasources/#add-a-data-source), but not everyone needs to see all of the data. In this case, grant each team query access to the data relevant for them, based on [label based access controls (LBAC) per team](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac). This way, you’ll maintain a central observability pipeline but still preserve data separation.
+However, you may need to protect data in shared resources. For example, all teams can be forwarding metrics to a shared [data source](https://grafana.com/docs/grafana/v13.3/datasources/#add-a-data-source), but not everyone needs to see all of the data. In this case, grant each team query access to the data relevant for them, based on [label based access controls (LBAC) per team](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac). This way, you’ll maintain a central observability pipeline but still preserve data separation.
 
 #### Autonomous team data management
 
@@ -90,7 +90,7 @@ For example, users working in [Frontend Observability](https://grafana.com/docs/
 
 After you've made sure the model is working, you can codify it.
 
-You can add any new users to your Grafana instance with an Identity Provider through [SCIM](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/). Use [role sync](https://grafana.com/docs/grafana/v13.2/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/#configure-role-sync-for-saml) to automatically assign users the correct basic role (Viewer, Editor, or Admin) based on their mapped attributes in the IdP..
+You can add any new users to your Grafana instance with an Identity Provider through [SCIM](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/). Use [role sync](https://grafana.com/docs/grafana/v13.3/configure-access/configure-authentication/saml/configure-saml-team-role-mapping/#configure-role-sync-for-saml) to automatically assign users the correct basic role (Viewer, Editor, or Admin) based on their mapped attributes in the IdP..
 
 You can also use Terraform to provision teams their folders, fixed roles, and shared data source LBAC rules. For example, if you need to add a new team (Team D), you only need to add the new team to Grafana and run the Terraform script, which will automatically set them up to start using Grafana.
 

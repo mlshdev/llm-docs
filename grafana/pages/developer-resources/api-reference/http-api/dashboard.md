@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/dashboard.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/dashboard.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/dashboard.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/dashboard.md)
 
 # Dashboard APIs
 
@@ -6,13 +6,13 @@
 >
 > Available in Grafana 12 and later.
 >
-> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis).
+> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis).
 >
 > **This document may not contain the latest version of the API. For the most up-to-date list of available endpoints, refer to [dashboard.grafana.app/v2](https://play.grafana.org/swagger?api=dashboard.grafana.app-v2) in Swagger.**
 
 ## Requirements
 
-If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Endpoints
 
@@ -31,7 +31,7 @@ If you're running Grafana Enterprise, you'll need to have specific permissions f
 
 Creates a new dashboard.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 
 **Required permissions**
 
@@ -479,7 +479,7 @@ Status Codes:
 
 Updates an existing dashboard via the dashboard uid.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - uid: the unique identifier of the dashboard to update. this will be the *name* in the dashboard response
 
 **Required permissions**
@@ -572,7 +572,7 @@ Status Codes:
 
 Gets a dashboard via the dashboard uid.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - uid: the unique identifier of the dashboard to update. this will be the *name* in the dashboard response
 
 **Required permissions**
@@ -645,7 +645,7 @@ The `GET` response includes an additional `access` section with data such as if 
 
 Lists all dashboards in the given organization. You can control the maximum number of dashboards returned through the `limit` query parameter. You can then use the `continue` token returned to fetch the next page of dashboards.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 
 **Query parameters**:
 
@@ -772,7 +772,7 @@ Status Codes:
 
 ## List dashboard history
 
-You can retrieve the full version history of a dashboard using the List endpoint with specific query parameters. For details and examples, refer to [Resource history HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/resource-history/).
+You can retrieve the full version history of a dashboard using the List endpoint with specific query parameters. For details and examples, refer to [Resource history HTTP API](https://grafana.com/docs/grafana/v13.3/developers/http_api/resource-history/).
 
 ## Delete Dashboard
 
@@ -780,7 +780,7 @@ You can retrieve the full version history of a dashboard using the List endpoint
 
 Deletes a dashboard via the dashboard uid.
 
-- **`namespace`**: To read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- **`namespace`**: To read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - **`uid`**: The unique identifier of the dashboard to update. This is the `metadata.name` field in the dashboard response and *not* the `metadata.uid` field.
 
 **Required permissions**

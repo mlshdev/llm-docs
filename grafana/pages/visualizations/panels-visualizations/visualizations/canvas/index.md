@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/visualizations/canvas/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/visualizations/canvas/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/visualizations/canvas/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/visualizations/canvas/index.md)
 
 # Canvas
 
@@ -13,7 +13,26 @@ With all of these dynamic elements, there's almost no limit to what a canvas can
 
 > **Note**
 >
-> We'd love your feedback on the canvas visualization. Please check out the [open Github issues](https://github.com/grafana/grafana/issues?page=1\&q=is%3Aopen+is%3Aissue+label%3Aarea%2Fpanel%2Fcanvas) and [submit a new feature request](https://github.com/grafana/grafana/issues/new?assignees=\&labels=type%2Ffeature-request,area%2Fpanel%2Fcanvas\&title=Canvas:\&projects=grafana-dataviz\&template=1-feature_requests.md) as needed.
+> We'd love your feedback on the canvas visualization. Please check out the [open GitHub issues](https://github.com/grafana/grafana/issues?page=1\&q=is%3Aopen+is%3Aissue+label%3Aarea%2Fpanel%2Fcanvas) and [submit a new feature request](https://github.com/grafana/grafana/issues/new?assignees=\&labels=type%2Ffeature-request,area%2Fpanel%2Fcanvas\&title=Canvas:\&projects=grafana-dataviz\&template=1-feature_requests.md) as needed.
+
+## Plugin information
+
+Starting with Grafana 13.3, the canvas visualization loads as a standalone plugin by default, instead of as a core plugin. The standalone plugin can get updates between Grafana releases. Existing dashboards that use canvas continue to work.
+
+Grafana bundles the standalone plugin, so you don't need to install it. If you use a slim Docker image, install the plugin from **Administration > Plugins and data > Plugins** first.
+
+In Grafana 13.3 and later 13.x releases, you can go back to the core plugin. To do so, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) and restart Grafana:
+
+```ini
+[plugin.canvas]
+as_external = false
+```
+
+Grafana 14.0 will remove the core plugin. After you upgrade to Grafana 14.0, the standalone plugin will be the only canvas plugin, and the `as_external` setting will have no effect.
+
+> **Note**
+>
+> On Grafana Cloud, the canvas plugin is managed by Grafana and updates automatically.
 
 ## Configure a canvas visualization
 
@@ -205,16 +224,16 @@ The following section describes the configuration options available in the panel
 ### Panel options
 
 In the **Panel options** section of the panel editor pane, set options like the panel title, description, and show/hide rules.
-To learn more, refer to [Configure panel options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-panel-options/).
+To learn more, refer to [Configure panel options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-panel-options/).
 
-| Option                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Title                  | Text entered in this field appears at the top of your panel in the panel editor and in the dashboard. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) or [global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#global-variables).                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Description            | Add a description to a panel to share with users any important information about it, such as its purpose. Text entered in this field appears in a tooltip in the upper-left corner of the panel. Conversely, toggle on the **Use as subtitle** switch to display the description just below the panel title instead. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/) or dashboard-scoped [global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#global-variables) (such as `$__from`, `$__to`, `$__dashboard`, `$__org`, and `$__user`). Query-scoped global variables (such as `$__interval` and `$__interval_ms`) are not available in this field. |
-| Transparent background | Toggle this switch on and off to control whether or not the panel has the same background color as the dashboard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Panel links            | Add [links to the panel](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/#panel-links) to create shortcuts to other dashboards, panels, and external websites. Access panel links by clicking the icon next to the panel title.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Repeat options         | Set whether to repeat the panel for each value in the selected variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Show/hide rules        | Set whether to show or hide panels based on various rules.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Option                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title                  | Text entered in this field appears at the top of your panel in the panel editor and in the dashboard. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) or [built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables).                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Description            | Add a description to a panel to share with users any important information about it, such as its purpose. Text entered in this field appears in a tooltip in the upper-left corner of the panel. Conversely, toggle on the **Use as subtitle** switch to display the description just below the panel title instead. You can use [variables you have defined](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/) or dashboard-scoped [built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables) (such as `$__from`, `$__to`, `$__dashboard`, `$__org`, and `$__user`). Query-scoped global variables (such as `$__interval` and `$__interval_ms`) are not available in this field. |
+| Transparent background | Toggle this switch on and off to control whether or not the panel has the same background color as the dashboard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Panel links            | Add [links to the panel](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/#panel-links) to create shortcuts to other dashboards, panels, and external websites. Access panel links by clicking the icon next to the panel title.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Repeat options         | Set whether to repeat the panel for each value in the selected variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Show/hide rules        | Set whether to show or hide panels based on various rules.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ### Canvas options
 
@@ -358,7 +377,7 @@ Use the following options to set the border of the element:
 
 #### Data links and actions
 
-Canvases support [data links](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/) and actions for all elements.
+Canvases support [data links](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/) and actions for all elements.
 
 If you add multiple data links or actions to an element, you can control the order in which they appear in the element tooltip.
 To do this, click and drag the link or action to the desired position.
@@ -459,7 +478,7 @@ You can style the selected connection using the following options:
 
 ### Standard options
 
-**Standard options** in the panel editor pane let you change how field data is displayed in your visualizations. When you set a standard option, the change is applied to all fields or series. For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+**Standard options** in the panel editor pane let you change how field data is displayed in your visualizations. When you set a standard option, the change is applied to all fields or series. For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/).
 
 | Option        | Description                                                                                                                                       |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -471,7 +490,7 @@ You can style the selected connection using the following options:
 | Color scheme  | Set single or multiple colors for your entire visualization.                                                                                      |
 | No value      | Enter what Grafana should display if the field value is empty or null. The default value is a hyphen (-).                                         |
 
-To learn more, refer to [Configure standard options](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/).
+To learn more, refer to [Configure standard options](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/).
 
 ### Value mappings
 
@@ -488,7 +507,7 @@ For each value mapping, set the following options:
 - **Color** (Optional)
 - **Icon** (Canvas only)
 
-To learn more, refer to [Configure value mappings](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-value-mappings/).
+To learn more, refer to [Configure value mappings](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-value-mappings/).
 
 ### Field overrides
 
@@ -504,7 +523,7 @@ Choose from the following override options:
 | Fields returned by query       | Select all fields returned by a specific query, such as A, B, or C.                                           |
 | Fields with values             | Select all fields returned by your defined reducer condition, such as **Min**, **Max**, **Count**, **Total**. |
 
-To learn more, refer to [Configure field overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+To learn more, refer to [Configure field overrides](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/).
 
 ### Thresholds
 
@@ -517,4 +536,4 @@ For each threshold, set the following options:
 | Value           | Set the value for each threshold.            |
 | Thresholds mode | Choose from **Absolute** and **Percentage**. |
 
-To learn more, refer to [Configure thresholds](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-thresholds/).
+To learn more, refer to [Configure thresholds](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-thresholds/).

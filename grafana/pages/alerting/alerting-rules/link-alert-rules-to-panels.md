@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/link-alert-rules-to-panels.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/link-alert-rules-to-panels.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/link-alert-rules-to-panels.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/link-alert-rules-to-panels.md)
 
 # Create and link alert rules to panels
 
@@ -8,7 +8,7 @@ Grafana allows you to link an alert rule to a dashboard panel. This can help you
 - Visualize the alert state directly from dashboards.
 - Include a screenshot of the panel in notification messages.
 
-An alert rule is linked to a panel by setting the [`__dashboardUid__` and `__panelId__` annotations](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#annotations). Both annotations must be set together.
+An alert rule is linked to a panel by setting the [`__dashboardUid__` and `__panelId__` annotations](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#annotations). Both annotations must be set together.
 
 ## Link alert rules to panels
 
@@ -19,9 +19,9 @@ When configuring the alert rule, you can set the dashboard and panel annotations
 3. Select an existing dashboard, then choose a panel from the selected dashboard.
 4. Complete the alert rule configuration and click **Save rule** to initiate the alert rule.
 
-You can then [view the alert state on the panel](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state/#view-alert-state-on-panels).
+You can then [view the alert state on the panel](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state/#view-alert-state-on-panels).
 
-By default, notification messages include a link to the dashboard panel. Additionally, you can [enable displaying panel screenshots in notifications](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/images-in-notifications/).
+By default, notification messages include a link to the dashboard panel. Additionally, you can [enable displaying panel screenshots in notifications](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/images-in-notifications/).
 
 ![](https://grafana.com/media/docs/alerting/panel-displays-alert-state.png)
 
@@ -39,9 +39,9 @@ To streamline alert creation, you can create an alert rule directly from a panel
    - Sets the alert rule query using the panel query.
 5. Complete the alert rule configuration and click **Save rule** to initiate the alert rule.
 
-You can then [view the alert state on the panel](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state/#view-alert-state-on-panels).
+You can then [view the alert state on the panel](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state/#view-alert-state-on-panels).
 
-By default, notification messages include a link to the dashboard panel. Additionally, you can [enable displaying panel screenshots in notifications](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/images-in-notifications/).
+By default, notification messages include a link to the dashboard panel. Additionally, you can [enable displaying panel screenshots in notifications](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/images-in-notifications/).
 
 > **Note**
 >
@@ -49,7 +49,7 @@ By default, notification messages include a link to the dashboard panel. Additio
 
 ## Access linked alert rules from panels
 
-This option is available only in [time series panels](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/time-series/). To access alert rules associated to a time series panel, complete the following steps.
+This option is available only in [time series panels](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/time-series/). To access alert rules associated to a time series panel, complete the following steps.
 
 1. Hover over the top-right corner of the panel and click the panel menu icon.
 2. Click **Edit**.

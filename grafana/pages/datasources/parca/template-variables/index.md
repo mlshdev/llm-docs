@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/parca/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/parca/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/parca/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/parca/template-variables/index.md)
 
 # Parca template variables
 
@@ -8,7 +8,7 @@
 
 Instead of hard-coding label values in your profiling queries, you can use template variables to create dynamic, reusable dashboards. Variables appear as drop-down menus at the top of the dashboard, making it easy to switch between services, instances, or environments without editing queries.
 
-For an introduction to template variables, refer to the [Variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) documentation.
+For an introduction to template variables, refer to the [Variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) documentation.
 
 ## Supported variable types
 
@@ -104,9 +104,9 @@ Parca template variable support has the following limitations:
 
 - **No query variable support:** You can't use Parca as a data source for populating variable options. Define values manually with custom variables or use another data source.
 - **Label selector only:** Variables are interpolated in the label selector field. The profile type drop-down doesn't support variables.
-- **No free-form filters:** Parca doesn't support free-form [filters](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/).
+- **No free-form filters:** Parca doesn't support free-form [filters](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/).
 
 ## Next steps
 
-- [Build queries](https://grafana.com/docs/grafana/v13.2/datasources/parca/query-editor/) using your template variables.
-- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.2/datasources/parca/troubleshooting/) if queries aren't returning expected data.
+- [Build queries](https://grafana.com/docs/grafana/v13.3/datasources/parca/query-editor/) using your template variables.
+- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.3/datasources/parca/troubleshooting/) if queries aren't returning expected data.

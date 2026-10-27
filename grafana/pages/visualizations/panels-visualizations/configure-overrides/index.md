@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/configure-overrides/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/configure-overrides/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/configure-overrides/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/configure-overrides/index.md)
 
 # Configure field overrides
 
@@ -16,22 +16,22 @@ After you've set them, your overrides appear in both the **All** and **Overrides
 
 You can configure field overrides for the following visualizations:
 
-- [Bar chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-chart/)
-- [Bar gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-gauge/)
-- [Candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/)
-- [Canvas](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/canvas/)
-- [Gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/gauge/)
-- [Geomap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/geomap/)
-- [Heatmap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/heatmap/)
-- [Histogram](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/histogram/)
-- [Pie chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/pie-chart/)
-- [Stat](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/stat/)
-- [State timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/)
-- [Status history](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/status-history/)
-- [Table](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/)
-- [Time series](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/)
-- [Trend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/trend/)
-- [XY chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/xy-chart/)
+- [Bar chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-chart/)
+- [Bar gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-gauge/)
+- [Candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/)
+- [Canvas](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/canvas/)
+- [Gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/gauge/)
+- [Geomap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/geomap/)
+- [Heatmap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/heatmap/)
+- [Histogram](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/histogram/)
+- [Pie chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/pie-chart/)
+- [Stat](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/stat/)
+- [State timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/)
+- [Status history](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/status-history/)
+- [Table](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/)
+- [Time series](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/)
+- [Trend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/trend/)
+- [XY chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/xy-chart/)
 
 ## Override rules
 
@@ -43,7 +43,7 @@ Select a field from the list of all available fields. Properties you add to this
 
 ### Fields with name matching regex
 
-Specify fields to override with a regular expression. Properties you add to this type of rule are applied to all fields where the field name matches the regular expression. This override doesn't rename the field; to do this, use the [Rename by regex transformation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#rename-by-regex).
+Specify fields to override with a regular expression. Properties you add to this type of rule are applied to all fields where the field name matches the regular expression. This override doesn't rename the field; to do this, use the [Rename by regex transformation](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/#rename-by-regex).
 
 ### Fields with type
 

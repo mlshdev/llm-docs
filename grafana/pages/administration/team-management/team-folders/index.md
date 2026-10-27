@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/team-management/team-folders/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/team-management/team-folders/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/team-management/team-folders/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/team-management/team-folders/index.md)
 
 # Manage team folders
 
@@ -10,15 +10,8 @@ Team folders is in public preview.
 
 Before you begin, ensure you have the following:
 
-- The `foldersAppPlatformAPI` feature toggle enabled.
 - Permission to create root-level folders, or permission to create subfolders in the parent folder you want to use.
 - Permission to manage folder permissions and read teams if you want to assign or change a folder owner in the UI.
-
-## Enable team folders
-
-To enable team folders in Grafana OSS or Grafana Enterprise, the `foldersAppPlatformAPI` feature toggle must be enabled.
-
-For more information about feature toggles, refer to [Configure feature toggles](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
 
 ## Create a team folder when you create a team
 
@@ -36,7 +29,7 @@ Grafana creates a folder with the same name as the team and assigns that team as
 
 ![New team page with the Team folder section visible and Auto-create a team folder selected.](https://grafana.com/media/whats-new/team-folders/2-new-team-detail.png)
 
-For more information about creating teams, refer to [Configure Grafana Teams](https://grafana.com/docs/grafana/v13.2/administration/team-management/configure-grafana-teams/).
+For more information about creating teams, refer to [Configure Grafana Teams](https://grafana.com/docs/grafana/v13.3/administration/team-management/configure-grafana-teams/).
 
 ## Create or assign a team folder from Dashboards
 
@@ -97,7 +90,7 @@ Each team page includes a **Folders** tab that lists all the folders owned by th
 
 Folder ownership does not replace folder permissions. Team folders use the same permission model as any other folder.
 
-If team members need access to the folder, configure folder permissions for the team or for the users, roles, or service accounts that should use it. For more information, refer to [Manage dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-dashboard-permissions/).
+If team members need access to the folder, configure folder permissions for the team or for the users, roles, or service accounts that should use it. For more information, refer to [Manage dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-dashboard-permissions/).
 
 ## Limitations
 
@@ -108,5 +101,5 @@ Team folders currently have the following limitations:
 
 ## Next steps
 
-- Refer to [Manage dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/manage-dashboards/) for the rest of the dashboards management workflow.
-- Refer to [Manage dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-dashboard-permissions/) to control access to team folders.
+- Refer to [Manage dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/manage-dashboards/) for the rest of the dashboards management workflow.
+- Refer to [Manage dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-dashboard-permissions/) to control access to team folders.

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/template-notifications/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/template-notifications/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/template-notifications/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/template-notifications/_index.md)
 
 # Template notifications
 
@@ -17,7 +17,9 @@ However, there are limitations. You cannot:
 - Modify Visual Appearance: Add HTML or CSS to email notifications for visual changes. Alter the design of notifications in messaging services like Slack or Microsoft Teams, such as adding custom blocks or adaptive cards.
 - Manage Media and Data: Customize the data structure or format passed to the templates, like adding new JSON fields or sending XML data for webhooks. Modify HTTP headers in webhooks beyond those defined in the configuration, or adjust the number, size, or placement of images.
 
-Here's an [example](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/examples/) that displays the summary and description annotations for each alert in the notification:
+In Grafana Cloud, you can create up to 30 notification templates by default. Template changes can take 1 to 2 minutes to take effect while a background job synchronizes them with storage.
+
+Here's an [example](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/examples/) that displays the summary and description annotations for each alert in the notification:
 
 ```go
 {{ define "custom.alerts" -}}
@@ -44,14 +46,14 @@ The notification message would look like this:
 
   Summary: The web server web1 has been responding to 5% of HTTP requests with 5xx errors for the last 5 minutes.
   Status: resolved
-  Description: This alert fires when a web server responds with more 5xx errors than is expected. This could be an issue with the web server or a backend service.
+  Description: This alert fires when a web server responds with more 5xx errors than expected. This could be an issue with the web server or a backend service.
 ```
 
 > **Note**
 >
 > Avoid adding extra information about alert instances in notification templates, as this information will only be visible in the notification message.
 >
-> Instead, you should [use annotations or labels](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) to add information directly to the alert, ensuring it's also visible in the alert state and alert history within Grafana. You can then print the new alert annotation or label in notification templates.
+> Instead, you should [use annotations or labels](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/) to add information directly to the alert, ensuring it's also visible in the alert state and alert history within Grafana. You can then print the new alert annotation or label in notification templates.
 
 #### Select a notification template for a contact point
 
@@ -87,9 +89,9 @@ To use AI to create your template, follow these steps:
 
 For further details on how to write notification templates, refer to:
 
-- [Select, create, and preview a notification template](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/manage-notification-templates/)
-- [Notification template reference](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/reference/)
-- [Notification template examples](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/examples/)
+- [Select, create, and preview a notification template](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/manage-notification-templates/)
+- [Notification template reference](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/reference/)
+- [Notification template examples](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/examples/)
 
 > **Tip**
 >

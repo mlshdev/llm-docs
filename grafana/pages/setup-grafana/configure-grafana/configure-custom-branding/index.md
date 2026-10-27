@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-grafana/configure-custom-branding/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-grafana/configure-custom-branding/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-grafana/configure-custom-branding/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-grafana/configure-custom-branding/index.md)
 
 # Configure custom branding
 
@@ -6,7 +6,7 @@ Custom branding enables you to replace the Grafana Labs brand and logo with your
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and Grafana Cloud paid accounts. Grafana Cloud Free plans support login title and footer link customization only. For Cloud users, click **Open a Support Ticket** from the Cloud Portal to create a ticket to configure custom branding.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and Grafana Cloud paid accounts. Grafana Cloud Free plans support login title and footer link customization only. For Cloud users, click **Open a Support Ticket** from the Cloud Portal to create a ticket to configure custom branding.
 
 The `grafana.ini` file includes Grafana Enterprise custom branding. As with all configuration options, you can use environment variables to set custom branding.
 
@@ -60,7 +60,7 @@ You can also customize the **loading logo** (`loading_logo`), which appears duri
 
 > You will have to host your logo and other images used by the custom branding feature separately. Make sure Grafana can access the URL where the assets are stored.
 
-The configuration file in Grafana Enterprise contains the following options. For more information about configuring Grafana, refer to [Configure Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+The configuration file in Grafana Enterprise contains the following options. For more information about configuring Grafana, refer to [Configure Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 
 ```ini
 # Enterprise only

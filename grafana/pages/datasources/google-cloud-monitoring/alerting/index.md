@@ -1,16 +1,16 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/google-cloud-monitoring/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/google-cloud-monitoring/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/google-cloud-monitoring/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/google-cloud-monitoring/alerting/index.md)
 
 # Google Cloud Monitoring alerting
 
-The Google Cloud Monitoring data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/), allowing you to create alert rules based on GCP metrics and Service Level Objectives (SLOs). You can monitor your Google Cloud environment and receive notifications when specific conditions are met.
+The Google Cloud Monitoring data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/), allowing you to create alert rules based on GCP metrics and Service Level Objectives (SLOs). You can monitor your Google Cloud environment and receive notifications when specific conditions are met.
 
 ## Before you begin
 
 Before you create alert rules, ensure the following:
 
 - You have appropriate permissions to create alert rules in Grafana.
-- Your Google Cloud Monitoring data source is configured and working correctly. Refer to [Configure the data source](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/configure/).
-- You're familiar with [Grafana Alerting concepts](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/).
+- Your Google Cloud Monitoring data source is configured and working correctly. Refer to [Configure the data source](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/configure/).
+- You're familiar with [Grafana Alerting concepts](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/).
 
 ## Supported query types for alerting
 
@@ -55,7 +55,7 @@ To create an alert rule using Google Cloud Monitoring data:
 6. Add labels and annotations to provide context for notifications.
 7. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example: VM CPU usage alert
 
@@ -156,7 +156,7 @@ Always verify your query returns expected data before creating an alert:
 
 ## Recording rules
 
-The Google Cloud Monitoring data source supports [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/). Recording rules periodically pre-compute frequently used or computationally expensive queries, saving the results as a new time series metric.
+The Google Cloud Monitoring data source supports [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/). Recording rules periodically pre-compute frequently used or computationally expensive queries, saving the results as a new time series metric.
 
 Use recording rules to:
 
@@ -168,7 +168,7 @@ Use recording rules to:
 >
 > Grafana-managed recording rules write results to a Prometheus-compatible database (such as Grafana Mimir or the Grafana Cloud managed Prometheus). You must configure a target data source for storing the recorded metrics.
 
-For instructions on creating recording rules, refer to [Create recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/).
+For instructions on creating recording rules, refer to [Create recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/).
 
 ## Troubleshooting
 
@@ -196,11 +196,11 @@ If you see authentication errors when alerts evaluate:
 - Simplify complex MQL queries.
 - Add filters to narrow the result set.
 
-For additional troubleshooting help, refer to [Troubleshoot Google Cloud Monitoring](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/troubleshooting/).
+For additional troubleshooting help, refer to [Troubleshoot Google Cloud Monitoring](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/troubleshooting/).
 
 ## Additional resources
 
-- [Grafana Alerting documentation](https://grafana.com/docs/grafana/v13.2/alerting/)
-- [Create alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/)
-- [Create recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/)
-- [Google Cloud Monitoring query editor](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/query-editor/)
+- [Grafana Alerting documentation](https://grafana.com/docs/grafana/v13.3/alerting/)
+- [Create alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/)
+- [Create recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/)
+- [Google Cloud Monitoring query editor](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/query-editor/)

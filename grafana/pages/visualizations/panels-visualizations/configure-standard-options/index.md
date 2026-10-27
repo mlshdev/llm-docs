@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/configure-standard-options/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/configure-standard-options/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/configure-standard-options/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/configure-standard-options/index.md)
 
 # Configure standard options
 
@@ -6,27 +6,27 @@
 
 When you set a standard option, the change is applied to all fields or series. For example, if you set the **Unit** option to **Percentage**, all fields with numeric values are displayed as percentages.
 
-For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+For more granular control over the display of fields, refer to [Configure overrides](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/).
 
 ## Supported visualizations
 
 You can configure standard options for the following visualizations:
 
-- [Bar chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-chart/)
-- [Bar gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-gauge/)
-- [Candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/)
-- [Canvas](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/canvas/)
-- [Gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/gauge/)
-- [Geomap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/geomap/)
-- [Histogram](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/histogram/)
-- [Pie chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/pie-chart/)
-- [Stat](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/stat/)
-- [State timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/)
-- [Status history](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/status-history/)
-- [Table](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/)
-- [Time series](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/)
-- [Trend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/trend/)
-- [XY chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/xy-chart/)
+- [Bar chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-chart/)
+- [Bar gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-gauge/)
+- [Candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/)
+- [Canvas](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/canvas/)
+- [Gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/gauge/)
+- [Geomap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/geomap/)
+- [Histogram](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/histogram/)
+- [Pie chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/pie-chart/)
+- [Stat](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/stat/)
+- [State timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/)
+- [Status history](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/status-history/)
+- [Table](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/)
+- [Time series](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/)
+- [Trend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/trend/)
+- [XY chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/xy-chart/)
 
 ## Standard options
 
@@ -115,7 +115,7 @@ To display all decimals, set the unit to **String**.
 
 ### Display name
 
-Set the display title of all fields. You can use [variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) in the field title.
+Set the display title of all fields. You can use [variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) in the field title.
 
 When multiple stats, fields, or series are displayed, this field controls the title in each stat. You can use expressions like `${__field.name}` to use only the series name or the field name in the title.
 
@@ -143,7 +143,7 @@ Select one of the following schemes:
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Single color                          | Specifies a single color.                                                                                                                                                                                                                                                                                                                                                                                   |
 | Shades of a color                     | Grafana selects shades of a single color.                                                                                                                                                                                                                                                                                                                                                                   |
-| From thresholds (by value)            | The color is taken from the matching [threshold](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-thresholds/). For some visualizations, you also need to choose if the color is set by the **Last**, **Min**, or **Max** value of the field or series.                                                                                                                               |
+| From thresholds (by value)            | The color is taken from the matching [threshold](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-thresholds/). For some visualizations, you also need to choose if the color is set by the **Last**, **Min**, or **Max** value of the field or series.                                                                                                                               |
 | Classic palette                       | Grafana automatically assigns a color for each field or series based on its order. If the order of a field changes in your query, the color also changes. Useful for graphs, pie charts, and other categorical data visualizations.                                                                                                                                                                         |
 | Classic palette (by series name)      | Grafana automatically assigns colors based on the name of the series. Useful when the series names to be visualized can change based on the available data.                                                                                                                                                                                                                                                 |
 | Multiple continuous colors (by value) | Grafana automatically assigns colors based on the percentage of a value relative to the min and the max of the field or series. For some visualizations, you also need to choose if the color is set by the **Last**, **Min**, or **Max** value of the field or series. Select from: **Green-Yellow-Red**, **Red-Yellow-Green**, **Blue-Yellow-Red**, **Yellow-Red**, **Blue-Purple**, and **Yellow-Blue**. |

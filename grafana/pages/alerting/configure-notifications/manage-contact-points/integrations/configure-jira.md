@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-jira.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-jira.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-jira.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-jira.md)
 
 # Configure Jira for Alerting
 
@@ -23,13 +23,13 @@ To create a contact point with a Jira integration, complete the following steps:
 5. Set up the required [settings](#required-settings) for your Jira configuration.
 6. Click **Save contact point**.
 
-For more details on contact points, including how to test them and enable notifications, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/).
+For more details on contact points, including how to test them and enable notifications, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/).
 
 ### Required Settings
 
 | Key                 | Description                                                                                                                                                                                                                                                                                          |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| URL                 | The URL of the REST API of your Jira instance. Supported versions: `2` and `3` (e.g., `https://your-domain.atlassian.net/rest/api/3`). This field is [protected](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/) from modification in Grafana Cloud. |
+| URL                 | The URL of the REST API of your Jira instance. Supported versions: `2` and `3` (e.g., `https://your-domain.atlassian.net/rest/api/3`). This field is [protected](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/) from modification in Grafana Cloud. |
 | Basic Auth User     | Username for authentication. For Jira Cloud, use your email address.                                                                                                                                                                                                                                 |
 | Basic Auth Password | Password or personal token. For Jira Cloud, you need to obtain a personal token [here](https://id.atlassian.com/manage-profile/security/api-tokens) and use it as the password.                                                                                                                      |
 | API Token           | An alternative to basic authentication, a bearer token is used to authorize the API requests. See [Jira documentation](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html) for more information.                                                               |
@@ -49,4 +49,10 @@ For more details on contact points, including how to test them and enable notifi
 | Reopen Duration         | The time duration (in minutes) to control whether to reopen an issue that was closed within this duration or create a new one. If not specified, the most recent issue that matches the deduplication key will be updated and reopened (if reopen transition is specified).                                           |
 | "Won't fix" Transition  | Specify a resolution status that should be ignored when searching for existing issues. For example, issues with this resolution will not be reopened or updated by subsequent alerts.                                                                                                                                 |
 | Deduplication Key Field | Custom field to store the deduplication key. Must be a text field. <br> If not specified, the deduplication key is added to labels in the format of `ALERT(hash sum)`. See [Jira documentation](https://support.atlassian.com/jira-cloud-administration/docs/create-a-custom-field/) for how to create custom fields. |
-| Fields                  | Allows to configure custom fields of Jira issue. The field name should be of the format like `customfield_10001`.                                                                                                                                                                                                     |
+| Fields                  | Extra Jira issue fields, including standard and custom fields. For custom fields, use `customfield_<FIELD_ID>`, where `<FIELD_ID>` is the numeric field ID in your Jira instance. For JSON parsing and templating behavior, refer to [Custom field data](#custom-field-data).                                         |
+
+### Custom field data
+
+Grafana attempts to parse each string field value as JSON when it loads the contact point. Grafana sends values parsed as objects or arrays as structured JSON, such as `{"value": "High"}`, but doesn't evaluate templates inside them. Grafana evaluates values that remain strings as notification templates, but doesn't parse their rendered output as JSON. Templates therefore can't generate dynamic object or array field values, such as those required by Jira select-list fields.
+
+To set different structured values for different alerts, create a Jira contact point for each static value and route alerts with [notification policies](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-notification-policy/). Or use a [Webhook contact point with a custom payload](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/webhook-notifier/#custom-payload) to send structured JSON that includes alert data.

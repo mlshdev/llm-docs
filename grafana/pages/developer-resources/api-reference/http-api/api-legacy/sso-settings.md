@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md)
 
 # SSO Settings API
 
@@ -8,18 +8,22 @@
 >
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
-> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 > If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 The API can be used to create, update, delete, get, and list SSO Settings for OAuth2 and SAML.
 
 The settings managed by this API are stored in the database and override
-[settings from other sources](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/)
+[settings from other sources](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/)
 (arguments, environment variables, settings file, etc).
 Therefore, every time settings for a specific provider are removed or reset to the default settings at runtime,
 the settings are inherited from the other sources in the reverse order of precedence
 (`arguments > environment variables > settings file`).
+
+The `source` field on the `GET` endpoints is `database` when this API stores settings for the provider, and `system` otherwise. Stored settings keep overriding the configuration file until you remove them, which most often surprises people during credential rotation.
+
+Use `DELETE` to discard a provider's stored settings. `PUT` replaces the whole record, so keys you leave out are deleted, and `PATCH` can't remove a key. A `system` source doesn't rule out a value stored by [settings updates at runtime](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/settings-updates-at-runtime/); refer to [Check for stored settings](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/settings-updates-at-runtime/#check-for-stored-settings).
 
 ## List SSO Settings
 

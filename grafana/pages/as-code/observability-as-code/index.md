@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/_index.md)
 
 # Observability as Code
 
@@ -14,18 +14,18 @@ Historically, managing Grafana as code involved various community and Grafana La
 
 - This approach requires handling HTTP requests and responses but provides complete control over resource management.
 - `gcx`, Git Sync, and the Foundation SDK are all built on top of these APIs.
-- To understand Dashboard Schemas accepted by the APIs, refer to the [JSON models documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/view-dashboard-json-model/).
+- To understand Dashboard Schemas accepted by the APIs, refer to the [JSON models documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/view-dashboard-json-model/).
 
 ## Explore
 
-- [Grafana CLI](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/): Grafana CLI (`gcx`) is a command-line tool designed to simplify interaction with Grafana instances using the new REST APIs. You can authenticate, manage multiple environments, and perform administrative tasks from the terminal. It's suitable for CI/CD pipelines, local development, or free-form tasks.
-- [Foundation SDK](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/foundation-sdk/): The Grafana Foundation SDK is a set of tools, types, and libraries that let you define Grafana dashboards and resources using familiar programming languages like Go, TypeScript, Python, Java, and PHP. Use it in conjunction with `gcx` to push your programmatically generated resources.
-- [Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/): Git Sync lets you store your dashboard files in a GitHub repository and synchronize those changes with your Grafana instance, enabling version control, branching, and pull requests directly from Grafana.
-- [On-prem file provisioning](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources/): File provisioning in Grafana lets you include resources, including folders and dashboard JSON files, that are stored in a local file system.
+- [Grafana CLI](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/): Grafana CLI (`gcx`) is a command-line tool designed to simplify interaction with Grafana instances using the new REST APIs. You can authenticate, manage multiple environments, and perform administrative tasks from the terminal. It's suitable for CI/CD pipelines, local development, or free-form tasks.
+- [Foundation SDK](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/foundation-sdk/): The Grafana Foundation SDK is a set of tools, types, and libraries that let you define Grafana dashboards and resources using familiar programming languages like Go, TypeScript, Python, Java, and PHP. Use it in conjunction with `gcx` to push your programmatically generated resources.
+- [Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/): Git Sync lets you store your dashboard files in a GitHub repository and synchronize those changes with your Grafana instance, enabling version control, branching, and pull requests directly from Grafana.
+- [On-prem file provisioning](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources/): File provisioning in Grafana lets you include resources, including folders and dashboard JSON files, that are stored in a local file system.
 
 ## Additional Observability as code tools
 
-If you're already using established [Infrastructure as code](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/) or other configuration management tools, Grafana offers integrations to manage resources within your existing workflows.
+If you're already using established [Infrastructure as code](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/) or other configuration management tools, Grafana offers integrations to manage resources within your existing workflows.
 
 - [Terraform](https://grafana.com/docs/grafana-cloud/as-code/infrastructure-as-code/terraform/)
   - Use the Grafana Terraform provider to manage dashboards, alerts, and more.
@@ -38,4 +38,4 @@ If you're already using established [Infrastructure as code](https://grafana.com
   - Manage dashboards, folders, and data sources via Kubernetes Custom Resources.
   - Integrate with GitOps workflows for seamless version control and deployment.
 - [Crossplane](https://github.com/grafana/crossplane-provider-grafana) lets you manage Grafana resources using Kubernetes manifests with the Grafana Crossplane provider.
-- [Grafonnet](https://github.com/grafana/grafonnet) is a Jsonnet library for generating Grafana dashboard JSON definitions programmatically. **Grafonnet is not officially supported by Grafana. Instead, use the [Foundation SDK](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/foundation-sdk/)** to create dashboards as code.
+- [Grafonnet](https://github.com/grafana/grafonnet) is a Jsonnet library for generating Grafana dashboard JSON definitions programmatically. **Grafonnet is not officially supported by Grafana. Instead, use the [Foundation SDK](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/foundation-sdk/)** to create dashboards as code.

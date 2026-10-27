@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/parca/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/parca/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/parca/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/parca/_index.md)
 
 # Parca data source
 
@@ -6,15 +6,15 @@
 >
 > This plugin is deprecated and will only receive critical security updates. Support will end on January 2, 2027.
 
-Parca is a continuous profiling database for analysis of CPU and memory usage, down to the line number and throughout time. Grafana ships with built-in support for Parca, so you can add it as a data source and start querying your profiles in [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
+Parca is a continuous profiling database for analysis of CPU and memory usage, down to the line number and throughout time. Grafana ships with built-in support for Parca, so you can add it as a data source and start querying your profiles in [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
 
 Refer to the [Parca documentation](https://www.parca.dev/docs) to learn about continuous profiling and how to instrument your applications.
 
 To use Parca profiling data in Grafana, you should:
 
 1. [Set up Parca](https://www.parca.dev/docs/quickstart) to scrape profiles from your applications.
-2. [Configure the Parca data source](https://grafana.com/docs/grafana/v13.2/datasources/parca/configure/) in Grafana.
-3. [Query your profiling data](https://grafana.com/docs/grafana/v13.2/datasources/parca/query-editor/) using the query editor in Explore.
+2. [Configure the Parca data source](https://grafana.com/docs/grafana/v13.3/datasources/parca/configure/) in Grafana.
+3. [Query your profiling data](https://grafana.com/docs/grafana/v13.3/datasources/parca/query-editor/) using the query editor in Explore.
 
 ## Supported Parca versions
 
@@ -33,18 +33,18 @@ This data source supports Parca v0.19 and later.
 
 The following pages help you get started with the Parca data source:
 
-- [Configure the Parca data source](https://grafana.com/docs/grafana/v13.2/datasources/parca/configure/)
-- [Parca query editor](https://grafana.com/docs/grafana/v13.2/datasources/parca/query-editor/)
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/parca/template-variables/)
-- [Troubleshoot Parca data source issues](https://grafana.com/docs/grafana/v13.2/datasources/parca/troubleshooting/)
+- [Configure the Parca data source](https://grafana.com/docs/grafana/v13.3/datasources/parca/configure/)
+- [Parca query editor](https://grafana.com/docs/grafana/v13.3/datasources/parca/query-editor/)
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/parca/template-variables/)
+- [Troubleshoot Parca data source issues](https://grafana.com/docs/grafana/v13.3/datasources/parca/troubleshooting/)
 
 ## Explore profiling data
 
-[Explore](https://grafana.com/docs/grafana/v13.2/explore/) is the primary way to interact with Parca data in Grafana. Use Explore to query profiles and metrics without building a dashboard, and to select the **Both** query type to view flame graphs and time-series data side by side.
+[Explore](https://grafana.com/docs/grafana/v13.3/explore/) is the primary way to interact with Parca data in Grafana. Use Explore to query profiles and metrics without building a dashboard, and to select the **Both** query type to view flame graphs and time-series data side by side.
 
 ## Integrate profiles into dashboards
 
-Using the Parca data source, you can embed profiling data in your dashboards alongside other signals like logs and metrics. For example, you can place a [flame graph panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/) showing CPU profiles next to a metrics panel tracking request latency to correlate performance bottlenecks with application behavior.
+Using the Parca data source, you can embed profiling data in your dashboards alongside other signals like logs and metrics. For example, you can place a [flame graph panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/) showing CPU profiles next to a metrics panel tracking request latency to correlate performance bottlenecks with application behavior.
 
 ## Plugin updates
 

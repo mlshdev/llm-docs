@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/plugin-management/plugin-sign.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/plugin-management/plugin-sign.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/plugin-management/plugin-sign.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/plugin-management/plugin-sign.md)
 
 # Plugin signatures
 
@@ -44,7 +44,7 @@ All plugins are signed under a *signature level*. The signature level determines
 >
 > Unsigned plugins are not supported in Grafana Cloud.
 
-We strongly recommend that you don't run unsigned plugins in your Grafana instance. However, if you're aware of the risks and you still want to load an unsigned plugin, refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#allow_loading_unsigned_plugins).
+We strongly recommend that you don't run unsigned plugins in your Grafana instance. However, if you're aware of the risks and you still want to load an unsigned plugin, refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#allow_loading_unsigned_plugins).
 
 If you've allowed loading of an unsigned plugin, then Grafana writes a warning message to the server log:
 

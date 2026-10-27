@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/authentication.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/authentication.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/authentication.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/authentication.md)
 
 # Authentication options for the HTTP APIs
 
@@ -30,7 +30,7 @@ To create a service account token:
 1. Go to **Administration** in the left-side menu
 2. Click **Users and access > Service Accounts**.
 
-For more information on how to use service account tokens, refer to the [Service Accounts](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/) documentation.
+For more information on how to use service account tokens, refer to the [Service Accounts](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/) documentation.
 
 You use the token in all requests in the `Authorization` header, for example:
 

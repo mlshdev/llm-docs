@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/configure-value-mappings/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/configure-value-mappings/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/configure-value-mappings/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/configure-value-mappings/index.md)
 
 # Configure value mappings
 
@@ -14,20 +14,20 @@ Value mappings bypass unit formatting set in the **Standard options** section of
 
 You can configure value mappings for the following visualizations:
 
-- [Bar chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-chart/)
-- [Bar gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-gauge/)
-- [Candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/)
-- [Canvas](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/canvas/)
-- [Gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/gauge/)
-- [Geomap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/geomap/)
-- [Histogram](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/histogram/)
-- [Pie chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/pie-chart/)
-- [Stat](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/stat/)
-- [State timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/)
-- [Status history](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/status-history/)
-- [Table](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/)
-- [Time series](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/)
-- [Trend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/trend/)
+- [Bar chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-chart/)
+- [Bar gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-gauge/)
+- [Candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/)
+- [Canvas](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/canvas/)
+- [Gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/gauge/)
+- [Geomap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/geomap/)
+- [Histogram](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/histogram/)
+- [Pie chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/pie-chart/)
+- [Stat](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/stat/)
+- [State timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/)
+- [Status history](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/status-history/)
+- [Table](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/)
+- [Time series](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/)
+- [Trend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/trend/)
 
 ## Types of value mappings
 

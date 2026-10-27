@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-email.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-email.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-email.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-email.md)
 
 # Configure email for alert notifications
 
@@ -14,9 +14,9 @@ In Grafana OSS, you must configure SMTP settings before you can enable email not
 >
 > In Grafana Cloud, SMTP configuration is not required.
 
-1. Open the [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/). The file is typically named `grafana.ini` or `custom.ini` and located in the `conf` directory of your Grafana installation.
+1. Open the [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/). The file is typically named `grafana.ini` or `custom.ini` and located in the `conf` directory of your Grafana installation.
 
-2. Configure the [SMTP settings](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#smtp) for your email server in the `[smtp]` section.
+2. Configure the [SMTP settings](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#smtp) for your email server in the `[smtp]` section.
 
 3. Save your changes and restart Grafana.
 
@@ -33,7 +33,7 @@ To create a contact point with a email integration, complete the following steps
 5. Set up the required [settings](#email-settings) for your Email configuration.
 6. Click **Save contact point**.
 
-For more details on contact points, including how to test them and enable notifications, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/).
+For more details on contact points, including how to test them and enable notifications, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/).
 
 ## Email settings
 
@@ -57,8 +57,8 @@ For more details on contact points, including how to test them and enable notifi
 
 | Option  | Description                                                                                                                                                                                                  |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Subject | Sets the email subject, replacing the default template. Supports [notification templates](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/).                  |
-| Message | Sets the main section of the email body, replacing the default template. Supports [notification templates](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/). |
+| Subject | Sets the email subject, replacing the default template. Supports [notification templates](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/).                  |
+| Message | Sets the main section of the email body, replacing the default template. Supports [notification templates](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/). |
 
 ![](https://grafana.com/media/docs/alerting/custom-email-message5.png)
 

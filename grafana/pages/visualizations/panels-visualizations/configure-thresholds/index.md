@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/configure-thresholds/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/configure-thresholds/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/configure-thresholds/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/configure-thresholds/index.md)
 
 # Configure thresholds
 
@@ -26,19 +26,19 @@ You can also use thresholds to:
 
 You can set thresholds in the following visualizations:
 
-- [Bar chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-chart/)
-- [Bar gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-gauge/)
-- [Candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/)
-- [Canvas](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/canvas/)
-- [Gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/gauge/)
-- [Geomap](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/geomap/)
-- [Histogram](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/histogram/)
-- [Stat](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/stat/)
-- [State timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/)
-- [Status history](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/status-history/)
-- [Table](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/)
-- [Time series](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/)
-- [Trend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/trend/)
+- [Bar chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-chart/)
+- [Bar gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-gauge/)
+- [Candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/)
+- [Canvas](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/canvas/)
+- [Gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/gauge/)
+- [Geomap](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/geomap/)
+- [Histogram](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/histogram/)
+- [Stat](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/stat/)
+- [State timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/)
+- [Status history](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/status-history/)
+- [Table](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/)
+- [Time series](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/)
+- [Trend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/trend/)
 
 ## Default thresholds
 

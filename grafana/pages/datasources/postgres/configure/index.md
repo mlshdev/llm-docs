@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/postgres/configure/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/postgres/configure/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/postgres/configure/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/postgres/configure/_index.md)
 
 # Configure the PostgreSQL data source
 
-This document explains how to configure the PostgreSQL data source and lists all configuration options. For general information on managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+This document explains how to configure the PostgreSQL data source and lists all configuration options. For general information on managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 ## Before you begin
 
 - You need the `Organization administrator` role to configure the data source. You can also [configure it via YAML](#provision-the-data-source) using Grafana provisioning or [using Terraform](#configure-with-terraform).
 
-- Grafana ships with the PostgreSQL data source preinstalled in OSS and Enterprise. You don't need to install a plugin. For update options, refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/postgres/#plugin-updates).
+- Grafana ships with the PostgreSQL data source preinstalled in OSS and Enterprise. You don't need to install a plugin. For update options, refer to [Plugin updates](https://grafana.com/docs/grafana/v13.3/datasources/postgres/#plugin-updates).
 
 - Have your PostgreSQL security details ready (certificates and client keys, if using TLS/SSL).
 
@@ -60,7 +60,7 @@ Following is a list of PostgreSQL configuration options:
 | Setting       | Description                                                                                                                                                                                                                                                            |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Host URL      | The IP address/hostname and optional port of your PostgreSQL instance. The default PostgreSQL port is `5432`. For IPv6 addresses, use the format `[::1]:5432`. To connect through a Unix socket, enter the socket directory path (for example, `/var/run/postgresql`). |
-| Database name | The name of your PostgreSQL database. This database is used as the default for queries in the [query editor](https://grafana.com/docs/grafana/v13.2/datasources/postgres/query-editor/).                                                                               |
+| Database name | The name of your PostgreSQL database. This database is used as the default for queries in the [query editor](https://grafana.com/docs/grafana/v13.3/datasources/postgres/query-editor/).                                                                               |
 
 **Authentication section:**
 
@@ -160,13 +160,13 @@ Click **Manage private data source connect** to be taken to your PDC connection 
 
 **Secure SOCKS proxy:**
 
-If your Grafana instance has the Secure SOCKS proxy feature enabled, a toggle appears in the data source settings. When enabled, Grafana routes PostgreSQL connections through a SOCKS proxy for secure access to databases in private networks. For more information, refer to [Configure a Secure SOCKS5 proxy](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/proxy/).
+If your Grafana instance has the Secure SOCKS proxy feature enabled, a toggle appears in the data source settings. When enabled, Grafana routes PostgreSQL connections through a SOCKS proxy for secure access to databases in private networks. For more information, refer to [Configure a Secure SOCKS5 proxy](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/proxy/).
 
 After you have added your PostgreSQL connection settings, click **Save & test** to test and save the data source connection.
 
 ### Min time interval
 
-The **Min time interval** setting defines a lower limit for the [`$__interval`](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#__interval) and [`$__interval_ms`](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#__interval_ms) variables.
+The **Min time interval** setting defines a lower limit for the [`$__interval`](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#__interval) and [`$__interval_ms`](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#__interval_ms) variables.
 
 This option can also be configured or overridden in the dashboard panel under the data source settings.
 
@@ -185,7 +185,7 @@ This value must be formatted as a number followed by a valid time identifier:
 
 ## Provision the data source
 
-You can define and configure the data source in YAML files with [provisioning](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources). For more information about provisioning and available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#datasources).
+You can define and configure the data source in YAML files with [provisioning](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources). For more information about provisioning and available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#datasources).
 
 The plugin ID is `grafana-postgresql-datasource`. Provisioning examples in this document use `type: postgres`, which remains a supported alias.
 
@@ -328,7 +328,7 @@ The following table lists all `jsonData` and `secureJsonData` fields supported w
 
 #### Troubleshoot provisioning issues
 
-If you encounter metric request errors or other issues when provisioning, refer to [Provisioning errors](https://grafana.com/docs/grafana/v13.2/datasources/postgres/troubleshooting/#provisioning-errors) in the PostgreSQL troubleshooting guide.
+If you encounter metric request errors or other issues when provisioning, refer to [Provisioning errors](https://grafana.com/docs/grafana/v13.3/datasources/postgres/troubleshooting/#provisioning-errors) in the PostgreSQL troubleshooting guide.
 
 ## Configure with Terraform
 
@@ -370,8 +370,8 @@ For all available configuration options, refer to the [Grafana provider data sou
 
 After configuring your PostgreSQL data source, you can:
 
-- [Write queries](https://grafana.com/docs/grafana/v13.2/datasources/postgres/query-editor/) using the query editor to explore and visualize your data.
-- [Use template variables](https://grafana.com/docs/grafana/v13.2/datasources/postgres/template-variables/) to create dynamic, reusable dashboards.
-- [Add annotations](https://grafana.com/docs/grafana/v13.2/datasources/postgres/annotations/) to overlay PostgreSQL events on your panels.
-- [Set up alerting](https://grafana.com/docs/grafana/v13.2/datasources/postgres/alerting/) to create alert rules based on your PostgreSQL data (time series format only).
-- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.2/datasources/postgres/troubleshooting/) if you encounter problems with your data source.
+- [Write queries](https://grafana.com/docs/grafana/v13.3/datasources/postgres/query-editor/) using the query editor to explore and visualize your data.
+- [Use template variables](https://grafana.com/docs/grafana/v13.3/datasources/postgres/template-variables/) to create dynamic, reusable dashboards.
+- [Add annotations](https://grafana.com/docs/grafana/v13.3/datasources/postgres/annotations/) to overlay PostgreSQL events on your panels.
+- [Set up alerting](https://grafana.com/docs/grafana/v13.3/datasources/postgres/alerting/) to create alert rules based on your PostgreSQL data (time series format only).
+- [Troubleshoot issues](https://grafana.com/docs/grafana/v13.3/datasources/postgres/troubleshooting/) if you encounter problems with your data source.

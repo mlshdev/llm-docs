@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/together/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/providers/together/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/together/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/providers/together/index.md)
 
 # Together AI
 
@@ -10,6 +10,8 @@
 models, serving Llama, Qwen, DeepSeek, Kimi, GLM and others through an
 OpenAI-compatible API. Docker Agent includes built-in support for Together AI as
 an alias provider.
+
+Use the provider ID `togetherai`. The legacy ID `together` is also accepted.
 
 ## Setup
 
@@ -29,7 +31,7 @@ The simplest way to use Together AI:
 ```yaml
 agents:
   root:
-    model: together/meta-llama/Llama-3.3-70B-Instruct-Turbo
+    model: togetherai/meta-llama/Llama-3.3-70B-Instruct-Turbo
     description: Assistant using Together AI
     instruction: You are a helpful assistant.
 ```
@@ -41,7 +43,7 @@ For more control over parameters:
 ```yaml
 models:
   together_model:
-    provider: together
+    provider: togetherai
     model: meta-llama/Llama-3.3-70B-Instruct-Turbo
     temperature: 0.7
     max_tokens: 8192
@@ -85,7 +87,7 @@ system messages into a single one for this provider.
 ```yaml
 agents:
   coder:
-    model: together/Qwen/Qwen3-235B-A22B-Instruct-2507-tput
+    model: togetherai/Qwen/Qwen3-235B-A22B-Instruct-2507-tput
     description: Code assistant using Qwen3 on Together AI
     instruction: |
       You are an expert programmer.

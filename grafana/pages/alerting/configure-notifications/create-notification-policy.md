@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/create-notification-policy.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/create-notification-policy.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/create-notification-policy.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/create-notification-policy.md)
 
 # Configure notification policies
 
@@ -6,29 +6,31 @@ Notification policies determine how alerts are routed to contact points.
 
 Policies have a tree structure. Each policy can have one or more child policies and a set of label matchers.
 
-Each alert (or alert instance) is evaluated by the default policy and subsequently by each child policy. Alerts are routed to the appropriate notification policy by matching alert labels with the policy's label matchers. For further details, refer to [label matching and routing in notification policies](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/).
+Each alert (or alert instance) is evaluated by the default policy and subsequently by each child policy. Alerts are routed to the appropriate notification policy by matching alert labels with the policy's label matchers. For further details, refer to [label matching and routing in notification policies](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/).
 
 ![A diagram displaying how the notification policy tree routes alerts](https://grafana.com/media/docs/alerting/get-started-notification-policy-tree-combo.png)
 
 When an alert instance is assigned to a notification policy, the notification policy is responsible for:
 
-- [Grouping similar alerts](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/#group-notifications) to minimize the number of notifications.
-- Controlling when notifications are sent using the [timing options](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/#timing-options).
-- Determining the [contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/) that receive the alert notification.
+- [Grouping similar alerts](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/#group-notifications) to minimize the number of notifications.
+- Controlling when notifications are sent using the [timing options](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/#timing-options).
+- Determining the [contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/) that receive the alert notification.
 
 > **Note**
 >
-> The default notification policy and its child policies are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/#alertmanager-architecture), and they cannot use contact points or mute timings from other Alertmanagers.
+> The default notification policy and its child policies are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/#alertmanager-architecture), and they cannot use contact points or mute timings from other Alertmanagers.
 
 ## Edit the default notification policy
+
+You can change the contact point, grouping, and timing options for this policy. Mute timings and active time intervals aren't available on the root policy. Add them on a [child policy](#add-a-child-policy) instead.
 
 1. In the left-side menu, click **Alerts & IRM** and then **Alerting**.
 2. Click **Notification configuration**, then select the **Notification policies** tab.
 3. From the **Choose Alertmanager** dropdown, select an external Alertmanager. By default, the **Grafana Alertmanager** is selected.
 4. In the Default policy section, click **...** -> **Edit**.
-5. In **Default contact point**, update the [contact point](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/) for where to send notifications when alert rules do not match any specific policy.
-6. In **Group by**, choose labels to group alerts. If multiple alerts match this policy, they are grouped by the selected labels, and notifications are sent per group. For more details on using this option, refer to [Group notifications](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/#group-notifications).
-7. In **Timing options**, set the [timing options](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/#timing-options) to configure when notifications are sent.
+5. In **Default contact point**, update the [contact point](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/) for where to send notifications when alert rules do not match any specific policy.
+6. In **Group by**, choose labels to group alerts. If multiple alerts match this policy, they are grouped by the selected labels, and notifications are sent per group. For more details on using this option, refer to [Group notifications](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/#group-notifications).
+7. In **Timing options**, set the [timing options](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/#timing-options) to configure when notifications are sent.
    - **Group wait**: the time to wait before sending the first notification for a new group of alerts. Default is 30 seconds.
    - **Group interval**: the time to wait before sending a notification about changes in the alert group. Default is 5 minutes.
    - **Repeat interval**: the time to wait before sending a notification if the group has not changed since the last notification. Default is 4 hours.
@@ -52,15 +54,17 @@ If you want to choose where to position your policy, see the section on **Add a 
 
    For instance, a child policy of the default policy handles `team=security` alerts, or a child policy handles only the `severity=critical` alerts of a parent policy.
 
-6. In the **Contact point** dropdown, select the [contact point](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/) to send notifications. If left empty, the contact point of the parent policy is [inherited](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/#inheritance).
+6. In the **Contact point** dropdown, select the [contact point](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/) to send notifications. If left empty, the contact point of the parent policy is [inherited](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/#inheritance).
 
 7. Optionally, enable **Continue matching subsequent sibling nodes** to continue matching sibling policies even after the alert matched the current policy. If enabled, multiple policies can handle the same alert.
 
-8. Optionally, enable **Override grouping** to set different [grouping](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/#group-notifications) than the parent policy. If disabled, the grouping of the parent policy is [inherited](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/#inheritance).
+8. Optionally, enable **Override grouping** to set different [grouping](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/#group-notifications) than the parent policy. If disabled, the grouping of the parent policy is [inherited](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/#inheritance).
 
-9. Optionally, enable **Override general timings** to set different [timing options](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/group-alert-notifications/#timing-options) than the parent policy. If disabled, the timing options of the parent policy are [inherited](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/#inheritance).
+9. Optionally, enable **Override general timings** to set different [timing options](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/group-alert-notifications/#timing-options) than the parent policy. If disabled, the timing options of the parent policy are [inherited](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/#inheritance).
 
-10. Click **Save policy** to save your changes.
+10. Optionally, in **Mute timings** and **Active timings**, select time intervals that apply to this policy. These fields aren't available on the root policy.
+
+11. Click **Save policy** to save your changes.
 
 ## Add a sibling policy
 
@@ -74,7 +78,7 @@ If you want to choose where to position your policy, see the section on **Add a 
 
    It's important to determine which policy receives the alert first and to set the correct order of sibling and child policies.
 
-   Policies are evaluated from top to bottom. If a matching policy is found, the system continues to evaluate its child policies in the order they are displayed. For more details, refer to [notification policies routing](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/#routing).
+   Policies are evaluated from top to bottom. If a matching policy is found, the system continues to evaluate its child policies in the order they are displayed. For more details, refer to [notification policies routing](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/#routing).
 
 5. Follow the instructions from step 5 onward in [adding a child policy](#add-a-child-policy).
 
@@ -93,15 +97,19 @@ It is important to note that all matched policies are **exact** matches. Grafana
 
 ## Mute timings
 
-Mute timings are not inherited from a parent notification policy, and they have to be configured on each level. For instructions, refer to [Configure mute timings](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/).
+Mute timings pause notifications during a recurring period. Active time intervals allow notifications only during a recurring period.
 
-## Manage multiple notification policies
+You can assign them only on child notification policies, not on the root policy. They aren't inherited from a parent notification policy. For instructions, refer to [Configure mute timings](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/).
 
-By default, Grafana uses a single notification policy tree for all alert routing. As organizations grow in size and complexity, managing a single global tree can become difficult. Multiple notification policies allow you to split routing logic into separate, independently managed routing trees.
+## Manage multiple notification policy trees
 
-Each notification policy contains a routing tree with its own name, root policy, and child policies which function similar to the default policy. You can create additional routing trees to organize routing logic by team, service, or domain.
+By default, Grafana uses a single notification policy tree for all alert routing. As organizations grow in size and complexity, managing a single global tree can become difficult. Multiple notification policy trees allow you to split routing logic into separate, independently managed routing trees.
+
+Each notification policy tree has its own name, root policy, and child policies which function similarly to the default policy tree. You can create additional routing trees to organize routing logic by team, service, or domain.
 
 The Default Policy can't be deleted. You can, however, reset the policy to clear it.
+
+For provisioning instructions, refer to [Enable multiple notification policy trees via Terraform](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/terraform-provisioning/#enable-multiple-notification-policy-trees).
 
 ## Example
 

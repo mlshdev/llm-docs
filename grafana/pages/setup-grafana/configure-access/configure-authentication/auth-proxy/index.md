@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/auth-proxy/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/auth-proxy/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/auth-proxy/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/auth-proxy/index.md)
 
 # Configure auth proxy authentication
 
@@ -220,7 +220,7 @@ With our Grafana and Apache containers running, you can now connect to <http://l
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and to customers on select Grafana Cloud plans. For pricing information, visit [pricing](https://grafana.com/pricing/) or contact our sales team.
 
 With Team Sync, it's possible to set up synchronization between teams in your authentication provider and Grafana. You can send Grafana values as part of an HTTP header and have Grafana map them to your team structure. This allows you to put users into specific teams automatically.
 
@@ -233,7 +233,7 @@ headers = "Groups:X-WEBAUTH-GROUPS"
 
 You use the `X-WEBAUTH-GROUPS` header to send the team information for each user. Specifically, the set of Grafana's group IDs that the user belongs to.
 
-First, we need to set up the mapping between your authentication provider and Grafana. Follow [these instructions](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/#synchronize-a-grafana-team-with-an-external-group) to add groups to a team within Grafana.
+First, we need to set up the mapping between your authentication provider and Grafana. Follow [these instructions](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/#synchronize-a-grafana-team-with-an-external-group) to add groups to a team within Grafana.
 
 Once that's done. You can verify your mappings by querying the API.
 
@@ -295,7 +295,7 @@ With this, the user `leonard` will be automatically placed into the Loki team as
 >
 > An empty `X-WEBAUTH-GROUPS` or the absence of a groups header will remove the user from all teams.
 
-[Learn more about Team Sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-team-sync/)
+[Learn more about Team Sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-team-sync/)
 
 ## Login token and session cookie
 

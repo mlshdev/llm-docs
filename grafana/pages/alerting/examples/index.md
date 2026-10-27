@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/examples/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/examples/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/examples/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/examples/_index.md)
 
 # Examples
 
@@ -6,10 +6,10 @@ This section provides practical examples that show how to work with different ty
 
 This section includes:
 
-- [Example of multi-dimensional alerts on time series data](https://grafana.com/docs/grafana/v13.2/alerting/examples/multi-dimensional-alerts/)
-- [Example of alerting on tabular data](https://grafana.com/docs/grafana/v13.2/alerting/examples/table-data/)
-- [Trace-based alerts](https://grafana.com/docs/grafana/v13.2/alerting/examples/trace-based-alerts/)
-- [Example of dynamic labels in alert instances](https://grafana.com/docs/grafana/v13.2/alerting/examples/dynamic-labels/)
-- [Example of dynamic thresholds per dimension](https://grafana.com/docs/grafana/v13.2/alerting/examples/dynamic-thresholds/)
-- [Examples of high-cardinality alerts](https://grafana.com/docs/grafana/v13.2/alerting/examples/high-cardinality-alerts/)
-- [Grafana Alerting tutorials](https://grafana.com/docs/grafana/v13.2/alerting/examples/tutorials/)
+- [Example of multi-dimensional alerts on time series data](https://grafana.com/docs/grafana/v13.3/alerting/examples/multi-dimensional-alerts/)
+- [Example of alerting on tabular data](https://grafana.com/docs/grafana/v13.3/alerting/examples/table-data/)
+- [Trace-based alerts](https://grafana.com/docs/grafana/v13.3/alerting/examples/trace-based-alerts/)
+- [Example of dynamic labels in alert instances](https://grafana.com/docs/grafana/v13.3/alerting/examples/dynamic-labels/)
+- [Example of dynamic thresholds per dimension](https://grafana.com/docs/grafana/v13.3/alerting/examples/dynamic-thresholds/)
+- [Examples of high-cardinality alerts](https://grafana.com/docs/grafana/v13.3/alerting/examples/high-cardinality-alerts/)
+- [Grafana Alerting tutorials](https://grafana.com/docs/grafana/v13.3/alerting/examples/tutorials/)

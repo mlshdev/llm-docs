@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/examples/dynamic-labels.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/examples/dynamic-labels.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/examples/dynamic-labels.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/examples/dynamic-labels.md)
 
 # Example of dynamic labels in alert instances
 
@@ -8,13 +8,13 @@ A label like `severity="critical"` can be set statically in the alert rule confi
 
 This example shows how to define dynamic labels based on query values, along with key behavior to keep in mind when using them.
 
-First, it's important to understand how Grafana Alerting treats [labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#labels).
+First, it's important to understand how Grafana Alerting treats [labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#labels).
 
 ## Alert instances are defined by labels
 
 Each alert rule creates a separate alert instance for every unique combination of labels.
 
-This is called [multi-dimensional alerts](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/multi-dimensional-alerts/): one rule, many instances—**one per unique label set**.
+This is called [multi-dimensional alerts](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/multi-dimensional-alerts/): one rule, many instances—**one per unique label set**.
 
 For example, a rule that queries CPU usage per host might return multiple series (or dimensions):
 
@@ -46,7 +46,7 @@ User-defined labels can be either:
 
 Templated labels evaluate their values dynamically, based on the query result. This allows the label value to vary per alert instance.
 
-Use templated labels to inject additional context into alerts. To learn about syntax and use cases, refer to [Template annotations and labels](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/).
+Use templated labels to inject additional context into alerts. To learn about syntax and use cases, refer to [Template annotations and labels](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/).
 
 You can define templated labels that produce either:
 
@@ -98,7 +98,7 @@ This pattern lets you express multiple alerting scenarios in a single rule, whil
 
 In the previous severity template, you can set the alert condition to `$B > 70` to prevent firing when `severity=none`, and then use the `severity` label to route distinct alert instances to different contact points.
 
-For example, configure a [notification policy](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) that matches `alertname="ServerHighCPU"` with the following children policies:
+For example, configure a [notification policy](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) that matches `alertname="ServerHighCPU"` with the following children policies:
 
 - `severity=critical` → escalate to an incident response and management solution (IRM).
 - `severity=warning` → send to the team's Slack channel.
@@ -145,7 +145,7 @@ Here’s a sequence example:
 | t5   | 50          | 🟢                         |                             | ⚠️ MissingSeries              |
 | t6   | 50          | 🟢                         |                             | 📩 Resolved and evicted       |
 
-Learn more about this behavior in [Stale alert instances](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/).
+Learn more about this behavior in [Stale alert instances](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/).
 
 In this example, the `minor` and `warning` alerts likely represent the same underlying issue, but Grafana treats them as distinct alert instances. As a result, this scenario generates two firing notifications and two resolved notifications, one for each instance.
 
@@ -155,7 +155,7 @@ It can lead to multiple notifications firing and resolving in short intervals, r
 
 ## Try it with TestData
 
-You can replicate this scenario using the [TestData data source](https://grafana.com/docs/grafana/v13.2/datasources/testdata/) to simulate an unstable signal—like monitoring a noisy sensor.
+You can replicate this scenario using the [TestData data source](https://grafana.com/docs/grafana/v13.3/datasources/testdata/) to simulate an unstable signal—like monitoring a noisy sensor.
 
 This setup reproduces label flapping and shows how dynamic label values affect alert instance behavior.
 
@@ -215,7 +215,7 @@ This setup reproduces label flapping and shows how dynamic label values affect a
 
 1. Observe alert state changes.
 
-   Click **Save rule and exit**, and open the [alert history view](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/) to see how changes in `severity` affect the state of distinct alert instances.
+   Click **Save rule and exit**, and open the [alert history view](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/) to see how changes in `severity` affect the state of distinct alert instances.
 
 ![](https://grafana.com/media/docs/alerting/example-dynamic-labels-alert-history-page.png)
 
@@ -235,7 +235,7 @@ These alerts often require tuning to stay reliable and benefit from continuous r
 
 - **Tune evaluation settings and queries for stability**
 
-  Increase the [evaluation interval and pending period](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/) to reduce the frequency of state changes. Additionally, consider smoothing metrics with functions like `avg_over_time` to reduce flapping.
+  Increase the [evaluation interval and pending period](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/) to reduce the frequency of state changes. Additionally, consider smoothing metrics with functions like `avg_over_time` to reduce flapping.
 
 - **Use wider threshold bands**
 
@@ -247,7 +247,7 @@ These alerts often require tuning to stay reliable and benefit from continuous r
 
 - **Disable the Missing series evaluations setting**
 
-  The [Missing series evaluations setting](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/) (default: 2) defines how many intervals without data are allowed before resolving an instance. Consider disabling it if it's unnecessary for your use case, as it can complicate alert troubleshooting.
+  The [Missing series evaluations setting](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/) (default: 2) defines how many intervals without data are allowed before resolving an instance. Consider disabling it if it's unnecessary for your use case, as it can complicate alert troubleshooting.
 
 - **Preserve context across related alerts**
 
@@ -261,10 +261,10 @@ These alerts often require tuning to stay reliable and benefit from continuous r
 
 Here's a list of additional resources related to this example:
 
-- [Multi-dimensional alerting example](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/multi-dimensional-alerts/) – Explore how Grafana creates separate alert instances for each unique set of labels.
-- [Labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#labels) – Learn about the different types of labels and how they define alert instances.
-- [Template labels in alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) – Use templating to set label values dynamically based on query results.
-- [Stale alert instances](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/) – Understand how Grafana resolves and removes stale alert instances.
-- [Handle missing data](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/missing-data/) – Learn how Grafana distinguishes between missing series and `NoData`.
-- [Notification policies and routing](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/notification-policies/) – Create multiple notification policies to route alerts based on label values like `severity` or `team`.
+- [Multi-dimensional alerting example](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/multi-dimensional-alerts/) – Explore how Grafana creates separate alert instances for each unique set of labels.
+- [Labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#labels) – Learn about the different types of labels and how they define alert instances.
+- [Template labels in alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/) – Use templating to set label values dynamically based on query results.
+- [Stale alert instances](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/) – Understand how Grafana resolves and removes stale alert instances.
+- [Handle missing data](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/missing-data/) – Learn how Grafana distinguishes between missing series and `NoData`.
+- [Notification policies and routing](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/notification-policies/) – Create multiple notification policies to route alerts based on label values like `severity` or `team`.
 - [Dynamic label example in Grafana Play](https://play.grafana.org/alerting/grafana/dynamic-label/view?tech=docs\&pg=alerting-examples\&plcmt=learn-more\&cta=alert-dynamic-labels) - View this example in Grafana Play to explore alert instances and state transitions with dynamic labels.

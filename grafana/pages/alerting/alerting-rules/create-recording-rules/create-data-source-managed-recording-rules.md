@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/create-recording-rules/create-data-source-managed-recording-rules.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/create-recording-rules/create-data-source-managed-recording-rules.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/create-recording-rules/create-data-source-managed-recording-rules.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/create-recording-rules/create-data-source-managed-recording-rules.md)
 
 # Create data source-managed recording rules
 
-[Recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/) allow you to periodically pre-compute frequently used or computationally expensive queries, saving the results as a new time series metric.
+[Recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/) allow you to periodically pre-compute frequently used or computationally expensive queries, saving the results as a new time series metric.
 
 Alert rules and dashboards can then query the new metric resulting from the recording rule. This is faster than querying real-time data and can help to reduce system load.
 

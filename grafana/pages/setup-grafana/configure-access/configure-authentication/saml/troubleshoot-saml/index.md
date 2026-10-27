@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/troubleshoot-saml/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/saml/troubleshoot-saml/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/troubleshoot-saml/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/saml/troubleshoot-saml/_index.md)
 
 ## Troubleshooting
 
@@ -6,7 +6,7 @@ Following are common issues found in configuring SAML authentication in Grafana 
 
 ### Troubleshoot SAML authentication in Grafana
 
-To troubleshoot and get more log information, enable SAML debug logging in the configuration file. Refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#filters) for more information.
+To troubleshoot and get more log information, enable SAML debug logging in the configuration file. Refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#filters) for more information.
 
 ```ini
 [log]
@@ -58,7 +58,7 @@ The keys you provide should look like:
 
 When the user logs in using SAML and gets presented with `origin not allowed`, the user might be issuing the login from an IdP (identity provider) service or the user is behind a reverse proxy. This potentially happens as the CSRF checks in Grafana deem the requests to be invalid. For more information [CSRF](https://owasp.org/www-community/attacks/csrf).
 
-To solve this issue, you can configure either the [`csrf_trusted_origins`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#csrf_trusted_origins) or [`csrf_additional_headers`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#csrf_additional_headers) option in the SAML configuration.
+To solve this issue, you can configure either the [`csrf_trusted_origins`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#csrf_trusted_origins) or [`csrf_additional_headers`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#csrf_additional_headers) option in the SAML configuration.
 
 Example of a configuration file:
 
@@ -111,7 +111,7 @@ curl -X POST "{token_url}" \
   -d "grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}&scope=https://graph.microsoft.com/.default"
 ```
 
-Where the following values come from your [SAML configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/saml-configuration-options/#saml-configuration-options):
+Where the following values come from your [SAML configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/saml-configuration-options/#saml-configuration-options):
 
 - `token_url`: The token URL of your Entra ID application.
 - `client_id`: The client ID of your Entra ID application.

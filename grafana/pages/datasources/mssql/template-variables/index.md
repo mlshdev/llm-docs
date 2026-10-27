@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mssql/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mssql/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mssql/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mssql/template-variables/index.md)
 
 # Microsoft SQL Server template variables
 
@@ -6,9 +6,9 @@ Instead of hard-coding details such as server, application, and sensor names in 
 Grafana displays these variables in drop-down select boxes at the top of the dashboard to help you change the data displayed in your dashboard.
 Grafana refers to such variables as **template variables**.
 
-For general information on using variables in Grafana, refer to [Add variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+For general information on using variables in Grafana, refer to [Add variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
-For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ## Query variable
 
@@ -142,7 +142,7 @@ ${servers:csv}
 
 This outputs the values as an unquoted comma-separated list. Use this only when you handle quoting yourself or when the values are numeric.
 
-Refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/#advanced-variable-format-options) for the full list of formatting options.
+Refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/#advanced-variable-format-options) for the full list of formatting options.
 
 ## Handle the "All" option in SQL queries
 
@@ -239,4 +239,4 @@ The Grafana SQL query parser strips SQL comments (`--` and `/* */`) before macro
 
 ### Variables in alerting queries
 
-Template variables are not supported in alerting queries. Grafana evaluates alert rules on the backend without dashboard context. If your dashboard query uses variables, create a separate alerting query with hard-coded values. For more information, refer to [Microsoft SQL Server alerting](https://grafana.com/docs/grafana/v13.2/datasources/mssql/alerting/#template-variables-not-supported).
+Template variables are not supported in alerting queries. Grafana evaluates alert rules on the backend without dashboard context. If your dashboard query uses variables, create a separate alerting query with hard-coded values. For more information, refer to [Microsoft SQL Server alerting](https://grafana.com/docs/grafana/v13.3/datasources/mssql/alerting/#template-variables-not-supported).

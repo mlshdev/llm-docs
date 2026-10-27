@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/templates/reference.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/templates/reference.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/templates/reference.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/templates/reference.md)
 
 # Annotation and label template reference
 
 Annotations and labels in alert rules can be defined using plain text. However, you can also define templates to customize their values with dynamic data from alert rule queries.
 
-For example, you can template the `summary` annotation to include information from query values, providing relevant alert context for responders. Refer to [Template annotations and labels](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) for various use cases.
+For example, you can template the `summary` annotation to include information from query values, providing relevant alert context for responders. Refer to [Template annotations and labels](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/) for various use cases.
 
 In templates, variables represent dynamic values from queries, while functions perform actions to transform or format this data.
 
@@ -18,7 +18,7 @@ The `$` and `.` symbols are used to reference variables and their properties. Yo
 {{ $values.A.Value }}
 ```
 
-Templates are based on the **Go templating system**. Refer to [Template language](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/language/) for additional information.
+Templates are based on the **Go templating system**. Refer to [Template language](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/language/) for additional information.
 
 The following variables are available when templating annotations and labels:
 
@@ -30,7 +30,7 @@ The following variables are available when templating annotations and labels:
 
 ### $labels
 
-The `$labels` variable contains all labels from the query. It excludes [user-configured and reserved labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/#label-types), containing only query labels.
+The `$labels` variable contains all labels from the query. It excludes [user-configured and reserved labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/#label-types), containing only query labels.
 
 ![](https://grafana.com/media/docs/alerting/query-labels-and-values.png)
 
@@ -48,7 +48,7 @@ The outcome of this template would be:
 CPU usage for server1 has exceeded 80% for the last 5 minutes
 ```
 
-> If you are using a classic condition then `$labels` will not contain any labels from the query. Classic conditions discard these labels to enforce uni-dimensional behavior (at most one alert per alert rule). If you want to use labels from the query in your template then use the example [here](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/examples/#print-all-labels-from-a-classic-condition).
+> If you are using a classic condition then `$labels` will not contain any labels from the query. Classic conditions discard these labels to enforce uni-dimensional behavior (at most one alert per alert rule). If you want to use labels from the query in your template then use the example [here](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/examples/#print-all-labels-from-a-classic-condition).
 
 ### $values
 
@@ -56,10 +56,24 @@ The `$values` variable is a table containing the labels and floating point value
 
 Each Ref IDs, such as `$values.A`, has the following properties
 
-| Property | Type            | Description                                                  |
-| -------- | --------------- | ------------------------------------------------------------ |
-| `Value`  | Float           | The value returned by the instant query or expression.       |
-| `Labels` | Key/value pairs | The labels associated with the instance query or expression. |
+| Property | Type            | Description                                                 |
+| -------- | --------------- | ----------------------------------------------------------- |
+| `Value`  | Float           | The value returned by the instant query or expression.      |
+| `Labels` | Key/value pairs | The labels associated with the instant query or expression. |
+
+To print labels from a specific query or expression, use its Ref ID and the `Labels` property:
+
+```
+{{ $values.A.Labels.instance }}
+```
+
+`$values` is indexed by Ref ID (`A`, `B`, `C`), not by the alert name.
+
+For most alert messages, use [`$labels`](#labels) instead. `$labels` contains the query labels for the alert instance, so you don't need the Ref ID:
+
+```
+{{ $labels.instance }}
+```
 
 Here's the previous example printing now the value of the instant query with Ref ID `A`:
 
@@ -127,20 +141,20 @@ Instead, we recommend using [$values](#values), which contains the same informat
 
 Functions can perform actions in templates such as transforming or formatting data.
 
-Note that the [functions provided by Go's template language](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/language/#functions), such as `index`, `and`, `printf`, and `len`, are available, along with many others.
+Note that the [functions provided by Go's template language](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/language/#functions), such as `index`, `and`, `printf`, and `len`, are available, along with many others.
 
 In addition, the following functions are also available for templating annotations and labels:
 
 **Numbers**
 
-| Name                                      | Arguments        | Returns | Description                                                      |
-| ----------------------------------------- | ---------------- | ------- | ---------------------------------------------------------------- |
-| [humanize](#humanize)                     | number or string | string  | Humanizes decimal numbers.                                       |
-| [humanize1024](#humanize1024)             | number or string | string  | Like `humanize`, but but uses 1024 as the base rather than 1000. |
-| [humanizeDuration](#humanizeduration)     | number or string | string  | Humanizes a duration in seconds.                                 |
-| [humanizePercentage](#humanizepercentage) | number or string | string  | Humanizes a ratio value to a percentage.                         |
-| [humanizeTimestamp](#humanizetimestamp)   | number or string | string  | Humanizes a Unix timestamp.                                      |
-| [toTime](#totime)                         | number or string | time    | Converts a Unix timestamp in seconds to time.                    |
+| Name                                      | Arguments        | Returns | Description                                                  |
+| ----------------------------------------- | ---------------- | ------- | ------------------------------------------------------------ |
+| [humanize](#humanize)                     | number or string | string  | Humanizes decimal numbers.                                   |
+| [humanize1024](#humanize1024)             | number or string | string  | Like `humanize`, but uses 1024 as the base rather than 1000. |
+| [humanizeDuration](#humanizeduration)     | number or string | string  | Humanizes a duration in seconds.                             |
+| [humanizePercentage](#humanizepercentage) | number or string | string  | Humanizes a ratio value to a percentage.                     |
+| [humanizeTimestamp](#humanizetimestamp)   | number or string | string  | Humanizes a Unix timestamp.                                  |
+| [toTime](#totime)                         | number or string | time    | Converts a Unix timestamp in seconds to time.                |
 
 **Strings**
 
@@ -182,7 +196,7 @@ The `humanize` function humanizes decimal numbers:
 
 #### humanize1024
 
-The `humanize1024` works similar to `humanize` but but uses 1024 as the base rather than 1000:
+The `humanize1024` function works similarly to `humanize` but uses 1024 as the base rather than 1000:
 
 ```
 {{ humanize1024 1024.0 }}
@@ -314,7 +328,7 @@ example.com:8080
 
 #### graphLink
 
-The `graphLink` function returns the path to the graphical view in [Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/) for the given expression and data source:
+The `graphLink` function returns the path to the graphical view in [Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/) for the given expression and data source:
 
 ```
 {{ graphLink "{\"expr\": \"up\", \"datasource\": \"gdev-prometheus\"}" }}
@@ -350,7 +364,7 @@ example:8080
 
 #### tableLink
 
-The `tableLink` function returns the path to the tabular view in [Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/) for the given expression and data source:
+The `tableLink` function returns the path to the tabular view in [Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/) for the given expression and data source:
 
 ```
 {{ tableLink "{\"expr\": \"up\", \"datasource\": \"gdev-prometheus\"}" }}
@@ -410,7 +424,7 @@ The `pathPrefix` function returns the path of the Grafana server as configured i
 
 ## Differences with notification templates
 
-Both notification templates and alert rule templates use the Go templating system. However, the [functions and variables available in notification templates](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/reference/) differ from those used in annotations and labels templates, which are described in this documentation.
+Both notification templates and alert rule templates use the Go templating system. However, the [functions and variables available in notification templates](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/reference/) differ from those used in annotations and labels templates, which are described in this documentation.
 
 Annotation and label templates operate in the context of an individual alert instance, while notification templates apply to a notification that includes a group of alert(s).
 

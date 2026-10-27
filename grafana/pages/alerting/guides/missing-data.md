@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/guides/missing-data.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/guides/missing-data.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/guides/missing-data.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/guides/missing-data.md)
 
 # Handle missing data in Grafana Alerting
 
@@ -8,11 +8,11 @@ When this happens, alerts won’t fire, and you might not notice the system has 
 
 Sometimes it's just a lack of data from a few instances. Other times, it's a connectivity issue where the entire target is unreachable.
 
-This guide covers different scenarios where the underlying data is missing and shows how to design your alerts to act on those cases. If you're troubleshooting an unreachable host or a network failure, see the [Handle connectivity errors documentation](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/connectivity-errors/) as well.
+This guide covers different scenarios where the underlying data is missing and shows how to design your alerts to act on those cases. If you're troubleshooting an unreachable host or a network failure, see the [Handle connectivity errors documentation](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/connectivity-errors/) as well.
 
 ## No Data vs. Missing Series
 
-There are a few common causes when an instance stops reporting data, similar to [connectivity errors](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/connectivity-errors/):
+There are a few common causes when an instance stops reporting data, similar to [connectivity errors](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/connectivity-errors/):
 
 - Host crash: The system is down, and Prometheus stops scraping the target.
 - Temporary network failures: Intermittent scrape failures cause data gaps.
@@ -84,7 +84,7 @@ While Prometheus provides functions like `absent_over_time()` to detect missing 
 
 To handle this, Grafana Alerting implements a built-in `No Data` state logic, so you don’t need to detect missing data with `absent_*` queries. Instead, you can configure in the alert rule settings how alerts behave when no data is returned.
 
-Similar to error handling, Grafana triggers a special *No data* alert by default and lets you control this behavior. In [**Configure no data and error handling**](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#modify-the-no-data-or-error-state), click **Alert state if no data or all values are null**, and choose one of the following options:
+Similar to error handling, Grafana triggers a special *No data* alert by default and lets you control this behavior. In [**Configure no data and error handling**](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#modify-the-no-data-or-error-state), click **Alert state if no data or all values are null**, and choose one of the following options:
 
 - **No Data (default):** Triggers a new `DatasourceNoData` alert, treating *No data* as a specific problem.
 - **Alerting:** Transition each existing alert instance into the `Alerting` state when data disappears.
@@ -95,18 +95,18 @@ Similar to error handling, Grafana triggers a special *No data* alert by default
 
 ### Manage DatasourceNoData notifications
 
-When Grafana triggers a [NoData alert](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#no-data-and-error-alerts), it creates a distinct alert instance, separate from the original alert instance. These alerts behave differently:
+When Grafana triggers a [NoData alert](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#no-data-and-error-alerts), it creates a distinct alert instance, separate from the original alert instance. These alerts behave differently:
 
 - They use a dedicated `alertname: DatasourceNoData`.
 - They don’t inherit all the labels from the original alert instances.
 
-Because of this, `DatasourceNoData` alerts might require a dedicated setup to handle their notifications. For general recommendations, see [Reduce redundant DatasourceError alerts](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/connectivity-errors/#reducing-notification-fatigue-from-datasourceerror-alerts) — similar practices can apply to *NoData* alerts.
+Because of this, `DatasourceNoData` alerts might require a dedicated setup to handle their notifications. For general recommendations, see [Reduce redundant DatasourceError alerts](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/connectivity-errors/#reducing-notification-fatigue-from-datasourceerror-alerts) — similar practices can apply to *NoData* alerts.
 
 ## Evict alert instances for missing series
 
 *MissingSeries* occurs when only some series disappear but not all. This case is subtle, but important.
 
-Grafana marks missing series as [**stale**](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/) after two evaluation intervals and triggers the alert instance eviction process. Here’s what happens under the hood:
+Grafana marks missing series as [**stale**](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/stale-alert-instances/) after two evaluation intervals and triggers the alert instance eviction process. Here’s what happens under the hood:
 
 - Alert instances with missing data keep their last state for two evaluation intervals.
 - If the data is still missing after that:
@@ -115,7 +115,7 @@ Grafana marks missing series as [**stale**](https://grafana.com/docs/grafana/v13
   - A **resolved notification** is sent if the alert was previously firing.
   - The **alert instance is removed** from the Grafana UI.
 
-If an alert instance becomes stale, you’ll find it in the [alert history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/) as `Normal (Missing Series)` before it disappears. This table shows the eviction process from the previous example:
+If an alert instance becomes stale, you’ll find it in the [alert history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/) as `Normal (Missing Series)` before it disappears. This table shows the eviction process from the previous example:
 
 | Time  | region1               | region2                               | Alert triggered                                                          |
 | :---- | :-------------------- | :------------------------------------ | :----------------------------------------------------------------------- |
@@ -137,7 +137,7 @@ In environments with frequent scale events, prioritize symptom-based alerts over
 
 ### Handle MissingSeries notifications
 
-A stale alert instance triggers a **resolved notification** if it transitions from a firing state (such as `Alerting`, `No Data`, or `Error`) to `Normal`, and the [`grafana_state_reason` annotation](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#grafana_state_reason-for-troubleshooting) is set to **MissingSeries** to indicate that the alert wasn’t resolved by recovery but evicted because the series data went missing.
+A stale alert instance triggers a **resolved notification** if it transitions from a firing state (such as `Alerting`, `No Data`, or `Error`) to `Normal`, and the [`grafana_state_reason` annotation](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states/#grafana_state_reason-for-troubleshooting) is set to **MissingSeries** to indicate that the alert wasn’t resolved by recovery but evicted because the series data went missing.
 
 Recognizing these notifications helps you handle them appropriately. For example:
 
@@ -196,4 +196,4 @@ Grafana Alerting handles distinct scenarios automatically. Here’s how to think
   - In Prometheus, you can use `last_over_time(metric_name[10m])` to pick the most recent sample within a given window.
 - Don’t alert on every instance by default. In dynamic environments, it’s better to aggregate and alert on symptoms — unless a missing individual instance directly impacts users.
 - If you’re getting too much noise from disappearing data, consider adjusting alerts, using `Keep Last State`, or routing those alerts differently.
-- For connectivity issues involving alert query failures, see the sibling guide: [Handling connectivity errors in Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/best-practices/connectivity-errors/).
+- For connectivity issues involving alert query failures, see the sibling guide: [Handling connectivity errors in Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/best-practices/connectivity-errors/).

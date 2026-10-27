@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/intro-to-prometheus/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/intro-to-prometheus/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/intro-to-prometheus/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/intro-to-prometheus/index.md)
 
 # What is Prometheus?
 
@@ -107,6 +107,6 @@ The combination of Prometheus and Grafana Alloy gives you control over the metri
 
 Now that you understand how Prometheus metrics work, what will you build?
 
-- One great next step is to [build a dashboard](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/) in Grafana and start turning that raw Prometheus telemetry data into insights about what’s going with your services and infrastructure.
+- One great next step is to [build a dashboard](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/) in Grafana and start turning that raw Prometheus telemetry data into insights about what’s going with your services and infrastructure.
 - Another great step is to learn about [Grafana Mimir](https://grafana.com/oss/mimir/), which is essentially a database for Prometheus data. If you’re wondering how to make this work for a large volumes of metrics with a lot of data and fast querying, check out Grafana Mimir.
-- If you’re interested in working with Prometheus data in Grafana directly, check out the [Prometheus data source](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/) documentation, or check out [PromQL basics](https://prometheus.io/docs/prometheus/latest/querying/basics/).
+- If you’re interested in working with Prometheus data in Grafana directly, check out the [Prometheus data source](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/) documentation, or check out [PromQL basics](https://prometheus.io/docs/prometheus/latest/querying/basics/).

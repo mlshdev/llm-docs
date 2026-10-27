@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform.md)
 
 # Set up Git Sync with Terraform
 
@@ -62,4 +62,4 @@ You need two resources for configure and manage Git Sync:
 - The repository resource configures the Git repository to sync Grafana resources with. For examples, refer to [Repository resource](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/apps_provisioning_repository_v0alpha1) in the Terraform registry.
 - The connection resource configures your Git provider credentials. For examples, refer to [Connection resource](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/apps_provisioning_connection_v0alpha1) in the Terraform registry.
 
-For better understanding of the required resources, refer to [Git Sync key concepts](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts).
+For better understanding of the required resources, refer to [Git Sync key concepts](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts).

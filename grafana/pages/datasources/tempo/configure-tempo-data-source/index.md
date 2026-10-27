@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/configure-tempo-data-source/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/configure-tempo-data-source/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/_index.md)
 
 # Configure the Tempo data source
 
@@ -20,7 +20,7 @@ To configure a Tempo data source, you need:
 - An application or service instrumented to emit traces. Refer to [Instrument for tracing](https://grafana.com/docs/tempo/latest/getting-started/instrumentation/) if you haven't set this up yet.
 
 If you're provisioning a Tempo data source, you also need administrative rights on the server hosting your Grafana instance.
-Refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/) for provisioning instructions.
+Refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/) for provisioning instructions.
 
 ![Provisioned data source warning](https://grafana.com/media/docs/grafana/data-sources/tempo/tempo-data-source-provisioned-error.png)
 
@@ -30,8 +30,8 @@ Refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.
 >
 > To make changes, you can either:
 >
-> - **Clone the data source:** Create a new data source of the same type and copy the settings from the provisioned data source. Refer to [Clone a provisioned data source for Grafana Cloud](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud).
-> - **Update the provisioning file:** Edit the YAML configuration file. Refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/).
+> - **Clone the data source:** Create a new data source of the same type and copy the settings from the provisioned data source. Refer to [Clone a provisioned data source for Grafana Cloud](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/#clone-a-provisioned-data-source-for-grafana-cloud).
+> - **Update the provisioning file:** Edit the YAML configuration file. Refer to [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/).
 
 ## Add or modify a data source
 
@@ -54,7 +54,7 @@ Follow these steps to set up a new Tempo data source:
    - Under **Connection**, enter the **URL** of the Tempo instance. Refer to the [connection](#connection) section for URL format examples.
    - Complete the [**Authentication** section](#authentication).
 
-6. Optional: Configure other sections to add capabilities to your tracing data. Refer to the [Configure trace correlations](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/trace-correlations/) and [Other settings](#other-settings) sections for available options.
+6. Optional: Configure other sections to add capabilities to your tracing data. Refer to the [Configure trace correlations](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/trace-correlations/) and [Other settings](#other-settings) sections for available options.
 
 7. Select **Save & test**.
 
@@ -187,31 +187,31 @@ To check the status, select Explore in the menu, select your Tempo data source, 
 
 ### Troubleshoot streaming
 
-If streaming isn't working, refer to [Streaming issues](https://grafana.com/docs/grafana/v13.2/datasources/tempo/troubleshooting/#streaming-issues) in the troubleshooting guide.
+If streaming isn't working, refer to [Streaming issues](https://grafana.com/docs/grafana/v13.3/datasources/tempo/troubleshooting/#streaming-issues) in the troubleshooting guide.
 
 ## Connect traces to other signals
 
 Grafana provides several ways to link traces to other telemetry signals. The following diagram shows the available correlation mechanisms, the direction each goes, and where each is configured.
 
-![Linking traces to other signals](https://raw.githubusercontent.com/grafana/grafana/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/configure-tempo-data-source/tempo-trace-correlation-diagram.svg)
+![Linking traces to other signals](https://raw.githubusercontent.com/grafana/grafana/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/tempo-trace-correlation-diagram.svg)
 
 The Tempo data source settings page includes three sections for linking from spans to other signals. Each corresponds to a section in the settings form:
 
-- [Trace to logs](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/): Navigate from spans to related logs in Loki or another log data source.
-- [Trace to metrics](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus or other metrics data sources.
-- [Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope with embedded flame graphs.
+- [Trace to logs](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/): Navigate from spans to related logs in Loki or another log data source.
+- [Trace to metrics](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus or other metrics data sources.
+- [Trace to profiles](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope with embedded flame graphs.
 
-For more flexible, rule-based correlations that can target any data source or external URL, use Grafana [Trace correlations](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/trace-correlations/). Trace correlations are configured under **Configuration > Correlations**, not in the Tempo data source settings.
+For more flexible, rule-based correlations that can target any data source or external URL, use Grafana [Trace correlations](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/trace-correlations/). Trace correlations are configured under **Configuration > Correlations**, not in the Tempo data source settings.
 
 To link *from* logs or metrics *to* traces (the reverse direction), refer to:
 
-- [Derived fields](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure-loki-data-source/#derived-fields) in the Loki data source (for logs to traces). The [trace to logs](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/) page also covers this setup.
-- [Exemplars](https://grafana.com/docs/grafana/v13.2/fundamentals/exemplars/) in the Prometheus data source (for metrics to traces).
+- [Derived fields](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure-loki-data-source/#derived-fields) in the Loki data source (for logs to traces). The [trace to logs](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/) page also covers this setup.
+- [Exemplars](https://grafana.com/docs/grafana/v13.3/fundamentals/exemplars/) in the Prometheus data source (for metrics to traces).
 
 ## Other settings
 
-- [Additional settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/): Configure Service graph, node graph, search, TraceID query, span bar, and other settings.
-- [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/): Configure the Tempo data source using a YAML file and clone provisioned data sources.
+- [Additional settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/): Configure Service graph, node graph, search, TraceID query, span bar, and other settings.
+- [Provision the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/): Configure the Tempo data source using a YAML file and clone provisioned data sources.
 
 ## Custom query variables
 

@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/user-management/manage-org-users/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/user-management/manage-org-users/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/user-management/manage-org-users/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/user-management/manage-org-users/index.md)
 
 # Manage users in an organization
 
 Organization administrators can invite users to join their organization. Organization users have access to organization resources based on their role, which is **Admin**, **Editor**, or **Viewer**. Permissions associated with each role determine the tasks a user can perform in the system.
 
-For more information about organization user permissions, refer to [Organization users and permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-users-and-permissions).
+For more information about organization user permissions, refer to [Organization users and permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-users-and-permissions).
 
 > **Note**
 >
@@ -25,15 +25,15 @@ You can see a list of users with accounts in your Grafana organization. If neces
 
 > **Note**
 >
-> If you have [server administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can also [view a global list of users](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/#view-a-list-of-users) in the Server Admin section of Grafana.
+> If you have [server administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can also [view a global list of users](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/#view-a-list-of-users) in the Server Admin section of Grafana.
 
 ## Change a user's organization permissions
 
-Update user permissions when you want to enhance or restrict a user's access to organization resources. For more information about organization permissions, refer to [Organization roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles).
+Update user permissions when you want to enhance or restrict a user's access to organization resources. For more information about organization permissions, refer to [Organization roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles).
 
 > **Note**
 >
-> Organization roles sync from the authentication provider on user sign-in. To prevent synchronization of organization roles from the authentication provider regardless of their role in the authentication provider, then refer to the `skip_org_role_sync` setting in your Grafana configuration. Refer to [skip org role sync](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#authgrafana_com-skip_org_role_sync) for more information.
+> Organization roles sync from the authentication provider on user sign-in. To prevent synchronization of organization roles from the authentication provider regardless of their role in the authentication provider, then refer to the `skip_org_role_sync` setting in your Grafana configuration. Refer to [skip org role sync](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#authgrafana_com-skip_org_role_sync) for more information.
 
 ### Before you begin
 
@@ -57,7 +57,7 @@ Update user permissions when you want to enhance or restrict a user's access to 
 
 > **Note**
 >
-> If you have [server administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can also [change a user's organization permissions](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/change-user-org-permissions/) in the Server Admin section.
+> If you have [server administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can also [change a user's organization permissions](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/change-user-org-permissions/) in the Server Admin section.
 
 ## Invite a user to join an organization
 
@@ -68,13 +68,13 @@ When you invite users to join an organization, you assign the **Admin**, **Edito
 
 > **Note**
 >
-> If you have [server administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can also manually [add a user to an organization](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/add-remove-user-to-org/).
+> If you have [server administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can also manually [add a user to an organization](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/add-remove-user-to-org/).
 
 ### Before you begin
 
 - Ensure you have organization administrator privileges.
 - If the user already has access to Grafana, obtain their user name.
-- Determine the permissions you want to assign to the user. For more information about organization permissions, refer to [Organization roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles).
+- Determine the permissions you want to assign to the user. For more information about organization permissions, refer to [Organization roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles).
 
 **To invite or add an existing user account to your organization**:
 
@@ -96,7 +96,7 @@ When you invite users to join an organization, you assign the **Admin**, **Edito
    | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
    | Email or username | Either the email or username that the user will use to sign in to Grafana.                                                                                                                                                                                               |
    | Name              | The user's name.                                                                                                                                                                                                                                                         |
-   | Role              | Click the organization role to assign this user. For more information about organization roles, refer to [Organization roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles)..                                         |
+   | Role              | Click the organization role to assign this user. For more information about organization roles, refer to [Organization roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles)..                                         |
    | Send invite email | Switch to on if your organization has configured. The system sends an email to the user inviting them to sign in to Grafana and join the organization. Switch to off if you are not using email. The user can sign in to Grafana with the email or username you entered. |
 
 7. Click **Submit**.
@@ -149,4 +149,4 @@ This action does not remove the user account from the Grafana server.
 
 4. Click the red **X** to remove the user from the organization.
 
-> **Note:** If you have [server administrator](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can also [remove a user from an organization](https://grafana.com/docs/grafana/v13.2/administration/user-management/server-user-management/add-remove-user-to-org/#remove-a-user-from-an-organization) on the Users page of the Server Admin section.
+> **Note:** If you have [server administrator](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators) permissions, you can also [remove a user from an organization](https://grafana.com/docs/grafana/v13.3/administration/user-management/server-user-management/add-remove-user-to-org/#remove-a-user-from-an-organization) on the Users page of the Server Admin section.

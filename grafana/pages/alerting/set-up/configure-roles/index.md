@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/configure-roles/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/configure-roles/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/set-up/configure-roles/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/set-up/configure-roles/index.md)
 
 # Configure roles and permissions
 
@@ -6,7 +6,7 @@ This guide explains how to configure roles and permissions for Grafana Alerting 
 
 A user is any individual who can log in to Grafana. Each user is associated with a role that includes permissions. Permissions determine the tasks a user can perform in the system. For example, the Admin role includes permissions for an administrator to create and delete users.
 
-For more information, refer to [Organization roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-roles).
+For more information, refer to [Organization roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-roles).
 
 ## Manage access using roles
 

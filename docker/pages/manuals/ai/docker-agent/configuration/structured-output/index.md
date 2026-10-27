@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/structured-output/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/configuration/structured-output/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/structured-output/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/configuration/structured-output/index.md)
 
 # Structured Output
 
@@ -157,13 +157,18 @@ schema:
 
 Structured output support varies by provider:
 
-| Provider      | Support    | Notes                                   |
-| ------------- | ---------- | --------------------------------------- |
-| OpenAI        | ✓ Full     | Native JSON mode with schema validation |
-| Anthropic     | ✓ Full     | Tool-based structured output            |
-| Google Gemini | ✓ Full     | Native JSON mode                        |
-| AWS Bedrock   | ✓ Partial  | Depends on underlying model             |
-| DMR           | ⚠️ Limited | Depends on model capabilities           |
+| Provider      | Support         | Notes                                                                          |
+| ------------- | --------------- | ------------------------------------------------------------------------------ |
+| OpenAI        | ✓ Full          | Native JSON mode with schema validation                                        |
+| Anthropic     | ✓ Native / tool | Beta Messages JSON schema on supported endpoints/models; tool mode is separate |
+| Google Gemini | ✓ Full          | Native JSON mode                                                               |
+| AWS Bedrock   | ✓ Tool mode     | No native JSON-schema wiring in the current Converse client                    |
+| DMR           | ⚠️ Limited      | Depends on model capabilities                                                  |
+
+For Claude, enforcement depends on the path: native Beta Messages, an
+OpenAI-compatible host that may ignore `response_format`, or client-validated
+tool mode. Google organization policy and model-specific restrictions still apply.
+See [Claude access paths](https://docs.docker.com/ai/docker-agent/providers/anthropic/#feature-and-access-limits).
 
 ## Example: Data Extraction Agent
 

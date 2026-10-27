@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/configure/azure-authentication.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/configure/azure-authentication.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/configure/azure-authentication.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/configure/azure-authentication.md)
 
 # Migrate from Prometheus Azure AD to Azure Monitor Managed Service for Prometheus
 
@@ -58,7 +58,7 @@ For App Registration authentication:
 | **Application (client) ID** | Your app registration client ID | `87654321-4321-4321-4321-210987654321` |
 | **Client secret**           | Your app registration secret    | `your-client-secret`                   |
 
-To learn more about Entra ID authentication for Grafana, refer to [Configure Entra ID OAuth authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/azuread/#configure-azure-adentra-id-oauth-authentication).
+To learn more about Entra ID authentication for Grafana, refer to [Configure Entra ID OAuth authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/azuread/#configure-azure-adentra-id-oauth-authentication).
 
 4. Set the **Prometheus server URL** to your Azure Monitor workspace endpoint:
 
@@ -114,7 +114,7 @@ The following sections cover common issues you may encounter during or after the
 
 **Solution for self-managed Grafana:**
 
-1. Set the options required by your authentication method in the `[azure]` section of your `.ini` configuration file. For a full description of each option, refer to the [`[azure]` configuration reference](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#azure).
+1. Set the options required by your authentication method in the `[azure]` section of your `.ini` configuration file. For a full description of each option, refer to the [`[azure]` configuration reference](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#azure).
    - **Managed Identity:** Set `managed_identity_enabled = true`. For a user-assigned identity, also set `managed_identity_client_id` to the identity's client ID. Leave it empty for a system-assigned identity.
    - **Workload Identity:** Set `workload_identity_enabled = true`.
    - **Current User:** Set `user_identity_enabled = true`.
@@ -137,9 +137,9 @@ The following sections cover common issues you may encounter during or after the
 
 If you need to revert migrated data sources back to the core Prometheus type:
 
-1. Set `prometheusTypeMigration` to `false` in your Grafana configuration feature toggles. For more information, refer to [Manage feature toggles](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/feature-toggles/#manage-feature-toggles).
+1. Set `prometheusTypeMigration` to `false` in your Grafana configuration feature toggles. For more information, refer to [Manage feature toggles](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/feature-toggles/#manage-feature-toggles).
 2. Restart Grafana.
-3. Obtain a bearer token with `read` and `write` permissions for the data source API. For more information, refer to [Data source API](https://grafana.com/docs/grafana/v13.2/developers/http_api/data_source/).
+3. Obtain a bearer token with `read` and `write` permissions for the data source API. For more information, refer to [Data source API](https://grafana.com/docs/grafana/v13.3/developers/http_api/data_source/).
 4. Run the following rollback script, providing your Grafana URL and bearer token:
 
 ```sh

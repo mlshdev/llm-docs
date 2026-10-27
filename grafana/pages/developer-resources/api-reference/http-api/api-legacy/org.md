@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/api-legacy/org.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/api-legacy/org.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/org.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/org.md)
 
 # Organization API
 
@@ -8,7 +8,7 @@
 >
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
-> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 The Organization HTTP API is divided in two resources, `/api/org` (current organization)
 and `/api/orgs` (admin organizations). One big difference between these are that
@@ -304,7 +304,7 @@ Content-Type: application/json
 >
 > You can't authenticate to the Admin Organizations HTTP API with service account tokens.
 > Service accounts are limited to an organization and an organization role.
-> They can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#grafana-server-administrators).
+> They can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators).
 >
 > To use these API endpoints you have to use Basic authentication and the Grafana user must have the Grafana server administrator permission.
 >

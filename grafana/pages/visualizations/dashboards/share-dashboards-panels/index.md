@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/share-dashboards-panels/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/share-dashboards-panels/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/share-dashboards-panels/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/share-dashboards-panels/_index.md)
 
 # Share dashboards and panels
 
@@ -66,7 +66,7 @@ This link has any customizations, like time range locking or theme, that you've 
 
 Externally shared dashboards allow you to share your Grafana dashboard with anyone. This is useful when you want to make your dashboard available to the world without requiring access to your Grafana organization.
 
-Learn how to configure and manage externally shared dashboards in [Externally shared dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/share-dashboards-panels/shared-dashboards/).
+Learn how to configure and manage externally shared dashboards in [Externally shared dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/share-dashboards-panels/shared-dashboards/).
 
 ### Schedule a report
 
@@ -79,7 +79,7 @@ To share your dashboard as a report, follow these steps:
 1. Click **Dashboards** in the main menu.
 2. Click the dashboard you want to share.
 3. Click the **Share** drop-down list in the top-right corner and select **Schedule a report**.
-4. [Configure the report](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/create-reports/#create-a-report).
+4. [Configure the report](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/create-reports/#create-a-report).
 5. Depending on your schedule settings, you'll have different options at this step. Click either **Schedule send** or **Send now**.
 
 You can also save the report as a draft.
@@ -200,7 +200,7 @@ To export a JSON file, follow these steps:
 
 > **Note**
 >
-> You must have the [Grafana Image Renderer service](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/) configured to export a dashboard as an image.
+> You must have the [Grafana Image Renderer service](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/) configured to export a dashboard as an image.
 
 To export a dashboard in its current state as a PNG image file, follow these steps:
 
@@ -277,13 +277,13 @@ To share a personalized, direct link to your panel within your organization, fol
 
 6. Send the copied link to a Grafana user with authorization to view it.
 
-7. (Optional) To [generate an image of the panel as a PNG file](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/), customize the image settings:
+7. (Optional) To [generate an image of the panel as a PNG file](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/), customize the image settings:
 
    - **Width** - In pixels. The default and minimum is 1000.
    - **Height** - In pixels. The default and minimum is 500.
    - **Scale factor** - The default is 1.
 
-   There are minimums and maximums for width, height, and scale factor in the image renderer [configuration options](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/troubleshooting/#available-configuration-options) that you can customize if needed.
+   There are minimums and maximums for width, height, and scale factor in the image renderer [configuration options](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/troubleshooting/#available-configuration-options) that you can customize if needed.
 
 8. (Optional) Click **Generate image** to see a preview of the panel image.
 
@@ -307,9 +307,9 @@ When you click **Generate image** in the panel link settings, Grafana generates 
 
 > **Note**
 >
-> The image renderer enforces minimum dimensions of 1000px for width and 500px for height. You can customize these minimums in self-managed Grafana installations through the [image renderer configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/#configuration). In Grafana Cloud, the configuration is managed by Grafana and can't be modified. If you encounter size-related errors when rendering images using the API, ensure your dimensions meet the minimum requirements.
+> The image renderer enforces minimum dimensions of 1000px for width and 500px for height. You can customize these minimums in self-managed Grafana installations through the [image renderer configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/#configuration). In Grafana Cloud, the configuration is managed by Grafana and can't be modified. If you encounter size-related errors when rendering images using the API, ensure your dimensions meet the minimum requirements.
 
-You can also update these parameters in the [image rendering configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/#configuration).
+You can also update these parameters in the [image rendering configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/#configuration).
 
 The following example shows a link to a server-side rendered PNG:
 
@@ -323,7 +323,7 @@ You can share a panel by embedding it on another website using an iframe. Users 
 
 > **Note**
 >
-> Panel embedding and anonymous access permissions are not available in Grafana Cloud, even for panels in [externally shared dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/share-dashboards-panels/shared-dashboards/). These capabilities are only supported in Grafana Enterprise and Grafana Open Source.
+> Panel embedding and anonymous access permissions are not available in Grafana Cloud, even for panels in [externally shared dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/share-dashboards-panels/shared-dashboards/). These capabilities are only supported in Grafana Enterprise and Grafana Open Source.
 
 To create a panel that can be embedded, follow these steps:
 

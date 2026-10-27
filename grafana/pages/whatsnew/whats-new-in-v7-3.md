@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/whatsnew/whats-new-in-v7-3.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/whatsnew/whats-new-in-v7-3.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/whatsnew/whats-new-in-v7-3.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/whatsnew/whats-new-in-v7-3.md)
 
 # What's new in Grafana v7.3
 
@@ -30,7 +30,7 @@ Another new feature that can be seen in the image above is the new image cell di
 
 *Color scheme*
 
-A new standard field color scheme option has been added. This new option will provide a unified way for all new panels to specify how colors should be assigned. For more information, refer to [Apply color to series and fields](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#color-scheme).
+A new standard field color scheme option has been added. This new option will provide a unified way for all new panels to specify how colors should be assigned. For more information, refer to [Apply color to series and fields](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/#color-scheme).
 
 - **Single color**: Specifies a single color. Useful in an override rule.
 - **From thresholds**: Informs Grafana to take color from the matching threshold.
@@ -51,7 +51,7 @@ Another thing to highlight is that all these new color schemes are theme aware a
 
 *table color monochrome scheme*
 
-As this new option is a standard field option it works in every panel. Here is another example from the [Bar Gauge](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-gauge/) panel.
+As this new option is a standard field option it works in every panel. Here is another example from the [Bar Gauge](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-gauge/) panel.
 
 ![](https://grafana.com/static/img/docs/v73/bar_gauge_gradient_color_scheme.png)
 
@@ -61,7 +61,7 @@ As this new option is a standard field option it works in every panel. Here is a
 
 In v7.0, we introduced a new table panel and inspect mode with Download CSV enabled. However, CSV export to Excel was removed. Due to a large number of inquiries and requests, this [community contribution from tomdaly](https://github.com/grafana/grafana/pull/27284) brought the feature back.
 
-For more information, refer to [Download raw query results](https://grafana.com/docs/grafana/v13.2/panels-visualizations/panel-inspector/#download-raw-query-results).
+For more information, refer to [Download raw query results](https://grafana.com/docs/grafana/v13.3/panels-visualizations/panel-inspector/#download-raw-query-results).
 
 ## Google Cloud monitoring out-of-the-box dashboards
 
@@ -75,7 +75,7 @@ The updated Google Cloud monitoring data source is shipped with pre-configured d
 
 To import the pre-configured dashboards, go to the configuration page of your Google Cloud Monitoring data source and click on the `Dashboards` tab. Click `Import` for the dashboard you would like to use. To customize the dashboard, we recommend to save the dashboard under a different name, because otherwise the dashboard will be overwritten when a new version of the dashboard is released.
 
-For more details, see the [Google Cloud Monitoring docs](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/#out-of-the-box-dashboards)
+For more details, see the [Google Cloud Monitoring docs](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/#out-of-the-box-dashboards)
 
 ## Shorten URL for dashboards and Explore
 
@@ -85,7 +85,7 @@ This is an amazing new feature that was created in cooperation with one of our c
 
 You can now configure your Elasticsearch data source to access your Amazon Elasticsearch Service domain directly from Grafana.
 
-For more details, refer to the [Elasticsearch docs](https://grafana.com/docs/grafana/v13.2/datasources/elasticsearch/#aws-signature-version-4-authentication).
+For more details, refer to the [Elasticsearch docs](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/#aws-signature-version-4-authentication).
 
 ## Chaining pipeline aggregation in Elasticsearch
 
@@ -121,7 +121,7 @@ Example of a login event:
 }
 ```
 
-For more details, see the [Auditing docs](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/audit-grafana/).
+For more details, see the [Auditing docs](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/audit-grafana/).
 
 ### Data source usage insights
 
@@ -135,11 +135,11 @@ Insights:
 
 ### SAML single logout
 
-SAML’s single logout (SLO) capability allows users to log out from all applications associated with the current identity provider (IdP) session established via SAML SSO. For more information, refer to the [docs](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/#single-logout).
+SAML’s single logout (SLO) capability allows users to log out from all applications associated with the current identity provider (IdP) session established via SAML SSO. For more information, refer to the [docs](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/#single-logout).
 
 ### SAML IdP-initiated single sign on
 
-IdP-initiated single sign on (SSO) allows the user to log in directly from the SAML identity provider (IdP). It is disabled by default for security reasons. For more information, refer to the [docs](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/#idp-initiated-single-sign-on-sso).
+IdP-initiated single sign on (SSO) allows the user to log in directly from the SAML identity provider (IdP). It is disabled by default for security reasons. For more information, refer to the [docs](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/#idp-initiated-single-sign-on-sso).
 
 ## Changelog
 
@@ -147,11 +147,11 @@ Check out [CHANGELOG.md](https://github.com/grafana/grafana/blob/main/CHANGELOG.
 
 ## Patch release notes
 
-- [Grafana 7.3.0 release notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-7-3-0/)
-- [Grafana 7.3.1 release notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-7-3-1/)
-- [Grafana 7.3.2 release notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-7-3-2/)
-- [Grafana 7.3.3 release notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-7-3-3/)
-- [Grafana 7.3.4 release notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-7-3-4/)
-- [Grafana 7.3.5 release notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-7-3-5/)
-- [Grafana 7.3.6 release notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-7-3-6/)
-- [Grafana 7.3.7 release notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-7-3-7/)
+- [Grafana 7.3.0 release notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-7-3-0/)
+- [Grafana 7.3.1 release notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-7-3-1/)
+- [Grafana 7.3.2 release notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-7-3-2/)
+- [Grafana 7.3.3 release notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-7-3-3/)
+- [Grafana 7.3.4 release notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-7-3-4/)
+- [Grafana 7.3.5 release notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-7-3-5/)
+- [Grafana 7.3.6 release notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-7-3-6/)
+- [Grafana 7.3.7 release notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-7-3-7/)

@@ -1,18 +1,18 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/_index.md)
 
 # Build dashboards
 
 This section includes the following topics:
 
-- [Create dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/)
-- [Create dashboards from templates and suggestions](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-template-dashboards/)
-- [Filter and Group by](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/)
-- [Import dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/import-dashboards/)
-- [Modify dashboard settings](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/modify-dashboard-settings/)
-- [Manage dashboard links](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/)
-- [Dashboard URL variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/)
-- [Manage library panels](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-library-panels/)
-- [Manage dashboard version history](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-version-history/)
-- [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/annotate-visualizations/)
-- [JSON model](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/view-dashboard-json-model/)
-- [Grafana dashboard best practices](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/best-practices/)
+- [Create dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/)
+- [Create dashboards from templates and suggestions](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-template-dashboards/)
+- [Filter and Group by](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/)
+- [Import dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/import-dashboards/)
+- [Modify dashboard settings](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/modify-dashboard-settings/)
+- [Manage dashboard links](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/)
+- [Dashboard URL variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard-url-variables/)
+- [Manage library panels](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-library-panels/)
+- [Manage dashboard version history](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-version-history/)
+- [Annotate visualizations](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/annotate-visualizations/)
+- [JSON model](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/view-dashboard-json-model/)
+- [Grafana dashboard best practices](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/best-practices/)

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/troubleshooting/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/troubleshooting/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/troubleshooting/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/troubleshooting/_index.md)
 
 # Troubleshooting
 
@@ -10,17 +10,17 @@ If you encounter an error or problem, then you can check the Grafana server log.
 
 You can enable more logging by changing log level in the Grafana configuration file.
 
-For more information, refer to [Enable debug logging in Grafana CLI](https://grafana.com/docs/grafana/v13.2/cli/#enable-debug-logging) and the [log section in Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#log).
+For more information, refer to [Enable debug logging in Grafana CLI](https://grafana.com/docs/grafana/v13.3/cli/#enable-debug-logging) and the [log section in Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#log).
 
 ## Troubleshoot with Dashboards Panels
 
-If you have an issue with your Dashboard panel, you can send us debug information. For more information, refer to [Send a panel to Grafana Labs support](https://grafana.com/docs/grafana/v13.2/troubleshooting/send-panel-to-grafana-support/).
+If you have an issue with your Dashboard panel, you can send us debug information. For more information, refer to [Send a panel to Grafana Labs support](https://grafana.com/docs/grafana/v13.3/troubleshooting/send-panel-to-grafana-support/).
 
 ## Troubleshoot transformations
 
 Order of transformations matters. If the final data output from multiple transformations looks wrong, try changing the transformation order. Each transformation transforms data returned by the previous transformation, not the original raw data.
 
-For more information, refer to [Debug a transformation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#debug-a-transformation).
+For more information, refer to [Debug a transformation](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/#debug-a-transformation).
 
 ## Text missing with server-side image rendering (RPM-based Linux)
 
@@ -36,7 +36,7 @@ sudo yum install urw-fonts
 
 ## Troubleshoot backend performance
 
-If you're experiencing backend performance problems, such as high memory or CPU usage, please refer to [Configure profiling and tracing to troubleshoot Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/configure-tracing/).
+If you're experiencing backend performance problems, such as high memory or CPU usage, please refer to [Configure profiling and tracing to troubleshoot Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/configure-tracing/).
 
 ## More help
 

@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/create-recording-rules/migrate-recorded-queries.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/create-recording-rules/migrate-recorded-queries.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/create-recording-rules/migrate-recorded-queries.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/create-recording-rules/migrate-recorded-queries.md)
 
 # Migrate recorded queries
 
-Users can transpose their [now-depreciated recorded queries](https://grafana.com/docs/grafana/latest/administration/recorded-queries/) into Grafana-managed recording rules in a few easy steps. The query PromQL for each recorded query has been exposed on the recorded queries list along with the existing datasource, time range, and interval values to simplify the migration process.
+Users can transpose their [now-deprecated recorded queries](https://grafana.com/docs/grafana/latest/administration/recorded-queries/) into Grafana-managed recording rules in a few easy steps. The query PromQL for each recorded query has been exposed on the recorded queries list along with the existing data source, time range, and interval values to simplify the migration process.
 
 ## Migrate your recorded queries to Grafana-managed alert rules
 

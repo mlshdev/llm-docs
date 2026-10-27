@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-stack.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-stack.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-stack.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-stack.md)
 
 # Create and manage a Grafana Cloud stack using Terraform
 
@@ -208,7 +208,7 @@ Once you apply the changes in the Terraform configurations, you should be able t
 
 ![InfluxDB data source](https://grafana.com/media/docs/grafana-cloud/screenshot-influxdb_datasource_tf.png)
 
-- A new folder in Grafana. In the following image, a folder named "Demos" was added by the [grafana\_folder (Resource)](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/#add-a-folder).
+- A new folder in Grafana. In the following image, a folder named "Demos" was added by the [grafana\_folder (Resource)](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/#add-a-folder).
 
 ![Folder](https://grafana.com/media/docs/grafana-cloud/screenshot-folder_tf.png)
 

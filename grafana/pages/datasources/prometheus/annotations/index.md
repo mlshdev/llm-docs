@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/annotations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/annotations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/annotations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/annotations/index.md)
 
 # Prometheus annotations
 
 Annotations overlay event data on your dashboard graphs, helping you correlate events with metrics. You can use Prometheus as a data source for annotations to display events such as deployments, alerts, or threshold crossings on your visualizations.
 
-For general information about annotations, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/).
+For general information about annotations, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/).
 
 ## Before you begin
 
@@ -190,4 +190,4 @@ Range annotations display as shaded regions rather than vertical lines, represen
 
 Because PromQL doesn't natively return start/end time pairs, range annotations with Prometheus are limited to scenarios where you have separate metrics for start and end times (for example, via recording rules or custom metrics pushed to `Pushgateway`). For most use cases, point annotations (using the examples in this page) are the practical approach.
 
-If your annotations aren't appearing or you encounter errors, refer to [Troubleshoot Prometheus data source issues](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/#annotation-errors).
+If your annotations aren't appearing or you encounter errors, refer to [Troubleshoot Prometheus data source issues](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/#annotation-errors).

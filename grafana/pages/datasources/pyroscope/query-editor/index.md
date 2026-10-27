@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/pyroscope/query-editor/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/pyroscope/query-editor/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/pyroscope/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/pyroscope/query-editor/index.md)
 
 # Query profile data
 
@@ -8,14 +8,14 @@ You can query your profile data using the open source Grafana Profiles Drilldown
 - Data source query editor provides complete control over your data exploration and is recommended for experienced users.
 
 In addition, you can embed flame graph panels in Grafana dashboards.
-Refer to the [Flame graph panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/) documentation for details.
+Refer to the [Flame graph panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/) documentation for details.
 
 ## Profiles Drilldown
 
-[Grafana Profiles Drilldown](https://grafana.com/docs/grafana/v13.2/explore/simplified-exploration/profiles/) is a native Grafana application designed to integrate seamlessly with Pyroscope, the open source continuous profiling platform, providing a smooth, queryless experience for browsing and analyzing profiling data.
+[Grafana Profiles Drilldown](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/profiles/) is a native Grafana application designed to integrate seamlessly with Pyroscope, the open source continuous profiling platform, providing a smooth, queryless experience for browsing and analyzing profiling data.
 
 You can use Profiles Drilldown in Grafana Cloud or in your own Grafana instance.
-For more information, refer to [Access or install Profiles Drilldown](https://grafana.com/docs/grafana/v13.2/explore/simplified-exploration/profiles/access/).
+For more information, refer to [Access or install Profiles Drilldown](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/profiles/access/).
 
 ![Profiles Drilldown home screen](https://grafana.com/media/docs/explore-profiles/explore-profiles-homescreen-v0.1.17.png)
 
@@ -108,7 +108,7 @@ The **Options** section provides the following settings.
 | **Max Nodes**   | Sets the maximum number of nodes rendered in the flame graph. Lower values improve performance for large profiles by aggregating smaller nodes. The field placeholder shows the default value, `16384`.                    |
 | **Annotations** | Includes profiling annotations, such as sampling and throttling events, on time-series results. Use these annotations to identify when Pyroscope reduced or limited ingestion for a service.                               |
 
-Select a query type to return the profile data. Data is shown in the [Flame Graph](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/), metric data visualized in a graph, or both.
+Select a query type to return the profile data. Data is shown in the [Flame Graph](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/), metric data visualized in a graph, or both.
 
 Using **Group by**, you can group metric data by a specified label.
 You can use multiple labels to group by.
@@ -117,10 +117,7 @@ In conjunction with **Group by**, you can set a positive number in the **Limit**
 
 #### Exemplars
 
-When the `profilesExemplars` feature is enabled, an **Exemplars** toggle appears in the **Options** section.
-Exemplars link individual profile samples to points on a metrics graph, so you can jump from a spike in a time series to the specific profile that produced it.
-
-The `profilesExemplars` feature is generally available and enabled by default.
+The **Exemplars** toggle in the **Options** section links individual profile samples to points on a metrics graph, so you can jump from a spike in a time series to the specific profile that produced it.
 
 #### Heatmap
 
@@ -177,12 +174,12 @@ Select the `goroutine:goroutine:count:goroutine:count` profile type to inspect t
 
 **View the profile for a specific trace span:**
 
-Select a profile type, set **Query Type** to **Profile**, and enter the span ID in the **Span ID** field, for example, `64f170a95f537095`. The flame graph then shows only the profile data associated with that span. This example supports [Trace to profiles](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/configure-traces-to-profiles/).
+Select a profile type, set **Query Type** to **Profile**, and enter the span ID in the **Span ID** field, for example, `64f170a95f537095`. The flame graph then shows only the profile data associated with that span. This example supports [Trace to profiles](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/configure-traces-to-profiles/).
 
 ### Profiles query results
 
 Profiles can be visualized in a flame graph.
-Refer to the [Flame Graph documentation](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/flame-graph/) to learn about the visualization and its features.
+Refer to the [Flame Graph documentation](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/) to learn about the visualization and its features.
 
 ![Flame graph](https://grafana.com/media/docs/pyroscope/query-editor/flame-graph.png "Flame graph")
 
@@ -200,5 +197,5 @@ This allows you to quickly see any spikes in the value of the scraped profiles a
 
 ## Next steps
 
-- [Use template variables](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/template-variables/)
-- [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/troubleshooting/)
+- [Use template variables](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/template-variables/)
+- [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/troubleshooting/)

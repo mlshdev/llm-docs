@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/aws-cloudwatch/annotations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/aws-cloudwatch/annotations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/annotations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/annotations/index.md)
 
 # Amazon CloudWatch annotations
 
-[Annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) overlay rich event information on top of graphs. With the Amazon CloudWatch data source, annotations are based on [CloudWatch alarm history](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html). Each alarm history item within the dashboard time range—such as a state change, configuration update, or action—becomes an annotation, so you can correlate alarm activity with the rest of your dashboard data.
+[Annotations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/) overlay rich event information on top of graphs. With the Amazon CloudWatch data source, annotations are based on [CloudWatch alarm history](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html). Each alarm history item within the dashboard time range—such as a state change, configuration update, or action—becomes an annotation, so you can correlate alarm activity with the rest of your dashboard data.
 
 ## Before you begin
 
 Before you create CloudWatch annotations, ensure you have:
 
-- A [configured Amazon CloudWatch data source](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/).
+- A [configured Amazon CloudWatch data source](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/).
 - One or more CloudWatch alarms in the AWS account and region you want to query.
 - IAM permissions to describe alarms and alarm history. Refer to [Required permissions](#required-permissions).
 
@@ -86,7 +86,7 @@ Annotation queries require the following CloudWatch API actions in the IAM polic
 }
 ```
 
-The metrics IAM policy on the [configure page](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/#iam-policy-examples) already includes these actions.
+The metrics IAM policy on the [configure page](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/#iam-policy-examples) already includes these actions.
 
 ## Troubleshoot annotations
 
@@ -105,6 +105,6 @@ If annotations don't appear as expected, try the following solutions.
 
 ## Related resources
 
-- [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/)
-- [Amazon CloudWatch query editor](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/query-editor/)
-- [Configure the Amazon CloudWatch data source](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/configure/)
+- [Annotate visualizations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/)
+- [Amazon CloudWatch query editor](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/query-editor/)
+- [Configure the Amazon CloudWatch data source](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/configure/)

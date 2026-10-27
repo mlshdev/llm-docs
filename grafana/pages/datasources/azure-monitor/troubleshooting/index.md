@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/azure-monitor/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/azure-monitor/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/azure-monitor/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/azure-monitor/troubleshooting/index.md)
 
 # Troubleshoot Azure Monitor data source issues
 
@@ -224,7 +224,7 @@ These errors occur when executing queries against Azure Monitor services.
 
 **Solutions:**
 
-1. **Increase the data source timeout.** Open the Azure Monitor data source settings, scroll to the **Misc** section, and increase the **Timeout** to `300` (seconds). Refer to [Query timeout](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/configure/#query-timeout) for details.
+1. **Increase the data source timeout.** Open the Azure Monitor data source settings, scroll to the **Misc** section, and increase the **Timeout** to `300` (seconds). Refer to [Query timeout](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/configure/#query-timeout) for details.
 2. Narrow the time range to reduce data volume.
 3. Add filters to reduce the result set.
 4. Use `summarize` to aggregate data instead of returning raw rows.
@@ -246,7 +246,7 @@ These errors occur when executing queries against Azure Monitor services.
 1. Aggregate the data in your query with `summarize` instead of returning raw rows.
 2. Narrow the dashboard time range to reduce the number of rows returned.
 3. Add filters to your KQL query to return only the rows you need.
-4. To remove the limit, enable the `azureMonitorDisableLogLimit` [feature toggle](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/feature-toggles/). Disabling the limit can degrade browser performance for very large result sets.
+4. To remove the limit, enable the `azureMonitorDisableLogLimit` [feature toggle](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/feature-toggles/). Disabling the limit can degrade browser performance for very large result sets.
 
 ### "Metrics not available" for a resource
 
@@ -324,7 +324,7 @@ These errors are specific to Basic Logs queries.
 
 **Solutions:**
 
-1. Verify **Enable Basic Logs** is toggled on in the data source configuration. Refer to [Enable Basic Logs](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/configure/#enable-basic-logs).
+1. Verify **Enable Basic Logs** is toggled on in the data source configuration. Refer to [Enable Basic Logs](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/configure/#enable-basic-logs).
 2. Basic Logs isn't available when creating alert rules. If you're in the alerting UI, use Analytics mode instead.
 
 ### Basic Logs query returns errors
@@ -351,7 +351,7 @@ These errors are specific to Basic Logs queries.
 
 ## Alerting errors
 
-These errors occur when using Azure Monitor data in Grafana alert rules or recording rules. For general alerting configuration, refer to the [Azure Monitor alerting documentation](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/alerting/).
+These errors occur when using Azure Monitor data in Grafana alert rules or recording rules. For general alerting configuration, refer to the [Azure Monitor alerting documentation](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/alerting/).
 
 ### Alert failure with Current User authentication
 
@@ -367,7 +367,7 @@ These errors occur when using Azure Monitor data in Grafana alert rules or recor
 
 1. Configure **fallback service credentials** in the data source settings. Typically this means adding an App Registration (client secret) as the fallback.
 2. Verify the fallback credentials have the required Azure RBAC permissions on the resources used in your alert rules.
-3. Refer to [Limitations and fallback credentials](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/configure/#limitations-and-fallback-credentials) for configuration details.
+3. Refer to [Limitations and fallback credentials](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/configure/#limitations-and-fallback-credentials) for configuration details.
 
 ### Alert evaluation timeout
 
@@ -378,14 +378,14 @@ These errors occur when using Azure Monitor data in Grafana alert rules or recor
 
 **Solutions:**
 
-1. **Increase the data source timeout.** The default is 30 seconds, but Azure Log Analytics queries can take up to 3 minutes. Open the Azure Monitor data source settings, scroll to **Misc**, and set **Timeout** to `300`. Refer to [Query timeout](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/configure/#query-timeout).
+1. **Increase the data source timeout.** The default is 30 seconds, but Azure Log Analytics queries can take up to 3 minutes. Open the Azure Monitor data source settings, scroll to **Misc**, and set **Timeout** to `300`. Refer to [Query timeout](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/configure/#query-timeout).
 2. Ensure the alert evaluation interval is long enough to accommodate the query duration.
 3. Simplify complex KQL queries used in alert rules.
 4. Reduce the time range in Log Analytics queries.
 
 ## Template variable errors
 
-For general template variable configuration, refer to the [template variables documentation](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/template-variables/).
+For general template variable configuration, refer to the [template variables documentation](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/template-variables/).
 
 ### "Properties found in series but missing `valueProp` and `textProp`"
 
@@ -422,7 +422,7 @@ For general template variable configuration, refer to the [template variables do
 
 **Solutions:**
 
-1. Check the [Grafana release notes](https://grafana.com/docs/grafana/v13.2/whatsnew/) for breaking changes related to template variables or the Azure Monitor data source.
+1. Check the [Grafana release notes](https://grafana.com/docs/grafana/v13.3/whatsnew/) for breaking changes related to template variables or the Azure Monitor data source.
 2. Verify the Azure Monitor plugin version is compatible with your Grafana version. Go to **Administration** > **Plugins and data** > **Plugins**, search for "Azure Monitor", and check the version.
 3. Clear the browser cache and reload the dashboard.
 4. Re-open the variable configuration and click **Run query** to verify it returns expected results.

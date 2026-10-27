@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/tutorials/iis/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/tutorials/iis/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/tutorials/iis/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/tutorials/iis/index.md)
 
 # Use IIS with URL Rewrite as a reverse proxy
 
@@ -28,7 +28,7 @@ You will also need the Application Request Routing (ARR) module for IIS for prox
 
 ## Grafana Config
 
-The Grafana config can be set by creating a file named/editing the existing file named `custom.ini` in the `conf` subdirectory of your Grafana installation. See the [installation instructions](https://grafana.com/docs/grafana/v13.2/installation/windows/#configure) for more details.
+The Grafana config can be set by creating a file named/editing the existing file named `custom.ini` in the `conf` subdirectory of your Grafana installation. See the [installation instructions](https://grafana.com/docs/grafana/v13.3/installation/windows/#configure) for more details.
 
 Using the example from above, if the subpath is `grafana` (you can set this to whatever is required) and the parent site is `yourdomain.com:8080`, then you would add this to the `custom.ini` config file:
 

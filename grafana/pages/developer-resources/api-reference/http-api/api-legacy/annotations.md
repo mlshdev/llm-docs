@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/api-legacy/annotations.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/api-legacy/annotations.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/annotations.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/annotations.md)
 
 # Annotations API
 
@@ -8,7 +8,7 @@
 >
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
-> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/).
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 Annotations are saved in the Grafana database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.
 
@@ -59,13 +59,10 @@ Content-Type: application/json
 [
     {
         "id": 1124,
-        "alertId": 0,
         "dashboardUID": "uGlb_lG7z",
         "panelId": 2,
         "userId": 1,
         "userName": "",
-        "newState": "",
-        "prevState": "",
         "time": 1507266395000,
         "timeEnd": 1507266395000,
         "text": "test",
@@ -77,13 +74,10 @@ Content-Type: application/json
     },
     {
         "id": 1123,
-        "alertId": 0,
         "dashboardUID": "jcIIG-07z",
         "panelId": 2,
         "userId": 1,
         "userName": "",
-        "newState": "",
-        "prevState": "",
         "time": 1507265111000,
         "text": "test",
         "tags": [
@@ -94,6 +88,10 @@ Content-Type: application/json
     }
 ]
 ```
+
+> **Note**
+>
+> Alerting fields, `alertId`, `alertName`, `newState`, `prevState`, are omitted when the annotation isn't tied to an alert. A missing `alertId` means the same as `0`: not an alert annotation.
 
 > Starting in Grafana v6.4 regions annotations are now returned in one entity that now includes the timeEnd property.
 

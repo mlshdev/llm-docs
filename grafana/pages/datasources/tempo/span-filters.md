@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/span-filters.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/span-filters.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/span-filters.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/span-filters.md)
 
 # Span filters
 
@@ -11,7 +11,7 @@ The more filters you add, the more specific the results become.
 
 > **Tip**
 >
-> If you arrived from the [Service Graph](https://grafana.com/docs/grafana/v13.2/datasources/tempo/service-graph/), use **service.name** and **status = error** filters to drill into the specific service nodes showing errors.
+> If you arrived from the [Service Graph](https://grafana.com/docs/grafana/v13.3/datasources/tempo/service-graph/), use **service.name** and **status = error** filters to drill into the specific service nodes showing errors.
 
 ![The Filters section in the trace timeline viewer showing the filter drop-down, quick filter pills for Critical path, Errors, and High latency, navigation arrows, match count, and Show all spans toggle.](https://grafana.com/media/docs/grafana/data-sources/tempo/screenshot-tempo-datasource-span-filters.png)
 
@@ -33,7 +33,7 @@ For most attribute keys, the available operators are `=`, `!=`, `=~` (regular ex
 
 > **Note**
 >
-> The same attributes available as filter keys (for example, `span.name`, `service.name`, `duration`) can be used directly in [TraceQL queries](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-editor/).
+> The same attributes available as filter keys (for example, `span.name`, `service.name`, `duration`) can be used directly in [TraceQL queries](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-editor/).
 
 ## Quick filter pills
 
@@ -86,6 +86,6 @@ To narrow to the critical path only, click the **Critical path** pill, then turn
 
 ## Next steps
 
-- [Service Graph](https://grafana.com/docs/grafana/v13.2/datasources/tempo/service-graph/): Visualize service relationships and identify error-producing nodes.
-- [Query editor](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/): Build TraceQL queries using the same attributes available as span filter keys.
-- [Configure the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/): Set up your Tempo data source and trace correlations.
+- [Service Graph](https://grafana.com/docs/grafana/v13.3/datasources/tempo/service-graph/): Visualize service relationships and identify error-producing nodes.
+- [Query editor](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/): Build TraceQL queries using the same attributes available as span filter keys.
+- [Configure the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/): Set up your Tempo data source and trace correlations.

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/tutorials/alerting-get-started-pt5/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/tutorials/alerting-get-started-pt5/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/tutorials/alerting-get-started-pt5/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/tutorials/alerting-get-started-pt5/index.md)
 
 The Get started with Grafana Alerting - Dynamic routing tutorial is a continuation of the [Get started with Grafana Alerting - Templating](http://www.grafana.com/tutorials/alerting-get-started-pt4/) tutorial.
 

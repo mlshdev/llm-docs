@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-entraid/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-entraid/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-entraid/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-entraid/_index.md)
 
 # Configure SAML with Microsoft Entra ID
 
@@ -17,7 +17,7 @@ Grafana supports user authentication through [Microsoft Entra ID](https://www.mi
 
 ## Before you begin
 
-Ensure you have permission to administer SAML authentication. For more information about roles and permissions in Grafana, refer to [Roles and permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/).
+Ensure you have permission to administer SAML authentication. For more information about roles and permissions in Grafana, refer to [Roles and permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/).
 
 If you have users that belong to more than 150 groups, configure a registered application to provide an Entra ID Graph API to retrieve the groups. Refer to [Setup Entra ID Graph API applications](#configure-a-graph-api-application-in-entra-id).
 
@@ -67,7 +67,7 @@ In order to validate Entra ID users with Grafana, you need to configure the SAML
 3. In the **Add a client secret** pane, enter a description for the secret.
 4. Set the expiration date for the secret.
 5. Select **Add**.
-6. Copy the value of the secret. This value is used in the `client_secret` field in the [SAML configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/saml-configuration-options/).
+6. Copy the value of the secret. This value is used in the `client_secret` field in the [SAML configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/saml-configuration-options/).
 
 ## Configure SAML assertions to use SCIM provisioning
 
@@ -133,4 +133,4 @@ The following table shows what the permissions look like from the Entra ID porta
 
 *Screen shot of the permissions listed in Entra ID for the App registration*
 
-To test that Graph API has the correct permissions, refer to the [Troubleshoot Graph API calls](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/troubleshoot-saml/#troubleshoot-graph-api-calls) section.
+To test that Graph API has the correct permissions, refer to the [Troubleshoot Graph API calls](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/troubleshoot-saml/#troubleshoot-graph-api-calls) section.

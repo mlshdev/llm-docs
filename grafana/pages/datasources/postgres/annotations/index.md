@@ -1,17 +1,17 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/postgres/annotations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/postgres/annotations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/postgres/annotations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/postgres/annotations/index.md)
 
 # PostgreSQL annotations
 
 Annotations overlay event data on your dashboard graphs, helping you correlate events with metrics.
 You can use PostgreSQL as a data source for annotations to display events such as deployments, alerts, or other significant occurrences on your visualizations.
 
-For general information about annotations, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/).
+For general information about annotations, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/).
 
 ## Before you begin
 
 Before creating PostgreSQL annotations, ensure you have:
 
-- [A configured PostgreSQL data source](https://grafana.com/docs/grafana/v13.2/datasources/postgres/configure/).
+- [A configured PostgreSQL data source](https://grafana.com/docs/grafana/v13.3/datasources/postgres/configure/).
 - Tables containing event data with timestamp fields.
 - Read access to the tables containing your events.
 

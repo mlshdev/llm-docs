@@ -1,16 +1,16 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/graphite/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/graphite/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/graphite/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/graphite/alerting/index.md)
 
 # Graphite alerting
 
 You can use Grafana Alerting with Graphite to create alerts based on your time series data. This lets you monitor metrics, detect anomalies, and receive notifications when specific conditions are met.
 
-For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+For general information about Grafana Alerting, refer to [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 ## Before you begin
 
 Before creating alerts with Graphite, ensure you have:
 
-- A Graphite data source configured in Grafana. Refer to [Configure the Graphite data source](https://grafana.com/docs/grafana/v13.2/datasources/graphite/configure/).
+- A Graphite data source configured in Grafana. Refer to [Configure the Graphite data source](https://grafana.com/docs/grafana/v13.3/datasources/graphite/configure/).
 - Permission to create alert rules.
 - An understanding of the metrics you want to monitor.
 
@@ -42,7 +42,7 @@ To create an alert rule using Graphite:
 9. Configure notifications and labels.
 10. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example alert queries
 
@@ -118,7 +118,7 @@ Grafana consolidates data points so that a query doesn't return more points than
 
 ### Metrics that stop reporting
 
-When a metric stops reporting, the query returns no data rather than a zero value, so a threshold alone can't detect the gap. To alert when a service stops sending metrics, set the alert rule's **No Data** state to **Alerting**. Configure this behavior in the alert rule under the evaluation options. For more information, refer to [Configure no data and error handling](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/#configure-no-data-and-error-handling).
+When a metric stops reporting, the query returns no data rather than a zero value, so a threshold alone can't detect the gap. To alert when a service stops sending metrics, set the alert rule's **No Data** state to **Alerting**. Configure this behavior in the alert rule under the evaluation options. For more information, refer to [Configure no data and error handling](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/#configure-no-data-and-error-handling).
 
 ## Best practices
 
@@ -126,11 +126,11 @@ Follow these best practices when creating Graphite alerts:
 
 - **Return a single series:** Aggregate wildcard queries with `sumSeries()` or `averageSeries()`, or evaluate each series separately when you want per-target alerts.
 - **Control consolidation:** Use `consolidateBy()` or `summarize()` so the evaluated value matches what you expect.
-- **Test queries first:** Verify your query returns the expected values in [Explore](https://grafana.com/docs/grafana/v13.2/explore/) before creating an alert.
+- **Test queries first:** Verify your query returns the expected values in [Explore](https://grafana.com/docs/grafana/v13.3/explore/) before creating an alert.
 - **Set realistic thresholds:** Base thresholds on historical data patterns to avoid false positives.
 - **Use meaningful names:** Give alert rules descriptive names that indicate what they monitor.
 
 ## Next steps
 
-- [Build queries](https://grafana.com/docs/grafana/v13.2/datasources/graphite/query-editor/) to explore your metrics before creating alerts.
-- [Troubleshoot Graphite data source issues](https://grafana.com/docs/grafana/v13.2/datasources/graphite/troubleshooting/) if alerts aren't firing as expected.
+- [Build queries](https://grafana.com/docs/grafana/v13.3/datasources/graphite/query-editor/) to explore your metrics before creating alerts.
+- [Troubleshoot Graphite data source issues](https://grafana.com/docs/grafana/v13.3/datasources/graphite/troubleshooting/) if alerts aren't firing as expected.

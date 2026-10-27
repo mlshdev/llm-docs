@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/usage-limits.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/usage-limits.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/usage-limits.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/usage-limits.md)
 
 # Usage and performance limitations
 
@@ -35,7 +35,7 @@ On Grafana Cloud, the repository-connection limit is a per-stack limit. On self-
 
 Both of these limits are early figures. As Git Sync matures, these limits will raise by orders of magnitude. The goal is for Git Sync to support around 100 repository connections per stack, and up to roughly 1,000 in the longer term, with similar increases to the number of resources you can sync per connection.
 
-If these limits are affecting your use of Git Sync, [get in touch](https://grafana.com/docs/grafana/v13.2/developer-resources/contribute/#communicate-with-grafana) and explain your situation. You may also share any ideas or suggestions.
+If these limits are affecting your use of Git Sync, [get in touch](https://grafana.com/docs/grafana/v13.3/developer-resources/contribute/#communicate-with-grafana) and explain your situation. You may also share any ideas or suggestions.
 
 For details on usage and storage limits, refer to [Dashboard and folder limits](https://grafana.com/docs/grafana-cloud/cost-management-and-billing/manage-invoices/understand-your-invoice/usage-limits/#other-usage-limits).
 
@@ -59,8 +59,8 @@ If you're an on-prem user you can change the limits directly through configurati
 
 To customize the limits use one of these configuration settings:
 
-- Use `max_repositories` to set how many repositories you can sync. Default is `10`. Set to `0` for unlimited repositories. Refer to [`max_repositories`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#max_repositories) in the Configure Grafana section to learn more.
-- Use `max_resources_per_repository` to set the amount of resources per repository to sync. Default is `0` (unlimited). Refer to [`max_resources_per_repository`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#max_resources_per_repository) in the Configure Grafana section to learn more.
+- Use `max_repositories` to set how many repositories you can sync. Default is `10`. Set to `0` for unlimited repositories. Refer to [`max_repositories`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#max_repositories) in the Configure Grafana section to learn more.
+- Use `max_resources_per_repository` to set the amount of resources per repository to sync. Default is `0` (unlimited). Refer to [`max_resources_per_repository`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#max_resources_per_repository) in the Configure Grafana section to learn more.
 
 ### Scale beyond 1,000 resources per repository
 
@@ -68,7 +68,7 @@ If a single repository holds more than 1,000 resources, you don't have to raise 
 
 Because a stack allows up to 10 repository connections, this lets you sync up to roughly 10,000 resources from a single repository while keeping each connection within the recommended range.
 
-When you split a single repository across several connections, use [folderless sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts#sync-targets) for each connection. With folder sync (the default), every connection creates its own wrapper folder named after the repository, so splitting the repository would change your folder hierarchy and nest resources one level deeper. Folderless sync places each connection's resources at the top level, so the split has no effect on how your dashboards and folders are organized in Grafana.
+When you split a single repository across several connections, use [folderless sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts#sync-targets) for each connection. With folder sync (the default), every connection creates its own wrapper folder named after the repository, so splitting the repository would change your folder hierarchy and nest resources one level deeper. Folderless sync places each connection's resources at the top level, so the split has no effect on how your dashboards and folders are organized in Grafana.
 
 If you need more than that, the 10-connection limit can be increased slightly for Cloud stacks on request. Contact Support to discuss your use case.
 
@@ -105,15 +105,15 @@ This feature is available starting in Grafana 13.0.4, but not supported until Gr
 
 Git Sync is available for any Git provider through a Pure Git repository type, and has specific enhanced integrations for GitHub, GitLab and Bitbucket.
 
-| **Provider**                         | **Available in**       | **Authentication**                  |
-| ------------------------------------ | ---------------------- | ----------------------------------- |
-| Pure Git                             | Cloud, OSS, Enterprise | Personal Access Token               |
-| GitHub                               | Cloud, OSS, Enterprise | Personal Access Token or GitHub App |
-| GitHub Enterprise (Server and Cloud) | Cloud, Enterprise      | Personal Access Token or GitHub App |
-| GitLab                               | Cloud, Enterprise      | Personal Access Token               |
-| Bitbucket                            | Cloud, Enterprise      | API token with scopes               |
+| **Provider**                         | **Available in**       | **Authentication**                              |
+| ------------------------------------ | ---------------------- | ----------------------------------------------- |
+| Pure Git                             | Cloud, OSS, Enterprise | Personal Access Token or OAuth App              |
+| GitHub                               | Cloud, OSS, Enterprise | Personal Access Token, GitHub App, or OAuth App |
+| GitHub Enterprise (Server and Cloud) | Cloud, Enterprise      | Personal Access Token, GitHub App, or OAuth App |
+| GitLab                               | Cloud, Enterprise      | Personal Access Token or OAuth App              |
+| Bitbucket                            | Cloud, Enterprise      | API token with scopes or OAuth App              |
 
-Note that Pure Git, GitLab and Bitbucket are supported in Grafana v12.4.x or later only. Refer to [Enable Git providers](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-before#enable-git-providers) to set them up.
+Note that Pure Git, GitLab and Bitbucket are supported in Grafana v12.4.x or later only. Refer to [Enable Git providers](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-before#enable-git-providers) to set them up. To make OAuth Apps available in self-managed Grafana, refer to [Enable OAuth connection types](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-before#enable-oauth-connection-types).
 
 To learn more about Git, refer to [Getting Started - About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) of the [Pro Git book](https://git-scm.com/book/en/v2) in the official Git documentation.
 
@@ -168,11 +168,11 @@ When migrating to resources to Git Sync, you can still create, edit or delete re
 
 ### Use existing resources
 
-To add existing resources as provisioned Git Sync resources, you can use the Import dashboards tool, save them from the UI, save them as JSON files and commit them to the synced repository, or use `gcx`. Refer to [Export non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources) for more details. When migrating existing dashboards, the folder structure will be replicated in the provisioned repository.
+To add existing resources as provisioned Git Sync resources, you can use the Import dashboards tool, save them from the UI, save them as JSON files and commit them to the synced repository, or use `gcx`. Refer to [Export non-provisioned resources from Grafana](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources) for more details. When migrating existing dashboards, the folder structure will be replicated in the provisioned repository.
 
 > **Caution**
 >
-> Git Sync cannot take ownership of a resource while an unmanaged resource with the same UID exists in Grafana, so you may need to manually remove the original resources to ensure the transition to provisioned resources. Since deleting resources implies certain operational caveats, refer to [How to delete existing resources in Grafana](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate#step-2-delete-the-original-dashboards) for more information.
+> Git Sync cannot take ownership of a resource while an unmanaged resource with the same UID exists in Grafana, so you may need to manually remove the original resources to ensure the transition to provisioned resources. Since deleting resources implies certain operational caveats, refer to [How to delete existing resources in Grafana](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources/dashboards-migrate#step-2-delete-the-original-dashboards) for more information.
 
 ### Restore resources
 

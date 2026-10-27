@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/start-restart-grafana.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/start-restart-grafana.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/start-restart-grafana.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/start-restart-grafana.md)
 
 # Start the Grafana server
 
@@ -220,5 +220,5 @@ To restart Grafana:
 
 After the Grafana server is up and running, consider taking the next steps:
 
-- Refer to [Get Started](https://grafana.com/docs/grafana/v13.2/getting-started/) to learn how to build your first dashboard.
-- Refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) to learn about how you can customize your environment.
+- Refer to [Get Started](https://grafana.com/docs/grafana/v13.3/getting-started/) to learn how to build your first dashboard.
+- Refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) to learn about how you can customize your environment.

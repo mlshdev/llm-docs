@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-docker.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-docker.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-docker.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-docker.md)
 
 > **Caution**
 >
@@ -59,7 +59,7 @@ The Distroless-based Grafana Enterprise and OSS images use the [Distroless](http
 
 ## Slim images
 
-Slim images don't include the plugins that Grafana bundles with the standard images. You can still install plugins when the container starts by setting the `GF_PLUGINS_PREINSTALL` environment variable. For instructions, refer to [Install plugins in the Docker container](https://grafana.com/docs/grafana/v13.2/setup-grafana/installation/docker/#install-plugins-in-the-docker-container).
+Slim images don't include the plugins that Grafana bundles with the standard images. You can still install plugins when the container starts by setting the `GF_PLUGINS_PREINSTALL` environment variable. For instructions, refer to [Install plugins in the Docker container](https://grafana.com/docs/grafana/v13.3/setup-grafana/installation/docker/#install-plugins-in-the-docker-container).
 
 To use a slim image, add `-slim` to the base image suffix. For example, use `<version>-slim` for Alpine, `<version>-ubuntu-slim` for Ubuntu, or `<version>-distroless-slim` for Distroless.
 
@@ -95,9 +95,9 @@ For a list of available tags, refer to [`grafana/grafana`](https://hub.docker.co
 
 ## Default paths
 
-Grafana comes with default configuration parameters that remain the same among versions regardless of the operating system or the environment (for example, virtual machine, Docker, Kubernetes, etc.). You can refer to the [Configure Grafana](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) documentation to view all the default configuration settings.
+Grafana comes with default configuration parameters that remain the same among versions regardless of the operating system or the environment (for example, virtual machine, Docker, Kubernetes, etc.). You can refer to the [Configure Grafana](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) documentation to view all the default configuration settings.
 
-The following configurations are set by default when you start the Grafana Docker container. When running in Docker you cannot change the configurations by editing the `conf/grafana.ini` file. Instead, you can modify the configuration using [environment variables](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
+The following configurations are set by default when you start the Grafana Docker container. When running in Docker you cannot change the configurations by editing the `conf/grafana.ini` file. Instead, you can modify the configuration using [environment variables](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#override-configuration-with-environment-variables).
 
 | Setting                 | Default value             |
 | ----------------------- | ------------------------- |
@@ -110,7 +110,7 @@ The following configurations are set by default when you start the Grafana Docke
 
 ## Install plugins in the Docker container
 
-You can install publicly available plugins and plugins that are private or used internally in an organization. For plugin installation instructions, refer to [Install plugins in the Docker container](https://grafana.com/docs/grafana/v13.2/setup-grafana/installation/docker/#install-plugins-in-the-docker-container).
+You can install publicly available plugins and plugins that are private or used internally in an organization. For plugin installation instructions, refer to [Install plugins in the Docker container](https://grafana.com/docs/grafana/v13.3/setup-grafana/installation/docker/#install-plugins-in-the-docker-container).
 
 ### Install plugins from other sources
 
@@ -196,7 +196,7 @@ docker run -d -p 3000:3000 --name=grafana grafana-custom
 
 ## Logging
 
-By default, Docker container logs are directed to `STDOUT`, a common practice in the Docker community. You can change this by setting a different [log mode](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#mode) such as `console`, `file`, or `syslog`. You can use one or more modes by separating them with spaces, for example, `console file`. By default, both `console` and `file` modes are enabled.
+By default, Docker container logs are directed to `STDOUT`, a common practice in the Docker community. You can change this by setting a different [log mode](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#mode) such as `console`, `file`, or `syslog`. You can use one or more modes by separating them with spaces, for example, `console file`. By default, both `console` and `file` modes are enabled.
 
 Example:
 
@@ -222,7 +222,7 @@ The following example demonstrates how to set the admin password:
 
 ### Configure Docker secrets credentials for AWS CloudWatch
 
-Grafana ships with built-in support for the [Amazon CloudWatch datasource](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/). To configure the data source, you must provide information such as the AWS ID-Key, secret access key, region, and so on. You can use Docker secrets as a way to provide this information.
+Grafana ships with built-in support for the [Amazon CloudWatch datasource](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/). To configure the data source, you must provide information such as the AWS ID-Key, secret access key, region, and so on. You can use Docker secrets as a way to provide this information.
 
 Example:
 
@@ -296,7 +296,7 @@ The following list includes the supported environment variables:
 
 By default, the Grafana log level is set to `INFO`, but you can increase the log level to `DEBUG` mode when you want to reproduce a problem.
 
-For more information about logging, refer to [logs](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#log).
+For more information about logging, refer to [logs](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#log).
 
 ### Increase log level using the Docker run (CLI) command
 

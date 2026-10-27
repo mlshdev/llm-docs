@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/explore/correlations-editor-in-explore.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/explore/correlations-editor-in-explore.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/explore/correlations-editor-in-explore.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/explore/correlations-editor-in-explore.md)
 
 # Correlations Editor in Explore
 
@@ -6,22 +6,22 @@
 >
 > The Explore editor is available in 10.1 and later versions. In the editor, transformations is available in Grafana 10.3 and later versions.
 
-Correlations allow users to build a link between any two data sources. For more information about correlations in general, please see the [correlations](https://grafana.com/docs/grafana/v13.2/administration/correlations/) topic in the administration page.
+Correlations allow users to build a link between any two data sources. For more information about correlations in general, please see the [correlations](https://grafana.com/docs/grafana/v13.3/administration/correlations/) topic in the administration page.
 
 ## Create a correlation
 
 1. In Grafana, navigate to the Explore page.
-2. Select a data source that you would like to be [the source data source](https://grafana.com/docs/grafana/v13.2/administration/correlations/correlation-configuration/#source-data-source-and-result-field) for a new correlation.
-3. Run a query producing data in [a supported visualization](https://grafana.com/docs/grafana/v13.2/administration/correlations/#correlations).
-4. Click **+ Add** in the top toolbar and select **Add correlation** (you can also select **Correlations Editor** from the [Command Palette](https://grafana.com/docs/grafana/v13.2/search/#command-palette)).
+2. Select a data source that you would like to be [the source data source](https://grafana.com/docs/grafana/v13.3/administration/correlations/correlation-configuration/#source-data-source-and-result-field) for a new correlation.
+3. Run a query producing data in [a supported visualization](https://grafana.com/docs/grafana/v13.3/administration/correlations/#correlations).
+4. Click **+ Add** in the top toolbar and select **Add correlation** (you can also select **Correlations Editor** from the [Command Palette](https://grafana.com/docs/grafana/v13.3/search/#command-palette)).
 5. Explore is now in Correlations Editor mode indicated by a blue border and top bar. You can exit Correlations Editor by clicking **Exit** in the top bar.
 6. You can now create the following new correlations for the visualization with links that are attached to the data that you can use to build a new query:
    - Logs: links are displayed next to field values inside log details for each log row
    - Table: every table cell is a link
 7. Click on a link to add a new correlation.
-   Links are associated with a field that is used as a [result field of a correlation](https://grafana.com/docs/grafana/v13.2/administration/correlations/correlation-configuration/).
-8. In the split view that opens, use the right pane to set up [the target query source of the correlation](https://grafana.com/docs/grafana/v13.2/administration/correlations/correlation-configuration/#target-query).
-9. Build a target query using [variables syntax](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/) with variables from the list provided at the top of the pane. The list contains sample values from the selected data row.
+   Links are associated with a field that is used as a [result field of a correlation](https://grafana.com/docs/grafana/v13.3/administration/correlations/correlation-configuration/).
+8. In the split view that opens, use the right pane to set up [the target query source of the correlation](https://grafana.com/docs/grafana/v13.3/administration/correlations/correlation-configuration/#target-query).
+9. Build a target query using [variables syntax](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/) with variables from the list provided at the top of the pane. The list contains sample values from the selected data row.
 10. Provide a label and description (optional).
     A label will be used as the name of the link inside the visualization and can contain variables.
 11. Provide transformations (optional; see below for details).
@@ -30,7 +30,7 @@ Correlations allow users to build a link between any two data sources. For more 
 
 ## Transformations
 
-Transformations allow you to extract values that exist in a field with other data. For example, using a transformation, you can extract one portion of a log line to use in a correlation. For more details on transformations in correlations, see [Correlations](https://grafana.com/docs/grafana/v13.2/explore/correlations-editor-in-explore/#transformations).
+Transformations allow you to extract values that exist in a field with other data. For example, using a transformation, you can extract one portion of a log line to use in a correlation. For more details on transformations in correlations, see [Correlations](https://grafana.com/docs/grafana/v13.3/explore/correlations-editor-in-explore/#transformations).
 
 After clicking one of the generated links in the editor mode, you can add transformations by clicking **Add transformation** in the Transformations dropdown menu.
 
@@ -40,7 +40,7 @@ You can use a transformation in your correlation with the following steps:
    Select the portion of the field that you want to use for the transformation. For example, a log line.
    Once selected, the value of this field will be used to assist you in building the transformation.
 2. Select the type of the transformation.
-   See [correlations](https://grafana.com/docs/grafana/v13.2/explore/correlations-editor-in-explore/#transformations) for the options and relevant settings.
+   See [correlations](https://grafana.com/docs/grafana/v13.3/explore/correlations-editor-in-explore/#transformations) for the options and relevant settings.
 3. Based on your selection, you might see one or more variables populate, or you might need to provide more specifications in options that are displayed.
 4. Select **Add transformation to correlation** to add the specified variables to the list of available variables.
 
@@ -50,7 +50,7 @@ For regular expressions in this dialog box, the `mapValue` referred to in other 
 
 ## Correlations examples
 
-The following examples show how to create correlations using the Correlations Editor in Explore. If you'd like to follow these examples, make sure to set up a [test data source](https://grafana.com/docs/grafana/v13.2/datasources/testdata/#testdata-data-source).
+The following examples show how to create correlations using the Correlations Editor in Explore. If you'd like to follow these examples, make sure to set up a [test data source](https://grafana.com/docs/grafana/v13.3/datasources/testdata/#testdata-data-source).
 
 ### Create a text to graph correlation
 
@@ -58,7 +58,7 @@ This example shows how to create a correlation using Correlations Editor in Expl
 
 Correlations allow you to use results of one query to run a new query in any data source. In this example, you will run a query that renders tabular data. The data will be used to run a different query that yields a graph result.
 
-To follow this example, make sure you have set up [a test data source](https://grafana.com/docs/grafana/v13.2/datasources/testdata/#testdata-data-source).
+To follow this example, make sure you have set up [a test data source](https://grafana.com/docs/grafana/v13.3/datasources/testdata/#testdata-data-source).
 
 1. In Grafana, navigate to **Explore**.
 2. Select the **test data source** from the dropdown menu at the top left of the page.
@@ -99,7 +99,7 @@ You can apply the same steps to any data source. Correlations allow you to creat
 
 In this example, you will create a correlation to demonstrate how to use transformations to extract values from the log line and another field.
 
-To follow this example, make sure you have set up [a test data source](https://grafana.com/docs/grafana/v13.2/datasources/testdata/#testdata-data-source).
+To follow this example, make sure you have set up [a test data source](https://grafana.com/docs/grafana/v13.3/datasources/testdata/#testdata-data-source).
 
 1. In Grafana, navigate to **Explore**.
 2. Select the **test data source** from the dropdown menu at the top left of the page.

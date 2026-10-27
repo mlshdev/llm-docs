@@ -1,12 +1,12 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/configure-tempo-data-source/trace-correlations.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/configure-tempo-data-source/trace-correlations.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/trace-correlations.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/trace-correlations.md)
 
 # Trace correlations
 
-You can use Grafana [correlations](https://grafana.com/docs/grafana/v13.2/administration/correlations/) to embed interactive correlation links in your trace view to jump from spans to related logs, metrics, profiles, or external systems. This guide explains how to configure and manage Trace correlations in Grafana.
+You can use Grafana [correlations](https://grafana.com/docs/grafana/v13.3/administration/correlations/) to embed interactive correlation links in your trace view to jump from spans to related logs, metrics, profiles, or external systems. This guide explains how to configure and manage Trace correlations in Grafana.
 
 ## What are trace correlations?
 
-Trace correlations let you define rules that inject context-sensitive links into your trace spans. When viewing traces in Explore or the Traces panel, users can click these links to navigate directly to relevant queries or URLs. Correlations are similar but more flexible to the [trace to logs, metrics, and profiles links you can configure for the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/).
+Trace correlations let you define rules that inject context-sensitive links into your trace spans. When viewing traces in Explore or the Traces panel, users can click these links to navigate directly to relevant queries or URLs. Correlations are similar but more flexible to the [trace to logs, metrics, and profiles links you can configure for the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/).
 
 ![Using correlations for a trace](https://grafana.com/media/docs/tempo/screenshot-trace-view-correlations.png)
 
@@ -15,7 +15,7 @@ Trace correlations let you define rules that inject context-sensitive links into
 To use trace correlations, you need:
 
 - Grafana 12 or later
-- A [Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/) configured in Grafana
+- A [Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) configured in Grafana
 - Admin access to configuration settings or provisioning files in Grafana
 
 ## Set up a trace correlation
@@ -149,13 +149,13 @@ In this example, you configure trace correlations with a custom URL.
 
 - **Name clearly:** Use descriptive names indicating source and target. For example: **Trace to errors in logs**.
 
-- **Use low-cardinality stream labels:** When targeting Loki, use only low-cardinality values like `service_name`, `namespace`, or `cluster` inside the stream selector `{}`. Place high-cardinality values like trace IDs in [pipeline filters](https://grafana.com/docs/loki/latest/query/log_queries/#line-filter-expression) (after `|`) or store them as [structured metadata](https://grafana.com/docs/loki/latest/get-started/labels/structured-metadata/). Using trace IDs as stream labels creates excessive streams and degrades Loki performance. For more information, refer to [Cardinality](https://grafana.com/docs/loki/latest/get-started/labels/cardinality/) and [Label best practices](https://grafana.com/docs/loki/latest/get-started/labels/bp-labels/). For detailed guidance on mapping span attributes to Loki labels, refer to [Configure trace to logs correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/).
+- **Use low-cardinality stream labels:** When targeting Loki, use only low-cardinality values like `service_name`, `namespace`, or `cluster` inside the stream selector `{}`. Place high-cardinality values like trace IDs in [pipeline filters](https://grafana.com/docs/loki/latest/query/log_queries/#line-filter-expression) (after `|`) or store them as [structured metadata](https://grafana.com/docs/loki/latest/get-started/labels/structured-metadata/). Using trace IDs as stream labels creates excessive streams and degrades Loki performance. For more information, refer to [Cardinality](https://grafana.com/docs/loki/latest/get-started/labels/cardinality/) and [Label best practices](https://grafana.com/docs/loki/latest/get-started/labels/bp-labels/). For detailed guidance on mapping span attributes to Loki labels, refer to [Configure trace to logs correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/).
 
 - **Template wisely:** Use multiple `$variable` tokens if you need to inject more than one field.
 
 ## Next steps
 
-- [Configure trace to logs correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/): Link spans to log queries in Loki with tag mapping and cardinality guidance.
-- [Configure trace to metrics correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus.
-- [Configure trace to profiles correlation](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope.
-- [Configure the Tempo data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/): Return to connection, authentication, and streaming settings.
+- [Configure trace to logs correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs/): Link spans to log queries in Loki with tag mapping and cardinality guidance.
+- [Configure trace to metrics correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus.
+- [Configure trace to profiles correlation](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope.
+- [Configure the Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/): Return to connection, authentication, and streaming settings.

@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/plugin-management/plugin-integrate.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/plugin-management/plugin-integrate.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/plugin-management/plugin-integrate.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/plugin-management/plugin-integrate.md)
 
 # Allow plugin backend communication
 
 By default, you can only communicate with plugin backends remotely.
 
-However, you can configure your Grafana instance to let the frontends of installed plugins to directly communicate with the backends of other plugins installed locally. You can use this configuration to, for example, enable a [canvas panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/canvas/) to call an application resource API that is permitted by the `actions_allow_post_url` option.
+However, you can configure your Grafana instance to let the frontends of installed plugins to directly communicate with the backends of other plugins installed locally. You can use this configuration to, for example, enable a [canvas panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/canvas/) to call an application resource API that is permitted by the `actions_allow_post_url` option.
 
 ## Integrate your plugins
 

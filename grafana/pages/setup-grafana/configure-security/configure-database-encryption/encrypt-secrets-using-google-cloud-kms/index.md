@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-google-cloud-kms/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-google-cloud-kms/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-google-cloud-kms/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-google-cloud-kms/index.md)
 
 # Encrypt database secrets using Google Cloud KMS
 
@@ -7,7 +7,7 @@ You can use an encryption key from Google Cloud Key Management Service to encryp
 **Prerequisites:**
 
 - A Google Cloud account with permission to list and create KMS keys and service accounts to access those keys
-- Access to the Grafana [configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location) file
+- Access to the Grafana [configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location) file
 
 1. [Create a key ring](https://cloud.google.com/kms/docs/creating-keys#kms-create-key-ring-console) in Google Cloud KMS.
 

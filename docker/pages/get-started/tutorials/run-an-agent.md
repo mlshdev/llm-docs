@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/tutorials/run-an-agent.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/get-started/tutorials/run-an-agent.md)
+> Pinned source for Docker main: [content/get-started/tutorials/run-an-agent.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/get-started/tutorials/run-an-agent.md)
 
 # Run your coding agent in a sandbox
 
@@ -11,6 +11,11 @@ agent gets a private environment with its own operating system and Docker
 daemon. Your project remains available on your host, while tools the agent
 installs and system changes it makes stay inside an environment you can
 discard.
+
+> \[!NOTE]
+> Familiar with containers? See [how Docker Sandboxes differ from containers][sandboxes-vs-containers].
+
+[sandboxes-vs-containers]: https://www.docker.com/products/docker-sandboxes/vs-containers/
 
 In this tutorial, you'll move an existing coding-agent workflow into a local
 sandbox. For a cloud workflow, see

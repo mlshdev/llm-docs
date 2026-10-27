@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/provision-resources/file-path-setup.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/provision-resources/file-path-setup.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/provision-resources/file-path-setup.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/provision-resources/file-path-setup.md)
 
 # Set up file provisioning
 
@@ -6,11 +6,11 @@
 >
 > On-prem file provisioning is available in Grafana v12 and later for open source and Enterprise editions. It's **not available in Grafana Cloud**. This new file provisioning feature is only available for dashboards and doesn't replace classic provisioning for the time being.
 >
-> For classic provisioning using configuration files refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/).
+> For classic provisioning using configuration files refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/).
 
 Use local file provisioning to include in your Grafana instance resources that you store in your local file system.
 
-The local path mount is referred to as a `repository`. File provisioning uses the same `Repository` resource as [Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/), with the repository `type` set to `local` and a `path` that points to a directory on the Grafana server's file system.
+The local path mount is referred to as a `repository`. File provisioning uses the same `Repository` resource as [Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/), with the repository `type` set to `local` and a `path` that points to a directory on the Grafana server's file system.
 
 Using the local path lets you also use it with a tool like `fuse`, allowing you to mount S3 buckets as local paths. You can also use tools like `restic` to automatically back up your dashboards to your preferred backup storage solution.
 
@@ -31,17 +31,17 @@ Local file provisioning using **Administration** > **Provisioning** will eventua
 
 > **Note**
 >
-> For production systems, use the `folderFromFilesStructure` capability instead of **Administration** > **Provisioning** to include dashboards from a local file system in your Grafana instance. Refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#provision-folders-structure-from-filesystem-to-grafana) for more information.
+> For production systems, use the `folderFromFilesStructure` capability instead of **Administration** > **Provisioning** to include dashboards from a local file system in your Grafana instance. Refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#provision-folders-structure-from-filesystem-to-grafana) for more information.
 
 ## Before you begin
 
 To set up file provisioning, you need:
 
 - Administration rights in your Grafana organization.
-- A local directory to store your dashboards. If you want to use a GitHub repository, refer to [Set up Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/).
+- A local directory to store your dashboards. If you want to use a GitHub repository, refer to [Set up Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/).
 - To update the `permitted_provisioning_paths` section of `custom.ini`.
-- To understand the limitations of local file provisioning. Refer to [How it works](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/provision-resources#how-it-works) for more details.
-- To set up file provisioning as code, you also need `gcx` configured with your Grafana instance details. Refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/) for setup instructions.
+- To understand the limitations of local file provisioning. Refer to [How it works](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/provision-resources#how-it-works) for more details.
+- To set up file provisioning as code, you also need `gcx` configured with your Grafana instance details. Refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/) for setup instructions.
 
 ## Configure permitted paths
 
@@ -58,7 +58,7 @@ Any subdirectories are automatically included.
 
 The values that you enter for the `permitted_provisioning_paths` become the base paths for those entered when you enter a local path in the **Connect to local storage** wizard or in the `spec.local.path` field of a `Repository` resource.
 
-1. Open your Grafana configuration file, either `grafana.ini` or `custom.ini`. For file location based on operating system, refer to [Configuration file location](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+1. Open your Grafana configuration file, either `grafana.ini` or `custom.ini`. For file location based on operating system, refer to [Configuration file location](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 
 2. Locate or add a `[paths]` section. To add more than one location, use the pipe character (`|`) to separate the paths. The list should not include empty paths or trailing pipes. Add these values:
 
@@ -181,7 +181,7 @@ Replace the placeholders with your values:
 
 > **Note**
 >
-> File provisioning supports two sync targets: `target: folder` (the default) creates a folder named after the repository and places synced resources inside it, while `target: folderless` places synced resources at the top level without creating a wrapper folder. Refer to [Sync targets](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/key-concepts/#sync-targets) for details.
+> File provisioning supports two sync targets: `target: folder` (the default) creates a folder named after the repository and places synced resources inside it, while `target: folderless` places synced resources at the top level without creating a wrapper folder. Refer to [Sync targets](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/key-concepts/#sync-targets) for details.
 
 ### Configuration parameters
 
@@ -200,7 +200,7 @@ The following configuration parameters are available:
 
 ### Push the resource to Grafana
 
-Before pushing any resources, configure `gcx` with your Grafana instance details. Refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/) for setup instructions.
+Before pushing any resources, configure `gcx` with your Grafana instance details. Refer to the [Grafana CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/) for setup instructions.
 
 Push the repository configuration:
 

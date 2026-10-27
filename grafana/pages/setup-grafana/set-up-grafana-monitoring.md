@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/set-up-grafana-monitoring.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/set-up-grafana-monitoring.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/set-up-grafana-monitoring.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/set-up-grafana-monitoring.md)
 
 # Set up Grafana monitoring
 
@@ -8,13 +8,13 @@ Grafana can emit Jaeger or OpenTelemetry Protocol (OTLP) traces for its HTTP API
 All HTTP endpoints are logged evenly (annotations, dashboard, tags, and so on).
 When a trace ID is propagated, it is reported with operation 'HTTP /datasources/proxy/:id/\*'.
 
-Refer to [Configuration's OpenTelemetry section](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#tracingopentelemetry) for a reference of tracing options available in Grafana.
+Refer to [Configuration's OpenTelemetry section](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#tracingopentelemetry) for a reference of tracing options available in Grafana.
 
 ## View Grafana internal metrics
 
 Grafana collects some metrics about itself internally. Grafana supports pushing metrics to Graphite or exposing them to be scraped by Prometheus.
 
-For more information about configuration options related to Grafana metrics, refer to [metrics](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#metrics) and [metrics.graphite](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#metricsgraphite) in [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+For more information about configuration options related to Grafana metrics, refer to [metrics](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#metrics) and [metrics.graphite](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#metricsgraphite) in [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 
 ### Available metrics
 

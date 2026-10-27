@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/simplified-exploration/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/simplified-exploration/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/simplified-exploration/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/simplified-exploration/_index.md)
 
 # Drilldown
 
@@ -29,7 +29,7 @@ To learn more, read:
 
 [Watch the video on YouTube](https://www.youtube.com/watch?v=MSHeWWsHaIA)
 
-- [Grafana Metrics Drilldown](https://grafana.com/docs/grafana/v13.2/visualizations/simplified-exploration/metrics/): Quickly find related metrics with a few clicks, without needing to write PromQL queries to retrieve metrics.
-- [Grafana Logs Drilldown](https://grafana.com/docs/grafana/v13.2/visualizations/simplified-exploration/logs/): Visualize log volumes to easily detect anomalies or significant changes over time, without needing to compose LogQL queries.
-- [Grafana Traces Drilldown](https://grafana.com/docs/grafana/v13.2/visualizations/simplified-exploration/traces/): Use Rate, Errors, and Duration (RED) metrics derived from traces to investigate and understand errors and latency issues within complex distributed systems.
-- [Grafana Profiles Drilldown](https://grafana.com/docs/grafana/v13.2/visualizations/simplified-exploration/profiles/): View and analyze high-level service performance, identify problem processes for optimization, and diagnose issues to determine root causes.
+- [Grafana Metrics Drilldown](https://grafana.com/docs/grafana/v13.3/visualizations/simplified-exploration/metrics/): Quickly find related metrics with a few clicks, without needing to write PromQL queries to retrieve metrics.
+- [Grafana Logs Drilldown](https://grafana.com/docs/grafana/v13.3/visualizations/simplified-exploration/logs/): Visualize log volumes to easily detect anomalies or significant changes over time, without needing to compose LogQL queries.
+- [Grafana Traces Drilldown](https://grafana.com/docs/grafana/v13.3/visualizations/simplified-exploration/traces/): Use Rate, Errors, and Duration (RED) metrics derived from traces to investigate and understand errors and latency issues within complex distributed systems.
+- [Grafana Profiles Drilldown](https://grafana.com/docs/grafana/v13.3/visualizations/simplified-exploration/profiles/): View and analyze high-level service performance, identify problem processes for optimization, and diagnose issues to determine root causes.

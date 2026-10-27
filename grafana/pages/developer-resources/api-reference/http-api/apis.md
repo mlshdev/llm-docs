@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/apis.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/apis.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/apis.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/apis.md)
 
 # The new HTTP API structure in Grafana
 
@@ -20,7 +20,7 @@ Before you begin, ensure you have the following:
 
 Grafana 13 deprecates legacy API endpoints (`/api`) in favor of a new generation of improved APIs (`/apis`). **Legacy APIs are not being disabled for the moment**. Removal of legacy APIs is planned for a future major release, and any breaking changes will be announced well in advance to avoid disruptions.
 
-For more information, refer to [Migrate to the new APIs](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis-migration).
+For more information, refer to [Migrate to the new APIs](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis-migration).
 
 ## API structure
 
@@ -201,6 +201,6 @@ The spec field describes the desired state of the resource. Its structure depend
 
 Use the following resources to keep working with Grafana APIs:
 
-- **Migration guide:** Refer to [Migrate to the new APIs](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis-migration).
-- **HTTP API reference:** Refer to [HTTP API reference](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/).
+- **Migration guide:** Refer to [Migrate to the new APIs](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis-migration).
+- **HTTP API reference:** Refer to [HTTP API reference](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/).
 - **Swagger UI:** Open the `/swagger` page in your Grafana instance to inspect endpoint schemas and try requests.

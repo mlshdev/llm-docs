@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/manage-contact-points/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/manage-contact-points/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/manage-contact-points/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/manage-contact-points/_index.md)
 
 # Configure contact points
 
@@ -17,7 +17,7 @@ On the **Contact Points** tab, you can:
 
 > **Note**
 >
-> Contact points are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alertmanager/) and cannot be used by notification policies in other Alertmanagers.
+> Contact points are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alertmanager/) and cannot be used by notification policies in other Alertmanagers.
 
 ## Protected fields
 
@@ -40,31 +40,35 @@ The ability to modify protected fields is controlled by the RBAC action `alert.n
 
 Each contact point integration has its own configuration options and setup process. The following list shows the contact point integrations supported by Grafana.
 
-- [Alertmanager](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-alertmanager/)
-- [AWS SNS](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-amazon-sns/)
+- [Alertmanager](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-alertmanager/)
+- [AWS SNS](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-amazon-sns/)
 - Cisco Webex Teams
 - DingDing
-- [Discord](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-discord/)
-- [Email](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-email/)
-- [Google Chat](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-google-chat/)
-- [Grafana IRM](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-irm/)
+- [Discord](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-discord/)
+- [Email](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-email/)
+- [Google Chat](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-google-chat/)
+- [Grafana IRM](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-irm/)
 - Kafka REST Proxy
-- [Jira](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-jira/)
+- [Jira](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-jira/)
 - Line
-- [Microsoft Teams](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-teams/)
-- [MQTT](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-mqtt/)
-- [Opsgenie](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-opsgenie/)
-- [PagerDuty](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/pager-duty/)
+- [Microsoft Teams](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-teams/)
+- [MQTT](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-mqtt/)
+- [Opsgenie](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-opsgenie/)
+- [PagerDuty](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/pager-duty/)
 - Pushover
 - Sensu Go
-- [Slack](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-slack/)
-- [Telegram](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/configure-telegram/)
+- [Slack](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-slack/)
+- [Telegram](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/configure-telegram/)
 - Threema Gateway
 - VictorOps
-- [Webhook](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/integrations/webhook-notifier/)
+- [Webhook](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/integrations/webhook-notifier/)
 - WeCom
 
 Some of the integrations above are not supported by Prometheus Alertmanager. For the list of supported integrations, refer to the [Prometheus Alertmanager receiver settings](https://prometheus.io/docs/alerting/latest/configuration/#receiver-integration-settings).
+
+## Allowlist notification source IP addresses
+
+Grafana Cloud notifications sent by the Grafana Alertmanager use the `grafana` service egress IP addresses, not the Hosted Alerts (`alerts`) list or `src-ips.alertmanager-*.grafana.net` DNS records. To retrieve the current addresses, refer to [List of Grafana Cloud IP addresses to add to your allowlist](https://grafana.com/docs/grafana-cloud/security-and-account-management/allow-list/).
 
 ## Add a contact point
 
@@ -100,7 +104,7 @@ By default, notification messages include common alert details, which are usuall
 
 If necessary, you can customize the content and format of notification messages. You can create a custom notification template, which can then be applied to one or more contact points.
 
-On the **Templates** tab under **Notification configuration**, you can view, edit, copy or delete notification templates. Refer to [manage notification templates](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/manage-notification-templates/) for instructions on selecting or creating a template for a contact point.
+On the **Templates** tab under **Notification configuration**, you can view, edit, copy or delete notification templates. Refer to [manage notification templates](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/manage-notification-templates/) for instructions on selecting or creating a template for a contact point.
 
 ## Test a contact point
 
@@ -117,9 +121,9 @@ Testing a contact point is only available for Grafana Alertmanager. Complete the
 
 After creating a contact point, you can enable it to receive alert notifications using one of the following methods:
 
-- **Assign it to alert rules** – Select the contact point in the [notifications options for Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/) to directly associate it with specific alerts.
-- **Assign it to notification policies** – Add the contact point to one or more [notification policies](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/), which manage the alert notifications you want the contact point to receive.
+- **Assign it to alert rules** – Select the contact point in the [notifications options for Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/) to directly associate it with specific alerts.
+- **Assign it to notification policies** – Add the contact point to one or more [notification policies](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/), which manage the alert notifications you want the contact point to receive.
 
 ## Troubleshoot notification delivery
 
-The **Contact points** tab shows the status of the latest notification deliveries for each contact point. To review past delivery attempts and filter by contact point or delivery outcome, refer to [View notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/).
+The **Contact points** tab shows the status of the latest notification deliveries for each contact point. To review past delivery attempts and filter by contact point or delivery outcome, refer to [View notification history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-notification-history/).

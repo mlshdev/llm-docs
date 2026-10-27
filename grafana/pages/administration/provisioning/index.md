@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/provisioning/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/provisioning/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/provisioning/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/provisioning/index.md)
 
 # Provision Grafana
 
@@ -6,11 +6,11 @@ Grafana has an active provisioning system that uses configuration files. You can
 
 > **Note**
 >
-> For advanced as code options such as Infrastructure as code, Git Sync or on-prem file provisioning refer to [Deploy, configure and provision Grafana with as-code workflows](https://grafana.com/docs/grafana/v13.2/as-code/).
+> For advanced as code options such as Infrastructure as code, Git Sync or on-prem file provisioning refer to [Deploy, configure and provision Grafana with as-code workflows](https://grafana.com/docs/grafana/v13.3/as-code/).
 
 ## Configuration file
 
-Refer to [Configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/) for more information on what you can configure in `grafana.ini`.
+Refer to [Configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/) for more information on what you can configure in `grafana.ini`.
 
 ### Configuration file locations
 
@@ -70,7 +70,7 @@ datasources:
 
 ## Data sources
 
-You can manage data sources in Grafana by adding YAML configuration files in the [`provisioning/datasources`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#provisioning) directory.
+You can manage data sources in Grafana by adding YAML configuration files in the [`provisioning/datasources`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#provisioning) directory.
 Each configuration file contains a list of data sources, under the `datasources` key, to add or update during startup.
 If the data source already exists, Grafana reconfigures it to match the provisioned configuration file.
 
@@ -89,7 +89,7 @@ This prevents old configurations from overwriting newer ones if you have differe
 
 ### Example data source configuration file
 
-This example provisions a [Graphite data source](https://grafana.com/docs/grafana/v13.2/datasources/graphite/):
+This example provisions a [Graphite data source](https://grafana.com/docs/grafana/v13.3/datasources/graphite/):
 
 ```yaml
 # Configuration file version
@@ -169,14 +169,14 @@ datasources:
     editable: false
 ```
 
-For provisioning examples of specific data sources, refer to that [data source's documentation](https://grafana.com/docs/grafana/v13.2/datasources/).
+For provisioning examples of specific data sources, refer to that [data source's documentation](https://grafana.com/docs/grafana/v13.3/datasources/).
 
 #### JSON data
 
 Not all data sources have the same configuration settings, only the most common ones are fields in the data source provisioning file.
 To provision the rest of a data source's settings, include them as JSON in the `jsonData` field.
 
-Common settings in the [built-in core data sources](https://grafana.com/docs/grafana/v13.2/datasources/#built-in-core-data-sources) include:
+Common settings in the [built-in core data sources](https://grafana.com/docs/grafana/v13.3/datasources/#built-in-core-data-sources) include:
 
 | Name                            | Type    | Data source                                                      | Description                                                                                                                                                                                                                                                                                   |
 | ------------------------------- | ------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -238,11 +238,11 @@ Common settings in the [built-in core data sources](https://grafana.com/docs/gra
 >
 > Data sources tagged with *HTTP\** communicate using the HTTP protocol, which includes all core data source plugins except MySQL, PostgreSQL, and MSSQL.
 
-For examples of specific data sources' JSON data, refer to that [data source's documentation](https://grafana.com/docs/grafana/v13.2/datasources/).
+For examples of specific data sources' JSON data, refer to that [data source's documentation](https://grafana.com/docs/grafana/v13.3/datasources/).
 
 #### Secure JSON data
 
-Secure JSON data is a map of settings encrypted with a [secret key](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#secret_key).
+Secure JSON data is a map of settings encrypted with a [secret key](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#secret_key).
 The encryption hides the JSON data from the users of Grafana.
 You should use secure JSON data to store TLS certificates and passwords for data source HTTP requests.
 All of these settings are optional.
@@ -284,7 +284,7 @@ datasources:
 
 ## Plugins
 
-You can manage plugin applications in Grafana by adding one or more YAML configuration files in the [`provisioning/plugins`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#provisioning) directory.
+You can manage plugin applications in Grafana by adding one or more YAML configuration files in the [`provisioning/plugins`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#provisioning) directory.
 Each configuration file contains a list of `apps` that Grafana configures during start up.
 Grafana configures each app to use the configuration in the file.
 
@@ -319,7 +319,7 @@ apps:
 
 ## Dashboards
 
-You can manage dashboards in Grafana by adding one or more YAML configuration files in the [`provisioning/dashboards`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#dashboards) directory.
+You can manage dashboards in Grafana by adding one or more YAML configuration files in the [`provisioning/dashboards`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#dashboards) directory.
 Each configuration file contains a list of `providers` that Grafana uses to load dashboards from the local filesystem.
 
 ### Example dashboard configuration file
@@ -458,7 +458,7 @@ Now you sync your dashboard changes back to the provisioning source.
 
 ### Reusable dashboard URLs
 
-If the dashboard in the JSON file contains an [UID](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/view-dashboard-json-model/), Grafana updates that the dashboard with that UID in the database.
+If the dashboard in the JSON file contains an [UID](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/view-dashboard-json-model/), Grafana updates that the dashboard with that UID in the database.
 This lets you migrate dashboards between Grafana instances and keep consistent dashboard URLs.
 When Grafana starts, it creates or updates all dashboards available in the configured folders.
 
@@ -514,7 +514,7 @@ To provision dashboards to the root level, store them in the root of your `path`
 
 ## Alerting
 
-For information on provisioning Grafana Alerting, refer to [Provision Grafana Alerting resources](https://grafana.com/docs/grafana/v13.2/alerting/set-up/provision-alerting-resources/).
+For information on provisioning Grafana Alerting, refer to [Provision Grafana Alerting resources](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/).
 
 ### Supported settings
 
@@ -732,8 +732,8 @@ Grafana encrypts secure settings in the database.
 
 Grafana Enterprise supports:
 
-- [Provisioning role-based access control with Grafana](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/)
-- [Provisioning role-based access control with Terraform](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/)
+- [Provisioning role-based access control with Grafana](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/)
+- [Provisioning role-based access control with Terraform](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/)
 
 ## Configuration management tools
 

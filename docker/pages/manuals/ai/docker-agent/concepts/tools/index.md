@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/concepts/tools/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/concepts/tools/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/concepts/tools/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/concepts/tools/index.md)
 
 # Tools
 
@@ -20,37 +20,22 @@ When an agent needs to perform an action, it makes a **tool call**. The Docker A
 
 ## Built-in Tools
 
-Docker Agent ships with several built-in tools that require no external dependencies. Each is enabled by adding its `type` to the agent's `toolsets` list:
+Enable a built-in toolset by adding its `type` to the agent's `toolsets` list. For example:
 
-| Tool                                                                                  | Description                                                                                         |
-| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [Filesystem](https://docs.docker.com/ai/docker-agent/tools/filesystem/)               | Read, write, list, search, and navigate files and directories                                       |
-| [Shell](https://docs.docker.com/ai/docker-agent/tools/shell/)                         | Execute shell commands synchronously                                                                |
-| [Background Jobs](https://docs.docker.com/ai/docker-agent/tools/background-jobs/)     | Run and manage long-running shell commands                                                          |
-| [Think](https://docs.docker.com/ai/docker-agent/tools/think/)                         | Step-by-step reasoning scratchpad for planning and decision-making                                  |
-| [Todo](https://docs.docker.com/ai/docker-agent/tools/todo/)                           | Task list management for complex multi-step workflows                                               |
-| [Tasks](https://docs.docker.com/ai/docker-agent/tools/tasks/)                         | Persistent task database shared across sessions                                                     |
-| [Memory](https://docs.docker.com/ai/docker-agent/tools/memory/)                       | Persistent key-value storage backed by SQLite                                                       |
-| [Fetch](https://docs.docker.com/ai/docker-agent/tools/fetch/)                         | Read content from HTTP/HTTPS URLs (GET only)                                                        |
-| [Script](https://docs.docker.com/ai/docker-agent/tools/script/)                       | Define custom shell scripts as named tools                                                          |
-| [LSP](https://docs.docker.com/ai/docker-agent/tools/lsp/)                             | Connect to Language Server Protocol servers for code intelligence                                   |
-| [API](https://docs.docker.com/ai/docker-agent/tools/api/)                             | Create custom tools that call HTTP APIs without writing code                                        |
-| [OpenAPI](https://docs.docker.com/ai/docker-agent/tools/openapi/)                     | Generate tools from an OpenAPI 3.x document                                                         |
-| [RAG](https://docs.docker.com/ai/docker-agent/tools/rag/)                             | Retrieval-augmented generation over indexed sources                                                 |
-| [Model Picker](https://docs.docker.com/ai/docker-agent/tools/model-picker/)           | Let the agent pick between several models per turn                                                  |
-| [User Prompt](https://docs.docker.com/ai/docker-agent/tools/user-prompt/)             | Ask users questions and collect interactive input                                                   |
-| [Open URL](https://docs.docker.com/ai/docker-agent/tools/open-url/)                   | Open a fixed URL in the user's default browser                                                      |
-| [Transfer Task](https://docs.docker.com/ai/docker-agent/tools/transfer-task/)         | Delegate tasks to sub-agents (auto-enabled with `sub_agents`)                                       |
-| [Background Agents](https://docs.docker.com/ai/docker-agent/tools/background-agents/) | Dispatch work to sub-agents concurrently                                                            |
-| [Handoff](https://docs.docker.com/ai/docker-agent/tools/handoff/)                     | Hand the conversation off to another local agent in the same config (auto-enabled with `handoffs:`) |
-| [A2A](https://docs.docker.com/ai/docker-agent/tools/a2a/)                             | Connect to remote agents via the Agent-to-Agent protocol                                            |
-| [MCP Catalog](https://docs.docker.com/ai/docker-agent/tools/mcp-catalog/)             | Discover and activate remote MCP servers from the Docker MCP Catalog on demand                      |
-| [Git](https://docs.docker.com/ai/docker-agent/tools/git/)                             | Read-only git repository inspection                                                                 |
-| [Scheduler](https://docs.docker.com/ai/docker-agent/tools/scheduler/)                 | Schedule instructions to run at a time or on a recurring interval                                   |
-| [Webhook](https://docs.docker.com/ai/docker-agent/tools/webhook/)                     | Outbound notifications to Slack, Discord, Telegram, IFTTT, and more                                 |
-| [Plan](https://docs.docker.com/ai/docker-agent/tools/plan/)                           | Shared persistent scratchpad for multi-agent collaboration                                          |
-| [Session Plan](https://docs.docker.com/ai/docker-agent/tools/session_plan/)           | Per-session plan tracker for the draft/review/execute workflow                                      |
-| [Session Context](https://docs.docker.com/ai/docker-agent/tools/session_context/)     | Reference a previous session as context                                                             |
+```yaml
+toolsets:
+  - type: filesystem
+  - type: shell
+  - type: todo
+```
+
+Choose tools for the capabilities your agent needs:
+
+- **Work with files and processes:** [Filesystem](https://docs.docker.com/ai/docker-agent/tools/filesystem/) and [Shell](https://docs.docker.com/ai/docker-agent/tools/shell/).
+- **Plan and remember:** [Todo](https://docs.docker.com/ai/docker-agent/tools/todo/), [Memory](https://docs.docker.com/ai/docker-agent/tools/memory/), and [RAG](https://docs.docker.com/ai/docker-agent/tools/rag/).
+- **Coordinate agents:** [Transfer Task](https://docs.docker.com/ai/docker-agent/tools/transfer-task/) and [Background Agents](https://docs.docker.com/ai/docker-agent/tools/background-agents/).
+
+See [Built-in Tools](https://docs.docker.com/ai/docker-agent/configuration/tools/#built-in-tools) for the complete catalog, including each toolset's type and configuration reference.
 
 ## MCP Tools
 

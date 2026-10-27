@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/inhibition-rules.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/inhibition-rules.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/inhibition-rules.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/inhibition-rules.md)
 
 # Configure inhibition rules
 
@@ -12,17 +12,17 @@ For example, if a node is down (the **source**), you can inhibit all alerts for 
 
 > **Note**
 >
-> Inhibition rules are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/#alertmanager-architecture) and only suppress notifications for alerts managed by that Alertmanager.
+> Inhibition rules are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/#alertmanager-architecture) and only suppress notifications for alerts managed by that Alertmanager.
 
 > **Caution**
 >
 > Inhibition rules are intended for compatibility with configurations imported from Prometheus Alertmanager or Mimir. They have no dedicated management UI in Grafana by design.
 >
-> If not carefully configured, inhibition rules can silently suppress alerts and make issues harder to detect. Consider [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) or [mute timings](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) for most suppression use cases.
+> If not carefully configured, inhibition rules can silently suppress alerts and make issues harder to detect. Consider [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/) or [mute timings](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/) for most suppression use cases.
 
 ## Inhibition rules vs silences
 
-Both inhibition rules and [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) suppress alert notifications. The key difference is that inhibition rules suppress alerts automatically based on the presence of another alert, while silences suppress alerts for a fixed time window regardless of other alerts.
+Both inhibition rules and [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/) suppress alert notifications. The key difference is that inhibition rules suppress alerts automatically based on the presence of another alert, while silences suppress alerts for a fixed time window regardless of other alerts.
 
 |              | Inhibition rule                               | Silence                                |
 | ------------ | --------------------------------------------- | -------------------------------------- |
@@ -44,7 +44,7 @@ The API resource is:
 >
 > The inhibition rules API is in beta (`v1beta1`) and is subject to change.
 
-Inhibition rules are also supported in the Prometheus Alertmanager. Refer to [Configure Alertmanager](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alertmanager/) to set up an external Alertmanager.
+Inhibition rules are also supported in the Prometheus Alertmanager. Refer to [Configure Alertmanager](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alertmanager/) to set up an external Alertmanager.
 
 ## Inhibition rule schema
 

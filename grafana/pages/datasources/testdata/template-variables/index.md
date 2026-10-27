@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/testdata/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/testdata/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/testdata/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/testdata/template-variables/index.md)
 
 # TestData template variables
 
 Use template variables with the TestData data source to test dynamic, reusable dashboards. TestData provides a hierarchical metric tree that you can query to populate variable drop-downs with simulated values.
 
-For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/) documentation.
+For an introduction to templating and template variables, refer to the [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/) documentation.
 
 ## Supported variable types
 
@@ -118,4 +118,4 @@ With a variable named `env` set to `production`, entering `env=$env` in the **La
 
 ## Limitations
 
-TestData doesn't support the use of [filters](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/). Filters require the data source to implement tag key and value lookups, which TestData doesn't provide.
+TestData doesn't support the use of [filters](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/). Filters require the data source to implement tag key and value lookups, which TestData doesn't provide.

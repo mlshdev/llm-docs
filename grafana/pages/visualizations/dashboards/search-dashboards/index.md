@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/search-dashboards/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/search-dashboards/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/search-dashboards/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/search-dashboards/index.md)
 
 # Search dashboards and folders
 
@@ -56,13 +56,13 @@ Complete the following steps to enable the `panelTitleSearch` feature toggle.
 
 **Before you begin:**
 
-- If you are running Grafana Enterprise with RBAC, enable [service accounts](https://grafana.com/docs/grafana/v13.2/administration/service-accounts/).
+- If you are running Grafana Enterprise with RBAC, enable [service accounts](https://grafana.com/docs/grafana/v13.3/administration/service-accounts/).
 
 **To enable the panelTitleSearch feature toggle:**
 
-1. Open the Grafana [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location).
+1. Open the Grafana [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location).
 
-2. Locate the [feature\_toggles](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#feature_toggles) section.
+2. Locate the [feature\_toggles](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#feature_toggles) section.
 
 3. Add the following parameter to the `feature_toggles` section:
 

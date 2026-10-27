@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/user-management/user-preferences/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/user-management/user-preferences/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/user-management/user-preferences/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/user-management/user-preferences/index.md)
 
 # Manage user preferences
 
@@ -34,7 +34,7 @@ Your profile includes your name, user name, and email address, which you can upd
 
 ## Edit your preferences
 
-You can choose the way you would like data to appear in Grafana, including the user interface theme, home dashboard, timezone, and first day of the week. You can set these preferences for your own account, for a team, for an organization, or Grafana-wide using configuration settings. Your user preferences take precedence over team, organization, and Grafana default preferences. For more information, see [Grafana preferences](https://grafana.com/docs/grafana/v13.2/administration/organization-preferences/).
+You can choose the way you would like data to appear in Grafana, including the user interface theme, home dashboard, timezone, and first day of the week. You can set these preferences for your own account, for a team, for an organization, or Grafana-wide using configuration settings. Your user preferences take precedence over team, organization, and Grafana default preferences. For more information, see [Grafana preferences](https://grafana.com/docs/grafana/v13.3/administration/organization-preferences/).
 
 - **Interface theme** determines whether Grafana appears in light mode or dark mode. You can also choose from several experimental modes. By default, the interface theme is set to dark mode. You can also [quickly view and change themes](#view-and-change-themes) using the **Change theme** option.
 - **Home dashboard** refers to the dashboard you see when you sign in to Grafana. By default, this is set to the Home dashboard.
@@ -82,7 +82,7 @@ Every user is a member of at least one organization. You can have different role
 2. Click the user icon in the top right corner of the page and select **Profile**.
 3. Scroll down to the Organizations section and review the following information:
    - **Name**: The name of the organizations of which you are a member.
-   - **Role**: The role to which you are assigned in the organization. For more information about roles and permissions, refer to [Organization users and permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#organization-users-and-permissions).
+   - **Role**: The role to which you are assigned in the organization. For more information about roles and permissions, refer to [Organization users and permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#organization-users-and-permissions).
    - **Current**: Grafana indicates the organization that you are currently signed into as *Current*. If you are a member of multiple organizations, you can click **Select** to switch to that organization.
 
 ## View your Grafana sessions

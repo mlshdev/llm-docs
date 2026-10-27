@@ -1,16 +1,16 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mssql/annotations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mssql/annotations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mssql/annotations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mssql/annotations/index.md)
 
 # Microsoft SQL Server annotations
 
 Annotations overlay event markers on your dashboard visualizations, helping you correlate metric behavior with events like deployments, incidents, or configuration changes. You can use the Microsoft SQL Server data source to create annotation queries that display SQL query results as annotation events.
 
-For general information about annotations, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/).
+For general information about annotations, refer to [Annotate visualizations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/).
 
 ## Before you begin
 
 Before you create MSSQL annotations, ensure you have:
 
-- A [configured Microsoft SQL Server data source](https://grafana.com/docs/grafana/v13.2/datasources/mssql/configure/)
+- A [configured Microsoft SQL Server data source](https://grafana.com/docs/grafana/v13.3/datasources/mssql/configure/)
 - A table containing event data with at least a time column and a description column
 - Familiarity with [T-SQL](https://learn.microsoft.com/en-us/sql/t-sql/language-reference) query syntax
 
@@ -135,7 +135,7 @@ ORDER BY 1
 
 ## Use template variables
 
-You can use [template variables](https://grafana.com/docs/grafana/v13.2/datasources/mssql/template-variables/) in your annotation queries to make them dynamic. For example, filter events by a selected server:
+You can use [template variables](https://grafana.com/docs/grafana/v13.3/datasources/mssql/template-variables/) in your annotation queries to make them dynamic. For example, filter events by a selected server:
 
 ```sql
 SELECT
@@ -159,7 +159,7 @@ Use these macros in your annotation queries to filter by the dashboard time rang
 | `$__timeFilter(column)`      | Filters by time range using a native SQL `datetime`/`datetime2` column. |
 | `$__unixEpochFilter(column)` | Filters by time range using a column with Unix epoch timestamps.        |
 
-For the full list of available macros, refer to the [Microsoft SQL Server query editor](https://grafana.com/docs/grafana/v13.2/datasources/mssql/query-editor/#macros).
+For the full list of available macros, refer to the [Microsoft SQL Server query editor](https://grafana.com/docs/grafana/v13.3/datasources/mssql/query-editor/#macros).
 
 ## Best practices
 
@@ -173,4 +173,4 @@ Follow these best practices when creating Microsoft SQL Server annotations:
 
 ## Get help
 
-If your annotations aren't appearing or behaving as expected, refer to [Troubleshoot Microsoft SQL Server data source issues](https://grafana.com/docs/grafana/v13.2/datasources/mssql/troubleshooting/) for common solutions.
+If your annotations aren't appearing or behaving as expected, refer to [Troubleshoot Microsoft SQL Server data source issues](https://grafana.com/docs/grafana/v13.3/datasources/mssql/troubleshooting/) for common solutions.

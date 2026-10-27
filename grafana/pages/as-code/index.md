@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/_index.md)
 
 # Configure and provision Grafana with as-code workflows
 
@@ -19,9 +19,9 @@ In Grafana Cloud, you can use **Infrastructure as code** to declaratively create
 
 > **Note**
 >
-> For basic configuration provisioning refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning).
+> For basic configuration provisioning refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning).
 
 ## Explore
 
-- [Observability as code](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/): Using Observability as code, you can version, automate, and scale Grafana configurations, including dashboards and observability workflows.
-- [Infrastructure as code](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/): Using Infrastructure as code, you can declaratively manage what Grafana resources to use.
+- [Observability as code](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/): Using Observability as code, you can version, automate, and scale Grafana configurations, including dashboards and observability workflows.
+- [Infrastructure as code](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/): Using Infrastructure as code, you can declaratively manage what Grafana resources to use.

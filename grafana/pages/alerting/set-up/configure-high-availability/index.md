@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/set-up/configure-high-availability/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/set-up/configure-high-availability/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/set-up/configure-high-availability/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/set-up/configure-high-availability/_index.md)
 
 # Configure high availability
 
@@ -55,7 +55,7 @@ As an alternative to Memberlist, you can configure Redis to enable high availabi
 7. Optional: Set the username and password if authentication is enabled on Redis Sentinel using `ha_redis_sentinel_username` and `ha_redis_sentinel_password`.
 8. Optional: Set `ha_redis_prefix` to something unique if you plan to share the Redis server with multiple Grafana instances.
 9. Optional: Set `ha_redis_tls_enabled` to `true` and configure the corresponding `ha_redis_tls_*` fields to secure communications between Grafana and Redis with Transport Layer Security (TLS).
-10. Set `[ha_advertise_address]` to `ha_advertise_address = "${POD_IP}:9094"` This is required if the instance doesn't have an IP address that is part of RFC 6890 with a default route.
+10. Set `[ha_advertise_address]` to `ha_advertise_address = "${POD_IP}:9094"`. This is required if the instance doesn't have an IP address that is part of RFC 6890 with a default route.
 
 For a demo, see this [example using Docker Compose](https://github.com/grafana/alerting-ha-docker-examples/tree/main/redis).
 
@@ -202,7 +202,7 @@ The default value is `200`. This setting applies to both Memberlist and Redis HA
 
 ## Verify your high availability setup
 
-When running multiple Grafana instances, all alert rules are evaluated on every instance by default. This multiple evaluation of alert rules is visible in the [state history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-alert-state-history/) and provides a straightforward way to verify that your high availability configuration is working correctly.
+When running multiple Grafana instances, all alert rules are evaluated on every instance by default. This multiple evaluation of alert rules is visible in the [state history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/) and provides a straightforward way to verify that your high availability configuration is working correctly.
 
 > **Note**
 >
@@ -245,7 +245,7 @@ Note that these alerting high availability metrics are exposed via the `/metrics
         - grafana:3000
 ```
 
-For more information on monitoring alerting metrics, refer to [Alerting meta-monitoring](https://grafana.com/docs/grafana/v13.2/alerting/monitor/). For a demo, see [alerting high availability examples using Docker Compose](https://github.com/grafana/alerting-ha-docker-examples/).
+For more information on monitoring alerting metrics, refer to [Alerting meta-monitoring](https://grafana.com/docs/grafana/v13.3/alerting/monitor/). For a demo, see [alerting high availability examples using Docker Compose](https://github.com/grafana/alerting-ha-docker-examples/).
 
 ## Prevent duplicate notifications
 
@@ -255,4 +255,4 @@ When multiple Grafana instances are running, all alert rules are evaluated on ea
 
 Alertmanagers in HA mode communicate with each other to coordinate notification delivery. However, this setup can sometimes lead to duplicated or out-of-order notifications. By design, HA prioritizes sending duplicate notifications over the risk of missing notifications.
 
-To avoid duplicate notifications, you can configure a shared alertmanager to manage notifications for all Grafana instances. For more information, refer to [add an external alertmanager](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alertmanager/).
+To avoid duplicate notifications, you can configure a shared alertmanager to manage notifications for all Grafana instances. For more information, refer to [add an external alertmanager](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alertmanager/).

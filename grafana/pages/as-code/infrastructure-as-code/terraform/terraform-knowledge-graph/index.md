@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/_index.md)
 
 # Manage Knowledge Graph using Terraform
 
@@ -12,16 +12,16 @@ Terraform enables you to manage [Grafana Cloud Knowledge Graph](https://grafana.
 
 ## Explore
 
-- [Get started with Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/): Learn how to set up Terraform provider and configure your environment for managing Knowledge Graph resources.
-- [Knowledge Graph stack](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack/): Configure the Knowledge Graph stack with token provisioning, dataset configuration, and stack enablement.
-- [Notification alerts](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/notification-alerts/): Configure notification alerts to manage how alerts are processed and routed in your Knowledge Graph.
-- [Suppressed assertions](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/suppressed-assertions/): Define suppression rules to temporarily disable specific alerts during maintenance windows or testing.
-- [Custom model rules](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/custom-model-rules/): Create custom entity models and define how entities are discovered based on Prometheus queries.
-- [Log configurations](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/log-configurations/): Configure log data correlation with entities using data source mappings and filtering options.
-- [Trace configurations](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/trace-configurations/): Configure trace data correlation with entities using data source mappings and filtering options.
-- [Profile configurations](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/profile-configurations/): Set up profile data correlation with entities using data source mappings and filtering options.
-- [Thresholds](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/thresholds/): Set custom thresholds for request, resource, and health assertions to monitor your services.
-- [Prometheus rules](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/prometheus-rules/): Define custom Prometheus recording and alerting rules that are evaluated against your metrics data.
+- [Get started with Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/): Learn how to set up Terraform provider and configure your environment for managing Knowledge Graph resources.
+- [Knowledge Graph stack](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack/): Configure the Knowledge Graph stack with token provisioning, dataset configuration, and stack enablement.
+- [Notification alerts](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/notification-alerts/): Configure notification alerts to manage how alerts are processed and routed in your Knowledge Graph.
+- [Suppressed assertions](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/suppressed-assertions/): Define suppression rules to temporarily disable specific alerts during maintenance windows or testing.
+- [Custom model rules](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/custom-model-rules/): Create custom entity models and define how entities are discovered based on Prometheus queries.
+- [Log configurations](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/log-configurations/): Configure log data correlation with entities using data source mappings and filtering options.
+- [Trace configurations](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/trace-configurations/): Configure trace data correlation with entities using data source mappings and filtering options.
+- [Profile configurations](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/profile-configurations/): Set up profile data correlation with entities using data source mappings and filtering options.
+- [Thresholds](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/thresholds/): Set custom thresholds for request, resource, and health assertions to monitor your services.
+- [Prometheus rules](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/prometheus-rules/): Define custom Prometheus recording and alerting rules that are evaluated against your metrics data.
 
 ***
 

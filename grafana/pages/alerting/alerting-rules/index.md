@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/alerting-rules/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/alerting-rules/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/alerting-rules/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/alerting-rules/_index.md)
 
 > **Caution**
 >
@@ -11,20 +11,22 @@
 
 # Configure alert rules
 
-[Alert rules](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/) are the central component of your alerting system.
+[Alert rules](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/) are the central component of your alerting system.
 
 An alert rule consists of one or more queries and expressions that select the data you want to measure. It contains a condition to trigger the alert, an evaluation period that determines how often the rule is evaluated, and additional options to manage alert events and their notifications.
 
 Grafana supports two types of alert rules:
 
-1. **Grafana-managed alert rules** — the recommended option. They can query backend data sources—including Prometheus-based ones—and offer a [richer feature set](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-data-source-managed-rule/#comparison-with-grafana-managed-rules).
+1. **Grafana-managed alert rules** — the recommended option. They can query backend data sources—including Prometheus-based ones—and offer a [richer feature set](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-data-source-managed-rule/#comparison-with-grafana-managed-rules).
 2. **Data source-managed alert rules** — supported for Prometheus-based data sources (such as Mimir, Loki, and Prometheus), with rules stored in the data source itself.
 
-   You can [convert and import data source-managed rules into Grafana-managed rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/alerting-migration/) to let Grafana Alerting manage them.
+   You can [convert and import data source-managed rules into Grafana-managed rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/alerting-migration/) to let Grafana Alerting manage them.
 
 Both types of alert rules can be configured in Grafana using the **+ New alert rule** flow. For step-by-step instructions, refer to:
 
-- [Configure Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/)
-- [Configure data source-managed alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-data-source-managed-rule/)
+- [Configure Grafana-managed alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/)
+- [Configure data source-managed alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-data-source-managed-rule/)
 
-In Grafana Alerting, you can also [configure recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/), which pre-compute queries and save the results as new time series metrics for use in other alert rules or dashboard queries.
+In Grafana Alerting, you can also [configure recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/), which pre-compute queries and save the results as new time series metrics for use in other alert rules or dashboard queries.
+
+When your Grafana-managed rules depend on recording rule results, use [Configure rule sequences](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/rule-sequences/) to define their evaluation order and shared interval through the API or Terraform.

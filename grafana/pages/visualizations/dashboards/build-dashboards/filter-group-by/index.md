@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/filter-group-by/index.md)
 
 # Filter and group by controls
 
@@ -18,6 +18,10 @@ Then, you can use filters within panels to filter data in or out, drilling down 
 The filter and group by feature lets you add label/value filter pairs that are automatically added to all queries that use the specified data source.
 Unlike variables, you don't use these filters in queries.
 Instead, you use them to write filters for existing queries.
+
+To try filter and group by controls with a Prometheus data source, explore this demo dashboard on Grafana Play:
+
+[Filter variables in Grafana Play](https://play.grafana.org/d/canvvlh/)
 
 The following data sources support filters.
 Data sources with an asterisk also support the group by function:
@@ -106,19 +110,35 @@ To enable this functionality, you need to add an override for every field by whi
 In the override:
 
 - Select a field name.
-- Enable the **Filterable** switch.
-
-![Field override making some fields filterable](https://grafana.com/media/docs/grafana/dashboards/screenshot-panel-filter-override-v13.2.png)
+- Add the **Standard options > Filter from values** override property.
+- Enable the **Filter from values** switch to allow viewers to update dashboard filters by interacting with the panel.
 
 You can also do this programmatically by returning the data frame with the appropriate `filterable` property on the desired fields.
 
+For provisioned dashboards, **Filter from values** uses the JSON property ID `filterable`.
+For example, add the following override to the panel's `fieldConfig.overrides` array to enable filtering from the `service` field:
+
+```json
+{
+  "matcher": { "id": "byName", "options": "service" },
+  "properties": [{ "id": "filterable", "value": true }]
+}
+```
+
+Replace `service` with the name of the field you want to filter by.
+This requires a supported visualization and data source support for dashboard filters.
+The standard `filterable` property updates dashboard filters.
+
 Cross-filtering is supported for the following visualizations:
 
-| Visualization | Requires Group by |
-| ------------- | ----------------- |
-| Bar chart     | no                |
-| Table         | no                |
-| Time series   | yes               |
+| Visualization  | Requires Group by |
+| -------------- | ----------------- |
+| Bar chart      | no                |
+| Histogram      | yes               |
+| State timeline | yes               |
+| Status history | yes               |
+| Table          | no                |
+| Time series    | yes               |
 
 ### Apply cross-filtering
 

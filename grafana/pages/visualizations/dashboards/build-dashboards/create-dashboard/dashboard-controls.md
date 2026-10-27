@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls.md)
 
 # Dashboard controls
 
@@ -31,6 +31,10 @@ Then, you can use filters within panels to filter data in or out, drilling down 
 The filter and group by feature lets you add label/value filter pairs that are automatically added to all queries that use the specified data source.
 Unlike variables, you don't use these filters in queries.
 Instead, you use them to write filters for existing queries.
+
+To try filter and group by controls with a Prometheus data source, explore this demo dashboard on Grafana Play:
+
+[Filter variables in Grafana Play](https://play.grafana.org/d/canvvlh/)
 
 The following data sources support filters.
 Data sources with an asterisk also support the group by function:
@@ -119,19 +123,35 @@ To enable this functionality, you need to add an override for every field by whi
 In the override:
 
 - Select a field name.
-- Enable the **Filterable** switch.
-
-![Field override making some fields filterable](https://grafana.com/media/docs/grafana/dashboards/screenshot-panel-filter-override-v13.2.png)
+- Add the **Standard options > Filter from values** override property.
+- Enable the **Filter from values** switch to allow viewers to update dashboard filters by interacting with the panel.
 
 You can also do this programmatically by returning the data frame with the appropriate `filterable` property on the desired fields.
 
+For provisioned dashboards, **Filter from values** uses the JSON property ID `filterable`.
+For example, add the following override to the panel's `fieldConfig.overrides` array to enable filtering from the `service` field:
+
+```json
+{
+  "matcher": { "id": "byName", "options": "service" },
+  "properties": [{ "id": "filterable", "value": true }]
+}
+```
+
+Replace `service` with the name of the field you want to filter by.
+This requires a supported visualization and data source support for dashboard filters.
+The standard `filterable` property updates dashboard filters.
+
 Cross-filtering is supported for the following visualizations:
 
-| Visualization | Requires Group by |
-| ------------- | ----------------- |
-| Bar chart     | no                |
-| Table         | no                |
-| Time series   | yes               |
+| Visualization  | Requires Group by |
+| -------------- | ----------------- |
+| Bar chart      | no                |
+| Histogram      | yes               |
+| State timeline | yes               |
+| Status history | yes               |
+| Table          | no                |
+| Time series    | yes               |
 
 ### Apply cross-filtering
 
@@ -211,7 +231,7 @@ To use filters on data from an unsupported data source, follow these steps:
 Now you can filter the data from the source panel by way of the Dashboard data source.
 Add as many panels as you need.
 
-For more detailed information on the **Filter and Group by** option, refer to the full [Filter and group by controls documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/).
+For more detailed information on the **Filter and Group by** option, refer to the full [Filter and group by controls documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/).
 
 ## Add variables
 
@@ -219,11 +239,13 @@ To add a variable, follow these steps:
 
 # Add variables
 
-In addition to the built-in global variables that come with Grafana, you can create your own variables.
+You can create your own variables within any dashboard, and these variables are specific to the dashboard in which you create them.
+For information on variables that you can use across dashboards, refer to the [Cross-dashboard variables documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/cross-dashboard-variables/).
+
 The following table lists the types of variables you can create:
 
 | Variable type | Description                                                                                                                                                  |
-| :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Query         | Query-generated list of values such as metric names, server names, sensor IDs, data centers, and so on. [Add a query variable](#add-a-query-variable).       |
 | Custom        | Define the variable options manually using a comma-separated list. [Add a custom variable](#add-a-custom-variable).                                          |
 | Text box      | Display a free text input field with an optional default value. [Add a text box variable](#add-a-textbox-variable-add-a-text-box-variable).                  |
@@ -234,42 +256,44 @@ The following table lists the types of variables you can create:
 
 > **Note**
 >
-> In Grafana 13.1, **Ad hoc filters** have been renamed **Filter and Group by** and extended by adding grouping for Prometheus and Loki data sources.
+> In Grafana 13.1, **Ad hoc filters** were renamed **Filter and Group by** and extended by adding grouping for Prometheus and Loki data sources.
 > However, in the dashboard schema, they're still referred to as `"kind": "AdhocVariable"`.
 >
-> For information on the **Filter and Group by** feature, refer to the [documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/).
+> For information on the **Filter and Group by** feature, refer to the [documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/).
 
 ## Enter general options for any variable
 
 To create a variable, follow these steps:
 
 1. Navigate to the dashboard you want to update.
+
 2. Click **Edit**.
-3. Click the **Add new element** icon (blue plus sign) and select **Variable**.
 
-You can also click the add **Add variable** icon at the top of the dashboard (plus sign).
+3. Click the plus sign **Add new element** icon in the sidebar and select **Variable**.
 
-1. Choose a variable type from the list.
+   You can also click the **Add variable** plus sign icon at the top of the dashboard.
+
+4. Choose a variable type from the list.
 
    You can update the variable type by clicking **Change type** in the sidebar.
 
-2. Enter a **Name** for the variable.
+5. Enter a **Name** for the variable.
 
-3. (Optional) In the **Label** field, enter the display name for the variable drop-down list.
+6. (Optional) In the **Label** field, enter the display name for the variable drop-down list.
 
-   If you don't enter a display name, then the drop-down list label is the variable name.
+   If you leave this empty, then Grafana uses the variable name.
 
-4. (Optional) In the **Description** field, enter a description of the variable. The description appears as an info icon tooltip next to the variable name on the dashboard.
+7. (Optional) In the **Description** field, enter a description of the variable. The description appears as an info icon tooltip next to the variable name on the dashboard.
 
-   Descriptions support links. You can use Markdown-style links (`[link text](https://example.com)`) or paste bare URLs (`https://example.com`). Only `http` and `https` URLs are rendered as clickable links—other protocols are displayed as plain text.
+   Descriptions support links. You can use Markdown-style links like `[link text](https://example.com)`, or paste bare URLs like `https://example.com`. Only `http` and `https` URLs render as clickable links—other protocols display as plain text.
 
-5. Choose a **Display** option:
+8. Choose a **Display** option:
    - **Above dashboard** - The variable drop-down list displays above the dashboard with the variable **Name** or **Label** value. This is the default.
    - **Above dashboard, label hidden** - The variable drop-down list displays above the dashboard, but without showing the name of the variable.
-   - **Controls menu** - The variable is displayed in the dashboard controls menu instead of above the dashboard. The dashboard controls menu appears as a button in the dashboard toolbar.
-   - **Hidden** - No variable drop-down list is displayed on the dashboard.
+   - **Controls menu** - The variable displays in the dashboard controls menu instead of above the dashboard. The dashboard controls menu appears as a button in the dashboard toolbar.
+   - **Hidden** - No variable drop-down list displays on the dashboard.
 
-6. Click one of the following links to complete the steps for adding your selected variable type:
+9. Click one of the following links to complete the steps for adding your selected variable type:
    - [Query](#add-a-query-variable)
    - [Custom](#add-a-custom-variable)
    - [Textbox](#add-a-textbox-variable-add-a-text-box-variable)
@@ -280,7 +304,7 @@ You can also click the add **Add variable** icon at the top of the dashboard (pl
 
 ### Variable best practices
 
-- Variable drop-down lists are displayed in the order in which they're listed in the **Variables** section of the sidebar, so put the variables that you change often at the top, so they're shown first.
+- Variable drop-down lists display in the order in which they're listed in the **Variables** section of the sidebar, so put the variables that you change often at the top, so they're shown first.
 - By default, variables don't have a default value. This means that the topmost value in the drop-down list is always preselected. If you want to pre-populate a variable with an empty value, you can use the following workaround in the variable settings:
   1. Select the **Include All Option** checkbox.
   2. In the **Custom all value** field, enter a value like `.+`.
@@ -295,7 +319,7 @@ Query expressions can contain references to other variables and in effect create
 
 > **Note**
 >
-> Query expressions are different for each data source. For more information, refer to the documentation for your [data source](https://grafana.com/docs/grafana/v13.2/datasources/).
+> Query expressions are different for each data source. For more information, refer to the documentation for your [data source](https://grafana.com/docs/grafana/v13.3/datasources/).
 
 1. [Enter general options](#enter-general-options-for-any-variable).
 
@@ -305,11 +329,11 @@ Query expressions can contain references to other variables and in effect create
 
    | Option             | Description                                                                                                                                                                                                                                                                                                                                |
    | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | Target data source | Select a data source in the drop-down list. You can also click **Open advanced data source picker** to see more options, including adding a data source (Admins only). For more information about data sources, refer to [Add a data source](https://grafana.com/docs/grafana/v13.2/datasources/#add-a-data-source).                       |
+   | Target data source | Select a data source in the drop-down list. You can also click **Open advanced data source picker** to see more options, including adding a data source (Admins only). For more information about data sources, refer to [Add a data source](https://grafana.com/docs/grafana/v13.3/datasources/#add-a-data-source).                       |
    | Query type         | If applicable, select an option in the drop-down list and fill in the query fields accordingly. For more information, refer to the [Query type](#query-type) section following these steps.                                                                                                                                                |
-   | Regex              | (Optional) Type a regular expression in the field to filter or capture specific parts of the names returned by your data source query. To see examples, refer to [Filter variables with a regular expression](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/advanced-variables/#filter-variables-with-regex). |
+   | Regex              | (Optional) Type a regular expression in the field to filter or capture specific parts of the names returned by your data source query. To see examples, refer to [Filter variables with a regular expression](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/advanced-variables/#filter-variables-with-regex). |
    | Apply regex to     | Select **Variable value** or **Display text** to choose where the regular expression pattern is applied. The default is **Variable value**.                                                                                                                                                                                                |
-   | Sort               | Select the sort order for values to be displayed in the drop-down list. The default option, **Disabled**, means that the order of options returned by your data source query is used.                                                                                                                                                      |
+   | Sort               | Select the sort order for values to display in the drop-down list. The default option, **Disabled**, means that the order of options returned by your data source query is used.                                                                                                                                                           |
 
 4. In the **Static options** tab, set the following options:
    - Select an option in the **Static options sort** drop-down list to control where in the list of variable values the static options appear.
@@ -324,11 +348,11 @@ Query expressions can contain references to other variables and in effect create
 7. Click **Apply** to close the query variable editor dialog box.
 
 8. In the **Refresh** drop-down list, select an option to control when the variable should update:
-   - **On dashboard load** - Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized.
+   - **On dashboard load** - Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before the dashboard can be initialized.
    - **On time range change** - Queries the data source every time the dashboard loads and when the dashboard time range changes. Use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
 
 9. (Optional) Set Selection options if needed:
-   - **Multi-value** - Enables multiple values to be selected at the same time.
+   - **Multi-value** - Enables the selection of select multiple values at the same time.
    - **Include All value** - Enables an option to include all variables.
    - **Allow custom values** - Enables users to add custom values to the list. Only applies to CSV custom values.
 
@@ -343,7 +367,7 @@ Query expressions can contain references to other variables and in effect create
 The query section of the editor varies according to your data source.
 Some data sources have custom query editors.
 
-Each data source defines how the variable values are extracted.
+Each data source defines how it extracts variable values.
 The typical implementation uses every string value returned from the data source response as a variable value.
 Make sure to double-check the documentation for the data source.
 
@@ -358,7 +382,7 @@ If you need more room in a single input field query editor, then hover your curs
 
 Use a *custom* variable for a value that doesn't change, such as a number or a string.
 
-For example, if you have server names or region names that never change, then you might want to create them as custom variables rather than query variables. Because they don't change, you might use them in [chained variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/advanced-variables/#chained-variables) rather than other query variables. That would reduce the number of queries Grafana must send when chained variables are updated.
+For example, if you have server names or region names that never change, then you might want to create them as custom variables rather than query variables. Because they don't change, you might use them in [chained variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/advanced-variables/#chained-variables) rather than other query variables. That would reduce the number of queries Grafana must send when you update chained variables.
 
 1. [Enter general options](#enter-general-options-for-any-variable).
 
@@ -366,7 +390,7 @@ For example, if you have server names or region names that never change, then yo
 
 3. Configure one of the following options:
    - **CSV** - Enter a flat list of values for the variable in a comma-separated list. You can include numbers, strings, or key/value pairs separated by a space and a colon. For example, `key1 : value1,key2 : value2`.
-   - **JSON** - Provide a JSON array of objects where each object can have any number of properties that can be referenced. For more information refer, to [Configure multi-property variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/advanced-variables/#multi-property-variables).
+   - **JSON** - Provide a JSON array of objects where each object can have any number of properties that you can reference. For more information refer, to [Configure multi-property variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/advanced-variables/#multi-property-variables).
 
 4. Click **Preview** to test the variable.
 
@@ -375,7 +399,7 @@ For example, if you have server names or region names that never change, then yo
 6. Click **Apply** to close the query editor dialog box.
 
 7. (Optional) Set Selection options if needed:
-   - **Multi-value** - Enables multiple values to be selected at the same time.
+   - **Multi-value** - Enables the selection of multiple values at the same time.
    - **Include All value** - Enables an option to include all variables.
    - **Allow custom values** - Enables users to add custom values to the list. Only applies to CSV custom values.
 
@@ -395,7 +419,7 @@ For more information about cardinality, refer to [What are cardinality spikes an
 
 2. (Optional) Under **Textbox options**, enter the default value for the variable in the **Value** field.
 
-   If you do not enter anything in this field, then Grafana displays an empty text box for users to type text into.
+   If you don't enter anything in this field, then Grafana displays an empty text box for users to type text into.
 
 3. Click **Save** in the top-right corner.
 
@@ -405,9 +429,9 @@ For more information about cardinality, refer to [What are cardinality spikes an
 
 ## Add a constant variable
 
-*Constant* variables enable you to define a hidden constant. This is useful for metric path prefixes for dashboards you want to share. When you export a dashboard, constant variables are converted to import options.
+*Constant* variables enable you to define a hidden constant. This is useful for metric path prefixes for dashboards you want to share. When you export a dashboard, Grafana converts constant variables to import options.
 
-Constant variables are *not* flexible. Each constant variable only holds one value, and it cannot be updated unless you update the variable settings.
+Constant variables are *not* flexible. Each constant variable only holds one value, and you can't update it unless you update the variable settings.
 
 Constant variables are useful when you have complex values that you need to include in queries but don't want to retype in every query. For example, if you had a server path called `i-0b6a61efe2ab843gg`, then you could replace it with a variable called `$path_gg`.
 
@@ -415,7 +439,7 @@ Constant variables are useful when you have complex values that you need to incl
 
 2. Under **Constant options**, enter the variable value in the **Value** field.
 
-   You can enter letters, numbers, and symbols. You can even use wildcards if you use [raw format](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/variable-syntax/#raw).
+   You can enter letters, numbers, and symbols. You can even use wildcards if you use [raw format](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/variable-syntax/#raw).
 
 3. Click **Save** in the top-right corner.
 
@@ -434,7 +458,7 @@ Constant variables are useful when you have complex values that you need to incl
    - **Name filter** - (Optional) Enter a regular expression filter for which data source instances to choose from in the variable value drop-down list. Leave this field empty to display all instances.
 
 3. (Optional) Set Selection options if needed:
-   - **Multi-value** - Enables multiple values to be selected at the same time.
+   - **Multi-value** - Enables the selection of multiple values at the same time.
    - **Include All value** - Enables an option to include all variables.
    - **Allow custom values** - Enables users to add custom values to the list. Only applies to CSV custom values.
 
@@ -454,12 +478,12 @@ You can use an interval variable as a parameter to group by time (for InfluxDB),
 
 2. Configure the following **Interval options**:
 
-   | Option       | Description                                                                                                                                                                                                                                                                                                                                                             |
-   | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Values       | Enter the time range intervals that you want to appear in the variable drop-down list. The following time units are supported: `s (seconds)`, `m (minutes)`, `h (hours)`, `d (days)`, `w (weeks)`, `M (months)`, and `y (years)`. You can also accept or edit the default values: `1m,10m,30m,1h,6h,12h,1d,7d,14d,30d`.                                                 |
-   | Auto option  | (Optional) Select on the checkbox if you want to add the `auto` option to the list. This option allows you to specify how many times the current time range should be divided to calculate the current `auto` time span.                                                                                                                                                |
-   | Step count   | Select the number of times the current time range is divided to calculate the value, similar to the **Max data points** query option. For example, if the current visible time range is 30 minutes, then the `auto` interval groups the data into 30 one-minute increments. The default value is 30 steps. Only displayed when you select the **Auto option** checkbox. |
-   | Min interval | The minimum threshold below which the step count intervals doesn't divide the time. To continue the 30 minute example, if the minimum interval is set to 2m, then Grafana would group the data into 15 two-minute increments. Only displayed when you select the **Auto option** checkbox.                                                                              |
+   | Option       | Description                                                                                                                                                                                                                                                                                                                                                                      |
+   | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Values       | Enter the time range intervals that you want to appear in the variable drop-down list. Grafana supports the following time units: `s (seconds)`, `m (minutes)`, `h (hours)`, `d (days)`, `w (weeks)`, `M (months)`, and `y (years)`. You can also accept or edit the default values: `1m,10m,30m,1h,6h,12h,1d,7d,14d,30d`.                                                       |
+   | Auto option  | (Optional) Select on the checkbox if you want to add the `auto` option to the list. This option allows you to specify how many times to divide the current time range to calculate the current `auto` time span.                                                                                                                                                                 |
+   | Step count   | Select the number of times to divide the current time range to calculate the value, similar to the **Max data points** query option. For example, if the current visible time range is 30 minutes, then the `auto` interval groups the data into 30 one-minute increments. The default value is 30 steps. This option only displays hen you select the **Auto option** checkbox. |
+   | Min interval | The minimum threshold below which the step count intervals doesn't divide the time. To continue the 30 minute example, if the minimum interval is set to 2m, then Grafana would group the data into 15 two-minute increments. Only displayed when you select the **Auto option** checkbox.                                                                                       |
 
 3. Click **Save** in the top-right corner.
 
@@ -475,7 +499,7 @@ The following example shows a template variable `myinterval` in a Graphite funct
 summarize($myinterval, sum, false)
 ```
 
-The following example shows a more complex Graphite example, from the [Graphite Template Nested Requests panel](https://play.grafana.org/d/000000056/graphite-templated-nested?editPanel=2\&orgId=1):
+The following example shows a more complex Graphite example, from the [Graphite Template Nested Requests panel](https://play.grafana.org/d/dbg1erw7kech6oe/placeholder-dashboard):
 
 ```
 groupByNode(summarize(movingAverage(apps.$app.$server.counters.requests.count, 5), '$interval', 'sum', false), 2, 'sum')
@@ -532,28 +556,28 @@ You can also use switch variables in panel titles and other dashboard elements:
 
 ### Multi-value variables
 
-Interpolating a variable with multiple values selected is tricky as it's not straight forward how to format the multiple values into a string that's valid in the given context where the variable is used. Grafana tries to solve this by allowing each data source plugin to inform the templating interpolation engine what format to use for multiple values.
+Interpolating a variable with multiple values selected is tricky as it's not straight forward how to format the multiple values into a string that's valid in the given context where you use the variable. Grafana tries to solve this by allowing each data source plugin to inform the templating interpolation engine what format to use for multiple values.
 
 > **Note**
 >
-> The **Custom all value** option on the variable must be blank for Grafana to format all values into a single string. If it's left blank, then Grafana concatenates (adds together) all the values in the query. Something like `value1,value2,value3`. If a custom `all` value is used, then instead the value is something like `*` or `all`.
+> The **Custom all value** option on the variable must be blank for Grafana to format all values into a single string. If it's left blank, then Grafana concatenates (adds together) all the values in the query. Something like `value1,value2,value3`. If you use a custom `all` value, then instead the value is something like `*` or `all`.
 
 #### Multi-value variables with a Graphite data source
 
-Graphite uses glob expressions. A variable with multiple values would, in this case, be interpolated as `{host1,host2,host3}` if the current variable value was *host1*, *host2*, and *host3*.
+Graphite uses glob expressions. In this case, Grafana interpolates a variable with multiple values as `{host1,host2,host3}` if the current variable value is *host1*, *host2*, and *host3*.
 
 #### Multi-value variables with a Prometheus or InfluxDB data source
 
-InfluxDB and Prometheus use regular expressions, so the same variable would be interpolated as `(host1|host2|host3)`. Every value would also be regular expression escaped. If not, a value with a regular expression control character would break the regular expression.
+InfluxDB and Prometheus use regular expressions, so Grafana interpolates the same variable as `(host1|host2|host3)`. Grafana also escapes every value for regular expressions. If not, a value with a regular expression control character would break the regular expression.
 
 #### Multi-value variables with an Elastic data source
 
-Elasticsearch uses Lucene query syntax, so the same variable would be formatted as `("host1" OR "host2" OR "host3")`. In this case, every value must be escaped so that the value only contains Lucene control words and quotation marks.
+Elasticsearch uses Lucene query syntax, so Grafana formats the same variable as `("host1" OR "host2" OR "host3")`. In this case, every value must be escaped so that the value only contains Lucene control words and quotation marks.
 
 #### Variable indexing
 
 If you have a multi-value variable that's formatted as an array, you can use array positions to reference the values rather than the actual values.
-You can use this functionality in dashboard panels to filter data, and when you do so, the array is maintained.
+You can use this functionality in dashboard panels to filter data, and maintain the array.
 
 To reference variable values this way, use the following syntax:
 
@@ -569,12 +593,12 @@ In the following example, there's an array of three values, `1t`, `2t`, and `3t`
 
 #### Troubleshoot multi-value variables
 
-Automatic escaping and formatting can cause problems and it can be tricky to grasp the logic behind it. Especially for InfluxDB and Prometheus where the use of regular expression syntax requires that the variable is used in regular expression operator context.
+Automatic escaping and formatting can cause problems and it can be tricky to grasp the logic behind it. Especially for InfluxDB and Prometheus where regular expression syntax requires you to use the variable in a regular expression operator context.
 
 If you don't want Grafana to do this automatic regular expression escaping and formatting, then you must do one of the following:
 
 - Turn off the **Multi-value** or **Include All option** options.
-- Use the [raw variable format](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/variable-syntax/#raw).
+- Use the [raw variable format](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/variable-syntax/#raw).
 
 ### Include All option
 
@@ -591,7 +615,7 @@ To set **All** as the default for a hidden variable, complete the following step
 
 ### Custom all value
 
-This option is only visible if the **Include All option** is selected.
+This option is only visible if you select the **Include All option**.
 
 Enter regular expressions, globs, or Lucene syntax in the **Custom all value** field to define the value of the `All` option.
 
@@ -601,20 +625,20 @@ In order to have custom regular expression, globs, or Lucene syntax in the **Cus
 
 1. Complete the variable configuration. For more detailed configuration information, click the one of the following links to complete the steps for adding your selected variable type:
 
-- [Query](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#add-a-query-variable)
-- [Custom](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#add-a-custom-variable)
-- [Textbox](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#add-a-text-box-variable)
-- [Constant](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#add-a-constant-variable)
-- [Data source](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#add-a-data-source-variable)
-- [Interval](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#add-an-interval-variable)
-- [Switch](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#add-a-switch-variable)
+- [Query](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/#add-a-query-variable)
+- [Custom](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/#add-a-custom-variable)
+- [Textbox](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/#add-a-text-box-variable)
+- [Constant](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/#add-a-constant-variable)
+- [Data source](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/#add-a-data-source-variable)
+- [Interval](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/#add-an-interval-variable)
+- [Switch](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/#add-a-switch-variable)
 
 1. Click **Save**.
 2. (Optional) Enter a description of the changes you've made.
 3. Click **Save**.
 4. Click **Exit edit**.
 
-For more detailed information on variables, refer to the full [Variables documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/).
+For more detailed information on variables, refer to the full [Variables documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/add-template-variables/).
 
 ## Add annotation queries
 
@@ -626,6 +650,10 @@ Annotations provide a way to mark points on a visualization with rich events. Th
 
 ![Annotated visualization with annotation context menu open](https://grafana.com/static/img/docs/v46/annotations.png)
 
+To see annotations in action, explore this demo dashboard on Grafana Play:
+
+[Annotations in Grafana Play](https://play.grafana.org/d/000000010/)
+
 You can annotate visualizations in three ways:
 
 - Directly in the panel, using the [built-in annotations query](#built-in-query)
@@ -634,7 +662,7 @@ You can annotate visualizations in three ways:
 
 In the first two cases, you're creating new annotations, while in the last you're querying existing annotations from data sources. The built-in annotation query also supports this.
 
-This page explains the first and third options; for information about using the HTTP API, refer to [Annotations API](https://grafana.com/docs/grafana/v13.2/developers/http_api/annotations/).
+This page explains the first and third options; for information about using the HTTP API, refer to [Annotations API](https://grafana.com/docs/grafana/v13.3/developers/http_api/annotations/).
 
 Annotations are supported for the following visualization types:
 
@@ -732,12 +760,12 @@ To add an annotation query to a dashboard, follow these steps:
 
 1. To add a query, do one of the following:
 
-   - Click **Open query editor** to open the **Annotation Query** dialog box, select an option in the **Data source** drop-down list, and write or construct a query. The annotation query options are different for each data source. For information about annotations in a specific data source, refer to the specific [data source](https://grafana.com/docs/grafana/v13.2/datasources/) topic. Proceed to the next step.
-   - Click **Use saved query** to open the **Saved queries** drawer. Choose a [saved query](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries) to reuse, click **Select query**, and proceed to step 13.
+   - Click **Open query editor** to open the **Annotation Query** dialog box, select an option in the **Data source** drop-down list, and write or construct a query. The annotation query options are different for each data source. For information about annotations in a specific data source, refer to the specific [data source](https://grafana.com/docs/grafana/v13.3/datasources/) topic. Proceed to the next step.
+   - Click **Use saved query** to open the **Saved queries** drawer. Choose a [saved query](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries) to reuse, click **Select query**, and proceed to step 13.
 
    > **Note**
    >
-   > [Saved queries](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries) is only available on Grafana Enterprise and Grafana Cloud.
+   > [Saved queries](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries) is only available on Grafana Enterprise and Grafana Cloud.
 
 2. (Optional) Click **Test annotation query** to ensure that the query is working properly.
 
@@ -763,9 +791,9 @@ It also helps you avoid having several users build the same queries for the same
 
 Saved queries are supported in:
 
-- [Dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/#create-a-dashboard)
-- [Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/query-editor/)
-- [Annotations](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/annotate-visualizations/#add-new-annotation-queries)
+- [Dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/#create-a-dashboard)
+- [Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/query-editor/)
+- [Annotations](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/annotate-visualizations/#add-new-annotation-queries)
 
 Learn more about saved queries:
 
@@ -805,7 +833,7 @@ You can apply all the same search, filter, and sort options in the **Starred que
 >
 > When you select a query with a Loki, Mimir, Tempo, or Pyroscope data source, the **Saved queries** dialog box displays a **Drilldown** button.
 > Click the button to open the associated Drilldown app, while maintaining the context of the query.
-> Learn more about these apps in the [Drilldown documentation](https://grafana.com/docs/grafana/v13.2/visualizations/simplified-exploration/).
+> Learn more about these apps in the [Drilldown documentation](https://grafana.com/docs/grafana/v13.3/visualizations/simplified-exploration/).
 
 #### Roles, permissions, and RBAC
 
@@ -839,7 +867,7 @@ However, the substitutions only apply to the query when it's reused, and the ori
 #### Manage saved queries as code
 
 You can manage saved queries as code with the Grafana Terraform provider, which lets you version-control your query library and keep it consistent across instances.
-For more information, refer to [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/manage-saved-queries/).
+For more information, refer to [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/manage-saved-queries/).
 
 #### Known limitations
 
@@ -912,11 +940,11 @@ Toggle the **Advanced** switch and use [Cron syntax](https://en.wikipedia.org/wi
 
 ![Time region query with cron syntax](https://grafana.com/media/docs/grafana/dashboards/screenshot-annotations-cron-option-v11.6.png)
 
-For more detailed information about annotations, refer to the full [Annotations documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/annotate-visualizations/).
+For more detailed information about annotations, refer to the full [Annotations documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/annotate-visualizations/).
 
 ## Add links
 
-For more detailed information on dashboard links, refer to the full [Dashboard links documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/manage-dashboard-links/).
+For more detailed information on dashboard links, refer to the full [Dashboard links documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/manage-dashboard-links/).
 
 ### Add links to dashboards
 
@@ -942,7 +970,7 @@ The next step is to figure out which link type is right for your workflow. Even 
 - If the link relates to most if not all of the panels in the dashboard, use [dashboard links](#dashboard-links).
 - If you want to drill down into specific panels, use [panel links](#panel-links).
 - If you want to link to an external site, you can use either a dashboard link or a panel link.
-- If you want to drill down into a specific series, or even a single measurement, use [data links](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/).
+- If you want to drill down into a specific series, or even a single measurement, use [data links](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/).
 
 ## Controlling time range using the URL
 
@@ -954,16 +982,16 @@ To control the time range of a panel or dashboard, you can provide query paramet
 
 ## Dashboard links
 
-When you create a dashboard link, you can include the time range and current template variables to directly jump to the same context in another dashboard. This way, you don’t have to worry whether the person you send the link to is looking at the right data. For other types of links, refer to [Data link variables](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/#data-link-variables).
+When you create a dashboard link, you can include the time range and current template variables to directly jump to the same context in another dashboard. This way, you don’t have to worry whether the person you send the link to is looking at the right data. For other types of links, refer to [Data link variables](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/#data-link-variables).
 
 Dashboard links can also be used as shortcuts to external systems, such as submitting [a GitHub issue with the current dashboard name](https://github.com/grafana/grafana/issues/new?title=Dashboard%3A%20HTTP%20Requests).
 
 To see an example of dashboard links in action, check out:
 
 - [Dashboard links with variables](https://play.grafana.org/d/rUpVRdamz/dashboard-links-with-variables?orgId=1)
-- [Prometheus repeat](https://play.grafana.org/d/000000036/prometheus-repeat?orgId=1)
+- [Prometheus repeat](https://play.grafana.org/d/dbg1erw7kech6oe/placeholder-dashboard)
 
-Once you've added a dashboard link, it appears in the upper right corner of your dashboard.
+After you've added a dashboard link, it appears in the upper right corner of your dashboard.
 
 ### Add links to dashboards
 
@@ -983,7 +1011,7 @@ The default link type is **Dashboards**.
 2. Set link options:
    - **Show as dropdown** – If you are linking to lots of dashboards, then you probably want to select this option and add an optional title to the dropdown. Otherwise, Grafana displays the dashboard links side by side across the top of your dashboard.
    - **Include current time range** – Select this option to include the dashboard time range in the link. When the user clicks the link, the linked dashboard opens with the indicated time range already set. **Example:** <https://play.grafana.org/d/000000010/annotations?orgId=1&from=now-3h&to=now>
-   - **Include current template variable values** – Select this option to include template variables currently used as query parameters in the link. When the user clicks the link, any matching templates in the linked dashboard are set to the values from the link. For more information, see [Dashboard URL variables](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/create-dashboard-url-variables/).
+   - **Include current template variable values** – Select this option to include template variables currently used as query parameters in the link. When the user clicks the link, any matching templates in the linked dashboard are set to the values from the link. For more information, see [Dashboard URL variables](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/create-dashboard-url-variables/).
    - **Open link in new tab** – Select this option if you want the dashboard link to open in a new tab or window.
    - **Show in controls menu** – Select this option to display the link in the dashboard controls menu instead of at the top of the dashboard. The dashboard controls menu appears as a button in the dashboard toolbar.
 
@@ -998,7 +1026,7 @@ The default link type is **Dashboards**.
 > **Tip**
 >
 > To add links without leaving the dashboard, click the **Add new element** icon in the dashboard toolbar, and select **Link**.
-> For more information, refer to the [Dashboard controls documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/).
+> For more information, refer to the [Dashboard controls documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/).
 
 ### Add a URL link to a dashboard
 
@@ -1179,7 +1207,7 @@ The next step is to figure out which link type is right for your workflow. Even 
 - If the link relates to most if not all of the panels in the dashboard, use [dashboard links](#dashboard-links).
 - If you want to drill down into specific panels, use [panel links](#panel-links).
 - If you want to link to an external site, you can use either a dashboard link or a panel link.
-- If you want to drill down into a specific series, or even a single measurement, use [data links](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/).
+- If you want to drill down into a specific series, or even a single measurement, use [data links](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/).
 
 ## Controlling time range using the URL
 
@@ -1191,16 +1219,16 @@ To control the time range of a panel or dashboard, you can provide query paramet
 
 ## Dashboard links
 
-When you create a dashboard link, you can include the time range and current template variables to directly jump to the same context in another dashboard. This way, you don’t have to worry whether the person you send the link to is looking at the right data. For other types of links, refer to [Data link variables](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/#data-link-variables).
+When you create a dashboard link, you can include the time range and current template variables to directly jump to the same context in another dashboard. This way, you don’t have to worry whether the person you send the link to is looking at the right data. For other types of links, refer to [Data link variables](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/#data-link-variables).
 
 Dashboard links can also be used as shortcuts to external systems, such as submitting [a GitHub issue with the current dashboard name](https://github.com/grafana/grafana/issues/new?title=Dashboard%3A%20HTTP%20Requests).
 
 To see an example of dashboard links in action, check out:
 
 - [Dashboard links with variables](https://play.grafana.org/d/rUpVRdamz/dashboard-links-with-variables?orgId=1)
-- [Prometheus repeat](https://play.grafana.org/d/000000036/prometheus-repeat?orgId=1)
+- [Prometheus repeat](https://play.grafana.org/d/dbg1erw7kech6oe/placeholder-dashboard)
 
-Once you've added a dashboard link, it appears in the upper right corner of your dashboard.
+After you've added a dashboard link, it appears in the upper right corner of your dashboard.
 
 ### Add links to dashboards
 
@@ -1220,7 +1248,7 @@ The default link type is **Dashboards**.
 2. Set link options:
    - **Show as dropdown** – If you are linking to lots of dashboards, then you probably want to select this option and add an optional title to the dropdown. Otherwise, Grafana displays the dashboard links side by side across the top of your dashboard.
    - **Include current time range** – Select this option to include the dashboard time range in the link. When the user clicks the link, the linked dashboard opens with the indicated time range already set. **Example:** <https://play.grafana.org/d/000000010/annotations?orgId=1&from=now-3h&to=now>
-   - **Include current template variable values** – Select this option to include template variables currently used as query parameters in the link. When the user clicks the link, any matching templates in the linked dashboard are set to the values from the link. For more information, see [Dashboard URL variables](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/create-dashboard-url-variables/).
+   - **Include current template variable values** – Select this option to include template variables currently used as query parameters in the link. When the user clicks the link, any matching templates in the linked dashboard are set to the values from the link. For more information, see [Dashboard URL variables](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/create-dashboard-url-variables/).
    - **Open link in new tab** – Select this option if you want the dashboard link to open in a new tab or window.
    - **Show in controls menu** – Select this option to display the link in the dashboard controls menu instead of at the top of the dashboard. The dashboard controls menu appears as a button in the dashboard toolbar.
 
@@ -1235,7 +1263,7 @@ The default link type is **Dashboards**.
 > **Tip**
 >
 > To add links without leaving the dashboard, click the **Add new element** icon in the dashboard toolbar, and select **Link**.
-> For more information, refer to the [Dashboard controls documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/).
+> For more information, refer to the [Dashboard controls documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/).
 
 ### Add a URL link to a dashboard
 

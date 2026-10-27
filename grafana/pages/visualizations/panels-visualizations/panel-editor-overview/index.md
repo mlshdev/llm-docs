@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/panel-editor-overview/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/panel-editor-overview/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/panel-editor-overview/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/panel-editor-overview/index.md)
 
 # Panel editor
 
@@ -20,7 +20,7 @@ The header section lists the dashboard in which the panel appears and the follow
 
 The visualization preview section contains the following options:
 
-- **Table view** - Convert any visualization to a table so you can see the data. Table views are helpful for troubleshooting. This view only contains the raw data. It doesn't include transformations you might have applied to the data or the formatting options available in the [table](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/table/) visualization.
+- **Table view** - Convert any visualization to a table so you can see the data. Table views are helpful for troubleshooting. This view only contains the raw data. It doesn't include transformations you might have applied to the data or the formatting options available in the [table](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/table/) visualization.
 - **Time range controls** - **Default** is either the browser local timezone or the timezone selected at a higher level.
 - **Refresh** - Query the data source.
 
@@ -32,18 +32,18 @@ The data section contains tabs where you enter queries, transform your data, and
 
   - Select your data source. You can also set or update the data source in existing dashboards using the drop-down menu in the **Queries** tab.
   - **Saved queries**:
-    - **Save query** - To [save the query](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#save-a-query) for reuse, click the **Save query** button (or icon).
+    - **Save query** - To [save the query](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#save-a-query) for reuse, click the **Save query** button (or icon).
     - **Replace query** - Reuse a saved query.
   - **+ Add query** - Add an additional query.
   - **+ Add from saved queries** - Add an additional query by reusing a saved query.
 
   > **Note**
   >
-  > [Saved queries](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries) is only available on Grafana Enterprise and Grafana Cloud.
+  > [Saved queries](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries) is only available on Grafana Enterprise and Grafana Cloud.
 
-- **Transformations** - Apply data transformations. For more information, refer to [Transform data](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/transform-data/).
+- **Transformations** - Apply data transformations. For more information, refer to [Transform data](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/transform-data/).
 
-- **Alert** - Write alert rules. For more information, refer to [the overview of Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+- **Alert** - Write alert rules. For more information, refer to [the overview of Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 ## Panel display options
 
@@ -51,7 +51,7 @@ The display options section contains tabs where you configure almost every aspec
 
 When you first open the panel editor, Grafana analyzes your query results and suggests visualizations that suit the shape of the data. You can select a suggested visualization or click **All visualizations** to browse the full list of available panel types. After you've selected a visualization, the display options section provides further configuration.
 
-For more information about individual visualizations, refer to [Visualizations options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/).
+For more information about individual visualizations, refer to [Visualizations options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/).
 
 ### Panel styles
 

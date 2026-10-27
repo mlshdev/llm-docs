@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/set-up-https.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/set-up-https.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/set-up-https.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/set-up-https.md)
 
 # Set up Grafana HTTPS for secure web traffic
 
@@ -214,7 +214,7 @@ To adjust permissions, perform the following steps:
 
 ## Configure Grafana HTTPS and restart Grafana
 
-In this section you edit the `grafana.ini` file so that it includes the certificate you created. If you need help identifying where to find this file, or what each key means, refer to [Configuration file location](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location).
+In this section you edit the `grafana.ini` file so that it includes the certificate you created. If you need help identifying where to find this file, or what each key means, refer to [Configuration file location](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location).
 
 To configure Grafana HTTPS and restart Grafana, complete the following steps.
 
@@ -236,7 +236,7 @@ To configure Grafana HTTPS and restart Grafana, complete the following steps.
 
 2. Optional. From Grafana v11.2, edit the `cert_pass` configuration option with the decryption password if you are using encrypted certificates.
 
-3. [Restart the Grafana server](https://grafana.com/docs/grafana/v13.2/setup-grafana/start-restart-grafana/#linux) using `systemd`, `init.d`, or the binary as appropriate for your environment.
+3. [Restart the Grafana server](https://grafana.com/docs/grafana/v13.3/setup-grafana/start-restart-grafana/#linux) using `systemd`, `init.d`, or the binary as appropriate for your environment.
 
 ## Troubleshooting
 

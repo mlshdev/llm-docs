@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/query-editor/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/query-editor/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/query-editor/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/query-editor/_index.md)
 
 # Prometheus query editor
 
 The Prometheus query editor lets you write PromQL queries against your Prometheus-compatible data sources. It includes a visual query builder for constructing queries without writing PromQL, a code editor with autocomplete and syntax highlighting, and configurable output formats for different visualization types.
 
-You can access the query editor from the [Explore page](https://grafana.com/docs/grafana/v13.2/explore/) or from any dashboard panel by clicking the panel title and selecting **Edit**. For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/). For more information about PromQL, refer to [Querying Prometheus](https://prometheus.io/docs/prometheus/latest/querying/basics/).
+You can access the query editor from the [Explore page](https://grafana.com/docs/grafana/v13.3/explore/) or from any dashboard panel by clicking the panel title and selecting **Edit**. For general documentation on querying data sources in Grafana, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/). For more information about PromQL, refer to [Querying Prometheus](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 
 The query editor has two modes:
 
@@ -38,8 +38,8 @@ Sets the minimum interval between data points returned by the query. For example
 Determines how query results are interpreted and displayed in a panel.
 
 - **Time series:** The default format. Returns data as time-indexed series suitable for graph panels.
-- **Table:** Displays data in a tabular format. Works only in a [Table panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/table/).
-- **Heatmap:** Displays histogram-type metrics in a [Heatmap panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/heatmap/) by converting cumulative histograms to regular ones and sorting the series by bucket boundary.
+- **Table:** Displays data in a tabular format. Works only in a [Table panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/table/).
+- **Heatmap:** Displays histogram-type metrics in a [Heatmap panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/heatmap/) by converting cumulative histograms to regular ones and sorting the series by bucket boundary.
 
 ### Type
 
@@ -47,7 +47,7 @@ Determines the query type.
 
 - **Both:** The default. Runs both a Range query and an Instant query and returns combined results.
 - **Range:** Returns a set of time series where each series includes multiple data points over the selected time range. Use this for graph visualizations (lines, bars, points, stacked).
-- **Instant:** Returns a single data point per series (the most recent value within the selected time range). Use this for stat panels, tables, or gauges. To visualize instant query results in a time series panel, add a field override with the `Transform` property set to `Constant`. For more information, refer to [Time Series Transform option](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/#transform).
+- **Instant:** Returns a single data point per series (the most recent value within the selected time range). Use this for stat panels, tables, or gauges. To visualize instant query results in a time series panel, add a field override with the `Transform` property set to `Constant`. For more information, refer to [Time Series Transform option](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/#transform).
 
 The query type doesn't change how aggregations are calculated. Both types evaluate the same PromQL expression, including aggregation operators such as `sum`, `avg`, and `count`. The type only controls how many points in time Grafana evaluates:
 
@@ -68,7 +68,7 @@ Choose the type based on what you want to display:
 
 ### Exemplars
 
-Toggle on to include exemplars in the graph. Exemplars link aggregated metric data to specific trace examples, letting you jump from a spike directly to a relevant trace. For more information, refer to [Introduction to exemplars](https://grafana.com/docs/grafana/v13.2/fundamentals/exemplars/).
+Toggle on to include exemplars in the graph. Exemplars link aggregated metric data to specific trace examples, letting you jump from a spike directly to a relevant trace. For more information, refer to [Introduction to exemplars](https://grafana.com/docs/grafana/v13.3/fundamentals/exemplars/).
 
 > **Note**
 >
@@ -284,12 +284,12 @@ High-cardinality metrics (those with many unique label combinations) can cause q
 
 - **Aggregate first, then filter:** Use `sum()`, `avg()`, or `count()` to reduce the number of series before applying other operations. For example, `sum(rate(metric[5m])) by (service)` is far cheaper than querying all individual Pod-level series.
 - **Use recording rules for repeated queries:** If a dashboard panel queries the same expensive expression on every load, create a [Prometheus recording rule](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/) to pre-compute the result.
-- **Scope with template variables:** Use dashboard [template variables](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/template-variables/) to select a specific `namespace`, `cluster`, or `job` rather than querying all labels at once.
+- **Scope with template variables:** Use dashboard [template variables](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/template-variables/) to select a specific `namespace`, `cluster`, or `job` rather than querying all labels at once.
 - **Increase Min step for overview panels:** For panels showing trends over days or weeks, set a higher **Min step** (for example, `5m` or `15m`) to reduce the number of data points requested.
 - **Set Max data points:** Use the **Max data points** query option to cap resolution for wide time ranges.
 - **Use Adaptive Metrics (Grafana Cloud):** [Adaptive Metrics](https://grafana.com/docs/grafana-cloud/cost-management-and-billing/reduce-costs/metrics-costs/control-metrics-usage-via-adaptive-metrics/) automatically reduces the cardinality of metrics that aren't queried at full resolution.
 
-If your queries hit memory or sample limits, refer to [Memory limit exceeded for high-cardinality queries](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/#memory-limit-exceeded-for-high-cardinality-queries).
+If your queries hit memory or sample limits, refer to [Memory limit exceeded for high-cardinality queries](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/#memory-limit-exceeded-for-high-cardinality-queries).
 
 ## Expected PromQL behaviors
 
@@ -333,7 +333,7 @@ If adding a label filter doesn't reduce the result count, you may have high-card
 
 ## Related resources
 
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/template-variables/): Use variables like `$namespace` or `$job` to create dynamic, reusable dashboards.
-- [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/annotations/): Overlay Prometheus events on your panels.
-- [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/alerting/): Create alert rules from your Prometheus queries.
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/): Resolve common query errors and performance issues.
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/template-variables/): Use variables like `$namespace` or `$job` to create dynamic, reusable dashboards.
+- [Annotations](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/annotations/): Overlay Prometheus events on your panels.
+- [Alerting](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/alerting/): Create alert rules from your Prometheus queries.
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/): Resolve common query errors and performance issues.

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-security/configure-security-hardening/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-security/configure-security-hardening/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-security/configure-security-hardening/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-security/configure-security-hardening/index.md)
 
 # Configure security hardening
 
@@ -6,7 +6,7 @@ Security hardening enables you to apply additional security, which can help stop
 
 > **Note**
 >
-> These settings are available in the [grafana.ini configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location). To apply changes to the configuration file, restart the Grafana server.
+> These settings are available in the [grafana.ini configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location). To apply changes to the configuration file, restart the Grafana server.
 
 ## Additional security for cookies
 

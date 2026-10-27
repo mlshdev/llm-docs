@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/configure-legend/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/configure-legend/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/configure-legend/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/configure-legend/index.md)
 
 # Configure a legend
 
@@ -8,17 +8,17 @@ A panel includes a legend that you can use to identify and interpret data displa
 
 Legends are supported for the following visualizations:
 
-- [Bar chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/bar-chart/)
-- [Candlestick](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/candlestick/)
-- [Histogram](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/histogram/)
-- [Pie chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/pie-chart/)
-- [State timeline](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/state-timeline/)
-- [Status history](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/status-history/)
-- [Time series](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/time-series/)
-- [Trend](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/trend/)
-- [XY chart](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/xy-chart/)
+- [Bar chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/bar-chart/)
+- [Candlestick](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/candlestick/)
+- [Histogram](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/histogram/)
+- [Pie chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/pie-chart/)
+- [State timeline](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/state-timeline/)
+- [Status history](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/status-history/)
+- [Time series](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/time-series/)
+- [Trend](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/trend/)
+- [XY chart](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/xy-chart/)
 
-[Geomaps](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/geomap/) and [heatmaps](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/heatmap/) also have legends, but they only provide the choice to display or not display a legend and don't support other legend options.
+[Geomaps](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/geomap/) and [heatmaps](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/heatmap/) also have legends, but they only provide the choice to display or not display a legend and don't support other legend options.
 
 ## Legend options
 
@@ -61,7 +61,7 @@ Legend limits are supported for the following visualizations: time series, bar c
 
 ### Values
 
-You can add more context to a visualization by adding series data values or [calculations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/calculation-types/) to a legend. You can add as many values as you'd like. After you apply your changes, you can scroll the legend to see all values.
+You can add more context to a visualization by adding series data values or [calculations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/calculation-types/) to a legend. You can add as many values as you'd like. After you apply your changes, you can scroll the legend to see all values.
 
 ![Legend showing values](https://grafana.com/media/docs/grafana/panels-visualizations/screenshot-legend-values-10.3.png)
 

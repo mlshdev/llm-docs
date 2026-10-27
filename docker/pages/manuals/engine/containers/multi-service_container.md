@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/containers/multi-service_container.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/engine/containers/multi-service_container.md)
+> Pinned source for Docker main: [content/manuals/engine/containers/multi-service_container.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/engine/containers/multi-service_container.md)
 
 A container's main running process is the `ENTRYPOINT` and/or `CMD` at the
 end of the `Dockerfile`. It's best practice to separate areas of concern by
@@ -51,7 +51,7 @@ Next, the Dockerfile:
 FROM ubuntu:latest
 COPY my_first_process my_first_process
 COPY my_second_process my_second_process
-COPY my_wrapper_script.sh my_wrapper_script.sh
+COPY --chmod=755 my_wrapper_script.sh my_wrapper_script.sh
 CMD ./my_wrapper_script.sh
 ```
 
@@ -87,7 +87,7 @@ fg %1
 FROM ubuntu:latest
 COPY my_main_process my_main_process
 COPY my_helper_process my_helper_process
-COPY my_wrapper_script.sh my_wrapper_script.sh
+COPY --chmod=755 my_wrapper_script.sh my_wrapper_script.sh
 CMD ./my_wrapper_script.sh
 ```
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/pyroscope/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/pyroscope/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/pyroscope/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/pyroscope/configure/index.md)
 
 # Configure the Pyroscope data source
 
@@ -10,7 +10,7 @@ This page explains how to set up and enable the data source capabilities using G
 If you make any changes, select **Save & test** to preserve those changes.
 
 If you're using your own installation of Grafana, you can provision the Pyroscope data source using a YAML configuration file.
-For more information about provisioning and available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information about provisioning and available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ## Before you begin
 
@@ -70,7 +70,7 @@ To authenticate against Grafana Cloud Profiles, enable **Basic auth** and enter 
 The connection URL for a self-managed Pyroscope backend depends on how Pyroscope is deployed.
 Refer to the steps under [Query profiles in Grafana](https://grafana.com/docs/pyroscope/latest/deploy-kubernetes/helm/#query-profiles-in-grafana) for more information on how to configure the data source.
 
-If you plan to use the [Profiles Drilldown](https://grafana.com/docs/grafana/v13.2/explore/simplified-exploration/profiles/) application and you are running a self-managed Pyroscope backend in microservices mode, the data source connection URL should point to a gateway or proxy that routes requests to the corresponding Pyroscope service.
+If you plan to use the [Profiles Drilldown](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/profiles/) application and you are running a self-managed Pyroscope backend in microservices mode, the data source connection URL should point to a gateway or proxy that routes requests to the corresponding Pyroscope service.
 Refer to the [Helm ingress configuration](https://github.com/grafana/pyroscope/blob/main/operations/pyroscope/helm/pyroscope/templates/ingress.yaml) for specific routing requirements.
 
 ## Authentication
@@ -170,12 +170,12 @@ Adjusting this option can help prevent gaps when you zoom in to profiling data.
 
 After you configure the data source, select **Save & test** to verify the connection.
 When the connection is successful, Grafana displays a **Data source is working** message.
-If the test fails, Grafana displays the error returned by the Pyroscope backend. For help resolving connection errors, refer to [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/troubleshooting/).
+If the test fails, Grafana displays the error returned by the Pyroscope backend. For help resolving connection errors, refer to [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/troubleshooting/).
 
 ## Provision the data source
 
 You can provision the Pyroscope data source using YAML configuration files or Terraform, as part of the Grafana provisioning system.
-For more information about provisioning and available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information about provisioning and available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### YAML provisioning example
 

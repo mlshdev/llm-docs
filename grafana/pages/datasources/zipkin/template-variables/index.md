@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/zipkin/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/zipkin/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/zipkin/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/zipkin/template-variables/index.md)
 
 # Zipkin template variables
 
 Use template variables to create dynamic, reusable dashboards. Instead of hard-coding trace IDs, you can use variables to let dashboard viewers select or input trace IDs at view time, making it easier to share dashboards across teams.
 
-For an introduction to Grafana template variables, refer to [Variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/).
+For an introduction to Grafana template variables, refer to [Variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/).
 
 ## Supported variable types
 
@@ -101,8 +101,8 @@ You can use template variables in the **Trace ID** field of the query editor. Gr
 
 For example, if you create a text box variable named `traceId`, enter `${traceId}` in the trace ID field. When the viewer enters a new trace ID, the query automatically runs with the new value.
 
-For more information about variable syntax, refer to [Variable syntax](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/).
+For more information about variable syntax, refer to [Variable syntax](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/).
 
 ## Troubleshoot template variable issues
 
-If template variables aren't working as expected, refer to [Troubleshoot Zipkin data source issues](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/troubleshooting/).
+If template variables aren't working as expected, refer to [Troubleshoot Zipkin data source issues](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/troubleshooting/).

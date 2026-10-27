@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-secrets-management.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-secrets-management.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-secrets-management.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-secrets-management.md)
 
 # Manage secrets in Grafana Cloud using Terraform
 
@@ -47,7 +47,7 @@ To create a service account and token, follow these steps:
 
 1. Create a service account and token in Grafana.
    To create them, refer to [Service account tokens](https://grafana.com/docs/grafana/latest/administration/service-accounts/#service-account-tokens).
-   You can also refer to [Create and manage a Grafana Cloud stack using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-cloud-stack/) to set up a service account and token.
+   You can also refer to [Create and manage a Grafana Cloud stack using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-cloud-stack/) to set up a service account and token.
 
 2. Make sure the service account has the role-based access control (RBAC) actions needed to manage secure values:
 
@@ -112,7 +112,7 @@ You can also use a secrets manager or a `terraform.tfvars` file.
 Don't set variables in a file that you commit.
 
 For other authentication options, refer to the [Grafana provider documentation](https://registry.terraform.io/providers/grafana/grafana/latest/docs#authentication).
-For end-to-end stack management, refer to [Create and manage a Grafana Cloud stack using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-cloud-stack/).
+For end-to-end stack management, refer to [Create and manage a Grafana Cloud stack using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-cloud-stack/).
 
 ## Define a secure value
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/index.md)
 
 # Configure LBAC for Tempo or Cloud Traces
 
@@ -92,7 +92,7 @@ Follow these guidelines when you write rules:
 - If you use negation (`!=` or `!~`), refer to [Troubleshoot missing service traces](#troubleshoot-missing-service-traces). TraceQL negation behaves differently from PromQL when an attribute is missing.
 - Use up to two conditions in a single rule, separated by a comma (`,`), which acts as an `AND` operator.
 
-For more detail, refer to [Create LBAC for data sources rules for a supported data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/create-teamlbac-rules/).
+For more detail, refer to [Create LBAC for data sources rules for a supported data source](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/create-teamlbac-rules/).
 
 ### Single rule
 
@@ -222,7 +222,7 @@ You can edit or delete existing LBAC rules from the data source's **Permissions*
 
 ## Related resources
 
-- [LBAC for data sources overview](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/) explains how LBAC works, which data sources are supported, and current limitations.
-- [Create LBAC for data sources rules for a supported data source](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/create-teamlbac-rules/) explains how to define and manage rules.
+- [LBAC for data sources overview](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/) explains how LBAC works, which data sources are supported, and current limitations.
+- [Create LBAC for data sources rules for a supported data source](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/create-teamlbac-rules/) explains how to define and manage rules.
 - [Construct a TraceQL query](https://grafana.com/docs/tempo/latest/traceql/construct-traceql-queries/) explains attribute selector syntax, including `!=`, `!~`, and `= nil`.
-- [Search traces using the query builder](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-search/) explains how to run the diagnostic query in Explore.
+- [Search traces using the query builder](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-search/) explains how to run the diagnostic query in Explore.

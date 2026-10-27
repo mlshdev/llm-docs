@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/tempo/service-graph.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/tempo/service-graph.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/service-graph.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/service-graph.md)
 
 # Service Graph and Service Graph view
 
@@ -27,7 +27,7 @@ To use the Service Graph, you need:
 
 - **Service graph metrics generation** configured in [Grafana Alloy](https://grafana.com/docs/tempo/latest/metrics-from-traces/service_graphs/enable-service-graphs/) or [the Tempo metrics-generator](https://grafana.com/docs/tempo/latest/metrics-from-traces/service_graphs/). Without this, no service graph data exists.
 - **A Prometheus data source** in Grafana that receives the generated metrics.
-- **The Prometheus data source linked** in the Tempo data source settings under [Service graph](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/#service-graph). Refer to [Additional settings](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/additional-settings/#service-graph) for details, or [Provision the data source](https://grafana.com/docs/grafana/v13.2/datasources/tempo/configure-tempo-data-source/provision/) for YAML configuration.
+- **The Prometheus data source linked** in the Tempo data source settings under [Service graph](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/#service-graph). Refer to [Additional settings](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/additional-settings/#service-graph) for details, or [Provision the data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/provision/) for YAML configuration.
 
 If you run a Service Graph query and see an empty result, refer to [Troubleshoot](#troubleshoot) on this page.
 
@@ -48,7 +48,7 @@ For the full metrics reference, including labels, virtual nodes, and additional 
 
 To display the Service Graph:
 
-1. Navigate to [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
+1. Navigate to [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
 2. Select the Tempo data source.
 3. Select the **Service Graph** query type.
 4. Run a query.
@@ -70,7 +70,7 @@ The color mix of each circle shows the proportion of each state. A mostly green 
 
 To open a context menu with links for quick navigation to traces, metrics, and related views, click a service.
 
-For details on navigating, zooming, and interacting with the graph layout, refer to the [Node graph panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/) documentation.
+For details on navigating, zooming, and interacting with the graph layout, refer to the [Node graph panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/) documentation.
 
 To investigate a service with a high error rate, use TraceQL:
 
@@ -79,7 +79,7 @@ To investigate a service with a high error rate, use TraceQL:
 ```
 
 Replace *`<SERVICE_NAME>`* with the name shown in the Service Graph node.
-Refer to [TraceQL query examples](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-query-examples/) for more queries you can run from Service Graph observations.
+Refer to [TraceQL query examples](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-query-examples/) for more queries you can run from Service Graph observations.
 
 ## Service Graph view
 
@@ -104,13 +104,13 @@ To open a query in Prometheus with the span name of that row automatically set i
 
 To open a query in Tempo with the span name of that row automatically set in the query, click a row in the **links** column.
 
-You can also use TraceQL to query the same data programmatically. Refer to [TraceQL query examples](https://grafana.com/docs/grafana/v13.2/datasources/tempo/query-editor/traceql-query-examples/) to translate Service Graph observations into queries.
+You can also use TraceQL to query the same data programmatically. Refer to [TraceQL query examples](https://grafana.com/docs/grafana/v13.3/datasources/tempo/query-editor/traceql-query-examples/) to translate Service Graph observations into queries.
 
 ## Troubleshoot
 
-If the Service Graph isn't displaying data, the table is empty, or you see high cardinality warnings, refer to [Service graph issues](https://grafana.com/docs/grafana/v13.2/datasources/tempo/troubleshooting/#service-graph-issues) in the troubleshooting guide.
+If the Service Graph isn't displaying data, the table is empty, or you see high cardinality warnings, refer to [Service graph issues](https://grafana.com/docs/grafana/v13.3/datasources/tempo/troubleshooting/#service-graph-issues) in the troubleshooting guide.
 
 ## Next steps
 
 - [Enable service graphs](https://grafana.com/docs/tempo/latest/metrics-from-traces/service_graphs/enable-service-graphs/) - Set up metric generation in Tempo or Alloy.
-- [Node graph panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/) - Navigate and customize the graph layout.
+- [Node graph panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/) - Navigate and customize the graph layout.

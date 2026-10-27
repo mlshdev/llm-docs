@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/template-variables/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/template-variables/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/template-variables/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/template-variables/_index.md)
 
 # Prometheus template variables
 
 Template variables let you create dynamic, reusable dashboards by replacing hard-coded values (such as server names, namespaces, or job labels) with selectable variables. Grafana displays these variables as dropdown menus at the top of the dashboard, letting viewers change the displayed data without editing queries.
 
-For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ## Query variable types
 
@@ -89,7 +89,7 @@ You can use global built-in variables in query variable definitions:
 | `$__range_s`     | Duration in seconds.                                              |
 | `$__range_ms`    | Duration in milliseconds.                                         |
 
-For details, refer to [Global built-in variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#global-variables).
+For details, refer to [Global built-in variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#global-variables).
 
 The `label_values` function (Classic query type) doesn't support these variables. Use `Query result` type with `query_result()` instead:
 
@@ -147,7 +147,7 @@ For `$__rate_interval` to produce reliable results, the scrape interval must mat
 
 - **Recording rules with fixed intervals:** If you use `$__rate_interval` in a recording rule query, the interval depends on the evaluation context. For recording rules, use a fixed interval (for example, `[5m]`) rather than `$__rate_interval`.
 
-For troubleshooting `$__rate_interval` issues, refer to [Rate interval returns no data or incorrect values](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/#rate_interval-returns-no-data-or-incorrect-values).
+For troubleshooting `$__rate_interval` issues, refer to [Rate interval returns no data or incorrect values](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/#rate_interval-returns-no-data-or-incorrect-values).
 
 For additional background, refer to [$\_\_rate\_interval for Prometheus rate queries that just work](https://grafana.com/blog/2020/09/28/new-in-grafana-7.2-__rate_interval-for-prometheus-rate-queries-that-just-work/).
 
@@ -167,11 +167,11 @@ The Prometheus data source supports three variable syntaxes:
 
 ## Filters variable
 
-Prometheus supports the [Filters](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/) variable type (formerly called "ad hoc filters"), which lets dashboard viewers dynamically add label filters without editing queries.
+Prometheus supports the [Filters](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/) variable type (formerly called "ad hoc filters"), which lets dashboard viewers dynamically add label filters without editing queries.
 
 > **Note**
 >
-> The **Filter and Group by** feature extends the Filters variable by adding grouping support for Prometheus and Loki data sources. For more information, refer to [Filter and Group by](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/).
+> The **Filter and Group by** feature extends the Filters variable by adding grouping support for Prometheus and Loki data sources. For more information, refer to [Filter and Group by](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/).
 
 To set up a Filters variable:
 
@@ -189,6 +189,6 @@ After you add the variable, a filter bar appears at the top of the dashboard. Vi
 
 ## Related resources
 
-- [Query editor](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/query-editor/): Use variables in PromQL queries.
-- [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/annotations/): Use template variables in annotation queries.
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/): Resolve variable-related query issues.
+- [Query editor](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/query-editor/): Use variables in PromQL queries.
+- [Annotations](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/annotations/): Use template variables in annotation queries.
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/): Resolve variable-related query issues.

@@ -1,14 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/roles-and-permissions/access-control/rbac-grafana-provisioning/index.md)
 
 # Provisioning RBAC with Grafana
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) for self-managed instances. This feature is not available in Grafana Cloud.
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) for self-managed instances. This feature is not available in Grafana Cloud.
 
-You can create, change or remove [Custom roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/manage-rbac-roles/#create-custom-roles-using-provisioning) and create or remove [basic role assignments](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/assign-rbac-roles/#assign-a-fixed-role-to-a-basic-role-using-provisioning), by adding one or more YAML configuration files in the `provisioning/access-control/` directory.
+You can create, change or remove [Custom roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/manage-rbac-roles/#create-custom-roles-using-provisioning) and create or remove [basic role assignments](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/assign-rbac-roles/#assign-a-fixed-role-to-a-basic-role-using-provisioning), by adding one or more YAML configuration files in the `provisioning/access-control/` directory.
 
-Because this method requires access to the file system where Grafana is running, it's only available for self-managed Grafana instances. To provision RBAC in Grafana Cloud, use [Terraform](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/) or the [HTTP API](https://grafana.com/docs/grafana/v13.2/developers/http_api/access_control/#create-and-manage-custom-roles).
+Because this method requires access to the file system where Grafana is running, it's only available for self-managed Grafana instances. To provision RBAC in Grafana Cloud, use [Terraform](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/) or the [HTTP API](https://grafana.com/docs/grafana/v13.3/developers/http_api/access_control/#create-and-manage-custom-roles).
 
 Grafana performs provisioning during startup. After you make a change to the configuration file, you can reload it during runtime. You do not need to restart the Grafana server for your changes to take effect.
 
@@ -26,13 +26,13 @@ Grafana performs provisioning during startup. After you make a change to the con
 
 4. Add RBAC provisioning details to the configuration file.
 
-   Refer to [Manage RBAC roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/manage-rbac-roles/) and [Assign RBAC roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/assign-rbac-roles/) for instructions.
+   Refer to [Manage RBAC roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/manage-rbac-roles/) and [Assign RBAC roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/assign-rbac-roles/) for instructions.
 
    Refer to [example role provisioning file](#example-role-configuration-file-using-grafana-provisioning) for a complete example of a provisioning file.
 
 5. Reload the provisioning configuration file.
 
-   For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations](https://grafana.com/docs/grafana/v13.2/developers/http_api/admin/#reload-provisioning-configurations).
+   For more information about reloading the provisioning configuration at runtime, refer to [Reload provisioning configurations](https://grafana.com/docs/grafana/v13.3/developers/http_api/admin/#reload-provisioning-configurations).
 
 ## Example role configuration file using Grafana provisioning
 
@@ -127,6 +127,6 @@ teams:
 
 ## Useful Links
 
-[Provisioning RBAC setup with Terraform](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/)
+[Provisioning RBAC setup with Terraform](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-terraform-provisioning/)
 
 [Grafana provisioning](https://grafana.com/docs/grafana/latest/administration/provisioning/)

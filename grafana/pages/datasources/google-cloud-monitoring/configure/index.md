@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/google-cloud-monitoring/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/google-cloud-monitoring/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/google-cloud-monitoring/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/google-cloud-monitoring/configure/index.md)
 
 # Configure the Google Cloud Monitoring data source
 
@@ -12,20 +12,20 @@ Before you begin, ensure you have the following:
 - **GCP project:** A Google Cloud Platform project.
 - **GCP permissions:** Permissions to create a service account or configure GCE default service account settings in your GCP project.
 
-Grafana ships with the Google Cloud Monitoring data source preinstalled in both Grafana OSS and Grafana Enterprise, so there's nothing for you to install. For details on how the standalone plugin updates, refer to [Plugin updates](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/#plugin-updates).
+Grafana ships with the Google Cloud Monitoring data source preinstalled in both Grafana OSS and Grafana Enterprise, so there's nothing for you to install. For details on how the standalone plugin updates, refer to [Plugin updates](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/#plugin-updates).
 
 ## Set up GCP authentication
 
 Before you can request data from Google Cloud Monitoring, you must configure authentication.
 All requests to Google APIs are performed on the server-side by the Grafana backend.
 
-For authentication options and configuration details, refer to [Google authentication](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/google-authentication/).
+For authentication options and configuration details, refer to [Google authentication](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/google-authentication/).
 
 When you configure Google authentication, note the following requirements specific to Google Cloud Monitoring.
 
 ### Configure a GCP service account
 
-When you [create a Google Cloud Platform (GCP) service account and key file](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/google-authentication/#create-a-gcp-service-account-and-key-file), the service account must have the **Monitoring Viewer** role (**Role > Select a role > Monitoring > Monitoring Viewer**):
+When you [create a Google Cloud Platform (GCP) service account and key file](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/google-authentication/#create-a-gcp-service-account-and-key-file), the service account must have the **Monitoring Viewer** role (**Role > Select a role > Monitoring > Monitoring Viewer**):
 
 ![](https://grafana.com/static/img/docs/v71/cloudmonitoring_service_account_choose_role.png)
 
@@ -33,7 +33,7 @@ When you [create a Google Cloud Platform (GCP) service account and key file](htt
 
 ### Grant the GCE Default Service Account scope
 
-If Grafana is running on a Google Compute Engine (GCE) virtual machine, when you [configure a GCE Default Service Account](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/google-authentication/#use-gce-default-service-account), you must also grant that service account access to the "Cloud Monitoring API" scope.
+If Grafana is running on a Google Compute Engine (GCE) virtual machine, when you [configure a GCE Default Service Account](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/google-authentication/#use-gce-default-service-account), you must also grant that service account access to the "Cloud Monitoring API" scope.
 
 ## Enable Google Cloud Platform APIs
 
@@ -77,7 +77,7 @@ Configure how Grafana authenticates with Google Cloud.
 
 | Setting                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Authentication type** | Select the authentication method: **Google JWT File** to use a service account key file, **GCE Default Service Account** if Grafana runs on a GCE virtual machine, **Forward OAuth Identity** to authenticate as the Google-signed-in Grafana user, or **Workload Identity Federation** (Grafana Cloud only) to authenticate through an external OIDC identity provider. For a comparison of the methods, refer to [Supported authentication methods](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/google-authentication/#supported-authentication-methods). |
+| **Authentication type** | Select the authentication method: **Google JWT File** to use a service account key file, **GCE Default Service Account** if Grafana runs on a GCE virtual machine, **Forward OAuth Identity** to authenticate as the Google-signed-in Grafana user, or **Workload Identity Federation** (Grafana Cloud only) to authenticate through an external OIDC identity provider. For a comparison of the methods, refer to [Supported authentication methods](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/google-authentication/#supported-authentication-methods). |
 
 ### Configure Google JWT File authentication
 
@@ -111,7 +111,7 @@ After you change the scopes, each user must sign out, revoke the existing grant 
 
 *Only available for Grafana Cloud.*
 
-These settings appear when you select **Workload Identity Federation** as the authentication type. This method lets each query run as the signed-in user by authenticating through an external OIDC identity provider, such as Okta, instead of a service account key. Setting it up spans Google Cloud, your Grafana Cloud stack, and the data source. For the complete procedure, refer to [Use Workload Identity Federation](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/google-authentication/#use-workload-identity-federation).
+These settings appear when you select **Workload Identity Federation** as the authentication type. This method lets each query run as the signed-in user by authenticating through an external OIDC identity provider, such as Okta, instead of a service account key. Setting it up spans Google Cloud, your Grafana Cloud stack, and the data source. For the complete procedure, refer to [Use Workload Identity Federation](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/google-authentication/#use-workload-identity-federation).
 
 | Setting                             | Description                                                                                                                                                                                                  |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -151,7 +151,7 @@ Click **Save & test** to test the connection. A successful connection displays t
 ## Provision the data source
 
 You can define and configure the data source in YAML files as part of the Grafana provisioning system.
-For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### Provisioning examples
 
@@ -315,9 +315,9 @@ For all available configuration options, refer to the [Grafana provider data sou
 
 After you configure the Google Cloud Monitoring data source, you can:
 
-- [Query GCP metrics](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/query-editor/) using the visual Builder, MQL, SLO, or PromQL query types.
-- [Create template variables](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/template-variables/) for dynamic, reusable dashboards.
-- [Add annotations](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/annotations/) to overlay GCP events on your graphs.
-- [Set up alerting](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/alerting/) to receive notifications based on GCP metrics and SLOs.
-- [Explore your data](https://grafana.com/docs/grafana/v13.2/explore/) to investigate metrics without building a dashboard.
-- [Build dashboards for GCP services](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/#import-dashboards-for-gcp-services) using community and Grafana-authored dashboards.
+- [Query GCP metrics](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/query-editor/) using the visual Builder, MQL, SLO, or PromQL query types.
+- [Create template variables](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/template-variables/) for dynamic, reusable dashboards.
+- [Add annotations](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/annotations/) to overlay GCP events on your graphs.
+- [Set up alerting](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/alerting/) to receive notifications based on GCP metrics and SLOs.
+- [Explore your data](https://grafana.com/docs/grafana/v13.3/explore/) to investigate metrics without building a dashboard.
+- [Build dashboards for GCP services](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/#import-dashboards-for-gcp-services) using community and Grafana-authored dashboards.

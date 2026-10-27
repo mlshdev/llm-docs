@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-mqtt.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-mqtt.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-mqtt.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-mqtt.md)
 
 # Configure MQTT notifications
 
@@ -17,13 +17,13 @@ To create a contact point with MQTT integration, complete the following steps.
 7. (Optional) Configure [additional settings](#optional-settings).
 8. Click **Save contact point**.
 
-For more details on contact points, including how to test them and enable notifications, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/).
+For more details on contact points, including how to test them and enable notifications, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/).
 
 ### Required Settings
 
 | Option     | Description                                                                                                                                                                               |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Broker URL | The URL of the MQTT broker. This field is [protected](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/) from modification in Grafana Cloud. |
+| Broker URL | The URL of the MQTT broker. This field is [protected](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/) from modification in Grafana Cloud. |
 | Topic      | The topic to which the message will be sent.                                                                                                                                              |
 
 ### Optional Settings
@@ -31,7 +31,7 @@ For more details on contact points, including how to test them and enable notifi
 | Option                   | Description                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Message format           | If set to `json` (default), the notification message uses the [default JSON payload](#default-json-payload). <br/> If set to `text`, the notification message is fully customizable.                                                                                                                                                                                                        |
-| Message                  | Depends on the **Message format** option. <br/> In `json` format, defines only the `message` field of the [default JSON payload](#default-json-payload). <br/> In `text` format, defines the [entire custom payload](#custom-payload). <br/> This field supports [notification templates](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/). |
+| Message                  | Depends on the **Message format** option. <br/> In `json` format, defines only the `message` field of the [default JSON payload](#default-json-payload). <br/> In `text` format, defines the [entire custom payload](#custom-payload). <br/> This field supports [notification templates](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/). |
 | Client ID                | The client ID to use when connecting to the MQTT broker. If blank, a random client ID is used.                                                                                                                                                                                                                                                                                              |
 | Username                 | The username to use when connecting to the MQTT broker.                                                                                                                                                                                                                                                                                                                                     |
 | Password                 | The password to use when connecting to the MQTT broker.                                                                                                                                                                                                                                                                                                                                     |
@@ -127,7 +127,7 @@ If the **Message format** option is `json` (the default), the payload contains t
 | `externalURL`       | string                           | External URL to the Grafana instance sending this webhook                                                                                                                                                                                        |
 | `version`           | string                           | Version of the payload                                                                                                                                                                                                                           |
 | `groupKey`          | string                           | Key that is used for grouping                                                                                                                                                                                                                    |
-| `message`           | string                           | Custom message configured in **Message** (**Optional Settings**). <br/> Supports [notification templates](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/); the output is formatted as a string. |
+| `message`           | string                           | Custom message configured in **Message** (**Optional Settings**). <br/> Supports [notification templates](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/); the output is formatted as a string. |
 
 > **Note**
 >
@@ -158,6 +158,6 @@ The Alert object represents an alert included in the notification group, as prov
 
 When you set the **Message format** option to `text`, you can customize the entire payload of the MQTT message.
 
-In this mode, the **Message** option defines the entire payload. It supports [notification templates](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/) and can generate notification messages in plain text, JSON, or any custom format.
+In this mode, the **Message** option defines the entire payload. It supports [notification templates](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/) and can generate notification messages in plain text, JSON, or any custom format.
 
-For examples of templates that produce plain text or JSON messages, refer to [notification template examples](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/examples/).
+For examples of templates that produce plain text or JSON messages, refer to [notification template examples](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/examples/).

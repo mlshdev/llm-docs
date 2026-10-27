@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/_index.md)
 
 # Configure notifications
 
@@ -11,17 +11,18 @@ By default, Grafana Alerting provides default notification messages with relevan
 
 ![In the alert rule, you can configure alert forwarding directly to a contact point or through notification policies](https://grafana.com/media/docs/alerting/alerting-configure-notifications-v2.png)
 
-Notification setup is essential for an effective alerting system to scale across multiple teams and services. For a quick overview about the various components involved in handling notifications, refer to the [introduction about notifications](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/notifications/).
+Notification setup is essential for an effective alerting system to scale across multiple teams and services. For a quick overview about the various components involved in handling notifications, refer to the [introduction about notifications](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/notifications/).
 
 The topics in this section include step-by-step instructions for:
 
-- [Configuring contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/) to specify where to receive alert notifications.
-- [Configuring notification policies](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-notification-policy/) to determine how alerts are routed to contact points.
-- [Templating notifications](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/template-notifications/) to customize notification messages.
-- [Configuring silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) or [mute timings](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) to stop notifications.
-- [Configuring inhibition rules](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/inhibition-rules/) to suppress notifications for dependent alerts when a root-cause alert is already firing.
+- [Configuring contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/) to specify where to receive alert notifications.
+- [Configuring notification policies](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-notification-policy/) to determine how alerts are routed to contact points.
+- [Templating notifications](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/template-notifications/) to customize notification messages.
+- [Configuring silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/) or [mute timings](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/) to stop notifications.
+- [Configuring inhibition rules](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/inhibition-rules/) to suppress notifications for dependent alerts when a root-cause alert is already firing.
+- [Importing an Alertmanager configuration](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/import-alertmanager-configuration/) to convert an existing Prometheus or Mimir notification setup into Grafana-managed resources.
 
-After you configure notifications, you can refer to [View notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/) to confirm delivery and troubleshoot failed notifications.
+After you configure notifications, you can refer to [View notification history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-notification-history/) to confirm delivery and troubleshoot failed notifications.
 
 ## Alertmanager architecture
 

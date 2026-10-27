@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/troubleshooting.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/troubleshooting.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/troubleshooting.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/troubleshooting.md)
 
 # Troubleshoot general data source issues
 
@@ -107,7 +107,7 @@ These errors occur when executing queries against a properly connected data sour
 
 **Solutions:**
 
-1. Verify the provisioning YAML syntax is correct. Refer to [Provision data sources](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources) for the expected format.
+1. Verify the provisioning YAML syntax is correct. Refer to [Provision data sources](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources) for the expected format.
 2. Ensure `secureJsonData` values (such as passwords, API keys, and tokens) are set correctly. These values can't be read back after being saved.
 3. Check that the provisioning file is in the correct directory and that Grafana has read access.
 4. Restart Grafana after making changes to provisioning files.

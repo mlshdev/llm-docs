@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/whatsnew/whats-new-in-v9-0.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/whatsnew/whats-new-in-v9-0.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/whatsnew/whats-new-in-v9-0.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/whatsnew/whats-new-in-v9-0.md)
 
 # What's new in Grafana v9.0
 
@@ -93,7 +93,7 @@ Grafana Alerting now provides the ability to capture an image for Grafana manage
 
 ## Envelope encryption is generally available and enabled by default
 
-Grafana now uses envelope encryption to encrypt secrets in the database. Envelope encryption adds a layer of indirection to the encryption process. Instead of encrypting all secrets in the database with a single key, Grafana uses a set of keys called data encryption keys (DEKs) to encrypt them. These data encryption keys are themselves encrypted with a single key encryption key (KEK). This allows you to rotate your KEK and quickly re-encrypt your DEKs in case a key is compromised. In Grafana Enterprise, you can also store your KEK in an external key management service (KMS) like AWS KMS or Azure Key Vault, for extra security. Learn more about envelope encryption in the [database encryption documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/#envelope-encryption).
+Grafana now uses envelope encryption to encrypt secrets in the database. Envelope encryption adds a layer of indirection to the encryption process. Instead of encrypting all secrets in the database with a single key, Grafana uses a set of keys called data encryption keys (DEKs) to encrypt them. These data encryption keys are themselves encrypted with a single key encryption key (KEK). This allows you to rotate your KEK and quickly re-encrypt your DEKs in case a key is compromised. In Grafana Enterprise, you can also store your KEK in an external key management service (KMS) like AWS KMS or Azure Key Vault, for extra security. Learn more about envelope encryption in the [database encryption documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/#envelope-encryption).
 
 ![](https://grafana.com/static/img/docs/enterprise/dashboards/envelope-encryption.png)
 
@@ -186,7 +186,7 @@ Reporting is all about convenience - getting info to eyeballs as quickly as poss
 
 ## Breaking changes
 
-This is a partial list of notable breaking changes. For the complete list, see our [Release Notes](https://grafana.com/docs/grafana/v13.2/release-notes/release-notes-9-0-0/).
+This is a partial list of notable breaking changes. For the complete list, see our [Release Notes](https://grafana.com/docs/grafana/v13.3/release-notes/release-notes-9-0-0/).
 
 ### Role-based access control: changes for general release
 
@@ -256,7 +256,7 @@ Therefore, any secret created or updated in Grafana v9.0 won't be decryptable by
 
 We strongly recommend that you enable `envelopeEncryption` for older versions to deploy envelope encryption. You can alternatively configure the `disableEnvelopeEncryption` feature toggle before upgrading to v9.0; however, this feature toggle might be removed in a future Grafana release.
 
-For more details, and workarounds for potential issues, refer to the [documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-database-encryption/).
+For more details, and workarounds for potential issues, refer to the [documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-database-encryption/).
 
 ## A note on Grafana Enterprise licensing
 

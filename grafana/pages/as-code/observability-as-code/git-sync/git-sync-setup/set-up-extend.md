@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-extend.md)
 
 # Set up instantaneous pulling and dashboard previews in Pull Requests
 
-After [setup](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/), you can optionally extend Git Sync by enabling pull request notifications and image previews of dashboard changes.
+After [setup](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/), you can optionally extend Git Sync by enabling pull request notifications and image previews of dashboard changes.
 
 | Capability                                       | Benefit                                                           | Requires                               |
 | ------------------------------------------------ | ----------------------------------------------------------------- | -------------------------------------- |
@@ -42,7 +42,7 @@ GitHub API error (HTTP 422: Validation Failed: The "pull_request" event cannot h
 If you hit this limit, you can either:
 
 - Remove unused or duplicate webhooks from your repository's **Settings > Webhooks** page.
-- Disable webhook integration for connections that don't need real-time sync so those instances poll on an interval instead. Refer to [Webhook options](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/#webhook-options) to disable webhook integration.
+- Disable webhook integration for connections that don't need real-time sync so those instances poll on an interval instead. Refer to [Webhook options](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/#webhook-options) to disable webhook integration.
 
 #### Webhook limitations per provider
 
@@ -70,7 +70,7 @@ The per-repository `spec.webhook.baseUrl` field still overrides `public_root_url
 
 If your security setup doesn't permit publicly exposing the Grafana instance, you can either choose to allowlist the Git provider's IP addresses, or expose only the necessary paths.
 
-For information about the traffic between Grafana and your Git server, refer to [Network connectivity and IP allowlisting](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/set-up-before/#network-connectivity-and-ip-allowlisting).
+For information about the traffic between Grafana and your Git server, refer to [Network connectivity and IP allowlisting](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/set-up-before/#network-connectivity-and-ip-allowlisting).
 
 In RegExp, the necessary paths required to be exposed are `/apis/provisioning\.grafana\.app/v0(alpha1)?/namespaces/[^/]+/repositories/[^/]+/(webhook|render/.*)$`.
 
@@ -88,8 +88,8 @@ Image rendering requires webhooks.
 
 To learn more about using Git Sync refer to the following documents:
 
-- [Set up Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/git-sync-setup/)
-- [Export resources](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/add-resources/)
-- [Work with provisioned repositories](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/use-git-sync/)
-- [Work with provisioned dashboards](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/provisioned-dashboards/)
-- [Git Sync deployment scenarios](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/scenarios/)
+- [Set up Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/git-sync-setup/)
+- [Export resources](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/add-resources/)
+- [Work with provisioned repositories](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/use-git-sync/)
+- [Work with provisioned dashboards](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/provisioned-dashboards/)
+- [Git Sync deployment scenarios](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/scenarios/)

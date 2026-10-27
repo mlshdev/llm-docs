@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/data-source-management/teamlbac/create-teamlbac-rules/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/data-source-management/teamlbac/create-teamlbac-rules/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/data-source-management/teamlbac/create-teamlbac-rules/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/data-source-management/teamlbac/create-teamlbac-rules/index.md)
 
 # Create LBAC for data sources rules
 
@@ -46,7 +46,7 @@ For Tempo and Cloud Traces, rules use attribute selectors rather than LogQL labe
 { resource.service.name="checkout", resource.env="prod" }
 ```
 
-The same logic applies as for logs and metrics: comma-separated conditions in one rule combine with **AND**, and multiple rules across a team combine with **OR**. For more information, refer to [Configure team LBAC for Tempo or Cloud Traces](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/).
+The same logic applies as for logs and metrics: comma-separated conditions in one rule combine with **AND**, and multiple rules across a team combine with **OR**. For more information, refer to [Configure team LBAC for Tempo or Cloud Traces](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/).
 
 ### Best practices
 
@@ -58,7 +58,7 @@ Follow these recommendations when you set up rules:
 - For a first setup, create as few rules as possible for each team and prefer rules that grant access over rules that exclude data, because access is the union of all rules.
 - Use a dedicated data source for LBAC, and keep a separate data source without LBAC for full access, so the separation is clear.
 - Manage rules as code with the Grafana Terraform provider for repeatable, reviewable setups.
-- To validate rules, test them in [Explore](https://grafana.com/docs/grafana/v13.2/explore/). Explore shows the logs or metrics that a rule returns.
+- To validate rules, test them in [Explore](https://grafana.com/docs/grafana/v13.3/explore/). Explore shows the logs or metrics that a rule returns.
 
 ## Examples
 
@@ -149,6 +149,6 @@ User A can access only logs or metrics that match `{ project_id="project-dev" }`
 
 Set up LBAC for data sources for your data source:
 
-- [Configure LBAC for data sources for Loki](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/)
-- [Configure LBAC for data sources for Prometheus](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/)
-- [Configure team LBAC for Tempo or Cloud Traces](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/)
+- [Configure LBAC for data sources for Loki](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/configure-teamlbac-for-loki/)
+- [Configure LBAC for data sources for Prometheus](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/configure-teamlbac-for-prometheus/)
+- [Configure team LBAC for Tempo or Cloud Traces](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/teamlbac/configure-teamlbac-for-tempo/)

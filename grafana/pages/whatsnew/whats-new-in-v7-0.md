@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/whatsnew/whats-new-in-v7-0.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/whatsnew/whats-new-in-v7-0.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/whatsnew/whats-new-in-v7-0.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/whatsnew/whats-new-in-v7-0.md)
 
 # What's new in Grafana v7.0
 
@@ -40,7 +40,7 @@ In previous versions of Grafana, each visualization had slightly different ways 
 
 We have yet to migrate all core panels to this new architecture so in 7.0 there will be some inconsistencies in the UI between panels. This will be fixed soon in future releases as we update all the core panels and help the community update the community panel plugins.
 
-Learn more about this feature in [Panel editor](https://grafana.com/docs/grafana/v13.2/panels-visualizations/panel-editor-overview/).
+Learn more about this feature in [Panel editor](https://grafana.com/docs/grafana/v13.3/panels-visualizations/panel-editor-overview/).
 
 ## New tracing UI
 
@@ -58,9 +58,9 @@ In the future we will add more workflows and integrations so that correlating be
 
 The data you want to visualize can come from many different places and it is usually not in exactly the right form. Users can now transform non-time series data into tables (e.g., JSON files or even simple lookup tables) in seconds without any customization or additional overhead. They can then combine non-time series data with any other data in Grafana; data from an external database or a panel that already exists in one of their current dashboards.
 
-By chaining a simple set of point and click [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#transformation-functions), users will be able join, pivot, filter, re-name and do calculations to get the results they need. Perfect for operations across queries or data sources missing essential data transformations.
+By chaining a simple set of point and click [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/#transformation-functions), users will be able join, pivot, filter, re-name and do calculations to get the results they need. Perfect for operations across queries or data sources missing essential data transformations.
 
-[Transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/) also adds the ability to do math across queries. Lots of data sources do not support this natively, so being able to do it in Grafana is a powerful feature.
+[Transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/) also adds the ability to do math across queries. Lots of data sources do not support this natively, so being able to do it in Grafana is a powerful feature.
 
 For users with large dashboards or with heavy queries, being able to reuse the query result from one panel in another panel can be a huge performance gain for slow queries (e.g log or sql queries). From the data source menu in the query editor, you can choose the `--dashboard--` option and then choose the query result from another panel on the same dashboard.
 
@@ -78,7 +78,7 @@ We are also introducing a new shared data model for both time series and table d
 - **Outer join:** Joins many time series/tables by a field. This can be used to outer join multiple time series on the *time* field to show many time series in one table.
 - **Add field from calculation:** This is a powerful transformation that allows you perform many different types of math operations and add the result as a new field. Can be used to calculate the difference between two series or fields and add the result to a new field. Or multiply one field with another and add the result to a new field.
 
-Learn more about this feature in [Transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#transformation-functions).
+Learn more about this feature in [Transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/#transformation-functions).
 
 ## Field options and overrides
 
@@ -88,7 +88,7 @@ Up until now the overrides were available only for Graph and Table panel(via Col
 
 This feature enables even more powerful visualizations and fine grained control over how the data is displayed.
 
-Learn more about this feature in [Field overrides](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-overrides/).
+Learn more about this feature in [Field overrides](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-overrides/).
 
 ## Inspect panels and export data to CSV
 
@@ -98,7 +98,7 @@ Learn more about this feature in [Field overrides](https://grafana.com/docs/graf
 
 Another new feature of Grafana 7.0 is the panel inspector. Inspect allows you to view the raw data for any Grafana panel as well as export that data to a CSV file. With Panel inspect you will also be able to perform simple raw data transformations like join, view query stats or detailed execution data.
 
-Learn more about this feature in [Panel Inspector](https://grafana.com/docs/grafana/v13.2/panels-visualizations/panel-inspector/#inspect-query-request-and-response-data).
+Learn more about this feature in [Panel Inspector](https://grafana.com/docs/grafana/v13.3/panels-visualizations/panel-inspector/#inspect-query-request-and-response-data).
 
 ## Table panel
 
@@ -144,7 +144,7 @@ Plugins can be monitored with the new metrics and health check capabilities. The
 
 With this release, we are deprecating the unofficial first version of backend plugins which will be removed in a future release.
 
-To learn more, start with the [overview](https://grafana.com/developers/plugin-tools/key-concepts/backend-plugins/). Next, in this [tutorial](https://grafana.com/developers/plugin-tools/tutorials/build-a-data-source-backend-plugin) you'll learn how to build a backend for a data source plugin and enable it for use with [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/). Make sure to keep an eye out for additional documentation and tutorials that will be published after the Grafana v7.0 release.
+To learn more, start with the [overview](https://grafana.com/developers/plugin-tools/key-concepts/backend-plugins/). Next, in this [tutorial](https://grafana.com/developers/plugin-tools/tutorials/build-a-data-source-backend-plugin) you'll learn how to build a backend for a data source plugin and enable it for use with [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/). Make sure to keep an eye out for additional documentation and tutorials that will be published after the Grafana v7.0 release.
 
 ## New tutorials
 
@@ -171,27 +171,27 @@ Since then we have been working towards removing PhantomJS. In October 2019, whe
 
 As a replacement for PhantomJS we’ve developed the [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) which is a plugin that runs on the backend and handles rendering panels and dashboards as PNG images using headless Chromium/Chrome. The [Grafana Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) can either be installed as a Grafana plugin running in its own process side-by-side with Grafana. or runs as an external HTTP service, hosted using Docker or as a standalone application.
 
-Read more about [Image Rendering](https://grafana.com/docs/grafana/v13.2/setup-grafana/image-rendering/) in the documentation for further instructions.
+Read more about [Image Rendering](https://grafana.com/docs/grafana/v13.3/setup-grafana/image-rendering/) in the documentation for further instructions.
 
 ## Query history in Explore out of beta
 
 The Query history feature lets you view and interact with the queries that you have previously run in Explore. You can add queries to the Explore query editor, write comments, create and share URL links, star your favorite queries, and much more. Starred queries are displayed in the Starred tab, so it is easier to reuse queries that you run often without typing them from scratch.
 
-It was released as a beta feature in Grafana 6.7. The feedback has been really positive and it is now out of beta for the 7.0 release. Learn more about query history in [Explore](https://grafana.com/docs/grafana/v13.2/explore/).
+It was released as a beta feature in Grafana 6.7. The feedback has been really positive and it is now out of beta for the 7.0 release. Learn more about query history in [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
 
 ## Stackdriver data source supports Service Monitoring
 
-[Service monitoring](https://cloud.google.com/service-monitoring) in Google Cloud Platform (GCP) enables you to monitor based on Service Level Objectives (SLOs) for your GCP services. The new SLO query builder in the Stackdriver data source allows you to display SLO data in Grafana. Read more about it in the [Stackdriver data source documentation](https://grafana.com/docs/grafana/v13.2/datasources/google-cloud-monitoring/#slo-service-level-objective-queries).
+[Service monitoring](https://cloud.google.com/service-monitoring) in Google Cloud Platform (GCP) enables you to monitor based on Service Level Objectives (SLOs) for your GCP services. The new SLO query builder in the Stackdriver data source allows you to display SLO data in Grafana. Read more about it in the [Stackdriver data source documentation](https://grafana.com/docs/grafana/v13.3/datasources/google-cloud-monitoring/#slo-service-level-objective-queries).
 
 ## Time zone support
 
-You can now override the [time zone](https://grafana.com/docs/grafana/v13.2/dashboards/manage-dashboards/#dashboard-time-settings) used to display date and time values in a dashboard. One benefit of this is that you can specify the local time zone of the service or system that you are monitoring which can be helpful when monitoring a system or service that operates across several time zones.
+You can now override the [time zone](https://grafana.com/docs/grafana/v13.3/dashboards/manage-dashboards/#dashboard-time-settings) used to display date and time values in a dashboard. One benefit of this is that you can specify the local time zone of the service or system that you are monitoring which can be helpful when monitoring a system or service that operates across several time zones.
 
 ## Alerting and deep linking for Azure Log Analytics
 
 The Azure Monitor data source supports multiple Azure services. Log Analytics queries in the data source now have alerting support too (Azure Monitor and Application Insights already had alerting support).
 
-A new feature is [deep linking from the graph panel to the Log Analytics query editor in the Azure Portal](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/#deep-link-from-grafana-panels-to-the-log-analytics-query-editor-in-azure-portal). Click on a time series in the panel to see a context menu with a link to View in Azure Portal. Clicking that link opens the Azure Log Analytics query editor in the Azure Portal and runs the query from the Grafana panel.
+A new feature is [deep linking from the graph panel to the Log Analytics query editor in the Azure Portal](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/#deep-link-from-grafana-panels-to-the-log-analytics-query-editor-in-azure-portal). Click on a time series in the panel to see a context menu with a link to View in Azure Portal. Clicking that link opens the Azure Log Analytics query editor in the Azure Portal and runs the query from the Grafana panel.
 
 ## Grafana Enterprise
 
@@ -212,7 +212,7 @@ This includes problems like:
 
 ### Usage insights and Presence indicator
 
-This release includes a series of features that build on our new usage analytics engine. This “Grafana about Grafana” feature will help our large customers get better insight into the behavior and utilization of their users, dashboards, and data sources. The improved [dashboard search](https://grafana.com/docs/grafana/v13.2/dashboards/assess-dashboard-usage/#sort-dashboards-by-using-insights-data) allows you to sort dashboards by usage and errors. When a user opens a dashboard, they will see a [presence indicator](https://grafana.com/docs/grafana/v13.2/dashboards/assess-dashboard-usage/#presence-indicator) of who else is viewing the same dashboard. And finally [Dashboard insights](https://grafana.com/docs/grafana/v13.2/dashboards/assess-dashboard-usage/#dashboard-insights) allows you to view recent dashboard usage.
+This release includes a series of features that build on our new usage analytics engine. This “Grafana about Grafana” feature will help our large customers get better insight into the behavior and utilization of their users, dashboards, and data sources. The improved [dashboard search](https://grafana.com/docs/grafana/v13.3/dashboards/assess-dashboard-usage/#sort-dashboards-by-using-insights-data) allows you to sort dashboards by usage and errors. When a user opens a dashboard, they will see a [presence indicator](https://grafana.com/docs/grafana/v13.3/dashboards/assess-dashboard-usage/#presence-indicator) of who else is viewing the same dashboard. And finally [Dashboard insights](https://grafana.com/docs/grafana/v13.3/dashboards/assess-dashboard-usage/#dashboard-insights) allows you to view recent dashboard usage.
 
 ![](https://grafana.com/static/img/docs/v70/presence_indicator.jpg)
 
@@ -220,11 +220,11 @@ This release includes a series of features that build on our new usage analytics
 
 ### SAML Role and Team Sync
 
-SAML support in Grafana Enterprise is improved by adding Role and Team Sync. Read more about how to use these features in the [SAML team sync documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/#configure-team-sync).
+SAML support in Grafana Enterprise is improved by adding Role and Team Sync. Read more about how to use these features in the [SAML team sync documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/#configure-team-sync).
 
 ### Okta OAuth Team Sync
 
-Okta gets its own provider which adds support for Team Sync. Read more about it in the [Okta documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/okta/).
+Okta gets its own provider which adds support for Team Sync. Read more about it in the [Okta documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/okta/).
 
 ## Changelog
 

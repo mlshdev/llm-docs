@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/mute-timings.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/mute-timings.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/mute-timings.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/mute-timings.md)
 
 # Configure mute timings and active time intervals
 
@@ -12,11 +12,11 @@ Active time intervals provide the opposite functionality, where alerts handled b
 
 > **Note**
 >
-> Mute timings and active time intervals are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/#alertmanager-architecture) and only suppress notifications for alerts managed by that Alertmanager.
+> Mute timings and active time intervals are assigned to a [specific Alertmanager](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/#alertmanager-architecture) and only suppress notifications for alerts managed by that Alertmanager.
 
 ## Mute timings and active time intervals vs silences
 
-[Mute timings and active time intervals](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) and [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/) are distinct methods to suppress notifications. They do not prevent alert rules from being evaluated or stop alert instances from appearing in the user interface; they only prevent notifications from being created.
+[Mute timings and active time intervals](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/) and [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/) are distinct methods to suppress notifications. They do not prevent alert rules from being evaluated or stop alert instances from appearing in the user interface; they only prevent notifications from being created.
 
 The following table highlights the key differences between mute timings and silences.
 
@@ -27,7 +27,7 @@ The following table highlights the key differences between mute timings and sile
 
 \[//]: <> (
 
-The function of [Mute timing and active timing](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/mute-timings/) differs from [silences](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/create-silence/), as they are two are distinct methods to suppress notifications. They do not prevent alert rules from being evaluated or stop alert instances from appearing in the user interface; they only prevent notifications from being created.
+The function of [Mute timing and active timing](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/mute-timings/) differs from [silences](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-silence/), as they are two are distinct methods to suppress notifications. They do not prevent alert rules from being evaluated or stop alert instances from appearing in the user interface; they only prevent notifications from being created.
 
 The following table highlights the key differences of mute timing and active timing compared with silences.
 
@@ -67,10 +67,12 @@ Use silences for one-time or as-needed suppression of notifications:
 
 ## Assign a time interval to a notification policy
 
+After you create a time interval, assign it as a mute timing or an active time interval on a [child notification policy](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/create-notification-policy/#add-a-child-policy). You can't assign these settings to the root policy. They aren't inherited from a parent policy.
+
 1. In the left-side menu, click **Alerts & IRM**, and then **Alerting**.
 2. Click **Notification configuration**, then select the **Notification policies** tab.
-3. Find the notification policy you would like to add the time intervals to and click **...** -> **Edit**.
-4. From either the **Mute timings** or **Active time intervals** dropdowns, choose the time intervals you would like to add to the policy.
+3. Find a child notification policy and click **...** -> **Edit**.
+4. From **Mute timings** or **Active timings**, choose the time intervals to add to the policy.
 5. Save your changes.
 
 ## Time intervals

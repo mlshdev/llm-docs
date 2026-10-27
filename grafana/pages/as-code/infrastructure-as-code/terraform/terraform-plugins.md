@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-plugins.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-plugins.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-plugins.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-plugins.md)
 
 # Install plugins in Grafana Cloud using Terraform
 
@@ -20,7 +20,7 @@ Before you begin, ensure you have the following:
 
 Use this Terraform configuration to set up the [Grafana provider](https://registry.terraform.io/providers/grafana/grafana/latest/docs) to provide the authentication required to manage plugin resources.
 
-1. Create a service account and token in Grafana. For more information on creating a service account and token, refer to [Service account tokens](https://grafana.com/docs/grafana/latest/administration/service-accounts/#service-account-tokens). You can also refer to [Creating and managing a Grafana Cloud stack using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-cloud-stack/) to set up a service account and a token.
+1. Create a service account and token in Grafana. For more information on creating a service account and token, refer to [Service account tokens](https://grafana.com/docs/grafana/latest/administration/service-accounts/#service-account-tokens). You can also refer to [Creating and managing a Grafana Cloud stack using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-cloud-stack/) to set up a service account and a token.
 
 2. Make sure that the token has the following permissions:
 

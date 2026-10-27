@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/grafana-operator/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/grafana-operator/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/grafana-operator/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/grafana-operator/_index.md)
 
 # Grafana Operator
 
@@ -19,5 +19,5 @@ For other installation methods, refer to the [Grafana Operator Installation](htt
 
 Use the following guides to use the Grafana Operator to manage your Grafana instance:
 
-- [Manage data sources, and dashboards with folders using the Grafana Operator](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/grafana-operator/operator-dashboards-folders-datasources/) describes how to add a folders, data sources, and dashboards, using the [Grafana Operator](https://grafana.github.io/grafana-operator/).
-- [Manage Dashboards with GitOps Using ArgoCD](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/grafana-operator/manage-dashboards-argocd/) describes how to create and manage dashboards using ArgoCD and [Grafana Operator](https://grafana.github.io/grafana-operator/).
+- [Manage data sources, and dashboards with folders using the Grafana Operator](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/grafana-operator/operator-dashboards-folders-datasources/) describes how to add a folders, data sources, and dashboards, using the [Grafana Operator](https://grafana.github.io/grafana-operator/).
+- [Manage Dashboards with GitOps Using ArgoCD](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/grafana-operator/manage-dashboards-argocd/) describes how to create and manage dashboards using ArgoCD and [Grafana Operator](https://grafana.github.io/grafana-operator/).

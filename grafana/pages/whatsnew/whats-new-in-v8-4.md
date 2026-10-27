@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/whatsnew/whats-new-in-v8-4.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/whatsnew/whats-new-in-v8-4.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/whatsnew/whats-new-in-v8-4.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/whatsnew/whats-new-in-v8-4.md)
 
 # What's new in Grafana v8.4
 
@@ -125,7 +125,7 @@ Enable role-based access control by adding the term `accesscontrol` to the list 
 
 #### Assign SAML users different roles in different Organizations
 
-You can use Grafana SAML integration to map organizations in your SAML service to [Organizations](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/#configure-organization-mapping) in Grafana so that users who authenticate using SAML have the right permissions. Previously, you could only choose a single role (Viewer, Editor, or Admin) for users, which would apply to all of their Organizations. Now, you can map a given SAML user or org to different roles in different Organizations, so that, for example, they can be a Viewer in one Organization and an Admin in another.
+You can use Grafana SAML integration to map organizations in your SAML service to [Organizations](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/#configure-organization-mapping) in Grafana so that users who authenticate using SAML have the right permissions. Previously, you could only choose a single role (Viewer, Editor, or Admin) for users, which would apply to all of their Organizations. Now, you can map a given SAML user or org to different roles in different Organizations, so that, for example, they can be a Viewer in one Organization and an Admin in another.
 
 Additionally, you can now grant multiple SAML organizations access to Grafana, using the `allowed_organizations` attribute. Previously, you could only map one.
 
@@ -133,7 +133,7 @@ Additionally, you can now grant multiple SAML organizations access to Grafana, u
 
 *Assign SAML users role*
 
-Learn more in our [SAML docs](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/).
+Learn more in our [SAML docs](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/).
 
 ### Performance improvements
 

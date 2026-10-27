@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/zipkin/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/zipkin/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/zipkin/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/zipkin/_index.md)
 
 # Zipkin data source
 
@@ -22,20 +22,20 @@ As of Grafana 13.2, Zipkin is packaged as a standalone plugin so it can receive 
 
 The following pages help you get started with the Zipkin data source:
 
-- [Configure the Zipkin data source](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/configure/)
-- [Zipkin query editor](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/query-editor/)
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/template-variables/)
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/troubleshooting/)
+- [Configure the Zipkin data source](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/configure/)
+- [Zipkin query editor](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/query-editor/)
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/template-variables/)
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/troubleshooting/)
 
 ## Additional features
 
 After configuring the data source, you can:
 
-- Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to query traces without building a dashboard
-- Navigate from traces to related logs with [trace to logs](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/configure/#trace-to-logs) integration
-- Navigate from traces to related metrics with [trace to metrics](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/configure/#trace-to-metrics) integration
-- Enable the [Node graph](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/) visualization to view service dependencies
-- Add [Transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/) to manipulate query results
+- Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to query traces without building a dashboard
+- Navigate from traces to related logs with [trace to logs](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/configure/#trace-to-logs) integration
+- Navigate from traces to related metrics with [trace to metrics](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/configure/#trace-to-metrics) integration
+- Enable the [Node graph](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/) visualization to view service dependencies
+- Add [Transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/) to manipulate query results
 
 ## Plugin updates
 
@@ -43,12 +43,12 @@ Starting with Grafana v13.2, the Zipkin data source is a standalone plugin, prei
 
 To adjust this behavior:
 
-- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 - **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
 
 The standalone plugin requires Grafana 12.3.0 or later. The Zipkin data source bundled with Grafana 13.1 and earlier continues to work as before. These versions are unaffected by the externalization.
 
-Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with these versions, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with these versions, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/):
 
 ```ini
 [plugin.zipkin]

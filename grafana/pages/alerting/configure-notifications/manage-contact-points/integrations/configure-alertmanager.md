@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-alertmanager.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-alertmanager.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-alertmanager.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/configure-notifications/manage-contact-points/integrations/configure-alertmanager.md)
 
 # Configure an Alertmanager contact point
 
@@ -14,7 +14,7 @@ This setup avoids duplicating Alertmanager configurations for better maintenance
 >
 > To send all Grafana-managed alerts to an Alertmanager, add it as a data source and enable it to receive all alerts. With this setup, you can configure multiple Alertmanagers to receive all alerts.
 >
-> For setup instructions, refer to [Configure Alertmanagers](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/).
+> For setup instructions, refer to [Configure Alertmanagers](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/).
 
 ## Configure an Alertmanager for a contact point
 
@@ -28,13 +28,13 @@ To create a contact point with Alertmanager integration, complete the following 
 6. (Optional) Configure [optional settings](#optional-settings).
 7. Click **Save contact point**.
 
-For more details on contact points, including how to test them and enable notifications, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/).
+For more details on contact points, including how to test them and enable notifications, refer to [Configure contact points](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/).
 
 ## Alertmanager settings
 
 | Option | Description                                                                                                                                                                         |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| URL    | The Alertmanager URL. This field is [protected](https://grafana.com/docs/grafana/v13.2/alerting/configure-notifications/manage-contact-points/) from modification in Grafana Cloud. |
+| URL    | The Alertmanager URL. This field is [protected](https://grafana.com/docs/grafana/v13.3/alerting/configure-notifications/manage-contact-points/) from modification in Grafana Cloud. |
 
 #### Optional settings
 

@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-authentication/ldap-ui/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-authentication/ldap-ui/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-authentication/ldap-ui/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-authentication/ldap-ui/_index.md)
 
 # Configure LDAP authentication using the Grafana user interface
 
-This page explains how to configure LDAP authentication in Grafana using the Grafana user interface. For more detailed information about configuring LDAP authentication using the configuration file, refer to [LDAP authentication](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/ldap/).
+This page explains how to configure LDAP authentication in Grafana using the Grafana user interface. For more detailed information about configuring LDAP authentication using the configuration file, refer to [LDAP authentication](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/ldap/).
 
 Benefits of using the Grafana user interface to configure LDAP authentication include:
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-security/audit-grafana.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-security/audit-grafana.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-security/audit-grafana.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-security/audit-grafana.md)
 
 # Audit a Grafana instance
 
@@ -6,7 +6,7 @@ Auditing allows you to track important changes to your Grafana instance. Dependi
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
 Only API requests or UI actions that trigger an API request generate an audit log.
 
@@ -130,7 +130,7 @@ Almost all recorded actions correspond to API requests or UI actions that trigge
 
 \* Where `AUTH-MODULE` is the name of the authentication module: `grafana`, `saml`,
 `ldap`, etc. \
-\*\* Includes manual log out, token expired/revoked, and [SAML Single Logout](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/configure-authentication/saml/#single-logout).
+\*\* Includes manual log out, token expired/revoked, and [SAML Single Logout](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-security/configure-authentication/saml/#single-logout).
 
 #### Service accounts
 
@@ -341,7 +341,7 @@ You can also record `GET` requests. Refer to [Configure audit logging](#configur
 >
 > The auditing feature is disabled by default.
 
-Audit logs can be saved into files, sent to a Loki-compatible endpoint, or sent to the Grafana default logger. You can choose which exporter to use in the [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+Audit logs can be saved into files, sent to a Loki-compatible endpoint, or sent to the Grafana default logger. You can choose which exporter to use in the [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 
 Options are `file`, `loki`, and `logger`. Use spaces to separate multiple modes, such as `file loki`.
 
@@ -461,4 +461,4 @@ url = user:password@localhost:3000
 >
 > The console exporter is only available in Grafana Enterprise.
 
-Audit logs are sent to the Grafana default logger. The audit logs use the `auditing.console` logger and are logged on `debug`-level. To learn how to enable debug logging, refer to the [log configuration](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#log) section. Accessing the audit logs in this way isn't recommended for production use.
+Audit logs are sent to the Grafana default logger. The audit logs use the `auditing.console` logger and are logged on `debug`-level. To learn how to enable debug logging, refer to the [log configuration](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#log) section. Accessing the audit logs in this way isn't recommended for production use.

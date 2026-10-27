@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started.md)
 
 # Get started with Terraform for Knowledge Graph
 
@@ -14,7 +14,7 @@ Before you begin, ensure you have the following:
 
 > **Note**
 >
-> You don't need to enable the Knowledge Graph before using Terraform. The [`grafana_asserts_stack` resource](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack/) handles the full onboarding flow, including enabling the Knowledge Graph on your stack.
+> You don't need to enable the Knowledge Graph before using Terraform. The [`grafana_asserts_stack` resource](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack/) handles the full onboarding flow, including enabling the Knowledge Graph on your stack.
 
 > **Note**
 >
@@ -124,10 +124,10 @@ When managing Knowledge Graph resources with Terraform, consider the following b
 
 Now that you have configured the Terraform provider, you can start managing knowledge graph resources:
 
-- [Configure notification alerts](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/notification-alerts/)
-- [Define suppressed assertions](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/suppressed-assertions/)
-- [Create custom model rules](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/custom-model-rules/)
-- [Set up log configurations](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/log-configurations/)
-- [Configure thresholds](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/thresholds/)
-- [Configure the Knowledge Graph stack](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack/)
-- [Define Prometheus rules](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/prometheus-rules/)
+- [Configure notification alerts](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/notification-alerts/)
+- [Define suppressed assertions](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/suppressed-assertions/)
+- [Create custom model rules](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/custom-model-rules/)
+- [Set up log configurations](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/log-configurations/)
+- [Configure thresholds](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/thresholds/)
+- [Configure the Knowledge Graph stack](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/knowledge-graph-stack/)
+- [Define Prometheus rules](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/prometheus-rules/)

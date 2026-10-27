@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/panels-visualizations/query-transform-data/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/panels-visualizations/query-transform-data/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/query-transform-data/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/query-transform-data/_index.md)
 
 # Query and transform data
 
-Grafana supports many types of [data sources](https://grafana.com/docs/grafana/v13.2/datasources/).
+Grafana supports many types of [data sources](https://grafana.com/docs/grafana/v13.3/datasources/).
 Data source queries return data that Grafana can transform and visualize.
 Each data source uses its own query language, and data source plugins each implement a query-building user interface called a *query editor*.
 
@@ -17,7 +17,7 @@ Grafana supports up to 26 queries per panel.
 > **Note**
 >
 > You **must** be familiar with a data source's query language.
-> For more information, refer to [Data sources](https://grafana.com/docs/grafana/v13.2/datasources/).
+> For more information, refer to [Data sources](https://grafana.com/docs/grafana/v13.3/datasources/).
 
 ### Query editors
 
@@ -38,10 +38,10 @@ Depending on your data source, the query editor might provide auto-completion fe
 
 For details on a specific data source's unique query editor features, refer to its documentation:
 
-- For data sources included with Grafana, refer to [Built-in core data sources](https://grafana.com/docs/grafana/v13.2/datasources/#built-in-core-data-sources), which links to each core data source's documentation.
+- For data sources included with Grafana, refer to [Built-in core data sources](https://grafana.com/docs/grafana/v13.3/datasources/#built-in-core-data-sources), which links to each core data source's documentation.
 - For data sources installed as plugins, refer to the documentation for the plugin.
   - Data source plugins in the Grafana [plugin catalog](https://grafana.com/grafana/plugins/) link to or include their documentation in their catalog listings.
-    For details about the plugin catalog, refer to [Plugin management](https://grafana.com/docs/grafana/v13.2/administration/plugin-management/).
+    For details about the plugin catalog, refer to [Plugin management](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/).
   - For links to Grafana Enterprise data source plugin documentation, refer to the [Enterprise plugins index](https://grafana.com/docs/plugins/).
 
 ### Query syntax
@@ -64,7 +64,7 @@ query_result(max_over_time(<metric>[${__range_s}s]) != <state>)
 ### Special data sources
 
 Grafana also includes three special data sources: **Grafana**, **Mixed**, and **Dashboard**.
-For details, refer to [Data sources](https://grafana.com/docs/grafana/v13.2/datasources/)
+For details, refer to [Data sources](https://grafana.com/docs/grafana/v13.3/datasources/)
 
 ## Saved queries
 
@@ -78,9 +78,9 @@ It also helps you avoid having several users build the same queries for the same
 
 Saved queries are supported in:
 
-- [Dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/#create-a-dashboard)
-- [Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/query-editor/)
-- [Annotations](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/annotate-visualizations/#add-new-annotation-queries)
+- [Dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/#create-a-dashboard)
+- [Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/query-editor/)
+- [Annotations](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/annotate-visualizations/#add-new-annotation-queries)
 
 Learn more about saved queries:
 
@@ -126,7 +126,7 @@ You can apply all the same search, filter, and sort options in the **Starred que
 >
 > When you select a query with a Loki, Mimir, Tempo, or Pyroscope data source, the **Saved queries** dialog box displays a **Drilldown** button.
 > Click the button to open the associated Drilldown app, while maintaining the context of the query.
-> Learn more about these apps in the [Drilldown documentation](https://grafana.com/docs/grafana/v13.2/visualizations/simplified-exploration/).
+> Learn more about these apps in the [Drilldown documentation](https://grafana.com/docs/grafana/v13.3/visualizations/simplified-exploration/).
 
 ### Roles, permissions, and RBAC
 
@@ -172,7 +172,7 @@ However, the substitutions only apply to the query when it's reused, and the ori
 ### Manage saved queries as code
 
 You can manage saved queries as code with the Grafana Terraform provider, which lets you version-control your query library and keep it consistent across instances.
-For more information, refer to [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/manage-saved-queries/).
+For more information, refer to [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/manage-saved-queries/).
 
 ### Known limitations
 
@@ -212,7 +212,7 @@ Click **Select...** in the sidebar footer to enter multi-select mode, then check
 
 **Queries & expressions**
 
-The list of queries and expressions you've written. Click a card in the sidebar to display that query or expression in the editor pane on the right. Click the blue plus sign to add a new query, add a saved query, or an expression. For more information about expressions, refer to [Use expressions to manipulate data](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/expression-queries/).
+The list of queries and expressions you've written. Click a card in the sidebar to display that query or expression in the editor pane on the right. Click the blue plus sign to add a new query, add a saved query, or an expression. For more information about expressions, refer to [Use expressions to manipulate data](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/expression-queries/).
 
 **Transformations**
 
@@ -222,7 +222,7 @@ The list of all the transformations you've added. Click the blue plus sign to ad
 
 **Data source selector**
 
-Select the data source to query. For more information about data sources, refer to [Data sources](https://grafana.com/docs/grafana/v13.2/datasources/).
+Select the data source to query. For more information about data sources, refer to [Data sources](https://grafana.com/docs/grafana/v13.3/datasources/).
 
 **Query name editor**
 
@@ -316,7 +316,7 @@ The following table describes actions you can take for each query:
 
 ![Create recorded query icon](https://grafana.com/media/docs/grafana/panels-visualizations/create-recorded-query-icon.png)
 
-\| Create [recorded queries](https://grafana.com/docs/grafana/v13.2/administration/recorded-queries/) so you can see trends over time by taking a snapshot of a data point on a set interval (Enterprise and Cloud only). |
+\| Create [recorded queries](https://grafana.com/docs/grafana/v13.3/administration/recorded-queries/) so you can see trends over time by taking a snapshot of a data point on a set interval (Enterprise and Cloud only). |
 |
 
 ![Hide icon](https://grafana.com/static/img/docs/queries/hide-query-icon-7-0.png)
@@ -383,7 +383,7 @@ You can also set this to a higher minimum than the scrape interval to retrieve q
 
 > **Note**
 >
-> The **Min interval** corresponds to the min step in Prometheus. Changing the Prometheus interval can change the start and end of the query range because Prometheus aligns the range to the interval. Refer to [Min step](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/query-editor/#min-step) for more details.
+> The **Min interval** corresponds to the min step in Prometheus. Changing the Prometheus interval can change the start and end of the query range because Prometheus aligns the range to the interval. Refer to [Min step](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/query-editor/#min-step) for more details.
 
 ### Interval
 
@@ -399,7 +399,7 @@ This automatic interval is calculated based on the width of the graph.
 As the user zooms out on a visualization, the interval grows, resulting in a more coarse-grained aggregation.
 Likewise, if the user zooms in, the interval decreases, resulting in a more fine-grained aggregation.
 
-For more information, refer to [Global variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/variables/add-template-variables/#global-variables).
+For more information, refer to [Built-in variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/variables/built-in-variables).
 
 ### Relative time
 

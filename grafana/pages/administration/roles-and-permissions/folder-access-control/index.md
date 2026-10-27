@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/roles-and-permissions/folder-access-control/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/roles-and-permissions/folder-access-control/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/roles-and-permissions/folder-access-control/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/roles-and-permissions/folder-access-control/index.md)
 
 # Folder access control
 
@@ -199,13 +199,13 @@ This pattern provides:
 
 For detailed guidance on folder organization patterns, including automation with Terraform and SCIM provisioning, refer to:
 
-- [Configure multi-team access](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/multi-team-access/)
+- [Configure multi-team access](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/multi-team-access/)
 - [Managing access in Grafana: A single-stack journey with teams, roles, and real-world patterns](https://grafana.com/blog/managing-access-in-grafana-a-single-stack-journey-with-teams-roles-and-real-world-patterns/)
 
 ## Related documentation
 
-- [Manage dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/user-management/manage-dashboard-permissions/) - Dashboard-level permission management
-- [Configure multi-team access](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/multi-team-access/) - Recommended folder structures for organizations
-- [RBAC fixed roles](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/) - Enterprise folder-related RBAC roles
-- [Alerting folder permissions](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-rbac/access-folders/) - How folders control alert rule access
-- [Team management](https://grafana.com/docs/grafana/v13.2/administration/team-management/) - Create and manage teams for folder access
+- [Manage dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/user-management/manage-dashboard-permissions/) - Dashboard-level permission management
+- [Configure multi-team access](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/multi-team-access/) - Recommended folder structures for organizations
+- [RBAC fixed roles](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions/) - Enterprise folder-related RBAC roles
+- [Alerting folder permissions](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-rbac/access-folders/) - How folders control alert rule access
+- [Team management](https://grafana.com/docs/grafana/v13.3/administration/team-management/) - Create and manage teams for folder access

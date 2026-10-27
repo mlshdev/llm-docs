@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/desktop/release-notes.md)
+> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -56,6 +56,11 @@ Download Docker Desktop:
 - Fixed a bug where the disk image location could not be moved back to a folder it had previously been moved out of. Fixes [docker/desktop-feedback#565](https://github.com/docker/desktop-feedback/issues/565).
 - Fixed a bug where a failed update could put back Start Menu and desktop shortcuts that had been deleted on purpose.
 - `--user` mode is now the default for new Docker Desktop `.EXE` installations.
+
+### Security
+
+- Addressed [CVE-2026-114409](https://www.cve.org/cverecord?id=CVE-2026-114409), where Docker Desktop could write third-party API keys and OAuth access tokens in cleartext to local application logs and diagnostics bundles. This release also cleans up existing host logs and crash dumps. These OAuth tokens are not Docker account tokens. If you've generated or shared diagnostics bundles with Docker Desktop 4.96.x or earlier, or kept copies of Docker Desktop logs elsewhere, delete or sanitize them.
+- Addressed [CVE-2026-99999](https://www.cve.org/cverecord?id=CVE-2026-99999), a kernel vulnerability where a container could exploit bad IPv4 checksum metadata via TUN or `AF_PACKET` to corrupt the VM's network stack.
 
 ## 4.96.3
 

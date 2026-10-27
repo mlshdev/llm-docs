@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/tools/background-jobs/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/tools/background-jobs/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/tools/background-jobs/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/tools/background-jobs/index.md)
 
 # Background Jobs Tool
 
@@ -82,3 +82,9 @@ The background jobs toolset exposes five tools:
 > **Safety**
 >
 > Background jobs run shell commands with the same access as the agent process. Stop servers and watchers when they are no longer needed, and use [Sandbox Mode](https://docs.docker.com/ai/docker-agent/configuration/sandbox/) for additional isolation.
+
+### Command classification
+
+The `cmd` passed to `run_background_job` goes through the same [command classification](https://docs.docker.com/ai/docker-agent/tools/shell/#command-classification) as the `shell` tool: it is labelled `safe`, `destructive` (with a `blast_radius`) or `unknown`, and the session's [safety mode](https://docs.docker.com/ai/docker-agent/configuration/permissions/#safety-modes) decides whether to run, ask or deny. A destructive command cannot bypass its confirmation badge by being started in the background. Most long-running commands (`npm run dev`, `go run .`, `docker compose up`) are `unknown` and prompt under `strict` / `balanced`.
+
+The interactive "always allow" decision grants the first word of the command (e.g. `run_background_job:cmd=npm*`), scoped to this tool — it does not cover the same command run through `shell`, and vice versa.

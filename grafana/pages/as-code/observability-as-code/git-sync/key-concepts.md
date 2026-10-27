@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/key-concepts.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/key-concepts.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/key-concepts.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/key-concepts.md)
 
 # Git Sync key concepts
 
@@ -107,7 +107,7 @@ your-org/grafana-manifests/
         └── memory-usage.json
 ```
 
-The `_folder.json` file stores the `team-platform` folder's stable UID and display name, so the folder keeps its identity and permissions if you move or rename it in the repository. Refer to [The Git Sync folder metadata file](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/use-git-sync/#the-git-sync-folder-metadata-file) for details.
+The `_folder.json` file stores the `team-platform` folder's stable UID and display name, so the folder keeps its identity and permissions if you move or rename it in the repository. Refer to [The Git Sync folder metadata file](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/use-git-sync/#the-git-sync-folder-metadata-file) for details.
 
 The instance also has content that isn't managed by Git Sync: a manually created **Ops** folder and an **Ad-hoc dashboard**.
 

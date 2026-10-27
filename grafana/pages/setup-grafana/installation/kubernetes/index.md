@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/installation/kubernetes/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/installation/kubernetes/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/installation/kubernetes/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/installation/kubernetes/index.md)
 
 # Deploy Grafana on Kubernetes
 
@@ -497,7 +497,7 @@ If you need to go back to any other `REVISION`, just repeat the steps above and 
 
 ## Provision Grafana resources using configuration files
 
-Provisioning can add, update, or delete resources specified in your configuration files when Grafana starts. For detailed information, refer to [Grafana Provisioning](https://grafana.com/docs/grafana/v13.2/administration/provisioning).
+Provisioning can add, update, or delete resources specified in your configuration files when Grafana starts. For detailed information, refer to [Grafana Provisioning](https://grafana.com/docs/grafana/v13.3/administration/provisioning).
 
 This section outlines general instructions for provisioning Grafana resources within Kubernetes, using a persistent volume to supply the configuration files to the Grafana pod.
 

@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/loki/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/loki/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/loki/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/loki/alerting/index.md)
 
 # Loki alerting
 
-The Loki data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/). You can alert on your logs so Grafana notifies you when a LogQL metric query crosses a threshold, for example when the rate of error logs spikes.
+The Loki data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/). You can alert on your logs so Grafana notifies you when a LogQL metric query crosses a threshold, for example when the rate of error logs spikes.
 
 Loki works with two kinds of alert rules:
 
@@ -13,10 +13,10 @@ Loki works with two kinds of alert rules:
 
 Before you create alert rules with Loki data, ensure you have:
 
-- A [configured Loki data source](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure/).
+- A [configured Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/).
 - Permissions to create alert rules in Grafana.
-- Familiarity with [Grafana Alerting concepts](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/).
-- For data source-managed rules, a Loki deployment with the ruler enabled, and the **Manage alert rules in Alerting UI** setting turned on in the data source configuration. To route the resulting alerts, add a separate [Alertmanager data source](https://grafana.com/docs/grafana/v13.2/datasources/alertmanager/).
+- Familiarity with [Grafana Alerting concepts](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/).
+- For data source-managed rules, a Loki deployment with the ruler enabled, and the **Manage alert rules in Alerting UI** setting turned on in the data source configuration. To route the resulting alerts, add a separate [Alertmanager data source](https://grafana.com/docs/grafana/v13.3/datasources/alertmanager/).
 
 ## Supported queries for alerting
 
@@ -70,7 +70,7 @@ To create a Grafana-managed alert rule using Loki data:
 6. Add labels and annotations to provide context for notifications.
 7. Click **Save rule**.
 
-For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For detailed instructions, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example: alert on error log rate
 
@@ -96,7 +96,7 @@ This example fires when the rate of log lines that contain `error` exceeds a thr
 
 When you turn on **Manage alert rules in Alerting UI** for the Loki data source, you can create and edit alert and recording rules that the Loki ruler stores and evaluates. These rules appear in the Grafana Alerting UI alongside your Grafana-managed rules, grouped under the Loki data source.
 
-The Loki data source configuration doesn't include Alertmanager routing. To route the resulting alerts, add a separate [Alertmanager data source](https://grafana.com/docs/grafana/v13.2/datasources/alertmanager/). For more information, refer to [Configure the Loki data source](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure/#alerting) and [Data source-managed alert rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-data-source-managed-rule/).
+The Loki data source configuration doesn't include Alertmanager routing. To route the resulting alerts, add a separate [Alertmanager data source](https://grafana.com/docs/grafana/v13.3/datasources/alertmanager/). For more information, refer to [Configure the Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/#alerting) and [Data source-managed alert rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-data-source-managed-rule/).
 
 ## Best practices
 
@@ -130,7 +130,7 @@ To avoid unexpected No Data states:
 
 > **Note**
 >
-> Editing and saving an alert rule resets its state to **Normal**. The rule re-enters **Pending** or **Alerting** on the next evaluation if the condition is still met. This is standard [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/) behavior and isn't specific to the Loki data source.
+> Editing and saving an alert rule resets its state to **Normal**. The rule re-enters **Pending** or **Alerting** on the next evaluation if the condition is still met. This is standard [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/) behavior and isn't specific to the Loki data source.
 
 ## Troubleshoot alerting
 
@@ -157,10 +157,10 @@ If your Loki alerts don't work as expected, use the following sections to diagno
 - Confirm **Manage alert rules in Alerting UI** is enabled in the Loki data source configuration.
 - Verify the Loki ruler is enabled and reachable from Grafana.
 
-For more help, refer to [Troubleshoot Loki issues](https://grafana.com/docs/grafana/v13.2/datasources/loki/troubleshooting/).
+For more help, refer to [Troubleshoot Loki issues](https://grafana.com/docs/grafana/v13.3/datasources/loki/troubleshooting/).
 
 ## Related resources
 
-- [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/)
-- [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/)
-- [Loki query editor](https://grafana.com/docs/grafana/v13.2/datasources/loki/query-editor/)
+- [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/)
+- [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/)
+- [Loki query editor](https://grafana.com/docs/grafana/v13.3/datasources/loki/query-editor/)

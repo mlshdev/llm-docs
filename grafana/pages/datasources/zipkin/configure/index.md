@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/zipkin/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/zipkin/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/zipkin/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/zipkin/configure/index.md)
 
 # Configure the Zipkin data source
 
@@ -52,12 +52,12 @@ You can also configure custom headers and TLS settings in the **Advanced HTTP se
 >
 > If you use Grafana Cloud, open a [support ticket in the Cloud Portal](https://grafana.com/profile/org#support) to access this feature.
 
-The **Trace to logs** setting configures the [trace to logs feature](https://grafana.com/docs/grafana/v13.2/explore/trace-integration/) that is available when you integrate Grafana with Zipkin. This feature lets you navigate from a span in a trace view directly to the relevant logs.
+The **Trace to logs** setting configures the [trace to logs feature](https://grafana.com/docs/grafana/v13.3/explore/trace-integration/) that is available when you integrate Grafana with Zipkin. This feature lets you navigate from a span in a trace view directly to the relevant logs.
 
 There are two ways to configure the trace to logs feature:
 
 - Use a simplified configuration with a default query, or
-- Configure a custom query where you can use a [template language](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/) to interpolate variables from the trace or span.
+- Configure a custom query where you can use a [template language](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/) to interpolate variables from the trace or span.
 
 ### Use a simple configuration
 
@@ -146,7 +146,7 @@ The **Additional settings** section is collapsible and contains optional setting
 
 ### Node graph
 
-The **Enable node graph** toggle enables the [Node graph visualization](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/), which is disabled by default.
+The **Enable node graph** toggle enables the [Node graph visualization](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/), which is disabled by default.
 
 After you enable it, Grafana displays the node graph above the trace view.
 
@@ -166,12 +166,12 @@ The **Label** drop-down has three options:
 
 Click **Save & test** to verify the connection. A successful connection displays the message **Data source is working**.
 
-If you encounter errors, refer to [Troubleshoot Zipkin data source issues](https://grafana.com/docs/grafana/v13.2/datasources/zipkin/troubleshooting/).
+If you encounter errors, refer to [Troubleshoot Zipkin data source issues](https://grafana.com/docs/grafana/v13.3/datasources/zipkin/troubleshooting/).
 
 ## Provision the data source
 
 You can define and configure the data source in YAML files as part of the Grafana provisioning system.
-For more information about provisioning and available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information about provisioning and available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### Provisioning example
 

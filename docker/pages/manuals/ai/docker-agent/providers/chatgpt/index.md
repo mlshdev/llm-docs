@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/chatgpt/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/providers/chatgpt/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/chatgpt/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/providers/chatgpt/index.md)
 
 # ChatGPT (OpenAI account)
 
@@ -96,6 +96,33 @@ The effort picker exposes Low/Medium/High/XHigh/Max on the GPT-5.6 family
   and a top-level `instructions` field, so Docker Agent moves system messages
   there. Client-side sampling parameters (`temperature`, `top_p`,
   `max_tokens`) are not supported by the backend and are dropped.
+
+## Image Input
+
+For image-capable models such as `gpt-6.1-sol`, you can attach an image:
+
+```bash
+docker agent run examples/chatgpt-images.yaml --exec \
+  --attach examples/chatgpt-images.png "Describe the shapes and colors."
+```
+
+The sample includes a red square centered on a blue background. Running it
+requires ChatGPT sign-in and access to the selected model. Image input for
+`gpt-6.1-sol` is inferred from the matching OpenAI catalogue entry; no
+`capabilities` override is needed.
+
+When models.dev has no direct `chatgpt/<model>` entry, Docker Agent uses the
+matching `openai/<model>` entry for **image input only**. This applies both to
+`--attach` images and image content returned by MCP tools (for example,
+screenshots). Tool images are sent in a follow-up user message alongside the
+text function-call output. PDF, audio, and video support, prices, context limits,
+tool support, output capabilities, and `max_tokens` are not inherited.
+A direct ChatGPT catalogue entry takes precedence; unknown models remain
+text-only.
+
+To intentionally override catalogue capabilities or declare support for an
+unknown model, see [Attachment Capability Overrides](https://docs.docker.com/ai/docker-agent/configuration/models/#attachment-capability-overrides).
+Image input support does not enable image generation or editing.
 
 ## Setting the Token Explicitly
 

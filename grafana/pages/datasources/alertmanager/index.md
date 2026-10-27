@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/alertmanager/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/alertmanager/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/alertmanager/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/alertmanager/_index.md)
 
 # Alertmanager data source
 
-Grafana includes built-in support for Alertmanager implementations in Prometheus and Grafana Mimir. After you add an Alertmanager data source, you can use the **Choose Alertmanager** drop-down in [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/) to view and manage Alertmanager resources such as silences, contact points, and notification policies. You can also enable the Alertmanager to receive Grafana-managed alerts.
+Grafana includes built-in support for Alertmanager implementations in Prometheus and Grafana Mimir. After you add an Alertmanager data source, you can use the **Choose Alertmanager** drop-down in [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/) to view and manage Alertmanager resources such as silences, contact points, and notification policies. You can also enable the Alertmanager to receive Grafana-managed alerts.
 
 ## Alertmanager implementations
 
@@ -45,7 +45,7 @@ To add and configure the Alertmanager data source, complete the following steps:
 
 The data source supports all standard Grafana HTTP authentication methods, including basic auth and TLS. When SigV4 authentication is enabled globally in Grafana, it's also available for this data source.
 
-For more information about authentication options and connection settings, refer to [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+For more information about authentication options and connection settings, refer to [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 ### Verify the connection
 
@@ -68,7 +68,7 @@ The `jsonData` fields used across both methods are:
 
 ### Configuration file
 
-For more information, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information, refer to [Provisioning data sources](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ```yaml
 apiVersion: 1
@@ -173,8 +173,8 @@ If you need full read/write access to contact points and notification policies, 
 
 ## Related resources
 
-- [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/)
-- [Configure external Alertmanagers](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alertmanager/)
+- [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/)
+- [Configure external Alertmanagers](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alertmanager/)
 - [Prometheus Alertmanager documentation](https://prometheus.io/docs/alerting/latest/alertmanager/)
 - [Grafana Mimir documentation](https://grafana.com/docs/mimir/latest/)
 - [Grafana community forums](https://community.grafana.com/)

@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/google-cloud-monitoring/annotations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/google-cloud-monitoring/annotations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/google-cloud-monitoring/annotations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/google-cloud-monitoring/annotations/index.md)
 
 # Google Cloud Monitoring annotations
 
-[Annotations](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/annotate-visualizations/) overlay rich event information on top of graphs. You can use annotations to mark important events, deployments, or incidents on your dashboards.
+[Annotations](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/annotate-visualizations/) overlay rich event information on top of graphs. You can use annotations to mark important events, deployments, or incidents on your dashboards.
 
 ## Before you begin
 

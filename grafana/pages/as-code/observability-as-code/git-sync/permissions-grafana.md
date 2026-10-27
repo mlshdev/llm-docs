@@ -1,19 +1,19 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/git-sync/permissions-grafana.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/git-sync/permissions-grafana.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/git-sync/permissions-grafana.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/git-sync/permissions-grafana.md)
 
 # Git Sync permissions and access control
 
 For Git Sync to work correctly you need to configure permissions at two layers:
 
 - At the Grafana level for repository management and resource access, as described in this document.
-- At your Git provider level, to protect your repository. Refer to [Repository protection for Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-git) for more information.
+- At your Git provider level, to protect your repository. Refer to [Repository protection for Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-git) for more information.
 
 ## Grafana role-based permissions
 
 Git Sync integrates with the Grafana standard role-based permission model, which has three levels:
 
-1. **Organization-level:** Default permissions of the `Admin`, `Editor`, or `Viewer` role. Refer to [Roles and permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/) for more details.
-2. **Folder-level:** They also apply to all dashboards within it. Refer to [Folder permissions](https://grafana.com/docs/grafana/v13.2/dashboards/manage-dashboards/#folder-permissions) for more details.
-3. **Dashboard-level:** Refer to [Dashboard permissions](https://grafana.com/docs/grafana/v13.2/dashboards/manage-dashboards/#manage-dashboard-permissions) for more details.
+1. **Organization-level:** Default permissions of the `Admin`, `Editor`, or `Viewer` role. Refer to [Roles and permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/) for more details.
+2. **Folder-level:** They also apply to all dashboards within it. Refer to [Folder permissions](https://grafana.com/docs/grafana/v13.3/dashboards/manage-dashboards/#folder-permissions) for more details.
+3. **Dashboard-level:** Refer to [Dashboard permissions](https://grafana.com/docs/grafana/v13.3/dashboards/manage-dashboards/#manage-dashboard-permissions) for more details.
 
 > **Note**
 >
@@ -115,7 +115,7 @@ When Git Sync creates a provisioned folder, it assigns these default permissions
 
 ### Modify folder-level permissions
 
-Folder permissions in Grafana are attached to a folder's **UID**, not to its path in the Git repository. Git Sync stores this UID in the folder's `_folder.json` metadata file (in the `metadata.name` field). For the metadata file schema and why it exists, refer to [The Git Sync folder metadata file](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/use-git-sync/#the-git-sync-folder-metadata-file).
+Folder permissions in Grafana are attached to a folder's **UID**, not to its path in the Git repository. Git Sync stores this UID in the folder's `_folder.json` metadata file (in the `metadata.name` field). For the metadata file schema and why it exists, refer to [The Git Sync folder metadata file](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/use-git-sync/#the-git-sync-folder-metadata-file).
 
 Because permissions reference the folder UID, keep the following in mind:
 
@@ -126,15 +126,15 @@ Because permissions reference the folder UID, keep the following in mind:
 >
 > To safely modify permissions, each provisioned folder must include a `_folder.json` metadata file with the folder's UID. Without this file, the folder's UID is derived from its repository path, so folder permissions can be lost if the folder is moved to a different path in the Git repository.
 >
-> For folders created from the Grafana UI, the metadata file is added automatically. If your folder is missing the metadata file, the UI shows a warning with instructions on how to add it. Refer to [The Git Sync folder metadata file](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/use-git-sync/#the-git-sync-folder-metadata-file) for details about this file and why it exists.
+> For folders created from the Grafana UI, the metadata file is added automatically. If your folder is missing the metadata file, the UI shows a warning with instructions on how to add it. Refer to [The Git Sync folder metadata file](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/use-git-sync/#the-git-sync-folder-metadata-file) for details about this file and why it exists.
 
 You can set folder permissions manually or as code. In both cases, apply them only after Git Sync has created the folders.
 
 #### Set permissions manually
 
 - **Grafana UI**: Navigate to the folder and select **Folder actions > Manage permissions**. Add or edit permissions for roles, teams, or users.
-- **HTTP API**: Use the [Folder/Dashboard permissions API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/dashboard_permissions/). Reference the folder by the UID stored in its `_folder.json` file.
-- **RBAC (Enterprise/Cloud)**: Use [Role-Based Access Control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/) for fine-grained permission management.
+- **HTTP API**: Use the [Folder/Dashboard permissions API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/dashboard_permissions/). Reference the folder by the UID stored in its `_folder.json` file.
+- **RBAC (Enterprise/Cloud)**: Use [Role-Based Access Control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/) for fine-grained permission management.
 
 #### Set permissions with Terraform
 
@@ -169,7 +169,7 @@ Alternatively, use [`grafana_folder_permission`](https://registry.terraform.io/p
 
 ## Configure fine-grained access control (RBAC)
 
-If you're a Grafana Enterprise or Grafana Cloud user with RBAC enabled, Git Sync provides fine-grained permissions that allow more granular control over Git Sync operations. You can create custom roles that combine Git Sync permissions in different ways. Refer to [Role-Based Access Control](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/) documentation for instructions on creating and managing custom roles.
+If you're a Grafana Enterprise or Grafana Cloud user with RBAC enabled, Git Sync provides fine-grained permissions that allow more granular control over Git Sync operations. You can create custom roles that combine Git Sync permissions in different ways. Refer to [Role-Based Access Control](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/) documentation for instructions on creating and managing custom roles.
 
 ### How basic roles map to RBAC permissions
 
@@ -278,7 +278,7 @@ Because the `repositories` resource has no Editor tier (`repositories:read` is g
 
 After you've configured your Grafana permissions, set up the appropriate permissions at your Git provider to write changes. Repository protection settings control write access, branch protection rules, and code review requirements.
 
-For detailed information about configuring repository write access and branch protection, refer to [Repository protection for Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync/permissions-git).
+For detailed information about configuring repository write access and branch protection, refer to [Repository protection for Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync/permissions-git).
 
 ## Troubleshoot permissions
 

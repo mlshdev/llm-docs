@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/configure/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/configure/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/configure/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/configure/_index.md)
 
 # Configure the Prometheus data source
 
-This document provides instructions for configuring the Prometheus data source and explains the available configuration options. The Prometheus data source is preinstalled in Grafana, so you don't need to install it manually. For general information on adding a data source to Grafana, refer to [Add a data source](https://grafana.com/docs/grafana/v13.2/datasources/#add-a-data-source).
+This document provides instructions for configuring the Prometheus data source and explains the available configuration options. The Prometheus data source is preinstalled in Grafana, so you don't need to install it manually. For general information on adding a data source to Grafana, refer to [Add a data source](https://grafana.com/docs/grafana/v13.3/datasources/#add-a-data-source).
 
 ## Before you begin
 
@@ -63,7 +63,7 @@ Additional authentication methods (Azure AD, AWS SigV4) are available depending 
 
 > **Warning**
 >
-> Azure AD and SigV4 authentication on the core Prometheus data source are **deprecated** in Grafana 13. Existing data sources using these methods are automatically migrated to dedicated plugins on startup. For new setups, use the [Azure Monitor Managed Service for Prometheus](https://grafana.com/grafana/plugins/grafana-azureprometheus-datasource/) or [Amazon Managed Service for Prometheus](https://grafana.com/grafana/plugins/grafana-amazonprometheus-datasource/) plugins instead. For migration details, refer to [Azure authentication (deprecated)](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/azure-authentication/) or [AWS authentication (deprecated)](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/aws-authentication/).
+> Azure AD and SigV4 authentication on the core Prometheus data source are **deprecated** in Grafana 13. Existing data sources using these methods are automatically migrated to dedicated plugins on startup. For new setups, use the [Azure Monitor Managed Service for Prometheus](https://grafana.com/grafana/plugins/grafana-azureprometheus-datasource/) or [Amazon Managed Service for Prometheus](https://grafana.com/grafana/plugins/grafana-amazonprometheus-datasource/) plugins instead. For migration details, refer to [Azure authentication (deprecated)](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/azure-authentication/) or [AWS authentication (deprecated)](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/aws-authentication/).
 
 - **Azure AD authentication** - Available in Grafana Enterprise and self-managed instances where `azure_auth_enabled = true` is configured. On Grafana Cloud, this option requires a server-side feature flag that isn't enabled by default. Contact [Grafana Support](https://grafana.com/profile/org#support) to request it be enabled for your stack. Refer to [Azure authentication settings](#azure-authentication-settings-deprecated) for configuration details.
 
@@ -101,9 +101,9 @@ Pass along additional information and metadata about the request or response.
 
 ### Alerting
 
-- **Manage alerts via Alerting UI** - Toggled on by default. This enables [data source-managed rules in Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/) for this data source. For `Mimir`, it enables managing data source-managed rules and alerts. For `Prometheus`, it only supports viewing existing rules and alerts, which are displayed as data source-managed. Change this by setting the [`default_manage_alerts_ui_toggle`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#default_manage_alerts_ui_toggle) option in the `grafana.ini` configuration file.
+- **Manage alerts via Alerting UI** - Toggled on by default. This enables [data source-managed rules in Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/) for this data source. For `Mimir`, it enables managing data source-managed rules and alerts. For `Prometheus`, it only supports viewing existing rules and alerts, which are displayed as data source-managed. Change this by setting the [`default_manage_alerts_ui_toggle`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#default_manage_alerts_ui_toggle) option in the `grafana.ini` configuration file.
 
-- **Allow as recording rules target** - Toggled on by default. This allows the data source to be selected as a target destination for writing [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/). When enabled, this data source appears in the target data source list when creating or importing recording rules. Change this by setting the [`default_allow_recording_rules_target_alerts_ui_toggle`](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#default_allow_recording_rules_target_alerts_ui_toggle) option in the `grafana.ini` configuration file.
+- **Allow as recording rules target** - Toggled on by default. This allows the data source to be selected as a target destination for writing [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/). When enabled, this data source appears in the target data source list when creating or importing recording rules. Change this by setting the [`default_allow_recording_rules_target_alerts_ui_toggle`](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#default_allow_recording_rules_target_alerts_ui_toggle) option in the `grafana.ini` configuration file.
 
 ### Interval behavior
 
@@ -112,7 +112,7 @@ Pass along additional information and metadata about the request or response.
 
 ### Query editor
 
-- **Default editor** - Sets the default query editor. Options are `Builder` or `Code`. `Builder` mode helps you build queries using a visual interface. `Code` mode is geared for the experienced Prometheus user with prior expertise in PromQL. For more details on editor types, refer to [Prometheus query editor](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/query-editor). You can switch between editors in the query editor UI.
+- **Default editor** - Sets the default query editor. Options are `Builder` or `Code`. `Builder` mode helps you build queries using a visual interface. `Code` mode is geared for the experienced Prometheus user with prior expertise in PromQL. For more details on editor types, refer to [Prometheus query editor](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/query-editor). You can switch between editors in the query editor UI.
 - **Disable metrics lookup** - Toggle on to disable the metrics chooser and metric and label support in the query field's autocomplete. This can improve performance for large Prometheus instances.
 
 ### Performance
@@ -149,12 +149,12 @@ Pass along additional information and metadata about the request or response.
 
 ### Exemplars
 
-Support for exemplars is available only for the Prometheus data source. An exemplar is a trace that represents a specific measurement taken within a given time interval. For more information, refer to [Introduction to exemplars](https://grafana.com/docs/grafana/v13.2/fundamentals/exemplars/).
+Support for exemplars is available only for the Prometheus data source. An exemplar is a trace that represents a specific measurement taken within a given time interval. For more information, refer to [Introduction to exemplars](https://grafana.com/docs/grafana/v13.3/fundamentals/exemplars/).
 
 Click the **+ sign** to add exemplars.
 
 - **Internal link** - Toggle on to enable an internal link. This displays the data source selector, where you can choose the backend tracing data store for your exemplar data.
-- **URL** - *(Visible if you disable `Internal link`)* Defines the external link's URL trace backend. You can interpolate the value from the field by using the [`${__value.raw}` macro](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-data-links/#value-variables).
+- **URL** - *(Visible if you disable `Internal link`)* Defines the external link's URL trace backend. You can interpolate the value from the field by using the [`${__value.raw}` macro](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-data-links/#value-variables).
 - **Data source** - *(Visible when `Internal link` is enabled)* Select the tracing data source that the exemplar links to.
 - **URL label** - Adds a custom display label to override the value of the `Label name` field.
 - **Label name** - The name of the field in the `labels` object used to obtain the traceID property.
@@ -172,7 +172,7 @@ PDC allows you to establish a private, secured connection between a Grafana Clou
 
 - **Private data source connect network** - Select the PDC network where your data source is available.
 
-PDC supports both querying and writing to Prometheus-compatible data sources. This means [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/) can write their results to a Prometheus or Mimir instance behind a PDC connection.
+PDC supports both querying and writing to Prometheus-compatible data sources. This means [Grafana-managed recording rules](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-recording-rules/create-grafana-managed-recording-rules/) can write their results to a Prometheus or Mimir instance behind a PDC connection.
 
 If you use PDC with SigV4 (AWS Signature Version 4 Authentication), the PDC agent must allow internet egress to `sts.<region>.amazonaws.com:443`.
 
@@ -180,7 +180,7 @@ Click **Manage private data source connect networks** to view your PDC configura
 
 For more information, refer to [Private data source connect (PDC)](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/) and [Configure PDC](https://grafana.com/docs/grafana-cloud/connect-externally-hosted/private-data-source-connect/configure-pdc/#configure-grafana-private-data-source-connect-pdc).
 
-For troubleshooting PDC connectivity issues (DNS resolution, "host unreachable" errors, or parallel connection tuning), refer to [PDC connectivity errors](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/#pdc-connectivity-errors).
+For troubleshooting PDC connectivity issues (DNS resolution, "host unreachable" errors, or parallel connection tuning), refer to [PDC connectivity errors](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/#pdc-connectivity-errors).
 
 ## Save and test
 
@@ -202,7 +202,7 @@ You can define and configure the data source in YAML files as part of the Grafan
 
 ### Provision with YAML
 
-For more information about provisioning, and for available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/).
+For more information about provisioning, and for available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/).
 
 **Example Prometheus data source configuration:**
 
@@ -293,11 +293,11 @@ For all available configuration options, refer to the [Grafana provider data sou
 
 > **Warning**
 >
-> Azure AD authentication on the core Prometheus data source is **deprecated** in Grafana 13. Data sources using this method are automatically migrated to the dedicated [Azure Monitor Managed Service for Prometheus](https://grafana.com/grafana/plugins/grafana-azureprometheus-datasource/) plugin on startup. For migration details, refer to [Azure authentication (deprecated)](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/azure-authentication/).
+> Azure AD authentication on the core Prometheus data source is **deprecated** in Grafana 13. Data sources using this method are automatically migrated to the dedicated [Azure Monitor Managed Service for Prometheus](https://grafana.com/grafana/plugins/grafana-azureprometheus-datasource/) plugin on startup. For migration details, refer to [Azure authentication (deprecated)](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/azure-authentication/).
 
-If you still need to configure Azure AD authentication on the core Prometheus data source (for example, on older Grafana versions), refer to [Configure Azure Active Directory (AD) authentication](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/#configure-azure-active-directory-ad-authentication).
+If you still need to configure Azure AD authentication on the core Prometheus data source (for example, on older Grafana versions), refer to [Configure Azure Active Directory (AD) authentication](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/#configure-azure-active-directory-ad-authentication).
 
-In Grafana Enterprise or self-managed OSS, update the `.ini` configuration file. Refer to [Configuration file location](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#configuration-file-location) to locate your `.ini` file.
+In Grafana Enterprise or self-managed OSS, update the `.ini` configuration file. Refer to [Configuration file location](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#configuration-file-location) to locate your `.ini` file.
 
 Add the following setting in the **\[auth]** section:
 
@@ -312,4 +312,4 @@ azure_auth_enabled = true
 
 ## Troubleshooting
 
-If you encounter issues after configuring your Prometheus data source, refer to [Troubleshoot Prometheus data source issues](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/).
+If you encounter issues after configuring your Prometheus data source, refer to [Troubleshoot Prometheus data source issues](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/).

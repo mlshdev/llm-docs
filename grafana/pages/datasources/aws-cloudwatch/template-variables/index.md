@@ -1,11 +1,11 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/aws-cloudwatch/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/aws-cloudwatch/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/template-variables/index.md)
 
 # CloudWatch template variables
 
 Instead of hard-coding details such as server, application, and sensor names in metric queries, you can use variables.
 Grafana lists these variables in drop-down select boxes at the top of the dashboard to help you change the data displayed in your dashboard. Grafana refers to such variables as template variables.
 
-For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ## Use query variables
 
@@ -26,7 +26,7 @@ Use them to fill a variable's options list with values like `regions`, `namespac
 | **Log Groups**              | Log groups matching the specified `region` and optional log group `prefix`. The variable value is the log group ARN.                             |
 | **Accounts**                | The IDs of linked monitoring accounts for the specified `region`. Available only when cross-account observability is enabled.                    |
 
-When cross-account observability is enabled, the **Metrics**, **Dimension Keys**, **Dimension Values**, and **Log Groups** query types also show an optional **Account** field. Use it to target a specific linked monitoring account, or leave it unset to query all linked accounts. For more information, refer to [Cross-account observability](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/query-editor/#cross-account-observability).
+When cross-account observability is enabled, the **Metrics**, **Dimension Keys**, **Dimension Values**, and **Log Groups** query types also show an optional **Account** field. Use it to target a specific linked monitoring account, or leave it unset to query all linked accounts. For more information, refer to [Cross-account observability](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/query-editor/#cross-account-observability).
 
 For details on the available dimensions, refer to the [CloudWatch Metrics and Dimensions Reference](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html).
 
@@ -35,7 +35,7 @@ For details about the metrics CloudWatch provides, refer to the [CloudWatch docu
 ### Use variables in queries
 
 Use the Grafana variable syntax to include variables in queries. A query variable dynamically retrieves values from your data source using a query.
-For details, refer to the [variable syntax documentation](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/).
+For details, refer to the [variable syntax documentation](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/).
 
 CloudWatch metric queries support variables in the **Region**, **Namespace**, **Metric name**, dimension key, and dimension value fields.
 

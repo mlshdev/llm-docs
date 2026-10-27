@@ -1,13 +1,13 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/postgres/alerting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/postgres/alerting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/postgres/alerting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/postgres/alerting/index.md)
 
 # PostgreSQL alerting
 
-The PostgreSQL data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/). You can create alert rules that evaluate time series queries against your PostgreSQL database and send notifications when conditions are met.
+The PostgreSQL data source supports [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/). You can create alert rules that evaluate time series queries against your PostgreSQL database and send notifications when conditions are met.
 
 ## Before you begin
 
-- Ensure your [PostgreSQL data source is configured](https://grafana.com/docs/grafana/v13.2/datasources/postgres/configure/).
-- Familiarize yourself with [Alert rules](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/) and [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+- Ensure your [PostgreSQL data source is configured](https://grafana.com/docs/grafana/v13.3/datasources/postgres/configure/).
+- Familiarize yourself with [Alert rules](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/) and [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Supported query format
 
@@ -16,7 +16,7 @@ Only **time series** queries can be used in alert rule conditions.
 - Your query must return a column named `time` (native SQL date/time or UNIX epoch) and one or more numeric value columns.
 - **Table** formatted queries aren't supported in alert rule conditions.
 
-For details on writing time series queries, refer to [Time series queries](https://grafana.com/docs/grafana/v13.2/datasources/postgres/query-editor/#time-series-queries) in the PostgreSQL query editor.
+For details on writing time series queries, refer to [Time series queries](https://grafana.com/docs/grafana/v13.3/datasources/postgres/query-editor/#time-series-queries) in the PostgreSQL query editor.
 
 ## Limitations
 
@@ -24,8 +24,8 @@ Keep the following limitations in mind when using PostgreSQL with Grafana Alerti
 
 - **Time series format only:** Alert rules require the query **Format** set to **Time series**. Table format queries can't be used as alert conditions.
 - **No fill mode in alerts:** The fill parameter in `$__timeGroup` (for example, `$__timeGroup(col, '5m', 0)`) isn't applied during alert evaluation. Missing data points remain as gaps.
-- **Single query per condition:** Each alert condition evaluates a single query. If you need to combine results from multiple queries, use [math expressions](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/#add-expressions) in the alert rule.
-- **Template variables aren't supported:** Alert queries don't support dashboard template variables because alerts evaluate independently of any dashboard context. Hard-code values or use [alert rule labels](https://grafana.com/docs/grafana/v13.2/alerting/fundamentals/alert-rules/annotation-label/) instead.
+- **Single query per condition:** Each alert condition evaluates a single query. If you need to combine results from multiple queries, use [math expressions](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/#add-expressions) in the alert rule.
+- **Template variables aren't supported:** Alert queries don't support dashboard template variables because alerts evaluate independently of any dashboard context. Hard-code values or use [alert rule labels](https://grafana.com/docs/grafana/v13.3/alerting/fundamentals/alert-rules/annotation-label/) instead.
 
 ## Create an alert rule
 
@@ -39,7 +39,7 @@ To create an alert rule that uses PostgreSQL:
 6. Configure the condition, evaluation group, and notification settings.
 7. Save the rule.
 
-For step-by-step guidance, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/create-grafana-managed-rule/).
+For step-by-step guidance, refer to [Create a Grafana-managed alert rule](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/create-grafana-managed-rule/).
 
 ## Example queries for alerting
 
@@ -95,7 +95,7 @@ ORDER BY time
 
 ## Template annotations and labels
 
-You can use [template annotations and labels](https://grafana.com/docs/grafana/v13.2/alerting/alerting-rules/templates/) to include query results or metadata in alert notifications and labels.
+You can use [template annotations and labels](https://grafana.com/docs/grafana/v13.3/alerting/alerting-rules/templates/) to include query results or metadata in alert notifications and labels.
 
 ## Best practices
 
@@ -104,5 +104,5 @@ Follow these best practices when using PostgreSQL for alerting:
 - **Keep queries fast:** Alert rules evaluate on a schedule (for example, every minute). Avoid expensive joins, subqueries, or scanning large tables without indexes. Add indexes on time columns and any columns used in `WHERE` clauses.
 - **Use `$__timeFilter`:** Always include a `$__timeFilter` or `$__unixEpochFilter` macro to limit data to the evaluation window. Without it, the query scans the entire table on every evaluation.
 - **Handle `NULL` values:** If your data contains `NULL` values, Grafana treats them as "no data." Configure the alert rule's **No data** behavior to match your expectations (for example, **Alerting**, **No data**, or **OK**).
-- **Test in Explore first:** Verify your query returns the expected time series in [Explore](https://grafana.com/docs/grafana/v13.2/explore/) before using it in an alert rule. Check the **Format** is set to **Time series** and results are sorted by time.
+- **Test in Explore first:** Verify your query returns the expected time series in [Explore](https://grafana.com/docs/grafana/v13.3/explore/) before using it in an alert rule. Check the **Format** is set to **Time series** and results are sorted by time.
 - **Set realistic evaluation intervals:** Choose an evaluation interval that gives your query enough time to complete. If your query takes 10 seconds, don't evaluate every 10 seconds—allow for headroom.

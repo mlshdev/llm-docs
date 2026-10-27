@@ -1,10 +1,14 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/annotate-visualizations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/annotate-visualizations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/annotate-visualizations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/annotate-visualizations/index.md)
 
 # Annotate visualizations
 
 Annotations provide a way to mark points on a visualization with rich events. They are visualized as vertical lines and icons on all graph panels. When you hover over an annotation, you can get event description and event tags. The text field can include links to other systems with more detail.
 
 ![Annotated visualization with annotation context menu open](https://grafana.com/static/img/docs/v46/annotations.png)
+
+To see annotations in action, explore this demo dashboard on Grafana Play:
+
+[Annotations in Grafana Play](https://play.grafana.org/d/000000010/)
 
 You can annotate visualizations in three ways:
 
@@ -14,7 +18,7 @@ You can annotate visualizations in three ways:
 
 In the first two cases, you're creating new annotations, while in the last you're querying existing annotations from data sources. The built-in annotation query also supports this.
 
-This page explains the first and third options; for information about using the HTTP API, refer to [Annotations API](https://grafana.com/docs/grafana/v13.2/developers/http_api/annotations/).
+This page explains the first and third options; for information about using the HTTP API, refer to [Annotations API](https://grafana.com/docs/grafana/v13.3/developers/http_api/annotations/).
 
 Annotations are supported for the following visualization types:
 
@@ -112,12 +116,12 @@ To add an annotation query to a dashboard, follow these steps:
 
 1. To add a query, do one of the following:
 
-   - Click **Open query editor** to open the **Annotation Query** dialog box, select an option in the **Data source** drop-down list, and write or construct a query. The annotation query options are different for each data source. For information about annotations in a specific data source, refer to the specific [data source](https://grafana.com/docs/grafana/v13.2/datasources/) topic. Proceed to the next step.
-   - Click **Use saved query** to open the **Saved queries** drawer. Choose a [saved query](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries) to reuse, click **Select query**, and proceed to step 13.
+   - Click **Open query editor** to open the **Annotation Query** dialog box, select an option in the **Data source** drop-down list, and write or construct a query. The annotation query options are different for each data source. For information about annotations in a specific data source, refer to the specific [data source](https://grafana.com/docs/grafana/v13.3/datasources/) topic. Proceed to the next step.
+   - Click **Use saved query** to open the **Saved queries** drawer. Choose a [saved query](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries) to reuse, click **Select query**, and proceed to step 13.
 
    > **Note**
    >
-   > [Saved queries](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries) is only available on Grafana Enterprise and Grafana Cloud.
+   > [Saved queries](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries) is only available on Grafana Enterprise and Grafana Cloud.
 
 2. (Optional) Click **Test annotation query** to ensure that the query is working properly.
 
@@ -143,9 +147,9 @@ It also helps you avoid having several users build the same queries for the same
 
 Saved queries are supported in:
 
-- [Dashboards](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/#create-a-dashboard)
-- [Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/query-editor/)
-- [Annotations](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/annotate-visualizations/#add-new-annotation-queries)
+- [Dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/#create-a-dashboard)
+- [Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/query-editor/)
+- [Annotations](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/annotate-visualizations/#add-new-annotation-queries)
 
 Learn more about saved queries:
 
@@ -185,7 +189,7 @@ You can apply all the same search, filter, and sort options in the **Starred que
 >
 > When you select a query with a Loki, Mimir, Tempo, or Pyroscope data source, the **Saved queries** dialog box displays a **Drilldown** button.
 > Click the button to open the associated Drilldown app, while maintaining the context of the query.
-> Learn more about these apps in the [Drilldown documentation](https://grafana.com/docs/grafana/v13.2/visualizations/simplified-exploration/).
+> Learn more about these apps in the [Drilldown documentation](https://grafana.com/docs/grafana/v13.3/visualizations/simplified-exploration/).
 
 #### Roles, permissions, and RBAC
 
@@ -219,7 +223,7 @@ However, the substitutions only apply to the query when it's reused, and the ori
 #### Manage saved queries as code
 
 You can manage saved queries as code with the Grafana Terraform provider, which lets you version-control your query library and keep it consistent across instances.
-For more information, refer to [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/manage-saved-queries/).
+For more information, refer to [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/manage-saved-queries/).
 
 #### Known limitations
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/alerting/monitor-status/view-alert-state-history.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/alerting/monitor-status/view-alert-state-history.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/alerting/monitor-status/view-alert-state-history.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/alerting/monitor-status/view-alert-state-history.md)
 
 # View alert state history
 
@@ -8,13 +8,13 @@ An alert event is displayed each time an alert instance changes its state over a
 
 > **Note**
 >
-> Grafana OSS and Grafana Enterprise users must [configure alert state history in Loki](https://grafana.com/docs/grafana/v13.2/alerting/set-up/configure-alert-state-history/) to view the **History page** and **State history view**.
+> Grafana OSS and Grafana Enterprise users must [configure alert state history in Loki](https://grafana.com/docs/grafana/v13.3/alerting/set-up/configure-alert-state-history/) to view the **History page** and **State history view**.
 
 ## View from the History page
 
 The History page shows the history and state changes of all Grafana-managed alert rules. You can filter by labels and alert states.
 
-The **History** page also includes a **Notifications** tab for [notification history](https://grafana.com/docs/grafana/v13.2/alerting/monitor-status/view-notification-history/).
+The **History** page also includes a **Notifications** tab for [notification history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-notification-history/).
 
 Users can only view the history of alert rules they have permission to access (RBAC).
 
@@ -102,6 +102,6 @@ Common labels are displayed at the top to make it easier to identify different a
 
 ## Explore and query the alert history
 
-You can also use [Grafana Explore](https://grafana.com/docs/grafana/v13.2/visualizations/explore/) to query the data sources that store alert history.
+You can also use [Grafana Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/) to query the data sources that store alert history.
 
-For details on querying these data sources, refer to [Alerting Meta monitoring](https://grafana.com/docs/grafana/v13.2/alerting/monitor/).
+For details on querying these data sources, refer to [Alerting Meta monitoring](https://grafana.com/docs/grafana/v13.3/alerting/monitor/).

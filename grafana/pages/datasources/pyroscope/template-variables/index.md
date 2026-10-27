@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/pyroscope/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/pyroscope/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/pyroscope/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/pyroscope/template-variables/index.md)
 
 # Pyroscope template variables
 
 Template variables let you create dynamic, reusable dashboards by replacing hard-coded values, such as service names or profile types, with selectable variables. Grafana displays these variables as drop-down menus at the top of the dashboard, letting viewers change the displayed data without editing queries.
 
-For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+For an introduction to templating and template variables, refer to [Templating](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ## Query variable types
 
@@ -102,7 +102,7 @@ Query variable definitions also support variables. You can reference one variabl
 
 ## Filters variable
 
-The Pyroscope data source supports the [Filters](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#add-ad-hoc-filters) variable type, which lets dashboard viewers add label filters without editing queries.
+The Pyroscope data source supports the [Filters](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#add-ad-hoc-filters) variable type, which lets dashboard viewers add label filters without editing queries.
 
 To set up a Filters variable:
 
@@ -116,5 +116,5 @@ After you add the variable, a filter bar appears at the top of the dashboard. Vi
 
 ## Related resources
 
-- [Query profile data](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/query-editor/): Use variables in the label selector.
-- [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.2/datasources/pyroscope/troubleshooting/): Resolve variable-related query issues.
+- [Query profile data](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/query-editor/): Use variables in the label selector.
+- [Troubleshoot the Pyroscope data source](https://grafana.com/docs/grafana/v13.3/datasources/pyroscope/troubleshooting/): Resolve variable-related query issues.

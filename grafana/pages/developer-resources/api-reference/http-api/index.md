@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/_index.md)
 
 # Grafana HTTP API reference guide
 
@@ -12,8 +12,8 @@ Grafana is deprecating legacy APIs (`/api`) in favor of a new generation of impr
 
 To learn more refer to:
 
-- The new [API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis/) for information on the new HTTP API structure.
-- The [API migration guide](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis-migration/) for details on the legacy API deprecation process.
+- The new [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/) for information on the new HTTP API structure.
+- The [API migration guide](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis-migration/) for details on the legacy API deprecation process.
 
 ## The Grafana API specification
 
@@ -28,7 +28,7 @@ You can browse and try out both via the Swagger UI editor, served by the Grafana
 
 ## Authentication
 
-In OSS, you can authenticate your requests to the HTTP APIs using basic auth or a service account token. In Grafana Cloud, only the service account token option is available. For more details refer to [HTTP API authentication](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/authentication).
+In OSS, you can authenticate your requests to the HTTP APIs using basic auth or a service account token. In Grafana Cloud, only the service account token option is available. For more details refer to [HTTP API authentication](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/authentication).
 
 ## List of available HTTP APIs
 
@@ -39,46 +39,47 @@ The following table lists all available HTTP API reference pages. New APIs are l
 | [Alert enrichment HTTP API (Swagger)](https://play.grafana.org/swagger?api=alertenrichment.grafana.app-v1beta1)                                                 | **New**              | No                  |
 | [Alert notifications HTTP API (Swagger)](https://play.grafana.org/swagger?api=notifications.alerting.grafana.app-v1beta1)                                       | **New**              | No                  |
 | [Banners HTTP API (Swagger)](https://play.grafana.org/swagger?api=banners.grafana.app-v0alpha1)                                                                 | **New**              | No                  |
-| [Dashboard HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/dashboard/)                                              | **New**              | `/api/dashboards/*` |
-| [Folder HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/folder/)                                                    | **New**              | `/api/folders/*`    |
+| [Dashboard HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/dashboard/)                                              | **New**              | `/api/dashboards/*` |
+| [Folder HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/folder/)                                                    | **New**              | `/api/folders/*`    |
 | [SLO (Swagger) / Kubernetes CRD](https://play.grafana.org/swagger?api=grafana-slo-app.plugins.grafana.com-v1)                                                   | **New - Cloud only** | No                  |
-| [Playlist HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/playlist/)                                                | **New**              | No                  |
-| [Resource history HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/resource-history/)                                | **New**              | No                  |
-| [Secrets Management HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/secrets_management/)                            | **New**              | No                  |
-| [Stars HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/stars/)                                                      | **New**              | `/api/collection/*` |
-| [Admin HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/admin/)                                           | Deprecated           | Not Applicable      |
-| [Alerting Provisioning HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/alerting_provisioning/)           | Deprecated           | Not Applicable      |
-| [Annotations HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/annotations/)                               | Deprecated           | Not Applicable      |
-| [Correlations HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/correlations/)                             | Deprecated           | Not Applicable      |
-| [Dashboard Permissions HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/dashboard_permissions/)           | Deprecated           | Not Applicable      |
-| [Dashboard Versions HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/dashboard_versions/)                 | Deprecated           | Not Applicable      |
-| [Data source HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/data_source/)                               | Deprecated           | Not Applicable      |
-| [Data source LBAC rules HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/datasource_lbac_rules/)          | Deprecated           | Not Applicable      |
-| [Data source permissions HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/datasource_permissions/)        | Deprecated           | Not Applicable      |
-| [Folder/Dashboard Search HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/folder_dashboard_search/)       | Deprecated           | Not Applicable      |
-| [Folder Permissions HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/folder_permissions/)                 | Deprecated           | Not Applicable      |
-| [Library Element HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/library_element/)                       | Deprecated           | Not Applicable      |
-| [Licensing HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/licensing/)                                   | Deprecated           | Not Applicable      |
-| [Organization HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/org/)                                      | Deprecated           | Not Applicable      |
-| [Other HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/other/)                                           | Deprecated           | Not Applicable      |
-| [Preferences API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/preferences/)                                    | Deprecated           | Not Applicable      |
-| [Query and Resource Caching HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/query_and_resource_caching/) | Deprecated           | Not Applicable      |
-| [Query History HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/query_history/)                           | Deprecated           | Not Applicable      |
-| [RBAC HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/access_control/)                                   | Deprecated           | Not Applicable      |
-| [Reporting API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/reporting/)                                        | Deprecated           | Not Applicable      |
-| [Service account HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/serviceaccount/)                        | Deprecated           | Not Applicable      |
-| [Shared Dashboards HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/dashboard_public/)                    | Deprecated           | Not Applicable      |
-| [Short URL HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/short_url/)                                   | Deprecated           | Not Applicable      |
-| [Snapshot API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/snapshot/)                                          | Deprecated           | Not Applicable      |
-| [SSO Settings API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/sso-settings/)                                  | Deprecated           | Not Applicable      |
-| [Team HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/team/)                                             | Deprecated           | Not Applicable      |
-| [Team Sync HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/team_sync/)                                   | Deprecated           | Not Applicable      |
-| [User HTTP API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/api-legacy/user/)                                             | Deprecated           | Not Applicable      |
+| [Playlist HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/playlist/)                                                | **New**              | No                  |
+| [Resource history HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/resource-history/)                                | **New**              | No                  |
+| [Secrets Management HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/secrets_management/)                            | **New**              | No                  |
+| [Stars HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/stars/)                                                      | **New**              | `/api/collection/*` |
+| [Admin HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/admin/)                                           | Deprecated           | Not Applicable      |
+| [Alerting Provisioning HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/alerting_provisioning/)           | Deprecated           | Not Applicable      |
+| [Annotations HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/annotations/)                               | Deprecated           | Not Applicable      |
+| [Correlations HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/correlations/)                             | Deprecated           | Not Applicable      |
+| [Dashboard Permissions HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/dashboard_permissions/)           | Deprecated           | Not Applicable      |
+| [Dashboard Versions HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/dashboard_versions/)                 | Deprecated           | Not Applicable      |
+| [Data source HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/data_source/)                               | Deprecated           | Not Applicable      |
+| [Data source LBAC rules HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/datasource_lbac_rules/)          | Deprecated           | Not Applicable      |
+| [Data source permissions HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/datasource_permissions/)        | Deprecated           | Not Applicable      |
+| [Folder/Dashboard Search HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/folder_dashboard_search/)       | Deprecated           | Not Applicable      |
+| [Folder Permissions HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/folder_permissions/)                 | Deprecated           | Not Applicable      |
+| [Library Element HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/library_element/)                       | Deprecated           | Not Applicable      |
+| [Licensing HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/licensing/)                                   | Deprecated           | Not Applicable      |
+| [Organization HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/org/)                                      | Deprecated           | Not Applicable      |
+| [Other HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/other/)                                           | Deprecated           | Not Applicable      |
+| [Preferences API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/preferences/)                                    | Deprecated           | Not Applicable      |
+| [Query and Resource Caching HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/query_and_resource_caching/) | Deprecated           | Not Applicable      |
+| [Query History HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/query_history/)                           | Deprecated           | Not Applicable      |
+| [RBAC HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/access_control/)                                   | Deprecated           | Not Applicable      |
+| [Reporting API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/reporting/)                                        | Deprecated           | Not Applicable      |
+| [Service account HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/serviceaccount/)                        | Deprecated           | Not Applicable      |
+| [Shared Dashboards HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/dashboard_public/)                    | Deprecated           | Not Applicable      |
+| [Short URL HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/short_url/)                                   | Deprecated           | Not Applicable      |
+| [Snapshot API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/snapshot/)                                          | Deprecated           | Not Applicable      |
+| [SSO Settings API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/sso-settings/)                                  | Deprecated           | Not Applicable      |
+| Stars API - `/user/stars/*`                                                                                                                                     | Deprecated           | Not Applicable      |
+| [Team HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/team/)                                             | Deprecated           | Not Applicable      |
+| [Team Sync HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/team_sync/)                                   | Deprecated           | Not Applicable      |
+| [User HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/api-legacy/user/)                                             | Deprecated           | Not Applicable      |
 
 ## Related resources
 
 Use the following resources to keep working with Grafana APIs:
 
-- **API structure:** Refer to [The new API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis).
-- **Migration guide:** Refer to [Migrate to the new APIs](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis-migration).
+- **API structure:** Refer to [The new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis).
+- **Migration guide:** Refer to [Migrate to the new APIs](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis-migration).
 - **Swagger UI:** Open the `/swagger` page in your Grafana instance to inspect endpoint schemas and try requests.

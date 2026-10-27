@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/agentsignore/index.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/_vendor/github.com/docker/docker-agent/docs/configuration/agentsignore/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/agentsignore/index.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/_vendor/github.com/docker/docker-agent/docs/configuration/agentsignore/index.md)
 
 *Hide files from the agent with a `.agentsignore` file, using the same syntax as `.gitignore`.*
 
@@ -20,7 +20,7 @@ There is nothing to configure. The file's presence is the opt-in, and it is pick
 
 ## Syntax
 
-The syntax is `.gitignore` syntax — parsed with the same library git uses, so patterns behave identically to `.gitignore` and `.dockerignore`:
+Patterns use go-git's `.gitignore` parser, not Git's own parser or Docker's `.dockerignore` parser. Supported forms include:
 
 | Pattern              | Matches                                                      |
 | -------------------- | ------------------------------------------------------------ |
@@ -51,7 +51,7 @@ Unlike `.gitignore`, **a git repository is not required** — `.agentsignore` wo
 
 Paths are resolved before matching — symlinks, `./` prefixes and `..` segments are all normalised — so an ignored file cannot be reached by spelling it differently.
 
-The `.agentsignore` file is itself always hidden: it names the very things being kept back, so handing it to the agent would be a map of what to look for.
+When `.agentsignore` contains at least one active pattern, the filesystem toolset also hides the file itself. An empty or comment-only file creates no matcher and is not hidden.
 
 > \[!NOTE]
 > `.agentsignore` is independent of the filesystem toolset's [`ignore_vcs`](https://docs.docker.com/ai/docker-agent/configuration/tools/) option. Setting `ignore_vcs: false` turns off `.gitignore` filtering but does **not** un-hide `.agentsignore` entries.
@@ -86,7 +86,8 @@ The derived permission rules are best-effort for the same reason: permission pat
 secrets.env
 *.pem
 *.key
-!public.key          # this one is safe to read
+# This one is safe to read
+!public.key
 
 # Credentials directories
 .aws/

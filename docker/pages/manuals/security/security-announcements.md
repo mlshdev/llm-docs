@@ -1,8 +1,40 @@
-> Pinned source for Docker main: [content/manuals/security/security-announcements.md](https://github.com/docker/docs/blob/171f597d4e166d42879d7d620a8a29e3b1a17a80/content/manuals/security/security-announcements.md)
+> Pinned source for Docker main: [content/manuals/security/security-announcements.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/security/security-announcements.md)
 
 # Docker security announcements
 
 [Subscribe to security RSS feed](https://docs.docker.com/security/security-announcements/index.xml)
+
+## Docker Desktop 4.97.0 security update: CVE-2026-114409
+
+A vulnerability in Docker Desktop was fixed on October 26 in the
+[4.97.0](https://docs.docker.com/desktop/release-notes/#4970) release:
+
+- Addressed [CVE-2026-114409](https://www.cve.org/cverecord?id=CVE-2026-114409),
+  where Docker Desktop could write third-party API keys and OAuth access tokens
+  in cleartext to local application logs and diagnostics bundles. This affected
+  Docker Desktop versions before 4.97.0 and was caused by insufficient IPC
+  payload redaction. An attacker with read access to these files could obtain
+  the credentials. These OAuth tokens are not Docker account tokens.
+
+  Docker Desktop 4.94.0 and 4.95.0 addressed the known logging paths, but logs
+  containing credentials can remain after upgrading. Docker Desktop 4.97.0 fixes
+  the issue and includes cleanup of existing host logs and crash dumps.
+
+  If you've generated or shared diagnostics bundles with Docker Desktop 4.96.x
+  or earlier, or kept copies of Docker Desktop logs elsewhere, delete or
+  sanitize them.
+
+Update to Docker Desktop
+[4.97.0](https://docs.docker.com/desktop/release-notes/#4970).
+
+## Docker Desktop 4.97.0 security update: CVE-2026-99999
+
+A vulnerability in Docker Desktop was fixed on October 26 in the
+[4.97.0](https://docs.docker.com/desktop/release-notes/#4970) release:
+
+- Addressed [CVE-2026-99999](https://www.cve.org/cverecord?id=CVE-2026-99999),
+  a kernel vulnerability where a container could exploit bad IPv4 checksum
+  metadata via TUN or `AF_PACKET` to corrupt the VM's network stack.
 
 ## Docker Sandboxes response to eMudhra CA compromise
 

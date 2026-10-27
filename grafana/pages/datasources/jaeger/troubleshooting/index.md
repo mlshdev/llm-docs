@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/jaeger/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/jaeger/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/jaeger/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/jaeger/troubleshooting/index.md)
 
 # Troubleshoot Jaeger data source issues
 
-This document provides solutions to common issues you may encounter when configuring or using the Jaeger data source. For configuration instructions, refer to [Configure the Jaeger data source](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/configure/).
+This document provides solutions to common issues you may encounter when configuring or using the Jaeger data source. For configuration instructions, refer to [Configure the Jaeger data source](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/configure/).
 
 ## Connection errors
 

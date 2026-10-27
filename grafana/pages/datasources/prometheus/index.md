@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/prometheus/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/prometheus/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/prometheus/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/prometheus/_index.md)
 
 # Prometheus data source
 
 Prometheus is an open source monitoring system and time series database that scrapes and stores metrics used for monitoring and alerting.
 
-The Prometheus data source is preinstalled in Grafana, so you don't need to install it manually. Write queries using [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) in the query editor, or use [Metrics Drilldown](https://grafana.com/docs/grafana/v13.2/explore/simplified-exploration/metrics/) to explore metrics without writing queries. The Prometheus data source also works with other projects that implement the [Prometheus querying API](https://prometheus.io/docs/prometheus/latest/querying/api/), including [Grafana Mimir](https://grafana.com/docs/mimir/latest/) and [Thanos](https://thanos.io/tip/components/query.md/).
+The Prometheus data source is preinstalled in Grafana, so you don't need to install it manually. Write queries using [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) in the query editor, or use [Metrics Drilldown](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/metrics/) to explore metrics without writing queries. The Prometheus data source also works with other projects that implement the [Prometheus querying API](https://prometheus.io/docs/prometheus/latest/querying/api/), including [Grafana Mimir](https://grafana.com/docs/mimir/latest/) and [Thanos](https://thanos.io/tip/components/query.md/).
 
 ## Supported features
 
@@ -20,23 +20,27 @@ The Prometheus data source is preinstalled in Grafana, so you don't need to inst
 
 The following documents help you set up and use the Prometheus data source:
 
-- [Configure the Prometheus data source](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/)
-- [Prometheus query editor](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/query-editor/)
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/template-variables/)
-- [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/annotations/)
-- [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/alerting/)
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/troubleshooting/)
+- [Configure the Prometheus data source](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/)
+- [Prometheus query editor](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/query-editor/)
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/template-variables/)
+- [Annotations](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/annotations/)
+- [Alerting](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/alerting/)
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/troubleshooting/)
 
 ## Additional features
 
 After you configure the Prometheus data source, you can:
 
-- Use [Metrics Drilldown](https://grafana.com/docs/grafana/v13.2/explore/simplified-exploration/metrics/) to browse and explore your Prometheus metrics without writing PromQL
-- Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to query data without building a dashboard
-- Add [transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/) to manipulate query results
-- Create [recorded queries](https://grafana.com/docs/grafana/v13.2/administration/recorded-queries/) for pre-aggregated data
-- Save and reuse PromQL queries across dashboards, Explore, and annotations with [saved queries](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries) (available in Grafana Enterprise and Grafana Cloud)
-- Build a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/)
+- Use [Metrics Drilldown](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/metrics/) to browse and explore your Prometheus metrics without writing PromQL
+- Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to query data without building a dashboard
+- Add [transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/) to manipulate query results
+- Create [recorded queries](https://grafana.com/docs/grafana/v13.3/administration/recorded-queries/) for pre-aggregated data
+- Save and reuse PromQL queries across dashboards, Explore, and annotations with [saved queries](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries) (available in Grafana Enterprise and Grafana Cloud)
+- Build a wide variety of [visualizations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/)
+
+To see the Prometheus data source in action, explore this demo dashboard on Grafana Play:
+
+[The Four Golden Signals in Grafana Play](https://play.grafana.org/d/000000109/)
 
 ## Cloud-managed Prometheus services
 
@@ -44,8 +48,8 @@ After you configure the Prometheus data source, you can:
 >
 > In Grafana 13, the core Prometheus data source no longer supports SigV4 (AWS) or Azure AD authentication. These authentication methods have been migrated to dedicated plugins:
 >
-> - **Amazon Managed Service for Prometheus:** Use the [Amazon Managed Service for Prometheus data source](https://grafana.com/grafana/plugins/grafana-amazonprometheus-datasource/). For migration details, refer to [AWS authentication (deprecated)](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/aws-authentication/).
-> - **Azure Monitor Managed Service for Prometheus:** Use the [Azure Monitor Managed Service for Prometheus data source](https://grafana.com/grafana/plugins/grafana-azureprometheus-datasource/). For migration details, refer to [Azure authentication (deprecated)](https://grafana.com/docs/grafana/v13.2/datasources/prometheus/configure/azure-authentication/).
+> - **Amazon Managed Service for Prometheus:** Use the [Amazon Managed Service for Prometheus data source](https://grafana.com/grafana/plugins/grafana-amazonprometheus-datasource/). For migration details, refer to [AWS authentication (deprecated)](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/aws-authentication/).
+> - **Azure Monitor Managed Service for Prometheus:** Use the [Azure Monitor Managed Service for Prometheus data source](https://grafana.com/grafana/plugins/grafana-azureprometheus-datasource/). For migration details, refer to [Azure authentication (deprecated)](https://grafana.com/docs/grafana/v13.3/datasources/prometheus/configure/azure-authentication/).
 >
 > Existing data sources using these methods are automatically migrated on startup.
 
@@ -55,12 +59,12 @@ Grafana still ships with the Prometheus data source out of the box. It's preinst
 
 To adjust this behavior:
 
-- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 - **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
 
 The standalone plugin requires Grafana 12.3.0 or later. The Prometheus data source bundled with Grafana 13.1 and earlier continues to work as before, and those versions aren't affected by this change.
 
-Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with Grafana 12.3.x through 13.1.x, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/):
 
 ```ini
 [plugin.prometheus]
@@ -77,9 +81,29 @@ preinstall_sync = prometheus
 
 [//]: # "This shared file is included in these locations:"
 
-[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+[//]: # "/docs/sources/datasources/aws-cloudwatch/_index.md"
+
+[//]: # "/docs/sources/datasources/azure-monitor/_index.md"
+
+[//]: # "/docs/sources/datasources/elasticsearch/_index.md"
+
+[//]: # "/docs/sources/datasources/google-cloud-monitoring/_index.md"
+
+[//]: # "/docs/sources/datasources/influxdb/_index.md"
+
+[//]: # "/docs/sources/datasources/loki/_index.md"
+
+[//]: # "/docs/sources/datasources/mssql/_index.md"
 
 [//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: # "/docs/sources/datasources/postgres/_index.md"
+
+[//]: # "/docs/sources/datasources/prometheus/_index.md"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/tempo/_index.md"
 
 [//]: #
 
@@ -91,7 +115,7 @@ preinstall_sync = prometheus
 
 You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
 
-`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
 
 For example, to query your Prometheus data source, use the `gcx datasources prometheus` commands:
 
@@ -114,7 +138,7 @@ Replace *`<DATASOURCE_UID>`* with the UID of your Prometheus data source. You ca
 
 ## Related resources
 
-- [What is Prometheus?](https://grafana.com/docs/grafana/v13.2/fundamentals/intro-to-prometheus/)
+- [What is Prometheus?](https://grafana.com/docs/grafana/v13.3/fundamentals/intro-to-prometheus/)
 - [Prometheus data model](https://prometheus.io/docs/concepts/data_model/)
 - [Getting started with Prometheus](https://prometheus.io/docs/prometheus/latest/getting_started/)
 - [Grafana community forum](https://community.grafana.com/)

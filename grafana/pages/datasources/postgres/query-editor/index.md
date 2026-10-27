@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/postgres/query-editor/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/postgres/query-editor/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/postgres/query-editor/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/postgres/query-editor/_index.md)
 
 # PostgreSQL query editor
 
-The PostgreSQL query editor lets you build and run queries against your data source. For general query editor and data transformation concepts, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/).
+The PostgreSQL query editor lets you build and run queries against your data source. For general query editor and data transformation concepts, refer to [Query and transform data](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/).
 
-You can open the PostgreSQL query editor from the [Explore page](https://grafana.com/docs/grafana/v13.2/explore/) or from a dashboard panel. Click the ellipsis in the upper right of the panel and select **Edit**.
+You can open the PostgreSQL query editor from the [Explore page](https://grafana.com/docs/grafana/v13.3/explore/) or from a dashboard panel. Click the ellipsis in the upper right of the panel and select **Edit**.
 
 > **Note**
 >
@@ -86,14 +86,14 @@ Grafana expands macros into native PostgreSQL SQL before executing the query. Wh
 
 ### Interval variables
 
-In addition to the macros listed, the following Grafana [interval variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#__interval) are replaced before query execution:
+In addition to the macros listed, the following Grafana [interval variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#__interval) are replaced before query execution:
 
 | Variable         | Description                                                                                                                                                 |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `$__interval`    | Replaced with the calculated interval based on the time range and panel width (for example, `5m`). Use in `$__timeGroup` or directly in custom expressions. |
 | `$__interval_ms` | Same as `$__interval` but in milliseconds (for example, `300000`).                                                                                          |
 
-You can set a lower bound for these variables with the **Min time interval** option in the [data source configuration](https://grafana.com/docs/grafana/v13.2/datasources/postgres/configure/#min-time-interval) or the panel's query options.
+You can set a lower bound for these variables with the **Min time interval** option in the [data source configuration](https://grafana.com/docs/grafana/v13.3/datasources/postgres/configure/#min-time-interval) or the panel's query options.
 
 ### Macro behavior
 
@@ -102,7 +102,7 @@ Keep the following behavior in mind when using macros:
 - **Comment stripping:** Grafana strips SQL comments (`--` line comments and `/* */` block comments) before expanding macros. Macros placed inside comments aren't expanded.
 - **TimescaleDB mode:** When the **TimescaleDB** toggle is enabled in the data source configuration, `$__timeGroup` and `$__timeGroupAlias` use the PostgreSQL `time_bucket()` function instead of `floor(extract(epoch ...))`.
 - **Trailing comma pattern:** A `$__timeGroup(...)` call followed immediately by a comma (`,`) is automatically treated as `$__timeGroupAlias(...)`, adding the `AS "time"` alias. This is a legacy convenience. Use `$__timeGroupAlias` explicitly for clarity.
-- **Inspect expanded SQL:** To view the final SQL after macro expansion, open the [Query inspector](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/#query-inspector) in a panel and check the query that was sent to the database.
+- **Inspect expanded SQL:** To view the final SQL after macro expansion, open the [Query inspector](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#query-inspector) in a panel and check the query that was sent to the database.
 
 ## Table queries
 
@@ -122,7 +122,7 @@ INNER JOIN "user" on "user".id = dashboard.created_by
 WHERE $__timeFilter(dashboard.created)
 ```
 
-You can use [template variables](https://grafana.com/docs/grafana/v13.2/datasources/postgres/template-variables/) in queries to create dynamic, reusable dashboards. For example, to filter by a variable named `hostname`:
+You can use [template variables](https://grafana.com/docs/grafana/v13.3/datasources/postgres/template-variables/) in queries to create dynamic, reusable dashboards. For example, to filter by a variable named `hostname`:
 
 ```sql
 SELECT
@@ -136,7 +136,7 @@ WHERE
 ORDER BY time
 ```
 
-For more information on creating and using template variables with PostgreSQL, refer to [PostgreSQL template variables](https://grafana.com/docs/grafana/v13.2/datasources/postgres/template-variables/).
+For more information on creating and using template variables with PostgreSQL, refer to [PostgreSQL template variables](https://grafana.com/docs/grafana/v13.3/datasources/postgres/template-variables/).
 
 ### Table query with time range columns
 
@@ -232,7 +232,7 @@ Data frame result:
 +---------------------+-----------------+
 ```
 
-To customize default series name formatting, refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#display-name).
+To customize default series name formatting, refer to [Standard options definitions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/#display-name).
 
 Following are time series query examples.
 
@@ -263,7 +263,7 @@ GROUP BY time, hostname
 ORDER BY time
 ```
 
-Based on the data frame result in the following example, the time series panel generates two series named *value 10.0.1.1* and *value 10.0.1.2*. To display the series names as *10.0.1.1* and *10.0.1.2*, use the [Standard options definitions](https://grafana.com/docs/grafana/v13.2/panels-visualizations/configure-standard-options/#display-name) display value `${__field.labels.hostname}`.
+Based on the data frame result in the following example, the time series panel generates two series named *value 10.0.1.1* and *value 10.0.1.2*. To display the series names as *10.0.1.1* and *10.0.1.2*, use the [Standard options definitions](https://grafana.com/docs/grafana/v13.3/panels-visualizations/configure-standard-options/#display-name) display value `${__field.labels.hostname}`.
 
 Data frame result:
 
@@ -338,7 +338,7 @@ Grafana macros are expanded before the query runs, so you can use `$__timeFilter
 
 ## Next steps
 
-- Use [template variables](https://grafana.com/docs/grafana/v13.2/datasources/postgres/template-variables/) to create dynamic, reusable dashboards.
-- Add [annotations](https://grafana.com/docs/grafana/v13.2/datasources/postgres/annotations/) from PostgreSQL to overlay events on your panels.
-- [Set up alerting](https://grafana.com/docs/grafana/v13.2/datasources/postgres/alerting/) to get notified when metrics cross thresholds (time series format only).
-- [Troubleshoot](https://grafana.com/docs/grafana/v13.2/datasources/postgres/troubleshooting/) issues if you encounter problems with queries.
+- Use [template variables](https://grafana.com/docs/grafana/v13.3/datasources/postgres/template-variables/) to create dynamic, reusable dashboards.
+- Add [annotations](https://grafana.com/docs/grafana/v13.3/datasources/postgres/annotations/) from PostgreSQL to overlay events on your panels.
+- [Set up alerting](https://grafana.com/docs/grafana/v13.3/datasources/postgres/alerting/) to get notified when metrics cross thresholds (time series format only).
+- [Troubleshoot](https://grafana.com/docs/grafana/v13.3/datasources/postgres/troubleshooting/) issues if you encounter problems with queries.

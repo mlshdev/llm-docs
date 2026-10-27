@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/influxdb/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/influxdb/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/influxdb/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/influxdb/troubleshooting/index.md)
 
 # Troubleshoot InfluxDB data source issues
 
-This document provides solutions to common issues you may encounter when configuring or using the InfluxDB data source. Issues are organized to follow the typical setup and usage workflow. For configuration instructions, refer to [Configure the InfluxDB data source](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/configure/).
+This document provides solutions to common issues you may encounter when configuring or using the InfluxDB data source. Issues are organized to follow the typical setup and usage workflow. For configuration instructions, refer to [Configure the InfluxDB data source](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/configure/).
 
 ## Connection errors
 
@@ -77,7 +77,7 @@ The following errors occur when Grafana can't establish or maintain a connection
 
 **Solution:**
 
-1. The InfluxDB data source supports TLS configuration for each data source instance. In the data source settings, expand **Auth and TLS/SSL Settings**, enable **CA cert**, and paste your CA certificate. Refer to [Auth and TLS/SSL settings](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/configure/#auth-and-tlsssl-settings) for details.
+1. The InfluxDB data source supports TLS configuration for each data source instance. In the data source settings, expand **Auth and TLS/SSL Settings**, enable **CA cert**, and paste your CA certificate. Refer to [Auth and TLS/SSL settings](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/configure/#auth-and-tlsssl-settings) for details.
 2. If your InfluxDB server requires client certificates, enable **TLS client auth** and provide the server name, client certificate, and client key.
 3. As a last resort, you can enable **Skip TLS verify** to bypass certificate validation. Grafana doesn't recommend this for production use because it disables protection against man-in-the-middle attacks.
 
@@ -485,7 +485,7 @@ The following issues occur when using template variables with InfluxDB queries.
 
 1. Add a time condition to the variable query, such as `WHERE $timeFilter` for InfluxQL or `WHERE $__timeFilter(time)` for SQL.
 2. Set the variable's **Refresh** option to **On time range change**.
-3. Refer to [Scope variables to the dashboard time range](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/template-variables/#scope-variables-to-the-dashboard-time-range) for examples.
+3. Refer to [Scope variables to the dashboard time range](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/template-variables/#scope-variables-to-the-dashboard-time-range) for examples.
 
 ### Multi-select variable breaks the query
 
@@ -495,7 +495,7 @@ The following issues occur when using template variables with InfluxDB queries.
 
 1. For InfluxQL, use the `=~` operator and wrap the variable in a regular expression: `"hostname" =~ /^$host$/`.
 2. For SQL, use the `IN` operator: `host IN ($host)`.
-3. Refer to [Choose a variable syntax](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/template-variables/#choose-a-variable-syntax) for working examples.
+3. Refer to [Choose a variable syntax](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/template-variables/#choose-a-variable-syntax) for working examples.
 
 ### Variable values are escaped unexpectedly
 
@@ -503,7 +503,7 @@ The following issues occur when using template variables with InfluxDB queries.
 
 **Solution:**
 
-Use the `raw` format option, such as `${path:raw}`, to interpolate the literal value without escaping. Refer to [Prevent unwanted value escaping](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/template-variables/#prevent-unwanted-value-escaping) for details.
+Use the `raw` format option, such as `${path:raw}`, to interpolate the literal value without escaping. Refer to [Prevent unwanted value escaping](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/template-variables/#prevent-unwanted-value-escaping) for details.
 
 ### Variable drop-down contains a blank or duplicate entry
 
@@ -570,7 +570,7 @@ The following issues don't produce specific error messages but are commonly enco
 
 **Solution:**
 
-1. As a workaround, add the [Convert field type](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/#convert-field-type) transformation to the panel and convert the field to **Number**.
+1. As a workaround, add the [Convert field type](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/#convert-field-type) transformation to the panel and convert the field to **Number**.
 2. To fix the root cause, correct the data type at write time. InfluxDB can't change the type of an existing field, so you may need to write the data to a new field or measurement.
 3. In older Grafana versions, the **Convert field type** transformation converted null values to zeros. Current versions preserve null values. If you see nulls displayed as zeros after conversion, upgrade Grafana.
 
@@ -590,7 +590,7 @@ The following issues don't produce specific error messages but are commonly enco
 **Solution:**
 
 1. Group by the tags that make each series unique, such as `GROUP BY "hostname"`.
-2. Use alias patterns such as `$tag_hostname` in the **ALIAS** field so each series has a unique display name. Refer to [Alias patterns](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/query-editor/#alias-patterns) for details.
+2. Use alias patterns such as `$tag_hostname` in the **ALIAS** field so each series has a unique display name. Refer to [Alias patterns](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/query-editor/#alias-patterns) for details.
 3. Use the panel inspector to confirm each returned series has a distinct name.
 
 ### Slow query performance
@@ -621,7 +621,7 @@ The following issues don't produce specific error messages but are commonly enco
 1. Increase the dashboard refresh interval or turn off auto-refresh where it isn't needed.
 2. Reduce the number of panels and queries per dashboard.
 3. Increase the **Min time interval** setting to reduce the resolution of each query.
-4. In Grafana Enterprise and Grafana Cloud, enable [query caching](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/#query-and-resource-caching) so identical queries within the cache window are served from cache instead of hitting InfluxDB.
+4. In Grafana Enterprise and Grafana Cloud, enable [query caching](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/#query-and-resource-caching) so identical queries within the cache window are served from cache instead of hitting InfluxDB.
 5. To confirm whether traffic originates from your Grafana Cloud instance, compare the source IP addresses against the [Grafana Cloud allowlist](https://grafana.com/docs/grafana-cloud/platform/security-and-account-management/security-and-access/allow-list/).
 
 ### Data appears delayed or missing recent points

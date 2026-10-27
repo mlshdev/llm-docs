@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-okta/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-okta/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-okta/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/setup-grafana/configure-access/configure-scim-provisioning/configure-scim-with-okta/_index.md)
 
 # Configure SCIM with Okta
 
 > **Note**
 >
-> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.2/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
+> Available in [Grafana Enterprise](https://grafana.com/docs/grafana/v13.3/introduction/grafana-enterprise/) and [Grafana Cloud](https://grafana.com/docs/grafana-cloud/).
 
 This guide explains how to configure SCIM provisioning with Okta to automate user and team management in Grafana.
 
@@ -14,16 +14,16 @@ Before configuring SCIM with Okta, ensure you have:
 
 - Grafana Enterprise or a paid Grafana Cloud account with SCIM provisioning enabled.
 - Admin access to both Grafana and Okta
-- [SAML authentication configured with Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/)
+- [SAML authentication configured with Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/)
 - SCIM feature enabled in Grafana
 
 > **Note**
 >
 > **Important SAML and SCIM Configuration:**
 > When using SAML for authentication alongside SCIM provisioning with Okta, it is crucial to correctly align user identifiers.
-> For detailed information on why this is critical for security and how to configure it, refer to the main [SCIM provisioning documentation](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-scim-provisioning/).
+> For detailed information on why this is critical for security and how to configure it, refer to the main [SCIM provisioning documentation](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-scim-provisioning/).
 >
-> Ensure your Okta SAML application is configured to send a stable, unique identifier (that will map to the Grafana SCIM `externalId`) as a SAML claim. Then, configure the Grafana SAML settings to use this claim. For general Okta SAML setup, refer to [Set up SAML with Okta](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/).
+> Ensure your Okta SAML application is configured to send a stable, unique identifier (that will map to the Grafana SCIM `externalId`) as a SAML claim. Then, configure the Grafana SAML settings to use this claim. For general Okta SAML setup, refer to [Set up SAML with Okta](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/).
 
 ## Configure SCIM in Grafana
 
@@ -33,11 +33,12 @@ To enable SCIM provisioning in Grafana, create a service account and generate an
 
 1. Navigate to **Administration > Users and access > Service accounts**
 2. Click **Add service account**
-3. Create the service account with a name (for example, "SCIM provisioning").
-4. In the **Roles** dropdown, select the following roles for the service account:
-   - **User administration** — required for user sync (create, read, update, and remove users in the organization)
-   - **Teams** — required for group sync (create, read, update, and delete teams, and manage team memberships)
-5. Create a new token for the service account and save it securely. This token will be used in the Okta configuration.
+3. Enter a display name for the service account (for example, "SCIM provisioning").
+4. In the **Role** picker, set the basic role to **No basic role**.
+5. In the same **Role** picker, select the following roles for the service account:
+   - **User administration: Writer (organizational)** — required for user sync (create, read, update, and remove users in the organization)
+   - **Teams: Writer** — required for group sync (create, read, update, and delete teams, and manage team memberships)
+6. Create a new token for the service account and save it securely. This token will be used in the Okta configuration.
 
 ## Configure SCIM in Okta
 

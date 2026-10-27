@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/jaeger/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/jaeger/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/jaeger/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/jaeger/_index.md)
 
 # Jaeger data source
 
@@ -20,9 +20,9 @@ Grafana ships with the Jaeger data source preinstalled in both Grafana OSS and E
 
 The following documents help you set up and use the Jaeger data source:
 
-- [Configure the Jaeger data source](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/configure/)
-- [Jaeger query editor](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/query-editor/)
-- [Troubleshoot Jaeger data source issues](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/troubleshooting/)
+- [Configure the Jaeger data source](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/configure/)
+- [Jaeger query editor](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/query-editor/)
+- [Troubleshoot Jaeger data source issues](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/troubleshooting/)
 
 ## Plugin updates
 
@@ -30,12 +30,12 @@ Starting with Grafana v13.2, the Jaeger data source is a standalone plugin, prei
 
 To adjust this behavior:
 
-- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/).
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
 - **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
 
 The standalone plugin requires Grafana 12.3.0 or later. The Jaeger data source bundled with Grafana 12.2 and earlier continues to work as before. These versions are unaffected by the change.
 
-If you run Grafana 12.3.x through 13.1.x, you can install the standalone plugin from the plugin catalog to get the latest features before you upgrade to Grafana 13.2. To use the standalone plugin with these versions, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/):
+If you run Grafana 12.3.x through 13.1.x, you can install the standalone plugin from the plugin catalog to get the latest features before you upgrade to Grafana 13.2. To use the standalone plugin with these versions, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/):
 
 ```ini
 [plugin.jaeger]
@@ -52,11 +52,11 @@ preinstall_sync = jaeger
 
 After configuring the data source, you can:
 
-- Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to query traces without building a dashboard.
-- Enable the [Node Graph visualization](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/node-graph/) to display trace structure and service dependencies.
-- Configure [trace to logs](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/configure/#trace-to-logs) to link spans to log entries in Loki or Splunk.
-- Configure [trace to metrics](https://grafana.com/docs/grafana/v13.2/datasources/jaeger/configure/#trace-to-metrics) to navigate from traces to related metrics.
-- Link to Jaeger traces from [logs](https://grafana.com/docs/grafana/v13.2/datasources/loki/configure-loki-data-source/#derived-fields) using derived fields or from [metrics](https://grafana.com/docs/grafana/v13.2/fundamentals/exemplars/) using exemplars.
+- Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to query traces without building a dashboard.
+- Enable the [Node Graph visualization](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/node-graph/) to display trace structure and service dependencies.
+- Configure [trace to logs](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/configure/#trace-to-logs) to link spans to log entries in Loki or Splunk.
+- Configure [trace to metrics](https://grafana.com/docs/grafana/v13.3/datasources/jaeger/configure/#trace-to-metrics) to navigate from traces to related metrics.
+- Link to Jaeger traces from [logs](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure-loki-data-source/#derived-fields) using derived fields or from [metrics](https://grafana.com/docs/grafana/v13.3/fundamentals/exemplars/) using exemplars.
 
 ## Related resources
 

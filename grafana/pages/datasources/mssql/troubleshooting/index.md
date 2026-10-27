@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/mssql/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/mssql/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mssql/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mssql/troubleshooting/index.md)
 
 # Troubleshoot Microsoft SQL Server data source issues
 
@@ -17,7 +17,7 @@ These errors occur when setting up or accessing the data source configuration in
 **Solution:**
 
 1. Ask an organization administrator to grant you the `Organization administrator` role, or assign you a custom RBAC role with data source write permissions.
-2. Alternatively, ask an administrator to configure the data source on your behalf or use [provisioning](https://grafana.com/docs/grafana/v13.2/administration/provisioning/) to define the data source in YAML.
+2. Alternatively, ask an administrator to configure the data source on your behalf or use [provisioning](https://grafana.com/docs/grafana/v13.3/administration/provisioning/) to define the data source in YAML.
 
 ## Connection errors
 
@@ -157,7 +157,7 @@ These errors occur when using Grafana Cloud with Private data source connect to 
 3. Install and configure a PDC agent on a host in your private network that can reach the SQL Server on port 1433.
 4. Ensure the PDC agent host allows outbound connections on port 22 to the Grafana Cloud PDC endpoint.
 
-For setup instructions, refer to [Connect to on-premises SQL Server from Grafana Cloud](https://grafana.com/docs/grafana/v13.2/datasources/mssql/configure/#connect-to-on-premises-sql-server-from-grafana-cloud).
+For setup instructions, refer to [Connect to on-premises SQL Server from Grafana Cloud](https://grafana.com/docs/grafana/v13.3/datasources/mssql/configure/#connect-to-on-premises-sql-server-from-grafana-cloud).
 
 ## Authentication errors
 
@@ -313,7 +313,7 @@ These errors occur when there are issues with authentication credentials or perm
    - Verify the app registration is configured to issue both Access Tokens and ID Tokens.
    - Check that the required API permissions are configured (`user_impersonation` for Azure SQL).
 
-For detailed Azure authentication configuration, refer to [Configure the Microsoft SQL Server data source](https://grafana.com/docs/grafana/v13.2/datasources/mssql/configure/).
+For detailed Azure authentication configuration, refer to [Configure the Microsoft SQL Server data source](https://grafana.com/docs/grafana/v13.3/datasources/mssql/configure/).
 
 ## Query errors
 
@@ -390,7 +390,7 @@ These errors occur when there are issues with query syntax or configuration.
 3. Verify the stored procedure parameters are being passed correctly.
 4. Test the stored procedure directly in SQL Server Management Studio with the same parameters.
 
-For more information on using stored procedures, refer to the [query editor documentation](https://grafana.com/docs/grafana/v13.2/datasources/mssql/query-editor/).
+For more information on using stored procedures, refer to the [query editor documentation](https://grafana.com/docs/grafana/v13.3/datasources/mssql/query-editor/).
 
 ## Performance issues
 
@@ -459,7 +459,7 @@ Refer to [Connection pool exhaustion](#connection-pool-exhaustion) in the Perfor
 3. Check that the query returns data within the alert evaluation time range.
 4. Test the query in Explore with a fixed time range to confirm it returns results.
 
-For more information, refer to [Microsoft SQL Server alerting](https://grafana.com/docs/grafana/v13.2/datasources/mssql/alerting/).
+For more information, refer to [Microsoft SQL Server alerting](https://grafana.com/docs/grafana/v13.3/datasources/mssql/alerting/).
 
 ## Template variable errors
 
@@ -484,7 +484,7 @@ These errors occur when using template variables in queries.
 
 1. Remove manual quotes around the variable: use `WHERE col IN ($var)` instead of `WHERE col IN ('${var}')`.
 2. For single-value comparisons, use the `sqlstring` format: `WHERE col = ${var:sqlstring}`.
-3. Refer to [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/mssql/template-variables/) for formatting options.
+3. Refer to [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/mssql/template-variables/) for formatting options.
 
 ## Other common issues
 

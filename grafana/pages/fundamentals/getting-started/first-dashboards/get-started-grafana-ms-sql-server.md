@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-ms-sql-server.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-ms-sql-server.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-ms-sql-server.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/getting-started/first-dashboards/get-started-grafana-ms-sql-server.md)
 
 # Get started with Grafana and MS SQL Server
 
@@ -87,6 +87,6 @@ Optionally, play around this dashboard and customize it to:
 
 Now that you have gained some idea of using the pre-packaged MS SQL data source and some test data, the next step is to setup your own instance of MS SQL Server database and data your development or sandbox area.
 
-To fetch data from your own instance of MS SQL Server, add the data source using instructions in Step 4 of this topic. In Grafana [Explore](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/explore/) build queries to experiment with the metrics you want to monitor.
+To fetch data from your own instance of MS SQL Server, add the data source using instructions in Step 4 of this topic. In Grafana [Explore](https://grafana.com/docs/grafana/v13.3/fundamentals/getting-started/explore/) build queries to experiment with the metrics you want to monitor.
 
-Once you have a curated list of queries, create [dashboards](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/dashboards/) to render metrics from the SQL Server database. For troubleshooting, user permissions, known issues, and query examples, refer to [Using Microsoft SQL Server in Grafana](https://grafana.com/docs/grafana/v13.2/fundamentals/getting-started/datasources/mssql/).
+Once you have a curated list of queries, create [dashboards](https://grafana.com/docs/grafana/v13.3/fundamentals/getting-started/dashboards/) to render metrics from the SQL Server database. For troubleshooting, user permissions, known issues, and query examples, refer to [Using Microsoft SQL Server in Grafana](https://grafana.com/docs/grafana/v13.3/fundamentals/getting-started/datasources/mssql/).

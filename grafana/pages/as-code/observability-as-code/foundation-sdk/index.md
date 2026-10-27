@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/observability-as-code/foundation-sdk/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/observability-as-code/foundation-sdk/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/observability-as-code/foundation-sdk/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/observability-as-code/foundation-sdk/_index.md)
 
 # Get started with the Grafana Foundation SDK
 
@@ -24,7 +24,7 @@ As you build more advanced dashboards, you’ll work with additional builders an
 The SDK supports not just panels and queries, but also variables, thresholds, field overrides, transformations, and more.
 Refer to [the full API reference](https://grafana.github.io/grafana-foundation-sdk/) to explore what's possible.
 
-Refer to [Foundation SDK key concepts](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/foundation-sdk/foundation-sdk-key-concepts) for a more extensive explanation, and read on to see these concepts in action.
+Refer to [Foundation SDK key concepts](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/foundation-sdk/foundation-sdk-key-concepts) for a more extensive explanation, and read on to see these concepts in action.
 
 ## Before you begin
 
@@ -166,7 +166,7 @@ After you've defined your dashboard as code, build the final dashboard represent
 With the JSON payload, you can:
 
 - **Manually import:** Paste into Grafana’s dashboard import feature.
-- **Automate:** Use the [Grafana API](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/), the [Grafana CLI](https://grafana.com/docs/grafana/v13.2/grafana-cli/), or [Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync) to programmatically upload the dashboard JSON.
+- **Automate:** Use the [Grafana API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/), the [Grafana CLI](https://grafana.com/docs/grafana/v13.3/grafana-cli/), or [Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync) to programmatically upload the dashboard JSON.
 
 ## Explore a real-world example
 
@@ -184,5 +184,5 @@ Now that you understand the basics of using the Grafana Foundation SDK, here are
 
 - **Explore more features:** Check out the [full API reference](https://grafana.github.io/grafana-foundation-sdk/) to learn about advanced dashboard configurations.
 - **Version control your dashboards:** Store your dashboard code in a Git repository to track changes over time.
-- **Automate dashboard provisioning with CI/CD:** [Integrate the SDK into your CI/CD pipeline](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/foundation-sdk/dashboard-automation/) to deploy dashboards automatically.
-- **Learn about [Grafana Git Sync](https://grafana.com/docs/grafana/v13.2/as-code/observability-as-code/git-sync)**, which lets you synchronize your resources so you can store your dashboards as JSON files stored in GitHub and manage them as code.
+- **Automate dashboard provisioning with CI/CD:** [Integrate the SDK into your CI/CD pipeline](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/foundation-sdk/dashboard-automation/) to deploy dashboards automatically.
+- **Learn about [Grafana Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/git-sync)**, which lets you synchronize your resources so you can store your dashboards as JSON files stored in GitHub and manage them as code.

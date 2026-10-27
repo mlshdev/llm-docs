@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/testdata/troubleshooting/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/testdata/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/testdata/troubleshooting/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/testdata/troubleshooting/index.md)
 
 # Troubleshoot TestData data source issues
 
@@ -108,7 +108,7 @@ The Flaky Query scenario returns errors for a configurable percentage of request
 
 1. Adjust the **Error rate** field to control how often requests fail. Set it to `0` for no errors or `100` to fail every request.
 2. Use the **Status code** and **Error source** fields to shape the returned error.
-3. If you're using Flaky Query with an alert rule, be aware that intermittent failures can flip the rule between states across evaluations. For alerting behavior, refer to [TestData alerting](https://grafana.com/docs/grafana/v13.2/datasources/testdata/alerting/).
+3. If you're using Flaky Query with an alert rule, be aware that intermittent failures can flip the rule between states across evaluations. For alerting behavior, refer to [TestData alerting](https://grafana.com/docs/grafana/v13.3/datasources/testdata/alerting/).
 
 ## CSV and data input errors
 
@@ -174,7 +174,7 @@ These errors occur with the Streaming Client and Grafana Live scenarios.
 
 ## Template variable errors
 
-These errors occur when using TestData with [dashboard template variables](https://grafana.com/docs/grafana/v13.2/datasources/testdata/template-variables/).
+These errors occur when using TestData with [dashboard template variables](https://grafana.com/docs/grafana/v13.3/datasources/testdata/template-variables/).
 
 ### Variable drop-down is empty
 
@@ -216,7 +216,7 @@ These errors occur when using TestData with [dashboard template variables](https
 
 ## Alerting errors
 
-These errors occur when using TestData with [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/datasources/testdata/alerting/).
+These errors occur when using TestData with [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/datasources/testdata/alerting/).
 
 ### Alert rule shows "no data" unexpectedly
 
@@ -256,7 +256,7 @@ These errors occur when using TestData with [Grafana Alerting](https://grafana.c
 
 Grafana evaluates alert rules on the backend without dashboard context. Template variables like `$varname` aren't resolved during alert evaluation. Replace variable references with fixed values in the scenario options.
 
-For more information, refer to the [alerting limitations](https://grafana.com/docs/grafana/v13.2/datasources/testdata/alerting/#template-variables-arent-supported-in-alert-queries).
+For more information, refer to the [alerting limitations](https://grafana.com/docs/grafana/v13.3/datasources/testdata/alerting/#template-variables-arent-supported-in-alert-queries).
 
 ### Alert evaluation timeout
 

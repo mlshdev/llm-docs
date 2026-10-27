@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/azure-monitor/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/azure-monitor/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/azure-monitor/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/azure-monitor/_index.md)
 
 # Azure Monitor data source
 
@@ -41,21 +41,21 @@ The Azure Monitor data source supports the following Azure services:
 
 The following documents help you get started with the Azure Monitor data source:
 
-- [Configure the Azure Monitor data source](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/configure/) - Set up authentication and connect to Azure
-- [Azure Monitor query editor](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/query-editor/) - Create and edit queries for Metrics, Logs, Traces, and Resource Graph
-- [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/template-variables/) - Create dynamic dashboards with Azure Monitor variables
-- [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/alerting/) - Create alert rules using Azure Monitor data
-- [Troubleshooting](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/troubleshooting/) - Solve common configuration and query errors
+- [Configure the Azure Monitor data source](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/configure/) - Set up authentication and connect to Azure
+- [Azure Monitor query editor](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/query-editor/) - Create and edit queries for Metrics, Logs, Traces, and Resource Graph
+- [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/template-variables/) - Create dynamic dashboards with Azure Monitor variables
+- [Alerting](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/alerting/) - Create alert rules using Azure Monitor data
+- [Troubleshooting](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/troubleshooting/) - Solve common configuration and query errors
 
 ## Additional features
 
 After you have configured the Azure Monitor data source, you can:
 
-- Add [Annotations](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/annotations/) to overlay Azure log events on your graphs.
-- Configure and use [Template variables](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/template-variables/) for dynamic dashboards.
-- Add [Transformations](https://grafana.com/docs/grafana/v13.2/panels-visualizations/query-transform-data/transform-data/) to manipulate query results.
-- Set up [Alerting](https://grafana.com/docs/grafana/v13.2/datasources/azure-monitor/alerting/) and recording rules using Metrics, Logs, Traces, and Resource Graph queries.
-- Use [Explore](https://grafana.com/docs/grafana/v13.2/explore/) to investigate your Azure data without building a dashboard.
+- Add [Annotations](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/annotations/) to overlay Azure log events on your graphs.
+- Configure and use [Template variables](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/template-variables/) for dynamic dashboards.
+- Add [Transformations](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/transform-data/) to manipulate query results.
+- Set up [Alerting](https://grafana.com/docs/grafana/v13.3/datasources/azure-monitor/alerting/) and recording rules using Metrics, Logs, Traces, and Resource Graph queries.
+- Use [Explore](https://grafana.com/docs/grafana/v13.3/explore/) to investigate your Azure data without building a dashboard.
 
 ## Pre-built dashboards
 
@@ -108,6 +108,74 @@ Always ensure that your plugin version is up-to-date so you have access to all c
 > **Note**
 >
 > Plugins are automatically updated in Grafana Cloud.
+
+[//]: # "Shared note: querying a data source with the gcx Grafana CLI."
+
+[//]: # "This shared file is included in these locations:"
+
+[//]: # "/docs/sources/datasources/aws-cloudwatch/_index.md"
+
+[//]: # "/docs/sources/datasources/azure-monitor/_index.md"
+
+[//]: # "/docs/sources/datasources/elasticsearch/_index.md"
+
+[//]: # "/docs/sources/datasources/google-cloud-monitoring/_index.md"
+
+[//]: # "/docs/sources/datasources/influxdb/_index.md"
+
+[//]: # "/docs/sources/datasources/loki/_index.md"
+
+[//]: # "/docs/sources/datasources/mssql/_index.md"
+
+[//]: # "/docs/sources/datasources/mysql/_index.md"
+
+[//]: # "/docs/sources/datasources/postgres/_index.md"
+
+[//]: # "/docs/sources/datasources/prometheus/_index.md"
+
+[//]: # "/docs/sources/datasources/pyroscope/_index.md"
+
+[//]: # "/docs/sources/datasources/tempo/_index.md"
+
+[//]: #
+
+[//]: # "If you make changes to this file, verify that the meaning and content are not changed in any place where the file is included."
+
+[//]: # "Any links should be fully qualified and not relative: /docs/grafana/ instead of ../grafana/."
+
+## Query with the Grafana CLI
+
+You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
+
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+
+For example, to explore and query your Azure Monitor data source, use the `gcx datasources azuremonitor` commands:
+
+```sh
+# Discover subscriptions, resource groups, and resources
+gcx datasources azuremonitor list-subscriptions -d <DATASOURCE_UID>
+gcx datasources azuremonitor list-resource-groups -d <DATASOURCE_UID> --subscription <SUBSCRIPTION_ID>
+gcx datasources azuremonitor list-resources -d <DATASOURCE_UID> --subscription <SUBSCRIPTION_ID> --resource-group my-rg
+
+# List the metrics available for a resource
+gcx datasources azuremonitor list-metrics -d <DATASOURCE_UID> --subscription <SUBSCRIPTION_ID> \
+  --resource-group my-rg --namespace Microsoft.Compute/virtualMachines --resource my-vm
+
+# Run a structured metrics query
+gcx datasources azuremonitor query -d <DATASOURCE_UID> --subscription <SUBSCRIPTION_ID> \
+  --resource-group my-rg --namespace Microsoft.Compute/virtualMachines --resource my-vm \
+  --metric 'Percentage CPU' --aggregation Average --since 1h
+
+# Query a Log Analytics workspace with KQL
+gcx datasources azuremonitor logs query 'AppRequests | take 10' -d <DATASOURCE_UID> \
+  --subscription <SUBSCRIPTION_ID> --resource-group my-rg --workspace my-workspace
+
+# Query Azure Resource Graph with KQL
+gcx datasources azuremonitor resource-graph query 'Resources | project name, type | limit 10' \
+  -d <DATASOURCE_UID> --subscription <SUBSCRIPTION_ID>
+```
+
+Replace *`<DATASOURCE_UID>`* with the UID of your Azure Monitor data source and *`<SUBSCRIPTION_ID>`* with an Azure subscription ID. You can omit the `-d` flag when `datasources.azuremonitor` is configured in your `gcx` context. Metrics queries are structured rather than expression-based, so `--subscription`, `--resource-group`, `--namespace`, `--resource`, and `--metric` are required, while `logs query` and `resource-graph query` take KQL. Data sources configured with **Current User** authentication can't be queried with API tokens or service accounts.
 
 ## Related resources
 

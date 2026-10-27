@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md)
 
 # Create dashboards
 
@@ -7,7 +7,7 @@ Each panel needs at least one query to display a visualization.
 
 **Before you begin:**
 
-- Ensure that you have the proper permissions. For more information about permissions, refer to [About users and permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/).
+- Ensure that you have the proper permissions. For more information about permissions, refer to [About users and permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/).
 - Understand the query language of the target data source.
 
 ## Create a dashboard
@@ -34,20 +34,20 @@ To create a dashboard, follow these steps:
 
    > **Note**
    >
-   > [Saved queries](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries) is only available on Grafana Enterprise and Grafana Cloud.
+   > [Saved queries](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries) is only available on Grafana Enterprise and Grafana Cloud.
 
 2. If you want to change the panel data source, in the **Queries** tab, click the **Data source** drop-down list and do one of the following:
 
    - Select one of your existing data sources.
-   - Click **Open advanced data source picker** to select one of the Grafana [built-in special data sources](https://grafana.com/docs/grafana/v13.2/datasources/#special-data-sources) or to configure a new data source (Admins only).
+   - Click **Open advanced data source picker** to select one of the Grafana [built-in special data sources](https://grafana.com/docs/grafana/v13.3/datasources/#special-data-sources) or to configure a new data source (Admins only).
 
-   For more information about data sources, refer to [Data sources](https://grafana.com/docs/grafana/v13.2/datasources/) for specific guidelines.
+   For more information about data sources, refer to [Data sources](https://grafana.com/docs/grafana/v13.3/datasources/) for specific guidelines.
 
 3. To create a query, do one of the following:
    - Write or construct a query in the query language of your data source.
-   - Open the **Saved queries** drop-down menu and click **Replace query** to reuse a [saved query](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#saved-queries).
+   - Open the **Saved queries** drop-down menu and click **Replace query** to reuse a [saved query](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#saved-queries).
 
-4. (Optional) To [save the query](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/query-transform-data/#save-a-query) for reuse, click the **Saved queries** drop-down menu and select **Save query**.
+4. (Optional) To [save the query](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#save-a-query) for reuse, click the **Saved queries** drop-down menu and select **Save query**.
 
 5. Click **Refresh** to query the data source.
 
@@ -57,27 +57,27 @@ To create a dashboard, follow these steps:
 
 Grafana displays a preview of your query results with the visualization applied.
 
-For more information about configuring individual visualizations, refer to [Visualizations options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/).
+For more information about configuring individual visualizations, refer to [Visualizations options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/).
 
 1. (Optional) If the panel supports it, choose an option from the **Panel styles** section in the panel editor sidebar. Each style shows a live preview of how it changes the visualization. Clicking a style applies it to the panel.
 
-   For more information about Panel styles, refer to the [Panel editor documentation](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/panel-editor-overview/#panel-styles).
+   For more information about Panel styles, refer to the [Panel editor documentation](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/panel-editor-overview/#panel-styles).
 
 2. Refer to the following documentation for ways you can adjust panel settings.
 
    While not required, most visualizations need some adjustment before they properly display the information that you need.
 
-   - [Configure standard options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-standard-options/)
-   - [Visualization-specific options](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/visualizations/)
-   - [Configure value mappings](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-value-mappings/)
-   - [Configure thresholds](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-thresholds/)
-   - [Override field values](https://grafana.com/docs/grafana/v13.2/visualizations/panels-visualizations/configure-overrides/)
+   - [Configure standard options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-standard-options/)
+   - [Visualization-specific options](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/visualizations/)
+   - [Configure value mappings](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-value-mappings/)
+   - [Configure thresholds](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-thresholds/)
+   - [Override field values](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/configure-overrides/)
 
-3. Enter a title and description for the panel or have Grafana create them using [generative AI features](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
+3. Enter a title and description for the panel or have Grafana create them using [generative AI features](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
 
 4. Click **Save**.
 
-5. Enter a title and description for the dashboard or have Grafana create them using [generative AI features](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
+5. Enter a title and description for the dashboard or have Grafana create them using [generative AI features](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/manage-dashboards/#set-up-generative-ai-features-for-dashboards).
 
 6. Select a folder, if applicable.
 
@@ -114,13 +114,13 @@ Hover your cursor over the numbers to display descriptions of the toolbar option
 
 **Edit as code**: Edit the dashboard JSON. Click again to close. Edit mode only.
 
-**Export**: Click to display [export](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/share-dashboards-panels/#export-dashboards) options.
+**Export**: Click to display [export](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/share-dashboards-panels/#export-dashboards) options.
 
 **Content outline**: Navigate a dashboard using the [Content outline](#navigate-using-the-content-outline).
 
 **Filters overview**: Open the filters overview drawer.
 
-**Dashboard insights**: View [dashboard analytics](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/assess-dashboard-usage/) including information about users, activity, and query counts.
+**Dashboard insights**: View [dashboard analytics](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/assess-dashboard-usage/) including information about users, activity, and query counts.
 
 **Hide**: Click to hide the sidebar and toolbar.
 
@@ -191,13 +191,16 @@ To edit a dashboard, follow these steps:
 
 3. Do one of the following:
 
-   | Update                 | Action                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-   | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | Edit existing elements | <p>Click the element to open the sidebar showing the relevant options. Click the **Dashboard options** icon to access dashboard settings.</p><p>If the dashboard is large, open the **Content outline** and use it to navigate to the part of the dashboard you want to update.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-   | Add more panels        | <p>Click the **Add new element** icon and select **Panel**.</p><p>You can also hover your cursor on the dashboard to display the **Add panel** button. This is helpful if you want to ensure that you add a new panel within a grouping.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-   | Group panels           | <p>Click **Add new element** and select **Add row/Group into rows** or **Add tab/Group into tabs**.</p><p>Alternatively hover your cursor on the dashboard to display the **Group panels** and select a grouping option or select a specific set of panels and group them into rows or tabs.</p><p>For more information on groupings, refer to [Panel groupings](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-groupings/).</p>                                                                                                                                                                                                                                                   |
-   | Add dashboard controls | Click **Add new element** and select one of the following: <ul><li>[Filter and Group by](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-filters-and-group-by-controls)</li><li>[Variable](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables)</li><li>[Annotation query](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-annotation-queries)</li><li>[Link](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-links)</li></ul> |
-   | Change layouts         | Click a row, tab, or the **Dashboard options** icon to open the sidebar and access layout options. For more information, refer to [panel layout options](#panel-layouts).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+   | Update                  | Action                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+   | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | Edit dashboard settings | Click the **Dashboard options** icon to access dashboard settings in the sidebar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+   | Add more panels         | <p>Click the **Add new element** icon and select **Panel**.</p><p>You can also hover your cursor on the dashboard to display the **Add panel** button. This is helpful if you want to ensure that you add a new panel within a grouping.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+   | Add dashboard controls  | Click **Add new element** and select one of the following: <ul><li>[Filter and Group by](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-filters-and-group-by-controls)</li><li>[Variable](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables)</li><li>[Annotation query](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-annotation-queries)</li><li>[Link](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-links)</li></ul> |
+   | Group panels            | <p>Click the **Add new element** icon and select **Add row/Group into rows** or **Add tab/Group into tabs**.</p><p>Alternatively hover your cursor on the dashboard to display the **Group panels** button and select a grouping option or select a specific set of panels and group them into rows or tabs.</p><p>For more information on groupings, refer to [Panel groupings](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-groupings/).</p>                                                                                                                                                                                                                                   |
+   | Edit panels             | <p>Hover your cursor over any part of a panel to display the actions tooltip, which has the following options: **Settings**, **Edit visualization**, **Copy**, **Duplicate**, **Delete**.</p><p>Click **Settings** to access high-level panel options in the sidebar, or **Edit visualization** to open the panel editor.</p>                                                                                                                                                                                                                                                                                                                                                                                                                    |
+   | Edit dashboard controls | <p>Hover your cursor over any part of a dashboard control to display the actions tooltip, which has the following options: **Settings**, **Duplicate**, and **Delete**. Click **Settings** to access options in the sidebar. For some controls, the tooltip also includes an **Edit query** or **Edit values** option.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+   | Edit rows and tabs      | Click a row or tab to access grouping settings in the sidebar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+   | Change layouts          | Click a row, tab, or the **Dashboard options** icon to open the sidebar and access layout options. For more information, refer to [panel layout options](#panel-layouts).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 4. When you've finished making changes, click **Save**.
 
@@ -228,7 +231,7 @@ There are default parameters to constrain the layout, and you can update these t
 - **Min column width**: Choose from **Standard**, **Narrow**, **Wide**, or **Custom**, for which you can enter the minimum width in pixels.
 - **Max columns**: Set a number up to 10.
 - **Row height**: Choose from **Standard**, **Short**, **Tall**, and **Custom**, for which you can enter the row height in pixels.
-- **Fill screen**: Toggle the switch on to have the panel fill the entire height of the screen. If the panel is in a row, the **Fill screen** toggle for the row must also be enabled (refer to [grouping configuration options](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-groupings/#grouping-configuration-options).
+- **Fill screen**: Toggle the switch on to have the panel fill the entire height of the screen. If the panel is in a row, the **Fill screen** toggle for the row must also be enabled (refer to [grouping configuration options](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-groupings/#grouping-configuration-options).
 
 If you try to resize a panel in auto grid layout, a dialog box opens with the following options:
 
@@ -294,7 +297,7 @@ To configure repeats, follow these steps:
 
 ### Repeating rows and tabs and the Dashboard special data source
 
-If a row includes panels using the special [Dashboard data source](https://grafana.com/docs/grafana/v13.2/datasources/#special-data-sources)—the data source that uses a result set from another panel in the same dashboard—then corresponding panels in repeated rows will reference the panel in the original row, not the ones in the repeated rows.
+If a row includes panels using the special [Dashboard data source](https://grafana.com/docs/grafana/v13.3/datasources/#special-data-sources)—the data source that uses a result set from another panel in the same dashboard—then corresponding panels in repeated rows will reference the panel in the original row, not the ones in the repeated rows.
 The same behavior applies to tabs.
 
 For example, in a dashboard:
@@ -347,7 +350,7 @@ You can select any variable that's configured for the dashboard and choose from 
 - Matches (regular expression values)
 - Not matches (regular expression values)
 
-You can [add more variables](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables) if you need to without leaving the dashboard.
+You can [add more variables](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/create-dashboard/dashboard-controls/#add-variables) if you need to without leaving the dashboard.
 
 ### Time range less than rule
 

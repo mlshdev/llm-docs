@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/developer-resources/api-reference/http-api/secrets_management.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/developer-resources/api-reference/http-api/secrets_management.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/secrets_management.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/secrets_management.md)
 
 # Secrets Management API
 
@@ -6,7 +6,7 @@
 >
 > Available in Grafana 12 and later.
 >
-> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.2/developer-resources/api-reference/http-api/apis).
+> This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis).
 >
 > **This document may not contain the latest version of the API. For the most up-to-date list of available endpoints, refer to [secret.grafana.app/v1](https://play.grafana.org/swagger?api=secret.grafana.app-v1beta1) in Swagger.**
 
@@ -18,7 +18,7 @@ The Grafana Secrets Management API allows you to manage secrets that are used by
 
 ## Requirements
 
-If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Decrypters
 
@@ -38,7 +38,7 @@ Creates a new secure value.
 
 **URL parameters**
 
-- `namespace`: To read more about which namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To read more about which namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 
 **Request body**
 
@@ -120,7 +120,7 @@ List all secure values in a namespace.
 
 **URL parameters**
 
-- `namespace`: To read more about which namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To read more about which namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 
 **Query parameters**
 
@@ -190,7 +190,7 @@ Get the details of a specific secure value. It will not return the secret value.
 
 **URL parameters**
 
-- `namespace`: To read more about which namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To read more about which namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - `name`: The name of the secure value.
 
 **Required permissions**
@@ -250,7 +250,7 @@ Replace an existing secure value with a new specification.
 
 **URL parameters**
 
-- `namespace`: To read more about which namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To read more about which namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - `name`: The name of the secure value.
 
 **Request body**
@@ -327,7 +327,7 @@ Permanently delete a secure value. This also deletes the underlying stored secre
 
 **URL parameters**
 
-- `namespace`: To read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.2/developers/http_api/apis/).
+- `namespace`: To read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developers/http_api/apis/).
 - `name`: The name of the secure value.
 
 **Required permissions**

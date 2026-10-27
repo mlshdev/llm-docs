@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/trace-configurations.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/trace-configurations.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/trace-configurations.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/trace-configurations.md)
 
 # Configure trace correlation using Terraform
 
@@ -280,6 +280,6 @@ After applying the Terraform configuration, verify that:
 ## Related documentation
 
 - [Configure traces correlation in Knowledge Graph](https://grafana.com/docs/grafana-cloud/knowledge-graph/configure/traces-correlation/)
-- [Get started with Terraform for Knowledge Graph](https://grafana.com/docs/grafana/v13.2/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
+- [Get started with Terraform for Knowledge Graph](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/)
 - [Tempo documentation](https://grafana.com/docs/tempo/latest/)
 - [OpenTelemetry semantic conventions](https://opentelemetry.io/docs/specs/semconv/)

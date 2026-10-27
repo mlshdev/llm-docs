@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/parca/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/parca/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/parca/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/parca/configure/index.md)
 
 # Configure the Parca data source
 
@@ -104,12 +104,12 @@ Click **Save & test** to verify that Grafana can connect to your Parca instance.
 
 **Data source is working**.
 
-If the test fails, verify that the URL is correct and that your Parca instance is running and accessible from the Grafana server. For more help, refer to [Troubleshoot Parca data source issues](https://grafana.com/docs/grafana/v13.2/datasources/parca/troubleshooting/).
+If the test fails, verify that the URL is correct and that your Parca instance is running and accessible from the Grafana server. For more help, refer to [Troubleshoot Parca data source issues](https://grafana.com/docs/grafana/v13.3/datasources/parca/troubleshooting/).
 
 ## Provision the data source
 
 You can define the data source in YAML files as part of the Grafana provisioning system.
-For more information, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### YAML provisioning example
 
@@ -177,4 +177,4 @@ Replace the following:
 
 ## Next steps
 
-- [Query profiling data with the Parca query editor](https://grafana.com/docs/grafana/v13.2/datasources/parca/query-editor/)
+- [Query profiling data with the Parca query editor](https://grafana.com/docs/grafana/v13.3/datasources/parca/query-editor/)

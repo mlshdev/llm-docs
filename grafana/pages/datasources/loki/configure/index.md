@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/loki/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/loki/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/loki/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/loki/configure/index.md)
 
 # Configure the Loki data source
 
-This document explains how to configure the Loki data source and describes the available configuration options. For general information on adding and managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+This document explains how to configure the Loki data source and describes the available configuration options. For general information on adding and managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 Grafana includes built-in support for Loki, so you don't need to install a plugin.
 
@@ -98,17 +98,17 @@ Configure additional HTTP behavior for requests to Loki.
 
 #### Secure Socks Proxy
 
-The **Secure Socks Proxy** settings appear only when the secure SOCKS data source proxy is enabled in the Grafana configuration file. When enabled, you can route data source requests through a secure SOCKS proxy. For more information, refer to [Configure a data source connection proxy](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/proxy/).
+The **Secure Socks Proxy** settings appear only when the secure SOCKS data source proxy is enabled in the Grafana configuration file. When enabled, you can route data source requests through a secure SOCKS proxy. For more information, refer to [Configure a data source connection proxy](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/proxy/).
 
 #### Alerting
 
-Configure how the data source works with [Grafana Alerting](https://grafana.com/docs/grafana/v13.2/alerting/).
+Configure how the data source works with [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting/).
 
 | Setting                               | Description                                                                                                                                                                                                      |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Manage alert rules in Alerting UI** | Toggle on to manage data source-managed alert rules for the Loki data source in the Grafana Alerting UI. These rules are stored and evaluated by the Loki ruler. The default follows your Grafana configuration. |
 
-To manage other alerting resources, such as the alerts these rules generate, add an [Alertmanager data source](https://grafana.com/docs/grafana/v13.2/datasources/alertmanager/). For more information on alerting with Loki, refer to [Loki alerting](https://grafana.com/docs/grafana/v13.2/datasources/loki/alerting/).
+To manage other alerting resources, such as the alerts these rules generate, add an [Alertmanager data source](https://grafana.com/docs/grafana/v13.3/datasources/alertmanager/). For more information on alerting with Loki, refer to [Loki alerting](https://grafana.com/docs/grafana/v13.3/datasources/loki/alerting/).
 
 #### Queries
 
@@ -122,7 +122,7 @@ Configure query behavior for the data source.
 
 Use derived fields to extract new fields from your logs and create a link from the value of the field.
 
-For example, you can link to your tracing backend directly from your logs, or link to a user profile page when a log line contains a corresponding `userId`. These links appear in the [log details](https://grafana.com/docs/grafana/v13.2/explore/logs-integration/#labels-and-detected-fields).
+For example, you can link to your tracing backend directly from your logs, or link to a user profile page when a log line contains a corresponding `userId`. These links appear in the [log details](https://grafana.com/docs/grafana/v13.3/explore/logs-integration/#labels-and-detected-fields).
 
 You can add multiple derived fields.
 
@@ -170,7 +170,7 @@ The new field with the link appears in the log details:
 
 ## Verify the connection
 
-Click **Save & test** at the bottom of the settings. Grafana attempts to connect to your Loki server and query its labels. When the test succeeds, Grafana displays a success message confirming the data source is working. If the test fails, review the error message and refer to [Troubleshoot Loki issues](https://grafana.com/docs/grafana/v13.2/datasources/loki/troubleshooting/).
+Click **Save & test** at the bottom of the settings. Grafana attempts to connect to your Loki server and query its labels. When the test succeeds, Grafana displays a success message confirming the data source is working. If the test fails, review the error message and refer to [Troubleshoot Loki issues](https://grafana.com/docs/grafana/v13.3/datasources/loki/troubleshooting/).
 
 > **Note**
 >
@@ -178,7 +178,7 @@ Click **Save & test** at the bottom of the settings. Grafana attempts to connect
 
 ## Provision the data source
 
-You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+You can define and configure the data source in YAML files as part of the Grafana provisioning system. For more information about provisioning, and for available configuration options, refer to [Provisioning Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 ### Provisioning examples
 

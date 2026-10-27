@@ -1,15 +1,15 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/visualizations/dashboards/manage-dashboards/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/visualizations/dashboards/manage-dashboards/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/manage-dashboards/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/manage-dashboards/index.md)
 
 # Manage dashboards
 
 On the **Dashboards** page, you can perform dashboard management tasks such as:
 
 - [Browsing](#browse-dashboards) and [creating](#create-a-dashboard-folder) dashboard folders
-- [Working with team folders](https://grafana.com/docs/grafana/v13.2/administration/team-management/team-folders/)
+- [Working with team folders](https://grafana.com/docs/grafana/v13.3/administration/team-management/team-folders/)
 - [Managing folder permissions](#folder-permissions)
 - [Adding generative AI features to dashboards](#set-up-generative-ai-features-for-dashboards)
 
-For more information about creating dashboards, refer to [Build dashboards](https://grafana.com/docs/grafana/v13.2/dashboards/build-dashboards/).
+For more information about creating dashboards, refer to [Build dashboards](https://grafana.com/docs/grafana/v13.3/dashboards/build-dashboards/).
 
 ## Browse dashboards
 
@@ -19,7 +19,7 @@ On the **Dashboards** page, you can browse and manage folders and dashboards. Th
 - Move dashboards between folders.
 - Delete multiple dashboards and folders.
 - Navigate to a folder.
-- Manage folder permissions. For more information, refer to [Dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#dashboard-permissions).
+- Manage folder permissions. For more information, refer to [Dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#dashboard-permissions).
 
 The page lists all the dashboards to which you have access, grouped into folders. Dashboards without a folder are displayed at the top level alongside folders.
 
@@ -33,13 +33,13 @@ If you have permission to view all folders, you won't see a **Shared with me**.
 
 If you belong to teams that own folders, the **Dashboards** page displays a **My team folders** section near the top of the page.
 
-For more information, refer to [Manage team folders](https://grafana.com/docs/grafana/v13.2/administration/team-management/team-folders/).
+For more information, refer to [Manage team folders](https://grafana.com/docs/grafana/v13.3/administration/team-management/team-folders/).
 
 ## Create a dashboard folder
 
 Folders help you organize and group dashboards, which is useful when you have many dashboards or multiple teams using the same Grafana instance.
 
-> **Before you begin:** Ensure you have permission to create root-level folders, or Edit or Admin access to a parent folder to create subfolders. For more information about dashboard permissions, refer to [Dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#dashboard-permissions).
+> **Before you begin:** Ensure you have permission to create root-level folders, or Edit or Admin access to a parent folder to create subfolders. For more information about dashboard permissions, refer to [Dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#dashboard-permissions).
 
 **To create a dashboard folder:**
 
@@ -82,7 +82,7 @@ You can assign permissions to a folder. Dashboards in the folder inherit any per
 
 Changes are saved automatically.
 
-For more information about dashboard permissions, refer to [Dashboard permissions](https://grafana.com/docs/grafana/v13.2/administration/roles-and-permissions/#dashboard-permissions).
+For more information about dashboard permissions, refer to [Dashboard permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#dashboard-permissions).
 
 ## Dashboard and folder deletion
 
@@ -93,8 +93,7 @@ For more information about dashboard permissions, refer to [Dashboard permission
 ## Restore deleted dashboards
 
 When you delete dashboards, they’re stored in the deletion history for up to 12 months, allowing you to restore them if needed.
-The deletion history can contain a maximum of 1000 dashboards.
-After this limit is reached, the oldest deleted dashboards are permanently removed even if the 12-month expiration period isn't over yet.
+After 12 months, Grafana permanently removes them.
 
 You can access the list of deleted dashboards from the **Dashboards** page by clicking the **Recently deleted** button, or by navigating to **Dashboards > Recently deleted**.
 

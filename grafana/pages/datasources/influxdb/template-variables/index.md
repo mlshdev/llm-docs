@@ -1,15 +1,15 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/influxdb/template-variables/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/influxdb/template-variables/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/influxdb/template-variables/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/influxdb/template-variables/index.md)
 
 # InfluxDB template variables
 
 Instead of hard-coding details such as server, application, and sensor names in metric queries, you can use variables. Grafana displays these variables in drop-down select boxes at the top of the dashboard to help you change the data displayed in your dashboard. Grafana refers to such variables as template variables.
 
-For general information about variables, refer to [Variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/).
+For general information about variables, refer to [Variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/) and [Add and manage variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/).
 
 ## Before you begin
 
-- [Configure the InfluxDB data source](https://grafana.com/docs/grafana/v13.2/datasources/influxdb/configure/).
-- Understand [Grafana template variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/).
+- [Configure the InfluxDB data source](https://grafana.com/docs/grafana/v13.3/datasources/influxdb/configure/).
+- Understand [Grafana template variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/).
 
 ## Supported variable types
 
@@ -20,7 +20,7 @@ For general information about variables, refer to [Variables](https://grafana.co
 | Data source   | Yes                 |
 | Ad-hoc filter | Yes (InfluxQL only) |
 
-To switch a dashboard between InfluxDB instances, use a data source variable. Don't use a query variable that returns data source names as a workaround. Query-based workarounds can break after Grafana upgrades because they depend on internal identifiers. Refer to [Add a data source variable](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#add-a-data-source-variable) for details.
+To switch a dashboard between InfluxDB instances, use a data source variable. Don't use a query variable that returns data source names as a workaround. Query-based workarounds can break after Grafana upgrades because they depend on internal identifiers. Refer to [Add a data source variable](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#add-a-data-source-variable) for details.
 
 ## Where you can use variables
 
@@ -38,7 +38,7 @@ Variable support differs by query editor and mode:
 
 By adding a query template variable, you can write an InfluxDB metadata exploration query. These queries return results such as measurement names, key names, and key values.
 
-For more information, refer to [Add a query variable](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#add-a-query-variable).
+For more information, refer to [Add a query variable](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#add-a-query-variable).
 
 ### InfluxQL query variable examples
 
@@ -112,7 +112,7 @@ SELECT DISTINCT hostname FROM cpu WHERE $__timeFilter(time)
 
 ## Chain or nest variables
 
-You can create nested variables, sometimes called [chained variables](https://grafana.com/docs/grafana/v13.2/dashboards/variables/add-template-variables/#chained-variables).
+You can create nested variables, sometimes called [chained variables](https://grafana.com/docs/grafana/v13.3/dashboards/variables/add-template-variables/#chained-variables).
 
 For example, if you have a variable named `region`, you can configure the `hosts` variable to display only hosts from the selected region.
 
@@ -143,7 +143,7 @@ To add filters:
 5. Select an option in the **Display** drop-down list to control where on the dashboard the filter is displayed.
 6. Select your InfluxDB data source in the **Data source** drop-down list.
 
-For more information, refer to the [Filter and Group by documentation](https://grafana.com/docs/grafana/v13.2/visualizations/dashboards/build-dashboards/filter-group-by/).
+For more information, refer to the [Filter and Group by documentation](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/build-dashboards/filter-group-by/).
 
 ## Choose a variable syntax
 
@@ -190,7 +190,7 @@ When you use a variable inside a regular expression, or when the variable is mul
 SELECT mean("value") FROM "requests" WHERE "path" = '${path:raw}' AND $timeFilter GROUP BY time($__interval)
 ```
 
-This is useful for custom variables whose values intentionally contain characters that Grafana would otherwise escape. For all available format options, refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.2/dashboards/variables/variable-syntax/#advanced-variable-format-options).
+This is useful for custom variables whose values intentionally contain characters that Grafana would otherwise escape. For all available format options, refer to [Advanced variable format options](https://grafana.com/docs/grafana/v13.3/dashboards/variables/variable-syntax/#advanced-variable-format-options).
 
 ### Templated dashboard example
 

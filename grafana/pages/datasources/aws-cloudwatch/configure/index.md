@@ -1,8 +1,8 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/datasources/aws-cloudwatch/configure/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/datasources/aws-cloudwatch/configure/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/configure/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/configure/index.md)
 
 # Configure the Amazon CloudWatch data source
 
-This document provides instructions for configuring the Amazon CloudWatch data source and explains available configuration options. For general information on adding and managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.2/administration/data-source-management/).
+This document provides instructions for configuring the Amazon CloudWatch data source and explains available configuration options. For general information on adding and managing data sources, refer to [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/).
 
 ## Before you begin
 
@@ -49,7 +49,7 @@ The following are configuration options for the CloudWatch data source.
 Grafana plugin requests to AWS are made on behalf of an AWS Identity and Access Management (IAM) role or IAM user.
 The IAM user or IAM role must have the associated policies to perform certain API actions.
 
-For authentication options and configuration details, refer to [AWS authentication](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/).
+For authentication options and configuration details, refer to [AWS authentication](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/).
 
 | Setting                     | Description                                                                                                                                                                                                                  |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -111,7 +111,7 @@ The **Proxy Configuration** settings appear only when per-data source HTTP proxy
 | --------------- | ------------------------------------------------------------------- |
 | **Data source** | Select the Application Signals data source from the drop-down menu. |
 
-Grafana automatically creates a link to a trace in Application Signals data source if logs contain the `@xrayTraceId` field. To use this feature, you must already have an Application Signals data source configured. For details, refer to the [Application Signals data source docs](https://grafana.com/docs/plugins/grafana-x-ray-datasource/latest/). To view the Application Signals link, select the log row in either the Explore view or dashboard [Logs panel](https://grafana.com/docs/grafana/v13.2/panels-visualizations/visualizations/logs/) to view the log details section.
+Grafana automatically creates a link to a trace in Application Signals data source if logs contain the `@xrayTraceId` field. To use this feature, you must already have an Application Signals data source configured. For details, refer to the [Application Signals data source docs](https://grafana.com/docs/plugins/grafana-x-ray-datasource/latest/). To view the Application Signals link, select the log row in either the Explore view or dashboard [Logs panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/logs/) to view the log details section.
 
 To log the `@xrayTraceId`, refer to the [AWS Application Signals documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html). To provide the field to Grafana, your log queries must also contain the `@xrayTraceId` field, for example by using the query `fields @message, @xrayTraceId`.
 
@@ -137,7 +137,7 @@ After configuring your Amazon CloudWatch data source options, click **Save & tes
 ### IAM policy examples
 
 To read CloudWatch metrics and EC2 tags, instances, regions, and alarms, you must grant Grafana permissions via IAM.
-You can attach these permissions to the IAM role or IAM user you configured in [AWS authentication](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/).
+You can attach these permissions to the IAM role or IAM user you configured in [AWS authentication](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/).
 
 **Metrics-only permissions:**
 
@@ -290,7 +290,7 @@ You can attach these permissions to the IAM role or IAM user you configured in [
 >
 > Cross-account observability lets you retrieve metrics and logs across different accounts in a single region, but you can't query EC2 Instance Attributes across accounts because those come from the EC2 API and not the CloudWatch API.
 
-For more information on configuring authentication, refer to [Configure AWS authentication](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/).
+For more information on configuring authentication, refer to [Configure AWS authentication](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/).
 
 ### Permissions reference
 
@@ -314,7 +314,7 @@ The following table explains why each permission is needed and whether it's requ
 | `tag:GetResources`                                                                                   | Resolves resource ARNs for the Resource ARNs template variable.                                        | Optional. Only needed for Resource ARNs template variables.           |
 | `oam:ListSinks`, `oam:ListAttachedLinks`                                                             | Discovers linked accounts for CloudWatch cross-account observability.                                  | Optional. Only needed for cross-account observability.                |
 
-When you use an **Assume Role ARN**, attach these query permissions to the assumed role. The primary credentials only need permission to perform `sts:AssumeRole`. For details, refer to [Assume a role](https://grafana.com/docs/grafana/v13.2/datasources/aws-cloudwatch/aws-authentication/#assume-a-role).
+When you use an **Assume Role ARN**, attach these query permissions to the assumed role. The primary credentials only need permission to perform `sts:AssumeRole`. For details, refer to [Assume a role](https://grafana.com/docs/grafana/v13.3/datasources/aws-cloudwatch/aws-authentication/#assume-a-role).
 
 ### CloudWatch Logs data protection
 
@@ -322,7 +322,7 @@ CloudWatch Logs can protect data by applying log group data protection policies.
 
 ### Configure the data source with grafana.ini
 
-The Grafana [configuration file](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-grafana/#aws) includes an `AWS` section where you can configure data source options:
+The Grafana [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/#aws) includes an `AWS` section where you can configure data source options:
 
 | Configuration option                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -334,7 +334,7 @@ The Grafana [configuration file](https://grafana.com/docs/grafana/v13.2/setup-gr
 ### Provision the data source
 
 You can define and configure the data source in YAML files as part of the Grafana provisioning system.
-For more information about provisioning and available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#data-sources).
+For more information about provisioning and available configuration options, refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#data-sources).
 
 **Using AWS SDK (default)**:
 

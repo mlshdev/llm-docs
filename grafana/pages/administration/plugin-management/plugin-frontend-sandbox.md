@@ -1,28 +1,23 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/plugin-management/plugin-frontend-sandbox.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/plugin-management/plugin-frontend-sandbox.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/plugin-management/plugin-frontend-sandbox.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/plugin-management/plugin-frontend-sandbox.md)
 
-# Isolate plugin code with the Plugin Frontend Sandbox
+# Improve security with the Plugins Frontend Sandbox
 
 > **Caution**
 >
-> Plugin Frontend Sandbox is currently in [public preview](https://grafana.com/docs/release-life-cycle/). Grafana Labs offers limited support, and breaking changes might occur prior to the feature being made generally available.
+> The Plugin Frontend Sandbox [public preview](https://grafana.com/docs/release-life-cycle/) has been deprecated and will
+> be removed in Grafana 13.4.
 
-The Plugin Frontend Sandbox is a security feature that isolates plugin frontend code from the main Grafana application. When enabled, plugins run in a separate JavaScript context, which provides several security benefits:
-
-- Prevents plugins from modifying parts of the Grafana interface outside their designated areas
-- Stops plugins from interfering with other plugins functionality
-- Protects core Grafana features from being altered by plugins
-- Prevents plugins from modifying global browser objects and behaviors
+The Plugin Frontend Sandbox helps keep a plugin's frontend code focused on the plugin's own area of the Grafana interface.
 
 Plugins running inside the Frontend Sandbox should continue to work normally without any noticeable changes in their intended functionality.
 
-## When to use the Plugin Frontend Sandbox
+## Intended use
 
-We strongly recommend enabling the Frontend Sandbox for plugins that allow users to write custom JavaScript code for data visualization or manipulation, since they can potentially execute arbitrary JavaScript code in your Grafana instance. The sandbox provides an additional layer of security by restricting what this code can access and modify.
+The Frontend Sandbox affects how a plugin interacts with the Grafana interface by adding extra controls to reduce the browser capabilities available to plugin code running within Grafana.
 
-These are examples of plugins where the sandbox is particularly useful:
-
-- Panel plugins that allow users to write custom JavaScript code
-- Plugins from untrusted sources
+> **Warning**
+>
+> Never install plugins from sources you do not trust.
 
 ## Compatibility and requirements
 
@@ -48,5 +43,5 @@ If a plugin isn't functioning correctly with the Frontend Sandbox enabled:
 
 1. Temporarily disable the sandbox for that specific plugin
 2. Test if the plugin works correctly without the sandbox
-3. If the plugin only works with the sandbox disabled, ensure you trust the plugin source before continuing to use it without sandbox protection
+3. If the plugin only works with the sandbox disabled, confirm the plugin comes from a source you trust before continuing to use it
 4. Report any sandbox-related issues to the plugin developer

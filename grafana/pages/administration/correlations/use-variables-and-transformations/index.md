@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.4: [docs/sources/administration/correlations/use-variables-and-transformations/index.md](https://github.com/grafana/grafana/blob/af4a33e3786594ad72f72d97e6744010330c2977/docs/sources/administration/correlations/use-variables-and-transformations/index.md)
+> Pinned source for Grafana v13.3.0: [docs/sources/administration/correlations/use-variables-and-transformations/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/correlations/use-variables-and-transformations/index.md)
 
 # Use variables and transformations in a correlation
 
@@ -66,7 +66,7 @@ Instructions below show how to set up a link that can run metrics query for the 
        - Required correlation type (query)
        - Target query matching test data source model
      - “App metrics” correlation contains the following configuration:
-       - Alias is set to ${application} variable (note that in provisioning files $ is used to access environment variables so it has to be [escaped](https://grafana.com/docs/grafana/v13.2/administration/provisioning/#using-environment-variables)).
+       - Alias is set to ${application} variable (note that in provisioning files $ is used to access environment variables so it has to be [escaped](https://grafana.com/docs/grafana/v13.3/administration/provisioning/#using-environment-variables)).
        - Regular expression transformation is created to extract values from “msg” field
          - Regular expression transformation is used to capture the application name from the full name of the service stored in the log line.
          - The output of the transformation is mapped to a variable called “application”.
