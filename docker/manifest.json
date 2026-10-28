@@ -8,9 +8,9 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-10-27T20:33:14Z",
-  "documentationDigest": "60cb39e14501b5f2aa66872c5643bef8356613a99487a2bc70d4ad215c820482",
-  "sourceCommit": "370c82d98701ada95ec149a7a8ee8bd469e20bcc",
+  "sourceCommittedAt": "2026-10-28T14:53:29Z",
+  "documentationDigest": "f7667490aa70c8a0b83c7b5f66aebe8bdf66a72f0df3c304bcafa581691ac349",
+  "sourceCommit": "f90928eb2040c4638e188868a612fd47e6a061a4",
   "documentCount": 1692,
   "indexComplete": true,
   "corpusVolumes": [
@@ -18,28 +18,28 @@
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "aba79469315b09ddb72e74914b2e46ee083061d69cb13b165ef05e83c315e264"
+      "sha256": "867dfe43e941a688ebd49c7ad8af96559e690ba9387217ff52560dc53b9e1a55"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8290187,
+      "byteLength": 8298870,
       "documentCount": 817,
-      "sha256": "8570f0f984e9b7de235bbcba855ce2eb1a177642507ac4d4d991712da7dd478a"
+      "sha256": "43fefa77bccc525c35e35f77344a69a65425372d7adc682dd5ede0f98ddd0ca6"
     },
     {
       "name": "llms-full.002.txt",
       "byteLength": 8120730,
       "documentCount": 209,
-      "sha256": "ca9a27f7830fd9bcb8fb61179870a74089cba162c326981ed1a97c24517926e4"
+      "sha256": "5c24109360d09c9bac633343621189f00d91660802caa0d659005388777720c4"
     },
     {
       "name": "llms-full.003.txt",
       "byteLength": 7211282,
       "documentCount": 666,
-      "sha256": "9d4b19e62dd6b23b0a451bc42f1e91ac060d3acb50b2a88dbddfc7050ada4567"
+      "sha256": "967d3d11262bb0d954e937c2d62615c2076ff958757cb71f7637de648801c5ce"
     }
   ],
-  "outputDigest": "d77be67d2ea8a95423fbd30031ff83ebbfa6224d65468f0b09052f04cbf149b9",
+  "outputDigest": "7b87a380065c71d2b9c65eff1a82317a5c584da77f05db4cc9bf9fdd514bfcc1",
   "quarantined": [
     {
       "sourcePath": "content/manuals/ai/sandboxes-api/cookbook/_index.md",

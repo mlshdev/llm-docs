@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/general-settings.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/accounts/organization/manage/general-settings.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/general-settings.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/accounts/organization/manage/general-settings.md)
 
 # Change general organization information
 

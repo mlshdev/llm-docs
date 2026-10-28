@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-scaler.texi](https://github.com/FFmpeg/FFmpeg/blob/ab0eeb03cc63c3399ebcbca68b972586066e3ca9/doc/ffmpeg-scaler.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-scaler.texi](https://github.com/FFmpeg/FFmpeg/blob/0ea6606418c4602a9de5d43657b7b2f56b0f9681/doc/ffmpeg-scaler.texi)
 
 # Description
 

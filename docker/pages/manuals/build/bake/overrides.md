@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/overrides.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/build/bake/overrides.md)
+> Pinned source for Docker main: [content/manuals/build/bake/overrides.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/build/bake/overrides.md)
 
 Bake supports loading build definitions from files, but sometimes you need even
 more flexibility to configure these definitions. For example, you might want to
@@ -272,6 +272,29 @@ must exist in the resulting list. The value describes the complete source
 using `env=...` or `src=...`; it doesn't address an object field such as
 `secret.aws.env`.
 
+### Override resource limits
+
+Use `--set <target>.resource.<name>=<value>` to change a resource limit for
+the containers that run build steps. For example, override memory and CPU
+limits for an `app` target:
+
+```console
+$ docker buildx bake --set app.resource.memory=2g \
+    --set app.resource.cpu-quota=50000 app
+```
+
+Supported names are `memory`, `memory-swap`, `cpu-shares`, `cpu-period`,
+`cpu-quota`, `cpuset-cpus`, and `cpuset-mems`. Each override changes only the
+named limit, preserving other limits from the Bake definition. Resource
+overrides don't support `+=`.
+
+These limits require a BuildKit daemon with per-step resource limit support
+and take effect on Linux. They control resources within a build step, rather
+than how many Bake targets run concurrently. See the
+[`--resource` reference](https://docs.docker.com/reference/cli/docker/buildx/build/#resource) for
+units and supported values, and the
+[`resources` attribute](https://docs.docker.com/build/bake/reference/#targetresources) for file configuration.
+
 ## Variables
 
 Use `--var NAME=value` to override a declared Bake variable for a single
@@ -295,6 +318,10 @@ Bake lets you use environment variables to override the value of a `variable`
 block. Only `variable` blocks can be overridden with environment variables.
 This means you need to define the variables in the bake file and then set the
 environment variable with the same name to override it.
+
+To disable these lookups, set `BUILDX_BAKE_DISABLE_VARS_ENV_LOOKUP=1`; see the
+[variable reference](https://docs.docker.com/build/building/variables/#buildx_bake_disable_vars_env_lookup).
+You can still provide variable values explicitly with `--var NAME=value`.
 
 The following example shows how you can define a `TAG` variable with a default
 value in the Bake file, and override it with an environment variable.

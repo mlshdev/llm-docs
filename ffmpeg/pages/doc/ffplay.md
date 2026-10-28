@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffplay.texi](https://github.com/FFmpeg/FFmpeg/blob/ab0eeb03cc63c3399ebcbca68b972586066e3ca9/doc/ffplay.texi)
+> Pinned source for FFmpeg master: [doc/ffplay.texi](https://github.com/FFmpeg/FFmpeg/blob/0ea6606418c4602a9de5d43657b7b2f56b0f9681/doc/ffplay.texi)
 
 # Synopsis
 
@@ -516,6 +516,9 @@ see time duration syntax.
     show audio waves
   - 2, rdft
     show audio frequency band using RDFT ((Inverse) Real Discrete Fourier Transform)
+  - 3, phase
+    like rdft, with stereo content whose left channel leads in phase shown in
+    blue and whose right channel leads shown in yellow
 
 Default value is "video", if video is not present or cannot be played
 "rdft" is automatically selected.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/ai/sandboxes/configuration/credentials.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/ai/sandboxes/configuration/credentials.md)
 
 # Manage credentials
 
@@ -609,7 +609,7 @@ passing neither:
 sbx secret set [--all-sandboxes | --sandbox SANDBOX] --registry HOST
 ```
 
-- **Host-only** (no scope flag): the `sbx` CLI uses it to pull templates
+- **Host-only** (no scope flag): `sbx` uses it to pull templates
   and kits when creating a sandbox. The credential stays on the host and is
   never available inside the sandbox.
 - **All sandboxes** (`--all-sandboxes`): same as host-only, plus the proxy

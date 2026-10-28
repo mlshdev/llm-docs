@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/orgs-resource-tagging.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/organizations/orgs-resource-tagging.mdx)
+> Pinned source for Runpod main: [organizations/orgs-resource-tagging.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/organizations/orgs-resource-tagging.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/orgs-resource-tagging
 
 # Resource tagging
@@ -14,7 +14,7 @@ Resource tagging is available to organization accounts only. Tags are key-value 
 - The combination of key and value must be unique on a resource.
 - Keys using the `runpod:` prefix are reserved for system use and cannot be created.
 - All org members can view all tags regardless of who created them.
-- Admin and dev roles can create, edit, and delete tags. Basic members can apply existing tags to resources. Billing members can only view tags.
+- Admin and developer roles can create, edit, and delete tags. Contributors can apply existing tags to resources. Billing members can only view tags.
 
 ## System tags
 

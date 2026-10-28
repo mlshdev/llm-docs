@@ -8,20 +8,20 @@
   "repository": "runpod/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-10-26T22:18:41Z",
-  "documentationDigest": "0a3f0eb351f76c36ce7af05e1efb6567f81e40bde5db4958e0f2fa9161288f95",
-  "sourceCommit": "25ec0e5ebf1cdc72fae35ed21b489444a68e9cad",
-  "documentCount": 365,
+  "sourceCommittedAt": "2026-10-28T15:11:42Z",
+  "documentationDigest": "a915c5a875a4a27cb52a2e794257dc73483b3af9190381158f86689ecc6446a4",
+  "sourceCommit": "70e07c1facd0003a81dbdc548e10ae92f96e7c38",
+  "documentCount": 367,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2838697,
-      "documentCount": 365,
-      "sha256": "f571a2cdc784084c82f9bb3c1ed129dbb9cbc64089cff9c90e1dc68cb65084c3"
+      "byteLength": 2861190,
+      "documentCount": 367,
+      "sha256": "1d56a6460c857e4cbd4451769fce7c270fe2d416d909034dad4e643378bdf67a"
     }
   ],
-  "outputDigest": "ad3feda7b443f71f7ace0af08e91335d3a96749249a8ac2664528b0db55bb2a4",
+  "outputDigest": "35caaefe3ab1ea298a07dfbb54235b2c2886cd6605d21b2b9cb1e715da21d8f7",
   "notes": [
     "Pages follow the navigation declared in docs.json at the pinned commit; snippets are inlined into the pages that import them rather than published separately.",
     "API reference pages are rendered from the OpenAPI specification in the directory the page lives under, since the upstream page carries no prose of its own.",

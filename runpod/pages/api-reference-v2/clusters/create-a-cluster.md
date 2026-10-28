@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/create-a-cluster.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/clusters/create-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/create-a-cluster.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/api-reference-v2/clusters/create-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/create-a-cluster
 
 # Create A Cluster
@@ -39,11 +39,11 @@ from a template response.
           - `podCount` (required; integer; minimum: `2`; maximum: `250`): Number of pods (nodes) in the cluster.
         - `name` (required; string; minimum length: `1`)
         - `type` (required; string; enum: `APPLICATION`, `TRAINING`, `SLURM`, `RAY`): Cluster type. TRAINING is the generic distributed-training cluster; SLURM provisions a managed Slurm controller/compute topology; RAY provisions a managed Ray head/worker topology; APPLICATION is a general multi-node application cluster.
-        - `templateId` (string; minimum length: `1`): ID of a pod template to provision every member pod from. The template supplies the container settings (image, args, disk, env, ports) and the container registry credential for private images — the only private-image path for clusters. Mutually exclusive with `image`, `args`, `entrypoint`, `cmd`, `disk`, `env`, `ports`, and `mounts` (rejected with 400). The cluster retains the link: the `template` response field is set. Must be a non-serverless pod template accessible to the caller.
+        - `templateId` (string; minimum length: `1`): ID of a pod template to provision every member pod from. The template supplies the container settings (image, args, disk, env, ports) and the container registry credential for private images — the only private-image path for clusters. Mutually exclusive with `image`, `args`, `entrypoint`, `cmd`, `disk`, `env`, and `ports` (rejected with 400). `mounts` combines with it: the volume in `mounts` is attached to every member pod, overriding the template's volume settings. The cluster retains the link: the `template` response field is set. Must be a non-serverless pod template accessible to the caller.
         - `dataCenterIds` (array): Preferred data centers for placement. Omit or pass an empty array to let the scheduler choose. A cluster is always placed within a single data center.
           - Example: `["US-TX-3"]`
           - `items` (string)
-        - `mounts`: Storage mounts for a cluster create: `persistent` or `network`, not both. Clusters cannot mount global volumes, so `global` is rejected with 422.
+        - `mounts`: Storage mounts for a cluster create: `persistent` or `network`, not both. Clusters cannot mount global volumes, so `global` is rejected with 422. A mount `path` must not be empty (rejected with 422): upstream reads an empty path as unset and would mount the volume at the template's path, or `/workspace` without a template.
           - allOf:
             - `variant 1` (object): The mount kinds every resource that takes `mounts` shares. At-most-one of `persistent` or `network` may be set today (mutually exclusive, enforced at the handler with 400 if both are present). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. Left open so that concrete schemas can extend it and close themselves.
               - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
@@ -53,6 +53,12 @@ from a template response.
                 - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
                   - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
                   - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
+            - `variant 2` (object)
+              - `persistent` (object)
+                - `path` (string; minimum length: `1`)
+              - `network` (array)
+                - `items` (object)
+                  - `path` (string; minimum length: `1`)
         - `startJupyter` (boolean; default: `false`): Start Jupyter on every member pod, as on pod create.
         - `startSsh` (boolean; default: `false`): Provision SSH access on every member pod: injects a PUBLIC\_KEY environment variable carrying your account's registered SSH public key. Same semantics as the pod create flag.
 

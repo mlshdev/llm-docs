@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/list-clusters.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/clusters/list-clusters.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/list-clusters.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/api-reference-v2/clusters/list-clusters.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/list-clusters
 
 # List Clusters
@@ -79,6 +79,17 @@ newest-first; an omitted `limit` defaults to 1000. Follow
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
+- `413`: The response would exceed the upstream response size cap. Request fewer items and retry; on paginated operations, lower `limit`.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `responseTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Response too large for one request. Request fewer items and retry."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
   - Header `RateLimit` (string)

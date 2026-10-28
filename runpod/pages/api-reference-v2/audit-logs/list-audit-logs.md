@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/audit-logs/list-audit-logs.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/api-reference-v2/audit-logs/list-audit-logs.mdx)
+> Pinned source for Runpod main: [api-reference-v2/audit-logs/list-audit-logs.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/api-reference-v2/audit-logs/list-audit-logs.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/audit-logs/list-audit-logs
 
 # List Audit Logs
@@ -81,6 +81,17 @@ Returns the account's audit trail, newest first, cursor-paginated; an omitted `l
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
+- `413`: The response would exceed the upstream response size cap. Request fewer items and retry; on paginated operations, lower `limit`.
+  - Header `RateLimit` (string)
+  - Header `RateLimit-Policy` (string)
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `responseTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Response too large for one request. Request fewer items and retry."}`
 - `422`: The request body or parameters were syntactically valid but failed validation.
   - Header `RateLimit` (string)
   - Header `RateLimit-Policy` (string)

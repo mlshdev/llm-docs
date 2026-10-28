@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/dual-mode-worker.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/serverless/development/dual-mode-worker.mdx)
+> Pinned source for Runpod main: [serverless/development/dual-mode-worker.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/serverless/development/dual-mode-worker.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/dual-mode-worker
 
 # Pod-first development

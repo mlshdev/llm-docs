@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/copy-a-file-into-a-cloud-sandbox.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/ai/sandboxes-api/cookbook/copy-a-file-into-a-cloud-sandbox.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/copy-a-file-into-a-cloud-sandbox.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/ai/sandboxes-api/cookbook/copy-a-file-into-a-cloud-sandbox.md)
 
 # Copy a file into a cloud sandbox
 

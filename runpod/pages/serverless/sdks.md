@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/sdks.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/serverless/sdks.mdx)
+> Pinned source for Runpod main: [serverless/sdks.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/serverless/sdks.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/sdks
 
 # Install the Runpod Serverless SDK

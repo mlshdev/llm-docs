@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/orgs-billing.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/organizations/orgs-billing.mdx)
+> Pinned source for Runpod main: [organizations/orgs-billing.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/organizations/orgs-billing.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/orgs-billing
 
 # Billing
@@ -11,7 +11,7 @@ Organizations are billed on a post-paid invoice model. Usage from all members ac
 
 Billing Explorer shows resource usage broken down by member, resource type, and time period. All members with access can open it from **Billing** in the console left nav.
 
-Admin and billing roles see usage for all org members. Dev members see their own usage only.
+Admin and billing roles see usage for all org members. Developer members see their own usage only.
 
 ## Cost centers
 

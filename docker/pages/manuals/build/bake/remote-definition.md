@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/remote-definition.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/build/bake/remote-definition.md)
+> Pinned source for Docker main: [content/manuals/build/bake/remote-definition.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/build/bake/remote-definition.md)
 
 You can build Bake files directly from a remote Git repository or HTTPS URL:
 
@@ -195,3 +195,9 @@ use the following environment variables to configure Bake's authentication strat
 - [`BUILDX_BAKE_GIT_AUTH_TOKEN`](https://docs.docker.com/build/building/variables/#buildx_bake_git_auth_token)
 - [`BUILDX_BAKE_GIT_AUTH_HEADER`](https://docs.docker.com/build/building/variables/#buildx_bake_git_auth_header)
 - [`BUILDX_BAKE_GIT_SSH`](https://docs.docker.com/build/building/variables/#buildx_bake_git_ssh)
+
+For HTTP authentication, Bake also uses these credentials for Git build
+contexts on the same host as the remote definition. Private Git contexts on
+other hosts need separate credentials. See the
+[token reference](https://docs.docker.com/build/building/variables/#buildx_bake_git_auth_token)
+for details.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/build/building/variables.md)
+> Pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/build/building/variables.md)
 
 In Docker Build, build arguments (`ARG`) and environment variables (`ENV`)
 both serve as a means to pass information into the build process.
@@ -298,7 +298,9 @@ They're used to configure the Buildx client, or the BuildKit daemon.
 | [BUILDKIT\_HOST](#buildkithost)                                             | String            | Specify host to use for remote builders.                        |
 | [BUILDKIT\_PROGRESS](#buildkitprogress)                                     | String            | Configure type of progress output.                              |
 | [BUILDKIT\_TTY\_LOG\_LINES](#buildkitttyloglines)                           | String            | Number of log lines (for active steps in TTY mode).             |
+| [BUILDX\_BAKE\_DISABLE\_VARS\_ENV\_LOOKUP](#buildxbakedisablevarsenvlookup) | Boolean           | Disable environment lookups in Bake definitions.                |
 | [BUILDX\_BAKE\_FILE](#buildxbakefile)                                       | String            | Specify the build definition file(s) for `docker buildx bake`.  |
+| [BUILDX\_BAKE\_FILE\_RELATIVE\_PATHS](#buildxbakefilerelativepaths)         | Boolean           | Resolve local build contexts from their definition file.        |
 | [BUILDX\_BAKE\_FILE\_SEPARATOR](#buildxbakefileseparator)                   | String            | Specify the file-path separator for `BUILDX_BAKE_FILE`.         |
 | [BUILDX\_BAKE\_GIT\_ADVICE](#buildxbakegitadvice)                           | Boolean           | Show Git advice when fetching remote Bake definitions.          |
 | [BUILDX\_BAKE\_GIT\_AUTH\_HEADER](#buildxbakegitauthheader)                 | String            | HTTP authentication scheme for remote Bake files.               |
@@ -431,6 +433,28 @@ Example:
 }
 ```
 
+### BUILDX\_BAKE\_DISABLE\_VARS\_ENV\_LOOKUP
+
+Set `BUILDX_BAKE_DISABLE_VARS_ENV_LOOKUP=1` to prevent Bake definitions from
+reading variable values from the process environment. For HCL input, this
+disables environment overrides of declared variables. It also disables the
+implicit environment lookup for `--set app.arg.NAME` when no value is given.
+
+For example, keep the Bake file's default `TAG` even when the shell defines
+a `TAG` environment variable:
+
+```console
+$ BUILDX_BAKE_DISABLE_VARS_ENV_LOOKUP=1 TAG=dev docker buildx bake --print
+```
+
+You can still pass values explicitly with `--var TAG=dev` or
+`--set app.arg.NAME=value`.
+
+For Compose input, this setting excludes the process environment from variable
+interpolation. Bake still loads `.env` from the working directory and accepts
+explicit `--var` values. The setting doesn't disable environment variables
+used to configure Buildx itself, such as `BUILDX_BUILDER`.
+
 ### BUILDX\_BAKE\_FILE
 
 **Buildx bake file requirements**
@@ -457,6 +481,30 @@ export BUILDX_BAKE_FILE=file1.hcl@file2.hcl
 If both `BUILDX_BAKE_FILE` and the `-f` flag are set, only the files provided via `-f` are used.
 
 If a listed file does not exist or is invalid, bake returns an error.
+
+### BUILDX\_BAKE\_FILE\_RELATIVE\_PATHS
+
+By default, Bake resolves local directory paths in `target.context` and
+`target.contexts` from the directory where you run the command. Set
+`BUILDX_BAKE_FILE_RELATIVE_PATHS=1` to resolve these paths from the definition
+file instead.
+
+For HCL files, each path is relative to the Bake file that defines it. An
+omitted `context` uses `.` relative to the file that defines the target.
+For Compose input, paths are relative to the first Compose file's directory,
+including paths added by override files.
+
+For example, if `build/docker-bake.hcl` contains `context = "./src"`, the
+following command uses `build/src` as its context:
+
+```console
+$ BUILDX_BAKE_FILE_RELATIVE_PATHS=1 \
+    docker buildx bake -f build/docker-bake.hcl
+```
+
+Use the `cwd://` prefix, such as `context = "cwd://src"`, to keep a path
+relative to the invocation directory. Absolute paths, remote URLs, and
+special contexts such as `target:app` keep their existing meaning.
 
 ### BUILDX\_BAKE\_FILE\_SEPARATOR
 
@@ -506,6 +554,10 @@ This is equivalent to the [`GIT_AUTH_HEADER` secret](https://docs.docker.com/bui
 but facilitates the pre-flight authentication in Bake when loading the remote Bake file.
 Supported values are `bearer` (default) and `basic`.
 
+Bake also uses this scheme when authenticating Git build contexts on the
+same host as the remote definition. See
+[`BUILDX_BAKE_GIT_AUTH_TOKEN`](#buildxbakegitauthtoken) for details.
+
 Usage:
 
 ```console
@@ -527,6 +579,21 @@ Usage:
 ```console
 $ export BUILDX_BAKE_GIT_AUTH_TOKEN=$(cat git-token.txt)
 ```
+
+When you build from a remote Bake definition, Bake also uses this token to
+authenticate Git build contexts on the same host. For example, a definition
+fetched from `https://git.example.com/team/app.git` can use the token for a
+Git context on `git.example.com`. Private Git contexts on other hosts need
+separate credentials.
+
+Bake determines which host can use these credentials from the remote
+definition URL.
+
+When you use only local Bake definition files, `BUILDX_BAKE_GIT_AUTH_TOKEN`
+and `BUILDX_BAKE_GIT_AUTH_HEADER` don't provide credentials for Git build
+contexts. Configure
+[Git authentication secrets](https://docs.docker.com/build/building/secrets/#git-authentication-for-remote-contexts)
+for those contexts instead.
 
 ### BUILDX\_BAKE\_GIT\_SSH
 

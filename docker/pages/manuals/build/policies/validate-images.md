@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/validate-images.md](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/content/manuals/build/policies/validate-images.md)
+> Pinned source for Docker main: [content/manuals/build/policies/validate-images.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/build/policies/validate-images.md)
 
 Container images are the most common build inputs. Every `FROM` instruction
 pulls an image, and `COPY --from` references pull additional images. Validating
@@ -384,6 +384,37 @@ This pattern works with any GitHub Actions workflow using Sigstore keyless
 signing. The signature metadata provides cryptographic proof of the build's
 origin. For complete signature verification examples, see [Example
 policies](https://docs.docker.com/build/policies/examples/).
+
+## Validate provenance materials
+
+An image's provenance can expose metadata about its own build dependencies
+through `input.image.provenance.materials`. Use this to check the source of a
+base image, rather than only checking the base image's registry and tag.
+
+The following policy requires the base image's provenance to include a Git
+material with an approved repository and commit:
+
+```rego
+package docker
+
+default allow := false
+
+allow if input.local
+
+allow if {
+  some material in input.image.provenance.materials
+  material.git.remote == "https://github.com/myorg/base.git"
+  material.git.commitChecksum == "0123456789abcdef0123456789abcdef01234567"
+}
+
+decision := {"allow": allow}
+```
+
+Replace the repository and commit with your approved source. This checks for
+at least one matching material; it doesn't restrict other dependencies.
+For image materials, you can also inspect their provenance and nested
+materials. See the [material input reference](https://docs.docker.com/build/policies/inputs/#provenance-materials)
+for supported sources and metadata resolution.
 
 ## Combine multiple checks
 

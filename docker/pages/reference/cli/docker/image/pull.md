@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/engine/docker_image_pull.yaml](https://github.com/docker/docs/blob/370c82d98701ada95ec149a7a8ee8bd469e20bcc/data/cli/engine/docker_image_pull.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_pull.yaml](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/data/cli/engine/docker_image_pull.yaml)
 
 # docker image pull
 

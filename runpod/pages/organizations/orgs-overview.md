@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/orgs-overview.mdx](https://github.com/runpod/docs/blob/25ec0e5ebf1cdc72fae35ed21b489444a68e9cad/organizations/orgs-overview.mdx)
+> Pinned source for Runpod main: [organizations/orgs-overview.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/organizations/orgs-overview.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/orgs-overview
 
 # Organizations
@@ -31,7 +31,7 @@ Organizations are Runpod's enterprise account model, designed for teams that nee
 
 **Membership:** A user can belong to at most one organization. Joining an organization is permanent and mutually exclusive with Team membership. There is no path back to a Team account once you join.
 
-**Roles:** Every member is assigned one of four built-in roles: admin, billing, dev, or basic. There is no owner role; admin is the highest level. Roles control what a member can create, manage, or view across compute, billing, and org settings. See [Roles](https://docs.runpod.io/organizations/org-roles) for the full permissions matrix.
+**Roles:** Every member is assigned one of four built-in roles: admin, billing, developer, or contributor. There is no owner role; admin is the highest level. Roles control what a member can create, manage, or view across compute, billing, and org settings. See [Roles](https://docs.runpod.io/organizations/org-roles) for the full permissions matrix.
 
 **Groups:** Groups are the social unit within an organization. They are leaderless and additive: a member can belong to zero or many groups simultaneously. Only org admins can manage group membership. See [Groups](https://docs.runpod.io/organizations/orgs-groups).
 
