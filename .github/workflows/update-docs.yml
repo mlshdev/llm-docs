@@ -1,20 +1,6 @@
-name: Update and publish documentation
+name: Publish documentation
 
 on:
-  schedule:
-    - cron: "0 20 * * *"
-      timezone: "Europe/Warsaw"
-  workflow_dispatch:
-    inputs:
-      scope:
-        description: "Documentation source scope"
-        type: choice
-        required: true
-        default: "github"
-        options:
-          - "github"
-          - "docc"
-          - "all"
   workflow_call:
     inputs:
       scope:
@@ -29,9 +15,8 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: "release-documentation"
-  cancel-in-progress: false
+# Callers own the release-documentation concurrency group. Declaring it here as
+# well makes GitHub reject every call as a concurrency deadlock.
 
 jobs:
   build:

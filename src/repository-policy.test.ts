@@ -13,6 +13,7 @@ describe("publication policy", () => {
     const sources = await Promise.all(
       [
         ".github/workflows/update-docs.yml",
+        ".github/workflows/update-github-docs.yml",
         "src/cli.ts",
         "src/output.ts",
         "README.md",
