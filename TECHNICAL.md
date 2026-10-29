@@ -70,6 +70,15 @@ CI publishes (update-docs.yml) via an artifact-mediated, write-isolated job
 - **Write isolation.** The scheduled workflow never pushes with `github.token`;
   a separate `commit` job receives an artifact containing exactly the paths
   `bun run src/cli.ts paths` listed, and pushes with `PUBLISH_TOKEN`.
+- **One publisher at a time.** The daily (`github`) and weekly (`docc`) runs
+  both rewrite `sources.lock.json` and the root indexes. Both workflows join
+  the `release-documentation` concurrency group at their own top level, because
+  the group declared inside the reusable `update-docs.yml` does not serialize a
+  `workflow_call` run. A queued run builds from current `main`, not the commit
+  it was triggered on. The `commit` job discards its snapshot if any of its
+  generated paths changed on `main` since that commit, so a run can never
+  revert another run's pins. CI runs `verify:apple` as well as `check`, so a
+  lock that disagrees with a DocC manifest fails on `main`.
 
 ## Development workflow
 
