@@ -10,10 +10,9 @@ permissions:
   contents: read
   issues: write
 
-# The called workflow's own concurrency block does not serialize a run started
-# through workflow_call: on 2026-10-11 the daily run overlapped this one and its
-# publish reverted six DocC pins. Both publishers share one lock file, so the
-# caller has to join the same group itself.
+# Shared with update-github-docs.yml: every scope rewrites the same lock file and
+# root indexes, so only one publisher may run at a time. On 2026-10-11 the two
+# overlapped and the daily publish reverted six DocC pins.
 concurrency:
   group: "release-documentation"
   cancel-in-progress: false

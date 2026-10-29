@@ -1,0 +1,34 @@
+name: Update and publish documentation
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+      timezone: "Europe/Warsaw"
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "Documentation source scope"
+        type: choice
+        required: true
+        default: "github"
+        options:
+          - "github"
+          - "docc"
+          - "all"
+
+permissions:
+  contents: read
+  issues: write
+
+# Shared with update-apple-docs.yml: every scope rewrites the same lock file and
+# root indexes, so only one publisher may run at a time.
+concurrency:
+  group: "release-documentation"
+  cancel-in-progress: false
+
+jobs:
+  update:
+    uses: ./.github/workflows/update-docs.yml
+    with:
+      scope: ${{ inputs.scope || 'github' }}
+    secrets: inherit

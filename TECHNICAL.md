@@ -30,7 +30,8 @@ bun run src/cli.ts build      convert the pinned bytes into the corpus
         ▼
 bun run src/cli.ts verify     manifests, digests, indexes, path safety
         ▼
-CI publishes (update-docs.yml) via an artifact-mediated, write-isolated job
+CI publishes (update-docs.yml, called by update-github-docs.yml daily and
+update-apple-docs.yml weekly) via an artifact-mediated, write-isolated job
 ```
 
 ## Source layout (`src/`)
@@ -71,10 +72,12 @@ CI publishes (update-docs.yml) via an artifact-mediated, write-isolated job
   a separate `commit` job receives an artifact containing exactly the paths
   `bun run src/cli.ts paths` listed, and pushes with `PUBLISH_TOKEN`.
 - **One publisher at a time.** The daily (`github`) and weekly (`docc`) runs
-  both rewrite `sources.lock.json` and the root indexes. Both workflows join
-  the `release-documentation` concurrency group at their own top level, because
-  the group declared inside the reusable `update-docs.yml` does not serialize a
-  `workflow_call` run. A queued run builds from current `main`, not the commit
+  both rewrite `sources.lock.json` and the root indexes. `update-docs.yml` is
+  reusable only (`workflow_call`); the two thin callers, `update-github-docs.yml`
+  and `update-apple-docs.yml`, each hold the `release-documentation` concurrency
+  group at their top level. The reusable workflow must not declare that group
+  itself: GitHub rejects a caller and callee sharing a group as a deadlock. A
+  queued run builds from current `main`, not the commit
   it was triggered on. The `commit` job discards its snapshot if any of its
   generated paths changed on `main` since that commit, so a run can never
   revert another run's pins. CI runs `verify:apple` as well as `check`, so a
