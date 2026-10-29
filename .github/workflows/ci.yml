@@ -44,6 +44,10 @@ jobs:
           exit 1
       - name: Check generator and outputs
         run: bun run check
+      # `check` verifies only the github scope, which let six DocC pins disagree
+      # with their published manifests for two weeks without failing CI.
+      - name: Verify DocC outputs against the lock
+        run: bun run verify:apple
       - name: Run isolated tests with the coverage floor
         run: bun test --isolate --coverage --coverage-reporter=text
       - name: Rebuild pinned documentation

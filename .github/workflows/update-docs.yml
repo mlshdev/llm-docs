@@ -46,13 +46,21 @@ jobs:
       issues: write
     outputs:
       changed: ${{ steps.changes.outputs.changed }}
-      base-sha: ${{ github.sha }}
+      base-sha: ${{ steps.base.outputs.sha }}
     steps:
-      - name: Check out repository without write credentials
+      # A run queued behind another publisher still carries the github.sha of the
+      # moment it was triggered; building from that commit would republish the
+      # other run's pins as they were before it committed.
+      - name: Check out current main without write credentials
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: "main"
           fetch-depth: 0
           persist-credentials: false
+      - name: Record the commit this run builds from
+        id: base
+        shell: bash
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - name: Set up Bun
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
@@ -241,6 +249,14 @@ jobs:
             # configuration, which the next run does.
             if ! git diff --quiet "${BASE_SHA}" FETCH_HEAD -- config/sources.json src package.json bun.lock; then
               echo "::error::main moved under this run: the generator inputs changed since ${BASE_SHA}, so this snapshot is stale and was discarded. The next scheduled run regenerates from the current main."
+              exit 1
+            fi
+
+            # Every scope writes the shared lock and root indexes. If another
+            # publisher committed generated paths since BASE_SHA, copying this
+            # snapshot over them would silently revert that publisher's pins.
+            if ! git diff --quiet "${BASE_SHA}" FETCH_HEAD -- "${generated[@]}"; then
+              echo "::error::Another publisher changed generated documentation since ${BASE_SHA}; this snapshot would revert its pins, so it was discarded. The next scheduled run regenerates from the current main."
               exit 1
             fi
 

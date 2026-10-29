@@ -1197428,7 +1197428,7 @@ Published as 2 volumes:
 - apple-swiftui/llms-full.001.txt
 - apple-swiftui/llms-full.002.txt
 
-# Apple WebKit and Safari snapshot-f22abf4916e5
+# Apple WebKit and Safari snapshot-8cd502625a0a
 
 Published as 6 volumes:
 
@@ -1197439,21 +1197439,21 @@ Published as 6 volumes:
 - apple-webkit/llms-full.005.txt
 - apple-webkit/llms-full.006.txt
 
-# Apple Xcode and developer tools snapshot-4fca00e84bae
+# Apple Xcode and developer tools snapshot-bfcfe27766c6
 
 Published as 2 volumes:
 
 - apple-xcode/llms-full.001.txt
 - apple-xcode/llms-full.002.txt
 
-# Apple iOS and iPadOS snapshot-d0d1b2f13e0d
+# Apple iOS and iPadOS snapshot-baedee40f551
 
 Published as 2 volumes:
 
 - apple-ios/llms-full.001.txt
 - apple-ios/llms-full.002.txt
 
-# Apple macOS snapshot-0513df389cc7
+# Apple macOS snapshot-8257b11be327
 
 Published as 18 volumes:
 
@@ -1197476,13 +1197476,13 @@ Published as 18 volumes:
 - apple-macos/llms-full.017.txt
 - apple-macos/llms-full.018.txt
 
-# Apple watchOS snapshot-a3a5c01bb2da
+# Apple watchOS snapshot-447f9a6dd611
 
 Complete corpus:
 
 - apple-watchos/llms-full.txt
 
-# Apple cross-platform frameworks snapshot-9afb9b6c8001
+# Apple cross-platform frameworks snapshot-2d7a1d789740
 
 Published as 68 volumes:
 
