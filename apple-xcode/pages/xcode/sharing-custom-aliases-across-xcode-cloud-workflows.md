@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/sharing-custom-aliases-across-xcode-cloud-workflows
 
 # Sharing macOS and Xcode versions across Xcode Cloud workflows

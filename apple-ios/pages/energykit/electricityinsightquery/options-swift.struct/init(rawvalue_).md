@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/energykit/electricityinsightquery/options-swift.struct/init(rawvalue:)
 
 # init(rawValue:)

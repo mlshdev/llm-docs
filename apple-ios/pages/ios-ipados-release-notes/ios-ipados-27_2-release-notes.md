@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27_2-release-notes
 
-# iOS & iPadOS 27.2 Beta 3 Release Notes
+# iOS & iPadOS 27.2 Release Notes
 
 **Kind:** Article
 
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 27.2 beta 3. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
+The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 27.2. The SDK comes bundled with Xcode 27.2. For information on the compatibility requirements for Xcode 27.2, see [Xcode 27.2 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_2-release-notes).
 
 <a id="App-Tracking-Transparency"></a>
 
@@ -21,14 +21,14 @@ The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad r
 
 #### New Features
 
-- `AppTrackingTransparency` ([ATT](https://developer.apple.com/documentation/apptrackingtransparency)) now supports an alternative expanded prompt and re-prompting on a yearly basis for EU users. The alternative prompt is required for users in France, Germany, Italy, Poland, and Romania. (179504171)
+- `AppTrackingTransparency` ([ATT](https://developer.apple.com/documentation/apptrackingtransparency)) now supports an alternative expanded prompt and reprompting on a yearly basis for EU users. The alternative prompt is required for users in France, Germany, Italy, Poland, and Romania. (179504171)
 
 <a id="Resolved-Issues"></a>
 
 #### Resolved Issues
 
 - Fixed: The new `requestTrackingAuthorization(usingExpandedInterface:additionalInformationAction:completionHandler:)` API is renamed to `requestTrackingAuthorization(preferExpandedInterface:...)`. (187149729)
-- Fixed: The new `requestTrackingAuthorization(preferExpandedInterface:...)` API is renamed to `requestTrackingAuthorizationPreferringExpandedInterface:…)`. (187610745)
+- Fixed: The new `requestTrackingAuthorizationPreferExpandedInterface:...` API is renamed to `requestTrackingAuthorizationPreferringExpandedInterface:...`. (187610745)
 
 <a id="Health"></a>
 
@@ -38,7 +38,20 @@ The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad r
 
 #### Known Issues
 
-- Personalized summaries may not generate as expected in the Insights tab. (186964423)
+- Personalized summaries might not generate as expected in the Insights tab. (186964423)
+- The redesigned Health app is not included in this beta and was available in the previous beta for testing purposes only. If you update to this beta, your Health app data from the previous beta remains on your device and is viewable in Settings. The redesigned Health app will be available again in an upcoming iOS beta. (188843443)
+
+<a id="Nearby-Interaction"></a>
+
+### Nearby Interaction
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- An `NISession` running with a DL-TDoA configuration in a foreground app might be invalidated unexpectedly with a resource timeout error (`NIErrorCodeResourceUsageTimeout`). (189664070)
+
+  **Workaround:** Run a new `NISession` with the same DL-TDoA configuration.
 
 <a id="Quest-Lab-Appointments"></a>
 
@@ -48,7 +61,7 @@ The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad r
 
 #### Known Issues
 
-- If you have an upcoming lab appointment, wait to update iOS versions until you receive your results. Contact [Quest](http://support.exp.questdiagnostics.com) directly to reschedule your appointment if you run into any issues. (184530996)
+- If you have an upcoming lab appointment, wait to update iOS versions until you receive your results. Contact [Quest](https://support.exp.questdiagnostics.com) directly to reschedule your appointment if you run into any issues. (184530996)
 
   **Workaround:** Lab results are also available under Browse \> Lab Results.
 
@@ -62,9 +75,9 @@ The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad r
 
 - Describe a Shortcut might fail with the error “Something went wrong. Try again later.” (187499433)
 
-<a id="Simulator-Runtimes"></a>
+<a id="Simulator"></a>
 
-### Simulator Runtimes
+### Simulator
 
 <a id="Known-Issues"></a>
 
@@ -84,7 +97,7 @@ The iOS & iPadOS 27.2 SDK provides support to develop apps for iPhone and iPad r
 
 - Fixed: Intro offer eligibility does not reset immediately after calling `SKTestSession.clearTransactions()`. (183933307) (FB24137836)
 - Fixed: Changing the storefront or locale using `SKTestSession` doesn’t propagate through `Storefront.updates`. (184155259)
-- Fixed: Failed purchases using `SKTestSession` might display error dialogs even when `dialogsDisabled` is set to true. (184255116)
+- Fixed: Failed purchases using `SKTestSession` might display error dialogs even when `dialogsDisabled` is set to `true`. (184255116)
 
 <a id="Known-Issues"></a>
 

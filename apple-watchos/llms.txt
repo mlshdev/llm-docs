@@ -1,11 +1,11 @@
-# Apple watchOS snapshot-447f9a6dd611
+# Apple watchOS snapshot-cf3cd0777a76
 
-> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/watchos/](https://developer.apple.com/watchos/) and pinned to catalog snapshot `447f9a6dd611dee4a61bc09594d42113d2d10675eea9da59f089f5c144a20623` captured at 2026-10-11T21:19:14.781Z.
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/watchos/](https://developer.apple.com/watchos/) and pinned to catalog snapshot `cf3cd0777a7652501a0551f92a78fa37dc007aed962667f2621e8c8c2023f23c` captured at 2026-10-29T19:20:35.564Z.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple watchOS snapshot-447f9a6dd611.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple watchOS snapshot-cf3cd0777a76.
 - [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
 - Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
-- 3 frameworks in this catalog, captured at 2026-10-11T21:19:14.781Z.
+- 3 frameworks in this catalog, captured at 2026-10-29T19:20:35.564Z.
 - Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
 - Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.
 - Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
@@ -26,11 +26,11 @@ These frameworks are available on watchOS but are published by another project i
 - [Accelerate](../apple-frameworks/pages/accelerate.md): 8904 pages.
 - [Accessibility](../apple-frameworks/pages/accessibility.md): 338 pages.
 - [App Intents](../apple-frameworks/pages/appintents.md): 4449 pages.
-- [App Intents Testing](../apple-xcode/pages/appintentstesting.md): 119 pages.
+- [App Intents Testing](../apple-xcode/pages/appintentstesting.md): 118 pages.
 - [Apple Archive](../apple-frameworks/pages/applearchive.md): 653 pages.
 - [Apple CryptoKit](../apple-frameworks/pages/cryptokit.md): 705 pages.
 - [Authentication Services](../apple-frameworks/pages/authenticationservices.md): 1454 pages.
-- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 918 pages.
+- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 929 pages.
 - [CallKit](../apple-frameworks/pages/callkit.md): 284 pages.
 - [ClockKit](../apple-frameworks/pages/clockkit.md): 688 pages.
 - [CloudKit](../apple-frameworks/pages/cloudkit.md): 1300 pages.
@@ -61,21 +61,21 @@ These frameworks are available on watchOS but are published by another project i
 - [Darwin Notify](../apple-frameworks/pages/darwinnotify.md): 51 pages.
 - [DataDetection](../apple-frameworks/pages/datadetection.md): 112 pages.
 - [DeveloperToolsSupport](../apple-xcode/pages/developertoolssupport.md): 85 pages.
-- [Device Management](../apple-frameworks/pages/devicemanagement.md): 1415 pages.
+- [Device Management](../apple-frameworks/pages/devicemanagement.md): 1420 pages.
 - [DeviceCheck](../apple-frameworks/pages/devicecheck.md): 32 pages.
 - [Dispatch](../apple-frameworks/pages/dispatch.md): 612 pages.
-- [Distributed](../apple-swift/pages/distributed.md): 93 pages.
-- [Evaluations](../apple-frameworks/pages/evaluations.md): 345 pages.
+- [Distributed](../apple-swift/pages/distributed.md): 95 pages.
+- [Evaluations](../apple-frameworks/pages/evaluations.md): 347 pages.
 - [EventKit](../apple-frameworks/pages/eventkit.md): 425 pages.
 - [ExtensionFoundation](../apple-frameworks/pages/extensionfoundation.md): 97 pages.
 - [ExtensionKit](../apple-frameworks/pages/extensionkit.md): 39 pages.
-- [Foundation](../apple-frameworks/pages/foundation.md): 14116 pages.
+- [Foundation](../apple-frameworks/pages/foundation.md): 14118 pages.
 - [Foundation Models](../apple-frameworks/pages/foundationmodels.md): 768 pages.
 - [GameKit](../apple-frameworks/pages/gamekit.md): 1076 pages.
 - [GeoToolbox](../apple-frameworks/pages/geotoolbox.md): 20 pages.
-- [HealthKit](../apple-frameworks/pages/healthkit.md): 2151 pages.
+- [HealthKit](../apple-frameworks/pages/healthkit.md): 2150 pages.
 - [HealthKitUI](../apple-frameworks/pages/healthkitui.md): 4 pages.
-- [HomeKit](../apple-frameworks/pages/homekit.md): 1304 pages.
+- [HomeKit](../apple-frameworks/pages/homekit.md): 1354 pages.
 - [Image I/O](../apple-frameworks/pages/imageio.md): 915 pages.
 - [Intents](../apple-frameworks/pages/intents.md): 3501 pages.
 - [IntentsUI](../apple-frameworks/pages/intentsui.md): 49 pages.
@@ -91,7 +91,7 @@ These frameworks are available on watchOS but are published by another project i
 - [Nearby Interaction](../apple-frameworks/pages/nearbyinteraction.md): 177 pages.
 - [Network](../apple-frameworks/pages/network.md): 1975 pages.
 - [Network Extension](../apple-frameworks/pages/networkextension.md): 1205 pages.
-- [Now Playing](../apple-frameworks/pages/nowplaying.md): 222 pages.
+- [Now Playing](../apple-frameworks/pages/nowplaying.md): 224 pages.
 - [OSLog](../apple-frameworks/pages/oslog.md): 98 pages.
 - [Objective-C Runtime](../apple-frameworks/pages/objectivec.md): 850 pages.
 - [Observation](../apple-swift/pages/observation.md): 37 pages.
@@ -115,13 +115,13 @@ These frameworks are available on watchOS but are published by another project i
 - [Swift](../apple-swift/pages/swift.md): 18441 pages.
 - [Swift Charts](../apple-frameworks/pages/charts.md): 595 pages.
 - [SwiftData](../apple-frameworks/pages/swiftdata.md): 551 pages.
-- [SwiftUI](../apple-swiftui/pages/swiftui.md): 7178 pages.
+- [SwiftUI](../apple-swiftui/pages/swiftui.md): 7196 pages.
 - [Symbols](../apple-frameworks/pages/symbols.md): 230 pages.
 - [Synchronization](../apple-swift/pages/synchronization.md): 196 pages.
 - [System](../apple-frameworks/pages/system.md): 446 pages.
 - [TabularData](../apple-frameworks/pages/tabulardata.md): 844 pages.
 - [TipKit](../apple-frameworks/pages/tipkit.md): 190 pages.
-- [UIKit](../apple-frameworks/pages/uikit.md): 12789 pages.
+- [UIKit](../apple-frameworks/pages/uikit.md): 12805 pages.
 - [Uniform Type Identifiers](../apple-frameworks/pages/uniformtypeidentifiers.md): 360 pages.
 - [User Notifications](../apple-frameworks/pages/usernotifications.md): 287 pages.
 - [Wallet Passes](../apple-frameworks/pages/walletpasses.md): 63 pages.

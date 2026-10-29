@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3136-avaudioconverter-performing-sample-rate-conversions
 
 # TN3136: AVAudioConverter - performing sample rate conversions
@@ -102,7 +102,7 @@ func refill(numberOfFrames: AVAudioPacketCount) -> AVAudioPCMBuffer {
 }
 ```
 
-The [AudioBufferList](https://developer.apple.com/documentation/coreaudiotypes/audiobufferlist) pointer that is provided in the call to `resample(ioData:)` is wrapped in an instance of [AVAudioPCMBuffer](https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer) using the init(pcmFormat:bufferListNoCopy:deallocator:) initializer. This buffer is passed to the converter in the call to [convert(to:error:withInputFrom:)](https://developer.apple.com/documentation/avfaudio/avaudioconverter/convert%28to:error:withinputfrom:%29) to store the output of the conversion. The converter calls the provided closure, passing it the input length and asking for a status flag and a returned audio buffer. The status is always [AVAudioConverterInputStatus.haveData](https://developer.apple.com/documentation/avfaudio/avaudioconverterinputstatus/havedata) in this case, since the sample provider can always produce an arbitrary number of samples. The returned audio buffer is the result of a call to `refill(inNumberOfPackets:)`, using the provided input length.
+The [AudioBufferList](https://developer.apple.com/documentation/coreaudiotypes/audiobufferlist) pointer that is provided in the call to `resample(ioData:)` is wrapped in an instance of [AVAudioPCMBuffer](https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer) using the [init(pcmFormat:bufferListNoCopy:deallocator:)](https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer/init%28pcmformat:bufferlistnocopy:deallocator:%29-9iwe7) initializer. This buffer is passed to the converter in the call to [convert(to:error:withInputFrom:)](https://developer.apple.com/documentation/avfaudio/avaudioconverter/convert%28to:error:withinputfrom:%29) to store the output of the conversion. The converter calls the provided closure, passing it the input length and asking for a status flag and a returned audio buffer. The status is always [AVAudioConverterInputStatus.haveData](https://developer.apple.com/documentation/avfaudio/avaudioconverterinputstatus/havedata) in this case, since the sample provider can always produce an arbitrary number of samples. The returned audio buffer is the result of a call to `refill(inNumberOfPackets:)`, using the provided input length.
 
 ```swift
 /// Takes as input an AudioBufferList pointer.

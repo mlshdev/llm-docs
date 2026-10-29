@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary/requestinlineappinstallation(_:subjecttoken:)
 
 # requestInlineAppInstallation(\_:subjectToken:)
 
 **Framework:** MarketplaceKit  
 **Kind:** Instance Method  
-**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta
+**Availability:** iOS 27.2+ · iPadOS 27.2+
 
 Requests the installation of a web-distributed app that you also distribute.
 

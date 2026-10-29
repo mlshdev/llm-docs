@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/addressing-crashes-from-swift-runtime-errors
 
 # Addressing crashes from Swift runtime errors
@@ -32,6 +32,10 @@ Exception Note:        EXC_CORPSE_NOTIFY
 Termination Signal:    Illegal instruction: 4
 Termination Reason:    Namespace SIGNAL, Code 0x4
 ```
+
+> **Note**
+
+> The exception type reflects the instructions the CPU was executing when the app crashed. Simulated iOS, iPadOS, watchOS, and tvOS apps run as Intel code on an Intel-based Mac, and macOS apps running under Rosetta translation execute as Intel code even on a Mac with Apple silicon. In both cases, the crash report shows the exception type for Intel processors.
 
 <a id="Identify-the-location-of-the-error"></a>
 

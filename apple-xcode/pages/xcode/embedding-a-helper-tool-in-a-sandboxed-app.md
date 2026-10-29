@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/embedding-a-helper-tool-in-a-sandboxed-app
 
 # Embedding a command-line tool in a sandboxed app
@@ -245,7 +245,7 @@ To validate your work, follow the process described in [Build and Validate](embe
 
 ### Project configuration
 
-- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Beta. Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
+- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
 - [Managing your app’s information property list values](https://developer.apple.com/documentation/bundleresources/managing-your-app-s-information-property-list): Customize the information property list values for your app using Xcode.
 - [Adding package dependencies to your app](adding-package-dependencies-to-your-app.md): Integrate package dependencies to share code between projects, or leverage code from other developers.
 - [Creating a Mac version of your iPad app](https://developer.apple.com/documentation/uikit/creating-a-mac-version-of-your-ipad-app): Bring your iPad app to macOS with Mac Catalyst.

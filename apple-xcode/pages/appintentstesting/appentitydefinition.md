@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintentstesting/appentitydefinition
 
 # AppEntityDefinition
@@ -86,6 +86,8 @@ let entity = landmarkEntity.makeReference(
 
 - [AppIntentTypeDefinition](appintenttypedefinition.md)
 - [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
 - [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Escapable](https://developer.apple.com/documentation/swift/escapable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)

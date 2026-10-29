@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/examining-the-fields-in-a-crash-report
 
 # Examining the fields in a crash report
@@ -51,7 +51,7 @@ The fields in the header can contain the following information. No single crash 
 - `Version`: The version of the process that crashed. The value is a concatenation of the app’s [CFBundleVersion](https://developer.apple.com/documentation/bundleresources/information-property-list/cfbundleversion) and [CFBundleShortVersionString](https://developer.apple.com/documentation/bundleresources/information-property-list/cfbundleshortversionstring).
 - `AppStoreTools`: The version of Xcode used to compile your app’s bitcode and to thin your app to device specific variants.
 - `AppVariant`: The specific variant of your app produced by app thinning. This field contains multiple values, described later in this section.
-- `Code Type`: The CPU architecture of the process that crashed. The value is one of `ARM-64`, `ARM`, `X86-64`, or `X86`.
+- `Code Type`: The CPU architecture of the process that crashed. The architecture is `ARM-64`, `ARM`, `X86-64`, or `X86`. If the app executes through Rosetta translation, this field appends `(Translated)`; otherwise, it appends `(Native)`.
 - `Role`: The [task_role](https://developer.apple.com/documentation/kernel/task_role_t) assigned to the process at the time it crashes. This field is generally not helpful when you analyze a crash report.
 - `Parent Process`: The name and process ID (in square brackets) of the process that launched the crashed process.
 - `Coalition`: The name of the process coalition containing the app. Process coalitions track resource usage among groups of related processes, such as an operating system process supporting a specific API’s functionality in an app. Most processes, including app extensions, form their own coalition.

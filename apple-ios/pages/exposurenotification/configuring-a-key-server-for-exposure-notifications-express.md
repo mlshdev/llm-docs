@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/exposurenotification/configuring-a-key-server-for-exposure-notifications-express
 
 # Configuring a Key Server for Exposure Notifications Express

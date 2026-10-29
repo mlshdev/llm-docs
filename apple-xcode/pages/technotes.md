@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes
 
 # Technotes
@@ -15,6 +15,9 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 
 ### Latest
 
+- [TN3216: Supporting touch input for games on macOS](technotes/tn3216-supporting-touch-input-for-games-on-macos.md): Let players interact with your game through touch on a Mac with a touch display or a Sidecar-connected iPad.
+- [TN3215: Reading man pages](technotes/tn3215-reading-man-pages.md): Use the Terminal app to read the documentation for command-line tools and low-level APIs.
+- [TN3192: Migrating your app from the deprecated UIRequiresFullScreen key](technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key.md): Support iPhone and iPad multitasking and dynamic resizing while updating your app to remove the deprecated full-screen compatibility mode.
 - [TN3179: Understanding local network privacy](technotes/tn3179-understanding-local-network-privacy.md): Learn how local network privacy affects your software.
 - [TN3214: Validating the fonts you ship in your app](technotes/tn3214-validating-the-fonts-you-ship-in-your-app.md): Understand the App Store’s font validation, reproduce the check, and fix any issues it reports.
 - [TN3137: On Mac keychain APIs and implementations](technotes/tn3137-on-mac-keychains.md): Learn how the keychain on macOS differs from other Apple platforms.
@@ -30,7 +33,6 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 - [TN3194: Handling account deletions and revoking tokens for Sign in with Apple](technotes/tn3194-handling-account-deletions-and-revoking-tokens-for-sign-in-with-apple.md): Learn the best techniques for managing Sign in with Apple user sessions and responding to account deletion requests.
 - [TN3193: Managing the on-device foundation model’s context window](technotes/tn3193-managing-the-on-device-foundation-model-s-context-window.md): Learn how to budget for the context window limit of Apple’s on-device foundation model and handle the error when reaching the limit.
 - [TN3115: Bluetooth State Restoration app relaunch rules](technotes/tn3115-bluetooth-state-restoration-app-relaunch-rules.md): Learn about the conditions under which an iOS app will be relaunched by Bluetooth State Restoration.
-- [TN3192: Migrating your iPad app from the deprecated UIRequiresFullScreen key](technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key.md): Support iPad multitasking and dynamic resizing while updating your app to remove the deprecated full-screen compatibility mode.
 - [TN3151: Choosing the right networking API](technotes/tn3151-choosing-the-right-networking-api.md): Learn which networking API is best for you.
 - [TN3111: iOS Wi-Fi API overview](technotes/tn3111-ios-wifi-api-overview.md): Explore the various Wi-Fi APIs available on iOS and their expected use cases.
 - [TN3191: IMAP extensions supported by Mail for iOS, iPadOS, and visionOS](technotes/tn3191-imap-extensions-supported-by-mail.md): Learn which extensions to the RFC 3501 IMAP protocol are supported by Mail for iOS, iPadOS, and visionOS.

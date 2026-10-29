@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements
 
 # TN3208: Preparing your app’s launch screen to meet App Store requirements
@@ -15,7 +15,7 @@ A [launch screen](https://developer.apple.com/design/human-interface-guidelines/
 
 Starting in iOS 27 and iPadOS 27, App Store Connect requires your app to include a launch screen configuration in its `Info.plist`. This applies to both iPhone and iPad apps distributed through the App Store and alternative app marketplaces. If your app already includes a launch screen, you don’t need to make any changes.
 
-A launch screen supports modern system features like multitasking and dynamic resizing. To learn about supporting resizable scenes, see [TN3192: Migrating your iPad app from the deprecated UIRequiresFullScreen key](tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key.md).
+A launch screen supports modern system features like multitasking and dynamic resizing. To learn about supporting resizable scenes, see [TN3192: Migrating your app from the deprecated UIRequiresFullScreen key](tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key.md).
 
 <a id="Understand-the-App-Store-submission-requirement"></a>
 

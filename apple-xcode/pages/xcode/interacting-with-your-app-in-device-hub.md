@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/interacting-with-your-app-in-device-hub
 
 # Interacting with your app in Device Hub
@@ -48,6 +48,20 @@ Activate device buttons by clicking on parts of the device bezel:
 | Click or hold Volume Up | Click or hold the Volume Up button on the device bezel or choose Device \> Sound \> Increase Volume. |
 | Click or hold Volume Down | Click or hold the Volume Down button on the device bezel or choose Device \> Sound \> Decrease Volume. |
 | Click the Action button | Click the Action button on the device bezel. |
+
+<a id="Interact-with-your-iOS-app-on-an-iPhone-Duo-simulator"></a>
+
+## Interact with your iOS app on an iPhone Duo simulator
+
+To ensure your iOS app adapts seamlessly to both iPhone Duo displays, simulate folding an iPhone Duo using the controls below the bezel in the canvas:
+
+- To close the iPhone Duo, click the Closed button on the right of the Rotate Right button.
+- To partially open the iPhone Duo, click the Partially Open button in the middle of the three device pose buttons.
+- To fully open the iPhone Duo, click the Open button on the far right.
+
+To fold the device to any angle, hold the Option key while dragging the slider that appears below the bezel.
+
+![A screenshot of Device Hub that shows an iPhone Duo simulator running a sample code app in the partially open device pose. The device pose buttons appear below the bezel.](https://developer.apple.com/images/com.apple.Xcode/running-app-in-iphone-duo-simulator@2x.png)
 
 <a id="Interact-with-your-watchOS-app-in-the-canvas"></a>
 

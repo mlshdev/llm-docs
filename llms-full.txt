@@ -1197439,14 +1197439,14 @@ Published as 6 volumes:
 - apple-webkit/llms-full.005.txt
 - apple-webkit/llms-full.006.txt
 
-# Apple Xcode and developer tools snapshot-bfcfe27766c6
+# Apple Xcode and developer tools snapshot-ecd62262bd5e
 
 Published as 2 volumes:
 
 - apple-xcode/llms-full.001.txt
 - apple-xcode/llms-full.002.txt
 
-# Apple iOS and iPadOS snapshot-baedee40f551
+# Apple iOS and iPadOS snapshot-5fac215cc84f
 
 Published as 2 volumes:
 
@@ -1197476,7 +1197476,7 @@ Published as 18 volumes:
 - apple-macos/llms-full.017.txt
 - apple-macos/llms-full.018.txt
 
-# Apple watchOS snapshot-447f9a6dd611
+# Apple watchOS snapshot-cf3cd0777a76
 
 Complete corpus:
 

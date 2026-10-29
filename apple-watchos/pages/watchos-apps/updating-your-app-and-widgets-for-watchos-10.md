@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-447f9a6dd611; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-cf3cd0777a76; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchos-apps/updating-your-app-and-widgets-for-watchos-10
 
 # Updating your app and widgets for watchOS 10

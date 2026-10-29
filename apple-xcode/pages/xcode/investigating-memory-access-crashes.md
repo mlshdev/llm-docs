@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/investigating-memory-access-crashes
 
 # Investigating memory access crashes
@@ -36,6 +36,8 @@ Once you’ve identified that a crash report is for a memory access issue throug
 - Address Sanitizer
 - Undefined Behavior Sanitizer
 - Thread Sanitizer
+
+For more information about these tools, see [Diagnosing memory, thread, and crash issues early](diagnosing-memory-thread-and-crash-issues-early.md).
 
 If your app contains code in Objective-C, C, or C++, run the static analyzer, and fix all issues it discovers. The static analyzer analyzes your app’s code at build time, and identifies common programming mistakes, including some types of memory management issues. See [Analyze your code for potential flaws](https://help.apple.com/xcode/mac/current/#/devb7babe820).
 

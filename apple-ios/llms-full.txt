@@ -1,11 +1,11 @@
-# Apple iOS and iPadOS snapshot-baedee40f551: full documentation
+# Apple iOS and iPadOS snapshot-5fac215cc84f: full documentation
 
 Source: https://developer.apple.com/ios/
-Catalog snapshot: baedee40f55179b7caa2d2169b495d5b69d435dd5a9589668c4fb46dcd363469
-Content digest: fae343d6fa93c6eaaeb8652a88cd66d5ec09a2f729808a1720309ad6fb4f8afa
-Captured at: 2026-10-11T21:19:14.699Z
+Catalog snapshot: 5fac215cc84f90d3ea4e87344e0195c3fdcf1bba7f759108274c54b9ff661215
+Content digest: 04227c1c4f2af770959e4e73292e029f4f2354ee8722c22f30c6cf244ca48bf1
+Captured at: 2026-10-29T19:20:35.406Z
 
 This corpus is published as 2 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-- [Volume 1](llms-full.001.txt): 4033 documents, 8387857 bytes, SHA-256 `35b551bee39b6c22ad24d9ff12321d8648ff0abf9ea079cc32bf2a26f86b5839`.
-- [Volume 2](llms-full.002.txt): 3362 documents, 6691010 bytes, SHA-256 `8c64b8840b040ab2607c65a178ab7f324358c4f9254e5c044358a8e0ae074b88`.
+- [Volume 1](llms-full.001.txt): 4032 documents, 8386468 bytes, SHA-256 `cdf4e3a644a13c5e474043890283fef718af7640751404df234f03499de31d88`.
+- [Volume 2](llms-full.002.txt): 3363 documents, 6694863 bytes, SHA-256 `2290d7c0143777d7d1c899f2067a5b2b23fecc33dddba935d33e4eba32859ebd`.

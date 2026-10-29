@@ -1,9 +1,9 @@
-# Apple iOS and iPadOS snapshot-baedee40f551: full documentation
+# Apple iOS and iPadOS snapshot-5fac215cc84f: full documentation
 
 Source: https://developer.apple.com/ios/
-Catalog snapshot: baedee40f55179b7caa2d2169b495d5b69d435dd5a9589668c4fb46dcd363469
-Content digest: fae343d6fa93c6eaaeb8652a88cd66d5ec09a2f729808a1720309ad6fb4f8afa
-Captured at: 2026-10-11T21:19:14.699Z
+Catalog snapshot: 5fac215cc84f90d3ea4e87344e0195c3fdcf1bba7f759108274c54b9ff661215
+Content digest: 04227c1c4f2af770959e4e73292e029f4f2354ee8722c22f30c6cf244ca48bf1
+Captured at: 2026-10-29T19:20:35.406Z
 Volume 1
 
 # Document: Accessory Live Activities
@@ -23748,17 +23748,17 @@ Display up-to-date data and offer quick interactions in the Dynamic Island, on t
 
 Live Activities display your app’s current data on the Lock Screen, in the Dynamic Island, in CarPlay, and on a paired Mac or Apple Watch, giving people access to information at a glance and allowing them to perform quick actions that are related to the displayed information.
 
-To offer Live Activities, add code to your existing widget extension or create a new widget extension if your app doesn’t already include one. Live Activities use [WidgetKit](https://developer.apple.com/documentation/widgetkit) functionality and [SwiftUI](https://developer.apple.com/documentation/swiftui) for their user interface. ActivityKit’s role is to handle the life cycle of each Live Activity: You use its API to request, schedule, update, and end a Live Activity and to receive ActivityKit push notifications.
+To offer Live Activities, add code to your existing widget extension or create a new widget extension if your app doesn’t already include one. Live Activities use [WidgetKit](https://developer.apple.com/documentation/widgetkit) functionality and [SwiftUI](https://developer.apple.com/documentation/swiftui) for their user interface. ActivityKit handles the life cycle of each Live Activity: You use its API to request, schedule, update, and end a Live Activity and to receive ActivityKit push notifications.
 
 For design guidance, refer to [Human Interface Guidelines \> Live Activities](https://developer.apple.com/design/human-interface-guidelines/components/system-experiences/live-activities).
 
 <a id="Review-Live-Activity-presentations-on-iPhone-and-iPad"></a>
 
-### Review Live Activity presentations on iPhone and iPad
+## Review Live Activity presentations on iPhone and iPad
 
 Live Activities come in different presentations that appear in various highly visible places. To add support for Live Activities to your iOS or iPadOS app, you must support all presentations. The system automatically chooses the best presentation for each location across a person’s devices.
 
-The Lock Screen presentation appears on the Lock Screen of iPhone and iPad. On an unlocked device that doesn’t support the Dynamic Island, the Lock Screen presentation appears as a banner for Live Activity updates that include an alert configuration. For example, if a person uses Mail on a device that doesn’t support the Dynamic Island while your app’s Live Activity receives an update with an alert configuration, the system displays the Lock Screen presentation as a banner at the top of the screen to let them know about the updated Live Activity.
+The Lock Screen presentation appears on the Lock Screen of iPhone and iPad. On an unlocked device that doesn’t support the Dynamic Island, the Lock Screen presentation appears as a banner for Live Activity updates that include an alert configuration. For example, if your app’s Live Activity receives an update with an alert configuration for a person who uses Mail on a device that doesn’t support the Dynamic Island, the system displays the Lock Screen presentation as a banner at the top of the screen so the person notices the update.
 
 ![Two screenshots of an iPhone that doesn’t support the Dynamic Island and shows a Live Activity for a delivery app. They show the Live Activity on the Lock Screen and the same presentation on the Home Screen as a banner.](https://developer.apple.com/images/com.apple.activitykit/live-activity-notch@2x.png)
 
@@ -23766,29 +23766,27 @@ Devices that support the Dynamic Island display Live Activities in the Dynamic I
 
 ![An illustration of the Dynamic Island with a Live Activity that appears in the compact leading and trailing presentations.](https://developer.apple.com/images/com.apple.activitykit/type-compact@2x.png)
 
-When multiple Live Activities from several apps are active, the system uses the minimal presentation to display two of them in the Dynamic Island. The system chooses a Live Activity from one app to appear attached to the Dynamic Island while it presents a Live Activity from another app detached from the Dynamic Island. As with a compact Live Activity, people can tap a minimal Live Activity to open the app and get more details about the event or task.
+When Live Activities from several apps are active, the number of visible Live Activities depends on the device. For example, iPhone 18 Pro displays two simultaneous Live Activities in the Dynamic Island that use the compact leading and trailing presentations with reduced width. On other devices, both activities appear in the minimal presentation. One active Live Activity appears attached to the Dynamic Island, and the activity from another app appears detached from it.
 
 ![An illustration of the Dynamic Island with a Live Activity that appears in the minimal presentation.](https://developer.apple.com/images/com.apple.activitykit/type-minimal@2x.png)
 
-Additionally, the minimal presentation also appears at the top of the iPhone Lock Screen when the device is in StandBy — in landscape orientation, charging, and with the display positioned at an angle to face the room. If a person taps the minimal presentation in StandBy, the Live Activity expands to fill the whole display using the Lock Screen presentation.
-
-When people touch and hold a Live Activity in a compact or minimal presentation, the system displays the content in an expanded presentation.
+People tap a compact or minimal Live Activity in the Dynamic Island to open its associated app and get more details about the event or task. When people touch and hold a Live Activity in a compact or minimal presentation, the system displays it in an expanded presentation.
 
 ![An illustration of the Dynamic Island with a Live Activity that appears in the expanded presentation.](https://developer.apple.com/images/com.apple.activitykit/type-expanded@2x.png)
 
-For additional information on making sure your Live Activities look great on paired devices, refer to [Creating custom views for Live Activities](creating-custom-views-for-live-activities.md).
+The minimal presentation also appears at the top of the iPhone Lock Screen in StandBy. In StandBy, tapping the Live Activity expands it to fill the whole display using the Lock Screen presentation. Additionally, Live Activities people start on iPhone may appear on paired devices. For more information on making sure your Live Activities look great on paired devices, refer to [Creating custom views for Live Activities](creating-custom-views-for-live-activities.md).
 
-<a id="Understand-constraints"></a>
+<a id="Plan-for-Live-Activity-duration-and-asset-constraints"></a>
 
-### Understand constraints
+## Plan for Live Activity duration and asset constraints
 
 A Live Activity can be active for up to eight hours unless its app or a person ends it before this limit. After the eight-hour limit, the system automatically ends the Live Activity, and immediately removes it from the Dynamic Island. However, the Live Activity remains on the Lock Screen until a person removes it or for up to four additional hours before the system removes it — whichever comes first. As a result, a Live Activity remains on the Lock Screen for a maximum of 12 hours.
 
-For more information about ending a Live Activity, refer to the “End the Live Activity” section below.
+For more information about ending a Live Activity, see [End the Live Activity](displaying-live-data-with-live-activities.md#End-the-Live-Activity).
 
-The system requires image assets for a Live Activity to use a resolution that’s smaller or equal to the size of the presentation for a device. If you use an image asset that’s larger than the size of the Live Activity presentation, the system might fail to start the Live Activity. For example, an image you use for the minimal presentation of your Live Activity shouldn’t exceed 45x36.67 points. For size guidance of Live Activity presentations, refer to [Human Interface Guidelines \> Live Activities](https://developer.apple.com/design/human-interface-guidelines/live-activities#Specifications).
+The system requires image assets for a Live Activity to use a resolution that’s smaller or equal to the size of the presentation for a device. If you use an image asset that’s larger than the size of the Live Activity presentation, the system might fail to start the Live Activity. For size guidance of Live Activity presentations, refer to [Human Interface Guidelines \> Live Activities](https://developer.apple.com/design/human-interface-guidelines/live-activities#Specifications).
 
-Each Live Activity runs in its own sandbox, and — unlike a widget — it can’t access the network or receive location updates. To update the dynamic data of an active Live Activity, use ActivityKit in your app or allow your Live Activities to receive ActivityKit push notifications as described in [Starting and updating Live Activities with ActivityKit push notifications](starting-and-updating-live-activities-with-activitykit-push-notifications.md).
+Each Live Activity runs in its own sandbox, and, unlike a widget, a Live Activity can’t access the network or receive location updates. To update the dynamic data of an active Live Activity, use ActivityKit in your app or allow your Live Activities to receive ActivityKit push notifications as described in [Starting and updating Live Activities with ActivityKit push notifications](starting-and-updating-live-activities-with-activitykit-push-notifications.md).
 
 > **Important**
 
@@ -23796,7 +23794,7 @@ Each Live Activity runs in its own sandbox, and — unlike a widget — it can�
 
 <a id="Add-support-for-Live-Activities-to-your-app"></a>
 
-### Add support for Live Activities to your app
+## Add support for Live Activities to your app
 
 The code that describes the user interface of your Live Activity is part of your app’s widget extension. If you already offer widgets in your app, add code for the Live Activity to your existing widget extension and reuse code between your widgets and Live Activities. However, although Live Activities leverage WidgetKit’s functionality, they aren’t widgets. In contrast to the timeline mechanism you use to update your widgets’ user interface, you start and update a Live Activity from your app with ActivityKit or with ActivityKit push notifications.
 
@@ -23816,9 +23814,9 @@ To support Live Activities:
 
 <a id="Define-a-set-of-static-and-dynamic-data"></a>
 
-### Define a set of static and dynamic data
+## Define a set of static and dynamic data
 
-After you add a widget extension target that includes Live Activities to your Xcode project, describe the data that your Live Activity displays by implementing [ActivityAttributes](activityattributes.md). The [ActivityAttributes](activityattributes.md) inform the system about static data that appears in the Live Activity. You also use [ActivityAttributes](activityattributes.md) to declare the required custom [Activity.ContentState](activity/contentstate-swift.typealias.md) type that describes the dynamic data of your Live Activity. In the example below from the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) sample code project, `AdventureAttributes ` describes the hero information as static data using `let hero: EmojiRanger`. Note how the code defines the [Activity.ContentState](activity/contentstate-swift.typealias.md) to encapsulate dynamic data: the current health level of the hero and a string that describes what happens to the hero.
+After you add a widget extension target that includes Live Activities to your Xcode project, describe the data that your Live Activity displays by implementing [ActivityAttributes](activityattributes.md). The [ActivityAttributes](activityattributes.md) inform the system about static data that appears in the Live Activity. You also use [ActivityAttributes](activityattributes.md) to declare the required custom [Activity.ContentState](activity/contentstate-swift.typealias.md) type that describes the dynamic data of your Live Activity. In the example below from the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) sample code project, `AdventureAttributes` describes the hero information as static data using `let hero: EmojiRanger`. Note how the code defines the [Activity.ContentState](activity/contentstate-swift.typealias.md) to encapsulate dynamic data: the current health level of the hero and a string that describes what happens to the hero.
 
 ```swift
 import ActivityKit
@@ -23839,7 +23837,7 @@ struct AdventureAttributes: ActivityAttributes {
 
 <a id="Add-Live-Activities-to-the-widget-extension"></a>
 
-### Add Live Activities to the widget extension
+## Add Live Activities to the widget extension
 
 Live Activities leverage WidgetKit. After you add code to describe the data that appears in the Live Activity with the [ActivityAttributes](activityattributes.md) structure, add code to return an [ActivityConfiguration](https://developer.apple.com/documentation/widgetkit/activityconfiguration) in your widget implementation.
 
@@ -23872,7 +23870,7 @@ If your app already offers widgets, add the Live Activity to your [WidgetBundle]
 
 <a id="Create-the-Lock-Screen-presentation"></a>
 
-### Create the Lock Screen presentation
+## Create the Lock Screen presentation
 
 To create the user interface of the Live Activity, you use [SwiftUI](https://developer.apple.com/documentation/swiftui) in the widget extension you created earlier. Similar to widgets, you don’t provide the size of the user interface for your Live Activity but let the system determine the appropriate dimensions.
 
@@ -23903,7 +23901,7 @@ struct AdventureActivityConfiguration: Widget {
 
 > The system may truncate a Live Activity if its height exceeds 160 points.
 
-On a device that doesn’t support the Dynamic Island, the system displays the Lock Screen presentation as a banner for a Live Activity update  if:
+On a device that doesn’t support the Dynamic Island, the system displays the Lock Screen presentation as a banner for a Live Activity update if:
 
 - The device is unlocked and its app isn’t in use
 - You pass an [AlertConfiguration](alertconfiguration.md) to the [update(\_:alertConfiguration:)](activity/update%28__alertconfiguration_%29.md) function
@@ -23912,17 +23910,17 @@ On iPhone in StandBy, the Lock Screen presentation appears scaled to fill the sc
 
 <a id="Create-the-compact-and-minimal-presentations"></a>
 
-### Create the compact and minimal presentations
+## Create the compact and minimal presentations
 
 Live Activities appear in the Dynamic Island of devices that support it. When you start one or more Live Activities and no other app starts a Live Activity, the compact leading and trailing presentations appear together to form a cohesive presentation in the Dynamic Island for one Live Activity.
 
 ![An illustration that shows compact leading and trailing presentations for a Live Activity of a food delivery app. ](https://developer.apple.com/images/com.apple.activitykit/compact-view@2x.png)
 
-When more than one app starts a Live Activity, the system chooses which Live Activities are visible and displays two Live Activities using the minimal presentation for each: One minimal presentation appears attached to the Dynamic Island, while the other appears detached. Additionally, the detached minimal presentation appears on the Lock Screen on iPhone in StandBy. If your app starts more than one Live Activity at the same time, you can tell the system which one it should display by setting a relevance score. For more information, refer to the [Configure the Live Activity](displaying-live-data-with-live-activities.md#Configure-the-Live-Activity) section below.
+When several Live Activities are active, the system chooses how to present them. The number of visible Live Activities depends on the device, and the system renders each one to best fit — attached to or detached from the Dynamic Island, and in the compact presentation, the compact presentation with reduced width, or the minimal presentation. The following example shows two Live Activities from separate apps in the minimal presentation:
 
 ![An illustration of the Dynamic Island with a Live Activity that appears in the minimal presentation.](https://developer.apple.com/images/com.apple.activitykit/minimal-view@2x.png)
 
-The following example shows how the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) app provides the required compact and minimal presentations. For the leading presentation, it reuses the custom SwiftUI view `Avatar`. For the trailing presentation, it uses a [ProgressView](https://developer.apple.com/documentation/swiftui/progressview).
+The following example shows how the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) app provides compact and minimal presentations. For the leading presentation, it reuses the custom SwiftUI view `Avatar`. For the trailing presentation, it uses a [ProgressView](https://developer.apple.com/documentation/swiftui/progressview).
 
 ```swift
 import SwiftUI
@@ -23962,9 +23960,35 @@ struct AdventureActivityConfiguration: Widget {
 }
 ```
 
+If your app starts more than one Live Activity at the same time, you can tell the system which one it should display by setting a relevance score. For more information, refer to [Configure the Live Activity](displaying-live-data-with-live-activities.md#Configure-the-Live-Activity).
+
+<a id="Support-presentations-with-reduced-width"></a>
+
+## Support presentations with reduced width
+
+Sometimes the system renders compact and minimal Live Activities with a limited width, for example, on iPhone in landscape orientation, on iPhone Duo, or on iPhone 18 Pro with two or more active Live Activities. Use the [isDynamicIslandLimitedInWidth](https://developer.apple.com/documentation/swiftui/environmentvalues/isdynamicislandlimitedinwidth) environment value to adapt your views to the reduced width of the Dynamic Island as shown in the following example:
+
+```swift
+struct CompactLeadingView: View {
+    @Environment(\.isDynamicIslandLimitedInWidth) var isDynamicIslandLimitedInWidth
+
+    var body: some View {
+        if isDynamicIslandLimitedInWidth {
+            Text("Ltd")
+        } else {
+            Text("Full")
+        }
+    }
+}
+```
+
+To avoid truncated text, adapt your compact presentation to the limited width by fitting it inside a circle that’s 28 points in diameter, and use a short abbreviation or graphic representation instead of a full text string. If you can’t find a solution to display views for leading and trailing compact presentations with limited width, provide a compact leading presentation that best represents your Live Activity, such as the view you use for the minimal presentation, and an empty view for the trailing compact presentation. The system hides the empty trailing view automatically.
+
+For additional design guidance, see [Human Interface Guidelines \> Live Activities](https://developer.apple.com/design/human-interface-guidelines/live-activities).
+
 <a id="Create-the-expanded-presentation"></a>
 
-### Create the expanded presentation
+## Create the expanded presentation
 
 In addition to the compact and minimal presentations, you must support the expanded presentation. It appears when a person touches and holds a compact or minimal presentation, and it also appears briefly for Live Activity updates.
 
@@ -24040,7 +24064,7 @@ To render views that appear in the expanded Live Activity, the system divides th
 
 To render content that appears in the expanded Live Activity, the system first determines the width of the center content while taking into account the minimal width of the leading and trailing content. The system then places and sizes the leading and trailing content based on its vertical position. By default, leading and trailing positions receive an equal amount of horizontal space.
 
-You can tell the system to prioritize one of the `DynamicIslandExpandedRegion` views by passing a `priority` to the [init(\_:priority:content:)](https://developer.apple.com/documentation/widgetkit/dynamicislandexpandedregion/init%28_:priority:content:%29) initializer. The system renders the view with the highest priority with the full width of the Dynamic Island. The following illustration shows leading and trailing positions in an expanded presentation with higher priority to render them below the TrueDepth camera.
+You can tell the system to prioritize one of the `DynamicIslandExpandedRegion` views by passing a `priority` to the [init(\_:priority:content:)](https://developer.apple.com/documentation/widgetkit/dynamicislandexpandedregion/init%28_:priority:content:%29) initializer. The system renders the highest-priority view at the full width of the Dynamic Island. The following illustration shows leading and trailing positions in an expanded presentation with higher priority to render them below the TrueDepth camera.
 
 ![An illustration that shows the leading and trailing positions in an expanded presentation with higher priority to render them below the TrueDepth camera.](https://developer.apple.com/images/com.apple.activitykit/expanded-sections@2x.png)
 
@@ -24050,13 +24074,13 @@ You can tell the system to prioritize one of the `DynamicIslandExpandedRegion` v
 
 <a id="Configure-how-your-Live-Activity-launches-your-app"></a>
 
-### Configure how your Live Activity launches your app
+## Configure how your Live Activity launches your app
 
 People tap your Live Activity to launch your app. Use deep links to take them to the scene in your app that matches the activity’s information. On Apple Watch, choose if people can open your app on iPhone or its watchOS companion by tapping your Live Activity on Apple Watch. For more information, refer to [Launching your app from a Live Activity](launching-your-app-from-a-live-activity.md).
 
-<a id="Add-Buttons-or-Toggles"></a>
+<a id="Add-buttons-or-toggles"></a>
 
-### Add Buttons or Toggles
+## Add buttons or toggles
 
 Like widgets, Live Activities can contain SwiftUI buttons and toggles to provide quick actions. For example, a food-ordering app might show a button in its Live Activity that people tap to check in at a restaurant when they pick up a takeout order.
 
@@ -24068,17 +24092,17 @@ To add a toggle or button to a Live Activity, adopt the [App Intents](https://de
 
 <a id="Provide-accessibility-labels"></a>
 
-### Provide accessibility labels
+## Provide accessibility labels
 
 Designing with accessibility in mind is a foundational principle when creating an app. It also applies to Live Activities. To allow people to customize how they interact with your Live Activity and to make sure VoiceOver for your Live Activity works correctly, add accessibility labels for the SwiftUI views you create for each Live Activity presentation. For more information, refer to [Adding accessible descriptions to widgets and Live Activities](adding-accessible-descriptions-to-widgets-and-live-activities.md).
 
 <a id="Make-sure-Live-Activities-are-available"></a>
 
-### Make sure Live Activities are available
+## Make sure Live Activities are available
 
 Live Activities are available on iPhone and iPad. If your app is available on additional platforms and offers a widget extension, make sure Live Activities are available at runtime. Additionally, people can choose to deactivate Live Activities for an app in the Settings app.
 
-To refer to if Live Activities are available and if a person allowed your app to use Live Activities:
+To determine whether Live Activities are available and whether a person authorized your app to use them:
 
 - Use [areActivitiesEnabled](activityauthorizationinfo/areactivitiesenabled.md) to synchronously determine whether to show a user interface in your app for starting a Live Activity.
 - Receive asynchronous user authorization updates by observing any user authorization changes with the [activityEnablementUpdates](activityauthorizationinfo/activityenablementupdates-swift.property.md) stream and respond to them accordingly.
@@ -24089,7 +24113,7 @@ To refer to if Live Activities are available and if a person allowed your app to
 
 <a id="Configure-the-Live-Activity"></a>
 
-### Configure the Live Activity
+## Configure the Live Activity
 
 Before you can start a Live Activity in your app, configure it with an [ActivityContent](activitycontent.md) structure. The activity content encapsulates the [ActivityAttributes](activityattributes.md) and additional configuration information:
 
@@ -24111,7 +24135,7 @@ The system expects relative values for the relevance score. Assign a higher valu
 
 <a id="Start-the-Live-Activity"></a>
 
-### Start the Live Activity
+## Start the Live Activity
 
 You start a Live Activity in your app’s code while the app is in the foreground with the [request(attributes:content:pushType:)](activity/request%28attributes_content_pushtype_%29.md) function. Pass the [ActivityAttributes](activityattributes.md) and [ActivityContent](activitycontent.md) objects you created to it and, if you implement ActivityKit push notifications, the `pushType` parameter.
 
@@ -24145,25 +24169,25 @@ if ActivityAuthorizationInfo().areActivitiesEnabled {
 }
 ```
 
-In general, your app needs to be in the foreground to start a Live Activity. You can update or end a Live Activity from your app while it runs in the background — for example, by using [Background Tasks](https://developer.apple.com/documentation/backgroundtasks). However, you can start a Live Activity while your app is in the background by using an app intent that conforms to [LiveActivityIntent](https://developer.apple.com/documentation/appintents/liveactivityintent). For example, you might create a control that people place in Control Center. The control could use a `LiveActivityIntent` and starts the Live Activity in the intent’s `perform()` method. For more information about app intents, refer to [App Intents](https://developer.apple.com/documentation/appintents) and doc://com.apple.documentation/appintents/making-actions-and-content-discoverable-and-widely-available.
+In general, your app needs to be in the foreground to start a Live Activity. You can update or end a Live Activity from your app while it runs in the background — for example, by using [Background Tasks](https://developer.apple.com/documentation/backgroundtasks). However, you can start a Live Activity while your app is in the background by using an app intent that conforms to [LiveActivityIntent](https://developer.apple.com/documentation/appintents/liveactivityintent). For example, you might create a control that people place in Control Center. The control could use a `LiveActivityIntent` and starts the Live Activity in the intent’s `perform()` method. For more information about app intents, refer to [App Intents](https://developer.apple.com/documentation/appintents) and [Getting started with the App Intents framework](https://developer.apple.com/documentation/appintents/getting-started-with-the-app-intents-framework).
 
 <a id="Schedule-a-Live-Activity-at-a-specific-date"></a>
 
-### Schedule a Live Activity at a specific date
+## Schedule a Live Activity at a specific date
 
 You can schedule a Live Activity for a specific date using the [request(attributes:content:pushType:style:alertConfiguration:startDate:)](activity/request%28attributes_content_pushtype_style_alertconfiguration_startdate_%29.md) function. For example, an app that allows people to watch or follow sports matches might want to schedule a Live Activity for an upcoming game. If you allow people to schedule a Live Activity, you must pass an [AlertConfiguration](alertconfiguration.md) to make sure they know when your app starts a Live Activity.
 
 <a id="Start-a-transient-Live-Activity"></a>
 
-### Start a transient Live Activity
+## Start a transient Live Activity
 
 Live Activities can appear temporarily in the extended presentation in the Dynamic Island to allow interactions and status updates while a person is actively performing a task. Locking the device, collapsing the extended presentation in the Dynamic Island, or tapping outside the Dynamic Island ends the Live Activity. For example, the Music app displays an extended presentation in the Dynamic Island when a person starts playing audio in the app, allowing people to choose to move the audio to a HomePod that’s on the same Wi-Fi network with AirPlay. The Live Activity ends automatically when the person leaves the app.
 
-To start a transient Live Activity, use [request(attributes:content:pushType:style:)](activity/request%28attributes_content_pushtype_style_%29.md) and pass [ActivityStyle.transient](activitystyle/transient.md)  as the `style` parameter.
+To start a transient Live Activity, use [request(attributes:content:pushType:style:)](activity/request%28attributes_content_pushtype_style_%29.md) and pass [ActivityStyle.transient](activitystyle/transient.md) as the `style` parameter.
 
-<a id="Start-update-and-end-your-Live-Activity-with-a-push-notification"></a>
+<a id="Start-update-and-end-a-Live-Activity-with-push-notifications"></a>
 
-### Start, update, and end your Live Activity with a push notification
+## Start, update, and end a Live Activity with push notifications
 
 In addition to updating and ending a Live Activity from your app with ActivityKit, start, update, or end a Live Activity with an ActivityKit push notification that you send from your server to the Apple Push Notification service (APNs).
 
@@ -24171,11 +24195,11 @@ To learn more about using ActivityKit push notifications, refer to [Starting and
 
 <a id="Update-the-Live-Activity"></a>
 
-### Update the Live Activity
+## Update the Live Activity
 
 When you start a Live Activity from your app, update the data that appears in the Live Activity using the [update(\_:)](activity/update%28__%29.md) function of the [Activity](activity.md) object you received when you started the Live Activity. To retrieve your app’s active Live Activities, use [activities](activity/activities.md).
 
-For important updates, use the [update(\_:alertConfiguration:)](activity/update%28__alertconfiguration_%29.md) function to display an alert on iPhone, iPad, and a paired Apple Watch that tells a person about new Live Activity content. For example, the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) app updates its Live Activity using an alert configuration to display an alert that lets people know that the hero has been knocked down:
+For important updates, use the [update(\_:alertConfiguration:)](activity/update%28__alertconfiguration_%29.md) function to display an alert on iPhone, iPad, and a paired Apple Watch that tells a person about new Live Activity content. For example, the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) app updates its Live Activity using an alert configuration to tell people that the hero has been knocked down:
 
 ```swift
 guard let activity = currentActivity else {
@@ -24216,13 +24240,13 @@ await activity.update(
 
 > **Note**
 
-> The size of the updated data can’t exceed 4KB in size.
+> The updated data can’t exceed 4 KB.
 
 On Apple Watch, the system uses the `title` and `body` attributes for the alert. On iPhone and iPad, the system doesn’t show a regular alert but instead shows the expanded Live Activity in the Dynamic Island or the Lock Screen presentation as a banner on devices without the Dynamic Island.
 
 <a id="Animate-content-updates"></a>
 
-### Animate content updates
+## Animate content updates
 
 When you define the user interface of your Live Activity, the system ignores any animation modifiers — for example, [withAnimation(\_:\_:)](https://developer.apple.com/documentation/swiftui/withanimation%28_:_:%29) and [animation(\_:value:)](https://developer.apple.com/documentation/swiftui/view/animation%28_:value:%29) — and uses the system’s animation timing instead. However, the system performs some animation when the dynamic content of the Live Activity changes. Text views animate content changes with blurred content transitions, and the system animates content transitions for images and SF Symbols. If you add or remove views from the user interface based on content or state changes, views fade in and out. Use the following view transitions to configure these built-in transitions: [opacity](https://developer.apple.com/documentation/swiftui/anytransition/opacity), [move(edge:)](https://developer.apple.com/documentation/swiftui/anytransition/move%28edge:%29), [slide](https://developer.apple.com/documentation/swiftui/anytransition/slide), [push(from:)](https://developer.apple.com/documentation/swiftui/anytransition/push%28from:%29), or combinations of them. Additionally, request animations for timer text with [numericText(countsDown:)](https://developer.apple.com/documentation/swiftui/contenttransition/numerictext%28countsdown:%29).
 
@@ -24234,9 +24258,9 @@ You can animate data changes in your Live Activity with functions that give you 
 
 <a id="End-the-Live-Activity"></a>
 
-### End the Live Activity
+## End the Live Activity
 
-Always end a Live Activity after the associated task or live event ends. A Live Activity that ended remains on the Lock Screen until the person removes it or the system removes it automatically. The automatic removal depends on the dismissal policy you provide to the [end(\_:dismissalPolicy:)](activity/end%28__dismissalpolicy_%29.md) function. Always include an updated [Activity.ContentState](activity/contentstate-swift.typealias.md) to ensure the Live Activity shows the latest and final content update after it ends. This is important because the Live Activity can remain visible on the Lock Screen for some time after it ends.
+Always end a Live Activity after the associated task or live event ends. A Live Activity that has ended remains on the Lock Screen until the person removes it, or the system removes it automatically. The automatic removal depends on the dismissal policy you provide to the [end(\_:dismissalPolicy:)](activity/end%28__dismissalpolicy_%29.md) function. Always include an updated [Activity.ContentState](activity/contentstate-swift.typealias.md) to ensure the Live Activity shows the latest and final content update after it ends. This is important because the Live Activity can remain visible on the Lock Screen for some time after it ends.
 
 The following example shows how the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) app ends its Live Activity and sets a custom dismissal policy based on a setting in the app:
 
@@ -24270,7 +24294,7 @@ func endActivity(dismissTimeInterval: Double?) async {
 
 With the [default](activityuidismissalpolicy/default.md) dismissal policy, the Live Activity appears on the Lock Screen for some time after it ends to allow a person to glance at their phone to refer to the latest information. A person can choose to remove the Live Activity at any time, or the system removes it automatically four hours after it ended.
 
-To immediately remove the Live Activity that ended from the Lock Screen, use [immediate](activityuidismissalpolicy/immediate.md). Alternatively, use [after(\_:)](activityuidismissalpolicy/after%28__%29.md) to specify a date within a four-hour window. While you can provide any date, the system removes the ended Live Activity after the given date or after four hours from the moment the Live Activity ended — whichever comes first.
+To immediately remove the Live Activity that ended from the Lock Screen, use [immediate](activityuidismissalpolicy/immediate.md). Alternatively, use [after(\_:)](activityuidismissalpolicy/after%28__%29.md) to specify a date within a four-hour window. While you can provide any date, the system removes the ended Live Activity after the given date or after four hours from the moment the Live Activity ends — whichever comes first.
 
 A person can remove your Live Activity from their Lock Screen at any time. This ends the Live Activity, but it doesn’t end or cancel the person’s action that started it. For example, a person may remove the Live Activity for their pizza delivery from the Lock Screen, but this doesn’t cancel the pizza order.
 
@@ -24280,7 +24304,7 @@ A person can remove your Live Activity from their Lock Screen at any time. This 
 
 <a id="Keep-track-of-updates"></a>
 
-### Keep track of updates
+## Keep track of updates
 
 When you start a Live Activity, ActivityKit returns an [Activity](activity.md) object. In addition to the [id](activity/id.md) that uniquely identifies each activity, the [Activity](activity.md) offers sequences to observe content, activity state, and push token updates. Use the corresponding sequence to receive updates in your app, keep your app and Live Activities in sync, and respond to changed data:
 
@@ -24289,7 +24313,7 @@ When you start a Live Activity, ActivityKit returns an [Activity](activity.md) o
 - To observe changes to the dynamic content of a Live Activity, use [contentUpdates](activity/contentupdates-swift.property.md).
 - To observe changes to the push token of a Live Activity, use [pushTokenUpdates](activity/pushtokenupdates-swift.property.md).
 
-The following example shows how the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) app tracks updates its content for ongoing Live Activities and updates its adventure view accordingly:
+The following example shows how the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) app tracks content updates for ongoing Live Activities and updates its adventure view accordingly:
 
 ```swift
 // Observe updates for ongoing Live Activities.
@@ -24302,13 +24326,13 @@ Task {
 
 <a id="Observe-active-Live-Activities"></a>
 
-### Observe active Live Activities
+## Observe active Live Activities
 
 Your app can start more than one Live Activity. For example, a sports app may allow a person to start a Live Activity for each live sports game they’re interested in. If your app starts multiple Live Activities, keep track of ongoing Live Activities for your app using the [activities](activity/activities.md) property to make sure your app is aware of all ongoing Live Activities that ActivityKit tracks. Another use case for fetching all activities is to maintain Live Activities that are in progress and make sure you don’t keep any activities running for longer than needed. For example, the system may stop your app, or your app may crash while a Live Activity is active. When the app launches the next time, check if any activities are still active, update your app’s stored Live Activity data, and end any Live Activity that’s no longer relevant.
 
 <a id="Start-and-stop-Live-Activities-from-App-Intents"></a>
 
-### Start and stop Live Activities from App Intents
+## Start and stop Live Activities from App Intents
 
 The [App Intents](https://developer.apple.com/documentation/appintents) framework enables you to extend your app’s custom functionality to support system-level services like Siri and the Shortcuts app, as well as the functionality to start a Live Activity. For example, a sports app could expose functionality to start a Live Activity for a person’s favorite sports team with the Shortcuts app or Siri.
 
@@ -24316,7 +24340,7 @@ Starting a Live Activity from an app intent is almost the same as adopting [App 
 
 1. Adopt the App Intents framework as described in [Getting started with the App Intents framework](https://developer.apple.com/documentation/appintents/getting-started-with-the-app-intents-framework).
 2. When you implement your app intent that starts the Live Activity, make sure it inherits from [LiveActivityIntent](https://developer.apple.com/documentation/appintents/liveactivityintent).
-3. In your `LiveActivityIntent` implementation, add code to start the Live Activity.
+3. In your `LiveActivityIntent` implementation, add code to the `perform()` implementation that starts the Live Activity.
 
 ## See Also
 
@@ -24574,13 +24598,13 @@ In your Xcode project, start by adding the Push Notifications capability to your
 
 ### Create a push notification server
 
-Additionally, set up a remote notification server or make changes to your existing server and send JSON payloads to APNs as described below. If you’re new to using push notifications, plan to spend time implementing the remote notification server. For more information, refer to [Registering your app with APNs](https://developer.apple.com/documentation/usernotifications/registering-your-app-with-apns). To use device push notifications, you use the push tokens that you receive from ActivityKit to send push notifications in your remote notification server. For more information about sending push notifcations using push tokens, refer to [Sending notification requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns).
+Additionally, set up a remote notification server or make changes to your existing server and send JSON payloads to APNs as described below. If you’re new to using push notifications, plan to spend time implementing the remote notification server. For more information, refer to [Registering your app with APNs](https://developer.apple.com/documentation/usernotifications/registering-your-app-with-apns). To use device push notifications, you use the push tokens that you receive from ActivityKit to send push notifications in your remote notification server. For more information about sending push notifications using push tokens, refer to [Sending notification requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns).
 
-For broadcast push notifications, use the channel you created for the Live Activity and shared with the app to send push notifications in your remote notifications server. For more information on creating channels, refer to [Sending channel management requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-channel-management-requests-to-apns).  For information on how to send a push notification on a channel, refer to [Sending broadcast push notification requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-broadcast-push-notification-requests-to-apns).
+For broadcast push notifications, use the channel you created for the Live Activity and shared with the app to send push notifications in your remote notifications server. For more information on creating channels, refer to [Sending channel management requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-channel-management-requests-to-apns). For information on how to send a push notification on a channel, refer to [Sending broadcast push notification requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-broadcast-push-notification-requests-to-apns).
 
-<a id="Start-a-Live-Activity-that-supports-push-updates-to-push-tokens"></a>
+<a id="Start-a-Live-Activity-that-receives-push-token-updates"></a>
 
-### Start a Live Activity that supports push updates to push tokens
+### Start a Live Activity that receives push token updates
 
 On devices that run iOS or iPadOS 17.1 and earlier, you can’t start Live Activities with ActivityKit push notifications. However, you can update and end them with ActivityKit push notifications. In your app, start a Live Activity with the [request(attributes:content:pushType:)](activity/request%28attributes_content_pushtype_%29.md) function and pass [token](pushtype/token.md) to its `pushType` parameter. As a result, you receive a push token that’s unique to your Live Activity when you successfully start the Live Activity.
 
@@ -24611,8 +24635,9 @@ For example, the following code snippet from the [Emoji Rangers: Supporting Live
 ```swift
 Task {
     for await pushToken in activity.pushTokenUpdates {
+        guard let self else { return }
         let pushTokenString = pushToken.reduce("") {
-	          $0 + String(format: "%02x", $1)
+            $0 + String(format: "%02x", $1)
         }
 
         Logger().log("New push token: \(pushTokenString)")
@@ -24628,17 +24653,26 @@ The push token for a Live Activity may change throughout its duration. When your
 
 ### Start a Live Activity that supports push updates on a channel
 
-You can update or end Live Activities by an ActivityKit push notification sent on a channel. To create a channel for your Live Activity event, refer to [Sending channel management requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-channel-management-requests-to-apns). The channel you create has a unique identifier, called a channel ID, that devices use to subscribe to Live Activity updates. Your remote server provides the Channel ID to your app before the Live Activity starts.  In your app, start a Live Activity with the `request(attributes:content:pushType:)` function and pass channel to its `pushType` parameter with the channel ID. If the channel ID isn’t a valid channel, the Live Activity fails to start.
+You can update or end Live Activities by sending an ActivityKit push notification on a channel. To create a channel for your Live Activity event, refer to [Sending channel management requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-channel-management-requests-to-apns). The channel you create has a unique identifier, called a channel ID, that devices use to subscribe to Live Activity updates. Your remote server provides the channel ID to your app before the Live Activity starts. In your app, start a Live Activity with the [request(attributes:content:pushType:)](activity/request%28attributes_content_pushtype_%29.md) function and pass a channel to its `pushType` parameter with the channel ID. If the channel ID isn’t a valid channel, the Live Activity fails to start.
 
 The following code snippet starts a Live Activity and subscribes to receive push notifications on channel ID:
 
 ```swift
-func startLiveActivityWithChannel(string channelId, initialState) {
+func startLiveActivityWithChannel(hero: EmojiRanger) throws {
+    let adventureAttributes = AdventureAttributes(hero: hero) // Load the relevant attributes for the Live Activity.
+    let initialState = AdventureAttributes.ContentState(
+        currentHealthLevel: hero.healthLevel,
+        eventDescription: "Adventure has begun!",
+        supercharged: EmojiRanger.herosAreSupercharged()
+    )
+    let channelID = ... // Use the channel ID your remote server provides.
+    
+    // Request a Live Activity.
     let activity = try Activity.request(
-            attributes: adventure,
-            content: .init(state: initialState, staleDate: nil),
-            //Input your unique channel ID
-            pushType: .channel(channelId)
+        attributes: adventureAttributes,
+        content: .init(state: initialState, staleDate: nil),
+        pushType: .channel(channelID)
+    )
 }
 ```
 
@@ -24648,7 +24682,7 @@ func startLiveActivityWithChannel(string channelId, initialState) {
 
 You can start new Live Activities with ActivityKit push notifications. This option is especially useful for tracking events with Live Activities that occur more than once. For example, if someone starts a Live Activity to track their favorite sports team, the sports app might offer to automatically start a Live Activity for each of the team’s games. In the future, the person doesn’t have to remember to start the Live Activity from the app. Instead, a Live Activity for tracking the game might automatically start from an ActivityKit push notification you sent with your remote notification server and APNs.
 
-To start Live Activities from ActivityKit push notifications, configure your app to support push notifications. Then obtain the token to for starting a Live Activity:
+To start Live Activities from ActivityKit push notifications, configure your app to support push notifications. Then obtain the token for starting a Live Activity:
 
 - Use the [pushToStartTokenUpdates](activity/pushtostarttokenupdates.md) asynchronous sequence to retrieve a push-to-start token that allows you to start new Live Activities. You don’t have to start a Live Activity from your app to receive the push-to-start token.
 - Send the push-to-start token to your server and use the [pushToStartTokenUpdates](activity/pushtostarttokenupdates.md) sequence to receive token updates. Similar to the update token, update it on your server when needed and invalidate the old token.
@@ -24720,7 +24754,7 @@ The following payload updates the Live Activity of the [Emoji Rangers: Supportin
 
 In your alert implementation, consider localizing both strings. For more information on displaying alerts for a remote notification, including localized alert messages and a reference of available keys, refer to [Generating a remote notification](https://developer.apple.com/documentation/usernotifications/generating-a-remote-notification).
 
-Remember that a person’s device may not receive a push notification — for example, if they’re in an area without a network connection. Similarly, the system ignores an ActivityKit push notification if it arrives after the Live Activity ended. Both cases can cause a Live Activity to display outdated information. To help reduce the chance of showing outdated information, update your Live Activity from your app in addition to push notifications.
+Remember that a person’s device may not receive a push notification — for example, if they’re in an area without a network connection. Similarly, the system ignores an ActivityKit push notification if it arrives after the Live Activity ends. Both cases can cause a Live Activity to display outdated information. To help reduce the chance of showing outdated information, update your Live Activity from your app in addition to push notifications.
 
 > **Note**
 
@@ -24736,9 +24770,9 @@ The JSON payload for starting a Live Activity with an ActivityKit push notificat
 - Include an `alert` in the JSON payload.
 - Include the `attributes-type` and `attributes` keys.
 
-By including an alert in your JSON payload, you make sure a person gets alerted about the started Live Activity and avoid unexpectedly surprising them. The following sample payload starts a Live Activity for devices that aren’t running iOS 18 and iPadOS 18 or later:
+By including an alert in your JSON payload, you make sure the system notifies a person about the newly started Live Activity and you avoid surprising them. The following sample payload starts a Live Activity for devices that aren’t running iOS 18 and iPadOS 18 or later:
 
-```swift
+```json
 {
     "aps": {
         "timestamp": 1234,
@@ -24781,9 +24815,9 @@ By including an alert in your JSON payload, you make sure a person gets alerted 
 }
 ```
 
-For devices running iOS 18 and iPadOS or later, you can add `input-push-channel` with the appropriate channel ID to start a Live Activity and listen for updates on a channel. After you send this payload, you can send updates on the channel to update a Live Activity.
+For devices running iOS 18 and iPadOS 18 or later, you can add `input-push-channel` with the appropriate channel ID to start a Live Activity and listen for updates on a channel. After you send this payload, you can send updates on the channel to update a Live Activity.
 
-```swift
+```json
        "input-push-channel": "dHN0LXNyY2gtY2hubA==",
        "attributes-type": "AdventureAttributes",
        "attributes": {
@@ -24792,11 +24826,11 @@ For devices running iOS 18 and iPadOS or later, you can add `input-push-channel`
        }
 ```
 
-Create a channel ID before you send this payload to a device and ensure that the channel ID is valid. If you send this payload to a device that doesn’t run iOS 18 and later, then the Live Activity will not start.
+Create a channel ID before you send this payload to a device and ensure that the channel ID is valid. If you send this payload to a device that doesn’t run iOS 18 or later or iPadOS 18 or later, the Live Activity doesn’t start.
 
-For devices running iOS 18 and iPadOS 18 or later, you can add `input-push-token: 1` to your payload to start a Live Activity and receive a new push token. After you receive a new push token, you can use it to send updates to a Live Activity.
+For devices running iOS 18 and later and iPadOS 18 or later, you can add `input-push-token: 1` to your payload to start a Live Activity and receive a new push token. After you receive a new push token, you can use it to send updates to a Live Activity.
 
-```swift
+```json
         "input-push-token": 1,
         "attributes-type": "AdventureAttributes",
         "attributes": {
@@ -24817,7 +24851,7 @@ To locally test Live Activity updates during development:
 2. Add code that logs the push token to the console when you start a new Live Activity in your app.
 3. Run your app in Simulator or on a test device and start a Live Activity.
 4. Copy the logged push token from the console and set it as the `$ACTIVITY_PUSH_TOKEN` environment variable in Terminal.
-5. Use a `curl` command to send a Live Activity update using APNs. Set the value of the  `apns-priority` header field to `10` to deliver the update quickly with high priority.
+5. Use a `curl` command to send a Live Activity update using APNs. Set the value of the `apns-priority` header field to `10` to deliver the update quickly with high priority.
 
 The following example shows a curl command that the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) sample code project could use to test a Live Activity update.
 
@@ -24854,36 +24888,35 @@ To locally test Live Activity updates to a channel during development:
 
 > **Note**
 
-> You can also use Push Notifications Console to send ActivityKit push notifications instead of using terminal. For more information, refer to [Testing notifications using the Push Notification Console](https://developer.apple.com/documentation/usernotifications/testing-notifications-using-the-push-notification-console).
+> You can also use Push Notifications Console to send ActivityKit push notifications instead of using Terminal. For more information, refer to [Testing notifications using the Push Notification Console](https://developer.apple.com/documentation/usernotifications/testing-notifications-using-the-push-notification-console).
 
 If you encounter failures while sending an ActivityKit push notification:
 
-- Ensure the `curl` command succeeded. An error might indicate an incorrect field  for the request, or errors setting up the command-line environment.
+- Ensure the `curl` command succeeded. An error might indicate an incorrect field for the request, or errors setting up the command-line environment.
 - Use the Console app to view device logs and look for errors that could help you understand the issue. Processes in Console that may contain relevant information are `liveactivitiesd`, `apsd`, and `chronod`.
 
 <a id="Determine-the-update-frequency"></a>
 
 ### Determine the update frequency
 
-The system allows for a certain budget of ActivityKit push notifications per hour. As with other push notifications you send with APNs, you can set the HTTP header field  `apns-priority` for your requests to specify the priority of an ActivityKit push notification:
+The system allows for a certain budget of ActivityKit push notifications per hour. As with other push notifications you send with APNs, you can set the HTTP header field `apns-priority` for your requests to specify the priority of an ActivityKit push notification:
 
 - If you don’t specify the `apns-priority` value, APNs delivers the ActivityKit push notification immediately with the default priority of `10` and counts it toward the notification budget that the system imposes.
 - If you exceed the budget, the system may throttle your ActivityKit push notifications.
 
-To avoid throttling, you can send a low-priority ActivityKit push notification that doesn’t count toward the budget by setting the HTTP header field  `apns-priority` to `5`. Consider this lower priority first before using the priority of `10`. In many cases, choosing a mix of priority `5` and `10` for updates prevents your Live Activity updates from being throttled. For example, the Live Activity of the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) sample code project could use priority `5` for updates that don’t require a person’s immediate attention, like when the hero heals by a few points. When the hero requires a healing potion, the example would use a priority of `10` to immediately update the Live Activity and let the user know about the important change.
+To avoid throttling, you can send a low-priority ActivityKit push notification that doesn’t count toward the budget by setting the HTTP header field `apns-priority` to `5`. Consider this lower priority first before using the priority of `10`. In many cases, choosing a mix of priority `5` and `10` for updates prevents the system from throttling your Live Activity updates. For example, the Live Activity of the [Emoji Rangers: Supporting Live Activities, interactivity, and animations](https://developer.apple.com/documentation/widgetkit/emoji-rangers-supporting-live-activities-interactivity-and-animations) sample code project could use priority `5` for updates that don’t require a person’s immediate attention, like when the hero heals by a few points. When the hero requires a healing potion, the example would use a priority of `10` to immediately update the Live Activity and let the person know about the important change.
 
 However, your app may need to update its Live Activity more frequently, causing you to hit the budget limit for ActivityKit push notifications. For example, if your app allows people to track a sports event like a basketball match that requires many updates per minute, you may not be able to update your Live Activity often enough.
 
 To allow for use cases like this, you can enable your Live Activities to receive frequent ActivityKit push notifications:
 
-- If your project includes an `Info.plist` file, add the [NSSupportsLiveActivitiesFrequentUpdates](https://developer.apple.com/documentation/bundleresources/information-property-list/nssupportsliveactivitiesfrequentupdates) entry to it, and set its Boolean value to `YES`.
-- Alternatively, open the `Info.plist` file as source code, add the key [NSSupportsLiveActivitiesFrequentUpdates](https://developer.apple.com/documentation/bundleresources/information-property-list/nssupportsliveactivitiesfrequentupdates), then set the type to `Boolean` and its value to `YES`. If your project doesn’t have an `Info.plist` file, add [NSSupportsLiveActivitiesFrequentUpdates](https://developer.apple.com/documentation/bundleresources/information-property-list/nssupportsliveactivitiesfrequentupdates) to the list of custom iOS target properties for your iOS app target and set its value to `YES`.
+- In Xcode, open your target’s Info pane and add the [NSSupportsLiveActivitiesFrequentUpdates](https://developer.apple.com/documentation/bundleresources/information-property-list/nssupportsliveactivitiesfrequentupdates) entry to your app’s custom iOS target properties, then set its Boolean value to `YES`.
 
-People can deactivate frequent ActivityKit push notifications for your app in the Settings app. In your code, use [frequentPushesEnabled](activityauthorizationinfo/frequentpushesenabled.md) to detect whether a person deactivated frequent push notifications and display information in your app that asks them to activate frequent ActivityKit push notifications again. Additionally, send the value of this setting to your server and adjust the update frequency accordingly.
+People can deactivate frequent ActivityKit push notifications for your app in the Settings app. In your code, use [frequentPushesEnabled](activityauthorizationinfo/frequentpushesenabled.md) to detect whether a person has deactivated frequent push notifications, and display information in your app that asks them to reactivate frequent ActivityKit push notifications. Additionally, send the value of this setting to your server and adjust the update frequency accordingly.
 
-Similar to other asynchronous sequences ActivityKit provides to receive configuration updates, you can subscribe to changes to the frequent Live Activity push notification setting setting with the [frequentPushEnablementUpdates](activityauthorizationinfo/frequentpushenablementupdates-swift.property.md) stream.
+Similar to other asynchronous sequences ActivityKit provides to receive configuration updates, you can subscribe to changes to the frequent Live Activity push notification setting with the [frequentPushEnablementUpdates](activityauthorizationinfo/frequentpushenablementupdates-swift.property.md) stream.
 
-For more information on available HTTPs headers and sending requests to APNs, refer to [Sending notification requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns).
+For more information on available HTTP headers and sending requests to APNs, refer to [Sending notification requests to APNs](https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns).
 
 <a id="End-the-Live-Activity-with-a-custom-dismissal-date"></a>
 
@@ -24895,7 +24928,7 @@ When you end a Live Activity, by default the Live Activity appears on the Lock S
 
 ### Mark a Live Activity as outdated by setting a stale date
 
-In some scenarios — for example,  if a person enters an area without network connectivity — you might not be able update the Live Activity with new information, causing it to display outdated data. To provide the best possible user experience and let the person know that the Live Activity displays outdated information, add a timestamp in the optional `stale-date` field to provide the time when the system will consider the Live Activity to be stale. With each update, you can advance this `stale-date`. When you can’t update the Live Activity for some time until it becomes stale, the [activityState](activity/activitystate.md) changes to [ActivityState.stale](activitystate/stale.md) at the specified date. Use the [activityStateUpdates](activity/activitystateupdates-swift.property.md) stream in your app to monitor the activity state and respond to outdated Live Activities that haven’t received updates. For example, while a person has network connectivity, a sports app could update the Live Activity with the latest game information and advance the stale date. When it becomes stale, it displays text to indicate that the displayed information is outdated.
+In some scenarios — for example, if a person enters an area without network connectivity — you might not be able to update the Live Activity with new information, causing it to display outdated data. To provide the best possible user experience and let the person know that the Live Activity displays outdated information, add a timestamp in the optional `stale-date` field to provide the time when the system considers the Live Activity to be stale. With each update, you can advance this `stale-date`. When you can’t update the Live Activity for some time until it becomes stale, the [activityState](activity/activitystate.md) changes to [ActivityState.stale](activitystate/stale.md) at the specified date. Use the [activityStateUpdates](activity/activitystateupdates-swift.property.md) stream in your app to monitor the activity state and respond to outdated Live Activities that haven’t received updates. For example, while a person has network connectivity, a sports app could update the Live Activity with the latest game information and advance the stale date. When it becomes stale, it displays text to indicate that the displayed information is outdated.
 
 <a id="Display-the-most-important-Live-Activity-in-the-Dynamic-Island"></a>
 
@@ -24912,7 +24945,7 @@ The system expects relative values for the relevance score. Assign a higher valu
 
 > Keep track of the relevance scores you assign for each ongoing Live Activity so you can change the order of them as needed with each Live Activity update.
 
-The following example payload provides a relevance score of `100` to make sure the Live Activity that receives the update appears in the Dynamic Island and at top of the list on the Lock Screen:
+The following example payload provides a relevance score of `100` to make sure the Live Activity that receives the update appears in the Dynamic Island and at the top of the list on the Lock Screen:
 
 ```json
 {
@@ -132936,6 +132969,8 @@ You don’t create scenes directly. Instead, you specify the name of the appropr
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 - [UIActivityItemsConfigurationProviding](https://developer.apple.com/documentation/uikit/uiactivityitemsconfigurationproviding)
 - [UIPasteConfigurationSupporting](https://developer.apple.com/documentation/uikit/uipasteconfigurationsupporting)
 - [UIResponderStandardEditActions](https://developer.apple.com/documentation/uikit/uiresponderstandardeditactions)
@@ -199761,90 +199796,6 @@ ENStatusActive
 ### States
 
 - [ENStatusBluetoothOff](bluetoothoff.md): Deprecated. Bluetooth is turned off.
-- [ENStatusDisabled](disabled.md): Deprecated. Notification is disabled.
-- [ENStatusRestricted](restricted.md): Deprecated. Notification is not active due to system restrictions, such as parental controls.
-- [ENStatusUnknown](unknown.md): Deprecated. Notification is unknown.
-- [ENStatusPaused](paused.md): Deprecated. The user paused Exposure Notification.
-- [ENStatusUnauthorized](unauthorized.md): Deprecated. The user hasn’t authorized Exposure Notification.
-
-# Document: ENStatus.bluetoothOff
-
-Source path: documentation/exposurenotification/enstatus/bluetoothoff
-Canonical documentation: https://developer.apple.com/documentation/exposurenotification/enstatus/bluetoothoff
-Description: Framework: Exposure Notification Kind: Case Availability: iOS 12.5+ (deprecated in 27.0) · iPadOS 12.5+ (deprecated in 27.0) · Mac Catalyst 12.5+ (deprecated in 27.0)
-
-# ENStatus.bluetoothOff (Swift)
-
-**Framework:** Exposure Notification  
-**Kind:** Case  
-**Availability:** iOS 12.5+ (deprecated in 27.0) · iPadOS 12.5+ (deprecated in 27.0) · Mac Catalyst 12.5+ (deprecated in 27.0)
-
-Bluetooth is turned off.
-
-> No longer supported.
-
-## Declaration
-
-```swift
-case bluetoothOff
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Bluetooth is required for Exposure Notification. If Bluetooth is disabled, notify the user that Exposure Notification can’t work without Bluetooth enabled.
-
-> **Note**
-
->  This may not match the state of Bluetooth as reported by CoreBluetooth.
-
-Exposure Notification is a system service and can use Bluetooth in situations when apps cannot. For the purposes of notification of exposure, it’s better to use this API instead of CoreBluetooth.
-
-## See Also
-
-### States
-
-- [ENStatus.active](active.md): Deprecated. Notification is active.
-- [ENStatus.disabled](disabled.md): Deprecated. Notification is disabled.
-- [ENStatus.restricted](restricted.md): Deprecated. Notification is not active due to system restrictions, such as parental controls.
-- [ENStatus.unknown](unknown.md): Deprecated. Notification is unknown.
-- [ENStatus.paused](paused.md): Deprecated. The user paused Exposure Notification.
-- [ENStatus.unauthorized](unauthorized.md): Deprecated. The user hasn’t authorized Exposure Notification.
-
-# ENStatusBluetoothOff (Objective-C)
-
-**Framework:** Exposure Notification  
-**Kind:** Enumeration Case  
-**Availability:** iOS 12.5+ (deprecated in 27.0) · iPadOS 12.5+ (deprecated in 27.0) · Mac Catalyst 12.5+ (deprecated in 27.0)
-
-Bluetooth is turned off.
-
-> No longer supported.
-
-## Declaration
-
-```objectivec
-ENStatusBluetoothOff
-```
-
-<a id="Discussion"></a>
-
-## Discussion
-
-Bluetooth is required for Exposure Notification. If Bluetooth is disabled, notify the user that Exposure Notification can’t work without Bluetooth enabled.
-
-> **Note**
-
->  This may not match the state of Bluetooth as reported by CoreBluetooth.
-
-Exposure Notification is a system service and can use Bluetooth in situations when apps cannot. For the purposes of notification of exposure, it’s better to use this API instead of CoreBluetooth.
-
-## See Also
-
-### States
-
-- [ENStatusActive](active.md): Deprecated. Notification is active.
 - [ENStatusDisabled](disabled.md): Deprecated. Notification is disabled.
 - [ENStatusRestricted](restricted.md): Deprecated. Notification is not active due to system restrictions, such as parental controls.
 - [ENStatusUnknown](unknown.md): Deprecated. Notification is unknown.

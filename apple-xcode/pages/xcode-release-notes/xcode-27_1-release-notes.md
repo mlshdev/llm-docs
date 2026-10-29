@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-27_1-release-notes
 
-# Xcode 27.1 RC Release Notes
+# Xcode 27.1 Release Notes
 
 **Kind:** Article
 
@@ -11,7 +11,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-Xcode 27.1 RC includes Swift 6.4 and SDKs for iOS 27.1, iPadOS 27, tvOS 27, watchOS 27, macOS 27, and visionOS 27. Xcode 27.1 RC supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.1 RC requires a Mac running macOS Tahoe 26.6 or later.
+Xcode 27.1 includes Swift 6.4 and SDKs for iOS 27.1, iPadOS 27, tvOS 27, watchOS 27, macOS 27, and visionOS 27. Xcode 27.1 supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.1 requires a Mac running macOS Tahoe 26.6 or later.
 
 See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more about compatible platforms and deployment targets.
 
@@ -23,9 +23,9 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 #### Known Issues
 
-- Projects that use APIs specific to iOS 27.1 show compile errors when building for Mac Catalyst (“undeclared identifier”, “not found”, “has no member”, “cannot find”, etc). (185924957)
+- Projects that use APIs specific to iOS 27.1 show compile errors when building for Mac Catalyst (“undeclared identifier”, “not found”, “has no member”, “cannot find”, etc.). (185924957)
 
-  **Workaround:** Use build-time conditionals like `#if !targetEnvironment(macCatalyst)` (Swift) or `#if !TARGET_OS_MACCATALYST` (ObjC) to isolate affected code.
+  **Workaround:** Use build-time conditionals like `#if !targetEnvironment(macCatalyst)` (Swift) or `#if !TARGET_OS_MACCATALYST` (Objective-C) to isolate affected code.
 - Projects that target iOS 27.1 show no Mac Catalyst run destination available. (187046347)
 
   **Workaround:** Add a Mac Catalyst 27.0 minimum deployment in target settings.
@@ -51,10 +51,11 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 - Initial Simulator launch can take several minutes. (187708500)
 - StandBy is unavailable in the iPhone Duo Simulator runtime. (187708663)
 - Running and debugging most app extensions is unavailable in the iPhone Duo Simulator runtime. (187708767)
+- In the iPhone Duo simulator, an app using `CameraCaptureAccessory` can use both displays at the same time without an active camera capture session. (190155353)
 
 ## See Also
 
 ### Xcode 27
 
-- [Xcode 27.2 Beta 2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.

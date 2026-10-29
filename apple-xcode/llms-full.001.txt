@@ -1,9 +1,9 @@
-# Apple Xcode and developer tools snapshot-bfcfe27766c6: full documentation
+# Apple Xcode and developer tools snapshot-ecd62262bd5e: full documentation
 
 Source: https://developer.apple.com/documentation/xcode
-Catalog snapshot: bfcfe27766c663f14999c4fcf31630a9571e9213781b42c76a1f17dfc49aeaf3
-Content digest: 990e2ee408426ee8304845f1e985cd3c28b8c57d3ce87386d5e53d62cdc12820
-Captured at: 2026-10-11T21:19:14.691Z
+Catalog snapshot: ecd62262bd5e7845a4c2dc1f6d5f07074b6a73452e2c30f6152c2907a2d99ba0
+Content digest: 484f1b689fd0a184e57235c86e556611996e593365fd722a3dd7713f4b9a086f
+Captured at: 2026-10-29T19:20:35.395Z
 Volume 1
 
 # Document: Analytics Reports
@@ -13386,6 +13386,8 @@ let entity = landmarkEntity.makeReference(
 
 - [AppIntentTypeDefinition](appintenttypedefinition.md)
 - [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
 - [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Escapable](https://developer.apple.com/documentation/swift/escapable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
@@ -14295,6 +14297,8 @@ let intent = orderIntent.makeIntent(
 
 ### Conforms To
 
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
 - [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
@@ -14542,7 +14546,6 @@ let coffee: AnyAppEntity = try result.value.as(CoffeeEntity)
 
 - [as(\_:)](dynamicpropertypath/as%28__%29-5po1a.md): Casts a property to the provided type.
 - [as(\_:)](dynamicpropertypath/as%28__%29-6n9rh.md): Casts the value to the given type.
-- [get(as:)](dynamicpropertypath/get%28as_%29.md): Beta. Resolves the value at this path, fetching it from the app if it was deferred.
 
 ### Subscripts
 
@@ -14628,26 +14631,6 @@ If the value’s type doesn’t match, this method throws an error.
 ```swift
 let CoffeeEntity = definitions.entities["CoffeeEntity"]
 let coffee: AnyAppEntity = try result.value.as(CoffeeEntity)
-```
-
-# Document: get(as:)
-
-Source path: documentation/appintentstesting/dynamicpropertypath/get(as:)
-Canonical documentation: https://developer.apple.com/documentation/appintentstesting/dynamicpropertypath/get(as:)
-Description: Framework: App Intents Testing Kind: Instance Method Availability: iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta · watchOS 27.2+ beta
-
-# get(as:)
-
-**Framework:** App Intents Testing  
-**Kind:** Instance Method  
-**Availability:** iOS 27.2+ beta · iPadOS 27.2+ beta · Mac Catalyst 27.2+ beta · macOS 27.2+ beta · tvOS 27.2+ beta · visionOS 27.2+ beta · watchOS 27.2+ beta
-
-Resolves the value at this path, fetching it from the app if it was deferred.
-
-## Declaration
-
-```swift
-func get<T>(as type: T.Type = T.self) async throws -> T where T : IntentValueConvertible
 ```
 
 # Document: subscript(_:)
@@ -94772,6 +94755,9 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 
 ### Latest
 
+- [TN3216: Supporting touch input for games on macOS](technotes/tn3216-supporting-touch-input-for-games-on-macos.md): Let players interact with your game through touch on a Mac with a touch display or a Sidecar-connected iPad.
+- [TN3215: Reading man pages](technotes/tn3215-reading-man-pages.md): Use the Terminal app to read the documentation for command-line tools and low-level APIs.
+- [TN3192: Migrating your app from the deprecated UIRequiresFullScreen key](technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key.md): Support iPhone and iPad multitasking and dynamic resizing while updating your app to remove the deprecated full-screen compatibility mode.
 - [TN3179: Understanding local network privacy](technotes/tn3179-understanding-local-network-privacy.md): Learn how local network privacy affects your software.
 - [TN3214: Validating the fonts you ship in your app](technotes/tn3214-validating-the-fonts-you-ship-in-your-app.md): Understand the App Store’s font validation, reproduce the check, and fix any issues it reports.
 - [TN3137: On Mac keychain APIs and implementations](technotes/tn3137-on-mac-keychains.md): Learn how the keychain on macOS differs from other Apple platforms.
@@ -94787,7 +94773,6 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 - [TN3194: Handling account deletions and revoking tokens for Sign in with Apple](technotes/tn3194-handling-account-deletions-and-revoking-tokens-for-sign-in-with-apple.md): Learn the best techniques for managing Sign in with Apple user sessions and responding to account deletion requests.
 - [TN3193: Managing the on-device foundation model’s context window](technotes/tn3193-managing-the-on-device-foundation-model-s-context-window.md): Learn how to budget for the context window limit of Apple’s on-device foundation model and handle the error when reaching the limit.
 - [TN3115: Bluetooth State Restoration app relaunch rules](technotes/tn3115-bluetooth-state-restoration-app-relaunch-rules.md): Learn about the conditions under which an iOS app will be relaunched by Bluetooth State Restoration.
-- [TN3192: Migrating your iPad app from the deprecated UIRequiresFullScreen key](technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key.md): Support iPad multitasking and dynamic resizing while updating your app to remove the deprecated full-screen compatibility mode.
 - [TN3151: Choosing the right networking API](technotes/tn3151-choosing-the-right-networking-api.md): Learn which networking API is best for you.
 - [TN3111: iOS Wi-Fi API overview](technotes/tn3111-ios-wifi-api-overview.md): Explore the various Wi-Fi APIs available on iOS and their expected use cases.
 - [TN3191: IMAP extensions supported by Mail for iOS, iPadOS, and visionOS](technotes/tn3191-imap-extensions-supported-by-mail.md): Learn which extensions to the RFC 3501 IMAP protocol are supported by Mail for iOS, iPadOS, and visionOS.
@@ -98821,7 +98806,7 @@ Swift Package Manager creates a module that contains the C structs found in the 
 
 Continuing with the same naming from the example above, consider the following header located at `MyRenderer/Sources/MySharedTypes/include/SharedTypes.h`:
 
-```Obj-C
+```obj-c
 #ifndef SharedTypes_h
 #define SharedTypes_h
 
@@ -99250,7 +99235,7 @@ func refill(numberOfFrames: AVAudioPacketCount) -> AVAudioPCMBuffer {
 }
 ```
 
-The [AudioBufferList](https://developer.apple.com/documentation/coreaudiotypes/audiobufferlist) pointer that is provided in the call to `resample(ioData:)` is wrapped in an instance of [AVAudioPCMBuffer](https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer) using the init(pcmFormat:bufferListNoCopy:deallocator:) initializer. This buffer is passed to the converter in the call to [convert(to:error:withInputFrom:)](https://developer.apple.com/documentation/avfaudio/avaudioconverter/convert%28to:error:withinputfrom:%29) to store the output of the conversion. The converter calls the provided closure, passing it the input length and asking for a status flag and a returned audio buffer. The status is always [AVAudioConverterInputStatus.haveData](https://developer.apple.com/documentation/avfaudio/avaudioconverterinputstatus/havedata) in this case, since the sample provider can always produce an arbitrary number of samples. The returned audio buffer is the result of a call to `refill(inNumberOfPackets:)`, using the provided input length.
+The [AudioBufferList](https://developer.apple.com/documentation/coreaudiotypes/audiobufferlist) pointer that is provided in the call to `resample(ioData:)` is wrapped in an instance of [AVAudioPCMBuffer](https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer) using the [init(pcmFormat:bufferListNoCopy:deallocator:)](https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer/init%28pcmformat:bufferlistnocopy:deallocator:%29-9iwe7) initializer. This buffer is passed to the converter in the call to [convert(to:error:withInputFrom:)](https://developer.apple.com/documentation/avfaudio/avaudioconverter/convert%28to:error:withinputfrom:%29) to store the output of the conversion. The converter calls the provided closure, passing it the input length and asking for a status flag and a returned audio buffer. The status is always [AVAudioConverterInputStatus.haveData](https://developer.apple.com/documentation/avfaudio/avaudioconverterinputstatus/havedata) in this case, since the sample provider can always produce an arbitrary number of samples. The returned audio buffer is the result of a call to `refill(inNumberOfPackets:)`, using the provided input length.
 
 ```swift
 /// Takes as input an AudioBufferList pointer.
@@ -107481,17 +107466,17 @@ Below are the IMAP extensions that Mail for iOS, iPadOS, and visionOS uses, with
 
 - **2025-08-27** First published.
 
-# Document: TN3192: Migrating your iPad app from the deprecated UIRequiresFullScreen key
+# Document: TN3192: Migrating your app from the deprecated UIRequiresFullScreen key
 
 Source path: documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key
 Canonical documentation: https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key
 Description: Kind: Technote
 
-# TN3192: Migrating your iPad app from the deprecated UIRequiresFullScreen key
+# TN3192: Migrating your app from the deprecated UIRequiresFullScreen key
 
 **Kind:** Technote
 
-Support iPad multitasking and dynamic resizing while updating your app to remove the deprecated full-screen compatibility mode.
+Support iPhone and iPad multitasking and dynamic resizing while updating your app to remove the deprecated full-screen compatibility mode.
 
 <a id="Overview"></a>
 
@@ -107505,28 +107490,30 @@ Update apps that rely on `UIRequiresFullScreen`’s compatibility mode to handle
 
 > Starting in iPadOS 26, `UIRequiresFullScreen` and its associated compatibility mode are deprecated and will be ignored in a future release. Apps that don’t update may experience broken layouts, UI elements positioned incorrectly, or content that doesn’t fit properly when the system resizes their scenes to accommodate multitasking scenarios they weren’t designed to handle.
 
-Starting in iOS 27 and iPadOS 27, `UIRequiresFullScreen` no longer opts your app out of resizing. Instead, the system resizes your app’s scene discretely. This behavior applies when you build your app with the iOS 27 SDK or later and set `UIRequiresFullScreen` to `YES`, unless [UIRequiresFullScreenIgnoredStartingWithVersion](https://developer.apple.com/documentation/bundleresources/information-property-list/uirequiresfullscreenignoredstartingwithversion) specifies version 27 or earlier.
+Starting in iOS 27 and iPadOS 27, `UIRequiresFullScreen` no longer opts your app out of resizing on either platform. Instead, the system resizes your app’s scene discretely. This behavior applies when you build your app with the iOS 27 SDK or later and set `UIRequiresFullScreen` to `YES`, unless [UIRequiresFullScreenIgnoredStartingWithVersion](https://developer.apple.com/documentation/bundleresources/information-property-list/uirequiresfullscreenignoredstartingwithversion) specifies version 27 or earlier.
 
 With a discrete resize, the scene doesn’t change size while people drag the window. When they finish, the `coordinateSpace.bounds` of the scene’s `effectiveGeometry` changes, and the scene moves to a `UIScreen` of exactly the same size. To learn more about discrete resizing, see WWDC26 session 278: [Modernize your UIKit app](https://developer.apple.com/videos/play/wwdc2026/278/).
 
-This guide will help you migrate away from `UIRequiresFullScreen` and handle dynamic resizing. For more information on the enhanced window resizing and improved multitasking, see WWDC25 session 282: [Make your UIKit app more flexible](https://developer.apple.com/videos/play/wwdc2025/282/).
+This guide will help you migrate away from `UIRequiresFullScreen` and handle dynamic resizing on iPhone and iPad. For more information on the enhanced window resizing and improved multitasking, see WWDC25 session 282: [Make your UIKit app more flexible](https://developer.apple.com/videos/play/wwdc2025/282/).
 
 <a id="Determine-if-your-app-should-update"></a>
 
 ## Determine if your app should update
 
-To support resizable scenes ensure that your app:
+To support resizable scenes on iOS and iPadOS, ensure that your app:
 
 - Provides a [launch screen](../xcode/specifying-your-apps-launch-screen.md). Starting in iOS 27 and iPadOS 27, a launch screen is required for App Store submission. See [TN3208: Preparing your app’s launch screen to meet App Store requirements](tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements.md).
 - Supports all [interface orientations](https://developer.apple.com/design/human-interface-guidelines/layout#Adaptability).
 - Doesn’t include the `UIRequiresFullScreen` key in its [Info.plist](https://developer.apple.com/documentation/bundleresources/information-property-list) or [INFOPLIST_KEY_UIRequiresFullScreen](https://developer.apple.com/documentation/xcode/build-settings-reference#Requires-Full-Screen) or its build settings.
 
-If you need to keep `UIRequiresFullScreen` to support earlier versions of iOS after you’ve made these updates, 
-add [`UIRequiresFullScreenIgnoredStartingWithVersion`](https://developer.apple.com/documentation/bundleresources/information-property-list/uirequiresfullscreenignoredstartingwithversion) to your information property list to specify in which version of iOS you want the system to begin ignoring `UIRequiresFullScreen` in your app.
+If you need to keep `UIRequiresFullScreen` to support earlier versions of iOS or iPadOS after you’ve made these updates, 
+add [`UIRequiresFullScreenIgnoredStartingWithVersion`](https://developer.apple.com/documentation/bundleresources/information-property-list/uirequiresfullscreenignoredstartingwithversion) to your information property list to specify in which version of iOS or iPadOS you want the system to begin ignoring `UIRequiresFullScreen` in your app.
 
-For example, if your app is available on iOS 18 and relies on `UIRequiresFullScreen` to function correctly, add `UIRequiresFullScreenIgnoredStartingWithVersion` to your `Info.plist` with a value of `26`. Then the system will begin ignoring `UIRequiresFullScreen` on iOS 26, iPadOS 26 and later, while supporting the full screen behavior on iOS 18, iPadOS or earlier.
+For example, if your app is available on iOS 18 and relies on `UIRequiresFullScreen` to function correctly, add `UIRequiresFullScreenIgnoredStartingWithVersion` to your `Info.plist` with a value of `26`. Then the system will begin ignoring `UIRequiresFullScreen` on iOS 26, iPadOS 26 and later, while supporting the full screen behavior on iOS 18, iPadOS 18 or earlier.
 
-With these updates, your app will support resizable scenes and multitasking. To learn more about adopting scene-based life cycle, see [TN3187: Migrating to the UIKit scene-based life cycle](tn3187-migrating-to-the-uikit-scene-based-life-cycle.md).
+Even with discrete resizing, the system still determines your scene’s supported interface orientations by comparing the orientations your app declares — through [`supportedInterfaceOrientations`](https://developer.apple.com/documentation/uikit/uiviewcontroller/supportedinterfaceorientations), your `Info.plist`, or [`application(_:supportedInterfaceOrientationsFor:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/application%28_:supportedinterfaceorientationsfor:%29) — against the orientations the device itself supports. On iPhone models without a Home button, the system excludes [`portraitUpsideDown`](https://developer.apple.com/documentation/uikit/uiinterfaceorientationmask/portraitupsidedown) from the supported set regardless of what your app declares. Account for this when you remove `UIRequiresFullScreen` and re-evaluate your app’s supported orientations for both iPhone and iPad.
+
+With these updates, your app will support resizable scenes and multitasking on both iPhone and iPad. To learn more about adopting scene-based life cycle, see [TN3187: Migrating to the UIKit scene-based life cycle](tn3187-migrating-to-the-uikit-scene-based-life-cycle.md).
 
 <a id="Respond-to-scene-size-changes"></a>
 
@@ -107593,7 +107580,7 @@ The example above specifies a preferred minimum width of 500 points.
 
 > The `UISceneSizeRestrictions` object does not prohibit other resizing behavior like rotation. When people rotate their device and the scene changes orientation, the scene’s bounds will change as well, regardless of the preferences expressed through the [sizeRestrictions](https://developer.apple.com/documentation/uikit/uiwindowscene/sizerestrictions) property of your app’s window scene. After the rotation has completed, the system will re-evaluate the size restrictions against the scene’s new bounds.
 
-In SwiftUI, use the [windowResizability(\_:)](https://developer.apple.com/documentation/swiftui/scene/windowresizability%28_:%29) modifier to allow your scene’s content provide sizing information. The value that you specify indicates the strategy the system uses to place minimum restriction on windows that it creates from that scene. For example:
+In SwiftUI, use the [windowResizability(\_:)](https://developer.apple.com/documentation/swiftui/scene/windowresizability%28_:%29) modifier to allow your scene’s content to provide sizing information. The value that you specify indicates the strategy the system uses to place a minimum restriction on windows that it creates from that scene. For example:
 
 ```swift
 @main
@@ -107612,7 +107599,7 @@ struct MyApp: App {
 
 ## Request scene orientation lock
 
-Some apps may benefit from temporarily locking the orientation. For example, a driving game may want to lock the orientation when the device is expected to rotate for steering a vehicle or a camera apps may need to lock orientation during photo or video capture.
+Some apps may benefit from temporarily locking the orientation. For example, a driving game may want to lock the orientation when the device is expected to rotate for steering a vehicle or camera apps may need to lock orientation during photo or video capture.
 
 To request orientation lock, override [prefersInterfaceOrientationLocked](https://developer.apple.com/documentation/uikit/uiviewcontroller/prefersinterfaceorientationlocked) in your view controller subclass. Whenever this preference changes, call [setNeedsUpdateOfSupportedInterfaceOrientations()](https://developer.apple.com/documentation/uikit/uiviewcontroller/setneedsupdateofsupportedinterfaceorientations%28%29). For example:
 
@@ -107639,7 +107626,7 @@ The value returned by `prefersInterfaceOrientationLocked` indicates to the syste
 
 > **Note**
 
-> The system does not guarantee that `prefersInterfaceOrientationLocked` preference will be honored. If honored, the preference to lock the interface orientation lasts while the view controller is visible, or you call `setNeedsUpdateOfPrefersInterfaceOrientationLocked` again and return `false` as the value of `prefersInterfaceOrientationLocked`.
+> The system does not guarantee that the `prefersInterfaceOrientationLocked` preference will be honored. If honored, the preference to lock the interface orientation lasts while the view controller is visible, or until you call `setNeedsUpdateOfPrefersInterfaceOrientationLocked` again and return `false` as the value of `prefersInterfaceOrientationLocked`.
 
 If your app uses the camera, use [`AVCaptureDevice.RotationCoordinator`](https://developer.apple.com/documentation/avfoundation/avcapturedevice/rotationcoordinator) to ensure that captures and camera preview interfaces are correctly oriented regardless of interface orientation lock.
 
@@ -107669,6 +107656,7 @@ For more information about locking your scene to your preferred interface orient
 
 ## Revision History
 
+- **2026-10-09** Updated content for both iOS 27 and iPadOS 27.
 - **2026-08-13** Added information about the updated behavior of UIRequiresFullScreen in iOS 27 and iPadOS 27.
 - **2026-06-08** Added launch screen requirement for iOS 27 and iPadOS 27.
 - **2026-02-06** Added information about back deployment support.
@@ -108778,7 +108766,7 @@ A [launch screen](https://developer.apple.com/design/human-interface-guidelines/
 
 Starting in iOS 27 and iPadOS 27, App Store Connect requires your app to include a launch screen configuration in its `Info.plist`. This applies to both iPhone and iPad apps distributed through the App Store and alternative app marketplaces. If your app already includes a launch screen, you don’t need to make any changes.
 
-A launch screen supports modern system features like multitasking and dynamic resizing. To learn about supporting resizable scenes, see [TN3192: Migrating your iPad app from the deprecated UIRequiresFullScreen key](tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key.md).
+A launch screen supports modern system features like multitasking and dynamic resizing. To learn about supporting resizable scenes, see [TN3192: Migrating your app from the deprecated UIRequiresFullScreen key](tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key.md).
 
 <a id="Understand-the-App-Store-submission-requirement"></a>
 
@@ -110096,7 +110084,7 @@ This section covers some privacy issues to consider as you implement your app.  
 
 There can be no privacy without security.  If you didn’t enable security with Multipeer Connectivity, now is the time to correct that misstep.  For more on this topic, see [Plan for security](tn3213-moving-from-multipeer-connectivity-to-network-framework.md#Plan-for-security).
 
-When you advertise a service with a listener, it defaults to using the user-assigned device name as the service name.  To override that, pass a custom name to [bonjour(name:type:domain:txtRecord:)](https://developer.apple.com/documentation/network/listenerprovider/bonjour%28name:type:domain:txtrecord:%29) when creating the listener:
+When you advertise a service with a listener, it defaults to using the [user-assigned device name](https://developer.apple.com/documentation/uikit/uidevice/name) as the service name.  To override that, pass a custom name to [bonjour(name:type:domain:txtRecord:)](https://developer.apple.com/documentation/network/listenerprovider/bonjour%28name:type:domain:txtrecord:%29) when creating the listener:
 
 ```swift
 let customName: String = …
@@ -110950,6 +110938,352 @@ Your app can’t redistribute fonts Apple designs, such as the San Francisco and
 ## Revision History
 
 - **2026-10-01** First published.
+
+# Document: TN3215: Reading man pages
+
+Source path: documentation/technotes/tn3215-reading-man-pages
+Canonical documentation: https://developer.apple.com/documentation/technotes/tn3215-reading-man-pages
+Description: Kind: Technote
+
+# TN3215: Reading man pages
+
+**Kind:** Technote
+
+Use the Terminal app to read the documentation for command-line tools and low-level APIs.
+
+<a id="Overview"></a>
+
+## Overview
+
+Apple’s man pages, short for *manual pages*, document command-line tools, low-level APIs, and file formats.  If you’re working at the lowest levels of the system, don’t miss out on this rich source of information.
+
+<a id="Display-a-man-page-in-the-Terminal-app"></a>
+
+## Display a man page in the Terminal app
+
+Type `man` and the name of a tool or API whose documentation you want to access, and press Return.  Because the man page is larger than the window, Terminal displays only the first part of the page.  Press Space to display subsequent parts, or press Q to exit the `man` tool.
+
+> **Important**
+
+> Developer-oriented man pages are distributed as part of Xcode.  The `man` tool searches for man pages within the active developer directory.  If you have multiple copies of Xcode installed, select your active developer directory using the `xcode-select` command-line tool.  See the `xcode-select` man page for details.
+
+<a id="Search-a-specific-section"></a>
+
+## Search a specific section
+
+Section 1 of the man pages covers command-line tools, section 2 covers system calls, section 3 covers user-space libraries, and so on.  If you don’t specify a section, `man` displays the page from the first section that has a matching entry.  For example, the following command displays the man page for the `open` command-line tool:
+
+```
+% man open
+```
+
+To get the man page for the `open` system call, specify section 2:
+
+```
+% man 2 open
+```
+
+If you’re not sure which section to use, do a keyword search using the `-k` option.  For example, the following command shows all the man pages that mention *open*.
+
+```
+% man -k open
+```
+
+<a id="Learn-more-about-man-pages"></a>
+
+## Learn more about man pages
+
+The `man` command-line tool has its own man page, which is a good place to learn more about this feature:
+
+```
+% man man
+```
+
+<a id="Revision-History"></a>
+
+## Revision History
+
+- **2026-10-08** First published.
+
+# Document: TN3216: Supporting touch input for games on macOS
+
+Source path: documentation/technotes/tn3216-supporting-touch-input-for-games-on-macos
+Canonical documentation: https://developer.apple.com/documentation/technotes/tn3216-supporting-touch-input-for-games-on-macos
+Description: Kind: Technote
+
+# TN3216: Supporting touch input for games on macOS
+
+**Kind:** Technote
+
+Let players interact with your game through touch on a Mac with a touch display or a Sidecar-connected iPad.
+
+<a id="Overview"></a>
+
+## Overview
+
+On a Mac with a touch display or a Sidecar-connected iPad, AppKit emulates mouse events from touch, so existing games can receive touch input with little or no code change. This guidance focuses on configurations common in games, such as an app with a single view backed by a [CAMetalLayer](https://developer.apple.com/documentation/quartzcore/cametallayer). For more information about touch support in AppKit, including the view hierarchy and hit-testing mechanism, see [Handling AppKit gestures](https://developer.apple.com/documentation/appkit/handling-appkit-gestures).
+
+Run your game on a Mac with a touch display or a Sidecar-connected iPad to see how it responds to touch. Standard AppKit controls, such as text fields and buttons, support touch automatically. Content that relies on hover, mouse movement deltas, or other pointer-only behavior, such as a map that reveals details when the pointer rests on a location, needs updates for touch.
+
+<a id="Extend-the-player-experience-meaningfully"></a>
+
+## Extend the player experience meaningfully
+
+Touch extends the Mac experience rather than replacing other input. Players don’t use touch on a Mac the way they use it on iPhone, where they often hold the device with both hands. Different game styles suit different input devices. For example, first-person shooters work best with a keyboard and mouse, and third-person adventures are generally more enjoyable with a game controller. Touch works best for brief interactions that complement these devices.
+
+Apply these guidelines so touch complements other input:
+
+- Give players who use touch the same information and actions that mouse and game controller players have, so touch doesn’t put them at a disadvantage.
+- Design touch interactions for brief moments that the player can complete with one hand, while the other hand stays on the keyboard, mouse, or controller.
+- Identify the interactions players reasonably expect from touch, such as inventory management, map zoom and scroll, or the settings menu.
+
+When touch covers these interactions well, it feels like a natural extension of your game without changing how the game plays with other input devices.
+
+<a id="Understand-automatic-touch-support-in-existing-games"></a>
+
+## Understand automatic touch support in existing games
+
+Existing games get touch support automatically. AppKit emulates mouse events from a single finger tapping or dragging, so your game receives touch as mouse input without code changes. AppKit applies game-specific emulation to apps in a games category, and can apply emulation to an individual view, such as one that hosts a third-party UI framework. To turn off the emulation, see [Opt out of mouse emulation](tn3216-supporting-touch-input-for-games-on-macos.md#Opt-out-of-mouse-emulation).
+
+If your game’s engine doesn’t handle touch directly, your game receives touch as mouse input. A tap arrives as a click, so interfaces that respond only to clicks, such as menus and buttons, work with touch without changes. Interfaces that depend on mouse movement deltas, hover, or other pointer-only behavior need updates, because touch doesn’t report movement between taps and has no hover state.
+
+A mouse moves continuously from one position to the next, but a player can tap or start a drag at two distant locations in succession. If your game tracks the pointer by adding up the movement deltas from [mouseMoved(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousemoved%28with:%29) and [mouseDragged(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousedragged%28with:%29) events, the tracked position drifts away from where the player touched. Instead, read the location from the event itself. For games, AppKit sends a `mouseMoved` event to the new location before each [mouseDown(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousedown%28with:%29), so your game can refresh its cached mouse position.
+
+If the [LSApplicationCategoryType](https://developer.apple.com/documentation/bundleresources/information-property-list/lsapplicationcategorytype) value in your information property list is `public.app-category.games` or a game subcategory such as `public.app-category.action-games`, the system applies game-specific mouse emulation.
+
+Specifically for games, AppKit sends these ordered mouse events for a single tap:
+
+- [mouseMoved(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousemoved%28with:%29), from the last mouse position to the tap location
+- [mouseDown(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousedown%28with:%29)
+- [mouseUp(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mouseup%28with:%29)
+
+For a drag, AppKit sends these mouse events, in this order:
+
+- [mouseMoved(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousemoved%28with:%29), to the location where the drag begins
+- [mouseDown(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousedown%28with:%29)
+- [mouseDragged(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousedragged%28with:%29), repeatedly while the touch continues
+- [mouseUp(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mouseup%28with:%29)
+
+> **Important**
+
+> Don’t intercept events by overriding [sendEvent(\_:)](https://developer.apple.com/documentation/appkit/nsapplication/sendevent%28_:%29) or pulling them with [nextEvent(matching:until:inMode:dequeue:)](https://developer.apple.com/documentation/appkit/nsapplication/nextevent%28matching:until:inmode:dequeue:%29). Doing so can interfere with gesture recognizers that respond to a physical mouse.
+
+<a id="Understand-GCMouse-emulation"></a>
+
+## Understand GCMouse emulation
+
+Games can read mouse events from [GCMouse](https://developer.apple.com/documentation/gamecontroller/gcmouse) for low-latency mouse input. By default, the system presents each touch surface, whether a Mac with a touch display or a Sidecar-connected iPad, as an additional `GCMouse` that emulates mouse input from touches:
+
+- A finger touching down presses the left button.
+- Moving the finger calls [mouseMovedHandler](https://developer.apple.com/documentation/gamecontroller/gcmouseinput/mousemovedhandler) with the movement delta.
+- Lifting the finger releases the button.
+
+The emulated `GCMouse` ignores additional fingers, and it doesn’t emulate other buttons, scrolling, or pinch input. Because a player can touch disconnected locations, the emulated deltas don’t represent continuous pointer movement. Don’t use them to track an absolute pointer position. To stop the system from presenting touch as a `GCMouse`, opt out of mouse emulation.
+
+<a id="Opt-out-of-mouse-emulation"></a>
+
+## Opt out of mouse emulation
+
+To opt out of mouse emulation, add the [NSIsTouchNative](https://developer.apple.com/documentation/bundleresources/information-property-list/nsistouchnative) key to your app’s information property list and set it to `YES`. AppKit’s emulation will stick to a generic emulation - ignoring the app’s category or whether it uses a third-party UI framework - and disable `GCMouse` emulation. Setting this key to `YES` has the following effects:
+
+- The system no longer presents the touch surface of a Mac with a touch display or a Sidecar-connected iPad as an additional `GCMouse` device.
+- Your game receives touch through gesture recognizers instead of emulated mouse events.
+
+AppKit still emulates mouse events for any [NSView](https://developer.apple.com/documentation/appkit/nsview) that handles them, for example by overriding `mouseDown:`. To handle touch directly in such a view, add an [NSGestureRecognizer](https://developer.apple.com/documentation/appkit/nsgesturerecognizer) that allows direct touch to that view.
+
+<a id="Implement-touch-events"></a>
+
+## Implement touch events
+
+After you decide where touch fits in your game, handle touch directly with gesture recognizers to support gestures such as pinch to zoom, two-finger rotate, and other multi-finger interactions. Opt out of mouse emulation, and then:
+
+1. Add gesture recognizers to your game view.
+2. Implement the action method for each gesture recognizer.
+3. In an object that conforms to [NSGestureRecognizerDelegate](https://developer.apple.com/documentation/appkit/nsgesturerecognizerdelegate), specify which gestures the system can recognize together and which it can’t.
+
+> **Note**
+
+> The gesture recognizers must include [direct](https://developer.apple.com/documentation/appkit/nstouch/touchtypemask/direct) in [allowedTouchTypes](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/allowedtouchtypes). On macOS 27 and later, this is the default.
+
+The following example registers gesture recognizers in an [NSViewController](https://developer.apple.com/documentation/appkit/nsviewcontroller). The `handleTap:` and `handlePinch:` action methods follow the same pattern as `handlePan:`, which appears later in this article.
+
+**Swift**
+
+```swift
+// One-time setup, typically in an NSViewController
+// that conforms to NSGestureRecognizerDelegate.
+// Store the recognizers as properties so the delegate
+// methods below can reference them.
+
+pan = NSPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+pan.buttonMask = 0 // Do not react to a physical mouse.
+pan.delegate = self
+gameView.addGestureRecognizer(pan)
+
+tap = NSClickGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+tap.buttonMask = 0 // Do not react to a physical mouse.
+tap.delegate = self
+gameView.addGestureRecognizer(tap)
+
+pinch = NSMagnificationGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
+pinch.delegate = self
+gameView.addGestureRecognizer(pinch)
+```
+
+**Objective-C**
+
+```objc
+// One-time setup, typically in an NSViewController
+// that conforms to <NSGestureRecognizerDelegate>.
+// Store the recognizers as properties so the delegate
+// methods below can reference them.
+
+self.pan = [[NSPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+self.pan.buttonMask = 0; // Do not react to a physical mouse.
+self.pan.delegate = self;
+[self.gameView addGestureRecognizer:self.pan];
+
+self.tap = [[NSClickGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+self.tap.buttonMask = 0; // Do not react to a physical mouse.
+self.tap.delegate = self;
+[self.gameView addGestureRecognizer:self.tap];
+
+self.pinch = [[NSMagnificationGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+self.pinch.delegate = self;
+[self.gameView addGestureRecognizer:self.pinch];
+```
+
+The following example lets the system recognize pan and pinch together and makes tap wait for both to fail:
+
+**Swift**
+
+```swift
+// NSGestureRecognizerDelegate: allow only pan and pinch to be recognized together.
+func gestureRecognizer(_ gestureRecognizer: NSGestureRecognizer,
+                       shouldRecognizeSimultaneouslyWith other: NSGestureRecognizer) -> Bool {
+    (gestureRecognizer === pan || gestureRecognizer === pinch) &&
+        (other === pan || other === pinch)
+}
+
+// NSGestureRecognizerDelegate: a tap must wait for pan/pinch to fail,
+// so it doesn't fire in the middle of a drag or pinch.
+func gestureRecognizer(_ gestureRecognizer: NSGestureRecognizer,
+                       shouldRequireFailureOf other: NSGestureRecognizer) -> Bool {
+    gestureRecognizer === tap && (other === pan || other === pinch)
+}
+```
+
+**Objective-C**
+
+```objc
+// NSGestureRecognizerDelegate: allow only pan and pinch to be recognized together.
+- (BOOL)gestureRecognizer:(NSGestureRecognizer *)gestureRecognizer
+        shouldRecognizeSimultaneouslyWithGestureRecognizer:(NSGestureRecognizer *)other {
+    return (gestureRecognizer == self.pan || gestureRecognizer == self.pinch) &&
+           (other == self.pan || other == self.pinch);
+}
+
+// NSGestureRecognizerDelegate: a tap must wait for pan/pinch to fail,
+// so it doesn't fire in the middle of a drag or pinch.
+- (BOOL)gestureRecognizer:(NSGestureRecognizer *)gestureRecognizer
+        shouldRequireFailureOfGestureRecognizer:(NSGestureRecognizer *)other {
+    return gestureRecognizer == self.tap &&
+           (other == self.pan || other == self.pinch);
+}
+```
+
+<a id="Route-gestures-in-your-game-engine"></a>
+
+### Route gestures in your game engine
+
+Games typically have several input contexts, such as gameplay, a main menu, and a mini-map, and each context reacts differently to the same gesture. To handle this, use the gesture recognizers as a single entry point and let your engine route the gestures to whichever input handler is active:
+
+1. Install the gesture recognizers once in your app and leave them enabled.
+2. Convert recognizer callbacks into your engine’s input events and send them to the active input handler (for example, the character, main menu, or mini-map input handler).
+3. Let the active input handler decide if and how to react to different gestures.
+
+The following example, in the same `NSViewController` that registered the recognizers, converts a pan gesture into an engine input event and sends it to the active input handler:
+
+**Swift**
+
+```swift
+@objc func handlePan(_ gesture: NSPanGestureRecognizer) {
+    let deltaPts = gesture.translation(in: gameView)
+    let scale = gameView.window?.backingScaleFactor ?? 1
+    gesture.setTranslation(.zero, in: gameView) // Reset it so the next callback reports a fresh delta.
+
+    // Convert points to pixels. Invert the y-axis if your engine's origin is at the top left,
+    // because AppKit's origin is at the bottom left.
+    Game.currentInputHandler.onPan(deltaPts.x * scale, -deltaPts.y * scale)
+}
+```
+
+**Objective-C**
+
+```objcpp
+- (void)handlePan:(NSPanGestureRecognizer *)gesture {
+    const NSPoint deltaPts = [gesture translationInView:self.gameView];
+    const CGFloat scale = self.gameView.window.backingScaleFactor;
+    [gesture setTranslation:NSZeroPoint inView:self.gameView]; // Reset it so the next callback reports a fresh delta.
+
+    // Convert points to pixels. Invert the y-axis if your engine's origin is at the top left,
+    // because AppKit's origin is at the bottom left.
+    Game::GetCurrentInputHandler()->OnPan(deltaPts.x * scale, -deltaPts.y * scale);
+}
+```
+
+The following input handlers show how the mini-map pans its content and how gameplay ignores the gesture:
+
+```cpp
+// C++ virtual function that handles pan events in the mini-map.
+void MiniMapInputHandler::OnPan(float dx, float dy)
+{
+    // Implement map pan.
+    mapLocation.x += dx;
+    mapLocation.y += dy;
+}
+
+// C++ virtual function that handles pan events during gameplay.
+void GameplayInputHandler::OnPan(float, float)
+{
+    // Nothing to do during gameplay.
+    // Gameplay is driven by the physical mouse (GCMouse), keyboard, or controller.
+    return;
+}
+```
+
+<a id="Use-standard-AppKit-controls-for-automatic-touch-support"></a>
+
+### Use standard AppKit controls for automatic touch support
+
+Standard AppKit controls, such as a text field for a player name or buttons in a settings panel, support touch automatically. For example, a tap places the caret in a text field or presses a button. The controls keep this behavior after you set `NSIsTouchNative` to `YES` and handle touch in your own view, as long as you don’t attach your own direct-touch gesture recognizers to them.
+
+For more information about how AppKit gathers gesture recognizers, including the view hierarchy and hit-testing mechanism, see [Handling AppKit gestures](https://developer.apple.com/documentation/appkit/handling-appkit-gestures).
+
+<a id="Review-your-touch-integration"></a>
+
+## Review your touch integration
+
+After you make your changes, use this checklist to verify that your game handles touch correctly.
+
+If your game relies on mouse emulation:
+
+- Read the location from each mouse event instead of using a cached pointer location.
+- Don’t intercept events by overriding `sendEvent:` or pulling them with `nextEventMatchingMask:`.
+
+If your game handles touch directly:
+
+- Set `NSIsTouchNative` to `YES`.
+- Use direct-touch gesture recognizers, and set [buttonMask](https://developer.apple.com/documentation/appkit/nsclickgesturerecognizer/buttonmask) to `0` so they don’t respond to a physical mouse.
+- Add touch to interactions players reasonably expect from it, such as inventory management, map zoom and scroll, or the settings menu, and make them usable with one hand alongside other input methods.
+- Continue to read `GCMouse` for the physical mouse. With `NSIsTouchNative` set, touch no longer appears as an emulated `GCMouse`.
+- Use standard AppKit controls where possible. They continue to support touch as long as you don’t attach your own direct-touch gesture recognizers to them.
+
+<a id="Revision-History"></a>
+
+## Revision History
+
+- **2026-10-28** First published.
 
 # Document: Swift Testing
 
@@ -121604,8 +121938,8 @@ For information about Xcode Cloud releases, see [Xcode Cloud release notes](http
 
 ### Xcode 27
 
-- [Xcode 27.2 Beta 2 Release Notes](xcode-release-notes/xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
-- [Xcode 27.1 RC Release Notes](xcode-release-notes/xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.2 Release Notes](xcode-release-notes/xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.1 Release Notes](xcode-release-notes/xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-release-notes/xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### Xcode 26
@@ -143406,16 +143740,16 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode 27
 
-- [Xcode 27.2 Beta 2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
-- [Xcode 27.1 RC Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.1 Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: Xcode 27.1 RC Release Notes
+# Document: Xcode 27.1 Release Notes
 
 Source path: documentation/xcode-release-notes/xcode-27_1-release-notes
 Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-27_1-release-notes
 Description: Kind: Article
 
-# Xcode 27.1 RC Release Notes
+# Xcode 27.1 Release Notes
 
 **Kind:** Article
 
@@ -143425,7 +143759,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-Xcode 27.1 RC includes Swift 6.4 and SDKs for iOS 27.1, iPadOS 27, tvOS 27, watchOS 27, macOS 27, and visionOS 27. Xcode 27.1 RC supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.1 RC requires a Mac running macOS Tahoe 26.6 or later.
+Xcode 27.1 includes Swift 6.4 and SDKs for iOS 27.1, iPadOS 27, tvOS 27, watchOS 27, macOS 27, and visionOS 27. Xcode 27.1 supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.1 requires a Mac running macOS Tahoe 26.6 or later.
 
 See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more about compatible platforms and deployment targets.
 
@@ -143437,9 +143771,9 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 #### Known Issues
 
-- Projects that use APIs specific to iOS 27.1 show compile errors when building for Mac Catalyst (“undeclared identifier”, “not found”, “has no member”, “cannot find”, etc). (185924957)
+- Projects that use APIs specific to iOS 27.1 show compile errors when building for Mac Catalyst (“undeclared identifier”, “not found”, “has no member”, “cannot find”, etc.). (185924957)
 
-  **Workaround:** Use build-time conditionals like `#if !targetEnvironment(macCatalyst)` (Swift) or `#if !TARGET_OS_MACCATALYST` (ObjC) to isolate affected code.
+  **Workaround:** Use build-time conditionals like `#if !targetEnvironment(macCatalyst)` (Swift) or `#if !TARGET_OS_MACCATALYST` (Objective-C) to isolate affected code.
 - Projects that target iOS 27.1 show no Mac Catalyst run destination available. (187046347)
 
   **Workaround:** Add a Mac Catalyst 27.0 minimum deployment in target settings.
@@ -143465,21 +143799,22 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 - Initial Simulator launch can take several minutes. (187708500)
 - StandBy is unavailable in the iPhone Duo Simulator runtime. (187708663)
 - Running and debugging most app extensions is unavailable in the iPhone Duo Simulator runtime. (187708767)
+- In the iPhone Duo simulator, an app using `CameraCaptureAccessory` can use both displays at the same time without an active camera capture session. (190155353)
 
 ## See Also
 
 ### Xcode 27
 
-- [Xcode 27.2 Beta 2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: Xcode 27.2 Beta 2 Release Notes
+# Document: Xcode 27.2 Release Notes
 
 Source path: documentation/xcode-release-notes/xcode-27_2-release-notes
 Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-27_2-release-notes
 Description: Kind: Article
 
-# Xcode 27.2 Beta 2 Release Notes
+# Xcode 27.2 Release Notes
 
 **Kind:** Article
 
@@ -143489,68 +143824,85 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-Xcode 27.2 beta 2 includes Swift 6.4 and SDKs for iOS 27.2, iPadOS 27.2, tvOS 27.2, watchOS 27.2, macOS 27.2, and visionOS 27.2. Xcode 27.2 beta 2 supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.2 beta 2 requires a Mac running macOS Tahoe 26.6 or later.
-
-> **Important**
-
-> [Download Xcode 27.1 beta](https://developer.apple.com/download/applications/) to get the iOS SDK and simulator support for iPhone Duo.
+Xcode 27.2 includes Swift 6.4 and SDKs for iOS 27.2, iPadOS 27.2, tvOS 27.2, watchOS 27.2, macOS 27.2, and visionOS 27.2. Xcode 27.2 supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.2 requires a Mac running macOS Tahoe 26.6 or later.
 
 See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more about compatible platforms and deployment targets.
-
-<a id="General"></a>
-
-### General
-
-<a id="Known-Issues"></a>
-
-#### Known Issues
-
-- Screenshots and recordings in iPhone Duo may be black for up to a few minutes after booting the device. (187146039)
-- Cloning a 27.2 simulator device may encounter an issue due to incorrect file permissions. (188407822) (FB24939277)
-
-<a id="Coding-Assistant"></a>
-
-### Coding Assistant
-
-<a id="New-Features"></a>
-
-#### New Features
-
-- Added a GetCodeCoverage MCP tool that reports code coverage from the most recent test result, optionally filtered by target or file. (181141715)
 
 <a id="Device-Hub"></a>
 
 ### Device Hub
 
+<a id="New-Features"></a>
+
+#### New Features
+
+- When used via Sidecar or a MacBook with Touch, Device Hub now sends touches on the iPad screen to the remote device as touches. This allows you to use multi-finger gestures such as pinch and rotate to test your applications. (188634387)
+- Device Hub in Xcode 27.2 contains multiple improvements:
+
+  - Support for touch events through Sidecar
+  - Support for Standby in iPhone Duo
+  - Input support for iOS 17.x simulator runtimes
+  - Slow Motion Animation (simulators only)
+  - Simulate Shake (simulators only)
+  - Simulate Fall (simulators only)
+  - Simulate Memory Pressure (simulators only)
+  - Context Menu for Screenshots
+  - Improved Drag and Drop Compatibility for Screenshot Icon
+  - Option to Hide Device Bezels
+  - App Settings
+
+    - Quit Behavior for Booted Simulators
+    - Keyboard Shortcut Behavior
+    - Secure Keyboard Entry
+    - Hardware Keyboard Simulation
+    - Screen Capture Save Location (189236369)
+
 <a id="Resolved-Issues"></a>
 
 #### Resolved Issues
 
-- Fixed: Keyboard and mouse inputs to simulators for OS versions before iOS 18.0, tvOS 18.0, watchOS 11.0, and visionOS 2.0 are not accepted. (181945323)
-- Fixed: After disconnecting a physical device from Device Hub when “Simulate Hardware Keyboard” was in use, the device may remain in “hardware keyboard” mode for up to 2 minutes. This will cause the software keyboard to not appear when selecting a text field. (182553164)
-- Fixed an issue where Device Hub stopped sending touch and button input to a connected device after a period of inactivity. (182695157) (FB23873443)
-- Fixed: Device Hub now supports input to iOS 17 Simulator Devices. (187484157)
+- Fixed: Modifier keys such as Shift, Control, Option, and Command were not sent to the correct device when more than one device window was open. (177181719)
+- Fixed: Keyboard and mouse inputs to simulators for OS versions before iOS 18.0, tvOS 18.0, watchOS 11.0, and visionOS 2.0 were not accepted. (181945323)
+- Fixed: After disconnecting a physical device from Device Hub when “Simulate Hardware Keyboard” was in use, the device might have remained in “hardware keyboard” mode for up to 2 minutes. This caused the software keyboard not to appear when selecting a text field. (182553164)
+- Fixed: Device Hub stopped sending touch and button input to a connected device after a period of inactivity. (182695157) (FB23873443)
+- Device Hub now supports input to iOS 17 simulator devices. (187484157)
+- Fixed: Selecting a Vision Pro simulator in Device Hub might cause Device Hub to quit unexpectedly if a visionOS runtime is not available. (188313956)
+- Fixed: The Device \> Simulate Memory Warning menu item did not work. (188326513)
+- Fixed: Device Hub might terminate unexpectedly when running on earlier macOS 27.2 betas. (190126101)
 
 <a id="Known-Issues"></a>
 
 #### Known Issues
 
-- Fixed an issue where modifier keys such as Shift, Control, Option, and Command were not sent to the correct device when more than one device window was open. (177181719)
+- When the “Secure keyboard entry” setting is on, it prevents any app on the system from intercepting keyboard events before Device Hub sends them to the controlled device. It cannot be used at the same time as the “Capture Keyboard” feature. (176305816)
+- Device Hub support for CarPlay requires devices to be physically connected via USB cable (not over the network). iOS Simulator is not supported for CarPlay. (179494052) (FB23101450)
+- Screenshots and recordings in iPhone Duo might be black for up to a few minutes after booting the device. (187146039)
 - VoiceOver, the Accessibility Inspector, and other accessibility tools cannot convey screen content on an iPhone Duo within Device Hub. (187148389)
-- Selecting a Vision Pro Simulator in Device Hub may cause Device Hub to quit unexpectedly if a visionOS runtime is not available. (188313956)
+- Device Hub is unable to customize the text size for a device running iOS 18 or earlier. (189261485) (FB25077755)
+- When switching between the inner and outer display of the iPhone Duo simulator, modifier keys such as Shift and Command might stop working. (189465196)
 
-  **Workaround:** Install the corresponding visionOS runtime from within Xcode or delete the simulator device.
-- The Device-\>Simulate Memory Warning menu item does not work. (188326513)
+  **Workaround:** Click with the mouse on the currently visible screen.
 
-<a id="Devices"></a>
+<a id="Instruments"></a>
 
-### Devices
+### Instruments
 
 <a id="Resolved-Issues"></a>
 
 #### Resolved Issues
 
-- Fixed: Holding Escape does not dismiss keyboard capture mode. (187880316)
+- Fixed: Hovering over the top ruler in the timeline would sometimes not show all tooltips for the timestamp you hovered over. (168530263)
+
+<a id="Interface-Builder"></a>
+
+### Interface Builder
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Interface Builder `toolchain` compilation mode incorrectly encoded standard/system `UIStackView.spacing` as `0`. (186354589) (FB24605403)
+- Fixed: Interface Builder `toolchain` compilation mode failed to encode `UIButtonConfiguration.contentInsets`. (187747632) (FB24829108)
 
 <a id="Mac-Catalyst"></a>
 
@@ -143560,27 +143912,33 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 #### Known Issues
 
-- Projects that use APIs specific to iOS 27.1 show compile errors when building for Mac Catalyst (“undeclared identifier”, “not found”, “has no member”, “cannot find”, etc). (185924957)
+- Projects that use APIs specific to iOS 27.1 show compile errors when building for Mac Catalyst (“undeclared identifier”, “not found”, “has no member”, “cannot find”, and similar errors). (185924957)
 
-  **Workaround:** Use build-time conditionals like `#if !targetEnvironment(macCatalyst)` (Swift) or `#if !TARGET_OS_MACCATALYST` (ObjC) to isolate affected code.
+  **Workaround:** Use build-time conditionals like `#if !targetEnvironment(macCatalyst)` (Swift) or `#if !TARGET_OS_MACCATALYST` (Objective-C) to isolate affected code.
 
-<a id="Previews"></a>
+<a id="Memory-Gauge"></a>
 
-### Previews
-
-<a id="New-Features"></a>
-
-#### New Features
-
-- The canvas overrides picker now includes a Display group for previewing content on a device’s alternative display. (182598534)
+### Memory Gauge
 
 <a id="Resolved-Issues"></a>
 
 #### Resolved Issues
 
-- Fixed: A clearer error with recovery steps is now shown when previews fail because another user account on this Mac owns the Previews JIT directory. (184564292)
-- Fixed an issue where previews could fail in source files that use Windows-style (CRLF) line endings. (186255376)
-- Fixed: The RenderPreview MCP tool now returns the list of available render destinations, and lets the caller specify which destination to use for rendering. (186442676)
+- Fixed: Memory usage needle rotated beyond the meter when swap is used. (187611943)
+
+<a id="Previews"></a>
+
+### Previews
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed an occasional issue where selecting a preview from a preview group’s thumbnail grid on macOS would fail to 1-up the right preview. (183475595)
+- A clearer error with recovery steps is now shown when previews fail because another user account on this Mac owns the Previews JIT directory. (184564292)
+- A clearer error is now shown when the selected platform does not support a preview’s content. (185436582)
+- Fixed: Previews could fail in source files that use Windows-style (CRLF) line endings. (186255376)
+- The RenderPreview MCP tool now returns the list of available render destinations, and lets the caller specify which destination to use for rendering. (186442676)
 
 <a id="Project-Format"></a>
 
@@ -143590,7 +143948,7 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 #### New Features
 
-- Xcode now supports a JSON-based project format (.xcproj) that’s more readable, merge-friendly, and easier for coding agents to edit. Enable it in the File inspector. Projects using .xcproj also open in earlier versions of Xcode 27. Learn more in [Updating your Xcode project configuration file format](https://developer.apple.com/documentation/xcode/updating-your-xcode-project-configuration-file-format). (184661114)
+- Xcode now supports a JSON-based project format (`.xcproj`) that’s more readable, merge-friendly, and easier for coding agents to edit. Enable it in the File inspector. Projects using `.xcproj` also open in earlier versions of Xcode 27. Learn more in [Updating your Xcode project configuration file format](https://developer.apple.com/documentation/xcode/updating-your-xcode-project-configuration-file-format). (184661114)
 
 <a id="SDK"></a>
 
@@ -143600,7 +143958,7 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 #### Known Issues
 
-- macOS, watchOS, tvOS, and visionOS SDKs in Xcode 27.2 incorrectly report 27.1 as a valid deployment target. Builds and other functionality may have unexpected behavior if this deployment target is used. Mac Catalyst builds with a 27.1 or 27.2 deployment target may be unable to use newly introduced API. (187160501)
+- macOS, watchOS, tvOS, and visionOS SDKs in Xcode 27.2 incorrectly report 27.1 as a valid deployment target. Builds and other functionality might have unexpected behavior if this deployment target is used. Mac Catalyst builds with a 27.1 or 27.2 deployment target might be unable to use newly introduced API. (187160501)
 
 <a id="Simulator"></a>
 
@@ -143610,37 +143968,33 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 #### Resolved Issues
 
-- Fixed: Some simulator runtimes are not completely deleted when removed, re-appearing after a reboot. (141290052) (FB16083602)
+- Fixed: Some simulator runtimes are not completely deleted when removed, reappearing after a reboot. (141290052) (FB16083602)
+- Fixed: If a simulator runtime is reinstalled after being deleted, it might still show up as unavailable in Xcode. (187950199)
+- Fixed: In the iPhone Duo simulator, an app using `CameraCaptureAccessory` could use both displays at the same time without an active camera capture session. (190155353)
 
 <a id="Known-Issues"></a>
 
 #### Known Issues
 
-- Device Hub support for CarPlay requires devices to be physically connected via USB cable (not over the network).  iOS Simulator is not supported for CarPlay. (179494052) (FB23101450)
-- If a simulator runtime is re-installed after being deleted, it may still show up as unavailable in Xcode (187950199)
+- Cloning a simulator device running runtime 27.2 might fail due to incorrect file permissions. (188407822) (FB24939277)
 
-  **Workaround:** `killall -9 com.apple.CoreSimulator.CoreSimulatorService`
+  **Workaround:** `find ~/Library/Developer/CoreSimulator/Devices/<SOURCE_UDID>/data -name '*.sb-????????-??????' -delete`
 
-<a id="Updates-in-Xcode-272-Beta"></a>
+<a id="XCTest-UI-Automation"></a>
 
-## Updates in Xcode 27.2 Beta
+### XCTest UI Automation
 
-<a id="Previews"></a>
+<a id="Resolved-Issues"></a>
 
-### Previews
+#### Resolved Issues
 
-<a id="Resolved-Issues-in-Xcode-272-Beta"></a>
-
-#### Resolved Issues in Xcode 27.2 Beta
-
-- Fixed an occasional issue where selecting a preview from a preview group’s thumbnail grid on macOS would fail to 1-up the right preview. (183475595)
-- Fixed: A clearer error is now shown when the selected platform does not support a preview’s content. (185436582)
+- Fixed: Tests using `.rotateDigitalCrown` might fail due to the device not registering the action. (188422137)
 
 ## See Also
 
 ### Xcode 27
 
-- [Xcode 27.1 RC Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.1 Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 # Document: About continuous integration and delivery with Xcode Cloud
@@ -144863,7 +145217,7 @@ To remove a package dependency from your Xcode project:
 
 ### Project configuration
 
-- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Beta. Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
+- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
 - [Managing your app’s information property list values](https://developer.apple.com/documentation/bundleresources/managing-your-app-s-information-property-list): Customize the information property list values for your app using Xcode.
 - [Creating a Mac version of your iPad app](https://developer.apple.com/documentation/uikit/creating-a-mac-version-of-your-ipad-app): Bring your iPad app to macOS with Mac Catalyst.
 - [Setting up a watchOS project](https://developer.apple.com/documentation/watchos-apps/setting-up-a-watchos-project): Create a new watchOS project or add a watch target to an existing iOS project.
@@ -145952,6 +146306,10 @@ Termination Signal:    Illegal instruction: 4
 Termination Reason:    Namespace SIGNAL, Code 0x4
 ```
 
+> **Note**
+
+> The exception type reflects the instructions the CPU was executing when the app crashed. Simulated iOS, iPadOS, watchOS, and tvOS apps run as Intel code on an Intel-based Mac, and macOS apps running under Rosetta translation execute as Intel code even on a Mac with Apple silicon. In both cases, the crash report shows the exception type for Intel processors.
+
 <a id="Identify-the-location-of-the-error"></a>
 
 ### Identify the location of the error
@@ -146724,7 +147082,7 @@ You can frequently determine the purpose of a thread based on the bottom frames 
 
 - Should the code from the app be running on this specific thread?
 - Is the crashed thread a background thread?
-- Do any of the backtraces show the app manipulating UI elements on any thread except the main thread? Have you tested your app with the `Main Thread Checker` enabled?
+- Do any of the backtraces show the app manipulating UI elements on any thread except the main thread? Have you tested your app with the `Main Thread Checker` enabled? See [Detect improper UI updates on background threads](diagnosing-memory-thread-and-crash-issues-early.md#Detect-improper-UI-updates-on-background-threads) for more information.
 - If your code uses an API that takes a completion handler, does that API guarantee the specific queue the completion handler uses? Is your code expecting that queue?
 - If your code uses an API where you provide a [DispatchQueue](https://developer.apple.com/documentation/dispatch/dispatchqueue) to the API, does the crash report show you’re using the queue you expect?
 
@@ -156121,7 +156479,7 @@ Before you begin, set up an agent or model in Intelligence settings and choose i
 
 - [Extending and customizing agents](extending-and-customizing-agents.md): Expand agent capabilities for your specific needs and application domain.
 - [Giving external agents access to Xcode](giving-external-agents-access-to-xcode.md): Let agents access your project and Xcode capabilities using the Model Context Protocol.
-- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Beta. Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
+- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
 
 ## See Also
 
@@ -161621,357 +161979,3 @@ Sorts the `integer-array` in the first argument. Does not cause rule activation.
 ### \`duplicate-array\`
 
 Copies the `integer-array` in the first argument and returns the EXTERNAL-ADDRESS.
-
-# Document: Creating distribution-signed code for macOS
-
-Source path: documentation/xcode/creating-distribution-signed-code-for-the-mac
-Canonical documentation: https://developer.apple.com/documentation/xcode/creating-distribution-signed-code-for-the-mac
-Description: Kind: Article
-
-# Creating distribution-signed code for macOS
-
-**Kind:** Article
-
-Sign Mac code for distribution using either Xcode or command-line tools.
-
-<a id="Overview"></a>
-
-## Overview
-
-Before shipping a software product for the Mac, you need to first create distribution-signed code, which is code that you package up and submit to either the Mac App Store or the notary service.  The way you do this depends on the type of your product and how you build it:
-
-- If your product is a Mac app bundle, possibly containing nested code such as an app extension, that you build using Xcode, use Xcode to export a distribution-signed app.
-- If your product isn’t an app, but you build it using Xcode, create an Xcode archive, and then manually export distribution-signed code from that archive.
-- If you build your product using an external build system, such as `make`, add a manual signing step to your build system.
-
-When you have distribution-signed code, package it for distribution. For more information, see [Packaging Mac software for distribution](packaging-mac-software-for-distribution.md).
-
-> **Note**
-
-> If you use a third-party developer tool to build your app, consult its documentation for advice specific to that tool.
-
-<a id="Export-an-app-from-Xcode"></a>
-
-## Export an app from Xcode
-
-If your product is a standalone app that you build with Xcode, follow these steps to export a distribution-signed app:
-
-1. Build an Xcode archive from your project.
-2. Export a distribution-signed app from that Xcode archive.
-
-You can complete each step from the Xcode app or automate the steps using `xcodebuild`.
-
-To create a distribution-signed app using the Xcode app:
-
-1. Select your app’s scheme.
-2. Choose Product \> Archive.
-3. In the Archives organizer, select the archive created in step 2.
-4. Click Distribute App.
-5. Choose the appropriate distribution method. For example, to create a notarized app that you send directly to your customers, choose Direct Distribution.
-6. Click Distribute.
-
-> **Note**
-
-> If the button says Distribute Content rather than Distribute App, your archive has multiple items in its `Products` directory.  To avoid copying a target’s product into the `Products` directory, set the Skip Install (`SKIP_INSTALL`) build setting for that target. Do this for every target that has output embedded in your app. For more information, see [TN3110: Resolving generic Xcode archive issue](../technotes/tn3110-resolving-generic-xcode-archive-issue.md).
-
-For more information about Xcode archives and the Archives organizer, see [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md).
-
-To export a distribution-signed app from the command line:
-
-1. Run `xcodebuild` with the `archive` action to build and archive your app.
-2. Run `xcodebuild` with the `exportArchive` action to export the distribution-signed app from the archive created in step 1.
-
-For more information about `xcodebuild`, see its man (manual) page.  For information about the keys supported by the export options property list, run `xcodebuild` with the `-help` argument.
-
-<a id="Export-a-non-app-product-built-with-Xcode"></a>
-
-## Export a non-app product built with Xcode
-
-To archive a non-app product in Xcode, follow the steps in “Export an app from Xcode” above.
-
-To export a distribution-signed product from the Xcode archive:
-
-1. Copy the relevant components from the archive.
-2. Sign those components manually.
-
-The commands that you use depend on your project structure. For example, imagine your product is a daemon, but it also has an associated configuration app.  The configuration app has a share extension and an embedded framework to share code between the app and the extension. An archive of this product in Xcode has the following structure:
-
-```
-DaemonWithApp.xcarchive/
-  Info.plist
-  Products/
-    usr/
-      local/
-        bin/
-          Daemon
-    Applications/
-      ConfigApp.app/
-        Contents/
-          embedded.provisionprofile
-          Frameworks/
-            Core.framework/
-              …
-          PlugIns/
-            Share.appex/
-              Contents/
-                embedded.provisionprofile
-                …
-          …
-  …
-```
-
-The `Products` directory contains two items: the daemon itself (`Daemon`) and the configuration app (`ConfigApp.app`). To sign this product, first copy these items out of the archive.
-
-```
-% mkdir "to-be-signed"
-% ditto "DaemonWithApp.xcarchive/Products/usr/local/bin/Daemon" "to-be-signed/Daemon"
-% ditto "DaemonWithApp.xcarchive/Products/Applications/ConfigApp.app" "to-be-signed/ConfigApp.app" 
-```
-
-> **Important**
-
-> When you copy code, use `ditto` rather than `cp` because `ditto` preserves symlinks, which are critical to the structure of Mac frameworks. For more information on this structure, see [Placing content in a bundle](https://developer.apple.com/documentation/bundleresources/placing-content-in-a-bundle). Symlinks are also useful when dealing with nonstandard code structures.  For more details, see [Embedding nonstandard code structures in a bundle](embedding-nonstandard-code-structures-in-a-bundle.md).
-
-<a id="Identify-the-code-to-sign"></a>
-
-## Identify the code to sign
-
-To sign your product, first identify each code item that you need to sign. For example, in the `DaemonWithApp` product, there are four code items: `ConfigApp.app`, `Core.framework`, `Share.appex`, and `Daemon`.
-
-For each code item, determine the following:
-
-- Is it bundled code?
-- Is it a main executable?
-
-Bundled code is the main code within a bundle. If, for example, you have an app with a nested helper tool, there are two code items: the app and the helper tool. The app is considered bundled code, but the helper tool isn’t.
-
-The following table shows the code items in the `DaemonWithApp` product and whether they’re bundled code or a main executable:
-
-| Code item | Bundled code? | Main executable? |
-| --- | --- | --- |
-| ConfigApp.app | yes | yes |
-| Core.framework | yes | no |
-| Share.appex | yes | yes |
-| Daemon | no | yes |
-
-In some cases, it might not be obvious whether the code item is a main executable. To confirm, run the `file` command. A main executable says `Mach-O … executable` as the following example shows:
-
-```
-% file "to-be-signed/ConfigApp.app/Contents/Frameworks/Core.framework/Versions/A/Core"
-…
-… Mach-O 64-bit dynamically linked shared library x86_64
-…
-% file "to-be-signed/ConfigApp.app/Contents/PlugIns/Share.appex/Contents/MacOS/Share"
-…
-… Mach-O 64-bit executable x86_64
-…
-```
-
-`Core.framework` isn’t a main executable, but `Share.appex` is.
-
-<a id="Determine-the-signing-order"></a>
-
-## Determine the signing order
-
-Sign code from the inside out.  That is, if component `A` depends on component `B`, sign `B` before you sign `A`.  For the `DaemonWithApp` example, sign the components in the following order:
-
-1. `Core.framework`
-2. `Share.appex `
-3. `ConfigApp.app`
-
-The app and daemon are independent, so you can sign them in either order.
-
-<a id="Configure-your-entitlements"></a>
-
-## Configure your entitlements
-
-A code signature can include *entitlements* — key-value pairs that grant an executable permission to use a service or technology. When macOS runs a process, it grants that process the entitlements that its executable’s code signature claims. For more information, see [Entitlements](https://developer.apple.com/documentation/bundleresources/entitlements).
-
-> **Important**
-
-> Don’t apply entitlements to library code.  It doesn’t do anything useful and can prevent your code from running.
-
-You apply entitlements to a main executable. If your main executable needs entitlements, create an `.entitlements` property list file, and add the key-value pairs for the entitlements that the executable claims.
-
-If you build your product with Xcode, you might be able to use the `.entitlements` file that Xcode manages in your source code.  If not, create the `.entitlements` file yourself.
-
-> **Important**
-
-> The entitlements file needs to be a property list in the standard XML format with LF line endings, no comments, and no byte-order mark (BOM).  If you’re not sure if your file conforms to these requirements, use `plutil` to convert it to the standard format.  For specific instructions, see [Resolving common notarization issues](https://developer.apple.com/documentation/security/resolving-common-notarization-issues).
-
-If you have a development-signed version of your program, you can print its entitlements using the `codesign` command-line tool, and use that information as the basis for your entitlements property list file as the following example shows:
-
-```
-% codesign -d --entitlements - --xml "to-be-signed/ConfigApp.app" | plutil -convert xml1 -o - -
-…
-<dict>
-  <key>com.apple.application-identifier</key>
-  <string>[Your Team ID].com.example.apple-samplecode.DaemonWithApp.App</string>
-  <key>com.apple.developer.team-identifier</key>
-  <string>[Your Team ID]</string>
-  <key>com.apple.security.app-sandbox</key>
-  <true/>
-  <key>keychain-access-groups</key>
-  <array>
-    <string>[Your Team ID].com.example.apple-samplecode.DaemonWithApp.SharedKeychain</string>
-  </array>
-</dict>
-</plist>
-```
-
-If you use the entitlements from a development-signed version of your program to create the entitlements property list file for your distribution-signed code, consider the following changes to the entitlements:
-
-- Change the value of [APS Environment (macOS) Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.aps-environment) from `development` to `production`.
-- The `com.apple.security.get-task-allow` entitlement allows the debugger to attach to your program, so you rarely apply it to a distribution-signed program. For more information, see [Resolving common notarization issues](https://developer.apple.com/documentation/security/resolving-common-notarization-issues).
-
-For any other entitlement, see the documentation for that specific entitlement in [Entitlements](https://developer.apple.com/documentation/bundleresources/entitlements).
-
-<a id="Configure-your-designated-requirements"></a>
-
-## Configure your designated requirements
-
-A code signature includes a designated requirement (DR) that macOS uses to identify the code.  For example, macOS uses the DR to track access to privacy-protected resources like the microphone.  For more information, see [TN3127: Inside Code Signing: Requirements](../technotes/tn3127-inside-code-signing-requirements.md).
-
-When you sign code with the `codesign` tool, it applies a default DR.  The default DR works well for most products, with one notable exception: The default DR for a Mac App Store app and a Developer ID-signed app are not mutually compatible.  If you distribute two variants of your app, one on the Mac App Store and one that you distribute directly using Developer ID signing, then, by default, those variants don’t share access to privacy-protected resources.
-
-To share access to privacy-protected resources across variants, sign the variants with mutually compatible DRs.  For advice on how to craft these DRs, see [TN3127: Inside Code Signing: Requirements](../technotes/tn3127-inside-code-signing-requirements.md).
-
-If you decide to use a custom DR, save it to a requirements file.  Mutually compatible DRs include a code-signing identifier.  If your product has multiple code items, copy this requirements file for each code item and update the code-signing identifier to match that of the code.
-
-<a id="Embed-distribution-provisioning-profiles"></a>
-
-## Embed distribution provisioning profiles
-
-For security reasons, a provisioning profile needs to authorize most entitlement claims. For example, the `keychain-access-groups` entitlement requires authorization by a provisioning profile. This stops other developers from distributing apps that impersonate your app to access its confidential keychain items.
-
-macOS allows programs to claim certain entitlements without such authorization.  These unrestricted entitlements include:
-
-- `com.apple.security.get-task-allow`
-- `com.apple.security.application-groups`
-- Entitlements that enable and configure the [App Sandbox](https://developer.apple.com/documentation/security/app-sandbox)
-- Entitlements that configure the [Hardened Runtime](https://developer.apple.com/documentation/security/hardened-runtime)
-
-If your program claims a restricted entitlement, include a distribution provisioning profile to authorize that claim as follows:
-
-1. Create the profile on the developer website. For more information, see [Developer Account Help](https://developer.apple.com/help/account/). Make sure to choose a profile type that matches your distribution channel (Mac App Store or Developer ID).
-2. Copy that profile into your program’s bundle. For more information, see [Placing content in a bundle](https://developer.apple.com/documentation/bundleresources/placing-content-in-a-bundle).
-
-If your product includes a nonbundled executable that uses a restricted entitlement, package that executable in an app-like structure.  For more information, see [Signing a daemon with a restricted entitlement](signing-a-daemon-with-a-restricted-entitlement.md).
-
-In the `DaemonWithApp` example, the configuration app and its share extension use a keychain access group to share secrets. The system grants the programs access to that group based on their `keychain-access-groups` entitlement claim, and a provisioning profile needs to authorize such claims. The app and the share extension each have their own profile. To distribute the app, update the app and share extension bundles with the corresponding distribution provisioning profile.
-
-```
-% cp "ConfigApp-Dist.provisionprofile" "to-be-signed/ConfigApp.app/Contents/embedded.provisionprofile"
-% cp "Share-Dist.provisionprofile" "to-be-signed/ConfigApp.app/Contents/PlugIns/Share.appex/Contents/embedded.provisionprofile"
-```
-
-Modifying the app in this way breaks the seal on its code signature.  You re-sign the app before you distribute it.
-
-> **Important**
-
-> If you build your product with Xcode, you might find that Xcode embeds a provisioning profile within your bundle.  This is a development provisioning profile.  Replace it with a distribution provisioning profile.
-
-<a id="Confirm-your-code-signing-identity"></a>
-
-## Confirm your code-signing identity
-
-The code you copy from the Xcode archive is typically signed using a development code-signing identity.
-
-```
-% codesign -d -vv to-be-signed/Daemon
-…
-Authority=Apple Development: …
-…
-```
-
-To ship a product that you signed for development, you need to re-sign it for distribution using an appropriate code-signing identity.  Choose one of the following identities for your distribution channel:
-
-- To distribute an app on the Mac App Store, use an Apple Distribution code-signing identity.  This is named `Apple Distribution: <Team Name> (<Team ID>)`, where `<Team Name>` and `<Team ID>` identifies your team.
-- To distribute a product independently, use a Developer ID Application code-signing identity.  This is named `Developer ID Application: <Team ID>`, where `<Team ID>` identifies your team.
-
-For information on how to set up these code-signing identities, see [Developer Account Help](https://developer.apple.com/help/account/).
-
-To confirm that your code-signing identity is present and correct, run the following command:
-
-```
-% security find-identity -p codesigning -v
-  1) A06E7F3F8237330EE15CB91BE1A511C00B853358 "Apple Distribution: …"
-  2) ADC03B244F4C1018384DCAFFC920F26136F6B59B "Developer ID Application: …"
-     2 valid identities found
-```
-
-The `-p codesigning` argument filters for code-signing identities. The `-v` argument filters for valid identities only.  If the code-signing identity that you need isn’t listed, see [Developer Account Help](https://developer.apple.com/help/account/).
-
-Each output line includes a SHA-1 hash that uniquely identifies the identity. If you have multiple identities with the same name, sign your code using this hash rather than the identity name.
-
-<a id="Sign-each-code-item"></a>
-
-## Sign each code item
-
-For all code types, the basic `codesign` command looks like the following:
-
-```
-% codesign -s <CodeSigningIdentity> <PathToExecutable>
-```
-
-Replace `<CodeSigningIdentity>` with the name of the code-signing identity to use, and replace `<PathToExecutable>` with the path to the code to sign.
-
-The specific identity you use for `<CodeSigningIdentity>` depends on your distribution channel, as discussed in “Confirm your code-signing identity” above.
-
-> **Note**
-
-> If you have multiple identities with the same name, supply the identity’s SHA-1 hash to specify it unambiguously.  For information on how to get this hash, see “Confirm your code-signing identity” above.
-
-If you’re re-signing code — that is, the code you’re signing is already signed — add the `-f` option.
-
-If you’re signing a main executable that needs entitlements, add the `--entitlements <entitlementsPath>` option, where `<entitlementsPath>` is the path to the entitlements file that you created for that executable.
-
-If you’re signing for Developer ID distribution, add the `--timestamp` option to include a secure timestamp.
-
-If you’re signing a main executable for Developer ID distribution, add the `-o runtime` option to enable the Hardened Runtime.  For more information about the Hardened Runtime, see [Hardened Runtime](https://developer.apple.com/documentation/security/hardened-runtime).
-
-If you’re signing nonbundled code, add the `-i <BundleID>` option to set the code-signing identifier, where `<BundleID>` is the bundle ID the code would have if it had a bundle ID.  For example, for an app with a  bundle ID of `com.example.flying-animals` that has a nested command-line tool called `pig-jato`, you can use `com.example.flying-animals.pig-jato` as the bundle ID for the command-line tool.
-
-> **Note**
-
-> For bundled code, you don’t need to supply a code-signing identifier because `codesign` defaults to using the bundle ID.
-
-If you’re using a custom DR, add the `-r <ReqPath>` option, where `<ReqPath>` is the path to the requirements file containing the DR for this code item.
-
-Repeat this signing step for every code item in your product, in the order you established in “Determine the signing order” above. If you have a complex product with many code items to sign, create a script to automate this process.
-
-The folloiwng code shows the complete sequence of commands to sign the `DaemonWithApp` example for Developer ID distribution:
-
-```
-% codesign -s "Developer ID Application" -f --timestamp "to-be-signed/ConfigApp.app/Contents/Frameworks/Core.framework"
-to-be-signed/ConfigApp.app/Contents/Frameworks/Core.framework: replacing existing signature
-% codesign -s "Developer ID Application" -f --timestamp -o runtime --entitlements "Share.entitlements" "to-be-signed/ConfigApp.app/Contents/PlugIns/Share.appex"
-to-be-signed/ConfigApp.app/Contents/PlugIns/Share.appex: replacing existing signature
-% codesign -s "Developer ID Application" -f --timestamp -o runtime --entitlements "ConfigApp.entitlements" "to-be-signed/ConfigApp.app"
-to-be-signed/ConfigApp.app: replacing existing signature
-% codesign -s "Developer ID Application" -f --timestamp -o runtime -i "com.example.apple-samplecode.DaemonWithApp.Daemon" "to-be-signed/Daemon"
-to-be-signed/Daemon: replacing existing signature
-```
-
-> **Important**
-
->  Don’t run `codesign` using `sudo` because `codesign` relies on information in your user account when it signs code. Using tools like `sudo` to change user accounts causes problems when `codesign` tries to access this information.
-
-<a id="Avoid-deep-code-signing"></a>
-
-## Avoid deep code signing
-
-Don’t pass the `--deep` option to `codesign` when you sign code.  This option is helpful in some specific circumstances (for example, in verifying a code signature), but it causes the following problems when signing a complex product:
-
-- The `--deep` option applies the same code-signing options to every code item that it signs. For example, if you have an app with an embedded command-line tool, where the app and the tool need different entitlements, `codesign --deep` applies the same entitlements to both.
-- `codesign` only signs nested code when you use the `--deep` option if that code is in particular locations in the top-level bundle. If you put code in a place where `codesign` expects to find data, `codesign --deep` doesn’t sign it. For information on the correct organization of nested code within a bundle, see [Placing content in a bundle](https://developer.apple.com/documentation/bundleresources/placing-content-in-a-bundle).
-
-## See Also
-
-### Code signing
-
-- [Using the latest code signature format](using-the-latest-code-signature-format.md): Update legacy app code signatures so your app runs on current OS releases.
-- [Notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution): Give users even more confidence in your macOS software by submitting it to Apple for notarization.
-- [Signing a daemon with a restricted entitlement](signing-a-daemon-with-a-restricted-entitlement.md): Wrap a daemon in an app-like structure to use an entitlement thatʼs authorized by a provisioning profile.
-- [Synchronizing code signing identities with your developer account](sharing-your-teams-signing-certificates.md): Ensure you and other team members can sign your organization’s code and installer packages in Xcode.
-- [TN3125: Inside Code Signing: Provisioning Profiles](../technotes/tn3125-inside-code-signing-provisioning-profiles.md): Learn how provisioning profiles enable third-party code to run on Apple platforms.

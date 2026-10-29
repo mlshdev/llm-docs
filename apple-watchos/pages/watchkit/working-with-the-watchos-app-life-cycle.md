@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-447f9a6dd611; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-cf3cd0777a76; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchkit/working-with-the-watchos-app-life-cycle
 
 # Working with the watchOS app life cycle (Swift)

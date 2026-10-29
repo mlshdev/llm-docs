@@ -1,9 +1,10 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/familycontrols/familyactivitypicker-view-modifiers
 
 # View Modifiers
 
-**Framework:** Family Controls
+**Framework:** Family Controls  
+**Kind:** Article
 
 Apply standard modifiers to configure the family activity picker view and the views it contains.
 

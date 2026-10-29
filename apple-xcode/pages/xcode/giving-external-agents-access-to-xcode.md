@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/giving-external-agents-access-to-xcode
 
 # Giving external agents access to Xcode
@@ -59,4 +59,4 @@ Before prompting an external agent (outside of Xcode), be sure to open your proj
 ### Agent configuration
 
 - [Extending and customizing agents](extending-and-customizing-agents.md): Expand agent capabilities for your specific needs and application domain.
-- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Beta. Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.
+- [Updating your Xcode project configuration file format](updating-your-xcode-project-configuration-file-format.md): Configure your Xcode project to use the JSON project configuration file format that’s more human-readable and editable by coding intelligence agents.

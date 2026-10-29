@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/marketplacekit/applibrary
 
 # AppLibrary
@@ -64,7 +64,7 @@ The class is observable (through [SwiftUI](https://developer.apple.com/documenta
 
 ### Installing web-distributed apps from your app
 
-- [requestInlineAppInstallation(\_:subjectToken:)](applibrary/requestinlineappinstallation%28__subjecttoken_%29.md): Beta. Requests the installation of a web-distributed app that you also distribute.
+- [requestInlineAppInstallation(\_:subjectToken:)](applibrary/requestinlineappinstallation%28__subjecttoken_%29.md): Requests the installation of a web-distributed app that you also distribute.
 
 ### Accessing installed apps
 

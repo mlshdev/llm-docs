@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-baedee40f551; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corenfc/nfciso15693tag/extendedwritesingleblock(requestflags:blocknumber:datablock:completionhandler:)
 
 # extendedWriteSingleBlock(requestFlags:blockNumber:dataBlock:completionHandler:) (Swift)

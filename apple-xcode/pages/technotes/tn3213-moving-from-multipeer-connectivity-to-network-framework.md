@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3213-moving-from-multipeer-connectivity-to-network-framework
 
 # TN3213: Moving from Multipeer Connectivity to Network framework
@@ -374,7 +374,7 @@ This section covers some privacy issues to consider as you implement your app.  
 
 There can be no privacy without security.  If you didn’t enable security with Multipeer Connectivity, now is the time to correct that misstep.  For more on this topic, see [Plan for security](tn3213-moving-from-multipeer-connectivity-to-network-framework.md#Plan-for-security).
 
-When you advertise a service with a listener, it defaults to using the user-assigned device name as the service name.  To override that, pass a custom name to [bonjour(name:type:domain:txtRecord:)](https://developer.apple.com/documentation/network/listenerprovider/bonjour%28name:type:domain:txtrecord:%29) when creating the listener:
+When you advertise a service with a listener, it defaults to using the [user-assigned device name](https://developer.apple.com/documentation/uikit/uidevice/name) as the service name.  To override that, pass a custom name to [bonjour(name:type:domain:txtRecord:)](https://developer.apple.com/documentation/network/listenerprovider/bonjour%28name:type:domain:txtrecord:%29) when creating the listener:
 
 ```swift
 let customName: String = …

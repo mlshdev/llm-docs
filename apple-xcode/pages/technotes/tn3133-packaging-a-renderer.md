@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-bfcfe27766c6; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3133-packaging-a-renderer
 
 # TN3133: Packaging a Metal renderer
@@ -78,7 +78,7 @@ Swift Package Manager creates a module that contains the C structs found in the 
 
 Continuing with the same naming from the example above, consider the following header located at `MyRenderer/Sources/MySharedTypes/include/SharedTypes.h`:
 
-```Obj-C
+```obj-c
 #ifndef SharedTypes_h
 #define SharedTypes_h
 
