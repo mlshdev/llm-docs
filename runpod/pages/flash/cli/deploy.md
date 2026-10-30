@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/cli/deploy.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/flash/cli/deploy.mdx)
+> Pinned source for Runpod main: [flash/cli/deploy.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/flash/cli/deploy.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/deploy
 
 # deploy
@@ -69,7 +69,7 @@ Build and launch a local Docker-based preview environment instead of deploying t
 
 **--python-version (type: string)**
 
-Target Python version for worker images (3.10, 3.11, 3.12, or 3.13). Overrides per-resource `python_version` declarations and local interpreter detection.
+Target Python version for worker images (3.10, 3.11, 3.12, or 3.13). Defaults to the `python_version` declared on your resource configs, or 3.12 if none declares one. The build fails if the flag conflicts with a declared `python_version`.
 
 ## What happens during deployment
 
@@ -220,7 +220,7 @@ This builds your project and runs it in Docker containers locally:
 
 ## Managing deployment size
 
-Runpod Serverless has a **1.5GB limit**. Flash automatically excludes packages that are pre-installed in the base image (`torch`, `torchvision`, `torchaudio`, `numpy`, `triton`).
+Runpod Serverless has a **1.5GB limit**. Flash automatically leaves `torch`, `torchvision`, `torchaudio`, and `triton` out of the upload because the GPU worker images provide them. CPU workers don't include them, so CPU code can't import these packages.
 
 If the deployment is still too large, use `--exclude` to skip additional packages:
 

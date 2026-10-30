@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/sdks.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/serverless/sdks.mdx)
+> Pinned source for Runpod main: [serverless/sdks.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/serverless/sdks.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/sdks
 
 # Install the Runpod Serverless SDK
@@ -121,4 +121,4 @@ Once you've installed and configured the SDK, you're ready to send requests to y
 
 - [Send API requests](https://docs.runpod.io/serverless/endpoints/send-requests): Learn how to submit jobs, check status, and stream results.
 - [Create handler functions](https://docs.runpod.io/serverless/workers/handler-functions): Build custom workers to process your jobs.
-- [API reference](https://docs.runpod.io/api-reference/overview): Explore the full Runpod API for managing Pods, endpoints, and other resources.
+- [API reference](https://docs.runpod.io/api-reference-v2/overview): Explore the full Runpod API for managing Pods, endpoints, and other resources.

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.16: [docs/content/security/content-length.md](https://github.com/traefik/traefik/blob/af6d927c51191ae1df104aaf907793386b816c28/docs/content/security/content-length.md)
+> Pinned source for Traefik Proxy v3.7.17: [docs/content/security/content-length.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/security/content-length.md)
 
 Traefik acts as a streaming proxy. By default, it checks each chunk of data against the `Content-Length` header as it passes it on to the backend or client.
 This live check blocks truncated or over‑long streams without holding the entire message.

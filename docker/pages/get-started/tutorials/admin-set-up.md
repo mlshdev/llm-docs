@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/tutorials/admin-set-up.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/get-started/tutorials/admin-set-up.md)
+> Pinned source for Docker main: [content/get-started/tutorials/admin-set-up.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/get-started/tutorials/admin-set-up.md)
 
 # Roll out Docker to a pilot group
 
@@ -72,7 +72,7 @@ pilot's feedback to refine the policy and its deployment communication.
 
 Continue with these guides when you're ready to expand the deployment:
 
-- [Set up your company for success with Docker](https://docs.docker.com/guides/admin-set-up/) for the
+- [Plan and roll out Docker](https://docs.docker.com/accounts/organization/setup/rollout/) for the
   full deployment handbook
 - [Manage organization members](https://docs.docker.com/accounts/organization/manage/members/)
   for roles, teams, and bulk invitations

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/databases.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/guides/databases.md)
+> Pinned source for Docker main: [content/guides/databases.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/guides/databases.md)
 
 Using a local containerized database offers flexibility and ease of setup,
 letting you mirror production environments closely without the overhead of
@@ -75,7 +75,7 @@ To run a container using the GUI:
      - `MYSQL_ROOT_PASSWORD`:`my-secret-pw`
      - `MYSQL_DATABASE`:`mydb`
 
-![The optional settings screen with the options specified.](https://raw.githubusercontent.com/docker/docs/f90928eb2040c4638e188868a612fd47e6a061a4/content/guides/images/databases-1.webp)
+![The optional settings screen with the options specified.](https://raw.githubusercontent.com/docker/docs/53581df94e05ad4116a8d31e47ea098289fa5498/content/guides/images/databases-1.webp)
 
 6. Select `Run`.
 7. Open the **Container** view in the Docker Desktop Dashboard to verify that your
@@ -209,7 +209,7 @@ To run a container using the GUI:
      - `MYSQL_ROOT_PASSWORD`:`my-secret-pw`
      - `MYSQL_DATABASE`:`mydb`
 
-![The optional settings screen with the options specified.](https://raw.githubusercontent.com/docker/docs/f90928eb2040c4638e188868a612fd47e6a061a4/content/guides/images/databases-2.webp)
+![The optional settings screen with the options specified.](https://raw.githubusercontent.com/docker/docs/53581df94e05ad4116a8d31e47ea098289fa5498/content/guides/images/databases-2.webp)
 
 6. Select `Run`.
 7. In the **Containers** view, verify that the port is mapped under the
@@ -375,7 +375,7 @@ data persists:
       - **Volumes**:
         - `my-db-volume`:`/var/lib/mysql`
 
-![The optional settings screen with the options specified.](https://raw.githubusercontent.com/docker/docs/f90928eb2040c4638e188868a612fd47e6a061a4/content/guides/images/databases-3.webp)
+![The optional settings screen with the options specified.](https://raw.githubusercontent.com/docker/docs/53581df94e05ad4116a8d31e47ea098289fa5498/content/guides/images/databases-3.webp)
 
 ```
   Here, the name of the volume is `my-db-volume` and it is mounted in the
@@ -419,7 +419,7 @@ data persists:
       - **Volumes**:
         - `my-db-volume`:`/var/lib/mysql`
 
-![The optional settings screen with the options specified.](https://raw.githubusercontent.com/docker/docs/f90928eb2040c4638e188868a612fd47e6a061a4/content/guides/images/databases-3.webp)
+![The optional settings screen with the options specified.](https://raw.githubusercontent.com/docker/docs/53581df94e05ad4116a8d31e47ea098289fa5498/content/guides/images/databases-3.webp)
 
 6. Select `Run`.
 

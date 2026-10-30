@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/mcp-servers.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/get-started/mcp-servers.mdx)
+> Pinned source for Runpod main: [get-started/mcp-servers.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/get-started/mcp-servers.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/mcp-servers
 
 # Use Runpod's MCP servers
@@ -12,7 +12,7 @@ Runpod provides two [Model Context Protocol (MCP)](https://modelcontextprotocol.
 
 ## Runpod API MCP server
 
-The Runpod API MCP server gives AI tools access to the [Runpod REST API](https://docs.runpod.io/api-reference/overview), letting you create and manage Pods, Serverless endpoints, templates, network volumes, and container registries through natural language.
+The Runpod API MCP server gives AI tools access to the [Runpod REST API](https://docs.runpod.io/api-reference-v2/overview), letting you create and manage Pods, Serverless endpoints, templates, network volumes, and container registries through natural language.
 
 **Hosted endpoint:** `https://mcp.runpod.io/` (Streamable HTTP transport)
 

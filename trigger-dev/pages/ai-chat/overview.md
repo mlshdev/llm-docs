@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/overview.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/overview
 
 # AI Agents
@@ -61,7 +61,7 @@ Four primitives, related but distinct:
 
 - **Chat agents** — the SDK surface you define with [`chat.agent()`](https://trigger.dev/docs/ai-chat/backend#chat-agent). Owns the turn loop, lifecycle hooks, and the response stream.
 - **Sessions** — the durable, bi-directional channel keyed on `chatId` that holds the conversation across run boundaries. A chat agent runs *on top of* a [Session](https://trigger.dev/docs/ai-chat/sessions).
-- **Sub-agents** — Delegate work from one agent to another via [`AgentChat`](https://trigger.dev/docs/ai-chat/patterns/sub-agents). The sub-agent runs as its own durable agent on its own session; its response streams back through the parent as preliminary tool results, so the frontend sees the sub-agent working inside the parent's tool card.
+- **Sub-agents**: delegate work from one agent to another via [`AgentChat`](https://trigger.dev/docs/ai-chat/patterns/sub-agents). The sub-agent runs as its own durable agent on its own session; [`chat.forwardSubAgent`](https://trigger.dev/docs/ai-chat/patterns/sub-agents) streams its reply through the parent's tool call, so the frontend sees the sub-agent working inside the parent's tool card.
 - **Channels** connect an agent to a surface other than your frontend. [`slack()`](https://trigger.dev/docs/webhooks/slack) and [`linear()`](https://trigger.dev/docs/webhooks/linear) turn an agent into a Slack or Linear agent, and [`chat.channels.custom()`](https://trigger.dev/docs/webhooks/channels) connects any chat surface that sends webhooks. Each conversation there is still a durable session, and the reply posts back to the surface.
 
 ## Next steps

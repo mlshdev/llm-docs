@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/quick-start.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/quick-start.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/quick-start
 
 # Quick Start
@@ -147,5 +147,5 @@ Run your frontend and `pnpm exec trigger dev`, then send a message. You should s
 - [Frontend](https://trigger.dev/docs/ai-chat/frontend) — Session management, client data, reconnection
 - [Types](https://trigger.dev/docs/ai-chat/types) — `chat.withUIMessage`, `InferChatUIMessage`, and related typing
 - [`chat.local`](https://trigger.dev/docs/ai-chat/chat-local) — Per-run typed state across hooks, run, tools, subtasks
-- [Sub-agents pattern](https://trigger.dev/docs/ai-chat/patterns/sub-agents) — Subtask-as-tool, `target: "root"` streaming, `ai.toolExecute` helpers
+- [Sub-agents pattern](https://trigger.dev/docs/ai-chat/patterns/sub-agents): `chat.forwardSubAgent`, subtask-as-tool, `target: "root"` streaming, `ai.toolExecute` helpers
 - [Background injection](https://trigger.dev/docs/ai-chat/background-injection) — `chat.inject()` and `chat.defer()` for between-turn work

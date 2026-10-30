@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/apikeys.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/apikeys.mdx)
 > Canonical documentation: https://trigger.dev/docs/apikeys
 
 # API keys
@@ -11,6 +11,11 @@ Authenticate backend requests with environment-specific API keys.
 >
 > API keys grant access to your Trigger.dev environment. Store them in a secret manager or backend
 > environment variable, never commit them to source control, and never expose them in frontend code.
+
+> **Tip**
+>
+> To access AWS or another external service from a deployed task without stored cloud keys, use
+> [OpenID Connect (OIDC)](https://trigger.dev/docs/oidc). Trigger.dev API keys cannot mint OIDC tokens.
 
 ## Create an API key
 

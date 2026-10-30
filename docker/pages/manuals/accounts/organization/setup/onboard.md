@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/setup/onboard.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/accounts/organization/setup/onboard.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/setup/onboard.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/accounts/organization/setup/onboard.md)
 
 # Onboard a Docker organization
 
@@ -152,10 +152,15 @@ Use these features to manage your organization's security posture:
 
 ## Next steps
 
+- [Plan your rollout](https://docs.docker.com/accounts/organization/setup/rollout/) to
+  coordinate pilot testing and deployment with your IT teams.
+
 - [Manage Docker products](https://docs.docker.com/accounts/organization/manage/manage-products/) to configure
   access and view usage.
+
 - Configure
   [Hardened Docker Desktop](https://docs.docker.com/desktop/enterprise/hardened-desktop/)
   to tighten security for containerized development.
+
 - [Manage your domains](https://docs.docker.com/security/provisioning/domain-management/)
   so Docker users in your domain are part of your organization.

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/migrating-from-v3.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/migrating-from-v3.mdx)
 > Canonical documentation: https://trigger.dev/docs/migrating-from-v3
 
 # Migrating from v3
@@ -40,7 +40,8 @@ Trigger.dev runs your deployed tasks on one of these runtimes:
 - Node.js `node-22` — `22.23.4`
 - Node.js `node-24` — `24.22.1`
 - Node.js `node-26` — `26.12.1`
-- Bun `bun` — `1.3.3`
+- Bun `bun-1.4` — `1.4.4`, no Node.js binary
+- Bun `bun` — `1.3.3` with Node.js `20` alongside it (also spelled `bun-legacy`). Deprecated: deploys are rejected from January 5, 2027
 
 If you don't set a `runtime`, or you set `runtime: "node"`, your tasks run on the current Node.js LTS. That version moves forward as new LTS releases land, so set an explicit version — for example `runtime: "node-24"` — if you need it to stay fixed.
 
@@ -48,7 +49,7 @@ If you don't set a `runtime`, or you set `runtime: "node"`, your tasks run on th
 import { defineConfig } from "@trigger.dev/sdk";
 
 export default defineConfig({
-  // "node", "node-22", "node-24", "node-26" or "bun"
+  // "node", "node-22", "node-24", "node-26", "bun" or "bun-1.4"
   runtime: "node-24",
   project: "<your-project-ref>",
 });

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/setup/_index.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/accounts/organization/setup/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/setup/_index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/accounts/organization/setup/_index.md)
 
 # Set up a Docker organization
 
@@ -37,6 +37,7 @@ existing repositories.
 
 ## Next steps
 
+- [Plan your rollout](https://docs.docker.com/accounts/organization/setup/rollout/): Coordinate settings, pilot testing, and deployment.
 - [Create your organization](https://docs.docker.com/accounts/organization/setup/orgs/): Choose a new namespace and subscription.
 - [Convert your account](https://docs.docker.com/accounts/organization/setup/convert-account/): Keep an existing Docker ID as the organization namespace.
 - [Onboard your organization](https://docs.docker.com/accounts/organization/setup/onboard/): Invite members and configure sign-in.

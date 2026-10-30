@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/serverless/endpoints/endpoint-configurations.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/serverless/endpoints/endpoint-configurations.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/endpoint-configurations
 
 # Endpoint settings
@@ -12,6 +12,8 @@ This guide details the configuration options available for Runpod Serverless end
 > Some settings can only be updated after deploying your endpoint. See [Edit an endpoint](https://docs.runpod.io/serverless/endpoints/overview#edit-an-endpoint).
 
 ## Quick reference
+
+These are the Runpod console defaults. REST v2 uses different defaults for idle timeout, execution timeout, and FlashBoot, and has no endpoint-level job TTL field; `type` and `scaling` are required when you create an endpoint through REST v2.
 
 | Setting               | Default       | Description                                                           |
 | --------------------- | ------------- | --------------------------------------------------------------------- |
@@ -84,7 +86,7 @@ Number of GPUs assigned to each worker instance. Default is 1. Generally priorit
 
 ### Idle timeout
 
-How long a worker keeps running after its last job, waiting for a new request, before it scales down. The worker is billed while it waits, and a request that arrives in this window starts immediately with no cold start. Default: 5 seconds.
+How long a worker keeps running after its last job, waiting for a new request, before it scales down. The worker is billed while it waits, and a request that arrives in this window starts immediately with no cold start. Console default: 5 seconds. REST v2 default: `workers.idleTimeout` is 10 seconds.
 
 The console shows a waiting worker as **Running**. **Idle** in the console means a worker that has already scaled down and is not billed. See [worker lifecycle](https://docs.runpod.io/serverless/workers/overview#worker-lifecycle).
 
@@ -101,7 +103,7 @@ Once an endpoint has been scaled down this way, it stays at its reduced max work
 
 ### Execution timeout
 
-Maximum duration for a single job. When exceeded, the job fails and the worker stops. Keep enabled to prevent runaway jobs. Default: 600s (10 min). Range: 5s to 7 days.
+Maximum duration for a single job. When exceeded, the job fails and the worker stops. Keep enabled to prevent runaway jobs. Console default: 600s (10 min). REST v2 default: `timeout` is 300000 ms (5 min). Range: 5s to 7 days.
 
 Configure in **Advanced** settings, or override per-request via `executionTimeout` in the [job policy](https://docs.runpod.io/serverless/endpoints/send-requests#execution-policies).
 
@@ -110,6 +112,8 @@ Configure in **Advanced** settings, or override per-request via `executionTimeou
 Total lifespan of a job in the system. When TTL expires, job data is deleted regardless of state (queued, running, or completed). Default: 24 hours. Range: 10s to 7 days.
 
 The timer starts at submission, not execution. If a job queues for 45 minutes with a 1-hour TTL, only 15 minutes remain for execution.
+
+REST v2 has no endpoint-level job TTL field when you [create an endpoint](https://docs.runpod.io/api-reference-v2/serverless/create-a-serverless-endpoint). Set `ttl` per request in the [job policy](https://docs.runpod.io/serverless/endpoints/send-requests#execution-policies) instead.
 
 > **Warning**
 >
@@ -131,7 +135,7 @@ Results are permanently deleted after retention expires.
 ### FlashBoot
 
 Reduces cold starts by retaining worker state after spin-down, allowing faster "revival" than fresh boots. Most effective on endpoints with consistent traffic where workers frequently cycle between active and idle.
-Both new GPU and CPU endpoints will have FlashBoot enabled by default, and you can edit existing endpoints to enable or disable FlashBoot.
+The console enables FlashBoot by default for new GPU and CPU endpoints, and you can edit existing endpoints to enable or disable it. REST v2 default: `flashboot` is `OFF`. Set it to `FLASHBOOT` to enable it.
 
 ### Model
 

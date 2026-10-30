@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/register-and-manage-an-image.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/ai/sandboxes-api/cookbook/register-and-manage-an-image.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/register-and-manage-an-image.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/ai/sandboxes-api/cookbook/register-and-manage-an-image.md)
 
 # Register and manage an image
 

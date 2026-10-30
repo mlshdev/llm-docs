@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/accounts/organization/manage/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/accounts/organization/manage/_index.md)
 
 # Manage your organization
 
@@ -30,6 +30,7 @@ and [Manage licenses](https://docs.docker.com/accounts/organization/manage/manag
 
 Explore the following sections to manage your organization.
 
+- [User access workflow](https://docs.docker.com/accounts/organization/manage/user-access/): Plan roles, provisioning, and ongoing access reviews.
 - [Information](https://docs.docker.com/accounts/organization/manage/general-settings/): Update your organization's general information and settings.
 - [Members](https://docs.docker.com/accounts/organization/manage/members/): Invite, manage, and assign roles to your organization members.
 - [Teams](https://docs.docker.com/accounts/organization/manage/manage-a-team/): Create teams and manage repository access for groups of members.

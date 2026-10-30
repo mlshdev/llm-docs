@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.16: [docs/content/reference/routing-configuration/http/middlewares/buffering.md](https://github.com/traefik/traefik/blob/af6d927c51191ae1df104aaf907793386b816c28/docs/content/reference/routing-configuration/http/middlewares/buffering.md)
+> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/buffering.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/buffering.md)
 
 The `buffering` middleware limits the size of requests that can be forwarded to services.
 

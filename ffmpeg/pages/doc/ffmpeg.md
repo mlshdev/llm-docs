@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/0ea6606418c4602a9de5d43657b7b2f56b0f9681/doc/ffmpeg.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg.texi](https://github.com/FFmpeg/FFmpeg/blob/92457ada93cf5d593d23cc18cd040a91532b6943/doc/ffmpeg.texi)
 
 # Synopsis
 
@@ -1959,7 +1959,7 @@ want to create filtergraphs with multiple inputs and/or outputs.
   will produce a thread pool with this many threads available for parallel processing.
   The default is the number of available CPUs.
 
-- -filter\_buffered\_frames *nb\_frames* (*global*)
+- -filter\_buffered\_frames\[:*media\_type*] *nb\_frames* (*global*)
   Defines the maximum number of buffered frames allowed in a filtergraph. Under
   normal circumstances, a filtergraph should not buffer more than a few frames,
   especially if frames are being fed to it and read from it in a balanced way
@@ -1967,6 +1967,11 @@ want to create filtergraphs with multiple inputs and/or outputs.
   to limit the total number of frames buffered across all links in a filtergraph.
   If more frames are generated, filtering is aborted and an error is returned.
   The default value is 0, which means no limit.
+
+The optional suffix *media\_type* may be used to set a different limit
+for audio and video frames, using the suffixes `a` and `v`,
+respectively. If the suffix is omitted, the limit applies to both audio and
+video frames, separately.
 
 - -pre\[:*stream\_specifier*] *preset\_name* (*output,per-stream*)
   Specify the preset for matching stream(s).

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/frontend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/frontend.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/frontend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/frontend.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/frontend
 
 # Frontend
@@ -110,7 +110,7 @@ Every chat is backed by a durable Session — the row that owns the chat's runs,
 | Field               | Type                   | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `publicAccessToken` | `string`               | Session-scoped JWT (`read:sessions:{chatId} + write:sessions:{chatId}`). Refreshed automatically on 401/403 via `accessToken`.                                                                                                                                                                                                                                                                                                                 |
-| `lastEventId`       | `string \| undefined`  | Last SSE event received on `.out`. **Valid for the lifetime of the Session** — keep it across `endRun` / `requestUpgrade` / continuation-run boundaries; only clear when the Session itself closes. The cursor lets the next subscription open past the prior turn's stale `turn-complete` record.                                                                                                                                             |
+| `lastEventId`       | `string \| undefined`  | Resume cursor on `.out`: the last SSE event received, or while a turn is streaming, the cursor from when that turn started, so a reload replays the whole turn. **Valid for the lifetime of the Session**: keep it across `endRun` / `requestUpgrade` / continuation-run boundaries; only clear when the Session itself closes. The cursor lets the next subscription open past the prior turn's stale `turn-complete` record.                 |
 | `isStreaming`       | `boolean \| undefined` | **Optional.** The transport sets it internally, but you don't have to persist it — the server decides "nothing is streaming" via the session's [`X-Session-Settled`](https://trigger.dev/docs/ai-chat/client-protocol#x-session-settled-fast-close-on-idle-reconnects) signal on reconnect. If you do persist it, the transport keeps the fast-path short-circuit. If you drop it, reconnects open the SSE and close fast on settled sessions. |
 
 ### Session cleanup (frontend)
@@ -502,6 +502,21 @@ const stream = await agentChat.sendAction({ type: "undo" });
 for await (const chunk of stream) {
   if (chunk.type === "text-delta") process.stdout.write(chunk.delta);
 }
+```
+
+## Sub-agents
+
+When a tool delegates to a sub-agent with [`chat.forwardSubAgent`](https://trigger.dev/docs/ai-chat/patterns/sub-agents), the parent's tool part has no output until the sub-agent finishes. `useSubAgentMessages` rebuilds the sub-agent's message from the chunks streamed so far:
+
+```tsx app/components/chat.tsx
+import { useChat } from "@ai-sdk/react";
+import { useSubAgentMessages } from "@trigger.dev/sdk/chat/react";
+
+const subAgents = useSubAgentMessages();
+const { messages } = useChat({ transport, onData: subAgents.onData });
+
+// in the tool card: live while it runs, the tool output once it finishes
+const message = subAgents.get(part.toolCallId) ?? part.output;
 ```
 
 ## Multi-tab coordination

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/daemon/ipv6.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/engine/daemon/ipv6.md)
+> Pinned source for Docker main: [content/manuals/engine/daemon/ipv6.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/engine/daemon/ipv6.md)
 
 # Use IPv6 networking
 

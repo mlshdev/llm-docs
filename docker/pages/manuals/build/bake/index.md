@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/_index.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/build/bake/_index.md)
+> Pinned source for Docker main: [content/manuals/build/bake/_index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/build/bake/_index.md)
 
 # Bake
 
@@ -50,3 +50,7 @@ targets concurrently.
 ## Get started
 
 To learn how to get started with Bake, head over to the [Bake introduction](https://docs.docker.com/build/bake/introduction/).
+
+For practical workflows, see [Run tests and lint checks](https://docs.docker.com/build/bake/targets/#run-tests-and-lint-checks),
+[Export build artifacts](https://docs.docker.com/build/bake/targets/#export-build-artifacts), and
+[Extend Compose builds with HCL](https://docs.docker.com/build/bake/compose-file/#extend-compose-builds-with-hcl).

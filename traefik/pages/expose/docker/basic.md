@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.16: [docs/content/expose/docker/basic.md](https://github.com/traefik/traefik/blob/af6d927c51191ae1df104aaf907793386b816c28/docs/content/expose/docker/basic.md)
+> Pinned source for Traefik Proxy v3.7.17: [docs/content/expose/docker/basic.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/expose/docker/basic.md)
 
 # Exposing Services with Traefik on Docker - Basic
 
@@ -19,7 +19,7 @@ First, create a `docker-compose.yml` file:
 ```yaml
 services:
   traefik:
-    image: "traefik:v3.4"
+    image: "traefik:v3.7"
     container_name: "traefik"
     restart: unless-stopped
     security_opt:
@@ -166,7 +166,7 @@ Update your `docker-compose.yml` file with the following changes:
 ```yaml
 services:
   traefik:
-    image: "traefik:v3.4"
+    image: "traefik:v3.7"
     container_name: "traefik"
     restart: unless-stopped
     security_opt:

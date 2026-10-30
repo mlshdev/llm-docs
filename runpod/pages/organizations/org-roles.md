@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/org-roles.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/organizations/org-roles.mdx)
+> Pinned source for Runpod main: [organizations/org-roles.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/organizations/org-roles.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/org-roles
 
 # Roles
@@ -6,6 +6,8 @@
 Control what organization members can do with four built-in roles. Learn which actions each role can perform.
 
 Every member of an organization is assigned one of four built-in roles: admin, billing, developer, or contributor. There is no owner role; admin is the highest level. Only org admins can assign or change member roles.
+
+If none of the built-in roles fit, you can create [custom roles](https://docs.runpod.io/organizations/org-custom-roles) that grant exactly the permissions a member needs.
 
 ## Role overview
 

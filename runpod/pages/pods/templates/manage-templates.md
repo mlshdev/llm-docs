@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/templates/manage-templates.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/pods/templates/manage-templates.mdx)
+> Pinned source for Runpod main: [pods/templates/manage-templates.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/pods/templates/manage-templates.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/templates/manage-templates
 
 # Manage Pod templates
@@ -72,32 +72,28 @@ You can also create templates programmatically using the Runpod REST API. For ex
 
 ```bash
 curl --request POST \
-  --url https://rest.runpod.io/v1/templates \
-  --header 'Authorization: Bearer YOUR_API_KEY' \
+  --url https://api.runpod.io/v2/templates \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{
   "category": "NVIDIA",
-  "containerDiskInGb": 50,
-  "dockerEntrypoint": [],
-  "dockerStartCmd": [],
+  "disk": 50,
   "env": {
     "ENV_VAR": "value"
   },
-  "imageName": "CONTAINER_IMAGE",
-  "isPublic": false,
-  "isServerless": false,
+  "image": "CONTAINER_IMAGE",
+  "public": false,
+  "serverless": false,
   "name": "TEMPLATE_NAME",
   "ports": [
     "8888/http",
     "22/tcp"
   ],
-  "readme": "",
-  "volumeInGb": 20,
-  "volumeMountPath": "/workspace"
+  "mounts": {"persistent": {"size": 20, "path": "/workspace"}}
 }'
 ```
 
-For more details, see the [API reference](https://docs.runpod.io/api-reference/templates/POST/templates).
+REST v2 has no template `readme` field; keep setup instructions in the image repository's README instead. For more details, see the [Create a template reference](https://docs.runpod.io/api-reference-v2/templates/create-a-template).
 
 ## Using environment variables in templates
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/pending-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/pending-messages.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/pending-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/pending-messages.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/pending-messages
 
 # Pending Messages
@@ -133,6 +133,8 @@ When messages are injected, the SDK automatically writes a `data-pending-message
 - Confirm which messages were injected
 - Remove them from the pending overlay
 - Render them inline at the injection point in the assistant response
+
+Background injections appear as a different data part (`data-background-injected`) that `usePendingMessages` ignores. It is not a user message.
 
 A "pending message injected" span also appears in the run trace.
 

@@ -1,9 +1,15 @@
-> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/release-notes.mdx)
+> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/release-notes.mdx)
 > Canonical documentation: https://docs.runpod.io/release-notes
 
 # Product updates
 
 New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation.
+
+**October 27, 2026**
+
+\*\*\*\* [Terraform provider 2.0.0](https://docs.runpod.io/integrations/terraform/overview) Version 2.0.0 of the Runpod Terraform provider is built on the REST API v2 and adds support for Instant Clusters, global volumes, CPU Pods and endpoints, FlashBoot tiers, and v2 billing. Pin it with `version = "~> 2.0"`.
+
+\*\*\*\* [Terraform provider 1.x to 2.0.0 migration](https://docs.runpod.io/integrations/terraform/migration) Upgrading from 1.x requires configuration and state changes. If your configuration sets `base_url`, remove it, because it now points at the REST v2 host. 2.0.0 makes no REST v1 calls, so the REST v1 retirement on November 15, 2026 doesn't affect it. Follow the migration guide before you upgrade.
 
 **October 15, 2026**
 

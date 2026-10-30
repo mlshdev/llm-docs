@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/0ea6606418c4602a9de5d43657b7b2f56b0f9681/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/92457ada93cf5d593d23cc18cd040a91532b6943/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -2585,6 +2585,19 @@ If not set, the default is CBR.
 
 If not set, the encoder tries to generate a hopefully unique ID for
 the stream.
+
+In order to do two pass encoding (where the first pass measures the
+loudness of the stream, and the second pass uses that information
+for accurately preserving the dynamics of the stream), invoke ffmpeg
+e.g. like this:
+
+```text
+ffmpeg -i input.wav -c:a libfdk_xhe_aac -pass 1 -f null -
+ffmpeg -i input.wav -c:a libfdk_xhe_aac -pass 2 out.m4a
+```
+
+Doing two pass encoding is the recommended way to use the libfdk\_xhe\_aac
+encoder.
 
 <a id="liblc3-enc"></a>
 

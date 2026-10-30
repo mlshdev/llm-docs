@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/guides/frameworks/bun.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/guides/frameworks/bun.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/guides/frameworks/bun.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/guides/frameworks/bun.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/bun
 
 # Bun guide
@@ -10,10 +10,30 @@ This guide will show you how to setup Trigger.dev in your existing Bun project, 
 > The trigger.dev CLI does not yet support Bun. So you will need to run the CLI using Node.js. Bun
 > will still be used to execute your tasks, even in the `dev` environment.
 
+> **Warning**
+>
+> **`runtime: "bun"` is deprecated.** It deploys on Bun 1.3.3 with a Node.js 20 binary alongside it
+> (`bun-legacy` is the same runtime). Deploys that use it will be rejected from **January 5, 2027**.
+> Switch to `runtime: "bun-1.4"` (Bun 1.4.4) and redeploy; already-deployed versions keep their
+> original image until you do. For local development, match the Bun minor you deploy on.
+
+## Choosing a Bun runtime
+
+| `runtime` | Bun   | Node.js binary in the image | Notes                                                                 |
+| --------- | ----- | --------------------------- | --------------------------------------------------------------------- |
+| `bun-1.4` | 1.4.4 | No                          | Recommended. Bun-only image. See the Bun 1.4 note below.              |
+| `bun`     | 1.3.3 | Yes (Node.js 20)            | Deprecated, also spelled `bun-legacy`. Rejected from January 5, 2027. |
+
+The `bun-1.4` image contains **no Node.js binary**. Anything in your task that spawns
+`node` (a CLI tool, a `postinstall` script, a library that shells out) will fail on it. Install
+Node.js yourself with a build extension before moving those projects off `bun`.
+
 > **Note**
 >
-> **Supported Bun version:** Deployed tasks run on Bun 1.3.3. For local development, use Bun 1.3.x
-> for compatibility.
+> **Bun 1.4:** Bun 1.4.x has an open regression in its `node:http2` client
+> ([oven-sh/bun#39796](https://github.com/oven-sh/bun/issues/39796)). If your tasks use HTTP/2
+> clients, for example some gRPC or Google Cloud SDKs, you can stay on `bun` until it is fixed,
+> but no later than January 5, 2027.
 
 ## Prerequisites
 
@@ -38,15 +58,15 @@ This guide will show you how to setup Trigger.dev in your existing Bun project, 
    Run this command in the root of your project to get started:
 
    ```bash npm
-   npx trigger.dev@latest init --runtime bun
+   npx trigger.dev@latest init --runtime bun-1.4
    ```
 
    ```bash pnpm
-   pnpm dlx trigger.dev@latest init --runtime bun
+   pnpm dlx trigger.dev@latest init --runtime bun-1.4
    ```
 
    ```bash yarn
-   yarn dlx trigger.dev@latest init --runtime bun
+   yarn dlx trigger.dev@latest init --runtime bun-1.4
    ```
 
    It will do a few things:
@@ -99,12 +119,12 @@ This guide will show you how to setup Trigger.dev in your existing Bun project, 
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/test-dashboard.png)
 
 1. Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/terminal-completed-run.png)

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/server-chat.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/server-chat.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/server-chat.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/server-chat.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/server-chat
 
 # Server-Side Chat
@@ -162,21 +162,25 @@ export async function POST(req: Request) {
 
 ## Sub-agent tool pattern
 
-`AgentChat` can be used inside an AI SDK tool to delegate work to a durable sub-agent. The sub-agent's response streams as preliminary tool results:
+`AgentChat` can be used inside an AI SDK tool to delegate work to a durable sub-agent. `chat.forwardSubAgent` streams the sub-agent's reply to the frontend inside the tool call and resolves with its final message:
 
 ```ts
 import { tool } from "ai";
+import { chat } from "@trigger.dev/sdk/ai";
 import { AgentChat } from "@trigger.dev/sdk/chat";
 import { z } from "zod";
 
 const researchTool = tool({
   description: "Delegate research to a specialist agent.",
   inputSchema: z.object({ topic: z.string() }),
-  execute: async function* ({ topic }, { abortSignal }) {
-    const chat = new AgentChat({ agent: "research-agent" });
-    const stream = await chat.sendMessage(topic, { abortSignal });
-    yield* stream.messages();
-    await chat.close();
+  execute: async ({ topic }, { toolCallId, abortSignal }) => {
+    const researcher = new AgentChat({ agent: "research-agent" });
+    try {
+      const stream = await researcher.sendMessage(topic, { abortSignal });
+      return await chat.forwardSubAgent(stream, { toolCallId });
+    } finally {
+      await researcher.close();
+    }
   },
   toModelOutput: ({ output: message }) => {
     const lastText = message?.parts?.findLast(
@@ -251,10 +255,10 @@ const stream = await chat.reconnect();
 
 ## ChatStream methods
 
-| Method                   | Returns                          | Description                                               |
-| ------------------------ | -------------------------------- | --------------------------------------------------------- |
-| `text()`                 | `Promise<string>`                | Consume stream, return accumulated text                   |
-| `result()`               | `Promise<ChatStreamResult>`      | Consume stream, return `{ text, toolCalls, toolResults }` |
-| `messages()`             | `AsyncGenerator<UIMessage>`      | Yield accumulated UIMessage snapshots (sub-agent pattern) |
-| `[Symbol.asyncIterator]` | `UIMessageChunk`                 | Iterate over typed stream chunks                          |
-| `.stream`                | `ReadableStream<UIMessageChunk>` | Raw stream for AI SDK utilities                           |
+| Method                   | Returns                          | Description                                                                                                         |
+| ------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `text()`                 | `Promise<string>`                | Consume stream, return accumulated text                                                                             |
+| `result()`               | `Promise<ChatStreamResult>`      | Consume stream, return `{ text, toolCalls, toolResults }`                                                           |
+| `messages()`             | `AsyncGenerator<UIMessage>`      | Yield the accumulated UIMessage after each chunk. For sub-agents, pass the stream to `chat.forwardSubAgent` instead |
+| `[Symbol.asyncIterator]` | `UIMessageChunk`                 | Iterate over typed stream chunks                                                                                    |
+| `.stream`                | `ReadableStream<UIMessageChunk>` | Raw stream for AI SDK utilities                                                                                     |

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/connect-to-runpod.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/get-started/connect-to-runpod.mdx)
+> Pinned source for Runpod main: [get-started/connect-to-runpod.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/get-started/connect-to-runpod.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/connect-to-runpod
 
 # Choose a workflow
@@ -25,7 +25,7 @@ You can connect directly to your running Pods and execute code on them using a v
 
 The Runpod REST API allows you to programmatically manage and control compute resources. Use the API to manage Pod lifecycles and Serverless endpoints, monitor resource utilization, and integrate Runpod into your applications.
 
-[Explore the API reference →](https://docs.runpod.io/api-reference/docs/GET/openapi-json)
+[Explore the API reference →](https://docs.runpod.io/api-reference-v2/overview)
 
 ## SDKs
 

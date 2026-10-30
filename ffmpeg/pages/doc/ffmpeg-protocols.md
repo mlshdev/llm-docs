@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/0ea6606418c4602a9de5d43657b7b2f56b0f9681/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/92457ada93cf5d593d23cc18cd040a91532b6943/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1827,6 +1827,11 @@ blocks, where N is the number of concurrent processes using the same cache
 file. Note also that the underlying file system may reserve more space than
 written, if the underlying allocation granularity is larger than the block
 size.
+
+- offset
+  Initial byte offset to start reading from. This option is not passed on to the
+  underlying protocol; it instead gets a regular seek on the first cache miss.
+  Defaults to 0.
 
 URL Syntax is
 

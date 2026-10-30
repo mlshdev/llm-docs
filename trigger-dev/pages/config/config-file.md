@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/config/config-file.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/config/config-file.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/config/config-file.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/config/config-file.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/config-file
 
 # The trigger.config.ts file
@@ -117,7 +117,7 @@ Read more about task lifecycle functions in the [tasks overview](https://trigger
 
 We use OpenTelemetry (OTEL) for our run logs. This means you get a lot of information about your tasks with no effort. But you probably want to add more information to your logs. For example, here's all the Prisma calls automatically logged:
 
-![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/auto-instrumentation.png)
+![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/auto-instrumentation.png)
 
 Here we add Prisma and OpenAI instrumentations to your `trigger.config.ts` file.
 
@@ -326,7 +326,7 @@ After each call we restore the few attributes we use to link a span to its run, 
 
 If you don't set a `runtime`, your tasks run on the current Node.js LTS. Setting `runtime: "node"` does the same thing — see the Node.js versions section below to pin a specific version instead.
 
-We currently only officially support the `node` runtime, but you can try our experimental `bun` runtime by setting the `runtime` option in your config file:
+We currently only officially support the `node` runtime, but you can try our experimental Bun runtimes by setting the `runtime` option in your config file:
 
 ```ts trigger.config.ts
 import { defineConfig } from "@trigger.dev/sdk";
@@ -334,11 +334,11 @@ import { defineConfig } from "@trigger.dev/sdk";
 export default defineConfig({
   project: "<project ref>",
   // Your other config settings...
-  runtime: "bun",
+  runtime: "bun-1.4",
 });
 ```
 
-See our [Bun guide](https://trigger.dev/docs/guides/frameworks/bun) for more information.
+`bun-1.4` runs on a Bun-only image with no Node.js binary. `bun` (Bun 1.3 with a Node.js binary alongside it) is deprecated, and deploys that use it will be rejected from January 5, 2027. See our [Bun guide](https://trigger.dev/docs/guides/frameworks/bun) for the differences.
 
 ### Node.js versions
 
@@ -348,7 +348,8 @@ Trigger.dev runs your deployed tasks on one of these runtimes:
 - Node.js `node-22` — `22.23.4`
 - Node.js `node-24` — `24.22.1`
 - Node.js `node-26` — `26.12.1`
-- Bun `bun` — `1.3.3`
+- Bun `bun-1.4` — `1.4.4`, no Node.js binary
+- Bun `bun` — `1.3.3` with Node.js `20` alongside it (also spelled `bun-legacy`). Deprecated: deploys are rejected from January 5, 2027
 
 If you don't set a `runtime`, or you set `runtime: "node"`, your tasks run on the current Node.js LTS. That version moves forward as new LTS releases land, so set an explicit version — for example `runtime: "node-24"` — if you need it to stay fixed.
 
@@ -356,7 +357,7 @@ If you don't set a `runtime`, or you set `runtime: "node"`, your tasks run on th
 import { defineConfig } from "@trigger.dev/sdk";
 
 export default defineConfig({
-  // "node", "node-22", "node-24", "node-26" or "bun"
+  // "node", "node-22", "node-24", "node-26", "bun" or "bun-1.4"
   runtime: "node-24",
   project: "<your-project-ref>",
 });

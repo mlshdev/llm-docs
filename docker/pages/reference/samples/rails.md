@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/samples/rails.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/reference/samples/rails.md)
+> Pinned source for Docker main: [content/reference/samples/rails.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/reference/samples/rails.md)
 
 # Rails samples
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/templates/create-custom-template.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/pods/templates/create-custom-template.mdx)
+> Pinned source for Runpod main: [pods/templates/create-custom-template.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/pods/templates/create-custom-template.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/templates/create-custom-template
 
 # Build a custom Pod template
@@ -467,4 +467,4 @@ For example, you can try:
 
 For more information on working with templates, see the [Manage Pod templates](https://docs.runpod.io/pods/templates/manage-templates) guide.
 
-For more advanced template management, you can use the [Runpod REST API](https://docs.runpod.io/api-reference/templates/POST/templates) to programmatically create and update templates.
+For more advanced template management, you can use the [Runpod REST API](https://docs.runpod.io/api-reference-v2/templates/create-a-template) to programmatically create and update templates.

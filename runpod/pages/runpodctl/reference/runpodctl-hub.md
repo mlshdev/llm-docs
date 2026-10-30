@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-hub.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/runpodctl/reference/runpodctl-hub.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-hub.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/runpodctl/reference/runpodctl-hub.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-hub
 
 # hub

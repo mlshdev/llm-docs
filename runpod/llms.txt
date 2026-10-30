@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `70e07c1facd0003a81dbdc548e10ae92f96e7c38`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `f2481a71841afde6db66b886a32d287d2e3ac0c9`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -13,11 +13,11 @@
 
 - [Welcome to Runpod](pages/overview.md): Explore our guides and examples to deploy your AI/ML application on Runpod. Review setup and usage guidance in the Runpod documentation. (4478 bytes)
 - [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (14020 bytes)
-- [Choose a workflow](pages/get-started/connect-to-runpod.md): Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod. (2219 bytes)
+- [Choose a workflow](pages/get-started/connect-to-runpod.md): Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod. (2209 bytes)
 - [Concepts](pages/get-started/concepts.md): Key concepts and terminology for understanding Runpod's platform and products. Review setup steps and core concepts for building on Runpod. (3461 bytes)
 - [Manage credentials](pages/get-started/credentials.md): Create and manage your API keys, SSH keys, S3 API keys, container registry credentials, and secrets from the Credentials page. (7235 bytes)
 - [Agent skills for AI coding tools](pages/get-started/agent-skills.md): Manage GPU workloads on Runpod with coding agents like Claude Code, Codex, and Cursor. Review setup steps and core concepts for building on Runpod. (10261 bytes)
-- [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (12304 bytes)
+- [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (12307 bytes)
 - [Early access features](pages/get-started/early-access.md): Opt in to experimental Runpod console features before they're generally available. Review setup steps and core concepts for building on Runpod. (1730 bytes)
 
 ## Runpod SDK (Beta)
@@ -39,8 +39,8 @@
 
 ## Flash
 
-- [Overview](pages/flash/overview.md): Build autoscaling AI/ML apps using local code with Runpod Flash. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4447 bytes)
-- [Get started with Flash](pages/flash/quickstart.md): Run your first GPU workload with Flash in less than 5 minutes. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (13029 bytes)
+- [Overview](pages/flash/overview.md): Build autoscaling AI/ML apps using local code with Runpod Flash. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4434 bytes)
+- [Get started with Flash](pages/flash/quickstart.md): Run your first GPU workload with Flash in less than 5 minutes. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (20711 bytes)
 - [Use Flash on Windows](pages/flash/windows-wsl2.md): Set up WSL2 with Ubuntu to run Flash on Windows. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4211 bytes)
 - [Pricing](pages/flash/pricing.md): Understand Flash pricing and optimize your costs. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4846 bytes)
 - [Create endpoints](pages/flash/create-endpoints.md): Learn how to create and configure hardware and scaling behavior with the Flash Endpoint class. Review configuration and usage details for Runpod Flash. (14260 bytes)
@@ -48,7 +48,7 @@
 - [Storage](pages/flash/configuration/storage.md): Understand container disk and network volume storage for Flash workloads. Review configuration and usage details for Runpod Flash. (8809 bytes)
 - [GPU types](pages/flash/configuration/gpu-types.md): Available GPU pools and specific GPU types for Flash endpoints. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (11827 bytes)
 - [CPU types](pages/flash/configuration/cpu-types.md): Available CPU instance types for Flash endpoints. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (4445 bytes)
-- [Endpoint parameters](pages/flash/configuration/parameters.md): Complete reference for all Endpoint class parameters. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (25238 bytes)
+- [Endpoint parameters](pages/flash/configuration/parameters.md): Complete reference for all Endpoint class parameters. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (23928 bytes)
 - [Configuration best practices](pages/flash/configuration/best-practices.md): Recommended configurations for production, development, and cost optimization. Review configuration and usage details for Runpod Flash. (7773 bytes)
 - [Overview](pages/flash/apps/overview.md): Understand the Flash app development lifecycle. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (3939 bytes)
 - [Build a Flash app](pages/flash/apps/build-app.md): Create a Flash app, test it locally, and deploy it to production. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7780 bytes)
@@ -56,19 +56,19 @@
 - [Customize your Flash app](pages/flash/apps/customize-app.md): Modify the Flash project template to build your application. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (5727 bytes)
 - [Test Flash apps locally](pages/flash/apps/local-testing.md): Use flash dev to test your Flash application locally before deploying. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7432 bytes)
 - [Apps and environments](pages/flash/apps/apps-and-environments.md): Understanding Flash's two-level deployment structure for organizing projects and managing deployments. (6253 bytes)
-- [Deploy Flash apps to Runpod](pages/flash/apps/deploy-apps.md): Build and deploy your Flash app for production serving. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (17986 bytes)
+- [Deploy Flash apps to Runpod](pages/flash/apps/deploy-apps.md): Build and deploy your Flash app for production serving. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (18044 bytes)
 - [Send API requests to deployed endpoints](pages/flash/apps/requests.md): Call your deployed Flash endpoints using HTTP requests for queue-based and load-balanced configurations. (8271 bytes)
 - [Execution model](pages/flash/execution-model.md): Understand how Flash executes your code on Runpod's infrastructure. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (7557 bytes)
-- [Troubleshooting](pages/flash/troubleshooting.md): Monitor, debug, and troubleshoot Flash deployments. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (19989 bytes)
-- [Generate text with Flash and transformers](pages/tutorials/flash/text-generation-with-transformers.md): Learn how to use Flash with Hugging Face transformers to build a GPU-accelerated text generation application. (14684 bytes)
-- [Generate images with Flash and SDXL](pages/tutorials/flash/image-generation-with-sdxl.md): Learn how to use Flash with Stable Diffusion XL to generate high-quality images from text prompts. Follow the implementation steps in this Runpod tutorial. (19520 bytes)
+- [Troubleshooting](pages/flash/troubleshooting.md): Monitor, debug, and troubleshoot Flash deployments. Review setup, configuration, deployment, and usage guidance for Runpod Flash. (19881 bytes)
+- [Generate text with Flash and transformers](pages/tutorials/flash/text-generation-with-transformers.md): Learn how to use Flash with Hugging Face transformers to build a GPU-accelerated text generation application. (18287 bytes)
+- [Generate images with Flash and SDXL](pages/tutorials/flash/image-generation-with-sdxl.md): Learn how to use Flash with Stable Diffusion XL to generate high-quality images from text prompts. Follow the implementation steps in this Runpod tutorial. (26020 bytes)
 - [Build a REST API with Flash](pages/tutorials/flash/build-rest-api-with-load-balancer.md): Learn how to build a production-ready REST API using Flash load-balanced endpoints with custom HTTP routes. (21847 bytes)
 
 ## Serverless
 
 - [Overview](pages/serverless/overview.md): Pay-as-you-go compute for AI models and compute-intensive workloads. Review configuration and operations guidance for Runpod Serverless. (9950 bytes)
 - [Quickstart](pages/serverless/quickstart.md): Write a handler function, build a worker image, create an endpoint, and send your first request. See Runpod Serverless setup and usage details. (6760 bytes)
-- [Install the Runpod Serverless SDK](pages/serverless/sdks.md): Install and configure the Serverless SDK for Python, JavaScript, or Go to interact with Serverless endpoints programmatically. (3174 bytes)
+- [Install the Runpod Serverless SDK](pages/serverless/sdks.md): Install and configure the Serverless SDK for Python, JavaScript, or Go to interact with Serverless endpoints programmatically. (3177 bytes)
 - [Pricing](pages/serverless/pricing.md): Learn how Serverless billing works to optimize your costs. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (3565 bytes)
 - [Overview](pages/serverless/workers/handler-functions.md): Write custom handler functions to process incoming requests to your queue-based endpoints. See Runpod Serverless setup and usage details. (10913 bytes)
 - [Local testing](pages/serverless/development/local-testing.md): Test your Serverless handlers locally before deploying to production. Review configuration and operations guidance for Runpod Serverless. (5994 bytes)
@@ -87,10 +87,10 @@
 - [Storage options](pages/serverless/storage/overview.md): Storage options for Serverless workers: container disks, network volumes, and S3-compatible storage. (2915 bytes)
 - [Cache files to a network volume](pages/serverless/development/volume-cache.md): Persist model weights and other files to an attached network volume to speed up Serverless worker cold starts. (6826 bytes)
 - [Pod-first development](pages/serverless/development/dual-mode-worker.md): Develop on a Pod before deploying your worker to Serverless for faster iteration. Review configuration and operations guidance for Runpod Serverless. (14701 bytes)
-- [Overview](pages/serverless/endpoints/overview.md): Deploy and manage Serverless endpoints using the Runpod console or REST API. Review configuration and operations guidance for Runpod Serverless. (5844 bytes)
+- [Overview](pages/serverless/endpoints/overview.md): Deploy and manage Serverless endpoints using the Runpod console or REST API. Review configuration and operations guidance for Runpod Serverless. (6265 bytes)
 - [Send API requests](pages/serverless/endpoints/send-requests.md): Submit and manage jobs for your queue-based endpoints by sending HTTP requests. Review configuration and operations guidance for Runpod Serverless. (13532 bytes)
 - [Operation reference](pages/serverless/endpoints/operation-reference.md): Detailed API reference for all queue-based endpoint operations. Review configuration and operations guidance for Runpod Serverless. (17931 bytes)
-- [Endpoint settings](pages/serverless/endpoints/endpoint-configurations.md): Reference guide for all Serverless endpoint settings and parameters. Review configuration and operations guidance for Runpod Serverless. (9835 bytes)
+- [Endpoint settings](pages/serverless/endpoints/endpoint-configurations.md): Reference guide for all Serverless endpoint settings and parameters. Review configuration and operations guidance for Runpod Serverless. (10553 bytes)
 - [Rolling releases](pages/serverless/endpoints/rolling-releases.md): Understand how Runpod rolls out Serverless endpoint updates without downtime, including worker replacement, version tracking, and rollback behavior. (2784 bytes)
 - [Cached models](pages/serverless/endpoints/model-caching.md): Accelerate worker cold starts and reduce costs by using cached models. Review configuration and operations guidance for Runpod Serverless. (8537 bytes)
 - [Optimize your endpoints](pages/serverless/development/optimization.md): Implement strategies to reduce latency and cost for your Serverless endpoints. Review configuration and operations guidance for Runpod Serverless. (5445 bytes)
@@ -115,12 +115,6 @@
 - [Deploy Phi-3 using model caching](pages/tutorials/serverless/model-caching-text.md): Learn how to create a custom Serverless endpoint that uses model caching to serve Phi-3 with reduced cost and cold start times. (16189 bytes)
 - [Integrate Serverless with a web application](pages/tutorials/serverless/generate-sdxl-turbo.md): Deploy an image generation endpoint from the Hub and integrate it into a web application. Follow the implementation steps in this Runpod tutorial. (10973 bytes)
 - [Deploy a Gemma 3 chatbot with the OpenAI API](pages/tutorials/serverless/run-gemma-7b.md): Deploy a Serverless endpoint with Google's Gemma 3 model using vLLM and the OpenAI API to build an interactive chatbot. (8085 bytes)
-- [Create a new endpoint](pages/api-reference/endpoints/POST/endpoints.md): POST /endpoints (25623 bytes)
-- [List endpoints](pages/api-reference/endpoints/GET/endpoints.md): GET /endpoints (19713 bytes)
-- [Find an endpoint by ID](pages/api-reference/endpoints/GET/endpoints/endpointId.md): GET /endpoints/{endpointId} (19359 bytes)
-- [Update an endpoint](pages/api-reference/endpoints/PATCH/endpoints/endpointId.md): PATCH /endpoints/{endpointId} (25454 bytes)
-- [Delete an endpoint](pages/api-reference/endpoints/DELETE/endpoints/endpointId.md): DELETE /endpoints/{endpointId} (444 bytes)
-- [Update an endpoint](pages/api-reference/endpoints/POST/endpoints/endpointId/update.md): POST /endpoints/{endpointId}/update (25466 bytes)
 - [List Serverless Endpoints](pages/api-reference-v2/serverless/list-serverless-endpoints.md): List all Runpod Serverless endpoints owned by the authenticated user, including compute, worker, scaling, and deployment settings. (19204 bytes)
 - [Create A Serverless Endpoint](pages/api-reference-v2/serverless/create-a-serverless-endpoint.md): Create a Runpod Serverless endpoint with GPU or CPU compute, container or template settings, worker limits, and scaling policies. (35337 bytes)
 - [Get A Serverless Endpoint](pages/api-reference-v2/serverless/get-a-serverless-endpoint.md): Retrieve a Runpod Serverless endpoint by ID with its compute, worker, scaling, container, storage, and current status settings. (17300 bytes)
@@ -131,13 +125,19 @@
 - [List Serverless Endpoint Builds](pages/api-reference-v2/serverless/list-serverless-endpoint-builds.md): List a Runpod Serverless endpoint's GitHub build history, newest first, capped to the 100 most recent builds, with older builds fetchable by ID. (7339 bytes)
 - [Get A Serverless Endpoint Build](pages/api-reference-v2/serverless/get-a-serverless-endpoint-build.md): Retrieve a single GitHub build for a Runpod Serverless endpoint by its build ID, returning that build regardless of how old it is. (5289 bytes)
 - [Stream Serverless Worker Logs](pages/api-reference-v2/serverless/stream-serverless-worker-logs.md): Stream a Runpod Serverless worker's logs in real time as Server-Sent Events, with resumable reconnects via Last-Event-ID. (5549 bytes)
+- [Create a new endpoint](pages/api-reference/endpoints/POST/endpoints.md): POST /endpoints (25623 bytes)
+- [List endpoints](pages/api-reference/endpoints/GET/endpoints.md): GET /endpoints (19713 bytes)
+- [Find an endpoint by ID](pages/api-reference/endpoints/GET/endpoints/endpointId.md): GET /endpoints/{endpointId} (19359 bytes)
+- [Update an endpoint](pages/api-reference/endpoints/PATCH/endpoints/endpointId.md): PATCH /endpoints/{endpointId} (25454 bytes)
+- [Delete an endpoint](pages/api-reference/endpoints/DELETE/endpoints/endpointId.md): DELETE /endpoints/{endpointId} (444 bytes)
+- [Update an endpoint](pages/api-reference/endpoints/POST/endpoints/endpointId/update.md): POST /endpoints/{endpointId}/update (25466 bytes)
 
 ## Pods
 
 - [Overview](pages/pods/overview.md): Get on-demand access to powerful computing resources. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (3748 bytes)
 - [Pricing](pages/pods/pricing.md): Explore pricing options for Pods, including on-demand pricing and storage costs. Review setup, configuration, and operations guidance for Runpod Pods. (3075 bytes)
 - [Choose a Pod](pages/pods/choose-a-pod.md): Select the right Pod by evaluating your resource requirements. Review setup, configuration, and operations guidance for Runpod Pods. (5186 bytes)
-- [Manage Pods](pages/pods/manage-pods.md): Create, start, stop, restart, and terminate Pods using the Runpod console or CLI. Review setup, configuration, and operations guidance for Runpod Pods. (8387 bytes)
+- [Manage Pods](pages/pods/manage-pods.md): Create, start, stop, restart, and terminate Pods using the Runpod console or CLI. Review setup, configuration, and operations guidance for Runpod Pods. (8832 bytes)
 - [Maintenance, outages, and data safety](pages/pods/maintenance-and-outages.md): Understand how Runpod handles planned and unplanned maintenance and how to protect your data. See setup and usage details for Runpod Pods. (3577 bytes)
 - [Connection options](pages/pods/connect-to-a-pod.md): Explore Pod connection options, including the web terminal, SSH, JupyterLab, and VSCode/Cursor. See setup and usage details for Runpod Pods. (2941 bytes)
 - [Connect to a Pod with SSH](pages/pods/configuration/use-ssh.md): Manage Pods from your local machine using SSH. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (8781 bytes)
@@ -148,8 +148,8 @@
 - [Transfer files](pages/pods/storage/transfer-files.md): Move files between your local machine and Pods with a variety of secure transfer methods. See setup and usage details for Runpod Pods. (7928 bytes)
 - [Sync Pod data with cloud storage providers](pages/pods/storage/cloud-sync.md): Learn how to sync your Pod data with popular cloud storage providers. Review setup, configuration, and operations guidance for Runpod Pods. (10224 bytes)
 - [Overview](pages/pods/templates/overview.md): Streamline your Pod deployments with templates, bundling prebuilt container images with hardware specs and network settings. (2670 bytes)
-- [Manage Pod templates](pages/pods/templates/manage-templates.md): Learn how to create, and manage custom Pod templates. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6826 bytes)
-- [Build a custom Pod template](pages/pods/templates/create-custom-template.md): A step-by-step guide to extending Runpod's official templates. Review setup, configuration, and operations guidance for Runpod Pods. (18926 bytes)
+- [Manage Pod templates](pages/pods/templates/manage-templates.md): Learn how to create, and manage custom Pod templates. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6876 bytes)
+- [Build a custom Pod template](pages/pods/templates/create-custom-template.md): A step-by-step guide to extending Runpod's official templates. Review setup, configuration, and operations guidance for Runpod Pods. (18932 bytes)
 - [Environment variables](pages/pods/templates/environment-variables.md): Configure Pods with environment variables for settings, secrets, and runtime information. See setup and usage details for Runpod Pods. (3420 bytes)
 - [Manage secrets](pages/pods/templates/secrets.md): Securely store and manage sensitive information like API keys, passwords, and tokens with Runpod secrets. (5501 bytes)
 - [Zero GPU Pods on restart](pages/pods/troubleshooting/zero-gpus.md): What to do when your Pod machine has zero GPUs. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (3097 bytes)
@@ -160,10 +160,17 @@
 - [Storage full](pages/pods/troubleshooting/storage-full.md): Diagnose and resolve storage-full errors on Runpod Pods by checking disk usage, locating large files, and managing container or volume storage. (4061 bytes)
 - [502 errors](pages/pods/troubleshooting/troubleshooting-502-errors.md): Troubleshoot 502 errors on Runpod Pods by checking GPU attachment, application status, port configuration, logs, and template requirements. (2721 bytes)
 - [Run LLMs in JupyterLab with transformers](pages/tutorials/pods/run-your-first.md): Learn how to run inference on the SmolLM3 model in JupyterLab using the transformers library. Follow the implementation steps in this Runpod tutorial. (7485 bytes)
-- [Generate images with ComfyUI](pages/tutorials/pods/comfyui.md): Deploy ComfyUI on Runpod to create AI-generated images. Follow implementation steps, configuration guidance, and examples in this Runpod tutorial. (10663 bytes)
+- [Generate images with ComfyUI](pages/tutorials/pods/comfyui.md): Deploy ComfyUI on Runpod to create AI-generated images. Follow implementation steps, configuration guidance, and examples in this Runpod tutorial. (10682 bytes)
 - [Set up Ollama on a Pod](pages/tutorials/pods/run-ollama.md): Install and run Ollama on a Pod with HTTP API access. Follow implementation steps, configuration guidance, and examples in this Runpod tutorial. (2896 bytes)
 - [Build Docker images on Runpod with Bazel](pages/tutorials/pods/build-docker-images.md): Build and push Docker images from inside a Runpod Pod using Bazel. Follow the setup and implementation steps in this Runpod tutorial. (6170 bytes)
 - [Use private AWS ECR images](pages/tutorials/pods/use-private-ecr-images.md): Pull private AWS ECR container images into Runpod Pods by configuring cross-account delegation, IAM permissions, and registry authentication. (8946 bytes)
+- [List Pods](pages/api-reference-v2/pods/list-pods.md): List Pods owned by the authenticated Runpod user, with an option to include member Pods that belong to Runpod Clusters. (22099 bytes)
+- [Create A Pod](pages/api-reference-v2/pods/create-a-pod.md): Create a Runpod Pod with GPU or CPU compute, container or template settings, storage, networking, and deployment constraints. (36983 bytes)
+- [Get A Pod](pages/api-reference-v2/pods/get-a-pod.md): Retrieve a Runpod Pod by ID with its compute, container, storage, networking, lifecycle status, and connection details. (19191 bytes)
+- [Terminate A Pod](pages/api-reference-v2/pods/terminate-a-pod.md): Permanently terminate a Runpod Pod, release its compute, and understand what happens to persistent mounts, network volumes, and Cluster members. (4385 bytes)
+- [Update A Pod](pages/api-reference-v2/pods/update-a-pod.md): Update selected settings on an existing Runpod Pod while preserving omitted fields, with guidance on mutable fields and restart behavior. (29399 bytes)
+- [Stream Pod Logs](pages/api-reference-v2/pods/stream-pod-logs.md): Stream a Runpod Pod's container and system logs in real time as Server-Sent Events, with resumable reconnects via Last-Event-ID. (5345 bytes)
+- [Trigger A Pod State Transition](pages/api-reference-v2/pods/trigger-a-pod-state-transition.md): Start, stop, or restart a Runpod Pod by sending a supported state transition action and retrieving the Pod's updated lifecycle state. (23220 bytes)
 - [Create a new Pod](pages/api-reference/pods/POST/pods.md): POST /pods (17792 bytes)
 - [List Pods](pages/api-reference/pods/GET/pods.md): GET /pods (9859 bytes)
 - [Find a Pod by ID](pages/api-reference/pods/GET/pods/podId.md): GET /pods/{podId} (9199 bytes)
@@ -174,18 +181,11 @@
 - [Stop a Pod](pages/api-reference/pods/POST/pods/podId/stop.md): POST /pods/{podId}/stop (391 bytes)
 - [Reset a Pod](pages/api-reference/pods/POST/pods/podId/reset.md): POST /pods/{podId}/reset (394 bytes)
 - [Restart a pod](pages/api-reference/pods/POST/pods/podId/restart.md): POST /pods/{podId}/restart (371 bytes)
-- [List Pods](pages/api-reference-v2/pods/list-pods.md): List Pods owned by the authenticated Runpod user, with an option to include member Pods that belong to Runpod Clusters. (22099 bytes)
-- [Create A Pod](pages/api-reference-v2/pods/create-a-pod.md): Create a Runpod Pod with GPU or CPU compute, container or template settings, storage, networking, and deployment constraints. (36983 bytes)
-- [Get A Pod](pages/api-reference-v2/pods/get-a-pod.md): Retrieve a Runpod Pod by ID with its compute, container, storage, networking, lifecycle status, and connection details. (19191 bytes)
-- [Terminate A Pod](pages/api-reference-v2/pods/terminate-a-pod.md): Permanently terminate a Runpod Pod, release its compute, and understand what happens to persistent mounts, network volumes, and Cluster members. (4385 bytes)
-- [Update A Pod](pages/api-reference-v2/pods/update-a-pod.md): Update selected settings on an existing Runpod Pod while preserving omitted fields, with guidance on mutable fields and restart behavior. (29399 bytes)
-- [Stream Pod Logs](pages/api-reference-v2/pods/stream-pod-logs.md): Stream a Runpod Pod's container and system logs in real time as Server-Sent Events, with resumable reconnects via Last-Event-ID. (5345 bytes)
-- [Trigger A Pod State Transition](pages/api-reference-v2/pods/trigger-a-pod-state-transition.md): Start, stop, or restart a Runpod Pod by sending a supported state transition action and retrieving the Pod's updated lifecycle state. (23220 bytes)
 
 ## Storage
 
 - [Storage overview](pages/storage/overview.md): Compare Runpod network volumes and global volumes, and learn how to attach persistent storage to Pods, Serverless endpoints, and Runpod SDK apps. (5687 bytes)
-- [Network volumes](pages/storage/network-volumes.md): Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod. (7924 bytes)
+- [Network volumes](pages/storage/network-volumes.md): Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod. (7938 bytes)
 - [High-performance storage](pages/storage/high-performance-storage.md): Premium storage tier for demanding AI workloads with up to 3x throughput and 4x IOPS. Review configuration and usage guidance for Runpod storage. (5239 bytes)
 - [S3-compatible API](pages/storage/s3-api.md): Use Runpod's S3-compatible API to access and manage your network volumes. Review configuration and usage guidance for Runpod storage. (26700 bytes)
 - [Overview](pages/storage/globalvolume/overview.md): Create a Runpod global volume, attach it to Pods or Serverless workers across data centers, and review storage costs and limitations. (7077 bytes)
@@ -226,20 +226,23 @@
 
 ## Organizations (Beta)
 
-- [Organizations](pages/organizations/orgs-overview.md): Manage enterprise GPU workloads with centralized resource ownership, post-paid billing, and role-based access control. (3752 bytes)
+- [Organizations](pages/organizations/orgs-overview.md): Manage enterprise GPU workloads with centralized resource ownership, post-paid billing, and role-based access control. (3880 bytes)
 - [Access](pages/organizations/orgs-access.md): Control who joins your organization with email invitations. Learn how to invite, accept, and remove members. (1768 bytes)
-- [Roles](pages/organizations/org-roles.md): Control what organization members can do with four built-in roles. Learn which actions each role can perform. (2768 bytes)
+- [Roles](pages/organizations/org-roles.md): Control what organization members can do with four built-in roles. Learn which actions each role can perform. (2940 bytes)
+- [Custom roles](pages/organizations/org-custom-roles.md): Create custom roles that grant organization members exactly the permissions they need, per resource, beyond the four built-in roles. (11276 bytes)
 - [Groups](pages/organizations/orgs-groups.md): Organize organization members into groups to control resource visibility and structure teams within your organization. (1781 bytes)
 - [Resource tagging](pages/organizations/orgs-resource-tagging.md): Attach key-value tags to organization resources to track spend, filter usage, and attribute costs across teams, projects, and cost centers. (1936 bytes)
 - [Billing](pages/organizations/orgs-billing.md): Understand how organization billing works, including post-paid invoicing, Billing Explorer access, and cost centers for spend attribution. (1196 bytes)
 
 ## Integrations
 
-- [Integrate your applications with Runpod](pages/integrations/overview.md): Integrate Runpod compute resources with your applications, external tools, and agentic frameworks. See related Runpod setup and usage details. (7650 bytes)
+- [Integrate your applications with Runpod](pages/integrations/overview.md): Integrate Runpod compute resources with your applications, external tools, and agentic frameworks. See related Runpod setup and usage details. (7830 bytes)
 - [Run Transformer Lab experiments on Runpod](pages/integrations/transformer-lab.md): Configure Transformer Lab to run ML training and inference workloads on Runpod GPUs. Review configuration and usage guidance for this Runpod integration. (6626 bytes)
 - [Manage Pods with dstack on Runpod](pages/integrations/dstack.md): Use dstack to automate Pod orchestration for AI and ML workloads on Runpod. Review configuration and usage guidance for this Runpod integration. (9576 bytes)
 - [Running Runpod on Mods](pages/integrations/mods.md): Use Mods to interact with language models hosted on Runpod from the command line. Review configuration and usage guidance for this Runpod integration. (2023 bytes)
 - [Running Runpod on SkyPilot](pages/integrations/skypilot.md): Use SkyPilot to run LLMs, AI, and batch jobs on Runpod Pods and Serverless endpoints. Review configuration and usage guidance for this Runpod integration. (1911 bytes)
+- [Manage Runpod infrastructure with Terraform](pages/integrations/terraform/overview.md): Install the Runpod Terraform provider 2.0.0, authenticate with your API key, and deploy your first Pod as code with a minimal working configuration. (8206 bytes)
+- [Migrate the Runpod Terraform provider from 1.x to 2.0.0](pages/integrations/terraform/migration.md): Map every 1.x attribute of the Runpod Terraform provider to its 2.0.0 equivalent, with the configuration edit and state action each resource needs. (57630 bytes)
 
 ## Hub
 
@@ -290,8 +293,8 @@
 - [init](pages/flash/cli/init.md): Initialize a Flash project with a FastAPI server, example GPU and CPU workers, configuration files, and a ready-to-run directory structure. (4506 bytes)
 - [login](pages/flash/cli/login.md): Authenticate the Flash CLI with Runpod, save your API key locally, and configure browser-based authorization options and timeouts. (3739 bytes)
 - [dev](pages/flash/cli/dev.md): Run a local Flash development server, test Endpoint functions on Runpod Serverless, and configure provisioning, ports, and updates. (7448 bytes)
-- [build](pages/flash/cli/build.md): Build a deployment-ready Flash application artifact without deploying, with controls for dependencies, exclusions, and output files. (10450 bytes)
-- [deploy](pages/flash/cli/deploy.md): Build and deploy a Flash application to Runpod Serverless, select an environment, preview the build, and control packaged dependencies. (9021 bytes)
+- [build](pages/flash/cli/build.md): Build a deployment-ready Flash application artifact without deploying, with controls for dependencies, exclusions, and output files. (10292 bytes)
+- [deploy](pages/flash/cli/deploy.md): Build and deploy a Flash application to Runpod Serverless, select an environment, preview the build, and control packaged dependencies. (9180 bytes)
 - [env](pages/flash/cli/env.md): Create, inspect, list, and delete isolated Flash deployment environments for development, staging, and production applications. (7688 bytes)
 - [app](pages/flash/cli/app.md): Create, inspect, list, and delete Flash applications that organize deployment environments, build artifacts, and configuration. (9086 bytes)
 - [undeploy](pages/flash/cli/undeploy.md): List or delete Runpod Serverless endpoints created by Flash, including individual deployments and local development resources. (5493 bytes)
@@ -317,52 +320,6 @@
 - [receive](pages/runpodctl/reference/runpodctl-receive.md): Receive files or folders through runpodctl using a secure peer-to-peer connection code shared by the sending machine. (713 bytes)
 - [update](pages/runpodctl/reference/runpodctl-update.md): Update runpodctl to the latest release, verify the downloaded binary with its SHA-256 checksum, and confirm the installed version. (762 bytes)
 - [version](pages/runpodctl/reference/runpodctl-version.md): Use runpodctl to display the currently installed CLI version and confirm that an installation or update completed successfully. (406 bytes)
-
-## API v1
-
-- [Overview](pages/api-reference/overview.md): Use the Runpod API to programmatically manage your compute resources. Review authentication, request formats, and response details for the Runpod API. (2029 bytes)
-
-## Network volumes
-
-- [Create a new network volume](pages/api-reference/network-volumes/POST/networkvolumes.md): POST /networkvolumes (1454 bytes)
-- [List network volumes](pages/api-reference/network-volumes/GET/networkvolumes.md): GET /networkvolumes (942 bytes)
-- [Find a network volume by ID](pages/api-reference/network-volumes/GET/networkvolumes/networkVolumeId.md): GET /networkvolumes/{networkVolumeId} (1027 bytes)
-- [Update a network volume](pages/api-reference/network-volumes/PATCH/networkvolumes/networkVolumeId.md): PATCH /networkvolumes/{networkVolumeId} (1506 bytes)
-- [Delete a network volume](pages/api-reference/network-volumes/DELETE/networkvolumes/networkVolumeId.md): DELETE /networkvolumes/{networkVolumeId} (492 bytes)
-- [Update a network volume](pages/api-reference/network-volumes/POST/networkvolumes/networkVolumeId/update.md): POST /networkvolumes/{networkVolumeId}/update (1505 bytes)
-
-## Templates
-
-- [Create a new template](pages/api-reference/templates/POST/templates.md): POST /templates (5627 bytes)
-- [List templates](pages/api-reference/templates/GET/templates.md): GET /templates (3890 bytes)
-- [Find a template by ID](pages/api-reference/templates/GET/templates/templateId.md): GET /templates/{templateId} (3906 bytes)
-- [Update a template](pages/api-reference/templates/PATCH/templates/templateId.md): PATCH /templates/{templateId} (5552 bytes)
-- [Delete a template](pages/api-reference/templates/DELETE/templates/templateId.md): DELETE /templates/{templateId} (441 bytes)
-- [Update a template](pages/api-reference/templates/POST/templates/templateId/update.md): POST /templates/{templateId}/update (5564 bytes)
-- [List Templates](pages/api-reference-v2/templates/list-templates.md): List all reusable Runpod templates owned by the authenticated user, including Pod and Serverless container configuration details. (10431 bytes)
-- [Create A Template](pages/api-reference-v2/templates/create-a-template.md): Create a reusable Runpod template for Pod and Serverless container settings, including images, storage, ports, environment, and mounts. (15489 bytes)
-- [Get A Template](pages/api-reference-v2/templates/get-a-template.md): Retrieve the complete configuration of an owned or public Runpod template by ID, including settings used to create Pods and endpoints. (8562 bytes)
-- [Delete A Template](pages/api-reference-v2/templates/delete-a-template.md): Permanently delete an owned Runpod template by ID and understand restrictions when Pods or Serverless endpoints still reference it. (4297 bytes)
-- [Update A Template](pages/api-reference-v2/templates/update-a-template.md): Update selected fields on a Runpod template while preserving omitted settings, with ownership rules and behavior for existing resources. (15376 bytes)
-
-## Container registry auth
-
-- [Create a new container registry auth](pages/api-reference/container-registry-auths/POST/containerregistryauth.md): POST /containerregistryauth (1174 bytes)
-- [List container registry auths](pages/api-reference/container-registry-auths/GET/containerregistryauth.md): GET /containerregistryauth (760 bytes)
-- [Find a container registry auth by ID](pages/api-reference/container-registry-auths/GET/containerregistryauth/containerRegistryAuthId.md): GET /containerregistryauth/{containerRegistryAuthId} (878 bytes)
-- [Delete a container registry auth](pages/api-reference/container-registry-auths/DELETE/containerregistryauth/containerRegistryAuthId.md): DELETE /containerregistryauth/{containerRegistryAuthId} (547 bytes)
-
-## Billing
-
-- [Pod billing history](pages/api-reference/billing/GET/billing/pods.md): GET /billing/pods (2841 bytes)
-- [Serverless billing history](pages/api-reference/billing/GET/billing/endpoints.md): GET /billing/endpoints (2008 bytes)
-- [Network Volume billing history](pages/api-reference/billing/GET/billing/networkvolumes.md): GET /billing/networkvolumes (1412 bytes)
-- [Get Aggregated Billing History](pages/api-reference-v2/billing/get-aggregated-billing-history.md): Retrieve time-bucketed total Runpod spend across Pods, Serverless, storage, Public Endpoints, and Clusters for the authenticated account. (11009 bytes)
-- [Get Pod Billing History](pages/api-reference-v2/billing/get-pod-billing-history.md): Retrieve time-bucketed billing details for one or all Runpod Pods, including GPU, CPU, disk, total costs, and query metadata. (8199 bytes)
-- [Get Serverless Billing History](pages/api-reference-v2/billing/get-serverless-billing-history.md): Retrieve time-bucketed billing history for one or all Runpod Serverless endpoints, including compute, disk, platform, and total costs. (8698 bytes)
-- [Get Public Endpoint Billing History](pages/api-reference-v2/billing/get-public-endpoint-billing-history.md): Retrieve time-bucketed billing history for Runpod Public Endpoints, including endpoint totals and resolved query metadata. (6743 bytes)
-- [Get Network Volume Billing History](pages/api-reference-v2/billing/get-network-volume-billing-history.md): Retrieve time-bucketed billing history for one or all Runpod network volumes, including storage tiers, totals, and query metadata. (8488 bytes)
-- [Get Cluster Billing History](pages/api-reference-v2/billing/get-cluster-billing-history.md): Retrieve time-bucketed Runpod Cluster billing history, including GPU compute, disk, inter-node networking, and total costs. (8353 bytes)
 
 ## API v2
 
@@ -394,6 +351,20 @@
 - [Delete A Cluster](pages/api-reference-v2/clusters/delete-a-cluster.md): Permanently delete a Runpod Cluster and terminate all of its member Pods, with the response confirming the deleted Cluster. (3250 bytes)
 - [Rename A Cluster](pages/api-reference-v2/clusters/rename-a-cluster.md): Rename a Runpod Cluster. Compute shape, type, and container configuration are fixed at creation and cannot be changed. (9534 bytes)
 - [List A Clusters Pods](pages/api-reference-v2/clusters/list-a-clusters-pods.md): List every Pod in a Runpod Cluster with each member's complete configuration and status, beyond the aggregate counts in the Cluster summary. (18787 bytes)
+
+## Templates
+
+- [List Templates](pages/api-reference-v2/templates/list-templates.md): List all reusable Runpod templates owned by the authenticated user, including Pod and Serverless container configuration details. (10431 bytes)
+- [Create A Template](pages/api-reference-v2/templates/create-a-template.md): Create a reusable Runpod template for Pod and Serverless container settings, including images, storage, ports, environment, and mounts. (15489 bytes)
+- [Get A Template](pages/api-reference-v2/templates/get-a-template.md): Retrieve the complete configuration of an owned or public Runpod template by ID, including settings used to create Pods and endpoints. (8562 bytes)
+- [Delete A Template](pages/api-reference-v2/templates/delete-a-template.md): Permanently delete an owned Runpod template by ID and understand restrictions when Pods or Serverless endpoints still reference it. (4297 bytes)
+- [Update A Template](pages/api-reference-v2/templates/update-a-template.md): Update selected fields on a Runpod template while preserving omitted settings, with ownership rules and behavior for existing resources. (15376 bytes)
+- [Create a new template](pages/api-reference/templates/POST/templates.md): POST /templates (5627 bytes)
+- [List templates](pages/api-reference/templates/GET/templates.md): GET /templates (3890 bytes)
+- [Find a template by ID](pages/api-reference/templates/GET/templates/templateId.md): GET /templates/{templateId} (3906 bytes)
+- [Update a template](pages/api-reference/templates/PATCH/templates/templateId.md): PATCH /templates/{templateId} (5552 bytes)
+- [Delete a template](pages/api-reference/templates/DELETE/templates/templateId.md): DELETE /templates/{templateId} (441 bytes)
+- [Update a template](pages/api-reference/templates/POST/templates/templateId/update.md): POST /templates/{templateId}/update (5564 bytes)
 
 ## Network Volumes
 
@@ -434,6 +405,38 @@
 ## Audit Logs
 
 - [List Audit Logs](pages/api-reference-v2/audit-logs/list-audit-logs.md): List your Runpod audit trail to see who acted on each resource, with filters for actor, action, time range, and text, newest first. (10069 bytes)
+
+## Billing
+
+- [Get Aggregated Billing History](pages/api-reference-v2/billing/get-aggregated-billing-history.md): Retrieve time-bucketed total Runpod spend across Pods, Serverless, storage, Public Endpoints, and Clusters for the authenticated account. (11009 bytes)
+- [Get Pod Billing History](pages/api-reference-v2/billing/get-pod-billing-history.md): Retrieve time-bucketed billing details for one or all Runpod Pods, including GPU, CPU, disk, total costs, and query metadata. (8199 bytes)
+- [Get Serverless Billing History](pages/api-reference-v2/billing/get-serverless-billing-history.md): Retrieve time-bucketed billing history for one or all Runpod Serverless endpoints, including compute, disk, platform, and total costs. (8698 bytes)
+- [Get Public Endpoint Billing History](pages/api-reference-v2/billing/get-public-endpoint-billing-history.md): Retrieve time-bucketed billing history for Runpod Public Endpoints, including endpoint totals and resolved query metadata. (6743 bytes)
+- [Get Network Volume Billing History](pages/api-reference-v2/billing/get-network-volume-billing-history.md): Retrieve time-bucketed billing history for one or all Runpod network volumes, including storage tiers, totals, and query metadata. (8488 bytes)
+- [Get Cluster Billing History](pages/api-reference-v2/billing/get-cluster-billing-history.md): Retrieve time-bucketed Runpod Cluster billing history, including GPU compute, disk, inter-node networking, and total costs. (8353 bytes)
+- [Pod billing history](pages/api-reference/billing/GET/billing/pods.md): GET /billing/pods (2841 bytes)
+- [Serverless billing history](pages/api-reference/billing/GET/billing/endpoints.md): GET /billing/endpoints (2008 bytes)
+- [Network Volume billing history](pages/api-reference/billing/GET/billing/networkvolumes.md): GET /billing/networkvolumes (1412 bytes)
+
+## API v1
+
+- [Overview](pages/api-reference/overview.md): Use the Runpod API to programmatically manage your compute resources. Review authentication, request formats, and response details for the Runpod API. (2029 bytes)
+
+## Network volumes
+
+- [Create a new network volume](pages/api-reference/network-volumes/POST/networkvolumes.md): POST /networkvolumes (1454 bytes)
+- [List network volumes](pages/api-reference/network-volumes/GET/networkvolumes.md): GET /networkvolumes (942 bytes)
+- [Find a network volume by ID](pages/api-reference/network-volumes/GET/networkvolumes/networkVolumeId.md): GET /networkvolumes/{networkVolumeId} (1027 bytes)
+- [Update a network volume](pages/api-reference/network-volumes/PATCH/networkvolumes/networkVolumeId.md): PATCH /networkvolumes/{networkVolumeId} (1506 bytes)
+- [Delete a network volume](pages/api-reference/network-volumes/DELETE/networkvolumes/networkVolumeId.md): DELETE /networkvolumes/{networkVolumeId} (492 bytes)
+- [Update a network volume](pages/api-reference/network-volumes/POST/networkvolumes/networkVolumeId/update.md): POST /networkvolumes/{networkVolumeId}/update (1505 bytes)
+
+## Container registry auth
+
+- [Create a new container registry auth](pages/api-reference/container-registry-auths/POST/containerregistryauth.md): POST /containerregistryauth (1174 bytes)
+- [List container registry auths](pages/api-reference/container-registry-auths/GET/containerregistryauth.md): GET /containerregistryauth (760 bytes)
+- [Find a container registry auth by ID](pages/api-reference/container-registry-auths/GET/containerregistryauth/containerRegistryAuthId.md): GET /containerregistryauth/{containerRegistryAuthId} (878 bytes)
+- [Delete a container registry auth](pages/api-reference/container-registry-auths/DELETE/containerregistryauth/containerRegistryAuthId.md): DELETE /containerregistryauth/{containerRegistryAuthId} (547 bytes)
 
 ## Image models
 
@@ -488,4 +491,4 @@
 
 ## Release notes
 
-- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (34914 bytes)
+- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (35658 bytes)

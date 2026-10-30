@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/webhooks/connect.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/webhooks/connect.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/webhooks/connect.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/webhooks/connect.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/connect
 
 # Connect a webhook provider
@@ -21,6 +21,18 @@ The prompt tells the agent to use the Trigger.dev MCP server (`npx trigger.dev@l
 | `get_webhook_endpoint_details` | Reads one endpoint: URL, subscribers and their filters, secret state, and the setup prompt.                                                                        |
 | `generate_webhook_secret`      | Generates a signing secret and returns it once, for providers where you choose the secret. Optionally keeps accepting the old secret (`previousSecretTtlSeconds`). |
 | `set_webhook_secret`           | Stores a secret the provider issued. Optionally keeps accepting the old secret (`previousSecretTtlSeconds`).                                                       |
+
+### Keep the secret out of the agent's context
+
+A secret passed to `set_webhook_secret`, or returned by `generate_webhook_secret`, becomes part of the agent's conversation. The [CLI webhooks commands](https://trigger.dev/docs/cli-webhooks-commands) store the secret without printing it, and the MCP tool descriptions point agents that can run shell commands to them:
+
+```bash
+# Store a secret the provider issued, from an env file or a pipe
+npx trigger.dev@latest webhooks set-secret stripe --env prod --from-env STRIPE_WEBHOOK_SECRET
+
+# Generate one and save it to .env.local for the agent to pass to the provider by name
+npx trigger.dev@latest webhooks generate-secret github --env prod --to-env GITHUB_WEBHOOK_SECRET
+```
 
 Without the MCP server, the same operations are available on the REST API with the environment's secret key:
 

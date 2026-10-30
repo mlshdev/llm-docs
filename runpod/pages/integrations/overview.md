@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [integrations/overview.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/integrations/overview.mdx)
+> Pinned source for Runpod main: [integrations/overview.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/integrations/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/integrations/overview
 
 # Integrate your applications with Runpod
@@ -16,7 +16,7 @@ To integrate with Serverless:
 1. Create a [handler function](https://docs.runpod.io/serverless/workers/handler-functions) with the code for your application.
 2. [Create a Dockerfile](https://docs.runpod.io/serverless/workers/create-dockerfile) to package your handler function and all its dependencies.
 3. [Package your worker](https://docs.runpod.io/serverless/workers/deploy) into a Docker image and push it to a Docker registry.
-4. [Deploy a Serverless endpoint](https://docs.runpod.io/serverless/endpoints/overview) using the Runpod console or [REST API](https://docs.runpod.io/api-reference/endpoints/POST/endpoints).
+4. [Deploy a Serverless endpoint](https://docs.runpod.io/serverless/endpoints/overview) using the Runpod console or [REST API](https://docs.runpod.io/api-reference-v2/serverless/create-a-serverless-endpoint).
 5. Start [sending requests](https://docs.runpod.io/serverless/endpoints/send-requests) to the endpoint.
 
 > **Tip**
@@ -47,7 +47,7 @@ https://abc123xyz-8000.proxy.runpod.net
 
 ### Direct TCP
 
-For protocols that require persistent connections or fall outside of standard HTTP, use the [Direct TCP Ports](https://docs.runpod.io/pods/configuration/expose-ports#tcp-access-via-public-ip). When you expose a TCP port, Runpod assigns a public IP address and a mapped external port. You can find these details using the [`GET /pods/POD_ID`](https://docs.runpod.io/api-reference/pods/GET/pods/podId) endpoint or the [Pod connection menu](https://docs.runpod.io/pods/connect-to-a-pod) in the Runpod console.
+For protocols that require persistent connections or fall outside of standard HTTP, use the [Direct TCP Ports](https://docs.runpod.io/pods/configuration/expose-ports#tcp-access-via-public-ip). When you expose a TCP port, Runpod assigns a public IP address and a mapped external port. You can find these details in the `runtime.ports[].ip` and `runtime.ports[].public` fields of the [Get a Pod](https://docs.runpod.io/api-reference-v2/pods/get-a-pod) response, or in the [Pod connection menu](https://docs.runpod.io/pods/connect-to-a-pod) in the Runpod console.
 
 ## Integrate with Public Endpoints
 
@@ -124,3 +124,4 @@ For infrastructure management and orchestration, you can also integrate Runpod w
 - [**dstack**](https://docs.runpod.io/integrations/dstack): Simplified Pod orchestration for AI/ML workloads.
 - [**SkyPilot**](https://docs.runpod.io/integrations/skypilot): Multi-cloud execution framework.
 - [**Mods**](https://docs.runpod.io/integrations/mods): AI-powered command-line tool.
+- [**Terraform**](https://docs.runpod.io/integrations/terraform/overview): Manage Runpod resources as code.

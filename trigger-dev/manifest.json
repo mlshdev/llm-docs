@@ -6,29 +6,33 @@
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
   "repository": "triggerdotdev/trigger.dev",
-  "tag": "v4.8.1",
-  "releaseId": 421940695,
-  "releasePublishedAt": "2026-10-23T14:28:11Z",
-  "sourceCommit": "bd2a14e6ad83fbe056a473b0082ff4110747fa38",
-  "documentCount": 365,
+  "tag": "v4.8.3",
+  "releaseId": 429001724,
+  "releasePublishedAt": "2026-10-30T12:22:45Z",
+  "sourceCommit": "645cc47dd2eeb99387f604cad2c90ba2ef568680",
+  "documentCount": 368,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 3245884,
-      "documentCount": 365,
-      "sha256": "a6f1dbe9bb841086cc8b16ea94ef07dba48843a7dc8ce7e04ff0f602211ea4b2"
+      "byteLength": 3313805,
+      "documentCount": 368,
+      "sha256": "b304515f46600a6f1203fc304b1b9a75d0d704f2352245c4051f06cca1409448"
     }
   ],
-  "outputDigest": "a645675734acf5f37e8ff013a60a816cbcbaabb56fe035baf1c0f9bf69ec6c88",
+  "outputDigest": "d5cf1b878534043ba34d7543920d4b765816daca2e12485e047ae73d3e7dcbb8",
   "quarantined": [
     {
       "sourcePath": "deploy-environment-variables.mdx",
       "reason": "Unable to convert Trigger.dev page deploy-environment-variables.mdx: Unhandled MDX component <RollingOut> in deploy-environment-variables.mdx"
     },
     {
-      "sourcePath": "management/runs/retrieve-trace.mdx",
-      "reason": "Unable to convert Trigger.dev page management/runs/retrieve-trace.mdx: Unhandled MDX component <RollingOut> in management/runs/retrieve-trace.mdx"
+      "sourcePath": "management/alerts/create.mdx",
+      "reason": "Unable to convert Trigger.dev page management/alerts/create.mdx: Unhandled MDX component <PrivateBeta> in management/alerts/create.mdx"
+    },
+    {
+      "sourcePath": "troubleshooting-alerts.mdx",
+      "reason": "Unable to convert Trigger.dev page troubleshooting-alerts.mdx: Unhandled MDX component <PrivateBeta> in troubleshooting-alerts.mdx"
     }
   ],
   "notes": [

@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `f90928eb2040c4638e188868a612fd47e6a061a4`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `53581df94e05ad4116a8d31e47ea098289fa5498`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -8,7 +8,7 @@
 - Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.
 - Docker and sbx CLI references, OpenAPI endpoints, glossary entries, and sample indexes are generated from data pinned in the same source archive.
 - Non-rendered stubs, redirects, assets, and include-only fragments are omitted.
-- Quarantined sources (7): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
+- Quarantined sources (8): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Get Started
 
@@ -30,22 +30,18 @@
 - [What is Docker?](pages/get-started/docker-overview.md): Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage y… (9413 bytes)
 - [Get Docker](pages/get-started/get-docker.md): Docker is an open platform for developing, shipping, and running applications. (1593 bytes)
 - [Educational resources](pages/get-started/resources.md): Docker and the broader community of Docker experts have put together many different ways to get further training and hands-on experience with Docker. Expand your understanding of Docker and Kubernetes with these additio… (3999 bytes)
-- [Roll out Docker to a pilot group](pages/get-started/tutorials/admin-set-up.md): Rolling out Docker across an organization changes how developers sign in and how Docker Desktop behaves. Testing the managed experience with a small group helps uncover access or workflow problems before they affect eve… (3406 bytes)
+- [Roll out Docker to a pilot group](pages/get-started/tutorials/admin-set-up.md): Rolling out Docker across an organization changes how developers sign in and how Docker Desktop behaves. Testing the managed experience with a small group helps uncover access or workflow problems before they affect eve… (3403 bytes)
 - [Run your coding agent in a sandbox](pages/get-started/tutorials/run-an-agent.md): Coding agents can work faster in full-autonomy modes that let them run commands, install tools, and use Docker without stopping for approval. Giving an agent that access directly on your machine also gives mistakes a wi… (5796 bytes)
 - [Build and share a containerized application](pages/get-started/tutorials/run-an-app.md): An application can depend on a particular runtime, libraries, database, and supporting tools. Docker packages these dependencies with the application so you can run it consistently without preparing each machine by hand. (6021 bytes)
 
 ## Guides
 
-- [Set up your company for success with Docker](pages/guides/admin-set-up.md): Docker's tools provide a scalable, secure platform that empowers your developers to create, ship, and run applications faster. As an administrator, you can streamline workflows, standardize development environments, and… (14462 bytes)
-- [Mastering user and access management](pages/guides/admin-user-management.md): Managing roles and permissions is key to securing your Docker environment while enabling easy collaboration and operational efficiency. This guide walks IT administrators through the essentials of user and access manage… (11018 bytes)
 - [Build and run agentic AI applications with Docker](pages/guides/agentic-ai.md): Agentic applications are transforming how software gets built. These apps don't just respond, they decide, plan, and act. They're powered by models, orchestrated by agents, and integrated with APIs, tools, and services… (13630 bytes)
 - [Angular language-specific guide](pages/guides/angular.md): The Angular language-specific guide shows you how to containerize an Angular application using Docker, following best practices for creating efficient, production-ready containers. (25997 bytes)
-- [Introduction to Azure Pipelines with Docker](pages/guides/azure-pipelines.md): Before you begin, ensure you have the following requirements: (10737 bytes)
-- [Mastering multi-platform builds, testing, and more with Docker Buildx Bake](pages/guides/bake.md): This guide demonstrates how to simplify and automate the process of building images, testing, and generating build artifacts using Docker Buildx Bake. By defining build configurations in a declarative docker-bake.hcl fi… (16269 bytes)
+- [Introduction to Azure Pipelines with Docker](pages/guides/azure-pipelines.md): Before you begin, ensure you have the following requirements: (10567 bytes)
 - [Bun language-specific guide](pages/guides/bun.md): The Bun getting started guide teaches you how to create a containerized Bun application using Docker. (8182 bytes)
 - [Use Claude Code with Docker Model Runner](pages/guides/claude-code-model-runner.md): This guide shows how to run Claude Code with Docker Model Runner as the backend model provider. You'll point Claude Code at the local Anthropic-compatible API, run a coding model, and package gpt-oss with a larger conte… (4295 bytes)
 - [Run Claude Code in a Docker Sandbox with Docker Model Runner](pages/guides/claude-code-sandbox-model-runner.md): This guide shows how to run Claude Code inside a Docker Sandbox with Docker Model Runner as the backend model provider. You'll keep the agent isolated from your host in a microVM, point it at a local model on your machi… (6900 bytes)
-- [Building Compose projects with Bake](pages/guides/compose-bake.md): This guide explores how you can use Bake to build images for Docker Compose projects with multiple services. (12484 bytes)
 - [C++ language-specific guide](pages/guides/cpp.md): The C++ getting started guide teaches you how to create a containerized C++ application using Docker. In this guide, you'll learn how to: (8127 bytes)
 - [Use containerized databases](pages/guides/databases.md): Using a local containerized database offers flexibility and ease of setup, letting you mirror production environments closely without the overhead of traditional database installations. Docker simplifies this process, e… (25588 bytes)
 - [Deno language-specific guide](pages/guides/deno.md): The Deno getting started guide teaches you how to create a containerized Deno application using Docker. (9166 bytes)
@@ -57,7 +53,6 @@
 - [.NET language-specific guide](pages/guides/dotnet.md): The .NET getting started guide teaches you how to create a containerized .NET application using Docker. In this guide, you'll learn how to: (27910 bytes)
 - [Give sandboxed agents live web access with Firecrawl](pages/guides/firecrawl-sandbox-kit.md): Agents in a Docker Sandbox run under a network policy that usually blocks most of the web. That keeps the agent contained, but it also means the agent can't look up documentation or read a page you point it at. Firecraw… (8833 bytes)
 - [Generate Docker Compose Files with Claude Code and Docker MCP Toolkit](pages/guides/genai-claude-code-mcp.md): This guide introduces how to use Claude Code together with Docker MCP Toolkit so Claude can search Docker Hub in real time and generate a complete docker-compose.yaml from natural language. (8520 bytes)
-- [Introduction to GitHub Actions with Docker](pages/guides/gha.md): This guide provides an introduction to building CI pipelines using Docker and GitHub Actions. You will learn how to use Docker's official GitHub Actions to build your application as a Docker image and push it to Docker… (8569 bytes)
 - [Monitor a Golang application with Prometheus and Grafana](pages/guides/go-prometheus-monitoring.md): The guide teaches you how to containerize a Golang application and monitor it with Prometheus and Grafana. (30770 bytes)
 - [Go language-specific guide](pages/guides/golang.md): This guide will show you how to create, test, and deploy containerized Go applications using Docker. (62152 bytes)
 - [Connect Gemini to Grafana via MCP](pages/guides/grafana-mcp-server-gemini.md): This guide shows how to connect Gemini CLI to a Grafana instance using the Docker MCP Toolkit. (5639 bytes)
@@ -125,20 +120,22 @@
 - [Docker individual accounts](pages/manuals/accounts/individual/index.md): A Docker account is how Docker identifies you. Use it to access products like Docker Hub and Docker Desktop, manage settings, and join organizations. (2080 bytes)
 - [Manage a Docker account](pages/manuals/accounts/individual/manage-account.md): Update your profile, email, password, and Google or GitHub sign-in. (3901 bytes)
 - [Activity logs](pages/manuals/accounts/organization/activity-logs.md): Activity logs requirements (13027 bytes)
-- [Organization accounts](pages/manuals/accounts/organization/index.md): A Docker organization is a shared workspace for members and repositories under one namespace. Organization owners administer membership, access, and security. (2301 bytes)
+- [Organization accounts](pages/manuals/accounts/organization/index.md): A Docker organization is a shared workspace for members and repositories under one namespace. Organization owners administer membership, access, and security. (2600 bytes)
 - [View organization Insights for Docker Desktop](pages/manuals/accounts/organization/insights.md): Insights requirements (11015 bytes)
 - [Deactivate an organization](pages/manuals/accounts/organization/manage/deactivate-account.md): General admin requirements (1836 bytes)
 - [Change general organization information](pages/manuals/accounts/organization/manage/general-settings.md): Learn how to update your organization information. (1225 bytes)
-- [Manage your organization](pages/manuals/accounts/organization/manage/index.md): As an organization owner, you manage your organization's membership, access, product usage, and settings. You can invite members, group them into teams, assign or revoke licenses and seats, change access to Docker produ… (2855 bytes)
+- [Manage your organization](pages/manuals/accounts/organization/manage/index.md): As an organization owner, you manage your organization's membership, access, product usage, and settings. You can invite members, group them into teams, assign or revoke licenses and seats, change access to Docker produ… (3002 bytes)
 - [Create and manage a team](pages/manuals/accounts/organization/manage/manage-a-team.md): Admin orgs requirements (5876 bytes)
 - [Manage licenses](pages/manuals/accounts/organization/manage/manage-licenses.md): Licenses control which organization members can use supported Docker products. As an organization owner, you manage license availability for your organization. (7124 bytes)
 - [Manage usage and access for Docker products](pages/manuals/accounts/organization/manage/manage-products.md): Admin orgs requirements (7719 bytes)
 - [Manage subscription seats](pages/manuals/accounts/organization/manage/manage-seats.md): You can add or remove seats from your Docker Team or Business subscription at any time to accommodate team changes. When you add seats mid-billing cycle, you're charged a prorated amount for the additional seats. (1966 bytes)
 - [Invite and manage organization members](pages/manuals/accounts/organization/manage/members.md): Invite and manage members for your organization in Docker Home. (10199 bytes)
+- [Plan and maintain user access](pages/manuals/accounts/organization/manage/user-access.md): Use this workflow to decide who needs access to your Docker organization, assign appropriate permissions, and keep membership aligned with changing responsibilities. It links to the procedures for onboarding, provisioni… (5557 bytes)
 - [Convert a Docker account to an organization](pages/manuals/accounts/organization/setup/convert-account.md): Admin orgs requirements (5018 bytes)
-- [Set up a Docker organization](pages/manuals/accounts/organization/setup/index.md): An organization groups members and teams under one namespace and one subscription. Anyone with a Docker ID can create an organization or convert an individual account into one. (2203 bytes)
-- [Onboard a Docker organization](pages/manuals/accounts/organization/setup/onboard.md): Admin orgs requirements (7119 bytes)
+- [Set up a Docker organization](pages/manuals/accounts/organization/setup/index.md): An organization groups members and teams under one namespace and one subscription. Anyone with a Docker ID can create an organization or convert an individual account into one. (2340 bytes)
+- [Onboard a Docker organization](pages/manuals/accounts/organization/setup/onboard.md): Admin orgs requirements (7271 bytes)
 - [Create a Docker organization](pages/manuals/accounts/organization/setup/orgs.md): Admin orgs requirements (3334 bytes)
+- [Plan and roll out Docker](pages/manuals/accounts/organization/setup/rollout.md): Use this workflow to plan a Docker rollout across your organization, test its settings with a pilot group, and coordinate deployment with your IT teams. For invitations and sign-in configuration, follow Onboard a Docker… (7180 bytes)
 
 ## Agentic Platform
 
@@ -365,8 +362,9 @@
 - [Base images for sandbox workloads](pages/manuals/ai/sandboxes/customize/author/base-images.md): Docker Sandboxes sbx requirements (7919 bytes)
 - [Build an agent workload](pages/manuals/ai/sandboxes/customize/author/build-an-agent.md): Docker Sandboxes sbx requirements (16254 bytes)
 - [Kit capability support](pages/manuals/ai/sandboxes/customize/author/capabilities.md): Docker Sandboxes sbx requirements (15206 bytes)
+- [Debug a kit](pages/manuals/ai/sandboxes/customize/author/debug.md): Docker Sandboxes sbx requirements (6748 bytes)
 - [Build and distribute kits](pages/manuals/ai/sandboxes/customize/author/distribute.md): Docker Sandboxes sbx requirements (4551 bytes)
-- [Author kits](pages/manuals/ai/sandboxes/customize/author/index.md): Docker Sandboxes sbx requirements (11302 bytes)
+- [Author kits](pages/manuals/ai/sandboxes/customize/author/index.md): Docker Sandboxes sbx requirements (11493 bytes)
 - [Compose a kit set](pages/manuals/ai/sandboxes/customize/author/kit-sets.md): Docker Sandboxes sbx requirements (9366 bytes)
 - [Kit authoring patterns](pages/manuals/ai/sandboxes/customize/author/patterns.md): Docker Sandboxes sbx requirements (5765 bytes)
 - [Build a tool mixin](pages/manuals/ai/sandboxes/customize/author/tool-mixins.md): Docker Sandboxes sbx requirements (7539 bytes)
@@ -408,14 +406,14 @@
 - [Docker Sandboxes release notes](pages/manuals/ai/sandboxes/release-notes.md): This page lists changes in recent stable releases of Docker Sandboxes. For the full release history, including pre-releases and downloads, see the Docker Sandboxes releases on GitHub. (27822 bytes)
 - [Default security posture](pages/manuals/ai/sandboxes/security/defaults.md): This page describes local sandboxes. For cloud behavior and limitations, see Compare local and cloud sandboxes. (4212 bytes)
 - [Isolation layers](pages/manuals/ai/sandboxes/security/isolation.md): This page describes local sandboxes. For cloud behavior and limitations, see Compare local and cloud sandboxes. (13023 bytes)
-- [Troubleshooting](pages/manuals/ai/sandboxes/troubleshooting.md): The following diagnostics and recovery steps apply to local sandboxes. Use sbx --cloud diagnose to check cloud connectivity and account access. For cloud files, expiration, and network access, see Cloud sandboxes. Local… (21421 bytes)
+- [Troubleshooting](pages/manuals/ai/sandboxes/troubleshooting.md): The following diagnostics and recovery steps apply to local sandboxes. Use sbx --cloud diagnose to check cloud connectivity and account access. For cloud files, expiration, and network access, see Cloud sandboxes. Local… (22126 bytes)
 - [Usage](pages/manuals/ai/sandboxes/usage.md): This page describes local sandboxes. For cloud commands, file transfers, ports, and expiration, see Use cloud sandboxes. (21923 bytes)
 - [Share agent skills](pages/manuals/ai/sandboxes/workflows/agent-skills.md): Shared agent skills let you install skills from Git repositories or import skills from supported agents on your host for use in local sandboxes. sbx keeps installed skills in a persistent store that survives sandbox del… (6205 bytes)
 - [Authenticate command-line tools](pages/manuals/ai/sandboxes/workflows/authentication.md): These workflows resolve credentials on the host for local sandboxes. For cloud secret setup, see Authenticate cloud agents. (4264 bytes)
 - [Develop and test locally](pages/manuals/ai/sandboxes/workflows/development.md): This page describes local sandboxes, host services, and local port mappings. For cloud endpoints, see Expose a port. (5227 bytes)
 - [Use Git with sandboxes](pages/manuals/ai/sandboxes/workflows/git.md): These workspace modes apply to local sandboxes. In cloud sandboxes, transfer files or clone a remote repository. To copy a sandbox filesystem between environments, see Move a sandbox. Host mounts and clone-mode volumes… (11672 bytes)
 - [Workflow patterns](pages/manuals/ai/sandboxes/workflows/index.md): Choose a workflow based on how you want to develop, authenticate tools, or run local sandboxes in automation. For command syntax and lifecycle basics, see Usage. (2255 bytes)
-- [Docker Skills](pages/manuals/ai/skills/index.md): Docker Skills are Docker's official, open-source guidance for compatible AI coding agents. They help agents with Docker tasks, such as improving a Dockerfile or setting up a Compose application. The collection evolves a… (1256 bytes)
+- [Docker Skills](pages/manuals/ai/skills/index.md): Docker Skills are Docker's official, open-source guidance for compatible AI coding agents. They help agents with Docker tasks, such as improving a Dockerfile, setting up a Compose application, or answering questions usi… (1314 bytes)
 - [Install Docker Skills](pages/manuals/ai/skills/install.md): Choose the installation method managed by your agent or organization. Native plugins, the Gemini CLI extension, and the cross-client skills CLI are separate options; the skills CLI is not a prerequisite. (7510 bytes)
 
 ## Build Cloud
@@ -430,19 +428,19 @@
 
 ## Build
 
-- [Building with Bake from a Compose file](pages/manuals/build/bake/compose-file.md): Bake supports the Compose file format to parse a Compose file and translate each service to a target. (5514 bytes)
+- [Building with Bake from a Compose file](pages/manuals/build/bake/compose-file.md): Bake supports the Compose file format to parse a Compose file and translate each service to a target. (7616 bytes)
 - [Using Bake with additional contexts](pages/manuals/build/bake/contexts.md): In addition to the main context key that defines the build context, each target can also define additional named contexts with a map defined with key contexts. These values map to the --build-context flag in the build c… (1830 bytes)
 - [Expression evaluation in Bake](pages/manuals/build/bake/expressions.md): Bake files in the HCL format support expression evaluation, which lets you perform arithmetic operations, conditionally set values, and more. (2599 bytes)
 - [Functions](pages/manuals/build/bake/funcs.md): HCL functions are great for when you need to manipulate values in your build configuration in more complex ways than just concatenation or interpolation. (2433 bytes)
-- [Bake](pages/manuals/build/bake/index.md): Bake is a feature of Docker Buildx that lets you define your build configuration using a declarative file, as opposed to specifying a complex CLI expression. It also lets you run multiple builds concurrently with a sing… (1389 bytes)
+- [Bake](pages/manuals/build/bake/index.md): Bake is a feature of Docker Buildx that lets you define your build configuration using a declarative file, as opposed to specifying a complex CLI expression. It also lets you run multiple builds concurrently with a sing… (1732 bytes)
 - [Inheritance in Bake](pages/manuals/build/bake/inheritance.md): Targets can inherit attributes from other targets, using the inherits attribute. For example, imagine that you have a target that builds a Docker image for a development environment: (4523 bytes)
 - [Introduction to Bake](pages/manuals/build/bake/introduction.md): Bake is an abstraction for the docker build command that lets you manage your build configuration (CLI flags, environment variables, etc.) in a consistent way for everyone on your team. (2983 bytes)
-- [Matrix targets](pages/manuals/build/bake/matrices.md): A matrix strategy lets you fork a single target into multiple different variants, based on parameters that you specify. This works in a similar way to Matrix strategies for GitHub Actions. You can use this to reduce dup… (2558 bytes)
+- [Matrix targets](pages/manuals/build/bake/matrices.md): A matrix strategy lets you fork a single target into multiple different variants, based on parameters that you specify. This works in a similar way to Matrix strategies for GitHub Actions. You can use this to reduce dup… (3726 bytes)
 - [Overriding configurations](pages/manuals/build/bake/overrides.md): Bake supports loading build definitions from files, but sometimes you need even more flexibility to configure these definitions. For example, you might want to override an attribute when building in a particular environ… (12694 bytes)
 - [Bake file reference](pages/manuals/build/bake/reference.md): The Bake file is a file for defining workflows that you run using docker buildx bake. (44044 bytes)
 - [Remote Bake file definition](pages/manuals/build/bake/remote-definition.md): You can build Bake files directly from a remote Git repository or HTTPS URL: (6326 bytes)
 - [Bake standard library functions](pages/manuals/build/bake/stdlib.md): Formats either an RFC3339 timestamp string or a unix timestamp integer. The special format X returns the unix timestamp in seconds. (58864 bytes)
-- [Bake targets](pages/manuals/build/bake/targets.md): A target in a Bake file represents a build invocation. It holds all the information you would normally pass to a docker build command using flags. (4004 bytes)
+- [Bake targets](pages/manuals/build/bake/targets.md): A target in a Bake file represents a build invocation. It holds all the information you would normally pass to a docker build command using flags. (6581 bytes)
 - [Variables in Bake](pages/manuals/build/bake/variables.md): You can define and use variables in a Bake file to set attribute values, interpolate them into other values, and perform arithmetic operations. Variables can be defined with default values, and can be overridden with th… (7814 bytes)
 - [Cloud driver](pages/manuals/build/builders/drivers/cloud.md): The Buildx cloud driver connects to managed BuildKit instances in Docker Build Cloud. Docker provisions and maintains the builder infrastructure, shared build cache, and native linux/amd64 and linux/arm64 nodes. (939 bytes)
 - [Docker container driver](pages/manuals/build/builders/drivers/docker-container.md): The Docker container driver allows creation of a managed and customizable BuildKit environment in a dedicated Docker container. (7753 bytes)
@@ -460,7 +458,7 @@
 - [Multi-stage builds](pages/manuals/build/building/multi-stage.md): Multi-stage builds are useful to anyone who has struggled to optimize Dockerfiles while keeping them easy to read and maintain. (6880 bytes)
 - [Registry authentication](pages/manuals/build/building/registry-auth.md): Buildx uses Docker's credential configuration to authenticate when pulling images for a build and pushing build results. Sign in to the registry before building: (2343 bytes)
 - [Build secrets](pages/manuals/build/building/secrets.md): A build secret is any piece of sensitive information, such as a password or API token, consumed as part of your application's build process. (9616 bytes)
-- [Build variables](pages/manuals/build/building/variables.md): In Docker Build, build arguments (ARG) and environment variables (ENV) both serve as a means to pass information into the build process. You can use them to parameterize the build, allowing for more flexible and configu… (30672 bytes)
+- [Build variables](pages/manuals/build/building/variables.md): In Docker Build, build arguments (ARG) and environment variables (ENV) both serve as a means to pass information into the build process. You can use them to parameterize the build, allowing for more flexible and configu… (31820 bytes)
 - [Configure BuildKit](pages/manuals/build/buildkit/configure.md): If you create a docker-container or kubernetes builder with Buildx, you can apply a custom BuildKit configuration by passing the --buildkitd-config flag to the docker buildx create command. (11935 bytes)
 - [Custom Dockerfile syntax](pages/manuals/build/buildkit/frontend.md): BuildKit supports loading frontends dynamically from container images. To use an external Dockerfile frontend, the first line of your Dockerfile needs to set the syntax directive pointing to the specific image you want… (4654 bytes)
 - [BuildKit](pages/manuals/build/buildkit/index.md): BuildKit is the builder backend used by Docker. BuildKit provides improved functionality and improves your builds' performance over the legacy builder used in earlier versions of Docker. It also introduces support for h… (8766 bytes)
@@ -489,7 +487,7 @@
 - [Bake with Docker GitHub Builder](pages/manuals/build/ci/github-actions/github-builder/bake.md): The bake.yml reusable workflow builds from a Bake definition instead of a Dockerfile input set. This page shows how to call the workflow for a target, how to pass Bake overrides and variables, and how to export local ou… (4724 bytes)
 - [Build with Docker GitHub Builder](pages/manuals/build/ci/github-actions/github-builder/build.md): The build.yml reusable workflow builds from a Dockerfile and packages the same core tasks that many repositories wire together by hand. This page shows how to call the workflow, publish multi-platform images, and export… (5000 bytes)
 - [Docker GitHub Builder](pages/manuals/build/ci/github-actions/github-builder/index.md): Docker GitHub Builder is a set of reusable workflows in the docker/github-builder repository for building container images and local artifacts with BuildKit. This section explains what the workflows solve, how they diff… (4820 bytes)
-- [Docker Build GitHub Actions](pages/manuals/build/ci/github-actions/index.md): GitHub Actions is a popular CI/CD platform for automating your build, test, and deployment pipeline. Docker provides a set of official GitHub Actions for you to use in your workflows. These official actions are reusable… (4174 bytes)
+- [Docker Build GitHub Actions](pages/manuals/build/ci/github-actions/index.md): GitHub Actions is a popular CI/CD platform for automating your build, test, and deployment pipeline. Docker provides a set of official GitHub Actions for you to use in your workflows. These official actions are reusable… (7674 bytes)
 - [Local registry with GitHub Actions](pages/manuals/build/ci/github-actions/local-registry.md): For testing purposes you may need to create a local registry to push images into: (840 bytes)
 - [Manage tags and labels with GitHub Actions](pages/manuals/build/ci/github-actions/manage-tags-labels.md): If you want an "automatic" tag management and OCI Image Format Specification for labels, you can do it in a dedicated setup step. The following workflow will use the Docker Metadata Action to handle tags and labels base… (2085 bytes)
 - [Multi-platform image with GitHub Actions](pages/manuals/build/ci/github-actions/multi-platform.md): You can build multi-platform images using the platforms option, as shown in the following example: (6168 bytes)
@@ -501,7 +499,7 @@
 - [Test before push with GitHub Actions](pages/manuals/build/ci/github-actions/test-before-push.md): In some cases, you might want to validate that the image works as expected before pushing it. The following workflow implements several steps to achieve this: (1469 bytes)
 - [Update Docker Hub description with GitHub Actions](pages/manuals/build/ci/github-actions/update-dockerhub-desc.md): You can update the Docker Hub repository description using a third party action called Docker Hub Description with this action: (1086 bytes)
 - [Continuous integration with Docker](pages/manuals/build/ci/index.md): Continuous Integration (CI) is the part of the development process where you're looking to get your code changes merged with the main branch of the project. At this point, development teams run tests and builds to vet t… (2629 bytes)
-- [Build context](pages/manuals/build/concepts/context.md): The docker build and docker buildx build commands build Docker images from a Dockerfile and a context. (26319 bytes)
+- [Build context](pages/manuals/build/concepts/context.md): The docker build and docker buildx build commands build Docker images from a Dockerfile and a context. (26632 bytes)
 - [Dockerfile overview](pages/manuals/build/concepts/dockerfile.md): It all starts with a Dockerfile. (11497 bytes)
 - [Docker Build Overview](pages/manuals/build/concepts/overview.md): Docker Build implements a client-server architecture, where: (3053 bytes)
 - [OpenTelemetry support](pages/manuals/build/debug/opentelemetry.md): Both Buildx and BuildKit support OpenTelemetry. (1176 bytes)
@@ -1064,7 +1062,6 @@
 - [Docker core roles and permissions](pages/manuals/security/roles-and-permissions/core-roles.md): General admin requirements (7740 bytes)
 - [Custom roles and permissions overview](pages/manuals/security/roles-and-permissions/custom-roles/index.md): Custom roles requirements (1208 bytes)
 - [Manage custom roles in Docker Home](pages/manuals/security/roles-and-permissions/custom-roles/manage.md): Custom roles requirements (4909 bytes)
-- [Custom role permissions reference](pages/manuals/security/roles-and-permissions/custom-roles/permissions-reference.md): Custom roles requirements (6302 bytes)
 - [Docker organization roles and permissions](pages/manuals/security/roles-and-permissions/index.md): General admin requirements (1780 bytes)
 - [Docker security announcements](pages/manuals/security/security-announcements.md): Subscribe to security RSS feed (31352 bytes)
 

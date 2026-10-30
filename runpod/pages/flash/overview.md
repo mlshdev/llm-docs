@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/overview.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/flash/overview.mdx)
+> Pinned source for Runpod main: [flash/overview.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/flash/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/overview
 
 # Overview
@@ -51,7 +51,7 @@ Write `@Endpoint` decorated Python functions on your local machine. Run them, an
 
 > **Note**
 >
-> Flash requires [Python 3.10, 3.11, 3.12, or 3.13](https://www.python.org/downloads/) and runs natively on macOS and Linux. Windows users can run Flash through [WSL2](https://docs.runpod.io/flash/windows-wsl2).
+> Flash requires [Python 3.10 to 3.14](https://www.python.org/downloads/) and runs natively on macOS and Linux. Windows users can run Flash through [WSL2](https://docs.runpod.io/flash/windows-wsl2).
 
 Install Flash using `pip` or `uv`:
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/_index.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/build/ci/github-actions/_index.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/_index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/build/ci/github-actions/_index.md)
 
 # Docker Build GitHub Actions
 
@@ -33,6 +33,107 @@ The following GitHub Actions are available:
 Using Docker's actions provides an easy-to-use interface, while still allowing
 flexibility for customizing build parameters.
 
+> \[!NOTE]
+> For an alternative to configuring individual actions, see
+> [Docker GitHub Builder](https://docs.docker.com/build/ci/github-actions/github-builder/).
+> It provides Docker-maintained reusable workflows for building images and artifacts
+> with BuildKit.
+
+## Get started
+
+Build an image from your GitHub repository and push it to Docker Hub with the
+following workflow.
+
+### Prerequisites
+
+- A GitHub repository with your application and a `Dockerfile` at its root.
+- A Docker Hub account and a
+  [personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/)
+  with permission to push images.
+
+### Configure your GitHub repository
+
+Add your Docker Hub credentials to your GitHub repository:
+
+1. Open your repository's **Settings**.
+2. Under **Security**, go to **Secrets and variables > Actions**.
+3. Under **Secrets**, create a repository secret named `DOCKERHUB_TOKEN`
+   containing your Docker access token.
+4. Under **Variables**, create a repository variable named `DOCKERHUB_USERNAME`
+   containing your Docker Hub username.
+
+### Set up your GitHub Actions workflow
+
+Create `.github/workflows/docker-ci.yml` in your repository with the following
+contents. Replace `my-image` with the name of your Docker Hub repository, and
+change `main` if your default branch has a different name.
+
+```yaml
+name: Build and push Docker image
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract Docker image metadata
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: ${{ vars.DOCKERHUB_USERNAME }}/my-image
+
+      - name: Sign in to Docker Hub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v4
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v7
+        with:
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          annotations: ${{ steps.meta.outputs.annotations }}
+```
+
+Commit the workflow file and push it to your default branch to run it. The
+workflow also runs on pull requests. Pull-request builds skip signing in to
+Docker Hub and pushing the image, so they don't require registry secrets,
+including for pull requests from forks.
+
+The build action uses Git context by default: BuildKit fetches your repository
+directly at the Git reference for the event that triggered the workflow, so no
+checkout step is needed. Changes to files made by earlier workflow steps are
+ignored because the build uses files from Git.
+
+The metadata action generates tags, labels, and
+annotations from the GitHub event and passes them to the build step. For
+example, a push to `main` publishes `DOCKERHUB_USERNAME/my-image:main`.
+See [Manage tags and labels](https://docs.docker.com/build/ci/github-actions/manage-tags-labels/)
+and [Annotations](https://docs.docker.com/build/ci/github-actions/annotations/) to customize
+this metadata.
+
+This workflow builds images but doesn't run application tests. To add tests,
+see [Test before push](https://docs.docker.com/build/ci/github-actions/test-before-push/).
+For additional build options, see
+[Multi-platform images](https://docs.docker.com/build/ci/github-actions/multi-platform/) and
+[SBOM and provenance attestations](https://docs.docker.com/build/ci/github-actions/attestations/),
+which covers default provenance and how to add SBOM attestations when pushing
+to a registry.
+
 ## Examples
 
 If you're looking for examples on how to use the Docker GitHub Actions,
@@ -56,9 +157,3 @@ refer to the following sections:
 - [Share built image between jobs with GitHub Actions](https://docs.docker.com/build/ci/github-actions/share-image-jobs/)
 - [Test before push with GitHub Actions](https://docs.docker.com/build/ci/github-actions/test-before-push/)
 - [Update Docker Hub description with GitHub Actions](https://docs.docker.com/build/ci/github-actions/update-dockerhub-desc/)
-
-## Get started with GitHub Actions
-
-The [Introduction to GitHub Actions with Docker](https://docs.docker.com/guides/gha/) guide walks
-you through the process of setting up and using Docker GitHub Actions for
-building Docker images, and pushing images to Docker Hub.

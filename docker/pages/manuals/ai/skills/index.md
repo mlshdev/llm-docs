@@ -1,12 +1,13 @@
-> Pinned source for Docker main: [content/manuals/ai/skills/_index.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/ai/skills/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/skills/_index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/ai/skills/_index.md)
 
 # Docker Skills
 
 Docker Skills are Docker's official, open-source guidance for compatible AI
-coding agents. They help agents with Docker tasks, such as improving a Dockerfile
-or setting up a Compose application. The collection evolves and doesn't cover
-every Docker product. Browse the [repository catalog](https://github.com/docker/skills#readme)
-for available skills and their descriptions.
+coding agents. They help agents with Docker tasks, such as improving a Dockerfile,
+setting up a Compose application, or answering questions using official Docker
+documentation. The collection evolves and doesn't cover every Docker product.
+Browse the [repository catalog](https://github.com/docker/skills#readme) for
+available skills and their descriptions.
 
 ## Get started
 

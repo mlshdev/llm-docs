@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/network-volumes.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/storage/network-volumes.mdx)
+> Pinned source for Runpod main: [storage/network-volumes.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/storage/network-volumes.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/network-volumes
 
 # Network volumes
@@ -45,17 +45,17 @@ Select the storage tier when creating a network volume. For details on choosing 
 
 ```bash
 curl --request POST \
-  --url https://rest.runpod.io/v1/networkvolumes \
-  --header 'Authorization: Bearer RUNPOD_API_KEY' \
+  --url https://api.runpod.io/v2/network-volumes \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{
   "name": "my-network-volume",
   "size": 100,
-  "dataCenterId": "US-KS-2"
+  "dataCenter": "US-KS-2"
 }'
 ```
 
-See [network volumes API reference](https://docs.runpod.io/api-reference/network-volumes/POST/networkvolumes) for details.
+See the [Create a network volume reference](https://docs.runpod.io/api-reference-v2/network-volumes/create-a-network-volume) for details.
 
 ## Network volumes for Serverless
 

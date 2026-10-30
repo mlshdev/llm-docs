@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/webhooks/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/webhooks/overview.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/webhooks/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/webhooks/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/overview
 
 # Webhooks overview
@@ -83,6 +83,14 @@ The limit covers every delivery the task handles. To process each customer's eve
 The CLI finds your endpoints and subscribers during `trigger dev` and deployment, and each environment gets one endpoint per declared id. The endpoint holds the URL and the credential used to verify requests.
 
 A request must pass verification before anything else happens. Provider handshakes are answered directly and create no delivery. A verified request is checked for duplicates, recorded, and then routed: each subscriber's filter is checked, matching subscribers run, and waiting runs whose match fits the event are resumed. The delivery records a result per subscriber.
+
+## Pricing and limits
+
+Webhooks have no separate charge on Trigger.dev Cloud. Receiving, verifying, filtering and recording deliveries is included in every plan. The runs a delivery starts or resumes are billed like any other run: a per-run invocation cost plus compute time. See [pricing](https://trigger.dev/pricing).
+
+A delivery that no subscriber's filter matches starts no run for any subscriber, so it costs nothing. A run already waiting for that webhook still resumes. A run [waiting](https://trigger.dev/docs/webhooks/waiters) for a webhook is suspended, so it uses no compute until the webhook arrives.
+
+Each plan sets limits on the ingest rate, waiting runs, processing concurrency and how long deliveries are kept. See [Limits](https://trigger.dev/docs/limits#webhook-ingest-rate-limits).
 
 ## Connect it
 

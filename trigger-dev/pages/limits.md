@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/limits.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/limits.mdx)
 > Canonical documentation: https://trigger.dev/docs/limits
 
 # Limits
@@ -177,6 +177,47 @@ All of an environment's endpoints also share a per-environment limit, counted in
 | Hobby        | 1,000 every 10 sec     |
 | Pro          | 3,000 every 10 sec     |
 | Enterprise   | Set per organization   |
+
+## Webhook waiters
+
+A [waiter](https://trigger.dev/docs/webhooks/waiters) is a run paused until a matching webhook arrives. The per-endpoint limit is also the most waiting runs one delivery can resume.
+
+| Pricing tier | Live waiters per environment | Live waiters per endpoint |
+| :----------- | :--------------------------- | :------------------------ |
+| Free         | 500                          | 100                       |
+| Hobby        | 2,000                        | 1,000                     |
+| Pro          | 25,000                       | 10,000                    |
+| Enterprise   | Set per organization         | Set per organization      |
+
+A waiter can wait for up to 90 days.
+
+## Webhook processing concurrency
+
+This limit controls how many webhook deliveries and waiter resumes are processed at once per environment. Additional deliveries wait their turn. It is not a limit on the runs those deliveries start, which use your normal [concurrency limits](#concurrency-limits).
+
+| Pricing tier | Limit                    |
+| :----------- | :----------------------- |
+| Free         | 5 concurrent deliveries  |
+| Hobby        | 10 concurrent deliveries |
+| Pro          | 50 concurrent deliveries |
+| Enterprise   | Set per organization     |
+
+## Webhook delivery retention
+
+How long [deliveries](https://trigger.dev/docs/webhooks/deliveries) stay visible in the dashboard and the API.
+
+| Pricing tier | Limit               |
+| :----------- | :------------------ |
+| Free         | 3 days              |
+| Hobby        | 7 days              |
+| Pro          | 30 days             |
+| Enterprise   | 90, 180 or 365 days |
+
+By default, deliveries are stored for at least 30 days, so upgrading your plan shows older deliveries that are still stored. An organization can ask us to store deliveries only for its retention period instead. Deliveries past that period are then deleted and can't be shown again after an upgrade.
+
+## Webhook subscribers
+
+An endpoint can have up to 25 subscribers (tasks, agent sessions and channels) on every plan.
 
 ## Log retention
 

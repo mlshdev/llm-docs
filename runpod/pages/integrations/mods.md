@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [integrations/mods.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/integrations/mods.mdx)
+> Pinned source for Runpod main: [integrations/mods.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/integrations/mods.mdx)
 > Canonical documentation: https://docs.runpod.io/integrations/mods
 
 # Running Runpod on Mods

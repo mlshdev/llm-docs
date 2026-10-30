@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/network-volumes/GET/networkvolumes/networkVolumeId.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/api-reference/network-volumes/GET/networkvolumes/networkVolumeId.mdx)
+> Pinned source for Runpod main: [api-reference/network-volumes/GET/networkvolumes/networkVolumeId.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/api-reference/network-volumes/GET/networkvolumes/networkVolumeId.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/network-volumes/GET/networkvolumes/networkVolumeId
 
 # Find a network volume by ID

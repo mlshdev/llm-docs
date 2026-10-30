@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/webhooks/deliveries.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/webhooks/deliveries.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/webhooks/deliveries.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/webhooks/deliveries.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/deliveries
 
 # Deliveries and endpoints
@@ -70,6 +70,10 @@ The [MCP server](https://trigger.dev/docs/mcp-introduction) has `list_webhook_de
 | [`GET /api/v1/webhooks/deliveries`](https://trigger.dev/docs/management/webhooks/list-deliveries)                      | Lists deliveries, newest first. Filter with `filter[endpoint]` (declared or `wh_` ids), `filter[status]`, and `filter[period]` or `filter[from]`/`filter[to]`. |
 | [`GET /api/v1/webhooks/deliveries/{deliveryId}`](https://trigger.dev/docs/management/webhooks/retrieve-delivery)       | Reads a delivery, with a `targets` entry per subscriber and one for waiting runs.                                                                              |
 | [`POST /api/v1/webhooks/deliveries/{deliveryId}/replay`](https://trigger.dev/docs/management/webhooks/replay-delivery) | Replays it, as above. The key needs permission to trigger every task the replay starts, and to write sessions if it reaches an agent's subscriber.             |
+
+## Retention
+
+Deliveries stay visible for 3 days on Free, 7 days on Hobby, 30 days on Pro, and 90, 180 or 365 days on Enterprise. See [Limits](https://trigger.dev/docs/limits#webhook-delivery-retention).
 
 ## Deduplication
 

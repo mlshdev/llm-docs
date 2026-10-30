@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.16: [docs/content/reference/routing-configuration/http/middlewares/basicauth.md](https://github.com/traefik/traefik/blob/af6d927c51191ae1df104aaf907793386b816c28/docs/content/reference/routing-configuration/http/middlewares/basicauth.md)
+> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/basicauth.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/basicauth.md)
 
 The `basicAuth` middleware grants access to services to authorized users only.
 

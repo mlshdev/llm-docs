@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/integrations/environment/cli.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/scout/integrations/environment/cli.md)
+> Pinned source for Docker main: [content/manuals/scout/integrations/environment/cli.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/scout/integrations/environment/cli.md)
 
 # Generic environment integration with CLI
 

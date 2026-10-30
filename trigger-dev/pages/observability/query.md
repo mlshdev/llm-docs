@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/observability/query.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/observability/query.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/observability/query.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/observability/query.mdx)
 > Canonical documentation: https://trigger.dev/docs/observability/query
 
 # Query
@@ -59,6 +59,35 @@ ORDER BY minute
 LIMIT 1000
 ```
 
+#### Platform limit metrics
+
+The `metrics` table also records how close your environment is to platform limits. These are the metrics behind [Limits alerts](https://trigger.dev/docs/troubleshooting-alerts#limits-alerts):
+
+| Metric                          | What it shows                                  |
+| ------------------------------- | ---------------------------------------------- |
+| `queue.size.queued`             | Runs currently queued in the environment       |
+| `queue.size.limit`              | The environment's maximum queued runs          |
+| `webhook.processing.in_flight`  | Webhooks being processed now                   |
+| `webhook.processing.limit`      | The webhook processing concurrency limit       |
+| `webhook.ingress.denied`        | Incoming webhooks rejected by a rate limit     |
+| `webhook.ingress.remaining_min` | The lowest remaining rate limit allowance seen |
+| `webhook.ingress.limit.tokens`  | The rate limit's allowance per window          |
+| `webhook.waiters.live`          | Runs currently waiting for a webhook           |
+| `webhook.waiters.limit.env`     | The environment's maximum webhook waiters      |
+| `webhook.waiters.refused`       | New webhook waiters that were refused          |
+
+```sql
+SELECT
+  timeBucket(),
+  maxIf(metric_value, metric_name = 'queue.size.queued') AS queued,
+  maxIf(metric_value, metric_name = 'queue.size.limit') AS queue_limit
+FROM metrics
+WHERE metric_name LIKE 'queue.size.%'
+GROUP BY timeBucket
+ORDER BY timeBucket
+LIMIT 1000
+```
+
 ### `prettyFormat()`
 
 Use `prettyFormat()` to format metric values for display:
@@ -86,7 +115,7 @@ Navigate to the Query page to write and execute queries. The dashboard provides:
 - **Interactive help** - Built-in documentation for TRQL syntax and functions
 - **Export options** - Download results as JSON or CSV
 
-![The Query dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/query-chart-usage-percentiles.png)
+![The Query dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/query-chart-usage-percentiles.png)
 
 ## Querying from the SDK
 

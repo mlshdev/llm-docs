@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/overview.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/serverless/endpoints/overview.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/overview.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/serverless/endpoints/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/overview
 
 # Overview
@@ -53,24 +53,24 @@ Before creating an endpoint, ensure you have a [handler function](https://docs.r
 
 ```bash
 curl --request POST \
-  --url https://rest.runpod.io/v1/endpoints \
-  --header 'Authorization: Bearer RUNPOD_API_KEY' \
+  --url https://api.runpod.io/v2/serverless \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{
     "name": "my-endpoint",
     "templateId": "30zmvf89kd",
-    "gpuTypeIds": ["NVIDIA GeForce RTX 4090"],
-    "workersMin": 0,
-    "workersMax": 3,
-    "idleTimeout": 5
+    "type": "QUEUE",
+    "gpu": {"pools": ["ADA_24"], "count": 1},
+    "workers": {"min": 0, "max": 3, "idleTimeout": 5},
+    "scaling": {"type": "QUEUE_DELAY", "queueDelay": 4}
   }'
 ```
 
-See the [Endpoint API reference](https://docs.runpod.io/api-reference/endpoints/POST/endpoints) for all parameters.
+REST v2 endpoints select GPU pools, not individual GPU types. The `ADA_24` pool holds the RTX 4090. Pools can include more than one card, so check the `pool` field in the [GPU catalog](https://docs.runpod.io/api-reference-v2/catalog/list-gpu-types), and use `gpu.excludedTypes` to leave out cards you don't want. See the [Create a Serverless endpoint reference](https://docs.runpod.io/api-reference-v2/serverless/create-a-serverless-endpoint) for all parameters.
 
 > **Tip**
 >
-> Optimize cost and availability by specifying multiple GPU types in priority order. Runpod allocates your first choice if available, otherwise uses the next in your list.
+> In the console, optimize cost and availability by specifying multiple GPU types in priority order. For REST v2, list multiple `gpu.pools` to make more GPU capacity available.
 
 After deployment, your endpoint displays a unique API URL: `https://api.runpod.ai/v2/{endpoint_id}/`
 

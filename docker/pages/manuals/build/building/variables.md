@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/build/building/variables.md)
+> Pinned source for Docker main: [content/manuals/build/building/variables.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/build/building/variables.md)
 
 In Docker Build, build arguments (`ARG`) and environment variables (`ENV`)
 both serve as a means to pass information into the build process.
@@ -319,6 +319,7 @@ They're used to configure the Buildx client, or the BuildKit daemon.
 | [BUILDX\_NO\_DEFAULT\_ATTESTATIONS](#buildxnodefaultattestations)           | Boolean           | Turn off default provenance attestations.                       |
 | [BUILDX\_NO\_DEFAULT\_OCI\_ARTIFACT](#buildxnodefaultociartifact)           | Boolean           | Turn off OCI artifact storage for attestations by default.      |
 | [BUILDX\_NO\_DEFAULT\_LOAD](#buildxnodefaultload)                           | Boolean           | Turn off loading images to image store by default.              |
+| [BUILDX\_SEND\_GIT\_QUERY\_AS\_INPUT](#buildxsendgitqueryasinput)           | Boolean           | Resolve Git URL queries in Buildx for frontend compatibility.   |
 | [EXPERIMENTAL\_BUILDKIT\_SOURCE\_POLICY](#experimentalbuildkitsourcepolicy) | String            | Specify a BuildKit source policy file.                          |
 
 BuildKit also supports a few additional configuration parameters. Refer to
@@ -824,3 +825,25 @@ Usage:
 ```console
 $ export BUILDX_NO_DEFAULT_LOAD=1
 ```
+
+### BUILDX\_SEND\_GIT\_QUERY\_AS\_INPUT
+
+Set `BUILDX_SEND_GIT_QUERY_AS_INPUT=1` to use Git URL queries with a BuildKit
+daemon or Dockerfile frontend that doesn't support the Git query-string
+format. Buildx resolves the Git URL into a source input instead of requiring
+the frontend to interpret the query. The default is `false`.
+
+For example, select a tag and verify its commit while using an older builder:
+
+```console
+$ BUILDX_SEND_GIT_QUERY_AS_INPUT=1 docker buildx build \
+    'https://github.com/moby/buildkit.git?tag=v0.21.1&checksum=66735c67'
+```
+
+This applies to the main Git context and additional Git contexts that use
+URL queries. It changes how the context is represented in provenance:
+the context is supplied as a source input instead of the usual context
+string. If you consume provenance, account for that difference before
+enabling the setting in your workflow.
+
+See [Git URL queries](https://docs.docker.com/build/concepts/context/#url-queries) for query syntax.

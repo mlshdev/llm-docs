@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.16: [docs/content/secure/secure-api-access-with-oidc.md](https://github.com/traefik/traefik/blob/af6d927c51191ae1df104aaf907793386b816c28/docs/content/secure/secure-api-access-with-oidc.md)
+> Pinned source for Traefik Proxy v3.7.17: [docs/content/secure/secure-api-access-with-oidc.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/secure/secure-api-access-with-oidc.md)
 
 # Secure API Access with OIDC
 
@@ -11,7 +11,7 @@
 To authenticate the user, the middleware redirects through the authentication provider.
 Once the authentication is complete, users are redirected back to the middleware before being authorized to access the upstream application, as described in the diagram below:
 
-![OpenID Connect authentication flow](https://raw.githubusercontent.com/traefik/traefik/af6d927c51191ae1df104aaf907793386b816c28/docs/content/assets/img/secure/oidc-auth-flow.png)
+![OpenID Connect authentication flow](https://raw.githubusercontent.com/traefik/traefik/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/assets/img/secure/oidc-auth-flow.png)
 
 <br />
 

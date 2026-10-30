@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/pods/comfyui.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/tutorials/pods/comfyui.mdx)
+> Pinned source for Runpod main: [tutorials/pods/comfyui.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/tutorials/pods/comfyui.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/pods/comfyui
 
 # Generate images with ComfyUI
@@ -48,16 +48,15 @@ Deploy a ComfyUI Pod programmatically using the REST API:
 
 ```bash
 curl --request POST \
-  --url https://rest.runpod.io/v1/pods \
-  --header 'Authorization: Bearer RUNPOD_API_KEY' \
+  --url https://api.runpod.io/v2/pods \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{
     "name": "comfyui-pod",
-    "imageName": "runpod/comfyui:latest",
-    "gpuTypeIds": ["NVIDIA GeForce RTX 4090"],
-    "gpuCount": 1,
-    "containerDiskInGb": 50,
-    "volumeInGb": 100,
+    "image": "runpod/comfyui:latest",
+    "gpu": {"id": "NVIDIA GeForce RTX 4090", "count": 1},
+    "disk": 50,
+    "mounts": {"persistent": {"size": 100, "path": "/workspace"}},
     "ports": ["8188/http", "22/tcp", "8080/http"]
   }'
 ```

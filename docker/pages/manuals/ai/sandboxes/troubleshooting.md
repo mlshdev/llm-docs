@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -152,6 +152,23 @@ $ sbx settings set kit.allowedSources '["docker.io/","github.com/docker/"]'
 
 Then run the command again. For details, including how to allow local kits or
 any remote source, see [Restrict kit sources](https://docs.docker.com/ai/sandboxes/customize/use-kits/#restrict-kit-sources).
+
+## Kit install or startup command fails
+
+If `sbx create` or `sbx run` shows ✗ on a kit's install command, or warns that a
+startup command failed, the full output is inside the sandbox. Read it with
+`sbx exec`:
+
+```console
+$ sbx exec <sandbox-name> cat /var/log/sbx-kits/<kit>/install-<n>.log
+$ sbx exec <sandbox-name> cat /var/log/sbx-kit-startup.log
+```
+
+`<n>` is the install command's position in the kit's `install` list, starting
+at 0. To stream every install command's output and the startup log while the
+sandbox is created, run `sbx -D create` or `sbx -D run`. See
+[Debug a kit](https://docs.docker.com/ai/sandboxes/customize/author/debug/) for how to read
+the output and fix the common causes.
 
 ## SSH and other non-HTTP connections fail
 

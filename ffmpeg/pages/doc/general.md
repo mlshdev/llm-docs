@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/0ea6606418c4602a9de5d43657b7b2f56b0f9681/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/92457ada93cf5d593d23cc18cd040a91532b6943/doc/general.texi)
 
 # External libraries
 
@@ -1001,6 +1001,8 @@ following image formats are supported:
 - Apple QuickDraw         |       |   X
   \|  fourcc: qdrw
 - APV                     |       |   X
+- Argonaut Games Creature Shock video   |       |   X
+  \|  Video encoding used by the Creature Shock game.
 - Argonaut Video          |       |   X
   \|  Used in some Argonaut games.
 - Asus v1                 |   X   |   X
@@ -1020,8 +1022,6 @@ following image formats are supported:
   \|  Supported through external libraries libaom, libdav1d, librav1e and libsvtav1
 - Avid 1:1 10-bit RGB Packer   |   X   |   X
   \|  fourcc: AVrp
-- AVS (Audio Video Standard) video   |       |   X
-  \|  Video encoding used by the Creature Shock game.
 - AVS2-P2/IEEE1857.4      |   E   |   E
   \|  Supported through external libraries libxavs2 and libdavs2
 - AVS3-P2/IEEE1857.10     |       |   E

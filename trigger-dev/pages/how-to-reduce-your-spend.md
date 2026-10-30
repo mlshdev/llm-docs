@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/how-to-reduce-your-spend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/how-to-reduce-your-spend.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/how-to-reduce-your-spend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/how-to-reduce-your-spend.mdx)
 > Canonical documentation: https://trigger.dev/docs/how-to-reduce-your-spend
 
 # How to reduce your spend
@@ -14,7 +14,7 @@ Monitor your usage dashboard to understand your spending patterns. You can see:
 - Number of runs by task
 - Spikes in your daily usage
 
-![Usage dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/images/usage-dashboard.png)
+![Usage dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/usage-dashboard.png)
 
 You can view your usage page by clicking the "Organization" menu in the top left of the dashboard and then clicking "Usage".
 
@@ -191,6 +191,10 @@ export const waitpointTask = task({
 ```
 
 Waiting saves you compute, but it doesn't always free up concurrency — see [Wait](https://trigger.dev/docs/wait).
+
+## Filter webhooks before they start runs
+
+Give each [webhook](https://trigger.dev/docs/webhooks/overview) subscriber a [filter](https://trigger.dev/docs/webhooks/filters) so it only runs for the events it handles. A delivery that no subscriber's filter matches starts no run for any subscriber, so you aren't charged for it. Filters only apply to subscribers: a run [waiting](https://trigger.dev/docs/webhooks/waiters) for a matching webhook still resumes and uses compute. Receiving webhooks has no separate charge.
 
 ## Use debounce to consolidate multiple triggers
 

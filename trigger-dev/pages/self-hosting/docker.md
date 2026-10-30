@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/self-hosting/docker.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/self-hosting/docker.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/self-hosting/docker.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/self-hosting/docker.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/docker
 
 # Docker compose
@@ -390,6 +390,56 @@ EVENT_REPOSITORY_DEFAULT_STORE=clickhouse_v2
 ```
 
 This only affects new runs; existing runs continue to read from wherever their events were originally stored.
+
+### Move from the legacy clickhouse store
+
+The legacy `clickhouse` store (the `task_events_v1` table) is retired. If you set `EVENT_REPOSITORY_DEFAULT_STORE=clickhouse`, your webapp now writes and reads `clickhouse_v2` instead and logs a warning at startup. Events recorded in `task_events_v1` stay there but no longer show in the dashboard until you copy them over.
+
+1. Switch the store in your `.env` and restart the webapp:
+
+   ```bash .env
+   EVENT_REPOSITORY_DEFAULT_STORE=clickhouse_v2
+   ```
+2. List the days that hold legacy events. The bundled ClickHouse container already sets `CLICKHOUSE_USER` and `CLICKHOUSE_PASSWORD`, and `clickhouse-client` reads them, so no credentials are needed:
+
+   ```bash
+   docker compose exec clickhouse clickhouse-client -q \
+     "SELECT toDate(start_time) AS day, count() FROM trigger_dev.task_events_v1 GROUP BY day ORDER BY day"
+   ```
+3. Save the copy query as `copy-task-events-v1.sql`. It copies one day and skips events already in `task_events_v2`, so it's safe to run again if it's interrupted:
+
+   ```sql copy-task-events-v1.sql
+   INSERT INTO trigger_dev.task_events_v2
+     (environment_id, organization_id, project_id, task_identifier, run_id, start_time,
+      trace_id, span_id, parent_span_id, message, kind, status, attributes_text,
+      metadata, duration, expires_at, inserted_at)
+   SELECT
+     environment_id, organization_id, project_id, task_identifier, run_id, start_time,
+     trace_id, span_id, parent_span_id, message, kind, status, attributes_text,
+     metadata, duration, expires_at, toDateTime64(start_time, 3)
+   FROM trigger_dev.task_events_v1
+   WHERE toDate(start_time) = {day:Date}
+     AND (trace_id, span_id, start_time, kind, status) NOT IN (
+       SELECT trace_id, span_id, start_time, kind, status
+       FROM trigger_dev.task_events_v2
+       WHERE inserted_at >= {day:Date} AND inserted_at < {day:Date} + INTERVAL 8 DAY
+         AND toDate(start_time) = {day:Date}
+     );
+   ```
+4. Run it once per day from step 2, oldest first:
+
+   ```bash
+   docker compose exec -T clickhouse clickhouse-client --param_day=2026-08-01 \
+     --multiquery < copy-task-events-v1.sql
+   ```
+5. Open a run from one of the copied days and check its trace and logs show.
+
+Copying one day at a time keeps memory use bounded on large tables. A future release removes `task_events_v1`, so copy anything you want to keep before then.
+
+> **Note**
+>
+> `EVENT_REPOSITORY_V1_REROUTE_ENABLED=0` keeps the legacy store while you migrate. It's
+> temporary and will be removed in a future release.
 
 ## Realtime streams
 

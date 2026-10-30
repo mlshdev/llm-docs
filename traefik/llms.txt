@@ -1,8 +1,8 @@
-# Traefik Proxy v3.7.16
+# Traefik Proxy v3.7.17
 
-> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `af6d927c51191ae1df104aaf907793386b816c28`.
+> Documentation generated from the latest stable release of [traefik/traefik](https://github.com/traefik/traefik) and pinned to immutable source commit `04e8ccf84ada1dcb450cec06554fe27812903134`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.16.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Traefik Proxy v3.7.17.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow docs/mkdocs.yml navigation order from the immutable release tag.
 - MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted.
@@ -54,7 +54,7 @@
 ## Migrate
 
 - [Migrate from Ingress NGINX Controller to Traefik](pages/migrate/nginx-to-traefik.md): How to migrate from Ingress NGINX Controller to Traefik with zero downtime. (44346 bytes)
-- [Traefik Migration Documentation](pages/migrate/v3.md): This guide provides detailed migration steps for upgrading between different Traefik v3 versions. Each section covers breaking changes, deprecations, and configuration updates required for a smooth transition. (68645 bytes)
+- [Traefik Migration Documentation](pages/migrate/v3.md): This guide provides detailed migration steps for upgrading between different Traefik v3 versions. Each section covers breaking changes, deprecations, and configuration updates required for a smooth transition. (72025 bytes)
 - [Traefik V3 Migration Documentation](pages/migrate/v2-to-v3.md): How to Migrate from Traefik v2 to Traefik v3. (6860 bytes)
 - [Traefik V3 Migration Details](pages/migrate/v2-to-v3-details.md): In v3, the provider Docker has been split into 2 providers: (22529 bytes)
 - [Traefik V2 Migration Documentation](pages/migrate/v2.md): The multiple minor versions of Traefik v2 introduced a number of changes, which may require one to update their configuration when they migrate. (363 bytes)
@@ -81,7 +81,7 @@
 - [Traefik File Documentation](pages/reference/install-configuration/providers/others/file.md): The file provider lets you define the install configuration in a YAML or TOML file. (6946 bytes)
 - [Traefik AWS ECS Documentation](pages/reference/install-configuration/providers/others/ecs.md): You can enable the ECS provider with as detailed below: (12643 bytes)
 - [Traefik HTTP Documentation](pages/reference/install-configuration/providers/others/http.md): Provide your install configuration via an HTTP(S) endpoint and let Traefik do the rest! (6994 bytes)
-- [Traefik EntryPoints Documentation](pages/reference/install-configuration/entrypoints.md): Listening for Incoming Connections/Requests (62294 bytes)
+- [Traefik EntryPoints Documentation](pages/reference/install-configuration/entrypoints.md): Listening for Incoming Connections/Requests (63640 bytes)
 - [Traefik API & Dashboard Documentation](pages/reference/install-configuration/api-dashboard.md): Traefik exposes a number of information through API endpoints, such as the configuration of your routers, services, middlewares, etc. (15211 bytes)
 - [Certificates Resolver](pages/reference/install-configuration/tls/certificate-resolvers/overview.md): In Traefik, TLS Certificates can be generated using Certificates Resolvers. (805 bytes)
 - [Traefik & ACME Certificates Resolver](pages/reference/install-configuration/tls/certificate-resolvers/acme.md): Below is an example of a basic configuration for ACME in Traefik. (25483 bytes)
@@ -94,7 +94,7 @@
 - [Traefik Health Check Documentation](pages/reference/install-configuration/observability/healthcheck.md): Checking the Health of your Traefik Instances (3226 bytes)
 - [Traefik FastProxy Experimental Configuration](pages/reference/install-configuration/experimental/fastproxy.md): This guide provides instructions on how to configure and use the new experimental fastProxy install configuration option in Traefik. The fastProxy option introduces a high-performance reverse proxy designed to enhance t… (1742 bytes)
 - [Traefik Plugins Experimental Configuration](pages/reference/install-configuration/experimental/plugins.md): This guide provides instructions on how to configure and use the new experimental plugins install configuration option in Traefik. The plugins option introduces a system to extend Traefik capabilities with custom middle… (4533 bytes)
-- [Install Configuration Options](pages/reference/install-configuration/configuration-options.md): Normalized source from docs/content/reference/install-configuration/configuration-options.md. (387882 bytes)
+- [Install Configuration Options](pages/reference/install-configuration/configuration-options.md): Normalized source from docs/content/reference/install-configuration/configuration-options.md. (389300 bytes)
 - [Providing Dynamic Configuration to Traefik](pages/reference/routing-configuration/dynamic-configuration-methods.md): Dynamic configuration—now also known as routing configuration—defines how Traefik routes incoming requests to the correct services. This is distinct from install configuration (formerly known as static configuration), w… (5758 bytes)
 - [Traefik HTTP Routers Documentation](pages/reference/routing-configuration/http/routing/router.md): An HTTP router is in charge of connecting incoming requests to the services that can handle them. Routers analyze incoming requests based on rules, and when a match is found, forward the request through any configured m… (14107 bytes)
 - [Traefik HTTP Routers Rules & Priority Documentation](pages/reference/routing-configuration/http/routing/rules-and-priority.md): An HTTP router is in charge of connecting incoming requests to the services that can handle them. Traefik allows you to define your matching rules and prioritize the routes. (21396 bytes)
@@ -186,7 +186,7 @@
 - [Traefik Contribution Documentation](pages/contributing/thank-you.md): You Made It (1729 bytes)
 - [Traefik Submitting Issues Documentation](pages/contributing/submitting-issues.md): Help Us Help You! (3068 bytes)
 - [Traefik Pull Requests Documentation](pages/contributing/submitting-pull-requests.md): This guide is for contributors who already have a pull request to submit. If you are looking for information on setting up your developer environment and creating code to contribute to Traefik Proxy or related projects,… (12755 bytes)
-- [Traefik Security Documentation](pages/contributing/submitting-security-issues.md): We strongly advise you to join our mailing list to be aware of the latest announcements from our security team. You can subscribe by sending an email to or on the online viewer. (8556 bytes)
+- [Traefik Security Documentation](pages/contributing/submitting-security-issues.md): We publish our security announcements as GitHub security advisories. Check this page to stay aware of the latest announcements from our security team. (8723 bytes)
 - [Traefik Security Decisions](pages/contributing/security-decisions.md): Some classes of report reach us repeatedly. This page records the positions we have already settled, so that you can check a finding against them before submitting, and so that we can answer with a reference instead of… (22668 bytes)
 - [Traefik Building & Testing Documentation](pages/contributing/building-testing.md): Compile and Test Your Own Traefik! (3388 bytes)
 - [Traefik Contribution Documentation](pages/contributing/documentation.md): Features Are Better When You Know How to Use Them (3100 bytes)

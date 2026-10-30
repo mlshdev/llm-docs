@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/manage-pods.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/pods/manage-pods.mdx)
+> Pinned source for Runpod main: [pods/manage-pods.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/pods/manage-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/manage-pods
 
 # Manage Pods
@@ -52,16 +52,15 @@ runpodctl pod create \
 
 ```bash
 curl --request POST \
-  --url https://rest.runpod.io/v1/pods \
-  --header 'Authorization: Bearer RUNPOD_API_KEY' \
+  --url https://api.runpod.io/v2/pods \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{
     "name": "my-pod",
-    "imageName": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
-    "gpuTypeIds": ["NVIDIA GeForce RTX 4090"],
-    "gpuCount": 1,
-    "containerDiskInGb": 50,
-    "volumeInGb": 20
+    "image": "runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04",
+    "gpu": {"id": "NVIDIA GeForce RTX 4090", "count": 1},
+    "disk": 50,
+    "mounts": {"persistent": {"size": 20, "path": "/workspace"}}
   }'
 ```
 
@@ -69,18 +68,17 @@ To deploy a Pod from an existing template, use the `templateId` parameter instea
 
 ```bash
 curl --request POST \
-  --url https://rest.runpod.io/v1/pods \
-  --header 'Authorization: Bearer RUNPOD_API_KEY' \
+  --url https://api.runpod.io/v2/pods \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{
     "name": "my-pod-from-template",
     "templateId": "YOUR_TEMPLATE_ID",
-    "gpuTypeIds": ["NVIDIA GeForce RTX 4090"],
-    "gpuCount": 1
+    "gpu": {"id": "NVIDIA GeForce RTX 4090", "count": 1}
   }'
 ```
 
-See the [Pod API reference](https://docs.runpod.io/api-reference/pods/POST/pods) for all parameters.
+See the [Create a Pod reference](https://docs.runpod.io/api-reference-v2/pods/create-a-pod) for all parameters.
 
 ## Stop a Pod
 
@@ -109,8 +107,10 @@ sleep 2h; runpodctl pod stop $RUNPOD_POD_ID &
 
 ```bash
 curl --request POST \
-  --url "https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID/stop" \
-  --header 'Authorization: Bearer RUNPOD_API_KEY'
+  --url "https://api.runpod.io/v2/pods/$RUNPOD_POD_ID/action" \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
+  --header 'Content-Type: application/json' \
+  --data '{"action":"stop"}'
 ```
 
 ## Start a Pod
@@ -126,9 +126,13 @@ runpodctl pod start $RUNPOD_POD_ID
 
 ```bash
 curl --request POST \
-  --url "https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID/start" \
-  --header 'Authorization: Bearer RUNPOD_API_KEY'
+  --url "https://api.runpod.io/v2/pods/$RUNPOD_POD_ID/action" \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
+  --header 'Content-Type: application/json' \
+  --data '{"action":"start"}'
 ```
+
+Unlike the console, the REST `start` action does not offer a zero-GPU start. If the GPUs on the Pod's host machine are no longer free, the request fails with `400` and a message saying there are not enough free GPUs on the host.
 
 ## Restart a Pod
 
@@ -164,16 +168,16 @@ Modify an existing Pod's configuration, such as storage size, image, ports, or e
 
 ```bash
 curl --request PATCH \
-  --url "https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID" \
-  --header 'Authorization: Bearer RUNPOD_API_KEY' \
+  --url "https://api.runpod.io/v2/pods/$RUNPOD_POD_ID" \
+  --header "Authorization: Bearer $RUNPOD_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{
-    "containerDiskInGb": 100,
-    "volumeInGb": 200
+    "disk": 100,
+    "mounts": {"persistent": {"size": 200, "path": "/workspace"}}
   }'
 ```
 
-See the [Pod API reference](https://docs.runpod.io/api-reference/pods/PATCH/pods/podId) for all editable fields.
+See the [Update a Pod reference](https://docs.runpod.io/api-reference-v2/pods/update-a-pod) for all editable fields.
 
 ## Terminate a Pod
 
@@ -190,8 +194,8 @@ runpodctl pod delete $RUNPOD_POD_ID
 
 ```bash
 curl --request DELETE \
-  --url "https://rest.runpod.io/v1/pods/$RUNPOD_POD_ID" \
-  --header 'Authorization: Bearer RUNPOD_API_KEY'
+  --url "https://api.runpod.io/v2/pods/$RUNPOD_POD_ID" \
+  --header "Authorization: Bearer $RUNPOD_API_KEY"
 ```
 
 ## View logs

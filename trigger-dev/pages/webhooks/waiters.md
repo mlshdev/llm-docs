@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/webhooks/waiters.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/webhooks/waiters.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/webhooks/waiters.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/webhooks/waiters.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/waiters
 
 # Waiting for a webhook
@@ -177,15 +177,15 @@ if (!result.cancelled) {
 
 ## Limits
 
-| Limit                                       | Default                                                |
-| ------------------------------------------- | ------------------------------------------------------ |
-| Live waiters per endpoint                   | 10,000. This is also the most one delivery can resume. |
-| Live waiters per environment                | 1,000,000 on self-hosted installs.                     |
-| Distinct sets of `match` paths per endpoint | 25                                                     |
-| Paths per `match`                           | 5                                                      |
-| Tags per waiter                             | 10                                                     |
-| Timeout                                     | 24 hours by default, 90 days at most                   |
+| Limit                                       | Default                                                                                                                   |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Live waiters per endpoint                   | Depends on your plan on Trigger.dev Cloud, 10,000 on self-hosted installs. This is also the most one delivery can resume. |
+| Live waiters per environment                | Depends on your plan on Trigger.dev Cloud, 1,000,000 on self-hosted installs.                                             |
+| Distinct sets of `match` paths per endpoint | 25                                                                                                                        |
+| Paths per `match`                           | 5                                                                                                                         |
+| Tags per waiter                             | 10                                                                                                                        |
+| Timeout                                     | 24 hours by default, 90 days at most                                                                                      |
 
-On Trigger.dev Cloud the per-endpoint and per-environment limits depend on your plan. Self-hosted installs can change them with `WEBHOOK_WAITER_MAX_PER_ENDPOINT`, `WEBHOOK_WAITER_MAX_PER_ENVIRONMENT` and `WEBHOOK_WAITER_MAX_SHAPES`.
+On Trigger.dev Cloud the per-endpoint and per-environment limits depend on your plan: see [Limits](https://trigger.dev/docs/limits#webhook-waiters). Self-hosted installs can change them with `WEBHOOK_WAITER_MAX_PER_ENDPOINT`, `WEBHOOK_WAITER_MAX_PER_ENVIRONMENT` and `WEBHOOK_WAITER_MAX_SHAPES`.
 
 A delivery that resumes waiters shows one **Waiting runs** row on its [delivery page](https://trigger.dev/docs/webhooks/deliveries#where-a-delivery-went) with how many matched, resumed and failed. A delivery that arrives while runs are waiting but matches none of them, and no subscriber takes, is `UNMATCHED`.

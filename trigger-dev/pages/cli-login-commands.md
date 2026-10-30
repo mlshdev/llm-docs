@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/cli-login-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/cli-login-commands.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/cli-login-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/cli-login-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-login-commands
 
 # CLI login command
@@ -19,11 +19,17 @@ pnpm dlx trigger.dev@latest login
 yarn dlx trigger.dev@latest login
 ```
 
+When the CLI opens your browser, approving the login sends you back to the CLI automatically. If the browser is on another machine, for example when you're connected over SSH, use `--no-browser`: after you approve, the page shows a code to paste into the terminal.
+
 ## Options
 
 **Property (type: --no-browser)**
 
-Do not open the browser. Print the URL only.
+Do not open the browser. Print the URL only, and finish the login by pasting the code shown after you approve.
+
+**Property (type: --code \<code>)**
+
+Finish a pending login with the code shown in your browser. Use this after `--no-wait`, or when the terminal can't prompt for the code.
 
 **Property (type: --email \<email>)**
 

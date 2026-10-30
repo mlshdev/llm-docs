@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/_index.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/accounts/organization/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/_index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/accounts/organization/_index.md)
 
 # Organization accounts
 
@@ -49,6 +49,11 @@ Teams are optional. They group members so you can grant repository
 access to many people at once. Use a team when several members need the
 same repositories. Members can belong to the organization without joining
 a team.
+
+For a deployment across your organization, start with
+[Plan and roll out Docker](https://docs.docker.com/accounts/organization/setup/rollout/).
+For ongoing membership and permissions decisions, use
+[Plan and maintain user access](https://docs.docker.com/accounts/organization/manage/user-access/).
 
 ## Next steps
 

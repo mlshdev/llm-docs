@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/choose-a-pod.mdx](https://github.com/runpod/docs/blob/70e07c1facd0003a81dbdc548e10ae92f96e7c38/pods/choose-a-pod.mdx)
+> Pinned source for Runpod main: [pods/choose-a-pod.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/pods/choose-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/choose-a-pod
 
 # Choose a Pod

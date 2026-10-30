@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/webhooks/sources.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/webhooks/sources.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/webhooks/sources.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/webhooks/sources.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/sources
 
 # Sources and verification
@@ -102,6 +102,8 @@ Provider IDs containing a hyphen use a camel case function name: the `cal-com` p
 Supabase database webhooks aren't signed, so `supabase()` checks a shared secret instead. Generate the endpoint's secret on Trigger.dev, then add an `Authorization` header with the value `Bearer <secret>` under the webhook's HTTP Headers in Supabase.
 
 Slack also ships as a chat channel in `@trigger.dev/slack`.
+
+For a complete project built on `resend()`, see the [Resend email agent example](https://github.com/triggerdotdev/examples/tree/main/resend-slack-email-agent). It drafts replies to a Resend inbox and waits for your approval in Slack before sending them.
 
 ### Hookdeck
 
@@ -234,12 +236,12 @@ Requests must pass verification before they reach any subscriber. Sources can ch
 
 Custom sources support these schemes:
 
-| Scheme          | Verification                                                                                       |
-| --------------- | -------------------------------------------------------------------------------------------------- |
-| `hmac`          | Computes an HMAC over the raw body or a signing template and compares it with a request header.    |
-| `shared-secret` | Compares a static token supplied in a header, bearer token, basic authentication, or request body. |
-| `url-secret`    | Compares a token in a URL query parameter. Hosted endpoints don't support path placement.          |
-| `asymmetric`    | Verifies an Ed25519, ECDSA, or RSA signature using the provider's public key.                      |
+| Scheme          | Verification                                                                                                                                                                                                                                       |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `hmac`          | Computes an HMAC over the raw body or a signing template and compares it with a request header.                                                                                                                                                    |
+| `shared-secret` | Compares a static token supplied in a header, bearer token, basic authentication, or request body.                                                                                                                                                 |
+| `url-secret`    | Compares a token in a URL query parameter. Hosted endpoints don't support path placement.                                                                                                                                                          |
+| `asymmetric`    | Verifies an Ed25519, ECDSA (P-256 with SHA-256, P-384 with SHA-384), or RSA-SHA256 signature using the provider's public key. Set `prehash: "sha256"` when the provider signs a SHA-256 digest of the signing string instead of the string itself. |
 
 > **Warning**
 >

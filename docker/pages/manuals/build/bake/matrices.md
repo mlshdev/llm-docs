@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/matrices.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/build/bake/matrices.md)
+> Pinned source for Docker main: [content/manuals/build/bake/matrices.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/build/bake/matrices.md)
 
 # Matrix targets
 
@@ -57,6 +57,51 @@ $ docker buildx bake --print app
   }
 }
 ```
+
+## Release and debug variants
+
+Use a matrix value in build arguments and tags to produce distinct image
+variants. For a Dockerfile that accepts a `BUILD_MODE` argument:
+
+```hcl {title=docker-bake.hcl}
+target "app" {
+  name = "app-${mode}"
+  matrix = {
+    mode = ["release", "debug"]
+  }
+  args = {
+    BUILD_MODE = mode
+  }
+  tags = ["docker.io/username/app:${mode}"]
+}
+```
+
+For file exports, also give each variant a separate output directory to avoid
+overwriting files from another variant. Using the `bin` target and Dockerfile
+from [Export build artifacts](https://docs.docker.com/build/bake/targets/#export-build-artifacts), add:
+
+```hcl {title=docker-bake.hcl}
+target "bin-all" {
+  inherits = ["bin"]
+  name = "bin-${mode}"
+  matrix = {
+    mode = ["release", "debug"]
+  }
+  args = {
+    BUILD_MODE = mode
+  }
+  output = ["type=local,dest=build/bin/${mode}"]
+}
+```
+
+```console
+$ docker buildx bake --print app
+$ docker buildx bake bin-all
+```
+
+The `app-release` and `app-debug` targets use the tags
+`docker.io/username/app:release` and `docker.io/username/app:debug`, respectively.
+The artifact targets write `build/bin/release/app` and `build/bin/debug/app`.
 
 ## Multiple axes
 

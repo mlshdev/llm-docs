@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/github-integration.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/github-integration.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-integration
 
 # GitHub integration
@@ -32,7 +32,7 @@ This eliminates the need to manually run the `trigger.dev deploy` command or set
 
 Our GitHub integration uses branch tracking to determine when and where to deploy your code.
 
-![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/deployment/git-settings.png)
+![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/deployment/git-settings.png)
 
 ### Production and staging branches
 
@@ -59,6 +59,27 @@ The name of the preview branch matches the branch name of the pull request.
 >
 > Preview branch deployments require the preview environment to be enabled on your project. Learn more about [preview branches](https://trigger.dev/docs/deployment/preview-branches).
 
+## Ignored paths
+
+Skip builds for pushes that only touch files your tasks do not depend on, such as docs or another app in a monorepo.
+
+Open **Integrations** in your project settings and add the patterns in the git settings panel below the branch fields, one per line. A push builds unless every file changed by the pushed commits matches a pattern. A newly opened pull request compares every file it changes against its base branch in the same way. Some pushes build regardless of the patterns, such as force pushes or pushes that change 300 or more files. Use **Test a path** to check which pattern, if any, ignores a given file.
+
+```text
+docs/**
+**/*.md
+apps/web/**
+.github/**
+```
+
+Patterns are globs relative to the repository root and match like `paths-ignore` in GitHub Actions. `**` matches across folders and also matches dotfiles, so `**/*.md` ignores `.github/PULL_REQUEST_TEMPLATE.md`. Negation (`!`), braces (`{a,b}`), extglob groups like `+(...)` and `[!...]` are not supported; use `[^...]` to exclude characters. You can add up to 100 patterns of up to 256 characters each.
+
+When a build is skipped, no deployment is created and the commit's Trigger.dev check is marked as skipped, with the matched patterns in its summary. Re-run that check from GitHub to build the commit anyway.
+
+> **Note**
+>
+> Projects connected to Vercel always build. See [production waits for your tasks](https://trigger.dev/docs/vercel-integration#production-waits-for-your-tasks).
+
 ## Version skew protection
 
 Every deployment the GitHub integration creates is tagged with the commit SHA it was built from. That is the deploy half of [version skew protection](https://trigger.dev/docs/deployment/atomic-deployment) — you get it for free.
@@ -79,7 +100,7 @@ You can disconnect a repository at any time from your project git settings. This
 
 To add or remove repository access for the Trigger.dev GitHub app, follow the link in the `Connect GitHub repository` modal:
 
-![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/deployment/connect-repo.png)
+![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/deployment/connect-repo.png)
 
 Alternatively, you can follow these steps on GitHub:
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/_index.md](https://github.com/docker/docs/blob/f90928eb2040c4638e188868a612fd47e6a061a4/content/manuals/ai/sandboxes/customize/author/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/_index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/ai/sandboxes/customize/author/_index.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -26,6 +26,9 @@ each approach.
 - [Build an agent workload](https://docs.docker.com/ai/sandboxes/customize/author/build-an-agent/)
   to control the base environment, agent installation, and launch command.
   You can also [use an existing agent image](https://docs.docker.com/ai/sandboxes/customize/author/base-images/#use-an-image-in-a-v3-workload).
+- [Debug a kit](https://docs.docker.com/ai/sandboxes/customize/author/debug/) when one of its
+  install or startup commands fails. Read the progress output and the logs
+  inside the sandbox.
 
 For complete kits you can study and adapt, see
 [Kit examples](https://github.com/docker/sandbox-kit-spec/tree/main/examples)

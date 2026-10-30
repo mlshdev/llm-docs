@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.1: [docs/ai-chat/background-injection.mdx](https://github.com/triggerdotdev/trigger.dev/blob/bd2a14e6ad83fbe056a473b0082ff4110747fa38/docs/ai-chat/background-injection.mdx)
+> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/background-injection.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/background-injection.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/background-injection
 
 # Background injection
@@ -70,6 +70,8 @@ export const myChat = chat.agent({
 7. The LLM sees the injected context alongside the new user message
 
 If the background work finishes *during* a tool-call loop (not between turns), the messages are picked up at the next `prepareStep` boundary instead.
+
+An injection made from a tool mid-turn is recorded in the conversation history at the step where it happened, after the tool result. The next turn's prompt prefix is unchanged.
 
 ## Example: self-review
 
