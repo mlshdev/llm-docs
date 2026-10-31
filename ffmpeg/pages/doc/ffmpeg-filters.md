@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/92457ada93cf5d593d23cc18cd040a91532b6943/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/6d1bfd760916ab52814b950692d1c1635d29f3c7/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -17036,6 +17036,8 @@ ffmpeg -i input.mov -vf lensfun=make=Canon:model="Canon EOS 100D":lens_model="Ca
 Low Complexity Enhancement Video Codec filter based on liblcevc\_dec
 (<https://github.com/v-novaltd/LCEVCdec>).
 
+<a id="libplacebo"></a>
+
 ## libplacebo
 
 Flexible GPU-accelerated processing filter based on libplacebo
@@ -17132,6 +17134,10 @@ Allows for the same expressions as the scale filter.
   content with black borders, while a value of `1.0` always crops off parts
   of the content. Intermediate values are possible, leading to a mix of the two
   approaches.
+
+- sar
+  Force the output sample aspect ratio. The default of `0` derives it from
+  the input, see `reset_sar`.
 
 - fit\_mode
   Specify the content fit strategy according to a list of predefined modes.
@@ -17791,6 +17797,75 @@ Interop with VAAPI hwdec to avoid round-tripping through RAM:
 
 ```text
 ffmpeg -init_hw_device vulkan -hwaccel vaapi -hwaccel_output_format vaapi ... -vf libplacebo
+```
+
+## libplacebo\_scene
+
+Composite one or more inputs onto a canvas of fixed size and frame rate,
+according to a JSON scene graph. See <https://libplacebo.org/json/> for more
+information.
+
+### Options
+
+- scene
+  JSON scene graph description. Required. Use `/scene=file.json` to load it
+  from a file.
+
+- w
+
+- h
+  Output frame width and height. Required. Constant expressions are accepted.
+
+- fps
+  Output frame rate. Required.
+
+- sar
+  Output sample aspect ratio. The default of `0` means 1:1.
+
+- format
+
+- colorspace
+
+- range
+
+- color\_primaries
+
+- color\_trc
+
+- chroma\_location
+
+- alpha\_mode
+
+- inherit\_device
+
+- shader\_cache
+
+- apply\_filmgrain
+
+- apply\_dolbyvision
+  Same as for the libplacebo filter.
+
+The output color properties default to the scene's `color`, `repr`
+and `chroma_location`. They only control the output frame tags; rendering
+always follows the scene, including any animated changes.
+
+### Example
+
+Show a second input in the bottom right quarter between 1 and 3 seconds:
+
+```text
+ffmpeg -i main.mkv -i overlay.mkv -filter_complex \
+  "[0][1]libplacebo_scene=w=1920:h=1080:fps=25:/scene=scene.json" out.mkv
+```
+
+with `scene.json` containing:
+
+```text
+{ "inputs": [
+    { },
+    { "start_pts": 1, "stop_pts": 3,
+      "dst_rect": { "x0": 0.5, "y0": 0.5 } }
+] }
 ```
 
 <a id="libvmaf"></a>
