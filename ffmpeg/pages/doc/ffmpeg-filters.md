@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/6d1bfd760916ab52814b950692d1c1635d29f3c7/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/a88838af482100fa22dd22c94be592c35642de46/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -17579,14 +17579,13 @@ gamut information to produce the best results.
     luminances.
   - st2094-10
     EETF from SMPTE ST 2094-10 Annex B.2, which takes into account the input signal
-    average luminance in addition to the maximum/minimum. The configurable contrast
-    parameter influences the slope of the linear output segment, defaulting to
-    `1.0` for no increase/decrease in contrast. Note that this does not
+    average luminance in addition to the maximum/minimum. Note that this does not
     currently include the subjective gain/offset/gamma controls defined in Annex
     B.3.
   - bt.2390
     EETF from the ITU-R Report BT.2390, a hermite spline roll-off with linear
-    segment. The knee point offset is configurable. Note that this parameter
+    segment. The knee point offset is configurable using
+    `tonemapping_knee_offset`. Note that this parameter
     defaults to `1.0`, rather than the value of `0.5` from the ITU-R
     spec.
   - bt.2446a
@@ -17595,24 +17594,26 @@ gamut information to produce the best results.
     configurable.
   - spline
     Simple spline consisting of two polynomials, joined by a single pivot point.
-    The parameter gives the pivot point (in PQ space), defaulting to `0.30`.
+    The knee point is determined from the source scene average brightness,
+    falling back to `tonemapping_knee_default` (defaulting to `0.4`).
     Can be used for both forward and inverse tone mapping.
   - reinhard
-    Simple non-linear, global tone mapping algorithm. The parameter specifies the
-    local contrast coefficient at the display peak. Essentially, a parameter of
-    `0.5` implies that the reference white will be about half as bright as
-    when clipping. Defaults to `0.5`, which results in the simplest
-    formulation of this function.
+    Simple non-linear, global tone mapping algorithm. The
+    `tonemapping_reinhard_contrast` option specifies the local contrast
+    coefficient at the display peak. Essentially, a value of `0.5` implies
+    that the reference white will be about half as bright as when clipping.
+    Defaults to `0.5`, which results in the simplest formulation of this
+    function.
   - mobius
     Generalization of the reinhard tone mapping algorithm to support an additional
-    linear slope near black. The tone mapping parameter indicates the trade-off
-    between the linear section and the non-linear section. Essentially, for a given
-    parameter *x*, every color value below *x* will be mapped linearly,
-    while higher values get non-linearly tone-mapped. Values near `1.0` make
-    this curve behave like `clip`, while values near `0.0` make this
-    curve behave like `reinhard`. The default value is `0.3`, which
-    provides a good balance between colorimetric accuracy and preserving
-    out-of-gamut details.
+    linear slope near black. The `tonemapping_linear_knee` option indicates
+    the trade-off between the linear section and the non-linear section.
+    Essentially, for a given parameter *x*, every color value below *x*
+    will be mapped linearly, while higher values get non-linearly tone-mapped.
+    Values near `1.0` make this curve behave like `clip`, while values
+    near `0.0` make this curve behave like `reinhard`. The default value
+    is `0.3`, which provides a good balance between colorimetric accuracy
+    and preserving out-of-gamut details.
   - hable
     Piece-wise, filmic tone-mapping algorithm developed by John Hable for use in
     Uncharted 2, inspired by a similar tone-mapping algorithm used by Kodak.
@@ -17624,19 +17625,82 @@ gamut information to produce the best results.
     Fits a gamma (power) function to transfer between the source and target color
     spaces, effectively resulting in a perceptual hard-knee joining two roughly
     linear sections. This preserves details at all scales fairly accurately, but
-    can result in an image with a muted or dull appearance. The parameter is used
-    as the cutoff point, defaulting to `0.5`.
+    can result in an image with a muted or dull appearance. The
+    `tonemapping_linear_knee` option is used as the cutoff point, defaulting
+    to `0.3`.
   - linear
     Linearly stretches the input range to the output range, in PQ space. This will
     preserve all details accurately, but results in a significantly different
     average brightness. Can be used for inverse tone-mapping in addition to regular
-    tone-mapping. The parameter can be used as an additional linear gain
-    coefficient (defaulting to `1.0`).
+    tone-mapping. The `tonemapping_exposure` option can be used as an additional
+    linear gain coefficient (defaulting to `1.0`).
 
 - tonemapping\_param
   For tunable tone mapping functions, this parameter can be used to fine-tune the
   curve behavior. Refer to the documentation of `tonemapping`. The default
-  value of `0.0` is replaced by the curve's preferred default setting.
+  value of `0.0` is replaced by the curve's preferred default setting, or by
+  `tonemapping_*` options below as applicable. This option, if nonzero, takes
+  effect over the corresponding values of the other `tonemapping_*` options.
+  Deprecated, do not use.
+
+- tonemapping\_knee\_adaptation
+  Controls how strongly the knee point adapts to the source scene average
+  brightness, relative to the target average in PQ space. A value of `1.0`
+  fully adapts the source average to the target average, while `0.0`
+  disables adaptation. Defaults to `0.4`. Affects `st2094-40`,
+  `st2094-10` and `spline`.
+
+- tonemapping\_knee\_minimum
+  Sets the minimum knee point as a fraction of the PQ luminance range.
+  Limits how low the automatically determined knee point can be.
+  Defaults to `0.1`.
+
+- tonemapping\_knee\_maximum
+  Sets the maximum knee point as a fraction of the PQ luminance range.
+  Limits how high the automatically determined knee point can be.
+  Defaults to `0.8`.
+
+- tonemapping\_knee\_default
+  Sets the fallback knee point used when source scene average brightness
+  metadata is unavailable. Normally, the knee point is determined from
+  the source scene average instead. The value should be between
+  `tonemapping_knee_minimum` and `tonemapping_knee_maximum`.
+  Defaults to `0.4`.
+
+- tonemapping\_knee\_offset
+  Sets the knee point offset for `bt.2390`. The ITU-R specification
+  defines `0.5` as the default, but libplacebo uses `1.0`.
+  Defaults to `1.0`.
+
+- tonemapping\_slope\_tuning
+  Controls how the slope of the `spline` curve is adjusted based on
+  the difference between source and target peaks. The tuning aims to
+  preserve a slope closer to `1.0` for small differences and approach
+  linear mapping for larger differences. Defaults to `1.5`.
+
+- tonemapping\_slope\_offset
+  Controls the slope adjustment of the `spline` curve, together with
+  `tonemapping_slope_tuning`. Defaults to `0.2`.
+
+- tonemapping\_spline\_contrast
+  Controls the contrast of the `spline` curve. Higher values produce
+  a steeper curve, preserving midtone contrast at the cost of shadow and
+  highlight detail. Lower values produce a shallower curve, preserving
+  highlights at the cost of midtone contrast. Values above `1.0`
+  can increase contrast beyond that of the source. Defaults to `0.5`.
+
+- tonemapping\_reinhard\_contrast
+  Sets the local contrast coefficient at the display peak for `reinhard`.
+  A value of `0.5` makes reference white approximately half as bright
+  as when clipping. Defaults to `0.5`.
+
+- tonemapping\_linear\_knee
+  Sets the knee point for the legacy `mobius` and `gamma` curves,
+  which operate on linear light. Defaults to `0.3`.
+
+- tonemapping\_exposure
+  Sets the linear exposure or gain applied by the `linear` tone-mapping
+  method. Defaults to `1.0`.
 
 - inverse\_tonemapping
   If enabled, this filter will also attempt stretching SDR signals to fill HDR

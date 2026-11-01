@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/6d1bfd760916ab52814b950692d1c1635d29f3c7/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/a88838af482100fa22dd22c94be592c35642de46/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -2290,6 +2290,12 @@ The list of supported options follows.
   need to be specified for verification to work, but not all libraries and
   setups have defaults built in.
   The file must be in OpenSSL PEM format.
+  When no file is given, Windows builds using OpenSSL 3.2 or later with
+  Windows certificate store support also use certificates from the system
+  ROOT store. OpenSSL applies its usual certificate checks. Additional
+  trust restrictions stored as Windows certificate properties, rather than
+  encoded in the certificates themselves, are not enforced by its Windows
+  certificate store loader.
 
 - tls\_verify, verify=*1|0*
   If enabled, try to verify the peer that we are communicating with.
@@ -2360,6 +2366,12 @@ The list of supported options follows.
   need to be specified for verification to work, but not all libraries and
   setups have defaults built in.
   The file must be in OpenSSL PEM format.
+  When no file is given, Windows builds using OpenSSL 3.2 or later with
+  Windows certificate store support also use certificates from the system
+  ROOT store. OpenSSL applies its usual certificate checks. Additional
+  trust restrictions stored as Windows certificate properties, rather than
+  encoded in the certificates themselves, are not enforced by its Windows
+  certificate store loader.
 
 - tls\_verify, verify=*1|0*
   If enabled, try to verify the peer that we are communicating with.
