@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/swarm/key-concepts.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/engine/swarm/key-concepts.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/key-concepts.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/engine/swarm/key-concepts.md)
 
 # Swarm mode key concepts
 

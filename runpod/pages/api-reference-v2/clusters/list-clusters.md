@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/list-clusters.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/clusters/list-clusters.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/list-clusters.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/clusters/list-clusters.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/list-clusters
 
 # List Clusters
@@ -17,6 +17,15 @@ newest-first; an omitted `limit` defaults to 1000. Follow
 
 **Parameters**
 
+- `filters` (query): Only return resources matching these filters, as URL-encoded JSON. The filters apply before the page is cut, so send the same value with each `cursor` to keep walking the filtered list.
+  - Media type: `application/json`
+    - Schema (object): An empty object, or an empty `tags` array, filters nothing.
+      - `tags` (array; maximum items: `25`): Conditions on the resource's tags. A resource must match every condition; repeating a key adds a condition rather than widening the first one. At most 25, the most tags one resource can carry.
+        - `items` (object)
+          - `key` (required; string; minimum length: `1`; maximum length: `191`; pattern: `[^\t-\r  - ]`): Tag key, 1–191 characters as sent, with at least one that is not whitespace. Leading and trailing whitespace is ignored. Keys under the reserved `runpod:` prefix, in any letter case, are rejected.
+          - `values` (array; maximum items: `100`): Matches a tag under `key` with any one of these values, compared exactly. Omitted or empty, the condition only requires the key to be present. `""` matches a tag whose value is empty. At most 100.
+            - `items` (string; maximum length: `191`)
+    - Example: `{"tags":[{"key":"env","values":["dev","prod"]},{"key":"team"}]}`
 - `cursor` (query; string; minimum length: `1`): Opaque resume cursor — pass the previous response's `pagination.nextCursor` through verbatim; omit for the first page. A cursor is only valid for the operation and parameters that issued it; a malformed or foreign cursor is rejected with 422.
   - Example: `Y3JlYXRlZEF0PTE3NDg3ODA0MDA`
 - `limit` (query; integer; minimum: `1`; maximum: `1000`): Page size, 1–1000. Defaults to 1000 when omitted.
@@ -29,12 +38,22 @@ newest-first; an omitted `limit` defaults to 1000. Follow
     - Schema (object)
       - `clusters` (required; array)
         - `items` (object): A cluster. Cluster-level fields describe the identity and homogeneous shape; `pods` is a lightweight summary of the members. Fetch the full member pods — with their container config, mounts, and runtime state — from `GET /v2/clusters/{id}/pods`.
+          - `costCenter`: Cost center this resource's spend is attributed to. Absent when the resource is not attributed to a cost center, or when the caller lacks permission to view cost centers. Managed through `/v2/cost-centers`.
+            - allOf:
+              - `variant 1` (object)
+                - `id` (required; string)
+                - `value` (required; string): Cost center name exactly as stored, so it matches billing breakdowns.
+          - `tags` (array): The tags on this resource that are visible to the caller. Keys and values are returned exactly as stored. Tags under the reserved `runpod:` prefix, such as the cost center, are never listed here. Absent when the resource's tags are unavailable to the caller; an empty array means none are visible.
+            - `items` (object)
+              - `id` (required; string): ID of the tag itself, shared by every resource it is attached to.
+              - `key` (required; string)
+              - `value` (required; string): May be empty.
           - `id` (required; string)
           - `name` (required; string)
           - `type` (required; string; enum: `APPLICATION`, `TRAINING`, `SLURM`, `RAY`): Cluster type. TRAINING is the generic distributed-training cluster; SLURM provisions a managed Slurm controller/compute topology; RAY provisions a managed Ray head/worker topology; APPLICATION is a general multi-node application cluster.
           - `compute` (required; object): The homogeneous compute shape of a cluster. Every pod in the cluster is identical: `podCount` pods, each with `gpuCountPerPod` GPUs of type `gpuTypeId`. Total GPUs = `podCount` \* `gpuCountPerPod`.
             - `gpuTypeId` (required; string; minimum length: `1`): GPU type for every pod in the cluster, as returned by GET /v2/catalog/gpus.
-            - `gpuCountPerPod` (required; integer; minimum: `1`): Number of GPUs on each pod. Bounded above by the GPU type's per-cloud maximum (GpuType.maxCount); the upstream rejects values beyond it.
+            - `gpuCountPerPod` (required; integer; minimum: `1`): Number of GPUs on each pod. Bounded above by the GPU type's per-cloud maximum (GpuType.maxCount); values beyond it are rejected.
             - `podCount` (required; integer; minimum: `2`; maximum: `250`): Number of pods (nodes) in the cluster.
           - `template` (string): ID of the template this cluster's pods were created from; omitted when they were not created from one.
           - `dataCenterId` (string): Data center the cluster is placed in (a cluster is always within a single data center). Derived from the member pods; omitted until at least one pod is placed.
@@ -69,8 +88,8 @@ newest-first; an omitted `limit` defaults to 1000. Follow
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -79,9 +98,9 @@ newest-first; an omitted `limit` defaults to 1000. Follow
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
-- `413`: The response would exceed the upstream response size cap. Request fewer items and retry; on paginated operations, lower `limit`.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+- `413`: The response would exceed the response size cap. Request fewer items and retry; on paginated operations, lower `limit`.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -90,10 +109,21 @@ newest-first; an omitted `limit` defaults to 1000. Follow
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `responseTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Response too large for one request. Request fewer items and retry."}`
+- `422`: The request body or parameters were syntactically valid but failed validation.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `validationFailed`: `{"title":"Unprocessable Entity","status":422,"detail":"Request validation failed."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

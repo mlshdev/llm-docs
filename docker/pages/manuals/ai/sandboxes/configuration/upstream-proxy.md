@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
 
 # Configure an upstream proxy
 
@@ -16,9 +16,9 @@ originating inside a cloud sandbox. For cloud sandbox egress controls, see
 
 An upstream proxy is the corporate or network proxy that Docker Sandboxes
 forwards outbound traffic through on its way to the internet. This is separate
-from the [network policy](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/), which decides
-*which* destinations are allowed. The upstream proxy decides *how* allowed
-traffic reaches them.
+from network policy, which decides *which* destinations are allowed. The
+upstream proxy decides *how* allowed traffic reaches them. For how network
+policy is set, see [Sandbox governance](https://docs.docker.com/ai/governance/).
 
 Docker Sandboxes sends two kinds of outbound traffic, and you can proxy them
 independently:

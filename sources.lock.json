@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "2eaa01ac4fbe81c8cb8705724a05e19474dd681a",
-      "sourceCommittedAt": "2026-11-02T16:51:39Z",
-      "observedCommit": "2eaa01ac4fbe81c8cb8705724a05e19474dd681a",
-      "documentationDigest": "cfd7c9d8cef4c6d98930bfcfa5bf605361188cf68a156554b2648a6dd5ec0aa4"
+      "sourceCommit": "d40e4d2c029e471aa18744e28bebe179d96abb6f",
+      "sourceCommittedAt": "2026-11-03T22:45:06Z",
+      "observedCommit": "d40e4d2c029e471aa18744e28bebe179d96abb6f",
+      "documentationDigest": "3241063117189400c64013cb40d5f523de00861be0efbe67f0acae66a13a69ad"
     },
     "container": {
       "tag": "1.6.1",
@@ -79,17 +79,17 @@
       "sourceCommit": "0f135ada5a362e41d6144e4821950a13566bedac"
     },
     "zitadel": {
-      "tag": "v4.20.0",
-      "releaseId": 420575184,
-      "releasePublishedAt": "2026-10-22T10:18:58Z",
-      "sourceCommit": "8afa5dd37a8e723efb9eace8d09fd5c1cccef694"
+      "tag": "v4.20.1",
+      "releaseId": 432417558,
+      "releasePublishedAt": "2026-11-03T08:08:50Z",
+      "sourceCommit": "709968cdd4257d7377bb95f22c840ee39ba951c6"
     },
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
       "sourceCommit": "1999e548f85166f921b7f2aca47091a7b7f002ed",
       "sourceCommittedAt": "2026-11-03T00:55:14Z",
-      "observedCommit": "1999e548f85166f921b7f2aca47091a7b7f002ed",
+      "observedCommit": "200a98d5ba4a6c792517d3ea464a5392737b4e33",
       "documentationDigest": "ff2e3f50fd719e65bb565474ae6f0ddb7d6ee3bcbb34108ec61f5ad061f2bcd9"
     },
     "yt-dlp": {
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "02379524f1d057200d839d013114f2e8817eaa85",
-      "sourceCommittedAt": "2026-11-02T19:44:20Z",
-      "observedCommit": "02379524f1d057200d839d013114f2e8817eaa85",
-      "documentationDigest": "1eafb66c4bc5569af7692b6ee379fa1c852d54f2e5637ba33e37eab5536b993e"
+      "sourceCommit": "bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f",
+      "sourceCommittedAt": "2026-11-03T19:04:18Z",
+      "observedCommit": "bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f",
+      "documentationDigest": "f999be4c2b929ba7dcc24c95cb990071e1b05a687bbbe01bb54fa4b2fe0d0480"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/delete-a-cluster.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/clusters/delete-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/delete-a-cluster.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/clusters/delete-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/delete-a-cluster
 
 # Delete A Cluster
@@ -31,8 +31,8 @@ Permanently deletes a cluster and terminates all of its member pods.
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -51,8 +51,8 @@ Permanently deletes a cluster and terminates all of its member pods.
         - `items` (string)
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

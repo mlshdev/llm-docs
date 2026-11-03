@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/api/engine/_index.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/reference/api/engine/_index.md)
+> Pinned source for Docker main: [content/reference/api/engine/_index.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/reference/api/engine/_index.md)
 
 # Docker Engine API
 
@@ -48,13 +48,13 @@ support, use `docker version`:
 ```console
 $ docker version
 Client: Docker Engine - Community
- Version:           29.8.2
+ Version:           29.9.3
  API version:       1.56
  ...
 
 Server: Docker Engine - Community
  Engine:
-  Version:          29.8.2
+  Version:          29.9.3
   API version:      1.56 (minimum version 1.40)
   ...
 ```
@@ -143,7 +143,7 @@ to provide full compatibility, some functionality may not be available.
 
 API versions before v1.40 are deprecated and no longer supported by current
 versions of the Docker Engine and CLI. You can find archived documentation
-for deprecated versions of the API [in the code repository on GitHub](https://github.com/moby/moby/tree/docker-v29.8.2/api/docs):
+for deprecated versions of the API [in the code repository on GitHub](https://github.com/moby/moby/tree/docker-v29.9.3/api/docs):
 
 | Docker version | Maximum API version | Minimum API version | Change log                                                                                |
 | :------------- | :------------------ | :------------------ | :---------------------------------------------------------------------------------------- |

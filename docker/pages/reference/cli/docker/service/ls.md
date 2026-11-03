@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/engine/docker_service_ls.yaml](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/data/cli/engine/docker_service_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_service_ls.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/cli/engine/docker_service_ls.yaml)
 
 # docker service ls
 

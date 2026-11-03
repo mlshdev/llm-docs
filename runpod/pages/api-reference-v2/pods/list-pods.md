@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/list-pods.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/pods/list-pods.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/list-pods.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/pods/list-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/list-pods
 
 # List Pods
@@ -24,6 +24,15 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
 
 - `includeClusterPods` (query; boolean; default: `false`): Include cluster member pods in the result. Defaults to false.
   - Example: `false`
+- `filters` (query): Only return resources matching these filters, as URL-encoded JSON. The filters apply before the page is cut, so send the same value with each `cursor` to keep walking the filtered list.
+  - Media type: `application/json`
+    - Schema (object): An empty object, or an empty `tags` array, filters nothing.
+      - `tags` (array; maximum items: `25`): Conditions on the resource's tags. A resource must match every condition; repeating a key adds a condition rather than widening the first one. At most 25, the most tags one resource can carry.
+        - `items` (object)
+          - `key` (required; string; minimum length: `1`; maximum length: `191`; pattern: `[^\t-\r  - ]`): Tag key, 1–191 characters as sent, with at least one that is not whitespace. Leading and trailing whitespace is ignored. Keys under the reserved `runpod:` prefix, in any letter case, are rejected.
+          - `values` (array; maximum items: `100`): Matches a tag under `key` with any one of these values, compared exactly. Omitted or empty, the condition only requires the key to be present. `""` matches a tag whose value is empty. At most 100.
+            - `items` (string; maximum length: `191`)
+    - Example: `{"tags":[{"key":"env","values":["dev","prod"]},{"key":"team"}]}`
 - `cursor` (query; string; minimum length: `1`): Opaque resume cursor — pass the previous response's `pagination.nextCursor` through verbatim; omit for the first page. A cursor is only valid for the operation and parameters that issued it; a malformed or foreign cursor is rejected with 422.
   - Example: `Y3JlYXRlZEF0PTE3NDg3ODA0MDA`
 - `limit` (query; integer; minimum: `1`; maximum: `1000`): Page size, 1–1000. Defaults to 1000 when omitted.
@@ -32,8 +41,8 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
 **Responses**
 
 - `200`: OK
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/json`
     - Schema
       - allOf:
@@ -58,33 +67,47 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
                     - `variant 2` (object)
                       - `registry` (nullable): Container registry credential ID (for private images)
                 - `variant 2` (object)
+                  - `costCenter`: Cost center this resource's spend is attributed to. Absent when the resource is not attributed to a cost center, or when the caller lacks permission to view cost centers. Managed through `/v2/cost-centers`.
+                    - allOf:
+                      - `variant 1` (object)
+                        - `id` (required; string)
+                        - `value` (required; string): Cost center name exactly as stored, so it matches billing breakdowns.
+                  - `tags` (array): The tags on this resource that are visible to the caller. Keys and values are returned exactly as stored. Tags under the reserved `runpod:` prefix, such as the cost center, are never listed here. Absent when the resource's tags are unavailable to the caller; an empty array means none are visible.
+                    - `items` (object)
+                      - `id` (required; string): ID of the tag itself, shared by every resource it is attached to.
+                      - `key` (required; string)
+                      - `value` (required; string): May be empty.
                   - `id` (required; string)
                   - `name` (required; string)
                   - `status` (required; string; enum: `PROVISIONING`, `STARTING`, `RUNNING`, `EXITED`, `ERROR`, `TERMINATED`): Lifecycle status of a pod. - `PROVISIONING` — pod is being allocated - `STARTING` — container is starting - `RUNNING` — container is healthy - `EXITED` — container exited (stopped) - `ERROR` — container is in an unrecoverable error state - `TERMINATED` — pod has been permanently deleted
                   - `actions` (required; array): Valid state transitions for the current status.
                     - `items` (string; enum: `start`, `stop`, `restart`, `terminate`): State transition to trigger on a pod.
-                  - `mounts` (required): Storage mounts attached to a pod. `persistent` is mutually exclusive with both `network` and `global` (enforced at the handler with 400 if combined). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. PATCH semantics: - Omitting `mounts` or sending `{}` leaves the existing mount unchanged. - An explicit `network: []` is rejected with 400 (clearing mounts is not supported). - Mount kind is fixed at create — a PATCH that introduces a kind not present at create (persistent on a network pod, network on a persistent pod, or any mount on a previously-mountless pod) is rejected with 400. - The `volumeId` of a network mount is immutable; a PATCH that names a different `volumeId` is rejected with 400. - Partial mounts are not supported — every mount entry must include the full schema (`size` + `path` for persistent, `volumeId` + `path` for network). Missing required fields → 422.
+                  - `mounts` (required): Storage mounts attached to a pod. `persistent` (the volume disk) is mutually exclusive with both `network` and `global` (enforced at the handler with 400 if combined). A pod takes up to 4 network volumes and 1 global volume. Every network volume must be in the pod's data center, each volume may be listed once, and mount paths must not overlap; a request that breaks one of these is rejected. To change a pod's mounts after creation, see `UpdatePodMounts`.
                     - allOf:
-                      - `variant 1` (object): The mount kinds every resource that takes `mounts` shares. At-most-one of `persistent` or `network` may be set today (mutually exclusive, enforced at the handler with 400 if both are present). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. Left open so that concrete schemas can extend it and close themselves.
+                      - `variant 1` (object): Shared base type for all resources that mount storage volumes. `persistent` and `network` cannot both be set (rejected with 400). Each resource that uses this type sets its own limit on network volumes.
                         - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
-                          - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
+                          - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Minimum 10 GB.
                           - `path` (required; string): Mount path inside the container. May be changed via PATCH.
-                        - `network` (array; maximum items: `1`)
-                          - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
+                        - `network` (array)
+                          - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
                             - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
                             - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
                       - `variant 2` (object)
-                        - `global` (array; maximum items: `1`): At most one global volume, on GPU and CPU pods, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): upstream drops a persistent disk whenever a volume is attached. Same PATCH rules as `network`: global mounts are fixed at create, `global: []` is rejected with 400, and `volumeId` is immutable; only `path` may change.
-                          - `items` (object): Reference to a GlobalVolume. Usage-billed, so it has no size. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
+                        - `network` (array; maximum items: `4`): Up to 4 network volumes, all in the pod's data center.
+                          - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
+                            - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
+                            - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
+                        - `global` (array; maximum items: `1`): At most one global volume, on GPU and CPU pods, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): a persistent disk is dropped whenever a volume is attached. Same PATCH rules as `network`.
+                          - `items` (object): Reference to a GlobalVolume. Usage-billed, so it has no size. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
                             - `volumeId` (required; string): ID of an existing GlobalVolume.
-                            - `path` (string): Mount path inside the container. Optional on create, where a default is chosen for you; a PATCH that omits it leaves the path unchanged.
+                            - `path` (string): Mount path inside the container. Optional; a default is chosen for you when omitted.
                   - `gpu`: Present for GPU pods; omitted from CPU pods.
                     - allOf:
                       - `variant 1`
                         - allOf:
                           - `variant 1` (object)
                             - `id` (required; string): GPU type identifier
-                            - `count` (integer; default: `1`; minimum: `1`): Number of GPUs
+                            - `count` (integer; default: `1`; minimum: `1`; maximum: `1024`): Number of GPUs
                           - `variant 2` (object)
                             - `vcpuCount` (required; number; format: double; minimum: `1`): Total vCPU count allocated to the pod across all requested GPUs.
                             - `memory` (required; number; format: double; minimum: `1`): Total system RAM in GB allocated to the pod across all requested GPUs.
@@ -171,8 +194,8 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -181,9 +204,9 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
-- `413`: The response would exceed the upstream response size cap. Request fewer items and retry; on paginated operations, lower `limit`.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+- `413`: The response would exceed the response size cap. Request fewer items and retry; on paginated operations, lower `limit`.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -192,10 +215,21 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `responseTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Response too large for one request. Request fewer items and retry."}`
+- `422`: The request body or parameters were syntactically valid but failed validation.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `validationFailed`: `{"title":"Unprocessable Entity","status":422,"detail":"Request validation failed."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -205,8 +239,8 @@ Follow `pagination.nextCursor` until `hasNextPage` is false.
         - `items` (string)
     - Example `rateLimited`: `{"title":"Too Many Requests","status":429,"detail":"rate limit exceeded for the minute window"}`
 - `default`: Error
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

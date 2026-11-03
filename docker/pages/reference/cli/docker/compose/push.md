@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml)
 
 # docker compose push
 
@@ -30,11 +30,11 @@ services:
 
 ## Options
 
-| Option                   | Default | Description                                            |
-| ------------------------ | ------- | ------------------------------------------------------ |
-| `--ignore-push-failures` |         | Push what it can and ignores images with push failures |
-| `--include-deps`         |         | Also push images of services declared as dependencies  |
-| `-q`, `--quiet`          |         | Push without printing progress information             |
+| Option             | Default | Description                                                                |
+| ------------------ | ------- | -------------------------------------------------------------------------- |
+| `--ignore-missing` |         | Skip images that are not available locally instead of failing to push them |
+| `--include-deps`   |         | Also push images of services declared as dependencies                      |
+| `-q`, `--quiet`    |         | Push without printing progress information                                 |
 
 ## Global options
 

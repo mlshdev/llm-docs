@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/plans/docker-agentic-platform.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/subscription-billing/plans/docker-agentic-platform.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/plans/docker-agentic-platform.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/subscription-billing/plans/docker-agentic-platform.md)
 
 # Docker Agentic Platform plans
 
@@ -9,10 +9,10 @@
 
 [Docker Agentic Platform](https://agentic-platform.docker.com/) is a
 pay-as-you-go plan for running agent and tool workloads in isolated
-sandboxes with Docker-managed cloud infrastructure. You pay for the usage you accrue without a recurring
+sandboxes with Docker-managed cloud infrastructure. It also includes access to [Docker Offload](https://docs.docker.com/offload/). You pay for the usage you accrue without a recurring
 subscription fee.
 
-To activate access for the Console, cloud sandbox CLI, or API and SDKs, follow
+To activate access for the Console, cloud sandbox CLI, Offload, or API and SDKs, follow
 [Signup and billing](https://docs.docker.com/agentic-platform/signup/#activate-cloud-access).
 
 ## Usage

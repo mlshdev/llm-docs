@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/platform-release-notes.md)
+> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/platform-release-notes.md)
 
 # Accounts and admin release notes
 
@@ -126,7 +126,7 @@ and subscriptions.
   now available. Administrators can purchase licenses through sales,
   [assign them to members](https://docs.docker.com/accounts/organization/manage/manage-licenses/),
   and enforce
-  [organization policies](https://docs.docker.com/ai/sandboxes/governance/) for
+  [organization policies](https://docs.docker.com/ai/governance/organization/policies/) for
   Docker AI products from Docker Home.
 
 ## 2026-03-03

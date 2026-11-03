@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/compose-file/interpolation.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/reference/compose-file/interpolation.md)
+> Pinned source for Docker main: [content/reference/compose-file/interpolation.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/reference/compose-file/interpolation.md)
 
 # Interpolation
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/templates/update-a-template.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/templates/update-a-template.mdx)
+> Pinned source for Runpod main: [api-reference-v2/templates/update-a-template.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/templates/update-a-template.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/templates/update-a-template
 
 # Update A Template
@@ -56,7 +56,7 @@ retroactively — the template is a snapshot applied at creation time.
         - `category` (string; enum: `CPU`, `NVIDIA`, `AMD`): Controls how the template is grouped and filtered in the Runpod console. It does not affect hardware selection, scheduling, or billing. - `CPU` — CPU-only workloads - `NVIDIA` — NVIDIA GPU workloads - `AMD` — AMD GPU workloads
         - `mounts` (object): Storage mounts attached to a template. Templates support only a single persistent mount today; any `network` property is rejected with 422 by the schema validator. PATCH semantics: omitting `mounts` or sending `{}` leaves the existing mount unchanged.
           - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
-            - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
+            - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Minimum 10 GB.
             - `path` (required; string): Mount path inside the container. May be changed via PATCH.
         - `name` (string; minimum length: `1`)
         - `public` (boolean)
@@ -68,8 +68,8 @@ retroactively — the template is a snapshot applied at creation time.
 **Responses**
 
 - `200`: OK
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/json`
     - Schema
       - allOf:
@@ -94,7 +94,7 @@ retroactively — the template is a snapshot applied at creation time.
           - `name` (required; string)
           - `mounts` (required; object): Storage mounts attached to a template. Templates support only a single persistent mount today; any `network` property is rejected with 422 by the schema validator. PATCH semantics: omitting `mounts` or sending `{}` leaves the existing mount unchanged.
             - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
-              - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
+              - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Minimum 10 GB.
               - `path` (required; string): Mount path inside the container. May be changed via PATCH.
           - `serverless` (required; boolean): Whether this template is for serverless workers (true) or pods (false)
           - `public` (required; boolean): Whether this template is visible to other Runpod users
@@ -105,8 +105,8 @@ retroactively — the template is a snapshot applied at creation time.
             - `items` (string)
     - Example `template`: `{"id":"9x4m2p7v","name":"Renamed PyTorch Template","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"mounts":{"persistent":{"size":20,"path":"/workspace"}},"ports":["8888/http"],"env":{"JUPYTER_ENABLE_LAB":"yes"},"registry":null,"serverless":false,"public":false,"category":"NVIDIA","startSsh":true,"startJupyter":false,"allowedCudaVersions":[]}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -125,8 +125,8 @@ retroactively — the template is a snapshot applied at creation time.
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -136,8 +136,8 @@ retroactively — the template is a snapshot applied at creation time.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
 - `404`: The requested resource was not found or is not accessible to the caller.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -146,9 +146,9 @@ retroactively — the template is a snapshot applied at creation time.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
-- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when its expanded upstream request is too large, even if the incoming body is within the limit.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when the request it expands into is too large, even if the incoming body is within the limit.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -158,8 +158,8 @@ retroactively — the template is a snapshot applied at creation time.
         - `items` (string)
     - Example `requestTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Request body exceeds the 1048576 byte limit."}`
 - `422`: The request body or parameters were syntactically valid but failed validation.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -170,8 +170,8 @@ retroactively — the template is a snapshot applied at creation time.
     - Example `validationFailed`: `{"title":"Unprocessable Entity","status":422,"detail":"Request validation failed."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -181,8 +181,8 @@ retroactively — the template is a snapshot applied at creation time.
         - `items` (string)
     - Example `rateLimited`: `{"title":"Too Many Requests","status":429,"detail":"rate limit exceeded for the minute window"}`
 - `default`: Error
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

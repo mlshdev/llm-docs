@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [integrations/terraform/overview.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/integrations/terraform/overview.mdx)
+> Pinned source for Runpod main: [integrations/terraform/overview.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/integrations/terraform/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/integrations/terraform/overview
 
 # Manage Runpod infrastructure with Terraform

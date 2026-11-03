@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/tool-mixins.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/customize/author/tool-mixins.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/tool-mixins.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/customize/author/tool-mixins.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -159,8 +159,9 @@ A response confirms that Claude Code can reach the API and authenticate with
 your stored key. If authentication fails, check that you stored the key and
 approved the kit's request to use it. See
 [Credential bindings](https://docs.docker.com/ai/sandboxes/configuration/credentials/#credential-bindings).
-Network requests must also meet the sandbox's
-[network policy](https://docs.docker.com/ai/sandboxes/governance/concepts/#precedence).
+Network requests must also meet the sandbox's network policy, which combines
+the mixin's network rules with the developer's own. For more details, see
+[How rules combine](https://docs.docker.com/ai/governance/local/#how-rules-combine).
 
 Run `claude` without arguments to start an interactive session. Follow its
 first-run prompts. Exit Claude Code and the shell to return to your host.

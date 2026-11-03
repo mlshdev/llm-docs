@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/faq.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/faq.md)
 
 # FAQ
 
@@ -15,9 +15,9 @@ Model-provider charges are separate from sandbox compute.
 
 Organization governance for local sandboxes includes centrally managed network,
 filesystem, and MCP policies,
-[sign-in enforcement](https://docs.docker.com/ai/sandboxes/governance/monitor-and-enforce/sign-in-enforcement/),
-and [audit logs](https://docs.docker.com/ai/sandboxes/governance/audit/). These
-[organization governance features](https://docs.docker.com/ai/sandboxes/governance/) require a separate paid
+[sign-in enforcement](https://docs.docker.com/ai/governance/organization/sign-in-enforcement/),
+and [audit logs](https://docs.docker.com/ai/governance/organization/audit/). These
+[organization governance features](https://docs.docker.com/ai/governance/organization/) require a separate paid
 subscription —
 [contact Docker Sales](https://www.docker.com/products/ai-governance/#contact-sales)
 to get started.
@@ -31,7 +31,7 @@ Signing in gives each sandbox a verified identity, which lets Docker:
   containers, install packages, and push code. Your Docker identity is the
   anchor.
 - **Enable team features.** Team-scale features like
-  [organization governance](https://docs.docker.com/ai/sandboxes/governance/), shared environments, and audit logs
+  [organization governance](https://docs.docker.com/ai/governance/organization/), shared environments, and audit logs
   need a concept of "who," and adding that later would be worse for everyone.
 - **Authenticate against Docker infrastructure.** Sandboxes pull images, run
   daemons, and talk to Docker services. A Docker account authenticates those
@@ -47,8 +47,9 @@ governance is active, only organization allow rules grant access: local allow
 rules set with `sbx policy` are no longer evaluated, while local deny rules
 still apply on top.
 
-See [Organization policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/organization/). This
-feature requires a separate paid subscription —
+See
+[How organization policy relates to local and kit rules](https://docs.docker.com/ai/governance/organization/policies/#how-organization-policy-relates-to-local-and-kit-rules).
+This feature requires a separate paid subscription —
 [contact Docker Sales](https://www.docker.com/products/ai-governance/#contact-sales)
 to get started.
 
@@ -109,7 +110,7 @@ the sandbox, to pick up the new value.
 ## Why do agents run without approval prompts?
 
 The sandbox itself is the safety boundary. Because agents run inside an
-isolated microVM with [network policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/),
+isolated microVM with [network isolation](https://docs.docker.com/ai/sandboxes/security/isolation/#network-isolation),
 [credential isolation](https://docs.docker.com/ai/sandboxes/security/isolation/#credential-isolation), and no access to your host
 system outside explicitly shared paths, the usual reasons for approval prompts
 (preventing destructive commands, network access, file modifications) are

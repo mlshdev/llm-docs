@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml)
 
 # docker compose
 
@@ -221,9 +221,13 @@ Profiles can also be set by `COMPOSE_PROFILES` environment variable.
 
 ### Configuring parallelism
 
-Use `--parallel` to specify the maximum level of parallelism for concurrent engine calls.
+Use `--parallel` to specify the maximum level of parallelism for concurrent engine calls or builds.
 Calling `docker compose --parallel 1 pull` pulls the pullable images defined in the Compose file
-one at a time. This can also be used to control build concurrency.
+one at a time.
+
+Limiting build concurrency requires Buildx 0.38.0 or later. When services are linked by
+`additional_contexts` (`service:`), Buildx rejects a limit lower than the number of images to
+build, so Compose ignores it with a warning.
 
 Parallelism can also be set by the `COMPOSE_PARALLEL_LIMIT` environment variable.
 

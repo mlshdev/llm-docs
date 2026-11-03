@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/firecrawl-sandbox-kit.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/guides/firecrawl-sandbox-kit.md)
+> Pinned source for Docker main: [content/guides/firecrawl-sandbox-kit.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/guides/firecrawl-sandbox-kit.md)
 
 # Give sandboxed agents live web access with Firecrawl
 
@@ -159,10 +159,10 @@ API, including structured extraction with a schema, see the
 
 Without organization governance, your default network policy and kit-defined
 rules determine which domains the sandbox can access. Under organization
-governance, organization policy controls which domains can be allowed; local
-and kit-defined allow rules are inactive, while deny rules can still restrict
+governance, organization policy controls which domains can be allowed; local and
+kit-defined allow rules are inactive, while deny rules can still restrict
 access. See
-[Network policy precedence](https://docs.docker.com/ai/sandboxes/governance/concepts/#precedence).
+[How organization policy relates to local and kit rules](https://docs.docker.com/ai/governance/organization/policies/#how-organization-policy-relates-to-local-and-kit-rules).
 
 The Firecrawl kit requests access to PyPI during installation and
 `api.firecrawl.dev` at runtime. Its credential declaration tells the proxy to

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/account/replace-registered-ssh-public-keys.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/account/replace-registered-ssh-public-keys.mdx)
+> Pinned source for Runpod main: [api-reference-v2/account/replace-registered-ssh-public-keys.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/account/replace-registered-ssh-public-keys.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/account/replace-registered-ssh-public-keys
 
 # Replace Registered Ssh Public Keys
@@ -24,16 +24,16 @@ Replaces the account's full set of registered SSH public keys. Existing keys not
 **Responses**
 
 - `200`: OK — the updated key set
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/json`
     - Schema (object)
       - `keys` (required; array): The account's registered SSH public keys, one authorized\_keys-style entry per element (`<type> <base64-key> [comment]`).
         - `items` (string)
     - Example `keys`: `{"keys":["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILXGDN/SclOozk1xsDztpmhGiKkkrfQB9SKoO8dSIQQZ me@example.com"]}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -52,8 +52,8 @@ Replaces the account's full set of registered SSH public keys. Existing keys not
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -62,9 +62,9 @@ Replaces the account's full set of registered SSH public keys. Existing keys not
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
-- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when its expanded upstream request is too large, even if the incoming body is within the limit.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when the request it expands into is too large, even if the incoming body is within the limit.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -74,8 +74,8 @@ Replaces the account's full set of registered SSH public keys. Existing keys not
         - `items` (string)
     - Example `requestTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Request body exceeds the 1048576 byte limit."}`
 - `422`: The request body or parameters were syntactically valid but failed validation.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -86,8 +86,8 @@ Replaces the account's full set of registered SSH public keys. Existing keys not
     - Example `validationFailed`: `{"title":"Unprocessable Entity","status":422,"detail":"Request validation failed."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -97,8 +97,8 @@ Replaces the account's full set of registered SSH public keys. Existing keys not
         - `items` (string)
     - Example `rateLimited`: `{"title":"Too Many Requests","status":429,"detail":"rate limit exceeded for the minute window"}`
 - `default`: Error
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

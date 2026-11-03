@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/security/authentication/single-sign-on/_index.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/single-sign-on/_index.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/security/authentication/single-sign-on/_index.md)
 
 # Single sign-on overview
 
@@ -8,9 +8,11 @@
 - For: Administrators
 
 Single sign-on (SSO) lets users access Docker by authenticating through your
-identity provider (IdP). You can configure SSO for an entire company,
-including all associated organizations, or for a single organization. SSO
-requires a Docker Business subscription or an
+identity provider (IdP). Docker supports any SAML 2.0 identity provider, and
+Microsoft Entra ID (formerly Azure AD) for OpenID Connect (OIDC). You can
+configure SSO for an entire company, including all associated organizations,
+or for a single organization. SSO requires a Docker Business subscription or
+an
 [AI Governance](https://docs.docker.com/accounts/organization/manage/manage-licenses/)
 license.
 

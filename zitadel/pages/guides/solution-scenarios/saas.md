@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.0: [apps/docs/content/guides/solution-scenarios/saas.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/guides/solution-scenarios/saas.mdx)
+> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/solution-scenarios/saas.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/solution-scenarios/saas.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/solution-scenarios/saas
 
 This is an example architecture for a typical SaaS product.
@@ -11,7 +11,7 @@ They have two environments, the development and the production environment.
 In this case Time uses authentication and authorizations from ZITADEL.
 This means that the users and also their authorizations will be managed within ZITADEL.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/concepts/usecase/saas.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/concepts/usecase/saas.png)
 
 ## Organization
 

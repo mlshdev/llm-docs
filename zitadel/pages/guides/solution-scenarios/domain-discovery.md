@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.0: [apps/docs/content/guides/solution-scenarios/domain-discovery.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/guides/solution-scenarios/domain-discovery.mdx)
+> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/solution-scenarios/domain-discovery.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/solution-scenarios/domain-discovery.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/solution-scenarios/domain-discovery
 
 This guide should explain how domain discovery works and how to configure it in ZITADEL.
@@ -7,7 +7,7 @@ This guide should explain how domain discovery works and how to configure it in 
 
 Domain discovery is typically used in [B2B](https://zitadel.com/docs/guides/solution-scenarios/b2b) or [SaaS](https://zitadel.com/docs/guides/solution-scenarios/saas) scenarios where you have users from different organizations and you want to route them according to their login methods, which could be a user name or, depending on your settings, also an [email / phone number](https://zitadel.com/docs/guides/solution-scenarios/configurations#use-email-to-login).
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/solution-scenarios/domain-discovery.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/solution-scenarios/domain-discovery.png)
 
 In the example there is a service provider with a ZITADEL instance running on a [Custom Domain](https://help.zitadel.com/customer-portal-instances#add-custom-domain) on `login.mycompany.com`.
 By default, all users login on the organization **CIAM** with their preferred social login provider.

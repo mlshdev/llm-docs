@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/defaults.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/security/defaults.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/defaults.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/security/defaults.md)
 
 # Default security posture
 
@@ -12,15 +12,14 @@ following security posture.
 
 All outbound TCP traffic, including HTTP, HTTPS, and SSH, is blocked unless an
 explicit rule allows the destination. Outbound UDP is disabled by default. To
-use it, turn on the [experimental UDP feature](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#allow-outbound-udp)
+use it, turn on the [experimental UDP feature](https://docs.docker.com/ai/governance/local/network-rules/#allow-outbound-udp)
 and add UDP allow rules. ICMP is blocked. DNS queries use the sandbox's internal
 resolver, which enforces network policy.
 
 Run `sbx policy ls` to see the active network rules for your installation.
 Rules can be customized per machine with the `sbx policy` CLI, or managed
 centrally across your organization. Org-level rules take precedence over local
-rules. See
-[Network access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/).
+rules. See [Sandbox governance](https://docs.docker.com/ai/governance/).
 
 ## Workspace defaults
 

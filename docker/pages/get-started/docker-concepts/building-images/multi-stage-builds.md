@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/multi-stage-builds.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/get-started/docker-concepts/building-images/multi-stage-builds.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/multi-stage-builds.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/get-started/docker-concepts/building-images/multi-stage-builds.md)
 
 [Watch the video](https://www.youtube.com/watch?v=vR185cjwxZ8)
 
@@ -42,7 +42,7 @@ In this hands-on guide, you'll unlock the power of multi-stage builds to create 
 
 2. Open this [pre-initialized project](https://start.spring.io/#!type=maven-project\&language=java\&platformVersion=4.0.1\&packaging=jar\&configurationFileFormat=properties\&jvmVersion=21\&groupId=com.example\&artifactId=spring-boot-docker\&name=spring-boot-docker\&description=Demo%20project%20for%20Spring%20Boot\&packageName=com.example.spring-boot-docker\&dependencies=web) to generate a ZIP file. Here’s how that looks:
 
-![A screenshot of Spring Initializr tool selected with Java 21, Spring Web and Spring Boot 3.4.0](https://raw.githubusercontent.com/docker/docs/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/get-started/docker-concepts/building-images/images/multi-stage-builds-spring-initializer.webp?border=true)
+![A screenshot of Spring Initializr tool selected with Java 21, Spring Web and Spring Boot 3.4.0](https://raw.githubusercontent.com/docker/docs/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/get-started/docker-concepts/building-images/images/multi-stage-builds-spring-initializer.webp?border=true)
 
 ```
 [Spring Initializr](https://start.spring.io/) is a quickstart generator for Spring projects. It provides an extensible API to generate JVM-based projects with implementations for several common concepts — like basic language generation for Java, Kotlin, Groovy, and Maven.

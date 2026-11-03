@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/activity-logs.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/accounts/organization/activity-logs.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/activity-logs.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/accounts/organization/activity-logs.md)
 
 # Activity logs
 
@@ -19,7 +19,7 @@ Organization owners and members with a custom role that includes the
 > Use activity logs for an admin audit trail of your organization and
 > repositories, including AI Governance policy and settings changes. For
 > enforcement events, such as policy decisions and sandbox sessions, see
-> [AI Governance Audit Logs](https://docs.docker.com/ai/sandboxes/governance/audit/).
+> [AI Governance Audit Logs](https://docs.docker.com/ai/governance/organization/audit/).
 
 ## Access activity logs
 
@@ -214,7 +214,7 @@ The following table lists Offload events that cover lease start and end.
 The following table lists governance events that cover the AI Governance
 admin audit trail, such as policy and settings changes. For enforcement
 events, such as policy decisions and sandbox sessions, see
-[AI Governance Audit Logs](https://docs.docker.com/ai/sandboxes/governance/audit/).
+[AI Governance Audit Logs](https://docs.docker.com/ai/governance/organization/audit/).
 
 | Event                          | Description                         |
 | :----------------------------- | :---------------------------------- |
@@ -227,7 +227,7 @@ events, such as policy decisions and sandbox sessions, see
 
 - [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/) for
   the **View activity logs** permission and custom roles
-- [AI Governance Audit Logs](https://docs.docker.com/ai/sandboxes/governance/audit/) for
+- [AI Governance Audit Logs](https://docs.docker.com/ai/governance/organization/audit/) for
   enforcement events such as policy decisions and sandbox sessions
 - [Audit logs API](https://docs.docker.com/reference/api/hub/latest/#tag-audit-logs) to query events
   programmatically

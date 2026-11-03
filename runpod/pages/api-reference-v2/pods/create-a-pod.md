@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/pods/create-a-pod.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/pods/create-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/create-a-pod
 
 # Create A Pod
@@ -63,7 +63,7 @@ Which failures are worth retrying:
 | `402`  | Insufficient balance.                                                                                                                              | Stop; no candidate will succeed.           |
 | `403`  | Your account cannot access the requested pool.                                                                                                     | Skip this candidate, keep going.           |
 | `429`  | Rate limited.                                                                                                                                      | Back off using `Retry-After`, then resume. |
-| `5xx`  | Transient upstream failure.                                                                                                                        | Retry the same candidate with backoff.     |
+| `5xx`  | Transient server failure.                                                                                                                          | Retry the same candidate with backoff.     |
 
 Requests larger than 102400 bytes receive `413` after authentication
 and rate limiting, before deployment processing. Reduce the serialized
@@ -117,33 +117,37 @@ request rather than as absent capacity.
               - `vcpuCount` (required; integer; minimum: `2`): Number of vCPUs. Must be valid for the selected CPU flavor and must be a power of two.
         - `dataCenterIds` (array): Preferred data centers for placement. Omit or pass an empty array to let the scheduler choose.
           - `items` (string)
-        - `globalNetworking` (boolean; default: `false`): Enable global networking, giving the pod a private IP reachable across data centers. Requires an NVIDIA GPU and a global-networking-enabled data center (both enforced upstream). See `GET /v2/catalog/datacenters` (`globalNetwork`) for eligible data centers.
+        - `globalNetworking` (boolean; default: `false`): Enable global networking, giving the pod a private IP reachable across data centers. Requires an NVIDIA GPU and a global-networking-enabled data center. See `GET /v2/catalog/datacenters` (`globalNetwork`) for eligible data centers.
         - `gpu`: GPU request for a pod create. Carries the CUDA host constraints, which live here rather than at the body's top level so they are unrepresentable on a CPU pod.
           - allOf:
             - `variant 1` (object)
               - `id` (required; string): GPU type identifier
-              - `count` (integer; default: `1`; minimum: `1`): Number of GPUs
+              - `count` (integer; default: `1`; minimum: `1`; maximum: `1024`): Number of GPUs
             - `variant 2` (object)
               - `allowedCudaVersions` (array): Acceptable CUDA versions for the host machine, as `major.minor`. Omit to accept any version. Matching is exact, so a version no machine reports yields a capacity error rather than a fallback — discover valid values per GPU type via `GET /v2/catalog/gpus?include=AVAILABILITY&product=POD` (`cudaVersions`). A non-empty set is mutually exclusive with minCudaVersion (400 if both are sent). An explicit `[]` states no constraint, so it may accompany a floor.
                 - `items` (string; pattern: `^\d+\.\d+$`)
               - `minCudaVersion` (string; pattern: `^\d+\.\d+$`): Lowest acceptable CUDA version for the host machine, as `major.minor`, compared numerically rather than as a decimal — so 12.11 is above 12.2. Use this for an open-ended floor and allowedCudaVersions for an exact set. Mutually exclusive with a non-empty allowedCudaVersions (400 if both are sent); an explicit `[]` there states no constraint and may accompany this floor.
-              - `minRamPerGpu` (integer; minimum: `1`): Minimum host system RAM in GB per requested GPU. This is a placement filter, not a resource request. The actual total allocated system RAM may be higher and is returned in gpu.memory.
-              - `minVcpuCountPerGpu` (integer; minimum: `1`): Minimum host vCPU count per requested GPU. This is a placement filter, not a resource request. The actual total allocated vCPU count may be higher and is returned in gpu.vcpuCount.
-        - `mounts`: Storage mounts attached to a pod. `persistent` is mutually exclusive with both `network` and `global` (enforced at the handler with 400 if combined). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. PATCH semantics: - Omitting `mounts` or sending `{}` leaves the existing mount unchanged. - An explicit `network: []` is rejected with 400 (clearing mounts is not supported). - Mount kind is fixed at create — a PATCH that introduces a kind not present at create (persistent on a network pod, network on a persistent pod, or any mount on a previously-mountless pod) is rejected with 400. - The `volumeId` of a network mount is immutable; a PATCH that names a different `volumeId` is rejected with 400. - Partial mounts are not supported — every mount entry must include the full schema (`size` + `path` for persistent, `volumeId` + `path` for network). Missing required fields → 422.
+              - `minRamPerGpu` (integer; minimum: `1`; maximum: `65536`): Minimum host system RAM in GB per requested GPU. This is a placement filter, not a resource request. The actual total allocated system RAM may be higher and is returned in gpu.memory.
+              - `minVcpuCountPerGpu` (integer; minimum: `1`; maximum: `4096`): Minimum host vCPU count per requested GPU. This is a placement filter, not a resource request. The actual total allocated vCPU count may be higher and is returned in gpu.vcpuCount.
+        - `mounts`: Storage mounts attached to a pod. `persistent` (the volume disk) is mutually exclusive with both `network` and `global` (enforced at the handler with 400 if combined). A pod takes up to 4 network volumes and 1 global volume. Every network volume must be in the pod's data center, each volume may be listed once, and mount paths must not overlap; a request that breaks one of these is rejected. To change a pod's mounts after creation, see `UpdatePodMounts`.
           - allOf:
-            - `variant 1` (object): The mount kinds every resource that takes `mounts` shares. At-most-one of `persistent` or `network` may be set today (mutually exclusive, enforced at the handler with 400 if both are present). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. Left open so that concrete schemas can extend it and close themselves.
+            - `variant 1` (object): Shared base type for all resources that mount storage volumes. `persistent` and `network` cannot both be set (rejected with 400). Each resource that uses this type sets its own limit on network volumes.
               - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
-                - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
+                - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Minimum 10 GB.
                 - `path` (required; string): Mount path inside the container. May be changed via PATCH.
-              - `network` (array; maximum items: `1`)
-                - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
+              - `network` (array)
+                - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
                   - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
                   - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
             - `variant 2` (object)
-              - `global` (array; maximum items: `1`): At most one global volume, on GPU and CPU pods, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): upstream drops a persistent disk whenever a volume is attached. Same PATCH rules as `network`: global mounts are fixed at create, `global: []` is rejected with 400, and `volumeId` is immutable; only `path` may change.
-                - `items` (object): Reference to a GlobalVolume. Usage-billed, so it has no size. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
+              - `network` (array; maximum items: `4`): Up to 4 network volumes, all in the pod's data center.
+                - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
+                  - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
+                  - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
+              - `global` (array; maximum items: `1`): At most one global volume, on GPU and CPU pods, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): a persistent disk is dropped whenever a volume is attached. Same PATCH rules as `network`.
+                - `items` (object): Reference to a GlobalVolume. Usage-billed, so it has no size. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
                   - `volumeId` (required; string): ID of an existing GlobalVolume.
-                  - `path` (string): Mount path inside the container. Optional on create, where a default is chosen for you; a PATCH that omits it leaves the path unchanged.
+                  - `path` (string): Mount path inside the container. Optional; a default is chosen for you when omitted.
         - `startJupyter` (boolean; default: `false`): Create-time flag telling the provisioner to start JupyterLab: injects a generated `JUPYTER_PASSWORD` environment variable, unless the request already sets one. Only images that honor the convention start Jupyter from it (Runpod official images do); expose `8888/http` in `ports` to reach it. Not part of the pod's readable config — never returned by GET and not changeable by PATCH.
         - `startSsh` (boolean; default: `false`): Create-time flag telling the provisioner to set up SSH access: injects a `PUBLIC_KEY` environment variable carrying your account's registered SSH public keys, unless the request already sets one. **Requires registered keys** (`PUT /v2/account/ssh-keys`) — with none registered the flag does nothing and the pod has no SSH access. Only images that honor the convention start sshd from it (all Runpod official images do). Connect using the pod's `ssh` block; the `ssh.direct` variant additionally needs a `22/tcp` entry in `ports`. Not part of the pod's readable config — never returned by GET and not changeable by PATCH.
         - `templateId` (string; minimum length: `1`): ID of a pod template to base this pod on. The template is resolved at create time into the same container settings you could otherwise spread into this body (image, args, disk, ports, env, registry, persistent mount, startSsh, startJupyter, allowedCudaVersions); explicit body fields override the template's, except `env`, which is merged per key with body values winning. Sending either CUDA field (`gpu.allowedCudaVersions` or `gpu.minCudaVersion`) replaces the template's CUDA constraint entirely, and CPU pods ignore it (like the persistent mount). The template is a one-time source of settings: later template edits do not affect the pod, and the created pod does not retain a link to the template (`template` stays null). The template may be one of your own or a public catalog template — see `GET /v2/catalog/templates` (unknown or inaccessible ID → 404) — and must not be a serverless template (→ 422). CPU pods do not inherit a template's persistent mount.
@@ -152,8 +156,8 @@ request rather than as absent capacity.
 **Responses**
 
 - `201`: Created
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/json`
     - Schema
       - allOf:
@@ -174,33 +178,47 @@ request rather than as absent capacity.
             - `variant 2` (object)
               - `registry` (nullable): Container registry credential ID (for private images)
         - `variant 2` (object)
+          - `costCenter`: Cost center this resource's spend is attributed to. Absent when the resource is not attributed to a cost center, or when the caller lacks permission to view cost centers. Managed through `/v2/cost-centers`.
+            - allOf:
+              - `variant 1` (object)
+                - `id` (required; string)
+                - `value` (required; string): Cost center name exactly as stored, so it matches billing breakdowns.
+          - `tags` (array): The tags on this resource that are visible to the caller. Keys and values are returned exactly as stored. Tags under the reserved `runpod:` prefix, such as the cost center, are never listed here. Absent when the resource's tags are unavailable to the caller; an empty array means none are visible.
+            - `items` (object)
+              - `id` (required; string): ID of the tag itself, shared by every resource it is attached to.
+              - `key` (required; string)
+              - `value` (required; string): May be empty.
           - `id` (required; string)
           - `name` (required; string)
           - `status` (required; string; enum: `PROVISIONING`, `STARTING`, `RUNNING`, `EXITED`, `ERROR`, `TERMINATED`): Lifecycle status of a pod. - `PROVISIONING` — pod is being allocated - `STARTING` — container is starting - `RUNNING` — container is healthy - `EXITED` — container exited (stopped) - `ERROR` — container is in an unrecoverable error state - `TERMINATED` — pod has been permanently deleted
           - `actions` (required; array): Valid state transitions for the current status.
             - `items` (string; enum: `start`, `stop`, `restart`, `terminate`): State transition to trigger on a pod.
-          - `mounts` (required): Storage mounts attached to a pod. `persistent` is mutually exclusive with both `network` and `global` (enforced at the handler with 400 if combined). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. PATCH semantics: - Omitting `mounts` or sending `{}` leaves the existing mount unchanged. - An explicit `network: []` is rejected with 400 (clearing mounts is not supported). - Mount kind is fixed at create — a PATCH that introduces a kind not present at create (persistent on a network pod, network on a persistent pod, or any mount on a previously-mountless pod) is rejected with 400. - The `volumeId` of a network mount is immutable; a PATCH that names a different `volumeId` is rejected with 400. - Partial mounts are not supported — every mount entry must include the full schema (`size` + `path` for persistent, `volumeId` + `path` for network). Missing required fields → 422.
+          - `mounts` (required): Storage mounts attached to a pod. `persistent` (the volume disk) is mutually exclusive with both `network` and `global` (enforced at the handler with 400 if combined). A pod takes up to 4 network volumes and 1 global volume. Every network volume must be in the pod's data center, each volume may be listed once, and mount paths must not overlap; a request that breaks one of these is rejected. To change a pod's mounts after creation, see `UpdatePodMounts`.
             - allOf:
-              - `variant 1` (object): The mount kinds every resource that takes `mounts` shares. At-most-one of `persistent` or `network` may be set today (mutually exclusive, enforced at the handler with 400 if both are present). The `network` field is an array for forward compatibility with eventual multi-network-volume support, but `maxItems` is 1 today. Left open so that concrete schemas can extend it and close themselves.
+              - `variant 1` (object): Shared base type for all resources that mount storage volumes. `persistent` and `network` cannot both be set (rejected with 400). Each resource that uses this type sets its own limit on network volumes.
                 - `persistent` (object): Host-local persistent storage. Pinned to the pod's host machine — data does not survive a host failure. Disallowed on CPU pods. Mutually exclusive with NetworkMount. Deprecated: prefer NetworkMount for any data you cannot recreate.
-                  - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Upstream enforces a 10 GB floor.
+                  - `size` (required; integer; minimum: `10`): Host-local persistent storage in GB. Minimum 10 GB.
                   - `path` (required; string): Mount path inside the container. May be changed via PATCH.
-                - `network` (array; maximum items: `1`)
-                  - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
+                - `network` (array)
+                  - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
                     - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
                     - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
               - `variant 2` (object)
-                - `global` (array; maximum items: `1`): At most one global volume, on GPU and CPU pods, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): upstream drops a persistent disk whenever a volume is attached. Same PATCH rules as `network`: global mounts are fixed at create, `global: []` is rejected with 400, and `volumeId` is immutable; only `path` may change.
-                  - `items` (object): Reference to a GlobalVolume. Usage-billed, so it has no size. The underlying `volumeId` is immutable post-create; the mount `path` may be changed via PATCH.
+                - `network` (array; maximum items: `4`): Up to 4 network volumes, all in the pod's data center.
+                  - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
+                    - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
+                    - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
+                - `global` (array; maximum items: `1`): At most one global volume, on GPU and CPU pods, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): a persistent disk is dropped whenever a volume is attached. Same PATCH rules as `network`.
+                  - `items` (object): Reference to a GlobalVolume. Usage-billed, so it has no size. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
                     - `volumeId` (required; string): ID of an existing GlobalVolume.
-                    - `path` (string): Mount path inside the container. Optional on create, where a default is chosen for you; a PATCH that omits it leaves the path unchanged.
+                    - `path` (string): Mount path inside the container. Optional; a default is chosen for you when omitted.
           - `gpu`: Present for GPU pods; omitted from CPU pods.
             - allOf:
               - `variant 1`
                 - allOf:
                   - `variant 1` (object)
                     - `id` (required; string): GPU type identifier
-                    - `count` (integer; default: `1`; minimum: `1`): Number of GPUs
+                    - `count` (integer; default: `1`; minimum: `1`; maximum: `1024`): Number of GPUs
                   - `variant 2` (object)
                     - `vcpuCount` (required; number; format: double; minimum: `1`): Total vCPU count allocated to the pod across all requested GPUs.
                     - `memory` (required; number; format: double; minimum: `1`): Total system RAM in GB allocated to the pod across all requested GPUs.
@@ -274,8 +292,8 @@ request rather than as absent capacity.
           - `startedAt` (required; format: date-time; nullable)
     - Example `pod`: `{"id":"7h9k2m4n6p","name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"ports":["8888/http","22/tcp"],"env":{"MODEL_NAME":"llama-3"},"registry":null,"status":"PROVISIONING","actions":["start","terminate"],"mounts":{"persistent":{"size":20,"path":"/workspace"}},"gpu":{"id":"NVIDIA GeForce RTX 4090","count":1,"vcpuCount":16,"memory":64},"cloud":"SECURE","dataCenterId":"US-KS-2","cudaVersion":"12.8","ssh":{"proxy":{"host":"ssh.runpod.io","port":22,"username":"7h9k2m4n6p-64411eb2","command":"ssh 7h9k2m4n6p-64411eb2@ssh.runpod.io"},"direct":null},"template":"9x4m2p7v","cost":0.44,"locked":false,"globalNetworking":{"enabled":false},"runtime":null,"createdAt":"2026-06-01T12:00:00Z","startedAt":null}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -294,8 +312,8 @@ request rather than as absent capacity.
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -305,8 +323,8 @@ request rather than as absent capacity.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
 - `404`: The requested resource was not found or is not accessible to the caller.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -315,9 +333,9 @@ request rather than as absent capacity.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
-- `413`: The incoming request body or expanded upstream request exceeds the 102400 byte limit, or the upstream rejects the request as too large.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+- `413`: The incoming request body, or the request it expands into, exceeds the 102400 byte limit or is rejected as too large.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -326,8 +344,8 @@ request rather than as absent capacity.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
 - `422`: The request body or parameters were syntactically valid but failed validation.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -338,8 +356,8 @@ request rather than as absent capacity.
     - Example `validationFailed`: `{"title":"Unprocessable Entity","status":422,"detail":"Request validation failed."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -349,8 +367,8 @@ request rather than as absent capacity.
         - `items` (string)
     - Example `rateLimited`: `{"title":"Too Many Requests","status":429,"detail":"rate limit exceeded for the minute window"}`
 - `default`: Error
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

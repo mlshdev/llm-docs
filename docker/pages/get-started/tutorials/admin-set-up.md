@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/tutorials/admin-set-up.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/get-started/tutorials/admin-set-up.md)
+> Pinned source for Docker main: [content/get-started/tutorials/admin-set-up.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/get-started/tutorials/admin-set-up.md)
 
 # Roll out Docker to a pilot group
 
@@ -80,5 +80,5 @@ Continue with these guides when you're ready to expand the deployment:
   for additional policies and deployment controls
 - [Set up SSO and provisioning](https://docs.docker.com/security/authentication/single-sign-on/)
   for centralized identity management
-- [Govern Docker Sandboxes](https://docs.docker.com/ai/sandboxes/governance/) for
-  organization-wide agent policies
+- [Govern Docker Sandboxes](https://docs.docker.com/ai/governance/organization/)
+  for organization-wide agent policies

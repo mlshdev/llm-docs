@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/tutorials/run-an-agent.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/get-started/tutorials/run-an-agent.md)
+> Pinned source for Docker main: [content/get-started/tutorials/run-an-agent.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/get-started/tutorials/run-an-agent.md)
 
 # Run your coding agent in a sandbox
 
@@ -107,7 +107,7 @@ The first time you run a sandbox, `sbx` asks you to choose a default network
 policy. This policy controls which external services your sandboxes can reach.
 Select **Balanced** to permit common development services and block other
 destinations by default. You can change these rules later with
-[`sbx policy`](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/).
+[`sbx policy`](https://docs.docker.com/ai/governance/local/network-rules/).
 
 The built-in integrations start coding agents in their full-autonomy mode. For
 example, Codex bypasses approvals, Claude Code skips permission prompts, and

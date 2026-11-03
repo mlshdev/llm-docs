@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/orgs-groups.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/organizations/orgs-groups.mdx)
+> Pinned source for Runpod main: [organizations/orgs-groups.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/organizations/orgs-groups.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/orgs-groups
 
 # Groups

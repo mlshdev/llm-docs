@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/audit-logs/list-audit-logs.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/audit-logs/list-audit-logs.mdx)
+> Pinned source for Runpod main: [api-reference-v2/audit-logs/list-audit-logs.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/audit-logs/list-audit-logs.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/audit-logs/list-audit-logs
 
 # List Audit Logs
@@ -33,8 +33,8 @@ Returns the account's audit trail, newest first, cursor-paginated; an omitted `l
 **Responses**
 
 - `200`: OK
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/json`
     - Schema (object)
       - `auditLogs` (required; array)
@@ -51,8 +51,8 @@ Returns the account's audit trail, newest first, cursor-paginated; an omitted `l
         - `hasNextPage` (required; boolean): Whether more items exist after this page.
     - Example `auditLogs`: `{"auditLogs":[{"actorId":"user_id_abc_123","email":"actor@example.com","resourceType":"pod","resourceId":"abc123","action":"delete","value":"{\"status\":\"TERMINATED\"}","timestamp":"2026-09-02T00:00:00Z"},{"actorId":"user_id_abc_123","email":"actor@example.com","resourceType":"pod","resourceId":"abc123","action":"rename","value":"{\"name\":\"training-run-7\"}","timestamp":"2026-09-01T18:30:00Z"},{"actorId":"user_id_def_456","email":"admin@example.com","resourceType":"secret","resourceId":"sec_789","action":"update","value":"{\"id\":\"sec_789\",\"name\":\"HF_TOKEN\",\"sharedWithOrganization\":true}","timestamp":"2026-09-01T09:15:00Z"}],"pagination":{"nextCursor":"eyJ0cyI6IjIwMjYtMDktMDFUMDk6MTU6MDBaIn0=","hasNextPage":true}}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -71,8 +71,8 @@ Returns the account's audit trail, newest first, cursor-paginated; an omitted `l
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -81,9 +81,9 @@ Returns the account's audit trail, newest first, cursor-paginated; an omitted `l
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
-- `413`: The response would exceed the upstream response size cap. Request fewer items and retry; on paginated operations, lower `limit`.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+- `413`: The response would exceed the response size cap. Request fewer items and retry; on paginated operations, lower `limit`.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -93,8 +93,8 @@ Returns the account's audit trail, newest first, cursor-paginated; an omitted `l
         - `items` (string)
     - Example `responseTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Response too large for one request. Request fewer items and retry."}`
 - `422`: The request body or parameters were syntactically valid but failed validation.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -105,8 +105,8 @@ Returns the account's audit trail, newest first, cursor-paginated; an omitted `l
     - Example `validationFailed`: `{"title":"Unprocessable Entity","status":422,"detail":"Request validation failed."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -116,8 +116,8 @@ Returns the account's audit trail, newest first, cursor-paginated; an omitted `l
         - `items` (string)
     - Example `rateLimited`: `{"title":"Too Many Requests","status":429,"detail":"rate limit exceeded for the minute window"}`
 - `default`: Error
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

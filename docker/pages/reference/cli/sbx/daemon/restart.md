@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_daemon_restart.yaml](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/data/sbx_cli/sbx_daemon_restart.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_daemon_restart.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_daemon_restart.yaml)
 
 # sbx daemon restart
 

@@ -1,45 +1,49 @@
-> Pinned source for Docker main: [content/manuals/security/_index.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/security/_index.md)
+> Pinned source for Docker main: [content/manuals/security/_index.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/security/_index.md)
 
 # Secure Docker accounts and organizations
 
-Security helps individual users and organization owners secure their
-accounts, manage access, and control membership. You configure these
-settings in [Docker Home](https://app.docker.com/).
+Use these settings to protect your own sign-in, and to control who can join
+an organization and what they can do. You configure them in
+[Docker Home](https://app.docker.com/).
 
-## Individual accounts
+## Secure your account
 
-You sign in with your individual account.
+Docker offers several methods to secure your account. You can choose how you sign in and what the CLI uses instead of your password.
 
 - [Two-factor authentication](https://docs.docker.com/security/authentication/2fa/)
-  (2FA) adds a time-based one-time password (TOTP) from an authenticator
-  app to your password.
+  (2FA) requires a time-based one-time password (TOTP) from an authenticator
+  app after you enter your password.
 - A [personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/)
-  (PAT) authenticates the Docker CLI and tools without your password, and
-  is required for CLI sign-in when 2FA is on or single sign-on (SSO) is
-  enforced.
+  (PAT) signs you in to the Docker CLI and other tools in place of your
+  password. The CLI requires a PAT when two-factor authentication (2FA) is
+  on or single sign-on (SSO) is enforced.
+- [Connected accounts](https://docs.docker.com/accounts/individual/manage-account/#manage-connected-accounts)
+  let you sign in with Google or GitHub when the provider account uses the
+  same email address as your Docker account.
 
-## Organization accounts
+## Secure your organization
 
-Organization and company owners set up how members sign in, add them to
-the organization, configure automation, and control what members can do.
+Owners can choose how members sign in, how Docker adds them, and what they can do.
 
 - [Single sign-on](https://docs.docker.com/security/authentication/single-sign-on/)
-  (SSO) federates sign-in through your identity provider, which can cover
-  one organization or every organization in a company.
+  (SSO) allows members to sign-in through your identity provider.
 - [Provisioning](https://docs.docker.com/security/provisioning/) adds users with
-  System for Cross-domain Identity Management (SCIM), Just-in-Time (JIT)
-  provisioning, auto-provisioning, or domain matching.
+  SCIM, Just-in-Time (JIT) provisioning, or auto-provisioning. Once an SSO connection exists, Docker enables JIT by default, or you can configure SCIM.
 - An [organization access token](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
-  (OAT) stays with the organization when membership changes.
+  (OAT) gives automation access on Docker Hub to selected repositories,
+  organization settings, Docker Build Cloud, and Docker Governance. It
+  belongs to the organization, so that access keeps working when people
+  join or leave.
 - [OIDC connections](https://docs.docker.com/security/authentication/oidc-connections/)
-  use OpenID Connect to authenticate GitHub Actions with short-lived
-  tokens, as an alternative to a long-lived OAT.
+  let GitHub Actions sign in with a short-lived token instead of a
+  long-lived OAT. Organization owners and editors can create, update, and
+  delete these connections.
 - [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/)
   control what members can do after they join.
 
 ## Next steps
 
-- [Authentication](https://docs.docker.com/security/authentication/): Two-factor authentication, single sign-on, and OIDC connections.
-- [Access tokens](https://docs.docker.com/security/access-tokens/): Personal and organization access tokens for the Docker CLI and automation.
-- [Provisioning](https://docs.docker.com/security/provisioning/): Add users with SCIM, JIT, auto-provisioning, and domain management.
-- [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/): Assign core or custom roles to control access in your organization.
+- [Choose a personal or organization access token](https://docs.docker.com/security/access-tokens/).
+- [Choose how to add users](https://docs.docker.com/security/provisioning/).
+- Compare what members can do in
+  [Roles and permissions](https://docs.docker.com/security/roles-and-permissions/core-roles/).

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/catalog/get-a-gpu-type.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/catalog/get-a-gpu-type.mdx)
+> Pinned source for Runpod main: [api-reference-v2/catalog/get-a-gpu-type.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/catalog/get-a-gpu-type.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/catalog/get-a-gpu-type
 
 # Get A Gpu Type
@@ -23,7 +23,7 @@ Returns a single GPU type with pricing. Availability details are included only w
   - Example: `["POD","SERVERLESS"]`
 - `count` (query; integer; default: `1`; minimum: `1`): GPU count for availability and lowest-price calculations. Valid only with include=AVAILABILITY. Defaults to 1.
   - Example: `2`
-- `cloud` (query; string; enum: `SECURE`, `COMMUNITY`): Cloud type for availability and lowest-price calculations. Valid only with include=AVAILABILITY. Supported values: SECURE, COMMUNITY. Upstream default when omitted: SECURE.
+- `cloud` (query; string; enum: `SECURE`, `COMMUNITY`): Cloud type for availability and lowest-price calculations. Valid only with include=AVAILABILITY. Supported values: SECURE, COMMUNITY. Default when omitted: SECURE.
 - `countryCodes` (query; array): Comma-separated ISO 3166-1 alpha-2 country codes, uppercase, to constrain availability to — e.g. FR or FR,DE. Values within this filter use OR semantics. Valid only with include=AVAILABILITY (400 otherwise); a malformed entry is a 422. Scopes availability, lowest-price calculations and the dataCenters array to those countries, so a listed data center outside them is omitted rather than returned with availability NONE. On the list endpoint a GPU type with no data center in those countries drops out entirely; the single-GPU endpoint still returns the requested type, with availability NONE and dataCenters omitted, so a 404 keeps meaning the GPU type does not exist. Read the NONE on availability rather than the absence of dataCenters, which is also absent when availability was not requested.
   - Example: `["FR","DE"]`
 - `cudaVersions` (query; array): Comma-separated CUDA versions to scope availability and lowest-price calculations to, matched exactly. Format: major.minor, e.g. 12.8 — a bare major is rejected here because it identifies no version. Valid only with include=AVAILABILITY (400 otherwise) and mutually exclusive with minCudaVersion (400 if both are sent); a malformed entry is a 422. Also narrows the returned cudaVersions array; omit it to enumerate every version offered.
@@ -34,8 +34,8 @@ Returns a single GPU type with pricing. Availability details are included only w
 **Responses**
 
 - `200`: OK
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/json`
     - Schema (object)
       - `id` (required; string): Individual GPU type identifier (use for pod creation)
@@ -52,6 +52,8 @@ Returns a single GPU type with pricing. Availability details are included only w
       - `maxCount` (required; object): The largest number of GPUs you can request on a single pod of this type, quoted separately per cloud. A pod runs on one machine, so this is the GPU count of the largest machine of this type Runpod operates in that cloud. This is a ceiling, not a stock level — it does not mean that many GPUs are free right now. For current availability, request `include=AVAILABILITY&product=POD` and read `availability` (overall) or `dataCenters` (per data center).
         - `secure` (required; integer)
         - `community` (required; integer)
+      - `minVcpuCount` (integer): Minimum total vCPU count reported across matching machines for the requested `count` and availability filters. Present only with include=AVAILABILITY and omitted when `availability` is `NONE`.
+      - `minRam` (integer): Minimum total system RAM in GB reported across matching machines for the requested `count` and availability filters. This is host RAM, not the GPU VRAM reported in `memory`. Present only with include=AVAILABILITY and omitted when `availability` is `NONE`.
       - `availability` (string; enum: `NONE`, `LOW`, `MEDIUM`, `HIGH`): Catalog stock availability level.
       - `dataCenters` (array): Per-datacenter GPU availability for the requested `product` contexts, listing only the datacenters that offer this GPU in the requested configuration. Present only when requested with include=AVAILABILITY, which also requires `product`, and omitted entirely when the configuration is unavailable everywhere.
         - `items` (object)
@@ -73,8 +75,8 @@ Returns a single GPU type with pricing. Availability details are included only w
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -84,8 +86,8 @@ Returns a single GPU type with pricing. Availability details are included only w
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
 - `404`: The requested resource was not found or is not accessible to the caller.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -96,8 +98,8 @@ Returns a single GPU type with pricing. Availability details are included only w
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -107,8 +109,8 @@ Returns a single GPU type with pricing. Availability details are included only w
         - `items` (string)
     - Example `rateLimited`: `{"title":"Too Many Requests","status":429,"detail":"rate limit exceeded for the minute window"}`
 - `default`: Error
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/_index.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/build/policies/_index.md)
+> Pinned source for Docker main: [content/manuals/build/policies/_index.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/build/policies/_index.md)
 
 Building with Docker often involves downloading remote resources. These
 external dependencies, such as Docker images, Git repositories, remote files,

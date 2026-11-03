@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -105,32 +105,11 @@ $ sbx run docker.io/sbx/copilot-kit:latest
 $ sbx run docker.io/sbx/droid-kit:latest
 ```
 
-## Agent can't install packages or reach an API
+## Network access and policy
 
-Sandboxes use [network access rules](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/) to
-control outbound traffic.
-If the agent fails to install packages or call an external API, the target
-domain is likely not in the allow list. Check which requests are being blocked:
-
-```console
-$ sbx policy log
-```
-
-Then allow the domains your workflow needs:
-
-```console
-$ sbx policy allow network "*.npmjs.org,*.pypi.org,files.pythonhosted.org"
-```
-
-To allow all outbound traffic instead:
-
-```console
-$ sbx policy allow network "**"
-```
-
-If `sbx policy allow` doesn't unblock the request, your organization may
-manage sandbox policies centrally and take precedence over local rules. See
-[Organization policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/organization/).
+For problems caused by network rules, approvals, or organization governance,
+such as blocked requests, inactive allow rules, or missing audit records, see
+[Troubleshoot governance](https://docs.docker.com/ai/governance/troubleshooting/).
 
 ## Kit fails to install: source not in allowlist
 
@@ -188,7 +167,7 @@ can't be recovered. Use an address-based rule in that case:
 $ sbx policy allow network "10.1.2.3:22"
 ```
 
-UDP requires [experimental UDP egress](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#allow-outbound-udp)
+UDP requires [experimental UDP egress](https://docs.docker.com/ai/governance/local/network-rules/#allow-outbound-udp)
 and UDP allow rules. ICMP is blocked and can't be unblocked with policy rules.
 
 For Git operations over SSH, you can either add an allow rule for the Git
@@ -226,7 +205,7 @@ If credentials are configured correctly but API calls still fail, check
 the `transparent` proxy don't get credential injection. This can happen when a
 client inside the sandbox (such as a process in a Docker container) isn't
 configured to use the forward proxy. See
-[Monitoring network activity](https://docs.docker.com/ai/sandboxes/governance/monitor-and-enforce/monitoring/)
+[View network activity](https://docs.docker.com/ai/governance/local/test-monitor/#view-network-activity)
 for details.
 
 ## MCP server streams stall

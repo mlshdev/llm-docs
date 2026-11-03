@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/create-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/serverless/create-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/create-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/serverless/create-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/create-a-serverless-endpoint
 
 # Create A Serverless Endpoint
@@ -52,8 +52,8 @@ chance of workers failing to start when a single pool is exhausted.
 
 If your workload needs a specific card, pick the pool that holds it and
 exclude the rest of that pool with `gpu.excludedTypes`. Keep at least
-one type in the selection — upstream rejects a selection that leaves
-none.
+one type in the selection — a selection that leaves none is
+rejected.
 
 **Authentication:** `bearerAuth`
 
@@ -85,7 +85,7 @@ none.
             - `variant 1` (object)
               - `pools` (array; minimum items: `1`): Serverless GPU pool IDs (as returned by `GET /v2/catalog/gpus` in `pool`). Workers are placed on whichever listed pool has capacity. Narrow a pool down to specific cards with `excludedTypes`. On `PATCH`, `pools` and `excludedTypes` are one selection and are replaced together, so sending `pools` by itself **clears the exclusions**. Two cases: - **Changing pools, keeping exclusions** — send both fields in one request: `{"gpu": {"pools": ["ADA_24"], "excludedTypes": ["NVIDIA L40"]}}`. `GET` the endpoint first to read the current `excludedTypes` and resend the ones that still apply to the new pools; an exclusion naming a type outside `pools` is a 400. - **Changing only `count` or a CUDA constraint** — omit `pools`: `{"gpu": {"minCudaVersion": "12.4"}}`. The pool list and the exclusions are both left exactly as they are. `excludedTypes` documents the full rule.
                 - `items` (string)
-              - `excludedTypes` (array; unique items): GPU **type** IDs to subtract from the selected pools — the `id` field of `GET /v2/catalog/gpus`, the same identifiers pods take in `gpu.id`. Workers run on every type in `pools` except these. Omit to use the whole pool. Pools stay the unit of selection; types are the unit of subtraction. There is no inclusive allowlist: a card later added to one of your pools becomes eligible, which is the honest reading of "this pool, minus these". Tied to `pools`, because the two together are one selection: supplying `pools` replaces that selection wholesale, so a `PATCH` sending `pools` **without `excludedTypes`** **clears** them — restate them to keep them. A `PATCH` that omits `pools` leaves both the pools and the exclusions untouched, so changing only a CUDA constraint cannot widen a pinned endpoint. Rejected with 400 if a value is not a GPU type in one of `pools`; upstream accepts unrecognized exclusions silently, so a typo would otherwise produce a filter that does nothing. Surrounding whitespace is trimmed, so `" NVIDIA L40"` and `"NVIDIA L40"` mean the same card.
+              - `excludedTypes` (array; unique items): GPU **type** IDs to subtract from the selected pools — the `id` field of `GET /v2/catalog/gpus`, the same identifiers pods take in `gpu.id`. Workers run on every type in `pools` except these. Omit to use the whole pool. Pools stay the unit of selection; types are the unit of subtraction. There is no inclusive allowlist: a card later added to one of your pools becomes eligible, which is the honest reading of "this pool, minus these". Tied to `pools`, because the two together are one selection: supplying `pools` replaces that selection wholesale, so a `PATCH` sending `pools` **without `excludedTypes`** **clears** them — restate them to keep them. A `PATCH` that omits `pools` leaves both the pools and the exclusions untouched, so changing only a CUDA constraint cannot widen a pinned endpoint. Rejected with 400 if a value is not a GPU type in one of `pools`, so a typo cannot produce a filter that does nothing. Surrounding whitespace is trimmed, so `" NVIDIA L40"` and `"NVIDIA L40"` mean the same card.
                 - `items` (string; pattern: `^\s*[^-\s]`)
               - `count` (integer; default: `1`; minimum: `1`): GPUs per worker
             - `variant 2` (object)
@@ -141,8 +141,8 @@ none.
 **Responses**
 
 - `201`: Created
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/json`
     - Schema
       - allOf:
@@ -163,6 +163,16 @@ none.
             - `variant 2` (object)
               - `registry` (nullable): Container registry credential ID (for private images)
         - `variant 2` (object)
+          - `costCenter`: Cost center this resource's spend is attributed to. Absent when the resource is not attributed to a cost center, or when the caller lacks permission to view cost centers. Managed through `/v2/cost-centers`.
+            - allOf:
+              - `variant 1` (object)
+                - `id` (required; string)
+                - `value` (required; string): Cost center name exactly as stored, so it matches billing breakdowns.
+          - `tags` (array): The tags on this resource that are visible to the caller. Keys and values are returned exactly as stored. Tags under the reserved `runpod:` prefix, such as the cost center, are never listed here. Absent when the resource's tags are unavailable to the caller; an empty array means none are visible.
+            - `items` (object)
+              - `id` (required; string): ID of the tag itself, shared by every resource it is attached to.
+              - `key` (required; string)
+              - `value` (required; string): May be empty.
           - `id` (required; string)
           - `name` (required; string)
           - `type` (string; enum: `QUEUE`, `LOAD_BALANCER`): Request-routing semantics for a modern serverless endpoint. - `QUEUE` — submit asynchronous or synchronous jobs through the managed queue. - `LOAD_BALANCER` — send requests directly to worker-defined HTTP paths. Configure via `env`: `PORT` (server port, default 80), `PORT_HEALTH` (health-check port, default 80), and `HEALTH_CHECK_PATH` (path the load balancer polls for worker health, default `/ping`).
@@ -187,7 +197,7 @@ none.
                   - `variant 1` (object)
                     - `pools` (array; minimum items: `1`): Serverless GPU pool IDs (as returned by `GET /v2/catalog/gpus` in `pool`). Workers are placed on whichever listed pool has capacity. Narrow a pool down to specific cards with `excludedTypes`. On `PATCH`, `pools` and `excludedTypes` are one selection and are replaced together, so sending `pools` by itself **clears the exclusions**. Two cases: - **Changing pools, keeping exclusions** — send both fields in one request: `{"gpu": {"pools": ["ADA_24"], "excludedTypes": ["NVIDIA L40"]}}`. `GET` the endpoint first to read the current `excludedTypes` and resend the ones that still apply to the new pools; an exclusion naming a type outside `pools` is a 400. - **Changing only `count` or a CUDA constraint** — omit `pools`: `{"gpu": {"minCudaVersion": "12.4"}}`. The pool list and the exclusions are both left exactly as they are. `excludedTypes` documents the full rule.
                       - `items` (string)
-                    - `excludedTypes` (array; unique items): GPU **type** IDs to subtract from the selected pools — the `id` field of `GET /v2/catalog/gpus`, the same identifiers pods take in `gpu.id`. Workers run on every type in `pools` except these. Omit to use the whole pool. Pools stay the unit of selection; types are the unit of subtraction. There is no inclusive allowlist: a card later added to one of your pools becomes eligible, which is the honest reading of "this pool, minus these". Tied to `pools`, because the two together are one selection: supplying `pools` replaces that selection wholesale, so a `PATCH` sending `pools` **without `excludedTypes`** **clears** them — restate them to keep them. A `PATCH` that omits `pools` leaves both the pools and the exclusions untouched, so changing only a CUDA constraint cannot widen a pinned endpoint. Rejected with 400 if a value is not a GPU type in one of `pools`; upstream accepts unrecognized exclusions silently, so a typo would otherwise produce a filter that does nothing. Surrounding whitespace is trimmed, so `" NVIDIA L40"` and `"NVIDIA L40"` mean the same card.
+                    - `excludedTypes` (array; unique items): GPU **type** IDs to subtract from the selected pools — the `id` field of `GET /v2/catalog/gpus`, the same identifiers pods take in `gpu.id`. Workers run on every type in `pools` except these. Omit to use the whole pool. Pools stay the unit of selection; types are the unit of subtraction. There is no inclusive allowlist: a card later added to one of your pools becomes eligible, which is the honest reading of "this pool, minus these". Tied to `pools`, because the two together are one selection: supplying `pools` replaces that selection wholesale, so a `PATCH` sending `pools` **without `excludedTypes`** **clears** them — restate them to keep them. A `PATCH` that omits `pools` leaves both the pools and the exclusions untouched, so changing only a CUDA constraint cannot widen a pinned endpoint. Rejected with 400 if a value is not a GPU type in one of `pools`, so a typo cannot produce a filter that does nothing. Surrounding whitespace is trimmed, so `" NVIDIA L40"` and `"NVIDIA L40"` mean the same card.
                       - `items` (string; pattern: `^\s*[^-\s]`)
                     - `count` (integer; default: `1`; minimum: `1`): GPUs per worker
                   - `variant 2` (object)
@@ -234,8 +244,8 @@ none.
     - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/4m7x2k9q/run","runSync":"https://api.runpod.ai/v2/4m7x2k9q/runsync","status":"https://api.runpod.ai/v2/4m7x2k9q/status/{job_id}","stream":"https://api.runpod.ai/v2/4m7x2k9q/stream/{job_id}","cancel":"https://api.runpod.ai/v2/4m7x2k9q/cancel/{job_id}","retry":"https://api.runpod.ai/v2/4m7x2k9q/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/4m7x2k9q/purge-queue","health":"https://api.runpod.ai/v2/4m7x2k9q/health"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":0,"max":5,"idleTimeout":5},"scaling":{"type":"QUEUE_DELAY","queueDelay":4},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"mounts":{"network":[{"volumeId":"2q9m7x4c"}],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
     - Example `cpuEndpoint`: `{"id":"7c3v1n8p","name":"cpu-inference","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/7c3v1n8p/run","runSync":"https://api.runpod.ai/v2/7c3v1n8p/runsync","status":"https://api.runpod.ai/v2/7c3v1n8p/status/{job_id}","stream":"https://api.runpod.ai/v2/7c3v1n8p/stream/{job_id}","cancel":"https://api.runpod.ai/v2/7c3v1n8p/cancel/{job_id}","retry":"https://api.runpod.ai/v2/7c3v1n8p/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/7c3v1n8p/purge-queue","health":"https://api.runpod.ai/v2/7c3v1n8p/health"},"image":"python:3.11-slim","args":"","disk":20,"ports":[],"env":{},"registry":null,"cpu":[{"id":"cpu5c","vcpuCount":4,"memory":16},{"id":"cpu5g","vcpuCount":8,"memory":16}],"workers":{"min":0,"max":3,"idleTimeout":10},"scaling":{"type":"QUEUE_DELAY","queueDelay":4},"dataCenterIds":[],"networkVolumes":[],"mounts":{"network":[],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -254,8 +264,8 @@ none.
         - `items` (string)
     - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
 - `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -265,8 +275,8 @@ none.
         - `items` (string)
     - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
 - `404`: The requested resource was not found or is not accessible to the caller.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -275,9 +285,9 @@ none.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
-- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when its expanded upstream request is too large, even if the incoming body is within the limit.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+- `413`: The incoming request body exceeds 1048576 bytes (1 MiB). Body size is checked after authentication and rate limiting. GET and DELETE reject any nonempty request body with `422` instead. An operation can also return this status when the request it expands into is too large, even if the incoming body is within the limit.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -287,8 +297,8 @@ none.
         - `items` (string)
     - Example `requestTooLarge`: `{"title":"Request Entity Too Large","status":413,"detail":"Request body exceeds the 1048576 byte limit."}`
 - `422`: The request body or parameters were syntactically valid but failed validation.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -299,8 +309,8 @@ none.
     - Example `validationFailed`: `{"title":"Unprocessable Entity","status":422,"detail":"Request validation failed."}`
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary
@@ -310,8 +320,8 @@ none.
         - `items` (string)
     - Example `rateLimited`: `{"title":"Too Many Requests","status":429,"detail":"rate limit exceeded for the minute window"}`
 - `default`: Error
-  - Header `RateLimit` (string)
-  - Header `RateLimit-Policy` (string)
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `application/problem+json`
     - Schema (object)
       - `title` (required; string): Short human-readable summary

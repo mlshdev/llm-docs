@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/settings-and-maintenance/settings.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/desktop/settings-and-maintenance/settings.md)
+> Pinned source for Docker main: [content/manuals/desktop/settings-and-maintenance/settings.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/desktop/settings-and-maintenance/settings.md)
 
 # Change your Docker Desktop settings
 
@@ -6,7 +6,7 @@ Customize Docker Desktop behavior and optimize performance and resource usage wi
 
 To open **Settings** either:
 
-- Select the Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/desktop/images/whale-x.svg) and then **Settings**
+- Select the Docker menu ![whale menu](https://raw.githubusercontent.com/docker/docs/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/desktop/images/whale-x.svg) and then **Settings**
 - Select the **Settings** icon from the Docker Desktop Dashboard.
 
 You can also locate the `settings-store.json` file at:
@@ -348,10 +348,10 @@ Reconfigure CLI tool installation paths and privileged system permissions. With 
 
 ## Docker Offload
 
-Enable Docker Offload and configure idle timeout and GPU support for cloud-based workloads.
+Enable [Docker Offload v1](https://docs.docker.com/offload/v1/) and configure idle timeout and GPU support for cloud-based workloads.
 
-| Setting                   | Description                                                                                                                                                                                                                            | Notes                                        |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| **Enable Docker Offload** | Run your containers in the cloud.                                                                                                                                                                                                      | Requires sign-in and an Offload subscription |
-| **Idle timeout**          | Set the duration of time between no activity and Docker Offload entering idle mode. For details about idle timeout, see [Session management and idle state](https://docs.docker.com/offload/about/#session-management-and-idle-state). |                                              |
-| **Enable GPU support**    | Let your workloads use cloud GPU if available.                                                                                                                                                                                         |                                              |
+| Setting                   | Description                                                                                                                                                                                                                               | Notes                                        |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **Enable Docker Offload** | Run your containers in the cloud using [Docker Offload v1](https://docs.docker.com/offload/v1/).                                                                                                                                          | Requires sign-in and an Offload subscription |
+| **Idle timeout**          | Set the duration of time between no activity and Docker Offload entering idle mode. For details about idle timeout, see [Session management and idle state](https://docs.docker.com/offload/v1/about/#session-management-and-idle-state). |                                              |
+| **Enable GPU support**    | Let your workloads use cloud GPU if available.                                                                                                                                                                                            |                                              |

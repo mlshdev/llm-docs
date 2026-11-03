@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/endpoints/POST/endpoints/endpointId/update.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference/endpoints/POST/endpoints/endpointId/update.mdx)
+> Pinned source for Runpod main: [api-reference/endpoints/POST/endpoints/endpointId/update.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference/endpoints/POST/endpoints/endpointId/update.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/endpoints/POST/endpoints/endpointId/update
 
 # Update an endpoint

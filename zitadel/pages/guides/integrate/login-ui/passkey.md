@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.0: [apps/docs/content/guides/integrate/login-ui/passkey.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/guides/integrate/login-ui/passkey.mdx)
+> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/integrate/login-ui/passkey.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/integrate/login-ui/passkey.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/passkey
 
 Passkeys are a replacement for passwords that provide faster, easier, and more secure sign-ins to websites and apps even across multiple devices.
@@ -14,7 +14,7 @@ Passkeys and there underlying protocols are a standard defined by the [FIDO Stan
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/login-ui/passkey-registration-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/login-ui/passkey-registration-flow.png)
 
 There are two options to onboard users with passkeys:
 
@@ -222,7 +222,7 @@ Next step is to authenticate the user with the new registered passkey.
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/public/img/guides/login-ui/passkey-login-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/login-ui/passkey-login-flow.png)
 
 ### Create Session
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/desktop/release-notes.md)
+> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -9,6 +9,60 @@ Releases are gradually rolled out to ensure quality control. If the latest versi
 Docker Desktop versions older than 6 months from the latest release are not available for download. Previous release notes are available in our [documentation repository](https://github.com/docker/docs/tree/main/content/manuals/desktop/previous-versions).
 
 For more frequently asked questions, see the [FAQs](https://docs.docker.com/desktop/troubleshoot-and-support/faqs/releases/).
+
+## 4.98.0
+
+**Release date:** 2026-11-03
+
+Download Docker Desktop:
+
+- [Windows](https://desktop.docker.com/win/main/amd64/245422/Docker%20Desktop%20Installer.exe)
+- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/245422/Docker%20Desktop%20Installer.exe)
+- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/245422/Docker.dmg)
+- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/245422/Docker.dmg)
+- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/245422/docker-desktop-amd64.deb)
+- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/245422/docker-desktop-x86_64.rpm)
+- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/245422/docker-desktop-x86_64.pkg.tar.zst)
+
+### Updates
+
+- Docker Offload `v0.7.35`
+- The following Kubernetes images have been updated to bring in latest security fixes. New tags listed below:
+  - `docker/desktop-storage-provisioner:v5.0`
+  - `docker/desktop-vpnkit-controller:v5.0`
+  - `docker/desktop-containerd-registry-mirror:v0.0.5`
+  - `docker/desktop-cloud-provider-kind:v0.8.0`
+
+### Bug fixes and enhancements
+
+#### For all platforms
+
+- Fixed Docker Hub model pulls failing on proxy-only networks where local DNS could not resolve the authentication endpoint.
+- Fixed Docker Desktop staying on the **Starting** page after Docker Engine had started. Fixes [docker/desktop-feedback#685](https://github.com/docker/desktop-feedback/issues/685)
+- Fixed `diagnose gather` on slow or stopped VMs by capping the VM start wait to 120 seconds.
+- Improved responsiveness of error dialogs.
+- Fixed moving the disk image to another volume failing when the copy took more than 5 minutes.
+- Fixed uncaught **Request aborted** errors each time the engine stopped.
+
+#### For Mac
+
+- Removed the `com.docker.vmnetd` privileged helper. A helper installed by a previous version is uninstalled automatically, and the `install vmnetd` option of the command line installer is gone.
+
+#### For Windows
+
+- Added Docker VMM to the **Clean up data** dialog.
+- Fixed WSL error code parsing so that users running newer WSL versions (3.0.x) receive accurate, actionable recovery instructions instead of a generic error message.
+- Fixed the Docker VMM backend option on Windows ARM64 to appear correctly disabled with an explanation in settings, and automatically fall back to WSL 2 during install or upgrade.
+- Fixed an intermittent **Being used by another process** error on the `desktop-linux` Docker context file when the engine started.
+- Fixed file sharing treating a directory as shared, or as allowed by Settings Management, when its name only started with that of a shared or allowed directory (e.g. `C:\foobar` for `C:\foo`). Allowed file share entries now match whole directory names only.
+- Fixed an issue where processes started in the Docker Desktop terminal could be left running after closing the terminal.
+- Added support for running `docker` and `docker compose` from WSL 2 distros when Docker VMM is the engine, including bind mounts of files on Windows drives such as `/mnt/c`.
+- Fixed Docker VMM re-enabling the WSL feature on update and showing a **Press any key to install WSL** prompt when WSL is uninstalled. Fixes [docker/desktop-feedback#775](https://github.com/docker/desktop-feedback/issues/775).
+
+### Security
+
+- Fixed [CVE-2026-98432](https://www.cve.org/cverecord?id=CVE-2026-98432), a use-after-free in the Linux kernel's IPv4 TCP handling.
+- Fixed [CVE-2026-112917](https://www.cve.org/cverecord?id=CVE-2026-112917) where a container on the WSL 2 backend could bypass the AF\_VSOCK restriction. Requires WSL 3.0.3 or later.
 
 ## 4.97.0
 

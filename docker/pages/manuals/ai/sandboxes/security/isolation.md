@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/isolation.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/security/isolation.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/isolation.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/security/isolation.md)
 
 # Isolation layers
 
@@ -43,14 +43,15 @@ directly with each other or share a network with your host. To reach a service
 running on the host through a policy-controlled connection, see
 [Accessing host services from a sandbox](https://docs.docker.com/ai/sandboxes/workflows/development/#accessing-host-services-from-a-sandbox).
 
-All outbound TCP traffic passes through a proxy on your host that enforces the
-[network access policy](https://docs.docker.com/ai/sandboxes/governance/access-controls/network/). The sandbox
-routes traffic through either a forward proxy or a transparent proxy depending
-on the client's configuration. Both enforce the network policy. Only the
+All outbound TCP traffic passes through a proxy on your host that enforces
+network policy. The sandbox routes traffic through either a forward proxy or a
+transparent proxy depending on the client's configuration. Both enforce the
+network policy. For how network policy is set, see
+[Sandbox governance](https://docs.docker.com/ai/governance/). Only the
 forward proxy [injects credentials](https://docs.docker.com/ai/sandboxes/configuration/credentials/) for AI services.
 
 Outbound UDP is disabled by default. When you turn on
-[experimental UDP egress](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/#allow-outbound-udp),
+[experimental UDP egress](https://docs.docker.com/ai/governance/local/network-rules/#allow-outbound-udp),
 network policy controls its destinations. ICMP is blocked. DNS queries use the
 sandbox's internal resolver, which enforces network policy. TCP connections
 are allowed only when a policy rule matches the destination.

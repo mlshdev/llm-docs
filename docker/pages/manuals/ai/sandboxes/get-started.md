@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/get-started.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/get-started.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/get-started.md)
 
 # Get started with local Docker Sandboxes
 
@@ -56,8 +56,8 @@ is already configured, the CLI uses it without prompting.
 
 To initialize the policy without an interactive prompt, run
 `sbx policy init balanced` before `sbx run`. See
-[Local policy](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) for the available presets
-and how to change an existing policy.
+[Start from a preset](https://docs.docker.com/ai/governance/local/#start-from-a-preset) for the
+available presets and how to change an existing policy.
 
 Replace `claude` with the agent you want to use — see [Agents](https://docs.docker.com/ai/sandboxes/agents/) for the
 full list.
@@ -124,7 +124,7 @@ $ sbx policy allow network registry.npmjs.org
 With Balanced, common development services are permitted by default. With
 Locked Down, destinations need an allow rule from you or a kit. Built-in agent
 kits can add rules for their model providers. See
-[local policy](https://docs.docker.com/ai/sandboxes/governance/access-controls/local/) for the full rule set
+[local policy](https://docs.docker.com/ai/governance/local/) for the full rule set
 and how to customize it.
 
 ## Clean up
@@ -157,7 +157,7 @@ Run `sbx` with no arguments to open the interactive dashboard: a live view of
 every sandbox where you can attach to agents, open shells, and manage network
 rules from one place.
 
-![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
+![The interactive dashboard showing sandbox status, resource usage, and network governance controls.](https://raw.githubusercontent.com/docker/docs/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/images/sbx-dashboard.png)
 
 Then explore:
 
@@ -171,5 +171,5 @@ Then explore:
   network rules into a reusable definition you launch with a single flag.
 - [Agents](https://docs.docker.com/ai/sandboxes/agents/) — the full list of supported agents and how to configure
   each one.
-- [Governance](https://docs.docker.com/ai/sandboxes/governance/) — centrally manage network, filesystem, and MCP
+- [Sandbox governance](https://docs.docker.com/ai/governance/) — centrally manage network, filesystem, and MCP
   policies across a team.

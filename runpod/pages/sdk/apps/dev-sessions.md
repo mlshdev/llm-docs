@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/apps/dev-sessions.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/sdk/apps/dev-sessions.mdx)
+> Pinned source for Runpod main: [sdk/apps/dev-sessions.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/sdk/apps/dev-sessions.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/apps/dev-sessions
 
 # Dev sessions

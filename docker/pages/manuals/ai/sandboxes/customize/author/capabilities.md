@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/capabilities.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/customize/author/capabilities.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/capabilities.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/customize/author/capabilities.md)
 
 # Kit capability support
 

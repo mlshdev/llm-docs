@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/pods/run-your-first.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/tutorials/pods/run-your-first.mdx)
+> Pinned source for Runpod main: [tutorials/pods/run-your-first.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/tutorials/pods/run-your-first.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/pods/run-your-first
 
 # Run LLMs in JupyterLab with transformers

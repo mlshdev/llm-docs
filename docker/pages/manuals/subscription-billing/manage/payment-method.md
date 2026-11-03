@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/manage/payment-method.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/subscription-billing/manage/payment-method.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/manage/payment-method.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/subscription-billing/manage/payment-method.md)
 
 # Add or update a payment method
 

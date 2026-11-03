@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/install/ubuntu.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/engine/install/ubuntu.md)
+> Pinned source for Docker main: [content/manuals/engine/install/ubuntu.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/engine/install/ubuntu.md)
 
 # Install Docker Engine on Ubuntu
 
@@ -143,15 +143,15 @@ available versions in the repository:
 ```console
 $ apt list --all-versions docker-ce
 
-docker-ce/noble 5:29.8.2-1~ubuntu.24.04~noble <arch>
-docker-ce/noble 5:29.8.1-1~ubuntu.24.04~noble <arch>
+docker-ce/noble 5:29.9.3-1~ubuntu.24.04~noble <arch>
+docker-ce/noble 5:29.9.2-1~ubuntu.24.04~noble <arch>
 ...
 ```
 
 Select the desired version and install:
 
 ```console
-$ VERSION_STRING=5:29.8.2-1~ubuntu.24.04~noble
+$ VERSION_STRING=5:29.9.3-1~ubuntu.24.04~noble
 $ sudo apt install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 

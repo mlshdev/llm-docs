@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/kling-video-o1-r2v.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/public-endpoints/models/kling-video-o1-r2v.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/kling-video-o1-r2v.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/public-endpoints/models/kling-video-o1-r2v.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/kling-video-o1-r2v
 
 # Kling Video O1 R2V

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.0: [apps/docs/content/self-hosting/deploy/kubernetes/ingress.mdx](https://github.com/zitadel/zitadel/blob/8afa5dd37a8e723efb9eace8d09fd5c1cccef694/apps/docs/content/self-hosting/deploy/kubernetes/ingress.mdx)
+> Pinned source for ZITADEL v4.20.1: [apps/docs/content/self-hosting/deploy/kubernetes/ingress.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/self-hosting/deploy/kubernetes/ingress.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/deploy/kubernetes/ingress
 
 The chart creates standard [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) resources. There are separate Ingress resources for the Zitadel container and the Login container.

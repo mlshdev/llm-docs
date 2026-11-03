@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/mcp-gateway.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/mcp-gateway.md)
 
 # MCP gateway
 
@@ -556,7 +556,7 @@ to the sandbox's gateway and disappears when the gateway is replaced or stops.
 In MCP access policies, built-in gateway tools are `MCP::Primordial` resources
 and use the `invokePrimordial` action. Tools from registered MCP servers are
 `MCP::Tool` resources and use the `invokeTool` action. For details, see the
-[MCP policy reference](https://docs.docker.com/ai/sandboxes/governance/reference/mcp-policy/).
+[MCP policy reference](https://docs.docker.com/ai/governance/reference/mcp-policy/).
 
 ## Manage registrations
 
@@ -593,6 +593,7 @@ token, use `sbx mcp auth rm`.
 ## Governance
 
 Organizations with AI Governance can use
-[MCP access policies](https://docs.docker.com/ai/sandboxes/governance/access-controls/mcp/) to control MCP server
-registration, tool calls, gateway meta-tools, resources, prompts, and approval
-requirements. MCP access policies are organization policies written in Cedar.
+[Organization MCP access policies](https://docs.docker.com/ai/governance/organization/policies/mcp/) to
+control MCP server registration, tool calls, gateway meta-tools, resources,
+prompts, and approval requirements. MCP access policies are organization
+policies written in Cedar.

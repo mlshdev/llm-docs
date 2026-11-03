@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/desktop/enterprise/enforce-sign-in/_index.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/enforce-sign-in/_index.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/desktop/enterprise/enforce-sign-in/_index.md)
 
 # Enforce sign-in for Docker Desktop
 
@@ -48,6 +48,12 @@ explanation at the terminal, for example:
 Sign in to continue using Docker Desktop. Membership in the [myorg] organization
 is required. Sign in enforced by your administrators (via registry.json).
 ```
+
+The value in brackets is whatever you configured in
+`allowedOrgs`, `ALLOWEDORG`, or `--allowed-org`. That value must be the
+[organization namespace](https://docs.docker.com/accounts/organization/setup/#names-versus-namespaces),
+not the organization display name. See
+[Configure sign-in enforcement](https://docs.docker.com/desktop/enterprise/enforce-sign-in/methods/).
 
 - `docker run`, `docker pull`, `docker build`, `docker ps`, and other commands
   that reach the engine fail until the user signs in.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/security.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/faqs/security.md)
+> Pinned source for Docker main: [content/manuals/faqs/security.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/faqs/security.md)
 
 # Security FAQs
 
@@ -26,7 +26,13 @@ Yes, Docker supports your IdP's session timeout using a custom `dockerSessionMin
 
 ### Can I use multiple identity providers with Docker SSO?
 
-Yes, Docker supports multiple IdP configurations. A domain can be associated with multiple IdPs. Docker supports Entra ID (formerly Azure AD) and identity providers that support SAML 2.0.
+Yes. Docker supports multiple IdP configurations, and a domain can be associated with multiple IdPs.
+
+### Which identity providers does Docker SSO support?
+
+Docker supports any SAML 2.0 identity provider, and Microsoft Entra ID (formerly Azure AD) for OpenID Connect (OIDC). In Docker Home, choose the **SAML 2.0** or **Azure AD (OIDC)** connection type. OAuth 2.0 is not a separate SSO connection type.
+
+SCIM provisions users and is separate from sign-in. See [Provision users](https://docs.docker.com/security/provisioning/).
 
 ### Can I change my identity provider after configuring SSO?
 
@@ -34,10 +40,16 @@ Yes. Delete your existing IdP configuration in your Docker SSO connection, then 
 
 ### What information do I need from my identity provider to configure SSO?
 
-To turn on SSO in Docker, you need the following from your IdP:
+Paste these values from your IdP into Docker:
 
-- SAML: Entity ID, ACS URL, Single Logout URL, and the public X.509 certificate
-- Entra ID (formerly Azure AD): Client ID, Client Secret, AD Domain
+- SAML 2.0, including Microsoft Entra ID SAML: the SAML sign-in URL and the
+  public X.509 certificate. Entra ID calls the sign-in URL **Login URL**.
+- Microsoft Entra ID for OpenID Connect (OIDC): **Client ID**, **Client
+  Secret**, and **Azure AD Domain**.
+
+Copy the SAML **Entity ID** and **ACS URL**, or the OIDC **Redirect URI**, from
+Docker and paste them into your IdP. See
+[Set up single sign-on](https://docs.docker.com/security/authentication/single-sign-on/connect/).
 
 ### What happens if my existing certificate expires?
 

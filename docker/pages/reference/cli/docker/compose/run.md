@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_run.yaml](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_run.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_run.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_run.yaml)
 
 # docker compose run
 
@@ -64,32 +64,33 @@ specified in the service configuration.
 
 ## Options
 
-| Option                  | Default  | Description                                                                      |
-| ----------------------- | -------- | -------------------------------------------------------------------------------- |
-| `--build`               |          | Build image before starting container                                            |
-| `--cap-add`             |          | Add Linux capabilities                                                           |
-| `--cap-drop`            |          | Drop Linux capabilities                                                          |
-| `-d`, `--detach`        |          | Run container in background and print container ID                               |
-| `--entrypoint`          |          | Override the entrypoint of the image                                             |
-| `-e`, `--env`           |          | Set environment variables                                                        |
-| `--env-from-file`       |          | Set environment variables from file                                              |
-| `-i`, `--interactive`   | `true`   | Keep STDIN open even if not attached                                             |
-| `-l`, `--label`         |          | Add or override a label                                                          |
-| `--name`                |          | Assign a name to the container                                                   |
-| `--no-deps`             |          | Don't start linked services                                                      |
-| `-T`, `--no-tty`        | `true`   | Disable pseudo-TTY allocation (default: auto-detected)                           |
-| `-p`, `--publish`       |          | Publish a container's port(s) to the host                                        |
-| `--pull`                | `policy` | Pull image before running ("always"\|"missing"\|"never")                         |
-| `-q`, `--quiet`         |          | Don't print anything to STDOUT                                                   |
-| `--quiet-build`         |          | Suppress progress output from the build process                                  |
-| `--quiet-pull`          |          | Pull without printing progress information                                       |
-| `--remove-orphans`      |          | Remove containers for services not defined in the Compose file                   |
-| `--rm`                  |          | Automatically remove the container when it exits                                 |
-| `-P`, `--service-ports` |          | Run command with all service's ports enabled and mapped to the host              |
-| `--use-aliases`         |          | Use the service's network useAliases in the network(s) the container connects to |
-| `-u`, `--user`          |          | Run as specified username or uid                                                 |
-| `-v`, `--volume`        |          | Bind mount a volume                                                              |
-| `-w`, `--workdir`       |          | Working directory inside the container                                           |
+| Option                  | Default  | Description                                                                                      |
+| ----------------------- | -------- | ------------------------------------------------------------------------------------------------ |
+| `--build`               |          | Build image before starting container                                                            |
+| `--cap-add`             |          | Add Linux capabilities                                                                           |
+| `--cap-drop`            |          | Drop Linux capabilities                                                                          |
+| `-d`, `--detach`        |          | Run container in background and print container ID                                               |
+| `--entrypoint`          |          | Override the entrypoint of the image                                                             |
+| `-e`, `--env`           |          | Set environment variables                                                                        |
+| `--env-from-file`       |          | Set environment variables from file                                                              |
+| `-i`, `--interactive`   | `true`   | Keep STDIN open even if not attached                                                             |
+| `-l`, `--label`         |          | Add or override a label                                                                          |
+| `--name`                |          | Assign a name to the container                                                                   |
+| `--no-deps`             |          | Don't start linked services                                                                      |
+| `--no-recreate`         |          | If dependent containers already exist, don't recreate them, even if their configuration diverged |
+| `-T`, `--no-tty`        | `true`   | Disable pseudo-TTY allocation (default: auto-detected)                                           |
+| `-p`, `--publish`       |          | Publish a container's port(s) to the host                                                        |
+| `--pull`                | `policy` | Pull image before running ("always"\|"missing"\|"never")                                         |
+| `-q`, `--quiet`         |          | Don't print anything to STDOUT                                                                   |
+| `--quiet-build`         |          | Suppress progress output from the build process                                                  |
+| `--quiet-pull`          |          | Pull without printing progress information                                                       |
+| `--remove-orphans`      |          | Remove containers for services not defined in the Compose file                                   |
+| `--rm`                  |          | Automatically remove the container when it exits                                                 |
+| `-P`, `--service-ports` |          | Run command with all service's ports enabled and mapped to the host                              |
+| `--use-aliases`         |          | Use the service's network useAliases in the network(s) the container connects to                 |
+| `-u`, `--user`          |          | Run as specified username or uid                                                                 |
+| `-v`, `--volume`        |          | Bind mount a volume                                                                              |
+| `-w`, `--workdir`       |          | Working directory inside the container                                                           |
 
 ## Global options
 

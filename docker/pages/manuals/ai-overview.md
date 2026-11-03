@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai-overview.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai-overview.md)
+> Pinned source for Docker main: [content/manuals/ai-overview.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai-overview.md)
 
 # Docker AI overview
 
@@ -7,15 +7,16 @@ Each tool serves a different purpose.
 
 ## Which tool do I need?
 
-| I want to...                                                    | Use                                                                                          | Interface      |
-| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------- |
-| Run coding agents in isolated environments                      | [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/)                                    | `sbx`          |
-| Run agents in cloud sandboxes through a web Console             | [Docker Agentic Platform](https://docs.docker.com/agentic-platform/) (experimental)          | Web Console    |
-| Get AI help with Docker tasks (containers, images, Dockerfiles) | [Gordon](https://docs.docker.com/ai/gordon/)                                                 | `docker ai`    |
-| Run AI models locally with an OpenAI-compatible API             | [Model Runner](https://docs.docker.com/ai/model-runner/)                                     | `docker model` |
-| Connect AI tools to external services via MCP                   | [MCP Catalog and Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/) | `docker mcp`   |
-| Build and orchestrate custom multi-agent teams                  | [Docker Agent](https://docs.docker.com/ai/docker-agent/)                                     | `docker agent` |
-| Give my coding agent Docker best-practice guidance              | [Docker Skills](https://docs.docker.com/ai/skills/)                                          | None           |
+| I want to...                                                    | Use                                                                                          | Interface                 |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------- |
+| Run coding agents in isolated environments                      | [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/)                                    | `sbx`                     |
+| Control what sandbox agents can reach, and audit what they did  | [Sandbox governance](https://docs.docker.com/ai/governance/)                                 | `sbx policy`, Docker Home |
+| Run agents in cloud sandboxes through a web Console             | [Docker Agentic Platform](https://docs.docker.com/agentic-platform/) (experimental)          | Web Console               |
+| Get AI help with Docker tasks (containers, images, Dockerfiles) | [Gordon](https://docs.docker.com/ai/gordon/)                                                 | `docker ai`               |
+| Run AI models locally with an OpenAI-compatible API             | [Model Runner](https://docs.docker.com/ai/model-runner/)                                     | `docker model`            |
+| Connect AI tools to external services via MCP                   | [MCP Catalog and Toolkit](https://docs.docker.com/desktop/features/mcp-catalog-and-toolkit/) | `docker mcp`              |
+| Build and orchestrate custom multi-agent teams                  | [Docker Agent](https://docs.docker.com/ai/docker-agent/)                                     | `docker agent`            |
+| Give my coding agent Docker best-practice guidance              | [Docker Skills](https://docs.docker.com/ai/skills/)                                          | None                      |
 
 ## How these tools relate
 

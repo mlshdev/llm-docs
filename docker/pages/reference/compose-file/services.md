@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/compose-file/services.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/reference/compose-file/services.md)
+> Pinned source for Docker main: [content/reference/compose-file/services.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/reference/compose-file/services.md)
 
 A service is an abstract definition of a computing resource within an application which can be scaled or replaced
 independently from other components. Services are backed by a set of containers, run by the platform
@@ -1467,6 +1467,48 @@ networks:
   back-tier: {}
   admin: {}
 ```
+
+#### use\_service\_name\_alias
+
+**Compose use service name alias requirements**
+
+- Requires: Docker Compose [5.7.0](https://github.com/docker/compose/releases/tag/v5.7.0) and later
+
+`use_service_name_alias` controls whether the service name is registered as an alias of the service's containers
+on the network. It defaults to `true`. It requires the long syntax of `networks`.
+
+When set to `false`, the service name is not an alias on this network. The values listed in
+[`aliases`](#aliases) are not affected, and neither are the other networks of the service.
+
+You must distinguish an unset value from `false`, so that a Compose file merged on top of another
+can set the attribute back to `true`.
+
+This is useful when a network is shared by several Compose applications that each define a service with the
+same name: the name would otherwise resolve to a container of any of them. Give each service a distinct
+alias instead:
+
+```yml
+networks:
+  shared:
+    external: true
+
+services:
+  database:
+    networks:
+      shared:
+        aliases:
+          - project1-database
+        use_service_name_alias: false
+```
+
+If the service is attached to no other network where its name is registered, other services can no longer
+reach it by service name. Use `aliases` to give it a name on that network. [`links`](#links)
+are not affected.
+
+> \[!NOTE]
+>
+> `use_service_name_alias` only affects name resolution. It does not isolate the network. Containers attached
+> to it can still reach the service by IP address or by any of its aliases.
 
 #### `interface_name`
 

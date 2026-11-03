@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/hardened-desktop/settings-management/settings-reference.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/desktop/enterprise/hardened-desktop/settings-management/settings-reference.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/hardened-desktop/settings-management/settings-reference.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/desktop/enterprise/hardened-desktop/settings-management/settings-reference.md)
 
 # Settings reference
 
@@ -673,7 +673,7 @@ Specify how port bindings are handled for new containers.
 
 ### Enable Docker Offload
 
-Controls Docker Offload availability. When enabled, users see the Docker Offload toggle in the Docker Desktop header.
+Controls [Docker Offload v1](https://docs.docker.com/offload/v1/) availability. When enabled, users see the Docker Offload toggle in the Docker Desktop header.
 
 | Property        | Value                     |
 | --------------- | ------------------------- |

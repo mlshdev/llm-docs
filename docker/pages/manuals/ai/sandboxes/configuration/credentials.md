@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes/configuration/credentials.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/credentials.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/configuration/credentials.md)
 
 # Manage credentials
 
@@ -454,9 +454,10 @@ $ sbx secret set-custom \
 ```
 
 A `--host` value can also use wildcards, with the same syntax as
-[network rules](https://docs.docker.com/ai/sandboxes/governance/concepts/#network-rules): `*` matches a
-single label (`*.example.com` covers `api.example.com`) and `**` matches any
-number (`**.example.com` covers `api.example.com` and `v2.api.example.com`).
+[network rule hostname patterns](https://docs.docker.com/ai/governance/reference/network-rules/#hostname-patterns):
+`*` matches a single label (`*.example.com` covers `api.example.com`) and `**`
+matches any number (`**.example.com` covers `api.example.com` and
+`v2.api.example.com`).
 
 ### Resolve custom secrets dynamically
 

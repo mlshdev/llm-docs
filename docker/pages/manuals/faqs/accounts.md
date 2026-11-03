@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/faqs/accounts.md)
+> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/faqs/accounts.md)
 
 # Account FAQs
 
@@ -110,6 +110,10 @@ assign them to a team during the invite process.
 
 Yes. You can
 [enforce sign-in](https://docs.docker.com/desktop/enterprise/enforce-sign-in/).
+When you configure enforcement, use your
+[organization namespace](https://docs.docker.com/accounts/organization/setup/#names-versus-namespaces),
+not the organization display name. See
+[Configure sign-in enforcement](https://docs.docker.com/desktop/enterprise/enforce-sign-in/methods/).
 
 Some benefits of enforcing sign-in are:
 
