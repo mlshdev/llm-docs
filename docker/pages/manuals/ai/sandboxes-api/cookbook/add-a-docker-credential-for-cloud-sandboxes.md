@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/add-a-docker-credential-for-cloud-sandboxes.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/ai/sandboxes-api/cookbook/add-a-docker-credential-for-cloud-sandboxes.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/add-a-docker-credential-for-cloud-sandboxes.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/ai/sandboxes-api/cookbook/add-a-docker-credential-for-cloud-sandboxes.md)
 
 # Add a Docker credential for cloud sandboxes
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/opencode-model-runner.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/guides/opencode-model-runner.md)
+> Pinned source for Docker main: [content/guides/opencode-model-runner.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/guides/opencode-model-runner.md)
 
 # Use OpenCode with Docker Model Runner
 

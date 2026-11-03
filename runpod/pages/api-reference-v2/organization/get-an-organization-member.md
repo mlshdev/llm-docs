@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/organization/get-an-organization-member.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/api-reference-v2/organization/get-an-organization-member.mdx)
+> Pinned source for Runpod main: [api-reference-v2/organization/get-an-organization-member.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/organization/get-an-organization-member.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/organization/get-an-organization-member
 
 # Get An Organization Member
 
-Get one member of your organization by user ID.
+Get an organization member by user ID with the Runpod REST API. Retrieve the member's email address and assigned organization role.
 
 `GET /v2/organization/users/{id}`
 

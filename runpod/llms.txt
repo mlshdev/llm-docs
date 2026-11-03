@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `f2481a71841afde6db66b886a32d287d2e3ac0c9`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `02379524f1d057200d839d013114f2e8817eaa85`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -242,7 +242,7 @@
 - [Running Runpod on Mods](pages/integrations/mods.md): Use Mods to interact with language models hosted on Runpod from the command line. Review configuration and usage guidance for this Runpod integration. (2023 bytes)
 - [Running Runpod on SkyPilot](pages/integrations/skypilot.md): Use SkyPilot to run LLMs, AI, and batch jobs on Runpod Pods and Serverless endpoints. Review configuration and usage guidance for this Runpod integration. (1911 bytes)
 - [Manage Runpod infrastructure with Terraform](pages/integrations/terraform/overview.md): Install the Runpod Terraform provider 2.0.0, authenticate with your API key, and deploy your first Pod as code with a minimal working configuration. (8206 bytes)
-- [Migrate the Runpod Terraform provider from 1.x to 2.0.0](pages/integrations/terraform/migration.md): Map every 1.x attribute of the Runpod Terraform provider to its 2.0.0 equivalent, with the configuration edit and state action each resource needs. (57630 bytes)
+- [Migrate Terraform provider to 2.0.0](pages/integrations/terraform/migration.md): Map every 1.x attribute of the Runpod Terraform provider to its 2.0.0 equivalent, with the configuration edit and state action each resource needs. (57610 bytes)
 
 ## Hub
 
@@ -330,8 +330,8 @@
 ## Organization
 
 - [Get Your Current Organization](pages/api-reference-v2/organization/get-your-current-organization.md): Retrieve the ID and name of your current Runpod organization through the REST API, including membership requirements and error responses. (4030 bytes)
-- [List Organization Members](pages/api-reference-v2/organization/list-organization-members.md): List the members of your organization and the role each one holds. (4797 bytes)
-- [Get An Organization Member](pages/api-reference-v2/organization/get-an-organization-member.md): Get one member of your organization by user ID. (4659 bytes)
+- [List Organization Members](pages/api-reference-v2/organization/list-organization-members.md): List every member of your organization with the Runpod REST API. Retrieve each member's user ID, email address, and assigned organization role. (4874 bytes)
+- [Get An Organization Member](pages/api-reference-v2/organization/get-an-organization-member.md): Get an organization member by user ID with the Runpod REST API. Retrieve the member's email address and assigned organization role. (4743 bytes)
 
 ## Account
 

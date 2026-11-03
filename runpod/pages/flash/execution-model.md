@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/execution-model.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/flash/execution-model.mdx)
+> Pinned source for Runpod main: [flash/execution-model.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/flash/execution-model.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/execution-model
 
 # Execution model
@@ -59,7 +59,7 @@ When you build a [Flash app](https://docs.runpod.io/flash/apps/overview):
 Here's what happens when you call an `@Endpoint` function:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'14px','fontFamily':'font-inter'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#684DF3','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5D29F0', 'fontSize':'14px','fontFamily':'font-inter'}}}%%
 
 sequenceDiagram
     participant Local as Your Machine

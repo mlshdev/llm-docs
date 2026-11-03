@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [README.md](https://github.com/FFmpeg/FFmpeg/blob/a88838af482100fa22dd22c94be592c35642de46/README.md)
+> Pinned source for FFmpeg master: [README.md](https://github.com/FFmpeg/FFmpeg/blob/1999e548f85166f921b7f2aca47091a7b7f002ed/README.md)
 
 # FFmpeg README
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_edit.yaml](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/data/cli/dhi/docker_dhi_customization_edit.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_edit.yaml](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/data/cli/dhi/docker_dhi_customization_edit.yaml)
 
 # docker dhi customization edit
 

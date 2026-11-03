@@ -1,8 +1,8 @@
-# VictoriaMetrics datasource for Grafana v0.26.1
+# VictoriaMetrics datasource for Grafana v1.0.0
 
-> Documentation generated from the latest stable release of [VictoriaMetrics/victoriametrics-datasource](https://github.com/VictoriaMetrics/victoriametrics-datasource) and pinned to immutable source commit `58cb4614080bded813362124d4a808d0359a1ccb`.
+> Documentation generated from the latest stable release of [VictoriaMetrics/victoriametrics-datasource](https://github.com/VictoriaMetrics/victoriametrics-datasource) and pinned to immutable source commit `7329605e49bccc8544819dc4c87b30f62a84aa19`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics datasource for Grafana v0.26.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics datasource for Grafana v1.0.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.
 - Links and screenshots that upstream pins to a branch are rewritten to the released commit.
@@ -17,4 +17,4 @@
 
 ## Release history
 
-- [VictoriaMetrics datasource for Grafana: changelog](pages/changelog.md): Update Note 1: This is an alpha release. We do not recommend using it in production. (32518 bytes)
+- [VictoriaMetrics datasource for Grafana: changelog](pages/changelog.md): Update Note 1: This is an alpha release. We do not recommend using it in production. (35101 bytes)

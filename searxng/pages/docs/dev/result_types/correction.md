@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/result_types/correction.rst](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/docs/dev/result_types/correction.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/correction.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/dev/result_types/correction.rst)
 
 <a id="result-types-corrections"></a>
 
@@ -23,7 +23,7 @@ From this simple dict another dict is build up:
 {"url" : "!bang lorem ipsum ..", "title": "lorem ipsum .." }
 ```
 
-and used in the template [corrections.html](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/searx/templates/simple/elements/corrections.html):
+and used in the template [corrections.html](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/templates/simple/elements/corrections.html):
 
 **title : `str`**
 

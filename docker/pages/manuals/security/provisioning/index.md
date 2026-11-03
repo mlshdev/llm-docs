@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/provisioning/_index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/security/provisioning/_index.md)
+> Pinned source for Docker main: [content/manuals/security/provisioning/_index.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/security/provisioning/_index.md)
 
 # User provisioning overview
 
@@ -54,8 +54,9 @@ IdP to set the user's identity and permissions:
 > \[!NOTE]
 >
 > Default session timeouts apply when Docker session minutes is not
-> specified. Docker Desktop sessions expire after 90 days or 30 days of
-> inactivity. Docker Hub and Docker Home sessions expire after 24 hours.
+> specified. Docker Desktop sessions last a maximum of 90 days, but expire sooner
+> if the session is inactive for 30 consecutive days. Docker Hub and
+> Docker Home sessions expire after 24 hours.
 
 ## SAML attribute mapping
 

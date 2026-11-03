@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-licenses.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/accounts/organization/manage/manage-licenses.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-licenses.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/accounts/organization/manage/manage-licenses.md)
 
 # Manage licenses
 
@@ -105,11 +105,11 @@ card.
 
 When the toggle is on:
 
-- Docker Team or Business: members receive a license when they sign in to
+- Docker Team or Business: members receive a license when they use
   Docker Desktop.
-- AI Governance: members receive a license when they sign in to
-  [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/). The `sbx login`
-  command provisions licenses on a first-come, first-served basis.
+- AI Governance: members receive a license when they use
+  [Docker Sandboxes](https://docs.docker.com/ai/sandboxes/).
+- Licenses are provisioned on a first-come, first-served basis.
 - Licenses are assigned until exhausted.
   - Once the available licenses are exhausted, automatic license assignment
     stops until more licenses are available.

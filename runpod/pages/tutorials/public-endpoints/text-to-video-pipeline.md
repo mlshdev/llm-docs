@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/public-endpoints/text-to-video-pipeline.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/tutorials/public-endpoints/text-to-video-pipeline.mdx)
+> Pinned source for Runpod main: [tutorials/public-endpoints/text-to-video-pipeline.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/tutorials/public-endpoints/text-to-video-pipeline.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/public-endpoints/text-to-video-pipeline
 
 # Build a text-to-video pipeline
@@ -7,7 +7,7 @@ Chain multiple Public Endpoints to generate videos from text prompts using Pytho
 
 This tutorial shows you how to build a complete text-to-video pipeline by chaining three Runpod [Public Endpoints](https://docs.runpod.io/public-endpoints/overview) together. You'll take a simple idea and transform it into an animated video, all with a single Python script.
 
-![](https://raw.githubusercontent.com/runpod/docs/f2481a71841afde6db66b886a32d287d2e3ac0c9/images/cool-cat-pe-pipeline.jpeg)
+![](https://raw.githubusercontent.com/runpod/docs/02379524f1d057200d839d013114f2e8817eaa85/images/cool-cat-pe-pipeline.jpeg)
 
 ## What you'll build
 
@@ -18,7 +18,7 @@ The pipeline takes a basic prompt like "a cat wearing sunglasses" and:
 3. Uses [WAN 2.5](https://docs.runpod.io/public-endpoints/models/wan-2-5) to animate the image into a 5-second video.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#684DF3','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5D29F0', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
 
 flowchart TD
     A([Text prompt]) --> B[Qwen3 32B]
@@ -28,7 +28,7 @@ flowchart TD
     E --> F[WAN 2.5]
     F --> G([Animated video])
 
-    style A fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
+    style A fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
     style B fill:#4D38F5,stroke:#4D38F5,color:#FFFFFF,stroke-width:2px
     style C fill:#9289FE,stroke:#9289FE,color:#FFFFFF,stroke-width:2px
     style D fill:#4D38F5,stroke:#4D38F5,color:#FFFFFF,stroke-width:2px
@@ -36,7 +36,7 @@ flowchart TD
     style F fill:#4D38F5,stroke:#4D38F5,color:#FFFFFF,stroke-width:2px
     style G fill:#22C55E,stroke:#22C55E,color:#000000,stroke-width:2px
 
-    linkStyle default stroke:#5F4CFE,stroke-width:2px
+    linkStyle default stroke:#684DF3,stroke-width:2px
 ```
 
 ## Requirements

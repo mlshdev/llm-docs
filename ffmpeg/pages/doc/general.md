@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/a88838af482100fa22dd22c94be592c35642de46/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/1999e548f85166f921b7f2aca47091a7b7f002ed/doc/general.texi)
 
 # External libraries
 
@@ -1048,7 +1048,8 @@ following image formats are supported:
 - CDXL                    |       |   X
   \|  Amiga CD video codec
 - Chinese AVS video       |   E   |   X
-  \|  AVS1-P2, JiZhun profile, encoding through external library libxavs
+  \|  AVS1-P2/P16 (JiZhun and Broadcasting) decoding,
+  AVS1-P2 encoding through external library libxavs
 - Delphine Software International CIN video   |       |   X
   \|  Codec used in Delphine Software International games.
 - Discworld II BMV Video  |       |   X

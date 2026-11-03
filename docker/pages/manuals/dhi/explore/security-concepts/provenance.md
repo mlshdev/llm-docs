@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/provenance.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/dhi/explore/security-concepts/provenance.md)
+> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/provenance.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/dhi/explore/security-concepts/provenance.md)
 
 # Image provenance
 

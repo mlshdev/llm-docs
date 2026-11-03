@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/model-caching.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/serverless/endpoints/model-caching.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/model-caching.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/serverless/endpoints/model-caching.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/model-caching
 
 # Cached models
@@ -38,7 +38,7 @@ When you select a cached model for your endpoint, Runpod automatically tries to 
 If no cached host machines are available, the system delays starting your workers until the model is downloaded onto the machine where your workers will run, ensuring you still won't be charged for the download time.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#684DF3','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5D29F0', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
 
 flowchart TD
     Start([Request received]) --> CheckWorkers{Worker<br/>ready?}
@@ -57,8 +57,8 @@ flowchart TD
     
     Process --> Response([Return response])
 
-    style Start fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
-    style Response fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
+    style Start fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
+    style Response fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
     
     style CheckWorkers fill:#f87171,stroke:#f87171,color:#000000,stroke-width:2px
     style CheckCache fill:#fb923c,stroke:#fb923c,color:#000000,stroke-width:2px
@@ -71,7 +71,7 @@ flowchart TD
     style WaitForCache fill:#ecc94b,stroke:#ecc94b,color:#000000,stroke-width:2px
     style Ready2 fill:#ecc94b,stroke:#ecc94b,color:#000000,stroke-width:2px
 
-    linkStyle default stroke-width:2px,stroke:#5F4CFE
+    linkStyle default stroke-width:2px,stroke:#684DF3
 ```
 
 ## Enable cached models
@@ -87,7 +87,7 @@ Follow these steps to select and add a cached model to your endpoint:
 
    The console displays the model size and estimated GPU requirements to help you choose the right GPU configuration.
 
-   ![](https://raw.githubusercontent.com/runpod/docs/f2481a71841afde6db66b886a32d287d2e3ac0c9/images/model-cache-setting.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/02379524f1d057200d839d013114f2e8817eaa85/images/model-cache-setting.png)
 3. If you're using a gated model, you'll need to enter a [Hugging Face access token](https://huggingface.co/docs/hub/en/security-tokens).
 4. Complete your endpoint configuration and click **Deploy Endpoint** .
 

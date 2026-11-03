@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/apps/local-testing.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/flash/apps/local-testing.mdx)
+> Pinned source for Runpod main: [flash/apps/local-testing.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/flash/apps/local-testing.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/apps/local-testing
 
 # Test Flash apps locally
@@ -114,7 +114,7 @@ This scans your project for `@Endpoint` functions and deploys them before the se
 With `flash dev`, Flash starts a local development server alongside remote Serverless endpoints:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'14px','fontFamily':'font-inter'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#684DF3','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5D29F0', 'fontSize':'14px','fontFamily':'font-inter'}}}%%
 
 flowchart TB
     Browser(["BROWSER/CURL"])
@@ -134,10 +134,10 @@ flowchart TB
     DevServer -->|"HTTPS"| GPU
     DevServer -->|"HTTPS"| CPU
 
-    style Local fill:#1a1a2e,stroke:#5F4CFE,stroke-width:2px,color:#fff
-    style Runpod fill:#1a1a2e,stroke:#5F4CFE,stroke-width:2px,color:#fff
+    style Local fill:#1a1a2e,stroke:#684DF3,stroke-width:2px,color:#fff
+    style Runpod fill:#1a1a2e,stroke:#684DF3,stroke-width:2px,color:#fff
     style Browser fill:#4D38F5,stroke:#4D38F5,color:#fff
-    style DevServer fill:#5F4CFE,stroke:#5F4CFE,color:#fff
+    style DevServer fill:#5D29F0,stroke:#684DF3,color:#fff
     style LB fill:#22C55E,stroke:#22C55E,color:#000
     style GPU fill:#22C55E,stroke:#22C55E,color:#000
     style CPU fill:#22C55E,stroke:#22C55E,color:#000

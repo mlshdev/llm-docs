@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/qwen-image.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/public-endpoints/models/qwen-image.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/qwen-image.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/public-endpoints/models/qwen-image.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/qwen-image
 
 # Qwen Image

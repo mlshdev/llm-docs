@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/plugins_authorization.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/_vendor/github.com/docker/cli/docs/extend/plugins_authorization.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/plugins_authorization.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/_vendor/github.com/docker/cli/docs/extend/plugins_authorization.md)
 
 # Access authorization plugin
 
@@ -63,9 +63,9 @@ request.
 
 The sequence diagrams below depict an allow and deny authorization flow:
 
-![Authorization Allow flow](https://raw.githubusercontent.com/docker/docs/53581df94e05ad4116a8d31e47ea098289fa5498/_vendor/github.com/docker/cli/docs/extend/images/authz_allow.png)
+![Authorization Allow flow](https://raw.githubusercontent.com/docker/docs/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/_vendor/github.com/docker/cli/docs/extend/images/authz_allow.png)
 
-![Authorization Deny flow](https://raw.githubusercontent.com/docker/docs/53581df94e05ad4116a8d31e47ea098289fa5498/_vendor/github.com/docker/cli/docs/extend/images/authz_deny.png)
+![Authorization Deny flow](https://raw.githubusercontent.com/docker/docs/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/_vendor/github.com/docker/cli/docs/extend/images/authz_deny.png)
 
 Each request sent to the plugin includes the authenticated user, the HTTP
 headers, and the request/response body. Only the user name and the

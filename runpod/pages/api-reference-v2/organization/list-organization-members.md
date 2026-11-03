@@ -1,9 +1,9 @@
-> Pinned source for Runpod main: [api-reference-v2/organization/list-organization-members.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/api-reference-v2/organization/list-organization-members.mdx)
+> Pinned source for Runpod main: [api-reference-v2/organization/list-organization-members.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/api-reference-v2/organization/list-organization-members.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/organization/list-organization-members
 
 # List Organization Members
 
-List the members of your organization and the role each one holds.
+List every member of your organization with the Runpod REST API. Retrieve each member's user ID, email address, and assigned organization role.
 
 `GET /v2/organization/users`
 

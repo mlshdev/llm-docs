@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/dev/api/dashboard-routes-navigation.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/extensions/extensions-sdk/dev/api/dashboard-routes-navigation.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/dev/api/dashboard-routes-navigation.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/extensions/extensions-sdk/dev/api/dashboard-routes-navigation.md)
 
 # Navigation
 

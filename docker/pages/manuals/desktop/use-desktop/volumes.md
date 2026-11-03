@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/volumes.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/desktop/use-desktop/volumes.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/volumes.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/desktop/use-desktop/volumes.md)
 
 # Explore the Volumes view in Docker Desktop
 

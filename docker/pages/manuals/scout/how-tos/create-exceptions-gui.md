@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/how-tos/create-exceptions-gui.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/scout/how-tos/create-exceptions-gui.md)
+> Pinned source for Docker main: [content/manuals/scout/how-tos/create-exceptions-gui.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/scout/how-tos/create-exceptions-gui.md)
 
 # Create an exception using the GUI
 

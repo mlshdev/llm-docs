@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/engines/offline/command-line-engines.rst](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/docs/dev/engines/offline/command-line-engines.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/offline/command-line-engines.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/dev/engines/offline/command-line-engines.rst)
 
 <a id="engine-command"></a>
 
@@ -6,7 +6,7 @@
 
 ### info
 
-- [command.py](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/searx/engines/command.py)
+- [command.py](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/engines/command.py)
 - [offline engines](https://docs.searxng.org/dev/engines/index.html#offline-engines)
 
 ### info

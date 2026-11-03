@@ -1,8 +1,23 @@
-> Pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/CHANGELOG.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v1.0.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- BUGFIX: send query parameters in the request body when the `HTTP method` setting is `POST`, so large queries no longer fail with `431 Request Header Fields Too Large` behind proxies that limit the URL length. The same applies to metadata requests such as label and series lookups. See [#550](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/550).
+  - **Note:** VictoriaMetrics still limits the query length with its `-search.maxQueryLen` flag (16 KiB by default), so very long expressions need that flag raised on the VictoriaMetrics side. See [the list of command-line flags](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#list-of-command-line-flags).
+
+- BUGFIX: keep WITH templates intact when ad hoc filters or the `Filter for value` action in Explore add label filters to a query. Previously such queries were rewritten into invalid MetricsQL and failed with a `422` error. Filters are now also added to every `or` alternative inside `{...}` and to metrics defined inside WITH templates, and label values are escaped. See [#551](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/551).
+
+- BUGFIX: keep the dashboard in its folder when saving WITH templates. Previously the save request did not pass the folder, so Grafana [moved the dashboard to the root level](https://archive.grafana.com/docs/grafana/v12.3/developers/http_api/dashboard/#create--update-dashboard), which made it unavailable to users without permissions on the root folder. See [#563](https://github.com/VictoriaMetrics/victoriametrics-datasource/pull/563). Thanks to @evkuzin for contributing.
+
+- BUGFIX: show the `Dashboard has been modified` message when saving WITH templates on Grafana 13. Grafana 11 and 12 report a stale dashboard version with the [documented HTTP 412](https://archive.grafana.com/docs/grafana/v12.3/developers/http_api/dashboard/#create--update-dashboard), while Grafana 13 [responds with HTTP 409](https://github.com/grafana/grafana/blob/v13.2.2/pkg/api/dashboard.go#L544-L548), which previously left the dialog open without any message. See [#563](https://github.com/VictoriaMetrics/victoriametrics-datasource/pull/563). Thanks to @evkuzin for contributing.
+
+- BUGFIX: fix WITH templates in Explore: a saved template used to be ignored, now it is applied to the query and kept after a page reload, in shared Explore links and after `Add to dashboard`.
+
+- BUGFIX: show the metrics of a query that uses a WITH template in the `Export data` dialog. Previously such a query had no selectors to export.
+
+## v0.26.1
 
 - MAINTENANCE: fix the frontend build of the plugin.
 

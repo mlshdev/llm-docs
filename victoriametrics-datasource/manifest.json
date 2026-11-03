@@ -6,21 +6,21 @@
   "title": "VictoriaMetrics datasource for Grafana",
   "homepage": "https://grafana.com/grafana/plugins/victoriametrics-metrics-datasource/",
   "repository": "VictoriaMetrics/victoriametrics-datasource",
-  "tag": "v0.26.1",
-  "releaseId": 387057789,
-  "releasePublishedAt": "2026-09-11T13:25:52Z",
-  "sourceCommit": "58cb4614080bded813362124d4a808d0359a1ccb",
+  "tag": "v1.0.0",
+  "releaseId": 431279167,
+  "releasePublishedAt": "2026-11-02T09:38:27Z",
+  "sourceCommit": "7329605e49bccc8544819dc4c87b30f62a84aa19",
   "documentCount": 3,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 63254,
+      "byteLength": 65835,
       "documentCount": 3,
-      "sha256": "92caf7cb2ec91b07579736d341e8274d38425064ff42729bfebcbdf78f32a072"
+      "sha256": "6c1036fe60ddeba1e56ef6342680437d165f809fbc6a59867a00c541a008867d"
     }
   ],
-  "outputDigest": "26b08c155e3c078b685403cdf35448c75a834a7a6a3cc9bd3a1eb3fad37f5293",
+  "outputDigest": "8da1e30b60ba6abba246d6373f2f395139459e8c8a6abea97ab3c2826e5a1e67",
   "notes": [
     "Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.",
     "Links and screenshots that upstream pins to a branch are rewritten to the released commit."

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/compose-file/develop.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/reference/compose-file/develop.md)
+> Pinned source for Docker main: [content/reference/compose-file/develop.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/reference/compose-file/develop.md)
 
 # Compose Develop Specification
 
@@ -94,7 +94,7 @@ The syntax is the same as `.dockerignore` file:
 - `*/*` matches two nested folders with arbitrary names
 - `**` matches an arbitrary number of nested folders
 
-If the build context includes a `.dockerignore` file, the patterns in this file is loaded as implicit content
+If the build context includes a `.dockerignore` file, the patterns in this file are loaded as implicit content
 for the `ignores` file, and values set in the Compose model are appended.
 
 #### `include`

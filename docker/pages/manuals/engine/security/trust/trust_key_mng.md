@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/security/trust/trust_key_mng.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/engine/security/trust/trust_key_mng.md)
+> Pinned source for Docker main: [content/manuals/engine/security/trust/trust_key_mng.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/engine/security/trust/trust_key_mng.md)
 
 # Manage keys for content trust
 

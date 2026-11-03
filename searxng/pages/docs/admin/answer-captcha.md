@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/answer-captcha.rst](https://github.com/searxng/searxng/blob/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/docs/admin/answer-captcha.rst)
+> Pinned source for SearXNG master: [docs/admin/answer-captcha.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/admin/answer-captcha.rst)
 
 # Answer CAPTCHA from server's IP
 
@@ -43,7 +43,7 @@ solve the CAPTCHA from [qwant.com](https://www.qwant.com/).
 
 **Firefox**
 
-![FFox proxy on SOCKS5, 127.0.0.1:8080](https://raw.githubusercontent.com/searxng/searxng/1c10abe2d3e4ab7ddcc4e9da1a7d07dc7ca7f8f4/docs/assets/answer-captcha/ffox-setting-proxy-socks.png)
+![FFox proxy on SOCKS5, 127.0.0.1:8080](https://raw.githubusercontent.com/searxng/searxng/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/assets/answer-captcha/ffox-setting-proxy-socks.png)
 
 *Firefox's network settings*
 

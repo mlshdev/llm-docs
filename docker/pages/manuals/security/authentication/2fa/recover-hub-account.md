@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/2fa/recover-hub-account.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/content/manuals/security/authentication/2fa/recover-hub-account.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/2fa/recover-hub-account.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/content/manuals/security/authentication/2fa/recover-hub-account.md)
 
 # Recover your Docker account and two-factor recovery code
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [README.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/README.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v1.0.0: [README.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/README.md)
 
 # VictoriaMetrics datasource for Grafana
 
@@ -31,7 +31,7 @@ The benefits of using VictoriaMetrics plugin are the following:
 2. Use Explore mode with Grafana.
 3. Build dashboards and setup alerts.
 4. Use Ad Hoc filters.
-5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/src/README.md#how-to-use-with-templates) queries and expressions.
+5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/src/README.md#how-to-use-with-templates) queries and expressions.
 6. Get insights about query execution bottlenecks via [tracing](https://docs.victoriametrics.com/victoriametrics/#query-tracing).
 7. Automatically format queries via `Prettify` button.
 
@@ -119,7 +119,7 @@ docker-compose -f docker-compose.yaml up
 
 When Grafana starts successfully datasources should be present on the datasources tab:
 
-![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58cb4614080bded813362124d4a808d0359a1ccb/docs/assets/provision_datasources.webp)
+![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/docs/assets/provision_datasources.webp)
 
 ### Install in Kubernetes
 
@@ -490,4 +490,4 @@ Grafana doesn't allow forwarding Alert requests to alerting API /api/v1/rules fo
 ## License
 
 This project is licensed under
-the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/LICENSE).
+the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/LICENSE).

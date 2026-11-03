@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/a88838af482100fa22dd22c94be592c35642de46/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/1999e548f85166f921b7f2aca47091a7b7f002ed/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -22440,6 +22440,148 @@ This filter supports the following commands:
 
 If the specified expression is not valid, it is kept at its current
 value.
+
+## scale\_d3d12
+
+Scale (resize) and convert the pixel format of the input video using
+Direct3D 12 hardware-accelerated video processing
+(`ID3D12VideoProcessor`). It requires the input to be in `d3d12`
+hardware pixel format.
+
+Setting the output width and height works in the same way as for the
+scale filter. `sample_aspect_ratio` is recalculated for the new
+dimensions the same way scale does it, and side data whose values
+are expressed in pixel coordinates of the old size (motion vectors,
+detection bounding boxes, ROI, ...) is removed when the size actually
+changes, also the same way scale does it.
+
+Which input/output pixel format and color space combinations are actually
+supported depends on the GPU and driver. The filter first rejects color
+descriptions it cannot represent using DXGI. For representable
+combinations, support is queried from the GPU and driver. If that
+capability query reports the conversion unsupported, `-v debug`
+prints a probe of alternative output combinations.
+
+The filter accepts the following options:
+
+- w
+- h
+  Set the output video dimension expression. Default value is the input
+  dimension.
+
+Allows for the same expressions as the scale filter.
+
+- format
+  Controls the output pixel format. By default, or if none is specified, the
+  input pixel format is used.
+
+Besides converting between the semi-planar YUV formats `nv12`,
+`p010` and `p012`, this filter can also convert to the packed
+RGB formats `bgra`, `rgba`, `x2bgr10` and `rgbaf16`,
+when supported by the hardware.
+
+- out\_color\_matrix
+  Set the output colorspace matrix. This only affects YUV output formats
+  and accepts the same values as the `space` option of the
+  `colorspace` filter, e.g. `smpte170m`, `bt709`,
+  `bt2020nc`; only those exact names are recognized, not other
+  common aliases (e.g. `bt2020nc`, not `bt2020ncl`). If
+  `out_color_matrix` is not specified and `out_color_primaries`
+  is explicitly set, the output matrix is derived from the requested
+  primaries. Otherwise, the input matrix is inherited; if it is
+  unspecified, the matrix is derived from the input primaries.
+
+- out\_range
+  Set the output color range. It accepts the following values:
+
+  - tv, mpeg, limited
+    Limited range.
+
+  - pc, jpeg, full
+    Full range.
+
+If not specified, it defaults to the input range, except that a
+`out_color_transfer` of `linear` (explicit or defaulted,
+see below) always selects `full` range. If the range is still
+unspecified at that point, it defaults to `limited` for YUV
+output and `full` for RGB output.
+
+- out\_color\_primaries
+  Set the output color primaries. It accepts the same values as the
+  `primaries` option of the `colorspace` filter, e.g.
+  `bt709`, `bt2020`. If not specified, it defaults to the input
+  primaries.
+
+- out\_color\_transfer
+  Set the output color transfer characteristics. It accepts the same
+  values as the `trc` option of the `colorspace` filter, e.g.
+  `bt709`, `smpte2084`, `arib-std-b67`; only those exact
+  names are recognized, not other common aliases (e.g.
+  `iec61966-2-1`, not `srgb`; `bt470bg`, not
+  `gamma28`). If not specified, it defaults to the input transfer
+  characteristics, except that `rgbaf16` output defaults to
+  `linear` when both this option and the input transfer
+  characteristics are unspecified.
+
+The video processor and output color properties are configured from
+the first frame and reused for subsequent frames. Changes in frame
+dimensions require filter-graph reinitialization.
+
+If this filter changes the output color primaries and/or transfer
+characteristics relative to the input, side data describing those
+properties (mastering display metadata, HDR10+/Dolby Vision metadata,
+ICC profile, ...) is removed from the output frame.
+
+Alpha is preserved for RGB formats that have it (`bgra`,
+`rgba`, `rgbaf16`); other formats, and devices that cannot
+pass alpha through, produce opaque alpha instead. A premultiplied-alpha
+input is rejected if the requested conversion cannot preserve it
+correctly (e.g. it also changes color space); unpremultiply the input
+first in that case.
+
+YUV output is retagged with the chroma sample location the selected
+output color space actually uses, which depends on the matrix, range
+and transfer characteristic (e.g. `topleft` for HLG, `left`
+for BT.601/BT.709); RGB output is always tagged `unspecified`. An
+input chroma siting the chosen input color space cannot represent is
+rejected.
+
+### Examples
+
+-
+
+Scale a `d3d12` NV12 surface to 1280x720, keeping the pixel format:
+
+```text
+scale_d3d12=w=1280:h=720
+```
+
+-
+
+Convert a `d3d12` NV12 surface to BGRA, so it can be downloaded and
+encoded or displayed without a software pixel format conversion:
+
+```text
+scale_d3d12=format=bgra
+```
+
+-
+
+Convert a 10-bit HDR10 (P010) surface to 10-bit RGB, without altering
+its HDR color properties:
+
+```text
+scale_d3d12=format=x2bgr10
+```
+
+-
+
+Scale and convert to full-range BGRA, for example before `hwdownload`
+feeds a renderer that expects full-range RGB:
+
+```text
+scale_d3d12=format=bgra:out_range=full
+```
 
 ## scharr
 

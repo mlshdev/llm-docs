@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/mailing-list-faq.texi](https://github.com/FFmpeg/FFmpeg/blob/a88838af482100fa22dd22c94be592c35642de46/doc/mailing-list-faq.texi)
+> Pinned source for FFmpeg master: [doc/mailing-list-faq.texi](https://github.com/FFmpeg/FFmpeg/blob/1999e548f85166f921b7f2aca47091a7b7f002ed/doc/mailing-list-faq.texi)
 
 # General Questions
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/overview.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/serverless/overview.mdx)
+> Pinned source for Runpod main: [serverless/overview.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/serverless/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/overview
 
 # Overview
@@ -67,7 +67,7 @@ When a user/client sends a request to your endpoint:
 6. If no new requests arrive, the worker scales down and billing stops.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#684DF3','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5D29F0', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
 
 flowchart TD
     Start([Endpoint receives<br/>a request]) --> Queue[Request queued]
@@ -84,7 +84,7 @@ flowchart TD
     
     Process --> End(["Result is stored (/run) or returned immediately (/runsync)"])
     
-    style Start fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
+    style Start fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
     style Queue fill:#4D38F5,stroke:#4D38F5,color:#FFFFFF,stroke-width:2px
     
     style CheckActive fill:#f87171,stroke:#f87171,color:#000000,stroke-width:2px
@@ -92,7 +92,7 @@ flowchart TD
     style WaitWorker fill:#ecc94b,stroke:#ecc94b,color:#000000,stroke-width:2px
 
     style Process fill:#22C55E,stroke:#22C55E,color:#000000,stroke-width:2px
-    style End fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
+    style End fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
 
     linkStyle default stroke-width:2px
 ```
@@ -130,7 +130,7 @@ Here's a typical Serverless development workflow:
 8. To update your endpoint logic, go back to step 1 and repeat the process.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#684DF3','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5D29F0', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
 
 flowchart TD
     Start([Write handler function]) --> Test[Test handler locally with the Runpod SDK]
@@ -153,19 +153,19 @@ flowchart TD
     Monitor -.-> Start
 
     %% Applied Color Logic from Diagram 2
-    style Start fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
+    style Start fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
     style Test fill:#4D38F5,stroke:#4D38F5,color:#FFFFFF,stroke-width:2px
     
     style Check fill:#f87171,stroke:#f87171,color:#000000,stroke-width:2px
     style Fix fill:#ecc94b,stroke:#ecc94b,color:#000000,stroke-width:2px
     
-    style Package fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
-    style Deploy fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
-    style Running fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
+    style Package fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
+    style Deploy fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
+    style Running fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
     style Monitor fill:#ecc94b,stroke:#ecc94b,color:#000000,stroke-width:2px
     
     %% Subgraph Styling
-    style Production fill:#1B0656,stroke:#5F4CFE,color:#FFFFFF,stroke-dasharray: 5 5
+    style Production fill:#1B0656,stroke:#684DF3,color:#FFFFFF,stroke-dasharray: 5 5
 
-    linkStyle default stroke-width:2px,stroke:#5F4CFE
+    linkStyle default stroke-width:2px,stroke:#684DF3
 ```

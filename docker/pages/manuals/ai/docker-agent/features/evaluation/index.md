@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/evaluation/index.md](https://github.com/docker/docs/blob/53581df94e05ad4116a8d31e47ea098289fa5498/_vendor/github.com/docker/docker-agent/docs/features/evaluation/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/evaluation/index.md](https://github.com/docker/docs/blob/2eaa01ac4fbe81c8cb8705724a05e19474dd681a/_vendor/github.com/docker/docker-agent/docs/features/evaluation/index.md)
 
 *Measure agent quality with automated evaluations — tool call accuracy, response relevance, output size, and more.*
 

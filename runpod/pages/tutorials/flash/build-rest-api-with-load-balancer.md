@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/flash/build-rest-api-with-load-balancer.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/tutorials/flash/build-rest-api-with-load-balancer.mdx)
+> Pinned source for Runpod main: [tutorials/flash/build-rest-api-with-load-balancer.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/tutorials/flash/build-rest-api-with-load-balancer.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/flash/build-rest-api-with-load-balancer
 
 # Build a REST API with Flash
@@ -543,7 +543,7 @@ Expected response:
 Your deployed API creates two independent Serverless endpoints:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'14px','fontFamily':'font-inter'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#684DF3','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5D29F0', 'fontSize':'14px','fontFamily':'font-inter'}}}%%
 
 flowchart TB
     Client([Client])
@@ -556,9 +556,9 @@ flowchart TB
     Client -->|HTTPS + Auth| CPU
     Client -->|HTTPS + Auth| GPU
 
-    style Runpod fill:#1a1a2e,stroke:#5F4CFE,stroke-width:2px
+    style Runpod fill:#1a1a2e,stroke:#684DF3,stroke-width:2px
     style Client fill:#4D38F5,stroke:#4D38F5,color:#fff
-    style CPU fill:#5F4CFE,stroke:#5F4CFE,color:#fff
+    style CPU fill:#5D29F0,stroke:#684DF3,color:#fff
     style GPU fill:#22C55E,stroke:#22C55E,color:#000
 ```
 

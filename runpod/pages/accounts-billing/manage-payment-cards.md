@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/manage-payment-cards.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/accounts-billing/manage-payment-cards.mdx)
+> Pinned source for Runpod main: [accounts-billing/manage-payment-cards.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/accounts-billing/manage-payment-cards.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/manage-payment-cards
 
 # Troubleshoot payment card declines

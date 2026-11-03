@@ -1,14 +1,14 @@
-# VictoriaMetrics datasource for Grafana v0.26.1: full documentation
+# VictoriaMetrics datasource for Grafana v1.0.0: full documentation
 
 Source repository: https://github.com/VictoriaMetrics/victoriametrics-datasource
-Release tag: v0.26.1
-Source commit: 58cb4614080bded813362124d4a808d0359a1ccb
+Release tag: v1.0.0
+Source commit: 7329605e49bccc8544819dc4c87b30f62a84aa19
 
 # Document: VictoriaMetrics datasource for Grafana
 
 Source path: src/README.md
-Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/src/README.md
-Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/src/README.md
+Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/src/README.md
+Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/src/README.md
 Description: The VictoriaMetrics Grafana plugin allows Grafana to query, visualize, and interact with VictoriaMetrics, a high-performance metrics storage and processing system.
 
 # VictoriaMetrics datasource for Grafana
@@ -17,7 +17,7 @@ The [VictoriaMetrics Grafana plugin](https://grafana.com/grafana/plugins/victori
 Grafana to query, visualize, and interact with [VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/),
 a high-performance metrics storage and processing system.
 
-![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58cb4614080bded813362124d4a808d0359a1ccb/src/img/dashboard.png)
+![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/dashboard.png)
 
 ## Capabilities
 
@@ -25,7 +25,7 @@ a high-performance metrics storage and processing system.
 2. Use Explore mode with Grafana.
 3. Build dashboards and setup alerts.
 4. Use Ad Hoc filters.
-5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/src/README.md#how-to-use-with-templates) queries and expressions.
+5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/src/README.md#how-to-use-with-templates) queries and expressions.
 6. Get insights about query execution bottlenecks via [tracing](https://docs.victoriametrics.com/victoriametrics/#query-tracing).
 7. Automatically format queries via `Prettify` button.
 
@@ -201,13 +201,13 @@ feature for navigating from a span in a trace directly to metrics relevant for a
 Metric to logs correlation can be configured using [correlations](https://grafana.com/docs/grafana/latest/administration/correlations/)
 interface:
 
-![Metric to logs correlation 1](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58cb4614080bded813362124d4a808d0359a1ccb/src/img/correlation-metric-to-logs-1.png)
-![Metric to logs correlation 2](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58cb4614080bded813362124d4a808d0359a1ccb/src/img/correlation-metric-to-logs-2.png)
-![Metric to logs correlation 3](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58cb4614080bded813362124d4a808d0359a1ccb/src/img/correlation-metric-to-logs-3.png)
+![Metric to logs correlation 1](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/correlation-metric-to-logs-1.png)
+![Metric to logs correlation 2](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/correlation-metric-to-logs-2.png)
+![Metric to logs correlation 3](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/correlation-metric-to-logs-3.png)
 
 Then, in Grafana's Explore mode click on the specified field will open a split view of Logs datasource already filtered
 by the configured fields:
-![Metric to logs correlation 4](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58cb4614080bded813362124d4a808d0359a1ccb/src/img/correlation-metric-to-logs-4.png)
+![Metric to logs correlation 4](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/correlation-metric-to-logs-4.png)
 
 ### Metric to traces
 
@@ -235,14 +235,14 @@ See more details [here](https://github.com/VictoriaMetrics/victoriametrics-datas
 ## License
 
 This project is licensed under
-the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/LICENSE).
+the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/LICENSE).
 
 
 # Document: VictoriaMetrics datasource for Grafana: repository guide
 
 Source path: README.md
-Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/README.md
-Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/README.md
+Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/README.md
+Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/README.md
 Description: The VictoriaMetrics datasource plugin allows to query and visualize data from VictoriaMetrics in Grafana.
 
 # VictoriaMetrics datasource for Grafana
@@ -276,7 +276,7 @@ The benefits of using VictoriaMetrics plugin are the following:
 2. Use Explore mode with Grafana.
 3. Build dashboards and setup alerts.
 4. Use Ad Hoc filters.
-5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/src/README.md#how-to-use-with-templates) queries and expressions.
+5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/src/README.md#how-to-use-with-templates) queries and expressions.
 6. Get insights about query execution bottlenecks via [tracing](https://docs.victoriametrics.com/victoriametrics/#query-tracing).
 7. Automatically format queries via `Prettify` button.
 
@@ -364,7 +364,7 @@ docker-compose -f docker-compose.yaml up
 
 When Grafana starts successfully datasources should be present on the datasources tab:
 
-![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58cb4614080bded813362124d4a808d0359a1ccb/docs/assets/provision_datasources.webp)
+![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/docs/assets/provision_datasources.webp)
 
 ### Install in Kubernetes
 
@@ -735,19 +735,34 @@ Grafana doesn't allow forwarding Alert requests to alerting API /api/v1/rules fo
 ## License
 
 This project is licensed under
-the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/LICENSE).
+the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/LICENSE).
 
 
 # Document: VictoriaMetrics datasource for Grafana: changelog
 
 Source path: CHANGELOG.md
-Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/CHANGELOG.md
-Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/CHANGELOG.md
+Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/CHANGELOG.md
+Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/CHANGELOG.md
 Description: Update Note 1: This is an alpha release. We do not recommend using it in production.
 
 # Changelog
 
 ## tip
+
+- BUGFIX: send query parameters in the request body when the `HTTP method` setting is `POST`, so large queries no longer fail with `431 Request Header Fields Too Large` behind proxies that limit the URL length. The same applies to metadata requests such as label and series lookups. See [#550](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/550).
+  - **Note:** VictoriaMetrics still limits the query length with its `-search.maxQueryLen` flag (16 KiB by default), so very long expressions need that flag raised on the VictoriaMetrics side. See [the list of command-line flags](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#list-of-command-line-flags).
+
+- BUGFIX: keep WITH templates intact when ad hoc filters or the `Filter for value` action in Explore add label filters to a query. Previously such queries were rewritten into invalid MetricsQL and failed with a `422` error. Filters are now also added to every `or` alternative inside `{...}` and to metrics defined inside WITH templates, and label values are escaped. See [#551](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/551).
+
+- BUGFIX: keep the dashboard in its folder when saving WITH templates. Previously the save request did not pass the folder, so Grafana [moved the dashboard to the root level](https://archive.grafana.com/docs/grafana/v12.3/developers/http_api/dashboard/#create--update-dashboard), which made it unavailable to users without permissions on the root folder. See [#563](https://github.com/VictoriaMetrics/victoriametrics-datasource/pull/563). Thanks to @evkuzin for contributing.
+
+- BUGFIX: show the `Dashboard has been modified` message when saving WITH templates on Grafana 13. Grafana 11 and 12 report a stale dashboard version with the [documented HTTP 412](https://archive.grafana.com/docs/grafana/v12.3/developers/http_api/dashboard/#create--update-dashboard), while Grafana 13 [responds with HTTP 409](https://github.com/grafana/grafana/blob/v13.2.2/pkg/api/dashboard.go#L544-L548), which previously left the dialog open without any message. See [#563](https://github.com/VictoriaMetrics/victoriametrics-datasource/pull/563). Thanks to @evkuzin for contributing.
+
+- BUGFIX: fix WITH templates in Explore: a saved template used to be ignored, now it is applied to the query and kept after a page reload, in shared Explore links and after `Add to dashboard`.
+
+- BUGFIX: show the metrics of a query that uses a WITH template in the `Export data` dialog. Previously such a query had no selectors to export.
+
+## v0.26.1
 
 - MAINTENANCE: fix the frontend build of the plugin.
 

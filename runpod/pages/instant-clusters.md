@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [instant-clusters.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/instant-clusters.mdx)
+> Pinned source for Runpod main: [instant-clusters.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/instant-clusters.mdx)
 > Canonical documentation: https://docs.runpod.io/instant-clusters
 
 # Overview
@@ -34,7 +34,7 @@ For distributed inference across multiple nodes, follow the [Ray and vLLM deploy
 Runpod provisions multiple GPU nodes in the same data center connected with high-speed networking. One node is designated primary (`NODE_RANK=0`), and all nodes receive pre-configured environment variables for distributed communication.
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#5F4CFE','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5F4CFE', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#9289FE','primaryTextColor':'#fff','primaryBorderColor':'#9289FE','lineColor':'#684DF3','secondaryColor':'#AE6DFF','tertiaryColor':'#FCB1FF','edgeLabelBackground':'#5D29F0', 'fontSize':'15px','fontFamily':'font-inter'}}}%%
 
 flowchart TD
     internet["Internet"]
@@ -56,16 +56,16 @@ flowchart TD
         node3 <--> ens
     end
 
-    style primary fill:#5F4CFE,stroke:#5F4CFE,color:#FFFFFF,stroke-width:2px
+    style primary fill:#5D29F0,stroke:#684DF3,color:#FFFFFF,stroke-width:2px
     style node1 fill:#4D38F5,stroke:#4D38F5,color:#FFFFFF,stroke-width:2px
     style node2 fill:#4D38F5,stroke:#4D38F5,color:#FFFFFF,stroke-width:2px
     style node3 fill:#4D38F5,stroke:#4D38F5,color:#FFFFFF,stroke-width:2px
     style internet fill:#22C55E,stroke:#22C55E,color:#000000,stroke-width:2px
     style eth0 fill:#fb923c,stroke:#fb923c,color:#000000,stroke-width:2px
     style ens fill:#9289FE,stroke:#9289FE,color:#FFFFFF,stroke-width:2px
-    style cluster fill:#1B0656,stroke:#5F4CFE,color:#FFFFFF,stroke-dasharray: 5 5
+    style cluster fill:#1B0656,stroke:#684DF3,color:#FFFFFF,stroke-dasharray: 5 5
 
-    linkStyle default stroke-width:2px,stroke:#5F4CFE
+    linkStyle default stroke-width:2px,stroke:#684DF3
 ```
 
 The high-speed interfaces (`ens1`-`ens8`) handle inter-node communication for PyTorch, TensorFlow, and Slurm. The `eth0` interface on the primary node handles external traffic. See the [configuration reference](https://docs.runpod.io/instant-clusters/configuration) for environment variables and network details.

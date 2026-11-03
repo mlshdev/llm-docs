@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/configuration/use-ssh.mdx](https://github.com/runpod/docs/blob/f2481a71841afde6db66b886a32d287d2e3ac0c9/pods/configuration/use-ssh.mdx)
+> Pinned source for Runpod main: [pods/configuration/use-ssh.mdx](https://github.com/runpod/docs/blob/02379524f1d057200d839d013114f2e8817eaa85/pods/configuration/use-ssh.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/configuration/use-ssh
 
 # Connect to a Pod with SSH
