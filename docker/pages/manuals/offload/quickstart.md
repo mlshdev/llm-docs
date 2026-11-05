@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/offload/quickstart.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/offload/quickstart.md)
+> Pinned source for Docker main: [content/manuals/offload/quickstart.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/offload/quickstart.md)
 
 # Docker Offload quickstart
 
@@ -162,6 +162,6 @@ The sandbox is removed from the Docker Agentic Platform console as well.
 ## What's next
 
 - [Explore the Docker Offload CLI reference](https://docs.docker.com/reference/cli/docker/offload/).
-- [Learn how Docker Offload works](https://docs.docker.com/offload/about/)
+- [Learn how Docker Offload works](https://docs.docker.com/offload/core-concepts/)
 - [Manage your sandbox](https://docs.docker.com/offload/sandboxes/), including resuming and deleting it
 - [Optimize your Docker Offload usage](https://docs.docker.com/offload/optimize/)

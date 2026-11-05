@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/governance/organization/policies/create-manage.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/governance/organization/policies/create-manage.md)
+> Pinned source for Docker main: [content/manuals/ai/governance/organization/policies/create-manage.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/governance/organization/policies/create-manage.md)
 
 # Create and manage organization policies
 
@@ -96,6 +96,10 @@ To set the message:
    organization.
 2. In the left-hand navigation, expand **AI Platform** and select **Manage**.
 3. In **Support message**, enter up to 500 characters.
+
+   The **Support message** field appears only when **AI governance** is turned
+   on. For more details, see
+   [Turn on AI governance](https://docs.docker.com/ai/governance/organization/get-started/#step-4-turn-on-ai-governance).
 4. Select **Save changes**.
 
 Docker shows the message only for denials caused by an organization policy and

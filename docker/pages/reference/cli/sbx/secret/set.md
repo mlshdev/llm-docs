@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_secret_set.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_secret_set.yaml)
 
 # sbx secret set
 
@@ -35,7 +35,7 @@ helper path outside shared workspaces. sbx does not copy helpers, inspect their
 dependencies, or confine their execution. Helpers and any code or configuration
 they load must remain outside writable sandbox mounts. Explicit paths into shared
 workspaces and broad mounts exposing host configuration or the host temporary
-directory remain unsafe, including mounts added later with sbx mount.
+directory remain unsafe, including mounts added to a running sandbox later.
 
 ### Registry credentials
 
@@ -58,7 +58,7 @@ use --registry-auth-endpoint to trust its exact HTTPS URL.
 | -------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `--all-sandboxes`          |         | Inject registry credentials into every sandbox (requires --registry)                                                                                      |
 | `--command`                |         | Use a command's standard output as the secret value                                                                                                       |
-| `-f`, `--force`            |         | Overwrite an existing secret when --token is used                                                                                                         |
+| `-f`, `--force`            |         | Overwrite existing API-key, OAuth, or registry credentials without confirmation                                                                           |
 | `--no-verify`              |         | Skip checking the --ref or --command source when storing it                                                                                               |
 | `--oauth`                  |         | Start OAuth flow and store OAuth tokens (openai/global only) With --cloud: openai or anthropic, stored only in the cloud (never the local secrets-engine) |
 | `--password-stdin`         |         | Read registry password or token from stdin (use with --registry)                                                                                          |
@@ -77,6 +77,7 @@ use --registry-auth-endpoint to trust its exact HTTPS URL.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 

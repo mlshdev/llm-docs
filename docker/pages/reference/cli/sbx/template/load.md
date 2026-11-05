@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_template_load.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_template_load.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_template_load.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_template_load.yaml)
 
 # sbx template load
 
 Load an image from a tar file into the sandbox runtime
 
-**Usage:** `sbx template load FILE [NAME] [flags]`
+**Usage:** `sbx template load FILE [flags]`
 
 ## Description
 
@@ -43,6 +43,7 @@ disk, and the microVM checkpoint for faster resume.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 

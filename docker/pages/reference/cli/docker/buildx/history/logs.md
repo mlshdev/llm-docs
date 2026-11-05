@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/buildx/docker_buildx_history_logs.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/cli/buildx/docker_buildx_history_logs.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_history_logs.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/cli/buildx/docker_buildx_history_logs.yaml)
 
 # docker buildx history logs
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/_index.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/integrations/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/_index.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes/integrations/_index.md)
 
 **Docker Sandboxes SSH requirements**
 
@@ -122,11 +122,13 @@ client. An interactive SSH shell starts in the sandbox workspace, matching
 home directory, `/home/agent`. Select the intended folder explicitly in the
 editor instead of relying on its initial location.
 
-For a sandbox with a primary workspace, each workspace path appears inside the
-sandbox at the same absolute path as on the host. For example, if you pass
-`/Users/bob/src/my-project`, select that path in the remote folder picker. For
-a mountless sandbox that uses a Docker-provided agent template, select
-`/home/agent/workspace`.
+In the remote folder picker, select the workspace's path inside the sandbox.
+A workspace mounted from `/Users/bob/src/my-project` uses that same path by
+default. A custom mount target such as `/workspace/data` is the path to open
+in the editor.
+
+Docker-provided agent templates use `/home/agent/workspace` as the workspace
+folder for mountless sandboxes.
 
 ## Connect a specific tool
 

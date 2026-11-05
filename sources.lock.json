@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "d40e4d2c029e471aa18744e28bebe179d96abb6f",
-      "sourceCommittedAt": "2026-11-03T22:45:06Z",
-      "observedCommit": "d40e4d2c029e471aa18744e28bebe179d96abb6f",
-      "documentationDigest": "3241063117189400c64013cb40d5f523de00861be0efbe67f0acae66a13a69ad"
+      "sourceCommit": "c98501277b974550688eeed803c975e2665d6468",
+      "sourceCommittedAt": "2026-11-04T19:27:40Z",
+      "observedCommit": "c98501277b974550688eeed803c975e2665d6468",
+      "documentationDigest": "2ed02492a64abbc36e23ff943dad85c0bd10dfb7c4ad965f1b3b7fdce8967289"
     },
     "container": {
       "tag": "1.6.1",
@@ -61,10 +61,10 @@
       "sourceCommit": "915d91904bf7f5be66ab00f88947ae7fc1431acc"
     },
     "victoriametrics-datasource": {
-      "tag": "v1.0.0",
-      "releaseId": 431279167,
-      "releasePublishedAt": "2026-11-02T09:38:27Z",
-      "sourceCommit": "7329605e49bccc8544819dc4c87b30f62a84aa19"
+      "tag": "v1.0.1",
+      "releaseId": 433966976,
+      "releasePublishedAt": "2026-11-04T13:34:05Z",
+      "sourceCommit": "8dc0515aa573a02cd799f010727c74830c6240d1"
     },
     "victorialogs-datasource": {
       "tag": "v0.33.1",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "1999e548f85166f921b7f2aca47091a7b7f002ed",
-      "sourceCommittedAt": "2026-11-03T00:55:14Z",
-      "observedCommit": "200a98d5ba4a6c792517d3ea464a5392737b4e33",
-      "documentationDigest": "ff2e3f50fd719e65bb565474ae6f0ddb7d6ee3bcbb34108ec61f5ad061f2bcd9"
+      "sourceCommit": "baa68e68b34e2de912eb7e94342cebd2545f05ed",
+      "sourceCommittedAt": "2026-10-12T13:12:28Z",
+      "observedCommit": "baa68e68b34e2de912eb7e94342cebd2545f05ed",
+      "documentationDigest": "10d661174a85f133cc0e876b8684e0d95b914ed95bb0b5ed63cbb16233960422"
     },
     "yt-dlp": {
       "tag": "2026.10.26",
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f",
-      "sourceCommittedAt": "2026-11-03T19:04:18Z",
-      "observedCommit": "bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f",
-      "documentationDigest": "f999be4c2b929ba7dcc24c95cb990071e1b05a687bbbe01bb54fa4b2fe0d0480"
+      "sourceCommit": "93f2147761903839f4a2b3e595117f4f20fd9a89",
+      "sourceCommittedAt": "2026-11-04T15:16:02Z",
+      "observedCommit": "93f2147761903839f4a2b3e595117f4f20fd9a89",
+      "documentationDigest": "97a7ad32980399151ef9f5d7978c746355250f82bf8b55ded8a53b53984b636a"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

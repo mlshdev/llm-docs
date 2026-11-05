@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_cp.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_cp.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_cp.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_cp.yaml)
 
 # sbx cp
 
@@ -13,19 +13,26 @@ The other must be a local path. Copying between two sandboxes is not supported. 
 ID (sbx\_\*) or name from "sbx --cloud ls". Cloud transfers go through the Docker
 Sandboxes Cloud file API instead of the local sandboxd.
 
+Cloud copies transfer files, not symbolic links or empty directories. A symbolic
+link passed as SRC is always followed on upload. Links inside an uploaded
+directory are skipped unless --follow-link is set. On download, --follow-link
+follows SRC only when it names a symbolic link to a file. Downloads of directories
+skip symbolic links even with --follow-link.
+
 When copying a directory, the directory itself is placed at the destination.
 If the destination path does not exist it is created; if it already exists
 as a directory, the source is placed inside it.
 
-When a local path is inside a sandbox workspace, sbx cp refuses symbolic
-links that lead out of the workspace, even with --follow-link, including
-when the workspace is reached through a symbolic link or junction to it.
+For local paths inside workspace directories or other host directories mounted
+into the sandbox, sbx cp refuses symbolic links that escape those directories,
+even with --follow-link, including when a directory is reached through a
+symbolic link, junction or substituted drive.
 
 ## Options
 
-| Option                | Default | Description                              |
-| --------------------- | ------- | ---------------------------------------- |
-| `-L`, `--follow-link` |         | Follow symbolic links in the source path |
+| Option                | Default | Description                                                                                           |
+| --------------------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| `-L`, `--follow-link` |         | Follow symbolic links in the source path (cloud: does not follow links inside downloaded directories) |
 
 ## Global options
 
@@ -33,6 +40,7 @@ when the workspace is reached through a symbolic link or junction to it.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 

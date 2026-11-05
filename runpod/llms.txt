@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `93f2147761903839f4a2b3e595117f4f20fd9a89`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -90,7 +90,7 @@
 - [Overview](pages/serverless/endpoints/overview.md): Deploy and manage Serverless endpoints using the Runpod console or REST API. Review configuration and operations guidance for Runpod Serverless. (6265 bytes)
 - [Send API requests](pages/serverless/endpoints/send-requests.md): Submit and manage jobs for your queue-based endpoints by sending HTTP requests. Review configuration and operations guidance for Runpod Serverless. (13532 bytes)
 - [Operation reference](pages/serverless/endpoints/operation-reference.md): Detailed API reference for all queue-based endpoint operations. Review configuration and operations guidance for Runpod Serverless. (17931 bytes)
-- [Endpoint settings](pages/serverless/endpoints/endpoint-configurations.md): Reference guide for all Serverless endpoint settings and parameters. Review configuration and operations guidance for Runpod Serverless. (10553 bytes)
+- [Endpoint settings](pages/serverless/endpoints/endpoint-configurations.md): Reference guide for all Serverless endpoint settings and parameters. Review configuration and operations guidance for Runpod Serverless. (10850 bytes)
 - [Rolling releases](pages/serverless/endpoints/rolling-releases.md): Understand how Runpod rolls out Serverless endpoint updates without downtime, including worker replacement, version tracking, and rollback behavior. (2784 bytes)
 - [Cached models](pages/serverless/endpoints/model-caching.md): Accelerate worker cold starts and reduce costs by using cached models. Review configuration and operations guidance for Runpod Serverless. (8537 bytes)
 - [Optimize your endpoints](pages/serverless/development/optimization.md): Implement strategies to reduce latency and cost for your Serverless endpoints. Review configuration and operations guidance for Runpod Serverless. (5445 bytes)

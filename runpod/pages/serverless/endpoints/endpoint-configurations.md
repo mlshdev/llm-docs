@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/serverless/endpoints/endpoint-configurations.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/serverless/endpoints/endpoint-configurations.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/endpoint-configurations
 
 # Endpoint settings
@@ -100,6 +100,10 @@ Runpod automatically scales down endpoints that go a long time without any reque
 This scale-down is automatic and system-driven, and the timer is based on request activity, so any incoming request resets it.
 
 Once an endpoint has been scaled down this way, it stays at its reduced max workers until you raise the value yourself. To use the endpoint again, increase its max workers in the Runpod console. To prevent an endpoint from scaling down in the first place, make sure it continues to receive requests.
+
+### Initialization timeout
+
+`RUNPOD_INIT_TIMEOUT` in the endpoint configuration sets how long, in seconds, a worker can take to initialize before Runpod stops it. The default is 420 seconds. Workers are billed while they initialize. For large models that need longer to load, set a higher value.
 
 ### Execution timeout
 

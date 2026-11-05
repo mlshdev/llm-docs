@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics datasource for Grafana v1.0.0: [src/README.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/src/README.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v1.0.1: [src/README.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/8dc0515aa573a02cd799f010727c74830c6240d1/src/README.md)
 
 # VictoriaMetrics datasource for Grafana
 
@@ -6,7 +6,7 @@ The [VictoriaMetrics Grafana plugin](https://grafana.com/grafana/plugins/victori
 Grafana to query, visualize, and interact with [VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/),
 a high-performance metrics storage and processing system.
 
-![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/dashboard.png)
+![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/8dc0515aa573a02cd799f010727c74830c6240d1/src/img/dashboard.png)
 
 ## Capabilities
 
@@ -14,7 +14,7 @@ a high-performance metrics storage and processing system.
 2. Use Explore mode with Grafana.
 3. Build dashboards and setup alerts.
 4. Use Ad Hoc filters.
-5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/src/README.md#how-to-use-with-templates) queries and expressions.
+5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/8dc0515aa573a02cd799f010727c74830c6240d1/src/README.md#how-to-use-with-templates) queries and expressions.
 6. Get insights about query execution bottlenecks via [tracing](https://docs.victoriametrics.com/victoriametrics/#query-tracing).
 7. Automatically format queries via `Prettify` button.
 
@@ -190,13 +190,13 @@ feature for navigating from a span in a trace directly to metrics relevant for a
 Metric to logs correlation can be configured using [correlations](https://grafana.com/docs/grafana/latest/administration/correlations/)
 interface:
 
-![Metric to logs correlation 1](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/correlation-metric-to-logs-1.png)
-![Metric to logs correlation 2](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/correlation-metric-to-logs-2.png)
-![Metric to logs correlation 3](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/correlation-metric-to-logs-3.png)
+![Metric to logs correlation 1](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/8dc0515aa573a02cd799f010727c74830c6240d1/src/img/correlation-metric-to-logs-1.png)
+![Metric to logs correlation 2](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/8dc0515aa573a02cd799f010727c74830c6240d1/src/img/correlation-metric-to-logs-2.png)
+![Metric to logs correlation 3](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/8dc0515aa573a02cd799f010727c74830c6240d1/src/img/correlation-metric-to-logs-3.png)
 
 Then, in Grafana's Explore mode click on the specified field will open a split view of Logs datasource already filtered
 by the configured fields:
-![Metric to logs correlation 4](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/7329605e49bccc8544819dc4c87b30f62a84aa19/src/img/correlation-metric-to-logs-4.png)
+![Metric to logs correlation 4](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/8dc0515aa573a02cd799f010727c74830c6240d1/src/img/correlation-metric-to-logs-4.png)
 
 ### Metric to traces
 
@@ -224,4 +224,4 @@ See more details [here](https://github.com/VictoriaMetrics/victoriametrics-datas
 ## License
 
 This project is licensed under
-the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/LICENSE).
+the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/8dc0515aa573a02cd799f010727c74830c6240d1/LICENSE).

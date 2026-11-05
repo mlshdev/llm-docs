@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-send.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/runpodctl/reference/runpodctl-send.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-send.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/runpodctl/reference/runpodctl-send.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-send
 
 # send

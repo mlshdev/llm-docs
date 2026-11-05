@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -24,6 +24,14 @@ The command prints a summary of checks that passed, warned, or failed, along
 with suggested fixes. Use `--json` or `--format yaml` for machine-readable
 output, or `--format github-issue` to generate a Markdown snippet suitable for pasting
 into a GitHub issue.
+
+## Image pulls fail on eCryptfs
+
+On Linux, image pulls can fail with an I/O error when the sandbox state
+directory is on eCryptfs.
+
+If [`sbx diagnose`](#run-diagnostics) reports `state directory is on eCryptfs`,
+use a filesystem other than eCryptfs for sandbox state.
 
 ## Sandbox is not responding
 

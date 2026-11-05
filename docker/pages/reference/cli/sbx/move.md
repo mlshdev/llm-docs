@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_move.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_move.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_move.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_move.yaml)
 
 # sbx move
 
@@ -78,7 +78,7 @@ Extend later with 'sbx --cloud ttl'.
 | `--name`        |         | Name for the destination sandbox (default: 'moved-' + the source name; a cloud destination always adds a short unique suffix, a local one only when that name is already taken)                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `--on-timeout`  |         | What happens to the destination cloud sandbox when its TTL lapses: 'stop' stops it in place so it can be started again later, 'restart' keeps it running by stopping and immediately starting it, or 'delete' removes it. Not every sandbox supports 'stop', and an explicit request the server refuses fails the move after the source has been stopped and uploaded, so the sandbox is restored but the transfer is spent. With 'restart' a supplied --ttl must be at least 1h. Default: stop when the sandbox supports it, else the server default (delete). Only with --to cloud |
 | `--to`          |         | Destination of the move: 'local' (cloud to local) or 'cloud' (local to cloud)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `--ttl`         |         | Time-to-live for the destination cloud sandbox (15s to 24h, e.g. 30m, 2h; only with --to cloud; default: server-side)                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `--ttl`         |         | Time-to-live for the destination cloud sandbox (15s to 24h, e.g. 30m, 2h; units are case-insensitive; only with --to cloud; default: server-side)                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Global options
 
@@ -86,6 +86,7 @@ Extend later with 'sbx --cloud ttl'.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 

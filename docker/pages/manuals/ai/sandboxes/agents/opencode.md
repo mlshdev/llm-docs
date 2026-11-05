@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/opencode.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/agents/opencode.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/opencode.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes/agents/opencode.md)
 
 # OpenCode
 
@@ -66,10 +66,10 @@ OpenCode Zen API keys aren't part of the built-in OpenCode credentials that
 Set the `OPENCODE_API_KEY` environment variable on the host, then store it:
 
 ```console
-$ sbx secret set-custom \
+$ printf '%s' "$OPENCODE_API_KEY" | sbx secret set-custom \
     --host opencode.ai \
     --env OPENCODE_API_KEY \
-    --value "$OPENCODE_API_KEY"
+    --value-stdin
 ```
 
 Custom secrets keep the real key in the host secret store. The sandbox receives

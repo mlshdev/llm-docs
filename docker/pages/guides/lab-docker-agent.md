@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/lab-docker-agent.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/guides/lab-docker-agent.md)
+> Pinned source for Docker main: [content/guides/lab-docker-agent.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/guides/lab-docker-agent.md)
 
 # Lab: Getting Started with Docker Agent
 

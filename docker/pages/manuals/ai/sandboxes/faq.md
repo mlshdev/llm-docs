@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/faq.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes/faq.md)
 
 # FAQ
 
@@ -88,7 +88,19 @@ CLI usage telemetry does not include your prompts or code. Cloud sandboxes
 execute on Docker-managed infrastructure, so files you transfer to them are
 stored in the cloud.
 
-To opt out of CLI usage analytics, set the `SBX_NO_TELEMETRY` environment variable:
+To persistently disable telemetry for the local CLI and daemon, set
+[`telemetry.disabled`](https://docs.docker.com/ai/sandboxes/configuration/settings/#telemetrydisabled) to `true`:
+
+```console
+$ sbx settings set telemetry.disabled true
+$ sbx daemon restart
+```
+
+The next CLI invocation uses the saved preference. A running daemon keeps its
+previous telemetry setting until you restart it. Setting `SBX_NO_TELEMETRY=0`
+doesn't override the saved opt-out.
+
+You can also opt out with the `SBX_NO_TELEMETRY` environment variable:
 
 ```console
 $ export SBX_NO_TELEMETRY=1

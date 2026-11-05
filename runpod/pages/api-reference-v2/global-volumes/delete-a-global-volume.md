@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/global-volumes/delete-a-global-volume.mdx](https://github.com/runpod/docs/blob/bb50dd3e90ddb2dfedf2d0c89fa8ed3feeadd01f/api-reference-v2/global-volumes/delete-a-global-volume.mdx)
+> Pinned source for Runpod main: [api-reference-v2/global-volumes/delete-a-global-volume.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/api-reference-v2/global-volumes/delete-a-global-volume.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/global-volumes/delete-a-global-volume
 
 # Delete A Global Volume

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/use-kits.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/customize/use-kits.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/use-kits.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes/customize/use-kits.md)
 
 # Use kits
 
@@ -17,9 +17,13 @@ for built-in agent references such as `claude` and `codex`.
 
 ## Run a kit
 
-The built-in agent names are shortcuts for kit references. To run another kit,
-replace the agent name with that kit's reference. For example, run Docker's
-published v3 Codex workload:
+Built-in names such as `claude` and `codex` resolve to kits published on
+Docker Hub under `docker.io/sbx/<NAME>:latest`. For example, `codex` resolves
+to `docker.io/sbx/codex:latest`. These references differ from the versioned
+v3 workloads listed below.
+
+To run another kit, replace the agent name with that kit's reference. For
+example, run Docker's published v3 Codex workload:
 
 ```console
 $ sbx run docker.io/docker/sbx-kit-codex:0.155.1 --name codex-v3-kit

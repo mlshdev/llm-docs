@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-ubuntu.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/dhi/migration/migrate-from-ubuntu.md)
+> Pinned source for Docker main: [content/manuals/dhi/migration/migrate-from-ubuntu.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/dhi/migration/migrate-from-ubuntu.md)
 
 Docker Hardened Images (DHI) come in [Alpine-based and Debian-based
 variants](https://docs.docker.com/dhi/explore/available/). When migrating from an Ubuntu-based image,

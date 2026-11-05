@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/offload/v1/quickstart.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/offload/v1/quickstart.md)
+> Pinned source for Docker main: [content/manuals/offload/v1/quickstart.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/offload/v1/quickstart.md)
 
 # Docker Offload v1 quickstart
 
@@ -7,7 +7,7 @@
 - Subscription: Docker Offload and Docker Teams or Business subscription
 - Requires: Docker Desktop
 
-[Docker Offload v1](https://docs.docker.com/offload/v1/about/) lets you build and run containers in the cloud
+[Docker Offload v1](https://docs.docker.com/offload/v1/core-concepts/) lets you build and run containers in the cloud
 while using your local Docker Desktop tools and workflow. This means faster
 builds, access to cloud resources, and a seamless development
 experience.
@@ -37,7 +37,7 @@ the Docker Offload toggle appears in the Docker Desktop Dashboard header.
 1. Start Docker Desktop and sign in.
 2. In the Docker Desktop Dashboard header, look for the Docker Offload toggle.
 
-![Offload toggle](https://raw.githubusercontent.com/docker/docs/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/offload/v1/images/offload-toggle.png)
+![Offload toggle](https://raw.githubusercontent.com/docker/docs/c98501277b974550688eeed803c975e2665d6468/content/manuals/offload/v1/images/offload-toggle.png)
 
 If you see the Docker Offload toggle, you have access to Docker Offload v1 and can
 proceed to the next step. If you don't see the Docker Offload toggle, check if
@@ -69,7 +69,7 @@ CLI.
    Offload v1, you have the option to select a profile. Your usage is
    associated with the organization of the selected profile.
 
-When Docker Offload v1 is started, you'll see a cloud icon (![Offload mode icon](https://raw.githubusercontent.com/docker/docs/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/offload/v1/images/cloud-mode.png)) in the Docker Desktop
+When Docker Offload v1 is started, you'll see a cloud icon (![Offload mode icon](https://raw.githubusercontent.com/docker/docs/c98501277b974550688eeed803c975e2665d6468/content/manuals/offload/v1/images/cloud-mode.png)) in the Docker Desktop
 Dashboard header, and the Docker Desktop Dashboard appears purple. You can run
 `docker offload status` in a terminal to check the status of Docker Offload v1.
 
@@ -91,7 +91,7 @@ If Docker Offload v1 is working, you'll see `Hello from Docker!` in the terminal
 
 When Docker Offload v1 is started and you have started session (for example, you've
 ran a container), then you can see current session duration estimate in the
-Docker Desktop Dashboard footer next to the hourglass icon (![Offload session duration](https://raw.githubusercontent.com/docker/docs/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/offload/v1/images/hourglass-icon.png)).
+Docker Desktop Dashboard footer next to the hourglass icon (![Offload session duration](https://raw.githubusercontent.com/docker/docs/c98501277b974550688eeed803c975e2665d6468/content/manuals/offload/v1/images/hourglass-icon.png)).
 
 Also, when Docker Offload v1 is started, you can view detailed session information
 by selecting **Docker Offload** > **Insights** in the left navigation of the
@@ -100,7 +100,7 @@ Docker Desktop Dashboard.
 ## Step 5: Stop Docker Offload v1
 
 Docker Offload v1 automatically
-[idles](https://docs.docker.com/offload/v1/about/#session-management-and-idle-state) if you do not respond to
+[idles](https://docs.docker.com/offload/v1/core-concepts/#session-management-and-idle-state) if you do not respond to
 periodic prompts that appear in the Docker Desktop Dashboard. You can stop your
 Docker Offload v1 session at any time. To stop Docker Offload v1:
 

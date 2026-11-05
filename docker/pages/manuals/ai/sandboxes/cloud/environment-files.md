@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/environment-files.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/cloud/environment-files.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/environment-files.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes/cloud/environment-files.md)
 
 # Use environment files in the cloud
 
@@ -162,8 +162,20 @@ Use `run` again to reconnect to the existing sandbox. It creates a sandbox if
 one doesn't exist. Pass `--ttl` and `--on-timeout` only when creating a sandbox:
 `run` rejects those flags when attaching to an existing one.
 
-Press `Ctrl+\` to detach while leaving the agent running. You can also run a
-command without an agent session, for example to inspect the working tree of
+If you set [`entrypoint` or `cmd`](https://docs.docker.com/ai/sandboxes/configuration/environment-files/#set-the-launch-command),
+or pass arguments after `--`, `run` starts a fresh session instead of rejoining
+an existing agent process. Arguments after `--` replace `cmd` and preserve
+`entrypoint`. For example:
+
+```console
+$ sbx --cloud env run ./cloud.sbxenv.yaml -- 'Explain this project'
+```
+
+These sessions don't support detaching and reconnecting.
+
+For a run without launch overrides or explicit arguments, press `Ctrl+\` to
+detach while leaving the agent running. You can also run a command without an
+agent session, for example to inspect the working tree of
 a copied Git project:
 
 ```console

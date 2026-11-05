@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/1999e548f85166f921b7f2aca47091a7b7f002ed/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/baa68e68b34e2de912eb7e94342cebd2545f05ed/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -847,6 +847,9 @@ available in a metadata key named "variant\_bitrate". It is unset when
 the stream is shared by variants with different bitrates. The value is
 always available in the corresponding program's metadata.
 
+The X-TIMESTAMP-MAP header of WebVTT subtitle segments is applied, so the
+cue times are on the timeline of the other renditions.
+
 It accepts the following options:
 
 - live\_start\_index
@@ -1543,6 +1546,22 @@ It accepts the following options:
   use it. If `usebgcolor` is set to true, then the background
   color hint will be used, otherwise transparent black will be used for
   the background. Default value is false.
+
+## webvtt
+
+WebVTT subtitle demuxer.
+
+It accepts the following options:
+
+- kind
+  Set the kind of the track: `subtitles` (default), `captions`,
+  `descriptions` or `metadata`.
+
+- timestamp\_map
+  Apply the `X-TIMESTAMP-MAP` header of HLS WebVTT segments to the cue
+  timestamps, which moves them onto the MPEG-TS timeline of the other
+  renditions, and use the 90 kHz MPEG-TS time base for the stream. Default
+  value is false.
 
 # Muxers
 

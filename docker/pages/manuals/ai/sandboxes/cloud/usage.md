@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/cloud/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes/cloud/usage.md)
 
 # Use cloud sandboxes
 
@@ -154,6 +154,15 @@ and a cloud sandbox. Use absolute sandbox paths:
 $ sbx --cloud cp ./src cloud-project:/home/agent/workspace/src
 $ sbx --cloud cp cloud-project:/home/agent/workspace/result.json ./result.json
 ```
+
+Cloud copies don't preserve empty directories or symbolic links themselves.
+Symbolic links are handled differently depending on the transfer:
+
+- Uploading a symbolic link as the source copies its target automatically.
+- Uploading a directory skips symbolic links inside it unless you pass
+  `-L` (`--follow-link`) to copy their targets.
+- Downloading a symbolic link to a file requires `-L` to copy its target.
+- Downloading a directory skips symbolic links, even with `-L`.
 
 Copying creates a point-in-time transfer. It doesn't mount or synchronize the
 local path. For source control workflows, you can also clone a remote

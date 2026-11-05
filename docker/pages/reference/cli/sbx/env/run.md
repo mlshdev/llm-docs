@@ -1,10 +1,10 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env_run.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_env_run.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env_run.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_env_run.yaml)
 
 # sbx env run
 
 Create (if needed) and attach to a sandbox environment
 
-**Usage:** `sbx env run [PATH...] [flags]`
+**Usage:** `sbx env run [PATH...] [-- ARG...] [flags]`
 
 > \[!NOTE]
 > This command is experimental.
@@ -12,7 +12,7 @@ Create (if needed) and attach to a sandbox environment
 ## Description
 
 Read the environment file from PATH (default: current directory)
-and drop into the sandbox shell. If the sandbox already exists it is started
+and launch its agent. If the sandbox already exists it is started
 and re-attached without re-provisioning; otherwise it is created first
 (provisioning secrets and bindings) and then attached.
 
@@ -22,6 +22,16 @@ in order (docker-compose `-f` semantics): later files override earlier ones.
 Values may reference the arguments the file declares with ${{ env.args.NAME }},
 supplied by --env-arg, plus ${{ env.projectDir }} and ${{ env.fileDir }}.
 Nothing else is expanded, so a "$" is literal text.
+
+Optional entrypoint and cmd arrays override the agent launch for this environment
+only. Omitted or null fields inherit defaults; empty arrays clear
+them. Later files replace these arrays rather than concatenate them. Arguments
+after -- replace cmd when an override is configured; otherwise they are forwarded
+to the agent's saved launcher. No shell expansion is performed on array elements.
+Overrides bypass the saved launcher, apply on each env run, and leave env exec,
+plain sbx run, the published kit, and the sandbox's PID 1 unchanged. A detached
+run starts only the sandbox, not the configured command. Inheriting launch
+defaults may require resolving the environment's workload kit again.
 
 A directory PATH selects sbxenv.yaml; a file PATH selects that file.
 With no PATH, \~/.sbxenv.yaml supplies shared defaults when present.
@@ -50,6 +60,7 @@ lists such as ports and mcp.servers are concatenated.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 
@@ -58,4 +69,7 @@ sbx env run
 
   # Start without attaching
   sbx env run --detach ./project
+
+  # Replace cmd while keeping the configured entrypoint
+  sbx env run . -- --base HEAD
 ```

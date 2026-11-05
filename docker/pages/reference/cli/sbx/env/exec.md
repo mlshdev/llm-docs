@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env_exec.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_env_exec.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env_exec.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_env_exec.yaml)
 
 # sbx env exec
 
@@ -12,8 +12,9 @@ Execute a command inside a sandbox environment
 ## Description
 
 Run COMMAND in the sandbox declared in sbxenv.yaml. The sandbox
-must already exist (see "sbx env create" and "sbx env run"); a stopped sandbox is
-started first.
+is started first if stopped. If it does not exist, an interactive terminal prompts
+to create it and approve the environment plan before running COMMAND. Without an
+interactive terminal, or with --no-input, create it first with "sbx env create".
 
 Arguments before `--` are environment-file paths, following the same rules as
 the other "sbx env" subcommands: each PATH may be a directory (the file is <PATH>/sbxenv.yaml) or the path to the environment file itself, and passing
@@ -55,6 +56,7 @@ unless a cloud backend reports it as an error rather than a status, which exits 
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 

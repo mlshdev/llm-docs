@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits-v2.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/ai/sandboxes/customize/kits-v2.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits-v2.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes/customize/kits-v2.md)
 
 # Kits v2
 
@@ -298,7 +298,7 @@ The agent's container image must provide:
 - HTTP proxy environment variables (`HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY`) preserved across sudo.
 - The agent binary, either baked in or installed with [`setup.install`](#setup).
 
-Build on top of `docker/sandbox-templates:shell-docker` to get these base
+Build on top of `docker.io/sbx/shell-docker-image:latest` to get these base
 requirements.
 
 ## Agent instructions

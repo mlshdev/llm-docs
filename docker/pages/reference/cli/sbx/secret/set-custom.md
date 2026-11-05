@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set-custom.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_secret_set-custom.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set-custom.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_secret_set-custom.yaml)
 
 # sbx secret set-custom
 
@@ -34,7 +34,7 @@ helper path outside shared workspaces. sbx does not copy helpers, inspect their
 dependencies, or confine their execution. Helpers and any code or configuration
 they load must remain outside writable sandbox mounts. Explicit paths into shared
 workspaces and broad mounts exposing host configuration or the host temporary
-directory remain unsafe, including mounts added later with sbx mount.
+directory remain unsafe, including mounts added to a running sandbox later.
 
 With --cloud, --host takes exact DNS names only (no IP addresses or wildcards)
 and the proxy sets --header on requests to those hosts instead of substituting
@@ -58,6 +58,7 @@ the placeholder.
 | `--show-error`  |         | Show resolver standard error if the initial check fails (may contain secrets)                            |
 | `-t`, `--token` |         | Secret value (less secure: visible in shell history)                                                     |
 | `--value`       |         | Secret value (less secure: visible in shell history)                                                     |
+| `--value-stdin` |         | Read the secret value from stdin                                                                         |
 
 ## Global options
 
@@ -65,6 +66,7 @@ the placeholder.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 
@@ -85,4 +87,7 @@ the placeholder.
 
   # Custom placeholder with {rand} suffix; the CLI prints the generated value.
   sbx secret set-custom --host api.example.com --placeholder sk-{rand} --value secret123
+
+  # Read the value from stdin to keep it out of shell history and the process list.
+  printf '%s' "$API_KEY" | sbx secret set-custom --host api.example.com --env API_KEY --value-stdin
 ```

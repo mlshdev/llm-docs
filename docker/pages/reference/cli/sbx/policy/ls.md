@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_policy_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_policy_ls.yaml)
 
 # sbx policy ls
 
@@ -24,6 +24,13 @@ Use --include-inactive to show inactive rules for troubleshooting.
 Use "sbx policy inspect <policy-or-rule>" for full detail on a selected policy or
 rule.
 
+With --cloud:
+List the cloud network policy's default mode and allow and deny patterns.
+
+Without SANDBOX, show the account policy. Specify a sandbox name or ID to show
+its policy. Cloud rules have no rule IDs; use "sbx --cloud policy rm network"
+with --resource to remove a pattern.
+
 ## Options
 
 | Option               | Default | Description                                                                                |
@@ -45,6 +52,7 @@ rule.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 
@@ -75,4 +83,16 @@ rule.
 
   # Include inactive rules hidden by remote governance
   sbx policy ls --include-inactive
+
+  # Show the account policy
+  sbx --cloud policy ls
+
+  # Show one sandbox's policy
+  sbx --cloud policy ls my-sandbox
+
+  # Output the policy as JSON
+  sbx --cloud policy ls --format json
+
+  # List only network patterns
+  sbx --cloud policy ls -q
 ```

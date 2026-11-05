@@ -1,8 +1,18 @@
-> Pinned source for VictoriaMetrics datasource for Grafana v1.0.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/7329605e49bccc8544819dc4c87b30f62a84aa19/CHANGELOG.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v1.0.1: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/8dc0515aa573a02cd799f010727c74830c6240d1/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- BUGFIX: keep the query editor settings saved in the browser separate from the built-in Prometheus datasource. Previously, both plugins shared the same storage keys and overwrote each other's default editor mode and last used labels.
+
+- BUGFIX: respond with a client error instead of crashing the backend when the `vmui` link request has no body or invalid JSON.
+
+- BUGFIX: stop including the full request URL, which may carry credentials and custom query parameters, in query error messages and logs.
+
+- DEPENDENCY: update `golang.org/x/net` to v0.62.0 to fix [GO-2026-6860](https://pkg.go.dev/vuln/GO-2026-6860) and [GO-2026-6866](https://pkg.go.dev/vuln/GO-2026-6866).
+
+## v1.0.0
 
 - BUGFIX: send query parameters in the request body when the `HTTP method` setting is `POST`, so large queries no longer fail with `431 Request Header Fields Too Large` behind proxies that limit the URL length. The same applies to metadata requests such as label and series lookups. See [#550](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/550).
   - **Note:** VictoriaMetrics still limits the query length with its `-search.maxQueryLen` flag (16 KiB by default), so very long expressions need that flag raised on the VictoriaMetrics side. See [the list of command-line flags](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#list-of-command-line-flags).

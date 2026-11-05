@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/how-to/verify.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/dhi/how-to/verify.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/verify.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/dhi/how-to/verify.md)
 
 # Verify a Docker Hardened Image or chart
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/secrets/docker_pass_plugins_enable.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/cli/secrets/docker_pass_plugins_enable.yaml)
+> Pinned source for Docker main: [data/cli/secrets/docker_pass_plugins_enable.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/cli/secrets/docker_pass_plugins_enable.yaml)
 
 # docker pass plugins enable
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/hardened-desktop/settings-management/configure-json-file.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/desktop/enterprise/hardened-desktop/settings-management/configure-json-file.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/hardened-desktop/settings-management/configure-json-file.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/desktop/enterprise/hardened-desktop/settings-management/configure-json-file.md)
 
 # Configure Settings Management with a JSON file
 
@@ -17,9 +17,9 @@ Before you begin, make sure you have:
   your organization
 - A Docker Business subscription
 
-The presence of the `admin-settings.json` file enforces sign-in on Docker Desktop. This is intended for business features that require authentication.
+Docker Desktop only applies the `admin-settings.json` file when the user is signed in to an account with a Docker Business subscription. To make sure the settings take effect, the presence of the file requires sign-in.
 
-Users must be signed in and part of a Docker Business organization. If either condition isn't met, the settings file is ignored.
+Until a user signs in with a Business account, Docker Desktop prompts them to sign in and doesn’t apply the settings. To require sign-in to a specific organization, use a [sign-in enforcement](https://docs.docker.com/desktop/enterprise/enforce-sign-in/) method.
 
 ## Step one: Create the settings file
 

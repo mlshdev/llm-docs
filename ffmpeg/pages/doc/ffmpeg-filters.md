@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/1999e548f85166f921b7f2aca47091a7b7f002ed/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/baa68e68b34e2de912eb7e94342cebd2545f05ed/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -14995,7 +14995,12 @@ The filter accepts the following options:
     DirectX 11.
 
   - dx12
-    DirectX 12 (Default value).
+    DirectX 12.
+
+By default DirectX 11 is used when FFmpeg is built with D3D11VA support and
+the AMF context uses a DirectX 11 device with feature level 11\_1 or higher,
+which the DirectX 11 engine requires. Otherwise, the AMF runtime default
+(DirectX 12) is used.
 
 - enable
   Boolean value: enable/disable FRC. Dynamic value, can be altered at a runtime

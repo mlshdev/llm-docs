@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_mcp_auth.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_mcp_auth.yaml)
 
 # sbx mcp auth
 
@@ -8,19 +8,20 @@ Authorize MCP servers
 
 ## Description
 
-Authorize registered remote MCP servers through the hosted MCP control plane.
+Authorize registered MCP servers with OAuth.
 
-Commands use the Docker Hub account from 'sbx login' as the request principal.
-User and tenant identity are derived by the control plane; they are not sent in
-the request body.
+With a local gateway or an OAuth override in the server registration, credentials
+are stored locally. Otherwise, the hosted MCP control plane manages them.
 
-Running 'sbx mcp auth <server>' authorizes or reauthorizes one server. If the
-stored credential is expired, sbx asks the control plane to refresh it first and
-only falls back to interactive OAuth when refresh needs user consent.
+Hosted operations use the Docker Hub account from 'sbx login'. The control plane
+derives user and tenant identity; they are not sent in the request body.
 
-Use 'sbx mcp auth status' to inspect hosted credential status without starting
-OAuth, and 'sbx mcp auth rm' to remove hosted credentials without removing
-local MCP server registrations.
+Running 'sbx mcp auth <server>' authorizes or reauthorizes one server, even if it
+already has stored credentials.
+
+Use 'sbx mcp auth status' to inspect credential status without starting OAuth,
+and 'sbx mcp auth rm' to remove credentials without removing local MCP server
+registrations.
 
 Pass --scope (repeatable) to authorize a specific set of scopes for this run,
 overriding the default recorded at 'sbx mcp add' time. Precedence is --no-scope >
@@ -73,6 +74,7 @@ Scope values may be URN-shaped (urn:ietf:params:oauth:scope:mail) or URL-shaped
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_ports.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_ports.yaml)
 
 # sbx ports
 
@@ -43,12 +43,12 @@ for each exposed port.
 
 ## Options
 
-| Option        | Default | Description                                                                                                                   |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `--format`    |         | Output format: table, json or yaml                                                                                            |
-| `--json`      |         | Output in JSON format                                                                                                         |
-| `--publish`   |         | Publish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud) |
-| `--unpublish` |         | Unpublish a port (can be repeated): \[HOST\_IP:]HOST\_PORT:SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud)  |
+| Option            | Default | Description                                                                                                                   |
+| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `--format`        |         | Output format: table, json or yaml                                                                                            |
+| `--json`          |         | Output in JSON format                                                                                                         |
+| `-p`, `--publish` |         | Publish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud) |
+| `--unpublish`     |         | Unpublish a port (can be repeated): \[HOST\_IP:]HOST\_PORT:SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud)  |
 
 ## Global options
 
@@ -56,6 +56,7 @@ for each exposed port.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 

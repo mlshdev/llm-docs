@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/offload/v1/_index.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/offload/v1/_index.md)
+> Pinned source for Docker main: [content/manuals/offload/v1/_index.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/offload/v1/_index.md)
 
 # Docker Offload v1
 
@@ -20,6 +20,27 @@ These pages are for you if any of the following apply:
 
 For the version that individual developers subscribe to and start with
 `docker offload create`, see [Docker Offload](https://docs.docker.com/offload/).
+
+## Key features
+
+Docker Offload v1 includes the following capabilities to support modern container
+workflows:
+
+- Ephemeral cloud runners: Automatically provision and tear down cloud
+  environments for each container session.
+- Secure communication: Use encrypted tunnels between Docker Desktop and cloud
+  environments with support for secure secrets and image pulling.
+- Port forwarding and bind mounts: Retain a local development experience even
+  when running containers in the cloud.
+- VDI-friendly: [Use Docker Desktop](https://docs.docker.com/desktop/setup/vm-vdi/) in virtual
+  desktop environments or systems that don't support nested virtualization.
+
+## Fair use
+
+Docker Offload v1 enforces a fair use policy to prevent resource abuse. Fair use is
+defined as up to 8 compute hours per named user per day, totaled across all user
+sessions. Usage in excess of this threshold may be subject to session management
+at Docker's discretion.
 
 - [Quickstart](https://docs.docker.com/offload/v1/quickstart/): Get up and running with Docker Offload v1.
 - [About](https://docs.docker.com/offload/v1/about/): Learn about Docker Offload v1 and how it works.

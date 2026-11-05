@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/offload/sandboxes.md](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/content/manuals/offload/sandboxes.md)
+> Pinned source for Docker main: [content/manuals/offload/sandboxes.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/offload/sandboxes.md)
 
 # Manage Docker Offload sandboxes
 
@@ -10,7 +10,7 @@
 A cloud sandbox is an isolated environment on Docker-managed hardware, running
 its own Docker daemon. Docker Offload runs your builds and containers there
 instead of on your machine, using the Docker commands you already know. For why
-you'd run workloads this way, see [About Docker Offload](https://docs.docker.com/offload/about/).
+you'd run workloads this way, see [Core concepts](https://docs.docker.com/offload/core-concepts/).
 
 A cloud sandbox persists between sessions. Stopping it
 pauses it rather than discarding it, so its containers, images, and volumes are

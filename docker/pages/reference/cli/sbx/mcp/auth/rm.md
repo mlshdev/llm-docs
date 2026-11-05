@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth_rm.yaml](https://github.com/docker/docs/blob/d40e4d2c029e471aa18744e28bebe179d96abb6f/data/sbx_cli/sbx_mcp_auth_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth_rm.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/sbx_cli/sbx_mcp_auth_rm.yaml)
 
 # sbx mcp auth rm
 
@@ -8,7 +8,10 @@ Remove MCP server OAuth credentials
 
 ## Description
 
-Remove hosted OAuth credentials for registered MCP servers.
+Remove OAuth credentials for registered MCP servers.
+
+With a local gateway or an OAuth override in the server registration, credentials
+are stored locally. Otherwise, the hosted MCP control plane manages them.
 
 This command does not remove local MCP server registrations. Use 'sbx mcp rm'
 to remove a registration.
@@ -28,6 +31,7 @@ to remove a registration.
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--cloud`       |         | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
 | `-D`, `--debug` |         | Enable debug logging                                                                                                                                   |
+| `--no-input`    |         | Never prompt; commands that need an answer fail with the command to run instead                                                                        |
 
 ## Examples
 
