@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/google/index.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/_vendor/github.com/docker/docker-agent/docs/providers/google/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/google/index.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/_vendor/github.com/docker/docker-agent/docs/providers/google/index.md)
 
 *Use Gemini 2.5 Flash, Gemini 3.1 Pro, and other Google models with Docker Agent.*
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/reference.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/public-endpoints/reference.mdx)
+> Pinned source for Runpod main: [public-endpoints/reference.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/public-endpoints/reference.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/reference
 
 # Available models
@@ -62,7 +62,7 @@ Generate text with large language models.
 | Model                                                                         | Description                                                         | Price                  |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------- |
 | [IBM Granite 4.0](https://docs.runpod.io/public-endpoints/models/granite-4)   | 32B parameter long-context instruct model.                          | $10.00/1M tokens       |
-| [Moonshot Kimi](https://docs.runpod.io/public-endpoints/models/moonshot-kimi) | Kimi family for reasoning, chat, and coding with extended thinking. | $4.00–$15.00/1M tokens |
+| [Moonshot Kimi](https://docs.runpod.io/public-endpoints/models/moonshot-kimi) | Kimi family for reasoning, chat, and coding with extended thinking. | $4.00-$20.00/1M tokens |
 | [Qwen3 32B AWQ](https://docs.runpod.io/public-endpoints/models/qwen3-32b)     | Advanced reasoning and multilingual support. OpenAI-compatible.     | $10.00/1M tokens       |
 
 ## Audio models

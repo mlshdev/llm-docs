@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/operation-reference.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/serverless/endpoints/operation-reference.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/operation-reference.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/serverless/endpoints/operation-reference.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/operation-reference
 
 # Operation reference

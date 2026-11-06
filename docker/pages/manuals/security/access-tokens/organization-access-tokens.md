@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/access-tokens/organization-access-tokens.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/security/access-tokens/organization-access-tokens.md)
+> Pinned source for Docker main: [content/manuals/security/access-tokens/organization-access-tokens.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/security/access-tokens/organization-access-tokens.md)
 
 # Create and manage organization access tokens
 

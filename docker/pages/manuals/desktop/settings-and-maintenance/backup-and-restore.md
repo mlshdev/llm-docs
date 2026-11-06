@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/settings-and-maintenance/backup-and-restore.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/desktop/settings-and-maintenance/backup-and-restore.md)
+> Pinned source for Docker main: [content/manuals/desktop/settings-and-maintenance/backup-and-restore.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/desktop/settings-and-maintenance/backup-and-restore.md)
 
 # How to back up and restore your Docker Desktop data
 

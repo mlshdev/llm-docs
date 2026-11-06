@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/baa68e68b34e2de912eb7e94342cebd2545f05ed/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/9f690c6a4c124b9fc60588860ac66ae3fc808525/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -26433,7 +26433,24 @@ Available modes are:
   detection to extract the lens `angle` and other settings (yet). It can
   also be used to create a burning effect.
 
+- wavelet
+  Like `backward`, but the noise amplified in the dark areas is suppressed
+  in a 9/7 wavelet domain, undecimated by default: detail coefficients are
+  shrunk toward 0 according to the local attenuation and the `noise`
+  level, while the low frequencies, which average over larger areas, are kept.
+  It needs about 150 bytes of memory per pixel.
+
 Default value is `forward`.
+
+- noise
+  Set the standard deviation of the input noise in 8-bit levels, used by the
+  `wavelet` mode. Quantization alone contributes about 0.3-0.4.
+  Default is `0.5`.
+
+- decimated
+  Use a decimated instead of an undecimated wavelet transform in the
+  `wavelet` mode. Several times faster and needs about 20 bytes of memory
+  per pixel, the result has slightly more artifacts. Default is `0`.
 
 - eval
   Set evaluation mode for the expressions (`angle`, `x0`, `y0`).

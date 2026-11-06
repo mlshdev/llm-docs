@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `c98501277b974550688eeed803c975e2665d6468`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `16e452c8eaea26cec842cbf1065037fb2015001f`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -624,7 +624,7 @@
 - [Wasm workloads](pages/manuals/desktop/features/wasm.md): Wasm workloads requirements (7949 bytes)
 - [WSL 2 best practices for Docker Desktop on Windows](pages/manuals/desktop/features/wsl/best-practices.md): This page covers recommendations when running Docker Desktop on Windows using WSL 2, including version requirements and file system performance. (2294 bytes)
 - [Custom kernels on WSL](pages/manuals/desktop/features/wsl/custom-kernels.md): Docker Desktop depends on several kernel features built into the default WSL 2 Linux kernel distributed by Microsoft. (1079 bytes)
-- [Docker Desktop WSL 2 backend on Windows](pages/manuals/desktop/features/wsl/index.md): Windows Subsystem for Linux (WSL) 2 is a full Linux kernel built by Microsoft that lets Linux distributions run without managing virtual machines. With Docker Desktop running on WSL 2, users can leverage Linux workspace… (6109 bytes)
+- [Docker Desktop WSL 2 backend on Windows](pages/manuals/desktop/features/wsl/index.md): Windows Subsystem for Linux (WSL) 2 is a full Linux kernel built by Microsoft that lets Linux distributions run without managing virtual machines. With Docker Desktop running on WSL 2, users can leverage Linux workspace… (9412 bytes)
 - [Develop with Docker Desktop using WSL 2 on Windows](pages/manuals/desktop/features/wsl/use-wsl.md): The following section describes how to start developing your applications using Docker and WSL 2. (1379 bytes)
 - [Docker Desktop](pages/manuals/desktop/index.md): Docker Desktop is a one-click-install application for your Mac, Linux, or Windows environment that lets you build, share, and run containerized applications and microservices. (3185 bytes)
 - [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (371101 bytes)
@@ -698,7 +698,7 @@
 - [Apply Docker Hardened Image policies to your images](pages/manuals/dhi/how-to/policies.md): Docker publishes the set of security and compliance policies that Docker Hardened Images (DHIs) are built to meet, so you can hold your own images to the same standards. You evaluate images against these policies with t… (9300 bytes)
 - [Scan Docker Hardened Images](pages/manuals/dhi/how-to/scan.md): Docker Hardened Images (DHIs) are designed to be secure by default, but like any container image, it's important to scan them regularly as part of your vulnerability management process. (14327 bytes)
 - [Search and evaluate Docker Hardened Images](pages/manuals/dhi/how-to/search-evaluate.md): You can browse, search, or filter images by category in the Docker Hub catalog. For details about the catalog interface, see Docker Hub. (3859 bytes)
-- [Get started with DHI Select and Enterprise](pages/manuals/dhi/how-to/select-enterprise.md): Docker Hardened Images requirements (8831 bytes)
+- [Get started with DHI Select and Enterprise](pages/manuals/dhi/how-to/select-enterprise.md): Docker Hardened Images requirements (8798 bytes)
 - [Troubleshoot](pages/manuals/dhi/how-to/troubleshoot.md): This page covers debugging techniques and common issues you may encounter while migrating to or using Docker Hardened Images (DHIs). (5935 bytes)
 - [Use a Docker Hardened Image](pages/manuals/dhi/how-to/use.md): You can use a Docker Hardened Image (DHI) just like any other image on Docker Hub. DHIs follow the same familiar usage patterns. Pull them with docker pull, reference them in your Dockerfile, and run containers with doc… (13248 bytes)
 - [Verify a Docker Hardened Image or chart](pages/manuals/dhi/how-to/verify.md): Docker Hardened Images (DHI) and charts include signed attestations that verify the build process, contents, and security posture. (12342 bytes)

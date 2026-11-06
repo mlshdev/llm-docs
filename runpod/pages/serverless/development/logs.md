@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [serverless/development/logs.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/serverless/development/logs.mdx)
+> Pinned source for Runpod main: [serverless/development/logs.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/serverless/development/logs.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/logs
 
 # Monitor logs
 
 View and access logs for Serverless endpoints and workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless.
 
-![](https://raw.githubusercontent.com/runpod/docs/93f2147761903839f4a2b3e595117f4f20fd9a89/images/serverless-logs.png)
+![](https://raw.githubusercontent.com/runpod/docs/f4691b442d8e51b3762dff5669f9a517aef85350/images/serverless-logs.png)
 
 Runpod provides comprehensive logging capabilities for Serverless endpoints and workers. You can view real-time and historical logs through the Runpod console to help you monitor, debug, and troubleshoot your applications.
 

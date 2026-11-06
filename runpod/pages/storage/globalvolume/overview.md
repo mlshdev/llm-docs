@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/globalvolume/overview.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/storage/globalvolume/overview.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/overview.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/storage/globalvolume/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/overview
 
 # Overview
@@ -11,7 +11,7 @@ Create a Runpod global volume, attach it to Pods or Serverless workers across da
 
 A global volume is elastic, region-independent storage you can attach to GPU Pods and GPU Serverless endpoints. Unlike a network volume, a global volume is not tied to a specific data center. You create it once and any Pod or worker, anywhere, can mount it at startup. The volume persists when a Pod or worker is stopped or deleted. Your data remains intact until you choose to remove it.
 
-Global volumes are designed for workloads that write data infrequently and read it often, such as model serving and inference. They are not a replacement for network volumes, which are better suited for workloads with frequent writes such as training and checkpointing.
+Global volumes are designed for data that many Pods or workers read, such as model weights. You can also write to them, including large files such as checkpoints or per-request outputs, but writes can be slower than on a network volume. Use a network volume instead when your workload needs fast writes, has multiple Pods or workers writing to the same file at the same time, or depends on full POSIX file system behavior.
 
 For attachment steps, see [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume/globalvolume-pods) or [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume/globalvolume-serverless).
 

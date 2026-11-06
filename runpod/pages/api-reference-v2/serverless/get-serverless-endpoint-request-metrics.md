@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/get-serverless-endpoint-request-metrics.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/api-reference-v2/serverless/get-serverless-endpoint-request-metrics.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/get-serverless-endpoint-request-metrics.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/api-reference-v2/serverless/get-serverless-endpoint-request-metrics.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/get-serverless-endpoint-request-metrics
 
 # Get Serverless Endpoint Request Metrics

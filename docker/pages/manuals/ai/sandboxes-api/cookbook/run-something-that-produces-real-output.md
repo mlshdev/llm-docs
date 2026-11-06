@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/run-something-that-produces-real-output.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/ai/sandboxes-api/cookbook/run-something-that-produces-real-output.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/run-something-that-produces-real-output.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes-api/cookbook/run-something-that-produces-real-output.md)
 
 # Run something that produces real output
 

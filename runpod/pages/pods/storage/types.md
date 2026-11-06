@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/pods/storage/types.mdx)
+> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/pods/storage/types.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/storage/types
 
 # Storage options
@@ -67,7 +67,7 @@ Network volumes are available in two tiers:
 
 Global volumes provide elastic, region-independent storage that any Pod can mount, regardless of data center. Capacity grows with the data you store, so there is no capacity to provision upfront, and the volume persists when a Pod is stopped or deleted.
 
-Global volumes are optimized for workloads that write infrequently and read often, such as model serving and inference. They are not a replacement for network volumes, which are better suited to workloads with frequent writes such as training and checkpointing.
+Global volumes are designed for data that many Pods read, such as model weights. You can also write to them, including large files such as checkpoints, but writes can be slower than on a network volume. Use a network volume instead when your workload needs fast writes, has multiple Pods writing to the same file at the same time, or depends on full POSIX file system behavior.
 
 [Learn more about global volumes](https://docs.runpod.io/storage/globalvolume/overview).
 

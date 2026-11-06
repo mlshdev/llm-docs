@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/overview.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/storage/overview.mdx)
+> Pinned source for Runpod main: [storage/overview.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/storage/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/overview
 
 # Storage overview
@@ -17,15 +17,15 @@ Pods and Serverless workers also include temporary disks that are tied to the re
 
 ## Compare network and global volumes
 
-|                 | Network volume                                                                                  | Global volume                                                                                                                |
-| --------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| **Location**    | One data center. Compute that mounts it runs in that data center.                               | Not tied to a data center. Compute in any supported data center can mount it.                                                |
-| **Best for**    | Workloads that write often, such as training and checkpointing.                                 | Workloads that write rarely and read often, such as loading model weights for inference.                                     |
-| **Consistency** | Changes are visible right away.                                                                 | Eventually consistent. Changes made after a worker starts may not be visible immediately.                                    |
-| **File system** | Full file system behavior.                                                                      | Object-backed. No file locking, atomic rename, hard links, or permission bits.                                               |
-| **Compute**     | GPU and CPU.                                                                                    | GPU only.                                                                                                                    |
-| **Capacity**    | You set the size and can increase it later.                                                     | Grows automatically with your data.                                                                                          |
-| **Pricing**     | Billed per GB per month. See [Network volumes](https://docs.runpod.io/storage/network-volumes). | Billed for storage plus read and write requests. See [Global volumes](https://docs.runpod.io/storage/globalvolume/overview). |
+|                 | Network volume                                                                                  | Global volume                                                                                                                                                |
+| --------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Location**    | One data center. Compute that mounts it runs in that data center.                               | Not tied to a data center. Compute in any supported data center can mount it.                                                                                |
+| **Best for**    | Workloads that need fast, frequent writes, such as training with frequent checkpoints.          | Data that many Pods or workers read, such as model weights. You can also write to them, including large files such as checkpoints, but writes can be slower. |
+| **Consistency** | Changes are visible right away.                                                                 | Eventually consistent. Changes made after a worker starts may not be visible immediately.                                                                    |
+| **File system** | Full file system behavior.                                                                      | Object-backed. No file locking, atomic rename, hard links, or permission bits.                                                                               |
+| **Compute**     | GPU and CPU.                                                                                    | GPU only.                                                                                                                                                    |
+| **Capacity**    | You set the size and can increase it later.                                                     | Grows automatically with your data.                                                                                                                          |
+| **Pricing**     | Billed per GB per month. See [Network volumes](https://docs.runpod.io/storage/network-volumes). | Billed for storage plus read and write requests. See [Global volumes](https://docs.runpod.io/storage/globalvolume/overview).                                 |
 
 ## Choose a storage option
 

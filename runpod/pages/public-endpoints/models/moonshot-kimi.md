@@ -1,11 +1,11 @@
-> Pinned source for Runpod main: [public-endpoints/models/moonshot-kimi.mdx](https://github.com/runpod/docs/blob/93f2147761903839f4a2b3e595117f4f20fd9a89/public-endpoints/models/moonshot-kimi.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/moonshot-kimi.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/public-endpoints/models/moonshot-kimi.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/moonshot-kimi
 
 # Moonshot Kimi
 
 Use Moonshot Kimi models for reasoning, chat, and coding through Runpod Public Endpoints, with supported inputs, outputs, and request examples.
 
-Moonshot's Kimi family of models handles advanced reasoning and chat. It supports extended thinking with a visible reasoning trace before the final answer. A single endpoint serves three variants, each selected by setting the `model` field in the request body.
+Moonshot's Kimi family of models handles advanced reasoning and chat. It supports extended thinking with a visible reasoning trace before the final answer. A single endpoint serves five variants, each selected by setting the `model` field in the request body.
 
 - [Try in playground](https://console.runpod.io/hub/playground/text/moonshot-kimi)
 
@@ -14,7 +14,7 @@ Moonshot's Kimi family of models handles advanced reasoning and chat. It support
 |              |                                                                    |
 | ------------ | ------------------------------------------------------------------ |
 | **Endpoint** | `https://api.runpod.ai/v2/moonshot-kimi/runsync`                   |
-| **Pricing**  | $4.00–$15.00 per 1M output tokens, $0.95–$3.00 per 1M input tokens |
+| **Pricing**  | $4.00-$20.00 per 1M output tokens, $0.95-$4.00 per 1M input tokens |
 | **Type**     | Text generation                                                    |
 
 > **Note**
@@ -25,11 +25,13 @@ Moonshot's Kimi family of models handles advanced reasoning and chat. It support
 
 Choose a variant by setting the `model` field in the request body (default `kimi-k2.6`). The endpoint slug stays `moonshot-kimi` for every variant.
 
-| `model` value         | Description                                                                                                           | Context window        | Input price         | Output price         |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------- | -------------------- |
-| `kimi-k2.6` (default) | General-purpose model with thinking and non-thinking modes, agentic capabilities, and multimodal input.               | 256K (262,144 tokens) | $0.95 per 1M tokens | $4.00 per 1M tokens  |
-| `kimi-k2.7-code`      | Coding-focused model with thinking mode and agentic capabilities.                                                     | 256K (262,144 tokens) | $0.95 per 1M tokens | $4.00 per 1M tokens  |
-| `kimi-k3`             | Flagship model with always-on reasoning and configurable reasoning effort for long-horizon coding and knowledge work. | 1M (1,048,576 tokens) | $3.00 per 1M tokens | $15.00 per 1M tokens |
+| `model` value             | Description                                                                                                           | Context window        | Input price         | Output price         |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------- | -------------------- |
+| `kimi-k2.6` (default)     | General-purpose model with thinking and non-thinking modes, agentic capabilities, and multimodal input.               | 256K (262,144 tokens) | $0.95 per 1M tokens | $4.00 per 1M tokens  |
+| `kimi-k2.7-code`          | Coding-focused model with thinking mode and agentic capabilities.                                                     | 256K (262,144 tokens) | $0.95 per 1M tokens | $4.00 per 1M tokens  |
+| `kimi-k3`                 | Flagship model with always-on reasoning and configurable reasoning effort for long-horizon coding and knowledge work. | 1M (1,048,576 tokens) | $3.00 per 1M tokens | $15.00 per 1M tokens |
+| `kimi-k3.1-pro`           | Moonshot's 3T-class open-weight model with always-on reasoning, for long-horizon coding and agentic work.             | 1M                    | $2.00 per 1M tokens | $10.00 per 1M tokens |
+| `kimi-k3.1-pro-highspeed` | Kimi K3.1 Pro served for higher throughput, for interactive coding and agent loops.                                   | 1M                    | $4.00 per 1M tokens | $20.00 per 1M tokens |
 
 To target a variant other than the default, set the `model` field to its ID. For example, to use the flagship model, set `"model": "kimi-k3"` in the request body (or `model="kimi-k3"` with the OpenAI SDK).
 
@@ -51,11 +53,11 @@ The content of the message.
 
 **Property (type: string)**
 
-The Kimi variant to use. One of `kimi-k2.6`, `kimi-k2.7-code`, or `kimi-k3`.
+The Kimi variant to use. One of `kimi-k2.6`, `kimi-k2.7-code`, `kimi-k3`, `kimi-k3.1-pro`, or `kimi-k3.1-pro-highspeed`.
 
 **Property (type: integer)**
 
-Maximum number of tokens to generate.
+Maximum number of tokens to generate. Kimi K3.1 models reason before they answer, and reasoning tokens count toward this limit. For coding tasks with `kimi-k3.1-pro` or `kimi-k3.1-pro-highspeed`, set it to 8,192 or higher so the model has room to finish its answer.
 
 **Property (type: float)**
 
@@ -227,7 +229,7 @@ Token usage information.
 
 ## OpenAI API compatibility
 
-Moonshot Kimi is fully compatible with the OpenAI API format. You can use the OpenAI Python client to interact with this endpoint. You can set `model` to any of the three variant IDs.
+Moonshot Kimi is fully compatible with the OpenAI API format. You can use the OpenAI Python client to interact with this endpoint. You can set `model` to any of the five variant IDs.
 
 ```python Python (OpenAI SDK)
 from openai import OpenAI
@@ -280,7 +282,7 @@ For more details, see [Send vLLM requests](https://docs.runpod.io/serverless/vll
 
 ## Cost calculation
 
-Moonshot Kimi charges separate rates for input and output tokens, and the rate depends on the variant. Kimi K2.6 and Kimi K2.7 Code charge $0.95 per 1M input tokens and $4.00 per 1M output tokens. Kimi K3 charges $3.00 per 1M input tokens and $15.00 per 1M output tokens. Example costs:
+Moonshot Kimi charges separate rates for input and output tokens, and the rate depends on the variant. Kimi K2.6 and Kimi K2.7 Code charge $0.95 per 1M input tokens and $4.00 per 1M output tokens. Kimi K3 charges $3.00 per 1M input tokens and $15.00 per 1M output tokens. Kimi K3.1 Pro charges $2.00 per 1M input tokens and $10.00 per 1M output tokens, and Kimi K3.1 Pro Highspeed charges $4.00 per 1M input tokens and $20.00 per 1M output tokens. Example costs:
 
 | Tokens           | K2.6 & K2.7 Code input ($0.95/1M) | K2.6 & K2.7 Code output ($4.00/1M) | K3 input ($3.00/1M) | K3 output ($15.00/1M) |
 | ---------------- | --------------------------------- | ---------------------------------- | ------------------- | --------------------- |

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/inputs.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/build/policies/inputs.md)
+> Pinned source for Docker main: [content/manuals/build/policies/inputs.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/build/policies/inputs.md)
 
 When Buildx evaluates policies, it provides information about build inputs
 through the `input` object. The structure of `input` depends on the type of

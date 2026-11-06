@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/baa68e68b34e2de912eb7e94342cebd2545f05ed/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/9f690c6a4c124b9fc60588860ac66ae3fc808525/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -1224,6 +1224,21 @@ opening the decoder), but the value is informational only and may be incorrect
 
 Same validity restrictions as for `view_ids_available` apply to
 this option.
+
+- tile\_interleave
+  Decode pictures split into tile columns in CTB row order rather than in tile
+  scan order, so that frame threading keeps overlapping. With the tile scan the
+  lower CTB rows are published only once the last tile column has been decoded,
+  which stalls the frames waiting for them. Only the order in which the CTBs are
+  decoded changes, the output is the same.
+
+The default of -1 takes this order for eligible pictures when frame threading is
+in use, 0 disables it, and 1 takes it for eligible pictures even without frame
+threading. A picture is eligible when it has two or more tile columns, does not
+use entropy coding synchronization and packs its tiles into slices in a layout
+the traversal supports. Every other picture is decoded in tile scan order as
+before. With slice threading, a picture whose tiles are all carried in one
+slice is still decoded tile-parallel, whatever this option is set to.
 
 ## rawvideo
 

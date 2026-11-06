@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/secrets.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/build/ci/github-actions/secrets.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/secrets.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/build/ci/github-actions/secrets.md)
 
 A build secret is sensitive information, such as a password or API token, consumed as part of the build process.
 Docker Build supports two forms of secrets:

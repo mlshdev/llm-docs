@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial.md)
 
 To start creating your extension, you first need a directory with files which range from the extension’s source code to the required extension-specific files. This page provides information on how to set up an extension with a more advanced frontend.
 

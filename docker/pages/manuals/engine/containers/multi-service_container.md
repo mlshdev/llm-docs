@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/containers/multi-service_container.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/engine/containers/multi-service_container.md)
+> Pinned source for Docker main: [content/manuals/engine/containers/multi-service_container.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/engine/containers/multi-service_container.md)
 
 A container's main running process is the `ENTRYPOINT` and/or `CMD` at the
 end of the `Dockerfile`. It's best practice to separate areas of concern by

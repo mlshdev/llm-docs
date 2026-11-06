@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/configure-builder.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/build/ci/github-actions/configure-builder.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/configure-builder.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/build/ci/github-actions/configure-builder.md)
 
 This page contains instructions on configuring your BuildKit instances when
 using our [Setup Buildx Action](https://github.com/docker/setup-buildx-action).
@@ -56,7 +56,7 @@ jobs:
 
 Logs will be available at the end of a job:
 
-![BuildKit container logs](https://raw.githubusercontent.com/docker/docs/c98501277b974550688eeed803c975e2665d6468/content/manuals/build/ci/github-actions/images/buildkit-container-logs.png)
+![BuildKit container logs](https://raw.githubusercontent.com/docker/docs/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/build/ci/github-actions/images/buildkit-container-logs.png)
 
 ## BuildKit Daemon configuration
 

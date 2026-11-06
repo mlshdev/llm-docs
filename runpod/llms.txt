@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `93f2147761903839f4a2b3e595117f4f20fd9a89`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `f4691b442d8e51b3762dff5669f9a517aef85350`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -147,7 +147,7 @@
 - [Connect to a Pod with VSCode or Cursor](pages/pods/configuration/connect-to-ide.md): Set up remote development on your Pod using VSCode or Cursor. Review setup, configuration, and operations guidance for Runpod Pods. (8147 bytes)
 - [Expose ports](pages/pods/configuration/expose-ports.md): Learn how to make your Pod services accessible from the internet using HTTP proxy and TCP port forwarding (8772 bytes)
 - [Global networking](pages/pods/networking.md): Connect your Pods through a secure private network for internal communication. Review setup, configuration, and operations guidance for Runpod Pods. (4717 bytes)
-- [Storage options](pages/pods/storage/types.md): Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6821 bytes)
+- [Storage options](pages/pods/storage/types.md): Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6937 bytes)
 - [Transfer files](pages/pods/storage/transfer-files.md): Move files between your local machine and Pods with a variety of secure transfer methods. See setup and usage details for Runpod Pods. (7928 bytes)
 - [Sync Pod data with cloud storage providers](pages/pods/storage/cloud-sync.md): Learn how to sync your Pod data with popular cloud storage providers. Review setup, configuration, and operations guidance for Runpod Pods. (10224 bytes)
 - [Overview](pages/pods/templates/overview.md): Streamline your Pod deployments with templates, bundling prebuilt container images with hardware specs and network settings. (2670 bytes)
@@ -187,11 +187,11 @@
 
 ## Storage
 
-- [Storage overview](pages/storage/overview.md): Compare Runpod network volumes and global volumes, and learn how to attach persistent storage to Pods, Serverless endpoints, and Runpod SDK apps. (5687 bytes)
+- [Storage overview](pages/storage/overview.md): Compare Runpod network volumes and global volumes, and learn how to attach persistent storage to Pods, Serverless endpoints, and Runpod SDK apps. (5975 bytes)
 - [Network volumes](pages/storage/network-volumes.md): Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod. (7938 bytes)
 - [High-performance storage](pages/storage/high-performance-storage.md): Premium storage tier for demanding AI workloads with up to 3x throughput and 4x IOPS. Review configuration and usage guidance for Runpod storage. (5239 bytes)
 - [S3-compatible API](pages/storage/s3-api.md): Use Runpod's S3-compatible API to access and manage your network volumes. Review configuration and usage guidance for Runpod storage. (26700 bytes)
-- [Overview](pages/storage/globalvolume/overview.md): Create a Runpod global volume, attach it to Pods or Serverless workers across data centers, and review storage costs and limitations. (7077 bytes)
+- [Overview](pages/storage/globalvolume/overview.md): Create a Runpod global volume, attach it to Pods or Serverless workers across data centers, and review storage costs and limitations. (7230 bytes)
 - [Global volumes for Pods](pages/storage/globalvolume/globalvolume-pods.md): Attach a global volume to a GPU Pod for elastic, region-independent storage that persists across sessions. (2840 bytes)
 - [Global volumes for Serverless](pages/storage/globalvolume/globalvolume-serverless.md): Attach a global volume to a GPU Serverless endpoint so workers share access to model weights and other read-heavy data across all data centers. (4287 bytes)
 
@@ -199,7 +199,7 @@
 
 - [Overview](pages/public-endpoints/overview.md): Test and deploy production-ready AI models using Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (6682 bytes)
 - [Quickstart](pages/public-endpoints/quickstart.md): Generate your first image with Public Endpoints in under 5 minutes. Review setup and request guidance for Runpod Public Endpoints. (3772 bytes)
-- [Available models](pages/public-endpoints/reference.md): Browse all available models for Runpod Public Endpoints. Review setup, model selection, request options, and usage guidance for Runpod Public Endpoints. (15012 bytes)
+- [Available models](pages/public-endpoints/reference.md): Browse all available models for Runpod Public Endpoints. Review setup, model selection, request options, and usage guidance for Runpod Public Endpoints. (15010 bytes)
 - [Make API requests](pages/public-endpoints/requests.md): Use the playground, REST API, and SDKs to interact with Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (10086 bytes)
 - [Vercel AI SDK](pages/public-endpoints/ai-sdk.md): Use the @runpod/ai-sdk-provider package to integrate Public Endpoints with the Vercel AI SDK. Review setup and request guidance for Runpod Public Endpoints. (17902 bytes)
 - [Connect AI coding tools with Public Endpoints](pages/public-endpoints/ai-coding-tools.md): Configure AI coding tools like OpenCode, Cursor, and Cline with Runpod Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (7416 bytes)
@@ -328,7 +328,7 @@
 
 - [API v2](pages/api-reference-v2/overview.md): Manage Runpod Pods, Serverless endpoints, Clusters, storage, templates, billing, and account resources programmatically with the REST API v2. (2485 bytes)
 - [Rate limits](pages/api-reference-v2/rate-limits.md): Learn how the Runpod REST API v2 limits request rates, read your remaining quota from response headers, and build a client that handles 429 responses. (7816 bytes)
-- [Migrate from API v1](pages/api-reference-v2/migrate-from-v1.md): Move your integrations from the Runpod REST API v1 to the v2 base URL, endpoints, and request and response shapes. (10430 bytes)
+- [Migrate from API v1](pages/api-reference-v2/migrate-from-v1.md): Move your integrations from the Runpod REST API v1 to the v2 base URL, endpoints, and request and response shapes. (20703 bytes)
 
 ## Organization
 
@@ -515,7 +515,7 @@
 ## Text models
 
 - [IBM Granite 4.0](pages/public-endpoints/models/granite-4.md): A 32-billion-parameter long-context instruction model for text generation. See model inputs and outputs on Runpod Public Endpoints. (5547 bytes)
-- [Moonshot Kimi](pages/public-endpoints/models/moonshot-kimi.md): Use Moonshot Kimi models for reasoning, chat, and coding through Runpod Public Endpoints, with supported inputs, outputs, and request examples. (9237 bytes)
+- [Moonshot Kimi](pages/public-endpoints/models/moonshot-kimi.md): Use Moonshot Kimi models for reasoning, chat, and coding through Runpod Public Endpoints, with supported inputs, outputs, and request examples. (10137 bytes)
 - [Qwen3 32B AWQ](pages/public-endpoints/models/qwen3-32b.md): Latest generation LLM with advanced reasoning, instruction-following, and multilingual support. See model inputs and outputs on Runpod Public Endpoints. (6118 bytes)
 
 ## Audio models

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/deep-dive/advisory-db-sources.md](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/content/manuals/scout/deep-dive/advisory-db-sources.md)
+> Pinned source for Docker main: [content/manuals/scout/deep-dive/advisory-db-sources.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/scout/deep-dive/advisory-db-sources.md)
 
 # Advisory database sources and matching service
 

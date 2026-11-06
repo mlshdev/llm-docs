@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/desktop/docker_desktop_engine_ls.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/cli/desktop/docker_desktop_engine_ls.yaml)
+> Pinned source for Docker main: [data/cli/desktop/docker_desktop_engine_ls.yaml](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/data/cli/desktop/docker_desktop_engine_ls.yaml)
 
 # docker desktop engine ls
 

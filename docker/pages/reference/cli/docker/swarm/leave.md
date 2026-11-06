@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/engine/docker_swarm_leave.yaml](https://github.com/docker/docs/blob/c98501277b974550688eeed803c975e2665d6468/data/cli/engine/docker_swarm_leave.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_swarm_leave.yaml](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/data/cli/engine/docker_swarm_leave.yaml)
 
 # docker swarm leave
 
