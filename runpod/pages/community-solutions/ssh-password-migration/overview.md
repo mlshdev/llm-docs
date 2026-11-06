@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [community-solutions/ssh-password-migration/overview.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/community-solutions/ssh-password-migration/overview.mdx)
+> Pinned source for Runpod main: [community-solutions/ssh-password-migration/overview.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/community-solutions/ssh-password-migration/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/community-solutions/ssh-password-migration/overview
 
 # SSH password setup & migration tools
@@ -11,7 +11,7 @@ These are simple bash and Python scripts that solve a critical problem: **migrat
 
 > **Note**
 >
-> Check the repository for additional features, updates, and documentation: [github.com/justinwlin/Runpod-SSH-Password](https://github.com/justinwlin/Runpod-SSH-Password)
+> Check the repository for additional features, updates, and documentation: [github.com/runpod/pod-ssh-password](https://github.com/runpod/pod-ssh-password)
 
 ## The problem it solves
 
@@ -48,7 +48,7 @@ Before using these tools, make sure you have:
 1. On your **destination Pod** (where you're migrating to):
 
    ```bash
-   wget https://raw.githubusercontent.com/justinwlin/Runpod-SSH-Password/main/passwordrunpod.sh && chmod +x passwordrunpod.sh && ./passwordrunpod.sh
+   wget https://raw.githubusercontent.com/runpod/pod-ssh-password/main/passwordrunpod.sh && chmod +x passwordrunpod.sh && ./passwordrunpod.sh
    ```
 
    The script will prompt you to set a password. After setup, it displays your connection details:
@@ -62,7 +62,7 @@ Before using these tools, make sure you have:
 2. On your **source Pod** (where your files currently are):
 
    ```bash
-   wget https://raw.githubusercontent.com/justinwlin/Runpod-SSH-Password/refs/heads/main/SCPMigration -O scp_migration.py && python3 scp_migration.py
+   wget https://raw.githubusercontent.com/runpod/pod-ssh-password/main/SCPMigration -O scp_migration.py && python3 scp_migration.py
    ```
 3. The tool provides an interactive interface:
 

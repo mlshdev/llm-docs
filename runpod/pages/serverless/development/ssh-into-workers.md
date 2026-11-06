@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/ssh-into-workers.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/serverless/development/ssh-into-workers.mdx)
+> Pinned source for Runpod main: [serverless/development/ssh-into-workers.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/serverless/development/ssh-into-workers.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/ssh-into-workers
 
 # Connect to workers with SSH
@@ -25,7 +25,7 @@ Before you can connect to a worker, [add your SSH public key to the Credentials 
 2. Select the **Workers** tab in your endpoint's details page to view all running workers for this endpoint.
 
    Here you'll see a list of all workers associated with your endpoint. Find a worker with a status of **Running** and click on it to open its detail pane.
-3. ![](https://raw.githubusercontent.com/runpod/docs/f4691b442d8e51b3762dff5669f9a517aef85350/images/ssh-serverless-worker.png)
+3. ![](https://raw.githubusercontent.com/runpod/docs/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/images/ssh-serverless-worker.png)
 
    In the worker's detail pane:
 

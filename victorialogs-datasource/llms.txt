@@ -1,8 +1,8 @@
-# VictoriaLogs datasource for Grafana v0.33.1
+# VictoriaLogs datasource for Grafana v0.34.0
 
-> Documentation generated from the latest stable release of [VictoriaMetrics/victorialogs-datasource](https://github.com/VictoriaMetrics/victorialogs-datasource) and pinned to immutable source commit `dd71b1acde8699f27d9196f3c478d0bcb23e3d6c`.
+> Documentation generated from the latest stable release of [VictoriaMetrics/victorialogs-datasource](https://github.com/VictoriaMetrics/victorialogs-datasource) and pinned to immutable source commit `a5450dee43595fd480c52dd362ced1d7430ab36b`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaLogs datasource for Grafana v0.33.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaLogs datasource for Grafana v0.34.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.
 - Links and screenshots that upstream pins to a branch are rewritten to the released commit.
@@ -17,4 +17,4 @@
 
 ## Release history
 
-- [VictoriaLogs datasource for Grafana: changelog](pages/changelog.md): ⚠️ Breaking Change: Plugin ID Updated Update Note 1: In the new version of the plugin, the plugin ID has been updated. The new plugin ID is victoriametrics-logs-datasource. This is a breaking change: Grafana will treat… (48947 bytes)
+- [VictoriaLogs datasource for Grafana: changelog](pages/changelog.md): ⚠️ Breaking Change: Plugin ID Updated Update Note 1: In the new version of the plugin, the plugin ID has been updated. The new plugin ID is victoriametrics-logs-datasource. This is a breaking change: Grafana will treat… (50652 bytes)

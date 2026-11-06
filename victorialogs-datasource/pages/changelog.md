@@ -1,8 +1,18 @@
-> Pinned source for VictoriaLogs datasource for Grafana v0.33.1: [CHANGELOG.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/CHANGELOG.md)
+> Pinned source for VictoriaLogs datasource for Grafana v0.34.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- FEATURE: expose every log field as its own column in annotation query results, so annotation field mappings can use a single field for `Title` or `Tags`, and a field with an epoch-milliseconds timestamp for `Time end` to draw range annotations. See [#568](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/568). Thanks to @Danielv123 for contributing.
+
+- BUGFIX: remove the `Manage alert rules in Alerting UI` switch from the data source settings. Grafana reads its `jsonData.manageAlerts` flag only for the data source-managed rules of Loki and Prometheus, so for VictoriaLogs the switch had no effect: Grafana-managed alert rules could still be created with it turned off. Restricting who can create alert rules is done with Grafana RBAC. See [#727](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/727).
+
+- BUGFIX: stop failing every alert rule evaluation when an `Instant` stats query matches no logs and VictoriaLogs returns an empty value (for example `stats max(ts)`). The alerting path now reports the empty value as a null sample, the same as dashboards do. See [#747](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/747). Thanks to @sarankumar1325 for contributing.
+
+- BUGFIX: show the `Logs sample` in Explore for `Range` and `Instant` stats queries. The sample was never requested, and its query kept the `stats` pipe, so it returned the aggregated rows instead of the log lines behind the chart. The sample now runs the query without its aggregation pipes (`stats`, `top`, `uniq`, `facets`...). See [#735](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/735). Thanks to @paullacoutiere-oss for contributing.
+
+## v0.33.1
 
 - BUGFIX: fix the `An unexpected error happened` crash of the Explore query editor when `Drilldown` opens on Grafana 10.x. See [pr #740](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/740).
 
@@ -112,7 +122,7 @@
 
 - FEATURE: replace the `/health` endpoint in the datasource backend health check with a real query to `/select/logsql/query`. This verifies that the VictoriaLogs backend can actually serve log queries, not just that the HTTP server is up. See [#599](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/599).
 
-- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/README.md#opentelemetry-preset) docs.
+- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/src/README.md#opentelemetry-preset) docs.
 
 - FEATURE: route "Filter for value" / "Filter out" actions in Grafana Explore into the `extra_filters` query parameter instead of mutating the main `expr`. The user's LogsQL stays untouched; added filters appear as removable chips under the query editor (via the existing Ad-hoc filters control). Dashboard behavior is unchanged — there Grafana keeps driving these clicks through ad-hoc template variables.
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/get-a-serverless-endpoint-build.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/api-reference-v2/serverless/get-a-serverless-endpoint-build.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/get-a-serverless-endpoint-build.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/api-reference-v2/serverless/get-a-serverless-endpoint-build.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/get-a-serverless-endpoint-build
 
 # Get A Serverless Endpoint Build

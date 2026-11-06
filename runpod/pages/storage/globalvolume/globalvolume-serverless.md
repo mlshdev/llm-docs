@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/globalvolume/globalvolume-serverless.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/storage/globalvolume/globalvolume-serverless.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/globalvolume-serverless.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/storage/globalvolume/globalvolume-serverless.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/globalvolume-serverless
 
 # Global volumes for Serverless

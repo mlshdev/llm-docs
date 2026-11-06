@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/configuration/storage.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/flash/configuration/storage.mdx)
+> Pinned source for Runpod main: [flash/configuration/storage.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/flash/configuration/storage.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/storage
 
 # Storage

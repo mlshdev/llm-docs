@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/configuration/use-ssh.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/pods/configuration/use-ssh.mdx)
+> Pinned source for Runpod main: [pods/configuration/use-ssh.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/pods/configuration/use-ssh.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/configuration/use-ssh
 
 # Connect to a Pod with SSH
@@ -112,10 +112,10 @@ Here are some common reasons why this might happen:
 
 To use this method, your Pod must have a public IP address and expose TCP port 22. SSH will be accessible through a mapped external port.
 
-To quickly set up password-based SSH, run this command to download and execute a [helper script](https://github.com/justinwlin/Runpod-SSH-Password/blob/main/passwordrunpod.sh) for password setup:
+To quickly set up password-based SSH, run this command to download and execute a [helper script](https://github.com/runpod/pod-ssh-password/blob/main/passwordrunpod.sh) for password setup:
 
 ```bash
-wget https://raw.githubusercontent.com/justinwlin/Runpod-SSH-Password/main/passwordrunpod.sh && chmod +x passwordrunpod.sh && ./passwordrunpod.sh
+wget https://raw.githubusercontent.com/runpod/pod-ssh-password/main/passwordrunpod.sh && chmod +x passwordrunpod.sh && ./passwordrunpod.sh
 ```
 
 > **Warning**

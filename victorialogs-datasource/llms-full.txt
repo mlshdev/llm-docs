@@ -1,14 +1,14 @@
-# VictoriaLogs datasource for Grafana v0.33.1: full documentation
+# VictoriaLogs datasource for Grafana v0.34.0: full documentation
 
 Source repository: https://github.com/VictoriaMetrics/victorialogs-datasource
-Release tag: v0.33.1
-Source commit: dd71b1acde8699f27d9196f3c478d0bcb23e3d6c
+Release tag: v0.34.0
+Source commit: a5450dee43595fd480c52dd362ced1d7430ab36b
 
 # Document: VictoriaLogs datasource for Grafana
 
 Source path: src/README.md
-Pinned source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/README.md
-Canonical documentation: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/README.md
+Pinned source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/src/README.md
+Canonical documentation: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/src/README.md
 Description: The VictoriaLogs Grafana plugin allows Grafana to query, visualize, and interact with VictoriaLogs, a high-performance log storage and processing system.
 
 # VictoriaLogs datasource for Grafana
@@ -17,7 +17,7 @@ The [VictoriaLogs Grafana plugin](https://grafana.com/grafana/plugins/victoriame
 to query, visualize, and interact with [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/),
 a high-performance log storage and processing system.
 
-![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/dashboard.png)
+![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/dashboard.png)
 
 ## Capabilities
 
@@ -39,7 +39,7 @@ For installation options in Docker or Kubernetes refer to [these docs](https://g
 VictoriaLogs datasource supports [multitenancy](https://docs.victoriametrics.com/victorialogs/#multitenancy) via `multitenancyHeaders` datasource configuration option.
 To configure it, set AccountID and ProjectID in the `multitenancyHeaders` section.
 
-![Multitenancy configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/multitenancy_configuration.png)
+![Multitenancy configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/multitenancy_configuration.png)
 
 ### Manual configuration via UI
 
@@ -141,7 +141,7 @@ and LogsQL examples [here](https://docs.victoriametrics.com/victorialogs/logsql-
 
 A visual alternative to the LogsQL code editor: build queries by chaining typed pipes through an interactive UI with field/value dropdowns and keyboard navigation.
 
-![Query builder](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/query_builder.gif)
+![Query builder](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/query_builder.gif)
 
 #### Switching between Builder and Code
 
@@ -190,21 +190,21 @@ See the [LogsQL pipes reference](https://docs.victoriametrics.com/victorialogs/l
 For using [Logs panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/logs/)
 switch to `Raw Logs` query type:
 
-![Logs panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/panel_logs.png)
+![Logs panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_logs.png)
 
 ### Time series panel
 
 For using [Time series panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/time-series/)
 switch to `Range` query type:
 
-![Time series panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/panel_time_series.png)
+![Time series panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_time_series.png)
 
 ### Stats panel
 
 For using [Stats panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/)
 switch to `Instant` query type:
 
-![Stats panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/panel_stat.png)
+![Stats panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_stat.png)
 
 For enabling background visualization switch to `Range` query type.
 
@@ -213,11 +213,11 @@ For enabling background visualization switch to `Range` query type.
 For using [Table panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/table/)
 switch to `Raw Logs` query type:
 
-![Table panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/panel_table.png)
+![Table panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_table.png)
 
 And apply `Transformations` by labels:
 
-![Transformations](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/panel_table_transformation.png)
+![Transformations](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_table_transformation.png)
 
 ### Heatmap panel
 
@@ -231,7 +231,7 @@ Query example:
   | stats histogram(duration)
 ```
 
-![Heatmap panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/panel_heatmap.png)
+![Heatmap panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_heatmap.png)
 
 ### Log level rules
 
@@ -302,7 +302,7 @@ VictoriaLogs datasource supports [variables](https://grafana.com/docs/grafana/la
 
 You can use [Ad Hoc filters](https://grafana.com/docs/grafana/latest/visualizations/dashboards/variables/add-template-variables/#add-ad-hoc-filters) to filter logs in Dashboards.
 By default, ad-hoc filters are applied to all panels in the Dashboard as the [extra\_filters](https://docs.victoriametrics.com/victorialogs/querying/#extra-filters) query parameter. If you navigate to the Explore page from the Dashboard, ad-hoc filters are also applied there.
-![Ad hoc filters](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/extra_filters_explore_page.png)
+![Ad hoc filters](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/extra_filters_explore_page.png)
 
 ##### Ad-hoc filters mode
 
@@ -319,7 +319,7 @@ Each panel exposes an **Ad-hoc filters** selector in the Query Editor *Options* 
 If you want to filter logs by a specific word or phrase, you can use [word filter](https://docs.victoriametrics.com/victorialogs/logsql/#word-filter).
 To do this, you need to create a [text box variable](https://grafana.com/docs/grafana/latest/visualizations/dashboards/variables/add-template-variables/#add-a-text-box-variable).
 After it is created, you need to add this to the query: `<q> | $word_filter`. Type any word or phrase you want to look for. Set to "\*" to not filter. By default, the given word is searched in the \_msg field.
-![Word filter](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/word_filter.png)
+![Word filter](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/word_filter.png)
 
 #### Variable interpolation
 
@@ -384,7 +384,7 @@ The **Drilldown** button in the Explore query editor opens a drawer that explore
 it breaks the logs down by field values, by stream fields and by message patterns, narrows the selection with
 filter chips and hands the finished selection back to the editor.
 
-![Drilldown button](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/drilldown_button.png)
+![Drilldown button](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_button.png)
 
 > **Note:** for now, the button is available only in the `Code` mode of the Explore query editor. The drawer does not
 > take the current query and always starts from the `*` query over the editor's time range.
@@ -407,7 +407,7 @@ of every value. Expanding a row shows a sample of its logs. The **Filter for** /
 of a row add a filter chip for the value. The level buttons above the tabs narrow the selection by the log level
 derived from the [log level rules](#log-level-rules) without drilling in.
 
-![Drilldown main view](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/drilldown_main.png)
+![Drilldown main view](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_main.png)
 
 ### Details view
 
@@ -419,9 +419,9 @@ Adding a filter chip or a pattern filter opens the details view of the selection
   constant fields, and fields with too many or too long values are listed without a summary;
 - **Patterns** - the message patterns of the selection.
 
-![Drilldown details view](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/drilldown_details.png)
+![Drilldown details view](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_details.png)
 
-![Drilldown patterns](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/drilldown_patterns.png)
+![Drilldown patterns](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_patterns.png)
 
 A chip can be edited in place (field, operator `=`, `!=`, `=~`, `!~`, and value) and removed. Removing the last chip
 and pattern filter returns to the main view.
@@ -438,7 +438,7 @@ Explore time range, and **Go to editor** does not transfer it.
 chips of the query editor, the pattern filters are appended to the query expression, and the query is run.
 The original expression and stream filters of the editor are replaced, not merged.
 
-![Query editor after Go to editor](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/drilldown_go_to_editor.png)
+![Query editor after Go to editor](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_go_to_editor.png)
 
 The drawer runs at most 6 queries at a time, so a wide time range with many fields takes a while to load completely.
 
@@ -456,7 +456,7 @@ There are two levels of control:
 
 Increase these limits only if needed; large values may make the browser sluggish.
 
-![Line limits configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/line_limits.png)
+![Line limits configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/line_limits.png)
 
 ### Configuring the default limit via file
 
@@ -487,7 +487,7 @@ feature for interactive links between visualizations.
 Tempo, Jaeger, and Zipkin data sources support [Trace to logs](https://grafana.com/docs/grafana/latest/explore/trace-integration/#trace-to-logs)
 feature for navigating from a span in a trace directly to logs relevant for that span. *(Supported since Grafana v12.2.0)*.
 
-![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/trace_to_logs.png)
+![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/trace_to_logs.png)
 
 An example of the correlation query in traces datasource is the following:
 
@@ -580,12 +580,12 @@ In VictoriaLogs datasource settings, you can configure rules of extracting value
 For example, if log entries have field `trace_id` then we can configure a Derived Field to make a link to Jaeger datasource
 for viewing an associated trace:
 
-![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/derived_fields_cfg.png)
+![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/derived_fields_cfg.png)
 
 Once configured, in Explore mode or in Logs panel log entries with field `trace_id` will also get a link that would
 open a Jaeger datasource and search for the `trace_id` value:
 
-![Derived fields explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/img/derived_fields_explore.png)
+![Derived fields explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/derived_fields_explore.png)
 
 If the trace ID is not stored in a separate field but in a log message itself, then use `Regex in log line` option
 to specify a regex expression for extracting the trace value from log message.
@@ -623,14 +623,14 @@ Learn more about [Derived Fields in Grafana](https://grafana.com/docs/grafana/ne
 ## License
 
 This project is licensed under
-the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/LICENSE).
+the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/LICENSE).
 
 
 # Document: VictoriaLogs datasource for Grafana: repository guide
 
 Source path: README.md
-Pinned source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/README.md
-Canonical documentation: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/README.md
+Pinned source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/README.md
+Canonical documentation: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/README.md
 Description: The VictoriaLogs datasource plugin allows you to query and visualize VictoriaLogs data in Grafana.
 
 # VictoriaLogs datasource for Grafana
@@ -653,7 +653,7 @@ For gitops follow [installation](#installation) instructions.
 
 Once installed, start exploring logs from [Grafana's Explore page](https://grafana.com/docs/grafana/latest/explore/get-started-with-explore/):
 
-![Grafana Explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/docs/assets/explore.webp)
+![Grafana Explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/docs/assets/explore.webp)
 
 > To search for all logs simply use `*` as a query. See [LogsQL specification](https://docs.victoriametrics.com/victorialogs/logsql/).
 
@@ -719,7 +719,7 @@ docker compose -f docker-compose.yaml up
 
 After Grafana starts successfully, datasource should be available in the datasources tab
 
-![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/docs/assets/provision_datasources.webp)
+![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/docs/assets/provision_datasources.webp)
 
 ### Install in Kubernetes
 
@@ -1077,7 +1077,7 @@ This command will build frontend part and backend part or the plugin and locate 
 ### 8. How to run e2e tests
 
 End-to-end tests run against a real Grafana + VictoriaLogs stack and can be executed
-against different Grafana and VictoriaLogs versions. See [tests/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/tests/README.md)
+against different Grafana and VictoriaLogs versions. See [tests/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/tests/README.md)
 for instructions.
 
 ## How to make new release
@@ -1096,19 +1096,29 @@ For more information on the fields in `plugin.json`, please refer to the [Grafan
 ## License
 
 This project is licensed under
-the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/LICENSE).
+the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/LICENSE).
 
 
 # Document: VictoriaLogs datasource for Grafana: changelog
 
 Source path: CHANGELOG.md
-Pinned source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/CHANGELOG.md
-Canonical documentation: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/CHANGELOG.md
+Pinned source: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/CHANGELOG.md
+Canonical documentation: https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/CHANGELOG.md
 Description: ⚠️ Breaking Change: Plugin ID Updated Update Note 1: In the new version of the plugin, the plugin ID has been updated. The new plugin ID is victoriametrics-logs-datasource. This is a breaking change: Grafana will treat…
 
 # Changelog
 
 ## tip
+
+- FEATURE: expose every log field as its own column in annotation query results, so annotation field mappings can use a single field for `Title` or `Tags`, and a field with an epoch-milliseconds timestamp for `Time end` to draw range annotations. See [#568](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/568). Thanks to @Danielv123 for contributing.
+
+- BUGFIX: remove the `Manage alert rules in Alerting UI` switch from the data source settings. Grafana reads its `jsonData.manageAlerts` flag only for the data source-managed rules of Loki and Prometheus, so for VictoriaLogs the switch had no effect: Grafana-managed alert rules could still be created with it turned off. Restricting who can create alert rules is done with Grafana RBAC. See [#727](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/727).
+
+- BUGFIX: stop failing every alert rule evaluation when an `Instant` stats query matches no logs and VictoriaLogs returns an empty value (for example `stats max(ts)`). The alerting path now reports the empty value as a null sample, the same as dashboards do. See [#747](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/747). Thanks to @sarankumar1325 for contributing.
+
+- BUGFIX: show the `Logs sample` in Explore for `Range` and `Instant` stats queries. The sample was never requested, and its query kept the `stats` pipe, so it returned the aggregated rows instead of the log lines behind the chart. The sample now runs the query without its aggregation pipes (`stats`, `top`, `uniq`, `facets`...). See [#735](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/735). Thanks to @paullacoutiere-oss for contributing.
+
+## v0.33.1
 
 - BUGFIX: fix the `An unexpected error happened` crash of the Explore query editor when `Drilldown` opens on Grafana 10.x. See [pr #740](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/740).
 
@@ -1218,7 +1228,7 @@ Description: ⚠️ Breaking Change: Plugin ID Updated Update Note 1: In the new
 
 - FEATURE: replace the `/health` endpoint in the datasource backend health check with a real query to `/select/logsql/query`. This verifies that the VictoriaLogs backend can actually serve log queries, not just that the HTTP server is up. See [#599](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/599).
 
-- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/dd71b1acde8699f27d9196f3c478d0bcb23e3d6c/src/README.md#opentelemetry-preset) docs.
+- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/src/README.md#opentelemetry-preset) docs.
 
 - FEATURE: route "Filter for value" / "Filter out" actions in Grafana Explore into the `extra_filters` query parameter instead of mutating the main `expr`. The user's LogsQL stays untouched; added filters appear as removable chips under the query editor (via the existing Ad-hoc filters control). Dashboard behavior is unchanged — there Grafana keeps driving these clicks through ad-hoc template variables.
 

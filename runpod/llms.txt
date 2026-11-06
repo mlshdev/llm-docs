@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `f4691b442d8e51b3762dff5669f9a517aef85350`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -143,7 +143,7 @@
 - [Manage Pods](pages/pods/manage-pods.md): Create, start, stop, restart, and terminate Pods using the Runpod console or CLI. Review setup, configuration, and operations guidance for Runpod Pods. (8832 bytes)
 - [Maintenance, outages, and data safety](pages/pods/maintenance-and-outages.md): Understand how Runpod handles planned and unplanned maintenance and how to protect your data. See setup and usage details for Runpod Pods. (3577 bytes)
 - [Connection options](pages/pods/connect-to-a-pod.md): Explore Pod connection options, including the web terminal, SSH, JupyterLab, and VSCode/Cursor. See setup and usage details for Runpod Pods. (2941 bytes)
-- [Connect to a Pod with SSH](pages/pods/configuration/use-ssh.md): Manage Pods from your local machine using SSH. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (8781 bytes)
+- [Connect to a Pod with SSH](pages/pods/configuration/use-ssh.md): Manage Pods from your local machine using SSH. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (8767 bytes)
 - [Connect to a Pod with VSCode or Cursor](pages/pods/configuration/connect-to-ide.md): Set up remote development on your Pod using VSCode or Cursor. Review setup, configuration, and operations guidance for Runpod Pods. (8147 bytes)
 - [Expose ports](pages/pods/configuration/expose-ports.md): Learn how to make your Pod services accessible from the internet using HTTP proxy and TCP port forwarding (8772 bytes)
 - [Global networking](pages/pods/networking.md): Connect your Pods through a secure private network for internal communication. Review setup, configuration, and operations guidance for Runpod Pods. (4717 bytes)
@@ -168,7 +168,7 @@
 - [Build Docker images on Runpod with Bazel](pages/tutorials/pods/build-docker-images.md): Build and push Docker images from inside a Runpod Pod using Bazel. Follow the setup and implementation steps in this Runpod tutorial. (6170 bytes)
 - [Use private AWS ECR images](pages/tutorials/pods/use-private-ecr-images.md): Pull private AWS ECR container images into Runpod Pods by configuring cross-account delegation, IAM permissions, and registry authentication. (8946 bytes)
 - [List Pods](pages/api-reference-v2/pods/list-pods.md): List Pods owned by the authenticated Runpod user, with an option to include member Pods that belong to Runpod Clusters. (25696 bytes)
-- [Create A Pod](pages/api-reference-v2/pods/create-a-pod.md): Create a Runpod Pod with GPU or CPU compute, container or template settings, storage, networking, and deployment constraints. (38545 bytes)
+- [Create A Pod](pages/api-reference-v2/pods/create-a-pod.md): Create a Runpod Pod with GPU or CPU compute, container or template settings, storage, networking, and deployment constraints. (38542 bytes)
 - [Get A Pod](pages/api-reference-v2/pods/get-a-pod.md): Retrieve a Runpod Pod by ID with its compute, container, storage, networking, lifecycle status, and connection details. (20634 bytes)
 - [Terminate A Pod](pages/api-reference-v2/pods/terminate-a-pod.md): Permanently terminate a Runpod Pod, release its compute, and understand what happens to persistent mounts, network volumes, and Cluster members. (5125 bytes)
 - [Update A Pod](pages/api-reference-v2/pods/update-a-pod.md): Update selected settings on an existing Runpod Pod while preserving omitted fields, with guidance on mutable fields and restart behavior. (31211 bytes)
@@ -282,7 +282,7 @@
 
 - [ComfyUI-to-API](pages/community-solutions/comfyui-to-api/overview.md): Convert your ComfyUI workflows into deployment-ready GitHub repositories with automated Dockerfile generation (9218 bytes)
 - [OhMyRunpod](pages/community-solutions/ohmyrunpod/overview.md): Community solution for easy (SFTP) setup on Runpod. Review installation, configuration, and usage guidance for this community solution on Runpod. (5108 bytes)
-- [SSH password setup & migration tools](pages/community-solutions/ssh-password-migration/overview.md): Simple tools for migrating data between Runpod instances. Review installation, configuration, and usage guidance for this community solution on Runpod. (3636 bytes)
+- [SSH password setup & migration tools](pages/community-solutions/ssh-password-migration/overview.md): Simple tools for migrating data between Runpod instances. Review installation, configuration, and usage guidance for this community solution on Runpod. (3597 bytes)
 - [CopyParty file manager](pages/community-solutions/copyparty-file-manager/overview.md): Web-based GUI for easy file browsing, uploading, downloading, and media viewing on Runpod. Review setup and usage guidance for this Runpod community solution. (6943 bytes)
 - [Network volume storage tool](pages/community-solutions/runpod-network-volume-storage-tool.md): A command-line tool for managing Runpod network storage volumes and files. Review setup and usage guidance for this Runpod community solution. (2943 bytes)
 
@@ -394,7 +394,7 @@
 - [List Network Volumes](pages/api-reference-v2/network-volumes/list-network-volumes.md): List all network volumes owned by the authenticated Runpod user, including each volume's size, data center, and storage tier. (9370 bytes)
 - [Create A Network Volume](pages/api-reference-v2/network-volumes/create-a-network-volume.md): Create a persistent Runpod network volume with a name, size, data center, and storage tier for use by Pods and Serverless workers. (9167 bytes)
 - [Get A Network Volume](pages/api-reference-v2/network-volumes/get-a-network-volume.md): Retrieve a Runpod network volume by ID with its name, size, data center, storage tier, and current resource details. (6036 bytes)
-- [Delete A Network Volume](pages/api-reference-v2/network-volumes/delete-a-network-volume.md): Permanently delete a Runpod network volume, release its persistent storage, and confirm the removed volume in the response. (4392 bytes)
+- [Delete A Network Volume](pages/api-reference-v2/network-volumes/delete-a-network-volume.md): Permanently delete a Runpod network volume, release its persistent storage, and confirm the removed volume in the response. (5055 bytes)
 - [Update A Network Volume](pages/api-reference-v2/network-volumes/update-a-network-volume.md): Update a Runpod network volume's mutable fields, such as its name or size. Size can only be increased, never reduced. (9048 bytes)
 
 ## Global Volumes

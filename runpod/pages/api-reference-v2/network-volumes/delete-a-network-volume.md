@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/network-volumes/delete-a-network-volume.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/api-reference-v2/network-volumes/delete-a-network-volume.mdx)
+> Pinned source for Runpod main: [api-reference-v2/network-volumes/delete-a-network-volume.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/api-reference-v2/network-volumes/delete-a-network-volume.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/network-volumes/delete-a-network-volume
 
 # Delete A Network Volume
@@ -54,6 +54,16 @@ Permanently deletes a network volume and releases its storage.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
+- `409`: The volume was created less than five minutes ago. Retry after the time given in the detail.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
 - `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
   - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
   - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.

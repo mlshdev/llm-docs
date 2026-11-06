@@ -6,21 +6,21 @@
   "title": "VictoriaLogs datasource for Grafana",
   "homepage": "https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/",
   "repository": "VictoriaMetrics/victorialogs-datasource",
-  "tag": "v0.33.1",
-  "releaseId": 414945006,
-  "releasePublishedAt": "2026-10-16T12:34:53Z",
-  "sourceCommit": "dd71b1acde8699f27d9196f3c478d0bcb23e3d6c",
+  "tag": "v0.34.0",
+  "releaseId": 436423279,
+  "releasePublishedAt": "2026-11-06T11:30:26Z",
+  "sourceCommit": "a5450dee43595fd480c52dd362ced1d7430ab36b",
   "documentCount": 3,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 98899,
+      "byteLength": 100604,
       "documentCount": 3,
-      "sha256": "9cacb75ade043fe5bb4e6a985021f8d6207c496c302a8c6c1788bcd3ead1f52d"
+      "sha256": "bd06ff1f2b0b84ff6306493831d1f57a625a14c11a47466022934de1f72ba75e"
     }
   ],
-  "outputDigest": "478f86295e7acb727ff5597d63eeb4ef51b8e58a262288fd05721e5df283e4ba",
+  "outputDigest": "276f72967c5bbd374f6e7196feb45151380c1f487242fdcbd10aade88d26eb29",
   "notes": [
     "Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.",
     "Links and screenshots that upstream pins to a branch are rewritten to the released commit."

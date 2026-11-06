@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/seedance-2-5-t2v.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/public-endpoints/models/seedance-2-5-t2v.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/seedance-2-5-t2v.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/public-endpoints/models/seedance-2-5-t2v.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/seedance-2-5-t2v
 
 # Seedance 2.5 Text-to-Video

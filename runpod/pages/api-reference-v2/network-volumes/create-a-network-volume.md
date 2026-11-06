@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/network-volumes/create-a-network-volume.mdx](https://github.com/runpod/docs/blob/f4691b442d8e51b3762dff5669f9a517aef85350/api-reference-v2/network-volumes/create-a-network-volume.mdx)
+> Pinned source for Runpod main: [api-reference-v2/network-volumes/create-a-network-volume.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/api-reference-v2/network-volumes/create-a-network-volume.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/network-volumes/create-a-network-volume
 
 # Create A Network Volume
