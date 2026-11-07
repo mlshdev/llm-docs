@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.1: [docs/container-machine.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-machine.md)
+> Pinned source for Apple container 1.7.1: [docs/container-machine.md](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-machine.md)
 
 # Container machine
 

@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.1: [docs/technical-overview.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/technical-overview.md)
+> Pinned source for Apple container 1.7.1: [docs/technical-overview.md](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/technical-overview.md)
 
 # Technical Overview
 
@@ -46,13 +46,13 @@ You use the `container` command line interface (CLI) to start and manage your co
 
 The `container-apiserver` is a launch agent that launches when you run the `container system start` command, and terminates when you run `container system stop`. It provides the client APIs for managing container and network resources.
 
-When `container-apiserver` starts, it launches an XPC helper `container-core-images` that exposes an API for image management and manages the local content store, and another XPC helper `container-network-vmnet` for the virtual network. For each container that you create, `container-apiserver` launches a container runtime helper `container-runtime-linux` that exposes the management API for that specific container.
+When `container-apiserver` starts, it launches an XPC helper `container-core-images` that exposes an API for image management and manages the local content store, another XPC helper `container-core-clusters` that stores local Kubernetes cluster records, an XPC helper `machine-apiserver` that exposes the machine management API, and another XPC helper `container-network-vmnet` for the virtual network. For each container that you create, `container-apiserver` launches a container runtime helper `container-runtime-linux` that exposes the management API for that specific container.
 
 \[Image unavailable: diagram showing container functional organization]
 
 ## What limitations does `container` have today?
 
-With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
+With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
 
 ### Releasing container memory to macOS
 

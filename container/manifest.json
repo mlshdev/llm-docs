@@ -6,21 +6,21 @@
   "title": "Apple container",
   "homepage": "https://github.com/apple/container",
   "repository": "apple/container",
-  "tag": "1.6.1",
-  "releaseId": 422348370,
-  "releasePublishedAt": "2026-10-23T23:26:12Z",
-  "sourceCommit": "aa8d76b44a834eee3ebf6a0bc577e376f65f6361",
-  "documentCount": 22,
+  "tag": "1.7.1",
+  "releaseId": 437182989,
+  "releasePublishedAt": "2026-11-06T23:56:02Z",
+  "sourceCommit": "a15b46097aa4c2325da13c1fb5192b9274aab083",
+  "documentCount": 21,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 213069,
-      "documentCount": 22,
-      "sha256": "a5d5f58fba76da7da29b0c5f1f8a0a7fc2d2e1301efa9873fc588b31aa72624f"
+      "byteLength": 216519,
+      "documentCount": 21,
+      "sha256": "b5ef2727594f6137fd747e336e424fed713846cdf2e8523de1ba2f989a1da8a9"
     }
   ],
-  "outputDigest": "c27d5b4f219b412548c7049a2e10ba97649e2397c409b6331f610bc889f0c1ad",
+  "outputDigest": "64235e10432d43967c62da61245279a6f03d33f114c33936540f807ea1dca271",
   "notes": [
     "Release-authored Markdown includes the repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference.",
     "Relative links, source references, and assets resolve against the immutable release commit."

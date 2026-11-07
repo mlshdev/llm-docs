@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.1: [docs/runtime-configuration.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/runtime-configuration.md)
+> Pinned source for Apple container 1.7.1: [docs/runtime-configuration.md](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/runtime-configuration.md)
 
 # Runtime configuration
 
@@ -177,7 +177,7 @@ CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o wrapper wrapper.go
 
 Use the `vminit` image tag corresponding to the `scVersion` value in the project `Package.swift` file.
 
-Or, use `vminit:latest` if you have a local `containerization` project in [edit mode](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/BUILDING.md#develop-using-a-local-copy-of-containerization).
+Or, use `vminit:latest` if you have a local `containerization` project in [edit mode](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/BUILDING.md#develop-using-a-local-copy-of-containerization).
 
 ```dockerfile
 FROM ghcr.io/apple/containerization/vminit:0.34.0 AS base
@@ -208,4 +208,4 @@ Check the VM boot logs to confirm your custom init code executed:
 [    0.129230] custom-init: === CUSTOM INIT IMAGE RUNNING ===
 ```
 
-See [Logs](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/logs.md) for more on viewing container and VM boot logs.
+See [Logs](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/logs.md) for more on viewing container and VM boot logs.

@@ -212234,19 +212234,19 @@ Published as 3 volumes:
 - docker/llms-full.002.txt
 - docker/llms-full.003.txt
 
-# Apple container 1.6.1
+# Apple container 1.7.1
 
-# Apple container 1.6.1: full documentation
+# Apple container 1.7.1: full documentation
 
 Source repository: https://github.com/apple/container
-Release tag: 1.6.1
-Source commit: aa8d76b44a834eee3ebf6a0bc577e376f65f6361
+Release tag: 1.7.1
+Source commit: a15b46097aa4c2325da13c1fb5192b9274aab083
 
 # Document: Building the project
 
 Source path: BUILDING.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/BUILDING.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/BUILDING.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/BUILDING.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/BUILDING.md
 Description: To build the container project, you need:
 
 # Building the project
@@ -212256,6 +212256,7 @@ To build the `container` project, you need:
 - Mac with Apple silicon
 - macOS 15 minimum, macOS 26 recommended
 - Xcode 26, set as the [active developer directory](https://developer.apple.com/library/archive/technotes/tn2339/_index.html#//apple_ref/doc/uid/DTS40014588-CH1-HOW_DO_I_SELECT_THE_DEFAULT_VERSION_OF_XCODE_TO_USE_FOR_MY_COMMAND_LINE_TOOLS_)
+- A running `container` installation, to build the `cluster-shim` Linux binary in a container. Builds leave `cluster-shim` out with a warning when `container` is not running, and clusters from those builds cannot use `--shared-image-store`. To use a prebuilt binary instead, set `CLUSTER_SHIM_BINARY` to its path.
 
 > \[!IMPORTANT]
 > There is a bug in the `vmnet` framework on macOS 26 that causes network creation to fail if the `container` helper applications are located under your `Documents` or `Desktop` directories. If you use `make install`, you can simply run the `container` binary in `/usr/local`. If you prefer to use the binaries that `make all` creates in your project `bin` and `libexec` directories, locate your project elsewhere, such as `~/projects/container`, until this issue is resolved.
@@ -212275,16 +212276,17 @@ This is the quickest way to verify your toolchain after cloning. `make verify` r
 
 ### Build and test targets
 
-| Target             | What it does                                                                                                                  |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| `make verify`      | Runs `all`, `test`, and `integration`.                                                                                        |
-| `make all`         | Compiles, then installs the binaries into `bin/` and `libexec/` in your project directory.                                    |
-| `make test`        | Runs the unit tests.                                                                                                          |
-| `make integration` | Runs the CLI and integration test suites. These start the `container` services, create containers, and boot virtual machines. |
-| `make install`     | Builds an installer package and installs it to `/usr/local`.                                                                  |
-| `make clean`       | Runs `cleantest`, then `cleanbuild`.                                                                                          |
-| `make cleanbuild`  | Removes `bin/`, `libexec/`, generated docs, and coverage output.                                                              |
-| `make cleantest`   | Stops the `container` services and removes the `APP_ROOT` and `SCRATCH_ROOT` directories.                                     |
+| Target                  | What it does                                                                                                                  |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `make verify`           | Runs `all`, `test`, and `integration`.                                                                                        |
+| `make all`              | Compiles, then installs the binaries into `bin/` and `libexec/` in your project directory.                                    |
+| `make test`             | Runs the unit tests.                                                                                                          |
+| `make integration`      | Runs the CLI and integration test suites. These start the `container` services, create containers, and boot virtual machines. |
+| `make install`          | Builds an installer package and installs it to `/usr/local`.                                                                  |
+| `make clean`            | Runs `cleanclustershim`, `cleantest`, then `cleanbuild`.                                                                      |
+| `make cleanclustershim` | Removes the cluster-shim binary, build image, and build volume.                                                               |
+| `make cleanbuild`       | Removes `bin/`, `libexec/`, generated docs, and coverage output.                                                              |
+| `make cleantest`        | Stops the `container` services and removes the `APP_ROOT` and `SCRATCH_ROOT` directories.                                     |
 
 ### Isolating test data with `APP_ROOT`
 
@@ -212341,9 +212343,13 @@ BUILD_CONFIGURATION=release make verify
 BUILD_CONFIGURATION=release make install
 ```
 
+Release builds strip local symbols from the installed binaries and leave out `-enable-testing`, which keeps the installer package smaller. The goals that build or run tests still enable testing, so `BUILD_CONFIGURATION=release make verify` works as above. To change this, set `STRIP_BINARIES=false` to keep the symbols, `STRIP_OPTS=` to use a plain `strip`, or `ENABLE_TESTING=true` to build a testable release.
+
+Use `make dsym` after building to archive the debug symbols for every installed executable in `bin/<configuration>/bundle/container-dSYM.zip`. Keep this archive with each release, because the stripped binaries rely on it to symbolicate crash reports. The target generates a dSYM when the build did not produce one, and fails if a dSYM does not match its binary.
+
 ### Clean up
 
-Stop the services, remove the build outputs, and delete the test directories:
+Remove the cluster-shim build files, stop the services, remove the build outputs, and delete the test directories:
 
 ```bash
 make clean
@@ -212487,6 +212493,7 @@ Attach debugger to the XPC helpers using their launchd service labels:
    % launchctl list | grep container
    27068   0       com.apple.container.container-network-vmnet.default
    27072   0       com.apple.container.container-core-images
+   27073   0       com.apple.container.container-core-clusters
    26980   0       com.apple.container.apiserver
    27331   0       com.apple.container.container-runtime-linux.test
    ```
@@ -212518,8 +212525,8 @@ Run `make pre-commit` to install a pre-commit hook that ensures that your change
 # Document: container
 
 Source path: README.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/README.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/README.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/README.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/README.md
 Description: container is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon.
 
 # container
@@ -212530,13 +212537,13 @@ The tool consumes and produces [OCI-compatible container images](https://github.
 
 `container` uses the [Containerization](https://github.com/apple/containerization) Swift package for low-level container, image, and process management.
 
-![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/assets/landing-movie.gif)
+![introductory movie showing some basic commands](https://raw.githubusercontent.com/apple/container/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/assets/landing-movie.gif)
 
 ## Get started
 
 ### Requirements
 
-You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/BUILDING.md) document.
+You need a Mac with Apple silicon to run `container`. To build it, see the [BUILDING](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/BUILDING.md) document.
 
 `container` is supported on macOS 26, since it takes advantage of new features and enhancements to virtualization and networking in this release. We do not support older versions of macOS and the `container` maintainers typically will not address issues that cannot be reproduced on macOS 26.
 
@@ -212559,7 +212566,7 @@ container run --rm alpine echo hello
 ```
 
 This pulls the `alpine` image, runs it in a lightweight Linux VM, prints `hello`, and
-removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/start-here.md)
+removes the container when it exits. See the [tutorial](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/start-here.md)
 for a fuller walkthrough that builds and publishes an image of your own.
 
 ### Upgrade or downgrade
@@ -212607,11 +212614,12 @@ To retain your user data so that it is available should you reinstall later, run
 
 ## Next steps
 
-- Take [a guided tour of `container`](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
-- Learn how to [use various `container` features](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/how-to.md).
-- Read a brief description and [technical overview](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/technical-overview.md) of `container`.
-- Browse the [full command reference](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/command-reference.md).
-- [Build and run](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/BUILDING.md) `container` on your own development system.
+- Take [a guided tour of `container`](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/start-here.md) by building, running, and publishing a simple web server image.
+- Learn how to [use various `container` features](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/how-to.md).
+- Explore the [container-examples repo](https://github.com/apple/container-examples/) that contains examples that show you how to work with `container`, such as [developing Linux apps in a container machine with Visual Studio Code](https://github.com/apple/container-examples/tree/main/container-machine-vscode) and [running a three-tier app on a container cluster behind a gateway](https://github.com/apple/container-examples/tree/main/container-cluster-gateway).
+- Read a brief description and [technical overview](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/technical-overview.md) of `container`.
+- Browse the [full command reference](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/command-reference.md).
+- [Build and run](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/BUILDING.md) `container` on your own development system.
 - View the project [API documentation](https://apple.github.io/container/documentation/).
 
 ## Contributing
@@ -212633,8 +212641,8 @@ The `container` application data provides forward compatibility only, guaranteed
 # Document: DNS architecture
 
 Source path: docs/architecture/dns.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/architecture/dns.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/architecture/dns.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/architecture/dns.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/architecture/dns.md
 Description: This document describes the DNS architecture of container. It covers:
 
 # DNS architecture
@@ -212647,7 +212655,7 @@ This document describes the DNS architecture of `container`. It covers:
 - The invariants that the implementation relies on
 - The security properties of the design
 
-For user-level instructions, see [Networking](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md).
+For user-level instructions, see [Networking](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md).
 
 ## Components
 
@@ -212736,190 +212744,25 @@ When a container starts, the API server validates its stored names again with th
 - Showing aliases in list output.
 
 
-# Document: How to file effective bug reports
-
-Source path: docs/bug-report-how-to.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/bug-report-how-to.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/bug-report-how-to.md
-Description: This guide helps you collect the essential information needed to file effective bug reports. Providing complete and accurate information helps maintainers reproduce and fix issues faster.
-
-# How to file effective bug reports
-
-This guide helps you collect the essential information needed to file effective bug reports. Providing complete and accurate information helps maintainers reproduce and fix issues faster.
-
-💡 **Example of a good bug report**: [Issue #1094](https://github.com/apple/container/issues/1094) demonstrates many of the best practices outlined in this guide.
-
-## Steps to reproduce
-
-Clear reproduction steps are essential for maintainers to understand and fix the issue.
-
-### What to include
-
-1. **Starting state**: What was your setup before the issue?
-   - Fresh installation or existing project?
-   - Any specific configuration files?
-   - Previous commands that led to this state?
-   - Has your machine recently been restarted?
-
-2. **Exact commands**: Copy-paste the exact commands you ran
-   - Include all flags and arguments
-   - Use code blocks for clarity
-
-3. **Reproducibility**: Does it happen every time or intermittently?
-   - Always reproducible
-   - Happens sometimes (describe conditions)
-   - Only happened once
-
-### Example
-
-```
-1. Create new container: `container create --name test-app ubuntu:latest`
-2. Start the container: `container start test-app`
-3. Container fails during bootstrap with error:
-   "failed to bootstrap container test-app"
-4. Container exits with code 1
-```
-
-## Problem description
-
-Provide a comprehensive description of your problem. Include what currently happens (the bug), what you expect should happen instead, and any relevant log output.
-
-### What to include
-
-#### Current behavior
-
-- Exact error messages (copy-paste, don't paraphrase)
-- Exit codes or status indicators
-- Performance issues (slowness, hangs, crashes)
-- Unexpected outputs or results
-
-#### Expected behavior
-
-- The correct output or result you anticipated
-- Reference to documentation if available
-- How it works in previous versions (if applicable)
-- Logical expectations based on the command or action
-
-#### Relevant logs
-
-Include any log output that helps illustrate the problem:
-
-- Error messages or stack traces
-- Warning messages related to your issue
-- Output from failed commands
-- Use verbose/debug flags to capture detailed information (see [Log Information](#log-information) section below for how to gather logs)
-
-## Environment information
-
-### Operating system details
-
-Run this command in Terminal to get your macOS version:
-
-```bash
-sw_vers
-```
-
-Example output:
-
-```
-ProductName:		macOS
-ProductVersion:		26.0
-BuildVersion:		12A345
-```
-
-### Xcode version
-
-Get your Xcode version with:
-
-```bash
-xcodebuild -version
-```
-
-Example output:
-
-```
-Xcode 15.0
-Build version 15A240d
-```
-
-### Container CLI version
-
-Check your Container CLI version:
-
-```bash
-container --version
-```
-
-Example output:
-
-```
-container CLI version 0.10.0-27-g9fd15f0 (build: debug, commit: 9fd15f0)
-```
-
-## Log information
-
-### Finding relevant logs
-
-When reporting issues, include logs that show:
-
-- Error messages or stack traces
-- Warning messages related to your issue
-- Output from failed commands
-
-### Getting container logs
-
-For Container CLI issues, run commands with verbose output:
-
-```bash
-container --debug <command>
-```
-
-You can also use the `container logs` command to get logs from running containers. See the [container logs](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/command-reference.md#container-logs) documentation for full details.
-
-```bash
-container logs <container-id>
-```
-
-### System logs
-
-For system-level container issues, use the built-in system logs command. See the [container system logs](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/command-reference.md#container-system-logs) documentation for full details.
-
-```bash
-container system logs
-```
-
-## Common information gaps
-
-### Missing context
-
-- What were you trying to accomplish?
-- What changed recently in your setup?
-- Does the issue occur in a fresh installation from main?
-
-### Incomplete error information
-
-- Full error messages (not just the last line)
-- Stack traces where relevant
-- Related warning messages
-
-### Environment variations
-
-- Does it work with a new instance of the container?
-- Does it work with a fresh install of the Container package?
-- Have your network settings changed?
-- Have your Xcode or macOS versions changed?
-
-
 # Document: Container cluster
 
 Source path: docs/cluster.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/cluster.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/cluster.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/cluster.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/cluster.md
 Description: Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With container, you can run local Kubernetes clusters for de…
 
 # Container cluster
 
 Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With `container`, you can run local Kubernetes clusters for development and testing.
+
+> \[!WARNING]
+> `container cluster create --shared-image-store` lets cluster nodes use your local image store, so pods can run images you build or pull with `container` without a registry. Sharing is off by default. With sharing on:
+>
+> - Anything with root on a node, including privileged pods and pods with a `hostPath` mount, can read every image in your local image store, including private images you pulled with your registry credentials.
+> - A local image is used before a registry image with the same name, for every pull policy, and without the pod's pull secrets.
+> - Nodes cannot add, change, or delete images in your local image store.
+>
+> Without `--shared-image-store`, nodes pull every image from a registry, as in a standard Kubernetes cluster.
 
 ## Why Kubernetes on container
 
@@ -212973,6 +212816,8 @@ List all clusters and their status:
 container cluster list
 ```
 
+Add `--nodes` to show one row per node instead of one row per cluster. Clusters created with an earlier version are not listed.
+
 ### Cluster lifecycle
 
 Create a cluster, use it with kubectl, and delete it when finished:
@@ -212987,6 +212832,15 @@ kubectl --context my-cluster get pods
 # Delete the cluster when finished
 container cluster delete --name my-cluster
 ```
+
+### Cluster nodes and container commands
+
+Each cluster node runs as a container, but `container cluster` manages those containers for you. To keep them from being changed by accident, the container lifecycle commands treat cluster nodes differently:
+
+- `container list` hides cluster nodes, even with `--all`. Use `container cluster list` to see them.
+- If you name a cluster node, `container start`, `container stop`, `container kill`, and `container delete` report it as not found, as they would for a container that doesn't exist. Other containers named in the same command are still processed.
+
+Commands that don't change a node's lifecycle, such as `container inspect`, `container logs`, `container exec`, `container stats`, and `container clean`, work on a cluster node you name. Use `container cluster delete` to remove a cluster and its nodes.
 
 ### Customize resources
 
@@ -213008,7 +212862,18 @@ By default, `container cluster create` creates a single node that acts as both c
 container cluster create --name my-cluster --workers 3
 ```
 
-When `--workers` is greater than `0`, the control-plane node is tainted so pods only schedule onto worker nodes, matching typical multi-node cluster behavior. Worker nodes share the same `--node-image`, `--cpus`, and `--memory` settings as the control plane, and are named `<cluster-name>-worker-<n>`.
+When `--workers` is greater than `0`, the control-plane node is tainted so pods only schedule onto worker nodes, matching typical multi-node cluster behavior. Worker nodes share the control plane's `--node-image` and are named `<cluster-name>-worker-<n>`.
+
+`--cpus` and `--memory` size the control-plane node, or the single node if no workers are specified.
+
+To size workers, pass a group of workers with `--workers count=<n>,cpus=<n>,memory=<size>`. A group's `count` defaults to `1`. If you leave out `cpus` or `memory`, the workers get the single-node defaults: 1/4 of your host's CPUs and memory, minimum 2 CPUs and 2GB. Repeat the option to create groups of differently sized workers:
+
+```bash
+# Control plane with 2 CPUs and 4GB, 2 workers with 4 CPUs and 8GB, plus 1 smaller worker
+container cluster create --name my-cluster --cpus 2 --memory 4g \
+  --workers count=2,cpus=4,memory=8g \
+  --workers count=1,cpus=2,memory=4g
+```
 
 ### Access clusters with kubectl
 
@@ -213023,29 +212888,15 @@ kubectl --context cluster-dev describe node
 kubectl config use-context staging
 ```
 
-## Load container images into your cluster
+## Use container images in your cluster
 
-Images built with `container build` can be loaded directly into your Kubernetes cluster, so you can test them without pushing to a registry.
-
-### Build and load
-
-Build an image and load it into your cluster:
+A cluster created with `--shared-image-store` can pull the images in your local image store. Build or pull an image with `container`, and reference it by name in a pod spec:
 
 ```bash
-# Build a local image
-container build -t my-app:latest .
-
-# Load the image into every node of the cluster
-container cluster load-image my-app:latest
-
-# Load the image into a single node instead
-container cluster load-image --node cluster-dev-worker-1 my-app:latest
-
-# Load the image into specific nodes only
-container cluster load-image --node cluster-dev-worker-1 --node cluster-dev-worker-2 my-app:latest
+container cluster create --shared-image-store
+container build -t my-app:dev .
+kubectl run my-app --image=my-app:dev
 ```
-
-The image is placed in the `k8s.io` namespace, making it available for pod scheduling:
 
 ```yaml
 apiVersion: v1
@@ -213055,28 +212906,21 @@ metadata:
 spec:
   containers:
   - name: app
-    image: my-app:latest
-    imagePullPolicy: Never
+    image: my-app:dev
   restartPolicy: Never
 ```
 
-### Load into named clusters
+If the local image store does not have an image, or has none of its content for the node's platform, the node pulls it from its registry as usual.
 
-If you have multiple clusters, specify which one to load into:
+The first time a node uses a local image, it copies the image's content for its platform from your local image store, the same way it stores an image it pulls from a registry.
 
-```bash
-container cluster load-image --name staging my-app:latest
-container cluster load-image --name testing my-app:latest
-```
+An image name without a registry, such as `my-app:dev`, is looked up in the local image store the same way `container` resolves it, using your default registry domain (`registry.domain`). Inside the cluster, Kubernetes shows such an image under its docker.io name, for example `docker.io/library/my-app:dev`.
 
-### Multi-architecture images
-
-When loading multi-architecture images, specify the architecture if needed:
-
-```bash
-# Load the amd64 variant of a multi-arch image
-container cluster load-image --platform linux/amd64 my-app:latest
-```
+> \[!NOTE]
+>
+> - Every pull policy works, including `imagePullPolicy: Never`.
+> - Sharing is set when the cluster is created. To change it, delete the cluster and create it again.
+> - After rebuilding a tag, use `imagePullPolicy: Always` or a new tag so the node picks up the new image. With `IfNotPresent`, a node keeps the image it already has.
 
 ## Kubernetes node image
 
@@ -213135,9 +212979,11 @@ To have a cluster automatically remove itself when stopped, create it with `--rm
 container cluster create --name temp-cluster --rm
 ```
 
+The node containers are removed when they stop, but the cluster's stored configuration remains, so the cluster shows as `stopped` in `container cluster list` until you run `container cluster delete --name temp-cluster` or create a cluster with the same name again (which clears the stale configuration).
+
 ### Recovering a stopped cluster
 
-If a cluster's control plane node stops (for example, after `container stop`), delete and re-create the cluster:
+If a cluster's control plane node stops (for example, after `container system stop`), delete and re-create the cluster:
 
 ```bash
 container cluster delete --name my-cluster
@@ -213152,11 +212998,8 @@ container cluster create --name my-cluster
 # Create a test cluster
 container cluster create --name test
 
-# Build your image locally
+# Build your image locally; the cluster pulls it by name
 container build -t my-service:v1.0 .
-
-# Load it into the test cluster
-container cluster load-image --name test my-service:v1.0
 
 # Deploy to the test cluster
 kubectl --context test apply -f deployment.yaml
@@ -213176,21 +213019,19 @@ container cluster create --name feature-auth
 container cluster create --name feature-payments
 
 # Work on each feature in isolation, test against its own cluster
-container cluster load-image --name feature-auth my-service:feature-auth
-container cluster load-image --name feature-payments my-service:feature-payments
 ```
 
 ## See also
 
-- [Command reference](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/command-reference.md#container-cluster-management) — full details of all `container cluster` subcommands
-- [Container machines](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-machine.md) — persistent Linux environments for general-purpose development
+- [Command reference](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/command-reference.md#container-cluster-management) — full details of all `container cluster` subcommands
+- [Container machines](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-machine.md) — persistent Linux environments for general-purpose development
 
 
 # Document: Container CLI Command Reference
 
 Source path: docs/command-reference.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/command-reference.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/command-reference.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/command-reference.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/command-reference.md
 Description: Command availability may vary depending on your macOS version.
 
 # Container CLI Command Reference
@@ -213256,7 +213097,7 @@ container run [<options>] <image> [<arguments> ...]
 - `--masked-path <path>`: **Experimental.** Hide a path inside the container, in addition to the runtime defaults (or `NONE` to clear prior values and the defaults)
 - `--mount <mount>`: Add a mount to the container (format: type=<>,source=<>,target=<>,readonly)
 - `--name <name>`: Use the specified name as the container ID
-- `--network <network>`: Attach the container to a network (format: `<name>[,mac=XX:XX:XX:XX:XX:XX][,mtu=VALUE][,alias=NAME]...`). Use `alias` to give the container additional DNS names; see [Give a container additional DNS names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#give-a-container-additional-dns-names)
+- `--network <network>`: Attach the container to a network (format: `<name>[,mac=XX:XX:XX:XX:XX:XX][,mtu=VALUE][,alias=NAME]...`). Use `alias` to give the container additional DNS names; see [Give a container additional DNS names](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#give-a-container-additional-dns-names)
 - `--no-dns`: Do not configure DNS in the container
 - `--os <os>`: Set OS if image can target multiple operating systems (default: from image, else linux)
 - `-p, --publish <spec>`: Publish a port from container to host (format: \[host-ip:]host-port:container-port\[/protocol])
@@ -213424,7 +213265,7 @@ container create [<options>] <image> [<arguments> ...]
 - `--masked-path <path>`: **Experimental.** Hide a path inside the container, in addition to the runtime defaults (or `NONE` to clear prior values and the defaults)
 - `--mount <mount>`: Add a mount to the container (format: type=<>,source=<>,target=<>,readonly)
 - `--name <name>`: Use the specified name as the container ID
-- `--network <network>`: Attach the container to a network (format: `<name>[,mac=XX:XX:XX:XX:XX:XX][,mtu=VALUE][,alias=NAME]...`). Use `alias` to give the container additional DNS names; see [Give a container additional DNS names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#give-a-container-additional-dns-names)
+- `--network <network>`: Attach the container to a network (format: `<name>[,mac=XX:XX:XX:XX:XX:XX][,mtu=VALUE][,alias=NAME]...`). Use `alias` to give the container additional DNS names; see [Give a container additional DNS names](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#give-a-container-additional-dns-names)
 - `--no-dns`: Do not configure DNS in the container
 - `--os <os>`: Set OS if image can target multiple operating systems (default: from image, else linux)
 - `-p, --publish <spec>`: Publish a port from container to host (format: \[host-ip:]host-port:container-port\[/protocol])
@@ -214152,7 +213993,7 @@ container volume create --opt journal=journal --opt size=10g myvolume
 
 Using `-v /path` or `--mount type=volume,dst=/path` without a source auto-creates a
 named volume for you, tagged with the `com.apple.container.resource.anonymous` label.
-See [Mounts and volumes](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/volumes.md#anonymous-volumes) for how to find and clean
+See [Mounts and volumes](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/volumes.md#anonymous-volumes) for how to find and clean
 these up.
 
 ### `container volume delete (rm)`
@@ -214832,7 +214673,7 @@ Creates and starts a local Kubernetes cluster and optional worker nodes. Pulls t
 **Usage**
 
 ```bash
-container cluster create [--name <name>] [--node-image <image>] [--cni <path>] [--workers <n>] [--rm] [<resource options>] [--debug]
+container cluster create [--name <name>] [--node-image <image>] [--cni <path>] [--workers <n | count=<n>,cpus=<n>,memory=<size>>]... [--shared-image-store] [--rm] [<resource options>] [--debug]
 ```
 
 **Options**
@@ -214841,12 +214682,16 @@ container cluster create [--name <name>] [--node-image <image>] [--cni <path>] [
 - `--node-image <image>`: Node image reference (default: `docker.io/kindest/node:v1.35.5`)
 - `--cni <path>`: Optional path to a CNI manifest to apply, or `NONE` (case-insensitive) to skip installing a CNI. If not provided, the bundled kindnet CNI is used. With `NONE`, the command returns without waiting for nodes to become `Ready`, since that requires a CNI; apply your own afterward with `kubectl apply`.
 - `--workers <n>`: Number of worker nodes to create (default: `0`, meaning the control-plane node also acts as a worker)
+- `--workers count=<n>,cpus=<n>,memory=<size>`: A group of `count` identical workers (default `1`) with the given CPUs and memory. Repeat the option to create groups of differently sized workers. Any value left out gets the single-node default (1/4 of host CPUs and memory, minimum 2 CPUs and 2g). Workers are numbered across groups as `<name>-worker-<n>`.
+- `--shared-image-store`: Let nodes pull images from the local image store (default: off). See [Container cluster](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/cluster.md).
 - `--rm`: Remove the cluster container after it stops
 
 **Resource Options**
 
-- `--cpus <cpus>`: Number of virtual CPUs (default: 1/4 of host CPUs, minimum 2)
-- `--memory <memory>`: Memory allocation (default: 1/4 of host memory, minimum 2g)
+- `--cpus <cpus>`: Number of virtual CPUs for the control-plane node (default: 1/4 of host CPUs, minimum 2)
+- `--memory <memory>`: Memory allocation for the control-plane node (default: 1/4 of host memory, minimum 2g)
+
+With workers, `--cpus` and `--memory` apply to the control-plane node only. A worker value that is not given defaults to the same as a single node, however many workers there are. A value given in a `--workers` group applies to that group only.
 
 **Registry Options**
 
@@ -214876,6 +214721,13 @@ container cluster create --cni NONE
 
 # create a cluster with a control plane and 3 worker nodes
 container cluster create --name my-cluster --workers 3
+
+# create a cluster with a 2 CPU, 4g control plane and two groups of differently sized workers
+container cluster create --name my-cluster --cpus 2 --memory 4g \
+  --workers count=2,cpus=4,memory=8g --workers count=1,cpus=2,memory=4g
+
+# create a cluster whose nodes can pull images from the local image store
+container cluster create --shared-image-store
 ```
 
 ### `container cluster delete (rm)`
@@ -214905,58 +214757,31 @@ container cluster rm --name my-cluster
 
 ### `container cluster list (ls)`
 
-Lists all Kubernetes clusters with their status and node image.
+Lists Kubernetes clusters created with this version of the plugin. By default the output has one row per cluster with its name, status, node count, and Kubernetes version. Use `--nodes` to show one row per node instead. Use `-q` to print only cluster names (node names with `--nodes`).
+
+With `--format json` (or `yaml`/`toml`), each cluster is reported with an `id`, its `configuration` (the settings it was created with), and its `status`. The `status` has a `state` (`running`, `degraded` or `stopped`, derived from the state of its node containers) and `nodes` (per-node state).
+
+Clusters created by earlier versions have no stored configuration and do not appear. Cluster records are kept by the `container-core-clusters` helper service, so the container system must be running (`container system start`).
 
 **Usage**
 
 ```bash
-container cluster list [--debug]
+container cluster list [--nodes] [--format json|table|yaml|toml] [-q] [--debug]
 ```
-
-**Examples**
-
-```bash
-container cluster list
-container cluster ls
-```
-
-### `container cluster load-image`
-
-Exports an image from the local `container` image store and imports it into every node's containerd (in the `k8s.io` namespace) so that Kubernetes can schedule pods that reference it on any node.
-
-**Usage**
-
-```bash
-container cluster load-image [--name <name>] [--platform <platform>] [--node <node> ...] <image> [--debug]
-```
-
-**Arguments**
-
-- `<image>`: Image reference to load (e.g. `my-app:latest`)
 
 **Options**
 
-- `--name <name>`: Cluster name (default: `cluster-dev`)
-- `--platform <platform>`: Platform of the image variant to load from a multi-arch image (format: os/arch\[/variant], default: `linux/<host-arch>`). Use this when the local store contains a multi-arch manifest list and you want to select a specific variant.
-- `--node <node>`: Load into specific nodes instead of every node in the cluster. Repeat to target multiple nodes.
+- `--nodes`: Show one row per node instead of one row per cluster.
+- `--format <format>`: Format of the output (`json`, `table`, `yaml`, `toml`; default `table`).
+- `-q, --quiet`: Only output the cluster name (the node name with `--nodes`).
 
 **Examples**
 
 ```bash
-# load an image into every node of the default cluster
-container cluster load-image my-app:latest
-
-# load an image into every node of a named cluster
-container cluster load-image --name my-cluster my-app:latest
-
-# load the amd64 variant of a multi-arch image
-container cluster load-image --platform linux/amd64 my-app:latest
-
-# load an image into a single worker node only
-container cluster load-image --node cluster-dev-worker-1 my-app:latest
-
-# load an image into specific worker nodes only
-container cluster load-image --node cluster-dev-worker-1 --node cluster-dev-worker-2 my-app:latest
+container cluster ls
+container cluster ls --nodes
+container cluster ls --format json
+container cluster ls -q
 ```
 
 ### `container cluster write-config`
@@ -214988,8 +214813,8 @@ container cluster write-config --name my-cluster --kubeconfig ~/.kube/my-cluster
 # Document: Inspecting containers and images
 
 Source path: docs/container-inspection.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-inspection.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-inspection.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-inspection.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-inspection.md
 Description: Get detailed, machine-readable information about your containers and images.
 
 # Inspecting containers and images
@@ -215062,15 +214887,15 @@ Use the `list` command with the `--format` option to display information for all
 ]
 </pre>
 
-See [Networking](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md) for how to publish ports, reach the host from a
+See [Networking](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md) for how to publish ports, reach the host from a
 container, set a custom MAC address, and create isolated networks.
 
 
 # Document: Container machine
 
 Source path: docs/container-machine.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-machine.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-machine.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-machine.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-machine.md
 Description: Container machine provides a highly integrated Linux environment that works seamlessly on your Mac. Container machines are fast, lightweight and persistent. They're based on standard OCI images you can build and share.…
 
 # Container machine
@@ -215249,8 +215074,8 @@ container machine create --user devuser --uid 1500 --gid 1600 --home /srv/devhom
 # Document: config.toml reference
 
 Source path: docs/container-system-config.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-system-config.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-system-config.md
 Description: For a guided walk-through on setting default values, see Container system config tutorial.
 
 # `config.toml` reference
@@ -215260,9 +215085,9 @@ Description: For a guided walk-through on setting default values, see Container 
 >
 > Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
 
-For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/container-system-config-tutorial.md).
+For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/container-system-config-tutorial.md).
 
-Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/ContainerSystemConfig.swift).
+Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/Sources/ContainerPersistence/ContainerSystemConfig.swift).
 
 ## Viewing your configuration
 
@@ -215286,9 +215111,9 @@ memory = "1gb"
 domain = "test"
 
 [kernel]
-binaryPath = "opt/kata/share/kata-containers/vmlinux-6.18.35-197-debug"
-url = "https://github.com/kata-containers/kata-containers/releases/download/3.32.0/kata-static-3.32.0-arm64.tar.zst"
-digest = "sha256:8736c054d9223974735394f822000823baef509e1c33405ec798240fa9b6e4b5"
+binaryPath = "opt/kata/share/kata-containers/vmlinux-6.18.56-208-debug"
+url = "https://github.com/kata-containers/kata-containers/releases/download/4.3.1/kata-static-4.3.1-arm64.tar.zst"
+digest = "sha256:2c5bf7cde334ad5307d482f45cceda496f91c9b6b96f5278c47f4f4eac1bbae6"
 
 [network]
 
@@ -215346,21 +215171,34 @@ Defaults applied when `container run` / `container create` is invoked without `-
 | `cpus`   | `Int`                            | `4`     | Default CPU count per container. |
 | `memory` | [MemorySize](#memorysize-format) | `"1g"`  | Default RAM per container.       |
 
+### `[container.dns]`
+
+Default DNS settings applied when `container run` / `container build` / `container builder start` is invoked without `--dns`, `--dns-search`, `--dns-option`, or `--dns-domain`. CLI flags override these values.
+
+| Key             | Type        | Default | Description                                                            |
+| --------------- | ----------- | ------- | ---------------------------------------------------------------------- |
+| `domain`        | `String?`   | unset   | DNS domain appended to container hostnames.                            |
+| `nameservers`   | `[String]?` | unset   | DNS nameservers configured in the container's resolver.                |
+| `searchDomains` | `[String]?` | unset   | DNS search domains configured in the container's resolver.             |
+| `options`       | `[String]?` | unset   | DNS options (e.g. `"ndots:2"`) configured in the container's resolver. |
+
+See [Networking: Set default DNS settings for containers](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#set-default-dns-settings-for-containers) for the walkthrough.
+
 ## `[dns]`
 
 | Key      | Type      | Default | Description                                                                                                                                                                                                                                                                                                                                                                      |
 | -------- | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
+| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
 
 ## `[kernel]`
 
-Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
+Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
 
-| Key          | Type     | Default                                                                                                          | Description                                                                                            |
-| ------------ | -------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `binaryPath` | `String` | `"opt/kata/share/kata-containers/vmlinux-6.18.35-197-debug"`                                                     | Path **inside** the downloaded kernel archive that points to the kernel binary.                        |
-| `url`        | `URL`    | `"https://github.com/kata-containers/kata-containers/releases/download/3.32.0/kata-static-3.32.0-arm64.tar.zst"` | Archive to download when no kernel is installed. Encoded and decoded as a plain string in TOML.        |
-| `digest`     | `String` | `"sha256:8736c054d9223974735394f822000823baef509e1c33405ec798240fa9b6e4b5"`                                      | Expected digest for the archive, for example `sha256:<hex>`. Required when configuring a custom `url`. |
+| Key          | Type     | Default                                                                                                        | Description                                                                                            |
+| ------------ | -------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `binaryPath` | `String` | `"opt/kata/share/kata-containers/vmlinux-6.18.56-208-debug"`                                                   | Path **inside** the downloaded kernel archive that points to the kernel binary.                        |
+| `url`        | `URL`    | `"https://github.com/kata-containers/kata-containers/releases/download/4.3.1/kata-static-4.3.1-arm64.tar.zst"` | Archive to download when no kernel is installed. Encoded and decoded as a plain string in TOML.        |
+| `digest`     | `String` | `"sha256:2c5bf7cde334ad5307d482f45cceda496f91c9b6b96f5278c47f4f4eac1bbae6"`                                    | Expected digest for the archive, for example `sha256:<hex>`. Required when configuring a custom `url`. |
 
 ## `[network]`
 
@@ -215410,7 +215248,7 @@ All units are **binary** (powers of 1024), even when written with `kb`/`mb`/`gb`
 
 A bare integer (e.g. `"2048"`) parses as bytes.
 
-Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/Measurement%2BParse.swift).
+Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/Sources/ContainerPersistence/Measurement%2BParse.swift).
 
 ### `CIDRv4` / `CIDRv6`
 
@@ -215420,8 +215258,8 @@ Quoted string. IPv4 example: `"192.168.100.0/24"`. IPv6 example: `"fd00:abcd::/6
 # Document: Host integration
 
 Source path: docs/host-integration.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/host-integration.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/host-integration.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/host-integration.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/host-integration.md
 Description: Bridge your container and your Mac: forward your SSH agent in, or reach a host service from inside a container.
 
 # Host integration
@@ -215511,15 +215349,15 @@ hello
 ```
 
 This uses the same underlying DNS mechanism described in [Networking: Set up DNS-based
-container names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#set-up-dns-based-container-names), just with
+container names](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#set-up-dns-based-container-names), just with
 `--localhost` pointing the domain at a host address instead of a container.
 
 
 # Document: How-to
 
 Source path: docs/how-to.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/how-to.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/how-to.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/how-to.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/how-to.md
 Description: container has a lot of surface area beyond the basic tutorial. Each topic below has its own guide — pick the one that matches what you're trying to do.
 
 # How-to
@@ -215529,30 +215367,30 @@ Description: container has a lot of surface area beyond the basic tutorial. Each
 >
 > Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
 
-`container` has a lot of surface area beyond the [basic tutorial](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/start-here.md). Each topic below has its own guide — pick the one that matches what you're trying to do.
+`container` has a lot of surface area beyond the [basic tutorial](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/start-here.md). Each topic below has its own guide — pick the one that matches what you're trying to do.
 
 ## Topics
 
-- [Resource usage](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/resource-usage.md) — CPU and memory limits for containers and builds, overcommitting resources, monitoring usage with `container stats`, and reclaiming disk space.
-- [Mounts and volumes](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/volumes.md) — bind-mount host directories, create named volumes, and mount temporary tmpfs storage.
-- [Networking](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md) — DNS-based container names, container-to-container connectivity, port forwarding, custom MAC addresses, and isolated networks.
-- [Host integration](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/host-integration.md) — forward your SSH agent into a container, and reach a service running on your Mac from inside a container.
-- [Resource limits (ulimits)](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/ulimits.md) — per-process limits like open-file and process-count limits.
-- [Runtime configuration](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/runtime-configuration.md) — Linux capabilities, masked and read-only paths, nested virtualization, and customizing the container's init process.
-- [Multiplatform images](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/multiplatform-images.md) — build, run, and publish images that support both Apple silicon and x86-64.
-- [Inspecting containers and images](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-inspection.md) — machine-readable `inspect` and `list` output for scripting.
-- [Logs](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/logs.md) — container output, VM boot logs, and the `container` system's own logs.
-- [`config.toml` reference](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md) — every configuration key, its default, and how to view your merged configuration.
-- [Container machines](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-machine.md) — persistent Linux environments built from OCI images, with your home directory mounted in and the filesystem surviving stop/start.
-- [Container cluster](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/cluster.md) — run local Kubernetes clusters, single-node or multi-node, for development and testing, load your own images, and test deployments before production.
-- [Shell completions](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/shell-completions.md) — generate and install completion scripts for `zsh`, `bash`, and `fish`.
+- [Resource usage](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/resource-usage.md) — CPU and memory limits for containers and builds, overcommitting resources, monitoring usage with `container stats`, and reclaiming disk space.
+- [Mounts and volumes](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/volumes.md) — bind-mount host directories, create named volumes, and mount temporary tmpfs storage.
+- [Networking](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md) — DNS-based container names, container-to-container connectivity, port forwarding, custom MAC addresses, and isolated networks.
+- [Host integration](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/host-integration.md) — forward your SSH agent into a container, and reach a service running on your Mac from inside a container.
+- [Resource limits (ulimits)](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/ulimits.md) — per-process limits like open-file and process-count limits.
+- [Runtime configuration](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/runtime-configuration.md) — Linux capabilities, masked and read-only paths, nested virtualization, and customizing the container's init process.
+- [Multiplatform images](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/multiplatform-images.md) — build, run, and publish images that support both Apple silicon and x86-64.
+- [Inspecting containers and images](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-inspection.md) — machine-readable `inspect` and `list` output for scripting.
+- [Logs](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/logs.md) — container output, VM boot logs, and the `container` system's own logs.
+- [`config.toml` reference](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-system-config.md) — every configuration key, its default, and how to view your merged configuration.
+- [Container machines](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-machine.md) — persistent Linux environments built from OCI images, with your home directory mounted in and the filesystem surviving stop/start.
+- [Container cluster](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/cluster.md) — run local Kubernetes clusters, single-node or multi-node, for development and testing, load your own images, and test deployments before production.
+- [Shell completions](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/shell-completions.md) — generate and install completion scripts for `zsh`, `bash`, and `fish`.
 
 
 # Document: Logs
 
 Source path: docs/logs.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/logs.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/logs.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/logs.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/logs.md
 Description: View output from your containerized applications, VM boot logs, and the container system's own logs.
 
 # Logs
@@ -215622,15 +215460,15 @@ The `container system logs` command allows you to look at the log messages that 
 %
 </pre>
 
-See [bug report how-to](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/bug-report-how-to.md) for gathering logs when filing an
+See [filing effective bug reports](https://github.com/apple/containerization/blob/main/CONTRIBUTING.md#filing-effective-bug-reports) for gathering logs when filing an
 issue.
 
 
 # Document: Multiplatform images
 
 Source path: docs/multiplatform-images.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/multiplatform-images.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/multiplatform-images.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/multiplatform-images.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/multiplatform-images.md
 Description: Build, run, and publish container images that support both Apple silicon and x86-64.
 
 # Multiplatform images
@@ -215639,7 +215477,7 @@ Build, run, and publish container images that support both Apple silicon and x86
 
 ## Build and run a multiplatform image
 
-Using the [project from the tutorial example](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/start-here.md#set-up-a-simple-project), you can create an image to use both on Apple silicon Macs and on x86-64 servers.
+Using the [project from the tutorial example](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/start-here.md#set-up-a-simple-project), you can create an image to use both on Apple silicon Macs and on x86-64 servers.
 
 When building the image, just add `--arch` options that direct the builder to create an image supporting both the `arm64` and `amd64` architectures:
 
@@ -215673,8 +215511,8 @@ container image push registry.example.com/fido/web-test:latest
 # Document: Networking
 
 Source path: docs/networking.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md
 Description: Learn how container networks containers with one another, with the host, and with external systems.
 
 # Networking
@@ -215725,7 +215563,7 @@ Enter your administrator password when prompted. This writes a resolver file to
 `/etc/resolver/` that tells macOS: for any `*.test` query, ask `127.0.0.1` instead of
 your normal DNS server.
 
-Both steps are needed. See [`[dns]` reference](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md#dns) for the
+Both steps are needed. See [`[dns]` reference](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-system-config.md#dns) for the
 config-key-level detail.
 
 With both steps done, confirm it end-to-end from your Mac:
@@ -215735,8 +215573,27 @@ With both steps done, confirm it end-to-end from your Mac:
 % curl http://my-web-server.test:8000
 ```
 
-See [Host integration](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/host-integration.md) for the reverse direction — reaching a
+See [Host integration](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/host-integration.md) for the reverse direction — reaching a
 service running on your Mac from inside a container.
+
+## Set default DNS settings for containers
+
+To avoid passing `--dns`, `--dns-search`, and `--dns-option` on every `container run`,
+`container build`, or `container builder start` invocation, set defaults in
+`~/.config/container/config.toml`:
+
+```toml
+[container.dns]
+domain = "corp.local"
+nameservers = ["1.1.1.1", "8.8.8.8"]
+searchDomains = ["corp.local", "lab.corp.local"]
+options = ["ndots:2", "timeout:1"]
+```
+
+CLI flags override these defaults when provided. Use `container run --no-dns` to skip DNS
+configuration entirely. The top-level [`[dns]`](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-system-config.md#dns) section
+configures the internal DNS domain used by the host and API server. Restart the daemon
+(`container system stop && container system start`) for changes to take effect.
 
 ## Container-to-container networking
 
@@ -215948,8 +215805,8 @@ These settings apply to networks created without explicit `--subnet` or `--subne
 # Document: Resource usage
 
 Source path: docs/resource-usage.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/resource-usage.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/resource-usage.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/resource-usage.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/resource-usage.md
 Description: Configure CPU, memory, and disk resources for your containers and builds, monitor usage while they run, and reclaim disk space afterward.
 
 # Resource usage
@@ -215965,7 +215822,7 @@ Since the containers created by `container` are lightweight virtual machines, co
 container run --rm --cpus 8 --memory 32g big
 ```
 
-See [Resource limits (ulimits)](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
+See [Resource limits (ulimits)](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
 
 ## Configure memory and CPUs for large builds
 
@@ -216048,7 +215905,8 @@ You can also output statistics in JSON format for scripting:
     "networkTxBytes": 876544,
     "blockReadBytes": 4718592,
     "blockWriteBytes": 2202009,
-    "numProcesses": 3
+    "numProcesses": 3,
+    "cpuUtilization": 0.0312
   }
 ]
 ```
@@ -216056,6 +215914,7 @@ You can also output statistics in JSON format for scripting:
 **Understanding the metrics:**
 
 - **Cpu %**: Percentage of CPU usage. \~100% = one fully utilized core. A multi-core container can show > 100%.
+- **cpuUtilization** (JSON, YAML, TOML): The same measurement as a fraction of one core. `1.0` is one fully utilized core, `2.5` is two and a half. Format it as you need; `Cpu %` in the table is this value times 100.
 - **Memory Usage**: Current memory usage vs. the container's memory limit.
 - **Net Rx/Tx**: Network bytes received and transmitted.
 - **Block I/O**: Disk bytes read and written.
@@ -216068,6 +215927,13 @@ volumes get their own sparse disk image too. As your containerized application w
 data, these images grow; when a container process deletes a file, the freed blocks
 aren't automatically returned to the host filesystem, so image size doesn't shrink on
 its own.
+
+Image snapshots and container root filesystems are excluded from backups when
+those directories are first created. Backup software that honors this exclusion,
+including Time Machine, skips them. Both are large sparse files that can be
+recreated by pulling the image or creating the container again. Named volume data
+under `volumes/` stays included. An exclusion removed from an existing directory
+is left as it is.
 
 Check overall usage with:
 
@@ -216104,6 +215970,13 @@ Remove volumes with no container references:
 container volume prune
 ```
 
+Return the blocks that a running container has freed by deleting files on its root
+filesystem and named volumes to the host, without stopping the container:
+
+```bash
+container clean mycontainer
+```
+
 Reclaim space used by the builder VM's layer cache by replacing the builder:
 
 ```bash
@@ -216111,15 +215984,15 @@ container builder stop
 container builder delete
 ```
 
-See [Mounts and volumes](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/volumes.md) for bind mounts, named volumes, and tmpfs
+See [Mounts and volumes](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/volumes.md) for bind mounts, named volumes, and tmpfs
 mounts.
 
 
 # Document: Runtime configuration
 
 Source path: docs/runtime-configuration.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/runtime-configuration.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/runtime-configuration.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/runtime-configuration.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/runtime-configuration.md
 Description: Configure what runs inside and around your container's init process: Linux capabilities, path masking, nested virtualization, and the init process itself.
 
 # Runtime configuration
@@ -216299,7 +216172,7 @@ CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o wrapper wrapper.go
 
 Use the `vminit` image tag corresponding to the `scVersion` value in the project `Package.swift` file.
 
-Or, use `vminit:latest` if you have a local `containerization` project in [edit mode](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/BUILDING.md#develop-using-a-local-copy-of-containerization).
+Or, use `vminit:latest` if you have a local `containerization` project in [edit mode](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/BUILDING.md#develop-using-a-local-copy-of-containerization).
 
 ```dockerfile
 FROM ghcr.io/apple/containerization/vminit:0.34.0 AS base
@@ -216330,14 +216203,14 @@ Check the VM boot logs to confirm your custom init code executed:
 [    0.129230] custom-init: === CUSTOM INIT IMAGE RUNNING ===
 ```
 
-See [Logs](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/logs.md) for more on viewing container and VM boot logs.
+See [Logs](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/logs.md) for more on viewing container and VM boot logs.
 
 
 # Document: Shell completions
 
 Source path: docs/shell-completions.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/shell-completions.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/shell-completions.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/shell-completions.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/shell-completions.md
 Description: Generate and install completion scripts for zsh, bash, and fish.
 
 # Shell completions
@@ -216418,8 +216291,8 @@ container --generate-completion-script fish > ~/.config/fish/completions/contain
 # Document: Technical Overview
 
 Source path: docs/technical-overview.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/technical-overview.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/technical-overview.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/technical-overview.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/technical-overview.md
 Description: A brief description and technical overview of container.
 
 # Technical Overview
@@ -216468,13 +216341,13 @@ You use the `container` command line interface (CLI) to start and manage your co
 
 The `container-apiserver` is a launch agent that launches when you run the `container system start` command, and terminates when you run `container system stop`. It provides the client APIs for managing container and network resources.
 
-When `container-apiserver` starts, it launches an XPC helper `container-core-images` that exposes an API for image management and manages the local content store, and another XPC helper `container-network-vmnet` for the virtual network. For each container that you create, `container-apiserver` launches a container runtime helper `container-runtime-linux` that exposes the management API for that specific container.
+When `container-apiserver` starts, it launches an XPC helper `container-core-images` that exposes an API for image management and manages the local content store, another XPC helper `container-core-clusters` that stores local Kubernetes cluster records, an XPC helper `machine-apiserver` that exposes the machine management API, and another XPC helper `container-network-vmnet` for the virtual network. For each container that you create, `container-apiserver` launches a container runtime helper `container-runtime-linux` that exposes the management API for that specific container.
 
 \[Image unavailable: diagram showing container functional organization]
 
 ## What limitations does `container` have today?
 
-With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
+With the initial release of `container`, you get basic facilities for building and running containers, but many common containerization features remain to be implemented. Consider [contributing](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/CONTRIBUTING.md) new features and bug fixes to `container` and the Containerization projects!
 
 ### Releasing container memory to macOS
 
@@ -216504,8 +216377,8 @@ Normally, vmnet creates the container network using the CIDR address 192.168.64.
 # Document: Customize container default configuration values
 
 Source path: docs/tutorials/container-system-config-tutorial.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/container-system-config-tutorial.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/container-system-config-tutorial.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/container-system-config-tutorial.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/container-system-config-tutorial.md
 Description: Take a guided tour of setting configurations for container CLI commands and services.
 
 # Customize `container` default configuration values
@@ -216524,7 +216397,7 @@ The `container` service loads values from these TOML files at startup, with firs
 1. Your user file at `~/.config/container/config.toml`.
 2. An optional file shipped with the `container` package install at `<installRoot>/etc/container/config.toml`.
 
-Any key absent from both files falls back to a hardcoded default. For the full schema and defaults, see the [`config.toml` reference](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md).
+Any key absent from both files falls back to a hardcoded default. For the full schema and defaults, see the [`config.toml` reference](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-system-config.md).
 
 ## Create a custom user TOML configuration file
 
@@ -216554,7 +216427,7 @@ memory = "4g"
 domain = "test"
 ```
 
-Each top-level table maps directly to a section of [ContainerSystemConfig](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md).
+Each top-level table maps directly to a section of [ContainerSystemConfig](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-system-config.md).
 
 ### Restart the `container` service
 
@@ -216575,7 +216448,7 @@ sudo container system dns create test
 ```
 
 Enter your administrator password when prompted. See [Networking: Set up DNS-based
-container names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#set-up-dns-based-container-names) for what this step
+container names](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#set-up-dns-based-container-names) for what this step
 does.
 
 ### Verify the values are loaded
@@ -216621,8 +216494,8 @@ container system property list --format json
 # Document: Tutorial
 
 Source path: docs/tutorials/start-here.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/start-here.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/start-here.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/start-here.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/start-here.md
 Description: Take a guided tour of container by building, running, and publishing a simple web server image.
 
 # Tutorial
@@ -216732,7 +216605,7 @@ Use the `--help` flag to see which abbreviations exist.
 
 ### Set up a local DNS domain (optional)
 
-`container` includes an embedded DNS service that simplifies access to your containerized applications. For what each step does, see [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#set-up-dns-based-container-names); the short version, to set up a domain named `test`:
+`container` includes an embedded DNS service that simplifies access to your containerized applications. For what each step does, see [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#set-up-dns-based-container-names); the short version, to set up a domain named `test`:
 
 Set `domain = "test"` under `[dns]` in `~/.config/container/config.toml`, then restart the service:
 
@@ -216749,7 +216622,7 @@ sudo container system dns create test
 
 Enter your administrator password when prompted. The first command requires administrator privileges to create a file containing the domain configuration under the `/etc/resolver` directory, and to tell the macOS DNS resolver to reload its configuration files.
 
-See [Customize `container` default configuration values](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/container-system-config-tutorial.md) for instructions on how to set the default domain name that the `container` service uses for container name resolution on the host. With the default domain set to `test`, if you use `--name my-web-server` to start a container, queries to `my-web-server.test` will respond with that container's IP address.
+See [Customize `container` default configuration values](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/container-system-config-tutorial.md) for instructions on how to set the default domain name that the `container` service uses for container name resolution on the host. With the default domain set to `test`, if you use `--name my-web-server` to start a container, queries to `my-web-server.test` will respond with that container's IP address.
 
 ## Build an image
 
@@ -216860,7 +216733,7 @@ my-web-server   0.23%   12.45 MiB / 1.00 GiB  856.00 KiB / 1.2 KiB 2.10 MiB / 51
 > \[!NOTE]
 > Without the `--no-stream` flag, `container stats` continuously updates the display in real-time, similar to the `top` command. Press Ctrl+C to exit the live view.
 
-See [Resource usage](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/resource-usage.md) for what each metric means, setting
+See [Resource usage](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/resource-usage.md) for what each metric means, setting
 CPU/memory limits, and reclaiming disk space.
 
 ### Run other commands in the container
@@ -216896,7 +216769,7 @@ Your web server is accessible from other containers as well as from your host. L
 > \[!NOTE]
 > Container relies on the new features and enhancements present in macOS 26.
 > As a result, the functionality of accessing the web server from another container will not work on macOS 15.
-> See [https://github.com/apple/container/blob/main/docs/technical-overview.md#macos-15-limitations](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/technical-overview.md#macos-15-limitations) for more details.
+> See [https://github.com/apple/container/blob/main/docs/technical-overview.md#macos-15-limitations](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/technical-overview.md#macos-15-limitations) for more details.
 
 ```bash
 container run -it --rm web-test curl http://192.168.64.3
@@ -216996,8 +216869,8 @@ container system stop
 # Document: Resource limits (ulimits)
 
 Source path: docs/ulimits.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/ulimits.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/ulimits.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/ulimits.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/ulimits.md
 Description: Set per-process resource limits for your containers.
 
 # Resource limits (ulimits)
@@ -217084,8 +216957,8 @@ cpu time                   (seconds, -t) 60
 # Document: Mounts and volumes
 
 Source path: docs/volumes.md
-Pinned source: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/volumes.md
-Canonical documentation: https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/volumes.md
+Pinned source: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/volumes.md
+Canonical documentation: https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/volumes.md
 Description: Share data from your host with containers, create named volumes with better performance and lifecycle guarantees than bind mounts, and mount temporary, memory-backed storage with tmpfs.
 
 # Mounts and volumes
@@ -217260,7 +217133,7 @@ tmpfs on /sys/firmware type tmpfs (ro,nosuid,nodev,noexec,relatime)
 ```
 
 The last two entries are runtime defaults, present in every container. See
-[Runtime configuration](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/runtime-configuration.md#mask-and-protect-paths-inside-a-container)
+[Runtime configuration](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/runtime-configuration.md#mask-and-protect-paths-inside-a-container)
 for what mounts `/sys/firmware` read-only.
 
 Mount a `tmpfs` filesystem with a 512 MiB size limit using `--mount`:
@@ -480345,13 +480218,13 @@ You do have two possibilities.
 
 Source repository: https://github.com/FFmpeg/FFmpeg
 Tracked branch: master
-Source commit: e196e57ca225a98654e482806fa714facd232b57
+Source commit: 6eb1078add7c01a165801bd5bda0cc1a982e3385
 
 # Document: Synopsis
 
 Source path: doc/ffmpeg.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg.texi
 Description: ffmpeg \[global\options] {\[input\file\options] -i inputurl} ... {\[output\file\options] outputurl} ...
 
 # Synopsis
@@ -484300,8 +484173,8 @@ Maintainers for the specific components are listed in the file
 # Document: Synopsis
 
 Source path: doc/ffplay.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffplay.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffplay.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffplay.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffplay.texi
 Description: ffplay \[options] \[inputurl]
 
 # Synopsis
@@ -485062,8 +484935,8 @@ Maintainers for the specific components are listed in the file
 # Document: Synopsis
 
 Source path: doc/ffprobe.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffprobe.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffprobe.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffprobe.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffprobe.texi
 Description: ffprobe \[options] inputurl
 
 # Synopsis
@@ -486171,8 +486044,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-utils.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-utils.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-utils.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-utils.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-utils.texi
 Description: This document describes some generic features and utilities provided by the libavutil library.
 
 # Description
@@ -487343,8 +487216,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-scaler.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-scaler.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-scaler.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-scaler.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-scaler.texi
 Description: The FFmpeg rescaler provides a high-level interface to the libswscale library image conversion utilities. In particular it allows one to perform image rescaling and pixel format conversion.
 
 # Description
@@ -487593,8 +487466,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-resampler.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-resampler.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-resampler.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-resampler.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-resampler.texi
 Description: The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio…
 
 # Description
@@ -487853,8 +487726,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-codecs.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-codecs.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-codecs.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-codecs.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-codecs.texi
 Description: This document describes the codecs (decoders and encoders) provided by the libavcodec library.
 
 # Description
@@ -495009,8 +494882,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-formats.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-formats.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-formats.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-formats.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-formats.texi
 Description: This document describes the supported formats (muxers and demuxers) provided by the libavformat library.
 
 # Description
@@ -501066,8 +500939,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-devices.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-devices.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-devices.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-devices.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-devices.texi
 Description: This document describes the input and output devices provided by the libavdevice library.
 
 # Description
@@ -503150,8 +503023,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-filters.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-filters.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-filters.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-filters.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-filters.texi
 Description: This document describes filters, sources, and sinks provided by the libavfilter library.
 
 # Description
@@ -538442,8 +538315,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-protocols.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-protocols.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-protocols.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-protocols.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-protocols.texi
 Description: This document describes the input and output protocols provided by the libavformat library.
 
 # Description
@@ -541091,8 +540964,8 @@ Maintainers for the specific components are listed in the file
 # Document: Description
 
 Source path: doc/ffmpeg-bitstream-filters.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-bitstream-filters.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-bitstream-filters.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-bitstream-filters.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-bitstream-filters.texi
 Description: This document describes the bitstream filters provided by the libavcodec library.
 
 # Description
@@ -542413,8 +542286,8 @@ Maintainers for the specific components are listed in the file
 # Document: Introduction
 
 Source path: doc/developer.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/developer.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/developer.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/developer.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/developer.texi
 Description: This text is concerned with the development of FFmpeg itself. Information on using the FFmpeg libraries in other programs can be found elsewhere, e.g. in: ----------------------------------------------------------------…
 
 # Introduction
@@ -543696,8 +543569,8 @@ Send an announcement to the mailing list.
 # Document: General Questions
 
 Source path: doc/faq.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/faq.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/faq.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/faq.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/faq.texi
 Description: Because no one has taken on that task yet. FFmpeg development is driven by the tasks that are important to the individual developers. If there is a feature that is important to you, the best way to get it implemented is…
 
 # General Questions
@@ -544372,8 +544245,8 @@ causing FATE to not find files. Just replace `~` by the full path.
 # Document: Introduction
 
 Source path: doc/fate.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/fate.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/fate.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/fate.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/fate.texi
 Description: FATE is an extended regression suite on the client-side and a means for results aggregation and presentation on the server-side.
 
 # Introduction
@@ -544653,8 +544526,8 @@ make V=1 SAMPLES=/var/fate/samples THREADS=2 CPUFLAGS=mmx fate
 # Document: External libraries
 
 Source path: doc/general.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/general.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/general.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/general.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/general.texi
 Description: FFmpeg can be hooked up with a number of external libraries to add support for more formats. None of them are used by default, their use has to be explicitly requested by passing the appropriate flags to ./configure.
 
 # External libraries
@@ -546138,6 +546011,7 @@ following image formats are supported:
 - PCM signed 32-bit little-endian   |   X   |   X
 - PCM signed 16/20/24-bit big-endian for DVD-Audio   |       |   X
 - PCM signed 16/20/24-bit big-endian in MPEG-TS   |       |   X
+- PCM signed 16/20/24-bit big-endian for PAMF streams   |       |   X
 - PCM unsigned 8-bit      |   X   |   X
 - PCM unsigned 16-bit big-endian   |   X   |   X
 - PCM unsigned 16-bit little-endian   |   X   |   X
@@ -546305,8 +546179,8 @@ performance on systems without hardware floating point support).
 # Document: Organisation
 
 Source path: doc/community.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/community.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/community.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/community.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/community.texi
 Description: The FFmpeg project is organized through a community working on global consensus.
 
 <a id="organisation"></a>
@@ -546497,8 +546371,8 @@ Finally, keep in mind the immortal words of Bill and Ted,
 # Document: Introduction
 
 Source path: doc/git-howto.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/git-howto.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/git-howto.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/git-howto.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/git-howto.texi
 Description: This document aims in giving some quick references on a set of useful Git commands. You should always use the extensive and detailed documentation provided directly by Git:
 
 # Introduction
@@ -546964,8 +546838,8 @@ problems with the Git server.
 # Document: General Questions
 
 Source path: doc/mailing-list-faq.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/mailing-list-faq.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/mailing-list-faq.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/mailing-list-faq.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/mailing-list-faq.texi
 Description: A mailing list is not much different than emailing someone, but the main difference is that your message is received by everyone who subscribes to the list. It is somewhat like a forum but in email form.
 
 # General Questions
@@ -547377,8 +547251,8 @@ Send a message to <ffmpeg-user-owner@ffmpeg.org>.
 # Document: Unix-like
 
 Source path: doc/platform.texi
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/platform.texi
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/platform.texi
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/platform.texi
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/platform.texi
 Description: If you compiled FFmpeg libraries statically and you want to use them to build your own shared library, you may need to force PIC support (with --enable-pic during FFmpeg configure) and add the following option to your p…
 
 # Unix-like
@@ -547646,8 +547520,8 @@ changes.)
 # Document: FFmpeg README
 
 Source path: README.md
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/README.md
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/README.md
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/README.md
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/README.md
 Description: FFmpeg is a collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata.
 
 # FFmpeg README
@@ -547700,8 +547574,8 @@ See <https://ffmpeg.org/developer.html> for more information.
 # Document: Installing FFmpeg
 
 Source path: INSTALL.md
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/INSTALL.md
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/INSTALL.md
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/INSTALL.md
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/INSTALL.md
 Description: configure can be launched from a directory different from the FFmpeg sources to build the objects out of tree. To do this, use an absolute path when launching configure, e.g. /ffmpegdir/ffmpeg/configure.
 
 # Installing FFmpeg
@@ -547733,8 +547607,8 @@ Description: configure can be launched from a directory different from the FFmpe
 # Document: Note to Github users
 
 Source path: CONTRIBUTING.md
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/CONTRIBUTING.md
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/CONTRIBUTING.md
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/CONTRIBUTING.md
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/CONTRIBUTING.md
 Description: Patches should be submitted to Forgejo or the ffmpeg-devel mailing list using git format-patch or git send-email. Github pull requests should be avoided because they are not part of our review process and will be ignore…
 
 # Note to Github users
@@ -547747,8 +547621,8 @@ See <https://ffmpeg.org/developer.html> for more information.
 # Document: Build System.Txt
 
 Source path: doc/build_system.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/build_system.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/build_system.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/build_system.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/build_system.txt
 Description: FFmpeg currently uses a custom build system, this text attempts to document some of its obscure features and options.
 
 FFmpeg currently uses a custom build system, this text attempts to document
@@ -547823,8 +547697,8 @@ sometimes but note that it will still not run all reg tests.
 # Document: Filter design
 
 Source path: doc/filter_design.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/filter_design.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/filter_design.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/filter_design.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/filter_design.txt
 Description: This document explains guidelines that should be observed (or ignored with good reason) when writing filters for libavfilter.
 
 # Filter design
@@ -548121,8 +547995,8 @@ the work.
 # Document: FFmpeg Infrastructure:
 
 Source path: doc/infra.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/infra.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/infra.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/infra.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/infra.txt
 Description: Trademark:
 
 # FFmpeg Infrastructure:
@@ -548319,8 +548193,8 @@ Wikipedia entry:
 # Document: FFmpeg's bug/feature request tracker manual
 
 Source path: doc/issue_tracker.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/issue_tracker.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/issue_tracker.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/issue_tracker.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/issue_tracker.txt
 Description: FFmpeg uses Trac for tracking issues, new issues and changes to existing issues can be done through a web interface.
 
 # FFmpeg's bug/feature request tracker manual
@@ -548539,8 +548413,8 @@ issues related to the wiki
 # Document: FFmpeg multithreading methods
 
 Source path: doc/multithreading.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/multithreading.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/multithreading.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/multithreading.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/multithreading.txt
 Description: FFmpeg provides two methods for multithreading codecs.
 
 # FFmpeg multithreading methods
@@ -548614,8 +548488,8 @@ Before accessing a reference frame or its MVs, call ff\_progress\_frame\_await()
 # Document: optimization Tips (for libavcodec):
 
 Source path: doc/optimization.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/optimization.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/optimization.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/optimization.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/optimization.txt
 Description: If you plan to do non-x86 architecture specific optimizations (SIMD normally), then take a look in the x86/ directory, as most important functions are already optimized for x86.
 
 # optimization Tips (for libavcodec):
@@ -548891,8 +548765,8 @@ a bit old (note "+" is valid for input-output, even though the next disagrees)
 # Document: Rate Distortion.Txt
 
 Source path: doc/rate_distortion.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/rate_distortion.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/rate_distortion.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/rate_distortion.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/rate_distortion.txt
 Description: A Quick Description Of Rate Distortion Theory.
 
 A Quick Description Of Rate Distortion Theory.
@@ -548959,8 +548833,8 @@ Copyright: LGPL
 # Document: Tablegen.Txt
 
 Source path: doc/tablegen.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/tablegen.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/tablegen.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/tablegen.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/tablegen.txt
 Description: Writing a table generator
 
 Writing a table generator
@@ -549038,8 +548912,8 @@ under the "ifdef CONFIG\_HARDCODED\_TABLES" section in the Makefile.
 # Document: Transforms
 
 Source path: doc/transforms.md
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/transforms.md
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/transforms.md
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/transforms.md
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/transforms.md
 Description: The basis transforms used for FFT and various other derived functions are based on the following unrollings. The functions can be easily adapted to double precision floats as well.
 
 # Transforms
@@ -550084,8 +549958,8 @@ static av_always_inline void fft15(TXComplex *out, TXComplex *in,
 # Document: Bootstrap
 
 Source path: doc/writing_filters.txt
-Pinned source: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/writing_filters.txt
-Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/writing_filters.txt
+Pinned source: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/writing_filters.txt
+Canonical documentation: https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/writing_filters.txt
 Description: This document is a tutorial/initiation for writing simple filters in libavfilter.
 
 This document is a tutorial/initiation for writing simple filters in

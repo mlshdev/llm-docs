@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.1: [docs/architecture/dns.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/architecture/dns.md)
+> Pinned source for Apple container 1.7.1: [docs/architecture/dns.md](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/architecture/dns.md)
 
 # DNS architecture
 
@@ -10,7 +10,7 @@ This document describes the DNS architecture of `container`. It covers:
 - The invariants that the implementation relies on
 - The security properties of the design
 
-For user-level instructions, see [Networking](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md).
+For user-level instructions, see [Networking](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md).
 
 ## Components
 

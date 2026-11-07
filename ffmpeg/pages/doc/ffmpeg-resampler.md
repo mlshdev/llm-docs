@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-resampler.texi](https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/ffmpeg-resampler.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-resampler.texi](https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-resampler.texi)
 
 # Description
 

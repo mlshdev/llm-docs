@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.1: [docs/logs.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/logs.md)
+> Pinned source for Apple container 1.7.1: [docs/logs.md](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/logs.md)
 
 # Logs
 
@@ -67,5 +67,5 @@ The `container system logs` command allows you to look at the log messages that 
 %
 </pre>
 
-See [bug report how-to](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/bug-report-how-to.md) for gathering logs when filing an
+See [filing effective bug reports](https://github.com/apple/containerization/blob/main/CONTRIBUTING.md#filing-effective-bug-reports) for gathering logs when filing an
 issue.

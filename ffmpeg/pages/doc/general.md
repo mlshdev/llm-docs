@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/e196e57ca225a98654e482806fa714facd232b57/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/general.texi)
 
 # External libraries
 
@@ -1481,6 +1481,7 @@ following image formats are supported:
 - PCM signed 32-bit little-endian   |   X   |   X
 - PCM signed 16/20/24-bit big-endian for DVD-Audio   |       |   X
 - PCM signed 16/20/24-bit big-endian in MPEG-TS   |       |   X
+- PCM signed 16/20/24-bit big-endian for PAMF streams   |       |   X
 - PCM unsigned 8-bit      |   X   |   X
 - PCM unsigned 16-bit big-endian   |   X   |   X
 - PCM unsigned 16-bit little-endian   |   X   |   X

@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.1: [docs/multiplatform-images.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/multiplatform-images.md)
+> Pinned source for Apple container 1.7.1: [docs/multiplatform-images.md](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/multiplatform-images.md)
 
 # Multiplatform images
 
@@ -6,7 +6,7 @@ Build, run, and publish container images that support both Apple silicon and x86
 
 ## Build and run a multiplatform image
 
-Using the [project from the tutorial example](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/start-here.md#set-up-a-simple-project), you can create an image to use both on Apple silicon Macs and on x86-64 servers.
+Using the [project from the tutorial example](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/start-here.md#set-up-a-simple-project), you can create an image to use both on Apple silicon Macs and on x86-64 servers.
 
 When building the image, just add `--arch` options that direct the builder to create an image supporting both the `arm64` and `amd64` architectures:
 

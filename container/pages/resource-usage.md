@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.1: [docs/resource-usage.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/resource-usage.md)
+> Pinned source for Apple container 1.7.1: [docs/resource-usage.md](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/resource-usage.md)
 
 # Resource usage
 
@@ -13,7 +13,7 @@ Since the containers created by `container` are lightweight virtual machines, co
 container run --rm --cpus 8 --memory 32g big
 ```
 
-See [Resource limits (ulimits)](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
+See [Resource limits (ulimits)](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/ulimits.md) for per-process resource limits like open-file and process-count limits.
 
 ## Configure memory and CPUs for large builds
 
@@ -96,7 +96,8 @@ You can also output statistics in JSON format for scripting:
     "networkTxBytes": 876544,
     "blockReadBytes": 4718592,
     "blockWriteBytes": 2202009,
-    "numProcesses": 3
+    "numProcesses": 3,
+    "cpuUtilization": 0.0312
   }
 ]
 ```
@@ -104,6 +105,7 @@ You can also output statistics in JSON format for scripting:
 **Understanding the metrics:**
 
 - **Cpu %**: Percentage of CPU usage. \~100% = one fully utilized core. A multi-core container can show > 100%.
+- **cpuUtilization** (JSON, YAML, TOML): The same measurement as a fraction of one core. `1.0` is one fully utilized core, `2.5` is two and a half. Format it as you need; `Cpu %` in the table is this value times 100.
 - **Memory Usage**: Current memory usage vs. the container's memory limit.
 - **Net Rx/Tx**: Network bytes received and transmitted.
 - **Block I/O**: Disk bytes read and written.
@@ -116,6 +118,13 @@ volumes get their own sparse disk image too. As your containerized application w
 data, these images grow; when a container process deletes a file, the freed blocks
 aren't automatically returned to the host filesystem, so image size doesn't shrink on
 its own.
+
+Image snapshots and container root filesystems are excluded from backups when
+those directories are first created. Backup software that honors this exclusion,
+including Time Machine, skips them. Both are large sparse files that can be
+recreated by pulling the image or creating the container again. Named volume data
+under `volumes/` stays included. An exclusion removed from an existing directory
+is left as it is.
 
 Check overall usage with:
 
@@ -152,6 +161,13 @@ Remove volumes with no container references:
 container volume prune
 ```
 
+Return the blocks that a running container has freed by deleting files on its root
+filesystem and named volumes to the host, without stopping the container:
+
+```bash
+container clean mycontainer
+```
+
 Reclaim space used by the builder VM's layer cache by replacing the builder:
 
 ```bash
@@ -159,5 +175,5 @@ container builder stop
 container builder delete
 ```
 
-See [Mounts and volumes](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/volumes.md) for bind mounts, named volumes, and tmpfs
+See [Mounts and volumes](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/volumes.md) for bind mounts, named volumes, and tmpfs
 mounts.

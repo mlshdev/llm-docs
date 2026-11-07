@@ -1,4 +1,4 @@
-> Pinned source for Apple container 1.6.1: [docs/container-system-config.md](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/container-system-config.md)
+> Pinned source for Apple container 1.7.1: [docs/container-system-config.md](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/container-system-config.md)
 
 # `config.toml` reference
 
@@ -7,9 +7,9 @@
 >
 > Example: [release 0.4.1 tag](https://github.com/apple/container/tree/0.4.1)
 
-For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/tutorials/container-system-config-tutorial.md).
+For a guided walk-through on setting default values, see [Container system config tutorial](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/tutorials/container-system-config-tutorial.md).
 
-Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/ContainerSystemConfig.swift).
+Source of truth: [`Sources/ContainerPersistence/ContainerSystemConfig.swift`](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/Sources/ContainerPersistence/ContainerSystemConfig.swift).
 
 ## Viewing your configuration
 
@@ -33,9 +33,9 @@ memory = "1gb"
 domain = "test"
 
 [kernel]
-binaryPath = "opt/kata/share/kata-containers/vmlinux-6.18.35-197-debug"
-url = "https://github.com/kata-containers/kata-containers/releases/download/3.32.0/kata-static-3.32.0-arm64.tar.zst"
-digest = "sha256:8736c054d9223974735394f822000823baef509e1c33405ec798240fa9b6e4b5"
+binaryPath = "opt/kata/share/kata-containers/vmlinux-6.18.56-208-debug"
+url = "https://github.com/kata-containers/kata-containers/releases/download/4.3.1/kata-static-4.3.1-arm64.tar.zst"
+digest = "sha256:2c5bf7cde334ad5307d482f45cceda496f91c9b6b96f5278c47f4f4eac1bbae6"
 
 [network]
 
@@ -93,21 +93,34 @@ Defaults applied when `container run` / `container create` is invoked without `-
 | `cpus`   | `Int`                            | `4`     | Default CPU count per container. |
 | `memory` | [MemorySize](#memorysize-format) | `"1g"`  | Default RAM per container.       |
 
+### `[container.dns]`
+
+Default DNS settings applied when `container run` / `container build` / `container builder start` is invoked without `--dns`, `--dns-search`, `--dns-option`, or `--dns-domain`. CLI flags override these values.
+
+| Key             | Type        | Default | Description                                                            |
+| --------------- | ----------- | ------- | ---------------------------------------------------------------------- |
+| `domain`        | `String?`   | unset   | DNS domain appended to container hostnames.                            |
+| `nameservers`   | `[String]?` | unset   | DNS nameservers configured in the container's resolver.                |
+| `searchDomains` | `[String]?` | unset   | DNS search domains configured in the container's resolver.             |
+| `options`       | `[String]?` | unset   | DNS options (e.g. `"ndots:2"`) configured in the container's resolver. |
+
+See [Networking: Set default DNS settings for containers](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#set-default-dns-settings-for-containers) for the walkthrough.
+
 ## `[dns]`
 
 | Key      | Type      | Default | Description                                                                                                                                                                                                                                                                                                                                                                      |
 | -------- | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
+| `domain` | `String?` | unset   | Local DNS domain appended to container hostnames (e.g. `"test"` makes `my-web-server` resolvable as `my-web-server.test`). When unset, no domain is appended. See [Networking: Set up DNS-based container names](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/docs/networking.md#set-up-dns-based-container-names) for the full walkthrough. |
 
 ## `[kernel]`
 
-Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
+Guest kernel used when launching container VMs. Defaults change per release as kernels are bumped — check the [source](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/Sources/ContainerPersistence/ContainerSystemConfig.swift) for current values.
 
-| Key          | Type     | Default                                                                                                          | Description                                                                                            |
-| ------------ | -------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `binaryPath` | `String` | `"opt/kata/share/kata-containers/vmlinux-6.18.35-197-debug"`                                                     | Path **inside** the downloaded kernel archive that points to the kernel binary.                        |
-| `url`        | `URL`    | `"https://github.com/kata-containers/kata-containers/releases/download/3.32.0/kata-static-3.32.0-arm64.tar.zst"` | Archive to download when no kernel is installed. Encoded and decoded as a plain string in TOML.        |
-| `digest`     | `String` | `"sha256:8736c054d9223974735394f822000823baef509e1c33405ec798240fa9b6e4b5"`                                      | Expected digest for the archive, for example `sha256:<hex>`. Required when configuring a custom `url`. |
+| Key          | Type     | Default                                                                                                        | Description                                                                                            |
+| ------------ | -------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `binaryPath` | `String` | `"opt/kata/share/kata-containers/vmlinux-6.18.56-208-debug"`                                                   | Path **inside** the downloaded kernel archive that points to the kernel binary.                        |
+| `url`        | `URL`    | `"https://github.com/kata-containers/kata-containers/releases/download/4.3.1/kata-static-4.3.1-arm64.tar.zst"` | Archive to download when no kernel is installed. Encoded and decoded as a plain string in TOML.        |
+| `digest`     | `String` | `"sha256:2c5bf7cde334ad5307d482f45cceda496f91c9b6b96f5278c47f4f4eac1bbae6"`                                    | Expected digest for the archive, for example `sha256:<hex>`. Required when configuring a custom `url`. |
 
 ## `[network]`
 
@@ -157,7 +170,7 @@ All units are **binary** (powers of 1024), even when written with `kb`/`mb`/`gb`
 
 A bare integer (e.g. `"2048"`) parses as bytes.
 
-Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/aa8d76b44a834eee3ebf6a0bc577e376f65f6361/Sources/ContainerPersistence/Measurement%2BParse.swift).
+Source: [`Sources/ContainerPersistence/Measurement+Parse.swift`](https://github.com/apple/container/blob/a15b46097aa4c2325da13c1fb5192b9274aab083/Sources/ContainerPersistence/Measurement%2BParse.swift).
 
 ### `CIDRv4` / `CIDRv6`
 
