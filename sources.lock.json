@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "6eb1078add7c01a165801bd5bda0cc1a982e3385",
-      "sourceCommittedAt": "2026-10-21T16:06:37Z",
-      "observedCommit": "6eb1078add7c01a165801bd5bda0cc1a982e3385",
-      "documentationDigest": "ce253408f7e263b3c249c730dfca4a524630aad0fa1773e4f79e693e41283505"
+      "sourceCommit": "0f89d936b39e1cb438a874ecfccffe253be6b63b",
+      "sourceCommittedAt": "2026-11-06T01:09:33Z",
+      "observedCommit": "0f89d936b39e1cb438a874ecfccffe253be6b63b",
+      "documentationDigest": "30c1eacad7e8081b0b8f6543666274ac9ab2862f926b3b26f478db628e5118be"
     },
     "yt-dlp": {
       "tag": "2026.10.26",
@@ -103,7 +103,7 @@
       "branch": "master",
       "sourceCommit": "cccbc9e158b0ac3bb2158e9841a647a5bec57b57",
       "sourceCommittedAt": "2026-11-02T17:38:48Z",
-      "observedCommit": "ac11e14c5edf995d4d2f066bfb885a614f52a978",
+      "observedCommit": "3a3dd15bfafcb645a1b45c2c6c0798a8f786aaaf",
       "documentationDigest": "c36b490df840f2e2e5f3f15227d976554f325bb62eb564cafc5119b3eb044a73"
     },
     "bun": {

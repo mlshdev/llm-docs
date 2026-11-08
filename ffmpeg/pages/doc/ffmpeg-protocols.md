@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/6eb1078add7c01a165801bd5bda0cc1a982e3385/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/0f89d936b39e1cb438a874ecfccffe253be6b63b/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -2282,6 +2282,20 @@ space) can be used to escape keys and values.
 Options can also can be specified via command line options (or in code via
 `AVOption`s).
 
+The TLS backend is selected at build time. The available backends are GnuTLS,
+OpenSSL, mbedTLS, libtls, SChannel (Windows) and Secure Transport (Apple
+platforms). Only one backend can be linked into a build.
+
+On Apple platforms, configure autodetects Secure Transport when no other TLS
+library is enabled. Apple has deprecated Secure Transport in favor of
+Network.framework and it does not support TLS 1.3, so such a build cannot
+connect to servers that require TLS 1.3. configure therefore emits a warning
+when it selects Secure Transport automatically; building with
+`--enable-gnutls` or `--enable-openssl` is recommended instead.
+Passing `--enable-securetransport` explicitly marks the backend as
+requested and suppresses the warning. This is also needed with
+`--fatal-warnings`, since any warning makes configure fail.
+
 The list of supported options follows.
 
 - ca\_file, cafile=*filename*
@@ -2342,6 +2356,9 @@ ffplay tls://*hostname*:*port*
 ## dtls
 
 Datagram Transport Layer Security (DTLS)
+
+DTLS requires one of the OpenSSL, GnuTLS, mbedTLS or SChannel backends;
+libtls and Secure Transport provide TLS only.
 
 The required syntax for a DTLS URL is:
 
