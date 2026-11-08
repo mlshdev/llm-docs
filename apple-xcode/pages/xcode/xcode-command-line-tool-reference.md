@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/xcode-command-line-tool-reference
 
 # Xcode command-line tool reference
@@ -19,17 +19,23 @@ Xcode includes a set of command-line tools that only ship with the app, such as 
 
 - **`agvtool`**: Manage build and version numbers. To learn more about this command, enter `man agvtool` in Terminal.
 
-<a id="Build-a-project"></a>
+<a id="Build-projects"></a>
 
-### Build a project
+### Build projects
 
-- **`xcodebuild`**: Build Xcode projects and workspaces. To learn more about this command, enter `man xcodebuild` in Terminal.
+- **`xcodebuild`**: Build Xcode projects and workspaces. To learn more about this command, enter `man xcodebuild` in Terminal. For more information, see [Managing Xcode projects using command-line tools](managing-xcode-projects-using-the-command-line.md).
 
-<a id="Debug-a-project"></a>
+<a id="Configure-projects"></a>
 
-### Debug a project
+### Configure projects
 
-- **`devicectl`**: Manage and interact with devices connected to a host. To learn more about this command, enter `xcrun devicectl help` in Terminal.
+- **`xcodeproj`**: Inspect and edit Xcode project files. To learn more about this command, enter `xcodeproj help` or `xcodeproj help <subcommand>` in Terminal.
+
+<a id="Debug-projects"></a>
+
+### Debug projects
+
+- **`devicectl`**: Manage and interact with devices connected to a host. To learn more about this command, enter `devicectl help` or `devicectl help <subcommand>` in Terminal.
 - **`xcdebug`**: Start a debugging session in Xcode. To learn more about this command, enter `xcdebug --help` in Terminal.
 
 <a id="Edit-files"></a>

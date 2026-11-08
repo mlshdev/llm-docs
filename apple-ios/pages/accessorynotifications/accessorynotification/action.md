@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorynotifications/accessorynotification/action
 
 # AccessoryNotification.Action
@@ -30,6 +30,14 @@ struct Action
 
 - [type](action/type.md): A type for the action.
 - [AccessoryNotification.Action.ActionType](action/actiontype.md): The types of actions available for a notification.
+
+### Initializers
+
+- [init(identifier:title:type:isDestructive:)](action/init%28identifier_title_type_isdestructive_%29.md): Beta.
+
+### Instance Properties
+
+- [isDestructive](action/isdestructive.md): Beta. Whether this action performs a destructive task.
 
 ## Relationships
 

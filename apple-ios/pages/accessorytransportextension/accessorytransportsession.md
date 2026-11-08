@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessorytransportsession
 
 # AccessoryTransportSession
@@ -43,6 +43,10 @@ The [AccessoryTransportAppExtension](accessorytransportappextension.md) protocol
 ### Sending data
 
 - [sendMessageToDataProvider(\_:)](accessorytransportsession/sendmessagetodataprovider%28__%29.md): Sends a message to the data provider extension.
+
+### Creating feature sessions
+
+- [makeFeatureSession(\_:)](accessorytransportsession/makefeaturesession%28__%29.md): Beta. Creates a feature session for the provided handler.
 
 ### Handling errors
 

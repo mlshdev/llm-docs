@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/forwarding-notifications-to-your-accessory-using-the-internet-transport-type
 
 # Forwarding notifications to your accessory using the internet transport type
@@ -275,11 +275,13 @@ The ratchet supports out-of-order delivery by caching up to 50,000 skipped messa
 
 ## See Also
 
-### Notification forwarding
+### Notification and Live Activity forwarding
 
 - [Receiving iOS notifications on an accessory](receiving-ios-notifications-on-an-accessory.md): Create custom app extensions that manage iOS system notifications for your accessory.
-- [AccessoryDataProvider](accessorydataprovider.md): A protocol for an extension that receives iOS system notifications and curates their data for your accessory.
+- [Receiving Live Activity updates and alerts on an accessory](../accessoryliveactivities/receiving-live-activities-on-an-accessory.md): Enable your accessory to receive forwarded Live Activities by updating your data provider extension.
+- [AccessoryDataProvider](accessorydataprovider.md): A protocol for an extension that provides your accessory’s data for one or more of the framework’s features.
 - [AccessoryDataProviderConfiguration](accessorydataproviderconfiguration.md): A protocol that configures and manages communication between the extension and the system.
 - [AccessoryTransportSecurity](accessorytransportsecurity.md): A protocol for an extension that handles cryptographic key exchange with your accessory.
 - [AccessoryTransportSecurityConfiguration](accessorytransportsecurityconfiguration.md): A protocol that configures and manages communication between your security extension and the system.
 - [Accessory Notifications](../accessorynotifications.md): Receive forwarded iOS system notifications on an accessory that you develop.
+- [Accessory Live Activities](../accessoryliveactivities.md): Forward Live Activity alerts from iPhone to an accessory you develop.

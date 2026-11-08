@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/alarmkit/scheduling-an-alarm-with-alarmkit
 
 # Scheduling an alarm with AlarmKit
@@ -122,7 +122,7 @@ let secondaryButton: AlarmButton? = switch secondaryButtonBehavior {
 
 > The system forwards the alert presentation to a paired watch (if any) to notify people when an alarm is alerting.
 
-The content for these presentations is wrapped into [ActivityAttributes](../activitykit/activityattributes.md), along with [tintColor](alarmattributes/tintcolor.md), and [metadata](alarmattributes/metadata.md). The tint color associates the alarms with the sample app and also differentiates them from other app’s alarms on the person’s device.
+The content for these presentations is wrapped into [ActivityAttributes](https://developer.apple.com/documentation/activitykit/activityattributes), along with [tintColor](alarmattributes/tintcolor.md), and [metadata](alarmattributes/metadata.md). The tint color associates the alarms with the sample app and also differentiates them from other app’s alarms on the person’s device.
 
 ```swift
 let attributes = AlarmAttributes(presentation: alarmPresentation(with: userInput),
@@ -183,7 +183,7 @@ The sample app adds a widget extension target to customize non-alerting presenta
 
 > **Important**
 
-> AlarmKit expects a widget extension if an app supports a countdown presentation. Otherwise, the system may unexpectedly dismiss alarms and fail to alert. For more information, see [ActivityKit](../activitykit.md).
+> AlarmKit expects a widget extension if an app supports a countdown presentation. Otherwise, the system may unexpectedly dismiss alarms and fail to alert. For more information, see [ActivityKit](https://developer.apple.com/documentation/activitykit).
 
 ## See Also
 

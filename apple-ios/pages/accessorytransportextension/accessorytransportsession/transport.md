@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessorytransportsession/transport
 
 # transport
@@ -12,7 +12,7 @@ A transport method that the session uses to communicate with the accessory.
 ## Declaration
 
 ```swift
-var transport: AccessoryTransport?
+var transport: AccessoryTransport? { get set }
 ```
 
 ## Mentioned In

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes
 
 # Technotes
@@ -96,5 +96,5 @@ Technotes are focused, timely documents from Apple Developer Technical Support. 
 - [TN3109: Resolving common archiving issues](technotes/tn3109-resolving-common-archiving-issues.md): Handle common issues that arise while archiving apps.
 - [TN3108: Viewing the interface of your Swift code](technotes/tn3108-viewing-the-interface-of-your-swift-code.md): Learn how to navigate to the interface file of a Swift implementation file.
 - [TN3104: Recording video in Apple ProRes](technotes/tn3104-recording-video-in-apple-prores.md): Configure pieces of an AVCaptureSession to capture video in Apple ProRes.
-- [TN3103: Apple Pay on the Web troubleshooting guide](technotes/tn3103-apple-pay-on-the-web-troubleshooting-guide.md): Troubleshooting guide for implementing Apple Pay on the Web.
+- [TN3103: Apple Pay on the Web troubleshooting guide](technotes/tn3103-apple-pay-on-the-web-troubleshooting-guide.md): Diagnose and resolve common configuration, domain verification, merchant validation, and payment token decryption issues when implementing Apple Pay on the Web.
 - [TN3102: HTTP/3 in your app](technotes/tn3102-http3-in-your-app.md): Get started with iOS 15’s new HTTP/3 support.

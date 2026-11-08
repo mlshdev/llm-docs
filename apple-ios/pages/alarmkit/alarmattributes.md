@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/alarmkit/alarmattributes
 
 # AlarmAttributes
@@ -47,7 +47,7 @@ let attributes = AlarmAttributes(
 
 ### Conforms To
 
-- [ActivityAttributes](../activitykit/activityattributes.md)
+- [ActivityAttributes](https://developer.apple.com/documentation/activitykit/activityattributes)
 - [Decodable](https://developer.apple.com/documentation/swift/decodable)
 - [Encodable](https://developer.apple.com/documentation/swift/encodable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)

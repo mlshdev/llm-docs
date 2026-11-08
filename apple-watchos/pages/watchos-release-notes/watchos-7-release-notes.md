@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-cf3cd0777a76; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-057e837b5f7a; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-7-release-notes
 
 # watchOS 7 Release Notes

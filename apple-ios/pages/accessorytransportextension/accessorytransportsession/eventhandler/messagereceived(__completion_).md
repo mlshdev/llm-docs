@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessorytransportsession/eventhandler/messagereceived(_:completion:)
 
 # messageReceived(\_:completion:)
@@ -36,4 +36,4 @@ If you don’t call the completion handler, the system assumes successful delive
 
 ### Handling data events
 
-- [dataEventHandler(event:)](dataeventhandler%28event_%29.md): Deprecated. Handles events that address incoming data destined for the accessory.
+- [dataEventHandler(event:)](dataeventhandler%28event_%29.md): Deprecated. Handles events that address incoming data sent to the accessory.

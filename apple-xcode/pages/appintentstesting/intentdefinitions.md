@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintentstesting/intentdefinitions
 
 # IntentDefinitions
@@ -67,6 +67,10 @@ let enumCase = definitions.enums["CoffeeSizeEnum"]
 ### Supporting types
 
 - [IntentDefinitions.DefinitionCollection](intentdefinitions/definitioncollection.md): A collection of a specific type of definition.
+
+### Instance Properties
+
+- [skills](intentdefinitions/skills.md): Beta. The definitions of the app’s skills, keyed by skill name.
 
 ## Relationships
 

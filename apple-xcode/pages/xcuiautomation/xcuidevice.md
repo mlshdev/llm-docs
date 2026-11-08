@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcuiautomation/xcuidevice
 
 # XCUIDevice (Swift)
@@ -87,6 +87,7 @@ func testPressingActionButton() throws {
 
 ### Instance Properties
 
+- [hinge](xcuidevice/hinge.md): The device’s hinge, if it has one.
 - [voiceOverService](xcuidevice/voiceoverservice.md): Provides access to VoiceOver for UI testing.
 
 ## Relationships
@@ -198,6 +199,7 @@ func testPressingActionButton() throws {
 
 ### Instance Properties
 
+- [hinge](xcuidevice/hinge.md): The device’s hinge, if it has one.
 - [voiceOverService](xcuidevice/voiceoverservice.md): Provides access to VoiceOver for UI testing.
 
 ## Relationships

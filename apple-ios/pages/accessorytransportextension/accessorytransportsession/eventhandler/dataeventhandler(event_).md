@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessorytransportsession/eventhandler/dataeventhandler(event:)
 
 # dataEventHandler(event:)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 26.4+ (deprecated in 26.5)
 
-Handles events that address incoming data destined for the accessory.
+Handles events that address incoming data sent to the accessory.
 
 ## Declaration
 
@@ -29,7 +29,7 @@ Implement this method to relay data to your accessory over Bluetooth or another 
 
 ### AccessoryTransportSession.EventHandler Implementations
 
-- [dataEventHandler(event:)](dataeventhandler%28event_%29-7c5yr.md)
+- [dataEventHandler(event:)](dataeventhandler%28event_%29-7c5yr.md): Handles events that address incoming data sent to the accessory.
 
 ## See Also
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-27_2-release-notes
 
 # Xcode 27.2 Release Notes
@@ -181,5 +181,6 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode 27
 
+- [Xcode 27.3 Beta Release Notes](xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.1 Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.

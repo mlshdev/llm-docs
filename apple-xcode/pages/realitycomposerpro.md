@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/realitycomposerpro
 
 # Reality Composer Pro
@@ -125,4 +125,5 @@ This release of Reality Composer Pro is a complete 3D development platform. The 
 
 ### Release notes
 
-- [Reality Composer Pro Release Notes](realitycomposerpro/reality-composer-pro-release-notes.md): Review known issues and changes in Reality Composer Pro 3.
+- [Reality Composer Pro 3.1 Release Notes](realitycomposerpro/reality-composer-pro-3-1-release-notes.md): Review known issues and changes in Reality Composer Pro 3.1.
+- [Reality Composer Pro 3 Release Notes](realitycomposerpro/reality-composer-pro-3-release-notes.md): Review known issues and changes in Reality Composer Pro 3.

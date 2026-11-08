@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessorytransportappextension
 
 # AccessoryTransportAppExtension
@@ -18,13 +18,14 @@ protocol AccessoryTransportAppExtension : AppExtension
 ## Mentioned In
 
 - [Receiving iOS notifications on an accessory](receiving-ios-notifications-on-an-accessory.md)
+- [Sending data to an accessory in the background](sending-data-to-an-accessory-in-the-background.md)
 - [Forwarding notifications to your accessory using the internet transport type](forwarding-notifications-to-your-accessory-using-the-internet-transport-type.md)
 
 <a id="overview"></a>
 
 ## Overview
 
-Implement this protocol in an extension with an `EXExtensionPointIdentifier` value of `com.apple.accessory-transport-extension` to relay data to your accessory. The extension supports sharing Wi-Fi networks and forwarding iOS system notifications.
+Implement this protocol in an extension with an `EXExtensionPointIdentifier` value of `com.apple.accessory-transport-extension` to relay data to your accessory. The extension supports sharing Wi-Fi networks, forwarding iOS system notifications, and opening feature sessions for background work.
 
 > **Important**
 

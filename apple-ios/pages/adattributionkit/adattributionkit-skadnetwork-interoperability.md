@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/adattributionkit/adattributionkit-skadnetwork-interoperability
 
 # Understanding AdAttributionKit and SKAdNetwork interoperability
@@ -40,7 +40,7 @@ The system sorts the impressions based on the following criteria:
 
 ## Bridge conversions between SKAdNetwork and AdAttributionKit
 
-When an app calls the update conversion values APIs in SKAdNetwork, such as [updatePostbackConversionValue(\_:coarseValue:lockWindow:completionHandler:)](https://developer.apple.com/documentation/storekit/skadnetwork/updatepostbackconversionvalue%28_:coarsevalue:lockwindow:completionhandler:%29), SKAdNetwork bridges the conversion values between the two frameworks by mirroring the call into AdAttributionNetwork by calling
+When an app calls the update conversion values APIs in SKAdNetwork, such as [updatePostbackConversionValue(\_:coarseValue:lockWindow:completionHandler:)](https://developer.apple.com/documentation/storekit/skadnetwork/updatepostbackconversionvalue%28_:coarsevalue:lockwindow:completionhandler:%29), SKAdNetwork bridges the conversion values between the two frameworks by mirroring the call into AdAttributionKit by calling
 [updateConversionValue(\_:lockPostback:)](postback/updateconversionvalue%28__lockpostback_%29.md).
 
 ## See Also

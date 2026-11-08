@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessorytransportsession/eventhandler
 
 # AccessoryTransportSession.EventHandler
@@ -25,7 +25,7 @@ Implement this protocol to respond to data events and session invalidation in yo
 
 ### Handling data events
 
-- [dataEventHandler(event:)](eventhandler/dataeventhandler%28event_%29.md): Deprecated. Handles events that address incoming data destined for the accessory.
+- [dataEventHandler(event:)](eventhandler/dataeventhandler%28event_%29.md): Deprecated. Handles events that address incoming data sent to the accessory.
 - [messageReceived(\_:completion:)](eventhandler/messagereceived%28__completion_%29.md): Handles incoming messages for transmission to the accessory.
 
 ### Handling the session life cycle

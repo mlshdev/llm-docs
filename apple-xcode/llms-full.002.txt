@@ -1,10 +1,1019 @@
-# Apple Xcode and developer tools snapshot-ecd62262bd5e: full documentation
+# Apple Xcode and developer tools snapshot-ee1c8cbf0f44: full documentation
 
 Source: https://developer.apple.com/documentation/xcode
-Catalog snapshot: ecd62262bd5e7845a4c2dc1f6d5f07074b6a73452e2c30f6152c2907a2d99ba0
-Content digest: 484f1b689fd0a184e57235c86e556611996e593365fd722a3dd7713f4b9a086f
-Captured at: 2026-10-29T19:20:35.395Z
+Catalog snapshot: ee1c8cbf0f444324b8d8344f5a1156f029d70a64656a2e18bbd463d6cdfb4480
+Content digest: a185e0d809e86cca76a9e737941229540ade97b52993d4252ec7703050b67f2f
+Captured at: 2026-11-08T22:37:20.676Z
 Volume 2
+
+# Document: Creating a standalone Swift package with Xcode
+
+Source path: documentation/xcode/creating-a-standalone-swift-package-with-xcode
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode
+Description: Kind: Article
+
+# Creating a standalone Swift package with Xcode
+
+**Kind:** Article
+
+Bundle executable or shareable code into a standalone Swift package.
+
+<a id="Overview"></a>
+
+## Overview
+
+Swift packages are reusable components of Swift, Objective-C, Objective-C++, C, or C++ code. They can bundle resources, vend their code as binaries, or depend on other packages. Use Swift packages to bundle executable code, for example a script, as an *executable product*, or create a package to vend shareable code as a *library product*. Packages that vend a library product help promote modularity in your code, make it easy to share code with others, and enable other developers to add functionality to their apps.
+
+With Xcode, you can create a new Swift package, add code, resource files, and binaries, build the Swift package, and run its unit tests.
+
+![Flowchart showing the development lifecycle for a Swift package.](https://developer.apple.com/images/com.apple.Xcode/creating-a-swift-package-with-xcode-1@2x.png)
+
+<a id="Create-a-Swift-package"></a>
+
+### Create a Swift package
+
+To create a new Swift package, open Xcode and select File \> New \> Package. Choose a name and select a file location. Select “Create Git repository on my Mac” to put your package under version control. On completion, the Swift package opens in Xcode and looks similar to a standard Xcode project. Xcode generates all necessary files and folders as it creates a Swift package:
+
+- The `README.md` file resides at the root level of the package. It describes the functionality of your Swift package.
+- The `Package.swift` file, or *package manifest*, describes the configuration for the Swift package. You can double-click it in Finder to open the package in Xcode. The package manifest uses Swift and the PackageDescription framework to define the package’s name, products, targets, dependencies on other packages, and so on.
+- Source files reside in a folder named `Sources` and are scoped per [Target](https://developer.apple.com/documentation/packagedescription/target). A Swift package can contain several targets, and, as a convention, each target’s code resides in its own subfolder.
+- Unit test targets reside in a folder named `Tests`, and, following the same convention as standard targets, each test target’s code resides in its own subfolder.
+
+![Screenshot showing a newly created standalone Swift package named ExamplePackage. The Editor area shows the package’s manifest file while the Navigator area shows the package’s contents and the Utilities area displays the information about the package manifest.](https://developer.apple.com/images/com.apple.Xcode/creating-a-swift-package-with-xcode-2@2x.png)
+
+<a id="Configure-your-Swift-package"></a>
+
+### Configure your Swift package
+
+Swift packages don’t use `.xcodeproj` or `.xcworkspace` but rely on their folder structure and use the package manifest for additional configuration. The following code listing shows a simple package manifest. It declares the MyLibrary target, and vends it as a library product with the same name.
+
+```swift
+// swift-tools-version:5.3
+import PackageDescription
+
+let package = Package(
+    name: "MyLibrary",
+    platforms: [
+        .macOS(.v10_14), .iOS(.v13), .tvOS(.v13)
+    ],
+    products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
+        .library(
+            name: "MyLibrary",
+            targets: ["MyLibrary", "SomeRemoteBinaryPackage", "SomeLocalBinaryPackage"])
+    ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+    ],
+    targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .target(
+            name: "MyLibrary",
+            exclude: ["instructions.md"],
+            resources: [
+                .process("text.txt"),
+                .process("example.png"),
+                .copy("settings.plist")
+            ]
+        ),
+        .binaryTarget(
+            name: "SomeRemoteBinaryPackage",
+            url: "https://url/to/some/remote/binary/package.zip",
+            checksum: "The checksum of the XCFramework inside the ZIP archive."
+        ),
+        .binaryTarget(
+            name: "SomeLocalBinaryPackage",
+            path: "path/to/some.xcframework"
+        )
+        .testTarget(
+            name: "MyLibraryTests",
+            dependencies: ["MyLibrary"]),
+    ]
+)
+```
+
+The package manifest must begin with the string `// swift-tools-version:`, followed by a version number such as `// swift-tools-version:5.3`.
+
+The Swift tools version declares:
+
+- The version of the PackageDescription framework
+- The Swift language compatibility version to process the manifest
+- The required minimum version of the Swift tools to use the package
+
+Each version of Swift can introduce updates to the PackageDescription framework, but the previous API version is available to packages that declare a prior Swift tools version. This behavior allows you take advantage of new releases of Swift, the Swift tools, and the PackageDescription framework, without having to update your package manifest and without losing access to existing packages.
+
+To learn more about the `PackageDescription` framework, see [Package](https://developer.apple.com/documentation/packagedescription/package).
+
+> **Note**
+
+> Xcode provides code completion when you edit the package manifest.
+
+<a id="Add-your-code"></a>
+
+### Add your code
+
+Per convention, source files reside in a subfolder of the package’s `Sources` directory that has the same name as the target they belong to. Note how the package manifest above declares the `MyLibrary` target. Its source files reside in `Sources/MyLibrary` while source files for tests reside in `Tests/MyLibraryTests`. You can use additional subfolders to structure them. Per default, Xcode includes all valid source files inside a target’s folder. If you prefer to declare included source files explicitly, pass them using the [sources](https://developer.apple.com/documentation/packagedescription/target/sources) parameter when you initialize the [Target](https://developer.apple.com/documentation/packagedescription/target). You can also pass paths to directories.
+
+![Screenshot showing a standalone Swift package with two added source files and two unit test files.](https://developer.apple.com/images/com.apple.Xcode/creating-a-swift-package-with-xcode-3@2x.png)
+
+To add source files to a Swift package, use workflows that you already know. For example, you can add a source file to a package by dragging it into the Project navigator, or by using the File \> Add Files to *\[packageName\]* menu. Targets can contain Swift, Objective-C/C++, or C/C++ code, but an individual target can’t mix Swift with C-family languages. For example, a Swift package can have two targets, one that contains Objective-C, Objective-C++, and C code, and a second one that contains Swift code.
+
+<a id="Add-a-dependency-on-another-Swift-package"></a>
+
+### Add a dependency on another Swift package
+
+Just like apps, Swift packages can have *package dependencies*. To declare a dependency on a remote package, use one of the functions that take the URL of the remote package as a parameter. To add a local package as a dependency, use one of the functions that take a path to the local package as a parameter. The following code snipped shows both options:
+
+```swift
+dependencies: [    
+    // Dependencies declare other packages that this package depends on.
+    .package(url: "https://url/of/another/package.git", from: "1.0.0"),
+    .package(path: "path/to/a/local/package/", "1.0.0"..<"2.0.0")],
+```
+
+See [Package.Dependency](https://developer.apple.com/documentation/packagedescription/package/dependency) for all possible ways to declare a package dependency. When you add the dependency, you can use its vended product as a [Target.Dependency](https://developer.apple.com/documentation/packagedescription/target/dependency) or make it a part of your package’s [Product](https://developer.apple.com/documentation/packagedescription/product).
+
+<a id="Distribute-binaries-as-a-Swift-package"></a>
+
+### Distribute binaries as a Swift package
+
+Instead of distributing a Swift package that vends source files, you can choose to distribute binaries instead. For example, creators of proprietary closed-source libraries often make them available as binaries. See [Distributing binary frameworks as Swift packages](distributing-binary-frameworks-as-swift-packages.md) to learn more.
+
+<a id="Add-package-resources"></a>
+
+### Add package resources
+
+Declare a Swift tools version of 5.3 or later in your manifest file to add asset files as package resources to your Swift package. For example, Swift packages can contain user interface components that use asset catalogs, storyboards, `.strings` files, and so on. See [Bundling resources with a Swift package](bundling-resources-with-a-swift-package.md) to learn more.
+
+<a id="Make-your-Swift-package-cross-platform-compatible"></a>
+
+### Make your Swift package cross-platform compatible
+
+While Swift packages are platform-independent by nature and include, for example, Linux as a target platform, Swift packages can be platform-specific. Use conditional compilation blocks to handle platform-specific code and achieve cross-platform compatibility. The following example shows how to use conditional compilation blocks:
+
+```swift
+#if os(Linux)
+
+// Code specific to Linux
+
+#elseif os(macOS)
+
+// Code specific to macOS
+
+#endif
+
+#if canImport(UIKit)
+
+// Code specific to platforms where UIKit is available
+
+#endif
+```
+
+In addition, you may need to define a minimum deployment target. Note how the package manifest below declares minimum deployment targets by passing them in as a value to the `platforms` parameter of the [Package](https://developer.apple.com/documentation/packagedescription/package) initializer. However, passing minimum deployment targets to the initializer doesn’t restrict the package to the listed platforms.
+
+```swift
+// swift-tools-version:5.3
+import PackageDescription
+
+let package = Package(
+    name: "MyLibrary",
+    platforms: [
+        .macOS(.v10_14), .iOS(.v13), .tvOS(.v13)
+    ],
+    products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
+        .library(
+            name: "MyLibrary",
+            targets: ["MyLibrary", "SomeRemoteBinaryPackage", "SomeLocalBinaryPackage"])
+    ],
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+    ],
+    targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .target(
+            name: "MyLibrary",
+            exclude: ["instructions.md"],
+            resources: [
+                .process("text.txt"),
+                .process("example.png"),
+                .copy("settings.plist")
+            ]
+        ),
+        .binaryTarget(
+            name: "SomeRemoteBinaryPackage",
+            url: "https://url/to/some/remote/binary/package.zip",
+            checksum: "The checksum of the XCFramework inside the ZIP archive."
+        ),
+        .binaryTarget(
+            name: "SomeLocalBinaryPackage",
+            path: "path/to/some.xcframework"
+        )
+        .testTarget(
+            name: "MyLibraryTests",
+            dependencies: ["MyLibrary"]),
+    ]
+)
+```
+
+> **Tip**
+
+> If you plan to publish a Swift package that doesn’t support all platforms, consider mentioning the supported platforms in your `README.md` file. In addition, think about adding support for other platforms to grow its audience.
+
+<a id="Build-your-targets-and-run-unit-tests"></a>
+
+### Build your targets and run unit tests
+
+Xcode creates a scheme for each product in the package manifest. Select a scheme for the package’s build-and-run destination, and build it as you’d build an app target. Each source target usually has at least one corresponding test target. If your package contains multiple products, Xcode creates an additional scheme with the name *\[packageName\]*-Package to build all targets and run all unit tests.
+
+## See Also
+
+### Package creation
+
+- [Bundling resources with a Swift package](bundling-resources-with-a-swift-package.md): Add resource files to your Swift package and access them in your code.
+- [Localizing package resources](localizing-package-resources.md): Ensure that your Swift package provides localized resources for many locales.
+- [Distributing binary frameworks as Swift packages](distributing-binary-frameworks-as-swift-packages.md): Make binaries available to other developers by creating Swift packages that include one or more XCFrameworks.
+- [Developing a Swift package in tandem with an app](developing-a-swift-package-in-tandem-with-an-app.md): Add your published Swift package as a local package to your app’s project and develop the package and the app in tandem.
+- [Organizing your code with local packages](organizing-your-code-with-local-packages.md): Simplify maintenance, promote modularity, and encourage reuse by organizing your app’s code into local Swift packages.
+- [PackageDescription](https://developer.apple.com/documentation/packagedescription): Create reusable code, organize it in a lightweight way, and share it across your projects and with other developers.
+
+# Document: Creating a static framework
+
+Source path: documentation/xcode/creating-a-static-framework
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-a-static-framework
+Description: Kind: Article
+
+# Creating a static framework
+
+**Kind:** Article
+
+Configure your project to build a new static framework.
+
+<a id="Overview"></a>
+
+## Overview
+
+In Xcode 15 or later, you can use a static framework to bundle resources with a static library. A static framework is a framework bundle whose main binary is a static archive. When a client links and embeds the framework, Xcode 15 or later omits the main binary from the embedded framework bundle because it’s already statically linked into the client. To create a static framework in Xcode, create a new framework target, configure the new target as a static framework target, and add all your source files and resources to the new framework target. Build, analyze, and test your static framework for each platform that it supports.
+
+To distribute your static framework, configure its target for distribution in Xcode, then create an archive of your framework for each platform that it supports. Package all variants of your framework into an XCFramework bundle that you can sign. For more information about configuring and archiving your static framework for distribution, and creating an XCFramework bundle, see [Creating a multiplatform binary framework bundle](creating-a-multi-platform-binary-framework-bundle.md). Xcode verifies if your static framework’s code signature is tampered or becomes invalid. For more information about verifying XCFrameworks, see [Verifying the origin of your XCFrameworks](verifying-the-origin-of-your-xcframeworks.md).
+
+<a id="Add-a-new-framework-target-to-your-project"></a>
+
+### Add a new framework target to your project
+
+You can add the new framework target to an existing Xcode project. Create a framework that supports either a single platform or multiple platforms.
+
+To add a new framework target:
+
+1. Choose File \> New \> Target.
+2. In the sheet that appears, choose the platform you wish to support. To create a framework that supports a single platform, choose that platform in the sheet. To create a framework that supports multiple platforms, choose Multiplatform in the sheet.
+3. Scroll down to the Framework & Library section.
+4. Select the Framework template.
+5. Click Next.
+6. Specify the name of your framework and configure the language and other options.
+7. Click Finish.
+
+![A sheet displays the available templates for a new target. The multiplatform framework template is selected.](https://developer.apple.com/images/com.apple.Xcode/creating-a-static-framework-1@2x.png)
+
+When you create a new framework target from a template, Xcode adds a target that builds a dynamic framework automatically. It also adds an umbrella header to the target. The header’s name is generated from your framework name, followed by a period (.) and the letter *h*. For example, if you name your framework SampleFramework, Xcode automatically adds a header file with the name `SampleFramework.h` to the target.
+
+<a id="Convert-the-new-framework-target-from-dynamic-to-static"></a>
+
+### Convert the new framework target from dynamic to static
+
+After adding the new framework target to your Xcode project, set its Mach-O Type build setting to Static Library to convert it from dynamic to static. For more information about the Mach-O Type build setting, see the [Build settings reference](build-settings-reference.md).
+
+To edit the Mach-O Type build setting:
+
+1. In the project editor, select your new framework target, then click Build Settings.
+2. Enter “Mach-O Type” in the search field to locate the Mach-O Type build setting.
+3. Choose Static Library from the setting value list.
+
+![A screenshot that shows the Mach-O Type build setting.](https://developer.apple.com/images/com.apple.Xcode/creating-a-static-framework-2@2x.png)
+
+<a id="Add-source-files-to-your-framework-target"></a>
+
+### Add source files to your framework target
+
+After you have a static framework target, add new or existing source files, such as Swift files, to the target. After adding them, check that these files appear in the Compile Sources build phase of the static framework target. For more information on adding new or existing files to a target, see [Managing files and folders in your Xcode project](managing-files-and-folders-in-your-xcode-project.md).
+
+![A screenshot that shows the Compile Source build phase for a target.](https://developer.apple.com/images/com.apple.Xcode/creating-a-static-framework-3@2x.png)
+
+<a id="Add-resources-to-your-framework-target"></a>
+
+### Add resources to your framework target
+
+You can add resources such as asset catalogs, storyboards, image files, and a privacy manifest to a static framework. The resource files appear in the Copy Bundle Resources build phase of the static framework target. The following image shows the Copy Bundle Resources build phase of a static framework that includes a privacy manifest file:
+
+![A screenshot that shows the Copy Bundle build phase for a target. The phase contains a privacy manifest file.](https://developer.apple.com/images/com.apple.Xcode/creating-a-static-framework-4@2x.png)
+
+To add a privacy manifest to your static framework in Xcode, see [Privacy manifest files](https://developer.apple.com/documentation/bundleresources/privacy-manifest-files).
+
+<a id="Add-public-and-private-headers-to-your-framework-target"></a>
+
+### Add public and private headers to your framework target
+
+If your static framework target contains public or private headers that you want to make available to external clients, add a Headers build phase to your target, then drag these files into Headers. For more information about adding public and private headers to a target, see [Customizing the build phases of a target](customizing-the-build-phases-of-a-target.md).
+
+Additionally, add your public headers to your framework umbrella header.
+
+<a id="Build-analyze-and-test-your-framework"></a>
+
+### Build, analyze, and test your framework
+
+Build, analyze, and test your static framework for each platform that it supports. The example below shows the bundle structure of `SampleFramework` after building it for iOS:
+
+**Image**
+
+![A screenshot that shows the bundle structure of a static framework.](https://developer.apple.com/images/com.apple.Xcode/creating-a-static-framework-5@2x.png)
+
+**Bundle structure**
+
+```shell
+SampleFramework.framework/
+    _CodeSignature/
+        ...
+    Headers/
+        ...
+    Modules/
+        ...
+    Info.plist 
+    SampleFramework
+    PrivacyInfo.xcprivacy
+    ...
+```
+
+To test your static framework, create a release build of your framework, then embed it in an app that utilizes it. For more information about creating a release build of your static framework, see [Testing a release build](testing-a-release-build.md). Build and run the test app.
+
+<a id="Embed-your-framework-in-an-app"></a>
+
+### Embed your framework in an app
+
+To embed your static framework in an app:
+
+1. In the project editor, select the app target, then click General.
+2. Expand the Frameworks, Libraries, and Embedded Content section.
+3. Click the Add button (+), select Add Other, then choose Add Files to locate your static framework.
+4. Click Open.
+5. Choose the Embed & Sign option from the Embed value list for the static framework.
+
+![A screenshot that shows the Frameworks, Libraries, and Embedded Content section in the target editor area.](https://developer.apple.com/images/com.apple.Xcode/creating-a-static-framework-6@2x.png)
+
+## See Also
+
+### Frameworks
+
+- [Creating a multiplatform binary framework bundle](creating-a-multi-platform-binary-framework-bundle.md): Combine variants of a binary framework or library into an XCFramework bundle that supports multiple platforms.
+- [Identifying and addressing framework module issues](identifying-and-addressing-framework-module-issues.md): Detect and fix common problems found in framework modules with the module verifier.
+
+# Document: Creating a workflow that builds your app for distribution
+
+Source path: documentation/xcode/creating-a-workflow-that-builds-your-app-for-distribution
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-a-workflow-that-builds-your-app-for-distribution
+Description: Kind: Article
+
+# Creating a workflow that builds your app for distribution
+
+**Kind:** Article
+
+Configure a workflow to build and sign your app for distribution to testers with TestFlight, in the App Store, or as a notarized app.
+
+<a id="Overview"></a>
+
+## Overview
+
+Delivering a version of your app to testers with TestFlight, uploading a version that’s eligible for app review, or sharing a notarized version a recipient can trust are key tasks of a continuous deployment (CD) practice. Configure an Xcode Cloud workflow that does multiple tasks, or create separate workflows — depending on your preferences, requirements, and the resulting workflow strategy.
+
+If you’re new to continuous integration and delivery (CI/CD), see [About continuous integration and delivery with Xcode Cloud](about-continuous-integration-and-delivery-with-xcode-cloud.md). For more information on developing a workflow strategy, see [Developing a workflow strategy for Xcode Cloud](developing-a-workflow-strategy-for-xcode-cloud.md).
+
+<a id="Configure-the-workflow"></a>
+
+### Configure the workflow
+
+When you create a new workflow to create a new version of your app for distribution to testers with TestFlight, in the App Store, or with notarization, make sure to:
+
+- Restrict editing in the General settings of the workflow. This is a required step if you want to create a build that’s eligible for app review or notarization.
+- In the Environments settings of the workflow, select Clean to configure the workflow so it starts builds without cached data. For more information, see [Perform a clean build](xcode-cloud-workflow-reference.md#Perform-a-clean-build).
+- Configure an archive action for each applicable platform you want to include in this workflow. For example, add two archive actions — one for iOS and one for macOS — if you want to distribute the iOS and the macOS version of your app with one workflow.
+- Choose TestFlight (Internal Testing Only) in the settings for the archive action if you want to distribute a development version to your team members with TestFlight.
+- Choose TestFlight and App Store in the settings for the archive action if you want to create an app binary that’s eligible for public testing with TestFlight and for release on the App Store. Note that external testing is subject to beta app review, and similarly you need to submit your app for review before you can release it on the App Store.
+- Review whether your new workflow includes test actions. If you use a separate workflow to run comprehensive tests, you may not want to configure a test action. If other workflows don’t run comprehensive tests, consider configuring a test action that performs comprehensive verifications.
+- Choose start conditions that make sense for your app testing and release process. Common start conditions are branch changes to a release branch or creation of a Git tag that starts with `release`. If you want to start a build for the workflow manually, configure a start condition that never actually starts a build.
+- Add a post-action for internal or external testing with TestFlight. If you choose external testing, you can later decide to submit the version for app review using App Store Connect.
+- In the post-action you add, add individual testers or groups of testers in TestFlight. The people or groups you add receive the update on their test device.
+- Add a post-action to notarize a macOS app if you intend to distribute it through your own channels. This sends the archive to the notary service to generate a ticket and staples the ticket to the archive. For more information, see [Notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution).
+- Download and archive build artifacts after a completed build as described in [Download and archive build artifacts](configuring-your-first-xcode-cloud-workflow.md#Download-and-archive-build-artifacts).
+
+When Xcode Cloud successfully builds your app and makes it available to testers in TestFlight, and you configured the workflow to create a binary that’s available for submission to app review, follow the necessary steps to release an app. For more information on using App Store Connect and TestFlight and on publishing your app in the App Store, see [App Store Connect Help](https://developer.apple.com/help/app-store-connect/).
+
+If your workflow includes a post-action that notarizes your app, you can download the notarized version from the artifacts of a successful build action. Navigate to the build action’s Artifacts, then select the app to download.
+
+## See Also
+
+### Workflows
+
+- [Developing a workflow strategy for Xcode Cloud](developing-a-workflow-strategy-for-xcode-cloud.md): Review how you can best create custom Xcode Cloud workflows to refine your continuous integration and delivery practice.
+- [Xcode Cloud workflow reference](xcode-cloud-workflow-reference.md): Configure metadata, start conditions, actions, post-actions, and more to create custom Xcode Cloud workflows.
+- [Understanding Xcode Cloud infrastructure validation builds](understanding-infrastructure-validation-builds.md): Learn about infrastructure validation builds and whether you need to opt out.
+
+# Document: Creating an Xcode project for an app
+
+Source path: documentation/xcode/creating-an-xcode-project-for-an-app
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-an-xcode-project-for-an-app
+Description: Kind: Article
+
+# Creating an Xcode project for an app
+
+**Kind:** Article
+
+Set up a new project to start developing your app.
+
+<a id="Overview"></a>
+
+## Overview
+
+Xcode creates a project for the platforms and type of app you want to make, so you can begin writing and testing code immediately. You can start with a basic SwiftUI project or customize one of the templates for the technologies you want to use. Then familiarize yourself with the project window and learn where to change the project configuration.
+
+<a id="Create-a-SwiftUI-app-project"></a>
+
+## Create a SwiftUI app project
+
+On the Welcome to Xcode window that appears when you first launch Xcode, choose App from the New Project pop-up menu or choose File \> New \> Project and select App from anywhere in Xcode.
+
+![A screenshot of the Welcome to Xcode window showing App chosen from the New Project pop-up menu.](https://developer.apple.com/images/com.apple.Xcode/choosing-new-project-app@2x.png)
+
+To save your code changes, choose File \> Save Project, and in the sheet that appears, enter the project name in the Save As field and click Save. To use a different name for the app, toggle off Rename Target.
+
+<a id="Create-a-project-from-a-template"></a>
+
+## Create a project from a template
+
+For more complex apps that use specific technologies, create a project from an Xcode template to get started. For example, you can create a project for a SwiftUI app that uses SwiftData, a macOS command-line tool, an iOS augmented reality app, or a visionOS immersive environment app.
+
+On the Welcome to Xcode window, choose Choose Template from the New Project pop-up menu or choose File \> New \> Project and then click Choose Template from anywhere in Xcode.
+
+In the sheet that appears, select Multiplatform for an app that runs on all platforms or a specific platform, such as iOS or macOS. Then select a template under Application depending on the platform you select.
+
+![A screenshot of an Xcode window showing the template choices for a new project. At the top is a list of platforms from which to choose, including Multiplatform, iOS, and macOS. In the lower half of the window, options for types of apps are displayed, such as a game and an augmented reality app.](https://developer.apple.com/images/com.apple.Xcode/choosing-an-app-template@2x.png)
+
+If you see a banner that says you don’t have support for a platform, you can create the project, but you can’t build and run it. To install the platform now, click the Get button on the right of the banner. Otherwise, manage downloads in the Components settings later. For more information, see [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md).
+
+In the “Choose options for your new project” sheet:
+
+- Enter a *product name* for your app as you want it to appear on App Store product pages and when someone installs your app. Later, you can change the app name in the General pane of the project editor.
+- Optionally, choose an account from the Team pop-up menu that Xcode uses to code sign your app. If your account doesn’t appear, choose Add an Account to enter your credentials in Apple Accounts settings. To create an Apple developer account, see [Apple Developer Program](https://developer.apple.com/programs/).
+- Enter an *organization identifier* that Xcode uses to create the *bundle identifier* ([CFBundleIdentifier](https://developer.apple.com/documentation/bundleresources/information-property-list/cfbundleidentifier)) that uniquely identifies your app throughout the system.
+- Choose other options from pop-up menus below depending on the template you select, such as SwiftUI for the interface and Swift for the language.
+
+![A screenshot showing new project options where you enter a product name and organization identifier, and choose a Team and other options depending on the template.](https://developer.apple.com/images/com.apple.Xcode/choosing-template-options@2x.png)
+
+In the last sheet, choose a location for your project, select other options, and click Create. Xcode creates a project containing essential configuration and source code files to build and run the type of app you select.
+
+For more information on properties in your project that the App Store uses, see [App information](https://developer.apple.com/help/app-store-connect/reference/app-information) in App Store Connect Help.
+
+<a id="Manage-files-in-the-main-window"></a>
+
+## Manage files in the main window
+
+When you create a project or open an existing project, the *main window* appears, showing the necessary files and resources for developing your app.
+
+You can access different parts of your project from the *navigator area* on the left. Use the *Project navigator* to select files you want to edit in the *editor area*. For example, when you select a Swift file in the Project navigator, the file opens in the *source editor*, where you can modify the code and set breakpoints.
+
+![A screenshot showing the location of the main window areas: the toolbar at the top, navigator area on the far left, editor area in the middle, canvas area on the right, debug area below, and inspector area on the far right.](https://developer.apple.com/images/com.apple.Xcode/project-main-window-anatomy@2x.png)
+
+Details about the selected file also appear in the *inspector area* on the right. In the inspector area, you can select the File inspector to edit properties of a file. If you want to hide the inspector to make more room for the editor, click the “Hide or show the Inspectors” button in the upper-right corner of the toolbar.
+
+You use the *toolbar* to build and run your app on a simulated or physical device. For an iOS app, choose a device from the run destination pop-up menu and click Run. For a macOS app, choose My Mac and click Run. For more information, see [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md).
+
+When your app launches, the *debug area* opens, where you can control the execution of your app and inspect variables. When the app stops at a breakpoint that you set, use the controls in the debug area to step through the code or continue execution. When you are done running the app, click Stop in the toolbar. For more information on using the debugger, see [Diagnosing and resolving bugs in your running app](diagnosing-and-resolving-bugs-in-your-running-app.md).
+
+If you add a preview or playground to your source file, you can interact with it in the canvas area. Most projects you create from a template already contain previews that appear in the canvas. For more information, see [Adding previews to your interface files](adding-previews-to-your-interface-files.md) and [Running code snippets using the playground macro](running-code-snippets-using-the-playground-macro.md).
+
+To use the coding assistant to explain or generate code, see [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md).
+
+<a id="Change-the-configuration-in-the-project-editor"></a>
+
+## Change the configuration in the project editor
+
+To view your project configuration, select the project in the Project navigator, then select the target in the *project editor* on the right. Click the tabs in the project editor, such as General and Signing & Capabilities, to make changes.
+
+![A screenshot of the General pane of the project editor with the Supported Destinations and Identity settings visible.](https://developer.apple.com/images/com.apple.Xcode/showing-the-project-editor@2x.png)
+
+For example, on the General pane you can change the bundle ID after you create your project. For all the steps to change the bundle ID, see [Changing the bundle identifier](changing-the-bundle-identifier.md).
+
+To add a [Liquid Glass](https://developer.apple.com/documentation/technologyoverviews/liquid-glass) app icon that supports different platforms and appearances to your project, see [Creating your app icon using Icon Composer](creating-your-app-icon-using-icon-composer.md).
+
+## See Also
+
+### Essentials
+
+- [Interacting with previews in the canvas](interacting-with-previews-in-the-canvas.md): Use the canvas controls to test your view’s appearance and behavior on different devices and configurations.
+- [Adding previews to your interface files](adding-previews-to-your-interface-files.md): Write code to test your views on different devices and configurations without needing to run your app.
+- [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md): Launch your app on a simulated iOS, iPadOS, tvOS, visionOS, or watchOS device, or on a physical device paired with your Mac.
+- [Xcode updates](https://developer.apple.com/documentation/updates/xcode): Learn about important changes to Xcode.
+
+# Document: Creating and using custom capture scopes
+
+Source path: documentation/xcode/creating-and-using-custom-capture-scopes
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-and-using-custom-capture-scopes
+Description: Kind: Article
+
+# Creating and using custom capture scopes
+
+**Kind:** Article
+
+Capture specific GPU commands by using custom capture scopes.
+
+<a id="Overview"></a>
+
+## Overview
+
+When you capture a frame using the default capture scope by clicking the Metal Capture button in Xcode’s debug bar, the resulting capture contains all of the data for a single frame. In some cases, you may want to debug a partial frame rather than an entire frame. You can accomplish this by setting up and using a custom capture scope that lets you choose exactly which Metal commands to record.
+
+> **Note**
+
+> Don’t allocate custom capture scopes yourself. Instead, call one of the [MTLCaptureManager](https://developer.apple.com/documentation/metal/mtlcapturemanager) methods: [makeCaptureScope(device:)](https://developer.apple.com/documentation/metal/mtlcapturemanager/makecapturescope%28device:%29) or [makeCaptureScope(commandQueue:)](https://developer.apple.com/documentation/metal/mtlcapturemanager/makecapturescope%28commandqueue:%29-1rozd).
+
+<a id="Define-capture-boundaries"></a>
+
+### Define capture boundaries
+
+Call [begin()](https://developer.apple.com/documentation/metal/mtlcapturescope/begin%28%29) on your capture scope to instruct the Metal debugger to record your app’s subsequent Metal activity. To stop recording a frame and to present the Metal debugger, call [end()](https://developer.apple.com/documentation/metal/mtlcapturescope/end%28%29).
+
+```swift
+// Create myCaptureScope outside of your rendering loop.
+myCaptureScope.begin()
+
+if let commandBuffer = commandQueue.makeCommandBuffer() {
+    // Do Metal work.
+    commandBuffer.commit()
+}
+
+myCaptureScope.end()
+```
+
+> **Important**
+
+> Create capture scopes outside your rendering or compute loop, situating your calls between [begin()](https://developer.apple.com/documentation/metal/mtlcapturescope/begin%28%29) and [end()](https://developer.apple.com/documentation/metal/mtlcapturescope/end%28%29). For Metal capture to work correctly, you need to hold a strong reference to an active capture scope for the duration of the work that the capture scope contains.
+
+<a id="Label-your-capture-scope"></a>
+
+### Label your capture scope
+
+To identify your custom capture scope when capturing a trace from the Metal Capture popover, set your capture scope’s label property.
+
+```swift
+myCaptureScope.label = "My Capture Scope"
+```
+
+When you’re ready to capture a frame, click the Metal Capture button in the debug bar. There, you can find your custom capture scope with the matching label available in the list for capturing.
+
+Keep a strong reference to the capture scope in your code for as long as you want the option to be visible in Xcode.
+
+<a id="Make-a-custom-capture-scope-the-default"></a>
+
+### Make a custom capture scope the default
+
+When you perform a capture from Xcode, it defaults to the capture scope that [defaultCaptureScope](https://developer.apple.com/documentation/metal/mtlcapturemanager/defaultcapturescope) specifies. If the value of this property is `nil`, Xcode defines the default capture scope using drawable presentation boundaries; for example, using your calls to the methods [present(\_:)](https://developer.apple.com/documentation/metal/mtlcommandbuffer/present%28_:%29) or [present()](https://developer.apple.com/documentation/metal/mtldrawable/present%28%29).
+
+To change the default scope, create an [MTLCaptureScope](https://developer.apple.com/documentation/metal/mtlcapturescope) instance and assign it to [defaultCaptureScope](https://developer.apple.com/documentation/metal/mtlcapturemanager/defaultcapturescope).
+
+```swift
+MTLCaptureManager.shared().defaultCaptureScope = myCaptureScope
+```
+
+## See Also
+
+### Project preparation for debugging
+
+- [Building your project with embedded shader sources](building-your-project-with-embedded-shader-sources.md): Prepare to debug your project’s shaders by including source code in the build.
+- [Naming resources and commands](naming-resources-and-commands.md): Enhance the debugging of your Metal app using labels and grouping.
+
+# Document: Creating build rules for custom file types
+
+Source path: documentation/xcode/creating-build-rules-for-custom-file-types
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-build-rules-for-custom-file-types
+Description: Kind: Article
+
+# Creating build rules for custom file types
+
+**Kind:** Article
+
+Tell Xcode how to build your project’s custom file types, and provide dependency information to optimize the build process for each file.
+
+<a id="Overview"></a>
+
+## Overview
+
+The code and resource files in a project are typically in an editable format that a running app can’t use directly. During a build, Xcode transforms the files you’ve been editing into a suitable runtime format. For example, it compiles your code files into machine instructions for a specific device. Each transformation requires a specific tool, and Xcode uses your project’s build rules, or the built-in build rules, to select the correct tool for each file type.
+
+A build rule maps a specific file type to the tools Xcode needs to generate the required output for that file. For example, one build rule compiles `.swift` files into executable code using the Swift compiler. Xcode contains built-in rules for many file types, including both code files and resource files. You can create additional rules to transform other file types into an appropriate final form, or override a built-in rule to use a different tool.
+
+> **Note**
+
+> A build rule is the preferred way to process files that are independent from each other. The build system processes each file using a separate task, which allows for more parallelization. If you require the build system to process your files as a group in a single operation, create a custom Run Script build phase instead, as described in [Running custom scripts during a build](running-custom-scripts-during-a-build.md).
+
+<a id="Add-a-new-build-rule-for-a-custom-file-type"></a>
+
+### Add a new build rule for a custom file type
+
+If your project contains file types not covered by Xcode’s built-in build rules, you can add new build rules to address those types. To create a new build rule:
+
+1. In the project editor, select the target that contains your custom files.
+2. Click the Build Rules tab.
+3. Click the Add button (+) to create a new rule.
+4. In the Process field, specify a filename matching string.
+5. In the script text field, specify your custom script code.
+
+![A target contains a custom build rule that builds a custom file type using a shell script.](https://developer.apple.com/images/com.apple.Xcode/build-rules-creating@2x.png)
+
+A build rule can use either a custom shell script or an existing tool to process files. If you use an existing tool to handle your custom file types, select that tool from the build rule’s Using field. For example, if your input files contain source code that a built-in compiler can handle, select the compiler from the list.
+
+<a id="Specify-the-match-criteria-for-source-files"></a>
+
+### Specify the match criteria for source files
+
+To match custom file types, select the “Source files with names matching” option in the Process field and specify a custom pattern string. Specify pattern strings that follow the same rules as the `fnmatch` function in the Standard C library. For example, to match all files with the names `myfile.c` and `myfile.h`, specify the string `*/myfile.c */myfile.h`. During a build, Xcode compares the full path of each project file against the specified pattern. When a match occurs, the system executes your custom script code.
+
+> **Important**
+
+> Avoid choosing filename extensions that overlap with the extensions other file types use. Xcode selects the first rule that matches a given file, so any overlap might cause Xcode to run the wrong tool.
+
+For information about pattern matching using the `fnmatch` function, see the man (manual) page for that function.
+
+<a id="Specify-the-input-and-output-files-for-your-shell-script"></a>
+
+### Specify the input and output files for your shell script
+
+When Xcode detects one of your custom file types, it executes the shell script associated with the matching build rule. In your script, get the path to the source file from the `SCRIPT_INPUT_FILE` environment variable, and begin processing the file. If your script requires additional input data, such as build configuration files, specify those files in the Input Files section of your build rule, and access them using environment variables.
+
+Your script code takes an input source file and generates an appropriate output file. For example, a script that compiles source code might generate an object file with machine instructions. You specify the output files for your script in the Output Files section of your build rule. Most scripts generate only one output file, but you can specify multiple files when appropriate. Xcode determines when to rebuild your source files based on the output files that you declare. When the source file is newer than the output files, Xcode rebuilds it. If you don’t specify any output files, Xcode builds your source file every time, regardless of whether the source file changed.
+
+When you specify input and output files in your build rule, use the following variables to compose the path and filename information. For example, you might use `$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).compiledData` to specify an output file based on the name of the original source file.
+
+| Variable | Description |
+| --- | --- |
+| `PROJECT_DIR` | The root directory of your project’s source files. |
+| `DERIVED_FILE_DIR` | The directory in which to place generated output files. The build system manages this directory and can clean it when needed. |
+| `INPUT_FILE_BASE` | The base name of the script’s input file. For example, if the path to the input file is `$PROJECT_DIR/Images/Default.png`, this variable contains the value `Default`. |
+| `INPUT_FILE_NAME` | The name of the input file, including the filename extension. For example, if the path to the input file is `$PROJECT_DIR/Images/Default.png`, this variable contains the value `Default.png`. |
+| `INPUT_FILE_DIR` | The directory that contains the input file. For example, if the path to the input file is  `$PROJECT_DIR/Images/Default.png`, this variable points to the `Images` directory in your project. |
+| `INPUT_FILE_PATH` | The complete path to the input file. |
+
+> **Important**
+
+> Place your script’s output files in the directory represented by the `DERIVED_FILE_DIR` variable. If you place them in other locations, your version-control system might not find them, or Xcode might not be able to remove them during a clean build operation.
+
+<a id="Access-script-related-files-from-environment-variables"></a>
+
+### Access script-related files from environment variables
+
+Shell scripts have access to the current target’s build settings and the input and output files associated with the build rule. Before executing your build rule’s script, Xcode configures the shell environment with several environment variables. To access the build rule’s input and output files, use the environment variables in the following table.
+
+| Variable | Description |
+| --- | --- |
+| `SCRIPT_INPUT_FILE` | The absolute path of the file to process. |
+| `OTHER_INPUT_FILE_FLAGS` | Additional command-line flags you assigned to the file in the Compile Sources build phase. |
+| `SCRIPT_INPUT_FILE_COUNT` | The number of paths in the Input Files section of your build rule. |
+| `SCRIPT_INPUT_FILE_`*n* | The absolute path to one of the files in the Input Files section of your build rule. Xcode creates an environment variable for each file, starting with `SCRIPT_INPUT_FILE_0` and increasing the number value sequentially for each subsequent file in the list. |
+| `SCRIPT_OUTPUT_FILE_COUNT` | The number of paths in the Output Files section of your build rule. |
+| `SCRIPT_OUTPUT_FILE_`*n* | The absolute path to one of the files in the Output Files section of your build rule. Xcode creates an environment variable for each file, starting with `SCRIPT_OUTPUT_FILE_0` and increasing the number value sequentially for each subsequent file in the list. |
+| `SCRIPT_HEADER_VISIBILITY` | A string that indicates a header’s visibility. If the current file is in the public or private section of the target’s Headers build phase, this string contains the value `public` or `private` to indicate its location. |
+| `HEADER_OUTPUT_DIR` | The directory in which to copy header files. If the current file is in a Headers build phase, copy the file to the location in this environment variable. |
+
+> **Important**
+
+> In your shell scripts, place environment variables in quotation marks before you pass them as parameters to other scripts or tools. The quotation marks prevent parsing errors when a variable contains spaces or special characters.
+
+For a list of build setting environment variables, see [Build settings reference](build-settings-reference.md).
+
+<a id="Specify-additional-build-dependencies-for-your-source-file"></a>
+
+### Specify additional build dependencies for your source file
+
+To improve performance during incremental builds, Xcode rebuilds only the files that require a rebuild. To determine whether a file requires a rebuild, Xcode evaluates the following criteria:
+
+- Did the contents of the source file change?
+- Does the source file depend on any other files that changed?
+
+Xcode determines whether a source file changed by comparing the modification date of that file to the modification date of its output file. If the source file is newer, or if the output file doesn’t exist, Xcode builds the source file.
+
+Analyzing the dependencies between source files is more complicated, but is important to ensure builds are correct. If a source file imports headers or other files, the tool that builds the source file reports the relationship to Xcode. For your custom file types, you report dependencies by generating a set of makefile rules for Xcode to execute.
+
+To report dependency rules for your custom source files, enable the “Use discovered dependency file” option in your build rule. Xcode suggests a default naming pattern for your dependency files, but you can change the name to match your tool’s output. In your script code, create the dependency file during each build cycle, and save the file with the appropriate name.
+
+Create the actual files in your script code when you build custom files. Fill the contents of each dependencies file with a set of makefile rules. The Xcode build system analyzes these rules at build time to determine whether it needs to rebuild the matching source file.
+
+## See Also
+
+### Build customization
+
+- [Customizing the build schemes for a project](customizing-the-build-schemes-for-a-project.md): Specify which targets to build, and customize the settings Xcode uses to build, run, test, and profile those targets.
+- [Customizing the build phases of a target](customizing-the-build-phases-of-a-target.md): Specify the tasks to perform during a build, including the source files to compile, the scripts to run, and the resources to include in the final product.
+- [Running custom scripts during a build](running-custom-scripts-during-a-build.md): Execute custom shell scripts during the build process, and run tools or other commands that your project requires.
+- [Running code on a specific platform or OS version](running-code-on-a-specific-version.md): Add conditional compilation markers around code that requires a particular family of devices or minimum operating system version to run.
+
+# Document: Creating custom modelers for intelligent instruments
+
+Source path: documentation/xcode/creating-custom-modelers-for-intelligent-instruments
+Canonical documentation: https://developer.apple.com/documentation/xcode/creating-custom-modelers-for-intelligent-instruments
+Description: Kind: Sample Code Availability: iOS 12.2+ · iPadOS 12.2+ · Mac Catalyst 12.2+ · macOS 14.2+ · Xcode 15.1+
+
+# Creating custom modelers for intelligent instruments
+
+**Kind:** Sample Code  
+**Availability:** iOS 12.2+ · iPadOS 12.2+ · Mac Catalyst 12.2+ · macOS 14.2+ · Xcode 15.1+
+
+Create Custom Modelers with the CLIPS language and learn how the embedded rules engine works.
+
+<a id="Overview"></a>
+
+## Overview
+
+> **Note**
+
+> This sample code is associated with WWDC 2019 session [421: Modeling in Custom Instruments](https://developer.apple.com/videos/play/wwdc19/421)
+
+Use this sample code project to step through the process of building a custom modeler for GoatList, an app that displays and modifies a list of goats. The GoatList app makes use of a `MobileAgent` pattern to break down a goal, such as sorting a list, into smaller subgoals. The subgoals execute at `stops`, locations where preconditions are met before execution continues.
+
+Each Instruments Distribution Package target within the Xcode project uses incrementally more sophisticated modeling logic, written in the CLIPS language, to build an Instrument that visualizes the different moving pieces of the `MobileAgent` pattern as it is used within GoatList.
+
+<a id="Configure-the-Sample-Code-Project"></a>
+
+### Configure the Sample Code Project
+
+This sample requires Xcode 11 or later and iOS 12 or later.
+
+Select GoatList from the target choices in Xcode to run the sample app on a simulated or physical iOS device. When the app launches, select a Modeling target to run on your Mac. The Modeling target launches Instruments. Next, select the Blank template and click the Add button (+) in the upper-right corner to search for the Instrument that was created when building the target. Searching for “Mobile Agent” should reveal the Custom Instrument. Once you select the proper device and target process within Instruments, you’re ready to record.
+
+<a id="Design-a-Custom-Modeler-for-MobileAgent-Activity"></a>
+
+### Design a Custom Modeler for MobileAgent Activity
+
+The `os_signpost` API lets you mark important events or intervals in your app and attach optional messages, and offers an effective and powerful way to get data into Instruments. The `MobileAgent` pattern implemented by this sample app uses just three `os_signpost` messages, yet they are vastly functional.
+
+The rules in the `ExecutionModeling`  (`mobile-agent-modeling.clp`) target rely on the `os_signpost` data emitted by the GoatList app to generate intervals, during which a `MobileAgent` actively executes at a stop. The target uses the  `Mobile Agent Exec` signpost to generate the execution intervals in two steps: first, it determines which `MobileAgent` is executing; and second, it tracks when a `MobileAgent` begins executing. The modeling rules handle this bookkeeping by asserting facts into working memory.
+
+Once the sample app emits a `Mobile Agent Moved` signpost, the modeling logic checks for execution interval facts associated with the `MobileAgent` that emitted the `Mobile Agent Moved` signpost. If the execution interval facts exist, the execution is considered complete, and the `RECORDER` module consumes the output.
+
+<a id="Incorporate-MobileAgent-Transitions"></a>
+
+### Incorporate MobileAgent Transitions
+
+The `MobileAgent` also transitions, an event that occurs when the `MobileAgent` moves from one stop to another to execute its next subgoal. You can use this movement to set up an execution environment for a `MobileAgent`, wait until certain conditions are satisfied before letting the `MobileAgent` execute at a stop, or signal failure status.
+
+The `Mobile Agent Moved` signpost marks transitions; it’s the same signpost the `ExecutionModeling` target uses to determine the end of an execution interval. In `ExecutionAndTransitionModeling`, this signpost plays a new role. In addition to serving as the end of an execution interval, it determines when a transition has begun. Similarly, the `Mobile Agent Exec` signpost also takes on a new role: it signals the end of a transition.
+
+As a result, there are four possible logical steps the modeler must consider when processing a signpost:
+
+1. If it’s a `Mobile Agent Exec` signpost, assert a new execution bookkeeping fact.
+2. If it’s a `Mobile Agent Exec` signpost *and* a previous *transition* bookkeeping fact is present in working memory, then close the transition interval.
+3. If it’s a `Mobile Agent Moved` signpost, assert a new transition bookkeeping fact.
+4. If it’s a `Mobile Agent Moved` signpost *and* a previous *execution* bookkeeping fact is present in working memory, then close the execution interval.
+
+Implementing the four steps requires the use of CLIPS Conditional Elements (CEs). Examples of CEs include `and`, `or`, and `not`. As the names imply, these CEs activate when all, any, or none of their input expressions are satisfied, respectively. `ExecutionAndTransitionModeling` uses these CEs to build rules that match the four possible cases.
+
+<a id="Compress-Signpost-Data"></a>
+
+### Compress Signpost Data
+
+Although `os_signpost` is convenient for getting data into Instruments, consider compressing that data to reduce the burden imposed on the recording technology. For example, in GoatList, the `MobileAgent` pattern sends integer codes, known as kind-codes, representing the type of `MobileAgent` and `MobileAgentStop` instead of a descriptive string in the signpost message.
+
+On the modeling side, these codes expand into their longer string representations. Every target in the `Modelers` folder contains facts that map an integer kind-code back to a string representation. When the signposts send a kind-code, the modeling rules map the codes to their string representation.
+
+<a id="Prevent-Incomplete-Facts-from-Reaching-the-Recorder"></a>
+
+### Prevent Incomplete Facts from Reaching the Recorder
+
+The `Modelers` targets contain several rules for annotating and augmenting the working memory facts into a complete fact that is viable for the `RECORDER` module to output into your data tables. As the `MODELER` module outputs the facts, it’s important to prevent the `RECORDER` module’s rules from seeing an incomplete fact and inserting it into the data tables. There are different mechanisms at work that make sure your modeling logic executes fully before being passed down to the `RECORDER` rules, two of which are described below.
+
+The first mechanism involves how CLIPS determines which rules to fire next. CLIPS ensures that all activated rules in the `MODELER` module execute before any rules in the `RECORDER` module execute. In other words, a `RECORDER` rule isn’t interleaved with the execution of rules in the `MODELER` module. All viable `MODELER` rules execute before any viable `RECORDER` rule executes.
+
+Further, you can place restrictions on the `LHS` of a rule to determine when it’s appropriate to fire. For example, a `RECORDER` rule can specify that it requires a `mobile-agent-execution-interval` fact to have a nonempty description of the stop in which the execution occurred. Thus, even if the kind-code to string mapping rules didn’t have a chance to fire during an execution cycle, and CLIPS considers which `RECORDER` rules are ready to fire, the nonempty restriction implies that the kind-code to string resolution occurs before the data tables record any data.
+
+<a id="Avoid-Overlapping-Intervals"></a>
+
+### Avoid Overlapping Intervals
+
+Storing all of the execution intervals on a single track may lead to UI stutters, which occur when your modeler commits overlapping intervals onto the same lane. The overlapping intervals make it ambiguous as to which interval should be displayed on the lane.
+
+Sometimes, however, it’s necessary to have overlapping segments, such as if `MobileAgents` execute concurrently on different threads. To remedy this problem, you need to somehow distinguish between the sets of data so they can be displayed on separate lanes or tracks. If you have multiple agents running in parallel, they can be distinguished by the thread they’re running on. You can use a plot-template to distinguish between agents. A plot-template serves as a cookie cutter to stamp out plots for each unique instance of a distinguishing feature.
+
+In the multithreaded MobileAgent example from the previous paragraph, a plot-template can be constructed that creates a plot per thread. Since the plots for each thread are distinct, the overlapping intervals won’t contend for the same lane. The `PlotTemplatesModeling` target within this Xcode project uses a plot-template to resolve this problem. For more information and an example of constructing a plot-template, please refer to the `PlotTemplatesModeling` target.
+
+<a id="Use-Speculation-Rules"></a>
+
+### Use Speculation Rules
+
+Many interesting modeling problems deal with intervals at some point or another, and certain modeling constructs must be implemented to support immediate mode when dealing with intervals. Immediate mode in Instruments displays data on the Standard UI as soon as it is available, instead of processing the data as a large batch and rendering it once the trace completes. Instruments such as `Time Profiler` and `Core Data` support immediate mode.
+
+To support immediate mode, you must take the concept of `Speculation` into consideration when building your modeler. For instance, in the case of a long-running `Mobile Agent`, the modeler rules assert the initial execution bookkeeping fact, but they have no way of knowing when the interval comes to a close. A `Mobile Agent` may be delayed in its execution or it may be executing an expensive task. In either case, there’s an indeterminate amount of time between the initial `Mobile Agent Exec` signpost and the closing `Mobile Agent Moved` signpost. Without special rules, the Instruments UI will be forced to either remodel your events after the trace completes or stutter the UI in order to insert the new interval. If an interval is incomplete before the trace ends, the interval will also be omitted from the trace.
+
+To remedy this, create a  `speculation rule`. The `Analysis Core` asks your modeler to speculate about the end of an interval in order to render the interval’s progress before it closes, as well as give your modelers a chance to infer how an interval might close once the trace ends.
+
+A `speculation rule` operates very similarly to other rules within the `RECORDER` module. It too outputs entries into a data table, but only temporarily. The `speculation rule` also doesn’t have the complete information about an interval. For example, consider the `mobile-agent-recording.clp` file in the `SpeculationModeling` target. The `speculation rule` requires the presence of a `speculate` fact in the working memory. The fact includes a slot for the time at which speculation was requested.
+
+```
+(defrule RECORDER::speculatively-record-execution
+    (speculate (event-horizon ?end))
+    (table (table-id ?output) (side append))
+    (table-attribute (table-id ?output) (has schema mobile-agent-activity))
+    (mobile-agent-execution-started (start ?start)
+    (instance ?instance) (stop-kind ?stop-kind&~sentinel))
+    
+    =>
+    (bind ?duration (- ?end ?start))
+    (create-new-row ?output)
+    (set-column start ?start)
+    (set-column duration ?duration)
+    (set-column instance ?instance)
+    (set-column state "Executing")
+    (set-column activity-type "Green")
+    (set-column stop-kind ?stop-kind)
+    (set-column-narrative activity "Executing at stop %string%" ?stop-kind)
+)
+```
+
+Although this rule doesn’t have the complete information about the `mobile-agent-execution-interval`, it does have the initial `mobile-agent-execution-started` bookkeeping fact, as well as the time at which speculation was requested. These two times can be used to determine a speculative duration. The rest of the speculative data table is filled out with any information that could be gathered at the time of speculation.
+
+With the speculation rule in place, the `Analysis Core` can now query the modeler when it needs to perform any speculation.
+
+<a id="Specify-Engineering-Type-Tracks"></a>
+
+### Specify  Engineering Type Tracks
+
+Instruments 11 and later include support for engineering type tracks. When combined with augmentations, engineering type tracks allow you to specify an engineering type to add in the Instruments UI dynamically alongside your other instruments’ tracks as your data tables populate.
+
+For example, if there are multiple threads executing the `MobileAgents`, the responsible threads can be displayed as tracks in the UI, with customizable lanes and titles. The engineering type tracks effectively promote ordinary engineering types into first-class citizens within the Instruments UI. Augmentations then work with these promoted types to visually render them onto the Instruments UI.
+
+The `EngineeringTypeTracksModeling` target uses these features to display visited stops as separate tracks in the UI. The activity of the MobileAgents displays within these tracks.
+
+<a id="CLIPS-Modeler-Functions"></a>
+
+### CLIPS Modeler Functions
+
+Building a custom modeler requires the use of the CLIPS language. Included with Xcode, the CLIPS distribution provides a rich set of functions for extracting and deducing information from your facts. This sample project made extensive use of CLIPS functions, but not every single one had a use for modeling GoatList. To that end, a broad variety of CLIPS functions are documented below.
+
+<a id="Data-Output-Actions"></a>
+
+### Data Output Actions
+
+<a id="create-new-row"></a>
+
+### \`create-new-row\`
+
+Creates a new row in an output table that is bound to the modeler. The only parameter is the INTEGER `table-id` of the bound table. This is typically matched as part of the rule, using the table schema and attributes to locate the table-id. Once the row has been created, `set-column` can be used to fill in each column of the new row. Columns that are not filled out assume a default value, which is typically the sentinel for that engineering type if one is defined.
+
+```
+(table (side append) (table-id ?output))
+(table-attribute (table-id ?output) (has schema example))
+ =>
+(create-new-row ?output)   ;; create the row before trying to set columns
+```
+
+<a id="set-column"></a>
+
+### \`set-column\`
+
+Sets the specified column of the most recently created row in the RHS of the rule. The first parameter is the column mnemonic, as defined in the schema, and the second parameter is the value to set. Conversion from the implementation type (e.g. INTEGER, STRING, FLOAT, EXTERNAL-ADDRESS) to the engineering type of the column will be done automatically when possible.
+
+```
+(set-column size-column ?example-size) ;; Sets size-column to the value ?example-size 
+```
+
+<a id="set-column-narrative"></a>
+
+### \`set-column-narrative\`
+
+`set-column-narrative` is similar to `set-column`, except that it applies a format string to create an engineering value of type `narrative`. Narratives are like long text strings; however, each piece of the narrative is preserved and tagged with the engineering type specified in the format string. This information allows the UI to break the string down later for a richer presentation. The first argument is the column mnemonic, followed by the format string, followed by the series of arguments, as in a printf-style format string.
+
+The format string argument contains tokens surrounded by ‘%’, such as: `Some text with a %thread% in the middle`. The value of the token must be a valid engineering type identifier. This example is a “thread” engineering type.
+
+```
+(set-column-narrative narrative-column "Some text with a %thread% in the middle" ?thread-value)
+```
+
+<a id="Data-Transformation"></a>
+
+### Data Transformation
+
+<a id="process-from-thread"></a>
+
+### \`process-from-thread\`
+
+The “thread” engineering type is associated with a particular process. This function takes a thread value as an argument and produces the process object with which it is associated.
+
+```
+(bind ?proc (process-from-thread ?thread)) ;;  Extracts the process object from ?thread and store it in ?proc
+(set-column process ?proc) ;; set the process column to the value ?proc
+```
+
+<a id="pid-from-process"></a>
+
+### \`pid-from-process\`
+
+Extracts the INTEGER pid from its argument, which must be a `process` engineering type.
+
+```
+(bind ?process (process-from-thread ?thread))
+(bind ?pid (pid-from-process ?process))
+```
+
+<a id="bit-test"></a>
+
+### \`bit-test\`
+
+A Boolean return function that tests the nth bit of the first argument, and returns true if it is set, false otherwise. The second argument supplies the bit index to test. The bit index ranges from \[0-63\], where bit 0 is the least significant bit of the INTEGER.
+
+```
+(bit-test ?value-to-test 63) ;  returns true if the most significant bit in ?value-to-test is set
+```
+
+<a id="extract-bits"></a>
+
+### \`extract-bits\`
+
+Returns an INTEGER by extracting a range of bits from the first argument. The return value has been shifted over such that the lowest bit in the extracted range becomes bit 0. Bit 0 is the least significant bit. The second and third arguments hold the range of bits to extract, inclusively. Conventionally, the highest bit in the range is the second argument, but if they are reversed, the function still works as expected.
+
+```
+(extract-bits ?integer-value 63 32) ; extracts the most significant 32-bits and shifts them to the right by 32 bits.
+```
+
+<a id="make-int64"></a>
+
+### \`make-int64\`
+
+Takes two 32-bit INTEGER arguments and concatenates them to create a single 64-bit INTEGER return value. This function takes the upper 32 bits of the first argument and place them into the upper 32 bits of the return value, and takes the lower 32 bits of the second argument and places them into the lower 32 bits of the return value. This function is typically useful for reconstructing a 64-bit value that has been broken apart into multiple fields. Even though the return and argument values are signed INTEGERs, they are treated as unsigned bit patterns internally.
+
+```
+(make-int64 ?msb ?lsb)
+```
+
+<a id="memory-to-string"></a>
+
+### \`memory-to-string\`
+
+Treats its INTEGER arguments as a run of continuous memory values and extracts a UTF8 encoded string from it. The function automatically detects if the run of INTEGERs are 32-bit or 64-bit, assuming that the run is consistently one or the other, but *not* a mixture of both. The UTF8 encoding convention allows us to reliably make that determination with little overhead.
+
+Note: you cannot pass a multifield value in as a single argument. On failure, this function will return the symbol `sentinel`.
+
+```
+(memory-to-string ?part1 ?part2 ?part3) ; treats the three INTEGER arguments as a run of INTEGERs and returns the string value for it.
+```
+
+<a id="Miscellaneous"></a>
+
+### Miscellaneous
+
+<a id="log-narrative"></a>
+
+### \`log-narrative\`
+
+When the Analysis Core has been configured with the extra logging enabled through the Instruments Inspector, a modeler-log table is created that is written to with this function. The function does nothing when logging is disabled, although there is still a small amount of overhead in the call. The first argument is a format string, and the following arguments are interpreted like a printf-style argument.
+
+```
+(log-narrative "Resolved stop kind code %uint64% to %string%" ?stop-kind-code ?kind)
+```
+
+<a id="new-integer-array"></a>
+
+### \`(new integer-array)\`
+
+Creates an empty `integer-array` and returns it.
+
+An EXTERNAL-ADDRESS type of `integer-array` has been built in that allows the modeler to bypass having to save runs of integer data in multifields. Multifields are generally efficient, but with a high rate data or when you don’t want changes to the array to cause rule activation, you may want to create an object of this type and use it in place of a multifield value. `integer-array`s are typically useful when your modeler needs to accumulate long lists of identifiers that it will emit as a single array at the end of modeling, or some other periodic event like a “tick”.
+
+<a id="add-integer"></a>
+
+### \`add-integer\`
+
+Appends the second argument to the `integer-array` in the first argument. Does not cause rule activation.
+
+<a id="nth-integer"></a>
+
+### \`nth-integer\`
+
+Returns the nth integer of the `integer-array` in the first argument. The second argument is n. Follows CLIPS index convention where 1 is the first element, and not 0 like in many other languages.
+
+<a id="length-of-array"></a>
+
+### \`length-of-array\`
+
+Returns the nth integer of the `integer-array` in the first argument. The second argument is n. Follows CLIPS index convention where 1 is the first element, and not 0 like in many other languages.
+
+<a id="sort-array"></a>
+
+### \`sort-array\`
+
+Sorts the `integer-array` in the first argument. Does not cause rule activation.
+
+<a id="duplicate-array"></a>
+
+### \`duplicate-array\`
+
+Copies the `integer-array` in the first argument and returns the EXTERNAL-ADDRESS.
 
 # Document: Creating distribution-signed code for macOS
 
@@ -4951,6 +5960,7 @@ To validate your work, follow the process described in [Build and Validate](embe
 - [Adding package dependencies to your app](adding-package-dependencies-to-your-app.md): Integrate package dependencies to share code between projects, or leverage code from other developers.
 - [Creating a Mac version of your iPad app](https://developer.apple.com/documentation/uikit/creating-a-mac-version-of-your-ipad-app): Bring your iPad app to macOS with Mac Catalyst.
 - [Setting up a watchOS project](https://developer.apple.com/documentation/watchos-apps/setting-up-a-watchos-project): Create a new watchOS project or add a watch target to an existing iOS project.
+- [Managing Xcode projects using command-line tools](managing-xcode-projects-using-the-command-line.md): Edit build settings, targets, build phases, groups, and Swift package dependencies.
 
 # Document: Embedding nonstandard code structures in a bundle
 
@@ -6194,9 +7204,9 @@ You can give agents more guidance and expertise so that they work productively, 
 
 ## Control access to external commands and tools
 
-If you want finer control over agents using commands and tools while performing tasks, you can grant or deny access in Intelligence settings.
+If you want finer control over agents using commands and tools while performing tasks, you can grant or deny access in Intelligence settings. First, enable one or more agents you want to use by clicking Get next to the agents under Agents.
 
-To manage these permissions, click the Permissions row under Agents in Xcode. Any commands or tools that you previously granted access to in the coding assistant appear here.
+To manage agent permissions, click the Permissions row under Agents in Xcode that appears in Intelligence settings. Any commands or tools that you previously granted access to in the coding assistant appear here.
 
 To give access to a command-line tool that you run in Terminal, click the Add button (+) under Allowed Commands. In the text field that appears, enter the command and press Return. To remove a command-line tool, select it and click the Remove button (-) under Allowed Commands.
 
@@ -6976,9 +7986,11 @@ Xcode alerts you when the external agent connects to Xcode and when it’s activ
 In Intelligence settings, allow external agents to connect with Xcode using its MCP server:
 
 1. Choose Xcode \> Settings and select Intelligence in the sidebar.
-2. Under Model Context Protocol, turn on “Allow external agents to use Xcode tools.”
+2. Under Model Context Protocol, choose either Always or “While Xcode is Open” from the “Allow External Agents to Use Xcode Tools” pop-up menu.
 
-![A screenshot of the Intelligence settings showing the “Allow external agents to use Xcode tools” toggle under Model Context Protocol.](https://developer.apple.com/images/com.apple.Xcode/intelligence-settings@2x.png)
+![A screenshot of the Intelligence settings showing the “Allow External Agents to Use Xcode Tools” setting under Model Context Protocol.](https://developer.apple.com/images/com.apple.Xcode/intelligence-settings@2x.png)
+
+To turn off this feature, choose Never from the “Allow External Agents to Use Xcode Tools” pop-up menu.
 
 <a id="Configure-external-agents-to-use-the-MCP-server"></a>
 
@@ -9604,6 +10616,8 @@ To pair physical devices that you connect to your Mac with a cable, enter this c
 % devicectl manage pair
 ```
 
+This command also pairs Apple TV and Apple Vision Pro devices wirelessly.
+
 To use Device Hub to pair physical devices with your Mac, either wirelessly or with a cable, see [Managing your simulated and physical devices in Device Hub](managing-your-simulated-and-physical-devices-in-device-hub.md).
 
 Whether you use the command line or Device Hub to pair physical devices, unlock the device before entering `devicectl` commands.
@@ -9871,6 +10885,10 @@ Device Hub surrounds the screen content with a bezel that resembles the target d
 
 To interact with a simulated Apple Vision Pro device in Device Hub, see [Interacting with your visionOS app in Device Hub](interacting-with-your-visionos-app-in-device-hub.md). To take screenshots and record videos, see [Capturing screenshots and videos from devices](capturing-screenshots-and-videos-from-devices.md).
 
+> **Tip**
+
+> To test touch features in your macOS app, test your app on a MacBook Pro with PROLED XDR Display, or connect an iPad to your Mac and test your app using Sidecar. For more information on Sidecar, see [Use an iPad as a second display for a Mac](https://support.apple.com/en-us/102597).
+
 <a id="Interact-with-your-iOS-or-iPadOS-app-in-the-canvas"></a>
 
 ## Interact with your iOS or iPadOS app in the canvas
@@ -9893,11 +10911,11 @@ Activate device buttons by clicking on parts of the device bezel:
 
 | Button | To simulate |
 | --- | --- |
-| Click the Home button | Click the Home button below the device bezel or choose Controls \> Home. |
-| Click the Sleep/Wake button | Click the Sleep/Wake button on the device bezel or choose Controls \> Lock. |
-| Click or hold Volume Up | Click or hold the Volume Up button on the device bezel or choose Device \> Sound \> Increase Volume. |
-| Click or hold Volume Down | Click or hold the Volume Down button on the device bezel or choose Device \> Sound \> Decrease Volume. |
-| Click the Action button | Click the Action button on the device bezel. |
+| Press the Home button | Click the Home button below the device bezel or choose Controls \> Home. |
+| Press the Sleep/Wake button | Click the Sleep/Wake button on the device bezel or choose Controls \> Lock. |
+| Press or hold Volume Up | Click or hold the Volume Up button on the device bezel or choose Device \> Sound \> Increase Volume. |
+| Press or hold Volume Down | Click or hold the Volume Down button on the device bezel or choose Device \> Sound \> Decrease Volume. |
+| Press the Action button | Click the Action button on the device bezel. |
 
 <a id="Interact-with-your-iOS-app-on-an-iPhone-Duo-simulator"></a>
 
@@ -9932,8 +10950,8 @@ Activate device buttons using menu items or by clicking on parts of the device b
 | --- | --- |
 | Push in the Digital Crown | Click the Digital Crown on the device bezel. |
 | Rotate the Digital Crown clockwise or counterclockwise | Place the pointer over the Digital Crown on the device bezel and scroll using a mouse wheel or trackpad. If the bezel is hidden, move the pointer over the simulator window, then scroll using a mouse wheel or trackpad. |
-| Click the Side button | Click the Side button on the device bezel. |
-| Click the Action button | Click the Action button on the device bezel or choose Controls \> Action Button. |
+| Press the Side button | Click the Side button on the device bezel. |
+| Press the Action button | Click the Action button on the device bezel or choose Controls \> Action Button. |
 
 <a id="Interact-with-your-tvOS-app-in-the-canvas"></a>
 
@@ -11861,7 +12879,7 @@ Use agentic coding tools to translate the strings in your app into multiple lang
 
 Agents simplify the localization of your app by performing tasks for you, such as adding languages, updating string catalogs, translating strings, and even adding language-specific plural variants when needed. Xcode gives the right context and language-specific style guidance to agents so they make the best translations for your app.
 
-Before you begin, enable an agent in Intelligence settings and choose that agent in the coding assistant. For more information, see [Setting up coding intelligence](setting-up-coding-intelligence.md).
+Before you begin, enable one or more agents in Intelligence settings and choose one in the coding assistant. For more information, see [Setting up coding intelligence](setting-up-coding-intelligence.md).
 
 <a id="Add-languages-and-translations"></a>
 
@@ -11886,9 +12904,9 @@ You can watch the progress of translations in the transcript and see files that 
 
 ![A screenshot that shows the conversation sidebar, a localization transcript in the middle, and changes to a string catalog in the artifacts pane on the right. The transcript shows the “Translate my app into Italian” prompt in progress with one translation batch in progress and two translation batches complete. The artifacts pane shows the Localizable string catalog translated into Italian.](https://developer.apple.com/images/com.apple.Xcode/localizing-using-agents-in-progress@2x.png)
 
-After the agent completes the translations, Xcode shows a summary of the changes in the transcript. The summary of changes includes the details of the added or changed files in the artifacts area. You can move the files that Xcode creates to other locations in your project.
+After the agent completes the translations, Xcode shows a summary of the changes in the transcript. The summary of changes includes the details of the added or changed files in the artifacts pane. You can move the files that Xcode creates to other locations in your project.
 
-To differentiate agentic translations from those that you provide, Xcode sets the state of translations to Machine Translated in the string catalog editor. If you export your localizations to XML Localization Interchange File Format (XLIFF), Xcode sets the `state-qualifier` property to `leveraged-mt` as well.
+To differentiate agentic translations from those that you provide, Xcode sets the state of translations to `machine_translated` in the string catalog file. If you export your localizations to XML Localization Interchange File Format (XLIFF), Xcode also sets the `state-qualifier` property to `leveraged-mt`.
 
 <a id="Use-localizable-APIs"></a>
 
@@ -11896,7 +12914,7 @@ To differentiate agentic translations from those that you provide, Xcode sets th
 
 If Xcode omits some user-facing strings when updating string catalogs, make sure you’re using localizable APIs in your code.
 
-If your app uses [SwiftUI](https://developer.apple.com/documentation/swiftui), the views that the framework provides treat user-facing strings as localizable, so Xcode automatically finds them. However, other Swift code that creates human-readable strings, must explicitly use the [init(localized:)](https://developer.apple.com/documentation/swift/string/init%28localized:%29) initializer to be localizable.
+If your app uses [SwiftUI](https://developer.apple.com/documentation/swiftui), the views that the framework provides treat user-facing strings as localizable, so Xcode automatically finds them. However, other Swift code that creates human-readable strings must explicitly use the [init(localized:)](https://developer.apple.com/documentation/swift/string/init%28localized:%29) initializer to be localizable.
 
 ```swift
 String(localized: "Hello, world!")
@@ -12679,6 +13697,143 @@ After you add a cross-project reference, you can refer to the other project’s 
 > **Note**
 
 > It’s good practice to use a workspace to manage multiple projects. However, you can’t create explicit dependencies between two projects in the same workspace.
+
+# Document: Managing Xcode projects using command-line tools
+
+Source path: documentation/xcode/managing-xcode-projects-using-the-command-line
+Canonical documentation: https://developer.apple.com/documentation/xcode/managing-xcode-projects-using-the-command-line
+Description: Kind: Article
+
+# Managing Xcode projects using command-line tools
+
+**Kind:** Article
+
+Edit build settings, targets, build phases, groups, and Swift package dependencies.
+
+<a id="Overview"></a>
+
+## Overview
+
+Use the `xcodeproj` command-line tool to modify an existing Xcode project configuration in Terminal.
+
+The `xcrun xcodeproj` commands apply to a single Xcode project file with a `.xcodeproj` extension in the current folder or the enclosing project folder by default. To use another Xcode project file from anywhere in the system, add the `--project <path.xcodeproj>` option to most of the `xcrun xcodeproj` commands.
+
+For complete `xcrun xcodeproj` documentation, enter `xcrun xcodeproj help` or `xcrun xcodeproj help <subcommand>` in Terminal.
+
+<a id="Manage-build-settings"></a>
+
+## Manage build settings
+
+Use the `setting` subcommand to get and set build settings in a project. The command uses the setting name as it appears in the Xcode project file, not the human-readable name that appears in Xcode.
+
+To set build settings on a specific target, add the `--target` option; otherwise, the command applies to the project. Similarly, to modify a specific configuration, use the `--config` option; otherwise, the command applies to all configurations.
+
+To see the value for a specific build setting, such as the bundle ID for a target, use the `setting get` subcommand:
+
+```shell
+% xcrun xcodeproj setting get PRODUCT_BUNDLE_IDENTIFIER --target Landmarks
+```
+
+To get a list of all the build settings for a target, use the `setting list` subcommand.
+
+For keys with a single string value, use the `setting set` subcommand to change build setting values. For keys with multiple string values, use the `setting set-multi` subcommand. To remove a build setting, use the `setting unset` subcommand.
+
+To list the fully evaluated build settings for targets in a project, enter `xcodebuild -showBuildSettings` in Terminal. For more information on build settings, see [Build settings reference](build-settings-reference.md).
+
+<a id="Manage-targets"></a>
+
+## Manage targets
+
+Use the `target` subcommand to inspect and modify targets in your project and their build phases.
+
+```shell
+% xcrun xcodeproj target --target <target>
+```
+
+Some `target` subcommands require the `--target <target>` option. Optionally, specify the project too using the `--project <path.xcodeproj>` option.
+
+To get information about a target in a project, including the kind and product type, use the `target info` subcommand:
+
+```shell
+% xcrun xcodeproj target info --target Landmarks
+```
+
+To add a target to a project, use the `target add` subcommand:
+
+```shell
+% xcrun xcodeproj target add LandmarkModels --product-type framework
+```
+
+You can omit the `com.apple.product-type.` prefix for the `--product-type` values and pass `framework`, `tool`, or `application` instead. The command adds targets without schemes, because Xcode creates schemes automatically for you.
+
+To remove a target, use the `target remove` subcommand.
+
+To learn about a specific subcommand, enter `xcrun xcodeproj help target <subcommand>` in Terminal. For more information on targets, see [Configuring a new target in your project](configuring-a-new-target-in-your-project.md).
+
+<a id="Manage-build-phases"></a>
+
+## Manage build phases
+
+Use the `target phase` subcommand to manage build phases for a target.
+
+```shell
+ % xcrun xcodeproj target phase add --target <target> <kind>
+```
+
+For example, to add an AppleScript-type build phase to a target, use the `target phase` subcommand with `apple-script` as the `kind` argument:
+
+```shell
+% xcrun xcodeproj target phase add --target Landmarks apple-script
+```
+
+To specify where to insert the build phase, include the optional `--position`, `--before`, and `--after` options. To remove a build phase, use the `target phase remove` subcommand.
+
+To learn about all `target phase` subcommands, enter `xcrun xcodeproj help target phase` in Terminal. For more information on build phases, see [Customizing the build phases of a target](customizing-the-build-phases-of-a-target.md).
+
+<a id="Manage-files-and-folders"></a>
+
+## Manage files and folders
+
+Use the `group` subcommand to create files and folders, or rearrange them, as they appear in the Project navigator in Xcode.
+
+For the `path` argument that’s common to many `group` subcommands, you can use the system file path, the folder path as it appears in the Project navigator, or the identifier that the `xcrun xcodeproj group ls` command returns. Use the identifier if two files or folders have the same name.
+
+To add a new folder, use the `group add` subcommand. To add a new file, use the `group add-file` subcommand, as in:
+
+```shell
+% xcrun xcodeproj group add-file <path> --group <group-path>
+```
+
+To remove files and folders, use the `group remove` and `group remove-file` subcommands.
+
+For more information on using Xcode to perform these actions, see [Managing files and folders in your Xcode project](managing-files-and-folders-in-your-xcode-project.md).
+
+<a id="Manage-Swift-packages"></a>
+
+## Manage Swift packages
+
+Use the `pkg` subcommand to list, add, and remove Swift package dependencies in a project.
+
+To add a remote package dependency, use `pkg add`. To add a local package dependency, use `pkg add-local`. To remove a package dependency, use `pkg remove` and pass the package name.
+
+```shell
+% xcrun xcodeproj pkg add <url>
+% xcrun xcodeproj pkg add-local <path>
+% xcrun xcodeproj pkg remove <package>
+```
+
+To get the `<package>` value, enter `xcrun xcodeproj pkg list` in Terminal.
+
+To add and remove package product links for a target, use the `pkg link` and `pkg unlink` subcommands.
+
+```shell
+% xcrun xcodeproj pkg link <product> --package <package> --target <target>
+% xcrun xcodeproj pkg unlink <product> --target <target>
+```
+
+To start or stop running a package build-tool plugin, use the `pkg link-plugin` and `pkg unlink-plugin` subcommands.
+
+To learn more about `pkg` subcommands, including more options, enter `xcrun xcodeproj help pkg <subcommand>` in Terminal. For more information on Swift packages, see [Swift packages](swift-packages.md).
 
 # Document: Managing your simulated and physical devices in Device Hub
 
@@ -15764,6 +16919,7 @@ Manage the code and resources you use to build apps, libraries, and other softwa
 - [Creating a Mac version of your iPad app](https://developer.apple.com/documentation/uikit/creating-a-mac-version-of-your-ipad-app): Bring your iPad app to macOS with Mac Catalyst.
 - [Setting up a watchOS project](https://developer.apple.com/documentation/watchos-apps/setting-up-a-watchos-project): Create a new watchOS project or add a watch target to an existing iOS project.
 - [Embedding a command-line tool in a sandboxed app](embedding-a-helper-tool-in-a-sandboxed-app.md): Add a command-line tool to a sandboxed app’s Xcode project so the resulting app can run it as a helper tool.
+- [Managing Xcode projects using command-line tools](managing-xcode-projects-using-the-command-line.md): Edit build settings, targets, build phases, groups, and Swift package dependencies.
 
 ### Customization
 
@@ -18841,11 +19997,11 @@ Enable intelligence tools that you want to use in Xcode.
 
 ## Overview
 
-To use coding intelligence in Xcode, go to the Intelligence settings and turn on the agent and chat products that you want to use. Choose Xcode \> Settings and select Intelligence in the sidebar. Where available, you can turn on Claude or ChatGPT in Xcode. You can also use coding tools from other providers.
+To use coding intelligence in Xcode, go to the Intelligence settings and turn on the agents that you want to use. Choose Xcode \> Settings and select Intelligence in the sidebar or click “Get Started with Agents” in the coding assistant sidebar. You can also use agents and tools from other providers that don’t appear under Agents.
 
-![A screenshot of the Intelligence settings showing the About Intelligence in Xcode and Privacy link, and the Agents, Model Context Protocol, and Chat setting sections.](https://developer.apple.com/images/com.apple.Xcode/intelligence-settings@2x.png)
+![A screenshot of the Intelligence settings showing the About Intelligence in Xcode and Privacy link, and the Agents and Model Context Protocol setting sections.](https://developer.apple.com/images/com.apple.Xcode/intelligence-settings@2x.png)
 
-After you enable an agent or chat provider in the Intelligence settings, you can enter prompts in the coding assistant. When you enter prompts, the agent or model that you set up in the Intelligence settings may access your project files and other information when processing your requests. For more information about sharing your project files with agents and models, click “About Intelligence in Xcode & Privacy…” in the Intelligence settings.
+After you enable an agent in the Intelligence settings, you can enter prompts in the coding assistant. When you enter prompts, the agent that you set up in the Intelligence settings may access your project files and other information when processing your requests. For more information about sharing your project files with agents, click “About Intelligence in Xcode & Privacy…” under Coding Intelligence in the Intelligence settings.
 
 Help agents reach your goals faster with additional guidance and tools that you and Xcode provide. You control which commands, tools, and skills agents use to perform tasks on your behalf. For more information, see [Extending and customizing agents](extending-and-customizing-agents.md).
 
@@ -18860,20 +20016,20 @@ When you choose an agent in the coding assistant, it automatically has access to
 1. In Intelligence settings, click Get next to the agent you want to enable under Agents.
 2. In the dialog that appears, click Install.
 
+After you download and install agents, Xcode automatically updates the downloads if possible. To manage agent downloads, see [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md).
+
 If you have an account, sign in:
 
 1. In the agent settings, click the More button (…) in the Account row.
 2. In the next sheets, and in the browser window if one appears, follow the instructions to sign in and enter your credentials.
 
-![A screenshot of the Claude Agent settings showing the Model and Account rows.](https://developer.apple.com/images/com.apple.Xcode/intelligence-settings-claude-agent@2x.png)
+![A screenshot of the Claude Agent settings showing the more button.](https://developer.apple.com/images/com.apple.Xcode/intelligence-settings-claude-agent@2x.png)
 
-For more information about an agent, click the privacy policy and terms of use links that appear at the bottom of the agent settings.
+For more information about an agent, click the privacy policy and terms of use links that appear under Account.
 
 To enable an agent that doesn’t appear in Intelligence settings and supports the Agent Client Protocol (ACP), click Add an Agent under Agents, enter information in the next sheet, and click Add.
 
 ![A screenshot of the Add an ACP Agent sheet with the agent settings and Add button below.](https://developer.apple.com/images/com.apple.Xcode/intelligence-settings-add-agent@2x.png)
-
-After you download agents, Xcode automatically updates the downloads if possible. To manage agent downloads, see [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md).
 
 <a id="Enable-ChatGPT-in-Xcode"></a>
 
@@ -18886,15 +20042,14 @@ To use ChatGPT in Xcode (with or without an account):
 
 To sign in to a free ChatGPT account, or a paid account with higher limits:
 
-1. In ChatGPT in Xcode settings, toggle ChatGPT in Xcode on.
-2. In the ChatGPT row, click Sign In, and in the next dialog, click Sign In again.
-3. In the browser window that appears, follow the instructions to enter your credentials.
+1. In ChatGPT in Xcode settings, click Sign In in the ChatGPT row, and in the next dialog, click Sign In again.
+2. In the browser window that appears, follow the instructions to enter your credentials.
 
-To upgrade your free ChatGPT account to a paid account, click Upgrade to ChatGPT Plus at the bottom of the ChatGPT in Xcode settings.
+To upgrade your free ChatGPT account to a paid account, click “Upgrade to ChatGPT Plus” at the bottom of the ChatGPT in Xcode settings.
 
 For some models, you can choose the level of reasoning that the model uses while producing a response. In the transcript pane of the conversation with the model, select the level of reasoning in the Reasoning pop-up menu that appears at the bottom of the message text field.
 
-For more information about OpenAI products, click “OpenAI Terms of Use…” at the bottom of the ChatGPT in Xcode settings.
+For more information about OpenAI products, click “OpenAI Terms of Use…” under ChatGPT.
 
 To turn off ChatGPT in Xcode, toggle ChatGPT in Xcode off in the ChatGPT in Xcode settings.
 
@@ -18916,6 +20071,8 @@ For more information about Anthropic products, click “Anthropic Terms of Use�
 
 To use another chat provider, click the Add a Chat Provider button under Chat. To add a provider that’s hosted on the internet, select Internet Hosted, enter the URL and other details, and click Add in the dialog that appears. To add a provider that’s hosted locally on your Mac, select Locally Hosted and enter a port and optional description instead.
 
+![A screenshot of the Add a Model Provider dialog with the Internet Hosted option selected, and the URL, other controls, and Add button below.](https://developer.apple.com/images/com.apple.Xcode/intelligence-settings-add-provider@2x.png)
+
 If you add another provider, it needs to support the Chat Completions API. In addition, Xcode expects the provider to support these endpoints that list models and perform completions:
 
 - `{Model provider URL}/v1/models`
@@ -18931,7 +20088,7 @@ To turn off the coding assistant for managed devices, set the `CodingAssistantAl
 
 ### Essentials
 
-- [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md): Start conversations with an agent or model in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
+- [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md): Start conversations with an agent in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
 - [Using coding intelligence in the source editor](using-coding-intelligence-in-the-source-editor.md): Submit prompts in the same place you want to make changes to your code.
 
 # Document: Setting up StoreKit Testing in Xcode
@@ -23325,7 +24482,7 @@ Submit prompts in the same place you want to make changes to your code.
 
 You can use coding intelligence in the source editor to submit prompts using the coding tools popover. You can also generate fixes for issues that Xcode detects in your code.
 
-Before you begin, set up an agent or chat provider in Intelligence settings. For more information, see [Setting up coding intelligence](setting-up-coding-intelligence.md).
+Before you begin, set up one or more agents in Intelligence settings. For more information, see [Setting up coding intelligence](setting-up-coding-intelligence.md) and [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md).
 
 <a id="Start-conversations-in-the-source-editor"></a>
 
@@ -23339,7 +24496,7 @@ To display the coding tools popover in the source editor, perform one of these a
 
 ![A screenshot that shows the Project navigator in the sidebar and the source editor on the right with a code snippet selected and the Show Coding Tools popover displayed with the Explain button.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-show-coding-tools@2x.png)
 
-Enter your prompt in the message text field in the coding tools popover or click one of the buttons, such as Explain, Generate a Preview, or Generate a Playground, depending on the context.
+Enter your prompt in the message text field in the coding tools popover or click one of the buttons, such as Explain, Generate a Preview, or Generate a Playground, depending on the context. Xcode shows the response in the transcript and any content it generates in the artifacts pane.
 
 <a id="Generate-playgrounds-and-previews"></a>
 
@@ -23351,39 +24508,25 @@ To add a playground macro to your project, open the coding tools popover and cli
 
 ![A screenshot that shows the Project navigator in the sidebar and the source editor on the right with a class selected and the Show Coding Tools popover displayed with the Generate a Playground button.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-generate-playground@2x.png)
 
-If you use an agent, Xcode starts a new conversation with a playground prompt, shows the response in the transcript, and displays the generated playground code in the artifacts pane. To see the code in the source editor, double-click the filename in the artifacts pane. To run the playground in the canvas, click Show Canvas in the toolbar if necessary.
+Xcode starts a new conversation with a playground prompt, shows the response in the transcript, and displays the generated playground code in the artifacts pane.
 
-If you use a chat model, Xcode shows the code changes directly in the source editor and runs the playground in the canvas.
+To run the playground in the canvas, double-click the filename in the artifacts pane, click Show Canvas in the toolbar, and click the Restart button in the canvas if necessary.
 
 ![A screenshot that shows the Project navigator in the sidebar, a file opened in the source editor with the playground code generated, and the playground run in the canvas on the right.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-run-playground@2x.png)
 
-Similarly, with an interface file in the source editor, open the coding tools popover and click Generate a Preview. Xcode adds the generated preview code to your file and renders the preview in the artifacts pane or the canvas.
+Similarly, with an interface file in the source editor, open the coding tools popover and click Generate a Preview. Xcode adds the generated preview code to your file and you run the preview in the source editor canvas.
 
 For more information, see [Running code snippets using the playground macro](running-code-snippets-using-the-playground-macro.md) and [Adding previews to your interface files](adding-previews-to-your-interface-files.md).
-
-<a id="Generate-documentation"></a>
-
-## Generate documentation
-
-Let Xcode draft [Swift-DocC](https://www.swift.org/documentation/docc/)-style documentation comments above a symbol in a source file.
-
-In the source editor, select a symbol that needs documentation comments, open the coding tools popover, and click Document.
-
-For example, if you select a class, Xcode adds documentation for the class and for its properties and methods, including method parameters. For an agent, Xcode shows the prompt in the transcript and the changes to the file in the artifacts pane. For a chat model, Xcode shows the documentation comments directly in the source editor.
-
-![A screenshot of the Project navigator on the left, a file open in the source editor with generated DocC style comments above the structure name.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-generate-docs@2x.png)
-
-To view your documentation in Xcode’s Developer Documentation window, choose Product \> Build Documentation.
 
 <a id="Fix-your-code"></a>
 
 ## Fix your code
 
-If you choose an agent when starting a conversation, Xcode automatically builds your app after editing your code and attempts to fix issues for you. If you encounter a compilation warning or error while building your app, Xcode can often generate a fix for you too.
+When you use the coding assistant, Xcode automatically builds your app after editing your code and attempts to fix issues for you. If you encounter a compilation warning or error while building your app, Xcode can often generate a fix for you.
 
 The source editor highlights any issues with a red or yellow underline and presents an issue summary and icon. Click the icon to show more information about the issue, then click Generate next to “Generate Fix for Issue”.
 
-For an agent, Xcode shows the details for the fix in the transcript and shows the changes in the artifacts pane. For a chat model, Xcode makes the code changes directly in the source editor.
+Xcode shows the details for the fix in the transcript and shows the changes in the artifacts pane.
 
 ![A screenshot that shows the Project navigator on the left, a file open in the source editor on the right, and a Fix-it dialog with an error message and a Generate button.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-generate-fix-it@2x.png)
 
@@ -23391,12 +24534,12 @@ For an agent, Xcode shows the details for the fix in the transcript and shows th
 
 ### Related Documentation
 
-- [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md): Start conversations with an agent or model in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
+- [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md): Start conversations with an agent in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
 
 ### Essentials
 
 - [Setting up coding intelligence](setting-up-coding-intelligence.md): Enable intelligence tools that you want to use in Xcode.
-- [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md): Start conversations with an agent or model in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
+- [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md): Start conversations with an agent in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
 
 # Document: Using generated localizable symbols in your code
 
@@ -25072,69 +26215,75 @@ Description: Kind: Article
 
 **Kind:** Article
 
-Start conversations with an agent or model in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
+Start conversations with an agent in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
 
 <a id="Overview"></a>
 
 ## Overview
 
-Open the coding assistant, enter your prompts, and see the results in the transcript and artifacts panes. Undo changes or roll them back using the conversation history. Then organize your conversations with an agent or chat model by feature or approach using the conversation sidebar.
+Open the coding assistant, enter your prompts, and see the results in the transcript and artifacts panes. Undo changes or roll them back using the conversation history. Then organize your conversations with an agent by feature or approach using the conversation sidebar.
 
-To set up an agent or chat provider in Intelligence settings before you begin, see [Setting up coding intelligence](setting-up-coding-intelligence.md).
+To set up agents in Intelligence settings before you begin, see [Setting up coding intelligence](setting-up-coding-intelligence.md).
 
-<a id="Start-conversations-with-an-agent-or-model"></a>
+<a id="Start-conversations-with-an-agent"></a>
 
-## Start conversations with an agent or model
+## Start conversations with an agent
 
-After you enable one or more agents and chat models, you can start conversations in different places in your project where it’s most convenient for you.
+After you enable one or more agents, you can start conversations in different places in your project where it’s most convenient for you.
 
-- To start a conversation with a specific agent or model, click the Coding Assistant button or press Command-0. Then click New Conversation in the conversation sidebar, and choose an agent under Agents or a model under Chat in the pop-up menu.
-- To start a conversation from anywhere in your project using the current agent or model, click the New Conversation button in the project window toolbar.
+To start a conversation with a specific agent, click the Coding Assistant button above the navigation area or press Command-0. Then click the New Conversation button above the conversation sidebar, if you only have one agent set up. Otherwise, choose an agent from the pop-up menu that appears.
 
-![A screenshot that shows the Coding Assistant button selected, the conversation list in the sidebar, an agent chosen from the New Conversation pop-up menu in the toolbar, and a file open in the source editor on the right.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-start-conversation@2x.png)
+![A screenshot that shows the Coding Assistant button selected with the conversation list below, an agent chosen from the New Conversation pop-up menu in the toolbar, and a file open in the source editor on the right with a preview in the canvas.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-start-conversation@2x.png)
 
-Xcode adds a New Conversation to the list in the conversation sidebar and shows the transcript on the right with a message text field at the bottom. The placeholder text shows the current agent or model that Xcode is using. To switch the agent or model, press Command-0 and choose another from the New Conversation pop-up menu.
+To start a conversation from anywhere in your project using the current agent, click the New Conversation button in the middle of the project window toolbar and enter a prompt in the popover.
 
-To show or hide the conversation sidebar from anywhere in your project, click the Coding Assistant button. To start conversations in the source editor, see [Using coding intelligence in the source editor](using-coding-intelligence-in-the-source-editor.md).
+Xcode adds a New Conversation to the list in the conversation sidebar. Select the conversation to show the transcript on the right with the message text field at the bottom.
+
+To show or hide the conversation sidebar from anywhere in your project, click the Coding Assistant button.
+
+To start conversations in the source editor, see [Using coding intelligence in the source editor](using-coding-intelligence-in-the-source-editor.md).
 
 <a id="Enter-prompts-in-the-message-text-field"></a>
 
 ## Enter prompts in the message text field
 
-Enter your prompts in the message text field at the bottom of the transcript or click one of the suggested prompts. If you start a new conversation, Xcode changes the name of the conversation to the first prompt that you enter.
+Enter your prompts in the message text field at the bottom of the transcript. If you start a new conversation, you can click one of the suggested prompts. Xcode changes the name of the conversation to the first prompt.
 
 For example, give Xcode specific instructions on how to generate or modify your code. If you aren’t getting results that you expect, try breaking down your question or adding more detailed instructions.
 
 Although Xcode automatically gathers relevant context based on your prompt and the conversation history, you can also add explicit context to prompts.
 
-- To reference specific symbols and files in your project, type the `@` character and choose a symbol or file.
-- To add files for context, inside and outside your project, choose “Add context from project” or “Upload files” from the Attachments pop-up menu in the lower-left corner.
+To reference specific symbols and files in your project, type the `@` character and choose a symbol or file:
 
-![A screenshot that shows the Project navigator in the sidebar, a New Conversation transcript in the editor area. There’s an at-character in the message text field, and a completion menu shows suggested symbols and filenames the person can use.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-enter-symbols@2x.png)
+![A screenshot that shows the Project navigator in the sidebar, a source file open in the editor on the right, and a New Conversation popover in the toolbar. There’s an at-character in the message text field, and a completion menu shows suggested symbols and filenames the person can use.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-enter-symbols@2x.png)
+
+To add files for context, inside and outside your project, choose “Add content from project” or “Upload files” from the Attachments pop-up menu in the lower-left corner.
 
 Use other buttons in the message text field to manage a request:
 
 - To submit a prompt that you type, press Return or click the Submit button in the lower-right corner.
 - To stop Xcode from responding to a prompt, click the Stop button the lower-right corner.
-- To undo changes that Xcode makes after responding to a prompt, click the Undo Changes button.
+- To switch models for the agent, choose a model from the Model pop-up menu in the lower-left corner.
 
-If you use a chat product, a Project Context button appears in the lower-left corner of the message text field and is on by default. This allows Xcode to share relevant code and other context from your project with the model. To narrow the scope of the project files, you can turn off the automatic search feature and add explicit references to files and symbols in your prompt instead.
+Xcode shows whether a conversation is active or waiting for input under the title in the sidebar. You can start multiple conversations and switch between them in the sidebar without losing context.
+
+To undo changes that Xcode makes after responding to a prompt, roll back changes using the history or discard changes using source control.
 
 <a id="Review-responses-in-the-transcript"></a>
 
 ## Review responses in the transcript
 
-When you submit a prompt, Xcode appends it to the transcript above the message text field and the Assistant Activity button in the project window toolbar starts spinning. You can watch the progress in the transcript or do other tasks in the project window while you wait. When a response finishes, the Assistant Activity button stops spinning and Xcode stops updating the transcript. To quickly jump to the transcript from anywhere in your project, click the Assistant Activity button.
+When you submit a prompt, Xcode appends it to the transcript above the message text field and the Jump to Next Active Conversation button in the project window toolbar starts spinning. You can watch the progress in the transcript or do other tasks in the project window while you wait. To quickly jump to the transcript from anywhere in your project, click the Jump to Next Active Conversation button.
 
-Review the response in the transcript, because it may contain content that you can interact with. For example, if a response references a filename, click the arrow button next to the filename to open it in the source editor where Xcode uses multicolor change bars to highlight any changes to your code.
+Xcode may iterate on a response, build your app to verify the code, and fix build warnings and errors automatically. If the Jump to Next Active Conversation button shows a warning icon, Xcode needs you to perform some action or answer a question in the transcript before continuing. Xcode may ask whether it can use a command-line tool to perform a task. If Xcode needs you to make a decision to proceed, a question and answer interface appears in the transcript.
 
-![A screenshot that shows the conversation sidebar on the left, a transcript showing a response in the middle, and a changes to a file in the artifacts pane on the right.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-write-code@2x.png)
+When Xcode finishes a response, the Jump to Next Active Conversation button stops spinning and Xcode stops updating the transcript.  Review the response in the transcript, because it may contain content that you can interact with. For example, if a response references a filename, click the arrow button next to the filename to open it in the source editor where Xcode uses change bars to highlight any changes to your code. To see more details, choose Verbose from the Adjust Editor Options button pop-up menu on the right of the toolbar.
+
+![A screenshot that shows the conversation list in the sidebar with a conversation selected, a transcript showing a response in the middle, and a file comparison view in the artifacts pane on the right.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-write-code@2x.png)
 
 At the end of the transcript, Xcode may ask you follow-up questions or suggest next steps. You can either answer the questions or enter a new prompt in the same thread. Xcode appends all your prompts, dialogs, and responses to the transcript so that you have a complete record of your conversation. To start a new conversation with a fresh transcript, click the New Conversation button in the toolbar.
 
-If you use an agent, Xcode may iterate on a response, build your app to verify the code, and fix build warnings and errors automatically. If the Assistant Activity button shows a warning icon, Xcode needs you to perform some action or answer a question in the transcript before continuing. For example, Xcode may ask whether it can use a command-line tool to perform a task. If Xcode needs you to make a decision to proceed, a question and answer interface might appear in the transcript.
-
-To navigate quickly between conversations, use the jump bar in the toolbar or select the conversation in the sidebar. To show or hide the transcript, choose Show Transcript from the filter button pop-up menu.
+To navigate quickly between conversations, use the jump bar in the toolbar or select the conversation in the sidebar. To show the transcript, choose Show Transcript from the Adjust Editor Options button pop-up menu.
 
 For more information on giving agents more tools, including managing permissions you grant in the transcript, see [Extending and customizing agents](extending-and-customizing-agents.md).
 
@@ -25146,21 +26295,31 @@ Any changes that Xcode makes to your project files using intelligence appear in 
 
 A comparison view or preview appears for each file that Xcode adds or modifies in your project. In a comparison view, the summary of changes to a file appears to the right of the filename. Similar to the source editor, the artifacts pane shows multicolor change bars to highlight changes Xcode made to the file. To show or hide a file, click the disclosure triangle on the left of the filename.
 
-To add annotations to the code where you want to make edits, hover the pointer over a line number and click the `@` symbol that appears. Then type your prompt in the dialog and press Return or click the checkmark in the lower-right corner. Xcode adds the prompt, with the filename and line number reference, to the message text field in the transcript. Add one or more annotations and click the Submit button in the lower-right corner of the message text field.
+To add annotations to files, hover the pointer over a file and click the `@` symbol that appears. For code, hover the pointer over a line number. Then type your prompt in the dialog and press Return or click the checkmark in the lower-right corner. Xcode adds the prompt, with the filename and line number reference, to the message text field in the transcript. Add one or more annotations and click the Submit button in the lower-right corner of the message text field.
 
-To jump to a file in the source editor from the artifacts pane, double-click the filename, or to show or hide the artifacts pane, choose Show Artifacts from the filter button pop-up menu.
+![A screenshot that shows the conversation list in the sidebar, a transcript in the middle, and a file comparison view in the artifacts pane on the right. There’s an ](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-artifacts-pane@2x.png)
 
-<a id="Apply-changes-to-your-code-when-you-are-ready"></a>
+To jump to a file in the source editor from the artifacts pane, double-click the filename.
 
-## Apply changes to your code when you are ready
+To show the artifacts pane, choose Show Artifacts from the Adjust Editor Options button pop-up menu. To see all the artifacts within a conversation (not just the last response), choose Scope \> All Turns under Artifacts from the Adjust Editor Options button pop-up menu.
 
-If you use an agent, you can enter plan mode to iterate on a software design and approve it before Xcode modifies any code.
+<a id="Apply-changes-to-your-code-when-youre-ready"></a>
 
-If you use a chat product, you control whether Xcode modifies your project in the message text field before you submit a prompt. If you turn the “Automatically apply code changes” button off, Xcode proposes changes to your code instead of applying them and labels them as “Proposal” in the transcript. The response may contain proposed code that you can selectively apply or paste into your files.
+## Apply changes to your code when you’re ready
 
-![A screenshot that shows the conversation sidebar on the left and a transcript on the right containing a proposed change in a response.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-propose-code@2x.png)
+To iterate on a software design and approve it before Xcode modifies any code, use plan mode. Xcode proposes changes to your code in the artifacts pane instead of applying them to your code.
 
-To apply a proposed change, click the code snippet in the response and click Apply in the dialog that appears. If the change adds a new file, click Create New File in the dialog.
+To enter plan mode, enter `/plan` at the beginning of your prompt in the transcript message text field. Then review the suggested changes to your project in the artifacts pane.
+
+![A screenshot that shows the conversation sidebar on the left, a transcript in the middle, and a plan in the artifacts pane on the right.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-plan-mode@2x.png)
+
+Optionally, iterate on a solution and approve the changes:
+
+- To add annotations to the plan, hover the pointer over the file, click the `@` symbol that appears and enter your prompt in the dialog that appears. Then click the Submit button in the message text field.
+- To apply proposed changes, click Yes in the “Implement the plan?” dialog at the bottom of the transcript.
+- To exit plan mode, enter `/exit-plan` in the message text field below.
+
+For more information about plan mode, see [Xcode, agents, and you](https://developer.apple.com/videos/play/wwdc2026/259).
 
 <a id="Roll-back-changes-using-the-conversation-history"></a>
 
@@ -25168,15 +26327,15 @@ To apply a proposed change, click the code snippet in the response and click App
 
 Use the conversation history that Xcode maintains to rollback changes to a known state of your project, or to review changes across multiple files in your project.
 
-To roll back changes in a conversation by prompt, choose the conversation in the conversation sidebar. Then choose History from the More button in the toolbar above the transcript or artifacts pane. Xcode shows a chronological list of your prompts with a slider on the right.
+To roll back changes in a conversation by prompt, choose the conversation in the conversation sidebar. Then choose History from the Adjust Editor Options button pop-up menu. Xcode shows a chronological list of your prompts with a slider on the right.
 
 Move the slider from the bottom to the top to unwind changes in the order that you made them. Move the slider up to remove changes and move the slider down to add changes in the next prompt. To update your project files to the current state of the slider, click the Restore button; otherwise, click Cancel.
 
-![A screenshot that shows the conversation sidebar on the left, the History view in the middle with the slider on the right, and the Cancel and Restore buttons below. The changes for the current state are in the artifacts pane on the right.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-history-view@2x.png)
+![A screenshot that shows the conversation sidebar on the left, the History view with the slider on the right with Cancel and Restore buttons below, and a file comparison view in the artifacts pane on the right.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-history-view@2x.png)
 
 Xcode keeps all the edits in the conversation history in case you decide to reapply changes from subsequent prompts later.
 
-To hide the conversation history, choose Dismiss History from the More button in the toolbar above the transcript or artifacts pane.
+To hide the conversation history, choose Dismiss History from the Adjust Editor Options button pop-up menu.
 
 > **Note**
 
@@ -25186,14 +26345,15 @@ To hide the conversation history, choose Dismiss History from the More button in
 
 ## Organize conversations into groups
 
-To find the conversations that you have with agents and chat models more easily, rename them appropriately and organize them into groups. For example, you can create a new conversation for each part of a feature you’re working on and create a group for each feature of your app.
+To find the conversations that you have with agents more easily, rename them appropriately and organize them into groups. For example, you can create a new conversation for each part of a feature you’re working on and create a group for each feature of your app.
 
 Actions you can perform on conversations:
 
-- To start a new conversation, click the New Conversation button in the toolbar and choose an agent or model.
+- To start a new conversation, click the New Conversation button and choose an agent from the pop-up menu.
 - To show the transcript for a conversation, select it in the conversation sidebar.
-- To change the name of a conversation, choose Rename Conversation from the More pop-up menu in the toolbar above the transcript or artifacts pane.
-- To hide a conversation, drag it to the existing Archive folder at the bottom of the conversation sidebar.
+- To change the name of a conversation, choose Rename Conversation from the Adjust Editor Options button pop-up menu.
+- To hide one or more conversations (use Command-click to select multiple conversations), drag them to the Archive folder at the bottom of the conversation sidebar.
+- To delete one or more conversations, select them and press Delete.
 
 Actions you can perform on groups:
 
@@ -25202,7 +26362,7 @@ Actions you can perform on groups:
 - To arrange conversations in groups, drag them to the groups and in the order you want them.
 - To collapse groups, click the disclosure triangle to the left of the group.
 
-To explore more conversation and group actions, Control-click a conversation or group and choose an option from the contextual menu.
+To explore more conversation and group actions, Control-click one or more conversations or groups, and choose an option from the contextual menu.
 
 ## See Also
 
@@ -25817,17 +26977,23 @@ Xcode includes a set of command-line tools that only ship with the app, such as 
 
 - **`agvtool`**: Manage build and version numbers. To learn more about this command, enter `man agvtool` in Terminal.
 
-<a id="Build-a-project"></a>
+<a id="Build-projects"></a>
 
-### Build a project
+### Build projects
 
-- **`xcodebuild`**: Build Xcode projects and workspaces. To learn more about this command, enter `man xcodebuild` in Terminal.
+- **`xcodebuild`**: Build Xcode projects and workspaces. To learn more about this command, enter `man xcodebuild` in Terminal. For more information, see [Managing Xcode projects using command-line tools](managing-xcode-projects-using-the-command-line.md).
 
-<a id="Debug-a-project"></a>
+<a id="Configure-projects"></a>
 
-### Debug a project
+### Configure projects
 
-- **`devicectl`**: Manage and interact with devices connected to a host. To learn more about this command, enter `xcrun devicectl help` in Terminal.
+- **`xcodeproj`**: Inspect and edit Xcode project files. To learn more about this command, enter `xcodeproj help` or `xcodeproj help <subcommand>` in Terminal.
+
+<a id="Debug-projects"></a>
+
+### Debug projects
+
+- **`devicectl`**: Manage and interact with devices connected to a host. To learn more about this command, enter `devicectl help` or `devicectl help <subcommand>` in Terminal.
 - **`xcdebug`**: Start a debugging session in Xcode. To learn more about this command, enter `xcdebug --help` in Terminal.
 
 <a id="Edit-files"></a>
@@ -59047,6 +60213,7 @@ UI testing lets you verify that when you change parts of your app’s data model
 
 ### Classes
 
+- [XCUIHinge](xcuiautomation/xcuihinge.md): A reference to the hinge on iPhone Duo.
 - [XCUIVoiceOverService](xcuiautomation/xcuivoiceoverservice.md)
 
 ### Variables
@@ -59116,6 +60283,7 @@ UI testing lets you verify that when you change parts of your app’s data model
 
 ### Classes
 
+- [XCUIHinge](xcuiautomation/xcuihinge.md): A reference to the hinge on iPhone Duo.
 - [XCUIVoiceOverService](xcuiautomation/xcuivoiceoverservice.md)
 - [XCUIVoiceOverOutput](xcuiautomation/xcuivoiceoverservice/output.md)
 
@@ -63374,6 +64542,7 @@ func testPressingActionButton() throws {
 
 ### Instance Properties
 
+- [hinge](xcuidevice/hinge.md): The device’s hinge, if it has one.
 - [voiceOverService](xcuidevice/voiceoverservice.md): Provides access to VoiceOver for UI testing.
 
 ## Relationships
@@ -63485,6 +64654,7 @@ func testPressingActionButton() throws {
 
 ### Instance Properties
 
+- [hinge](xcuidevice/hinge.md): The device’s hinge, if it has one.
 - [voiceOverService](xcuidevice/voiceoverservice.md): Provides access to VoiceOver for UI testing.
 
 ## Relationships
@@ -64275,6 +65445,52 @@ Use this method to check if the device supports the particular button type you p
 - [XCUIDeviceButton](button.md): A physical button on an iOS device.
 - [rotateDigitalCrownByDelta:](rotatedigitalcrown%28delta_%29.md): Simulates the user rotating the Digital Crown on an Apple Watch by the delta amount.
 - [rotateDigitalCrownByDelta:withVelocity:](rotatedigitalcrown%28delta_velocity_%29.md): Simulates the user rotating the Digital Crown on an Apple Watch by the delta amount and speed you provide.
+
+# Document: hinge
+
+Source path: documentation/xcuiautomation/xcuidevice/hinge
+Canonical documentation: https://developer.apple.com/documentation/xcuiautomation/xcuidevice/hinge
+Description: Framework: XCUIAutomation Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+# hinge (Swift)
+
+**Framework:** XCUIAutomation  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+The device’s hinge, if it has one.
+
+## Declaration
+
+```swift
+nonisolated var hinge: XCUIHinge? { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property is `nil` on devices that do not have a hinge.
+
+# hinge (Objective-C)
+
+**Framework:** XCUIAutomation  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+The device’s hinge, if it has one.
+
+## Declaration
+
+```objectivec
+@property (strong, readonly, nullable) XCUIHinge * hinge;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property is `nil` on devices that do not have a hinge.
 
 # Document: init()
 
@@ -85586,6 +86802,128 @@ extern const XCUIGestureVelocity XCUIGestureVelocitySlow;
 
 - [XCUIGestureVelocityDefault](default.md): A value representing a default gesture velocity.
 - [XCUIGestureVelocityFast](fast.md): A value representing a fast gesture velocity.
+
+# Document: XCUIHinge
+
+Source path: documentation/xcuiautomation/xcuihinge
+Canonical documentation: https://developer.apple.com/documentation/xcuiautomation/xcuihinge
+Description: Framework: XCUIAutomation Kind: Class Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+# XCUIHinge (Swift)
+
+**Framework:** XCUIAutomation  
+**Kind:** Class  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+A reference to the hinge on iPhone Duo.
+
+## Declaration
+
+```swift
+@MainActor class XCUIHinge
+```
+
+## Topics
+
+### Instance Properties
+
+- [angle](xcuihinge/angle.md): The hinge’s current angle, in radians.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](https://developer.apple.com/documentation/objectivec/nsobject-swift.class)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+
+# XCUIHinge (Objective-C)
+
+**Framework:** XCUIAutomation  
+**Kind:** Class  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+A reference to the hinge on iPhone Duo.
+
+## Declaration
+
+```objectivec
+@interface XCUIHinge : NSObject
+```
+
+## Topics
+
+### Instance Properties
+
+- [angle](xcuihinge/angle.md): The hinge’s current angle, in radians.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](https://developer.apple.com/documentation/objectivec/nsobject-swift.class)
+
+# Document: angle
+
+Source path: documentation/xcuiautomation/xcuihinge/angle
+Canonical documentation: https://developer.apple.com/documentation/xcuiautomation/xcuihinge/angle
+Description: Framework: XCUIAutomation Kind: Instance Property Availability: iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+# angle (Swift)
+
+**Framework:** XCUIAutomation  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+The hinge’s current angle, in radians.
+
+## Declaration
+
+```swift
+var angle: CGFloat { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Setting this property can cause the device to switch between displays. Reading the angle alone does not tell you which layout your app uses.
+
+> **Note**
+
+> On physical devices, programmatically opening the hinge while the device is closed is not supported and results in a test failure.
+
+# angle (Objective-C)
+
+**Framework:** XCUIAutomation  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+The hinge’s current angle, in radians.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) CGFloat angle;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Setting this property can cause the device to switch between displays. Reading the angle alone does not tell you which layout your app uses.
+
+> **Note**
+
+> On physical devices, programmatically opening the hinge while the device is closed is not supported and results in a test failure.
 
 # Document: XCUIIdentifierCloseWindow
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintentstesting
 
 # App Intents Testing
@@ -48,3 +48,21 @@ The [App Intents](https://developer.apple.com/documentation/appintents) framewor
 - [DynamicPropertyPath](appintentstesting/dynamicpropertypath.md): A type-safe, dynamic path to access nested intent values.
 - [DynamicPropertyPathCollection](appintentstesting/dynamicpropertypathcollection.md): Indexed result items from an intent value query.
 - [IntentValuePropertiesCallable](appintentstesting/intentvaluepropertiescallable.md): A callable wrapper that creates app intent instances from keyword arguments.
+
+### Protocols
+
+- [AppEntityExpectationProviding](appintentstesting/appentityexpectationproviding.md): Beta. A value expectation that checks an app entity’s type and, optionally, its identifier or property values.
+- [AppIntentExpectationProviding](appintentstesting/appintentexpectationproviding.md): Beta. A type that describes the app intent you expect, including its type and, optionally, its parameter values and result.
+- [IntentValueExpectation](appintentstesting/intentvalueexpectation.md): Beta. A type that describes the value you expect for an intent parameter, an app entity property, or an intent result.
+- [ResolvableAppEntityExpectation](appintentstesting/resolvableappentityexpectation.md): Beta. An entity expectation that checks an app entity as the caller passed it, before any query runs.
+- [ResolvableIntentValueExpectation](appintentstesting/resolvableintentvalueexpectation.md): Beta. A value expectation that checks a value as the caller passed it, before any query runs.
+
+### Structures
+
+- [AppEntityExpectation](appintentstesting/appentityexpectation.md): Beta. An expectation that checks an app entity’s type, its property values, and, optionally, its instance identifier.
+- [AppEntityIdentifierExpectation](appintentstesting/appentityidentifierexpectation.md): Beta. An expectation that checks whether an app entity is a specific instance by comparing its type and identifier.
+- [AppIntentExpectation](appintentstesting/appintentexpectation.md): Beta. An expectation that checks an app intent’s parameters and, optionally, the result the intent returns.
+- [IntentValueExpectationCallable](appintentstesting/intentvalueexpectationcallable.md): Beta. A value that you call with labeled value expectations to create an expectation on the corresponding parameters or properties.
+- [PredicateExpectation](appintentstesting/predicateexpectation.md): Beta. A value expectation that checks a value of any convertible type against a predicate.
+- [PrimitiveExpectation](appintentstesting/primitiveexpectation.md): Beta. A value expectation that checks whether a value is present or whether its string content matches.
+- [SkillDefinition](appintentstesting/skilldefinition.md): Beta. A definition that identifies one of an app’s skills by the app’s bundle identifier and the skill’s name.

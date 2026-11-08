@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/transportmessage/data
 
 # data
@@ -25,4 +25,4 @@ For messages from the system containing sensitive data, this data is encrypted a
 
 ### Accessing message content
 
-- [sessionID](sessionid.md): A unique identifier for the message’s capability session.
+- [sessionID](sessionid.md): A unique identifier for the feature to which the message belongs.

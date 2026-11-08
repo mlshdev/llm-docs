@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/command-line-tools
 
 # Command-line tools
@@ -18,6 +18,10 @@ You can use command-line tools to perform some actions in Terminal without runni
 - [Installing the command-line tools](installing-the-command-line-tools.md): Install command-line tools for Xcode using an installer package or the Terminal app.
 - [Configuring command-line tools settings](configuring-command-line-tools-settings.md): Select the version of Xcode you want to use for command-line tools, in either Xcode settings or Terminal.
 - [Xcode command-line tool reference](xcode-command-line-tool-reference.md): Use command-line tools that require you to install Xcode and set the app as the active developer directory.
+
+### Project configuration
+
+- [Managing Xcode projects using command-line tools](managing-xcode-projects-using-the-command-line.md): Edit build settings, targets, build phases, groups, and Swift package dependencies.
 
 ### Debugging
 

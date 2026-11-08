@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintentstesting/appentitydefinition
 
 # AppEntityDefinition
@@ -70,8 +70,13 @@ let entity = landmarkEntity.makeReference(
 - [typeIdentifier](appentitydefinition/typeidentifier.md): The entity type’s unique identifier.
 - [bundleIdentifier](appentitydefinition/bundleidentifier.md): The bundle identifier of the app that includes the app entity.
 
+### Instance Properties
+
+- [expect](appentitydefinition/expect.md): Beta. A callable that creates an entity expectation from value expectations for the entity’s properties.
+
 ### Instance Methods
 
+- [expectIdentifier(\_:)](appentitydefinition/expectidentifier%28__%29.md): Beta. Creates an expectation that an app entity is the instance with the specified identifier.
 - [resolved(from:)](appentitydefinition/resolved%28from_%29-2fld0.md): Resolves an entity from an exported intent file through the entity type’s transferable conformance.
 - [resolved(from:)](appentitydefinition/resolved%28from_%29-4yp5n.md): Resolves an entity from a system intent value type through the entity type’s transferable conformance.
 - [resolved(from:)](appentitydefinition/resolved%28from_%29-7c04a.md): Resolves an entity from a transferable intent value type through the entity type’s transferable conformance.
@@ -84,12 +89,16 @@ let entity = landmarkEntity.makeReference(
 
 ### Conforms To
 
+- [AppEntityExpectationProviding](appentityexpectationproviding.md)
 - [AppIntentTypeDefinition](appintenttypedefinition.md)
 - [Copyable](https://developer.apple.com/documentation/swift/copyable)
 - [Decodable](https://developer.apple.com/documentation/swift/decodable)
 - [Encodable](https://developer.apple.com/documentation/swift/encodable)
 - [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [IntentValueExpectation](intentvalueexpectation.md)
+- [ResolvableAppEntityExpectation](resolvableappentityexpectation.md)
+- [ResolvableIntentValueExpectation](resolvableintentvalueexpectation.md)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 

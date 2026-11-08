@@ -1,11 +1,11 @@
-# Apple iOS and iPadOS snapshot-5fac215cc84f
+# Apple iOS and iPadOS snapshot-0edb2c9c8b69
 
-> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/ios/](https://developer.apple.com/ios/) and pinned to catalog snapshot `5fac215cc84f90d3ea4e87344e0195c3fdcf1bba7f759108274c54b9ff661215` captured at 2026-10-29T19:20:35.406Z.
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/ios/](https://developer.apple.com/ios/) and pinned to catalog snapshot `0edb2c9c8b6974098c4f5041f38e17d41914df6ce4bf93bd90e9c545a2e4e309` captured at 2026-11-08T22:37:20.684Z.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple iOS and iPadOS snapshot-5fac215cc84f.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple iOS and iPadOS snapshot-0edb2c9c8b69.
 - [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
 - Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
-- 46 frameworks in this catalog, captured at 2026-10-29T19:20:35.406Z.
+- 45 frameworks in this catalog, captured at 2026-11-08T22:37:20.684Z.
 - Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
 - Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.
 - Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
@@ -14,10 +14,9 @@
 
 - [AVSystemRouting](pages/avsystemrouting.md): 90 pages. Platforms: iOS, iPadOS, Mac Catalyst.
 - [Accessory Live Activities](pages/accessoryliveactivities.md): 34 pages. Platforms: iOS, iPadOS, Mac Catalyst.
-- [Accessory Notifications](pages/accessorynotifications.md): 97 pages. Platforms: iOS.
-- [Accessory Transport Extension](pages/accessorytransportextension.md): 105 pages. Platforms: iOS.
+- [Accessory Notifications](pages/accessorynotifications.md): 99 pages. Platforms: iOS.
+- [Accessory Transport Extension](pages/accessorytransportextension.md): 152 pages. Platforms: iOS.
 - [AccessorySetupKit](pages/accessorysetupkit.md): 161 pages. Platforms: iOS, iPadOS.
-- [ActivityKit](pages/activitykit.md): 121 pages. Platforms: iOS, iPadOS, Mac Catalyst.
 - [AdAttributionKit](pages/adattributionkit.md): 67 pages. Platforms: iOS, iPadOS, Mac Catalyst.
 - [Address Book UI](pages/addressbookui.md): 68 pages. Platforms: iOS, iPadOS, Mac Catalyst.
 - [AlarmKit](pages/alarmkit.md): 128 pages. Platforms: iOS, iPadOS, Mac Catalyst.
@@ -57,37 +56,38 @@
 - [Wi-Fi Infrastructure](pages/wifiinfrastructure.md): 187 pages. Platforms: iOS, iPadOS, Mac Catalyst.
 - [WirelessInsights](pages/wirelessinsights.md): 29 pages. Platforms: iOS, iPadOS.
 - [iAd](pages/iad.md): 26 pages. Platforms: iOS, iPadOS, Mac Catalyst.
-- [iOS & iPadOS Release Notes](pages/ios-ipados-release-notes.md): 64 pages.
+- [iOS & iPadOS Release Notes](pages/ios-ipados-release-notes.md): 65 pages.
 
 ## Frameworks shared with other platforms
 
 These frameworks are available on iOS but are published by another project in this repository, so their pages are stored once rather than duplicated per platform.
 
 - [ARKit](../apple-frameworks/pages/arkit.md): 2554 pages.
-- [AVFAudio](../apple-frameworks/pages/avfaudio.md): 1576 pages.
-- [AVFoundation](../apple-frameworks/pages/avfoundation.md): 5606 pages.
+- [AVFAudio](../apple-frameworks/pages/avfaudio.md): 1610 pages.
+- [AVFoundation](../apple-frameworks/pages/avfoundation.md): 5611 pages.
 - [AVKit](../apple-frameworks/pages/avkit.md): 706 pages.
 - [AVRouting](../apple-frameworks/pages/avrouting.md): 38 pages.
 - [Accelerate](../apple-frameworks/pages/accelerate.md): 8904 pages.
 - [Accessibility](../apple-frameworks/pages/accessibility.md): 338 pages.
 - [Accounts](../apple-frameworks/pages/accounts.md): 83 pages.
+- [ActivityKit](../apple-frameworks/pages/activitykit.md): 121 pages.
 - [AdServices](../apple-frameworks/pages/adservices.md): 15 pages.
 - [AdSupport](../apple-frameworks/pages/adsupport.md): 5 pages.
 - [Address Book](../apple-frameworks/pages/addressbook.md): 676 pages.
-- [App Intents](../apple-frameworks/pages/appintents.md): 4449 pages.
-- [App Intents Testing](../apple-xcode/pages/appintentstesting.md): 118 pages.
+- [App Intents](../apple-frameworks/pages/appintents.md): 4544 pages.
+- [App Intents Testing](../apple-xcode/pages/appintentstesting.md): 149 pages.
 - [App Tracking Transparency](../apple-frameworks/pages/apptrackingtransparency.md): 13 pages.
 - [Apple Archive](../apple-frameworks/pages/applearchive.md): 653 pages.
 - [Apple CryptoKit](../apple-frameworks/pages/cryptokit.md): 705 pages.
-- [Audio Toolbox](../apple-frameworks/pages/audiotoolbox.md): 3731 pages.
+- [Audio Toolbox](../apple-frameworks/pages/audiotoolbox.md): 3743 pages.
 - [Audio Unit](../apple-frameworks/pages/audiounit.md): 2 pages.
-- [Authentication Services](../apple-frameworks/pages/authenticationservices.md): 1454 pages.
+- [Authentication Services](../apple-frameworks/pages/authenticationservices.md): 1469 pages.
 - [Automatic Assessment Configuration](../apple-frameworks/pages/automaticassessmentconfiguration.md): 156 pages.
 - [Background Assets](../apple-frameworks/pages/backgroundassets.md): 253 pages.
 - [Background Tasks](../apple-frameworks/pages/backgroundtasks.md): 64 pages.
 - [BrowserEngineCore](../apple-webkit/pages/browserenginecore.md): 30 pages.
 - [BrowserEngineKit](../apple-webkit/pages/browserenginekit.md): 471 pages.
-- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 929 pages.
+- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 930 pages.
 - [CFNetwork](../apple-frameworks/pages/cfnetwork.md): 419 pages.
 - [CallKit](../apple-frameworks/pages/callkit.md): 284 pages.
 - [Cinematic](../apple-frameworks/pages/cinematic.md): 400 pages.
@@ -113,7 +113,7 @@ These frameworks are available on iOS but are published by another project in th
 - [Core Location](../apple-frameworks/pages/corelocation.md): 568 pages.
 - [Core MIDI](../apple-frameworks/pages/coremidi.md): 1093 pages.
 - [Core ML](../apple-frameworks/pages/coreml.md): 794 pages.
-- [Core Media](../apple-frameworks/pages/coremedia.md): 2561 pages.
+- [Core Media](../apple-frameworks/pages/coremedia.md): 2562 pages.
 - [Core Motion](../apple-frameworks/pages/coremotion.md): 434 pages.
 - [Core Services](../apple-frameworks/pages/coreservices.md): 15777 pages.
 - [Core Spotlight](../apple-frameworks/pages/corespotlight.md): 815 pages.
@@ -137,17 +137,17 @@ These frameworks are available on iOS but are published by another project in th
 - [DeviceDiscoveryUI](../apple-frameworks/pages/devicediscoveryui.md): 25 pages.
 - [Dispatch](../apple-frameworks/pages/dispatch.md): 612 pages.
 - [Distributed](../apple-swift/pages/distributed.md): 95 pages.
-- [DriverKit](../apple-frameworks/pages/driverkit.md): 2962 pages.
-- [Evaluations](../apple-frameworks/pages/evaluations.md): 347 pages.
+- [DriverKit](../apple-frameworks/pages/driverkit.md): 2963 pages.
+- [Evaluations](../apple-frameworks/pages/evaluations.md): 366 pages.
 - [EventKit](../apple-frameworks/pages/eventkit.md): 425 pages.
 - [EventKit UI](../apple-frameworks/pages/eventkitui.md): 55 pages.
-- [ExtensionFoundation](../apple-frameworks/pages/extensionfoundation.md): 97 pages.
+- [ExtensionFoundation](../apple-frameworks/pages/extensionfoundation.md): 99 pages.
 - [ExtensionKit](../apple-frameworks/pages/extensionkit.md): 39 pages.
 - [External Accessory](../apple-frameworks/pages/externalaccessory.md): 92 pages.
 - [File Provider](../apple-frameworks/pages/fileprovider.md): 505 pages.
 - [File Provider UI](../apple-frameworks/pages/fileproviderui.md): 21 pages.
-- [Foundation](../apple-frameworks/pages/foundation.md): 14118 pages.
-- [Foundation Models](../apple-frameworks/pages/foundationmodels.md): 768 pages.
+- [Foundation](../apple-frameworks/pages/foundation.md): 14123 pages.
+- [Foundation Models](../apple-frameworks/pages/foundationmodels.md): 790 pages.
 - [GLKit](../apple-frameworks/pages/glkit.md): 531 pages.
 - [GSS](../apple-frameworks/pages/gss.md): 438 pages.
 - [Game Controller](../apple-frameworks/pages/gamecontroller.md): 1194 pages.
@@ -156,13 +156,13 @@ These frameworks are available on iOS but are published by another project in th
 - [GameplayKit](../apple-frameworks/pages/gameplaykit.md): 509 pages.
 - [GeoToolbox](../apple-frameworks/pages/geotoolbox.md): 20 pages.
 - [Group Activities](../apple-frameworks/pages/groupactivities.md): 253 pages.
-- [HealthKit](../apple-frameworks/pages/healthkit.md): 2150 pages.
+- [HealthKit](../apple-frameworks/pages/healthkit.md): 2159 pages.
 - [HealthKitUI](../apple-frameworks/pages/healthkitui.md): 4 pages.
 - [HomeKit](../apple-frameworks/pages/homekit.md): 1354 pages.
 - [IOKit](../apple-frameworks/pages/iokit.md): 14367 pages.
 - [IOSurface](../apple-frameworks/pages/iosurface.md): 219 pages.
-- [IdentityDocumentServices](../apple-frameworks/pages/identitydocumentservices.md): 81 pages.
-- [IdentityDocumentServicesUI](../apple-frameworks/pages/identitydocumentservicesui.md): 30 pages.
+- [IdentityDocumentServices](../apple-frameworks/pages/identitydocumentservices.md): 167 pages.
+- [IdentityDocumentServicesUI](../apple-frameworks/pages/identitydocumentservicesui.md): 49 pages.
 - [Image I/O](../apple-frameworks/pages/imageio.md): 915 pages.
 - [Image Playground](../apple-frameworks/pages/imageplayground.md): 78 pages.
 - [ImageCaptureCore](../apple-frameworks/pages/imagecapturecore.md): 763 pages.
@@ -171,14 +171,14 @@ These frameworks are available on iOS but are published by another project in th
 - [JavaScriptCore](../apple-frameworks/pages/javascriptcore.md): 371 pages.
 - [LightweightCodeRequirements](../apple-frameworks/pages/lightweightcoderequirements.md): 212 pages.
 - [Link Presentation](../apple-webkit/pages/linkpresentation.md): 64 pages.
-- [LiveCommunicationKit](../apple-frameworks/pages/livecommunicationkit.md): 185 pages.
+- [LiveCommunicationKit](../apple-frameworks/pages/livecommunicationkit.md): 192 pages.
 - [Local Authentication](../apple-frameworks/pages/localauthentication.md): 245 pages.
 - [Local Authentication Embedded UI](../apple-frameworks/pages/localauthenticationembeddedui.md): 8 pages.
 - [ML Compute](../apple-frameworks/pages/mlcompute.md): 817 pages.
 - [ManagedApp](../apple-frameworks/pages/managedapp.md): 35 pages.
 - [ManagedAppDistribution](../apple-frameworks/pages/managedappdistribution.md): 90 pages.
 - [MapKit](../apple-frameworks/pages/mapkit.md): 1295 pages.
-- [Matter](../apple-frameworks/pages/matter.md): 24380 pages.
+- [Matter](../apple-frameworks/pages/matter.md): 24387 pages.
 - [MatterSupport](../apple-frameworks/pages/mattersupport.md): 68 pages.
 - [Media Accessibility](../apple-frameworks/pages/mediaaccessibility.md): 101 pages.
 - [Media Intelligence](../apple-frameworks/pages/mediaintelligence.md): 77 pages.
@@ -214,7 +214,7 @@ These frameworks are available on iOS but are published by another project in th
 - [PencilKit](../apple-frameworks/pages/pencilkit.md): 418 pages.
 - [PermissionKit](../apple-frameworks/pages/permissionkit.md): 108 pages.
 - [PhotoKit](../apple-frameworks/pages/photokit.md): 23 pages.
-- [Photos](../apple-frameworks/pages/photos.md): 702 pages.
+- [Photos](../apple-frameworks/pages/photos.md): 703 pages.
 - [PhotosUI](../apple-frameworks/pages/photosui.md): 312 pages.
 - [PushKit](../apple-frameworks/pages/pushkit.md): 30 pages.
 - [Quick Look](../apple-frameworks/pages/quicklook.md): 175 pages.
@@ -229,11 +229,12 @@ These frameworks are available on iOS but are published by another project in th
 - [SceneKit](../apple-frameworks/pages/scenekit.md): 1689 pages.
 - [Screen Time](../apple-webkit/pages/screentime.md): 28 pages.
 - [ScreenCaptureKit](../apple-frameworks/pages/screencapturekit.md): 337 pages.
-- [Security](../apple-frameworks/pages/security.md): 7313 pages.
+- [Security](../apple-frameworks/pages/security.md): 7326 pages.
 - [Sensitive Content Analysis](../apple-frameworks/pages/sensitivecontentanalysis.md): 43 pages.
 - [ShaderGraph](../apple-xcode/pages/shadergraph.md): 249 pages.
-- [Shared with You](../apple-frameworks/pages/sharedwithyou.md): 128 pages.
+- [Shared with You](../apple-frameworks/pages/sharedwithyou.md): 147 pages.
 - [ShazamKit](../apple-frameworks/pages/shazamkit.md): 166 pages.
+- [Siri Evaluations](../apple-frameworks/pages/sirievaluations.md): 133 pages.
 - [SiriKit](../apple-frameworks/pages/sirikit.md): 57 pages.
 - [Social](../apple-frameworks/pages/social.md): 67 pages.
 - [Sound Analysis](../apple-frameworks/pages/soundanalysis.md): 73 pages.
@@ -241,36 +242,36 @@ These frameworks are available on iOS but are published by another project in th
 - [Speech](../apple-frameworks/pages/speech.md): 387 pages.
 - [SpriteKit](../apple-frameworks/pages/spritekit.md): 1150 pages.
 - [StateReporting](../apple-frameworks/pages/statereporting.md): 38 pages.
-- [StoreKit](../apple-frameworks/pages/storekit.md): 1439 pages.
+- [StoreKit](../apple-frameworks/pages/storekit.md): 1521 pages.
 - [StoreKit Test](../apple-xcode/pages/storekittest.md): 251 pages.
 - [Suggested Actions](../apple-frameworks/pages/suggestedactions.md): 9 pages.
-- [Swift](../apple-swift/pages/swift.md): 18441 pages.
+- [Swift](../apple-swift/pages/swift.md): 18456 pages.
 - [Swift Charts](../apple-frameworks/pages/charts.md): 595 pages.
 - [SwiftData](../apple-frameworks/pages/swiftdata.md): 551 pages.
-- [SwiftUI](../apple-swiftui/pages/swiftui.md): 7196 pages.
+- [SwiftUI](../apple-swiftui/pages/swiftui.md): 7206 pages.
 - [Symbols](../apple-frameworks/pages/symbols.md): 230 pages.
 - [Synchronization](../apple-swift/pages/synchronization.md): 196 pages.
 - [System](../apple-frameworks/pages/system.md): 446 pages.
 - [System Configuration](../apple-frameworks/pages/systemconfiguration.md): 946 pages.
 - [TabularData](../apple-frameworks/pages/tabulardata.md): 844 pages.
-- [ThreadNetwork](../apple-frameworks/pages/threadnetwork.md): 29 pages.
+- [ThreadNetwork](../apple-frameworks/pages/threadnetwork.md): 32 pages.
 - [TipKit](../apple-frameworks/pages/tipkit.md): 190 pages.
 - [Touch Controller](../apple-frameworks/pages/touchcontroller.md): 279 pages.
 - [Translation](../apple-frameworks/pages/translation.md): 70 pages.
-- [UIKit](../apple-frameworks/pages/uikit.md): 12805 pages.
+- [UIKit](../apple-frameworks/pages/uikit.md): 12816 pages.
 - [USDKit](../apple-frameworks/pages/usdkit.md): 1151 pages.
 - [Uniform Type Identifiers](../apple-frameworks/pages/uniformtypeidentifiers.md): 360 pages.
 - [User Notifications](../apple-frameworks/pages/usernotifications.md): 287 pages.
 - [User Notifications UI](../apple-frameworks/pages/usernotificationsui.md): 20 pages.
 - [Video Subscriber Account](../apple-frameworks/pages/videosubscriberaccount.md): 185 pages.
-- [Video Toolbox](../apple-frameworks/pages/videotoolbox.md): 918 pages.
+- [Video Toolbox](../apple-frameworks/pages/videotoolbox.md): 919 pages.
 - [VisionKit](../apple-frameworks/pages/visionkit.md): 274 pages.
 - [Visual Intelligence](../apple-frameworks/pages/visualintelligence.md): 9 pages.
 - [Wallet Orders](../apple-frameworks/pages/walletorders.md): 31 pages.
 - [Wallet Passes](../apple-frameworks/pages/walletpasses.md): 63 pages.
 - [Watch Connectivity](../apple-frameworks/pages/watchconnectivity.md): 105 pages.
 - [WeatherKit](../apple-frameworks/pages/weatherkit.md): 429 pages.
-- [WebKit](../apple-webkit/pages/webkit.md): 3190 pages.
+- [WebKit](../apple-webkit/pages/webkit.md): 3192 pages.
 - [WidgetKit](../apple-frameworks/pages/widgetkit.md): 329 pages.
 - [WorkoutKit](../apple-frameworks/pages/workoutkit.md): 155 pages.
 - [XPC](../apple-frameworks/pages/xpc.md): 753 pages.

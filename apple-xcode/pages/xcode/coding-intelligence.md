@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/coding-intelligence
 
 # Coding intelligence
@@ -9,20 +9,22 @@ Use agents to help you explore code, add features, refine your interface, and le
 
 ## Overview
 
-You interact with an agent or large language model of your choice by entering a series of natural language prompts to ask questions and give instructions. The agent or model refines its responses to your prompts based on previous interactions and any project context that you give it. Xcode presents the responses and changes that it makes to your project files for your review. You can enter another prompt or undo changes, and you can later roll back changes to a previous state. Xcode preserves all your interactions in conversations that you can refer to and organize into groups.
+You interact with the agent of your choice by entering a series of natural language prompts to ask questions and give instructions. The agent refines its responses to your prompts based on previous interactions and any project context that you give it.
+
+Xcode presents the responses and changes that it makes to your project files for your review. You can enter another prompt or roll back changes to a previous state. Xcode preserves all your interactions in conversations that you can refer to and organize into groups.
 
 You can access Xcode intelligence from anywhere in your project, including the source editor, and it blends seamlessly into your workspace. The conversation sidebar behaves like the Project navigator. You can lay out and create tabs for the transcript and artifacts panes, similar to editor panes. You can arrange your workspace to run multiple agents in parallel while editing files in another pane.
 
 ![A screenshot of the project window with the conversation sidebar on the left, a transcript in the middle with a message text field below, and the artifacts pane on the right.](https://developer.apple.com/images/com.apple.Xcode/coding-assistant-anatomy@2x.png)
 
-Before you begin, set up an agent or model in Intelligence settings and choose it in the coding assistant sidebar. For more information, see [Setting up coding intelligence](setting-up-coding-intelligence.md).
+Before you begin, set up one or more agents in Intelligence settings and choose one in the coding assistant sidebar. For more information, see [Setting up coding intelligence](setting-up-coding-intelligence.md).
 
 ## Topics
 
 ### Essentials
 
 - [Setting up coding intelligence](setting-up-coding-intelligence.md): Enable intelligence tools that you want to use in Xcode.
-- [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md): Start conversations with an agent or model in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
+- [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md): Start conversations with an agent in Xcode to generate code, navigate unfamiliar codebases, and fix or refactor existing code.
 - [Using coding intelligence in the source editor](using-coding-intelligence-in-the-source-editor.md): Submit prompts in the same place you want to make changes to your code.
 
 ### Skills and expertise

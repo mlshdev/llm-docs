@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintentstesting/appintentdefinition
 
 # AppIntentDefinition
@@ -49,13 +49,24 @@ let intent = orderIntent.makeIntent(
 - [identifier](appintentdefinition/identifier.md): The intent’s identifier.
 - [bundleIdentifier](appintentdefinition/bundleidentifier.md): The bundle identifier of the app that includes this intent.
 
+### Instance Properties
+
+- [expect](appintentdefinition/expect.md): Beta. A callable that creates an intent expectation from value expectations for the intent’s parameters.
+
+### Instance Methods
+
+- [result(\_:)](appintentdefinition/result%28__%29.md): Beta. Creates an intent expectation that checks the result the intent returns, but none of its parameters.
+
 ## Relationships
 
 ### Conforms To
 
+- [AppIntentExpectationProviding](appintentexpectationproviding.md)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
 - [Decodable](https://developer.apple.com/documentation/swift/decodable)
 - [Encodable](https://developer.apple.com/documentation/swift/encodable)
 - [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 

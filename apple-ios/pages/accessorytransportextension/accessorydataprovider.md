@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessorydataprovider
 
 # AccessoryDataProvider
@@ -7,7 +7,7 @@
 **Kind:** Protocol  
 **Availability:** iOS 26.5+
 
-A protocol for an extension that receives iOS system notifications and curates their data for your accessory.
+A protocol for an extension that provides your accessory’s data for one or more of the framework’s features.
 
 ## Declaration
 
@@ -18,13 +18,14 @@ protocol AccessoryDataProvider : AppExtension, Sendable where Self.Configuration
 ## Mentioned In
 
 - [Receiving iOS notifications on an accessory](receiving-ios-notifications-on-an-accessory.md)
+- [Sending data to an accessory in the background](sending-data-to-an-accessory-in-the-background.md)
 - [Forwarding notifications to your accessory using the internet transport type](forwarding-notifications-to-your-accessory-using-the-internet-transport-type.md)
 
 <a id="overview"></a>
 
 ## Overview
 
-Implement this protocol in an extension with an `EXExtensionPointIdentifier` value of `com.apple.accessory-data-provider` to receive notification data for eventual forwarding to an accessory that you develop. The extension runs in a sandboxed environment and communicates with the system through the extension’s configuration object ([AccessoryDataProviderConfiguration](accessorydataproviderconfiguration.md)).
+Implement this protocol in an extension with an `EXExtensionPointIdentifier` value of `com.apple.accessory-data-provider` to support features such as forwarding iOS system notifications, forwarding Live Activities, or running your own background work on an accessory that you develop. The extension runs in a sandboxed environment and communicates with the system through the extension’s configuration object ([AccessoryDataProviderConfiguration](accessorydataproviderconfiguration.md)). For more information about features, see [Accessory features](accessory-features.md).
 
 > **Important**
 
@@ -34,7 +35,7 @@ Implement this protocol in an extension with an `EXExtensionPointIdentifier` val
 
 ## Add the necessary target configuration
 
-In your extension’s target properties, include the `EXCapabilities` key with the value `AccessoryNotifications.NotificationsForwarding`:
+In your extension’s target properties, include the `EXCapabilities` key with a value for each feature you support. For example, an extension that forwards iOS system notifications sets this value to `AccessoryNotifications.NotificationsForwarding`:
 
 ```xml
 <plist>
@@ -56,9 +57,10 @@ In your extension’s target properties, include the `EXCapabilities` key with t
 
 ## Implement the extension point
 
-In your extension’s Swift code, implement the protocol and declare the capability with your [NotificationsForwarding.AccessoryNotificationsHandler](../accessorynotifications/notificationsforwarding/accessorynotificationshandler.md) implementation:
+In your extension’s Swift code, implement the protocol and declare each feature you support in the `extensionPoint` body. The following example declares the [NotificationsForwarding](../accessorynotifications/notificationsforwarding.md) feature with a handler that conforms to [NotificationsForwarding.AccessoryNotificationsHandler](../accessorynotifications/notificationsforwarding/accessorynotificationshandler.md); other features, such as [AccessoryWorker](accessoryworker.md), [LiveActivityForwarding](../accessoryliveactivities/liveactivityforwarding.md), or [AudioAccessoryHeadTracking](../audioaccessorykit/audioaccessoryheadtracking.md), follow the same strategy with their own handler type:
 
 ```swift
+@main
 struct DataProvider: AccessoryDataProvider {
     var extensionPoint: AppExtensionPoint {
         Identifier("com.apple.accessory-data-provider")
@@ -79,7 +81,7 @@ class MyNotificationsHandler: AccessoryNotificationsHandler {
 
 ## Share data between the app and the extension
 
-Configure a shared app group so your companion app can provide information to the extension. The extension has read-only access to the shared container. Use the shared container to store:
+Configure a shared app group so your companion app can provide information to the extension. The extension has read-only access to the shared container, with one exception: [AccessoryWorker](accessoryworker.md) has write access, so it can save information for your companion app to read the next time it launches. The system groups the features your extension declares into separate sandboxed processes by feature, and only the process hosting [AccessoryWorker](accessoryworker.md) has this exception; [AccessoryGPUWorker](accessorygpuworker.md) and every other feature are read-only, even when your extension target declares both. Use the shared container to store:
 
 - Authentication tokens for your private servers
 - Accessory-specific preferences (max payload size, content filtering)
@@ -95,7 +97,7 @@ let sharedDefaults = UserDefaults(suiteName: "group.com.yourcompany.accessoryapp
 let authToken = sharedDefaults?.string(forKey: "ServerAuthToken")
 ```
 
-For more information, see [Receiving iOS notifications on an accessory](receiving-ios-notifications-on-an-accessory.md).
+For more information, see [Receiving iOS notifications on an accessory](receiving-ios-notifications-on-an-accessory.md) and [Sending data to an accessory in the background](sending-data-to-an-accessory-in-the-background.md).
 
 ## Relationships
 
@@ -107,11 +109,13 @@ For more information, see [Receiving iOS notifications on an accessory](receivin
 
 ## See Also
 
-### Notification forwarding
+### Notification and Live Activity forwarding
 
 - [Receiving iOS notifications on an accessory](receiving-ios-notifications-on-an-accessory.md): Create custom app extensions that manage iOS system notifications for your accessory.
+- [Receiving Live Activity updates and alerts on an accessory](../accessoryliveactivities/receiving-live-activities-on-an-accessory.md): Enable your accessory to receive forwarded Live Activities by updating your data provider extension.
 - [Forwarding notifications to your accessory using the internet transport type](forwarding-notifications-to-your-accessory-using-the-internet-transport-type.md): Send notification data to your accessory over the internet when Bluetooth connectivity is unavailable.
 - [AccessoryDataProviderConfiguration](accessorydataproviderconfiguration.md): A protocol that configures and manages communication between the extension and the system.
 - [AccessoryTransportSecurity](accessorytransportsecurity.md): A protocol for an extension that handles cryptographic key exchange with your accessory.
 - [AccessoryTransportSecurityConfiguration](accessorytransportsecurityconfiguration.md): A protocol that configures and manages communication between your security extension and the system.
 - [Accessory Notifications](../accessorynotifications.md): Receive forwarded iOS system notifications on an accessory that you develop.
+- [Accessory Live Activities](../accessoryliveactivities.md): Forward Live Activity alerts from iPhone to an accessory you develop.

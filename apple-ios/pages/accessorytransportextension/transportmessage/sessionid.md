@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/transportmessage/sessionid
 
 # sessionID
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 26.5+
 
-A unique identifier for the message’s capability session.
+A unique identifier for the feature to which the message belongs.
 
 ## Declaration
 
@@ -23,7 +23,7 @@ let sessionID: UUID
 
 ## Discussion
 
-This identifier correlates messages with their capability (such as notifications or Live Activities). The system generates the session ID at feature enrollment time, and the value is fixed while the accessory remains paired through AccessorySetupKit.
+This identifier specifies the feature to which an incoming message belongs. It’s the feature ID your accessory uses when it derives encryption secrets. For internet transport, your accessory also includes the identifier in responses to help the system deliver them to the correct data provider extension. It isn’t the same value as [featureID](../accessoryfeature/featureid.md), which names a feature type. The value is fixed while the accessory remains paired through AccessorySetupKit.
 
 ## See Also
 

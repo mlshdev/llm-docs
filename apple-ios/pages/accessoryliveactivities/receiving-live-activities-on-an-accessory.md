@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessoryliveactivities/receiving-live-activities-on-an-accessory
 
 # Receiving Live Activity updates and alerts on an accessory
@@ -122,7 +122,7 @@ func activate(for session: LiveActivityForwarding.Session) {
 
 When the system forwards a Live Activity update to your data provider extension, it provides your handler with an [AccessoryLiveActivity](accessoryliveactivity.md) object you use to update the accessory’s display. Use [activityUpdated(\_:)](liveactivityforwarding/accessoryliveactivitieshandler/activityupdated%28__%29.md) to update your accessory to reflect the current Live Activity state. When the update includes an alert, the system calls [activityUpdatedForAlert(\_:)](liveactivityforwarding/accessoryliveactivitieshandler/activityupdatedforalert%28__%29.md) instead. Return a `Bool` indicating whether your accessory displayed the alert so the system coordinates alert delivery across devices.
 
-If the callback’s activity’s [state](accessoryliveactivity/state.md) property equals [ActivityState.dismissed](../activitykit/activitystate/dismissed.md), remove the Live Activity from the accessory’s display.
+If the callback’s activity’s [state](accessoryliveactivity/state.md) property equals [ActivityState.dismissed](https://developer.apple.com/documentation/activitykit/activitystate/dismissed), remove the Live Activity from the accessory’s display.
 
 To send forwarded Live Activities from your data provider extension to your accessory, use the extension model and code you added to support iOS system notifications. For more information, see [Receiving iOS notifications on an accessory](../accessorytransportextension/receiving-ios-notifications-on-an-accessory.md).
 

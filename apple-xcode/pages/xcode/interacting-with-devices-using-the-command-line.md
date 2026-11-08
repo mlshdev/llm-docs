@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/interacting-with-devices-using-the-command-line
 
 # Interacting with devices using the command line
@@ -40,6 +40,8 @@ To pair physical devices that you connect to your Mac with a cable, enter this c
 ```shell
 % devicectl manage pair
 ```
+
+This command also pairs Apple TV and Apple Vision Pro devices wirelessly.
 
 To use Device Hub to pair physical devices with your Mac, either wirelessly or with a cable, see [Managing your simulated and physical devices in Device Hub](managing-your-simulated-and-physical-devices-in-device-hub.md).
 

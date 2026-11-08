@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessorysecuritysession
 
 # AccessorySecuritySession
@@ -53,9 +53,8 @@ The security session handles a key exchange process (see `AccessorySecurity/Even
 
 ## See Also
 
-### Data and sessions
+### Transport messaging and security
 
-- [AccessoryFeature](accessoryfeature.md): A protocol that defines a capability for an accessory data provider extension.
 - [AccessoryMessage](accessorymessage.md): A structure that represents a message to send to an accessory.
 - [TransportMessage](transportmessage.md): A structure that represents a message for transmission between the system and an accessory.
 - [SecurityMessage](securitymessage.md): A structure that carries key material for a secure channel between the system and an accessory.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ecd62262bd5e; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/embedding-a-helper-tool-in-a-sandboxed-app
 
 # Embedding a command-line tool in a sandboxed app
@@ -250,3 +250,4 @@ To validate your work, follow the process described in [Build and Validate](embe
 - [Adding package dependencies to your app](adding-package-dependencies-to-your-app.md): Integrate package dependencies to share code between projects, or leverage code from other developers.
 - [Creating a Mac version of your iPad app](https://developer.apple.com/documentation/uikit/creating-a-mac-version-of-your-ipad-app): Bring your iPad app to macOS with Mac Catalyst.
 - [Setting up a watchOS project](https://developer.apple.com/documentation/watchos-apps/setting-up-a-watchos-project): Create a new watchOS project or add a watch target to an existing iOS project.
+- [Managing Xcode projects using command-line tools](managing-xcode-projects-using-the-command-line.md): Edit build settings, targets, build phases, groups, and Swift package dependencies.

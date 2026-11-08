@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5fac215cc84f; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessoryliveactivities/liveactivityforwarding/accessoryliveactivitieshandler/activityupdated(_:)
 
 # activityUpdated(\_:)
@@ -29,7 +29,7 @@ func activityUpdated(_ activity: AccessoryLiveActivity)
 
 Use this callback method to keep the accessory’s display in sync with the current state of the Live Activity. Parse the activity’s details, select the information to display on your accessory, and convert it to data for transmission. Then, send the data to your accessory using the Live Activity’s corresponding [LiveActivityForwarding.Session](../session.md) and its `LiveActivityForwarding/Session/send(message:)` method.
 
-If the activity’s [state](../../accessoryliveactivity/state.md) property equals [ActivityState.dismissed](../../../activitykit/activitystate/dismissed.md), remove the Live Activity from the accessory’s display.
+If the activity’s [state](../../accessoryliveactivity/state.md) property equals [ActivityState.dismissed](https://developer.apple.com/documentation/activitykit/activitystate/dismissed), remove the Live Activity from the accessory’s display.
 
 ## See Also
 
