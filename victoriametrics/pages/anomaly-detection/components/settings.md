@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/anomaly-detection/components/settings.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/components/settings.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/anomaly-detection/components/settings.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/settings.md)
 
 Through the **Settings** section of a config, you can configure the following parameters of the anomaly detection service:
 
@@ -347,7 +347,7 @@ Here's an example configuration that enables retention with a TTL of 1 day and a
 - Model instances that have not been used for inference or refitting within the last day will be cleaned up every 30 minutes (m2 example on a diagram)
 - While model instances used for inference within the last day at least 1 time will be retained (m1 example on a diagram)
 
-![Retention Example Diagram](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/components/vmanomaly-ttl-example.webp)
+![Retention Example Diagram](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/vmanomaly-ttl-example.webp)
 
 ```yaml
 schedulers:

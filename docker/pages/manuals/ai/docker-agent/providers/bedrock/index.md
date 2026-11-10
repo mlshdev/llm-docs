@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/bedrock/index.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/_vendor/github.com/docker/docker-agent/docs/providers/bedrock/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/providers/bedrock/index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/_vendor/github.com/docker/docker-agent/docs/providers/bedrock/index.md)
 
 *Access Claude, Nova, Llama, and more through AWS infrastructure with enterprise-grade security and compliance.*
 

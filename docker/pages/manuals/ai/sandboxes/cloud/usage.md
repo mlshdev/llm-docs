@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/cloud/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/cloud/usage.md)
 
 # Use cloud sandboxes
 
@@ -356,7 +356,7 @@ Configure [cloud credentials](https://docs.docker.com/ai/sandboxes/cloud/credent
 
 Use `--kit-arg` or `--kit-args-file` with `sbx --cloud create` to pass
 arguments to kits supplied with `--kit`.
-For example, configure a v2 mixin that declares a `version` argument:
+For example, configure a mixin that declares a `version` argument:
 
 ```console
 $ sbx --cloud create --name cloud-tools claude \
@@ -366,7 +366,7 @@ $ sbx --cloud create --name cloud-tools claude \
 
 Replace the kit reference and argument with those from your kit's
 documentation. The `company-cli` prefix targets the kit by its repository
-name. Built-in agents such as `claude` require v2 mixins.
+name.
 
 To load arguments from a file, pass `--kit-args-file <FILE>` with one
 `name=value` entry per line, such as `company-cli.version=1.2`. Values passed

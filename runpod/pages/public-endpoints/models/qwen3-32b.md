@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/qwen3-32b.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/public-endpoints/models/qwen3-32b.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/qwen3-32b.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/public-endpoints/models/qwen3-32b.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/qwen3-32b
 
 # Qwen3 32B AWQ

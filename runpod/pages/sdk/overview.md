@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/overview.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/sdk/overview.mdx)
+> Pinned source for Runpod main: [sdk/overview.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/sdk/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/overview
 
 # Runpod Python SDK
@@ -51,7 +51,7 @@ pip install runpod
 uv add runpod
 ```
 
-Until 2.0.0 is released, install the release candidate with `pip install runpod==2.0.0rc1`.
+If you already have `runpod` 1.x installed, upgrade with `pip install --upgrade runpod` (or `uv add 'runpod>=2'`).
 
 Installing the package also installs the `rp` CLI. The same CLI is available under the longer name `runpod`.
 

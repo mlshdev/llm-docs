@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/workflows/git.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/git.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/workflows/git.md)
 
 # Use Git with sandboxes
 
@@ -288,10 +288,9 @@ you turned off forwarding or use a fixed SSH agent socket, see
    $ git commit -S -m "feat: my change"
    ```
 
-To apply this configuration automatically to every sandbox, use the
-[`git-ssh-sign`](https://github.com/docker/sbx-kits-contrib/tree/main/git-ssh-sign)
-community kit, which handles all of the above setup. For using it with the
-built-in agents, see [Kits v2](https://docs.docker.com/ai/sandboxes/customize/kits-v2/).
+To apply this configuration automatically to built-in agents, package it as
+a mixin. See [Build a tool mixin](https://docs.docker.com/ai/sandboxes/customize/author/tool-mixins/)
+and [Add mixins](https://docs.docker.com/ai/sandboxes/customize/use-kits/#add-mixins).
 
 For troubleshooting, see
 [Sandbox commits aren't signed](https://docs.docker.com/ai/sandboxes/troubleshooting/#sandbox-commits-arent-signed).

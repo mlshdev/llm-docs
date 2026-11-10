@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/vscode.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/integrations/vscode.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/vscode.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/integrations/vscode.md)
 
 # Connect VS Code to a sandbox
 
@@ -16,6 +16,8 @@ run in the isolated sandbox.
 
 ## Prerequisites
 
+- Model provider credentials configured in Docker Sandboxes for any AI agent
+  you plan to run. See [Configure agent credentials](https://docs.docker.com/ai/sandboxes/integrations/#configure-agent-credentials).
 - SSH access set up. See [Editor and app integrations](https://docs.docker.com/ai/sandboxes/integrations/#enable-ssh-access).
 - The [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
   extension (`ms-vscode-remote.remote-ssh`) installed in VS Code.

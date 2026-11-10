@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/members.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/accounts/organization/manage/members.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/members.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/accounts/organization/manage/members.md)
 
 # Invite and manage organization members
 

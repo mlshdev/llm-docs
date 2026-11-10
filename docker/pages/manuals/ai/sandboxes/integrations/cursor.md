@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/cursor.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/integrations/cursor.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/cursor.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/integrations/cursor.md)
 
 # Connect Cursor to a sandbox
 
@@ -21,6 +21,8 @@ extensions run in the isolated sandbox.
 
 ## Prerequisites
 
+- Model provider credentials configured in Docker Sandboxes for any AI agent
+  you plan to run. See [Configure agent credentials](https://docs.docker.com/ai/sandboxes/integrations/#configure-agent-credentials).
 - SSH access set up. See [Editor and app integrations](https://docs.docker.com/ai/sandboxes/integrations/#enable-ssh-access).
 - Cursor's Remote - SSH support installed.
 

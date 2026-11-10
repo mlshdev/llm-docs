@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/kit-sets.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/customize/author/kit-sets.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/kit-sets.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/customize/author/kit-sets.md)
 
 **Docker Sandboxes sbx requirements**
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/tool-mixins.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/customize/author/tool-mixins.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/tool-mixins.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/customize/author/tool-mixins.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -16,7 +16,7 @@ session storage, and MCP configuration.
 
 You need `sbx`, Docker with Buildx, and an Anthropic API key. To publish the
 mixin, you also need a registry namespace you can push to. Use a v3 workload
-with this mixin. Built-in shortcuts such as `shell` and `claude` use v2. See
+with this mixin. Built-in shortcuts such as `shell` and `claude` use v3. See
 [Version compatibility](https://docs.docker.com/ai/sandboxes/customize/#version-compatibility).
 
 ## Package the executable
@@ -134,7 +134,7 @@ From the directory containing `claude-mixin`, add the mixin to Docker's
 published shell workload:
 
 ```console
-$ sbx run docker.io/docker/sbx-kit-shell:1.0.0 --name claude-mixin-test \
+$ sbx run shell --name claude-mixin-test \
     --kit ./claude-mixin
 ```
 

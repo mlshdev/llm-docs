@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/base-images.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/customize/author/base-images.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/base-images.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/customize/author/base-images.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -15,6 +15,13 @@ To save and reuse an environment you've configured interactively, see
 [Save a sandbox as a template](https://docs.docker.com/ai/sandboxes/usage/#saving-a-sandbox-as-a-template).
 
 ## Docker-provided images
+
+Built-in agent names resolve to Debian-based kits at
+`docker.io/sbx/<NAME>:latest`. To add tools to these agents, use
+[mixins](https://docs.docker.com/ai/sandboxes/customize/author/tool-mixins/).
+
+The `docker/sandbox-templates` images described here are older Ubuntu-based
+images, separate from the built-in kits.
 
 To customize an existing agent, start from one of Docker's sandbox templates,
 published as

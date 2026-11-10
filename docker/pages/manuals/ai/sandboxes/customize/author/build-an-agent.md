@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/build-an-agent.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/customize/author/build-an-agent.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/build-an-agent.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/customize/author/build-an-agent.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -43,9 +43,8 @@ run, such as network access and credentials. The Markdown file contains
 instructions for the agent. Give the YAML file and Dockerfile the same name
 before the extension so the build can find both files.
 
-This kit uses v3 and is independent of the built-in `claude` kit, which uses
-v2. Any mixins you add must also use v3. To customize the built-in kit, see
-[Kits v2](https://docs.docker.com/ai/sandboxes/customize/kits-v2/).
+This kit uses v3 and is independent of the built-in `claude` kit.
+Any mixins you add must also use v3.
 
 ## Use your own base image
 

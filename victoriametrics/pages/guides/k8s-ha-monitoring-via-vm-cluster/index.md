@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md)
 
 This guide walks you through deploying a [VictoriaMetrics cluster](https://docs.victoriametrics.com/guides/k8s-monitoring-via-vm-cluster/) version on Kubernetes in high-availability mode.
 
@@ -310,11 +310,11 @@ You can also execute the query in VMUI by opening your browser in `http://localh
 
 Type `count(up{kubernetes_pod_name=~".*vmselect.*"})` and press **Execute query**
 
-![Screenshot of VMUI showing query results](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/guides/k8s-ha-monitoring-via-vm-cluster/count-pods.webp)
+![Screenshot of VMUI showing query results](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/guides/k8s-ha-monitoring-via-vm-cluster/count-pods.webp)
 
 You can also try **Explore** > **Prometheus metrics** to discover metrics collected from the Kubernetes cluster.
 
-![Screenshot of VMUI showing CPU utilization graph](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/guides/k8s-ha-monitoring-via-vm-cluster/process-cpu-seconds-total.webp)
+![Screenshot of VMUI showing CPU utilization graph](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/guides/k8s-ha-monitoring-via-vm-cluster/process-cpu-seconds-total.webp)
 
 ## 5. High Availability
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/opentelemetry.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/guides/opentelemetry.md)
+> Pinned source for Docker main: [content/guides/opentelemetry.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/guides/opentelemetry.md)
 
 OpenTelemetry (OTel) is an open-source observability framework that provides a set of APIs, SDKs, and tools for collecting telemetry data, such as metrics, logs, and traces, from applications. With OpenTelemetry, developers can obtain valuable insights into how their services perform in production or during local development.
 

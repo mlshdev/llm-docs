@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -240,10 +240,9 @@ SDKs trust certificates signed by the proxy. Certificate errors can stop a
 request before the credential proxy can inject credentials.
 
 For repeatable setup with a built-in agent, create a
-[v2 mixin kit](https://docs.docker.com/ai/sandboxes/customize/kits-v2/) that installs the CA when the
-sandbox is created. See
-[Install an internal CA certificate](https://docs.docker.com/ai/sandboxes/customize/kits-v2/#install-an-internal-ca-certificate)
-for an example kit.
+[mixin kit](https://docs.docker.com/ai/sandboxes/customize/author/patterns/#run-setup-after-combining-kits)
+that installs the CA when the sandbox is created. Save the example descriptor
+as `internal-ca/internal-ca.yaml` and place your certificate beside it.
 
 Use a PEM-encoded certificate with a `.crt` extension. If traffic can be signed
 by more than one internal proxy, install each proxy's root CA before running

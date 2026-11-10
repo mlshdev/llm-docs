@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/manage/plans.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/subscription-billing/manage/plans.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/manage/plans.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/subscription-billing/manage/plans.md)
 
 # Manage plans
 

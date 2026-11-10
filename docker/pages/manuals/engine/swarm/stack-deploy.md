@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/swarm/stack-deploy.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/engine/swarm/stack-deploy.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/stack-deploy.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/engine/swarm/stack-deploy.md)
 
 # Deploy a stack to a swarm
 

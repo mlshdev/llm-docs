@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/integrate/retrieve-user-roles.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/integrate/retrieve-user-roles.mdx)
+> Pinned source for ZITADEL v4.20.2: [apps/docs/content/guides/integrate/retrieve-user-roles.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/guides/integrate/retrieve-user-roles.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/retrieve-user-roles
 
 > **Terminology update**
@@ -67,11 +67,11 @@ And you can also use the same to access the ZITADEL APIs.
 
 If you need user roles returned from the userinfo endpoint, you must select the **’Assert Roles on Authentication’** checkbox in your project under general settings.
 
-![Assert Roles on Authentication](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/integrate/retrieve-user-roles-1.png)
+![Assert Roles on Authentication](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/integrate/retrieve-user-roles-1.png)
 
 If you need them included in your ID Token, select **’User Roles Inside ID Token’** in application settings. This has to be set in your applications as this is dependent on your application type. Navigate to your application and select this setting.
 
-![Assert Roles on Authentication](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/integrate/retrieve-user-roles-2.png)
+![Assert Roles on Authentication](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/integrate/retrieve-user-roles-2.png)
 
 Alternatively, you can include the claims `urn:iam:org:project:roles` or/and `urn:zitadel:iam:org:projects:roles` in your scope to achieve the same as above.
 

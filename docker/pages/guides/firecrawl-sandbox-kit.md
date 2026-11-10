@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/firecrawl-sandbox-kit.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/guides/firecrawl-sandbox-kit.md)
+> Pinned source for Docker main: [content/guides/firecrawl-sandbox-kit.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/guides/firecrawl-sandbox-kit.md)
 
 # Give sandboxed agents live web access with Firecrawl
 
@@ -13,14 +13,14 @@ without opening the rest of the web.
 In this guide, you'll learn how to:
 
 - Store your Firecrawl API key on the host as a sandbox secret
-- Add the Firecrawl mixin to a v3 workload
+- Add the Firecrawl mixin to a workload
 - Check that the SDK, the proxy-managed credential, and the network rule work
 - Call Firecrawl from inside the sandbox
 - Understand the limits the sandbox network policy places on the kit
 
 ## What the kit adds
 
-The Firecrawl kit is a v3 [mixin](https://docs.docker.com/ai/sandboxes/customize/author/tool-mixins/)
+The Firecrawl kit is a [mixin](https://docs.docker.com/ai/sandboxes/customize/author/tool-mixins/)
 published as `docker.io/firecrawl/sbx-kit-firecrawl`. When you add it to a
 workload, it contributes four things:
 
@@ -72,13 +72,13 @@ unattended runs, see
 ## Step 2: Run a workload with the Firecrawl mixin
 
 This example uses a shell workload without a coding agent so you can try the
-SDK directly. You can also add the Firecrawl mixin to another compatible v3
+SDK directly. You can also add the Firecrawl mixin to another compatible
 workload, including one that runs a coding agent.
 
 From your project directory, run:
 
 ```console
-$ sbx run docker.io/docker/sbx-kit-shell:1.0.0 --name firecrawl-shell \
+$ sbx run shell --name firecrawl-shell \
     --kit docker.io/firecrawl/sbx-kit-firecrawl:1.0.0
 ```
 
@@ -87,13 +87,6 @@ install hook, and opens a shell in the sandbox.
 
 For more on combining kits, see
 [Use kits](https://docs.docker.com/ai/sandboxes/customize/use-kits/#add-mixins).
-
-> \[!NOTE]
-> Built-in shortcuts such as `sbx run claude` use v2 kits, and v2 agents only
-> accept v2 mixins. Firecrawl also publishes a v2 form of the kit for those
-> agents. See the
-> [kit repository](https://github.com/firecrawl/firecrawl-docker-sandbox#2-launch-the-sandbox-with-the-kit)
-> for v2 usage.
 
 ## Step 3: Check the kit
 

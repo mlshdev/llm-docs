@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/governance/organization/audit/_index.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/governance/organization/audit/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/governance/organization/audit/_index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/governance/organization/audit/_index.md)
 
 # Audit logs
 
@@ -18,8 +18,8 @@ do with them.
 
 > \[!NOTE]
 > Audit logs cover local sandboxes, the sandboxes that run on developers'
-> machines. Cloud delivery stores their audit records in the cloud. It
-> doesn't add cloud sandbox coverage. For cloud network decisions, see
+> machines. Audit logs don't cover cloud sandboxes. For cloud network
+> decisions, see
 > [Cloud policy logs](https://docs.docker.com/ai/sandboxes/cloud/network-policy/#inspect-network-policy).
 
 ## What audit logs record

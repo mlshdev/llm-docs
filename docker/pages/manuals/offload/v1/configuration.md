@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/offload/v1/configuration.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/offload/v1/configuration.md)
+> Pinned source for Docker main: [content/manuals/offload/v1/configuration.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/offload/v1/configuration.md)
 
 # Configure Docker Offload v1
 

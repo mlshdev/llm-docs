@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmctl/prometheus.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmctl/prometheus.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/vmctl/prometheus.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmctl/prometheus.md)
 
 `vmctl` can migrate historical data from Prometheus to VictoriaMetrics by reading [Prometheus snapshot](https://prometheus.io/docs/prometheus/latest/querying/api/#snapshot).
 See `./vmctl prometheus --help` for details and full list of flags. Also see Prometheus [related articles](https://docs.victoriametrics.com/victoriametrics/vmctl/#articles).

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/configuration/parameters.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/sdk/configuration/parameters.mdx)
+> Pinned source for Runpod main: [sdk/configuration/parameters.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/sdk/configuration/parameters.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/configuration/parameters
 
 # Resource parameters
@@ -9,7 +9,7 @@ Every resource in a Runpod SDK app is configured through keyword arguments on it
 
 > **Note**
 >
-> The parameters on this page require `runpod` 2.0 or later. To test before the stable release, install the release candidate with `pip install runpod==2.0.0rc1`.
+> The parameters on this page require `runpod` 2.0 or later.
 
 ## Parameter overview
 

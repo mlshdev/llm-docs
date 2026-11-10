@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/integrate/login/hosted-login.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/integrate/login/hosted-login.mdx)
+> Pinned source for ZITADEL v4.20.2: [apps/docs/content/guides/integrate/login/hosted-login.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/guides/integrate/login/hosted-login.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login/hosted-login
 
 ZITADEL provides a hosted single-sign-on page to securely sign-in users to your applications.
@@ -44,7 +44,7 @@ Developers can configure the authentication methods offered on the login page ba
 
 ### Enterprise single-sign-on
 
-![Screenshot of ZITADEL management console showing different identity provider templates](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/integrate/login/login-external-idp-templates.png)
+![Screenshot of ZITADEL management console showing different identity provider templates](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/integrate/login/login-external-idp-templates.png)
 
 With the hosted login page from ZITADEL developers will get the best support for multi-tenancy single-sign-on with third-party identity providers.
 ZITADEL acts as an [identity broker](https://zitadel.com/docs/concepts/features/identity-brokering) between your applications and different external identity providers, reducing the implementation effort for developers.
@@ -178,7 +178,7 @@ Zitadel Cloud provides the V2 login at the fixed path `/ui/v2/login`.
 To activate it to authenticate on your Zitadel Cloud apps, you can follow one of these steps:
 
 1. Enable the new login on your application settings. Leave the field **Custom base URL for the new Login UI** empty to use the default. With these settings, Zitadel will automatically redirect you to the new login if you call the old one.
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/integrate/login/login-v2-app-config.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/integrate/login/login-v2-app-config.png)
 2. Enable the [loginV2 feature](https://zitadel.com/docs/reference/api/feature/zitadel.feature.v2.FeatureService.SetInstanceFeatures) on the instance. Leave the base URI empty to use the default. If you enable this feature, the login will be used for every application configured in your Zitadel instance. (Example: <https://your-zitadel-instance.zitadel.cloud/ui/v2/login>)
 
 **Vercel Custom Login Deployment**
@@ -200,7 +200,7 @@ The simplest way to deploy the new login for yourself is by using the [Deploy wi
    > In case something breaks, you can use this PAT to revert your changes or fix the settings so you can use a login UI again.
    > You have three different options on how to achieve this:
    1. Enable the new login on your application settings and add the URL of your login UI. With these settings, Zitadel will automatically redirect you to the new login if you call the old one.
-      ![](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/integrate/login/login-v2-app-config.png)
+      ![](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/integrate/login/login-v2-app-config.png)
    2. Enable the [loginV2 feature](https://zitadel.com/docs/reference/api/feature/zitadel.feature.v2.FeatureService.SetInstanceFeatures) on the instance and add the URL of your login. If you enable this feature, the login will be used for every application configured in your Zitadel instance. (Example: <https://my-new-zitadel-login.vercel.app>)
    3. Change the issuer in the code of your application to the new domain of your login
 7. Enforce users to have their email verified. By setting `EMAIL_VERIFICATION` to `true` in your environment variables, your users will be enforced to verify their email address before they can log in.

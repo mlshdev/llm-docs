@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/overview.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/runpodctl/overview.mdx)
+> Pinned source for Runpod main: [runpodctl/overview.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/runpodctl/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/overview
 
 # Overview
@@ -30,16 +30,10 @@ Choose the installation method that matches your operating system.
 The install script automatically detects your operating system and architecture:
 
 ```bash
-bash <(wget -qO- cli.runpod.io)
+curl -fsSL https://cli.runpod.net | sudo bash
 ```
 
-Or using curl:
-
-```bash
-bash <(curl -sL cli.runpod.io)
-```
-
-The script installs the latest version to `/usr/local/bin` when run as root, or to `~/.local/bin` for non-root users. If you don't have root access, the script displays instructions for adding `runpodctl` to your PATH.
+The script runs as root and installs the latest version to `/usr/local/bin`. For installation without root access, use the non-root instructions in the Linux tab.
 
 > **Note**
 >

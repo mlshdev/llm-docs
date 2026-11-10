@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/organization/remove-a-member-from-a-group.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/api-reference-v2/organization/remove-a-member-from-a-group.mdx)
+> Pinned source for Runpod main: [api-reference-v2/organization/remove-a-member-from-a-group.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/api-reference-v2/organization/remove-a-member-from-a-group.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/organization/remove-a-member-from-a-group
 
 # Remove A Member From A Group

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/validate-images.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/build/policies/validate-images.md)
+> Pinned source for Docker main: [content/manuals/build/policies/validate-images.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/build/policies/validate-images.md)
 
 Container images are the most common build inputs. Every `FROM` instruction
 pulls an image, and `COPY --from` references pull additional images. Validating

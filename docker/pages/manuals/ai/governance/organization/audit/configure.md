@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/governance/organization/audit/configure.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/governance/organization/audit/configure.md)
+> Pinned source for Docker main: [content/manuals/ai/governance/organization/audit/configure.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/governance/organization/audit/configure.md)
 
 # Configure audit delivery
 
@@ -40,8 +40,7 @@ audit logging before hosted audit logs were available. Those organizations start
 turns it on. To keep records local to your hosts, turn off **Docker Cloud** and
 keep **Local disk** on.
 
-Docker Cloud keeps audit records searchable in the hosted audit log view for 90
-days, and in archive storage for 90 days.
+The **Audit delivery** page shows how long Docker Cloud retains audit records.
 
 ## Review delivery change history
 

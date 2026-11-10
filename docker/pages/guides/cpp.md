@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/cpp.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/guides/cpp.md)
+> Pinned source for Docker main: [content/guides/cpp.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/guides/cpp.md)
 
 The C++ getting started guide teaches you how to create a containerized C++ application using Docker. In this guide, you'll learn how to:
 

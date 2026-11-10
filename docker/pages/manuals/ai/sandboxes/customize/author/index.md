@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/_index.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/customize/author/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/_index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/customize/author/_index.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -11,9 +11,8 @@ each approach.
 
 > \[!NOTE]
 > Select a v3 workload and v3 mixins together.
-> Built-in shortcuts such as `claude` and `codex` use v2 and can't be combined
-> with v3 mixins. See [Version compatibility](https://docs.docker.com/ai/sandboxes/customize/#version-compatibility)
-> or the [v2 reference](https://docs.docker.com/ai/sandboxes/customize/kits-v2/).
+> Built-in shortcuts such as `claude` and `codex` use v3 and accept v3 mixins.
+> See [Version compatibility](https://docs.docker.com/ai/sandboxes/customize/#version-compatibility).
 
 ## Choose what to author
 

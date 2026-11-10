@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmagent.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmagent.md)
 
 `vmagent` is a tiny agent that helps you collect metrics from various sources,
 [relabel and filter the collected metrics](https://docs.victoriametrics.com/victoriametrics/relabeling/)
@@ -8,7 +8,7 @@ or via the [VictoriaMetrics `remote_write` protocol](#victoriametrics-remote-wri
 
 See [Quick Start](#quick-start) for details.
 
-![vmagent](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmagent.webp)
+![vmagent](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmagent.webp)
 
 ## Motivation
 
@@ -1077,6 +1077,45 @@ vmagent will generate the following persistent queue folders:
 2_0AAFDF53E314A72A
 ```
 
+### Manual on-disk persistence paths
+
+By default, `vmagent` [generates persistent queue directory names](https://docs.victoriametrics.com/victoriametrics/vmagent/#on-disk-persistence)
+from the position and the value of every `-remoteWrite.url`. So adding, removing, reordering or editing `-remoteWrite.url` flags
+changes the directory names, and pending data in the old directories is no longer sent: it is dropped as a dangling queue on the next start,
+unless `-remoteWrite.keepDanglingQueues` is set.
+If you plan to modify `-remoteWrite.url` flags often, consider setting the persistent queue directory
+for each `-remoteWrite.url` manually via `-remoteWrite.queuePath` *(available from v1.156.0)* command-line flag.
+
+`-remoteWrite.queuePath` must be set once per `-remoteWrite.url`; the n-th `-remoteWrite.queuePath` is used by the n-th `-remoteWrite.url`.
+For example:
+
+```bash
+./bin/vmagent \
+  -remoteWrite.url=http://url-0 \
+  -remoteWrite.url=http://url-1 \
+  -remoteWrite.url=http://url-2 \
+  -remoteWrite.queuePath=/vmagent-data/url-0 \
+  -remoteWrite.queuePath=/vmagent-data/url-1 \
+  -remoteWrite.queuePath=/vmagent-data/url-2
+```
+
+Now `-remoteWrite.url=http://url-1` can be removed together with `-remoteWrite.queuePath=/vmagent-data/url-1`,
+and `http://url-2` keeps its pending data in `/vmagent-data/url-2`.
+
+Keep in mind the following when using `-remoteWrite.queuePath`:
+
+- Every `-remoteWrite.queuePath` must point to a dedicated directory used only by a single `-remoteWrite.url`.
+  `vmagent` deletes all the contents of a directory that doesn't contain a valid persistent queue.
+- `vmagent` doesn't track which `-remoteWrite.url` a directory belongs to. If a directory is assigned to another `-remoteWrite.url`,
+  pending data from it is sent to that new `-remoteWrite.url`.
+- `vmagent` doesn't remove directories that are no longer referenced by any `-remoteWrite.queuePath`. Delete them manually when they aren't needed.
+- `-remoteWrite.tmpDataPath` is still created and used for internal files, but `vmagent` doesn't remove
+  [dangling queues](https://docs.victoriametrics.com/victoriametrics/vmagent/#on-disk-persistence) from it.
+
+To keep pending data when switching from auto-generated directories to `-remoteWrite.queuePath`, pass the existing directory as the flag value,
+for example `-remoteWrite.queuePath=<remoteWrite.tmpDataPath>/persistent-queue/1_B9EB7BE220B91E9D`.
+Auto-generated directories not listed in `-remoteWrite.queuePath` stay on disk and are no longer sent, so remove them manually when they aren't needed.
+
 ### On-disk persistence and data processing order
 
 By default, vmagent processes data in FIFO order. If data has been written to the on-disk queue,
@@ -1571,6 +1610,8 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmagent/ .
      Whether to use proxy protocol for connections accepted at -graphiteListenAddr . See https://www.haproxy.org/download/1.8/doc/proxy-protocol.txt
   -graphiteTrimTimestamp duration
      Trim timestamps for Graphite data to this duration. Minimum practical duration is 1s. Higher duration (i.e. 1m) may be used for reducing disk space usage for timestamp data (default 1s)
+  -healthcheck
+     Whether to check that the running process accepts connections at -httpListenAddr and exit. The exit code is non-zero if the check fails. This is useful for Docker HEALTHCHECK in images without curl or wget. Pass the same -httpListenAddr as the checked process has
   -http.connTimeout duration
      Incoming connections to -httpListenAddr are closed after the configured timeout. This may help evenly spreading load among a cluster of services behind TCP-level load balancer. Zero value disables closing of incoming connections (default 2m0s)
   -http.disableCORS
@@ -1815,6 +1856,8 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmagent/ .
      Interval for checking for changes in Marathon REST API. This works only if marathon_sd_configs is configured in '-promscrape.config' file. See https://docs.victoriametrics.com/victoriametrics/sd_configs/#marathon_sd_configs for details (default 30s)
   -promscrape.maxDroppedTargets int
      The maximum number of droppedTargets to show at /api/v1/targets page. Increase this value if your setup drops more scrape targets during relabeling and you need investigating labels for all the dropped targets. Note that the increased number of tracked dropped targets may result in increased memory usage (default 10000)
+  -promscrape.maxParseErrorsPerScrape int
+     The maximum number of parse errors to log per each scrape of a target. The number of suppressed parse errors is logged after the scrape. Zero or negative value disables the limit. See also -promscrape.suppressScrapeErrors (default 20)
   -promscrape.maxResponseHeadersSize size
      The maximum size of http response headers from Prometheus scrape targets
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 4096)

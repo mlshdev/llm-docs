@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/url-examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/url-examples.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/url-examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/url-examples.md)
 
 ## General information
 
@@ -1000,10 +1000,18 @@ Cluster version of VictoriaMetrics:
 curl 'http://<vmselect>:8481/admin/tenants'
 ```
 
-The optional `start` and `end` query args can be used to return only tenants with ingested data in the given time range:
+By default, only tenants with data ingested during the current day (UTC) are returned.
+Use the `start` and `end` query args to return tenants with ingested data on the given time range.
+Both args should be set together:
 
 ```sh
 curl 'http://<vmselect>:8481/admin/tenants?start=-1d&end=now'
+```
+
+To get all the tenants, set a time range that covers the whole `-retentionPeriod`. For example, for `-retentionPeriod=1y`:
+
+```sh
+curl 'http://<vmselect>:8481/admin/tenants?start=-1y&end=now'
 ```
 
 Additional information:

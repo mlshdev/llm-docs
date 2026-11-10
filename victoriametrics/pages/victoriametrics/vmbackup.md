@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmbackup.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmbackup.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/vmbackup.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmbackup.md)
 
 `vmbackup` creates backups of VictoriaMetrics data to protect against hardware failures and accidental data loss.
 Whether you are using a single-node  or a cluster version, it is recommended to use `vmbackup` to perform periodical data backup from instant snapshots.

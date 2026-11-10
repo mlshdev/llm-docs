@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/apps/build-app.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/sdk/apps/build-app.mdx)
+> Pinned source for Runpod main: [sdk/apps/build-app.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/sdk/apps/build-app.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/apps/build-app
 
 # Build an app
@@ -20,7 +20,7 @@ This tutorial builds a small Runpod SDK app one resource at a time. You'll creat
 
 - A [Runpod account](https://www.runpod.io/console/signup) with credits.
 - Python 3.10 to 3.14 on your machine.
-- The `runpod` package, version 2.0 or later. To use the release candidate, run `pip install runpod==2.0.0rc1`.
+- The `runpod` package, version 2.0 or later. Install or upgrade it with `pip install --upgrade runpod`.
 - Credentials saved with `rp login`. See [Authenticate](https://docs.runpod.io/sdk/overview#authenticate).
 
 ## Step 1: Create a project

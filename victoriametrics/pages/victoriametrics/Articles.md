@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/Articles.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/Articles.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/Articles.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/Articles.md)
 
 See also [case studies](https://docs.victoriametrics.com/victoriametrics/casestudies/).
 
@@ -110,6 +110,7 @@ See also [case studies](https://docs.victoriametrics.com/victoriametrics/casestu
 - [LiteLLM: Metrics, Traces, and VictoriaMetrics Stack Integration](https://rtfm.co.ua/en/litellm-metrics-traces-and-victoriametrics-stack-integration/)
 - [llama.cpp: Metrics and Monitoring with VictoriaMetrics](https://rtfm.co.ua/en/llama-cpp-metrics-and-monitoring-with-victoriametrics/)
 - [Monitoring Short-Lived Kubernetes Jobs at Scale](https://www.doit.com/blog/monitoring-short-lived-kubernetes-jobs-at-scale)
+- [Wrangling Telemetry at Scale: A Guide to Self-Hosted Observability](https://www.infoq.com/presentations/self-hosted-observability-stack-tradeoffs)
 
 ## Third-party articles and slides about VictoriaLogs
 

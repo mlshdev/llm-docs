@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/troubleshooting/token-authentication-enabled.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/pods/troubleshooting/token-authentication-enabled.mdx)
+> Pinned source for Runpod main: [pods/troubleshooting/token-authentication-enabled.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/pods/troubleshooting/token-authentication-enabled.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/troubleshooting/token-authentication-enabled
 
 # JupyterLab server token authentication
@@ -7,7 +7,7 @@ Recover the JupyterLab server token from a Runpod Pod terminal, then use it to a
 
 If you see a "Token authentication is enabled" screen when trying to access your Pod's JupyterLab server, follow the steps below to log in.
 
-![Jupyter server token authentication](https://raw.githubusercontent.com/runpod/docs/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/images/jupyter-server-token.png)
+![Jupyter server token authentication](https://raw.githubusercontent.com/runpod/docs/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/images/jupyter-server-token.png)
 
 1. Go to the Pod page in the Runpod console and click the **Connect** button for the Pod you want to access.
 2. Look for the **Web Terminal** start button.

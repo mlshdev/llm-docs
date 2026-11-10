@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/desktop/release-notes.md)
+> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -9,6 +9,56 @@ Releases are gradually rolled out to ensure quality control. If the latest versi
 Docker Desktop versions older than 6 months from the latest release are not available for download. Previous release notes are available in our [documentation repository](https://github.com/docker/docs/tree/main/content/manuals/desktop/previous-versions).
 
 For more frequently asked questions, see the [FAQs](https://docs.docker.com/desktop/troubleshoot-and-support/faqs/releases/).
+
+## 4.99.0
+
+**Release date:** 2026-11-09
+
+Download Docker Desktop:
+
+- [Windows](https://desktop.docker.com/win/main/amd64/245822/Docker%20Desktop%20Installer.exe)
+- [Windows ARM Early Access](https://desktop.docker.com/win/main/arm64/245822/Docker%20Desktop%20Installer.exe)
+- [Mac (Apple chip)](https://desktop.docker.com/mac/main/arm64/245822/Docker.dmg)
+- [Mac (Intel chip)](https://desktop.docker.com/mac/main/amd64/245822/Docker.dmg)
+- [Linux (Debian)](https://desktop.docker.com/linux/main/amd64/245822/docker-desktop-amd64.deb)
+- [Linux (RPM)](https://desktop.docker.com/linux/main/amd64/245822/docker-desktop-x86_64.rpm)
+- [Linux (Arch)](https://desktop.docker.com/linux/main/amd64/245822/docker-desktop-x86_64.pkg.tar.zst)
+
+### Updates
+
+- Docker Offload `v0.7.36`
+- Docker Hardened Images (`dhictl`) `v0.0.10`
+- [Docker Agent v1.153.0](https://github.com/docker/docker-agent/releases/tag/v1.153.0)
+- Docker Scout CLI `v1.28.0`
+- Docker MCP CLI `v0.44.3`
+- [Docker Compose v5.7.0](https://github.com/docker/compose/releases/tag/v5.7.0)
+- [Docker Engine v29.9.3](https://docs.docker.com/engine/release-notes/29/#2993)
+
+### Bug fixes and enhancements
+
+#### For all platforms
+
+- Fixed a socket leak in the system proxy where plain HTTP requests from containers routed through an upstream proxy left one socket open per request until restart.
+- Fixed constant network traffic and CPU usage caused by Docker Desktop computing the size of NFS- or SMB-backed volumes. Fixes [docker/desktop-feedback#800](https://github.com/docker/desktop-feedback/issues/800).
+- Fixed an issue where Docker Desktop could shut down ungracefully, causing resource leaks or a corrupted state by not allowing cleanup handlers to run.
+- Fixed the Containers list cutting off the ports when clicking **Show all ports**, which now lists all of them in a popover. Fixes [docker/desktop-feedback#794](https://github.com/docker/desktop-feedback/issues/794).
+- Fixed connection resets on published ports under bursts of new connections with Docker VMM.
+
+#### For Mac
+
+- Fixed an issue where an update could fail with **Unable to install** because Docker Desktop killed the installer while quitting.
+
+#### For Windows
+
+- Fixed Windows updates stopping Docker Desktop abruptly, which could corrupt the engine databases.
+- Fixed an error that could occur when attempting to run `docker desktop` commands from inside a WSL distro while using the WSL integration.
+- Added BuildKit support for Windows containers when using the containerd image store.
+- Fixed WSL 2 engine start failing on slow machines when the data disk took more than a fraction of a second to appear.
+- Fixed per-user installs and updates on Windows failing with a "Virtual Machine Platform" error on machines where WSL 2 already works.
+- Fixed Docker Desktop hanging after closing an error dialog with its **Close** button. Closing an error dialog that offers **Continue now** continues instead of quitting Docker Desktop.
+- Fixed Windows containers failing to start at login with **Starting windows containers: An error has occurred.** when a container took longer than 30 seconds to stop.
+- Fixed WSL 2 distributions flushing their systemd-resolved DNS cache every 30 seconds while Docker Desktop was running. Fixes [docker/desktop-feedback#761](https://github.com/docker/desktop-feedback/issues/761).
+- Fixed Windows installer launcher to report descriptive error reasons (e.g. **Disk full**) on update failure instead of a bare exit code.
 
 ## 4.98.0
 
@@ -58,6 +108,10 @@ Download Docker Desktop:
 - Fixed an issue where processes started in the Docker Desktop terminal could be left running after closing the terminal.
 - Added support for running `docker` and `docker compose` from WSL 2 distros when Docker VMM is the engine, including bind mounts of files on Windows drives such as `/mnt/c`.
 - Fixed Docker VMM re-enabling the WSL feature on update and showing a **Press any key to install WSL** prompt when WSL is uninstalled. Fixes [docker/desktop-feedback#775](https://github.com/docker/desktop-feedback/issues/775).
+
+#### For Linux
+
+- Added Docker VMM as a virtual machine manager option in Settings on Linux.
 
 ### Security
 

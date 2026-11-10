@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/release-notes/platform.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/scout/release-notes/platform.md)
+> Pinned source for Docker main: [content/manuals/scout/release-notes/platform.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/scout/release-notes/platform.md)
 
 # Docker Scout release notes
 

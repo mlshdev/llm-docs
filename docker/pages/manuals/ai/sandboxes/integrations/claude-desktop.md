@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/claude-desktop.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/integrations/claude-desktop.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/claude-desktop.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/integrations/claude-desktop.md)
 
 # Connect Claude Desktop to a sandbox
 
@@ -21,19 +21,22 @@ host.
 
 ## Prerequisites
 
+- Claude credentials configured in Docker Sandboxes. See
+  [Claude Code authentication](https://docs.docker.com/ai/sandboxes/agents/claude-code/#authentication).
 - SSH access set up. See [Editor and app integrations](https://docs.docker.com/ai/sandboxes/integrations/#enable-ssh-access).
 - Claude Desktop installed.
 
 Use a sandbox created with the Claude agent type. The Claude sandbox template
-configures Anthropic credentials and network access for the remote Claude Code
-session.
-
-## Connect
+configures credential injection and network access for the remote Claude Code
+session. You must supply the credential before connecting.
 
 > \[!WARNING]
-> Connecting Claude Desktop to a sandbox over SSH transmits Anthropic
-> credentials into the Claude Code process within the sandbox, reducing
-> isolation guarantees.
+> Claude Desktop can write Anthropic credentials directly into the sandbox
+> during OAuth refresh. When this happens, requests use those credentials
+> instead of proxy credential injection. The credentials are exposed inside
+> the sandbox, reducing isolation guarantees.
+
+## Connect
 
 For a dedicated sandbox created on first connection, see
 [Set up desktop app connections](https://docs.docker.com/ai/sandboxes/integrations/#set-up-desktop-app-connections).

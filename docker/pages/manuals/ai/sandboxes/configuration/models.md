@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/models.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/configuration/models.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/models.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/configuration/models.md)
 
 # Use local and hosted models
 
@@ -8,7 +8,7 @@ host, at a hosted provider, or at an inference endpoint you configure.
 
 This page covers the built-in `claude`, `codex`, and `opencode` agents. Choose
 a model that supports the tool calls and context length your agent needs.
-`--model` isn't supported with cloud sandboxes or v3 kits.
+`--model` isn't supported with cloud sandboxes.
 
 > \[!NOTE]
 > Model selection is experimental. Enable it before following these examples.

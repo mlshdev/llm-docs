@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/scout/docker_scout_vex.yaml](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/data/cli/scout/docker_scout_vex.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_vex.yaml](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/data/cli/scout/docker_scout_vex.yaml)
 
 # docker scout vex
 

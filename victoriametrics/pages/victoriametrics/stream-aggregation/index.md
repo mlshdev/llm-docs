@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/stream-aggregation/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/stream-aggregation/_index.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/stream-aggregation/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/_index.md)
 
 [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) and [single-node VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/)
 can aggregate incoming [samples](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#raw-samples) in streaming mode **by time** and **by labels** before data is written to remote storage
@@ -446,6 +446,8 @@ outside the current [aggregation interval](https://docs.victoriametrics.com/vict
 - To enable [deduplication](https://docs.victoriametrics.com/victoriametrics/stream-aggregation/#deduplication).
 
 The dropped old samples can be tracked with the `vm_streamaggr_ignored_samples_total{reason="too_old"}` and `vm_streamaggr_dedup_dropped_samples_total` metrics.
+To find out the actual lag of the dropped samples, check the `vm_streamaggr_ignored_samples_lag_seconds{reason="too_old"}` metric.
+If the drops are unexpected, reduce the lag by fixing the delivery pipeline, or increase the aggregation interval to tolerate a higher lag.
 
 ## Ignore aggregation intervals on start
 
@@ -655,18 +657,27 @@ See also [why you shouldn't put an aggregator behind a load balancer](https://do
 
 ## Aggregation windows
 
-By default, stream aggregation and deduplication store a single state for each aggregation output result.
-The data for each aggregator is flushed independently once per aggregation interval. But there's no guarantee that
-incoming samples with timestamps close to the aggregation interval's end will get into it. For example, when aggregating
-with `interval: 1m`, a data sample with timestamp 1739473078 (18:57:59) can fall into the aggregation round `18:58:00` or `18:59:00`.
-It depends on network lag, load, clock synchronization, etc. In most scenarios, it doesn't impact aggregation or
-deduplication results, which are consistent within the margin of error. But for metrics represented as a collection of series,
-like [histograms](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#histogram), such inaccuracy leads to invalid aggregation results.
+By default, stream aggregation and deduplication store a single state for each aggregation output result
+and assign incoming samples to the aggregation interval by their ingestion time, not by their timestamps.
+So there's no guarantee that samples with timestamps close to the aggregation interval's end will get into it.
+For example, when aggregating with `interval: 1m`, a data sample with timestamp 1739473078 (18:57:59) can fall into
+the aggregation round `18:58:00` or `18:59:00`. It depends on network lag, load, clock synchronization, etc.
+In most scenarios, it doesn't impact aggregation or deduplication results, which are consistent within the margin of error.
+But for metrics represented as a collection of series, like [histograms](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#histogram),
+such inaccuracy leads to invalid aggregation results, since buckets of the same histogram may end up in different aggregation rounds.
 
-For this case, streaming aggregation and deduplication support mode with aggregation windows for the current and previous state.
-In this mode, flush doesn't happen immediately but is delayed by a calculated sample lag, which should significantly improve the accuracy of calculations when samples arrive with a delay. *(available from v1.112.0)*
+Aggregation windows solve this issue. *(available from v1.112.0)* In this mode, samples are assigned to the aggregation interval by their timestamps,
+and the current and the previous intervals are aggregated separately. The previous interval isn't flushed
+immediately at its end, but after a delay equal to the max lag of the samples received during the previous interval
+(see `vm_streamaggr_samples_lag_seconds` metric). This gives delayed samples a chance to get into the correct aggregation interval.
 
-This mode doubles the memory used for the aggregation state, since two states(for the current and previous intervals) are stored per series simultaneously. Aggregation windows can be enabled via
+Aggregation windows are intended for samples delayed by less than the aggregation `interval` (or `dedup_interval` for deduplication),
+so the flush delay is capped at 90% of the interval. Samples for already flushed intervals are dropped
+(see `vm_streamaggr_ignored_samples_total{reason="too_old"}` and `vm_streamaggr_dedup_dropped_samples_total` metrics).
+If samples are constantly delayed by more than the interval, then increase the `interval` or perform stream aggregation closer to the data source.
+See also [data delay and staleness](https://docs.victoriametrics.com/victoriametrics/stream-aggregation/#staleness).
+
+This mode doubles the memory used for the aggregation state, since two states (for the current and previous intervals) are stored per series simultaneously. Aggregation windows can be enabled via
 the following settings:
 
 - `-streamAggr.enableWindows` at [single-node VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/)
@@ -681,14 +692,16 @@ the following settings:
 
 If counter-specific outputs, such as `total*`, `rate*`, and `increase*`, produce values that are significantly higher than anticipated, then check the `vm_streamaggr_counter_resets_total` metric. This metric increments each time when [counter reset event](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#counter) happens and could be caused by duplication or collision of raw samples. If you observe duplication or collision, try solving this problem by either fixing the source of these metrics or by [deduplicating](https://docs.victoriametrics.com/victoriametrics/stream-aggregation/#deduplication) these samples before aggregation.
 
+Counter-specific outputs skip samples with timestamps older than the last accepted sample for the same series. Such samples can appear when clients retry failed requests or send data concurrently. The skipped samples can be tracked with the `vm_streamaggr_counter_dropped_samples_total{reason="out_of_order"}` metric.
+
 ## Data delay and staleness {#staleness}
 
-Stream aggregation processes input samples in a streaming manner and flushes results once per specified `interval`. Because of this, aggregation results can be heavily affected by data delays (see `vm_streamaggr_samples_lag_seconds_bucket` metric).
+Stream aggregation processes input samples in a streaming manner and flushes results once per specified `interval`. Because of this, aggregation results can be heavily affected by data delays (see `vm_streamaggr_samples_lag_seconds_bucket` metric for accepted samples and `vm_streamaggr_ignored_samples_lag_seconds{reason="too_old"}` metric for dropped samples).
 
 In particular:
 
 1. Stream aggregation won't produce results if input samples are delayed for multiple aggregation intervals, causing gaps in the output.
-2. Delayed and out-of-order samples can inflate or skew correctness of aggregation results.
+2. Delayed and out-of-order samples can inflate or skew correctness of aggregation results. Counter-specific outputs skip out-of-order samples, see [counter resets](https://docs.victoriametrics.com/victoriametrics/stream-aggregation/#counter-resets).
 
 Dropping delayed samples can result in missed observations in the results, while keeping delayed samples may inflate the results. It is up to the user to decide what they prefer in the produced results:
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/allow-list.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/desktop/enterprise/allow-list.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/allow-list.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/desktop/enterprise/allow-list.md)
 
 # Allowlist for Docker Desktop
 
@@ -26,6 +26,7 @@ This page contains the domain URLs that you need to add to a firewall allowlist 
 | <https://api.dso.docker.com>                     | Docker Scout service                         |
 | <https://api.docker.com>                         | New API                                      |
 | <https://api.offload.docker.com>                 | Docker Offload                               |
+| <https://api.sandboxes-cloud.docker.com>         | Docker Offload                               |
 | <https://dhi.io>                                 | Docker Hardened Images                       |
 | <https://registry.scout.docker.com>              | Docker Scout registry for DHI attestations   |
 | <https://ai-backend-service.docker.com>          | [Gordon](https://docs.docker.com/ai/gordon/) |

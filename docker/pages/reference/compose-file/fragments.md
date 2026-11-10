@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/compose-file/fragments.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/reference/compose-file/fragments.md)
+> Pinned source for Docker main: [content/reference/compose-file/fragments.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/reference/compose-file/fragments.md)
 
 # Fragments
 

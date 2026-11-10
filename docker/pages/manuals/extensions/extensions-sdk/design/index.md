@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/design/_index.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/extensions/extensions-sdk/design/_index.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/design/_index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/extensions/extensions-sdk/design/_index.md)
 
 # UI styling overview for Docker extensions
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/referrals.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/accounts-billing/referrals.mdx)
+> Pinned source for Runpod main: [accounts-billing/referrals.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/accounts-billing/referrals.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/referrals
 
 # Referral, affiliate, and creator programs
@@ -72,6 +72,18 @@ Getting started with any of these programs is straightforward:
 3. Share this link with potential users through your preferred channels.
 
 For the creator program, simply publish templates through your Runpod account and promote them to potential users.
+
+### Skip the setup survey for your referrals
+
+New users see a short setup survey the first time they open the Runpod console. If your users set up Runpod through your own app or integration instead, you can skip that survey by adding `skip_onboarding=1` to a console sign-up link:
+
+```text
+https://console.runpod.io/signup?ref=5t99c9je&skip_onboarding=1
+```
+
+Replace `5t99c9je` with your referral code. Use the console sign-up URL, not `runpod.io`, so the parameter reaches the console. Referral tracking and rewards work the same as with your standard link, and the parameter has no effect on users who already have an account.
+
+Leave the parameter off for users who are new to Runpod and would benefit from the guided setup.
 
 ## Important details
 

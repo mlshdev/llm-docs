@@ -1,11 +1,11 @@
-> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/integrate/login-ui/saml-standard.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/integrate/login-ui/saml-standard.mdx)
+> Pinned source for ZITADEL v4.20.2: [apps/docs/content/guides/integrate/login-ui/saml-standard.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/guides/integrate/login-ui/saml-standard.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/saml-standard
 
 To build your own login ui for your own application it is not necessary to have the SAML standard included or any additional work that has to be done.
 However, it might make sense, if you want to connect your login to different applications especially if they are not in your control and they rely on the standard.
 
 The following flow shows you the different components you need to enable SAML for your login.
-![](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/login-ui/saml-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/login-ui/saml-flow.png)
 
 1. Your application makes an SAML request to your login UI
 2. The login UI proxies the request to the ZITADEL API.

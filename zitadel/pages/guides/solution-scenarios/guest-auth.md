@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/solution-scenarios/guest-auth.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/solution-scenarios/guest-auth.mdx)
+> Pinned source for ZITADEL v4.20.2: [apps/docs/content/guides/solution-scenarios/guest-auth.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/guides/solution-scenarios/guest-auth.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/solution-scenarios/guest-auth
 
 In certain scenarios, requiring users to create an account *before* they can interact with core features of your product often leads to increased drop-off rates. Whether it is an e-commerce platform requiring authentication to add items to a cart, or a SaaS application requesting an email before granting dashboard access, registration barriers can negatively impact user acquisition.

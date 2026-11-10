@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/get-started.mdx)
+> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/get-started.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started
 
 # Deploy your first Pod
@@ -145,7 +145,7 @@ First, install the [Runpod CLI](https://docs.runpod.io/runpodctl/overview) on yo
 
 ```bash
 # Install runpodctl
-bash <(wget -qO- cli.runpod.io)
+curl -fsSL https://cli.runpod.net | sudo bash
 
 # Configure your API key
 runpodctl config --apiKey "your-api-key"

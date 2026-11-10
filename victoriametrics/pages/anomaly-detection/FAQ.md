@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/anomaly-detection/FAQ.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/FAQ.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/anomaly-detection/FAQ.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/FAQ.md)
 
 ## What is VictoriaMetrics Anomaly Detection (vmanomaly)?
 
@@ -26,7 +26,7 @@ For most of the [univariate models](https://docs.victoriametrics.com/anomaly-det
 
 Please see example graph illustrating this logic below:
 
-![anomaly-score-calculation-example](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/vmanomaly-prophet-example.webp)
+![anomaly-score-calculation-example](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/vmanomaly-prophet-example.webp)
 
 > Additional post-processing logic may be applied to produced anomaly scores when query policies such as [`min_dev_from_expected`](https://docs.victoriametrics.com/anomaly-detection/components/models/#minimal-deviation-from-expected) or [`detection_direction`](https://docs.victoriametrics.com/anomaly-detection/components/models/#detection-direction) are configured. Follow the links for details.
 
@@ -54,11 +54,14 @@ Please see example graph illustrating this logic below:
 
 ## Choosing the right model for vmanomaly
 
+> \[!TIP]
+> For worked examples and copyable configurations, see [Choose a model for your metrics](https://docs.victoriametrics.com/anomaly-detection/guides/model-selection/).
+
 Start with what you want to compare: a metric with its own history, related signals with each other, or an entity with its peers. Then choose a model for the data's behavior and the [types of anomalies](https://victoriametrics.com/blog/victoriametrics-anomaly-detection-handbook-chapter-2/#categories-of-anomalies) you want to detect.
 
 ### Independent time series
 
-[Univariate models](https://docs.victoriametrics.com/anomaly-detection/components/models/#univariate-models) evaluate each time series independently, using its own history. Choose this type when metrics have different behavior or need separate anomaly decisions.
+[Univariate models](https://docs.victoriametrics.com/anomaly-detection/components/models/#univariate-models) evaluate each time series independently, using its own history. Choose this type when metrics have different behavior or need separate anomaly decisions. See the [CPU history example](https://docs.victoriametrics.com/anomaly-detection/guides/model-selection/#follow-each-metric-over-time).
 
 - Use [Online MAD](https://docs.victoriametrics.com/anomaly-detection/components/models/#online-mad) for simple, mostly stationary data with no-to-slow trend, when robustness to outliers is important.
 - Use [Online Z-score](https://docs.victoriametrics.com/anomaly-detection/components/models/#online-z-score) for simple, light-tailed data where standard-deviation units are meaningful.
@@ -66,13 +69,13 @@ Start with what you want to compare: a metric with its own history, related sign
 
 ### Related signals
 
-[Multivariate models](https://docs.victoriametrics.com/anomaly-detection/components/models/#multivariate-models) learn relationships across a fixed set of related signals and produce a joint anomaly decision per group, for example CPU, memory and request rate for one service.
+[Multivariate models](https://docs.victoriametrics.com/anomaly-detection/components/models/#multivariate-models) learn relationships across a fixed set of related signals and produce a joint anomaly decision per group, for example CPU, memory and request rate for one service. See the [CPU and RAM comparison](https://docs.victoriametrics.com/anomaly-detection/guides/model-selection/#watch-related-signals-together).
 
 Use multivariate [Temporal Envelope](https://docs.victoriametrics.com/anomaly-detection/components/models/#temporal-envelope) when normal relationships between aligned metrics matter. It is the recommended replacement for [Isolation Forest](https://docs.victoriametrics.com/anomaly-detection/components/models/#isolation-forest-multivariate), which is planned for deprecation in a future release.
 
 ### Comparable peers
 
-[Peer-group models](https://docs.victoriametrics.com/anomaly-detection/components/models/#peer-group-models) compare similar entities at the same timestamp and score each peer separately. Use [Peer Outlier](https://docs.victoriametrics.com/anomaly-detection/components/models/#peer-outlier) *(available from vmanomaly v1.31.0)* to find unusual members among comparable replicas or hosts. Queries remain isolated, and `groupby` separates populations within each query.
+[Peer-group models](https://docs.victoriametrics.com/anomaly-detection/components/models/#peer-group-models) compare similar entities at the same timestamp and score each peer separately. Use [Peer Outlier](https://docs.victoriametrics.com/anomaly-detection/components/models/#peer-outlier) *(available from vmanomaly v1.31.0)* to find unusual members among comparable replicas or hosts. Queries remain isolated, and `groupby` separates populations within each query. See the [replica comparison](https://docs.victoriametrics.com/anomaly-detection/guides/model-selection/#find-the-odd-one-out).
 
 A new peer can use an existing, warmed-up group's learned state without a separate per-peer fit. Missing or departed peers do not reset that state, but each timestamp still needs enough valid peers to score. A new group requires its own fit and warmup. See the [peer-group lifecycle](https://docs.victoriametrics.com/anomaly-detection/components/models/#peer-group-models).
 
@@ -96,7 +99,7 @@ To visualize and interact with both [self-monitoring metrics](https://docs.victo
 - To monitor `vmanomaly` health, operational performance, and potential issues in real time, visit the [self-monitoring section](https://docs.victoriametrics.com/anomaly-detection/self-monitoring/).
 - *(available from vmanomaly v1.26.0)* For rapid exploration of how different models, their configurations and included domain knowledge impact the results of anomaly detection, use the built-in [vmanomaly UI](https://docs.victoriametrics.com/anomaly-detection/ui/).
 
-![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/vmanomaly-ui-overview.webp)
+![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/vmanomaly-ui-overview.webp)
 
 ## Using offsets
 
@@ -217,7 +220,7 @@ Treat AI-generated configuration as a proposal. Review it and validate it throug
 ## How to backtest particular configuration on historical data?
 
 > *(available from vmanomaly v1.26.0)* You can use the [vmanomaly UI](https://docs.victoriametrics.com/anomaly-detection/ui/) to backtest particular configuration on historical data with easy-to-use [preset](https://docs.victoriametrics.com/anomaly-detection/presets/#ui).
-> ![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/vmanomaly-ui-overview.webp)
+> ![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/vmanomaly-ui-overview.webp)
 
 Anomaly scores for historical ([backtesting](https://wikipedia.org/wiki/Backtesting)) data can be produced using [`backtesting` scheduler](https://docs.victoriametrics.com/anomaly-detection/components/scheduler/#backtesting-scheduler) in `vmanomaly` config. This scheduler allows you to define a historical period for which the models will be trained and then used to produce anomaly scores, imitating the behavior of the [PeriodicScheduler](https://docs.victoriametrics.com/anomaly-detection/components/scheduler/#periodic-scheduler) for that period. Especially useful for testing new models or configurations on historical data before deploying them in production, around labelled incidents.
 
@@ -383,7 +386,7 @@ groups:
 
 While `vmanomaly` detects anomalies and produces scores, it *does not directly generate alerts*. The anomaly scores are written back to VictoriaMetrics, where respective alerting tool, like [`vmalert`](https://docs.victoriametrics.com/victoriametrics/vmalert/), can be used to create alerts based on these scores for integrating it with your alerting management system. See an example diagram of how `vmanomaly` integrates into observability pipeline for anomaly detection on `node_exporter` metrics:
 
-![Typical vmanomaly observability pipeline using node-exporter, vmagent, VictoriaMetrics, Grafana, vmalert, and Alertmanager](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_overview.svg)
+![Typical vmanomaly observability pipeline using node-exporter, vmagent, VictoriaMetrics, Grafana, vmalert, and Alertmanager](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/guide-vmanomaly-vmalert_overview.svg)
 
 Once anomaly scores are written back to VictoriaMetrics, you can use [MetricsQL](https://docs.victoriametrics.com/victoriametrics/metricsql/) expressions in `vmalert` to define alerting rules based on these scores. Reasonable defaults are based around default threshold of `anomaly_score > 1`:
 
@@ -456,7 +459,7 @@ services:
   # ...
   vmanomaly:
     container_name: vmanomaly
-    image: victoriametrics/vmanomaly:v1.30.6
+    image: victoriametrics/vmanomaly:v1.32.0
     # ...
     restart: always
     volumes:
@@ -676,7 +679,7 @@ For a side-by-side comparison of all split modes and their resulting sub-configu
 Here’s an example of using the config splitter to divide configurations based on the `extra_filters` argument from the reader section:
 
 ```sh
-docker pull victoriametrics/vmanomaly:v1.30.6 && docker image tag victoriametrics/vmanomaly:v1.30.6 vmanomaly
+docker pull victoriametrics/vmanomaly:v1.32.0 && docker image tag victoriametrics/vmanomaly:v1.32.0 vmanomaly
 ```
 
 ```sh

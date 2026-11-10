@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/integrate/actions/testing-function.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/integrate/actions/testing-function.mdx)
+> Pinned source for ZITADEL v4.20.2: [apps/docs/content/guides/integrate/actions/testing-function.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/guides/integrate/actions/testing-function.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/actions/testing-function
 
 This guide shows you how to leverage the ZITADEL actions feature to enhance different functions in your ZITADEL instance.

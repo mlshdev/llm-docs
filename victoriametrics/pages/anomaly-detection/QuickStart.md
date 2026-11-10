@@ -1,6 +1,8 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/QuickStart.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/QuickStart.md)
 
 For a broader overview please visit the [navigation page](https://docs.victoriametrics.com/anomaly-detection/).
+
+*(available from vmanomaly v1.32.0)* For a configuration tailored to your metrics, try [dynamic presets](https://docs.victoriametrics.com/anomaly-detection/presets/#dynamic-presets) with AI Copilot.
 
 ## How to install and run vmanomaly
 
@@ -125,13 +127,13 @@ groups:
 *(available from vmanomaly v1.30.6)* An experimental [Docker Hardened Images](https://www.docker.com/products/hardened-images/)-based variant is available on Docker Hub and Quay for `linux/amd64` and `linux/arm64`:
 
 ```text
-victoriametrics/vmanomaly:v1.31.1-dhi
-victoriametrics/vmanomaly:v1.31.1-enterprise-dhi
-quay.io/victoriametrics/vmanomaly:v1.31.1-dhi
-quay.io/victoriametrics/vmanomaly:v1.31.1-enterprise-dhi
+victoriametrics/vmanomaly:v1.32.0-dhi
+victoriametrics/vmanomaly:v1.32.0-enterprise-dhi
+quay.io/victoriametrics/vmanomaly:v1.32.0-dhi
+quay.io/victoriametrics/vmanomaly:v1.32.0-enterprise-dhi
 ```
 
-These are aliases of the same application image and have the same license requirements. The `-enterprise-dhi` ordering supports Helm's `image.variant: dhi` when enterprise mode is enabled, `image.tag` is empty, and the chart appVersion matches the desired release. With an older chart, set `image.tag: v1.31.1-enterprise-dhi` explicitly. Standard `v1.31.1`, `v1.31.1-enterprise` and `latest` tags retain their existing base image.
+These are aliases of the same application image and have the same license requirements. The `-enterprise-dhi` ordering supports Helm's `image.variant: dhi` when enterprise mode is enabled, `image.tag` is empty, and the chart appVersion matches the desired release. With an older chart, set `image.tag: v1.32.0-enterprise-dhi` explicitly. Standard `v1.32.0`, `v1.32.0-enterprise` and `latest` tags retain their existing base image.
 
 > \[!WARNING]
 > The hardened image runs as a non-root user and contains no runtime shell or package manager. Ensure mounted configuration and license files are readable and state directories are writable by the container user; shell-based entrypoint overrides and `docker exec ... sh` are unavailable.
@@ -145,7 +147,7 @@ Below are the steps to get `vmanomaly` up and running inside a Docker container:
 1. Pull Docker image:
 
 ```sh
-docker pull victoriametrics/vmanomaly:v1.31.1
+docker pull victoriametrics/vmanomaly:v1.32.0
 ```
 
 2. Create the license file with your license key.
@@ -165,7 +167,7 @@ docker run -it \
     -v ./license:/license \
     -v ./config.yaml:/config.yaml \
     -p 8490:8490 \
-    victoriametrics/vmanomaly:v1.31.1 \
+    victoriametrics/vmanomaly:v1.32.0 \
     /config.yaml \
     --licenseFile=/license \
     --loggerLevel=INFO \
@@ -182,7 +184,7 @@ docker run -it \
     -e VMANOMALY_DATA_DUMPS_DIR=/tmp/vmanomaly/data \
     -e VMANOMALY_MODEL_DUMPS_DIR=/tmp/vmanomaly/models \
     -p 8490:8490 \
-    victoriametrics/vmanomaly:v1.31.1 \
+    victoriametrics/vmanomaly:v1.32.0 \
     /config.yaml \
     --licenseFile=/license \
     --loggerLevel=INFO \
@@ -195,7 +197,7 @@ services:
   # ...
   vmanomaly:
     container_name: vmanomaly
-    image: victoriametrics/vmanomaly:v1.31.1
+    image: victoriametrics/vmanomaly:v1.32.0
     # ...
     restart: always
     volumes:
@@ -245,6 +247,8 @@ with [these Helm charts](https://github.com/VictoriaMetrics/helm-charts/blob/mas
 If you are using [VM Operator](https://docs.victoriametrics.com/operator/) to manage your Kubernetes cluster, `vmanomaly` can be deployed using the following [custom resource guide](https://docs.victoriametrics.com/operator/resources/vmanomaly/).
 
 ## How to configure vmanomaly
+
+Need help choosing a model and its initial settings? Use [Choose a model for your metrics](https://docs.victoriametrics.com/anomaly-detection/guides/model-selection/) for worked examples and copyable recipes, then return here to complete the deployment.
 
 To run `vmanomaly`, use YAML files or directories containing YAML files. The configuration files support shallow merge, allowing splitting the configuration into multiple files for better organization.
 
@@ -330,7 +334,7 @@ writer:
 
 *(available from vmanomaly v1.26.0)* `vmanomaly`'s built-in web UI supports prototyping and interactive generation of `vmanomaly` and `vmalert` configuration files. See the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/) for instructions and examples. For optional AI-assisted workflows, use the [UI Copilot](https://docs.victoriametrics.com/anomaly-detection/ui/#ai-assistance), connect the [vmanomaly MCP server](https://docs.victoriametrics.com/ai-tools/#vmanomaly-mcp-server), or follow the published [agent skills](https://docs.victoriametrics.com/ai-tools/#agent-skills).
 
-![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/vmanomaly-ui-overview.webp)
+![vmanomaly-ui-overview](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/vmanomaly-ui-overview.webp)
 
 > \[!TIP]
 > Public playgrounds with pre-configured `vmanomaly` instances and VictoriaMetrics/VictoriaLogs/VictoriaTraces datasources are available for interactive experimenting without the need to set up your own instance or getting an enterprise license. You can find them in the [UI documentation](https://docs.victoriametrics.com/anomaly-detection/ui/#playgrounds) or access them directly via the links - [metrics](https://play-vmanomaly.victoriametrics.com/metrics/), [logs](https://play-vmanomaly.victoriametrics.com/logs/), [traces](https://play-vmanomaly.victoriametrics.com/traces/) - or embedded versions in the collapsible blocks.

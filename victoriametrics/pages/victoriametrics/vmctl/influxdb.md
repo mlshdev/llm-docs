@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/vmctl/influxdb.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/vmctl/influxdb.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/vmctl/influxdb.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmctl/influxdb.md)
 
 `vmctl` can migrate historical data from InfluxDB (v1) to VictoriaMetrics. See `./vmctl influx --help` for details and
 full list of flags. Also see [migrating data from InfluxDB to VictoriaMetrics](https://docs.victoriametrics.com/guides/migrate-from-influx/) article.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/_index.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/integrations/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/_index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/integrations/_index.md)
 
 **Docker Sandboxes SSH requirements**
 
@@ -25,6 +25,15 @@ that supports remote development over SSH can connect to it.
   Windows, install the OpenSSH client.
 - The editor or app you want to connect, with its remote-over-SSH support
   installed.
+
+## Configure agent credentials
+
+Before setting up an integration that runs an AI agent, configure a model
+provider credential for that agent in Docker Sandboxes. Connecting an editor
+or desktop app over SSH doesn't supply the sandbox with the credential.
+Store an API key with [stored secrets](https://docs.docker.com/ai/sandboxes/configuration/credentials/#stored-secrets)
+or complete the agent's supported OAuth sign-in flow. See the
+[agent pages](https://docs.docker.com/ai/sandboxes/agents/) for authentication instructions.
 
 ## Enable SSH access
 

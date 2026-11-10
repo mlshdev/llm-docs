@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/network-volumes/DELETE/networkvolumes/networkVolumeId.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/api-reference/network-volumes/DELETE/networkvolumes/networkVolumeId.mdx)
+> Pinned source for Runpod main: [api-reference/network-volumes/DELETE/networkvolumes/networkVolumeId.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/api-reference/network-volumes/DELETE/networkvolumes/networkVolumeId.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/network-volumes/DELETE/networkvolumes/networkVolumeId
 
 # Delete a network volume

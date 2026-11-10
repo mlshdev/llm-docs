@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/hooks/index.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/_vendor/github.com/docker/docker-agent/docs/configuration/hooks/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/hooks/index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/_vendor/github.com/docker/docker-agent/docs/configuration/hooks/index.md)
 
 *Run shell commands at various points during agent execution for deterministic control over behavior.*
 

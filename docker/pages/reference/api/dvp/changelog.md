@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/api/dvp/changelog.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/reference/api/dvp/changelog.md)
+> Pinned source for Docker main: [content/reference/api/dvp/changelog.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/reference/api/dvp/changelog.md)
 
 # Docker Verified Publisher API changelog
 

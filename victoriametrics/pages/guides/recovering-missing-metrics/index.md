@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/guides/recovering-missing-metrics/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/guides/recovering-missing-metrics/_index.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/guides/recovering-missing-metrics/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/guides/recovering-missing-metrics/_index.md)
 
 If one VictoriaMetrics installation is missing samples that another installation still has, `vmctl vm-native` can copy the affected time range from the healthy source. This applies to single-node and cluster installations, including independent clusters in different availability zones. The source must contain the missing samples; `vmctl` cannot recreate data that is absent from every installation.
 

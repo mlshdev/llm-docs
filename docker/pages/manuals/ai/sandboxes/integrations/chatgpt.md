@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/chatgpt.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/integrations/chatgpt.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/chatgpt.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/integrations/chatgpt.md)
 
 # Connect ChatGPT to a sandbox
 
@@ -20,6 +20,8 @@ isolated environment instead of on your host.
 
 ## Prerequisites
 
+- Codex credentials configured in Docker Sandboxes. See
+  [Codex authentication](https://docs.docker.com/ai/sandboxes/agents/codex/#authentication).
 - SSH access set up. See [Editor and app integrations](https://docs.docker.com/ai/sandboxes/integrations/#enable-ssh-access).
 - The ChatGPT desktop app installed.
 

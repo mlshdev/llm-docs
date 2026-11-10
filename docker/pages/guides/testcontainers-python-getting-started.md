@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/testcontainers-python-getting-started.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/guides/testcontainers-python-getting-started.md)
+> Pinned source for Docker main: [content/guides/testcontainers-python-getting-started.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/guides/testcontainers-python-getting-started.md)
 
 # Getting started with Testcontainers for Python
 

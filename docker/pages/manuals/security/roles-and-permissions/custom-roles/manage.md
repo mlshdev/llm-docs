@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/roles-and-permissions/custom-roles/manage.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/security/roles-and-permissions/custom-roles/manage.md)
+> Pinned source for Docker main: [content/manuals/security/roles-and-permissions/custom-roles/manage.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/security/roles-and-permissions/custom-roles/manage.md)
 
 # Manage custom roles in Docker Home
 

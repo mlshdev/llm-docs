@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "16e452c8eaea26cec842cbf1065037fb2015001f",
-      "sourceCommittedAt": "2026-11-05T16:05:23Z",
-      "observedCommit": "16e452c8eaea26cec842cbf1065037fb2015001f",
-      "documentationDigest": "8c13cd004187b86be001ffdd2f30ec419b3b18d4c83054350a4acc8844769e7c"
+      "sourceCommit": "34992b922461d20cc97107b84056756802584571",
+      "sourceCommittedAt": "2026-11-09T17:48:56Z",
+      "observedCommit": "34992b922461d20cc97107b84056756802584571",
+      "documentationDigest": "64b90fb47fc0895aebbb8e3b18deedbdb943f410cfc611d08c89abd9917918df"
     },
     "container": {
       "tag": "1.7.1",
@@ -49,10 +49,10 @@
       "sourceCommit": "752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a"
     },
     "victoriametrics": {
-      "tag": "v1.155.0",
-      "releaseId": 422094225,
-      "releasePublishedAt": "2026-10-26T13:40:31Z",
-      "sourceCommit": "3fec2f72414d00d1acda807c8818d7af90cc966d"
+      "tag": "v1.156.0",
+      "releaseId": 436901484,
+      "releasePublishedAt": "2026-11-09T10:02:46Z",
+      "sourceCommit": "0c1bf87a0c9843c30566df0c0aa6593466425ac5"
     },
     "victorialogs": {
       "tag": "v1.53.0",
@@ -79,17 +79,17 @@
       "sourceCommit": "0f135ada5a362e41d6144e4821950a13566bedac"
     },
     "zitadel": {
-      "tag": "v4.20.1",
-      "releaseId": 432417558,
-      "releasePublishedAt": "2026-11-03T08:08:50Z",
-      "sourceCommit": "709968cdd4257d7377bb95f22c840ee39ba951c6"
+      "tag": "v4.20.2",
+      "releaseId": 438841942,
+      "releasePublishedAt": "2026-11-09T07:33:05Z",
+      "sourceCommit": "dce17d591309b1c0cdfb6c6718ec6cfada05eb7d"
     },
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
       "sourceCommit": "0f89d936b39e1cb438a874ecfccffe253be6b63b",
       "sourceCommittedAt": "2026-11-06T01:09:33Z",
-      "observedCommit": "0f89d936b39e1cb438a874ecfccffe253be6b63b",
+      "observedCommit": "2d482a888a4e5d82fdafa24f9915dbae2f4832e8",
       "documentationDigest": "30c1eacad7e8081b0b8f6543666274ac9ab2862f926b3b26f478db628e5118be"
     },
     "yt-dlp": {
@@ -103,7 +103,7 @@
       "branch": "master",
       "sourceCommit": "cccbc9e158b0ac3bb2158e9841a647a5bec57b57",
       "sourceCommittedAt": "2026-11-02T17:38:48Z",
-      "observedCommit": "3a3dd15bfafcb645a1b45c2c6c0798a8f786aaaf",
+      "observedCommit": "57ff753ad416b7bf27e59d72ae8c7cac93b56be4",
       "documentationDigest": "c36b490df840f2e2e5f3f15227d976554f325bb62eb564cafc5119b3eb044a73"
     },
     "bun": {
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1",
-      "sourceCommittedAt": "2026-11-06T21:35:08Z",
-      "observedCommit": "66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1",
-      "documentationDigest": "d7832f0682cd4e5ef611d789dc4fab0c26e27c6c33a98da08922f462ee57f035"
+      "sourceCommit": "eba1be5cd1f4af9e764b2f65145197430e9ba0ad",
+      "sourceCommittedAt": "2026-11-10T01:34:24Z",
+      "observedCommit": "eba1be5cd1f4af9e764b2f65145197430e9ba0ad",
+      "documentationDigest": "f9244e607d7f146da86754e324c2e1077707c9df1e91b3a57fc3fc1131e0a2b7"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

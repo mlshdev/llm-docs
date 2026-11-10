@@ -1,8 +1,8 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/victoriametrics/Single-server-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/Single-server-VictoriaMetrics.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/Single-server-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/Single-server-VictoriaMetrics.md)
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
-![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/victoriametrics/README-components.webp)
+![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/README-components.webp)
 
 - **Case studies**: [Grammarly, Roblox, Wix, Spotify,...](https://docs.victoriametrics.com/victoriametrics/casestudies/).
 - **Available**: [Binary releases](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest), Docker images on [Docker Hub](https://hub.docker.com/r/victoriametrics/victoria-metrics/) and [Quay](https://quay.io/repository/victoriametrics/victoria-metrics), [Source code](https://github.com/VictoriaMetrics/VictoriaMetrics).
@@ -2756,6 +2756,8 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/
      Whether to use proxy protocol for connections accepted at -graphiteListenAddr . See https://www.haproxy.org/download/1.8/doc/proxy-protocol.txt
   -graphiteTrimTimestamp duration
      Trim timestamps for Graphite data to this duration. Minimum practical duration is 1s. Higher duration (i.e. 1m) may be used for reducing disk space usage for timestamp data (default 1s)
+  -healthcheck
+     Whether to check that the running process accepts connections at -httpListenAddr and exit. The exit code is non-zero if the check fails. This is useful for Docker HEALTHCHECK in images without curl or wget. Pass the same -httpListenAddr as the checked process has
   -http.connTimeout duration
      Incoming connections to -httpListenAddr are closed after the configured timeout. This may help evenly spreading load among a cluster of services behind TCP-level load balancer. Zero value disables closing of incoming connections (default 2m0s)
   -http.disableCORS
@@ -3017,6 +3019,8 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/
      Interval for checking for changes in Marathon REST API. This works only if marathon_sd_configs is configured in '-promscrape.config' file. See https://docs.victoriametrics.com/victoriametrics/sd_configs/#marathon_sd_configs for details (default 30s)
   -promscrape.maxDroppedTargets int
      The maximum number of droppedTargets to show at /api/v1/targets page. Increase this value if your setup drops more scrape targets during relabeling and you need investigating labels for all the dropped targets. Note that the increased number of tracked dropped targets may result in increased memory usage (default 10000)
+  -promscrape.maxParseErrorsPerScrape int
+     The maximum number of parse errors to log per each scrape of a target. The number of suppressed parse errors is logged after the scrape. Zero or negative value disables the limit. See also -promscrape.suppressScrapeErrors (default 20)
   -promscrape.maxResponseHeadersSize size
      The maximum size of http response headers from Prometheus scrape targets
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 4096)

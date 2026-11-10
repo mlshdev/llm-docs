@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/security/apparmor.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/engine/security/apparmor.md)
+> Pinned source for Docker main: [content/manuals/engine/security/apparmor.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/engine/security/apparmor.md)
 
 AppArmor (Application Armor) is a Linux security module that protects an
 operating system and its applications from security threats. To use it, a system

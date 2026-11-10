@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_rm.yaml](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/data/sbx_cli/sbx_secret_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_rm.yaml](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/data/sbx_cli/sbx_secret_rm.yaml)
 
 # sbx secret rm
 

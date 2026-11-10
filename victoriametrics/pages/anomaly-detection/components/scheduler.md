@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.155.0: [docs/anomaly-detection/components/scheduler.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/3fec2f72414d00d1acda807c8818d7af90cc966d/docs/anomaly-detection/components/scheduler.md)
+> Pinned source for VictoriaMetrics v1.156.0: [docs/anomaly-detection/components/scheduler.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/scheduler.md)
 
 Scheduler defines how often to run and make inferences, as well as what timerange to use to train the model.
 Is specified in `scheduler` section of a config for VictoriaMetrics Anomaly Detection.

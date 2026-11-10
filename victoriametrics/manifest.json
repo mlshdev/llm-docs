@@ -6,25 +6,37 @@
   "title": "VictoriaMetrics",
   "homepage": "https://docs.victoriametrics.com/",
   "repository": "VictoriaMetrics/VictoriaMetrics",
-  "tag": "v1.155.0",
-  "releaseId": 422094225,
-  "releasePublishedAt": "2026-10-26T13:40:31Z",
-  "sourceCommit": "3fec2f72414d00d1acda807c8818d7af90cc966d",
-  "documentCount": 115,
+  "tag": "v1.156.0",
+  "releaseId": 436901484,
+  "releasePublishedAt": "2026-11-09T10:02:46Z",
+  "sourceCommit": "0c1bf87a0c9843c30566df0c0aa6593466425ac5",
+  "documentCount": 113,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 5668396,
-      "documentCount": 115,
-      "sha256": "51f83b57d5df96839330333e4044041e959b213b100836f754a3f48677cf929a"
+      "byteLength": 4897485,
+      "documentCount": 113,
+      "sha256": "aea26de7b8c8ec54da17cd8a6a7d01821fb8066468d60a3c2e6252b5666d5338"
     }
   ],
-  "outputDigest": "82aa18fce8c10ba02bb2ac8c683fa5b68d63548b7283f1c786f81ede09e0346f",
+  "outputDigest": "bb3be5a33193b429ba86aca9b8dcbe6cb76d0954963e636fa32aafb617eff133",
   "quarantined": [
+    {
+      "sourcePath": "docs/anomaly-detection/UI.md",
+      "reason": "Unresolved victoriametrics source syntax \"{{< a\""
+    },
     {
       "sourcePath": "docs/playgrounds/_index.md",
       "reason": "Unresolved victoriametrics source syntax \"{{% a\""
+    },
+    {
+      "sourcePath": "docs/victoriametrics/changelog/CHANGELOG_2026.md",
+      "reason": "Unresolved victoriametrics source syntax \"{{< y\""
+    },
+    {
+      "sourcePath": "docs/victoriametrics/changelog/_index.md",
+      "reason": "Unresolved victoriametrics source syntax \"{{< y\""
     }
   ],
   "notes": [

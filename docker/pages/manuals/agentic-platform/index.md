@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/agentic-platform/_index.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/agentic-platform/_index.md)
+> Pinned source for Docker main: [content/manuals/agentic-platform/_index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/agentic-platform/_index.md)
 
 # Docker Agentic Platform
 
@@ -37,6 +37,7 @@ information.
 - [Get started](https://docs.docker.com/agentic-platform/get-started/): Start your first sandbox.
 - [Kits](https://docs.docker.com/agentic-platform/kits/): Find a kit or run your own public kit.
 - [Sandboxes](https://docs.docker.com/agentic-platform/sandboxes/): Access, pause, resume, and delete your sandboxes.
+- [Schedules](https://docs.docker.com/agentic-platform/schedules/): Run recurring tasks in a fresh sandbox.
 - [MCP](https://docs.docker.com/agentic-platform/mcp/): Connect predefined or custom MCP servers.
 - [Secrets](https://docs.docker.com/agentic-platform/secrets/): Manage model provider and service credentials.
 - [Policies](https://docs.docker.com/agentic-platform/policies/): Control outbound network access from sandboxes.

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1/get-started/agent-skills.mdx)
+> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/get-started/agent-skills.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/agent-skills
 
 # Agent skills for AI coding tools
@@ -28,7 +28,7 @@ Then connect the hosted MCP server and sign in with Runpod (see [Connecting the 
 You don't need to install the Runpod CLI or Flash now. The skills install them the first time a task needs them, such as a file transfer, SSH, or a Flash deploy, and ask for a [Runpod API key](https://docs.runpod.io/get-started/credentials#api-keys) at that point. The same key works for the CLI, Flash, and the MCP server. To set it up ahead of time:
 
 ```bash
-curl -sSL https://cli.runpod.net | bash   # or: brew install runpod/runpodctl/runpodctl
+curl -fsSL https://cli.runpod.net | sudo bash   # or: brew install runpod/runpodctl/runpodctl
 export RUNPOD_API_KEY=<key>               # add to ~/.zshrc or ~/.bashrc to persist
 ```
 

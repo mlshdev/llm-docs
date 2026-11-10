@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/attach-persistent-storage.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes-api/cookbook/attach-persistent-storage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/attach-persistent-storage.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes-api/cookbook/attach-persistent-storage.md)
 
 # Attach persistent storage
 

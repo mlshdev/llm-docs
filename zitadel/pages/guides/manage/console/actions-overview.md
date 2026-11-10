@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.1: [apps/docs/content/guides/manage/console/actions-overview.mdx](https://github.com/zitadel/zitadel/blob/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/content/guides/manage/console/actions-overview.mdx)
+> Pinned source for ZITADEL v4.20.2: [apps/docs/content/guides/manage/console/actions-overview.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/guides/manage/console/actions-overview.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/console/actions-overview
 
 ## Overview
@@ -7,7 +7,7 @@ An Identity and Access Management system is a highly interactive environment. ZI
 
 Actions allow you to define custom scripts (JavaScript) that are executed based on specific triggers (Flows). This enables advanced customization, such as modifying tokens, calling external APIs during login, or customizing authentication flows.
 
-![Actions menu](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/console/actionsmenu.png)
+![Actions menu](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/console/actionsmenu.png)
 
 ## How Actions Work
 
@@ -63,7 +63,7 @@ To add an action, navigate to your Organization's top navigation and select **Ac
 - **Timeout:** How long the script is allowed to run before being terminated.
 - **Allowed to Fail:** If checked, the flow will continue even if the script throws an error.
 
-![Create Action](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/console/action.png)
+![Create Action](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/console/action.png)
 
 ### 2. Create a Flow (Link Action to Trigger)
 
@@ -73,7 +73,7 @@ Merely creating an Action does not run it. You must create a **Flow** to define 
 2. Select the **Trigger** (e.g., Post Authentication).
 3. Add your Action to the list of executed scripts.
 
-![Flow](https://raw.githubusercontent.com/zitadel/zitadel/709968cdd4257d7377bb95f22c840ee39ba951c6/apps/docs/public/img/guides/console/flow.png)
+![Flow](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/console/flow.png)
 
 **Example Scenario:**
 You create an **External Authentication** Flow with a **Post Authentication** trigger. Now, whenever a user authenticates via an external IDP (like Google or Azure AD), your Action is triggered immediately after the authentication step but before the session is finalized.

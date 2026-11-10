@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `66961d34e9c766709c7fdfa4b6f7b9e1e1f848a1`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `eba1be5cd1f4af9e764b2f65145197430e9ba0ad`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -12,30 +12,30 @@
 ## Get started
 
 - [Welcome to Runpod](pages/overview.md): Explore our guides and examples to deploy your AI/ML application on Runpod. Review setup and usage guidance in the Runpod documentation. (4478 bytes)
-- [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (14020 bytes)
+- [Deploy your first Pod](pages/get-started.md): Run code on a remote GPU in minutes. Review setup steps, core concepts, and recommended next actions for building on Runpod. (14034 bytes)
 - [Choose a workflow](pages/get-started/connect-to-runpod.md): Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod. (2209 bytes)
 - [Concepts](pages/get-started/concepts.md): Key concepts and terminology for understanding Runpod's platform and products. Review setup steps and core concepts for building on Runpod. (3461 bytes)
 - [Manage credentials](pages/get-started/credentials.md): Create and manage your API keys, SSH keys, S3 API keys, container registry credentials, and secrets from the Credentials page. (7235 bytes)
-- [Agent skills for AI coding tools](pages/get-started/agent-skills.md): Manage GPU workloads on Runpod with coding agents like Claude Code, Codex, and Cursor. Review setup steps and core concepts for building on Runpod. (10261 bytes)
+- [Agent skills for AI coding tools](pages/get-started/agent-skills.md): Manage GPU workloads on Runpod with coding agents like Claude Code, Codex, and Cursor. Review setup steps and core concepts for building on Runpod. (10267 bytes)
 - [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (12307 bytes)
 - [Early access features](pages/get-started/early-access.md): Opt in to experimental Runpod console features before they're generally available. Review setup steps and core concepts for building on Runpod. (1730 bytes)
 
 ## Runpod SDK (Beta)
 
-- [Runpod Python SDK](pages/sdk/overview.md): Use the runpod Python package to define GPU functions, deploy apps, call endpoints, build Serverless workers, and manage Runpod resources from one SDK. (13338 bytes)
-- [Get started with the Runpod SDK](pages/sdk/quickstart.md): Install the runpod Python package, log in with the rp CLI, and run your first function on a Runpod GPU in a few minutes, then deploy it as an endpoint. (4592 bytes)
-- [Resource parameters](pages/sdk/configuration/parameters.md): Reference for every resource parameter on @app.queue, @app.api, and @app.task in the Runpod SDK, including defaults and which decorators support each one. (10231 bytes)
+- [Runpod Python SDK](pages/sdk/overview.md): Use the runpod Python package to define GPU functions, deploy apps, call endpoints, build Serverless workers, and manage Runpod resources from one SDK. (13361 bytes)
+- [Get started with the Runpod SDK](pages/sdk/quickstart.md): Install the runpod Python package, log in with the rp CLI, and run your first function on a Runpod GPU in a few minutes, then deploy it as an endpoint. (4588 bytes)
+- [Resource parameters](pages/sdk/configuration/parameters.md): Reference for every resource parameter on @app.queue, @app.api, and @app.task in the Runpod SDK, including defaults and which decorators support each one. (10129 bytes)
 - [GPU types](pages/sdk/configuration/gpu-types.md): Choose GPUs for Runpod SDK resources with short names, GPU pools, or exact device types, and learn how the SDK matches each form to available hardware. (7135 bytes)
 - [CPU types](pages/sdk/configuration/cpu-types.md): Run Runpod SDK resources on CPU-only workers. Compare CPU instance types by vCPU and memory, and see which data centers stock each generation. (2836 bytes)
 - [Storage](pages/sdk/configuration/storage.md): Attach network volumes and global volumes to Runpod SDK resources with mounts, read volume paths in worker code, and avoid common storage mistakes. (4507 bytes)
 - [Configuration best practices](pages/sdk/configuration/best-practices.md): Recommended Runpod SDK resource settings for production, development, and cost control, including worker counts, idle timeouts, and GPU selection. (4759 bytes)
-- [Build an app](pages/sdk/apps/build-app.md): Build a Runpod SDK app step by step: run a function on a GPU, add a load-balanced HTTP service, share data between tasks, and deploy it. (7954 bytes)
+- [Build an app](pages/sdk/apps/build-app.md): Build a Runpod SDK app step by step: run a function on a GPU, add a load-balanced HTTP service, share data between tasks, and deploy it. (7947 bytes)
 - [Dev sessions](pages/sdk/apps/dev-sessions.md): Use rp flash dev to run a Runpod SDK app against temporary endpoints, stream worker logs, re-run on code changes, and clean up when you finish. (4509 bytes)
 - [Apps and environments](pages/sdk/apps/apps-and-environments.md): Learn how Runpod SDK apps and environments organize deployments, and manage them with the rp flash app and rp flash env commands. (3213 bytes)
 - [Deploy an app](pages/sdk/apps/deploy.md): Deploy a Runpod SDK app with rp flash deploy: what goes into the build, ignore rules, size limits, Python versions, and how to call deployed resources. (5614 bytes)
 - [rp CLI reference](pages/sdk/cli.md): Reference for the rp CLI that ships with the runpod Python package: log in, scaffold apps, run live dev sessions, deploy, and manage SSH keys and Pods. (8050 bytes)
 - [Runpod SDK runtime](pages/sdk/runtime.md): Learn what the runpod-sdk-runtime package does, where its source lives, and when you need to think about it separately from the runpod Python SDK. (2750 bytes)
-- [Migrate from Flash to the Runpod SDK](pages/sdk/migrate-from-flash.md): Move an existing Flash project to the unified Runpod SDK: install runpod, update CLI commands and code, check behavior changes, and test before redeploying. (19416 bytes)
+- [Migrate from Flash to the Runpod SDK](pages/sdk/migrate-from-flash.md): Move an existing Flash project to the unified Runpod SDK: install runpod, update CLI commands and code, check behavior changes, and test before redeploying. (19246 bytes)
 
 ## Flash
 
@@ -221,7 +221,7 @@
 - [Manage accounts](pages/accounts-billing/manage-accounts.md): Create accounts, manage teams, and configure user permissions in Runpod. Review account, billing, and management details for Runpod. (7588 bytes)
 - [Billing overview](pages/accounts-billing/billing.md): Understand how Runpod billing works, manage your credits, and configure payment methods. Review account, billing, and management details for Runpod. (7548 bytes)
 - [Cost centers](pages/accounts-billing/cost-centers.md): Track and organize Runpod spending by team, project, or department. Review account, billing, and management details for Runpod. (6433 bytes)
-- [Referral, affiliate, and creator programs](pages/accounts-billing/referrals.md): Earn additional revenue through Runpod's referral, affiliate, and creator programs. Review account, billing, and management details for Runpod. (6036 bytes)
+- [Referral, affiliate, and creator programs](pages/accounts-billing/referrals.md): Earn additional revenue through Runpod's referral, affiliate, and creator programs. Review account, billing, and management details for Runpod. (6764 bytes)
 - [Troubleshoot payment card declines](pages/accounts-billing/manage-payment-cards.md): Resolve declined payment cards and prevent service interruptions on Runpod. Review account, billing, and management details for Runpod. (4017 bytes)
 - [Post-paid billing](pages/accounts-billing/post-paid-billing.md): Learn how Runpod's enterprise post-paid billing works: usage is metered and invoiced in arrears at your contracted rates, with a different console experience. (4594 bytes)
 - [Sales tax on Runpod purchases](pages/accounts-billing/sales-tax.md): Understand how sales tax applies to Runpod purchases, what determines your rate, and how it appears on your receipts. (2082 bytes)
@@ -305,7 +305,7 @@
 
 ## Runpod CLI
 
-- [Overview](pages/runpodctl/overview.md): Use Runpod CLI to manage Pods, Serverless endpoints, templates, and more from your local machine. Review commands and usage guidance for the Runpod CLI. (7479 bytes)
+- [Overview](pages/runpodctl/overview.md): Use Runpod CLI to manage Pods, Serverless endpoints, templates, and more from your local machine. Review commands and usage guidance for the Runpod CLI. (7377 bytes)
 - [doctor](pages/runpodctl/reference/runpodctl-doctor.md): Run runpodctl doctor to configure API and SSH credentials, verify the CLI setup, and diagnose common connection or configuration problems. (995 bytes)
 - [pod](pages/runpodctl/reference/runpodctl-pod.md): Use runpodctl to create, list, start, stop, inspect, and delete Pods from the command line with status and resource filters. (14132 bytes)
 - [serverless](pages/runpodctl/reference/runpodctl-serverless.md): Use runpodctl to create, list, inspect, update, and delete Serverless endpoints, including Hub-based deployments and templates. (8886 bytes)
@@ -365,6 +365,12 @@
 - [Get A Secret](pages/api-reference-v2/account/get-a-secret.md): Retrieve a Runpod account secret's metadata by ID. The secret value is write-only and is never returned. (5370 bytes)
 - [Delete A Secret](pages/api-reference-v2/account/delete-a-secret.md): Delete a Runpod account secret so Pods, Serverless endpoints, and templates can no longer resolve it from environment variables. (4437 bytes)
 - [Update A Secret](pages/api-reference-v2/account/update-a-secret.md): Update a Runpod account secret's description or rotate its value. The new value takes effect the next time a referencing Pod or worker boots. (9167 bytes)
+
+## Signup
+
+- [Start An Authentication Attempt](pages/api-reference-v2/signup/start-an-authentication-attempt.md): Email a verification code to sign in or create a Runpod account without an API key. (4834 bytes)
+- [Verify An Authentication Attempt](pages/api-reference-v2/signup/verify-an-authentication-attempt.md): Exchange an emailed verification code for a new Runpod API key. (5317 bytes)
+- [Resend An Authentication Attempts Code](pages/api-reference-v2/signup/resend-an-authentication-attempts-code.md): Email a new verification code for a pending authentication attempt. (4722 bytes)
 
 ## Clusters
 

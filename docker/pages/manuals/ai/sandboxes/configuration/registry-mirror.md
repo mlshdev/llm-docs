@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/registry-mirror.md](https://github.com/docker/docs/blob/16e452c8eaea26cec842cbf1065037fb2015001f/content/manuals/ai/sandboxes/configuration/registry-mirror.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/registry-mirror.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/ai/sandboxes/configuration/registry-mirror.md)
 
 # Configure a registry mirror
 
@@ -53,7 +53,7 @@ mirror URL paths differently from image repository prefixes.
 Docker Engine connects to the mirror over HTTPS, so the sandbox must trust the
 certificate that the mirror presents. For a mirror that uses an internal
 certificate authority, add the CA to the sandbox's system trust store. See
-[Install an internal CA certificate](https://docs.docker.com/ai/sandboxes/customize/kits-v2/#install-an-internal-ca-certificate).
+[Run setup after combining kits](https://docs.docker.com/ai/sandboxes/customize/author/patterns/#run-setup-after-combining-kits).
 
 Template and kit pulls use the changed setting immediately. Existing sandboxes
 retain the Docker Engine mirror configuration with which they were created.
