@@ -1,12 +1,14 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/_index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/tempo/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/tempo/_index.md)
 
 # Tempo data source
 
-Grafana ships with built-in support for [Grafana Tempo](https://grafana.com/docs/tempo/latest/), a high-volume, minimal-dependency distributed tracing backend from Grafana Labs.
+Grafana ships preinstalled with the Tempo data source for [Grafana Tempo](https://grafana.com/docs/tempo/latest/), a high-volume, minimal-dependency distributed tracing backend from Grafana Labs. There's nothing to install to get started.
 Use the Tempo data source to search and visualize traces, correlate traces with logs, metrics, and profiles, and monitor service dependencies with the Service Graph.
 
+As of Grafana 13.2, Tempo is packaged as a standalone plugin so it can receive updates independently of Grafana releases. For details, refer to [Plugin updates](#plugin-updates).
+
 Want to learn more about traces and the other telemetry signals?
-Refer to [Understand your data](https://grafana.com/docs/grafana-cloud/telemetry-signals/).
+Refer to [Correlate telemetry signals](https://grafana.com/docs/grafana-cloud/telemetry-signals/).
 
 > **Note**
 >
@@ -16,23 +18,23 @@ Refer to [Understand your data](https://grafana.com/docs/grafana-cloud/telemetry
 
 The Tempo data source supports the following features:
 
-| Feature            | Supported | Notes                                                                  |
-| ------------------ | --------- | ---------------------------------------------------------------------- |
-| TraceQL queries    | Yes       | Query traces using TraceQL, the query language designed for traces     |
-| Search             | Yes       | Find traces by service name, span name, duration, and attributes       |
-| Service Graph      | Yes       | Visualize service dependencies and RED metrics                         |
-| Trace to logs      | Yes       | Navigate from spans to related logs in Loki and other log data sources |
-| Trace to metrics   | Yes       | Link spans to metrics queries in Prometheus                            |
-| Trace to profiles  | Yes       | Link spans to profiling data in Grafana Pyroscope                      |
-| Trace correlations | Yes       | Embed custom correlation links in trace views                          |
-| Streaming          | Yes       | Display TraceQL results as they become available                       |
-| JSON trace upload  | Yes       | Upload and visualize trace files without a Tempo instance              |
-| Explore            | Yes       | Ad-hoc trace investigation without dashboards                          |
-| Alerting           | No        | Use TraceQL metrics in Prometheus for trace-based alerting             |
+| Feature            | Supported    | Notes                                                                                                                               |
+| ------------------ | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| TraceQL queries    | Yes          | Query traces using TraceQL, the query language designed for traces                                                                  |
+| Search             | Yes          | Find traces by service name, span name, duration, and attributes                                                                    |
+| Service Graph      | Yes          | Visualize service dependencies and RED metrics                                                                                      |
+| Trace to logs      | Yes          | Navigate from spans to related logs in Loki and other log data sources                                                              |
+| Trace to metrics   | Yes          | Link spans to metrics queries in Prometheus                                                                                         |
+| Trace to profiles  | Yes          | Link spans to profiling data in Grafana Pyroscope                                                                                   |
+| Trace correlations | Yes          | Embed custom correlation links in trace views                                                                                       |
+| Streaming          | Yes          | Display TraceQL results as they become available                                                                                    |
+| JSON trace upload  | Yes          | Upload and visualize trace files without a Tempo instance                                                                           |
+| Explore            | Yes          | Ad-hoc trace investigation without dashboards                                                                                       |
+| Alerting           | Experimental | Enable the `tempoAlerting` feature toggle to alert on TraceQL metrics queries, or use Prometheus metrics from the metrics generator |
 
 > **Tip**
 >
-> **New to tracing?** Learn what telemetry signals are and how they work together in [Understand your data](https://grafana.com/docs/grafana-cloud/telemetry-signals/) (Grafana Cloud), or read the [Introduction to tracing](https://grafana.com/docs/tempo/latest/introduction/) for core concepts like spans, traces, and instrumentation.
+> **New to tracing?** Learn what telemetry signals are and how they work together in [Correlate telemetry signals](https://grafana.com/docs/grafana-cloud/telemetry-signals/) (Grafana Cloud), or take the [Introduction to tracing](https://grafana.com/docs/learning-hub/intro-to-tracing/) learning journey to learn about spans, traces, and how to read a trace in Grafana.
 >
 > **Prefer a queryless experience?** [Grafana Traces Drilldown](https://grafana.com/docs/grafana/v13.3/explore/simplified-exploration/traces/) lets you explore tracing data using RED metrics without writing TraceQL queries.
 
@@ -57,6 +59,34 @@ After you've connected Grafana to Tempo, you can configure correlations between 
 - [Trace to metrics](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics/): Link spans to metrics queries in Prometheus or other metrics data sources.
 - [Trace to profiles](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/configure-trace-to-profiles/): Link spans to profiling data in Grafana Pyroscope with embedded flame graphs.
 - [Trace correlations](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/trace-correlations/): Create custom correlation links to any data source or external URL.
+
+## Plugin updates
+
+Starting with Grafana v13.2, the Tempo data source is a standalone plugin, preinstalled in both Grafana OSS and Enterprise. This enables more frequent updates independent of Grafana releases. Grafana automatically checks the plugin catalog on each server restart and installs the latest version within the current major version. New major versions aren't installed automatically.
+
+To adjust this behavior:
+
+- **Opt out of auto-updates:** Set `preinstall_auto_update` to `false` in your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/).
+- **Update manually:** Update at any time from the **Administration > Plugins** page without restarting Grafana.
+
+The standalone plugin requires Grafana 12.3.0 or later. The Tempo data source bundled with Grafana 13.1 and earlier continues to work as before. These versions are unaffected by the externalization.
+
+Users running Grafana 12.3.x through 13.1.x can install the standalone plugin from the plugin catalog if they want the latest features before upgrading to Grafana 13.2. To use the standalone plugin with these versions, add the following to your [configuration file](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/):
+
+```ini
+[plugin.tempo]
+as_external = true
+
+[plugins]
+; Install the latest version on startup:
+preinstall_sync = tempo
+; Or install a specific version:
+; preinstall_sync = tempo@<version>
+```
+
+> **Note**
+>
+> On Grafana Cloud, the Tempo plugin is managed by Grafana and updates automatically.
 
 [//]: # "Shared note: querying a data source with the gcx Grafana CLI."
 
@@ -96,7 +126,7 @@ After you've connected Grafana to Tempo, you can configure correlations between 
 
 You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
 
-`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/ai-tools/grafana-cli/gcx/) for installation, configuration, and the full command reference.
 
 For example, to search and query your Tempo data source, use the `gcx datasources tempo` commands:
 

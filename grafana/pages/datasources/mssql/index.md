@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/mssql/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/mssql/_index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/mssql/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/mssql/_index.md)
 
 # Microsoft SQL Server data source
 
@@ -127,7 +127,7 @@ After you configure the data source, you can:
 
 You can query this data source from the command line and from AI coding agents using the Grafana CLI, `gcx`. `gcx` gives you and your agent structured, terminal-based access to your Grafana data sources, which is useful for automation and agent-driven investigations.
 
-`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/as-code/observability-as-code/grafana-cli/gcx/) for installation, configuration, and the full command reference.
+`gcx` supports Grafana Cloud and Grafana OSS or Enterprise v12 and later. Before you query, install and authenticate `gcx`. Refer to the [`gcx` CLI documentation](https://grafana.com/docs/grafana/v13.3/ai-tools/grafana-cli/gcx/) for installation, configuration, and the full command reference.
 
 For example, to explore and query your Microsoft SQL Server data source, use the `gcx datasources mssql` commands:
 

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-machine-init.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-init.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-machine-init.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-init.1.md.in)
 
 # podman-machine-init
 
@@ -44,7 +44,7 @@ be updated.  After updating, you must stop and start your machine with `podman m
 it to take effect.
 
 The above mechanism is only used to update patch (Z) versions of podman. For updates to new major and minor
-version (X.Y) use the **[podman machine os apply](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-os-apply.1.md)** command, see the docs there for
+version (X.Y) use the **[podman machine os apply](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-os-apply.1.md)** command, see the docs there for
 more information.
 
 Note: Updating as described above can result in version mismatches between Podman on the host and Podman in the
@@ -261,7 +261,7 @@ $ podman machine init myvm
 Initialize and start a new Podman machine in one step.
 
 ```
-podman machine init --now
+$ podman machine init --now
 ```
 
 Initialize the default Podman machine pulling the content from the internet defaulting to rootful mode. The default is rootless.
@@ -308,7 +308,7 @@ $ podman machine init --provider applehv
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine.1.md)**, **containers.conf(5)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine.1.md)**, **containers.conf(5)**
 
 ## HISTORY
 

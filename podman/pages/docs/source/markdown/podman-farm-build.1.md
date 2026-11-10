@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-farm-build.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-farm-build.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-farm-build.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-farm-build.1.md.in)
 
 # podman-farm-build
 
@@ -77,7 +77,7 @@ discarded when writing images in Docker formats.
 #### **--authfile**=*path*
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -248,7 +248,7 @@ microseconds.
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -263,7 +263,7 @@ ends (controllable via **--cpu-period**).
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -305,7 +305,7 @@ this can result in the following division of CPU shares:
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -317,7 +317,7 @@ CPUs in which to allow execution. Can be specified as a comma-separated list
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -332,7 +332,7 @@ two memory nodes.
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -497,6 +497,15 @@ runtime to pass the group access into the container. Currently only available
 with the `crun` OCI runtime. Note: `keep-groups` is exclusive, other groups cannot be specified
 with this flag. (Not available for remote commands, including Mac and Windows (excluding WSL2) machines)
 
+Note: `keep-groups` passes the supplementary groups that the *calling process*
+already has into the container, it does not look the user's groups up at
+container start. When Podman is started from a systemd user service, for example
+a rootless Quadlet, the calling process is the `systemd --user` manager, which
+only holds the groups the user had when that manager was started. Groups the user
+is added to afterwards, for example with `usermod`, are therefore not passed into
+the container. Restart the user's systemd manager to pick them up, for example
+with `loginctl terminate-user <user>` followed by a new login, or by rebooting.
+
 #### **--help**, **-h**
 
 Print usage statement
@@ -528,7 +537,9 @@ proxy environment at container build time.)
 When used with the remote client it uses the proxy environment variables
 that are set on the server process.
 
-Defaults to **true**.
+The default for this option is taken from the `http_proxy` setting in the
+`[containers]` table of containers.conf(5). If unset, that value defaults to
+**true**.
 
 #### **--identity-label**
 
@@ -617,7 +628,7 @@ BUILDAH\_LAYERS environment variable. `export BUILDAH_LAYERS=true`
 
 #### **--local**, **-l**
 
-Build image on local machine as well as on farm nodes.
+Build image on local machine as well as on farm nodes (Default: true).
 
 #### **--logfile**=*filename*
 
@@ -1140,6 +1151,10 @@ Specifies resource limits to apply to processes launched when processing `RUN` i
 "sigpending": maximum number of pending signals (ulimit -i)
 "stack": maximum stack size (ulimit -s)
 
+Size limits ("core", "data", "fsize", "memlock", "msgqueue", "rss" and "stack") are given in bytes,
+not in the units that the **ulimit** shell builtin displays. See the **--ulimit** option in
+**[podman-run(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-run.1.md.in)** for the units used by each type.
+
 #### **--unsetannotation**=*annotation*
 
 Unset the image annotation, causing the annotation not to be inherited from the base image.
@@ -1363,7 +1378,7 @@ $ podman farm build --platforms arm64,amd64 -t name .
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-farm(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-farm.1.md)**, **[buildah(1)](https://github.com/containers/buildah/blob/main/docs/buildah.1.md)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**, **[containers-registries.conf(5)](https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md)**, **[crun(1)](https://github.com/containers/crun/blob/main/crun.1.md)**, **[runc(8)](https://github.com/opencontainers/runc/blob/main/man/runc.8.md)**, **[useradd(8)](https://www.unix.com/man-page/redhat/8/useradd)**, **[Containerfile(5)](https://github.com/containers/container-libs/blob/main/common/docs/Containerfile.5.md)**, **[containerignore(5)](https://github.com/containers/container-libs/blob/main/common/docs/containerignore.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-farm(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-farm.1.md)**, **[buildah(1)](https://github.com/containers/buildah/blob/main/docs/buildah.1.md)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**, **[containers-registries.conf(5)](https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md)**, **[crun(1)](https://github.com/containers/crun/blob/main/crun.1.md)**, **[runc(8)](https://github.com/opencontainers/runc/blob/main/man/runc.8.md)**, **[useradd(8)](https://www.unix.com/man-page/redhat/8/useradd)**, **[Containerfile(5)](https://github.com/containers/container-libs/blob/main/common/docs/Containerfile.5.md)**, **[containerignore(5)](https://github.com/containers/container-libs/blob/main/common/docs/containerignore.5.md)**
 
 ## HISTORY
 

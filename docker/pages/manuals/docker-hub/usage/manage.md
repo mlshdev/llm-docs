@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/usage/manage.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/docker-hub/usage/manage.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/usage/manage.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/docker-hub/usage/manage.md)
 
 # Best practices for optimizing Docker Hub usage
 

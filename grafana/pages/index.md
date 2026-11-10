@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/_index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/_index.md)
 
 # Grafana OSS and Enterprise
 
@@ -22,13 +22,16 @@ To learn more about these features, refer to [Enterprise features](https://grafa
 ## Learn
 
 - [What's new](https://grafana.com/docs/grafana/v13.3/whatsnew/): Browse release highlights, deprecations, and breaking changes in Grafana releases.
+- [Upgrade](https://grafana.com/docs/grafana/v13.3/upgrade-guide/): Upgrade Grafana to stay current with the latest fixes and enhancements.
 - [Introduction](https://grafana.com/docs/grafana/v13.3/fundamentals/): Learn about observability topics in general and some of the products included in Grafana.
 - [Set up](https://grafana.com/docs/grafana/v13.3/setup-grafana/): Get up and running with Grafana.
+- [Administration](https://grafana.com/docs/grafana/v13.3/administration/): Perform administrative tasks such as configuring user management and roles and permissions.
 - [Data sources](https://grafana.com/docs/grafana/v13.3/datasources/): Manage data sources and how to configure or query the built-in data sources.
 - [Dashboards](https://grafana.com/docs/grafana/v13.3/visualizations/dashboards/): Query, transform, visualize, and understand your data no matter where it's stored.
 - [Panels and Visualizations](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/): Easily collect, correlate, and visualize data to make informed decisions in real-time.
 - [Explore](https://grafana.com/docs/grafana/v13.3/visualizations/explore/): Explore your data using a query instead of creating a dashboard.
 - [Alerting](https://grafana.com/docs/grafana/v13.3/alerting/): Learn about problems in your systems moments after they occur.
-- [Administration](https://grafana.com/docs/grafana/v13.3/administration/): Perform administrative tasks such as configuring user management and roles and permissions.
+- [As code and provisioning](https://grafana.com/docs/grafana/v13.3/as-code/): Deploy, configure and provision Grafana with as code workflows.
+- [AI tools](https://grafana.com/docs/grafana/v13.3/ai-tools/): AI tools available in Grafana - Assistant, MCP servers, and `gcx`.
 - [Troubleshooting](https://grafana.com/docs/grafana/v13.3/troubleshooting/): Troubleshoot common Grafana issues.
-- [Upgrade](https://grafana.com/docs/grafana/v13.3/upgrade-guide/): Upgrade Grafana to stay current with the latest fixes and enhancements.
+- [Developer resources](https://grafana.com/docs/grafana/v13.3/developer-resources/): Content for developers - API reference guides, contributing guides, and contact options.

@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-json](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-json)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-json](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-json)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-json.html
 
 # JSON Functions and Operators
@@ -611,9 +611,9 @@ Expands the top-level JSON array of objects to a set of rows having the composit
 
 ---
 
-`jsonb_set` ( `target` `jsonb`, `path` `text[]`, `new_value` `jsonb` [, `create_if_missing` `boolean`] ) → `jsonb`
+`jsonb_set` ( `jsonb_in` `jsonb`, `path` `text[]`, `replacement` `jsonb` [, `create_if_missing` `boolean`] ) → `jsonb`
 
-Returns `target` with the item designated by `path` replaced by `new_value`, or with `new_value` added if `create_if_missing` is true (which is the default) and the item designated by `path` does not exist. All earlier steps in the path must exist, or the `target` is returned unchanged. As with the path oriented operators, negative integers that appear in the `path` count from the end of JSON arrays. If the last path step is an array index that is out of range, and `create_if_missing` is true, the new value is added at the beginning of the array if the index is negative, or at the end of the array if it is positive.
+Returns `jsonb_in` with the item designated by `path` replaced by `replacement`, or with `replacement` added if `create_if_missing` is true (which is the default) and the item designated by `path` does not exist. All earlier steps in the path must exist, or the `jsonb_in` is returned unchanged. As with the path oriented operators, negative integers that appear in the `path` count from the end of JSON arrays. If the last path step is an array index that is out of range, and `create_if_missing` is true, the new value is added at the beginning of the array if the index is negative, or at the end of the array if it is positive.
 
 `jsonb_set('[{"f1":1,"f2":null},2,null,3]', '{0,f1}', '[2,3,4]', false)` → `[{"f1": [2, 3, 4], "f2": null}, 2, null, 3]`
 
@@ -621,9 +621,9 @@ Returns `target` with the item designated by `path` replaced by `new_value`, or 
 
 ---
 
-`jsonb_set_lax` ( `target` `jsonb`, `path` `text[]`, `new_value` `jsonb` [, `create_if_missing` `boolean` [, `null_value_treatment` `text`]] ) → `jsonb`
+`jsonb_set_lax` ( `jsonb_in` `jsonb`, `path` `text[]`, `replacement` `jsonb` [, `create_if_missing` `boolean` [, `null_value_treatment` `text`]] ) → `jsonb`
 
-If `new_value` is not `NULL`, behaves identically to `jsonb_set`. Otherwise behaves according to the value of `null_value_treatment` which must be one of `'raise_exception'`, `'use_json_null'`, `'delete_key'`, or `'return_target'`. The default is `'use_json_null'`.
+If `replacement` is not `NULL`, behaves identically to `jsonb_set`. Otherwise behaves according to the value of `null_value_treatment` which must be one of `'raise_exception'`, `'use_json_null'`, `'delete_key'`, or `'return_target'`. The default is `'use_json_null'`.
 
 `jsonb_set_lax('[{"f1":1,"f2":null},2,null,3]', '{0,f1}', null)` → `[{"f1": null, "f2": null}, 2, null, 3]`
 
@@ -631,9 +631,9 @@ If `new_value` is not `NULL`, behaves identically to `jsonb_set`. Otherwise beha
 
 ---
 
-`jsonb_insert` ( `target` `jsonb`, `path` `text[]`, `new_value` `jsonb` [, `insert_after` `boolean`] ) → `jsonb`
+`jsonb_insert` ( `jsonb_in` `jsonb`, `path` `text[]`, `replacement` `jsonb` [, `insert_after` `boolean`] ) → `jsonb`
 
-Returns `target` with `new_value` inserted. If the item designated by the `path` is an array element, `new_value` will be inserted before that item if `insert_after` is false (which is the default), or after it if `insert_after` is true. If the item designated by the `path` is an object field, `new_value` will be inserted only if the object does not already contain that key. All earlier steps in the path must exist, or the `target` is returned unchanged. As with the path oriented operators, negative integers that appear in the `path` count from the end of JSON arrays. If the last path step is an array index that is out of range, the new value is added at the beginning of the array if the index is negative, or at the end of the array if it is positive.
+Returns `jsonb_in` with `replacement` inserted. If the item designated by the `path` is an array element, `replacement` will be inserted before that item if `insert_after` is false (which is the default), or after it if `insert_after` is true. If the item designated by the `path` is an object field, `replacement` will be inserted only if the object does not already contain that key. All earlier steps in the path must exist, or the `jsonb_in` is returned unchanged. As with the path oriented operators, negative integers that appear in the `path` count from the end of JSON arrays. If the last path step is an array index that is out of range, the new value is added at the beginning of the array if the index is negative, or at the end of the array if it is positive.
 
 `jsonb_insert('{"a": [0,1,2]}', '{a, 1}', '"new_value"')` → `{"a": [0, "new_value", 1, 2]}`
 

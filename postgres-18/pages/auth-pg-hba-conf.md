@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/client-auth.sgml#auth-pg-hba-conf](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/client-auth.sgml%23auth-pg-hba-conf)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/client-auth.sgml#auth-pg-hba-conf](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/client-auth.sgml%23auth-pg-hba-conf)
 > Canonical documentation: https://www.postgresql.org/docs/18/auth-pg-hba-conf.html
 
 # The pg_hba.conf File
@@ -188,7 +188,7 @@ The meaning of the fields is as follows:
 
   **`oauth`**
 
-    Authorize and optionally authenticate using a third-party OAuth 2.0 identity provider. See [OAuth Authorization/Authentication](./auth-oauth.md) for details.
+    Authorize and optionally authenticate using a third-party OAuth 2.0 identity provider. Since the bearer token is sent in clear text over the network, this should not be used on untrusted networks. See [OAuth Authorization/Authentication](./auth-oauth.md) for details.
 
 **`auth-options`**
 

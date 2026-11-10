@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/query-editor/traceql-search.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/query-editor/traceql-search.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/tempo/query-editor/traceql-search.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/tempo/query-editor/traceql-search.md)
 
 # Search traces using the query builder
 
@@ -12,11 +12,9 @@ To learn the full query syntax, refer to [Construct a TraceQL query](https://gra
 
 If queries return no results, check that your [Tempo data source is configured and connected](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/).
 
-## Enable Search with the query builder
+## Availability
 
-This feature is automatically available in Grafana 10 (and newer) and Grafana Cloud.
-
-To enable the TraceQL query builder in self-managed Grafana through version 10.1, [enable the `traceqlSearch` feature toggle](https://grafana.com/docs/grafana/v13.3/setup-grafana/configure-grafana/feature-toggles/).
+The Search query builder is available by default in Grafana and Grafana Cloud. No feature toggle or additional configuration is required.
 
 [//]: # "Shared content for the Search - TraceQL query builder"
 

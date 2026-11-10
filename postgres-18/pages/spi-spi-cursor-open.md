@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/spi.sgml#spi-spi-cursor-open](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/spi.sgml%23spi-spi-cursor-open)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/spi.sgml#spi-spi-cursor-open](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/spi.sgml%23spi-spi-cursor-open)
 > Canonical documentation: https://www.postgresql.org/docs/18/spi-spi-cursor-open.html
 
 # SPI_cursor_open
@@ -20,6 +20,8 @@ Portal SPI_cursor_open(const char * name, SPIPlanPtr plan,
 Using a cursor instead of executing the statement directly has two benefits. First, the result rows can be retrieved a few at a time, avoiding memory overrun for queries that return many rows. Second, a portal can outlive the current C function (it can, in fact, live to the end of the current transaction). Returning the portal name to the C function's caller provides a way of returning a row set as result.
 
 The passed-in parameter data will be copied into the cursor's portal, so it can be freed while the cursor still exists.
+
+In most cases, a cursor remains until it is explicitly closed, even after the function returns. As an exception, if ephemeral named relations or transition tables are registered on the SPI connection with `SPI_register_relation` or `SPI_register_trigger_data`, all cursors are automatically closed when the function exits.
 
 ## Arguments
 

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/install-configuration/providers/docker.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/install-configuration/providers/docker.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/providers/docker.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/providers/docker.md)
 
 # Traefik & Docker
 
@@ -53,7 +53,7 @@ services:
 | <a id="opt-providers-docker-httpClientTimeout"></a>`providers.docker.httpClientTimeout`           | Defines the client timeout for HTTP connections. Accepts a duration string (e.g., `30s`, `1m30s`) or an integer value in seconds. If its value is 0, no timeout is set.                                                                                                                                                                                                              | 0                                   | No       |
 | <a id="opt-providers-docker-watch"></a>`providers.docker.watch`                                   | Instructs Traefik to watch Docker events or not.                                                                                                                                                                                                                                                                                                                                     | true                                | No       |
 | <a id="opt-providers-docker-constraints"></a>`providers.docker.constraints`                       | Defines an expression that Traefik matches against the container labels to determine whether to create any route for that container. See [here](#constraints) for more information.                                                                                                                                                                                                  | ""                                  | No       |
-| <a id="opt-providers-docker-allowEmptyServices"></a>`providers.docker.allowEmptyServices`         | Instructs the provider to create any [servers load balancer](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service#service-load-balancer) defined for Docker containers regardless of the [healthiness](https://docs.docker.com/engine/reference/builder/#healthcheck) of the corresponding containers.                                    | false                               | No       |
+| <a id="opt-providers-docker-allowEmptyServices"></a>`providers.docker.allowEmptyServices`         | Instructs the provider to create any [servers load balancer](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service#service-load-balancer) defined for Docker containers regardless of the [healthiness](https://docs.docker.com/reference/dockerfile#healthcheck) of the corresponding containers.                                         | false                               | No       |
 | <a id="opt-providers-docker-tls-ca"></a>`providers.docker.tls.ca`                                 | Defines the path to the certificate authority used for the secure connection to Docker, it defaults to the system bundle.                                                                                                                                                                                                                                                            | ""                                  | No       |
 | <a id="opt-providers-docker-tls-cert"></a>`providers.docker.tls.cert`                             | Defines the path to the public certificate used for the secure connection to Docker. When using this option, setting the `key` option is required.                                                                                                                                                                                                                                   | ""                                  | Yes      |
 | <a id="opt-providers-docker-tls-key"></a>`providers.docker.tls.key`                               | Defines the path to the private key used for the secure connection to Docker. When using this option, setting the `cert` option is required.                                                                                                                                                                                                                                         | ""                                  | Yes      |
@@ -263,7 +263,7 @@ providers:
 
 The `defaultRule` option defines what routing rule to apply to a container if no rule is defined by a label.
 
-It must be a valid [Go template](https://pkg.go.dev/text/template/),
+It must be a valid [Go template](https://pkg.go.dev/text/template),
 and can use [sprig template functions](https://masterminds.github.io/sprig/).
 The container name can be accessed with the `ContainerName` identifier.
 The service name can be accessed with the `Name` identifier.
@@ -371,17 +371,17 @@ providers:
 ## Routing Configuration
 
 When using Docker as a [provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview),
-Traefik uses [container labels](https://docs.docker.com/engine/reference/commandline/run/#label) to retrieve its routing configuration.
+Traefik uses [container labels](https://docs.docker.com/reference/cli/docker/container/run/#label) to retrieve its routing configuration.
 
 See the list of labels in the dedicated [routing](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/docker) section.
 
 ### Routing Configuration with Labels
 
-By default, Traefik watches for [container level labels](https://docs.docker.com/config/labels-custom-metadata/) on a standalone Docker Engine.
+By default, Traefik watches for [container level labels](https://docs.docker.com/engine/manage-resources/labels/) on a standalone Docker Engine.
 
 When using Docker Compose, labels are specified by the directive
-[`labels`](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels) from the
-["services" objects](https://docs.docker.com/compose/compose-file/compose-file-v3/#service-configuration-reference).
+[`labels`](https://docs.docker.com/reference/compose-file/services/#labels) from the
+["services" objects](https://docs.docker.com/reference/compose-file/services/).
 
 > **Not Only Docker**
 > Please note that any tool like Nomad, Terraform, Ansible, etc.
@@ -405,7 +405,7 @@ Port detection for private communication works as follows:
 
 ### Host networking
 
-When exposing containers that are configured with [host networking](https://docs.docker.com/network/host/),
+When exposing containers that are configured with [host networking](https://docs.docker.com/engine/network/drivers/host/),
 the IP address of the host is resolved as follows:
 
 - try a lookup of `host.docker.internal`
@@ -451,7 +451,7 @@ You can specify which Docker API Endpoint to use with the directive [`endpoint`]
 > > - Authentication using HTTP Basic authentication through an HTTP proxy that exposes the Docker daemon socket.
 > >   **More Resources and Examples**
 > > - ["Paranoid about mounting /var/run/docker.sock?"](https://medium.com/@containeroo/traefik-2-0-paranoid-about-mounting-var-run-docker-sock-22da9cb3e78c)
-> > - [Traefik and Docker: A Discussion with Docker Captain, Bret Fisher](https://blog.traefik.io/traefik-and-docker-a-discussion-with-docker-captain-bret-fisher-7f0b9a54ff88)
+> > - [Traefik and Docker: A Discussion with Docker Captain, Bret Fisher](https://traefik.io/blog/traefik-and-docker-a-discussion-with-docker-captain-bret-fisher-7f0b9a54ff88)
 > > - [KubeCon EU 2018 Keynote, Running with Scissors, from Liz Rice](https://www.youtube.com/watch?v=ltrV-Qmh3oY)
 > > - [Don't expose the Docker socket (not even to a container)](https://www.lvh.io/posts/dont-expose-the-docker-socket-not-even-to-a-container/)
 > > - [A thread on Hacker News about sharing the `/var/run/docker.sock` file](https://news.ycombinator.com/item?id=17983623)

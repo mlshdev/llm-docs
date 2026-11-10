@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/contributing/submitting-security-issues.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/contributing/submitting-security-issues.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/contributing/submitting-security-issues.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/contributing/submitting-security-issues.md)
 
 # Security
 
@@ -14,7 +14,7 @@ and select **Custom** > **Releases**.
 ## CVE
 
 Reported vulnerabilities can be found on
-[cve.mitre.org](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=traefik).
+[cve.mitre.org](https://www.cve.org/CVERecord/SearchResults?query=traefik).
 
 CVEs are only created for vulnerabilities affecting **Generally Available (GA) versions** of Traefik.
 Vulnerabilities discovered in non-GA versions (release candidates, betas, early access, or development branches)

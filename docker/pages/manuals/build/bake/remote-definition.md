@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/remote-definition.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/build/bake/remote-definition.md)
+> Pinned source for Docker main: [content/manuals/build/bake/remote-definition.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/build/bake/remote-definition.md)
 
 You can build Bake files directly from a remote Git repository or HTTPS URL:
 

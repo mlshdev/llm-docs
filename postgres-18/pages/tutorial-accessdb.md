@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/start.sgml#tutorial-accessdb](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/start.sgml%23tutorial-accessdb)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/start.sgml#tutorial-accessdb](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/start.sgml%23tutorial-accessdb)
 > Canonical documentation: https://www.postgresql.org/docs/18/tutorial-accessdb.html
 
 # Accessing a Database
@@ -20,7 +20,7 @@ If you do not supply the database name then it will default to your user account
 In `psql`, you will be greeted with the following message:
 
 ```
-psql (18.6)
+psql (18.7)
 Type "help" for help.
 
 mydb=>
@@ -42,7 +42,7 @@ The last line printed out by `psql` is the prompt, and it indicates that `psql` 
 mydb=> SELECT version();
                                          version
 -------------------------------------------------------------------&#x200B;-----------------------
- PostgreSQL 18.6 on x86_64-pc-linux-gnu, compiled by gcc (Debian 4.9.2-10) 4.9.2, 64-bit
+ PostgreSQL 18.7 on x86_64-pc-linux-gnu, compiled by gcc (Debian 4.9.2-10) 4.9.2, 64-bit
 (1 row)
 
 mydb=> SELECT current_date;

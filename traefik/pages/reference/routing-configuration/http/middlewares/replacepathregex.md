@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/replacepathregex.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/replacepathregex.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/replacepathregex.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/replacepathregex.md)
 
 The `replacePathRegex` middleware will:
 
@@ -62,12 +62,12 @@ labels:
 
 ## Configuration Options
 
-| Field                                     | Description                                                                                                                                                                                                 | Default | Required |
-| :---------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
-| <a id="opt-regex"></a>`regex`             | Regular expression to match and capture the path from the request URL.                                                                                                                                      |         | Yes      |
-| <a id="opt-replacement"></a>`replacement` | Replacement path format, which can include captured variables.<br /> `$1x` is equivalent to `${1x}`, not `${1}x` (see [Regexp.Expand](https://golang.org/pkg/regexp/#Regexp.Expand)), so use `${1}` syntax. |         | No       |
+| Field                                     | Description                                                                                                                                                                                            | Default | Required |
+| :---------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
+| <a id="opt-regex"></a>`regex`             | Regular expression to match and capture the path from the request URL.                                                                                                                                 |         | Yes      |
+| <a id="opt-replacement"></a>`replacement` | Replacement path format, which can include captured variables.<br /> `$1x` is equivalent to `${1x}`, not `${1}x` (see [Regexp.Expand](https://pkg.go.dev/regexp#Regexp.Expand)), so use `${1}` syntax. |         | No       |
 
 > **Tip**
-> Regular expressions and replacements can be tested using online tools such as [Go Playground](https://play.golang.org/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2).
+> Regular expressions and replacements can be tested using online tools such as [Go Playground](https://go.dev/play/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2/substitution).
 >
 > When defining a regular expression within YAML, any escaped character needs to be escaped twice: `example\.com` needs to be written as `example\\.com`.

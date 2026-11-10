@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md)
 
 The `stripPrefixRegex` middleware strips the matching path prefix and stores it in an `X-Forwarded-Prefix` header.
 
@@ -70,6 +70,6 @@ If your backend is serving assets (for example, images or JavaScript files), it 
 Using the previous example, the backend should return `/products/shoes/image.png` (and not `/images.png`, which Traefik would likely not be able to associate with the same backend).
 
 > **Tip**
-> Regular expressions and replacements can be tested using online tools such as [Go Playground](https://play.golang.org/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2).
+> Regular expressions and replacements can be tested using online tools such as [Go Playground](https://go.dev/play/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2/substitution).
 >
 > When defining a regular expression within YAML, any escaped character needs to be escaped twice: `example\.com` needs to be written as `example\\.com`.

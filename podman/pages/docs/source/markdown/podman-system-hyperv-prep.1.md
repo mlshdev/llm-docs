@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-system-hyperv-prep.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-system-hyperv-prep.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-system-hyperv-prep.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-system-hyperv-prep.1.md)
 
 # podman-system-hyperv-prep
 
@@ -50,32 +50,32 @@ Administrators group membership status.
 Create the required registry entries and add the current user to the Hyper-V
 Administrators group:
 
-```
-podman system hyperv-prep
+```powershell
+PS> podman system hyperv-prep
 ```
 
 Show existing registry entries and group membership status:
 
-```
-podman system hyperv-prep --status
+```powershell
+PS> podman system hyperv-prep --status
 ```
 
 Remove all Podman VSock registry entries and the current user from the Hyper-V
 Administrators group (with confirmation prompts):
 
-```
-podman system hyperv-prep --reset
+```powershell
+PS> podman system hyperv-prep --reset
 ```
 
 Reset without confirmation prompts:
 
-```
-podman system hyperv-prep --reset --force
+```powershell
+PS> podman system hyperv-prep --reset --force
 ```
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-system(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-system.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-system(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-system.1.md)**
 
 ## HISTORY
 

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-push.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-push.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-push.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-push.1.md.in)
 
 # podman-push
 
@@ -53,7 +53,7 @@ $ podman push myimage oci-archive:/tmp/myimage
 #### **--authfile**=*path*
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -115,6 +115,13 @@ Defaults to `true` if `--compression-format` is explicitly specified on the comm
 #### **--format**, **-f**=*format*
 
 Manifest Type (oci, v2s2, or v2s1) to use when pushing an image.
+
+#### **--platform**=*OS\[/ARCH\[/VARIANT]]*
+
+Specify the platform for selecting a specific image from a manifest list to push.
+When this option is specified and the source is a manifest list, only the image matching the
+specified platform will be pushed as a single-platform image rather than the entire manifest list.
+Architecture defaults to the runtime architecture if not specified.
 
 #### **--quiet**, **-q**
 
@@ -226,9 +233,9 @@ Storing signatures
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-pull(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pull.1.md.in)**, **[podman-login(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**, **[containers-registries.conf(5)](https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md)**, **[containers-transports(5)](https://github.com/containers/image/blob/main/docs/containers-transports.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-pull(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pull.1.md.in)**, **[podman-login(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**, **[containers-registries.conf(5)](https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md)**, **[containers-transports(5)](https://github.com/containers/image/blob/main/docs/containers-transports.5.md)**
 
 ### Troubleshooting
 
-See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md)
+See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md)
 for solutions to common issues.

@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/errcodes.sgml#errcodes-appendix](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/errcodes.sgml%23errcodes-appendix)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/errcodes.sgml#errcodes-appendix](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/errcodes.sgml%23errcodes-appendix)
 > Canonical documentation: https://www.postgresql.org/docs/18/errcodes-appendix.html
 
 # PostgreSQL Error Codes
@@ -7,7 +7,7 @@ All messages emitted by the PostgreSQL server are assigned five-character error 
 
 According to the standard, the first two characters of an error code denote a class of errors, while the last three characters indicate a specific condition within that class. Thus, an application that does not recognize the specific error code might still be able to infer what to do from the error class.
 
-[PostgreSQL Error Codes](./errcodes-appendix.md#postgresql-error-codes) lists all the error codes defined in PostgreSQL 18.6. (Some are not actually used at present, but are defined by the SQL standard.) The error classes are also shown. For each error class there is a “standard” error code having the last three characters `000`. This code is used only for error conditions that fall within the class but do not have any more-specific code assigned.
+[PostgreSQL Error Codes](./errcodes-appendix.md#postgresql-error-codes) lists all the error codes defined in PostgreSQL 18.7. (Some are not actually used at present, but are defined by the SQL standard.) The error classes are also shown. For each error class there is a “standard” error code having the last three characters `000`. This code is used only for error conditions that fall within the class but do not have any more-specific code assigned.
 
 The symbol shown in the column “Condition Name” is the condition name to use in `PL/pgSQL`. Condition names can be written in either upper or lower case. (Note that `PL/pgSQL` does not recognize warning, as opposed to error, condition names; those are classes 00, 01, and 02.)
 
@@ -111,6 +111,7 @@ For some types of errors, the server reports the name of a database object (a ta
 | `22P03` | `invalid_binary_representation` |
 | `22P04` | `bad_copy_file_format` |
 | `22P05` | `untranslatable_character` |
+| `22P07` | `datum_version_mismatch` |
 | `2200L` | `not_an_xml_document` |
 | `2200M` | `invalid_xml_document` |
 | `2200N` | `invalid_xml_content` |

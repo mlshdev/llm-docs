@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-unpause.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-unpause.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-unpause.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-unpause.1.md.in)
 
 # podman-unpause
 
@@ -46,6 +46,7 @@ Valid filters are listed below:
 | label!               | \[Key] or \[Key=Value] Label NOT assigned to a container                                                                                                                             |
 | exited               | \[Int] Container's exit code                                                                                                                                                         |
 | status               | \[Status] Container's status: 'created', 'initialized', 'running', 'stopped', 'paused', 'exited', 'removing', 'stopping', 'unknown'                                                  |
+| status!              | \[Status] Container's status is NOT the specified status                                                                                                                             |
 | ancestor             | \[ImageName] Image or descendant used to create container (accepts regex)                                                                                                            |
 | before               | \[ID] or \[Name] Containers created before this container                                                                                                                            |
 | since                | \[ID] or \[Name] Containers created since this container                                                                                                                             |
@@ -70,37 +71,37 @@ Note: the last started container can be from other users of Podman on the host m
 Unpause specified container:
 
 ```
-podman unpause mywebserver
+$ podman unpause mywebserver
 ```
 
 Unpause container by a partial container ID:
 
 ```
-podman unpause 860a4b23
+$ podman unpause 860a4b23
 ```
 
 Unpause all **paused** containers:
 
 ```
-podman unpause --all
+$ podman unpause --all
 ```
 
 Unpause container using ID specified in given files:
 
 ```
-podman unpause --cidfile /home/user/cidfile-1
-podman unpause --cidfile /home/user/cidfile-1 --cidfile ./cidfile-2
+$ podman unpause --cidfile /home/user/cidfile-1
+$ podman unpause --cidfile /home/user/cidfile-1 --cidfile ./cidfile-2
 ```
 
 Unpause the latest container. (This option is not available with the remote Podman client, including Mac and Windows (excluding WSL2) machines):
 
 ```
-podman unpause --latest
+$ podman unpause --latest
 ```
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-pause(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pause.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-pause(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pause.1.md.in)**
 
 ## HISTORY
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/flash/build-rest-api-with-load-balancer.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/tutorials/flash/build-rest-api-with-load-balancer.mdx)
+> Pinned source for Runpod main: [tutorials/flash/build-rest-api-with-load-balancer.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/tutorials/flash/build-rest-api-with-load-balancer.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/flash/build-rest-api-with-load-balancer
 
 # Build a REST API with Flash

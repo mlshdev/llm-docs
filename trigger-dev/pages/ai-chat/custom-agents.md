@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/custom-agents.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/custom-agents.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/ai-chat/custom-agents.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/ai-chat/custom-agents.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/custom-agents
 
 # Custom agents
@@ -424,7 +424,12 @@ export const myChat = chat.customAgent({
       const incoming = currentPayload.message ? [currentPayload.message] : [];
       const turnInput =
         turn === 0 && continuationSeed.length > 0
-          ? [...continuationSeed.filter((s) => !incoming.some((m) => m.id === s.id)), ...incoming]
+          ? [
+              ...continuationSeed.filter(
+                (s) => !incoming.some((m) => m.role === "user" && m.id === s.id)
+              ),
+              ...incoming,
+            ]
           : incoming;
       const messages = await conversation.addIncoming(turnInput, currentPayload.trigger, turn);
 
@@ -488,6 +493,8 @@ export const myChat = chat.customAgent({
 
 - **Turn 0 or `trigger === "regenerate-message"`: replaces** the accumulator with exactly what you pass. This is why continuation seeding goes through `addIncoming` (above), and why a regenerate needs you to slice your own history — the wire omits the message on regenerate, so pass the stored history minus the last assistant message.
 - **Every other turn: appends** what you pass (the wire carries at most the one new user message).
+
+In both modes, a tool approval or tool output from the client is merged onto the stored tool call it answers, found in the accumulator or earlier in what you pass, rather than appended as a new message. One that answers no pending call is dropped.
 
 ```ts
 const conversation = new chat.MessageAccumulator();

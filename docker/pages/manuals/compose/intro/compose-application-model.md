@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/intro/compose-application-model.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/compose/intro/compose-application-model.md)
+> Pinned source for Docker main: [content/manuals/compose/intro/compose-application-model.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/compose/intro/compose-application-model.md)
 
 # How Compose works
 
@@ -90,7 +90,7 @@ The backend stores data in a persistent volume.
 
 Both services communicate with each other on an isolated back-tier network, while the frontend is also connected to a front-tier network and exposes port 443 for external usage.
 
-![Compose application example](https://raw.githubusercontent.com/docker/docs/34992b922461d20cc97107b84056756802584571/content/manuals/compose/images/compose-application.webp)
+![Compose application example](https://raw.githubusercontent.com/docker/docs/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/compose/images/compose-application.webp)
 
 The example application is composed of the following parts:
 

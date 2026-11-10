@@ -1,6 +1,11 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/visualizations/text/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/visualizations/text/index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/visualizations/panels-visualizations/visualizations/text/index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/visualizations/panels-visualizations/visualizations/text/index.md)
 
 # Text
+
+> **Note**
+>
+> This documentation describes the generally available version of the text visualization.
+> For information about the updated text visualization, currently in public preview, refer to the [next version of the documentation](https://grafana.com/docs/grafana/next/visualizations/panels-visualizations/visualizations/text/)
 
 Text visualizations let you include text or HTML in your dashboards.
 This can be used to add contextual information and descriptions or embed complex HTML.

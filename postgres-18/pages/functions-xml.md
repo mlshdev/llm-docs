@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-xml](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-xml)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-xml](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-xml)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-xml.html
 
 # XML Functions
@@ -544,7 +544,7 @@ SELECT xmltable.*
 The following functions map the contents of relational tables to XML values. They can be thought of as XML export functionality:
 
 ```
-table_to_xml ( table regclass, nulls boolean,
+table_to_xml ( tbl regclass, nulls boolean,
                tableforest boolean, targetns text ) xml
 query_to_xml ( query text, nulls boolean,
                tableforest boolean, targetns text ) xml
@@ -552,7 +552,7 @@ cursor_to_xml ( cursor refcursor, count integer, nulls boolean,
                 tableforest boolean, targetns text ) xml
 ```
 
-`table_to_xml` maps the content of the named table, passed as parameter `table`. The `regclass` type accepts strings identifying tables using the usual notation, including optional schema qualification and double quotes (see [Object Identifier Types](./datatype-oid.md) for details). `query_to_xml` executes the query whose text is passed as parameter `query` and maps the result set. `cursor_to_xml` fetches the indicated number of rows from the cursor specified by the parameter `cursor`. This variant is recommended if large tables have to be mapped, because the result value is built up in memory by each function.
+`table_to_xml` maps the content of the named table, passed as parameter `tbl`. The `regclass` type accepts strings identifying tables using the usual notation, including optional schema qualification and double quotes (see [Object Identifier Types](./datatype-oid.md) for details). `query_to_xml` executes the query whose text is passed as parameter `query` and maps the result set. `cursor_to_xml` fetches the indicated number of rows from the cursor specified by the parameter `cursor`. This variant is recommended if large tables have to be mapped, because the result value is built up in memory by each function.
 
 If `tableforest` is false, then the resulting XML document looks like this:
 
@@ -605,7 +605,7 @@ The parameter `targetns` specifies the desired XML namespace of the result. If n
 The following functions return XML Schema documents describing the mappings performed by the corresponding functions above:
 
 ```
-table_to_xmlschema ( table regclass, nulls boolean,
+table_to_xmlschema ( tbl regclass, nulls boolean,
                      tableforest boolean, targetns text ) xml
 query_to_xmlschema ( query text, nulls boolean,
                      tableforest boolean, targetns text ) xml
@@ -618,7 +618,7 @@ It is essential that the same parameters are passed in order to obtain matching 
 The following functions produce XML data mappings and the corresponding XML Schema in one document (or forest), linked together. They can be useful where self-contained and self-describing results are wanted:
 
 ```
-table_to_xml_and_xmlschema ( table regclass, nulls boolean,
+table_to_xml_and_xmlschema ( tbl regclass, nulls boolean,
                              tableforest boolean, targetns text ) xml
 query_to_xml_and_xmlschema ( query text, nulls boolean,
                              tableforest boolean, targetns text ) xml

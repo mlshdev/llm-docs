@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md)
 
 # Shared Dashboards API
 
@@ -9,6 +9,10 @@
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
 > To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+> **Note**
+>
+> This is a legacy API. To create, read, update, and delete dashboards, use the [Dashboard HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/dashboard/). It supports both the classic dashboard JSON model (`v1`) and the dashboard schema v2 (`v2`). To learn more, refer to [API versions](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/dashboard/#api-versions).
 
 ## Requirements
 

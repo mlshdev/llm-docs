@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/lifecycle-hooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/lifecycle-hooks.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/ai-chat/lifecycle-hooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/ai-chat/lifecycle-hooks.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/lifecycle-hooks
 
 # Lifecycle hooks
@@ -254,6 +254,10 @@ export const myChat = chat.agent({
 > **Warning**
 >
 > On HITL continuations (`addToolOutput` / `addToolApproveResponse`) the assistant entry in `messages` is **slim** — `state` + `output` / `errorText` / `approval` only, no `input` or other parts. `validateUIMessages` against the AI SDK schema rejects that shape (the schema requires `input` on resolved tool parts), so filter to user messages first (or skip validation entirely on those turns). The example above does the filter.
+
+> **Note**
+>
+> The agent only takes two kinds of message from a client: user messages, and resolutions of tool calls the agent itself made (an approval response for a call awaiting approval, or the output of a client-side tool). Tool parts on a user message, any client-supplied tool `input`, other roles, and resolutions that don't answer a pending call are dropped before your hooks run. Tool `input` always comes from the agent's own history.
 
 > **Note**
 >

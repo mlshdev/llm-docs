@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/deprecation/releases.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/deprecation/releases.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/deprecation/releases.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/deprecation/releases.md)
 
 # Releases
 
@@ -37,7 +37,7 @@ And these are our guiding rules for version support, as of Traefik v3.6:
 
 - **Every `minor`** is supported for 6 months from its GA release date, which means several `minor` versions can be supported at the same time
 - **The last `minor` after releasing a new `major`** is supported for 2 years following the `major` release (starting with v3)
-- **Previous rules are subject to change** and in such cases an announcement will be made publicly, [here](https://traefik.io/blog/traefik-2-1-in-the-wild/) is an example extending v1.x branch support.
+- **Previous rules are subject to change** and in such cases an announcement will be made publicly, [here](https://traefik.io/blog/traefik-2-1-in-the-wild) is an example extending v1.x branch support.
 
 > **Versions released before v3.6**
 > These rules apply starting with Traefik v3.6. Before that, only the latest `minor` was on active support at any given time, and support for a `minor` ended as soon as the next one was released.

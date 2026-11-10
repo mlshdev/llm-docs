@@ -1,9 +1,9 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/keywords.sgml#sql-keywords-appendix](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/keywords.sgml%23sql-keywords-appendix)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/keywords.sgml#sql-keywords-appendix](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/keywords.sgml%23sql-keywords-appendix)
 > Canonical documentation: https://www.postgresql.org/docs/18/sql-keywords-appendix.html
 
 # SQL Key Words
 
-[SQL Key Words](./sql-keywords-appendix.md#sql-key-words) lists all tokens that are key words in the SQL standard and in PostgreSQL 18.6. Background information can be found in [Identifiers and Key Words](./sql-syntax-lexical.md#identifiers-and-key-words). (For space reasons, only the latest two versions of the SQL standard, and SQL-92 for historical comparison, are included. The differences between those and the other intermediate standard versions are small.)
+[SQL Key Words](./sql-keywords-appendix.md#sql-key-words) lists all tokens that are key words in the SQL standard and in PostgreSQL 18.7. Background information can be found in [Identifiers and Key Words](./sql-syntax-lexical.md#identifiers-and-key-words). (For space reasons, only the latest two versions of the SQL standard, and SQL-92 for historical comparison, are included. The differences between those and the other intermediate standard versions are small.)
 
 SQL distinguishes between *reserved* and *non-reserved* key words. According to the standard, reserved key words are the only real key words; they are never allowed as identifiers. Non-reserved key words only have a special meaning in particular contexts and can be used as identifiers in other contexts. Most non-reserved key words are actually the names of built-in tables and functions specified by SQL. The concept of non-reserved key words essentially only exists to declare that some predefined meaning is attached to a word in some contexts.
 

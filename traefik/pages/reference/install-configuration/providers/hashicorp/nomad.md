@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/install-configuration/providers/hashicorp/nomad.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/install-configuration/providers/hashicorp/nomad.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/providers/hashicorp/nomad.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/providers/hashicorp/nomad.md)
 
 # Traefik & Nomad Service Discovery
 
@@ -107,7 +107,7 @@ Use stale consistency for Nomad service API reads.
 > **Note**
 > This makes reads very fast and scalable at the cost of a higher likelihood of stale values.
 >
-> For more information, see the Nomad [documentation on consistency](https://www.nomadproject.io/api-docs#consistency-modes).
+> For more information, see the Nomad [documentation on consistency](https://developer.hashicorp.com/nomad/api-docs#consistency-modes).
 > **File (YAML)**
 
 ```yaml
@@ -135,7 +135,7 @@ providers:
 ### `token`
 
 Token is used to provide a per-request ACL token, if Nomad ACLs are enabled.
-The appropriate ACL privilege for this token is 'read-job', as outlined in the [Nomad documentation on ACL](https://developer.hashicorp.com/nomad/tutorials/access-control/access-control-policies).
+The appropriate ACL privilege for this token is 'read-job', as outlined in the [Nomad documentation on ACL](https://developer.hashicorp.com/nomad/docs/secure/acl/policies).
 
 **File (YAML)**
 
@@ -168,7 +168,7 @@ providers:
 The default host rule for all services.
 
 For a given service, if no routing rule was defined by a tag, it is defined by this `defaultRule` instead.
-The `defaultRule` must be set to a valid [Go template](https://pkg.go.dev/text/template/),
+The `defaultRule` must be set to a valid [Go template](https://pkg.go.dev/text/template),
 and can include [sprig template functions](https://masterminds.github.io/sprig/).
 The service name can be accessed with the `Name` identifier,
 and the template has access to all the labels (i.e. tags beginning with the `prefix`) defined on this service.

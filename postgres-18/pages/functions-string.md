@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-string](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-string)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-string](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-string)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-string.html
 
 # String Functions and Operators
@@ -301,9 +301,9 @@ Computes the MD5 [hash](./functions-binarystring.md#functions-hash-note) of the 
 
 ---
 
-`parse_ident` ( `qualified_identifier` `text` [, `strict_mode` `boolean` `DEFAULT` `true`] ) → `text[]`
+`parse_ident` ( `str` `text` [, `strict` `boolean` `DEFAULT` `true`] ) → `text[]`
 
-Splits `qualified_identifier` into an array of identifiers, removing any quoting of individual identifiers. By default, extra characters after the last identifier are considered an error; but if the second parameter is `false`, then such extra characters are ignored. (This behavior is useful for parsing names for objects like functions.) Note that this function does not truncate over-length identifiers. If you want truncation you can cast the result to `name[]`.
+Splits the qualified identifier `str` into an array of identifiers, removing any quoting of individual identifiers. By default, extra characters after the last identifier are considered an error; but if the second parameter is `false`, then such extra characters are ignored. (This behavior is useful for parsing names for objects like functions.) Note that this function does not truncate over-length identifiers. If you want truncation you can cast the result to `name[]`.
 
 `parse_ident('"SomeSchema".someTable')` → `{SomeSchema,sometable}`
 
@@ -670,7 +670,7 @@ SELECT format('INSERT INTO %I VALUES(%L)', 'Foo bar', E'O\'Reilly');
 Result: INSERT INTO "Foo bar" VALUES('O''Reilly')
 
 SELECT format('INSERT INTO %I VALUES(%L)', 'locations', 'C:\Program Files');
-Result: INSERT INTO locations VALUES('C:\Program Files')
+Result: INSERT INTO locations VALUES(E'C:\\Program Files')
 ```
 
 Here are examples using `width` fields and the `-` flag:

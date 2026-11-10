@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/contributing/submitting-pull-requests.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/contributing/submitting-pull-requests.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/contributing/submitting-pull-requests.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/contributing/submitting-pull-requests.md)
 
 # Before You Submit a Pull Request
 
@@ -202,7 +202,7 @@ here are some things you can do to move the process along:
 
 For more information on best practices, try these links:
 
-- [How to Write a Git Commit Message - Chris Beams](https://chris.beams.io/posts/git-commit/)
+- [How to Write a Git Commit Message - Chris Beams](https://chris.beams.io/git-commit)
 - [Distributed Git - Contributing to a Project (Commit Guidelines)](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project)
 - [What’s with the 50/72 rule? - Preslav Rachev](https://preslav.me/2015/02/21/what-s-with-the-50-72-rule/)
 - [A Note About Git Commit Messages - Tim Pope](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)

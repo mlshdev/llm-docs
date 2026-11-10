@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/monitoring.sgml#monitoring-stats](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/monitoring.sgml%23monitoring-stats)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/monitoring.sgml#monitoring-stats](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/monitoring.sgml%23monitoring-stats)
 > Canonical documentation: https://www.postgresql.org/docs/18/monitoring-stats.html
 
 # The Cumulative Statistics System
@@ -2474,7 +2474,7 @@ Returns the time when this process was started.
 
 `pg_stat_get_backend_subxact` ( `integer` ) → `record`
 
-Returns a record of information about the subtransactions of the backend with the specified ID. The fields returned are `subxact_count`, which is the number of subtransactions in the backend's subtransaction cache, and `subxact_overflow`, which indicates whether the backend's subtransaction cache is overflowed or not.
+Returns a record of information about the subtransactions of the backend with the specified ID. The fields returned are `subxact_count`, which is the number of subtransactions in the backend's subtransaction cache, and `subxact_overflowed`, which indicates whether the backend's subtransaction cache is overflowed or not.
 
 ---
 

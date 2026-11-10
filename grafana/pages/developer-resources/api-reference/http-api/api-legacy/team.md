@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md)
 
 # Team API
 
@@ -439,6 +439,10 @@ Status Codes:
 
 ## Get Team Preferences
 
+> **Note**
+>
+> This endpoint is deprecated. Use the [Preferences HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/) with the `team-<TEAM_UID>` name instead. To learn how the legacy endpoints map to the new ones, refer to [Migrate from the legacy Preferences API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/#migrate-from-the-legacy-preferences-api).
+
 `GET /api/teams/:teamId/preferences`
 
 **Required permissions**
@@ -473,6 +477,10 @@ Content-Type: application/json
 ```
 
 ## Update Team Preferences
+
+> **Note**
+>
+> This endpoint is deprecated. Use the [Preferences HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/) with the `team-<TEAM_UID>` name instead. To learn how the legacy endpoints map to the new ones, refer to [Migrate from the legacy Preferences API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/#migrate-from-the-legacy-preferences-api).
 
 `PUT /api/teams/:teamId/preferences`
 

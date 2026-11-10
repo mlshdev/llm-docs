@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-pod-logs.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pod-logs.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-pod-logs.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod-logs.1.md.in)
 
 # podman-pod-logs
 
@@ -73,39 +73,39 @@ and 2006-01-02.
 To view a pod's logs:
 
 ```
-podman pod logs -t podIdorName
+$ podman pod logs -t podIdorName
 ```
 
 To view logs of a specific container on the pod:
 
 ```
-podman pod logs -c ctrIdOrName podIdOrName
+$ podman pod logs -c ctrIdOrName podIdOrName
 ```
 
 To view all pod logs:
 
 ```
-podman pod logs -t --since 0 myserver-pod-1
+$ podman pod logs -t --since 0 myserver-pod-1
 ```
 
 To view a pod's logs since a certain time:
 
 ```
-podman pod logs -t --since 2017-08-07T10:10:09.055837383-04:00 myserver-pod-1
+$ podman pod logs -t --since 2017-08-07T10:10:09.055837383-04:00 myserver-pod-1
 ```
 
 To view a pod's logs generated in the last 10 minutes:
 
 ```
-podman pod logs --since 10m myserver-pod-1
+$ podman pod logs --since 10m myserver-pod-1
 ```
 
 To view a pod's logs until 30 minutes ago:
 
 ```
-podman pod logs --until 30m myserver-pod-1
+$ podman pod logs --until 30m myserver-pod-1
 ```
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-pod(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pod.1.md)**, **[podman-pod-rm(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pod-rm.1.md.in)**, **[podman-logs(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-logs.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-pod(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod.1.md)**, **[podman-pod-rm(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod-rm.1.md.in)**, **[podman-logs(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-logs.1.md.in)**

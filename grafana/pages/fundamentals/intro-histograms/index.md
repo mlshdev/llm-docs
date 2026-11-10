@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/intro-histograms/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/intro-histograms/index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/fundamentals/intro-histograms/index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/fundamentals/intro-histograms/index.md)
 
 # Introduction to histograms and heatmaps
 

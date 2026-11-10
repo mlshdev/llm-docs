@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/desktop/release-notes.md)
+> Pinned source for Docker main: [content/manuals/desktop/release-notes.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/release-notes.md)
 
 # Docker Desktop release notes
 
@@ -413,6 +413,7 @@ Download Docker Desktop:
 
 #### For Mac
 
+- Docker Desktop now trusts only the certificates in `SSL_CERT_FILE` or `SSL_CERT_DIR` when either is set, instead of the system certificate store. If that bundle lacks a root certificate Docker Desktop needs, such as the ISRG roots used by `login.docker.com`, sign-in fails with `x509: certificate signed by unknown authority`. To fix it, add the missing root certificates to the bundle or unset the variable.
 - Fixed the update tooltip suggesting to move Docker Desktop to `/Applications` when that is the folder the current user cannot modify. Fixes [docker/desktop-feedback#598](https://github.com/docker/desktop-feedback/issues/598).
 - Fixed repeated privileged-access prompts when Docker Desktop starts automatically after a reboot. Fixes [docker/desktop-feedback#651](https://github.com/docker/desktop-feedback/issues/651).
 - Fixed the "CLI tools installation" setting on macOS reverting to System when Docker Desktop could not update the login shell profile.
@@ -420,6 +421,7 @@ Download Docker Desktop:
 
 #### For Windows
 
+- Docker Desktop now trusts only the certificates in `SSL_CERT_FILE` or `SSL_CERT_DIR` when either is set, instead of the system certificate store. If that bundle lacks a root certificate Docker Desktop needs, such as the ISRG roots used by `login.docker.com`, sign-in fails with `x509: certificate signed by unknown authority`. To fix it, add the missing root certificates to the bundle or unset the variable.
 - Improved WSL startup errors to explain when virtualization is disabled in firmware, nested virtualization is unavailable, or the Windows hypervisor is disabled at startup, with guidance for resolving each condition.
 - Fixed the Docker Desktop service losing its automatic start mode after an update run by WinGet or another external installer when the service had been installed with `--always-run-service`.
 - Fixed a bug introduced in 4.92.0 where WSL integration could fail to start with "timed out waiting for ... to be automounted". Fixes [docker/desktop-feedback#695](https://github.com/docker/desktop-feedback/issues/695).
@@ -427,6 +429,10 @@ Download Docker Desktop:
 #### For Linux
 
 - Fixed a bug on Linux where quitting Docker Desktop could close unrelated applications, including all open terminal windows. Fixes [docker/desktop-linux#109](https://github.com/docker/desktop-linux/issues/109).
+
+### Security
+
+- Addressed [CVE-2026-123082](https://www.cve.org/cverecord?id=CVE-2026-123082), where Docker Desktop 4.43.0 through 4.93.x could write the signed-in user's Docker Hub access token in cleartext to local application logs and diagnostics bundles. If you've generated or shared diagnostics bundles with an affected version, or kept copies of Docker Desktop logs elsewhere, delete or sanitize them.
 
 ## 4.93.0
 

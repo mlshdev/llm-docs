@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/explore/query-editor.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/explore/query-editor.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/visualizations/explore/query-editor.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/visualizations/explore/query-editor.md)
 
 # Query editor in Explore
 
@@ -138,7 +138,7 @@ However, the substitutions only apply to the query when it's reused, and the ori
 ### Manage saved queries as code
 
 You can manage saved queries as code with the Grafana Terraform provider, which lets you version-control your query library and keep it consistent across instances.
-For more information, refer to [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/infrastructure-as-code/terraform/manage-saved-queries/).
+For more information, refer to [Manage saved queries using Terraform](https://grafana.com/docs/grafana/v13.3/as-code/terraform/manage-saved-queries/).
 
 ### Known limitations
 

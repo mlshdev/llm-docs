@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-network-prune.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network-prune.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-network-prune.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network-prune.1.md)
 
 # podman-network-prune
 
@@ -44,18 +44,18 @@ Do not prompt for confirmation
 Prune networks:
 
 ```
-podman network prune
+$ podman network prune
 ```
 
 Prune all networks created not created in the last two hours:
 
 ```
-podman network prune --filter until=2h
+$ podman network prune --filter until=2h
 ```
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network.1.md)**, **[podman-network-rm(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network-rm.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network.1.md)**, **[podman-network-rm(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network-rm.1.md)**
 
 ## HISTORY
 

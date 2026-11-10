@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-auto-update.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-auto-update.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-auto-update.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-auto-update.1.md.in)
 
 # podman-auto-update
 
@@ -52,7 +52,7 @@ The unit can further be invoked by other systemd units (e.g., via the dependency
 #### **--authfile**=*path*
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -62,6 +62,49 @@ Alternatively, the `io.containers.autoupdate.authfile` container label can be co
 
 Check for the availability of new images but do not perform any pull operation or restart any service or container.
 The `UPDATED` field indicates the availability of a new image with "pending".
+
+#### **--filter**, **-f**=*filter*
+
+Filter what containers auto update.
+Multiple filters can be given with multiple uses of the --filter flag.
+Filters with the same key work inclusive with the only exception being
+`label` which is exclusive. Filters with different keys always work exclusive.
+
+Valid filters are listed below:
+
+| **Filter**           | **Description**                                                                                                                                                                      |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| id                   | \[ID] Container's ID (CID prefix match by default; accepts regex)                                                                                                                    |
+| name                 | \[Name] Container's name (accepts regex)                                                                                                                                             |
+| annotation           | \[Key] or \[Key=Value] Annotation assigned to a container                                                                                                                            |
+| annotation!          | \[Key] or \[Key=Value] Annotation NOT assigned to a container                                                                                                                        |
+| label                | \[Key] or \[Key=Value] Label assigned to a container                                                                                                                                 |
+| label!               | \[Key] or \[Key=Value] Label NOT assigned to a container                                                                                                                             |
+| exited               | \[Int] Container's exit code                                                                                                                                                         |
+| status               | \[Status] Container's status: 'created', 'initialized', 'running', 'stopped', 'paused', 'exited', 'removing', 'stopping', 'unknown'                                                  |
+| status!              | \[Status] Container's status is NOT the specified status                                                                                                                             |
+| ancestor             | \[ImageName] Image or descendant used to create container (accepts regex)                                                                                                            |
+| before               | \[ID] or \[Name] Containers created before this container                                                                                                                            |
+| since                | \[ID] or \[Name] Containers created since this container                                                                                                                             |
+| volume               | \[VolumeName] or \[MountpointDestination] Volume mounted in container                                                                                                                |
+| health               | \[Status] healthy or unhealthy                                                                                                                                                       |
+| pod                  | \[Pod] name or full or partial ID of pod                                                                                                                                             |
+| network              | \[Network] name or full ID of network                                                                                                                                                |
+| restart-policy       | \[Policy] Container's restart policy (e.g., 'no', 'on-failure', 'always', 'unless-stopped')                                                                                          |
+| until                | \[DateTime] Containers created before the given duration or time.                                                                                                                    |
+| command              | \[Command] the command the container is executing, only argv\[0] is taken                                                                                                            |
+| should-start-on-boot | \[Bool] Containers that need to be restarted after system reboot. True for containers with restart policy 'always', or 'unless-stopped' that were not explicitly stopped by the user |
+
+Only matching running containers with an enabled auto-update policy are considered for updates.
+The label filter matches labels assigned to containers.
+For example, `--filter label=app=web` selects containers labeled `app=web`.
+Use `--filter ancestor=IMAGE` to select containers by image.
+Without filters, all eligible containers are considered. A filter that matches no eligible containers succeeds without updating anything.
+
+Updates restart the systemd unit associated with a selected container.
+For containers in a pod, this may be the pod's unit.
+Other containers in the same unit or affected by systemd dependencies may also restart, even if they do not match the filters.
+Those containers may use updated images when recreated, including images shared with selected containers.
 
 #### **--format**=*format*
 
@@ -139,6 +182,18 @@ UNIT           CONTAINER                     IMAGE                              
 sleep.service  f8e4759798d4 (systemd-sleep)  registry.fedoraproject.org/fedora:latest  registry    true
 ```
 
+Update containers belonging to a deployment, selected by a container label:
+
+```
+$ podman auto-update --filter label=com.example.deploy.repository=example/web
+```
+
+Check for updates to containers using a particular image:
+
+```
+$ podman auto-update --dry-run --filter ancestor=quay.io/example/web:latest
+```
+
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-generate-systemd(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-generate-systemd.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-run.1.md.in)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-systemd.unit.5.md)**, **sd\_notify(3)**, **[systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-generate-systemd(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-generate-systemd.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-run.1.md.in)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-systemd.unit.5.md)**, **sd\_notify(3)**, **[systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)**

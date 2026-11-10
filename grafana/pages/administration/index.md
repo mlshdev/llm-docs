@@ -1,11 +1,11 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/administration/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/administration/_index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/administration/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/administration/_index.md)
 
 # Administration
 
 This section includes information for Grafana administrators, team administrators, and users performing administrative tasks:
 
 - [Back up Grafana](https://grafana.com/docs/grafana/v13.3/administration/back-up-grafana/)
-- [Grafana Assistant](https://grafana.com/docs/grafana/v13.3/administration/assistant/)
+- [Grafana Assistant and other AI tools](https://grafana.com/docs/grafana/v13.3/administration/assistant/)
 - [Data source management](https://grafana.com/docs/grafana/v13.3/administration/data-source-management/)
 - [Plugin management](https://grafana.com/docs/grafana/v13.3/administration/plugin-management/)
 - [Grafana Advisor](https://grafana.com/docs/grafana/v13.3/administration/grafana-advisor/)

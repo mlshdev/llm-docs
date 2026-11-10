@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/distributed-ratelimit.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/distributed-ratelimit.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/distributed-ratelimit.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/distributed-ratelimit.md)
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -169,10 +169,10 @@ Connection parameters to your [Redis](https://redis.io/ "Link to website of Redi
 The following Redis modes are supported:
 
 - Single instance mode
-- [Redis Cluster](https://redis.io/docs/management/scaling "Link to official Redis documentation about Redis Cluster mode")
-- [Redis Sentinel](https://redis.io/docs/management/sentinel "Link to official Redis documentation about Redis Sentinel mode")
+- [Redis Cluster](https://redis.io/docs/latest/management/scaling/ "Link to official Redis documentation about Redis Cluster mode")
+- [Redis Sentinel](https://redis.io/docs/latest/management/sentinel/ "Link to official Redis documentation about Redis Sentinel mode")
 
-For more information about Redis, we recommend the [official Redis documentation](https://redis.io/docs/ "Link to official Redis documentation").
+For more information about Redis, we recommend the [official Redis documentation](https://redis.io/docs/latest/ "Link to official Redis documentation").
 
 > **Info**
 > If you use Redis in single instance mode or Redis Sentinel, you can configure the `database` field.

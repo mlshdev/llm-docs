@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-rmi.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-rmi.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-rmi.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-rmi.1.md)
 
 # podman-rmi
 
@@ -75,7 +75,7 @@ Error: nothing: image not known
 Remove an image but keep any parents of it.
 
 ```
-podman rmi --no-prune d29200bf974d
+$ podman rmi --no-prune d29200bf974d
 Deleted: d29200bf974dbc48dc66c23c4031548531b6b5943e5f25ee7bda232e3b6b27f4
 ```
 
@@ -91,7 +91,7 @@ Deleted: d29200bf974dbc48dc66c23c4031548531b6b5943e5f25ee7bda232e3b6b27f4
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[skopeo-delete(1)](https://github.com/containers/skopeo/blob/main/docs/skopeo-delete.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[skopeo-delete(1)](https://github.com/containers/skopeo/blob/main/docs/skopeo-delete.1.md)**
 
 ## HISTORY
 

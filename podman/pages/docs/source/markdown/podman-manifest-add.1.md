@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-manifest-add.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-manifest-add.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-manifest-add.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-manifest-add.1.md.in)
 
 # podman-manifest-add
 
@@ -91,7 +91,7 @@ manifest's `artifactType` value instead of the less informative default value.
 #### **--authfile**=*path*
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -166,7 +166,7 @@ An existing local directory *path* storing the manifest, layer tarballs, and sig
 is a non-standardized format, primarily useful for debugging or noninvasive container inspection.
 
 ```
-$ podman manifest add dir:/tmp/myimage
+$ podman manifest add mylist:v1.11 dir:/tmp/myimage
 ```
 
 **docker-archive:***path*\[**:***docker-reference*]
@@ -174,21 +174,21 @@ An image is stored in the `docker save` formatted file.  *docker-reference* is o
 file, and it must not contain a digest.
 
 ```
-$ podman manifest add docker-archive:/tmp/myimage
+$ podman manifest add mylist:v1.11 docker-archive:/tmp/myimage
 ```
 
 **docker-daemon:***docker-reference*
 An image in *docker-reference* format stored in the docker daemon internal storage. The *docker-reference* can also be an image ID (docker-daemon:algo:digest).
 
 ```
-$ sudo podman manifest add docker-daemon:docker.io/library/myimage:33
+$ podman manifest add mylist:v1.11 docker-daemon:docker.io/library/myimage:33
 ```
 
 **oci-archive:***path***:***tag*
 An image *tag* in a directory compliant with "Open Container Image Layout Specification" at *path*.
 
 ```
-$ podman manifest add oci-archive:/tmp/myimage
+$ podman manifest add mylist:v1.11 oci-archive:/tmp/myimage
 ```
 
 ## EXAMPLES
@@ -196,23 +196,23 @@ $ podman manifest add oci-archive:/tmp/myimage
 Add specified default image from source manifest list to destination manifest list:
 
 ```
-podman manifest add mylist:v1.11 docker://fedora
+$ podman manifest add mylist:v1.11 docker://fedora
 71c201d10fffdcac52968a000d85a0a016ca1c7d5473948000d3131c1773d965
 ```
 
 Add all images from source manifest list to destination manifest list:
 
 ```
-podman manifest add --all mylist:v1.11 docker://fedora
+$ podman manifest add --all mylist:v1.11 docker://fedora
 71c201d10fffdcac52968a000d85a0a016ca1c7d5473948000d3131c1773d965
 ```
 
 Add selected image matching arch and variant from source manifest list to destination manifest list:
 
 ```
-podman manifest add --arch arm64 --variant v8 mylist:v1.11 docker://71c201d10fffdcac52968a000d85a0a016ca1c7d5473948000d3131c1773d965
+$ podman manifest add --arch arm64 --variant v8 mylist:v1.11 docker://71c201d10fffdcac52968a000d85a0a016ca1c7d5473948000d3131c1773d965
 ```
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-manifest(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-manifest.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-manifest(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-manifest.1.md)**

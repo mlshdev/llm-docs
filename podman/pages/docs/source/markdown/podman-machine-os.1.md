@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-machine-os.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-os.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-machine-os.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-os.1.md)
 
 # podman-machine-os
 
@@ -18,12 +18,12 @@ podman-machine-os - Manage a Podman virtual machine's OS
 
 | Command | Man Page                                                                                                                                                                           | Description                                 |
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| apply   | [podman-machine-os-apply(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-os-apply.1.md)     | Apply an OCI image to a Podman Machine's OS |
-| upgrade | [podman-machine-os-upgrade(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-os-upgrade.1.md) | Upgrade a Podman Machine's OS               |
+| apply   | [podman-machine-os-apply(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-os-apply.1.md)     | Apply an OCI image to a Podman Machine's OS |
+| upgrade | [podman-machine-os-upgrade(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-os-upgrade.1.md) | Upgrade a Podman Machine's OS               |
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine.1.md)**, **[podman-machine-os-apply(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-os-apply.1.md)**, **[podman-machine-os-upgrade(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-os-upgrade.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine.1.md)**, **[podman-machine-os-apply(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-os-apply.1.md)**, **[podman-machine-os-upgrade(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-os-upgrade.1.md)**
 
 ## HISTORY
 

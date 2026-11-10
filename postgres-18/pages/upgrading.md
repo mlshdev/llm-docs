@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/runtime.sgml#upgrading](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/runtime.sgml%23upgrading)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/runtime.sgml#upgrading](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/runtime.sgml%23upgrading)
 > Canonical documentation: https://www.postgresql.org/docs/18/upgrading.html
 
 # Upgrading a PostgreSQL Cluster
@@ -51,7 +51,7 @@ These instructions assume that your existing installation is under the `/usr/loc
    pg_dumpall > outputfile
    ```
 
-   To make the backup, you can use the `pg_dumpall` command from the version you are currently running; see [Using pg_dumpall](./backup-dump.md#using-pgdumpall) for more details. For best results, however, try to use the `pg_dumpall` command from PostgreSQL 18.6, since this version contains bug fixes and improvements over older versions. While this advice might seem idiosyncratic since you haven't installed the new version yet, it is advisable to follow it if you plan to install the new version in parallel with the old version. In that case you can complete the installation normally and transfer the data later. This will also decrease the downtime.
+   To make the backup, you can use the `pg_dumpall` command from the version you are currently running; see [Using pg_dumpall](./backup-dump.md#using-pgdumpall) for more details. For best results, however, try to use the `pg_dumpall` command from PostgreSQL 18.7, since this version contains bug fixes and improvements over older versions. While this advice might seem idiosyncratic since you haven't installed the new version yet, it is advisable to follow it if you plan to install the new version in parallel with the old version. In that case you can complete the installation normally and transfer the data later. This will also decrease the downtime.
 2. Shut down the old server:
 
    ```

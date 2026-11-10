@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/apis.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/apis.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/api-reference/http-api/apis.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/apis.md)
 
 # The new HTTP API structure in Grafana
 
@@ -7,6 +7,8 @@
 > Available in Grafana 12 and later.
 
 This document explains how Grafana structures the `/apis` HTTP APIs, which use a Kubernetes-style API layer with a standardized structure and consistent versioning. Read on to understand request paths, versions, namespaces, and common response fields when you migrate from legacy `/api` endpoints or work with new APIs.
+
+For information about a specific API, refer to its doc. You can find them in [List of available HTTP APIs](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api#list-of-available-http-apis).
 
 ## Before you begin
 

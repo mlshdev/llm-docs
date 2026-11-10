@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/cli/index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/_vendor/github.com/docker/docker-agent/docs/features/cli/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/cli/index.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/_vendor/github.com/docker/docker-agent/docs/features/cli/index.md)
 
 *Complete reference for all Docker Agent command-line commands and flags.*
 

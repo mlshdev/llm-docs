@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/samples/agentic-ai.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/reference/samples/agentic-ai.md)
+> Pinned source for Docker main: [content/reference/samples/agentic-ai.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/reference/samples/agentic-ai.md)
 
 # Agentic AI samples
 

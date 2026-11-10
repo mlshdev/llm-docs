@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/query_history.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/query_history.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/api-reference/http-api/api-legacy/query_history.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/query_history.md)
 
 # Query history API
 
@@ -7,6 +7,10 @@
 > Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
 > **This API will not be migrated**. Refer to [API deprecation notes](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis-migration#deprecation-notes) for more details and alternatives.
+
+> **Note**
+>
+> The new [Queries HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/queries/) is related to this API, but it isn't a full replacement. It lets you store, share, and manage queries on the server, but it doesn't record the queries you run or support starring. The Queries HTTP API is only available in Grafana Enterprise and Grafana Cloud. Refer to [Differences from the legacy Query history API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/queries/#differences-from-the-legacy-query-history-api) to learn how both APIs match.
 
 This API can be used to add queries to Query history. It requires that the user is logged in and that Query history feature is enabled in config file.
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/init/docker_init.yaml](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/data/cli/init/docker_init.yaml)
+> Pinned source for Docker main: [data/cli/init/docker_init.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/cli/init/docker_init.yaml)
 
 # docker init
 

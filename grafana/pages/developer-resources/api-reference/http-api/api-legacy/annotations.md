@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/annotations.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/annotations.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/api-reference/http-api/api-legacy/annotations.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/annotations.md)
 
 # Annotations API
 
@@ -10,11 +10,15 @@
 >
 > To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
-Annotations are saved in the Grafana database (sqlite, mysql or postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.
+> **Note**
+>
+> The new [Annotations HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/annotations/) is rolling out gradually in Grafana Cloud, and is available in self-managed Grafana when enabled. Refer to [Migrate from the legacy Annotations API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/annotations/#migrate-from-the-legacy-annotations-api) to learn more about the new API, and how to migrate.
+
+Annotations are saved in the Grafana database (SQLite, MySQL or Postgres). Annotations can be organization annotations that can be shown on any dashboard by configuring an annotation data source - they are filtered by tags. Or they can be tied to a panel on a dashboard and are then only shown on that panel.
 
 ## Requirements
 
-If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
 
 ## Find Annotations
 

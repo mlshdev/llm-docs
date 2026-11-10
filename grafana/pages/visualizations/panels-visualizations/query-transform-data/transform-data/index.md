@@ -1,8 +1,6 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/query-transform-data/transform-data/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/query-transform-data/transform-data/index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/visualizations/panels-visualizations/query-transform-data/transform-data/index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/visualizations/panels-visualizations/query-transform-data/transform-data/index.md)
 
 # Transform data
-
-> **Note:** The screenshots and steps on this page reflect the classic, generally available panel query editor. For information about the new panel query editor experience, currently in public preview, refer to the [Query and transform data documentation](https://grafana.com/docs/grafana/v13.1/visualizations/panels-visualizations/query-transform-data/).
 
 Transformations are a powerful way to manipulate data returned by a query before the system applies a visualization. Using transformations, you can:
 
@@ -50,32 +48,33 @@ The following steps guide you in adding a transformation to data. This documenta
 1. Navigate to the panel where you want to add one or more transformations.
 2. Hover over any part of the panel to display the actions menu on the top right corner.
 3. Click the menu and select **Edit**.
-4. Click the **Transform** tab.
-5. Click a transformation.
-   A transformation row appears where you configure the transformation options. For more information about how to configure a transformation, refer to [Transformation functions](#transformation-functions).
+4. In the query editor sidebar, click the plus icon next to **Transformations**.
+5. In the editor pane, search for or browse to a transformation and click it.
+   The transformation appears as a card in the sidebar, and its options open in the editor pane. For more information about how to configure a transformation, refer to [Transformation functions](#transformation-functions).
    For information about available calculations, refer to [Calculation types][].
-6. To apply another transformation, click **Add transformation**.
-   This transformation acts on the result set returned by the previous transformation.
+6. To apply another transformation, click the plus icon next to **Transformations** again, or hover the cursor over a transformation card and click the plus sign beside it to insert the new transformation after that card.
+   Each transformation acts on the result set returned by the previous transformation.
+   You can drag and drop the cards to change the order.
 
-![Transform tab in the panel editor](https://grafana.com/static/img/docs/transformations/transformations-7-0.png)
+![Query editor with a new transformation card in the sidebar and the transformation picker in the editor pane](https://grafana.com/media/docs/grafana/panels-visualizations/add-transformation-v13.3.png)
 
 ## Debug a transformation
 
-To see the input and the output result sets of the transformation, click the bug icon on the right side of the transformation row.
+To see the input and the output result sets of a transformation, select its card in the sidebar and click the bug icon in the editor pane header.
 
 The input and output results sets can help you debug a transformation.
 
-![The debug transformation screen with the debug icon highlighted](https://grafana.com/static/img/docs/transformations/debug-transformations-7-0.png)
+![Debug transformation view showing the input and output data of an Organize fields by name transformation](https://grafana.com/media/docs/grafana/panels-visualizations/debug-transformation-v13.3.png)
 
 ## Disable a transformation
 
-You can disable or hide one or more transformations by clicking on the eye icon on the top right side of the transformation row. This disables the applied actions of that specific transformation and can help to identify issues when you change several transformations one after another.
+You can disable one or more transformations by hovering the cursor over a transformation card in the sidebar and clicking the eye icon. This disables the applied actions of that specific transformation and can help to identify issues when you change several transformations one after another.
 
-![A transformation row with the disable transformation icon highlighted](https://grafana.com/static/img/docs/transformations/screenshot-example-disable-transformation.png)
+To disable several transformations at once, click **Select...** in the sidebar footer, select the transformations, and use the bulk actions bar.
 
 ## Filter a transformation
 
-If your panel uses more than one query, you can filter these and apply the selected transformation to only one of the queries. To do this, click the filter icon on the top right of the transformation row. This opens a drop-down with a list of queries used on the panel. From here, you can select the query you want to transform.
+If your panel uses more than one query, you can filter these and apply the selected transformation to only one of the queries. To do this, select the transformation card and click the filter icon in the editor pane header. This displays an **Apply transformation to** drop-down with a list of queries used on the panel. From here, you can select the query you want to transform.
 
 You can also filter by annotations (which includes exemplars) to apply transformations to them. When you do so, the list of fields changes to reflect those in the annotation or exemplar tooltip.
 
@@ -83,7 +82,7 @@ The filter icon is always displayed if your panel has more than one query or sou
 
 ## Set a static refId for a transformation
 
-Some transformations build the refId of their output from the refIds of their input. For example, a **Merge series/tables** transformation applied to queries A and B outputs a frame with the refId `merge-A-B`. If you add, remove, or rename a query, or a query returns no data, that refId changes, and a later [Filter data by query refId](#filter-data-by-query-refid) transformation stops selecting the frame. To keep the refId stable, give the transformation a static refId. The transformation row calls this the transformation name.
+Some transformations build the refId of their output from the refIds of their input. For example, a **Merge series/tables** transformation applied to queries A and B outputs a frame with the refId `merge-A-B`. If you add, remove, or rename a query, or a query returns no data, that refId changes, and a later [Filter data by query refId](#filter-data-by-query-refid) transformation stops selecting the frame. To keep the refId stable, give the transformation a static refId. The query editor calls this the transformation name.
 
 You can set a static refId on the following transformations:
 
@@ -97,13 +96,13 @@ Other transformations don't offer this setting.
 
 To set a static refId:
 
-1. Click the name to the left of the transformation type in the transformation row.
+1. Select the transformation card in the sidebar and click the transformation name in the editor pane header.
 2. Enter a name.
 3. Press Enter or click outside the field.
 
 To go back to the generated refId, clear the field.
 
-When you haven't set a static refId, the row shows the refId the transformation generates, in italics. If the transformation doesn't output exactly one frame, the row shows **(Auto)** instead.
+When you haven't set a static refId, the editor shows the refId the transformation generates, in italics. If the transformation doesn't output exactly one frame, the editor shows **(Auto)** instead.
 
 A static refId can't:
 
@@ -124,10 +123,8 @@ We recommend that you remove transformations that you don't need. When you delet
 **To delete a transformation**:
 
 1. Open a panel for editing.
-2. Click the **Transform** tab.
-3. Click the trash icon next to the transformation you want to delete.
-
-![A transformation row with the remove transformation icon highlighted](https://grafana.com/static/img/docs/transformations/screenshot-example-remove-transformation.png)
+2. In the query editor sidebar, hover the cursor over the transformation card you want to delete.
+3. Click the trash icon and confirm the deletion.
 
 ## Transformation functions
 

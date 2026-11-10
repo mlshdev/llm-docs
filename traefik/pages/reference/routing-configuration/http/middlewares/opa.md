@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/opa.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/opa.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/opa.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/opa.md)
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -62,9 +62,9 @@ spec:
 
 ## Configuration Options
 
-| Field                                           | Description                                                                                                                           | Default | Required                                            |
-| :---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | :------ | :-------------------------------------------------- |
-| <a id="opt-policy"></a>`policy`                 | Path or the content of a [policy file](https://www.openpolicyagent.org/docs/v0.66.0/kubernetes-primer/#writing-policies).             | ""      | No (one of `policy` or `bundlePath` must be set)    |
-| <a id="opt-bundlePath"></a>`bundlePath`         | The `bundlePath` option should contain the path to an OPA [bundle](https://www.openpolicyagent.org/docs/v0.66.0/management-bundles/). | ""      | No (one of `policy` or `bundlePath` must be set)    |
-| <a id="opt-allow"></a>`allow`                   | The `allow` option sets the expression to evaluate that determines if the request should be authorized.                               | ""      | No (one of `allow` or `forwardHeaders` must be set) |
-| <a id="opt-forwardHeaders"></a>`forwardHeaders` | The `forwardHeaders` option sets the HTTP headers to add to requests and populates them with the result of the given expression.      | {}      | No (one of `allow` or `forwardHeaders` must be set) |
+| Field                                           | Description                                                                                                                      | Default | Required                                            |
+| :---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :------ | :-------------------------------------------------- |
+| <a id="opt-policy"></a>`policy`                 | Path or the content of a [policy file](https://www.openpolicyagent.org/docs/policy-language).                                    | ""      | No (one of `policy` or `bundlePath` must be set)    |
+| <a id="opt-bundlePath"></a>`bundlePath`         | The `bundlePath` option should contain the path to an OPA [bundle](https://www.openpolicyagent.org/docs/management-bundles).     | ""      | No (one of `policy` or `bundlePath` must be set)    |
+| <a id="opt-allow"></a>`allow`                   | The `allow` option sets the expression to evaluate that determines if the request should be authorized.                          | ""      | No (one of `allow` or `forwardHeaders` must be set) |
+| <a id="opt-forwardHeaders"></a>`forwardHeaders` | The `forwardHeaders` option sets the HTTP headers to add to requests and populates them with the result of the given expression. | {}      | No (one of `allow` or `forwardHeaders` must be set) |

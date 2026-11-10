@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `eba1be5cd1f4af9e764b2f65145197430e9ba0ad`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `03654ae6f119347890b8633ab8b2d72379866aef`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -20,7 +20,7 @@
 - [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (12307 bytes)
 - [Early access features](pages/get-started/early-access.md): Opt in to experimental Runpod console features before they're generally available. Review setup steps and core concepts for building on Runpod. (1730 bytes)
 
-## Runpod SDK (Beta)
+## Runpod SDK
 
 - [Runpod Python SDK](pages/sdk/overview.md): Use the runpod Python package to define GPU functions, deploy apps, call endpoints, build Serverless workers, and manage Runpod resources from one SDK. (13361 bytes)
 - [Get started with the Runpod SDK](pages/sdk/quickstart.md): Install the runpod Python package, log in with the rp CLI, and run your first function on a Runpod GPU in a few minutes, then deploy it as an endpoint. (4588 bytes)
@@ -174,6 +174,7 @@
 - [Update A Pod](pages/api-reference-v2/pods/update-a-pod.md): Update selected settings on an existing Runpod Pod while preserving omitted fields, with guidance on mutable fields and restart behavior. (31211 bytes)
 - [Stream Pod Logs](pages/api-reference-v2/pods/stream-pod-logs.md): Stream a Runpod Pod's container and system logs in real time as Server-Sent Events, with resumable reconnects via Last-Event-ID. (6085 bytes)
 - [Trigger A Pod State Transition](pages/api-reference-v2/pods/trigger-a-pod-state-transition.md): Start, stop, or restart a Runpod Pod by sending a supported state transition action and retrieving the Pod's updated lifecycle state. (25401 bytes)
+- [Run A Command In A Pod](pages/api-reference-v2/pods/run-a-command-in-a-pod.md): Run one command inside a running Runpod Pod's container and get its stdout, stderr, and exit code back, with no SSH setup. (14292 bytes)
 - [Create a new Pod](pages/api-reference/pods/POST/pods.md): POST /pods (17792 bytes)
 - [List Pods](pages/api-reference/pods/GET/pods.md): GET /pods (9859 bytes)
 - [Find a Pod by ID](pages/api-reference/pods/GET/pods/podId.md): GET /pods/{podId} (9199 bytes)

@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/dblink.sgml#contrib-dblink-is-busy](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/dblink.sgml%23contrib-dblink-is-busy)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/dblink.sgml#contrib-dblink-is-busy](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/dblink.sgml%23contrib-dblink-is-busy)
 > Canonical documentation: https://www.postgresql.org/docs/18/contrib-dblink-is-busy.html
 
 # dblink_is_busy

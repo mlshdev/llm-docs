@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/management/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/management/overview.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/management/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/management/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/overview
 
 # Management API overview

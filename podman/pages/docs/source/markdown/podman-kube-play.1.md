@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-kube-play.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-kube-play.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-kube-play.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-kube-play.1.md.in)
 
 # podman-kube-play
 
@@ -216,7 +216,7 @@ Note: For `podman kube play`, the `--annotation` flag adds Podman-specific annot
 #### **--authfile**=*path*
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -267,6 +267,10 @@ Print usage statement
 Assign a static ip address to the pod. This option can be specified several times when kube play creates more than one pod.
 Note: When joining multiple networks use the **--network name:ip=\<ip>** syntax.
 
+#### **--label**, **-l**=*key=value*
+
+Add a label to the pods, persistent volume claims, and secrets created by `podman kube play`. This option can be set multiple times.
+
 #### **--log-driver**=*driver*
 
 Set logging driver for all created containers.
@@ -299,6 +303,10 @@ This option is currently supported only by the **journald** log driver.
 Assign a static mac address to the pod. This option can be specified several times when kube play creates more than one pod.
 Note: When joining multiple networks use the **--network name:mac=\<mac>** syntax.
 
+#### **--multiple-pods**
+
+Only one Pod replica is created by default, despite the desired number of Pods in the Kubernetes Deployment resource. This setting overrides the default behavior, allowing the desired number of Pods to be created.
+
 #### **--network**=*mode*, **--net**
 
 Set the network mode for the pod.
@@ -320,7 +328,7 @@ Valid *mode* values are:
 
   For example, to set a static IPv4 address and a static mac address, use `--network bridge:ip=10.88.0.10,mac=44:33:22:11:00:99`.
 
-- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
+- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
   For backwards compatibility it is also possible to specify comma-separated networks on the first **--network** argument, however this prevents you from using the options described under the bridge section above.
 
 - **none**: Create a network namespace for the container but do not configure network interfaces for it, thus the container has no network connectivity.
@@ -410,6 +418,8 @@ Define or override a port definition in the YAML file.
 
 The lists of ports in the YAML file and the command line are merged. Matching is done by using the **containerPort** field.
 If **containerPort** exists in both the YAML file and the option, the latter takes precedence.
+
+In case this options is used with **--multiple-pods** option then number of published ports should be equal to the number of replicas in container spec, e.g. Deployment.spec.replicas is 3, then **--publish** is set to "8080:80,8081:80,8082:80"
 
 #### **--publish-all**
 
@@ -511,6 +521,19 @@ Valid `keep-id` options:
 **nomap**: creates a user namespace where the current rootless user's UID:GID are not mapped into the container. This option is not allowed for containers created by the root user.
 
 **ns:***namespace*: run the pod in the given existing user namespace.
+
+#### **--validate**=*mode*
+
+Control how unrecognized YAML fields and unsupported objects are handled. Supported modes are:
+
+- **ignore**: silently skip them (default).
+- **warn**: report a warning and continue. Warnings are printed to stderr and, when using the API, returned in the play report.
+- **strict**: fail with an error.
+
+When **strict** is used, any object that fails validation halts the processing of
+further objects, but prior objects will still exist and will not be rolled back.
+For example, in a YAML file containing a Pod followed by an unsupported object, the
+Pod is created and then the command fails.
 
 #### **--wait**, **-w**
 
@@ -750,18 +773,18 @@ Note: **N/A** means that the option cannot be supported in a single-node Podman 
 
 ## Deployment Fields
 
-| Field                                 | Support                                              |
-| ------------------------------------- | ---------------------------------------------------- |
-| replicas                              | ✅ (the actual replica count is ignored and set to 1) |
-| selector                              | ✅                                                    |
-| template                              | ✅                                                    |
-| minReadySeconds                       | no                                                   |
-| strategy.type                         | no                                                   |
-| strategy.rollingUpdate.maxSurge       | no                                                   |
-| strategy.rollingUpdate.maxUnavailable | no                                                   |
-| revisionHistoryLimit                  | no                                                   |
-| progressDeadlineSeconds               | no                                                   |
-| paused                                | no                                                   |
+| Field                                 | Support                                           |
+| ------------------------------------- | ------------------------------------------------- |
+| replicas                              | ✅ (use `--multiple-pods` option for replicas > 1) |
+| selector                              | ✅                                                 |
+| template                              | ✅                                                 |
+| minReadySeconds                       | no                                                |
+| strategy.type                         | no                                                |
+| strategy.rollingUpdate.maxSurge       | no                                                |
+| strategy.rollingUpdate.maxUnavailable | no                                                |
+| revisionHistoryLimit                  | no                                                |
+| progressDeadlineSeconds               | no                                                |
+| paused                                | no                                                |
 
 ## DaemonSet Fields
 
@@ -793,4 +816,4 @@ Note: **N/A** means that the option cannot be supported in a single-node Podman 
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-kube(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-kube.1.md)**, **[podman-kube-down(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-kube-down.1.md.in)**, **[podman-network-create(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network-create.1.md.in)**, **[podman-kube-generate(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-kube-generate.1.md)**, **[podman-build(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-build.1.md.in)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-kube(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-kube.1.md)**, **[podman-kube-down(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-kube-down.1.md.in)**, **[podman-network-create(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network-create.1.md.in)**, **[podman-kube-generate(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-kube-generate.1.md)**, **[podman-build(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-build.1.md.in)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**

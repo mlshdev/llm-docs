@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/install-configuration/providers/overview.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/install-configuration/providers/overview.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/providers/overview.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/providers/overview.md)
 
 # Overview
 
@@ -167,9 +167,9 @@ you can do so in two different ways:
 > - [Nomad](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/hashicorp/nomad#constraints)
 > - [Swarm](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/swarm#constraints)
 >   **The following providers support label selectors**
-> - [Kubernetes CRD](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#opt-providers-kubernetesCRD-labelselector)
-> - [Kubernetes Gateway API](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-gateway#opt-providers-kubernetesGateway-labelselector)
-> - [Kubernetes Ingress](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-ingress#opt-providers-kubernetesIngress-labelselector)
+> - [Kubernetes CRD](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#opt-providers-kubernetesCRD-labelSelector)
+> - [Kubernetes Gateway API](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-gateway#opt-providers-kubernetesGateway-labelSelector)
+> - [Kubernetes Ingress](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-ingress#opt-providers-kubernetesIngress-labelSelector)
 
 ## Providers Precedence
 

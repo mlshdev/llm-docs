@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-events.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-events.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-events.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-events.1.md)
 
 # podman-events
 
@@ -125,6 +125,7 @@ filters are supported:
 | event      | event\_status (described above)      |
 | image      | \[Name or ID] Image name or ID       |
 | label      | \[key] or \[key=value] label         |
+| network    | \[Name] Network name                 |
 | pod        | \[Name or ID] Pod name or ID         |
 | volume     | \[Name or ID] Volume name or ID      |
 | type       | Event\_type (described above)        |
@@ -247,7 +248,7 @@ $ podman events --format json
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[containers.conf(5)](https://github.com/containers/container-libs/blob/main/common/docs/containers.conf.5.md)**
 
 ## HISTORY
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/parca/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/parca/_index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/parca/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/parca/_index.md)
 
 # Parca data source
 
@@ -6,15 +6,22 @@
 >
 > This plugin is deprecated and will only receive critical security updates. Support will end on January 2, 2027.
 
-Parca is a continuous profiling database for analysis of CPU and memory usage, down to the line number and throughout time. Grafana ships with built-in support for Parca, so you can add it as a data source and start querying your profiles in [Explore](https://grafana.com/docs/grafana/v13.3/explore/).
+Parca is a continuous profiling database for analysis of CPU and memory usage, down to the line number and throughout time. You can use the Parca data source to query your profiles in [Explore](https://grafana.com/docs/grafana/v13.3/explore/) and to build profiling dashboards.
+
+The Parca data source is developed and released from the standalone [grafana/grafana-parca-datasource](https://github.com/grafana/grafana-parca-datasource) repository. Grafana doesn't bundle it, so you build it from source and install it manually before you can use it.
+
+> **Note**
+>
+> The Parca data source isn't published to the Grafana plugin catalog and isn't available in Grafana Cloud. You can't install it with Grafana CLI, the **Plugins** page, or the `plugins.preinstall` configuration option.
 
 Refer to the [Parca documentation](https://www.parca.dev/docs) to learn about continuous profiling and how to instrument your applications.
 
 To use Parca profiling data in Grafana, you should:
 
 1. [Set up Parca](https://www.parca.dev/docs/quickstart) to scrape profiles from your applications.
-2. [Configure the Parca data source](https://grafana.com/docs/grafana/v13.3/datasources/parca/configure/) in Grafana.
-3. [Query your profiling data](https://grafana.com/docs/grafana/v13.3/datasources/parca/query-editor/) using the query editor in Explore.
+2. [Build and install the Parca data source](https://grafana.com/docs/grafana/v13.3/datasources/parca/configure/#install-the-data-source) on your Grafana instance.
+3. [Configure the Parca data source](https://grafana.com/docs/grafana/v13.3/datasources/parca/configure/) in Grafana.
+4. [Query your profiling data](https://grafana.com/docs/grafana/v13.3/datasources/parca/query-editor/) using the query editor in Explore.
 
 ## Supported Parca versions
 
@@ -46,15 +53,14 @@ The following pages help you get started with the Parca data source:
 
 Using the Parca data source, you can embed profiling data in your dashboards alongside other signals like logs and metrics. For example, you can place a [flame graph panel](https://grafana.com/docs/grafana/v13.3/panels-visualizations/visualizations/flame-graph/) showing CPU profiles next to a metrics panel tracking request latency to correlate performance bottlenecks with application behavior.
 
-## Plugin updates
+## Updates
 
-Always ensure that your plugin version is up-to-date so you have access to all current features and improvements. Navigate to **Plugins and data** > **Plugins** to check for updates. Grafana recommends upgrading to the latest Grafana version, and this applies to plugins as well.
+Because you install the Parca data source manually, Grafana can't update it for you. To update, pull the latest changes from [grafana/grafana-parca-datasource](https://github.com/grafana/grafana-parca-datasource), rebuild, and replace the contents of your plugin directory. Refer to [Install the data source](https://grafana.com/docs/grafana/v13.3/datasources/parca/configure/#install-the-data-source) for the build and deployment steps.
 
-> **Note**
->
-> Plugins are automatically updated in Grafana Cloud.
+The Parca data source only receives critical security updates until January 2, 2027. After that date it receives no further updates.
 
 ## Related resources
 
+- [Parca data source repository](https://github.com/grafana/grafana-parca-datasource)
 - [Official Parca documentation](https://www.parca.dev/docs)
 - [Grafana community forum](https://community.grafana.com/)

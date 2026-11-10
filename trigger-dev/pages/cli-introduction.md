@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/cli-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/cli-introduction.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/cli-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/cli-introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-introduction
 
 # Introduction

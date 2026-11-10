@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-pod-rm.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pod-rm.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-pod-rm.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod-rm.1.md.in)
 
 # podman-pod-rm
 
@@ -55,32 +55,32 @@ The --force option must be specified to use the --time option.
 Remove pod with a given name:
 
 ```
-podman pod rm mywebserverpod
+$ podman pod rm mywebserverpod
 ```
 
 Remove multiple pods with given names and/or IDs:
 
 ```
-podman pod rm mywebserverpod myflaskserverpod 860a4b23
+$ podman pod rm mywebserverpod myflaskserverpod 860a4b23
 ```
 
 Forcefully remove pod with a given ID:
 
 ```
-podman pod rm -f 860a4b23
+$ podman pod rm -f 860a4b23
 ```
 
 Forcefully remove all pods:
 
 ```
-podman pod rm -f -a
-podman pod rm -fa
+$ podman pod rm -f -a
+$ podman pod rm -fa
 ```
 
 Remove pod using ID specified in a given file:
 
 ```
-podman pod rm --pod-id-file /path/to/id/file
+$ podman pod rm --pod-id-file /path/to/id/file
 ```
 
 ## Exit Status
@@ -95,7 +95,7 @@ podman pod rm --pod-id-file /path/to/id/file
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-pod(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pod.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-pod(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod.1.md)**
 
 ## HISTORY
 

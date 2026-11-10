@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-healthcheck.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-healthcheck.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-healthcheck.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-healthcheck.1.md)
 
 # podman-healthcheck
 
@@ -33,6 +33,7 @@ Healthchecks can also be defined when creating a container via `podman run` or `
 - The startup healthcheck cannot be sourced from an image; it can only be set manually
 - Once the startup healthcheck succeeds (based on `--health-startup-success` consecutive successes), it stops and the regular healthcheck takes over
 - If it fails too many times (`--health-startup-retries`), the container can be restarted based on `--health-on-failure`
+- If `--health-cmd` option was set, but `--health-startup-cmd` one was missed, then value of `--health-cmd` option is used for startup health check.
 
 **When to use each:**
 
@@ -56,11 +57,11 @@ To update healthchecks:
 
 | Command | Man Page                                                                                                                                                                     | Description                 |
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| run     | [podman-healthcheck-run(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-healthcheck-run.1.md) | Run a container healthcheck |
+| run     | [podman-healthcheck-run(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-healthcheck-run.1.md) | Run a container healthcheck |
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-run.1.md.in)**, **[podman-create(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-create.1.md.in)**, **[podman-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-inspect.1.md.in)**, **[podman-update(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-update.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-run.1.md.in)**, **[podman-create(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-create.1.md.in)**, **[podman-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-inspect.1.md.in)**, **[podman-update(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-update.1.md.in)**
 
 ## HISTORY
 

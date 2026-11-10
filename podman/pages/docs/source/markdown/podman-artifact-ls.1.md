@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-artifact-ls.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-artifact-ls.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-artifact-ls.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-artifact-ls.1.md.in)
 
 # podman-artifact-ls
 
@@ -12,7 +12,7 @@ podman-artifact-ls - List OCI artifacts in local store (alias list)
 
 ## DESCRIPTION
 
-List all local artifacts in your local store.
+List all local artifacts in your local store.  Outputs the following by default: repository name, tag, digest, created time and size.
 
 ## OPTIONS
 
@@ -37,6 +37,10 @@ Do not truncate the output (default *false*).
 #### **--noheading**, **-n**
 
 Omit the table headings from the listing.
+
+#### **--quiet**, **-q**
+
+Lists only the artifact digests.
 
 ## EXAMPLES
 
@@ -74,9 +78,32 @@ ab609fad386d 2.097GB
 cd734b558ceb 12.58MB
 ```
 
+List artifact details in json format
+
+```
+$ podman artifact ls --format json"
+[
+    {
+        "Repository": "quay.io/artifact/foobar1",
+        "CreatedAt": "2026-06-16T00:00:57Z",
+        "Size": 12580000,
+        "Tag": "special",
+        "Digest": "cd734b558ceb"
+    }
+]
+```
+
+List only artifact digests
+
+```
+$ podman artifact ls --quiet
+ab609fad386d
+cd734b558ceb
+```
+
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-artifact(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-artifact.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-artifact(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-artifact.1.md)**
 
 ## HISTORY
 

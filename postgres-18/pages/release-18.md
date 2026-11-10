@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/release-18.sgml#release-18](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/release-18.sgml%23release-18)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/release-18.sgml#release-18](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/release-18.sgml%23release-18)
 > Canonical documentation: https://www.postgresql.org/docs/18/release-18.html
 
 # Release 18
@@ -47,6 +47,7 @@ Version 18 contains a number of changes that may affect compatibility with previ
 - Execute `AFTER` [triggers](./triggers.md) as the role that was active when trigger events were queued (Laurenz Albe) [§](https://postgr.es/c/01463e1cc)
 
   Previously such triggers were run as the role that was active at trigger execution time (e.g., at [COMMIT](./sql-commit.md)). This is significant for cases where the role is changed between queue time and transaction commit.
+- Report `RESTRICT` [foreign key](./sql-createtable.md#sql-createtable-parms-references) violations with [`SQLSTATE`](./errcodes-appendix.md) `23001` (`restrict_violation`) instead of `23503` (`foreign_key_violation`) (Peter Eisentraut) [§](https://postgr.es/c/086c84b23)
 - Remove non-functional support for rule privileges in [GRANT](./sql-grant.md)/[REVOKE](./sql-revoke.md) (Fujii Masao) [§](https://postgr.es/c/fefa76f70)
 
   These have been non-functional since PostgreSQL 8.2.
@@ -130,7 +131,7 @@ Below you will find a detailed account of the changes between PostgreSQL 18 and 
 
   This server variable was previously only boolean, which is still supported.
 - Add `log_connections` option to report the duration of connection stages (Melanie Plageman) [§](https://postgr.es/c/18cd15e70)
-- Add [Error Reporting and Logging](./runtime-config-logging.md#guc-log-line-prefix) escape `%L` to output the client IP address (Greg Sabino Mullane) [§](https://postgr.es/c/3516ea768)
+- Add [Error Reporting and Logging](./runtime-config-logging.md#guc-log-line-prefix) escape `%L` to output the local IP address on the server that the client connected to (Greg Sabino Mullane) [§](https://postgr.es/c/3516ea768)
 - Add server variable [Error Reporting and Logging](./runtime-config-logging.md#guc-log-lock-failures) to log lock acquisition failures (Yuki Seino, Fujii Masao) [§](https://postgr.es/c/6d376c3b0) [§](https://postgr.es/c/73bdcfab3)
 
   Specifically it reports [`SELECT ... NOWAIT`](./sql-select.md#the-locking-clause) lock failures.
@@ -267,7 +268,7 @@ Below you will find a detailed account of the changes between PostgreSQL 18 and 
 - Allow [`CHECK`](./sql-createtable.md#sql-createtable-parms-check) and [foreign key](./sql-createtable.md#sql-createtable-parms-references) constraints to be specified as `NOT ENFORCED` (Amul Sul) [§](https://postgr.es/c/ca87c415e) [§](https://postgr.es/c/eec0040c4)
 
   This also adds column [`pg_constraint`](./catalog-pg-constraint.md).`conenforced`.
-- Require [primary/foreign key](./sql-createtable.md#sql-createtable-parms-references) relationships to use either deterministic collations or the the same nondeterministic collations (Peter Eisentraut) [§](https://postgr.es/c/9321d2fdf)
+- Require [primary/foreign key](./sql-createtable.md#sql-createtable-parms-references) relationships to use either deterministic collations or the same nondeterministic collations (Peter Eisentraut) [§](https://postgr.es/c/9321d2fdf)
 
   The restore of a [pg_dump](./app-pgdump.md), also used by [pg_upgrade](./pgupgrade.md), will fail if these requirements are not met; schema changes must be made for these upgrade methods to succeed.
 - Store column [`NOT NULL`](./sql-createtable.md#sql-createtable-parms-not-null) specifications in [`pg_constraint`](./catalog-pg-constraint.md) (Álvaro Herrera, Bernd Helmle) [§](https://postgr.es/c/14e87ffa5) [§](https://postgr.es/c/81ce602d4)

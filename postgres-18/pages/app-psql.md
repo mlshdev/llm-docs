@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/psql-ref.sgml#app-psql](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/psql-ref.sgml%23app-psql)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/ref/psql-ref.sgml#app-psql](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/ref/psql-ref.sgml%23app-psql)
 > Canonical documentation: https://www.postgresql.org/docs/18/app-psql.html
 
 # psql
@@ -231,7 +231,7 @@ In normal operation, `psql` provides a prompt with the name of the database to w
 
 ```sql
 $ psql testdb
-psql (18.6)
+psql (18.7)
 Type "help" for help.
 
 testdb=>
@@ -397,7 +397,7 @@ The following meta-commands are defined:
   >
   > If `\d` is used without a `pattern` argument, it is equivalent to `\dtvmsE` which will show a list of all visible tables, views, materialized views, sequences and foreign tables. This is purely a convenience measure.
   >
-  > As with many other commands, if `x` is appended to the command name, the results are displayed in expanded mode, but note that this only applies when `\d` is used without a `pattern` argument, and the `x` modifier cannot appear immediately after the `\d` (because `\dx` is a different command); the `x` modifier may only appear after an `S` or `+` modifier. For example, `\d+x` is equivalent to `\dtvmsE+x` and will show a list of all relations in expanded mode.
+  > As with many other commands, if `x` is appended to the command name, the results are displayed in expanded mode for this command only, but note that this only applies when `\d` is used without a `pattern` argument or to describe a sequence. The same limitation on expanded output applies to `\x on` and `\x auto`. The `x` modifier cannot appear immediately after the `\d` (because `\dx` is a different command); the `x` modifier may only appear after an `S` or `+` modifier. For example, `\d+x` is equivalent to `\dtvmsE+x` and will show a list of all relations in expanded mode.
 
 **`\da[Sx] [ [pattern](./app-psql.md#patterns) ]`**
 
@@ -1613,7 +1613,7 @@ This utility, like most other PostgreSQL utilities, also uses the environment va
 
   The user's personal startup file is named `.psqlrc` and is sought in the invoking user's home directory. On Windows the personal startup file is instead named `%APPDATA%\postgresql\psqlrc.conf`. In either case, this default file path can be overridden by setting the `PSQLRC` environment variable.
 
-  Both the system-wide startup file and the user's personal startup file can be made `psql`-version-specific by appending a dash and the PostgreSQL major or minor release identifier to the file name, for example `~/.psqlrc-18` or `~/.psqlrc-18.6`. The most specific version-matching file will be read in preference to a non-version-specific file. These version suffixes are added after determining the file path as explained above.
+  Both the system-wide startup file and the user's personal startup file can be made `psql`-version-specific by appending a dash and the PostgreSQL major or minor release identifier to the file name, for example `~/.psqlrc-18` or `~/.psqlrc-18.7`. The most specific version-matching file will be read in preference to a non-version-specific file. These version suffixes are added after determining the file path as explained above.
 
 **`.psql_history`**
 

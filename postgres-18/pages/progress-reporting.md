@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/monitoring.sgml#progress-reporting](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/monitoring.sgml%23progress-reporting)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/monitoring.sgml#progress-reporting](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/monitoring.sgml%23progress-reporting)
 > Canonical documentation: https://www.postgresql.org/docs/18/progress-reporting.html
 
 # Progress Reporting
@@ -502,13 +502,13 @@ Current processing phase. See [Base Backup Phases](./progress-reporting.md#base-
 
 `backup_total` `bigint`
 
-Total amount of data that will be streamed. This is estimated and reported as of the beginning of `streaming database files` phase. Note that this is only an approximation since the database may change during `streaming database files` phase and WAL log may be included in the backup later. This is always the same value as `backup_streamed` once the amount of data streamed exceeds the estimated total size. If the estimation is disabled in `pg_basebackup` (i.e., `--no-estimate-size` option is specified), this is `NULL`.
+Total amount of data that will be streamed. This counts archive data before any server-side compression. The estimate is reported as of the beginning of the `streaming database files` phase. Note that this is only an approximation since the database may change during `streaming database files` phase and WAL log may be included in the backup later. This is always the same value as `backup_streamed` once the amount of data streamed exceeds the estimated total size. If the estimation is disabled in `pg_basebackup` (i.e., `--no-estimate-size` option is specified), this is `NULL`.
 
 ---
 
 `backup_streamed` `bigint`
 
-Amount of data streamed. This counter only advances when the phase is `streaming database files` or `transferring wal files`.
+Amount of data streamed. This counts archive data before any server-side compression. This counter only advances when the phase is `streaming database files` or `transferring wal files`.
 
 ---
 

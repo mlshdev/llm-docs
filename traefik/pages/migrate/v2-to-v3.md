@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/migrate/v2-to-v3.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/migrate/v2-to-v3.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/migrate/v2-to-v3.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/migrate/v2-to-v3.md)
 
 # Migration Guide: From v2 to v3
 
@@ -78,7 +78,7 @@ We strongly advise you to follow a progressive migration strategy ([Kubernetes r
 
 > **Critical Requirements**
 >
-> - ✅ **Real-time monitoring solution** for ingress traffic ([monitoring guide](https://traefik.io/blog/capture-traefik-metrics-for-apps-on-kubernetes-with-prometheus/ "Link to the blog on capturing Traefik metrics with Prometheus"))
+> - ✅ **Real-time monitoring solution** for ingress traffic ([monitoring guide](https://traefik.io/blog/capture-traefik-metrics-for-apps-on-kubernetes-with-prometheus "Link to the blog on capturing Traefik metrics with Prometheus"))
 > - ✅ **Rollback plan** ready for immediate execution
 > - ✅ **Team availability** during migration window
 

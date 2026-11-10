@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_restore.sgml#app-pgrestore](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/pg_restore.sgml%23app-pgrestore)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/ref/pg_restore.sgml#app-pgrestore](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/ref/pg_restore.sgml%23app-pgrestore)
 > Canonical documentation: https://www.postgresql.org/docs/18/app-pgrestore.html
 
 # pg_restore
@@ -196,7 +196,7 @@ Obviously, `pg_restore` cannot restore information that is not present in the ar
   The first keyword specifies whether the objects matched by the pattern are to be included or excluded. The second keyword specifies the type of object to be filtered using the pattern:
 
   - `function`: functions, works like the `-P`/`--function` option. This keyword can only be used with the `include` keyword.
-  - `index`: indexes, works like the `-I`/`--indexes` option. This keyword can only be used with the `include` keyword.
+  - `index`: indexes, works like the `-I`/`--index` option. This keyword can only be used with the `include` keyword.
   - `schema`: schemas, works like the `-n`/`--schema` and `-N`/`--exclude-schema` options.
   - `table`: tables, works like the `-t`/`--table` option. This keyword can only be used with the `include` keyword.
   - `trigger`: triggers, works like the `-T`/`--trigger` option. This keyword can only be used with the `include` keyword.

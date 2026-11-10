@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/toolkit.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/desktop/features/mcp-catalog-and-toolkit/toolkit.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/mcp-catalog-and-toolkit/toolkit.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/features/mcp-catalog-and-toolkit/toolkit.md)
 
 # Docker MCP Toolkit
 
@@ -175,11 +175,11 @@ You can interact with all your installed MCP servers in Visual Studio Code:
 
 2. In Visual Studio Code, open a new Chat and select the **Agent** mode:
 
-![Copilot mode switching](https://raw.githubusercontent.com/docker/docs/34992b922461d20cc97107b84056756802584571/content/manuals/desktop/features/mcp-catalog-and-toolkit/images/copilot-mode.png)
+![Copilot mode switching](https://raw.githubusercontent.com/docker/docs/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/features/mcp-catalog-and-toolkit/images/copilot-mode.png)
 
 1. You can also check the available MCP tools:
 
-![Displaying tools in VSCode](https://raw.githubusercontent.com/docker/docs/34992b922461d20cc97107b84056756802584571/content/manuals/desktop/features/mcp-catalog-and-toolkit/images/tools.png)
+![Displaying tools in VSCode](https://raw.githubusercontent.com/docker/docs/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/features/mcp-catalog-and-toolkit/images/tools.png)
 
 For more information about the Agent mode, see the
 [Visual Studio Code documentation](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_use-mcp-tools-in-agent-mode).

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/visualizations/dashboards/build-dashboards/create-dashboard/_index.md)
 
 # Create dashboards
 
@@ -16,9 +16,11 @@ To create a dashboard, follow these steps:
 
 1. Click **Dashboards** in the main menu.
 2. Click **New** and select **New dashboard**.
-3. Click the **Add new element** icon (blue plus sign) and click or drag a panel onto the dashboard.
+3. Do one of the following:
+   - Create a dashboard with Grafana Assistant by describing what you want to build. Make sure to save your dashboard.
+   - Click **+ Add visualization**. Then proceed to the next step.
 
-![Empty dashboard with sidebar open](https://grafana.com/media/docs/grafana/dashboards/screenshot-empty-dashboard-v13.2.png)
+![Empty dashboard with sidebar open](https://grafana.com/media/docs/grafana/dashboards/screenshot-empty-dashboard-v13.3.png)
 
 1. On the new panel, select one of the following options:
 

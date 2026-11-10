@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md)
 
 ## General
 
@@ -23,7 +23,7 @@ The table below lists all the available matchers:
 > **Backticks or Quotes?**
 > To set the value of a rule, use [backticks](https://en.wiktionary.org/wiki/backtick) `` ` `` or escaped double-quotes `\"`.
 >
-> Single quotes `'` are not accepted since the values are [Go's String Literals](https://golang.org/ref/spec#String_literals).
+> Single quotes `'` are not accepted since the values are [Go's String Literals](https://go.dev/ref/spec#String_literals).
 
 ### Expressing Complex Rules Using Operators and Parenthesis
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/cli-preview-archive.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/cli-preview-archive.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/cli-preview-archive.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/cli-preview-archive.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-preview-archive
 
 # CLI preview archive command
@@ -32,6 +32,14 @@ npx trigger.dev@latest preview archive [path]
 The path to the project. Defaults to the current directory.
 
 ## Options
+
+**Property (type: --auth-method \<method>)**
+
+Use `auto` (default) or `oidc`. In GitHub Actions, `auto` uses OIDC when no
+`TRIGGER_ACCESS_TOKEN` is set. Explicit `oidc` ignores stored credentials and tokens.
+See [Trusted publishing](https://trigger.dev/docs/deployment/trusted-publishing).
+
+You can also authenticate with a parent Preview environment API key in `TRIGGER_ACCESS_TOKEN`.
 
 **Property (type: --branch | -b)**
 

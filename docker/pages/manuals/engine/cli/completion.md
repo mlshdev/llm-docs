@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/cli/completion.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/engine/cli/completion.md)
+> Pinned source for Docker main: [content/manuals/engine/cli/completion.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/engine/cli/completion.md)
 
 You can generate a shell completion script for the Docker CLI using the `docker
 completion` command. The completion script gives you word completion for

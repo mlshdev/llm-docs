@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/migrate/nginx-to-traefik.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/migrate/nginx-to-traefik.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/migrate/nginx-to-traefik.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/migrate/nginx-to-traefik.md)
 
 # Migrate from Ingress NGINX Controller to Traefik
 
@@ -13,7 +13,7 @@ How to migrate from Ingress NGINX Controller to Traefik with zero downtime.
 > - No security patches
 > - No bug fixes
 >
-> For more information, see the [official Kubernetes blog announcement](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement).
+> For more information, see the [official Kubernetes blog announcement](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/).
 
 ## What You Will Achieve
 
@@ -520,7 +520,7 @@ kubectl get svc -n ingress-nginx ingress-nginx-controller -o go-template='{{ $in
 >     loadBalancerIP: "<your-static-ip>"
 > ```
 >
-> For more details, see the [GKE LoadBalancer Service parameters documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/service-load-balancer-parameters).
+> For more details, see the [GKE LoadBalancer Service parameters documentation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/service-load-balancer-parameters).
 > **OVHcloud**
 > OVHcloud supports static IP on OVHcloud Public Load Balancer, it is based on Openstack Octavia which allocates floating IPs to LoadBalancer services. This requires the [Openstack Cloud Controller Manager](https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/openstack-cloud-controller-manager/using-openstack-cloud-controller-manager.md) to be installed in your cluster. If you are using OVHcloud Managed Kubernetes Service (MKS), the Openstack Cloud Controller Manager is already installed and managed for you.
 >

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-inspect.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-inspect.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-inspect.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-inspect.1.md.in)
 
 # podman-inspect
 
@@ -18,12 +18,12 @@ If a container has the same name as an image, then the container JSON is returne
 If a format is specified, the given template is executed for each result.
 
 For more inspection options, see also
-[podman-artifact-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-artifact-inspect.1.md),
-[podman-container-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-container-inspect.1.md.in),
-[podman-image-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-image-inspect.1.md),
-[podman-network-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network-inspect.1.md),
-[podman-pod-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pod-inspect.1.md.in), and
-[podman-volume-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-volume-inspect.1.md).
+[podman-artifact-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-artifact-inspect.1.md),
+[podman-container-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-container-inspect.1.md.in),
+[podman-image-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-image-inspect.1.md),
+[podman-network-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network-inspect.1.md),
+[podman-pod-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod-inspect.1.md.in), and
+[podman-volume-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-volume-inspect.1.md).
 
 ## OPTIONS
 
@@ -157,14 +157,14 @@ size:   4405240
 Inspect the latest container created for `EffectiveCaps` format specifier. (This option is not available with the remote Podman client, including Mac and Windows (excluding WSL2) machines):
 
 ```
-podman container inspect --latest --format {{.EffectiveCaps}}
+$ podman container inspect --latest --format {{.EffectiveCaps}}
 [CAP_CHOWN CAP_DAC_OVERRIDE CAP_FSETID CAP_FOWNER CAP_SETGID CAP_SETUID CAP_SETFCAP CAP_SETPCAP CAP_NET_BIND_SERVICE CAP_KILL]
 ```
 
 Inspect the specified container for the `OOMKilled` format specifier
 
 ```
-podman container inspect myContainer --format {{.State.OOMKilled}}
+$ podman container inspect myContainer --format {{.State.OOMKilled}}
 false
 ```
 
@@ -206,7 +206,7 @@ Inspect the specified artifact:
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-artifact-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-artifact-inspect.1.md)**, **[podman-container-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-container-inspect.1.md.in)**, **[podman-image-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-image-inspect.1.md)**, **[podman-network-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network-inspect.1.md)**, **[podman-pod-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pod-inspect.1.md.in)**, **[podman-volume-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-volume-inspect.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-artifact-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-artifact-inspect.1.md)**, **[podman-container-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-container-inspect.1.md.in)**, **[podman-image-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-image-inspect.1.md)**, **[podman-network-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network-inspect.1.md)**, **[podman-pod-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod-inspect.1.md.in)**, **[podman-volume-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-volume-inspect.1.md)**
 
 ## HISTORY
 

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-artifact-add.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-artifact-add.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-artifact-add.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-artifact-add.1.md.in)
 
 # podman-artifact-add
 
@@ -84,14 +84,14 @@ $ podman artifact add --append quay.io/myimage/myartifact:latest /home/user/conf
 Create artifact with the layer title name being replaced, and then mount into a container.
 
 ```
-podman artifact add --annotation org.opencontainers.image.title=smollm2 quay.io/myreg/smollm2:latest blobs/sha256-4d2396b16114669389d7555c15a1592aad584750310f648edad5ca8c4eccda17
-podman run --mount type=artifact,source=quay.io/myreg/smollm2:latest,destination=/mnt fedora ls -l /mnt
+$ podman artifact add --annotation org.opencontainers.image.title=smollm2 quay.io/myreg/smollm2:latest blobs/sha256-4d2396b16114669389d7555c15a1592aad584750310f648edad5ca8c4eccda17
+$ podman run --mount type=artifact,source=quay.io/myreg/smollm2:latest,destination=/mnt fedora ls -l /mnt
 smollm2
 ```
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-artifact(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-artifact.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-artifact(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-artifact.1.md)**
 
 ## HISTORY
 

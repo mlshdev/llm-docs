@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-pull.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-pull.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-pull.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pull.1.md.in)
 
 # podman-pull
 
@@ -54,7 +54,11 @@ $ podman pull oci-archive:/tmp/myimage
 
 All tagged images in the repository are pulled.
 
-*IMPORTANT: When using the all-tags flag, Podman does not iterate over the search registries in the **[containers-registries.conf(5)](https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md)** but always uses docker.io for unqualified image names.*
+*IMPORTANT: With **--all-tags**, Podman does **not** walk the unqualified-search registries from
+**[containers-registries.conf(5)](https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md)**
+for short (unqualified) names. Unqualified names are resolved as if they lived on **docker.io**
+(for example `alpine` becomes `docker.io/library/alpine`). To pull every tag from another registry,
+use a fully qualified image name such as `quay.io/myorg/myimage` or `registry.example.com/ns/name`.*
 
 #### **--arch**=*ARCH*
 
@@ -64,7 +68,7 @@ Unless overridden, subsequent lookups of the same image in the local storage mat
 #### **--authfile**=*path*
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -186,7 +190,7 @@ d4ff818577bc193b309b355b02ebc9220427090057b54a59e73b79bdfe139b83
 Pull multiple images with/without short name resolution.
 
 ```
-podman pull busybox:musl alpine quay.io/libpod/cirros
+$ podman pull busybox:musl alpine quay.io/libpod/cirros
 Trying to pull docker.io/library/busybox:musl...
 Getting image source signatures
 Copying blob 0c52b060233b [--------------------------------------] 0.0b / 0.0b
@@ -314,11 +318,11 @@ d4ff818577bc193b309b355b02ebc9220427090057b54a59e73b79bdfe139b83
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-push(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-push.1.md.in)**, **[podman-login(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**, **[containers-registries.conf(5)](https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md)**, **[containers-transports(5)](https://github.com/containers/image/blob/main/docs/containers-transports.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-push(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-push.1.md.in)**, **[podman-login(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**, **[containers-registries.conf(5)](https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md)**, **[containers-transports(5)](https://github.com/containers/image/blob/main/docs/containers-transports.5.md)**
 
 ### Troubleshooting
 
-See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md)
+See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md)
 for solutions to common issues.
 
 ## HISTORY

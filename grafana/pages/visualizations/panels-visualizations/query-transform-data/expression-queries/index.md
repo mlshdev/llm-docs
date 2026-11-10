@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/visualizations/panels-visualizations/query-transform-data/expression-queries/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/visualizations/panels-visualizations/query-transform-data/expression-queries/index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/visualizations/panels-visualizations/query-transform-data/expression-queries/index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/visualizations/panels-visualizations/query-transform-data/expression-queries/index.md)
 
 # Write expression queries
 
@@ -204,26 +204,24 @@ Resample changes the time stamps in each time series to have a consistent time i
 
 ## Write an expression
 
-> **Note**
->
-> The steps in this section describe the classic, generally available panel query editor.
-> For information about the new panel query editor experience, currently in public preview, refer to the [Query and transform data documentation](https://grafana.com/docs/grafana/v13.1/visualizations/panels-visualizations/query-transform-data/).
-
-If your data source supports them, then Grafana displays the **Expression** button and shows any existing expressions in the query editor list.
+If your data source supports them, Grafana lists expressions alongside queries in the **Queries & Expressions** section of the query editor sidebar.
+Expressions aren't available with the **Dashboard** data source.
 
 For more information about expressions, refer to [About expressions](#about-expressions).
 
-1. Open the panel.
+1. Open the panel for editing.
 
-2. Below the query, click **Expression**.
+2. In the sidebar, click the plus icon next to **Queries & Expressions** and select **Add expression**.
 
-3. In the **Operation** field, select the type of expression you want to write.
+   To add the expression in a specific position, hover the cursor over the card it should follow and click the plus sign beside it.
+
+3. In the editor pane, select the type of expression you want to write.
 
    For more information about expression operations, refer to [About expressions](#about-expressions).
 
 4. Write the expression.
 
-5. Click **Apply**.
+For more information about the query editor, refer to [Navigate the query editor](https://grafana.com/docs/grafana/v13.3/visualizations/panels-visualizations/query-transform-data/#navigate-the-query-editor).
 
 ## Special cases
 

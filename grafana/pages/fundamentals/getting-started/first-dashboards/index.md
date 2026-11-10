@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/fundamentals/getting-started/first-dashboards/_index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/fundamentals/getting-started/first-dashboards/_index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/fundamentals/getting-started/first-dashboards/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/fundamentals/getting-started/first-dashboards/_index.md)
 
 # Build your first dashboard
 
@@ -41,9 +41,9 @@ To create your first dashboard using the built-in `-- Grafana --` data source:
 1. Click **Dashboards** in the main menu.
 2. On the **Dashboards** page, click **New** and select **New dashboard** from the drop-down menu.
 3. Click the **Add new element** icon.
-4. Click or drag a panel onto the dashboard.
+4. In the middle of the dashboard, click **+ Add visualization**.
 
-![New dashboard](https://grafana.com/media/docs/grafana/dashboards/screenshot-empty-dashboard-v13.0.png)
+![New dashboard](https://grafana.com/media/docs/grafana/dashboards/screenshot-empty-dashboard-v13.3.png)
 
 1. On the panel, click **Configure visualization**.
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/claude-code-model-runner.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/guides/claude-code-model-runner.md)
+> Pinned source for Docker main: [content/guides/claude-code-model-runner.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/claude-code-model-runner.md)
 
 # Use Claude Code with Docker Model Runner
 

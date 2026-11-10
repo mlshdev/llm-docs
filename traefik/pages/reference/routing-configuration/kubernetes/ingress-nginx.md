@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/kubernetes/ingress-nginx.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/kubernetes/ingress-nginx.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/kubernetes/ingress-nginx.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/kubernetes/ingress-nginx.md)
 
 # Traefik & Ingresses with NGINX Annotations
 
@@ -10,7 +10,7 @@ Enable seamless migration from NGINX Ingress Controller to Traefik with NGINX an
 >
 > **→ See the [NGINX to Traefik Migration Guide](https://doc.traefik.io/traefik/v3.7/migrate/nginx-to-traefik) for step-by-step instructions.**
 >
-> For more information about the NGINX Ingress Controller retirement, see the [official Kubernetes blog announcement](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement).
+> For more information about the NGINX Ingress Controller retirement, see the [official Kubernetes blog announcement](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/).
 
 ## Ingress Discovery
 
@@ -454,6 +454,9 @@ The following annotations are organized by category for easier navigation.
 > \| <a id="opt-nginx-ingress-kubernetes-ioauth-keepalive-requests"></a>`nginx.ingress.kubernetes.io/auth-keepalive-requests` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-ioauth-keepalive-timeout"></a>`nginx.ingress.kubernetes.io/auth-keepalive-timeout` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-ioauth-proxy-set-headers"></a>`nginx.ingress.kubernetes.io/auth-proxy-set-headers` |                                                      |
+> \| <a id="opt-nginx-ingress-kubernetes-ioauth-always-set-cookie"></a>`nginx.ingress.kubernetes.io/auth-always-set-cookie` |                                                      |
+> \| <a id="opt-nginx-ingress-kubernetes-ioauth-request-redirect"></a>`nginx.ingress.kubernetes.io/auth-request-redirect` |                                                      |
+> \| <a id="opt-nginx-ingress-kubernetes-ioauth-signin-redirect-param"></a>`nginx.ingress.kubernetes.io/auth-signin-redirect-param` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-iodisable-proxy-intercept-errors"></a>`nginx.ingress.kubernetes.io/disable-proxy-intercept-errors` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-iolimit-rate-after"></a>`nginx.ingress.kubernetes.io/limit-rate-after` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-iolimit-rate"></a>`nginx.ingress.kubernetes.io/limit-rate` |                                                      |
@@ -465,6 +468,7 @@ The following annotations are organized by category for easier navigation.
 > \| <a id="opt-nginx-ingress-kubernetes-iopreserve-trailing-slash"></a>`nginx.ingress.kubernetes.io/preserve-trailing-slash` | Traefik preserves trailing slash by default.         |
 > \| <a id="opt-nginx-ingress-kubernetes-ioproxy-cookie-domain"></a>`nginx.ingress.kubernetes.io/proxy-cookie-domain` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-ioproxy-cookie-path"></a>`nginx.ingress.kubernetes.io/proxy-cookie-path` |
+> \| <a id="opt-nginx-ingress-kubernetes-ioproxy-busy-buffers-size"></a>`nginx.ingress.kubernetes.io/proxy-busy-buffers-size` | Traefik has no equivalent of NGINX busy buffers.     |
 > \| <a id="opt-nginx-ingress-kubernetes-ioproxy-redirect-from"></a>`nginx.ingress.kubernetes.io/proxy-redirect-from` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-ioproxy-redirect-to"></a>`nginx.ingress.kubernetes.io/proxy-redirect-to` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-ioproxy-ssl-ciphers"></a>`nginx.ingress.kubernetes.io/proxy-ssl-ciphers` |                                                      |
@@ -474,8 +478,11 @@ The following annotations are organized by category for easier navigation.
 > \| <a id="opt-nginx-ingress-kubernetes-iosatisfy"></a>`nginx.ingress.kubernetes.io/satisfy` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-iosession-cookie-conditional-samesite-none"></a>`nginx.ingress.kubernetes.io/session-cookie-conditional-samesite-none` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-iosession-cookie-change-on-failure"></a>`nginx.ingress.kubernetes.io/session-cookie-change-on-failure` |                                                      |
+> \| <a id="opt-nginx-ingress-kubernetes-ioupstream-hash-by-subset"></a>`nginx.ingress.kubernetes.io/upstream-hash-by-subset` |                                                      |
+> \| <a id="opt-nginx-ingress-kubernetes-ioupstream-hash-by-subset-size"></a>`nginx.ingress.kubernetes.io/upstream-hash-by-subset-size` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-iossl-ciphers"></a>`nginx.ingress.kubernetes.io/ssl-ciphers` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-iossl-prefer-server-ciphers"></a>`nginx.ingress.kubernetes.io/ssl-prefer-server-ciphers` |                                                      |
+> \| <a id="opt-nginx-ingress-kubernetes-iohttp2-push-preload"></a>`nginx.ingress.kubernetes.io/http2-push-preload` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-ioconnection-proxy-header"></a>`nginx.ingress.kubernetes.io/connection-proxy-header` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-ioenable-opentracing"></a>`nginx.ingress.kubernetes.io/enable-opentracing` |                                                      |
 > \| <a id="opt-nginx-ingress-kubernetes-ioopentracing-trust-incoming-span"></a>`nginx.ingress.kubernetes.io/opentracing-trust-incoming-span` |                                                      |

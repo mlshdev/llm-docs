@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-start.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-start.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-start.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-start.1.md.in)
 
 # podman-start
 
@@ -32,7 +32,7 @@ starting multiple containers.
 
 #### **--detach-keys**=*sequence*
 
-Specify the key sequence for detaching a container. Format is a single character `[a-Z]` or one or more `ctrl-<value>` characters where `<value>` is one of: `a-z`, `@`, `^`, `[`, `,` or `_`. Specifying "" disables this feature. The default is *ctrl-p,ctrl-q*.
+Specify the key sequence for detaching a container. Format is a single character `[a-Z]` or a comma separated sequence of `ctrl-<value>`, where `<value>` is one of: `a-z`, `@`, `[`, `\`, `]`, `^` or `_`. Specifying "" disables this feature. The default is *ctrl-p,ctrl-q*.
 
 This option can also be set in **containers.conf**(5) file.
 
@@ -55,6 +55,7 @@ Valid filters are listed below:
 | label!               | \[Key] or \[Key=Value] Label NOT assigned to a container                                                                                                                             |
 | exited               | \[Int] Container's exit code                                                                                                                                                         |
 | status               | \[Status] Container's status: 'created', 'initialized', 'running', 'stopped', 'paused', 'exited', 'removing', 'stopping', 'unknown'                                                  |
+| status!              | \[Status] Container's status is NOT the specified status                                                                                                                             |
 | ancestor             | \[ImageName] Image or descendant used to create container (accepts regex)                                                                                                            |
 | before               | \[ID] or \[Name] Containers created before this container                                                                                                                            |
 | since                | \[ID] or \[Name] Containers created since this container                                                                                                                             |
@@ -93,25 +94,25 @@ The default is **true** when attaching, **false** otherwise.
 Start specified container:
 
 ```
-podman start mywebserver
+$ podman start mywebserver
 ```
 
 Start multiple containers:
 
 ```
-podman start 860a4b231279 5421ab43b45
+$ podman start 860a4b231279 5421ab43b45
 ```
 
 Start specified container in interactive mode with terminal attached:
 
 ```
-podman start --interactive --attach 860a4b231279
+$ podman start --interactive --attach 860a4b231279
 ```
 
 Start last created container in interactive mode (This option is not available with the remote Podman client, including Mac and Windows (excluding WSL2) machines):
 
 ```
-podman start -i -l
+$ podman start -i -l
 ```
 
 Start containers by label:
@@ -169,7 +170,7 @@ $ podman start --filter ancestor=nginx
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**
 
 ## HISTORY
 

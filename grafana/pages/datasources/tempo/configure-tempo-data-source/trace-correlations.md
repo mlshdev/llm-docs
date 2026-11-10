@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/trace-correlations.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/trace-correlations.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/tempo/configure-tempo-data-source/trace-correlations.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/tempo/configure-tempo-data-source/trace-correlations.md)
 
 # Trace correlations
 
@@ -22,7 +22,7 @@ To use trace correlations, you need:
 
 1. Log in to Grafana with an administrator account.
 
-2. Go to **Configuration** > **Plugins & data** > **Correlations**.
+2. Go to **Administration** > **Plugins and data** > **Correlations**.
 
 3. Select **Add correlation** or **Add new**.
 
@@ -62,7 +62,7 @@ To use trace correlations, you need:
 
 1. Select **Save** to save the correlation.
 
-## Verifying correlations in Explore
+## Verify correlations in Explore
 
 1. Open **Explore** and select your Tempo tracing source.
 

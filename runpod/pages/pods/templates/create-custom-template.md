@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/templates/create-custom-template.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/pods/templates/create-custom-template.mdx)
+> Pinned source for Runpod main: [pods/templates/create-custom-template.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/pods/templates/create-custom-template.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/templates/create-custom-template
 
 # Build a custom Pod template

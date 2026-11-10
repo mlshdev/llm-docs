@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/contributing/building-testing.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/contributing/building-testing.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/contributing/building-testing.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/contributing/building-testing.md)
 
 # Building and Testing
 
@@ -84,7 +84,7 @@ For development purposes, you can specify which tests to run by using (only work
 > **Configuring Tailscale for Docker Desktop user**
 > Create `tailscale.secret` file in `integration` directory.
 >
-> This file needs to contain a [Tailscale auth key](https://tailscale.com/kb/1085/auth-keys)
+> This file needs to contain a [Tailscale auth key](https://tailscale.com/docs/features/access-control/auth-keys)
 > (an ephemeral, but reusable, one is recommended).
 >
 > Add this section to your tailscale ACLs to auto-approve the routes for the
@@ -93,7 +93,7 @@ For development purposes, you can specify which tests to run by using (only work
 > ```json
 >     "autoApprovers": {
 >       // Allow myself to automatically
->       // advertize routes for docker networks
+>       // advertise routes for docker networks
 >       "routes": {
 >         "172.31.42.0/24": ["your_tailscale_identity"],
 >       },

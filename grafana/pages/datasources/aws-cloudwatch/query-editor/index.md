@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/aws-cloudwatch/query-editor/index.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/aws-cloudwatch/query-editor/index.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/aws-cloudwatch/query-editor/index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/aws-cloudwatch/query-editor/index.md)
 
 # Amazon CloudWatch query editor
 
@@ -119,7 +119,7 @@ The query returns the average CPU utilization for all EC2 instances in the defau
 
 Auto-scaling events add new instances to the graph without manual instance ID tracking. As with other metric search queries, AWS returns up to 100 metrics per `GetMetricData` request.
 
-Click the [**Query inspector**](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#navigate-the-query-editor) button and select **Meta Data** to see the search expression that's automatically built to support wildcards.
+Click [**Inspect queries**](https://grafana.com/docs/grafana/v13.3/panels-visualizations/query-transform-data/#navigate-the-query-editor) in the footer of the editor pane and select **Meta Data** to see the search expression that's automatically built to support wildcards.
 
 To learn more about search expressions, refer to the [CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/search-expression-syntax.html).
 The search expression is defined by default in such a way that the queried metrics must match the defined dimension names exactly.

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/ai-chat/migrating-from-hydrate-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/ai-chat/migrating-from-hydrate-messages.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/ai-chat/migrating-from-hydrate-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/ai-chat/migrating-from-hydrate-messages.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/migrating-from-hydrate-messages
 
 # Migrate from hydrateMessages to transcript storage
@@ -171,7 +171,7 @@ With `hydrateMessages`, your hook was the source of truth and the runtime wrote 
    ```ts lib/transcript-storage.ts
    loadContext: async ({ chatId, clientData }, { incomingMessages }) => {
      const branch = await db.activeBranch(chatId, clientData.userId);
-     return [...branch, ...incomingMessages];
+     return [...branch, ...incomingMessages.filter((m) => m.role === "user")];
    },
    ```
 

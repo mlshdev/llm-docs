@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/guides/ai-agents/route-question.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/guides/ai-agents/route-question.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/guides/ai-agents/route-question.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/ai-agents/route-question.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/route-question
 
 # Route a question to a different AI model
@@ -9,7 +9,7 @@ Create an AI agent workflow that routes a question to a different AI model depen
 
 **Routing** is a workflow pattern that classifies an input and directs it to a specialized followup task. This pattern allows for separation of concerns and building more specialized prompts, which is particularly effective when there are distinct categories that are better handled separately. Without routing, optimizing for one kind of input can hurt performance on other inputs.
 
-![Routing](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/guides/ai-agents/routing.png)
+![Routing](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/ai-agents/routing.png)
 
 ## Example task
 

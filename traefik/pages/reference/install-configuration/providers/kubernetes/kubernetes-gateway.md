@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md)
 
 # Traefik & Kubernetes with Gateway API
 
@@ -7,7 +7,7 @@ specification from the Kubernetes Special Interest Groups (SIGs).
 
 This provider supports Standard version [v1.6.3](https://github.com/kubernetes-sigs/gateway-api/releases/tag/v1.6.3) of the Gateway API specification.
 
-It fully supports all `HTTPRoute` core and some extended features, like `BackendTLSPolicy`, `GRPCRoute`, and `TLSRoute` resources from the [Standard channel](https://gateway-api.sigs.k8s.io/concepts/versioning/?h=#release-channels), as well as `TCPRoute` from the [Experimental channel](https://gateway-api.sigs.k8s.io/concepts/versioning/?h=#release-channels).
+It fully supports all `HTTPRoute` core and some extended features, like `BackendTLSPolicy`, `GRPCRoute`, and `TLSRoute` resources from the [Standard channel](https://gateway-api.sigs.k8s.io/docs/concepts/versioning/#release-channels), as well as `TCPRoute` from the [Experimental channel](https://gateway-api.sigs.k8s.io/docs/concepts/versioning/#release-channels).
 
 For more details, check out the conformance [report](https://github.com/kubernetes-sigs/gateway-api/tree/main/conformance/reports/v1.6.3/traefik-traefik).
 
@@ -34,7 +34,7 @@ General functionality cannot be guaranteed for older versions.
    > (`experimental-install.yaml`) prevents the Kubernetes Gateway provider from starting:
    > no Gateway API resource is served at all, not only `TCPRoute` and `TLSRoute`.
    > Traefik keeps running and the other providers are unaffected.
-2. If you are not using the Helm Chart, install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/dynamic-configuration/kubernetes-gateway-rbac.yml) for Gateway API.
+2. If you are not using the Helm Chart, install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/dynamic-configuration/kubernetes-gateway-rbac.yml) for Gateway API.
 
    ```bash
    # Install Traefik RBACs for Gateway API.
@@ -81,7 +81,7 @@ providers:
 | :------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
 | <a id="opt-providers-providersThrottleDuration"></a>`providers.providersThrottleDuration`                                                         | Minimum amount of time to wait for, after a configuration reload, before taking into account any new configuration refresh event.<br />If multiple events occur within this time, only the most recent one is taken into account, and all others are discarded.<br />**This option cannot be set per provider, but the throttling algorithm applies to each of them independently.** | 2s      | No       |
 | <a id="opt-providers-kubernetesGateway-endpoint"></a>`providers.kubernetesGateway.endpoint`                                                       | Server endpoint URL.<br />More information [here](#endpoint).                                                                                                                                                                                                                                                                                                                        | ""      | No       |
-| <a id="opt-providers-kubernetesGateway-experimentalChannel"></a>`providers.kubernetesGateway.experimentalChannel`                                 | Toggles support for the Experimental Channel resources ([Gateway API release channels documentation](https://gateway-api.sigs.k8s.io/concepts/versioning/#release-channels)).<br />(ex: `TCPRoute`)<br />Requires the Experimental channel CRDs to be installed in the cluster, see [Requirements](#requirements).                                                                   | false   | No       |
+| <a id="opt-providers-kubernetesGateway-experimentalChannel"></a>`providers.kubernetesGateway.experimentalChannel`                                 | Toggles support for the Experimental Channel resources ([Gateway API release channels documentation](https://gateway-api.sigs.k8s.io/docs/concepts/versioning/#release-channels)).<br />(ex: `TCPRoute`)<br />Requires the Experimental channel CRDs to be installed in the cluster, see [Requirements](#requirements).                                                              | false   | No       |
 | <a id="opt-providers-kubernetesGateway-token"></a>`providers.kubernetesGateway.token`                                                             | Bearer token used for the Kubernetes client configuration. Accepts either the token value directly or a path to a file containing the token.                                                                                                                                                                                                                                         | ""      | No       |
 | <a id="opt-providers-kubernetesGateway-certAuthFilePath"></a>`providers.kubernetesGateway.certAuthFilePath`                                       | Path to the certificate authority file.<br />Used for the Kubernetes client configuration.                                                                                                                                                                                                                                                                                           | ""      | No       |
 | <a id="opt-providers-kubernetesGateway-namespaces"></a>`providers.kubernetesGateway.namespaces`                                                   | Array of namespaces to watch.<br />If left empty, watch all namespaces.                                                                                                                                                                                                                                                                                                              | \[]     | No       |
@@ -152,6 +152,6 @@ See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/refer
 > **Routing Configuration**
 > When using the Kubernetes Gateway API provider, Traefik uses the Gateway API
 > CRDs to retrieve its routing configuration.
-> Check out the Gateway API concepts [documentation](https://gateway-api.sigs.k8s.io/concepts/api-overview/),
+> Check out the Gateway API concepts [documentation](https://gateway-api.sigs.k8s.io/docs/concepts/api-overview/),
 > and the dedicated [routing section](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api)
 > in the Traefik documentation.

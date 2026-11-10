@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-machine-info.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine-info.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-machine-info.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-info.1.md)
 
 # podman-machine-info
 
@@ -20,6 +20,11 @@ one can set a default podman machine via system connections. This value represen
 the current active system connection associated with a podman machine. Regardless
 of the default system connection, the default podman machine will always be
 `podman-machine-default`.
+
+The `VMType`, `MachineConfigDir`, and `MachineImageDir` fields in the `Host` output
+reflect the provider of the current machine: the running or starting machine if there
+is one, otherwise the default machine. When no machine exists, they reflect the system
+default machine provider. `NumberOfMachines` counts machines across all providers.
 
 ## OPTIONS
 
@@ -104,7 +109,7 @@ amd64
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-machine.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-machine(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine.1.md)**
 
 ## HISTORY
 

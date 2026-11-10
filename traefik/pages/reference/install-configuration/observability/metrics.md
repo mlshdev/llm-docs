@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/install-configuration/observability/metrics.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/install-configuration/observability/metrics.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/observability/metrics.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/observability/metrics.md)
 
 # Metrics
 
@@ -9,8 +9,8 @@ Traefik provides metrics in the [OpenTelemetry](#open-telemetry) format as well 
 - [Prometheus](#prometheus)
 - [StatsD](#statsd)
 
-Traefik Proxy has an official Grafana dashboard for both [on-premises](https://grafana.com/grafana/dashboards/17346)
-and [Kubernetes](https://grafana.com/grafana/dashboards/17347) deployments.
+Traefik Proxy has an official Grafana dashboard for both [on-premises](https://grafana.com/grafana/dashboards/17346-traefik-official-standalone-dashboard/)
+and [Kubernetes](https://grafana.com/grafana/dashboards/17347-traefik-official-kubernetes-dashboard/) deployments.
 
 ***
 
@@ -681,6 +681,6 @@ Here is a comprehensive list of labels that are provided by the metrics:
 | <a id="opt-url"></a>`url`                 | Service server url                    | "<http://example.com>"       |
 
 > **`method` label value**
-> If the HTTP method verb on a request is not one defined in the set of common methods for [`HTTP/1.1`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+> If the HTTP method verb on a request is not one defined in the set of common methods for [`HTTP/1.1`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods)
 > or the [`PRI`](https://datatracker.ietf.org/doc/html/rfc7540#section-11.6) verb (for `HTTP/2`),
 > then the value for the method label becomes `EXTENSION_METHOD`.

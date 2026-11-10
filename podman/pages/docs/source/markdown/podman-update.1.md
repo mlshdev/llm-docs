@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-update.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-update.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-update.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-update.1.md.in)
 
 # podman-update
 
@@ -37,7 +37,7 @@ microseconds.
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -52,28 +52,9 @@ ends (controllable via **--cpu-period**).
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
-
-#### **--cpu-rt-period**=*microseconds*
-
-Limit the CPU real-time period in microseconds.
-
-Limit the container's Real Time CPU usage. This option tells the kernel to restrict the container's Real Time CPU usage to the period specified.
-
-This option is only supported on cgroups V1 rootful systems.
-
-#### **--cpu-rt-runtime**=*microseconds*
-
-Limit the CPU real-time runtime in microseconds.
-
-Limit the containers Real Time CPU usage. This option tells the kernel to limit the amount of time in a given CPU period Real Time tasks may consume. Ex:
-Period of 1,000,000us and Runtime of 950,000us means that this container can consume 95% of available CPU and leave the remaining 5% to normal priority tasks.
-
-The sum of all runtimes across containers cannot exceed the amount allotted to the parent cgroup.
-
-This option is only supported on cgroups V1 rootful systems.
 
 #### **--cpu-shares**, **-c**=*shares*
 
@@ -113,7 +94,7 @@ this can result in the following division of CPU shares:
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -125,7 +106,7 @@ for **--cpu-period** and **--cpu-quota**, therefore the option cannot be specifi
 
 On some systems, changing the CPU limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -137,7 +118,7 @@ CPUs in which to allow execution. Can be specified as a comma-separated list
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -152,7 +133,7 @@ two memory nodes.
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -162,7 +143,7 @@ Limit read rate (in bytes per second) from a device (e.g. **--device-read-bps=/d
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -172,7 +153,7 @@ Limit read rate (in IO operations per second) from a device (e.g. **--device-rea
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -182,7 +163,7 @@ Limit write rate (in bytes per second) to a device (e.g. **--device-write-bps=/d
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -192,7 +173,7 @@ Limit write rate (in IO operations per second) to a device (e.g. **--device-writ
 
 On some systems, changing the resource limits may not be allowed for non-root
 users. For more details, see
-[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
+[https://github.com/containers/podman/blob/main/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md#26-running-containers-with-resource-limits-fails-with-a-permissions-error)
 
 This option is not supported on cgroups V1 rootless systems.
 
@@ -258,6 +239,10 @@ The number of retries allowed before a healthcheck is considered to be unhealthy
 
 Note: This parameter can overwrite the healthcheck configuration from the image.
 
+#### **--health-start-interval**=*interval*
+
+This is an alias for `--health-startup-interval` option made for **Docker** compatibility.
+
 #### **--health-start-period**=*period*
 
 The initialization time needed for a container to bootstrap. The value can be expressed in time format like
@@ -281,11 +266,12 @@ healthcheck. When the startup command succeeds, the regular healthcheck begins a
 if the command fails a set number of times, the container is restarted. A startup healthcheck can be used to ensure that
 containers with an extended startup period are not marked as unhealthy until they are fully started. Startup healthchecks can only be
 used when a regular healthcheck (from the container's image or the
-`--health-cmd` option) is also set.
+`--health-cmd`  option) is also set.
+If `--health-cmd`  option was set, but `--health-startup-cmd`  one was missed, then value of `--health-cmd`  option is used for startup health check.
 
 #### **--health-startup-interval**=*interval*
 
-Set an interval for the startup healthcheck. An *interval* of **disable** results in no automatic timer setup. The default is **30s**.
+Set an interval for the startup healthcheck. An *interval* of **0s** results in no automatic timer setup. The default is **0s**.
 
 Changing this setting resets the timer, depending on the state of the container.
 
@@ -400,10 +386,28 @@ Ulimit options. Sets the ulimits values inside of the container.
 $ podman run --ulimit nofile=1024:1024 --rm ubi9 ulimit -n
 1024
 
+Here is the list of the different resources and the limits' units:
+
+| Type                                           | Unit of the value given to --ulimit |
+| :--------------------------------------------- | :---------------------------------- |
+| core, fsize                                    | bytes                               |
+| data, memlock, rss, stack                      | bytes                               |
+| msgqueue                                       | bytes                               |
+| rttime                                         | microseconds                        |
+| cpu                                            | seconds                             |
+| locks, nice, nofile, nproc, rtprio, sigpending | count                               |
+
+For example, a locked memory limit given in bytes is reported in kbytes:
+
+$ podman run --ulimit memlock=4096 --rm ubi9 ulimit -l
+4
+
+Unit suffixes such as *k* or *m* are not accepted.
+
 Set -1 for the soft or hard limit to set the limit to the maximum limit of the current
 process. In rootful mode this is often unlimited.
 
-If nofile and nproc are unset, a default value of 1048576 will be used, unless overridden
+If nofile is unset, a default value of 1048576 will be used, unless overridden
 in containers.conf(5).  However, if the default value exceeds the hard limit for the current
 rootless user, the current hard limit will be applied instead.
 
@@ -429,25 +433,25 @@ the next start.
 Update a container with a new cpu quota and period:
 
 ```
-podman update --cpus=0.5 ctrID
+$ podman update --cpus=0.5 ctrID
 ```
 
 Update the latest container with a new cpu value:
 
 ```
-podman update --latest --cpus=1
+$ podman update --latest --cpus=1
 ```
 
 Update a container's ulimit:
 
 ```
-podman update --ulimit nofile=1024:1024 ctrID
+$ podman update --ulimit nofile=1024:1024 ctrID
 ```
 
 Update a container with multiple options at ones:
 
 ```
-podman update --cpus 5 --cpuset-cpus 0 --cpu-shares 123 --cpuset-mems 0 \\
+$ podman update --cpus 5 --cpuset-cpus 0 --cpu-shares 123 --cpuset-mems 0 \\
   --memory 1G --memory-swap 2G --memory-reservation 2G \\
   --blkio-weight-device /dev/sda:123 --blkio-weight 123 \\
   --device-read-bps /dev/sda:10mb --device-write-bps /dev/sda:10mb \\
@@ -457,7 +461,7 @@ podman update --cpus 5 --cpuset-cpus 0 --cpu-shares 123 --cpuset-mems 0 \\
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-create(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-create.1.md.in)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-run.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-create(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-create.1.md.in)**, **[podman-run(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-run.1.md.in)**
 
 ## HISTORY
 

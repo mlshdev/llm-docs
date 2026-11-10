@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/contributing/documentation-style-guide.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/contributing/documentation-style-guide.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/contributing/documentation-style-guide.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/contributing/documentation-style-guide.md)
 
 # Documentation Style Guide
 
@@ -206,4 +206,4 @@ To change an option description in the generated reference, change the comment o
 2. Check that every link and anchor resolves.
 3. Run the docs build with `mkdocs build --strict` and the markdown lint, as described in the contributing guide.
 4. Target the right branch: `master` for new features, and the maintenance branch for the release for fixes. Don't backport your own change.
-5. Declare substantial AI assistance with an `Assisted-by:` trailer.
+5. Declare substantial AI assistance in the pull request description with `Assisted-by: <agent name>`, never in a commit trailer.

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-image-mount.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-image-mount.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-image-mount.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-image-mount.1.md)
 
 # podman-image-mount
 
@@ -41,7 +41,7 @@ Print the mounted images in specified format (json).
 Mount multiple images. Note: In rootless mode, image mounting works only after executing the podman unshare command to enter the user namespace.
 
 ```
-podman image mount fedora ubi8-init
+# podman image mount fedora ubi8-init
 /var/lib/containers/storage/overlay/f3ac502d97b5681989dff84dfedc8354239bcecbdc2692f9a639f4e080a02364/merged
 /var/lib/containers/storage/overlay/0ff7d7ca68bed1ace424f9df154d2dd7b5a125c19d887f17653cbcd5b6e30ba1/merged
 ```
@@ -49,7 +49,7 @@ podman image mount fedora ubi8-init
 List mounted images:
 
 ```
-podman image mount
+# podman image mount
 registry.fedoraproject.org/fedora:latest /var/lib/containers/storage/overlay/f3ac502d97b5681989dff84dfedc8354239bcecbdc2692f9a639f4e080a02364/merged
 registry.access.redhat.com/ubi8-init:latest /var/lib/containers/storage/overlay/0ff7d7ca68bed1ace424f9df154d2dd7b5a125c19d887f17653cbcd5b6e30ba1/merged
 ```
@@ -57,7 +57,7 @@ registry.access.redhat.com/ubi8-init:latest /var/lib/containers/storage/overlay/
 List mounted images in JSON format:
 
 ```
-podman image mount --format json
+# podman image mount --format json
 [
  {
   "id": "00ff39a8bf19f810a7e641f7eb3ddc47635913a19c4996debd91fafb6b379069",
@@ -84,4 +84,4 @@ podman image mount --format json
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-image(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-image.1.md)**, **[podman-image-unmount(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-image-unmount.1.md)**, **[podman-unshare(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-unshare.1.md)**, **mount(8)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-image(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-image.1.md)**, **[podman-image-unmount(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-image-unmount.1.md)**, **[podman-unshare(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-unshare.1.md)**, **mount(8)**

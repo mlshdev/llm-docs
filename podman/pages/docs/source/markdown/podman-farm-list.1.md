@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-farm-list.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-farm-list.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-farm-list.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-farm-list.1.md.in)
 
 # podman-farm-list
 
@@ -30,6 +30,14 @@ Valid placeholders for the Go template listed below:
 | .Name           | Farm name                                                             |
 | .ReadWrite      | Indicates if this farm can be modified using the podman farm commands |
 
+#### **--noheading**, **-n**
+
+Omit the table headings from the listing.
+
+#### **--quiet**, **-q**
+
+Print farm output in quiet mode. Only print the farm names.
+
 ## EXAMPLE
 
 List all farms:
@@ -37,6 +45,14 @@ List all farms:
 ```
 $ podman farm list
 Name        Connections  Default     ReadWrite
+farm1       [f38 f37]    false       true
+farm2       [f37]        true        true
+```
+
+List all farms without showing the headers:
+
+```
+$ podman farm list --noheading
 farm1       [f38 f37]    false       true
 farm2       [f37]        true        true
 ```
@@ -74,6 +90,14 @@ farm1
 farm2
 ```
 
+Show only farm names using **--quiet**:
+
+```
+$ podman farm list --quiet
+farm1
+farm2
+```
+
 Show detailed farm information:
 
 ```
@@ -86,7 +110,7 @@ Connections: [f37]
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-farm(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-farm.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-farm(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-farm.1.md)**
 
 ## HISTORY
 

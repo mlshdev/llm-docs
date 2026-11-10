@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/apikeys.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/apikeys.mdx)
 > Canonical documentation: https://trigger.dev/docs/apikeys
 
 # API keys
@@ -15,7 +15,7 @@ Authenticate backend requests with environment-specific API keys.
 > **Tip**
 >
 > To access AWS or another external service from a deployed task without stored cloud keys, use
-> [OpenID Connect (OIDC)](https://trigger.dev/docs/oidc). Trigger.dev API keys cannot mint OIDC tokens.
+> [workload identity](https://trigger.dev/docs/oidc). Trigger.dev API keys cannot mint OIDC tokens.
 
 ## Create an API key
 
@@ -29,10 +29,12 @@ API keys belong to one environment. A Development key cannot access Production, 
 > The dashboard disables these actions when your role does not have permission.
 
 1. Select the project and environment the integration needs to access, then open [**API keys**](https://cloud.trigger.dev/_/apikeys).
-2. Click **New API key**, enter a descriptive name, and optionally set an expiration date. Names can
-   contain up to 64 characters.
+2. Click **Create API key**, enter a descriptive name, and choose when it expires: in 30 days, 90
+   days (the default), or 1 year, on a custom date, or never. Names can contain up to 64 characters. To
+   [restrict the key to your servers](#restrict-a-key-to-ip-addresses), list their IP addresses.
 3. Select the narrowest access preset that supports the integration. For task-aware presets, choose
-   all tasks or up to 10 task identifiers.
+   all tasks or up to 10 task identifiers. When no single preset fits, switch to
+   [Custom](https://trigger.dev/docs/apikeys/custom-access) and combine presets or set each area's level.
 4. Copy the key into your secret manager or backend environment. Trigger.dev shows the complete
    value only once.
 
@@ -51,7 +53,7 @@ import { configure, tasks } from "@trigger.dev/sdk";
 import type { sendEmail } from "./trigger/send-email";
 
 configure({
-  secretKey: process.env.TRIGGER_SECRET_KEY,
+  accessToken: process.env.TRIGGER_SECRET_KEY,
   previewBranch: "my-branch", // Only needed for preview branches
   baseURL: "https://mytrigger.example.com", // Optional
 });
@@ -72,21 +74,23 @@ The default API URL is `https://api.trigger.dev`.
 
 ## Access presets
 
-Access presets define what a key can do. On the Free and Hobby plans only the **No restrictions** preset is available. All other presets require the Pro or Enterprise plan.
+Access presets define what a key can do. Every preset is available on every plan.
 
-| Preset              | Access                                                                                                                                                                       |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Trigger only**    | Trigger runs and batches for all or selected tasks. Trigger responses include scoped public access tokens for the runs and batches they create                               |
-| **Task operator**   | Trigger all or selected tasks and inspect or operate on their runs                                                                                                           |
-| **Observer**        | Read runs, tasks, batches, logs, traces, queues, errors, and webhooks                                                                                                        |
-| **Operator**        | Observe and operate on runs, queues, errors, and webhooks, and trigger tasks                                                                                                 |
-| **Webhooks only**   | Read and write [webhooks](https://trigger.dev/docs/webhooks/overview). Replaying deliveries that trigger tasks and creating webhook waiters require task or waitpoint scopes |
-| **Waitpoints only** | Create, list, and retrieve [waitpoint tokens](https://trigger.dev/docs/wait-for-token). No task or run access                                                                |
-| **Deploy only**     | Deploy versions, sync environment variables, and manage Preview branches                                                                                                     |
-| **Variables only**  | Read and write environment variables in this environment                                                                                                                     |
-| **No restrictions** | Full access to the environment                                                                                                                                               |
+| Preset              | Access                                                                                                                                                                                                     |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Trigger only**    | Trigger runs and batches for all or selected tasks, and upload large payloads. Trigger responses include scoped public access tokens for the runs and batches they create                                  |
+| **Task operator**   | Trigger all or selected tasks, upload large payloads, and inspect or operate on their runs                                                                                                                 |
+| **Observer**        | Read runs, tasks, batches, logs, traces, queues, errors, webhooks, sessions, and prompts                                                                                                                   |
+| **Operator**        | Observe and operate on runs, queues, errors, webhooks, sessions, and waitpoints, close sessions, send to and wait on input streams, read tagged runs and prompts, upload large payloads, and trigger tasks |
+| **Webhooks only**   | Read and write [webhooks](https://trigger.dev/docs/webhooks/overview). Replaying deliveries that trigger tasks and creating webhook waiters require task or waitpoint scopes                               |
+| **Waitpoints only** | Create, read, and complete [waitpoint tokens](https://trigger.dev/docs/wait-for-token), and create and cancel webhook waiters. No task or run access                                                       |
+| **Deploy only**     | Deploy versions, sync environment variables, and manage Preview branches                                                                                                                                   |
+| **Variables only**  | Read and write environment variables in this environment                                                                                                                                                   |
+| **No restrictions** | Full access to the environment                                                                                                                                                                             |
 
-**Trigger only** and **Task operator** can be restricted to selected tasks, up to 10 tasks per key. Task restrictions use task identifiers, such as `send-email`. A request involving multiple tasks — such as a batch trigger — succeeds only when the key can access every task in the request, so a task-restricted key can batch-trigger only its selected tasks.
+**Trigger only** and **Task operator** can be restricted to selected tasks, up to 10 tasks per key. Task restrictions use task identifiers, such as `send-email`. A request involving multiple tasks (such as a batch trigger) succeeds only when the key can access every task in the request, so a task-restricted key can batch-trigger only its selected tasks.
+
+When no single preset fits, such as a CI key that operates on runs and also deploys, build the key's access with [custom access](https://trigger.dev/docs/apikeys/custom-access). Your organization can also save custom access as its own preset.
 
 ## Deploy with an API key
 
@@ -104,9 +108,38 @@ The key must belong to the target environment. Use a Production key with `--env 
 > `TRIGGER_SECRET_KEY`. Setting an API key in `TRIGGER_ACCESS_TOKEN` takes precedence over a saved
 > CLI login.
 
+## Restrict a key to IP addresses
+
+Give a key a list of allowed IP addresses to limit where it can be used. Requests using the key from any other address are rejected, so a leaked key is useless outside your network. They get the same `Invalid API key` error as a key that doesn't exist, so the response never confirms the key is real. If a working key suddenly returns that error, check its allowed IP addresses.
+
+- Enter one IPv4 or IPv6 address or CIDR range per line, for example `203.0.113.9` or `203.0.113.0/24`. A key can have up to 50 ranges.
+- Leave the list empty to allow any IP address.
+- Private and reserved ranges, such as `10.0.0.0/8` or `192.168.0.0/16`, are not accepted. Use the public addresses your requests come from.
+- Set the list when you create the key, or change it later with **Edit allowed IPs** in the key's menu. Changes take effect immediately.
+- The API keys page shows the IP address each key was last used from, so you can check it before saving a list.
+- [Public Access Tokens](https://trigger.dev/docs/realtime/auth) created with the key are not IP-restricted, since they are meant for browsers. Creating one still requires an allowed IP address.
+
+> **Tip**
+>
+> To lock down an environment, give each backend its own IP-restricted key, move your applications
+> to those keys, then hide the root key. Your tasks keep working because they don't authenticate
+> with your API keys.
+
+## Change a key's access
+
+To change what an existing key can do, click the key on the API keys page to open its details, then click **Edit access**. The key's menu has the same option. Pick another preset or switch to **Custom**, then click **Save access**. The dialog lists what the key gains and loses before you confirm.
+
+The key's secret doesn't change, so nothing needs redeploying, and the new access applies to the key's next request. Name, expiry and allowed IP addresses stay as they are. Editing access needs permission to manage API keys in that environment. The root key and revoked or expired keys can't be edited.
+
+To remove access a key never uses, click **Narrow to what it used** in the key's details. See [See what a key uses](https://trigger.dev/docs/apikeys/custom-access#see-what-a-key-uses).
+
+### When a key's access differs from its preset
+
+A key keeps the access it was created with. If a preset later grants more or less, keys created before the change don't follow it. When a preset now grants more than a key has, the API keys page marks the key with a dot after the preset name in the **Access** column. Click the key to see which areas the preset now grants, then click **Update to current preset** and **Save access** to update the key.
+
 ## Expire and revoke keys
 
-Set an expiration date when creating a key if the integration only needs temporary access. An expired key stops authenticating automatically.
+Set an expiration date when creating a key if the integration only needs temporary access. A key with a custom date works until the end of that day in UTC. An expired key stops authenticating automatically.
 
 Revoking a key takes effect immediately and cannot be reversed. Requests using the key fail, and the key can no longer create public access tokens. Create a replacement before revoking a key when you need to rotate it without interrupting the integration.
 
@@ -139,7 +172,9 @@ The SDK sends the branch automatically. When calling the API directly, send the 
 
 ## Self-hosting
 
-Self-hosted installations support multiple keys with **No restrictions**. The restricted access presets are available in Trigger.dev Cloud.
+Self-hosted installations support multiple keys with **No restrictions**. The restricted access presets, custom access, saved presets and key usage are available in Trigger.dev Cloud.
+
+IP allowlists use the last address in the `X-Forwarded-For` header, so run the webapp behind a reverse proxy that appends the client IP to that header. To allow private ranges because your clients reach the instance over a private network, set `API_KEY_ALLOW_PRIVATE_IP_RANGES=1`.
 
 Keep your instance and SDK current before creating keys. Calling a public-token API with a key on a server that does not support server-minted tokens returns an upgrade error. Upgrade the instance before creating public tokens with an environment API key.
 
@@ -147,6 +182,7 @@ Keep your instance and SDK current before creating keys. Calling a public-token 
 
 - Create one key per service or integration instead of sharing keys.
 - Choose the narrowest access preset and task selection that supports the integration.
+- Restrict keys used from servers with fixed IP addresses to those addresses.
 - Store keys in a secret manager and inject them as backend environment variables.
 - Set expiration dates for temporary integrations and deployment credentials.
 - Revoke keys when an integration or team member no longer needs access.

@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/problems.sgml#bug-reporting](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/problems.sgml%23bug-reporting)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/problems.sgml#bug-reporting](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/problems.sgml%23bug-reporting)
 > Canonical documentation: https://www.postgresql.org/docs/18/bug-reporting.html
 
 # Bug Reporting Guidelines
@@ -50,7 +50,7 @@ The following items should be contained in every bug report:
 - Anything you did at all differently from the installation instructions.
 - The PostgreSQL version. You can run the command `SELECT version();` to find out the version of the server you are connected to. Most executable programs also support a `--version` option; at least `postgres --version` and `psql --version` should work. If the function or the options do not exist then your version is more than old enough to warrant an upgrade. If you run a prepackaged version, such as RPMs, say so, including any subversion the package might have. If you are talking about a Git snapshot, mention that, including the commit hash.
 
-  If your version is older than 18.6 we will almost certainly tell you to upgrade. There are many bug fixes and improvements in each new release, so it is quite possible that a bug you have encountered in an older release of PostgreSQL has already been fixed. We can only provide limited support for sites using older releases of PostgreSQL; if you require more than we can provide, consider acquiring a commercial support contract.
+  If your version is older than 18.7 we will almost certainly tell you to upgrade. There are many bug fixes and improvements in each new release, so it is quite possible that a bug you have encountered in an older release of PostgreSQL has already been fixed. We can only provide limited support for sites using older releases of PostgreSQL; if you require more than we can provide, consider acquiring a commercial support contract.
 - Platform information. This includes the kernel name and version, C library, processor, memory information, and so on. In most cases it is sufficient to report the vendor and version, but do not assume everyone knows what exactly “Debian” contains or that everyone runs on x86\_64. If you have installation problems then information about the toolchain on your machine (compiler, `make`, and so on) is also necessary.
 
 Do not be afraid if your bug report becomes rather lengthy. That is a fact of life. It is better to report everything the first time than us having to squeeze the facts out of you. On the other hand, if your input files are huge, it is fair to ask first whether somebody is interested in looking into it. Here is an [article](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html) that outlines some more tips on reporting bugs.

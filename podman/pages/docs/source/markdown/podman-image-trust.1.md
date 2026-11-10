@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-image-trust.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-image-trust.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-image-trust.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-image-trust.1.md.in)
 
 # podman-image-trust
 
@@ -18,8 +18,7 @@ The location is determined
 by the transport and the registry host of the image.  Using this container image `docker://docker.io/library/busybox`
 as an example, `docker` is the transport and `docker.io` is the registry host.
 
-Trust is defined in **/etc/containers/policy.json** and is enforced when a user attempts to pull
-a remote image from a registry.  The trust policy in policy.json describes a registry scope (registry and/or repository) for the trust.  This trust can use public keys for signed images.
+Trust is defined in **policy.json** (see **containers-policy.json(5)** for exact paths) and is enforced when a user attempts to pull a remote image from a registry.  The trust policy in policy.json describes a registry scope (registry and/or repository) for the trust.  This trust can use public keys for signed images.
 
 The scope of the trust is evaluated from most specific to the least specific. In other words, a policy may be:
 
@@ -101,19 +100,19 @@ Path to the signature policy file (**policy.json**) to display. When omitted, Po
 Accept all unsigned images from a registry:
 
 ```
-sudo podman image trust set --signature-policy /etc/containers/policy.json --type accept docker.io
+$ sudo podman image trust set --signature-policy /etc/containers/policy.json --type accept docker.io
 ```
 
 Modify default trust policy:
 
 ```
-sudo podman image trust set --signature-policy /etc/containers/policy.json -t reject default
+$ sudo podman image trust set --signature-policy /etc/containers/policy.json -t reject default
 ```
 
 Display system trust policy:
 
 ```
-podman image trust show
+$ podman image trust show
 TRANSPORT      NAME                        TYPE        ID                   STORE
 all            default                     reject
 repository     docker.io/library           accept
@@ -126,7 +125,7 @@ docker-daemon                              accept
 Display trust policy file:
 
 ```
-podman image trust show --raw
+$ podman image trust show --raw
 {
     "default": [
         {
@@ -174,7 +173,7 @@ podman image trust show --raw
 Display trust as JSON:
 
 ```
-podman image trust show --json
+$ podman image trust show --json
 [
   {
     "transport": "all",

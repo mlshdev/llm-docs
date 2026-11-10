@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/rust.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/guides/rust.md)
+> Pinned source for Docker main: [content/guides/rust.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/rust.md)
 
 The Rust language-specific guide teaches you how to create a containerized Rust application using Docker. In this guide, you'll learn how to:
 

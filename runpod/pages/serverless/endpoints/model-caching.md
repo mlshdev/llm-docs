@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/model-caching.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/serverless/endpoints/model-caching.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/model-caching.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/serverless/endpoints/model-caching.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/model-caching
 
 # Cached models
@@ -87,7 +87,7 @@ Follow these steps to select and add a cached model to your endpoint:
 
    The console displays the model size and estimated GPU requirements to help you choose the right GPU configuration.
 
-   ![](https://raw.githubusercontent.com/runpod/docs/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/images/model-cache-setting.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/03654ae6f119347890b8633ab8b2d72379866aef/images/model-cache-setting.png)
 3. If you're using a gated model, you'll need to enter a [Hugging Face access token](https://huggingface.co/docs/hub/en/security-tokens).
 4. Complete your endpoint configuration and click **Deploy Endpoint** .
 

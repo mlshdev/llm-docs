@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "projects": {
     "traefik": {
-      "tag": "v3.7.17",
-      "releaseId": 428798918,
-      "releasePublishedAt": "2026-10-30T08:32:41Z",
-      "sourceCommit": "04e8ccf84ada1dcb450cec06554fe27812903134"
+      "tag": "v3.7.18",
+      "releaseId": 440101311,
+      "releasePublishedAt": "2026-11-10T08:23:37Z",
+      "sourceCommit": "89e11274ead687094b871f8a4a75e90603773ef5"
     },
     "netbird": {
       "tag": "v0.81.4",
@@ -15,18 +15,18 @@
       "docsCommit": "238224712cf7639036ed39fa8873d777b8822273"
     },
     "podman": {
-      "tag": "v6.1.4",
-      "releaseId": 410992137,
-      "releasePublishedAt": "2026-10-12T20:59:46Z",
-      "sourceCommit": "464c15fec06f0074c916f9eff87c4806869c2833"
+      "tag": "v6.2.0",
+      "releaseId": 440847312,
+      "releasePublishedAt": "2026-11-10T20:01:54Z",
+      "sourceCommit": "055de046937d29450f310fce0fe3071485d8bed9"
     },
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "34992b922461d20cc97107b84056756802584571",
-      "sourceCommittedAt": "2026-11-09T17:48:56Z",
-      "observedCommit": "34992b922461d20cc97107b84056756802584571",
-      "documentationDigest": "64b90fb47fc0895aebbb8e3b18deedbdb943f410cfc611d08c89abd9917918df"
+      "sourceCommit": "75a95460ce3cc8db87a23893490ec331506d08fd",
+      "sourceCommittedAt": "2026-11-10T17:48:17Z",
+      "observedCommit": "75a95460ce3cc8db87a23893490ec331506d08fd",
+      "documentationDigest": "16692b08d718b9ea2b3d33cce3d74e4f3e8459c80a4db4426965eda760fe55a0"
     },
     "container": {
       "tag": "1.7.1",
@@ -43,10 +43,10 @@
       "documentationDigest": "76476316122882b99a3aec367017aed2c9cb3548148ef953abf9b995fb792d9b"
     },
     "grafana": {
-      "tag": "v13.3.0",
-      "releaseId": 425347741,
-      "releasePublishedAt": "2026-10-27T11:08:50Z",
-      "sourceCommit": "752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a"
+      "tag": "v13.3.1",
+      "releaseId": 440936629,
+      "releasePublishedAt": "2026-11-10T21:31:44Z",
+      "sourceCommit": "5db6ba887630c7fa12e5bfd063f2fa854025468c"
     },
     "victoriametrics": {
       "tag": "v1.156.0",
@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "0f89d936b39e1cb438a874ecfccffe253be6b63b",
       "sourceCommittedAt": "2026-11-06T01:09:33Z",
-      "observedCommit": "2d482a888a4e5d82fdafa24f9915dbae2f4832e8",
+      "observedCommit": "cd4e96eb314630788b7ff2f9820c395788c023e2",
       "documentationDigest": "30c1eacad7e8081b0b8f6543666274ac9ab2862f926b3b26f478db628e5118be"
     },
     "yt-dlp": {
@@ -113,10 +113,10 @@
       "sourceCommit": "38afee6c84fcf48c0edb2466aa4b27d287a59c30"
     },
     "trigger-dev": {
-      "tag": "v4.8.3",
-      "releaseId": 429001724,
-      "releasePublishedAt": "2026-10-30T12:22:45Z",
-      "sourceCommit": "645cc47dd2eeb99387f604cad2c90ba2ef568680"
+      "tag": "v4.8.4",
+      "releaseId": 440599308,
+      "releasePublishedAt": "2026-11-10T16:15:05Z",
+      "sourceCommit": "55a53ef23958db0ce59893d9d4486258e00433b1"
     },
     "aria2": {
       "tag": "release-1.37.0",
@@ -125,9 +125,9 @@
       "sourceCommit": "02f2d0d8472b3c38c29b4dba8c75ebd5fdd2899a"
     },
     "postgres-18": {
-      "tag": "REL_18_6",
-      "sourceCommit": "724edf9bde9d356724ad384a2e196edc3c9f80f7",
-      "taggedAt": "2026-08-11T18:38:31Z"
+      "tag": "REL_18_7",
+      "sourceCommit": "f5c41f6681c910b3f69951bf6fb97c6d74605d25",
+      "taggedAt": "2026-11-09T20:09:29Z"
     },
     "vastai": {
       "tag": "main",
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "eba1be5cd1f4af9e764b2f65145197430e9ba0ad",
-      "sourceCommittedAt": "2026-11-10T01:34:24Z",
-      "observedCommit": "eba1be5cd1f4af9e764b2f65145197430e9ba0ad",
-      "documentationDigest": "f9244e607d7f146da86754e324c2e1077707c9df1e91b3a57fc3fc1131e0a2b7"
+      "sourceCommit": "03654ae6f119347890b8633ab8b2d72379866aef",
+      "sourceCommittedAt": "2026-11-10T20:43:27Z",
+      "observedCommit": "03654ae6f119347890b8633ab8b2d72379866aef",
+      "documentationDigest": "9bff5e6b669fe2d25a23c399cf95ca21b14c7bfc2b0c942a48aa66edbb3fea88"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

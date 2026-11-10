@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/self-hosting/env/supervisor.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/self-hosting/env/supervisor.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/self-hosting/env/supervisor.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/self-hosting/env/supervisor.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/env/supervisor
 
 # Supervisor

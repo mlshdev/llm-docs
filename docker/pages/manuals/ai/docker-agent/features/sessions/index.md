@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/sessions/index.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/_vendor/github.com/docker/docker-agent/docs/features/sessions/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/sessions/index.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/_vendor/github.com/docker/docker-agent/docs/features/sessions/index.md)
 
 *How Docker Agent stores conversations, resumes them across runs, and tracks their token cost.*
 

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md)
 
 `IngressRouteTCP` is the CRD implementation of a [Traefik TCP router](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/routing/rules-and-priority).
 

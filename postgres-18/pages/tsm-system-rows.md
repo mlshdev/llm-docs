@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/tsm-system-rows.sgml#tsm-system-rows](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/tsm-system-rows.sgml%23tsm-system-rows)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/tsm-system-rows.sgml#tsm-system-rows](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/tsm-system-rows.sgml%23tsm-system-rows)
 > Canonical documentation: https://www.postgresql.org/docs/18/tsm-system-rows.html
 
 # tsm_system_rows — the SYSTEM_ROWS sampling method for TABLESAMPLE

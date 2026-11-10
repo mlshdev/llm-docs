@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/grpcweb.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/grpcweb.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/grpcweb.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/grpcweb.md)
 
 The `grpcWeb` middleware converts gRPC Web requests to HTTP/2 gRPC requests before forwarding them to the backends.
 
@@ -68,6 +68,6 @@ spec:
 
 More information including how to use the settings can be found at:
 
-- [Mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [Mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
 - [w3](https://fetch.spec.whatwg.org/#http-access-control-allow-origin)
 - [IETF](https://tools.ietf.org/html/rfc6454#section-7.1)

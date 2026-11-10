@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/provision.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/provision.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/tempo/configure-tempo-data-source/provision.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/tempo/configure-tempo-data-source/provision.md)
 
 # Provision the Tempo data source
 
@@ -25,7 +25,7 @@ To make changes, you can either:
 ## Example file
 
 This example provisioning YAML file sets up the equivalents of the options available in the Tempo data source UI.
-Replace `grafana-pyroscope-datasource` with the actual UID of your Pyroscope datasource, and verify the other `datasource Uid` values match what's actually provisioned.
+Replace `grafana-pyroscope-datasource` with the actual UID of your Pyroscope data source, and verify the other `datasource Uid` values match what's actually provisioned.
 
 ```yaml
 apiVersion: 1

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/basicauth.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/basicauth.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/basicauth.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/basicauth.md)
 
 The `basicAuth` middleware grants access to services to authorized users only.
 
@@ -80,6 +80,7 @@ spec:
 ### Passwords format
 
 Passwords must be hashed using MD5, SHA1, or BCrypt.
+Passwords longer than 1024 bytes are rejected.
 Use `htpasswd` to generate the passwords.
 
 ### users & usersFile

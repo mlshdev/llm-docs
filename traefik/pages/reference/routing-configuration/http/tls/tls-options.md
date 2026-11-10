@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/tls/tls-options.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/tls/tls-options.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/tls/tls-options.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/tls/tls-options.md)
 
 The TLS options allow one to configure some parameters of the TLS connection.
 
@@ -186,7 +186,7 @@ tls:
 
 ### Cipher Suites
 
-See [cipherSuites](https://godoc.org/crypto/tls#pkg-constants) for more information.
+See [cipherSuites](https://pkg.go.dev/crypto/tls#pkg-constants) for more information.
 
 **Structured (YAML)**
 
@@ -215,7 +215,7 @@ tls:
 > **TLS 1.3**
 > Cipher suites defined for TLS 1.2 and below cannot be used in TLS 1.3, and vice versa. (<https://tools.ietf.org/html/rfc8446>)
 > With TLS 1.3, the cipher suites are not configurable (all supported cipher suites are safe in this case).
-> <https://golang.org/doc/go1.12#tls_1_3>
+> <https://go.dev/doc/go1.12#tls_1_3>
 
 ### Curve Preferences
 

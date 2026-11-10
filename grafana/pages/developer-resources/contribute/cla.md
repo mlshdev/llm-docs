@@ -1,11 +1,11 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/contribute/cla.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/contribute/cla.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/contribute/cla.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/contribute/cla.md)
 
 # Grafana Labs Software Grant and Contributor License Agreement ("Agreement")
 
 This agreement is based on the Apache Software Foundation Contributor License Agreement.
 (v r190612)
 
-Thank you for your interest in software projects stewarded by Raintank, Inc. dba Grafana Labs (“Grafana Labs”). In order to clarify the intellectual property license
+Thank you for your interest in software projects stewarded by Grafana Labs Inc. In order to clarify the intellectual property license
 granted with Contributions from any person or entity, Grafana Labs
 must have a Contributor License Agreement (CLA) on file that has been
 agreed to by each Contributor, indicating agreement to the license terms

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/other-providers/file.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/other-providers/file.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/other-providers/file.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/other-providers/file.md)
 
 # Traefik File Routing Configuration
 
@@ -458,7 +458,7 @@ You can declare TLS certificates, options, and stores with the file provider.
 > Go Templating only works with dedicated dynamic configuration files.
 > Templating does not work in the Traefik main static configuration file.
 > Traefik supports using Go templating to automatically generate repetitive sections of configuration files.
-> These sections must be a valid [Go template](https://pkg.go.dev/text/template/), and can use
+> These sections must be a valid [Go template](https://pkg.go.dev/text/template), and can use
 > [sprig template functions](https://masterminds.github.io/sprig/).
 
 To illustrate, it is possible to easily define multiple routers, services, and TLS certificates as described in the following examples:

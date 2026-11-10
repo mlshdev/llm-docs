@@ -1,15 +1,5358 @@
-# Grafana v13.3.0: full documentation
+# Grafana v13.3.1: full documentation
 
 Source repository: https://github.com/grafana/grafana
-Release tag: v13.3.0
-Source commit: 752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a
+Release tag: v13.3.1
+Source commit: 5db6ba887630c7fa12e5bfd063f2fa854025468c
 Volume 2
+
+# Document: Data source HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/data_source.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/data_source.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/data_source.md
+Description: If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to Role-based access control permissions for more information.
+
+# Data source API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+## Requirements
+
+If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+
+## Endpoints
+
+| Method | URI                                    | Summary                                                                                        |
+| ------ | -------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| GET    | /api/datasources                       | [Get all data sources](#get-all-data-sources)                                                  |
+| GET    | /api/datasources/uid/:uid              | [Get a single data source by uid](#get-a-single-data-source-by-uid)                            |
+| GET    | /api/datasources/name/:name            | [Get a single data source by name](#get-a-single-data-source-by-name) (deprecated)             |
+| GET    | /api/datasources/id/:name              | [Get data source Id by name](#get-data-source-id-by-name) (deprecated)                         |
+| POST   | /api/datasources                       | [Create a data source](#create-a-data-source)                                                  |
+| PUT    | /api/datasources/uid/:uid              | [Update an existing data source](#update-an-existing-data-source)                              |
+| DELETE | /api/datasources/uid/:uid              | [Delete an existing data source by uid](#delete-an-existing-data-source-by-uid)                |
+| DELETE | /api/datasources/name/:datasourceName  | [Delete an existing data source by name](#delete-an-existing-data-source-by-name) (deprecated) |
+| GET    | /api/datasources/proxy/uid/:uid/\*     | [Data source proxy calls](#data-source-proxy-calls)                                            |
+| GET    | /api/datasources/uid/:uid/health       | [Check data source health](#check-data-source-health)                                          |
+| GET    | /api/datasources/uid/:uid/resources/\* | [Fetch data source resources](#fetch-data-source-resources)                                    |
+| POST   | /api/ds/query                          | [Query a data source](#query-a-data-source)                                                    |
+
+## Get all data sources
+
+`GET /api/datasources`
+
+> **Warning**
+>
+> This API currently doesn't handle pagination. The default maximum number of data sources returned is 5000. You can change this value in the default.ini file.
+
+**Required permissions**
+
+See note in the [introduction](#data-source-api) for an explanation.
+
+| Action           | Scope          |
+| ---------------- | -------------- |
+| datasources:read | datasources:\* |
+
+### Examples
+
+**Example Request**:
+
+```http
+GET /api/datasources HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+   {
+     "id": 1,
+     "orgId": 1,
+     "uid": "H8joYFVGz"
+     "name": "datasource_elastic",
+     "type": "elasticsearch",
+     "typeLogoUrl": "public/app/plugins/datasource/elasticsearch/img/elasticsearch.svg",
+     "access": "proxy",
+     "url": "http://mydatasource.com",
+     "password": "",
+     "user": "",
+     "database": "grafana-dash",
+     "basicAuth": false,
+     "isDefault": false,
+     "jsonData": {
+         "logLevelField": "",
+         "logMessageField": "",
+         "maxConcurrentShardRequests": 256,
+         "timeField": "@timestamp"
+     },
+     "readOnly": false
+   }
+]
+```
+
+## Get a single data source by uid
+
+`GET /api/datasources/uid/:uid`
+
+**Required permissions**
+
+See note in the [introduction](#data-source-api) for an explanation.
+
+| Action           | Scope                                                                                  |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| datasources:read | datasources:\*<br>datasources:uid:\*<br>datasources:uid:kLtEtcRGk (single data source) |
+
+### Examples
+
+**Example request:**
+
+```http
+GET /api/datasources/uid/kLtEtcRGk HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "id": 1,
+  "uid": "kLtEtcRGk",
+  "orgId": 1,
+  "name": "test_datasource",
+  "type": "graphite",
+  "typeLogoUrl": "",
+  "access": "proxy",
+  "url": "http://mydatasource.com",
+  "password": "",
+  "user": "",
+  "database": "",
+  "basicAuth": false,
+  "basicAuthUser": "",
+  "basicAuthPassword": "",
+  "withCredentials": false,
+  "isDefault": false,
+  "jsonData": {
+    "graphiteType": "default",
+    "graphiteVersion": "1.1"
+  },
+  "secureJsonFields": {},
+  "version": 1,
+  "readOnly": false
+}
+```
+
+## Get a single data source by name
+
+`GET /api/datasources/name/:name`
+
+> **Warning**
+>
+> This API is deprecated and will be removed in a future release.
+
+**Required permissions**
+
+See note in the [introduction](#data-source-api) for an explanation.
+
+| Action           | Scope                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| datasources:read | datasources:\*<br>datasources:name:\*<br>datasources:name:test\_datasource (single data source) |
+
+### Examples
+
+**Example Request**:
+
+```http
+GET /api/datasources/name/test_datasource HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "id": 1,
+  "uid": "kLtEtcRGk",
+  "orgId": 1,
+  "name": "test_datasource",
+  "type": "graphite",
+  "typeLogoUrl": "",
+  "access": "proxy",
+  "url": "http://mydatasource.com",
+  "password": "",
+  "user": "",
+  "database": "",
+  "basicAuth": false,
+  "basicAuthUser": "",
+  "basicAuthPassword": "",
+  "withCredentials": false,
+  "isDefault": false,
+  "jsonData": {
+    "graphiteType": "default",
+    "graphiteVersion": "1.1"
+  },
+  "secureJsonFields": {},
+  "version": 1,
+  "readOnly": false
+}
+```
+
+## Get data source Id by name
+
+`GET /api/datasources/id/:name`
+
+> **Warning**
+>
+> This API is deprecated and will be removed in a future release.
+
+**Required permissions**
+
+See note in the [introduction](#data-source-api) for an explanation.
+
+| Action              | Scope                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------- |
+| datasources.id:read | datasources:\*<br>datasources:name:\*<br>datasources:name:test\_datasource (single data source) |
+
+### Examples
+
+**Example Request**:
+
+```http
+GET /api/datasources/id/test_datasource HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "id":1
+}
+```
+
+## Create a data source
+
+`POST /api/datasources`
+
+**Required permissions**
+
+See note in the [introduction](#data-source-api) for an explanation.
+
+| Action             | Scope |
+| ------------------ | ----- |
+| datasources:create | n/a   |
+
+### Examples
+
+**Example Graphite Request**:
+
+```http
+POST /api/datasources HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "name":"test_datasource",
+  "type":"graphite",
+  "url":"http://mydatasource.com",
+  "access":"proxy",
+  "basicAuth":false
+}
+```
+
+**Example Graphite Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "datasource": {
+    "id": 1,
+    "orgId": 1,
+    "name": "test_datasource",
+    "type": "graphite",
+    "typeLogoUrl": "",
+    "access": "proxy",
+    "url": "http://mydatasource.com",
+    "password": "",
+    "user": "",
+    "database": "",
+    "basicAuth": false,
+    "basicAuthUser": "",
+    "basicAuthPassword": "",
+    "withCredentials": false,
+    "isDefault": false,
+    "jsonData": {},
+    "secureJsonFields": {},
+    "version": 1,
+    "readOnly": false
+  },
+  "id": 1,
+  "message": "Datasource added",
+  "name": "test_datasource"
+}
+```
+
+> **Note**
+>
+> By defining `password` and `basicAuthPassword` under `secureJsonData` Grafana encrypts them securely as an encrypted blob in the database. The response then lists the encrypted fields under `secureJsonFields`.
+
+**Example Graphite Request with basic auth enabled**:
+
+```http
+POST /api/datasources HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "name": "test_datasource",
+  "type": "graphite",
+  "url": "http://mydatasource.com",
+  "access": "proxy",
+  "basicAuth": true,
+  "basicAuthUser": "basicuser",
+  "secureJsonData": {
+    "basicAuthPassword": "basicpassword"
+  }
+}
+```
+
+**Example Response with basic auth enabled**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "datasource": {
+    "id": 1,
+    "orgId": 1,
+    "name": "test_datasource",
+    "type": "graphite",
+    "typeLogoUrl": "",
+    "access": "proxy",
+    "url": "http://mydatasource.com",
+    "password": "",
+    "user": "",
+    "database": "",
+    "basicAuth": true,
+    "basicAuthUser": "basicuser",
+    "basicAuthPassword": "",
+    "withCredentials": false,
+    "isDefault": false,
+    "jsonData": {},
+    "secureJsonFields": {
+      "basicAuthPassword": true
+    },
+    "version": 1,
+    "readOnly": false
+  },
+  "id": 102,
+  "message": "Datasource added",
+  "name": "test_datasource"
+}
+```
+
+**Example CloudWatch Request**:
+
+```http
+POST /api/datasources HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "name": "test_datasource",
+  "type": "cloudwatch",
+  "url": "http://monitoring.us-west-1.amazonaws.com",
+  "access": "proxy",
+  "jsonData": {
+    "authType": "keys",
+    "defaultRegion": "us-west-1"
+  },
+  "secureJsonData": {
+    "accessKey": "Ol4pIDpeKSA6XikgOl4p",
+    "secretKey": "dGVzdCBrZXkgYmxlYXNlIGRvbid0IHN0ZWFs"
+  }
+}
+```
+
+## Update an existing data source
+
+`PUT /api/datasources/uid/:uid`
+
+**Required permissions**
+
+See note in the [introduction](#data-source-api) for an explanation.
+
+| Action            | Scope                                                                                  |
+| ----------------- | -------------------------------------------------------------------------------------- |
+| datasources:write | datasources:\*<br>datasources:uid:\*<br>datasources:uid:kLtEtcRGk (single data source) |
+
+### Examples
+
+**Example Request**:
+
+```http
+PUT /api/datasources/uid/kLtEtcRGk HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "id":1,
+  "uid": "uid",
+  "orgId":1,
+  "name":"test_datasource",
+  "type":"graphite",
+  "access":"proxy",
+  "url":"http://mydatasource.com",
+  "password":"",
+  "user":"",
+  "database":"",
+  "basicAuth":true,
+  "basicAuthUser":"basicuser",
+  "secureJsonData": {
+    "basicAuthPassword": "basicpassword"
+  },
+  "isDefault":false,
+  "jsonData":null
+}
+```
+
+Note that the UID cannot be modified.
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "datasource": {
+    "id": 1,
+    "uid": "uid",
+    "orgId": 1,
+    "name": "test_datasource",
+    "type": "graphite",
+    "typeLogoUrl": "",
+    "access": "proxy",
+    "url": "http://mydatasource.com",
+    "password": "",
+    "user": "",
+    "database": "",
+    "basicAuth": true,
+    "basicAuthUser": "basicuser",
+    "basicAuthPassword": "",
+    "withCredentials": false,
+    "isDefault": false,
+    "jsonData": {},
+    "secureJsonFields": {
+      "basicAuthPassword": true
+    },
+    "version": 1,
+    "readOnly": false
+  },
+  "id": 102,
+  "message": "Datasource updated",
+  "name": "test_datasource"
+}
+```
+
+> **Note**
+>
+> Similar to [creating a data source](#create-a-data-source), `password` and `basicAuthPassword` should be defined under `secureJsonData` in order to be stored securely as an encrypted blob in the database. Then, the encrypted fields are listed under `secureJsonFields` section in the response.
+
+## Delete an existing data source by uid
+
+`DELETE /api/datasources/uid/:uid`
+
+**Required permissions**
+
+See note in the [introduction](#data-source-api) for an explanation.
+
+| Action             | Scope                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| datasources:delete | datasources:\*<br>datasources:uid:\*<br>datasources:uid:kLtEtcRGk (single data source) |
+
+### Examples
+
+**Example request:**
+
+```http
+DELETE /api/datasources/uid/kLtEtcRGk HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "message": "Data source deleted",
+    "id": 1
+}
+```
+
+## Delete an existing data source by name
+
+`DELETE /api/datasources/name/:datasourceName`
+
+> **Warning**
+>
+> This API is deprecated and will be removed in a future release.
+
+**Required permissions**
+
+See note in the [introduction](#data-source-api) for an explanation.
+
+| Action             | Scope                                                                                           |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| datasources:delete | datasources:\*<br>datasources:name:\*<br>datasources:name:test\_datasource (single data source) |
+
+### Examples
+
+**Example Request**:
+
+```http
+DELETE /api/datasources/name/test_datasource HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "message":"Data source deleted",
+  "id": 1
+}
+```
+
+## Data source proxy calls
+
+`GET /api/datasources/proxy/uid/:uid/*`
+
+Proxies all calls to the actual data source identified by the `uid`.
+
+## Check data source health
+
+`GET /api/datasources/uid/:uid/health`
+
+Makes a call to the health endpoint of data source identified by the given `uid`. This is not mandatory - every plugin author has to <a href="https://grafana.com/tutorials/build-a-data-source-backend-plugin/#add-support-for-health-checks" target="_blank">implement support for health checks</a> in their plugin themselves.
+
+### Examples
+
+**Example Request**:
+
+```http
+GET api/datasources/uid/P8045C56BDA891CB2/health HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "message": "1. Successfully queried the CloudWatch metrics API.\n2. Successfully queried the CloudWatch logs API.",
+  "status": "OK"
+}
+```
+
+## Fetch data source resources
+
+`GET /api/datasources/uid/:uid/resources/*`
+
+Makes a call to the resources endpoint of data source identified by the given `uid`.
+
+### Examples
+
+**Example Request**:
+
+```http
+GET api/datasources/uid/P8045C56BDA891CB2/resources/dimension-keys?region=us-east-2&namespace=AWS%2FEC2&dimensionFilters=%7B%7D&metricName=CPUUtilization HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+	{
+		"text": "AutoScalingGroupName",
+		"value": "AutoScalingGroupName",
+		"label": "AutoScalingGroupName"
+	},
+	{
+		"text": "ImageId",
+		"value": "ImageId",
+		"label": "ImageId"
+	},
+	{
+		"text": "InstanceId",
+		"value": "InstanceId",
+		"label": "InstanceId"
+	},
+	{
+		"text": "InstanceType",
+		"value": "InstanceType",
+		"label": "InstanceType"
+	}
+]
+```
+
+## Query a data source
+
+Queries a data source having a backend implementation.
+
+`POST /api/ds/query`
+
+> **Note**
+>
+> Grafana's built-in data sources usually have a backend implementation.
+
+**Example request for the Test data source**:
+
+```http
+POST /api/ds/query HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+   "queries":[
+      {
+         "refId":"A",
+         "scenarioId":"csv_metric_values",
+         "datasource":{
+            "uid":"PD8C576611E62080A"
+         },
+         "format": "table",
+         "maxDataPoints":1848,
+         "intervalMs":200,
+         "stringInput":"1,20,90,30,5,0"
+      }
+   ],
+   "from":"now-5m",
+   "to":"now"
+}
+```
+
+JSON Body schema:
+
+- **from/to** – Specifies the time range for the queries. The time can be either epoch timestamps in milliseconds or relative using Grafana time units. For example, `now-5m`.
+- **queries** – Specifies one or more queries. Must contain at least 1.
+- **queries.datasource.uid** – Specifies the UID of data source to be queried. Each query in the request must have a unique `datasource`.
+- **queries.refId** – Specifies an identifier of the query. Defaults to "A".
+- **queries.format** – Specifies the format the data should be returned in. Valid options are `time_series` or `table` depending on the data source.
+- **queries.maxDataPoints** - Species the maximum amount of data points that a dashboard panel can render. Defaults to 100.
+- **queries.intervalMs** - Specifies the time series time interval in milliseconds. Defaults to 1000.
+
+In addition, specific properties of each data source should be added in a request (for example **queries.stringInput** as shown in the request above). To better understand how to form a query for a certain data source, use the Developer Tools in your browser of choice and inspect the HTTP requests being made to `/api/ds/query`.
+
+**Example Test data source time series query response:**
+
+```json
+{
+  "results": {
+    "A": {
+      "frames": [
+        {
+          "schema": {
+            "refId": "A",
+            "fields": [
+              {
+                "name": "time",
+                "type": "time",
+                "typeInfo": {
+                  "frame": "time.Time"
+                }
+              },
+              {
+                "name": "A-series",
+                "type": "number",
+                "typeInfo": {
+                  "frame": "int64",
+                  "nullable": true
+                }
+              }
+            ]
+          },
+          "data": {
+            "values": [
+              [1644488152084, 1644488212084, 1644488272084, 1644488332084, 1644488392084, 1644488452084],
+              [1, 20, 90, 30, 5, 0]
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+#### Status codes
+
+| Code | Description                                                                                                                                                                      |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 200  | All data source queries returned a successful response.                                                                                                                          |
+| 400  | Bad request due to invalid JSON, missing content type, missing or invalid fields, etc. Or one or more data source queries were unsuccessful. Refer to the body for more details. |
+| 403  | Access denied.                                                                                                                                                                   |
+| 404  | Either the data source or plugin required to fulfil the request could not be found.                                                                                              |
+| 500  | Unexpected error. Refer to the body and/or server logs for more details.                                                                                                         |
+
+
+# Document: Data source LBAC rules HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/datasource_lbac_rules.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/datasource_lbac_rules.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/datasource_lbac_rules.md
+Description: LBAC (Label-Based Access Control) rules can be set for teams.
+
+# Data source LBAC rules API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+LBAC (Label-Based Access Control) rules can be set for teams.
+
+## Get LBAC rules for a data source
+
+`GET /api/datasources/uid/:uid/lbac/teams`
+
+Gets all existing LBAC rules for the data source with the given `uid`.
+
+**Required permissions**
+
+| Action           | Scope                                                                                     |
+| ---------------- | ----------------------------------------------------------------------------------------- |
+| datasources:read | datasources:*<br>datasources:uid:*<br>datasources:uid:my\_datasource (single data source) |
+
+### Examples
+
+**Example request:**
+
+```
+GET /api/datasources/uid/my_datasource/lbac/teams HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 131
+
+{
+  "rules": [
+    {
+      "teamUId": "fdnd1pf4m9sxvc",
+      "rules": [
+        "{ service_name=\"bigquery-sync-mysql\" }"
+      ]
+    },
+    {
+      "teamUid": "dfed1p2m9sxvfc",
+      "rules": [
+        "{ service_name=\"api\" }"
+      ]
+    }
+  ]
+}
+```
+
+## Update LBAC rules for a data source
+
+`PUT /api/datasources/uid/:uid/lbac/teams`
+
+Updates LBAC rules for teams associated with the data source with the given `uid`. Here you submit a list of teams and the rules for each team.
+Deleting a team from the list will remove the team's LBAC rules. You have to submit all teams and their rules to be updated, to remove a team's rules, you have to submit the current list of rules without the team.
+
+**Required permissions**
+
+| Action                        | Scope                                                                                     |
+| ----------------------------- | ----------------------------------------------------------------------------------------- |
+| datasources:write             | datasources:*<br>datasources:uid:*<br>datasources:uid:my\_datasource (single data source) |
+| datasources.permissions:write | datasources:*<br>datasources:uid:*<br>datasources:uid:my\_datasource (single data source) |
+
+### Examples
+
+**Example request:**
+
+```http
+PUT /api/datasources/uid/my_datasource/lbac/teams
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "rules": [
+    {
+      "teamUId": "fdnd1pf4m9sxvc",
+      "rules": [
+        "{ service_name=\"bigquery-sync-mysql\" }"
+      ]
+    },
+    {
+      "teamUid": "dfed1p2m9sxvfc",
+      "rules": [
+        "{ service_name=\"api\" }"
+      ]
+    }
+  ]
+}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+
+{
+  "id": 1,
+  "message": "Data source LBAC rules updated",
+  "name": "loki",
+  "rules": [
+    {
+      "teamUId": "fdnd1pf4m9sxvc",
+      "rules": [
+        "{ service_name=\"bigquery-sync-mysql\" }"
+      ]
+    },
+    {
+      "teamUid": "dfed1p2m9sxvfc",
+      "rules": [
+        "{ service_name=\"api\" }"
+      ]
+    }
+  ],
+  "uid": "ee1nm1t7spog0e",
+}
+```
+
+
+# Document: Data source permissions HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/datasource_permissions.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/datasource_permissions.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/datasource_permissions.md
+Description: This API can be used to list, add and remove permissions for a data source.
+
+# Data source Permissions API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+> The Data Source Permissions is only available in Grafana Enterprise. Read more about [Grafana Enterprise](https://grafana.com/docs/grafana/latest/introduction/grafana-enterprise/).
+
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+
+This API can be used to list, add and remove permissions for a data source.
+
+Permissions can be set for a user, team, service account or a basic role (Admin, Editor, Viewer).
+
+### Optional `ds_type` query parameter {#ds-type}
+
+Every endpoint in this API accepts an optional query parameter `ds_type`. Set it to the data source **plugin type** (for example `prometheus` or `loki`). Use `ds_type` when more than one data source in the organization shares the same UID so Grafana can resolve the correct instance.
+
+## Get permissions for a data source
+
+`GET /api/access-control/datasources/:uid`
+
+Gets all existing permissions for the data source with the given `uid`.
+
+Append `?ds_type=<TYPE>` when you need to disambiguate the UID; refer to Optional `ds_type` query parameter.
+
+**Required permissions**
+
+See note in the [introduction](#data-source-permissions-api) for an explanation.
+
+| Action                       | Scope                                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------------------- |
+| datasources.permissions:read | datasources:\*<br>datasources:uid:\*<br>datasources:uid:my\_datasource (single data source) |
+
+### Examples
+
+**Example request:**
+
+```http
+GET /api/access-control/datasources/my_datasource HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example request (with `ds_type` when the UID is not unique):**
+
+```http
+GET /api/access-control/datasources/my_datasource?ds_type=prometheus HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 551
+
+[
+    {
+        "id": 1,
+        "roleName": "fixed:datasources:reader",
+        "isManaged": false,
+        "isInherited": false,
+        "isServiceAccount": false,
+        "userId": 1,
+        "userLogin": "admin_user",
+        "userAvatarUrl": "/avatar/admin_user",
+        "actions": [
+            "datasources:read",
+            "datasources:query",
+            "datasources:read",
+            "datasources:query",
+            "datasources:write",
+            "datasources:delete"
+        ],
+        "permission": "Edit"
+    },
+    {
+        "id": 2,
+        "roleName": "managed:teams:1:permissions",
+        "isManaged": true,
+        "isInherited": false,
+        "isServiceAccount": false,
+        "team": "A team",
+        "teamId": 1,
+        "teamAvatarUrl": "/avatar/523d70c8551046f441727d690431858c",
+        "actions": [
+            "datasources:read",
+            "datasources:query"
+        ],
+        "permission": "Query"
+    },
+    {
+        "id": 3,
+        "roleName": "basic:admin",
+        "isManaged": false,
+        "isInherited": false,
+        "isServiceAccount": false,
+        "builtInRole": "Admin",
+        "actions": [
+            "datasources:query",
+            "datasources:read",
+            "datasources:write",
+            "datasources:delete"
+        ],
+        "permission": "Edit"
+    },
+]
+```
+
+Status codes:
+
+- **200** - Ok
+- **401** - Unauthorized
+- **403** - Access denied
+- **500** - Internal error
+
+## Add or revoke access to a data source for a user
+
+`POST /api/access-control/datasources/:uid/users/:id`
+
+Sets user permission for the data source with the given `uid`.
+
+Append `?ds_type=<TYPE>` when you need to disambiguate the UID; refer to Optional `ds_type` query parameter.
+
+To add a permission, set the `permission` field to either `Query`, `Edit`, or `Admin`.
+To remove a permission, set the `permission` field to an empty string.
+
+**Required permissions**
+
+See note in the [introduction](#data-source-permissions-api) for an explanation.
+
+| Action                        | Scope                                                                                       |
+| ----------------------------- | ------------------------------------------------------------------------------------------- |
+| datasources.permissions:write | datasources:\*<br>datasources:uid:\*<br>datasources:uid:my\_datasource (single data source) |
+
+### Examples
+
+**Example request:**
+
+```http
+POST /api/access-control/datasources/my_datasource/users/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "permission": "Query",
+}
+```
+
+When granting a `Query` permission, the user also has read access to the data source.
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+
+{"message": "Permission updated"}
+```
+
+**Example request:**
+
+```http
+POST /api/access-control/datasources/my_datasource/users/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "permission": "",
+}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+
+{"message": "Permission removed"}
+```
+
+Status codes:
+
+- **200** - Ok
+- **400** - Permission cannot be added, see response body for details
+- **401** - Unauthorized
+- **403** - Access denied
+
+## Add or revoke access to a data source for a team
+
+`POST /api/access-control/datasources/:uid/teams/:id`
+
+Sets team permission for the data source with the given `uid`.
+
+Append `?ds_type=<TYPE>` when you need to disambiguate the UID; refer to Optional `ds_type` query parameter.
+
+To add a permission, set the `permission` field to either `Query`, `Edit`, or `Admin`.
+To remove a permission, set the `permission` field to an empty string.
+
+When adding `Query`, `Edit`, or `Admin` permissions, the user implicitly has `Read` access.
+
+**Required permissions**
+
+See note in the [introduction](#data-source-permissions-api) for an explanation.
+
+| Action                        | Scope                                                                                       |
+| ----------------------------- | ------------------------------------------------------------------------------------------- |
+| datasources.permissions:write | datasources:\*<br>datasources:uid:\*<br>datasources:uid:my\_datasource (single data source) |
+
+### Examples
+
+**Example request:**
+
+```http
+POST /api/access-control/datasources/my_datasource/teams/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "permission": "Edit",
+}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+
+{"message": "Permission updated"}
+```
+
+**Example request:**
+
+```http
+POST /api/access-control/datasources/my_datasource/teams/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "permission": "",
+}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+
+{"message": "Permission removed"}
+```
+
+Status codes:
+
+- **200** - Ok
+- **400** - Permission cannot be added, see response body for details
+- **401** - Unauthorized
+- **403** - Access denied
+
+## Add or revoke access to a data source for a basic role
+
+`POST /api/access-control/datasources/:uid/builtInRoles/:builtinRoleName`
+
+Sets permission for the data source with the given `uid` to all users who have the specified basic role.
+
+Append `?ds_type=<TYPE>` when you need to disambiguate the UID; refer to Optional `ds_type` query parameter.
+
+You can set permissions for the following basic roles: `Admin`, `Editor`, `Viewer`.
+
+To add a permission, set the `permission` field to either `Query`, `Edit`, or `Admin`.
+To remove a permission, set the `permission` field to an empty string.
+
+**Required permissions**
+
+See note in the [introduction](#data-source-permissions-api) for an explanation.
+
+| Action                        | Scope                                                                                       |
+| ----------------------------- | ------------------------------------------------------------------------------------------- |
+| datasources.permissions:write | datasources:\*<br>datasources:uid:\*<br>datasources:uid:my\_datasource (single data source) |
+
+### Examples
+
+**Example request:**
+
+```http
+POST /api/access-control/datasources/my_datasource/builtInRoles/Admin
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "permission": "Edit",
+}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+
+{"message": "Permission updated"}
+```
+
+**Example request:**
+
+```http
+POST /api/access-control/datasources/my_datasource/builtInRoles/Viewer
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "permission": "",
+}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+
+{"message": "Permission removed"}
+```
+
+Status codes:
+
+- **200** - Ok
+- **400** - Permission cannot be added, see response body for details
+- **401** - Unauthorized
+- **403** - Access denied
+
+
+# Document: Folder Permissions HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/folder_permissions.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/folder_permissions.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/folder_permissions.md
+Description: This API can be used to update/get the permissions for a folder.
+
+# Folder Permissions API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+This API can be used to update/get the permissions for a folder.
+
+Permissions with `folderId=-1` are the default permissions for users with the Viewer and Editor roles. Permissions can be set for a user, a team or a role (Viewer or Editor). Permissions cannot be set for Admins - they always have access to everything.
+
+The permission levels for the permission field:
+
+- 1 = View
+- 2 = Edit
+- 4 = Admin
+
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+
+## Get permissions for a folder
+
+`GET /api/folders/:uid/permissions`
+
+Gets all existing permissions for the folder with the given `uid`.
+
+**Required permissions**
+
+See note in the introduction for an explanation.
+
+| Action                     | Scope       |
+| -------------------------- | ----------- |
+| `folders.permissions:read` | `folders:*` |
+
+**Example request**:
+
+```http
+GET /api/folders/nErXDvCkzz/permissions HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 551
+
+[
+  {
+    "id": 1,
+    "folderId": -1,
+    "created": "2017-06-20T02:00:00+02:00",
+    "updated": "2017-06-20T02:00:00+02:00",
+    "userId": 0,
+    "userLogin": "",
+    "userEmail": "",
+    "teamId": 0,
+    "team": "",
+    "role": "Viewer",
+    "permission": 1,
+    "permissionName": "View",
+    "uid": "nErXDvCkzz",
+    "title": "",
+    "slug": "",
+    "isFolder": false,
+    "url": ""
+  },
+  {
+    "id": 2,
+    "dashboardId": -1,
+    "created": "2017-06-20T02:00:00+02:00",
+    "updated": "2017-06-20T02:00:00+02:00",
+    "userId": 0,
+    "userLogin": "",
+    "userEmail": "",
+    "teamId": 0,
+    "team": "",
+    "role": "Editor",
+    "permission": 2,
+    "permissionName": "Edit",
+    "uid": "",
+    "title": "",
+    "slug": "",
+    "isFolder": false,
+    "url": ""
+  }
+]
+```
+
+Status Codes:
+
+- **200** - Ok
+- **401** - Unauthorized
+- **403** - Access denied
+- **404** - Folder not found
+
+## Update permissions for a folder
+
+`POST /api/folders/:uid/permissions`
+
+Updates permissions for a folder. This operation will remove existing permissions if they're not included in the request.
+
+**Required permissions**
+
+See note in the introduction for an explanation.
+
+| Action                      | Scope       |
+| --------------------------- | ----------- |
+| `folders.permissions:write` | `folders:*` |
+
+**Example request**:
+
+```http
+POST /api/folders/nErXDvCkzz/permissions
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+{
+  "items": [
+    {
+      "role": "Viewer",
+      "permission": 1
+    },
+    {
+      "role": "Editor",
+      "permission": 2
+    },
+    {
+      "teamId": 1,
+      "permission": 1
+    },
+    {
+      "userId": 11,
+      "permission": 4
+    }
+  ]
+}
+```
+
+JSON body schema:
+
+- **items** - The permission items to add/update. Items that are omitted from the list will be removed.
+
+**Example response**:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+
+{"message":"Folder permissions updated","id":1,"title":"Department ABC"}
+```
+
+Status Codes:
+
+- **200** - Ok
+- **401** - Unauthorized
+- **403** - Access denied
+- **404** - Dashboard not found
+
+
+# Document: Folder/Dashboard Search HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/folder_dashboard_search.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/folder_dashboard_search.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/folder_dashboard_search.md
+Description: GET /api/search/
+
+# Folder/Dashboard Search API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+## Search folders and dashboards
+
+`GET /api/search/`
+
+> Note: When using [Role-based access control](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/), search results will contain only dashboards and folders which you have access to.
+
+Query parameters:
+
+- **query** – Search Query
+- **tag** – List of tags to search for
+- **type** – Type to search for, `dash-folder` or `dash-db`
+- **dashboardIds** – List of dashboard id's to search for
+- **dashboardUID** - List of dashboard uid's to search for, It is deprecated since Grafana v9.1, please use dashboardUIDs instead
+- **dashboardUIDs** – List of dashboard uid's to search for
+- **folderUIDs** – List of folder UIDs to search in
+- **starred** – Flag indicating if only starred Dashboards should be returned
+- **limit** – Limit the number of returned results (max is 5000; default is 1000). If an invalid value is provided (for example, strings or special characters), the parameter defaults to 1000.
+- **page** – Use this parameter to access hits beyond limit. Numbering starts at 1. limit param acts as page size.
+
+**Example request for retrieving folders and dashboards at the root level**:
+
+```http
+GET /api/search?query=&starred=false HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response for retrieving folders and dashboards at the root level**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+  {
+    "id": 163,
+    "uid": "000000163",
+    "orgId": 1,
+    "title": "Folder",
+    "url": "/dashboards/f/000000163/folder",
+    "type": "dash-folder",
+    "tags": [],
+    "isStarred": false,
+    "uri":"db/folder" // deprecated in Grafana v5.0
+  },
+  {
+    "id":1,
+    "uid": "cIBgcSjkk",
+    "orgId": 1,
+    "title":"Production Overview",
+    "url": "/d/cIBgcSjkk/production-overview",
+    "type":"dash-db",
+    "tags":[prod],
+    "isStarred":true,
+    "uri":"db/production-overview" // deprecated in Grafana v5.0
+  }
+]
+```
+
+**Example request searching for dashboards**:
+
+```http
+GET /api/search?query=Production%20Overview&starred=true&tag=prod HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response searching for dashboards**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+  {
+    "id":1,
+    "uid": "cIBgcSjkk",
+    "orgId": 1,
+    "title":"Production Overview",
+    "url": "/d/cIBgcSjkk/production-overview",
+    "type":"dash-db",
+    "tags":[prod],
+    "isStarred":true,
+    "folderId": 2,
+    "folderUid": "000000163",
+    "folderTitle": "Folder",
+    "folderUrl": "/dashboards/f/000000163/folder",
+    "uri":"db/production-overview" // deprecated in Grafana v5.0
+  }
+]
+```
+
+
+# Document: Library Element HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/library_element.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/library_element.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/library_element.md
+Description: The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Grafana install.
+
+# Library Element API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+## Identifier (id) vs unique identifier (uid)
+
+The identifier (ID) of a library element is an auto-incrementing numeric value that is unique per Grafana install.
+
+The unique identifier (UID) of a library element uniquely identifies library elements between multiple Grafana installs. It's automatically generated unless you specify it during library element creation. The UID provides consistent URLs for accessing library elements and when syncing library elements between multiple Grafana installs.
+
+The maximum length of a UID is 40 characters.
+
+## Get all library elements
+
+`GET /api/library-elements`
+
+Returns a list of all library elements the authenticated user has permission to view. Use the `perPage` query parameter to control the maximum number of library elements returned; the default limit is 100. You can also use the `page` query parameter to fetch library elements from any page other than the first one.
+
+Query parameters:
+
+- `searchString`: Part of the name or description searched for.
+- `kind`: Kind of element to search for. Use `1` for library panels.
+- `sortDirection`: Sort order of elements. Use `alpha-asc` for ascending and `alpha-desc` for descending sort order.
+- `typeFilter`: A comma separated list of types to filter the elements by.
+- `excludeUid`: Element UID to exclude from search results.
+- `folderFilter`: **Deprecated.** A comma separated list of folder IDs to filter the elements by. Use `folderFilterUIDs` instead.
+- `folderFilterUIDs`: A comma separated list of folder UIDs to filter the elements by.
+- `perPage`: The number of results per page; default is 100.
+- `page`: The page for a set of records, given that only `perPage` records are returned at a time. Numbering starts at `1`.
+
+**Example Request**:
+
+```http
+GET /api/library-elements?perPage=10 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "result": {
+     "totalCount": 15,
+     "page": 1,
+     "perPage": 10
+     "elements": [
+        {
+            "id": 25,
+            "orgId": 1,
+            "folderId": 0,
+            "uid": "V--OrYHnz",
+            "name": "API docs Example",
+            "kind": 1,
+            "type": "text",
+            "description": "",
+            "model": {...},
+            "version": 1,
+            "meta": {
+                "folderName": "General",
+                "folderUid": "",
+                "connectedDashboards": 1,
+                "created": "2021-09-27T09:56:17+02:00",
+                "updated": "2021-09-27T09:56:17+02:00",
+                "createdBy": {
+                    "id": 1,
+                    "name": "admin",
+                    "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+                },
+                "updatedBy": {
+                    "id": 1,
+                    "name": "admin",
+                    "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+                }
+            }
+        },
+        {...}
+        {...}
+     ],
+  }
+}
+```
+
+Status Codes:
+
+- `200`: Found
+- `401`: Unauthorized
+
+## Get library element by uid
+
+`GET /api/library-elements/:uid`
+
+Returns a library element with the given UID.
+
+**Example Request**:
+
+```http
+GET /api/library-elements/V--OrYHnz HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "result": {
+      "id": 25,
+      "orgId": 1,
+      "folderId": 0,
+      "uid": "V--OrYHnz",
+      "name": "API docs Example",
+      "kind": 1,
+      "type": "text",
+      "description": "",
+      "model": {...},
+      "version": 1,
+      "meta": {
+          "folderName": "General",
+          "folderUid": "",
+          "connectedDashboards": 1,
+          "created": "2021-09-27T09:56:17+02:00",
+          "updated": "2021-09-27T09:56:17+02:00",
+          "createdBy": {
+              "id": 1,
+              "name": "admin",
+              "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+          },
+          "updatedBy": {
+              "id": 1,
+              "name": "admin",
+              "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+          }
+      }
+   }
+}
+```
+
+Status Codes:
+
+- `200`: Found
+- `401`: Unauthorized
+- `404`: Library element not found
+
+## Get library element by name
+
+`GET /api/library-elements/name/:name`
+
+Returns a library element with the given name
+
+**Example Request**:
+
+```http
+GET /api/library-elements/name/API docs Example HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "result": [
+        {
+            "id": 25,
+            "orgId": 1,
+            "folderId": 0,
+            "uid": "V--OrYHnz",
+            "name": "API docs Example",
+            "kind": 1,
+            "type": "text",
+            "description": "",
+            "model": {...},
+            "version": 1,
+            "meta": {
+                "folderName": "General",
+                "folderUid": "",
+                "connectedDashboards": 1,
+                "created": "2021-09-27T09:56:17+02:00",
+                "updated": "2021-09-27T09:56:17+02:00",
+                "createdBy": {
+                    "id": 1,
+                    "name": "admin",
+                    "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+                },
+                "updatedBy": {
+                    "id": 1,
+                    "name": "admin",
+                    "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+                }
+            }
+        }
+    ]
+}
+```
+
+Status Codes:
+
+- `200`: Found
+- `401`: Unauthorized
+- `404`: Library element not found
+
+## Get library element connections
+
+`GET /api/library-elements/:uid/connections`
+
+Returns a list of connections for a library element based on the UID specified.
+
+**Example Request**:
+
+```http
+GET /api/library-elements/V--OrYHnz/connections HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "result": [
+        {
+            "id": 148, // Deprecated: will be removed in the future.
+            "kind": 1,
+            "elementId": 25,
+            "connectionId": 527,
+            "connectionUid": "dHEquNzGz",
+            "created": "2021-09-27T10:00:07+02:00",
+            "createdBy": {
+                "id": 1,
+                "name": "admin",
+                "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+            }
+        }
+    ]
+}
+```
+
+Status Codes:
+
+- `200`: Found
+- `401`: Unauthorized
+- `404`: Library element not found
+
+## Create library element
+
+`POST /api/library-elements`
+
+Creates a new library element.
+
+JSON Body schema:
+
+- `folderId`: ID of the folder where the library element is stored. It is deprecated since Grafana v9
+- `folderUid`: Optional, the UID of the folder where the library element is stored, empty string when it is at the root level.
+- `name`: Optional, the name of the library element.
+- `model`: The JSON model for the library element.
+- `kind`: Kind of element to create, Use `1` for library panels.
+- `uid`: Optional, the [unique identifier](#identifier-id-vs-unique-identifier-uid).
+
+**Example Request**:
+
+```http
+POST /api/library-elements HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "uid": "nErXDvCkzz",
+  "folderUid": "",
+  "name": "Example library panel",
+  "model": {...},
+  "kind": 1
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "result": {
+        "id": 28,
+        "orgId": 1,
+        "folderId": 0,
+        "folderUid": "",
+        "uid": "nErXDvCkzz",
+        "name": "Example library panel",
+        "kind": 1,
+        "type": "",
+        "description": "",
+        "model": {...},
+        "version": 1,
+        "meta": {
+            "folderName": "General",
+            "folderUid": "",
+            "connectedDashboards": 0,
+            "created": "2021-09-30T09:14:22.378307+02:00",
+            "updated": "2021-09-30T09:14:22.378307+02:00",
+            "createdBy": {
+                "id": 1,
+                "name": "admin",
+                "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+            },
+            "updatedBy": {
+                "id": 1,
+                "name": "admin",
+                "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+            }
+        }
+    }
+}
+```
+
+Status Codes:
+
+- `200`: Created
+- `400`: Errors (for example, name or UID already exists, invalid JSON, missing or invalid fields, and so on).
+- `401`: Unauthorized
+- `403`: Access denied
+
+## Update library element
+
+`PATCH /api/library-elements/:uid`
+
+Updates an existing library element identified by uid.
+
+JSON Body schema:
+
+- `folderId`: ID of the folder where the library element is stored. It is deprecated since Grafana v9
+- `folderUid`: UID of the folder where the library element is stored, empty string when it is at the root level.
+- `name`: Name of the library element.
+- `model`: The JSON model for the library element.
+- `kind`: Kind of element to create. Use `1` for library panels.
+- `version`: Version of the library element you are updating.
+- `uid`: Optional, the [unique identifier](#identifier-id-vs-unique-identifier-uid).
+
+**Example Request**:
+
+```http
+PATCH /api/library-elements/nErXDvCkzz HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "name": "Renamed library panel",
+  "kind": 1,
+  "version": 1
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "result": {
+        "id": 28,
+        "orgId": 1,
+        "folderId": 0,
+        "folderUid": "",
+        "uid": "nErXDvCkzz",
+        "name": "Renamed library panel",
+        "kind": 1,
+        "type": "",
+        "description": "",
+        "model": {
+            "description": "",
+            "type": ""
+        },
+        "version": 2,
+        "meta": {
+            "folderName": "General",
+            "folderUid": "",
+            "connectedDashboards": 0,
+            "created": "2021-09-30T09:14:22+02:00",
+            "updated": "2021-09-30T09:25:57.697214+02:00",
+            "createdBy": {
+                "id": 1,
+                "name": "admin",
+                "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+            },
+            "updatedBy": {
+                "id": 1,
+                "name": "admin",
+                "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+            }
+        }
+    }
+}
+```
+
+Status Codes:
+
+- `200`: Updated
+- `400`: Errors (for example, name or UID already exists, invalid JSON, missing or invalid fields, and so on).
+- `401`: Unauthorized
+- `403`: Access denied
+- `404`: Library element not found
+- `412`: Version mismatch
+
+## Delete library element
+
+`DELETE /api/library-elements/:uid`
+
+Deletes an existing library element as specified by the UID. This operation cannot be reverted.
+
+> **Note**
+>
+> You cannot delete a library element that is connected. This operation cannot be reverted.
+
+**Example Request**:
+
+```http
+DELETE /api/library-elements/nErXDvCkzz HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "message": "Library element deleted",
+    "id": 28
+}
+```
+
+Status Codes:
+
+- `200`: Deleted
+- `401`: Unauthorized
+- `400`: Bad request
+- `403`: Access denied
+- `404`: Library element not found
+
+
+# Document: Licensing HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/licensing.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/licensing.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/licensing.md
+Description: Licensing is only available in Grafana Enterprise. Read more about Grafana Enterprise.
+
+# Enterprise License API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+Licensing is only available in Grafana Enterprise. Read more about [Grafana Enterprise](https://grafana.com/docs/grafana/latest/introduction/grafana-enterprise/).
+
+> **Caution**
+>
+> You can't authenticate to the Licensing HTTP API with service account tokens.
+> Service accounts are limited to an organization and an organization role.
+> They can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators).
+>
+> To use these API endpoints you have to use Basic authentication and the Grafana user must have the Grafana server administrator permission.
+>
+> The `admin` user that Grafana is provisioned with by default has permissions to use these API endpoints.
+
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+
+## Check license availability
+
+> **Note:** Available in Grafana Enterprise v7.4+.
+
+`GET /api/licensing/check`
+
+Checks if a valid license is available.
+
+**Required permissions**
+
+See note in the [introduction](#enterprise-license-api) for an explanation.
+
+| Action         | Scope |
+| -------------- | ----- |
+| licensing:read | n/a   |
+
+### Examples
+
+**Example request:**
+
+```http
+GET /api/licensing/check
+Accept: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 4
+
+true
+```
+
+Status codes:
+
+- **200** - OK
+
+## Add license
+
+> **Note**
+>
+> Available in Grafana Enterprise v7.4+.
+
+`POST /api/licensing/token`
+
+Applies a license to a Grafana instance.
+
+**Required permissions**
+
+See note in the [introduction](#enterprise-license-api) for an explanation.
+
+| Action          | Scope |
+| --------------- | ----- |
+| licensing:write | n/a   |
+
+### Examples
+
+**Example request:**
+
+```http
+POST /licensing/token
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aGlzIjoiaXMiLCJub3QiOiJhIiwidmFsaWQiOiJsaWNlbnNlIn0.bxDzxIoJlYMwiEYKYT_l2s42z0Y30tY-6KKoyz9RuLE"}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 357
+
+{
+"status":0,
+"jti":"",
+"iss":"",
+"sub":"",
+"iat":0,
+"exp":0,
+"nbf":0,
+"lexp":0,
+"lid":"",
+"limit_by":"",
+"included_users":0,
+"lic_exp_warn_days":0,
+"tok_exp_warn_days":0,
+"update_days":0,
+"prod":null,
+"company":"",
+"account":"",
+"slug":"",
+"usage_billing":false,
+"max_concurrent_user_sessions":0,
+"details_url":"",
+"trial":false,
+"trial_exp":0,
+"anonymousRatio":0
+}
+
+```
+
+The response is a JSON blob with specific values intentionally not shown. The
+available fields may change at any time without any prior notice. Refer to [Check license availability](#check-license-availability) for information on using the API to check the status of your license.
+
+Status Codes:
+
+- **200** - OK
+- **400** - Bad request
+- **500** - Internal server error (refer to server logs for more details)
+
+## Manually force license refresh
+
+> **Note**
+>
+> Available in Grafana Enterprise v7.4+.
+
+`POST /api/licensing/token/renew`
+
+Manually ask license issuer for a new token.
+
+**Required permissions**
+
+See note in the [introduction](#enterprise-license-api) for an explanation.
+
+| Action          | Scope |
+| --------------- | ----- |
+| licensing:write | n/a   |
+
+### Examples
+
+**Example request:**
+
+```http
+POST /api/licensing/token/renew
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{}
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 357
+
+{
+  "jti":"2",
+  "iss":"https://grafana.com",
+  "sub":"https://play.grafana.org/"
+  "lid":"1",
+  "included_users":15,
+  "lic_exp_warn_days":30,
+  "tok_exp_warn_days":2,
+  "update_days":1,
+  "prod":["grafana-enterprise"],
+  "company":"Grafana Labs"
+}
+```
+
+The response is a JSON blob available for debugging purposes. The
+available fields may change at any time without any prior notice.
+
+Status Codes:
+
+- **200** - OK
+- **401** - Unauthorized
+- **403** - Access denied
+
+## Remove license from database
+
+> **Note**
+>
+> Available in Grafana Enterprise v7.4+.
+
+`DELETE /api/licensing/token`
+
+Removes the license stored in the Grafana database.
+
+**Required permissions**
+
+See note in the [introduction](#enterprise-license-api) for an explanation.
+
+| Action           | Scope |
+| ---------------- | ----- |
+| licensing:delete | n/a   |
+
+### Examples
+
+**Example request:**
+
+```http
+DELETE /api/licensing/token
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{"instance": "http://play.grafana.org/"}
+```
+
+JSON Body schema:
+
+- **instance** – Root URL for the instance for which the license should be deleted. Required.
+
+**Example response:**
+
+```http
+HTTP/1.1 202 Accepted
+Content-Type: application/json
+Content-Length: 2
+
+{}
+```
+
+Status codes:
+
+- **202** - Accepted, license removed or did not exist.
+- **401** - Unauthorized
+- **403** - Access denied
+- **422** - Unprocessable entity, incorrect instance name provided.
+
+
+# Document: Organization HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/org.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/org.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/org.md
+Description: The Organization HTTP API is divided in two resources, /api/org (current organization) and /api/orgs (admin organizations). One big difference between these are that the admin of all organizations API only works with ba…
+
+# Organization API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+The Organization HTTP API is divided in two resources, `/api/org` (current organization)
+and `/api/orgs` (admin organizations). One big difference between these are that
+the admin of all organizations API only works with basic authentication, see [Admin Organizations API](#admin-organizations-api) for more information.
+
+> If you are running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+
+### Current Organization endpoints
+
+| Method | Summary                                                                                                         | URI                    |
+| ------ | --------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| GET    | [Get current Organization](#get-current-organization)                                                           | /api/org/              |
+| GET    | [Get all users within the current organization](#get-all-users-within-the-current-organization)                 | /api/org/users         |
+| GET    | [Get all users within the current organization (lookup)](#get-all-users-within-the-current-organization-lookup) | /api/org/users/lookup  |
+| PATCH  | [Updates the given user](#updates-the-given-user)                                                               | /api/org/users/:userId |
+| DELETE | [Delete user in current organization](#delete-user-in-current-organization)                                     | /api/org/users/:userId |
+| PUT    | [Update current Organization](#update-current-organization)                                                     | /api/org               |
+| POST   | [Add a new user to the current organization](#add-a-new-user-to-the-current-organization)                       | /api/org/users         |
+
+### Admin Organizations endpoints
+
+| Method | Summary                                                       | URI                            |
+| ------ | ------------------------------------------------------------- | ------------------------------ |
+| GET    | [Get Organization by Id](#get-organization-by-id)             | /api/orgs/:orgId               |
+| GET    | [Get Organization by Name](#get-organization-by-name)         | /api/orgs/name/:orgName        |
+| POST   | [Create Organization](#create-organization)                   | /api/orgs                      |
+| GET    | [Search all Organizations](#search-all-organizations)         | /api/orgs                      |
+| PUT    | [Update Organization](#update-organization)                   | /api/orgs/:orgId               |
+| DELETE | [Delete Organization](#delete-organization)                   | /api/orgs/:orgId               |
+| GET    | [Get Users in Organization](#get-users-in-organization)       | /api/orgs/:orgId/users         |
+| POST   | [Add User in Organization](#add-user-in-organization)         | /api/orgs/:orgId/users         |
+| PATCH  | [Update Users in Organization](#update-users-in-organization) | /api/orgs/:orgId/users/:userId |
+| DELETE | [Delete User in Organization](#delete-user-in-organization)   | /api/orgs/:orgId/users/:userId |
+
+## Current Organization API
+
+### Get current Organization
+
+`GET /api/org/`
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action    | Scope |
+| --------- | ----- |
+| orgs:read | N/A   |
+
+**Example Request**:
+
+```http
+GET /api/org/ HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "id":1,
+  "name":"Main Org."
+}
+```
+
+### Get all users within the current organization
+
+`GET /api/org/users`
+
+Returns all org users within the current organization.
+Accessible to users with org admin role.
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action         | Scope    |
+| -------------- | -------- |
+| org.users:read | users:\* |
+
+**Example Request**:
+
+```http
+GET /api/org/users HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+  {
+    "orgId": 1,
+    "userId": 1,
+    "email": "admin@localhost",
+    "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
+    "login": "admin",
+    "role": "Admin",
+    "lastSeenAt": "2019-08-09T11:02:49+02:00",
+    "lastSeenAtAge": "< 1m"
+  }
+]
+```
+
+### Get all users within the current organization (lookup)
+
+`GET /api/org/users/lookup`
+
+Returns all org users within the current organization, but with less detailed information.
+Accessible to users with org admin role, admin in any folder or admin of any team.
+Mainly used by Grafana UI for providing list of users when adding team members and
+when editing folder/dashboard permissions.
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action         | Scope    |
+| -------------- | -------- |
+| org.users:read | users:\* |
+
+**Example Request**:
+
+```http
+GET /api/org/users/lookup HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+  {
+    "userId": 1,
+    "login": "admin",
+    "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56"
+  }
+]
+```
+
+### Updates the given user
+
+`PATCH /api/org/users/:userId`
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action          | Scope    |
+| --------------- | -------- |
+| org.users:write | users:\* |
+
+**Example Request**:
+
+```http
+PATCH /api/org/users/1 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "role": "Viewer",
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"Organization user updated"}
+```
+
+### Delete user in current organization
+
+`DELETE /api/org/users/:userId`
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action           | Scope    |
+| ---------------- | -------- |
+| org.users:remove | users:\* |
+
+**Example Request**:
+
+```http
+DELETE /api/org/users/1 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"User removed from organization"}
+```
+
+### Update current Organization
+
+`PUT /api/org`
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action     | Scope |
+| ---------- | ----- |
+| orgs:write | N/A   |
+
+**Example Request**:
+
+```http
+PUT /api/org HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "name":"Main Org."
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"Organization updated"}
+```
+
+### Add a new user to the current organization
+
+`POST /api/org/users`
+
+Adds a global user to the current organization.
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action        | Scope    |
+| ------------- | -------- |
+| org.users:add | users:\* |
+
+**Example Request**:
+
+```http
+POST /api/org/users HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "role": "Admin",
+  "loginOrEmail": "admin"
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"User added to organization","userId":1}
+```
+
+## Admin Organizations API
+
+> **Caution**
+>
+> You can't authenticate to the Admin Organizations HTTP API with service account tokens.
+> Service accounts are limited to an organization and an organization role.
+> They can't be granted [Grafana server administrator permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/#grafana-server-administrators).
+>
+> To use these API endpoints you have to use Basic authentication and the Grafana user must have the Grafana server administrator permission.
+>
+> The `admin` user that Grafana is provisioned with by default has permissions to use these API endpoints.
+
+### Get Organization by Id
+
+`GET /api/orgs/:orgId`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action    | Scope |
+| --------- | ----- |
+| orgs:read | N/A   |
+
+**Example Request**:
+
+```http
+GET /api/orgs/1 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "id":1,
+  "name":"Main Org.",
+  "address":{
+    "address1":"",
+    "address2":"",
+    "city":"",
+    "zipCode":"",
+    "state":"",
+    "country":""
+  }
+}
+```
+
+### Get Organization by Name
+
+`GET /api/orgs/name/:orgName`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action    | Scope | Note                           |
+| --------- | ----- | ------------------------------ |
+| orgs:read | N/A   | Needs to be assigned globally. |
+
+**Example Request**:
+
+```http
+GET /api/orgs/name/Main%20Org%2E HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "id":1,
+  "name":"Main Org.",
+  "address":{
+    "address1":"",
+    "address2":"",
+    "city":"",
+    "zipCode":"",
+    "state":"",
+    "country":""
+  }
+}
+```
+
+### Create Organization
+
+`POST /api/orgs`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action      | Scope | Note                           |
+| ----------- | ----- | ------------------------------ |
+| orgs:create | N/A   | Needs to be assigned globally. |
+
+**Example Request**:
+
+```http
+POST /api/orgs HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name":"New Org."
+}
+```
+
+Note: The api will work in the following two ways
+
+1. Need to set GF\_USERS\_ALLOW\_ORG\_CREATE=true
+2. Set the config value users.allow\_org\_create to true in ini file
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "orgId":"1",
+  "message":"Organization created"
+}
+```
+
+### Search all Organizations
+
+`GET /api/orgs?perpage=10&page=1`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action    | Scope | Note                           |
+| --------- | ----- | ------------------------------ |
+| orgs:read | N/A   | Needs to be assigned globally. |
+
+**Example Request**:
+
+```http
+GET /api/orgs HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+```
+
+Note: The api will only work when you pass the admin name and password
+to the request HTTP URL, like <http://admin:admin@localhost:3000/api/orgs>
+
+Default value for the `perpage` parameter is `1000` and for the `page` parameter is `0`.
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+  {
+    "id":1,
+    "name":"Main Org."
+  }
+]
+```
+
+### Update Organization
+
+`PUT /api/orgs/:orgId`
+
+Update Organization, fields *Address 1*, *Address 2*, *City* are not implemented yet.
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action     | Scope |
+| ---------- | ----- |
+| orgs:write | N/A   |
+
+**Example Request**:
+
+```http
+PUT /api/orgs/1 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name":"Main Org 2."
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"Organization updated"}
+```
+
+### Delete Organization
+
+`DELETE /api/orgs/:orgId`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action      | Scope |
+| ----------- | ----- |
+| orgs:delete | N/A   |
+
+**Example Request**:
+
+```http
+DELETE /api/orgs/1 HTTP/1.1
+Accept: application/json
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"Organization deleted"}
+```
+
+### Get Users in Organization
+
+`GET /api/orgs/:orgId/users`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action         | Scope    |
+| -------------- | -------- |
+| org.users:read | users:\* |
+
+**Example Request**:
+
+```http
+GET /api/orgs/1/users HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+```
+
+Note: The api will only work when you pass the admin name and password
+to the request HTTP URL, like <http://admin:admin@localhost:3000/api/orgs/1/users>
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+[
+  {
+    "orgId":1,
+    "userId":1,
+    "email":"admin@mygraf.com",
+    "login":"admin",
+    "role":"Admin"
+  }
+]
+```
+
+### Add User in Organization
+
+`POST /api/orgs/:orgId/users`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action        | Scope    |
+| ------------- | -------- |
+| org.users:add | users:\* |
+
+**Example Request**:
+
+```http
+POST /api/orgs/1/users HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "loginOrEmail":"user",
+  "role":"Viewer"
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"User added to organization", "userId": 1}
+```
+
+### Update Users in Organization
+
+`PATCH /api/orgs/:orgId/users/:userId`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action          | Scope    |
+| --------------- | -------- |
+| org.users:write | users:\* |
+
+**Example Request**:
+
+```http
+PATCH /api/orgs/1/users/2 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "role":"Admin"
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"Organization user updated"}
+```
+
+### Delete User in Organization
+
+`DELETE /api/orgs/:orgId/users/:userId`
+
+Only works with Basic Authentication (username and password), see [introduction](#admin-organizations-api).
+
+**Required permissions**
+
+See note in the [introduction](#organization-api) for an explanation.
+
+| Action           | Scope    |
+| ---------------- | -------- |
+| org.users:remove | users:\* |
+
+**Example Request**:
+
+```http
+DELETE /api/orgs/1/users/2 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message":"User removed from organization"}
+```
+
+
+# Document: Other HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/other.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/other.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/other.md
+Description: GET /api/frontend/settings
+
+# Frontend Settings API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+## Get Settings
+
+`GET /api/frontend/settings`
+
+**Example Request**:
+
+```http
+GET /api/frontend/settings HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "allowOrgCreate":true,
+  "appSubUrl":"",
+  "buildInfo":{
+    "buildstamp":xxxxxx,
+    "commit":"vyyyy",
+    "version":"zzzzz"
+  },
+  "datasources":{
+    "datasourcename":{
+      "index":"grafana-dash",
+      "meta":{
+        "annotations":true,
+        "module":"plugins/datasource/grafana/datasource",
+        "name":"Grafana",
+        "partials":{
+          "annotations":"app/plugins/datasource/grafana/partials/annotations.editor.html",
+          "config":"app/plugins/datasource/grafana/partials/config.html"
+        },
+        "pluginType":"datasource",
+        "serviceName":"Grafana",
+        "type":"grafanasearch"
+      }
+    }
+  },
+  "defaultDatasource": "Grafana"
+}
+```
+
+# Login API
+
+## Renew session based on remember cookie
+
+`GET /api/login/ping`
+
+**Example Request**:
+
+```http
+GET /api/login/ping HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{"message": "Logged in"}
+```
+
+# Health API
+
+## Returns health information about Grafana
+
+`GET /api/health`
+
+**Example Request**
+
+```http
+GET /api/health
+Accept: application/json
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200 OK
+
+{
+  "commit": "087143285",
+  "database": "ok",
+  "version": "5.1.3"
+}
+```
+
+
+# Document: Preferences API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/preferences.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/preferences.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/preferences.md
+Description: Keys:
+
+# User and Org Preferences API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+> **Note**
+>
+> This HTTP API is deprecated. Use the [Preferences HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/) instead. To learn how the legacy endpoints map to the new ones, refer to [Migrate from the legacy Preferences API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/#migrate-from-the-legacy-preferences-api).
+
+Keys:
+
+- **theme** - One of: `light`, `dark`, or an empty string for the default theme
+- **homeDashboardId** - Deprecated. Use `homeDashboardUID` instead.
+- **homeDashboardUID**: The `:uid` of a dashboard
+- **timezone** - Any valid IANA timezone string (e.g., `America/New_York`, `Europe/London`), `utc`, `browser`, or an empty string for the default.
+
+Omitting a key will cause the current value to be replaced with the
+system default value.
+
+## Get Current User Prefs
+
+`GET /api/user/preferences`
+
+**Example Request**:
+
+```http
+GET /api/user/preferences HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "theme": "",
+    "homeDashboardId": 217,
+    "homeDashboardUID": "jcIIG-07z",
+    "timezone": "utc",
+    "weekStart": "",
+    "navbar": {
+        "bookmarkUrls": null
+    },
+    "queryHistory": {
+        "homeTab": ""
+    }
+}
+```
+
+## Update Current User Prefs
+
+`PUT /api/user/preferences`
+
+**Example Request**:
+
+```http
+PUT /api/user/preferences HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "theme": "",
+  "homeDashboardUID":"home",
+  "timezone":"utc"
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: text/plain; charset=utf-8
+
+{"message":"Preferences updated"}
+```
+
+## Patch Current User Prefs
+
+Update one or more preferences without modifying the others.
+
+`PATCH /api/user/preferences`
+
+**Example Request**:
+
+```http
+PATCH /api/user/preferences HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "theme": "dark"
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: text/plain; charset=utf-8
+
+{"message":"Preferences updated"}
+```
+
+## Get Current Org Prefs
+
+`GET /api/org/preferences`
+
+**Example Request**:
+
+```http
+GET /api/org/preferences HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "theme": "",
+    "homeDashboardId": 0,
+    "homeDashboardUID": "",
+    "timezone": "",
+    "weekStart": "",
+    "navbar": {
+        "bookmarkUrls": null
+    },
+    "queryHistory": {
+        "homeTab": ""
+    }
+}
+```
+
+## Update Current Org Prefs
+
+`PUT /api/org/preferences`
+
+**Example Request**:
+
+```http
+PUT /api/org/preferences HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "theme": "",
+  "homeDashboardUID":"home",
+  "timezone":"utc"
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: text/plain; charset=utf-8
+
+{"message":"Preferences updated"}
+```
+
+## Patch Current Org Prefs
+
+Update one or more preferences without modifying the others.
+
+`PATCH /api/org/preferences`
+
+**Example Request**:
+
+```http
+PATCH /api/org/preferences HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+  "theme": "dark"
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: text/plain; charset=utf-8
+
+{"message":"Preferences updated"}
+```
+
+
+# Document: Query History HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/query_history.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/query_history.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/query_history.md
+Description: This API can be used to add queries to Query history. It requires that the user is logged in and that Query history feature is enabled in config file.
+
+# Query history API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> **This API will not be migrated**. Refer to [API deprecation notes](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis-migration#deprecation-notes) for more details and alternatives.
+
+> **Note**
+>
+> The new [Queries HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/queries/) is related to this API, but it isn't a full replacement. It lets you store, share, and manage queries on the server, but it doesn't record the queries you run or support starring. The Queries HTTP API is only available in Grafana Enterprise and Grafana Cloud. Refer to [Differences from the legacy Query history API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/queries/#differences-from-the-legacy-query-history-api) to learn how both APIs match.
+
+This API can be used to add queries to Query history. It requires that the user is logged in and that Query history feature is enabled in config file.
+
+## Add query to Query history
+
+`POST /api/query-history`
+
+Adds query to query history.
+
+**Example request:**
+
+```http
+POST /api/query-history HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+{
+  "datasourceUid": "PE1C5CBDA0504A6A3",
+  "queries": [
+    {
+        "refId": "A",
+        "key": "Q-87fed8e3-62ba-4eb2-8d2a-4129979bb4de-0",
+        "scenarioId": "csv_content",
+        "datasource": {
+            "type": "testdata",
+            "uid": "PD8C576611E62080A"
+        }
+    }
+]
+}
+```
+
+JSON body schema:
+
+- **datasourceUid** – Data source uid.
+- **queries** – JSON of query or queries.
+
+**Example response:**
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+{
+  "result": {
+    "uid": "Ahg678z",
+    "datasourceUid": "PE1C5CBDA0504A6A3",
+    "createdBy": 1,
+    "createdAt": 1643630762,
+    "starred": false,
+    "comment": "",
+    "queries": [
+      {
+        "refId": "A",
+        "key": "Q-87fed8e3-62ba-4eb2-8d2a-4129979bb4de-0",
+        "scenarioId": "csv_content",
+        "datasource": {
+            "type": "testdata",
+            "uid": "PD8C576611E62080A"
+        }
+      }
+    ]
+  }
+}
+```
+
+Status codes:
+
+- **200** – OK
+- **400** - Errors (invalid JSON, missing or invalid fields)
+- **401** – Unauthorized
+- **500** – Internal error
+
+## Query history search
+
+`GET /api/query-history`
+
+Returns a list of queries in the query history that matches the search criteria. Query history search supports pagination. Use the `limit` parameter to control the maximum number of queries returned; the default limit is 100. You can also use the `page` query parameter to fetch queries from any page other than the first one.
+
+Query parameters:
+
+- **datasourceUid** - Filter the query history for the selected data source. To perform an "AND" filtering with multiple data sources, specify the data source parameter using the following format: `datasourceUid=uid1&datasourceUid=uid2`.
+- **searchString** – Filter the query history based on the content.
+- **sort** - Specify the sorting order. Sorting can be `time-asc` or `time-desc`. The default is `time-desc`.
+- **onlyStarred** - Search for queries that are starred. Defaults to `false`.
+- **page** - Search supports pagination. Specify which page number to return. Use the limit parameter to specify the number of queries per page.
+- **limit** - Limits the number of returned query history items per page. The default is 100 queries per page.
+- **from/to** - Specifies time range for the query history search. The time can be either epoch timestamps in milliseconds or relative using Grafana time units. For example, now-5m.
+
+**Example request for query history search**:
+
+```http
+GET /api/query-history?datasourceUid="PE1C5CBDA0504A6A3"&datasourceUid="FG1C1CBDA0504A6EL"&searchString="ALERTS"&sort="time-asc" HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response for query history search**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+{
+  "result": {
+    "totalCount": 150,
+    "page": 1,
+    "perPage": 100
+    "queryHistory":[{
+    "uid": "Ahg678z",
+    "datasourceUid": "PE1C5CBDA0504A6A3",
+    "createdBy": 1,
+    "createdAt": 1643630762,
+    "starred": false,
+    "comment": "",
+    "queries": [
+      {
+        "refId": "A",
+        "key": "Q-87fed8e3-62ba-4eb2-8d2a-4129979bb4de-0",
+        "scenarioId": "csv_content",
+        "datasource": {
+            "type": "testdata",
+            "uid": "PE1C5CBDA0504A6A3"
+        }
+      }
+    ]
+  }]
+}
+```
+
+Status codes:
+
+- **200** – OK
+- **401** – Unauthorized
+- **500** – Internal error
+
+## Delete query from Query history by UID
+
+`DELETE /api/query-history/:uid`
+
+Deletes the query in query history that matches the specified uid. It requires that the user is logged in and that Query history feature is enabled in config file.
+
+**Example Request**:
+
+```http
+DELETE /api/query-history/P8zM2I1nz HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+    "message": "Query deleted",
+    "id": 28
+}
+```
+
+Status codes:
+
+- **200** – OK
+- **401** – Unauthorized
+- **500** – Internal error
+
+## Update comment of query in Query history by UID
+
+`PATCH /api/query-history/:uid`
+
+Updates comment of a query with a specific uid that is stored in the query history.
+
+Query parameters:
+
+- **comment** – New comment that will be added to the specified query.
+
+**Example Request**:
+
+```http
+PATCH /api/query-history/P8zM2I1nz HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+{
+  "comment": "Debugging query",
+}
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+{
+  "result": {
+    "uid": "P8zM2I1nz",
+    "datasourceUid": "PE1C5CBDA0504A6A3",
+    "createdBy": 1,
+    "createdAt": 1643630762,
+    "starred": false,
+    "comment": "Debugging query",
+    "queries": [
+      {
+        "refId": "A",
+        "key": "Q-87fed8e3-62ba-4eb2-8d2a-4129979bb4de-0",
+        "scenarioId": "csv_content",
+        "datasource": {
+            "type": "testdata",
+            "uid": "PD8C576611E62080A"
+        }
+      }
+    ]
+  }
+}
+```
+
+Status codes:
+
+- **200** – OK
+- **400** - Errors (invalid JSON, missing or invalid fields)
+- **401** – Unauthorized
+- **500** – Internal error
+
+## Star query in Query history
+
+`POST /api/query-history/star/:uid`
+
+Stars query in query history.
+
+**Example request:**
+
+```http
+POST /api/query-history/star/P8zM2I1nz HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+{
+  "result": {
+    "uid": "P8zM2I1nz",
+    "datasourceUid": "PE1C5CBDA0504A6A3",
+    "createdBy": 1,
+    "createdAt": 1643630762,
+    "starred": false,
+    "comment": "Debugging query",
+    "queries": [
+      {
+        "refId": "A",
+        "key": "Q-87fed8e3-62ba-4eb2-8d2a-4129979bb4de-0",
+        "scenarioId": "csv_content",
+        "datasource": {
+            "type": "testdata",
+            "uid": "PD8C576611E62080A"
+        }
+      }
+    ]
+  }
+}
+```
+
+Status codes:
+
+- **200** – OK
+- **401** – Unauthorized
+- **500** – Internal error
+
+## Unstar query in Query history
+
+`DELETE /api/query-history/star/:uid`
+
+Removes stars from query in query history.
+
+**Example request:**
+
+```http
+DELETE /api/query-history/star/P8zM2I1nz  HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example response:**
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+{
+  "result": {
+    "uid": "P8zM2I1nz",
+    "datasourceUid": "PE1C5CBDA0504A6A3",
+    "createdBy": 1,
+    "createdAt": 1643630762,
+    "starred": false,
+    "comment": "Debugging query",
+    "queries": [
+      {
+        "refId": "A",
+        "key": "Q-87fed8e3-62ba-4eb2-8d2a-4129979bb4de-0",
+        "scenarioId": "csv_content",
+        "datasource": {
+            "type": "testdata",
+            "uid": "PD8C576611E62080A"
+        }
+      }
+    ]
+  }
+}
+```
+
+Status codes:
+
+- **200** – OK
+- **401** – Unauthorized
+- **500** – Internal error
+
+
+# Document: Query and Resource Caching HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/query_and_resource_caching.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/query_and_resource_caching.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/query_and_resource_caching.md
+Description: If you're running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to Role-based access control permissions for more information.
+
+# Query and resource caching API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+## Requirements
+
+If you're running Grafana Enterprise, for some endpoints you'll need to have specific permissions. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+
+## Enable caching for a data source
+
+`POST /api/datasources/:dataSourceUID/cache/enable`
+
+**Required permissions**
+
+See note in the [introduction](#query-and-resource-caching-api) for an explanation.
+
+| Action                    | Scope          |
+| ------------------------- | -------------- |
+| datasources.caching:write | datasources:\* |
+
+### Examples
+
+**Example Request**:
+
+```http
+POST /api/datasources/jZrmlLCGka/cache/enable HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+   "message": "Data source cache enabled",
+   "dataSourceID": 1,
+   "dataSourceUID": "jZrmlLCGka",
+   "enabled": true,
+   "ttlQueriesMs": 300000,
+   "ttlResourcesMs": 300000,
+   "useDefaultTTL": true,
+   "defaultTTLMs": 300000,
+   "created": "2023-04-21T11:49:22-04:00",
+   "updated": "2023-04-24T16:30:29-04:00"
+}
+```
+
+#### Status codes
+
+| Code | Description                                                              |
+| ---- | ------------------------------------------------------------------------ |
+| 200  | Cache was successfully enabled for the data source                       |
+| 500  | Unexpected error. Refer to the body and/or server logs for more details. |
+
+## Disable caching for a data source
+
+`POST /api/datasources/:dataSourceUID/cache/disable`
+
+**Required permissions**
+
+See note in the [introduction](#query-and-resource-caching-api) for an explanation.
+
+| Action                    | Scope          |
+| ------------------------- | -------------- |
+| datasources.caching:write | datasources:\* |
+
+### Examples
+
+**Example Request**:
+
+```http
+POST /api/datasources/jZrmlLCGka/cache/disable HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+   "message": "Data source cache disabled",
+   "dataSourceID": 1,
+   "dataSourceUID": "jZrmlLCGka",
+   "enabled": false,
+   "ttlQueriesMs": 300000,
+   "ttlResourcesMs": 300000,
+   "useDefaultTTL": true,
+   "defaultTTLMs": 0,
+   "created": "2023-04-21T11:49:22-04:00",
+   "updated": "2023-04-24T16:30:31-04:00"
+}
+```
+
+#### Status codes
+
+| Code | Description                                                              |
+| ---- | ------------------------------------------------------------------------ |
+| 200  | Cache was successfully enabled for the data source                       |
+| 500  | Unexpected error. Refer to the body and/or server logs for more details. |
+
+## Clean cache for all data sources
+
+`POST /api/datasources/:dataSourceUID/cache/clean`
+
+Will clean cached data for *all* data sources with caching enabled. The `dataSourceUID` specified will only be used to return the configuration for that data source.
+
+**Required permissions**
+
+See note in the [introduction](#query-and-resource-caching-api) for an explanation.
+
+| Action                    | Scope          |
+| ------------------------- | -------------- |
+| datasources.caching:write | datasources:\* |
+
+### Examples
+
+**Example Request**:
+
+```http
+POST /api/datasources/jZrmlLCGka/cache/clean HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+   "message": "Data source cache cleaned",
+   "dataSourceID": 1,
+   "dataSourceUID": "jZrmlLCGka",
+   "enabled": false,
+   "ttlQueriesMs": 300000,
+   "ttlResourcesMs": 300000,
+   "useDefaultTTL": true,
+   "defaultTTLMs": 0,
+   "created": "2023-04-21T11:49:22-04:00",
+   "updated": "2023-04-24T16:30:31-04:00"
+}
+```
+
+#### Status codes
+
+| Code | Description                                                              |
+| ---- | ------------------------------------------------------------------------ |
+| 200  | Cache was successfully enabled for the data source                       |
+| 500  | Unexpected error. Refer to the body and/or server logs for more details. |
+
+## Update cache configuration for a data source
+
+`POST /api/datasources/:dataSourceUID/cache`
+
+**Required permissions**
+
+See note in the [introduction](#query-and-resource-caching-api) for an explanation.
+
+| Action                    | Scope          |
+| ------------------------- | -------------- |
+| datasources.caching:write | datasources:\* |
+
+### Examples
+
+**Example Request**:
+
+```http
+POST /api/datasources/jZrmlLCGka/cache HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+
+{
+   "dataSourceID": 1,
+   "dataSourceUID": "jZrmlLCGka",
+   "enabled": true,
+   "useDefaultTTL": false,
+   "ttlQueriesMs": 60000,
+   "ttlResourcesMs": 300000,
+}
+```
+
+#### JSON Body Schema
+
+| Field name     | Data type | Description                                                                                                                                 |
+| -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceID   | number    | The ID of the data source to configure.                                                                                                     |
+| dataSourceUID  | string    | The UID of the data source to configure.                                                                                                    |
+| enabled        | boolean   | Whether or not to enable caching for this data source.                                                                                      |
+| useDefaultTTL  | boolean   | Whether the configured default TTL (Time-To-Live) should be used for both query and resource caching, instead of the user-specified values. |
+| ttlQueriesMs   | number    | The TTL to use for query caching, in milliseconds.                                                                                          |
+| ttlResourcesMs | number    | The TTL to use for resource caching, in milliseconds.                                                                                       |
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+   "message": "Data source cache settings updated",
+   "dataSourceID": 1,
+   "dataSourceUID": "jZrmlLCGka",
+   "enabled": true,
+   "useDefaultTTL": false,
+   "ttlQueriesMs": 60000,
+   "ttlResourcesMs": 300000,
+   "defaultTTLMs": 300000,
+   "created": "2023-04-21T11:49:22-04:00",
+   "updated": "2023-04-24T17:03:40-04:00"
+}
+```
+
+#### Status codes
+
+| Code | Description                                                              |
+| ---- | ------------------------------------------------------------------------ |
+| 200  | Cache was successfully enabled for the data source                       |
+| 400  | Request errors (invalid json, missing or invalid fields, etc)            |
+| 500  | Unexpected error. Refer to the body and/or server logs for more details. |
+
+## Get cache configuration for a data source
+
+`GET /api/datasources/:dataSourceUID/cache`
+
+**Required permissions**
+
+See note in the [introduction](#query-and-resource-caching-api) for an explanation.
+
+| Action                   | Scope          |
+| ------------------------ | -------------- |
+| datasources.caching:read | datasources:\* |
+
+### Examples
+
+**Example Request**:
+
+```http
+GET /api/datasources/jZrmlLCGka/cache HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
+```
+
+**Example Response**:
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+   "message": "Data source cache settings loaded",
+   "dataSourceID": 1,
+   "dataSourceUID": "jZrmlLCGka",
+   "enabled": true,
+   "useDefaultTTL": false,
+   "ttlQueriesMs": 60000,
+   "ttlResourcesMs": 300000,
+   "defaultTTLMs": 300000,
+   "created": "2023-04-21T11:49:22-04:00",
+   "updated": "2023-04-24T17:03:40-04:00"
+}
+```
+
+#### Status codes
+
+| Code | Description                                                              |
+| ---- | ------------------------------------------------------------------------ |
+| 200  | Cache was successfully enabled for the data source                       |
+| 500  | Unexpected error. Refer to the body and/or server logs for more details. |
+
+
+# Document: RBAC HTTP API
+
+Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/access_control.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/access_control.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/access_control.md
+Description: Use this API to create, update, delete, get, and list roles.
+
+# RBAC API
+
+> **Note**
+>
+> Starting in Grafana 13, `/api` endpoints are being deprecated in favor of the `/apis` route. Note that while Grafana is working on migrating existing APIs, currently there may not be an exact match to the legacy API you're using.
+>
+> **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
+>
+> To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+Use this API to create, update, delete, get, and list roles.
+
+To check which basic or fixed roles have the required permissions, refer to [RBAC role definitions](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/rbac-fixed-basic-role-definitions).
+
+## Requirements
+
+Role-based access control API is only available in Grafana Cloud or Grafana Enterprise. Read more about [Grafana Enterprise](https://grafana.com/docs/grafana/latest/introduction/grafana-enterprise/).
+
+## Get status
+
+`GET /api/access-control/status`
+
+Returns an indicator to check if role-based access control is enabled or not.
+
+#### Required permissions
+
+| Action               | Scope                  |
+| -------------------- | ---------------------- |
+| status:accesscontrol | services:accesscontrol |
+
+#### Example request
+
+```http
+GET /api/access-control/status
+Accept: application/json
+Content-Type: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+  "enabled": true
+}
+```
+
+#### Status codes
+
+| Code | Description                                                                      |
+| ---- | -------------------------------------------------------------------------------- |
+| 200  | Returned a flag indicating if the role-based access control is enabled or no.    |
+| 403  | Access denied                                                                    |
+| 404  | Not found, an indication that role-based access control is not available at all. |
+| 500  | Unexpected error. Refer to body and/or server logs for more details.             |
+
+## Create and manage custom roles
+
+### Get all roles
+
+`GET /api/access-control/roles`
+
+Gets all existing roles. The response contains all global and organization local roles, for the organization which user is signed in.
+
+Query Parameters:
+
+- `includeHidden`: Optional. Set to `true` to include roles that are `hidden`.
+
+#### Required permissions
+
+| Action     | Scope    |
+| ---------- | -------- |
+| roles:read | roles:\* |
+
+#### Example request
+
+```http
+GET /api/access-control/roles
+Accept: application/json
+Content-Type: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+[
+    {
+        "version": 3,
+        "uid": "XvHQJq57z",
+        "name": "fixed:reports:reader",
+        "displayName": "Report reader",
+        "description": "Read all reports and shared report settings.",
+        "group": "Reports",
+        "updated": "2021-11-19T10:48:00+01:00",
+        "created": "2021-11-19T10:48:00+01:00",
+        "global": false
+    },
+    {
+        "version": 5,
+        "uid": "vi9mlLjGz",
+        "name": "fixed:datasources.permissions:writer",
+        "description: "Create, read or delete data source permissions.",
+        "global": true,
+        "updated": "2021-05-13T22:41:49+02:00",
+        "created": "2021-05-13T16:24:26+02:00"
+    }
+]
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Global and organization local roles are returned.                    |
+| 403  | Access denied                                                        |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### Get a role
+
+`GET /api/access-control/roles/:uid`
+
+Get a role for the given UID.
+
+#### Required permissions
+
+| Action     | Scope    |
+| ---------- | -------- |
+| roles:read | roles:\* |
+
+#### Example request
+
+```http
+GET /api/access-control/roles/PYnDO3rMk
+Accept: application/json
+Content-Type: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "version": 4,
+    "uid": "6dNwJq57z",
+    "name": "fixed:reports:writer",
+    "displayName": "Report writer",
+    "description": "Create, read, update, or delete all reports and shared report settings.",
+    "group": "Reports",
+    "permissions": [
+        {
+            "action": "reports:delete",
+            "scope": "reports:*",
+            "updated": "2021-11-19T10:48:00+01:00",
+            "created": "2021-11-19T10:48:00+01:00"
+        },
+        {
+            "action": "reports:read",
+            "scope": "reports:*",
+            "updated": "2021-11-19T10:48:00+01:00",
+            "created": "2021-11-19T10:48:00+01:00"
+        },
+        {
+            "action": "reports:send",
+            "scope": "reports:*",
+            "updated": "2021-11-19T10:48:00+01:00",
+            "created": "2021-11-19T10:48:00+01:00"
+        },
+        {
+            "action": "reports:create",
+            "scope": "",
+            "updated": "2021-11-19T10:48:00+01:00",
+            "created": "2021-11-19T10:48:00+01:00"
+        },
+        {
+            "action": "reports:write",
+            "scope": "reports:*",
+            "updated": "2021-11-19T10:48:00+01:00",
+            "created": "2021-11-19T10:48:00+01:00"
+        },
+        {
+            "action": "reports.settings:read",
+            "scope": "",
+            "updated": "2021-11-19T10:48:00+01:00",
+            "created": "2021-11-19T10:48:00+01:00"
+        },
+        {
+            "action": "reports.settings:write",
+            "scope": "",
+            "updated": "2021-11-19T10:48:00+01:00",
+            "created": "2021-11-19T10:48:00+01:00"
+        }
+    ],
+    "updated": "2021-11-19T10:48:00+01:00",
+    "created": "2021-11-19T10:48:00+01:00",
+    "global": false
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Role is returned.                                                    |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### Create a new custom role
+
+`POST /api/access-control/roles`
+
+Creates a new custom role and maps given permissions to that role. Note that roles with the same prefix as [Fixed roles](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/#fixed-roles) can't be created.
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to create a custom role which allows to do that. This is done to prevent escalation of privileges.
+
+| Action      | Scope                     |
+| ----------- | ------------------------- |
+| roles:write | permissions:type:delegate |
+
+#### Example request
+
+```http
+POST /api/access-control/roles
+Accept: application/json
+Content-Type: application/json
+
+{
+    "uid": "jZrmlLCGka",
+    "name": "custom:delete:roles",
+    "displayName": "custom delete roles",
+    "description": "My custom role which gives users permissions to delete roles",
+    "group":"My Group",
+    "displayName": "My Custom Role",
+    "global": false,
+    "permissions": [
+        {
+            "action": "roles:delete",
+            "scope": "permissions:type:delegate"
+        }
+    ]
+}
+```
+
+#### JSON body schema
+
+| Field Name  | Date Type  | Required | Description                                                                                                                                                                                                                                                  |
+| ----------- | ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| uid         | string     | No       | UID of the role. If not present, the UID is automatically created for you and returned in response. Refer to [Custom roles](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/#custom-roles) for more information. |
+| global      | boolean    | No       | A flag indicating if the role is global or not. If set to `false`, the default org ID of the authenticated user will be used from the request.                                                                                                               |
+| version     | number     | No       | **Deprecated.** Ignored on create; the server always assigns version 1 to new roles. The response returns the assigned version.                                                                                                                              |
+| name        | string     | Yes      | Name of the role. Refer to [Custom roles](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/#custom-roles) for more information.                                                                                   |
+| description | string     | No       | Description of the role.                                                                                                                                                                                                                                     |
+| displayName | string     | No       | Display name of the role, visible in the UI.                                                                                                                                                                                                                 |
+| group       | string     | No       | The group name the role belongs to.                                                                                                                                                                                                                          |
+| hidden      | boolean    | No       | Specify whether the role is hidden or not. If set to `true`, then the role does not show in the role picker. It will not be listed by API endpoints unless explicitly specified.                                                                             |
+| permissions | Permission | No       | If not present, the role will be created without any permissions.                                                                                                                                                                                            |
+
+**Permission**
+
+| Field Name | Data Type | Required | Description                                                                                                                                                                                                                                                      |
+| ---------- | --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| action     | string    | Yes      | Refer to [Custom role actions and scopes](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for full list of available actions.                                                           |
+| scope      | string    | No       | If not present, no scope will be mapped to the permission. Refer to [Custom role actions and scopes](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for full list of available scopes. |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "version": 2,
+    "uid": "jZrmlLCGka",
+    "name": "custom:delete:create:roles",
+    "displayName": "custom delete create roles",
+    "description": "My custom role which gives users permissions to delete and create roles",
+    "group":"My Group",
+    "displayName": "My Custom Role",
+    "global": false,
+    "permissions": [
+        {
+            "action": "roles:delete",
+            "scope": "permissions:type:delegate",
+            "updated": "2021-05-13T23:19:46+02:00",
+            "created": "2021-05-13T23:19:46+02:00"
+        }
+    ],
+    "updated": "2021-05-13T23:20:51.416518+02:00",
+    "created": "2021-05-13T23:19:46+02:00"
+}
+```
+
+#### Create role validation errors
+
+Permission validation only occurs when permission validation is enabled (`rbac.permission_validation_enabled = true`).
+
+> It has been enabled by default since Grafana 10.2.
+
+##### Invalid action
+
+The following example shows a request with an invalid action. The action `serviceaccounts.permissions:reader` is not a valid action. The valid action should be `serviceaccounts.permissions:read`.
+
+```http
+POST /api/access-control/roles HTTP/1.1
+Content-Type: application/json
+{
+	"Name": "Read Service Account with id 6",
+	"Permissions": [
+			{
+			"action": "serviceaccounts.permissions:reader",
+			"scope": "serviceaccounts:uid:6"
+		}
+	]
+}
+```
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+{
+	"extra": {
+		"validationError": "the provided action was not found in the list of valid actions: serviceaccounts.permissions:reader"
+	},
+	"message": "Permission contains an invalid action",
+	"messageId": "accesscontrol.permission-invalid-action",
+	"statusCode": 400,
+	"traceID": ""
+}
+```
+
+##### Invalid scope
+
+The following example shows a request with an invalid scope. The scope `serviceaccounts:serviceaccount6` is not a valid scope for the action `serviceaccounts.permissions:read`. The valid scopes for this action are `*`, `serviceaccounts:*` and `serviceaccounts:id:*`.
+
+```http
+POST /api/access-control/roles HTTP/1.1
+Content-Type: application/json
+{
+	"Name": "Read Service Account with id 6",
+	"Permissions": [
+			{
+			"action": "serviceaccounts.permissions:read",
+			"scope": "serviceaccounts:serviceaccount6"
+		}
+	]
+}
+```
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+{
+	"extra": {
+		"validationError": "unknown scope: serviceaccounts:serviceaccount6 for action: serviceaccounts.permissions:read provided, expected prefixes are [* serviceaccounts:* serviceaccounts:id:*]"
+	},
+	"message": "Invalid scope",
+	"messageId": "accesscontrol.permission-invalid-scope",
+	"statusCode": 400,
+	"traceID": ""
+}
+```
+
+#### Status codes
+
+| Code | Description                                                                        |
+| ---- | ---------------------------------------------------------------------------------- |
+| 200  | Role is updated.                                                                   |
+| 400  | Bad request (invalid json, missing content-type, missing or invalid fields, etc.). |
+| 403  | Access denied (one of the specified permissions is not assigned to the requester)  |
+| 500  | Unexpected error. Refer to body and/or server logs for more details.               |
+
+### Update a role
+
+`PUT /api/access-control/roles/:uid`
+
+Update the role with the given UID, and its permissions. The operation is idempotent and all permissions of the role will be replaced based on the request content. Send the current `version` of the role (from the last GET or list response) for optimistic locking; the request fails if the role was updated elsewhere. The server auto-increments the stored version on each update.
+
+You can update `custom` roles and `basic` roles permissions. However `fixed` roles cannot be updated.
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only update custom roles with the same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to update a custom role which allows to do that. This is done to prevent escalation of privileges.
+
+| Action      | Scope                     |
+| ----------- | ------------------------- |
+| roles:write | permissions:type:delegate |
+
+#### Example request
+
+```http
+PUT /api/access-control/roles/jZrmlLCGka
+Accept: application/json
+Content-Type: application/json
+
+{
+    "version": 3,
+    "name": "custom:delete:write:roles",
+    "displayName": "custom delete write roles",
+    "description": "My custom role which gives users permissions to delete and write roles",
+    "group":"My Group",
+    "displayName": "My Custom Role",
+    "global": false,
+    "permissions": [
+        {
+            "action": "roles:delete",
+            "scope": "permissions:type:delegate"
+        },
+        {
+            "action": "roles:write",
+            "scope": "permissions:type:delegate"
+        }
+    ]
+}
+```
+
+#### JSON body schema
+
+| Field Name  | Data Type           | Required | Description                                                                                                                                                                                                                                      |
+| ----------- | ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| version     | number              | Yes      | Current version of the role (from the last GET or list). Required for optimistic locking; the request fails if the stored version is greater. **Deprecated** as an input to set a value—the server auto-increments the stored version on update. |
+| name        | string              | Yes      | Name of the role.                                                                                                                                                                                                                                |
+| description | string              | No       | Description of the role.                                                                                                                                                                                                                         |
+| displayName | string              | No       | Display name of the role, visible in the UI.                                                                                                                                                                                                     |
+| group       | string              | No       | The group name the role belongs to.                                                                                                                                                                                                              |
+| hidden      | boolean             | No       | Specifies whether the role is hidden or not. If set to `true`, then the role does not show in the role picker. It will not be listed by API endpoints unless explicitly specified.                                                               |
+| permissions | List of Permissions | No       | The full list of permissions for the role after the update.                                                                                                                                                                                      |
+
+**Permission**
+
+| Field Name | Data Type | Required | Description                                                                                                                                                                                                                                                      |
+| ---------- | --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| action     | string    | Yes      | Refer to [Custom role actions and scopes](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for full list of available actions.                                                           |
+| scope      | string    | No       | If not present, no scope will be mapped to the permission. Refer to [Custom role actions and scopes](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for full list of available scopes. |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "version":3,
+    "uid":"jZrmlLCGka",
+    "name":"custom:delete:write:roles",
+    "displayName":"custom delete write roles",
+    "description":"My custom role which gives users permissions to delete and write roles",
+    "group":"My Group",
+    "displayName": "My Custom Role",
+    "permissions":[
+        {
+            "action":"roles:delete",
+            "scope":"permissions:type:delegate",
+            "updated":"2021-08-06T18:27:40+02:00",
+            "created":"2021-08-06T18:27:40+02:00"
+        },
+        {
+            "action":"roles:write",
+            "scope":"permissions:type:delegate",
+            "updated":"2021-08-06T18:27:41+02:00",
+            "created":"2021-08-06T18:27:41+02:00"
+        }
+    ],
+    "updated":"2021-08-06T18:27:41+02:00",
+    "created":"2021-08-06T18:27:40+02:00",
+    "global":false
+}
+```
+
+#### Update role validation errors
+
+Permission validation only occurs when permission validation is enabled (`rbac.permission_validation_enabled = true`).
+
+> It has been enabled by default since Grafana 10.2.
+
+For more information, refer to [Create role validation errors](#create-role-validation-errors).
+
+#### Status codes
+
+| Code | Description                                                                        |
+| ---- | ---------------------------------------------------------------------------------- |
+| 200  | Role is updated.                                                                   |
+| 400  | Bad request (invalid json, missing content-type, missing or invalid fields, etc.). |
+| 403  | Access denied (one of the specified permissions is not assigned to the requester)  |
+| 404  | Role was not found to update.                                                      |
+| 500  | Unexpected error. Refer to body and/or server logs for more details.               |
+
+### Delete a custom role
+
+`DELETE /api/access-control/roles/:uid?force=false`
+
+Delete a role with the given UID, and it's permissions. If the role is assigned, the deletion operation will fail, unless the `force` query param is set to `true`, and in that case all assignments will also be deleted.
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only delete a custom role with the same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to delete a custom role which allows to do that.
+
+| Action       | Scope                     |
+| ------------ | ------------------------- |
+| roles:delete | permissions:type:delegate |
+
+#### Example request
+
+```http
+DELETE /api/access-control/roles/jZrmlLCGka?force=true&global=false
+Accept: application/json
+```
+
+#### Query parameters
+
+| Param  | Type    | Required | Description                                                                                                                                                                                                                                                                                |
+| ------ | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| force  | boolean | No       | When set to `true`, the role will be deleted with all its assignments.                                                                                                                                                                                                                     |
+| global | boolean | No       | A flag indicating if the role is global or not. If set to false, the default org ID of the authenticated user will be used from the request. Refer to the [About RBAC](https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/access-control/) for more information. |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Role deleted"
+}
+```
+
+#### Status codes
+
+| Code | Description                                                                        |
+| ---- | ---------------------------------------------------------------------------------- |
+| 200  | Role is deleted.                                                                   |
+| 400  | Bad request (invalid json, missing content-type, missing or invalid fields, etc.). |
+| 403  | Access denied                                                                      |
+| 500  | Unexpected error. Refer to body and/or server logs for more details.               |
+
+## Create and remove user role assignments
+
+### List roles assigned to a user
+
+`GET /api/access-control/users/:userId/roles`
+
+Lists the roles that have been directly assigned to a given user. The list does not include basic roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.
+
+Query Parameters:
+
+- `includeHidden`: Optional. Set to `true` to include roles that are `hidden`.
+- `includeMapped`: Optional. Set to `true` to include roles that have been mapped through the group attribute sync feature.
+
+#### Required permissions
+
+| Action           | Scope                |
+| ---------------- | -------------------- |
+| users.roles:read | users:id:`<user ID>` |
+
+#### Example request
+
+```http
+GET /api/access-control/users/1/roles
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+[
+    {
+        "version": 4,
+        "uid": "6dNwJq57z",
+        "name": "fixed:reports:writer",
+        "displayName": "Report writer",
+        "description": "Create, read, update, or delete all reports and shared report settings.",
+        "group": "Reports",
+        "updated": "2021-11-19T10:48:00+01:00",
+        "created": "2021-11-19T10:48:00+01:00",
+        "global": false
+    }
+]
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Set of assigned roles is returned.                                   |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### List your permissions
+
+`GET /api/access-control/user/permissions`
+
+Lists the permissions granted to the signed in user.
+
+#### Required permissions
+
+No permission is required.
+
+#### Query parameters
+
+| Param       | Type    | Required | Description                            |
+| ----------- | ------- | -------- | -------------------------------------- |
+| reloadcache | boolean | No       | A flag to reload the permission cache. |
+
+#### Example request
+
+```http
+GET /api/access-control/user/permissions
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+  "dashboards:read": ["dashboards:uid:70KrY6IVz"],
+  "dashboards:write": ["dashboards:uid:70KrY6IVz"],
+  "datasources.id:read": ["datasources:*"],
+  "datasources:read": ["datasources:*"],
+  "datasources:explore": [""],
+  "datasources:query": ["datasources:uid:grafana"],
+  "datasources:read": ["datasources:uid:grafana"],
+  "orgs:read": [""]
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Set of assigned permissions is returned.                             |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### List permissions assigned to a user
+
+`GET /api/access-control/users/:userId/permissions`
+
+Lists the permissions granted to a given user.
+
+#### Required permissions
+
+| Action                 | Scope                |
+| ---------------------- | -------------------- |
+| users.permissions:read | users:id:`<user ID>` |
+
+#### Example request
+
+```http
+GET /api/access-control/users/1/permissions
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+[
+    {
+        "action": "ldap.status:read",
+        "scope": ""
+    },
+    {
+        "action": "ldap.user:read",
+        "scope": ""
+    }
+]
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Set of assigned permissions is returned.                             |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### Add a user role assignment
+
+`POST /api/access-control/users/:userId/roles`
+
+Assign a role to a specific user.
+
+For bulk updates consider
+[Set user role assignments](#set-user-role-assignments).
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only assign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to assign a role which will allow to do that. This is done to prevent escalation of privileges.
+
+| Action          | Scope                     |
+| --------------- | ------------------------- |
+| users.roles:add | permissions:type:delegate |
+
+#### Example request
+
+```http
+POST /api/access-control/users/1/roles
+Accept: application/json
+Content-Type: application/json
+
+{
+    "global": false,
+    "roleUid": "XvHQJq57z"
+}
+```
+
+#### JSON body schema
+
+| Field Name | Data Type | Required | Description                                                                                                                                                                                  |
+| ---------- | --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| roleUid    | string    | Yes      | UID of the role.                                                                                                                                                                             |
+| global     | boolean   | No       | A flag indicating if the assignment is global or not. If set to `false`, the default org ID of the authenticated user will be used from the request to create organization local assignment. |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Role added to the user."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Role is assigned to a user.                                          |
+| 403  | Access denied.                                                       |
+| 404  | Role not found.                                                      |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+## Remove a user role assignment
+
+`DELETE /api/access-control/users/:userId/roles/:roleUID`
+
+Revoke a role from a user.
+
+For bulk updates consider
+[Set user role assignments](#set-user-role-assignments).
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only unassign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to unassign a role which will allow to do that. This is done to prevent escalation of privileges.
+
+| Action             | Scope                     |
+| ------------------ | ------------------------- |
+| users.roles:remove | permissions:type:delegate |
+
+#### Query parameters
+
+| Param  | Type    | Required | Description                                                                                                                                                               |
+| ------ | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| global | boolean | No       | A flag indicating if the assignment is global or not. If set to `false`, the default org ID of the authenticated user will be used from the request to remove assignment. |
+
+#### Example request
+
+```http
+DELETE /api/access-control/users/1/roles/AFUXBHKnk
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Role removed from user."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Role is unassigned.                                                  |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### Set user role assignments
+
+`PUT /api/access-control/users/:userId/roles`
+
+Update the user's role assignments to match the provided set of UIDs.
+This will remove any assigned roles that aren't in the request and add
+roles that are in the set but are not already assigned to the user.
+
+If you want to add or remove a single role, consider using
+[Add a user role assignment](#add-a-user-role-assignment) or
+[Remove a user role assignment](#remove-a-user-role-assignment)
+instead.
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only assign or unassign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to assign or unassign a role which will allow to do that. This is done to prevent escalation of privileges.
+
+| Action             | Scope                     |
+| ------------------ | ------------------------- |
+| users.roles:add    | permissions:type:delegate |
+| users.roles:remove | permissions:type:delegate |
+
+#### Example request
+
+```http
+PUT /api/access-control/users/1/roles
+Accept: application/json
+Content-Type: application/json
+
+{
+    "global": false,
+    "roleUids": [
+        "ZiHQJq5nk",
+        "GzNQ1357k"
+    ]
+}
+```
+
+#### JSON body schema
+
+| Field Name    | Date Type | Required | Description                                                                                                                                          |
+| ------------- | --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| global        | boolean   | No       | A flag indicating if the assignment is global or not. If set to `false`, the default org ID of the authenticated user will be used from the request. |
+| roleUids      | list      | Yes      | List of role UIDs.                                                                                                                                   |
+| includeHidden | boolean   | No       | Specify whether the hidden role assignments should be updated.                                                                                       |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "User roles have been updated."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Roles have been assigned.                                            |
+| 403  | Access denied.                                                       |
+| 404  | Role not found.                                                      |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+## Create and remove service account role assignments
+
+### List roles assigned to a service account
+
+`GET /api/access-control/users/:serviceAccountId/roles`
+
+Lists the roles that have been directly assigned to a given service account. The list does not include basic roles (Viewer, Editor, Admin or Grafana Admin).
+
+Query Parameters:
+
+- `includeHidden`: Optional. Set to `true` to include roles that are `hidden`.
+
+#### Required permissions
+
+| Action           | Scope                           |
+| ---------------- | ------------------------------- |
+| users.roles:read | users:id:`<service account ID>` |
+
+#### Example request
+
+```http
+GET /api/access-control/users/1/roles
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+[
+    {
+        "version": 4,
+        "uid": "6dNwJq57z",
+        "name": "fixed:reports:writer",
+        "displayName": "Report writer",
+        "description": "Create, read, update, or delete all reports and shared report settings.",
+        "group": "Reports",
+        "updated": "2021-11-19T10:48:00+01:00",
+        "created": "2021-11-19T10:48:00+01:00",
+        "global": false
+    }
+]
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Set of assigned roles is returned.                                   |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### List permissions assigned to a service account
+
+`GET /api/access-control/users/:serviceAccountId/permissions`
+
+Lists the permissions that a given service account has.
+
+#### Required permissions
+
+| Action                 | Scope                           |
+| ---------------------- | ------------------------------- |
+| users.permissions:read | users:id:`<service account ID>` |
+
+#### Example request
+
+```http
+GET /api/access-control/users/1/permissions
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+[
+    {
+        "action": "ldap.status:read",
+        "scope": ""
+    },
+    {
+        "action": "ldap.user:read",
+        "scope": ""
+    }
+]
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Set of assigned permissions is returned.                             |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### Add a service account role assignment
+
+`POST /api/access-control/users/:serviceAccountId/roles`
+
+Assign a role to a specific service account.
+
+For bulk updates consider
+[Set service account role assignments](#set-service-account-role-assignments).
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only assign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to assign a role which will allow to do that. This is done to prevent escalation of privileges.
+
+| Action          | Scope                     |
+| --------------- | ------------------------- |
+| users.roles:add | permissions:type:delegate |
+
+#### Example request
+
+```http
+POST /api/access-control/users/1/roles
+Accept: application/json
+Content-Type: application/json
+
+{
+    "global": false,
+    "roleUid": "XvHQJq57z"
+}
+```
+
+#### JSON body schema
+
+| Field Name | Data Type | Required | Description                                                                                                                                                                                  |
+| ---------- | --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| roleUid    | string    | Yes      | UID of the role.                                                                                                                                                                             |
+| global     | boolean   | No       | A flag indicating if the assignment is global or not. If set to `false`, the default org ID of the authenticated user will be used from the request to create organization local assignment. |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Role added to the user."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Role is assigned to a user.                                          |
+| 403  | Access denied.                                                       |
+| 404  | Role not found.                                                      |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+## Remove a service account role assignment
+
+`DELETE /api/access-control/users/:serviceAccountId/roles/:roleUID`
+
+Revoke a role from a service account.
+
+For bulk updates consider
+[Set service account role assignments](#set-service-account-role-assignments).
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only unassign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to unassign a role which will allow to do that. This is done to prevent escalation of privileges.
+
+| Action             | Scope                     |
+| ------------------ | ------------------------- |
+| users.roles:remove | permissions:type:delegate |
+
+#### Query parameters
+
+| Param  | Type    | Required | Description                                                                                                                                                               |
+| ------ | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| global | boolean | No       | A flag indicating if the assignment is global or not. If set to `false`, the default org ID of the authenticated user will be used from the request to remove assignment. |
+
+#### Example request
+
+```http
+DELETE /api/access-control/users/1/roles/AFUXBHKnk
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Role removed from user."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Role is unassigned.                                                  |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### Set service account role assignments
+
+`PUT /api/access-control/users/:serviceAccountId/roles`
+
+Update the service accounts's role assignments to match the provided set of UIDs.
+This will remove any assigned roles that aren't in the request and add
+roles that are in the set but are not already assigned to the service account.
+
+If you want to add or remove a single role, consider using
+[Add a service account role assignment](#add-a-service-account-role-assignment) or
+[Remove a service account role assignment](#remove-a-service-account-role-assignment)
+instead.
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only assign or unassign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to assign or unassign a role which will allow to do that. This is done to prevent escalation of privileges.
+
+| Action             | Scope                     |
+| ------------------ | ------------------------- |
+| users.roles:add    | permissions:type:delegate |
+| users.roles:remove | permissions:type:delegate |
+
+#### Example request
+
+```http
+PUT /api/access-control/users/1/roles
+Accept: application/json
+Content-Type: application/json
+
+{
+    "global": false,
+    "roleUids": [
+        "ZiHQJq5nk",
+        "GzNQ1357k"
+    ]
+}
+```
+
+#### JSON body schema
+
+| Field Name    | Date Type | Required | Description                                                                                                                                          |
+| ------------- | --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| global        | boolean   | No       | A flag indicating if the assignment is global or not. If set to `false`, the default org ID of the authenticated user will be used from the request. |
+| roleUids      | list      | Yes      | List of role UIDs.                                                                                                                                   |
+| includeHidden | boolean   | No       | Specify whether the hidden role assignments should be updated.                                                                                       |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "User roles have been updated."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Roles have been assigned.                                            |
+| 403  | Access denied.                                                       |
+| 404  | Role not found.                                                      |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+## Create and remove team role assignments
+
+### List roles assigned to a team
+
+`GET /api/access-control/teams/:teamId/roles`
+
+Lists the roles that have been directly assigned to a given team.
+
+Query Parameters:
+
+- `includeHidden`: Optional. Set to `true` to include roles that are `hidden`.
+
+#### Required permissions
+
+| Action           | Scope                |
+| ---------------- | -------------------- |
+| teams.roles:read | teams:id:`<team ID>` |
+
+#### Example request
+
+```http
+GET /api/access-control/teams/1/roles
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+[
+    {
+        "version": 4,
+        "uid": "j08ZBi-nk",
+        "name": "fixed:licensing:reader",
+        "displayName": "Licensing reader",
+        "description": "Read licensing information and licensing reports.",
+        "group": "Licenses",
+        "updated": "2022-02-03T14:19:50+01:00",
+        "created": "0001-01-01T00:00:00Z",
+        "global": false
+    }
+]
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Set of assigned roles is returned.                                   |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### Add a team role assignment
+
+`POST /api/access-control/teams/:teamId/roles`
+
+Assign a role to a specific team.
+
+For bulk updates consider [Set team role assignments](#set-team-role-assignments).
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only assign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have the permissions required to create users, they won't be able to assign a role that contains these permissions. This is done to prevent escalation of privileges.
+
+| Action          | Scope                     |
+| --------------- | ------------------------- |
+| teams.roles:add | permissions:type:delegate |
+
+#### Example request
+
+```http
+POST /api/access-control/teams/1/roles
+Accept: application/json
+Content-Type: application/json
+
+{
+    "roleUid": "XvHQJq57z"
+}
+```
+
+#### JSON body schema
+
+| Field Name | Data Type | Required | Description      |
+| ---------- | --------- | -------- | ---------------- |
+| roleUid    | string    | Yes      | UID of the role. |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Role added to the team."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Role is assigned to a team.                                          |
+| 403  | Access denied.                                                       |
+| 404  | Role not found.                                                      |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+## Remove a team role assignment
+
+`DELETE /api/access-control/teams/:teams/roles/:roleUID`
+
+Revoke a role from a team.
+
+For bulk updates consider [Set team role assignments](#set-team-role-assignments).
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only unassign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have the permissions required to create users, they won't be able to assign a role that contains these permissions. This is done to prevent escalation of privileges.\`\`\`
+
+| Action             | Scope                     |
+| ------------------ | ------------------------- |
+| teams.roles:remove | permissions:type:delegate |
+
+#### Example request
+
+```http
+DELETE /api/access-control/teams/1/roles/AFUXBHKnk
+Accept: application/json
+```
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Role removed from team."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Role is unassigned.                                                  |
+| 403  | Access denied.                                                       |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+### Set team role assignments
+
+`PUT /api/access-control/teams/:teamId/roles`
+
+Update the team's role assignments to match the provided set of UIDs.
+This will remove any assigned roles that aren't in the request and add
+roles that are in the set but are not already assigned to the user.
+
+If you want to add or remove a single role, consider using
+[Add a team role assignment](#add-a-team-role-assignment) or
+[Remove a team role assignment](#remove-a-team-role-assignment)
+instead.
+
+#### Required permissions
+
+`permissions:type:delegate` scope ensures that users can only assign or unassign roles which have same, or a subset of permissions which the user has.
+For example, if a user does not have required permissions for creating users, they won't be able to assign or unassign a role to a team which will allow to do that. This is done to prevent escalation of privileges.
+
+| Action             | Scope                     |
+| ------------------ | ------------------------- |
+| teams.roles:add    | permissions:type:delegate |
+| teams.roles:remove | permissions:type:delegate |
+
+#### Example request
+
+```http
+PUT /api/access-control/teams/1/roles
+Accept: application/json
+Content-Type: application/json
+
+{
+    "roleUids": [
+        "ZiHQJq5nk",
+        "GzNQ1357k"
+    ]
+}
+```
+
+#### JSON body schema
+
+| Field Name    | Date Type | Required | Description                                                    |
+| ------------- | --------- | -------- | -------------------------------------------------------------- |
+| roleUids      | list      | Yes      | List of role UIDs.                                             |
+| includeHidden | boolean   | No       | Specify whether the hidden role assignments should be updated. |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Team roles have been updated."
+}
+```
+
+#### Status codes
+
+| Code | Description                                                          |
+| ---- | -------------------------------------------------------------------- |
+| 200  | Roles have been assigned.                                            |
+| 403  | Access denied.                                                       |
+| 404  | Role not found.                                                      |
+| 500  | Unexpected error. Refer to body and/or server logs for more details. |
+
+## Reset basic roles to their default
+
+`POST /api/access-control/roles/hard-reset`
+
+`permissions:type:escalate` scope enables users to reset basic roles permissions.
+This could result in basic roles having permissions exceedind those of callers.
+
+Reset basic roles permissions to their default.
+
+#### Required permissions
+
+| Action      | Scope                     |
+| ----------- | ------------------------- |
+| roles:write | permissions:type:escalate |
+
+#### Example request
+
+```http
+POST /api/access-control/roles/hard-reset
+Accept: application/json
+Content-Type: application/json
+
+{
+    "BasicRoles": true
+}
+```
+
+#### JSON body schema
+
+| Field Name | Data Type | Required | Description                              |
+| ---------- | --------- | -------- | ---------------------------------------- |
+| BasicRoles | boolean   | No       | Option to reset basic roles permissions. |
+
+#### Example response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{
+    "message": "Reset performed"
+}
+```
+
+#### Status codes
+
+| Code | Description                 |
+| ---- | --------------------------- |
+| 200  | Reset performed             |
+| 500  | Failed to reset basic roles |
+
 
 # Document: Reporting API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/reporting.md
 Description: This API allows you to interact programmatically with the Reporting feature.
 
 # Reporting API
@@ -687,8 +6030,8 @@ Content-Length: 29
 # Document: SSO Settings API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/sso-settings.md
 Description: The API can be used to create, update, delete, get, and list SSO Settings for OAuth2 and SAML.
 
 # SSO Settings API
@@ -937,8 +6280,8 @@ Status Codes:
 # Document: Service account HTTP API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/serviceaccount.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/serviceaccount.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/serviceaccount.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/serviceaccount.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/serviceaccount.md
 Description: GET /api/serviceaccounts/search?perpage=10&page=1&query=myserviceaccount
 
 # Service account API
@@ -1310,8 +6653,8 @@ Content-Type: application/json
 # Document: Shared Dashboards HTTP API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_public.md
 Description: If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to Role-based access control permissions for more information.
 
 # Shared Dashboards API
@@ -1323,6 +6666,10 @@ Description: If you're running Grafana Enterprise, you'll need to have specific 
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
 > To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+> **Note**
+>
+> This is a legacy API. To create, read, update, and delete dashboards, use the [Dashboard HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/dashboard/). It supports both the classic dashboard JSON model (`v1`) and the dashboard schema v2 (`v2`). To learn more, refer to [API versions](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/dashboard/#api-versions).
 
 ## Requirements
 
@@ -1628,8 +6975,8 @@ Content-Type: application/json
 # Document: Short URL HTTP API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md
 Description: Use this API to create shortened URLs. A short URL represents a longer URL containing complex query parameters in a smaller and simpler format.
 
 # Short URL API
@@ -1644,12 +6991,9 @@ Description: Use this API to create shortened URLs. A short URL represents a lon
 
 > **Note**
 >
-> Grafana announced the deprecation of this API on September 23, 2026. Use the `shorturl.grafana.app/v1beta1` API group instead:
+> This HTTP API is deprecated since September 2026. Use the [Short URL HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/short_url) instead.
 >
-> - **Create a short URL:** `POST /apis/shorturl.grafana.app/v1beta1/namespaces/{namespace}/shorturls`
-> - **Retrieve a short URL:** `GET /apis/shorturl.grafana.app/v1beta1/namespaces/{namespace}/shorturls/{name}`
->
-> The new API uses different request and response shapes than the endpoints on this page, so changing the URL alone isn't enough. Refer to the [Short URL API Swagger documentation](https://play.grafana.org/swagger?api=shorturl.grafana.app-v1beta1) for the schemas, and to [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/) for how to determine the `{namespace}` for your instance.
+> Refer to [Migrate from the legacy Short URL API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/short_url/#migrate-from-the-legacy-short-url-api) to learn more about the new API, and how to migrate.
 
 Use this API to create shortened URLs. A short URL represents a longer URL containing complex query parameters in a smaller and simpler format.
 
@@ -1698,8 +7042,8 @@ Status codes:
 # Document: Snapshot API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/snapshot.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/snapshot.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/snapshot.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/snapshot.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/snapshot.md
 Description: POST /api/snapshots
 
 # Snapshot API
@@ -1929,8 +7273,8 @@ Content-Type: application/json
 # Document: Team HTTP API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/team.md
 Description: This API can be used to manage Teams and Team Memberships.
 
 # Team API
@@ -2372,6 +7716,10 @@ Status Codes:
 
 ## Get Team Preferences
 
+> **Note**
+>
+> This endpoint is deprecated. Use the [Preferences HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/) with the `team-<TEAM_UID>` name instead. To learn how the legacy endpoints map to the new ones, refer to [Migrate from the legacy Preferences API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/#migrate-from-the-legacy-preferences-api).
+
 `GET /api/teams/:teamId/preferences`
 
 **Required permissions**
@@ -2406,6 +7754,10 @@ Content-Type: application/json
 ```
 
 ## Update Team Preferences
+
+> **Note**
+>
+> This endpoint is deprecated. Use the [Preferences HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/) with the `team-<TEAM_UID>` name instead. To learn how the legacy endpoints map to the new ones, refer to [Migrate from the legacy Preferences API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/preferences/#migrate-from-the-legacy-preferences-api).
 
 `PUT /api/teams/:teamId/preferences`
 
@@ -2457,8 +7809,8 @@ Content-Type: text/plain; charset=utf-8
 # Document: Team Sync HTTP API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/team_sync.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/team_sync.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/team_sync.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/team_sync.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/team_sync.md
 Description: GET /api/teams/:teamId/groups
 
 # Team Sync API
@@ -2651,8 +8003,8 @@ Status Codes:
 # Document: User HTTP API
 
 Source path: docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/user.md
 Description: The User API is a special, instance-wide endpoint that lists users across every organization on all its Grafana instances.
 
 # User API
@@ -3343,8 +8695,8 @@ Content-Type: application/json
 # Document: HTTP API examples
 
 Source path: docs/sources/developer-resources/api-reference/http-api/examples/_index.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/examples/_index.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/examples/_index.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/examples/_index.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/examples/_index.md
 Description: Normalized source from docs/sources/developer-resources/api-reference/http-api/examples/_index.md.
 
 # HTTP API examples
@@ -3356,8 +8708,8 @@ Description: Normalized source from docs/sources/developer-resources/api-referen
 # Document: API Tutorial: Create Service Account tokens and dashboards for an organization
 
 Source path: docs/sources/developer-resources/api-reference/http-api/examples/create-api-tokens-for-org.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/examples/create-api-tokens-for-org.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/examples/create-api-tokens-for-org.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/examples/create-api-tokens-for-org.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/examples/create-api-tokens-for-org.md
 Description: Use the Grafana API to set up new Grafana organizations or to add dynamically generated dashboards to an existing organization.
 
 # Create Service Account tokens and dashboards for an organization
@@ -3452,8 +8804,8 @@ curl -X POST --insecure -H "Authorization: Bearer eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RW
 # Document: cURL examples
 
 Source path: docs/sources/developer-resources/api-reference/http-api/examples/curl-examples.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/examples/curl-examples.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/examples/curl-examples.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/examples/curl-examples.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/examples/curl-examples.md
 Description: This page provides examples of calls to the Grafana API using cURL.
 
 # cURL examples
@@ -3485,8 +8837,8 @@ curl --location '<grafana_url>/api/access-control/builtin-roles' --user 'user:pa
 # Document: Grafana Cloud API
 
 Source path: docs/sources/developer-resources/api-reference/cloud-api/_index.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/cloud-api/_index.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/cloud-api/_index.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/cloud-api/_index.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/cloud-api/_index.md
 Description: The Grafana Cloud API, sometimes referred to as the Grafana.com API or GCOM API, allows you to interact with resources from your Grafana Cloud Stack programmatically.
 
 # Grafana Cloud API
@@ -3979,7 +9331,7 @@ Example response:
   "lastUsedAt": "2022-06-08T22:05:46.959Z",
   "createdAt": "2022-06-08T22:05:46.959Z",
   "updatedAt": "2022-06-08T22:05:46.959Z",
-  "token": "glc_eyJrIjoiZjI0YzZkNGEwZDBmZmZjMmUzNTU2ODcxMmY0ZWZlNTQ1NTljMDFjOCIsIm4iOiJteXRva2VuIiwiaWQiOjF9"
+  "token": "glc_<redacted-example-token>"
 }
 ```
 
@@ -5702,8 +11054,8 @@ Example response:
 # Document: Grafana Cloud tracing API
 
 Source path: docs/sources/developer-resources/api-reference/tracing-api/_index.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/tracing-api/_index.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/tracing-api/_index.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/tracing-api/_index.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/tracing-api/_index.md
 Description: Consult the following tracing API reference resources as necessary:
 
 # Grafana Cloud tracing API
@@ -5719,8 +11071,8 @@ Consult the following tracing API reference resources as necessary:
 # Document: Grafana Cloud Synthetic Monitoring API
 
 Source path: docs/sources/developer-resources/api-reference/synthetic-monitoring-api/_index.md
-Pinned source: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/synthetic-monitoring-api/_index.md
-Canonical documentation: https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/synthetic-monitoring-api/_index.md
+Pinned source: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/synthetic-monitoring-api/_index.md
+Canonical documentation: https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/synthetic-monitoring-api/_index.md
 Description: Consult the following Synthetic Monitoring API reference resources as necessary:
 
 # Grafana Cloud Synthetic Monitoring API

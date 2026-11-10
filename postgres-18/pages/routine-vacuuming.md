@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/maintenance.sgml#routine-vacuuming](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/maintenance.sgml%23routine-vacuuming)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/maintenance.sgml#routine-vacuuming](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/maintenance.sgml%23routine-vacuuming)
 > Canonical documentation: https://www.postgresql.org/docs/18/routine-vacuuming.html
 
 # Routine Vacuuming
@@ -141,7 +141,7 @@ In this condition any transactions already in progress can continue, but only re
 1. Resolve old prepared transactions. You can find these by checking [`pg_prepared_xacts`](./view-pg-prepared-xacts.md) for rows where `age(transactionid)` is large. Such transactions should be committed or rolled back.
 2. End long-running open transactions. You can find these by checking [`pg_stat_activity`](./monitoring-stats.md#pgstatactivity) for rows where `age(backend_xid)` or `age(backend_xmin)` is large. Such transactions should be committed or rolled back, or the session can be terminated using `pg_terminate_backend`.
 3. Drop any old replication slots. Use [`pg_replication_slots`](./view-pg-replication-slots.md) to find slots where `age(xmin)` or `age(catalog_xmin)` is large. In many cases, such slots were created for replication to servers that no longer exist, or that have been down for a long time. If you drop a slot for a server that still exists and might still try to connect to that slot, that replica may need to be rebuilt.
-4. Execute `VACUUM` in the target database. A database-wide `VACUUM` is simplest; to reduce the time required, it as also possible to issue manual `VACUUM` commands on the tables where `relminxid` is oldest. Do not use `VACUUM FULL` in this scenario, because it requires an XID and will therefore fail, except in super-user mode, where it will instead consume an XID and thus increase the risk of transaction ID wraparound. Do not use `VACUUM FREEZE` either, because it will do more than the minimum amount of work required to restore normal operation.
+4. Execute `VACUUM` in the target database. A database-wide `VACUUM` is simplest; to reduce the time required, it is also possible to issue manual `VACUUM` commands on the tables where `relminxid` is oldest. Do not use `VACUUM FULL` in this scenario, because it requires an XID and will therefore fail, except in super-user mode, where it will instead consume an XID and thus increase the risk of transaction ID wraparound. Do not use `VACUUM FREEZE` either, because it will do more than the minimum amount of work required to restore normal operation.
 5. Once normal operation is restored, ensure that autovacuum is properly configured in the target database in order to avoid future problems.
 
 > **Note**

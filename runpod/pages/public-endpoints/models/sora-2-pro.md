@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/sora-2-pro.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/public-endpoints/models/sora-2-pro.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/sora-2-pro.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/public-endpoints/models/sora-2-pro.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/sora-2-pro
 
 # SORA 2 Pro I2V

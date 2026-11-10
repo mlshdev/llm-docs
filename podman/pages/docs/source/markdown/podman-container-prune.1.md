@@ -1,10 +1,10 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-container-prune.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-container-prune.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-container-prune.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-container-prune.1.md)
 
 # podman-container-prune
 
 ## NAME
 
-podman-container-prune - Remove all stopped containers from local storage
+podman-container-prune - Remove all stopped containers not associated with pods from local storage
 
 ## SYNOPSIS
 
@@ -12,7 +12,7 @@ podman-container-prune - Remove all stopped containers from local storage
 
 ## DESCRIPTION
 
-**podman container prune** removes all stopped containers from local storage.
+**podman container prune** removes all stopped containers that are not associated with a pod from local storage.
 
 ## OPTIONS
 
@@ -48,7 +48,7 @@ The default is **false**.
 
 ## EXAMPLES
 
-Remove all stopped containers from local storage:
+Remove all stopped containers not associated with pods from local storage:
 
 ```
 $ podman container prune
@@ -62,7 +62,7 @@ fff1c5b6c3631746055ec40598ce8ecaa4b82aef122f9e3a85b03b55c0d06c23
 602d343cd47e7cb3dfc808282a9900a3e4555747787ec6723bb68cedab8384d5
 ```
 
-Remove all stopped containers from local storage without confirmation:
+Remove all stopped containers not associated with pods from local storage without confirmation:
 
 ```
 $ podman container prune -f
@@ -74,7 +74,7 @@ fff1c5b6c3631746055ec40598ce8ecaa4b82aef122f9e3a85b03b55c0d06c23
 602d343cd47e7cb3dfc808282a9900a3e4555747787ec6723bb68cedab8384d5
 ```
 
-Remove all stopped containers from local storage created before the last 10 minutes:
+Remove all stopped containers not associated with pods from local storage created before the last 10 minutes:
 
 ```
 $ podman container prune --filter until="10m"
@@ -85,7 +85,7 @@ Are you sure you want to continue? [y/N] y
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-ps(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-ps.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-ps(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-ps.1.md.in)**
 
 ## HISTORY
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/cli-promote-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/cli-promote-commands.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/cli-promote-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/cli-promote-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-promote-commands
 
 # CLI promote command
@@ -30,6 +30,12 @@ npx trigger.dev@latest promote <version>
 The version to promote, e.g. `20250208.1`.
 
 ## Options
+
+**Property (type: --auth-method \<method>)**
+
+Use `auto` (default) or `oidc`. In GitHub Actions, `auto` uses OIDC when no
+`TRIGGER_ACCESS_TOKEN` is set. Explicit `oidc` ignores stored credentials and tokens.
+The workflow must match the target environment's [trusted-publishing settings](https://trigger.dev/docs/deployment/trusted-publishing).
 
 **Property (type: -c, --config \<config file>)**
 

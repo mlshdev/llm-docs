@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/protocol.sgml#sasl-authentication](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/protocol.sgml%23sasl-authentication)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/protocol.sgml#sasl-authentication](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/protocol.sgml%23sasl-authentication)
 > Canonical documentation: https://www.postgresql.org/docs/18/sasl-authentication.html
 
 # SASL Authentication
@@ -43,6 +43,10 @@ SCRAM with channel binding prevents such man-in-the-middle attacks by mixing the
 A typical exchange differs depending on whether or not the client already has a bearer token cached for the current user. If it does not, the exchange will take place over two connections: the first "discovery" connection to obtain OAuth metadata from the server, and the second connection to send the token after the client has obtained it. (libpq does not currently implement a caching method as part of its builtin flow, so it uses the two-connection exchange.)
 
 This mechanism is client-initiated, like SCRAM. The client initial response consists of the standard "GS2" header used by SCRAM, followed by a list of `key=value` pairs. The only key currently supported by the server is `auth`, which contains the bearer token. `OAUTHBEARER` additionally specifies three optional components of the client initial response (the `authzid` of the GS2 header, and the `host` and `port` keys) which are currently ignored by the server.
+
+> **Note**
+>
+> The bearer token is sent across the connection, as part of the client initial response, and grants access to the database like a clear-text password. On an unencrypted connection it can be captured by network sniffing. For this reason `OAUTHBEARER` should only be used over SSL connections.
 
 `OAUTHBEARER` does not support channel binding, and there is no "OAUTHBEARER-PLUS" mechanism. This mechanism does not make use of server data during a successful authentication, so the AuthenticationSASLFinal message is not used in the exchange.
 

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-metrics.md)
 
 # Configure trace to metrics correlation
 
@@ -46,7 +46,7 @@ To use a basic configuration, follow these steps:
 
 4. Don't select **Add query**.
 
-5. Select **Save and Test**.
+5. Select **Save & test**.
 
 ## Set up custom queries
 
@@ -80,7 +80,7 @@ To use custom queries with the configuration, follow these steps:
      Interpolate tags using the `$__tags` keyword.
      For example, when you configure the query `requests_total{$__tags}` with the tags `k8s.pod=pod` and `cluster`, the result looks like `requests_total{pod="nginx-554b9", cluster="us-east-1"}`.
 
-5. Select **Save and Test**.
+5. Select **Save & test**.
 
 ## Configuration options
 

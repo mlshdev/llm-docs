@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/seg.sgml#seg](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/seg.sgml%23seg)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/seg.sgml#seg](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/seg.sgml%23seg)
 > Canonical documentation: https://www.postgresql.org/docs/18/seg.html
 
 # seg — a datatype for line segments or floating point intervals
@@ -73,9 +73,9 @@ As a sanity check, `seg` rejects intervals with the lower bound greater than the
 
 ## Precision
 
-`seg` values are stored internally as pairs of 32-bit floating point numbers. This means that numbers with more than 7 significant digits will be truncated.
+`seg` values are stored internally as pairs of 32-bit floating point numbers. This means that numbers with more than 6 significant digits will be truncated.
 
-Numbers with 7 or fewer significant digits retain their original precision. That is, if your query returns 0.00, you will be sure that the trailing zeroes are not the artifacts of formatting: they reflect the precision of the original data. The number of leading zeroes does not affect precision: the value 0.0067 is considered to have just 2 significant digits.
+Numbers with 6 or fewer significant digits retain their original precision. That is, if your query returns 0.00, you will be sure that the trailing zeroes are not the artifacts of formatting: they reflect the precision of the original data. The number of leading zeroes does not affect precision: the value 0.0067 is considered to have just 2 significant digits.
 
 ## Usage
 

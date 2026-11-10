@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/textsearch.sgml#textsearch-features](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/textsearch.sgml%23textsearch-features)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/textsearch.sgml#textsearch-features](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/textsearch.sgml%23textsearch-features)
 > Canonical documentation: https://www.postgresql.org/docs/18/textsearch-features.html
 
 # Additional Features
@@ -234,12 +234,12 @@ Keep in mind that it is important to specify the configuration name explicitly w
 The function `ts_stat` is useful for checking your configuration and for finding stop-word candidates.
 
 ```
-ts_stat(sqlquery text,  weights text, 
+ts_stat(query text,  weights text, 
         OUT word text, OUT ndoc integer,
         OUT nentry integer) returns setof record
 ```
 
-`sqlquery` is a text value containing an SQL query which must return a single `tsvector` column. `ts_stat` executes the query and returns statistics about each distinct lexeme (word) contained in the `tsvector` data. The columns returned are
+`query` is a text value containing an SQL query which must return a single `tsvector` column. `ts_stat` executes the query and returns statistics about each distinct lexeme (word) contained in the `tsvector` data. The columns returned are
 
 - `word` `text` — the value of a lexeme
 - `ndoc` `integer` — number of documents (`tsvector`s) the word occurred in

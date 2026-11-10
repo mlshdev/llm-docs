@@ -4,13 +4,13 @@
 
 ## Projects
 
-- [Traefik Proxy v3.7.17](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
+- [Traefik Proxy v3.7.18](traefik/llms.txt): [full corpus](traefik/llms-full.txt), [manifest](traefik/manifest.json)
 - [NetBird v0.81.4](netbird/llms.txt): [full corpus](netbird/llms-full.txt), [manifest](netbird/manifest.json)
-- [Podman v6.1.4](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
+- [Podman v6.2.0](podman/llms.txt): [full corpus](podman/llms-full.txt), [manifest](podman/manifest.json)
 - [Docker main](docker/llms.txt): [full corpus](docker/llms-full.txt), [manifest](docker/manifest.json)
 - [Apple container 1.7.1](container/llms.txt): [full corpus](container/llms-full.txt), [manifest](container/manifest.json)
 - [n8n main](n8n/llms.txt): [full corpus](n8n/llms-full.txt), [manifest](n8n/manifest.json)
-- [Grafana v13.3.0](grafana/llms.txt): [full corpus](grafana/llms-full.txt), [manifest](grafana/manifest.json)
+- [Grafana v13.3.1](grafana/llms.txt): [full corpus](grafana/llms-full.txt), [manifest](grafana/manifest.json)
 - [VictoriaMetrics v1.156.0](victoriametrics/llms.txt): [full corpus](victoriametrics/llms-full.txt), [manifest](victoriametrics/manifest.json)
 - [VictoriaLogs v1.53.0](victorialogs/llms.txt): [full corpus](victorialogs/llms-full.txt), [manifest](victorialogs/manifest.json)
 - [VictoriaMetrics datasource for Grafana v1.0.1](victoriametrics-datasource/llms.txt): [full corpus](victoriametrics-datasource/llms-full.txt), [manifest](victoriametrics-datasource/manifest.json)
@@ -21,9 +21,9 @@
 - [yt-dlp 2026.10.26](yt-dlp/llms.txt): [full corpus](yt-dlp/llms-full.txt), [manifest](yt-dlp/manifest.json)
 - [SearXNG master](searxng/llms.txt): [full corpus](searxng/llms-full.txt), [manifest](searxng/manifest.json)
 - [Bun bun-v1.4.4](bun/llms.txt): [full corpus](bun/llms-full.txt), [manifest](bun/manifest.json)
-- [Trigger.dev v4.8.3](trigger-dev/llms.txt): [full corpus](trigger-dev/llms-full.txt), [manifest](trigger-dev/manifest.json)
+- [Trigger.dev v4.8.4](trigger-dev/llms.txt): [full corpus](trigger-dev/llms-full.txt), [manifest](trigger-dev/manifest.json)
 - [aria2 release-1.37.0](aria2/llms.txt): [full corpus](aria2/llms-full.txt), [manifest](aria2/manifest.json)
-- [PostgreSQL 18 REL_18_6](postgres-18/llms.txt): [full corpus](postgres-18/llms-full.txt), [manifest](postgres-18/manifest.json)
+- [PostgreSQL 18 REL_18_7](postgres-18/llms.txt): [full corpus](postgres-18/llms-full.txt), [manifest](postgres-18/manifest.json)
 - [Vast.ai main](vastai/llms.txt): [full corpus](vastai/llms-full.txt), [manifest](vastai/manifest.json)
 - [Runpod main](runpod/llms.txt): [full corpus](runpod/llms-full.txt), [manifest](runpod/manifest.json)
 - [discord.py-self v2.1.0](discord-py-self/llms.txt): [full corpus](discord-py-self/llms-full.txt), [manifest](discord-py-self/manifest.json)

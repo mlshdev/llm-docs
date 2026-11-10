@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/getting-started/faq.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/getting-started/faq.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/getting-started/faq.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/getting-started/faq.md)
 
 # FAQ
 
@@ -219,8 +219,8 @@ The "field not found" error occurs, when an unknown property is encountered in t
 
 One way to check whether a configuration file is well-formed, is to validate it with:
 
-- [JSON Schema of the static configuration](https://json.schemastore.org/traefik-v2.json)
-- [JSON Schema of the dynamic configuration](https://json.schemastore.org/traefik-v2-file-provider.json)
+- [JSON Schema of the static configuration](https://www.schemastore.org/traefik-v2.json)
+- [JSON Schema of the dynamic configuration](https://www.schemastore.org/traefik-v2-file-provider.json)
 
 ## Why are some resources (routers, middlewares, services...) not created/applied?
 
@@ -231,7 +231,7 @@ If found, the error confirms that something went wrong while creating the resour
 and the message should help in figuring out the mistake(s) in the configuration, and how to fix it.
 
 When using the file provider,
-one way to check if the dynamic configuration is well-formed is to validate it with the [JSON Schema of the dynamic configuration](https://json.schemastore.org/traefik-v2-file-provider.json).
+one way to check if the dynamic configuration is well-formed is to validate it with the [JSON Schema of the dynamic configuration](https://www.schemastore.org/traefik-v2-file-provider.json).
 
 ## Why does Let's Encrypt wildcard certificate renewal/generation with DNS challenge fail?
 

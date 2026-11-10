@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/config.sgml#runtime-config-vacuum](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/config.sgml%23runtime-config-vacuum)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/config.sgml#runtime-config-vacuum](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/config.sgml%23runtime-config-vacuum)
 > Canonical documentation: https://www.postgresql.org/docs/18/runtime-config-vacuum.html
 
 # Vacuuming
@@ -161,4 +161,4 @@ To maintain correctness even after transaction IDs wrap around, PostgreSQL marks
 
   Note that when eager scanning is enabled, only freeze failures count against the cap, not successful freezing. Successful page freezes are capped internally at 20% of the all-visible but not all-frozen pages in the relation. Capping successful page freezes helps amortize the overhead across multiple normal vacuums and limits the potential downside of wasted eager freezes of pages that are modified again before the next aggressive vacuum.
 
-  This parameter can only be set in the `postgresql.conf` file or on the server command line; but the setting can be overridden for individual tables by changing the [corresponding table storage parameter](./sql-createtable.md#reloption-vacuum-max-eager-freeze-failure-rate). For more information on tuning vacuum's freezing behavior, see [Preventing Transaction ID Wraparound Failures](./routine-vacuuming.md#preventing-transaction-id-wraparound-failures).
+  The setting can be overridden for individual tables by changing the [corresponding table storage parameter](./sql-createtable.md#reloption-vacuum-max-eager-freeze-failure-rate). For more information on tuning vacuum's freezing behavior, see [Preventing Transaction ID Wraparound Failures](./routine-vacuuming.md#preventing-transaction-id-wraparound-failures).

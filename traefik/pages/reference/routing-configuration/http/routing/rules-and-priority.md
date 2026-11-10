@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/routing/rules-and-priority.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/routing/rules-and-priority.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/routing/rules-and-priority.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/routing/rules-and-priority.md)
 
 An HTTP router is in charge of connecting incoming requests to the services that can handle them. Traefik allows you to define your matching rules and [prioritize](#priority-calculation) the routes.
 
@@ -8,7 +8,7 @@ Rules are a set of matchers configured with values, that determine if a particul
 If the rule is verified, the router becomes active, calls middlewares, and then forwards the request to the service.
 
 - To set the value of a rule, use [backticks](https://en.wiktionary.org/wiki/backtick) `` ` `` or escaped double-quotes `\"`.
-  - Single quotes `'` are not accepted since the values are [Go's String Literals](https://golang.org/ref/spec#String_literals).
+  - Single quotes `'` are not accepted since the values are [Go's String Literals](https://go.dev/ref/spec#String_literals).
 - Matchers that accept a regular expression (`regexp`) use the [Go flavored syntax](https://golang.org/pkg/regexp/).
 - The usual AND (`&&`) and OR (`||`) logical operators can be used, with the expected precedence rules, as well as parentheses to express complex rules.
 - The NOT (`!`) operator allows you to invert the matcher.

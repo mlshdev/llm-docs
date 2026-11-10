@@ -1,13 +1,13 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/waf.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/waf.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/waf.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/waf.md)
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
-> The [Coraza WAF](https://coraza.io/) middleware in Traefik Hub API Gateway provides web application firewall capabilities.
+> The [Coraza WAF](https://www.coraza.io/) middleware in Traefik Hub API Gateway provides web application firewall capabilities.
 
 The native middleware in Hub API Gateway provides at least 23 times more performance compared to the
 WASM-based [Coraza plugin](https://plugins.traefik.io/plugins/65f2aea146079255c9ffd1ec/coraza-waf) available with the open-source Traefik Proxy.
 
-To learn how to write rules, please visit [Coraza documentation](https://coraza.io/docs/tutorials/introduction/ "Link to Coraza introduction tutorial") and
+To learn how to write rules, please visit [Coraza documentation](https://www.coraza.io/docs/tutorials/introduction/ "Link to Coraza introduction tutorial") and
 [OWASP CRS documentation](https://coreruleset.org/docs/ "Link to the OWAP CRS project documentation").
 
 > **Warning**

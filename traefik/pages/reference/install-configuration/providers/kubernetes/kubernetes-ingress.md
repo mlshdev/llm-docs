@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md)
 
 # Traefik & Kubernetes
 
@@ -6,7 +6,7 @@ The Traefik Kubernetes Ingress provider is a Kubernetes Ingress controller; i.e,
 it manages access to cluster services by supporting the [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) specification.
 
 > **Ingress Backend Resource not supported**
-> Referencing backend service endpoints using [`spec.rules.http.paths.backend.resource`](https://kubernetes.io/docs/reference/kubernetes-api/service-resources/ingress-v1/#IngressBackend) is not supported.
+> Referencing backend service endpoints using [`spec.rules.http.paths.backend.resource`](https://kubernetes.io/docs/reference/kubernetes-api/networking/ingress-v1/#IngressBackend) is not supported.
 > Use `spec.rules.http.paths.backend.service` instead.
 > **Ingress API frozen**
 > The Kubernetes Ingress API is [frozen](https://kubernetes.io/docs/concepts/services-networking/ingress/) and will not receive further changes or updates.

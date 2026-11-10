@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/wan-2-2-i2v-lora.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/public-endpoints/models/wan-2-2-i2v-lora.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/wan-2-2-i2v-lora.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/public-endpoints/models/wan-2-2-i2v-lora.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/wan-2-2-i2v-lora
 
 # WAN 2.2 I2V 720p LoRA

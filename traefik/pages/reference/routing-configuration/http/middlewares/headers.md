@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/headers.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/headers.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/headers.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/headers.md)
 
 The Headers middleware manages the headers of requests and responses.
 
@@ -340,7 +340,7 @@ This value can contain a list of allowed origins.
 
 More information including how to use the settings can be found at:
 
-- [Mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [Mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
 - [w3](https://fetch.spec.whatwg.org/#http-access-control-allow-origin)
 - [IETF](https://tools.ietf.org/html/rfc6454#section-7.1)
 
@@ -352,6 +352,6 @@ The `accessControlAllowOriginListRegex` option is the counterpart of the `access
 It allows all origins that contain any match of a regular expression in the `accessControlAllowOriginList`.
 
 > **Tip**
-> Regular expressions and replacements can be tested using online tools such as [Go Playground](https://play.golang.org/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2).
+> Regular expressions and replacements can be tested using online tools such as [Go Playground](https://go.dev/play/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2/substitution).
 >
 > When defining a regular expression within YAML, any escaped character needs to be escaped twice: `example\.com` needs to be written as `example\\.com`.

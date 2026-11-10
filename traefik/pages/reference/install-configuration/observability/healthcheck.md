@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/install-configuration/observability/healthcheck.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/install-configuration/observability/healthcheck.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/observability/healthcheck.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/observability/healthcheck.md)
 
 # CLI & Ping
 
@@ -8,7 +8,7 @@ Checking the Health of your Traefik Instances
 
 The CLI can be used to make a request to the `/ping` endpoint to check the health of Traefik. Its exit status is `0` if Traefik is healthy and `1` otherwise.
 
-This can be used with [HEALTHCHECK](https://docs.docker.com/engine/reference/builder/#healthcheck) instruction or any other health check orchestration mechanism.
+This can be used with [HEALTHCHECK](https://docs.docker.com/reference/dockerfile#healthcheck) instruction or any other health check orchestration mechanism.
 
 ### Usage
 

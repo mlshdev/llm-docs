@@ -1,0 +1,30 @@
+> Pinned source for Grafana v13.3.1: [docs/sources/as-code/provision-resources/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/as-code/provision-resources/_index.md)
+
+# On-prem file provisioning
+
+> **Note**
+>
+> On-prem file provisioning is available in Grafana v12 and later for open source and Enterprise editions. It's **not available in Grafana Cloud**. This new file provisioning feature is only available for dashboards and doesn't replace classic provisioning for the time being.
+>
+> For classic provisioning using configuration files refer to [Provision Grafana](https://grafana.com/docs/grafana/v13.3/administration/provisioning/).
+
+On-prem local file provisioning allows you to add resources that are stored in your local file system to your Grafana instance. You can
+configure how to save your dashboards' JSON and other files from your local file system into a single or multiple folders in a different repository, with up to 10 connections.
+
+You can set it up [using the UI](https://grafana.com/docs/grafana/v13.3/as-code/provision-resources/file-path-setup#set-up-file-provisioning-using-the-ui) or [as code](https://grafana.com/docs/grafana/v13.3/as-code/provision-resources/file-path-setup#set-up-file-provisioning-as-code) with the Grafana CLI. Refer to [Set up file provisioning](https://grafana.com/docs/grafana/v13.3/as-code/provision-resources/file-path-setup) for details.
+
+File provisioning uses the same `Repository` resource as Git Sync, with the repository `type` set to `local`.
+
+## How it works
+
+On-prem file provisioning is only available for dashboards at the moment.
+
+After setting up file provisioning:
+
+- The dashboards saved in your GitHub repository or local folder appear in Grafana in the `provisioned` folder.
+- The dashboards and folders saved to the local path are referred to as `provisioned` resources and are labeled as such in the Grafana UI.
+
+You can only modify provisioned dashboards locally.
+
+- Any changes made in the provisioned files are reflected in the Grafana database. The Grafana UI reads the database and updates the UI to reflect these changes.
+- You can't use the Grafana UI to edit or delete provisioned resources.

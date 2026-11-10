@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-build.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-build.unit.5.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-build.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-build.unit.5.md.in)
 
 # podman-build.unit
 
@@ -87,7 +87,7 @@ Unless overridden, subsequent lookups of the same image in the local storage mat
 ### `AuthFile=path`
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -170,6 +170,15 @@ devices are only accessible by the rootless user's group, this flag tells the OC
 runtime to pass the group access into the container. Currently only available
 with the `crun` OCI runtime. Note: `keep-groups` is exclusive, other groups cannot be specified
 with this flag. (Not available for remote commands, including Mac and Windows (excluding WSL2) machines)
+
+Note: `keep-groups` passes the supplementary groups that the *calling process*
+already has into the container, it does not look the user's groups up at
+container start. When Podman is started from a systemd user service, for example
+a rootless Quadlet, the calling process is the `systemd --user` manager, which
+only holds the groups the user had when that manager was started. Groups the user
+is added to afterwards, for example with `usermod`, are therefore not passed into
+the container. Restart the user's systemd manager to pick them up, for example
+with `loginctl terminate-user <user>` followed by a new login, or by rebooting.
 
 ### `ImageTag=imageName`
 
@@ -603,6 +612,6 @@ Secret=mysecret
 
 # SEE ALSO
 
-[podman-build(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-build.1.md.in),
-[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-systemd.unit.5.md),
+[podman-build(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-build.1.md.in),
+[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-systemd.unit.5.md),
 [systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md)
 
 # Traefik & Ingresses with NGINX Annotations
 
@@ -11,7 +11,7 @@ It also supports many of the [ingress-nginx](https://kubernetes.github.io/ingres
 >
 > **→ See the [NGINX to Traefik Migration Guide](https://doc.traefik.io/traefik/v3.7/migrate/nginx-to-traefik) for step-by-step instructions.**
 >
-> For more information about the NGINX Ingress Controller retirement, see the [official Kubernetes blog announcement](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement).
+> For more information about the NGINX Ingress Controller retirement, see the [official Kubernetes blog announcement](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/).
 
 ## Requirements
 

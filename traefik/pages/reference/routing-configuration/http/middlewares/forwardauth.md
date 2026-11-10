@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/forwardauth.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/forwardauth.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/forwardauth.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/forwardauth.md)
 
 The `forwardAuth` middleware delegates authentication to an external service.
 If the service answers with a 2XX code, access is granted, and the original request is performed.
@@ -88,7 +88,7 @@ It allows partial matching of the regular expression against the header key.
 
 The start of string (`^`) and end of string (`$`) anchors should be used to ensure a full match against the header key.
 
-Regular expressions and replacements can be tested using online tools such as [Go Playground](https://play.golang.org/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2).
+Regular expressions and replacements can be tested using online tools such as [Go Playground](https://go.dev/play/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2/substitution).
 
 ### maxBodySize
 

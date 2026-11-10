@@ -1,8 +1,8 @@
-# PostgreSQL 18 REL_18_6
+# PostgreSQL 18 REL_18_7
 
-> Documentation generated from the `REL_18_6` maintenance-release tag of [postgres/postgres](https://github.com/postgres/postgres) and pinned to immutable source commit `724edf9bde9d356724ad384a2e196edc3c9f80f7`.
+> Documentation generated from the `REL_18_7` maintenance-release tag of [postgres/postgres](https://github.com/postgres/postgres) and pinned to immutable source commit `f5c41f6681c910b3f69951bf6fb97c6d74605d25`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for PostgreSQL 18 REL_18_6.
+- [Full documentation](llms-full.txt): Complete normalized corpus for PostgreSQL 18 REL_18_7.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - PostgreSQL 18 tracks the highest `REL_18_<minor>` maintenance-release tag; betas and release candidates are ignored.
 - DocBook XML sources are assembled from their declared entities and converted without executing the upstream Make, Meson, Perl, or XSLT toolchain.
@@ -136,32 +136,32 @@
 
 - [Logical Operators](pages/functions-logical.md): The usual logical operators are available: (999 bytes)
 - [Comparison Functions and Operators](pages/functions-comparison.md): The usual comparison operators are available, as shown in Comparison Operators. (9244 bytes)
-- [Mathematical Functions and Operators](pages/functions-math.md): Mathematical operators are provided for many PostgreSQL types. For types without standard mathematical conventions (e.g., date/time types) we describe the actual behavior in subsequent sections. (15241 bytes)
-- [String Functions and Operators](pages/functions-string.md): This section describes functions and operators for examining and manipulating string values. Strings in this context include values of the types character, character varying, and text. Except where noted, these function… (29589 bytes)
+- [Mathematical Functions and Operators](pages/functions-math.md): Mathematical operators are provided for many PostgreSQL types. For types without standard mathematical conventions (e.g., date/time types) we describe the actual behavior in subsequent sections. (15508 bytes)
+- [String Functions and Operators](pages/functions-string.md): This section describes functions and operators for examining and manipulating string values. Strings in this context include values of the types character, character varying, and text. Except where noted, these function… (29577 bytes)
 - [Binary String Functions and Operators](pages/functions-binarystring.md): This section describes functions and operators for examining and manipulating binary strings, that is values of type bytea. Many of these are equivalent, in purpose and syntax, to the text-string functions described in… (12624 bytes)
 - [Bit String Functions and Operators](pages/functions-bitstring.md): This section describes functions and operators for examining and manipulating bit strings, that is values of the types bit and bit varying. (While only type bit is mentioned in these tables, values of type bit varying c… (3898 bytes)
 - [Pattern Matching](pages/functions-matching.md): There are three separate approaches to pattern matching provided by PostgreSQL: the traditional SQL LIKE operator, the more recent SIMILAR TO operator (added in SQL:1999), and POSIX-style regular expressions. Aside from… (60714 bytes)
-- [Data Type Formatting Functions](pages/functions-formatting.md): The PostgreSQL formatting functions provide a powerful set of tools for converting various data types (date/time, integer, floating point, numeric) to formatted strings and for converting from formatted strings to speci… (21915 bytes)
-- [Date/Time Functions and Operators](pages/functions-datetime.md): Date/Time Functions shows the available functions for date/time value processing, with details appearing in the following subsections. Date/Time Operators illustrates the behaviors of the basic arithmetic operators (+,… (40769 bytes)
+- [Data Type Formatting Functions](pages/functions-formatting.md): The PostgreSQL formatting functions provide a powerful set of tools for converting various data types (date/time, integer, floating point, numeric) to formatted strings and for converting from formatted strings to speci… (21916 bytes)
+- [Date/Time Functions and Operators](pages/functions-datetime.md): Date/Time Functions shows the available functions for date/time value processing, with details appearing in the following subsections. Date/Time Operators illustrates the behaviors of the basic arithmetic operators (+,… (40771 bytes)
 - [Enum Support Functions](pages/functions-enum.md): For enum types (described in Enumerated Types), there are several functions that allow cleaner programming without hard-coding particular values of an enum type. These are listed in Enum Support Functions. The examples… (1920 bytes)
 - [Geometric Functions and Operators](pages/functions-geometry.md): The geometric types point, box, lseg, line, path, polygon, and circle have a large set of native support functions and operators, shown in Geometric Operators, Geometric Functions, and Geometric Type Conversion Function… (15663 bytes)
 - [Network Address Functions and Operators](pages/functions-net.md): The IP network address types, cidr and inet, support the usual comparison operators shown in Comparison Operators as well as the specialized operators and functions shown in IP Address Operators and IP Address Functions. (6957 bytes)
-- [Text Search Functions and Operators](pages/functions-textsearch.md): Text Search Operators, Text Search Functions and Text Search Debugging Functions summarize the functions and operators that are provided for full text searching. See Full Text Search for a detailed explanation of Postgr… (17034 bytes)
-- [UUID Functions](pages/functions-uuid.md): UUID Generation Functions shows the PostgreSQL functions that can be used to generate UUIDs. (2591 bytes)
-- [XML Functions](pages/functions-xml.md): The functions and function-like expressions described in this section operate on values of type xml. See XML Type for information about the xml type. The function-like expressions xmlparse and xmlserialize for convertin… (31812 bytes)
-- [JSON Functions and Operators](pages/functions-json.md): This section describes: (79516 bytes)
+- [Text Search Functions and Operators](pages/functions-textsearch.md): Text Search Operators, Text Search Functions and Text Search Debugging Functions summarize the functions and operators that are provided for full text searching. See Full Text Search for a detailed explanation of Postgr… (17026 bytes)
+- [UUID Functions](pages/functions-uuid.md): UUID Generation Functions shows the PostgreSQL functions that can be used to generate UUIDs. (2573 bytes)
+- [XML Functions](pages/functions-xml.md): The functions and function-like expressions described in this section operate on values of type xml. See XML Type for information about the xml type. The function-like expressions xmlparse and xmlserialize for convertin… (31804 bytes)
+- [JSON Functions and Operators](pages/functions-json.md): This section describes: (79548 bytes)
 - [Sequence Manipulation Functions](pages/functions-sequence.md): This section describes functions for operating on sequence objects, also called sequence generators or just sequences. Sequence objects are special single-row tables created with CREATE SEQUENCE. Sequence objects are co… (5049 bytes)
 - [Conditional Expressions](pages/functions-conditional.md): This section describes the SQL-compliant conditional expressions available in PostgreSQL. (5778 bytes)
 - [Array Functions and Operators](pages/functions-array.md): Array Operators shows the specialized operators available for array types. In addition to those, the usual comparison operators shown in Comparison Operators are available for arrays. The comparison operators compare th… (9853 bytes)
 - [Range/Multirange Functions and Operators](pages/functions-range.md): See Range Types for an overview of range types. (12218 bytes)
-- [Aggregate Functions](pages/functions-aggregate.md): Aggregate functions compute a single result from a set of input values. The built-in general-purpose aggregate functions are listed in General-Purpose Aggregate Functions while statistical aggregates are in Aggregate Fu… (23864 bytes)
+- [Aggregate Functions](pages/functions-aggregate.md): Aggregate functions compute a single result from a set of input values. The built-in general-purpose aggregate functions are listed in General-Purpose Aggregate Functions while statistical aggregates are in Aggregate Fu… (24148 bytes)
 - [Window Functions](pages/functions-window.md): Window functions provide the ability to perform calculations across sets of rows that are related to the current query row. See Window Functions for an introduction to this feature, and Window Function Calls for syntax… (5375 bytes)
 - [Merge Support Functions](pages/functions-merge-support.md): PostgreSQL includes one merge support function that may be used in the RETURNING list of a MERGE command to identify the action taken for each row; see Merge Support Functions. (1240 bytes)
 - [Subquery Expressions](pages/functions-subquery.md): This section describes the SQL-compliant subquery expressions available in PostgreSQL. All of the expression forms documented in this section return Boolean (true/false) results. (9397 bytes)
 - [Row and Array Comparisons](pages/functions-comparisons.md): This section describes several specialized constructs for making multiple comparisons between groups of values. These forms are syntactically related to the subquery forms of the previous section, but do not involve sub… (8295 bytes)
 - [Set Returning Functions](pages/functions-srf.md): This section describes functions that possibly return more than one row. The most widely used functions in this class are series generating functions, as detailed in Series Generating Functions and Subscript Generating… (6220 bytes)
-- [System Information Functions and Operators](pages/functions-info.md): The functions described in this section are used to obtain various information about a PostgreSQL installation. (63436 bytes)
-- [System Administration Functions](pages/functions-admin.md): The functions described in this section are used to control and monitor a PostgreSQL installation. (63332 bytes)
+- [System Information Functions and Operators](pages/functions-info.md): The functions described in this section are used to obtain various information about a PostgreSQL installation. (63639 bytes)
+- [System Administration Functions](pages/functions-admin.md): The functions described in this section are used to control and monitor a PostgreSQL installation. (63508 bytes)
 - [Trigger Functions](pages/functions-trigger.md): While many uses of triggers involve user-written trigger functions, PostgreSQL provides a few built-in trigger functions that can be used directly in user-defined triggers. These are summarized in Built-In Trigger Funct… (3417 bytes)
 - [Event Trigger Functions](pages/functions-event-triggers.md): PostgreSQL provides these helper functions to retrieve information from event triggers. (5322 bytes)
 - [Statistics Information Functions](pages/functions-statistics.md): PostgreSQL provides a function to inspect complex statistics defined using the CREATE STATISTICS command. (1053 bytes)
@@ -195,14 +195,14 @@
 - [Introduction](pages/textsearch-intro.md): Full Text Searching (or just text search) provides the capability to identify natural-language documents that satisfy a query, and optionally to sort them by relevance to the query. The most common type of search is to… (13955 bytes)
 - [Tables and Indexes](pages/textsearch-tables.md): The examples in the previous section illustrated full text matching using simple constant strings. This section shows how to search table data, optionally using indexes. (5295 bytes)
 - [Controlling Text Search](pages/textsearch-controls.md): To implement full text searching there must be a function to create a tsvector from a document and a tsquery from a user query. Also, we need to return results in a useful order, so we need a function that compares docu… (20823 bytes)
-- [Additional Features](pages/textsearch-features.md): This section describes additional functions and operators that are useful in connection with text search. (13344 bytes)
+- [Additional Features](pages/textsearch-features.md): This section describes additional functions and operators that are useful in connection with text search. (13338 bytes)
 - [Parsers](pages/textsearch-parsers.md): Text search parsers are responsible for splitting raw document text into tokens and identifying each token's type, where the set of possible types is defined by the parser itself. Note that a parser does not modify the… (4621 bytes)
 - [Dictionaries](pages/textsearch-dictionaries.md): Dictionaries are used to eliminate words that should not be considered in a search (stop words), and to normalize words so that different derived forms of the same word will match. A successfully normalized word is call… (22712 bytes)
 - [Configuration Example](pages/textsearch-configuration.md): A text search configuration specifies all options necessary to transform a document into a tsvector: the parser to use to break text into tokens, and the dictionaries to use to transform each token into a lexeme. Every… (2943 bytes)
-- [Testing and Debugging Text Search](pages/textsearch-debugging.md): The behavior of a custom text search configuration can easily become confusing. The functions described in this section are useful for testing text search objects. You can test a complete configuration, or test parsers… (9862 bytes)
+- [Testing and Debugging Text Search](pages/textsearch-debugging.md): The behavior of a custom text search configuration can easily become confusing. The functions described in this section are useful for testing text search objects. You can test a complete configuration, or test parsers… (9850 bytes)
 - [Preferred Index Types for Text Search](pages/textsearch-indexes.md): There are two kinds of indexes that can be used to speed up full text searches: GIN and GiST. Note that indexes are not mandatory for full text searching, but in cases where a column is searched on a regular basis, an i… (3510 bytes)
 - [psql Support](pages/textsearch-psql.md): Information about text search configuration objects can be obtained in psql using a set of commands: (6883 bytes)
-- [Limitations](pages/textsearch-limitations.md): The current limitations of PostgreSQL's text search features are: (891 bytes)
+- [Limitations](pages/textsearch-limitations.md): The current limitations of PostgreSQL's text search features are: (846 bytes)
 
 ## Concurrency Control
 
@@ -264,7 +264,7 @@
 - [The PostgreSQL User Account](pages/postgres-user.md): As with any server daemon that is accessible to the outside world, it is advisable to run PostgreSQL under a separate user account. This user account should only own the data that is managed by the server, and should no… (843 bytes)
 - [Creating a Database Cluster](pages/creating-cluster.md): Before you can do anything, you must initialize a database storage area on disk. We call this a database cluster. (The SQL standard uses the term catalog cluster.) A database cluster is a collection of databases that is… (9526 bytes)
 - [Starting the Database Server](pages/server-start.md): Before anyone can access the database, you must start the database server. The database server program is called postgres. (9939 bytes)
-- [Managing Kernel Resources](pages/kernel-resources.md): PostgreSQL can sometimes exhaust various operating system resource limits, especially when multiple copies of the server are running on the same system, or in very large installations. This section explains the kernel r… (24229 bytes)
+- [Managing Kernel Resources](pages/kernel-resources.md): PostgreSQL can sometimes exhaust various operating system resource limits, especially when multiple copies of the server are running on the same system, or in very large installations. This section explains the kernel r… (24536 bytes)
 - [Shutting Down the Server](pages/server-shutdown.md): There are several ways to shut down the database server. Under the hood, they all reduce to sending a signal to the supervisor postgres process. (2720 bytes)
 - [Upgrading a PostgreSQL Cluster](pages/upgrading.md): This section discusses how to upgrade your database data from one PostgreSQL release to a newer one. (8522 bytes)
 - [Preventing Server Spoofing](pages/preventing-server-spoofing.md): While the server is running, it is not possible for a malicious user to take the place of the normal database server. However, when the server is down, it is possible for a local user to spoof the normal server by start… (3335 bytes)
@@ -281,23 +281,23 @@
 - [Connections and Authentication](pages/runtime-config-connection.md): listenaddresses (string) (25734 bytes)
 - [Resource Consumption](pages/runtime-config-resource.md): sharedbuffers (integer) (35097 bytes)
 - [Write Ahead Log](pages/runtime-config-wal.md): For additional information on tuning these settings, see WAL Configuration. (40698 bytes)
-- [Replication](pages/runtime-config-replication.md): These settings control the behavior of the built-in streaming replication feature (see Streaming Replication), and the built-in logical replication feature (see Logical Replication). (30534 bytes)
+- [Replication](pages/runtime-config-replication.md): These settings control the behavior of the built-in streaming replication feature (see Streaming Replication), and the built-in logical replication feature (see Logical Replication). (31616 bytes)
 - [Query Planning](pages/runtime-config-query.md): These configuration parameters provide a crude method of influencing the query plans chosen by the query optimizer. If the default plan chosen by the optimizer for a particular query is not optimal, a temporary solution… (24750 bytes)
-- [Error Reporting and Logging](pages/runtime-config-logging.md): logdestination (string) (44381 bytes)
+- [Error Reporting and Logging](pages/runtime-config-logging.md): logdestination (string) (44635 bytes)
 - [Run-time Statistics](pages/runtime-config-statistics.md): These parameters control the server-wide cumulative statistics system. When enabled, the data that is collected can be accessed via the pgstat and pgstatio family of system views. Refer to Monitoring Database Activity f… (7960 bytes)
-- [Vacuuming](pages/runtime-config-vacuum.md): These parameters control vacuuming behavior. For more information on the purpose and responsibilities of vacuum, see Routine Vacuuming. (19460 bytes)
+- [Vacuuming](pages/runtime-config-vacuum.md): These parameters control vacuuming behavior. For more information on the purpose and responsibilities of vacuum, see Routine Vacuuming. (19364 bytes)
 - [Client Connection Defaults](pages/runtime-config-client.md): clientminmessages (enum) (37359 bytes)
 - [Lock Management](pages/runtime-config-locks.md): deadlocktimeout (integer) (3981 bytes)
 - [Version and Platform Compatibility](pages/runtime-config-compatible.md): arraynulls (boolean) (7272 bytes)
 - [Error Handling](pages/runtime-config-error-handling.md): exitonerror (boolean) (3154 bytes)
 - [Preset Options](pages/runtime-config-preset.md): The following “parameters” are read-only. As such, they have been excluded from the sample postgresql.conf file. These options report various aspects of PostgreSQL behavior that might be of interest to certain applicati… (5877 bytes)
 - [Customized Options](pages/runtime-config-custom.md): This feature was designed to allow parameters not normally known to PostgreSQL to be added by add-on modules (such as procedural languages). This allows extension modules to be configured in the standard ways. (968 bytes)
-- [Developer Options](pages/runtime-config-developer.md): The following parameters are intended for developer testing, and should never be used on a production database. However, some of them can be used to assist with the recovery of severely damaged databases. As such, they… (19611 bytes)
+- [Developer Options](pages/runtime-config-developer.md): The following parameters are intended for developer testing, and should never be used on a production database. However, some of them can be used to assist with the recovery of severely damaged databases. As such, they… (20242 bytes)
 - [Short Options](pages/runtime-config-short.md): For convenience there are also single letter command-line option switches available for some parameters. They are described in Short Option Key. Some of these options exist for historical reasons, and their presence as… (1324 bytes)
 
 ## Client Authentication
 
-- [The pg_hba.conf File](pages/auth-pg-hba-conf.md): Client authentication is controlled by a configuration file, which traditionally is named pghba.conf and is stored in the database cluster's data directory. (HBA stands for host-based authentication.) A default pghba.co… (26274 bytes)
+- [The pg_hba.conf File](pages/auth-pg-hba-conf.md): Client authentication is controlled by a configuration file, which traditionally is named pghba.conf and is stored in the database cluster's data directory. (HBA stands for host-based authentication.) A default pghba.co… (26384 bytes)
 - [User Name Maps](pages/auth-username-maps.md): When using an external authentication system such as Ident or GSSAPI, the name of the operating system user that initiated the connection might not be the same as the database user (role) that is to be used. In this cas… (6102 bytes)
 - [Authentication Methods](pages/auth-methods.md): PostgreSQL provides various methods for authenticating users: (2216 bytes)
 - [Trust Authentication](pages/auth-trust.md): When trust authentication is specified, PostgreSQL assumes that anyone who can connect to the server is authorized to access the database with whatever database user name they specify (even superuser names). Of course,… (1735 bytes)
@@ -311,7 +311,7 @@
 - [Certificate Authentication](pages/auth-cert.md): This authentication method uses SSL client certificates to perform authentication. It is therefore only available for SSL connections; see OpenSSL Configuration for SSL configuration instructions. When using this authen… (1062 bytes)
 - [PAM Authentication](pages/auth-pam.md): This authentication method operates similarly to password except that it uses PAM (Pluggable Authentication Modules) as the authentication mechanism. The default PAM service name is postgresql. PAM is used only to valid… (1336 bytes)
 - [BSD Authentication](pages/auth-bsd.md): This authentication method operates similarly to password except that it uses BSD Authentication to verify the password. BSD Authentication is used only to validate user name/password pairs. Therefore the user's role mu… (882 bytes)
-- [OAuth Authorization/Authentication](pages/auth-oauth.md): OAuth 2.0 is an industry-standard framework, defined in RFC 6749, to enable third-party applications to obtain limited access to a protected resource. OAuth client support has to be enabled when PostgreSQL is built, see… (6236 bytes)
+- [OAuth Authorization/Authentication](pages/auth-oauth.md): OAuth 2.0 is an industry-standard framework, defined in RFC 6749, to enable third-party applications to obtain limited access to a protected resource. OAuth client support has to be enabled when PostgreSQL is built, see… (6379 bytes)
 - [Authentication Problems](pages/client-authentication-problems.md): Authentication failures and related problems generally manifest themselves through error messages like the following: (1391 bytes)
 
 ## Database Roles
@@ -348,7 +348,7 @@
 
 - [SQL Dump](pages/backup-dump.md): The idea behind this dump method is to generate a file with SQL commands that, when fed back to the server, will recreate the database in the same state as it was at the time of the dump. PostgreSQL provides the utility… (9788 bytes)
 - [File System Level Backup](pages/backup-file.md): An alternative backup strategy is to directly copy the files that PostgreSQL uses to store the data in the database; Creating a Database Cluster explains where these files are located. You can use whatever method you pr… (4566 bytes)
-- [Continuous Archiving and Point-in-Time Recovery (PITR)](pages/continuous-archiving.md): At all times, PostgreSQL maintains a write ahead log (WAL) in the pgwal/ subdirectory of the cluster's data directory. The log records every change made to the database's data files. This log exists primarily for crash-… (44665 bytes)
+- [Continuous Archiving and Point-in-Time Recovery (PITR)](pages/continuous-archiving.md): At all times, PostgreSQL maintains a write ahead log (WAL) in the pgwal/ subdirectory of the cluster's data directory. The log records every change made to the database's data files. This log exists primarily for crash-… (44897 bytes)
 
 ## High Availability, Load Balancing, and Replication
 
@@ -360,9 +360,9 @@
 ## Monitoring Database Activity
 
 - [Standard Unix Tools](pages/monitoring-ps.md): On most Unix platforms, PostgreSQL modifies its command title as reported by ps, so that individual server processes can readily be identified. A sample display is (3590 bytes)
-- [The Cumulative Statistics System](pages/monitoring-stats.md): PostgreSQL's cumulative statistics system supports collection and reporting of information about server activity. Presently, accesses to tables and indexes in both disk-block and individual-row terms are counted. The to… (107139 bytes)
+- [The Cumulative Statistics System](pages/monitoring-stats.md): PostgreSQL's cumulative statistics system supports collection and reporting of information about server activity. Presently, accesses to tables and indexes in both disk-block and individual-row terms are counted. The to… (107141 bytes)
 - [Viewing Locks](pages/monitoring-locks.md): Another useful tool for monitoring database activity is the pglocks system table. It allows the database administrator to view information about the outstanding locks in the lock manager. For example, this capability ca… (938 bytes)
-- [Progress Reporting](pages/progress-reporting.md): PostgreSQL has the ability to report the progress of certain commands during command execution. Currently, the only commands which support progress reporting are ANALYZE, CLUSTER, CREATE INDEX, VACUUM, COPY, and Streami… (20745 bytes)
+- [Progress Reporting](pages/progress-reporting.md): PostgreSQL has the ability to report the progress of certain commands during command execution. Currently, the only commands which support progress reporting are ANALYZE, CLUSTER, CREATE INDEX, VACUUM, COPY, and Streami… (20865 bytes)
 - [Dynamic Tracing](pages/dynamic-trace.md): PostgreSQL provides facilities to support dynamic tracing of the database server. This allows an external utility to be called at specific points in the code and thereby trace execution. (19739 bytes)
 - [Monitoring Disk Usage](pages/diskusage.md): This section discusses how to monitor the disk usage of a PostgreSQL database system. (3866 bytes)
 
@@ -533,7 +533,7 @@
 - [routine_column_usage](pages/infoschema-routine-column-usage.md): The view routinecolumnusage identifies all columns that are used by a function or procedure, either in the SQL body or in parameter default expressions. (This only works for unquoted SQL bodies, not quoted bodies or fun… (1459 bytes)
 - [routine_privileges](pages/infoschema-routine-privileges.md): The view routineprivileges identifies all privileges granted on functions to a currently enabled role or by a currently enabled role. There is one row for each combination of function, grantor, and grantee. (1256 bytes)
 - [routine_routine_usage](pages/infoschema-routine-routine-usage.md): The view routineroutineusage identifies all functions or procedures that are used by another (or the same) function or procedure, either in the SQL body or in parameter default expressions. (This only works for unquoted… (1551 bytes)
-- [routine_sequence_usage](pages/infoschema-routine-sequence-usage.md): The view routinesequenceusage identifies all sequences that are used by a function or procedure, either in the SQL body or in parameter default expressions. (This only works for unquoted SQL bodies, not quoted bodies or… (1403 bytes)
+- [routine_sequence_usage](pages/infoschema-routine-sequence-usage.md): The view routinesequenceusage identifies all sequences that are used by a function or procedure, either in the SQL body or in parameter default expressions. (This only works for unquoted SQL bodies, not quoted bodies or… (1405 bytes)
 - [routine_table_usage](pages/infoschema-routine-table-usage.md): The view routinetableusage is meant to identify all tables that are used by a function or procedure. This information is currently not tracked by PostgreSQL. (1205 bytes)
 - [routines](pages/infoschema-routines.md): The view routines contains all functions and procedures in the current database. Only those functions and procedures are shown that the current user has access to (by way of being the owner or having some privilege). (10351 bytes)
 - [schemata](pages/infoschema-schemata.md): The view schemata contains all schemas in the current database that the current user has access to (by way of being the owner or having some privilege). (829 bytes)
@@ -711,7 +711,7 @@
 - [SPI_execute_plan_extended](pages/spi-spi-execute-plan-extended.md): execute a statement prepared by SPIprepare (3012 bytes)
 - [SPI_execute_plan_with_paramlist](pages/spi-spi-execute-plan-with-paramlist.md): execute a statement prepared by SPIprepare (1330 bytes)
 - [SPI_execp](pages/spi-spi-execp.md): execute a statement in read/write mode (1249 bytes)
-- [SPI_cursor_open](pages/spi-spi-cursor-open.md): set up a cursor using a statement created with SPIprepare (2074 bytes)
+- [SPI_cursor_open](pages/spi-spi-cursor-open.md): set up a cursor using a statement created with SPIprepare (2398 bytes)
 - [SPI_cursor_open_with_args](pages/spi-spi-cursor-open-with-args.md): set up a cursor using a query and parameters (2457 bytes)
 - [SPI_cursor_open_with_paramlist](pages/spi-spi-cursor-open-with-paramlist.md): set up a cursor using parameters (1416 bytes)
 - [SPI_cursor_parse_open](pages/spi-spi-cursor-parse-open.md): set up a cursor using a query string and parameters (2115 bytes)
@@ -848,7 +848,7 @@
 - [CREATE EXTENSION](pages/sql-createextension.md): install an extension (6121 bytes)
 - [CREATE FOREIGN DATA WRAPPER](pages/sql-createforeigndatawrapper.md): define a new foreign-data wrapper (3444 bytes)
 - [CREATE FOREIGN TABLE](pages/sql-createforeigntable.md): define a new foreign table (13872 bytes)
-- [CREATE FUNCTION](pages/sql-createfunction.md): define a new function (25050 bytes)
+- [CREATE FUNCTION](pages/sql-createfunction.md): define a new function (25048 bytes)
 - [CREATE GROUP](pages/sql-creategroup.md): define a new database role (840 bytes)
 - [CREATE INDEX](pages/sql-createindex.md): define a new index (26948 bytes)
 - [CREATE LANGUAGE](pages/sql-createlanguage.md): define a new procedural language (5448 bytes)
@@ -857,7 +857,7 @@
 - [CREATE OPERATOR CLASS](pages/sql-createopclass.md): define a new operator class (6955 bytes)
 - [CREATE OPERATOR FAMILY](pages/sql-createopfamily.md): define a new operator family (2205 bytes)
 - [CREATE POLICY](pages/sql-createpolicy.md): define a new row-level security policy for a table (20616 bytes)
-- [CREATE PROCEDURE](pages/sql-createprocedure.md): define a new procedure (9109 bytes)
+- [CREATE PROCEDURE](pages/sql-createprocedure.md): define a new procedure (9107 bytes)
 - [CREATE PUBLICATION](pages/sql-createpublication.md): define a new publication (11779 bytes)
 - [CREATE ROLE](pages/sql-createrole.md): define a new database role (12578 bytes)
 - [CREATE RULE](pages/sql-createrule.md): define a new rewrite rule (7091 bytes)
@@ -878,12 +878,12 @@
 - [CREATE TYPE](pages/sql-createtype.md): define a new data type (29331 bytes)
 - [CREATE USER](pages/sql-createuser.md): define a new database role (1081 bytes)
 - [CREATE USER MAPPING](pages/sql-createusermapping.md): define a new mapping of a user to a foreign server (2186 bytes)
-- [CREATE VIEW](pages/sql-createview.md): define a new view (15460 bytes)
+- [CREATE VIEW](pages/sql-createview.md): define a new view (15684 bytes)
 - [DEALLOCATE](pages/sql-deallocate.md): deallocate a prepared statement (732 bytes)
 - [DECLARE](pages/sql-declare.md): define a cursor (9308 bytes)
 - [DELETE](pages/sql-delete.md): delete rows of a table (7165 bytes)
 - [DISCARD](pages/sql-discard.md): discard session state (1511 bytes)
-- [DO](pages/sql-do.md): execute an anonymous code block (1924 bytes)
+- [DO](pages/sql-do.md): execute an anonymous code block (1925 bytes)
 - [DROP ACCESS METHOD](pages/sql-drop-access-method.md): remove an access method (988 bytes)
 - [DROP AGGREGATE](pages/sql-dropaggregate.md): remove an aggregate function (2426 bytes)
 - [DROP CAST](pages/sql-dropcast.md): remove a cast (922 bytes)
@@ -942,7 +942,7 @@
 - [NOTIFY](pages/sql-notify.md): generate a notification (6851 bytes)
 - [PREPARE](pages/sql-prepare.md): prepare a statement for execution (7262 bytes)
 - [PREPARE TRANSACTION](pages/sql-prepare-transaction.md): prepare the current transaction for two-phase commit (4386 bytes)
-- [REASSIGN OWNED](pages/sql-reassign-owned.md): change the ownership of database objects owned by a database role (1767 bytes)
+- [REASSIGN OWNED](pages/sql-reassign-owned.md): change the ownership of database objects owned by a database role (1979 bytes)
 - [REFRESH MATERIALIZED VIEW](pages/sql-refreshmaterializedview.md): replace the contents of a materialized view (2766 bytes)
 - [REINDEX](pages/sql-reindex.md): rebuild indexes (15138 bytes)
 - [RELEASE SAVEPOINT](pages/sql-release-savepoint.md): release a previously defined savepoint (2649 bytes)
@@ -966,7 +966,7 @@
 - [UNLISTEN](pages/sql-unlisten.md): stop listening for a notification (1375 bytes)
 - [UPDATE](pages/sql-update.md): update rows of a table (14671 bytes)
 - [VACUUM](pages/sql-vacuum.md): garbage-collect and optionally analyze a database (15503 bytes)
-- [VALUES](pages/sql-values.md): compute a set of rows (5316 bytes)
+- [VALUES](pages/sql-values.md): compute a set of rows (5269 bytes)
 - [clusterdb](pages/app-clusterdb.md): cluster a PostgreSQL database (4371 bytes)
 - [createdb](pages/app-createdb.md): create a new PostgreSQL database (6426 bytes)
 - [createuser](pages/app-createuser.md): define a new PostgreSQL user account (8392 bytes)
@@ -974,18 +974,18 @@
 - [dropuser](pages/app-dropuser.md): remove a PostgreSQL user account (3747 bytes)
 - [ecpg](pages/app-ecpg.md): embedded SQL C preprocessor (4045 bytes)
 - [pg_amcheck](pages/app-pgamcheck.md): checks for corruption in one or more PostgreSQL databases (12993 bytes)
-- [pg_basebackup](pages/app-pgbasebackup.md): take a base backup of a PostgreSQL cluster (27848 bytes)
+- [pg_basebackup](pages/app-pgbasebackup.md): take a base backup of a PostgreSQL cluster (27862 bytes)
 - [pgbench](pages/pgbench.md): run a benchmark test on PostgreSQL (60814 bytes)
 - [pg_combinebackup](pages/app-pgcombinebackup.md): reconstruct a full backup from an incremental backup and dependent backups (7781 bytes)
 - [pg_config](pages/app-pgconfig.md): retrieve information about the installed version of PostgreSQL (4372 bytes)
-- [pg_dump](pages/app-pgdump.md): export a PostgreSQL database as an SQL script or to other formats (45361 bytes)
+- [pg_dump](pages/app-pgdump.md): export a PostgreSQL database as an SQL script or to other formats (45235 bytes)
 - [pg_dumpall](pages/app-pg-dumpall.md): extract a PostgreSQL database cluster into a script file (19335 bytes)
 - [pg_isready](pages/app-pg-isready.md): check the connection status of a PostgreSQL server (2877 bytes)
 - [pg_receivewal](pages/app-pgreceivewal.md): stream write-ahead logs from a PostgreSQL server (11353 bytes)
 - [pg_recvlogical](pages/app-pgrecvlogical.md): control PostgreSQL logical decoding streams (8486 bytes)
-- [pg_restore](pages/app-pgrestore.md): restore a PostgreSQL database from an archive file created by pgdump (25319 bytes)
+- [pg_restore](pages/app-pgrestore.md): restore a PostgreSQL database from an archive file created by pgdump (25317 bytes)
 - [pg_verifybackup](pages/app-pgverifybackup.md): verify the integrity of a base backup of a PostgreSQL cluster (7949 bytes)
-- [psql](pages/app-psql.md): PostgreSQL interactive terminal (135651 bytes)
+- [psql](pages/app-psql.md): PostgreSQL interactive terminal (135768 bytes)
 - [reindexdb](pages/app-reindexdb.md): reindex a PostgreSQL database (5399 bytes)
 - [vacuumdb](pages/app-vacuumdb.md): garbage-collect and analyze a PostgreSQL database (10114 bytes)
 - [initdb](pages/app-initdb.md): create a new PostgreSQL database cluster (13940 bytes)
@@ -1044,7 +1044,7 @@
 - [pg_amop](pages/catalog-pg-amop.md): The catalog pgamop stores information about operators associated with access method operator families. There is one row for each operator that is a member of an operator family. A family member can be either a search op… (2889 bytes)
 - [pg_amproc](pages/catalog-pg-amproc.md): The catalog pgamproc stores information about support functions associated with access method operator families. There is one row for each support function belonging to an operator family. (1283 bytes)
 - [pg_attrdef](pages/catalog-pg-attrdef.md): The catalog pgattrdef stores column default expressions and generation expressions. The main information about columns is stored in pgattribute. Only columns for which a default expression or generation expression has b… (770 bytes)
-- [pg_attribute](pages/catalog-pg-attribute.md): The catalog pgattribute stores information about table columns. There will be exactly one pgattribute row for every column in every table in the database. (There will also be attribute entries for indexes, and indeed al… (5557 bytes)
+- [pg_attribute](pages/catalog-pg-attribute.md): The catalog pgattribute stores information about table columns. There will be exactly one pgattribute row for every column in every table in the database. (There will also be attribute entries for indexes, and indeed al… (5698 bytes)
 - [pg_authid](pages/catalog-pg-authid.md): The catalog pgauthid contains information about database authorization identifiers (roles). A role subsumes the concepts of “users” and “groups”. A user is essentially just a role with the rolcanlogin flag set. Any role… (2842 bytes)
 - [pg_auth_members](pages/catalog-pg-auth-members.md): The catalog pgauthmembers shows the membership relations between roles. Any non-circular set of relationships is allowed. (1042 bytes)
 - [pg_cast](pages/catalog-pg-cast.md): The catalog pgcast stores data type conversion paths, both built-in and user-defined. (2768 bytes)
@@ -1149,8 +1149,8 @@
 
 - [Overview](pages/protocol-overview.md): The protocol has separate phases for startup and normal operation. In the startup phase, the frontend opens a connection to the server and authenticates itself to the satisfaction of the server. (This might involve a si… (8201 bytes)
 - [Message Flow](pages/protocol-flow.md): This section describes the message flow and the semantics of each message type. (Details of the exact representation of each message appear in Message Formats.) There are several different sub-protocols depending on the… (50663 bytes)
-- [SASL Authentication](pages/sasl-authentication.md): SASL is a framework for authentication in connection-oriented protocols. At the moment, PostgreSQL implements three SASL authentication mechanisms: SCRAM-SHA-256, SCRAM-SHA-256-PLUS, and OAUTHBEARER. More might be added… (8255 bytes)
-- [Streaming Replication Protocol](pages/protocol-replication.md): To initiate streaming replication, the frontend sends the replication parameter in the startup message. A Boolean value of true (or on, yes, 1) tells the backend to go into physical replication walsender mode, wherein a… (25246 bytes)
+- [SASL Authentication](pages/sasl-authentication.md): SASL is a framework for authentication in connection-oriented protocols. At the moment, PostgreSQL implements three SASL authentication mechanisms: SCRAM-SHA-256, SCRAM-SHA-256-PLUS, and OAUTHBEARER. More might be added… (8562 bytes)
+- [Streaming Replication Protocol](pages/protocol-replication.md): To initiate streaming replication, the frontend sends the replication parameter in the startup message. A Boolean value of true (or on, yes, 1) tells the backend to go into physical replication walsender mode, wherein a… (25795 bytes)
 - [Logical Streaming Replication Protocol](pages/protocol-logical-replication.md): This section describes the logical replication protocol, which is the message flow started by the STARTREPLICATION SLOT slotname LOGICAL replication command. (5172 bytes)
 - [Message Data Types](pages/protocol-message-types.md): This section describes the base data types used in messages. (1275 bytes)
 - [Message Formats](pages/protocol-message-formats.md): This section describes the detailed format of each message. Each is marked to indicate that it can be sent by a frontend (F), a backend (B), or both (F & B). Notice that although each message includes a byte count at th… (26725 bytes)
@@ -1211,7 +1211,7 @@
 
 ## Built-in Index Access Methods
 
-- [B-Tree Indexes](pages/btree.md): PostgreSQL includes an implementation of the standard btree (multi-way balanced tree) index data structure. Any data type that can be sorted into a well-defined linear order can be indexed by a btree index. The only lim… (27463 bytes)
+- [B-Tree Indexes](pages/btree.md): PostgreSQL includes an implementation of the standard btree (multi-way balanced tree) index data structure. Any data type that can be sorted into a well-defined linear order can be indexed by a btree index. The only lim… (27633 bytes)
 - [GiST Indexes](pages/gist.md): GiST stands for Generalized Search Tree. It is a balanced, tree-structured access method, that acts as a base template in which to implement arbitrary indexing schemes. B-trees, R-trees and many other indexing schemes c… (38497 bytes)
 - [SP-GiST Indexes](pages/spgist.md): SP-GiST is an abbreviation for space-partitioned GiST. SP-GiST supports partitioned search trees, which facilitate development of a wide range of different non-balanced data structures, such as quad-trees, k-d trees, an… (37918 bytes)
 - [GIN Indexes](pages/gin.md): GIN stands for Generalized Inverted Index. GIN is designed for handling cases where the items to be indexed are composite values, and the queries to be handled by the index need to search for element values that appear… (21519 bytes)
@@ -1259,9 +1259,9 @@
 ## Appendixes
 
 - [Appendixes](pages/appendixes.md): Normalized source from doc/src/sgml/postgres.sgml#appendixes. (13 bytes)
-- [PostgreSQL Error Codes](pages/errcodes-appendix.md): All messages emitted by the PostgreSQL server are assigned five-character error codes that follow the SQL standard's conventions for “SQLSTATE” codes. Applications that need to know which error condition has occurred sh… (15348 bytes)
+- [PostgreSQL Error Codes](pages/errcodes-appendix.md): All messages emitted by the PostgreSQL server are assigned five-character error codes that follow the SQL standard's conventions for “SQLSTATE” codes. Applications that need to know which error condition has occurred sh… (15387 bytes)
 - [Date/Time Support](pages/datetime-appendix.md): PostgreSQL uses an internal heuristic parser for all date/time input support. Dates and times are input as strings, and are broken up into distinct fields with a preliminary determination of what kind of information can… (606 bytes)
-- [SQL Key Words](pages/sql-keywords-appendix.md): SQL Key Words lists all tokens that are key words in the SQL standard and in PostgreSQL 18.6. Background information can be found in Identifiers and Key Words. (For space reasons, only the latest two versions of the SQL… (50446 bytes)
+- [SQL Key Words](pages/sql-keywords-appendix.md): SQL Key Words lists all tokens that are key words in the SQL standard and in PostgreSQL 18.7. Background information can be found in Identifiers and Key Words. (For space reasons, only the latest two versions of the SQL… (50446 bytes)
 - [SQL Conformance](pages/features.md): This section attempts to outline to what extent PostgreSQL conforms to the current SQL standard. The following information is not a full statement of conformance, but it presents the main topics in as much detail as is… (3899 bytes)
 - [Release Notes](pages/release.md): The release notes contain the significant changes in each PostgreSQL release, with major features and migration issues listed at the top. The release notes do not contain changes that affect only a few users or changes… (1288 bytes)
 - [Additional Supplied Modules and Extensions](pages/contrib.md): This appendix and the next one contain information on the optional components found in the contrib directory of the PostgreSQL distribution. These include porting tools, analysis utilities, and plug-in features that are… (4627 bytes)
@@ -1269,7 +1269,7 @@
 - [External Projects](pages/external-projects.md): PostgreSQL is a complex software project, and managing the project is difficult. We have found that many enhancements to PostgreSQL can be more efficiently developed separately from the core project. (221 bytes)
 - [The Source Code Repository](pages/sourcerepo.md): The PostgreSQL source code is stored and managed using the Git version control system. A public mirror of the master repository is available; it is updated within a minute of any change to the master repository. (345 bytes)
 - [Documentation](pages/docguide.md): PostgreSQL has four primary documentation formats: (524 bytes)
-- [PostgreSQL Limits](pages/limits.md): PostgreSQL Limitations describes various hard limits of PostgreSQL. However, practical limits, such as performance limitations or available disk space may apply before absolute hard limits are reached. (2795 bytes)
+- [PostgreSQL Limits](pages/limits.md): PostgreSQL Limitations describes various hard limits of PostgreSQL. However, practical limits, such as performance limitations or available disk space may apply before absolute hard limits are reached. (2887 bytes)
 - [Acronyms](pages/acronyms.md): This is a list of acronyms commonly used in the PostgreSQL documentation and in discussions about PostgreSQL. (7539 bytes)
 - [Glossary](pages/glossary.md): This is a list of terms and their meaning in the context of PostgreSQL and relational database systems in general. (127 bytes)
 - [Color Support](pages/color.md): Most programs in the PostgreSQL package can produce colorized console output. This appendix describes how that is configured. (143 bytes)
@@ -1293,12 +1293,13 @@
 
 ## Release Notes
 
+- [Release 18.7](pages/release-18-7.md): Release date: 2026-11-12 (66382 bytes)
 - [Release 18.6](pages/release-18-6.md): Release date: 2026-08-13 (49815 bytes)
 - [Release 18.4](pages/release-18-4.md): Release date: 2026-05-14 (25463 bytes)
 - [Release 18.3](pages/release-18-3.md): Release date: 2026-02-26 (4491 bytes)
 - [Release 18.2](pages/release-18-2.md): Release date: 2026-02-12 (25490 bytes)
 - [Release 18.1](pages/release-18-1.md): Release date: 2025-11-13 (14951 bytes)
-- [Release 18](pages/release-18.md): Release date: 2025-09-25 (66308 bytes)
+- [Release 18](pages/release-18.md): Release date: 2025-09-25 (66619 bytes)
 - [Prior Releases](pages/release-prior.md): Release notes for prior release branches can be found at https://www.postgresql.org/docs/release/ (162 bytes)
 
 ## Additional Supplied Modules and Extensions

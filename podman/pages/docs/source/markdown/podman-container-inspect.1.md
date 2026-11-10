@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-container-inspect.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-container-inspect.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-container-inspect.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-container-inspect.1.md.in)
 
 # podman-container-inspect
 
@@ -44,7 +44,9 @@ Valid placeholders for the Go template are listed below:
 | .Image                   | Container image ID (64-char hash)                                   |
 | .ImageDigest             | Container image digest (sha256:+64-char hash)                       |
 | .ImageName               | Container image name (string)                                       |
+| .InitContainerType       | Type of init container if applicable (string)                       |
 | .IsInfra                 | Is this an infra container? (string: true/false)                    |
+| .IsInitCtr               | Is this an init container? (string: true/false)                     |
 | .IsService               | Is this a service container? (string: true/false)                   |
 | .KubeExitCodePropagation | Kube exit-code propagation (string)                                 |
 | .LockNumber              | Number of the container's Libpod lock                               |
@@ -340,9 +342,16 @@ $ podman container inspect --latest --format {{.EffectiveCaps}}
 [CAP_CHOWN CAP_DAC_OVERRIDE CAP_FOWNER CAP_FSETID CAP_KILL CAP_NET_BIND_SERVICE CAP_SETFCAP CAP_SETGID CAP_SETPCAP CAP_SETUID]
 ```
 
+Inspect the specified container to check whether it is an init container and its type.
+
+```
+$ podman container inspect my-init-ctr --format "{{.IsInitCtr}} {{.InitContainerType}}"
+true always
+```
+
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-container(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-container.1.md)**, **[podman-inspect(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-inspect.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-container(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-container.1.md)**, **[podman-inspect(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-inspect.1.md.in)**
 
 ## HISTORY
 

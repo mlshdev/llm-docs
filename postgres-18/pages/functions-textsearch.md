@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-textsearch](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-textsearch)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-textsearch](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-textsearch)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-textsearch.html
 
 # Text Search Functions and Operators
@@ -351,17 +351,17 @@ Returns an array of replacement lexemes if the input token is known to the dicti
 
 ---
 
-`ts_parse` ( `parser_name` `text`, `document` `text` ) → `setof record` ( `tokid` `integer`, `token` `text` )
+`ts_parse` ( `parser_name` `text`, `txt` `text` ) → `setof record` ( `tokid` `integer`, `token` `text` )
 
-Extracts tokens from the `document` using the named parser. See [Parser Testing](./textsearch-debugging.md#parser-testing) for details.
+Extracts tokens from the document `txt` using the named parser. See [Parser Testing](./textsearch-debugging.md#parser-testing) for details.
 
 `ts_parse('default', 'foo - bar')` → `(1,foo) ...`
 
 ---
 
-`ts_parse` ( `parser_oid` `oid`, `document` `text` ) → `setof record` ( `tokid` `integer`, `token` `text` )
+`ts_parse` ( `parser_oid` `oid`, `txt` `text` ) → `setof record` ( `tokid` `integer`, `token` `text` )
 
-Extracts tokens from the `document` using a parser specified by OID. See [Parser Testing](./textsearch-debugging.md#parser-testing) for details.
+Extracts tokens from the document `txt` using a parser specified by OID. See [Parser Testing](./textsearch-debugging.md#parser-testing) for details.
 
 `ts_parse(3722, 'foo - bar')` → `(1,foo) ...`
 
@@ -383,8 +383,8 @@ Returns a table that describes each type of token a parser specified by OID can 
 
 ---
 
-`ts_stat` ( `sqlquery` `text` [, `weights` `text`] ) → `setof record` ( `word` `text`, `ndoc` `integer`, `nentry` `integer` )
+`ts_stat` ( `query` `text` [, `weights` `text`] ) → `setof record` ( `word` `text`, `ndoc` `integer`, `nentry` `integer` )
 
-Executes the `sqlquery`, which must return a single `tsvector` column, and returns statistics about each distinct lexeme contained in the data. See [Gathering Document Statistics](./textsearch-features.md#gathering-document-statistics) for details.
+Executes the `query`, which must return a single `tsvector` column, and returns statistics about each distinct lexeme contained in the data. See [Gathering Document Statistics](./textsearch-features.md#gathering-document-statistics) for details.
 
 `ts_stat('SELECT vector FROM apod')` → `(foo,10,15) ...`

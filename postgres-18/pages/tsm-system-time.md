@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/tsm-system-time.sgml#tsm-system-time](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/tsm-system-time.sgml%23tsm-system-time)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/tsm-system-time.sgml#tsm-system-time](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/tsm-system-time.sgml%23tsm-system-time)
 > Canonical documentation: https://www.postgresql.org/docs/18/tsm-system-time.html
 
 # tsm_system_time — the SYSTEM_TIME sampling method for TABLESAMPLE

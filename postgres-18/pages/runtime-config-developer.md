@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/config.sgml#runtime-config-developer](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/config.sgml%23runtime-config-developer)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/config.sgml#runtime-config-developer](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/config.sgml%23runtime-config-developer)
 > Canonical documentation: https://www.postgresql.org/docs/18/runtime-config-developer.html
 
 # Developer Options
@@ -159,6 +159,12 @@ The following parameters are intended for developer testing, and should never be
   Only has effect if [data checksums](./checksums.md) are enabled.
 
   Detection of a checksum failure during a read normally causes PostgreSQL to report an error, aborting the current transaction. Setting `ignore_checksum_failure` to on causes the system to ignore the failure (but still report a warning), and continue processing. This behavior may *cause crashes, propagate or hide corruption, or other serious problems*. However, it may allow you to get past the error and retrieve undamaged tuples that might still be present in the table if the block header is still sane. If the header is corrupt an error will be reported even if this option is enabled. The default setting is `off`. Only superusers and users with the appropriate `SET` privilege can change this setting.
+
+**`composite_type_mismatch` (`enum`)**
+
+  Reading a composite value whose row type was altered in an incompatible way after the value was created normally causes PostgreSQL to report an error. This parameter controls that behavior. With the default, `error`, an error is reported, aborting the current transaction. With `warn`, the system warns about mismatches but allows execution to continue. With `disabled`, the check is not performed at all.
+
+  Settings other than `error` may *cause crashes, wrong results, or other serious problems*. Only superusers and users with the appropriate `SET` privilege can change this setting.
 
 **`zero_damaged_pages` (`boolean`)**
 

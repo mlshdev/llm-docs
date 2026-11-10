@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-math](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-math)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-math](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-math)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-math.html
 
 # Mathematical Functions and Operators
@@ -6,6 +6,8 @@
 Mathematical operators are provided for many PostgreSQL types. For types without standard mathematical conventions (e.g., date/time types) we describe the actual behavior in subsequent sections.
 
 [Mathematical Operators](./functions-math.md#mathematical-operators) shows the mathematical operators that are available for the standard numeric types. Unless otherwise noted, operators shown as accepting `numeric_type` are available for all the types `smallint`, `integer`, `bigint`, `numeric`, `real`, and `double precision`. Operators shown as accepting `integral_type` are available for the types `smallint`, `integer`, and `bigint`. Except where noted, each form of an operator returns the same data type as its argument(s). Calls involving multiple argument data types, such as `integer` `+` `numeric`, are resolved by using the type appearing later in these lists.
+
+The behavior of bitwise shifting, both left and right, has platform-dependent behavior both in cases of left shifting that results in a signed overflow and in cases of the results of shifting by more bits than exist in the type or from shifting by a negative value.
 
 **Mathematical Operators**
 

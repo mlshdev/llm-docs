@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-admin](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-admin)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-admin](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-admin)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-admin.html
 
 # System Administration Functions
@@ -446,11 +446,11 @@ Returns the replay location for the given replication origin. The parameter `flu
 
 ---
 
-`pg_logical_emit_message` ( `transactional` `boolean`, `prefix` `text`, `content` `text` [, `flush` `boolean` `DEFAULT` `false`] ) → `pg_lsn`
+`pg_logical_emit_message` ( `transactional` `boolean`, `prefix` `text`, `message` `text` [, `flush` `boolean` `DEFAULT` `false`] ) → `pg_lsn`
 
-`pg_logical_emit_message` ( `transactional` `boolean`, `prefix` `text`, `content` `bytea` [, `flush` `boolean` `DEFAULT` `false`] ) → `pg_lsn`
+`pg_logical_emit_message` ( `transactional` `boolean`, `prefix` `text`, `message` `bytea` [, `flush` `boolean` `DEFAULT` `false`] ) → `pg_lsn`
 
-Emits a logical decoding message. This can be used to pass generic messages to logical decoding plugins through WAL. The `transactional` parameter specifies if the message should be part of the current transaction, or if it should be written immediately and decoded as soon as the logical decoder reads the record. The `prefix` parameter is a textual prefix that can be used by logical decoding plugins to easily recognize messages that are interesting for them. The `content` parameter is the content of the message, given either in text or binary form. The `flush` parameter (default set to `false`) controls if the message is immediately flushed to WAL or not. `flush` has no effect with `transactional`, as the message's WAL record is flushed along with its transaction.
+Emits a logical decoding message. This can be used to pass generic messages to logical decoding plugins through WAL. The `transactional` parameter specifies if the message should be part of the current transaction, or if it should be written immediately and decoded as soon as the logical decoder reads the record. The `prefix` parameter is a textual prefix that can be used by logical decoding plugins to easily recognize messages that are interesting for them. The `message` parameter is the content of the message, given either in text or binary form. The `flush` parameter (default set to `false`) controls if the message is immediately flushed to WAL or not. `flush` has no effect with `transactional`, as the message's WAL record is flushed along with its transaction.
 
 ---
 
@@ -464,7 +464,7 @@ Synchronize the logical failover replication slots from the primary server to th
 
 ## Database Object Management Functions
 
-The functions shown in [Database Object Size Functions](./functions-admin.md#database-object-size-functions) calculate the disk space usage of database objects, or assist in presentation or understanding of usage results. `bigint` results are measured in bytes. If an OID that does not represent an existing object is passed to one of these functions, `NULL` is returned.
+The functions shown in [Database Object Size Functions](./functions-admin.md#database-object-size-functions) calculate the disk space usage of database objects, or assist in presentation or understanding of usage results. `bigint` results are measured in bytes. If an OID that does not represent an existing object is passed to one of these functions, `NULL` is returned, except for `pg_database_size` and `pg_tablespace_size`, which raise an error.
 
 **Database Object Size Functions**
 
@@ -490,7 +490,7 @@ Shows the `chunk_id` of an on-disk TOASTed value. Returns `NULL` if the value is
 
 `pg_database_size` ( `oid` ) → `bigint`
 
-Computes the total disk space used by the database with the specified name or OID. To use this function, you must have `CONNECT` privilege on the specified database (which is granted by default) or have privileges of the `pg_read_all_stats` role.
+Computes the total disk space used by the database with the specified name or OID. To use this function, you must have `CONNECT` privilege on the specified database (which is granted by default) or have privileges of the `pg_read_all_stats` role. Throws an error if the database does not exist.
 
 ---
 
@@ -535,7 +535,7 @@ Computes the disk space used by the specified table, excluding indexes (but incl
 
 `pg_tablespace_size` ( `oid` ) → `bigint`
 
-Computes the total disk space used in the tablespace with the specified name or OID. To use this function, you must have `CREATE` privilege on the specified tablespace or have privileges of the `pg_read_all_stats` role, unless it is the default tablespace for the current database.
+Computes the total disk space used in the tablespace with the specified name or OID. To use this function, you must have `CREATE` privilege on the specified tablespace or have privileges of the `pg_read_all_stats` role, unless it is the default tablespace for the current database. Throws an error if the tablespace does not exist.
 
 ---
 

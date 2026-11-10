@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/redirectregex.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/redirectregex.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/redirectregex.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/redirectregex.md)
 
 The `RedirectRegex` redirects a request using regex matching and replacement.
 
@@ -66,18 +66,18 @@ spec:
 
 ## Configuration Options
 
-| Field                                     | Description                                                                                                                                                                                                                      | Default | Required |
-| :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
-| <a id="opt-regex"></a>`regex`             | The `regex` option is the regular expression to match and capture elements from the request URL.                                                                                                                                 | ""      | Yes      |
-| <a id="opt-permanent"></a>`permanent`     | Enable a permanent redirection.                                                                                                                                                                                                  | false   | No       |
-| <a id="opt-replacement"></a>`replacement` | The `replacement` option defines how to modify the URL to have the new target URL..<br /> `$1x` is equivalent to `${1x}`, not `${1}x` (see [Regexp.Expand](https://golang.org/pkg/regexp/#Regexp.Expand)), so use `${1}` syntax. | ""      | No       |
+| Field                                     | Description                                                                                                                                                                                                                 | Default | Required |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
+| <a id="opt-regex"></a>`regex`             | The `regex` option is the regular expression to match and capture elements from the request URL.                                                                                                                            | ""      | Yes      |
+| <a id="opt-permanent"></a>`permanent`     | Enable a permanent redirection.                                                                                                                                                                                             | false   | No       |
+| <a id="opt-replacement"></a>`replacement` | The `replacement` option defines how to modify the URL to have the new target URL..<br /> `$1x` is equivalent to `${1x}`, not `${1}x` (see [Regexp.Expand](https://pkg.go.dev/regexp#Regexp.Expand)), so use `${1}` syntax. | ""      | No       |
 
 ### `regex`
 
 The `regex` option is the regular expression to match and capture elements from the request URL.
 
 > **Tip**
-> Regular expressions and replacements can be tested using online tools such as [Go Playground](https://play.golang.org/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2).
+> Regular expressions and replacements can be tested using online tools such as [Go Playground](https://go.dev/play/p/mWU9p-wk2ru) or the [Regex101](https://regex101.com/r/58sIgx/2/substitution).
 >
 > When defining a regular expression within YAML, any escaped character needs to be escaped twice: `example\.com` needs to be written as `example\\.com`.
 
@@ -86,4 +86,4 @@ The `regex` option is the regular expression to match and capture elements from 
 The `replacement` option defines how to modify the URL to have the new target URL.
 
 > **Warning**
-> Care should be taken when defining replacement expand variables: `$1x` is equivalent to `${1x}`, not `${1}x` (see [Regexp.Expand](https://golang.org/pkg/regexp/#Regexp.Expand)), so use `${1}` syntax.
+> Care should be taken when defining replacement expand variables: `$1x` is equivalent to `${1x}`, not `${1}x` (see [Regexp.Expand](https://pkg.go.dev/regexp#Regexp.Expand)), so use `${1}` syntax.

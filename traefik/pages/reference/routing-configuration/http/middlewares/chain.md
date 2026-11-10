@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/http/middlewares/chain.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/http/middlewares/chain.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/chain.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/chain.md)
 
 The `chain` middleware enables you to define reusable combinations of other pieces of middleware.
 It makes it effortless to reuse the same groups.
@@ -148,8 +148,14 @@ metadata:
   name: auth-users
 spec:
   basicAuth:
-    users:
-    - test:$apr1$H6uskkkW$IgXLP6ewTrSuBkTrqE8wj/
+    secret: auth-users-secret
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: auth-users-secret
+stringData:
+  users: test:$apr1$H6uskkkW$IgXLP6ewTrSuBkTrqE8wj/
 ---
 apiVersion: traefik.io/v1alpha1
 kind: Middleware

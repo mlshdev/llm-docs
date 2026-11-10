@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md)
 
 # Configure trace to logs correlation
 
@@ -19,7 +19,7 @@ Both sides must be configured for the correlation to work in either direction.
 To configure trace to logs correlation, you need:
 
 - A [Tempo data source](https://grafana.com/docs/grafana/v13.3/datasources/tempo/configure-tempo-data-source/) configured in Grafana
-- A [Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure-loki-data-source/) configured in Grafana
+- A [Loki data source](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/) configured in Grafana
 - Applications that emit traces and logs with a shared identifier such as a trace ID, service name, or both
 - Editor or Admin permissions in Grafana
 
@@ -33,6 +33,10 @@ To configure trace to logs correlation, you need:
 
 These settings control how Grafana queries your log data source when you click a span in the trace view.
 This guide uses Loki, but Trace to logs also supports Elasticsearch, Splunk, OpenSearch, Falcon LogScale, Google Cloud Logging, and VictoriaMetrics Logs.
+
+> **Note**
+>
+> To change the target log data source, for example from Elasticsearch to Loki, select the new data source from the **Data source** drop-down in the following steps and update the tags and custom query to match its query language. The reverse direction, from a log line back to a trace, is configured on the log data source itself, and the mechanism differs by type: Loki uses [Derived fields](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/#derived-fields), while Elasticsearch and Splunk use [Data links](https://grafana.com/docs/grafana/v13.3/datasources/elasticsearch/configure/#data-links).
 
 1. Go to **Connections** > **Data sources** and select your Tempo data source.
 
@@ -158,7 +162,7 @@ These settings enable the **Tempo** link on Loki log lines, letting you navigate
 
 8. Click **Save & test**.
 
-For more details about derived field options, refer to [Derived fields](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure-loki-data-source/#derived-fields) in the Loki data source documentation.
+For more details about derived field options, refer to [Derived fields](https://grafana.com/docs/grafana/v13.3/datasources/loki/configure/#derived-fields) in the Loki data source documentation.
 
 ## Provision trace to logs settings
 

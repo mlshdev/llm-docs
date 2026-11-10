@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-quadlet-install.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-quadlet-install.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-quadlet-install.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-quadlet-install.1.md.in)
 
 # podman-quadlet-install
 
@@ -16,13 +16,11 @@ Install a Quadlet file or an application (which may include multiple Quadlet fil
 
 This command allows you to:
 
-```
-* Install a single Quadlet file, optionally followed by additional non-Quadlet files.
+- Install a single Quadlet file, optionally followed by additional non-Quadlet files.
 
-* Specify a directory containing multiple Quadlet files and other non-Quadlet files for installation (for example a config file for a quadlet container).
+- Specify a directory containing multiple Quadlet files and other non-Quadlet files for installation (for example a config file for a quadlet container).
 
-* Install multiple Quadlets from a single file with the `.quadlets` extension, where each Quadlet is separated by a `---` delimiter. When using multiple quadlets in a single `.quadlets` file, each quadlet section must include a `# FileName=<name>` comment to specify the name for that quadlet.
-```
+- Install multiple Quadlets from a single file with the `.quadlets` extension, where each Quadlet is separated by a `---` delimiter. When using multiple quadlets in a single `.quadlets` file, each quadlet section must include a `# FileName=<name>` comment to specify the name for that quadlet.
 
 Note: An application is a collection of files, quadlet and non-quadlets, that
 need to live together. As such, removing a quadlet that is part of an
@@ -109,4 +107,4 @@ Note: Multi-quadlet functionality requires the `.quadlets` file extension. Files
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-quadlet(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-quadlet.1.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-systemd.unit.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-quadlet(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-quadlet.1.md)**, **[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-systemd.unit.5.md)**

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-container.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-container.unit.5.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-container.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-container.unit.5.md.in)
 
 # podman-container.unit
 
@@ -213,7 +213,7 @@ Add an annotation to the container. This option can be set multiple times.
 
 ### `AutoUpdate=registry`
 
-Indicates whether the container will be auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-auto-update.1.md.in)). The following values are supported:
+Indicates whether the container will be auto-updated ([podman-auto-update(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-auto-update.1.md.in)). The following values are supported:
 
 - `registry`: Requires a fully-qualified image reference (e.g., quay.io/podman/stable:latest) to be used to create the container. This enforcement is necessary to know which image to actually check and pull. If an image ID was used, Podman does not know which image to check/pull anymore.
 
@@ -259,7 +259,7 @@ container's primary IP address (also see the
 
 The name is not the hostname inside the container; see
 **HostName=**. See
-**[podman-network(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network.1.md)** for more on network DNS.
+**[podman-network(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network.1.md)** for more on network DNS.
 
 ### `ContainersConfModule=module`
 
@@ -393,6 +393,15 @@ runtime to pass the group access into the container. Currently only available
 with the `crun` OCI runtime. Note: `keep-groups` is exclusive, other groups cannot be specified
 with this flag. (Not available for remote commands, including Mac and Windows (excluding WSL2) machines)
 
+Note: `keep-groups` passes the supplementary groups that the *calling process*
+already has into the container, it does not look the user's groups up at
+container start. When Podman is started from a systemd user service, for example
+a rootless Quadlet, the calling process is the `systemd --user` manager, which
+only holds the groups the user had when that manager was started. Groups the user
+is added to afterwards, for example with `usermod`, are therefore not passed into
+the container. Restart the user's systemd manager to pick them up, for example
+with `loginctl terminate-user <user>` followed by a new login, or by rebooting.
+
 ### `HealthCmd="command"`
 
 Set or alter a healthcheck command for a container. The command is a command to be executed inside the
@@ -465,10 +474,11 @@ if the command fails a set number of times, the container is restarted. A startu
 containers with an extended startup period are not marked as unhealthy until they are fully started. Startup healthchecks can only be
 used when a regular healthcheck (from the container's image or the
 `HealthCmd=` option) is also set.
+If `HealthCmd=` option was set, but `HealthStartupCmd=` one was missed, then value of `HealthCmd=` option is used for startup health check.
 
 ### `HealthStartupInterval=interval`
 
-Set an interval for the startup healthcheck. An *interval* of **disable** results in no automatic timer setup. The default is **30s**.
+Set an interval for the startup healthcheck. An *interval* of **0s** results in no automatic timer setup. The default is **0s**.
 
 ### `HealthStartupRetries=retries`
 
@@ -506,7 +516,7 @@ This option can only be used with a private UTS namespace `--uts=private`
 
 When **HostName=** is unset and the container uses a private UTS namespace (default), Podman sets the hostname to the first 12 characters of the container ID. The container name assigned with **ContainerName=** is not used unless *container\_name\_as\_hostname=true* is set in `containers.conf`.
 
-Podman network DNS registers the container name, the short container ID (first 12 characters), and any explicitly set **--hostname** as DNS names. The default hostname matches the short ID alias. See **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network.1.md)**.
+Podman network DNS registers the container name, the short container ID (first 12 characters), and any explicitly set **--hostname** as DNS names. The default hostname matches the short ID alias. See **[podman-network(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network.1.md)**.
 
 ### `HttpProxy=`
 
@@ -523,7 +533,9 @@ proxy environment at container build time.)
 When used with the remote client it uses the proxy environment variables
 that are set on the server process.
 
-Defaults to **true**.
+The default for this option is taken from the `http_proxy` setting in the
+`[containers]` table of containers.conf(5). If unset, that value defaults to
+**true**.
 
 ### `Image=name`
 
@@ -541,12 +553,14 @@ Special Cases:
 
 ### `ImageVolume=mode`
 
-Tells Podman how to handle the builtin image volumes. Default is **bind**.
+Tells Podman how to handle the builtin image volumes. Default is **anonymous**.
 
-- **bind**: An anonymous named volume is created and mounted into the container.
+- **anonymous**: An anonymous named volume is created and mounted into the container.
 - **tmpfs**: The volume is mounted onto the container as a tmpfs, which allows the users to create
   content that disappears when the container is stopped.
 - **ignore**: All volumes are just ignored and no action is taken.
+
+In the past, a **bind** option was accepted as well. This is deprecated, and currently aliased to **anonymous**.
 
 ### `IP=IPv4`
 
@@ -839,7 +853,7 @@ Valid *mode* values are:
 
   For example, to set a static IPv4 address and a static mac address, use `--network bridge:ip=10.88.0.10,mac=44:33:22:11:00:99`.
 
-- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
+- *\<network name or ID>***\[:OPTIONS,...]**: Connect to a user-defined network; this is the network name or ID from a network created by **[podman network create](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-network-create.1.md.in)**. It is possible to specify the same options described under the bridge mode above. Use the **--network** option multiple times to specify additional networks. \
   For backwards compatibility it is also possible to specify comma-separated networks on the first **--network** argument, however this prevents you from using the options described under the bridge section above.
 
 - **none**: Create a network namespace for the container but do not configure network interfaces for it, thus the container has no network connectivity.
@@ -929,6 +943,11 @@ Tune the container's pids limit. Set to **-1** to have unlimited pids for the co
 
 Specify a Quadlet `.pod` unit to link the container to.
 The value must take the form of `<name>.pod` and the `.pod` unit must exist.
+
+In this value, Quadlet expands the `%N` specifier to the container's service name (the
+`ServiceName=` value if set, otherwise the name derived from the unit file), for example
+`Pod=%N.pod`. The expansion happens while the unit is generated, and `%N` is the only
+specifier resolved in this key.
 
 Quadlet will add all the necessary parameters to link between the container and the pod and between their corresponding services.
 
@@ -1471,10 +1490,28 @@ Ulimit options. Sets the ulimits values inside of the container.
 $ podman run --ulimit nofile=1024:1024 --rm ubi9 ulimit -n
 1024
 
+Here is the list of the different resources and the limits' units:
+
+| Type                                           | Unit of the value given to --ulimit |
+| :--------------------------------------------- | :---------------------------------- |
+| core, fsize                                    | bytes                               |
+| data, memlock, rss, stack                      | bytes                               |
+| msgqueue                                       | bytes                               |
+| rttime                                         | microseconds                        |
+| cpu                                            | seconds                             |
+| locks, nice, nofile, nproc, rtprio, sigpending | count                               |
+
+For example, a locked memory limit given in bytes is reported in kbytes:
+
+$ podman run --ulimit memlock=4096 --rm ubi9 ulimit -l
+4
+
+Unit suffixes such as *k* or *m* are not accepted.
+
 Set -1 for the soft or hard limit to set the limit to the maximum limit of the current
 process. In rootful mode this is often unlimited.
 
-If nofile and nproc are unset, a default value of 1048576 will be used, unless overridden
+If nofile is unset, a default value of 1048576 will be used, unless overridden
 in containers.conf(5).  However, if the default value exceeds the hard limit for the current
 rootless user, the current hard limit will be applied instead.
 
@@ -1875,6 +1912,7 @@ DefaultDependencies=false
 By default, the container is named `systemd-<unitname>`. Use `ContainerName=` to override.
 
 Avoid using systemd specifiers like `%N` in resource names—they break inter-resource linking.
+The exception is `%N` in `Pod=`, which Quadlet expands while generating the unit.
 
 # TEMPLATE UNITS
 
@@ -1930,7 +1968,7 @@ WantedBy=multi-user.target
 
 # SEE ALSO
 
-[podman-run(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-run.1.md.in),
-[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-systemd.unit.5.md),
+[podman-run(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-run.1.md.in),
+[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-systemd.unit.5.md),
 [systemd.service(5)](https://www.freedesktop.org/software/systemd/man/systemd.service.html),
 [systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)

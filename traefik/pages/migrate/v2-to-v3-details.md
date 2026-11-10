@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/migrate/v2-to-v3-details.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/migrate/v2-to-v3-details.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/migrate/v2-to-v3-details.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/migrate/v2-to-v3-details.md)
 
 # Configuration Details for Migrating from Traefik v2 to v3
 
@@ -744,7 +744,7 @@ Use `PathRegexp` instead for dynamic path segments.
 
 `QueryRegexp` has been introduced to match query values using a regular expression.
 
-`HeaderRegexp`, `HostRegexp`, `PathRegexp`, `QueryRegexp`, and `HostSNIRegexp` matchers now uses the [Go regexp syntax](https://golang.org/pkg/regexp/syntax/).
+`HeaderRegexp`, `HostRegexp`, `PathRegexp`, `QueryRegexp`, and `HostSNIRegexp` matchers now uses the [Go regexp syntax](https://pkg.go.dev/regexp/syntax).
 
 All matchers now take a single value (except `Header`, `HeaderRegexp`, `Query`, and `QueryRegexp` which take two)
 and should be explicitly combined using logical operators to mimic previous behavior.

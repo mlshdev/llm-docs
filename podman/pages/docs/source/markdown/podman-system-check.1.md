@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-system-check.1.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-system-check.1.md)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-system-check.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-system-check.1.md)
 
 # podman-system-check
 
@@ -52,18 +52,18 @@ depend on damaged images, and those damaged images, as well.
 A reasonably quick check:
 
 ```
-podman system check --quick --repair --force
+$ podman system check --quick --repair --force
 ```
 
 A more thorough check:
 
 ```
-podman system check --repair --max=1h --force
+$ podman system check --repair --max=1h --force
 ```
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-system(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-system.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-system(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-system.1.md)**
 
 ## HISTORY
 

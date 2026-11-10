@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/tutorials/admin-set-up.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/get-started/tutorials/admin-set-up.md)
+> Pinned source for Docker main: [content/get-started/tutorials/admin-set-up.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/get-started/tutorials/admin-set-up.md)
 
 # Roll out Docker to a pilot group
 

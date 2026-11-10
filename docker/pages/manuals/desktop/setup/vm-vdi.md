@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/vm-vdi.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/desktop/setup/vm-vdi.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/vm-vdi.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/setup/vm-vdi.md)
 
 # Run Docker Desktop for Windows in a VM or VDI environment
 

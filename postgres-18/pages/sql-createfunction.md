@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_function.sgml#sql-createfunction](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/create_function.sgml%23sql-createfunction)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/ref/create_function.sgml#sql-createfunction](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/ref/create_function.sgml%23sql-createfunction)
 > Canonical documentation: https://www.postgresql.org/docs/18/sql-createfunction.html
 
 # CREATE FUNCTION
@@ -96,7 +96,7 @@ Refer to [User-Defined Functions](./xfunc.md) for further information on writing
 
   The name of the language that the function is implemented in. It can be `sql`, `c`, `internal`, or the name of a user-defined procedural language, e.g., `plpgsql`. The default is `sql` if `sql_body` is specified. Enclosing the name in single quotes is deprecated and requires matching case.
 
-**`TRANSFORM { FOR TYPE type_name } [, ... ] }`**
+**`TRANSFORM { FOR TYPE type_name } [, ... ]`**
 
   Lists which transforms a call to the function should apply. Transforms convert between SQL types and language-specific data types; see [CREATE TRANSFORM](./sql-createtransform.md). Procedural language implementations usually have hardcoded knowledge of the built-in types, so those don't need to be listed here. If a procedural language implementation does not know how to handle a type and no transform is supplied, it will fall back to a default behavior for converting data types, but this depends on the implementation.
 

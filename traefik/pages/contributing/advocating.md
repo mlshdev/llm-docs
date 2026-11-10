@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/contributing/advocating.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/contributing/advocating.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/contributing/advocating.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/contributing/advocating.md)
 
 # Advocating
 
@@ -10,8 +10,8 @@ You can contribute to the Traefik community in three main ways:
 **Spread the word!** Guides, videos, blog posts, how-to articles, and showing off your network design all help spread the word about Traefik Proxy
 and teach others in the community how to best implement it.
 It always sparks joy when users share how Traefik Proxy helps them solve their problems.
-If you are talking about Traefik Proxy, [let us know](https://traefik.io/submit-my-contribution/) and we will promote your work and reward your enthusiasm!
-If you are giving a talk that includes or is about Traefik Proxy, [let us know](https://traefik.io/submit-my-contribution/) and we will send you swag and stickers for your time at the conference.
+If you are talking about Traefik Proxy, [let us know](https://traefik.io/submit-my-contribution) and we will promote your work and reward your enthusiasm!
+If you are giving a talk that includes or is about Traefik Proxy, [let us know](https://traefik.io/submit-my-contribution) and we will send you swag and stickers for your time at the conference.
 If you have written about Traefik or shared useful information you would like to promote, feel free to add links to the [dedicated wiki page on GitHub](https://github.com/traefik/traefik/wiki/Awesome-Traefik).
 
 **Help community members!** Everyone needs a place to share their cool innovations or get help with that pesky bug that only a different pair of eyes seems to be able to see.

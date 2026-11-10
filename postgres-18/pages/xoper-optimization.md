@@ -1,11 +1,11 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/xoper.sgml#xoper-optimization](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/xoper.sgml%23xoper-optimization)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/xoper.sgml#xoper-optimization](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/xoper.sgml%23xoper-optimization)
 > Canonical documentation: https://www.postgresql.org/docs/18/xoper-optimization.html
 
 # Operator Optimization Information
 
 A PostgreSQL operator definition can include several optional clauses that tell the system useful things about how the operator behaves. These clauses should be provided whenever appropriate, because they can make for considerable speedups in execution of queries that use the operator. But if you provide them, you must be sure that they are right! Incorrect use of an optimization clause can result in slow queries, subtly wrong output, or other Bad Things. You can always leave out an optimization clause if you are not sure about it; the only consequence is that queries might run slower than they need to.
 
-Additional optimization clauses might be added in future versions of PostgreSQL. The ones described here are all the ones that release 18.6 understands.
+Additional optimization clauses might be added in future versions of PostgreSQL. The ones described here are all the ones that release 18.7 understands.
 
 It is also possible to attach a planner support function to the function that underlies an operator, providing another way of telling the system about the behavior of the operator. See [Function Optimization Information](./xfunc-optimization.md) for more information.
 

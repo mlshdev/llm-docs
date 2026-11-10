@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/allow-list.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/desktop/enterprise/allow-list.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/allow-list.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/enterprise/allow-list.md)
 
 # Allowlist for Docker Desktop
 

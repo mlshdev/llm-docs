@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-info](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-info)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-info](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-info)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-info.html
 
 # System Information Functions and Operators
@@ -87,7 +87,9 @@ Returns the process ID of the server process attached to the current session.
 
 Returns an array of the process ID(s) of the sessions that are blocking the server process with the specified process ID from acquiring a lock, or an empty array if there is no such server process or it is not blocked.
 
-One server process blocks another if it either holds a lock that conflicts with the blocked process's lock request (hard block), or is waiting for a lock that would conflict with the blocked process's lock request and is ahead of it in the wait queue (soft block). When using parallel queries the result always lists client-visible process IDs (that is, `pg_backend_pid` results) even if the actual lock is held or awaited by a child worker process. As a result of that, there may be duplicated PIDs in the result. Also note that when a prepared transaction holds a conflicting lock, it will be represented by a zero process ID.
+One server process blocks another if it either holds a lock that conflicts with the blocked process's lock request (hard block), or is waiting for a lock that would conflict with the blocked process's lock request and is ahead of it in the wait queue (soft block). A prepared transaction that holds a conflicting lock is represented by a zero process ID.
+
+When using parallel queries the result always lists client-visible process IDs (that is, `pg_backend_pid` results) even if the actual lock is held or awaited by a child worker process. As a result of that, there may be duplicated PIDs in the result. Note that the processes of a parallel query can block each other on relation extension locks (lock type `extend` in [`pg_locks`](./view-pg-locks.md)), in which case the result contains the blocked session's own process ID.
 
 Frequent calls to this function could have some impact on database performance, because it needs exclusive access to the lock manager's shared state for a short time.
 
@@ -864,9 +866,9 @@ This function will only work as desired if the data type's input function has be
 
 ---
 
-`pg_input_error_info` ( `string` `text`, `type` `text` ) → `record` ( `message` `text`, `detail` `text`, `hint` `text`, `sql_error_code` `text` )
+`pg_input_error_info` ( `value` `text`, `type_name` `text` ) → `record` ( `message` `text`, `detail` `text`, `hint` `text`, `sql_error_code` `text` )
 
-Tests whether the given `string` is valid input for the specified data type; if not, return the details of the error that would have been thrown. If the input is valid, the results are NULL. The inputs are the same as for `pg_input_is_valid`.
+Tests whether the given `value` is valid input for the specified data type; if not, return the details of the error that would have been thrown. If the input is valid, the results are NULL. The inputs are the same as for `pg_input_is_valid`.
 
 This function will only work as desired if the data type's input function has been updated to report invalid input as a “soft” error. Otherwise, invalid input will abort the transaction, just as if the string had been cast to the type directly.
 

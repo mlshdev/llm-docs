@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `34992b922461d20cc97107b84056756802584571`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `75a95460ce3cc8db87a23893490ec331506d08fd`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -301,12 +301,12 @@
 - [Organization filesystem access policies](pages/manuals/ai/governance/organization/policies/filesystem.md): AI Governance requirements (2388 bytes)
 - [Organization policies](pages/manuals/ai/governance/organization/policies/index.md): AI Governance requirements (7391 bytes)
 - [Organization MCP access policies](pages/manuals/ai/governance/organization/policies/mcp.md): AI Governance requirements (12638 bytes)
-- [Organization network access policies](pages/manuals/ai/governance/organization/policies/network.md): AI Governance requirements (5839 bytes)
+- [Organization network access policies](pages/manuals/ai/governance/organization/policies/network.md): AI Governance requirements (6233 bytes)
 - [Enforce sign-in for Docker Sandboxes](pages/manuals/ai/governance/organization/sign-in-enforcement.md): AI Governance requirements (10019 bytes)
 - [Audit record reference](pages/manuals/ai/governance/reference/audit-records.md): Docker AI Governance audit records use one schema across delivery modes. Local JSON Lines files and cloud-delivered records contain the same metadata fields. (17078 bytes)
 - [Filesystem mount rule syntax](pages/manuals/ai/governance/reference/filesystem-rules.md): Filesystem mount rules are written in organization filesystem access policies. Developers can't add them with local policy. Filesystem mount rules use the actions read and write. Resources are host paths that sandboxes… (2463 bytes)
 - [MCP policy reference](pages/manuals/ai/governance/reference/mcp-policy.md): MCP policies are organization policies written in Cedar using Docker's MCP namespace. This reference defines the Docker-specific policy surface for Model Context Protocol (MCP) activity made available to sandboxes throu… (13201 bytes)
-- [Network and HTTP rule syntax](pages/manuals/ai/governance/reference/network-rules.md): A network rule matches a destination. There are two kinds: (6207 bytes)
+- [Network and HTTP rule syntax](pages/manuals/ai/governance/reference/network-rules.md): A network rule matches a destination. There are two kinds: (6334 bytes)
 - [Organization policy limits](pages/manuals/ai/governance/reference/policy-limits.md): Organization policies have the following limits, which help ensure fair usage and resource availability across organizations: (1618 bytes)
 - [Troubleshoot governance](pages/manuals/ai/governance/troubleshooting.md): These problems come from the governance rules that control what sandboxes can reach and mount, and from the audit logs that record those decisions. For other Docker Sandboxes problems, see Troubleshooting. (7273 bytes)
 - [DMR REST API](pages/manuals/ai/model-runner/api-reference.md): Once Model Runner is enabled, new API endpoints are available. You can use these endpoints to interact with a model programmatically. Docker Model Runner provides compatibility with OpenAI, Anthropic, and Ollama API for… (16206 bytes)
@@ -628,7 +628,7 @@
 - [Docker Desktop WSL 2 backend on Windows](pages/manuals/desktop/features/wsl/index.md): Windows Subsystem for Linux (WSL) 2 is a full Linux kernel built by Microsoft that lets Linux distributions run without managing virtual machines. With Docker Desktop running on WSL 2, users can leverage Linux workspace… (9412 bytes)
 - [Develop with Docker Desktop using WSL 2 on Windows](pages/manuals/desktop/features/wsl/use-wsl.md): The following section describes how to start developing your applications using Docker and WSL 2. (1379 bytes)
 - [Docker Desktop](pages/manuals/desktop/index.md): Docker Desktop is a one-click-install application for your Mac, Linux, or Windows environment that lets you build, share, and run containerized applications and microservices. (3185 bytes)
-- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (374677 bytes)
+- [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): This page contains information about the new features, improvements, known issues, and bug fixes in Docker Desktop releases. (375909 bytes)
 - [How to back up and restore your Docker Desktop data](pages/manuals/desktop/settings-and-maintenance/backup-and-restore.md): Use this procedure to back up and restore your images and container data. This is useful if you want to reset your VM disk or to move your Docker environment to a new computer, or recover from a failed Docker Desktop up… (5350 bytes)
 - [Change your Docker Desktop settings](pages/manuals/desktop/settings-and-maintenance/settings.md): Customize Docker Desktop behavior and optimize performance and resource usage with Docker Desktop's settings. (54951 bytes)
 - [Install Docker Desktop on Arch-based distributions](pages/manuals/desktop/setup/install/linux/archlinux.md): Docker Desktop Archlinux requirements (5026 bytes)

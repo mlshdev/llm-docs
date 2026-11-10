@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_basebackup.sgml#app-pgbasebackup](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/pg_basebackup.sgml%23app-pgbasebackup)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/ref/pg_basebackup.sgml#app-pgbasebackup](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/ref/pg_basebackup.sgml%23app-pgbasebackup)
 > Canonical documentation: https://www.postgresql.org/docs/18/app-pgbasebackup.html
 
 # pg_basebackup
@@ -202,7 +202,7 @@ The following command-line options control the generation of the backup and the 
 
   Prevents the server from estimating the total amount of backup data that will be streamed, resulting in the `backup_total` column in the `pg_stat_progress_basebackup` view always being `NULL`.
 
-  Without this option, the backup will start by enumerating the size of the entire database, and then go back and send the actual contents. This may make the backup take slightly longer, and in particular it will take longer before the first data is sent. This option is useful to avoid such estimation time if it's too long.
+  Without this option, the backup will start by estimating the total amount of data that will be streamed, and then go back and send the actual contents. This may make the backup take slightly longer, and in particular it will take longer before the first data is sent. This option is useful to avoid such estimation time if it's too long.
 
   This option is not allowed when using `--progress`.
 

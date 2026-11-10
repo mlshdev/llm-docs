@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-aggregate](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-aggregate)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-aggregate](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-aggregate)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-aggregate.html
 
 # Aggregate Functions
@@ -247,7 +247,7 @@ While all aggregates below accept an optional `ORDER BY` clause (as outlined in 
 
   `jsonb_object_agg` ( `key` `"any"`, `value` `"any"` `ORDER BY` `input_sort_columns` ) → `jsonb`
 
-  Collects all the key/value pairs into a JSON object. Key arguments are coerced to text; value arguments are converted as per `to_json` or `to_jsonb`. Values can be null, but keys cannot.
+  Collects all the key/value pairs into a JSON object. Key arguments are coerced to text; value arguments are converted as per `to_json` or `to_jsonb`. Values can be null, but keys cannot. If a key appears more than once, the `json` result keeps every pair, while the `jsonb` result keeps only the last value for that key.
 
 **Partial Mode**
 
@@ -261,7 +261,7 @@ While all aggregates below accept an optional `ORDER BY` clause (as outlined in 
 
   `jsonb_object_agg_strict` ( `key` `"any"`, `value` `"any"` ) → `jsonb`
 
-  Collects all the key/value pairs into a JSON object. Key arguments are coerced to text; value arguments are converted as per `to_json` or `to_jsonb`. The `key` can not be null. If the `value` is null then the entry is skipped,
+  Collects all the key/value pairs into a JSON object. Key arguments are coerced to text; value arguments are converted as per `to_json` or `to_jsonb`. The `key` cannot be null. If the `value` is null then the pair is skipped. Duplicate keys are handled as for `json_object_agg` and `jsonb_object_agg`, after removing any pairs with null values.
 
 **Partial Mode**
 
@@ -289,7 +289,7 @@ While all aggregates below accept an optional `ORDER BY` clause (as outlined in 
 
   `jsonb_object_agg_unique_strict` ( `key` `"any"`, `value` `"any"` ) → `jsonb`
 
-  Collects all the key/value pairs into a JSON object. Key arguments are coerced to text; value arguments are converted as per `to_json` or `to_jsonb`. The `key` can not be null. If the `value` is null then the entry is skipped. If there is a duplicate key an error is thrown.
+  Collects all the key/value pairs into a JSON object. Key arguments are coerced to text; value arguments are converted as per `to_json` or `to_jsonb`. The `key` cannot be null. If the `value` is null then the pair is skipped. If there is a duplicate key (including pairs with null values) an error is thrown.
 
 **Partial Mode**
 

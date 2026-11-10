@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/config.sgml#runtime-config-logging](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/config.sgml%23runtime-config-logging)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/config.sgml#runtime-config-logging](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/config.sgml%23runtime-config-logging)
 > Canonical documentation: https://www.postgresql.org/docs/18/runtime-config-logging.html
 
 # Error Reporting and Logging
@@ -45,7 +45,9 @@
 
   > **Note**
   >
-  > The logging collector is designed to never lose messages. This means that in case of extremely high load, server processes could be blocked while trying to send additional log messages when the collector has fallen behind. In contrast, `syslog` prefers to drop messages if it cannot write them, which means it may fail to log some messages in such cases but it will not block the rest of the system.
+  > The logging collector is designed to avoid dropping messages. This means that in case of extremely high load, server processes could be blocked while trying to send additional log messages when the collector has fallen behind. In contrast, `syslog` prefers to drop messages if it cannot write them, which means it may fail to log some messages in such cases but it will not block the rest of the system.
+  >
+  > The logging collector does not guarantee that log messages have reached durable storage. It can still lose messages due to a system crash, power loss, or an error while writing the log file.
 
 **`log_directory` (`string`)**
 
@@ -250,7 +252,7 @@
 
 **`log_line_prefix` (`string`)**
 
-  This is a `printf`-style string that is output at the beginning of each log line. `%` characters begin “escape sequences” that are replaced with status information as outlined below. Unrecognized escapes are ignored. Other characters are copied straight to the log line. Some escapes are only recognized by session processes, and will be treated as empty by background processes such as the main server process. Status information may be aligned either left or right by specifying a numeric literal after the % and before the option. A negative value will cause the status information to be padded on the right with spaces to give it a minimum width, whereas a positive value will pad on the left. Padding can be useful to aid human readability in log files.
+  This is a `printf`-style string that is output at the beginning of each log entry that is sent to `stderr`, `syslog`, or `eventlog`. `%` characters begin “escape sequences” that are replaced with status information as outlined below. Unrecognized escapes are ignored. Other characters are copied straight to the log line. Some escapes are only recognized by session processes, and will be treated as empty by background processes such as the main server process. Status information may be aligned either left or right by specifying a numeric literal after the % and before the option. A negative value will cause the status information to be padded on the right with spaces to give it a minimum width, whereas a positive value will pad on the left. Padding can be useful to aid human readability in log files.
 
   This parameter can only be set in the `postgresql.conf` file or on the server command line. The default is `'%m [%p] '` which logs a time stamp and the process ID.
 

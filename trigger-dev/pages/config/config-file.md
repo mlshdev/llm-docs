@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/config/config-file.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/config/config-file.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/config/config-file.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/config/config-file.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/config-file
 
 # The trigger.config.ts file
@@ -117,7 +117,7 @@ Read more about task lifecycle functions in the [tasks overview](https://trigger
 
 We use OpenTelemetry (OTEL) for our run logs. This means you get a lot of information about your tasks with no effort. But you probably want to add more information to your logs. For example, here's all the Prisma calls automatically logged:
 
-![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/auto-instrumentation.png)
+![The run log](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/auto-instrumentation.png)
 
 Here we add Prisma and OpenAI instrumentations to your `trigger.config.ts` file.
 

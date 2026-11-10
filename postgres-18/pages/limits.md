@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/limits.sgml#limits](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/limits.sgml%23limits)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/limits.sgml#limits](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/limits.sgml%23limits)
 > Canonical documentation: https://www.postgresql.org/docs/18/limits.html
 
 # PostgreSQL Limits
@@ -15,6 +15,7 @@
 | relation size | 32 TB | with the default `BLCKSZ` of 8192 bytes |
 | rows per table | limited by the number of tuples that can fit onto 4,294,967,295 pages |  |
 | columns per table | 1,600 | further limited by tuple size fitting on a single page; see note below |
+| `CHECK` constraints per table | 32,767 | constrained by the size of pg\_class.relchecks |
 | columns in a result set | 1,664 |  |
 | field size | 1 GB |  |
 | indexes per table | unlimited | constrained by maximum relations per database |

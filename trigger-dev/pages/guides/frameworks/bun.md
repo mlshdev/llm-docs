@@ -1,14 +1,9 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/guides/frameworks/bun.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/guides/frameworks/bun.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/guides/frameworks/bun.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/frameworks/bun.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/bun
 
 # Bun guide
 
 This guide will show you how to setup Trigger.dev in your existing Bun project, test an example task, and view the run.
-
-> **Warning**
->
-> The trigger.dev CLI does not yet support Bun. So you will need to run the CLI using Node.js. Bun
-> will still be used to execute your tasks, even in the `dev` environment.
 
 > **Warning**
 >
@@ -119,12 +114,12 @@ Node.js yourself with a build extension before moving those projects off `bun`.
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/test-dashboard.png)
 
 1. Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/terminal-completed-run.png)

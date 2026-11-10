@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-stop.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-stop.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-stop.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-stop.1.md.in)
 
 # podman-stop
 
@@ -52,6 +52,7 @@ Valid filters are listed below:
 | label!               | \[Key] or \[Key=Value] Label NOT assigned to a container                                                                                                                             |
 | exited               | \[Int] Container's exit code                                                                                                                                                         |
 | status               | \[Status] Container's status: 'created', 'initialized', 'running', 'stopped', 'paused', 'exited', 'removing', 'stopping', 'unknown'                                                  |
+| status!              | \[Status] Container's status is NOT the specified status                                                                                                                             |
 | ancestor             | \[ImageName] Image or descendant used to create container (accepts regex)                                                                                                            |
 | before               | \[ID] or \[Name] Containers created before this container                                                                                                                            |
 | since                | \[ID] or \[Name] Containers created since this container                                                                                                                             |
@@ -155,7 +156,7 @@ bb3ff91d969a8dc622d627e4a8d76c18bdbd417d317c5e7e66543c0b0c8ed1e8
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**, **[podman-rm(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-rm.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-rm(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-rm.1.md.in)**
 
 ## HISTORY
 

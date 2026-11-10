@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.0: [docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md](https://github.com/grafana/grafana/blob/752e3462ff71a43a5c1fb62d00a482fa2dc0ee6a/docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md)
+> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/short_url.md)
 
 # Short URL API
 
@@ -12,12 +12,9 @@
 
 > **Note**
 >
-> Grafana announced the deprecation of this API on September 23, 2026. Use the `shorturl.grafana.app/v1beta1` API group instead:
+> This HTTP API is deprecated since September 2026. Use the [Short URL HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/short_url) instead.
 >
-> - **Create a short URL:** `POST /apis/shorturl.grafana.app/v1beta1/namespaces/{namespace}/shorturls`
-> - **Retrieve a short URL:** `GET /apis/shorturl.grafana.app/v1beta1/namespaces/{namespace}/shorturls/{name}`
->
-> The new API uses different request and response shapes than the endpoints on this page, so changing the URL alone isn't enough. Refer to the [Short URL API Swagger documentation](https://play.grafana.org/swagger?api=shorturl.grafana.app-v1beta1) for the schemas, and to [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/) for how to determine the `{namespace}` for your instance.
+> Refer to [Migrate from the legacy Short URL API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/short_url/#migrate-from-the-legacy-short-url-api) to learn more about the new API, and how to migrate.
 
 Use this API to create shortened URLs. A short URL represents a longer URL containing complex query parameters in a smaller and simpler format.
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/how-tos/models-and-compose.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/compose/how-tos/models-and-compose.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/models-and-compose.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/compose/how-tos/models-and-compose.md)
 
 # Define AI Models in Docker Compose applications
 

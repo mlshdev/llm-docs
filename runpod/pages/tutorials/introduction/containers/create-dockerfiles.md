@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/introduction/containers/create-dockerfiles.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/tutorials/introduction/containers/create-dockerfiles.mdx)
+> Pinned source for Runpod main: [tutorials/introduction/containers/create-dockerfiles.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/tutorials/introduction/containers/create-dockerfiles.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/introduction/containers/create-dockerfiles
 
 # Create Dockerfiles

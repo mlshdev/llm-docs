@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/config.sgml#runtime-config-replication](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/config.sgml%23runtime-config-replication)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/config.sgml#runtime-config-replication](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/config.sgml%23runtime-config-replication)
 > Canonical documentation: https://www.postgresql.org/docs/18/runtime-config-replication.html
 
 # Replication
@@ -25,7 +25,7 @@ These parameters can be set on any server that is to send replication data to on
 
 **`output_plugin_libraries` (`string`)**
 
-  Lists the libraries installed in [Client Connection Defaults](./runtime-config-client.md#guc-dynamic-library-path) that are also trusted for use as logical output plugins by replication clients. Any [logical decoding](./logicaldecoding-example.md) or [replication](./protocol-replication.md) requests for other libraries will be refused. All users are subject to this restriction. The default is `'pgoutput, test_decoding'`, which are the two logical output plugins included in the standard PostgreSQL distribution.
+  Lists the libraries installed in [Client Connection Defaults](./runtime-config-client.md#guc-dynamic-library-path) that are also trusted for use as logical output plugins by replication clients. Any [logical decoding](./logicaldecoding-example.md) or [replication](./protocol-replication.md) requests for other libraries will be refused. All users are subject to this restriction. The default is `'pgoutput, test_decoding'`, which are the two logical output plugins included in the standard PostgreSQL distribution. ([Plugins Allowed by Default](./runtime-config-replication.md#plugins-allowed-by-default) documents the behavior of the system if they are removed from this list.)
 
   The format is a comma-separated list of library names, where each name is interpreted as for the [`LOAD`](./sql-load.md) command (but logical decoding clients must specify a plugin name that *exactly* matches an entry in the list, without variations in case or path structure). Whitespace between entries is ignored; surround a library name with double quotes if you need to include whitespace or commas in the name.
 
@@ -48,6 +48,13 @@ These parameters can be set on any server that is to send replication data to on
   > DETAIL:  The configuration parameter "output_plugin_libraries" (currently 'pgoutput, test_decoding') does not name this library as a trusted output plugin.
   > HINT:  If it is safe for all REPLICATION users to use this library as an output plugin, add it to "output_plugin_libraries" and reload the server configuration.
   > ```
+
+  **Plugins Allowed by Default**
+
+  | Plugin | Description |
+  | --- | --- |
+  | [pgoutput](./protocol-logical-replication.md) | Core plugin for logical replication. Removing `pgoutput` from `output_plugin_libraries` will cause future subscription connections, and maintenance of the replication slots for subscriptions, to fail with an error. (Beware that existing replication tools may not degrade gracefully if the server is configured in this way.) |
+  | [test_decoding — SQL-based test/example module for WAL logical decoding](./test-decoding.md) | Decodes the WAL stream into a human-readable text representation. [pg_recvlogical](./app-pgrecvlogical.md) uses this plugin by default, so removing it from `output_plugin_libraries` will prevent the use of that utility unless a replacement plugin is installed and explicitly selected with [`--plugin`](./app-pgrecvlogical.md#app-pgrecvlogical-option-plugin). |
 
 **`wal_keep_size` (`integer`)**
 

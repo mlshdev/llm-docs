@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_dump.sgml#app-pgdump](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/pg_dump.sgml%23app-pgdump)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/ref/pg_dump.sgml#app-pgdump](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/ref/pg_dump.sgml%23app-pgdump)
 > Canonical documentation: https://www.postgresql.org/docs/18/app-pgdump.html
 
 # pg_dump
@@ -365,7 +365,7 @@ The following command-line options control the content and format of the output.
 
 **`--restrict-key=restrict_key`**
 
-  Use the provided string as the `psql` `\restrict` key in the dump output. This can only be specified for plain-text dumps, i.e., when `--format` is set to `plain` or the `--format` option is omitted. If no restrict key is specified, `pg_dump` will generate a random one as needed. Keys may contain only alphanumeric characters.
+  Use the provided string as the `psql` `\restrict` key in the dump output. If no restrict key is specified, `pg_dump` will generate a random one as needed. Keys may contain only alphanumeric characters.
 
   This option is primarily intended for testing purposes and other scenarios that require repeatable output (e.g., comparing dump files). It is not recommended for general use, as a malicious server with advance knowledge of the key may be able to inject arbitrary code that will be executed on the machine that runs `psql` with the dump output.
 

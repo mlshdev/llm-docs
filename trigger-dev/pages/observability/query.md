@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.3: [docs/observability/query.mdx](https://github.com/triggerdotdev/trigger.dev/blob/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/observability/query.mdx)
+> Pinned source for Trigger.dev v4.8.4: [docs/observability/query.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/observability/query.mdx)
 > Canonical documentation: https://trigger.dev/docs/observability/query
 
 # Query
@@ -115,7 +115,7 @@ Navigate to the Query page to write and execute queries. The dashboard provides:
 - **Interactive help** - Built-in documentation for TRQL syntax and functions
 - **Export options** - Download results as JSON or CSV
 
-![The Query dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/645cc47dd2eeb99387f604cad2c90ba2ef568680/docs/images/query-chart-usage-percentiles.png)
+![The Query dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/query-chart-usage-percentiles.png)
 
 ## Querying from the SDK
 

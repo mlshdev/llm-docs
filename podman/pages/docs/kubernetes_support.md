@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/kubernetes_support.md](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/kubernetes_support.md)
+> Pinned source for Podman v6.2.0: [docs/kubernetes_support.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/kubernetes_support.md)
 
 # Podman Kube Play Support
 
@@ -164,18 +164,18 @@ Note: **N/A** means that the option cannot be supported in a single-node Podman 
 
 ## Deployment Fields
 
-| Field                                 | Support                                              |
-| ------------------------------------- | ---------------------------------------------------- |
-| replicas                              | ✅ (the actual replica count is ignored and set to 1) |
-| selector                              | ✅                                                    |
-| template                              | ✅                                                    |
-| minReadySeconds                       | no                                                   |
-| strategy.type                         | no                                                   |
-| strategy.rollingUpdate.maxSurge       | no                                                   |
-| strategy.rollingUpdate.maxUnavailable | no                                                   |
-| revisionHistoryLimit                  | no                                                   |
-| progressDeadlineSeconds               | no                                                   |
-| paused                                | no                                                   |
+| Field                                 | Support                                           |
+| ------------------------------------- | ------------------------------------------------- |
+| replicas                              | ✅ (use `--multiple-pods` option for replicas > 1) |
+| selector                              | ✅                                                 |
+| template                              | ✅                                                 |
+| minReadySeconds                       | no                                                |
+| strategy.type                         | no                                                |
+| strategy.rollingUpdate.maxSurge       | no                                                |
+| strategy.rollingUpdate.maxUnavailable | no                                                |
+| revisionHistoryLimit                  | no                                                |
+| progressDeadlineSeconds               | no                                                |
+| paused                                | no                                                |
 
 ## DaemonSet Fields
 

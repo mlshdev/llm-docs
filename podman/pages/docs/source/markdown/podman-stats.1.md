@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.1.4: [docs/source/markdown/podman-stats.1.md.in](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman-stats.1.md.in)
+> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-stats.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-stats.1.md.in)
 
 # podman-stats
 
@@ -78,7 +78,13 @@ Do not clear the terminal/screen in between reporting intervals
 
 #### **--no-stream**
 
-Disable streaming stats and only pull the first result, default setting is false
+Disable streaming stats and only pull the first result, default setting is false.
+
+Note: With **--no-stream**, the CPU percentage is a coarse snapshot measured
+over a brief sampling window (\~100 ms). In streaming mode, it reflects
+usage between 5-second refresh intervals for a smoother reading. For
+sustained CPU monitoring, use streaming mode or the REST API with
+**stream=true**.
 
 #### **--no-trunc**
 
@@ -144,7 +150,7 @@ stats output.
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/464c15fec06f0074c916f9eff87c4806869c2833/docs/source/markdown/podman.1.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**
 
 ## HISTORY
 

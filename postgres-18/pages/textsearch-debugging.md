@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/textsearch.sgml#textsearch-debugging](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/textsearch.sgml%23textsearch-debugging)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/textsearch.sgml#textsearch-debugging](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/textsearch.sgml%23textsearch-debugging)
 > Canonical documentation: https://www.postgresql.org/docs/18/textsearch-debugging.html
 
 # Testing and Debugging Text Search
@@ -113,13 +113,13 @@ FROM ts_debug('public.english', 'The Brightest supernovaes');
 The following functions allow direct testing of a text search parser.
 
 ```
-ts_parse(parser_name text, document text,
+ts_parse(parser_name text, txt text,
          OUT tokid integer, OUT token text) returns setof record
-ts_parse(parser_oid oid, document text,
+ts_parse(parser_oid oid, txt text,
          OUT tokid integer, OUT token text) returns setof record
 ```
 
-`ts_parse` parses the given `document` and returns a series of records, one for each token produced by parsing. Each record includes a `tokid` showing the assigned token type and a `token` which is the text of the token. For example:
+`ts_parse` parses the document `txt` and returns a series of records, one for each token produced by parsing. Each record includes a `tokid` showing the assigned token type and a `token` which is the text of the token. For example:
 
 ```
 SELECT * FROM ts_parse('default', '123 - a number');

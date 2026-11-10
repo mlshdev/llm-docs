@@ -1,4 +1,4 @@
-> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-formatting](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-formatting)
+> Pinned source for PostgreSQL 18 REL_18_7: [doc/src/sgml/func.sgml#functions-formatting](https://github.com/postgres/postgres/blob/f5c41f6681c910b3f69951bf6fb97c6d74605d25/doc/src/sgml/func.sgml%23functions-formatting)
 > Canonical documentation: https://www.postgresql.org/docs/18/functions-formatting.html
 
 # Data Type Formatting Functions
@@ -256,7 +256,7 @@ Certain modifiers can be applied to any template pattern to alter its behavior. 
 | `to_char(-485, '999MI')` | `'485-'` |
 | `to_char(485, '999MI')` | `'485 '` |
 | `to_char(485, 'FM999MI')` | `'485'` |
-| `to_char(485, 'PL999')` | `'+485'` |
+| `to_char(485, 'PL999')` | `'+ 485'` |
 | `to_char(485, 'SG999')` | `'+485'` |
 | `to_char(-485, 'SG999')` | `'-485'` |
 | `to_char(-485, '9SG99')` | `'4-85'` |

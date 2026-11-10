@@ -1,8 +1,8 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/index.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/index.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/index.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/index.md)
 
 # What is Traefik?
 
-![Architecture](https://raw.githubusercontent.com/traefik/traefik/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/assets/img/traefik-architecture.png)
+![Architecture](https://raw.githubusercontent.com/traefik/traefik/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/assets/img/traefik-architecture.png)
 
 Traefik is an [open-source](https://github.com/traefik/traefik) Application Proxy and the core of the Traefik Hub Runtime Platform.
 
@@ -10,7 +10,7 @@ If you start with Traefik for service discovery and routing, you can seamlessly 
 
 For a detailed comparison of all Traefik products and their capabilities, see our [Product Features Comparison](https://doc.traefik.io/traefik/v3.7/features/).
 
-With 3.3 billion downloads and over 55k stars on GitHub, Traefik is used globally across hybrid cloud, multi-cloud, on prem, and bare metal environments running Kubernetes, Docker Swarm, AWS, [the list goes on](https://doc.traefik.io/traefik/reference/install-configuration/providers/overview/).
+With 3.5 billion downloads and over 65k stars on GitHub, Traefik is used globally across hybrid cloud, multi-cloud, on prem, and bare metal environments running Kubernetes, Docker Swarm, AWS, [the list goes on](https://doc.traefik.io/traefik/reference/install-configuration/providers/overview/).
 
 Here’s how it works—Traefik receives requests on behalf of your system, identifies which components are responsible for handling them, and routes them securely. It automatically discovers the right configuration for your services by inspecting your infrastructure to identify relevant information and which service serves which request.
 

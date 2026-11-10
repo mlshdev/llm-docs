@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.17: [docs/content/reference/routing-configuration/other-providers/swarm.md](https://github.com/traefik/traefik/blob/04e8ccf84ada1dcb450cec06554fe27812903134/docs/content/reference/routing-configuration/other-providers/swarm.md)
+> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/other-providers/swarm.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/other-providers/swarm.md)
 
 # Traefik & Docker Swarm
 
@@ -60,7 +60,7 @@ With Docker Swarm, Traefik can leverage labels attached to a service to generate
 > > **Labels in Docker Swarm Mode**
 > > While in Swarm Mode, Traefik uses labels found on services, not on individual containers.
 > > Therefore, if you use a compose file with Swarm Mode, labels should be defined in the `deploy` part of your service.
-> > This behavior is only enabled for docker-compose version 3+ ([Compose file reference](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels-1)).
+> > This behavior is only enabled for docker-compose version 3+ ([Compose file reference](https://docs.docker.com/reference/compose-file/)).
 > > **Specify a Custom Port for the Container**
 > > Forward requests for `http://example.com` to `http://<private IP of container>:12345`:
 >

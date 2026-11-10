@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/update-dockerhub-desc.md](https://github.com/docker/docs/blob/34992b922461d20cc97107b84056756802584571/content/manuals/build/ci/github-actions/update-dockerhub-desc.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/update-dockerhub-desc.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/build/ci/github-actions/update-dockerhub-desc.md)
 
 # Update Docker Hub description with GitHub Actions
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/endpoints/POST/endpoints.mdx](https://github.com/runpod/docs/blob/eba1be5cd1f4af9e764b2f65145197430e9ba0ad/api-reference/endpoints/POST/endpoints.mdx)
+> Pinned source for Runpod main: [api-reference/endpoints/POST/endpoints.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/api-reference/endpoints/POST/endpoints.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/endpoints/POST/endpoints
 
 # Create a new endpoint
