@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/faqs/accounts.md)
+> Pinned source for Docker main: [content/manuals/faqs/accounts.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/faqs/accounts.md)
 
 # Account FAQs
 
@@ -151,7 +151,7 @@ for the full explanation.
 ### Do organization invitees take up seats?
 
 Yes. A user invited to an organization will take up one of the provisioned
-seats, even if that user hasn’t accepted their invitation yet.
+seats, even if that user hasn't accepted their invitation yet.
 
 To manage invites, see [Manage organization members](https://docs.docker.com/accounts/organization/manage/members/).
 
@@ -210,17 +210,17 @@ domain](https://docs.docker.com/security/provisioning/domain-management/).
 
 ### Companies
 
-#### Can I use a parent company if some of my organizations don’t have a Docker Business subscription?
+#### Can I use a parent company if some of my organizations don't have a Docker Business subscription?
 
 Yes, but you can only add organizations with a Docker Business subscription
-to a company. For more details, see [Add more organizations](https://docs.docker.com/accounts/company/manage/#add-more-organizations).
+to a company. For more details, see [Add more organizations](https://docs.docker.com/accounts/company/new-company/#add-more-organizations).
 
 #### What happens if one of my organizations downgrades from Docker Business, but I still need access as a company owner?
 
 To access and manage a nested organization, it must have a Docker Business
 subscription. If an organization downgrades from Docker Business, its owner must
 manage it outside of the company. For more details, see
-[Add more organizations](https://docs.docker.com/accounts/company/manage/#add-more-organizations).
+[Add more organizations](https://docs.docker.com/accounts/company/new-company/#add-more-organizations).
 
 #### Do company owners occupy a subscription seat?
 

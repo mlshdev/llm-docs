@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/kling-v2-6-motion-control.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/public-endpoints/models/kling-v2-6-motion-control.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/kling-v2-6-motion-control.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/public-endpoints/models/kling-v2-6-motion-control.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/kling-v2-6-motion-control
 
 # Kling v2.6 Motion Control

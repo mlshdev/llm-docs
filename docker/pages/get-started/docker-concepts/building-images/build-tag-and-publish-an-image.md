@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md)
 
 # Build, tag, and publish an image
 

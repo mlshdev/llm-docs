@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/upstream-proxy.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/configuration/upstream-proxy.md)
 
 # Configure an upstream proxy
 
@@ -133,6 +133,10 @@ the variable and restart the daemon for the stored setting to take effect.
 
 When a `system` or PAC proxy is in use, `sbx` still tracks OS-level proxy changes
 (such as switching networks, connecting a VPN, or updated PAC contents) live.
+
+A host network change can also leave established sandbox connections stalled.
+To tune or disable the timeout that closes these connections, see
+[`egress.stalledConnectionTimeoutSeconds`](https://docs.docker.com/ai/sandboxes/configuration/settings/#egressstalledconnectiontimeoutseconds).
 
 ## Cloud SSH
 

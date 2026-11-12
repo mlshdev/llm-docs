@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/0f89d936b39e1cb438a874ecfccffe253be6b63b/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/02970f067cf06c5c23209d521575b1024898bb29/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -5091,6 +5091,13 @@ ffmpeg -i INPUT -f_strict experimental -syncpoints none - | processor
 
 Ogg container muxer.
 
+A new link is started on new metadata or extradata of a single Vorbis, FLAC or
+Opus stream.
+Other outputs ignore new metadata.
+New extradata ends them at the current link, and the packets that follow are
+dropped.
+New extradata on the first packet is ignored.
+
 - -page\_duration *duration*
   Preferred page duration, in microseconds. The muxer will attempt to create
   pages that are approximately *duration* microseconds long. This allows the
@@ -5111,8 +5118,8 @@ Ogg container muxer.
   Links with identical headers and tags always share one, which separately muxed
   outputs avoid with explicit offsets.
 
-A link the muxer starts itself on new stream metadata keeps the offset of the
-link before it.
+A link the muxer starts itself on new stream metadata or extradata keeps the
+offset of the link before it.
 With an explicit offset it then reuses its serial number.
 With the default it does so when its headers and tags are unchanged.
 

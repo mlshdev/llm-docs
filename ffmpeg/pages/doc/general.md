@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/0f89d936b39e1cb438a874ecfccffe253be6b63b/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/02970f067cf06c5c23209d521575b1024898bb29/doc/general.texi)
 
 # External libraries
 

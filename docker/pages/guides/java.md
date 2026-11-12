@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/java.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/java.md)
+> Pinned source for Docker main: [content/guides/java.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/java.md)
 
 The Java getting started guide teaches you how to create a containerized Spring Boot application using Docker. In this module, you’ll learn how to:
 
@@ -295,11 +295,11 @@ for the application you containerized in the previous section. This includes:
 
 ### Add a local database and persist data
 
-You can use containers to set up local services, like a database. In this section, you'll update the `docker-compose.yaml` file to define a database service and a volume to persist data. Also, this particular application uses a system property to define the database type, so you'll need to update the `Dockerfile` to pass in the system property when starting the app.
+You can use containers to set up local services, like a database. In this section, you'll update the `compose.yaml` file to define a database service and a volume to persist data. Also, this particular application uses a system property to define the database type, so you'll need to update the `Dockerfile` to pass in the system property when starting the app.
 
-In the cloned repository's directory, open the `docker-compose.yaml` file in an IDE or text editor. Your Compose file has an example database service, but it'll require a few changes for your unique app.
+In the cloned repository's directory, open the `compose.yaml` file in an IDE or text editor. Your Compose file has an example database service, but it'll require a few changes for your unique app.
 
-In the `docker-compose.yaml` file, you need to do the following:
+In the `compose.yaml` file, you need to do the following:
 
 - Uncomment all of the database instructions. You'll now use a database service
   instead of local storage for the data.
@@ -317,7 +317,7 @@ In the `docker-compose.yaml` file, you need to do the following:
   overrides the default value defined in
   `spring-petclinic/src/main/resources/application-postgres.properties`.
 
-The following is the updated `docker-compose.yaml` file. All comments have been removed.
+The following is the updated `compose.yaml` file. All comments have been removed.
 
 ```yaml {hl_lines="7-29"}
 services:
@@ -446,7 +446,7 @@ In the `Dockerfile` you added a new stage labeled `development` based on the `ex
 
 The current Compose file doesn't start your development container. To do that, you must update your Compose file to target the development stage. Also, update the port mapping of the server service to provide access for the debugger.
 
-Open the `docker-compose.yaml` and add the following instructions into the file.
+Open the `compose.yaml` and add the following instructions into the file.
 
 ```yaml {hl_lines=["5","8"]}
 services:
@@ -560,7 +560,7 @@ You should receive the following response:
 
 You’ll use the debugger that comes with the IntelliJ IDEA. You can use the community version of this IDE. Open your project in IntelliJ IDEA, go to the **Run** menu, and then **Edit Configuration**. Add a new Remote JVM Debug configuration similar to the following:
 
-![Java Connect a Debugger](https://raw.githubusercontent.com/docker/docs/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/images/java-connect-debugger.webp)
+![Java Connect a Debugger](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/images/java-connect-debugger.webp)
 
 Set a breakpoint.
 
@@ -568,11 +568,11 @@ Open `src/main/java/org/springframework/samples/petclinic/vet/VetController.java
 
 To start your debug session, select the **Run** menu and then **Debug *NameOfYourConfiguration***.
 
-![Debug menu](https://raw.githubusercontent.com/docker/docs/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/images/java-debug-menu.webp?w=300)
+![Debug menu](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/images/java-debug-menu.webp?w=300)
 
 You should now see the connection in the logs of your Compose application.
 
-![Compose log file](https://raw.githubusercontent.com/docker/docs/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/images/java-compose-logs.webp)
+![Compose log file](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/images/java-compose-logs.webp)
 
 You can now call the server endpoint.
 
@@ -582,7 +582,7 @@ $ curl --request GET --url http://localhost:8080/vets
 
 You should have seen the code break on the marked line and now you are able to use the debugger just like you would normally. You can also inspect and watch variables, set conditional breakpoints, view stack traces and a do bunch of other stuff.
 
-![Debugger code breakpoint](https://raw.githubusercontent.com/docker/docs/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/images/java-debugger-breakpoint.webp)
+![Debugger code breakpoint](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/images/java-debugger-breakpoint.webp)
 
 Press `ctrl+c` in the terminal to stop your application.
 
@@ -592,8 +592,8 @@ Use Compose Watch to automatically update your running Compose services as you
 edit and save your code. For more details about Compose Watch, see
 [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/).
 
-Open your `docker-compose.yaml` file in an IDE or text editor and then add the
-Compose Watch instructions. The following is the updated `docker-compose.yaml`
+Open your `compose.yaml` file in an IDE or text editor and then add the
+Compose Watch instructions. The following is the updated `compose.yaml`
 file.
 
 ```yaml {hl_lines="14-17"}

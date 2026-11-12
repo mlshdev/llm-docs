@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.4: [docs/guides/frameworks/nodejs.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/frameworks/nodejs.mdx)
+> Pinned source for Trigger.dev v4.8.5: [docs/guides/frameworks/nodejs.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/frameworks/nodejs.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/nodejs
 
 # Node.js setup guide
@@ -67,15 +67,15 @@ This guide will show you how to setup Trigger.dev in your existing Node.js proje
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/test-dashboard.png)
 
 1) Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/terminal-completed-run.png)
 
 ## Useful next steps
 

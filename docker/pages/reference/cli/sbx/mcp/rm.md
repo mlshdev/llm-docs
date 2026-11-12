@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_rm.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_mcp_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_rm.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_mcp_rm.yaml)
 
 # sbx mcp rm
 
@@ -16,7 +16,7 @@ environment ownership and approval, including damaged or orphaned registrations.
 kept, and MCP processes already running in sandbox gateways are not stopped.
 For an untrusted registration, first stop the selected daemon; this interrupts
 all of its sandbox gateways. A later approved env run can register a declared
-server again.
+server again. Use --sandbox to select an environment-owned registration.
 
 ## Options
 
@@ -24,6 +24,7 @@ server again.
 | --------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
 | `-f`, `--force`       |         | Skip confirmation prompts                                                                                  |
 | `--registration-only` |         | Remove only the local registration without starting the daemon; keep credentials and running MCP processes |
+| `--sandbox`           |         | Owning sandbox (requires --registration-only)                                                              |
 
 ## Global options
 
@@ -38,4 +39,5 @@ server again.
 ```console
 sbx mcp rm notion
   sbx mcp rm --registration-only notion
+  sbx mcp rm --registration-only notion --sandbox my-sbx
 ```

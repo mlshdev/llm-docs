@@ -1,42 +1,37 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/accounts/organization/manage/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/_index.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/accounts/organization/manage/_index.md)
 
 # Manage your organization
 
-As an organization owner, you manage your organization's membership, access,
-product usage, and settings. You can invite members, group them into teams,
-assign or revoke licenses and seats, change access to Docker products, update
-organization information, and deactivate the organization.
+Managing an organization is how you control who belongs to it and what each
+member can use. Organization owners handle administration from
+[Docker Home](https://app.docker.com).
 
-## Managing your organization
+## What organization management covers
 
-You manage your organization from [Docker Home](https://app.docker.com) and
-must be assigned the
-[organization owner role](https://docs.docker.com/security/roles-and-permissions/).
+Organization management covers two things: membership and the products your
+members can use. Running both from one place keeps access aligned with your
+team as it changes, so you can grow, reorganize, or offboard without
+rebuilding access each time.
 
-## Seats and licenses
-
-Seats and licenses both control access, but they apply to different kinds of
-plans. The following table summarizes the difference.
-
-| Entitlement | What it grants                                          | Applies to                                       | Managed from                 |
-| ----------- | ------------------------------------------------------- | ------------------------------------------------ | ---------------------------- |
-| Seat        | Membership in your Docker Team or Business subscription | Docker Team or Business subscription             | Billing                      |
-| License     | Access to a specific product or add-on                  | AI Governance, Docker Offload, and other add-ons | Licenses, Teams, and Members |
-
-For details, see [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/)
-and [Manage licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/).
+| To do this                                                                   | Go here                                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Invite members, assign roles, and remove people who leave                    | [Members](https://docs.docker.com/accounts/organization/manage/members/)                 |
+| Group members and grant shared repository access                             | [Teams](https://docs.docker.com/accounts/organization/manage/manage-a-team/)             |
+| Add or remove seats on your Team or Business subscription                    | [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/)              |
+| Assign add-on licenses for AI Governance, Docker Offload, and other products | [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/)        |
+| Control what members can use in each Docker product, and check usage         | [Products](https://docs.docker.com/accounts/organization/manage/manage-products/)        |
+| Update the organization name, company, website, and avatar                   | [Information](https://docs.docker.com/accounts/organization/manage/general-settings/)    |
+| Deactivate the organization                                                  | [Deactivation](https://docs.docker.com/accounts/organization/manage/deactivate-account/) |
 
 ## Next steps
 
-Explore the following sections to manage your organization.
-
-- [User access workflow](https://docs.docker.com/accounts/organization/manage/user-access/): Plan roles, provisioning, and ongoing access reviews.
-- [Information](https://docs.docker.com/accounts/organization/manage/general-settings/): Update your organization's general information and settings.
-- [Members](https://docs.docker.com/accounts/organization/manage/members/): Invite, manage, and assign roles to your organization members.
-- [Teams](https://docs.docker.com/accounts/organization/manage/manage-a-team/): Create teams and manage repository access for groups of members.
-- [Licenses](https://docs.docker.com/accounts/organization/manage/manage-licenses/): View your license inventory and assign licenses to teams or individual members.
-- [Seats](https://docs.docker.com/accounts/organization/manage/manage-seats/): Add or remove seats for Docker Team and Business subscriptions.
-- [Products](https://docs.docker.com/accounts/organization/manage/manage-products/): Manage access and view usage for Docker products across your organization.
-- [Deactivation](https://docs.docker.com/accounts/organization/manage/deactivate-account/): Deactivate an organization after completing the required steps.
-- [Security](https://docs.docker.com/security/): Configure single sign-on, provisioning, and access management.
-- [Billing](https://docs.docker.com/subscription-billing/): Manage payment methods and view billing history.
+- On a Docker Business subscription,
+  you can delegate specific actions by assigning
+  [custom roles](https://docs.docker.com/security/roles-and-permissions/custom-roles/)
+  to members or teams.
+- To configure single sign-on, SCIM provisioning, or domain verification
+  first, see
+  [Set up your organization](https://docs.docker.com/accounts/organization/setup/).
+- For a planning approach to roles, provisioning, and ongoing access reviews,
+  follow the
+  [User access workflow](https://docs.docker.com/accounts/organization/manage/user-access/).

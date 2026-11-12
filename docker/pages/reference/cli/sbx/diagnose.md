@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_diagnose.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_diagnose.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_diagnose.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_diagnose.yaml)
 
 # sbx diagnose
 
@@ -8,11 +8,11 @@ Diagnose common issues with your sbx installation
 
 ## Options
 
-| Option     | Default | Description                                      |
-| ---------- | ------- | ------------------------------------------------ |
-| `--format` |         | Output format: table, json, yaml or github-issue |
-| `--json`   |         | Output in JSON format                            |
-| `--upload` |         | Upload diagnostics to Docker support             |
+| Option     | Default | Description                                              |
+| ---------- | ------- | -------------------------------------------------------- |
+| `--format` |         | Output format: table, json, yaml or github-issue         |
+| `--json`   |         | Output in JSON format                                    |
+| `--upload` |         | Upload diagnostics to Docker support (table format only) |
 
 ## Global options
 

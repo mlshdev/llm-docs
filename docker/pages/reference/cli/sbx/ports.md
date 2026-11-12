@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_ports.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_ports.yaml)
 
 # sbx ports
 
@@ -15,7 +15,7 @@ stopped sandbox before creating the host binding. Without --publish or
 \--unpublish flags, lists all published ports.
 
 Port spec format: \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL]
-If HOST\_PORT is omitted, an ephemeral port is allocated automatically.
+When publishing without a HOST\_PORT, an ephemeral port is allocated automatically.
 If HOST\_IP is omitted, the port is bound on loopback, expanded based on
 PROTOCOL and the sandbox's address families: tcp/udp binds both 127.0.0.1
 and ::1 (or only 127.0.0.1 if the sandbox is IPv4-only); tcp4/udp4 binds
@@ -26,6 +26,9 @@ When publishing without a PROTOCOL, tcp4 is used — so a sandbox service
 listening only on IPv4 is reachable without a host client having to avoid
 ::1 — or tcp6 when HOST\_IP is an IPv6 address. Publish tcp explicitly to
 bind both families.
+
+When unpublishing without a HOST\_PORT, mappings matching HOST\_IP and PROTOCOL
+are removed from every host port.
 
 When unpublishing without a PROTOCOL, the mapping is removed whether it was
 published with that same default or as dual-stack tcp. Name the protocol to
@@ -43,12 +46,12 @@ for each exposed port.
 
 ## Options
 
-| Option            | Default | Description                                                                                                                   |
-| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `--format`        |         | Output format: table, json or yaml                                                                                            |
-| `--json`          |         | Output in JSON format                                                                                                         |
-| `-p`, `--publish` |         | Publish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud) |
-| `--unpublish`     |         | Unpublish a port (can be repeated): \[HOST\_IP:]HOST\_PORT:SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud)  |
+| Option            | Default | Description                                                                                                                     |
+| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `--format`        |         | Output format: table, json or yaml                                                                                              |
+| `--json`          |         | Output in JSON format                                                                                                           |
+| `-p`, `--publish` |         | Publish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud)   |
+| `--unpublish`     |         | Unpublish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT\[/tcp] (cloud) |
 
 ## Global options
 

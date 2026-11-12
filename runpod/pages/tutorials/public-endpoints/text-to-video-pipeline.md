@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/public-endpoints/text-to-video-pipeline.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/tutorials/public-endpoints/text-to-video-pipeline.mdx)
+> Pinned source for Runpod main: [tutorials/public-endpoints/text-to-video-pipeline.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/tutorials/public-endpoints/text-to-video-pipeline.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/public-endpoints/text-to-video-pipeline
 
 # Build a text-to-video pipeline
@@ -7,7 +7,7 @@ Chain multiple Public Endpoints to generate videos from text prompts using Pytho
 
 This tutorial shows you how to build a complete text-to-video pipeline by chaining three Runpod [Public Endpoints](https://docs.runpod.io/public-endpoints/overview) together. You'll take a simple idea and transform it into an animated video, all with a single Python script.
 
-![](https://raw.githubusercontent.com/runpod/docs/03654ae6f119347890b8633ab8b2d72379866aef/images/cool-cat-pe-pipeline.jpeg)
+![](https://raw.githubusercontent.com/runpod/docs/b3d94eb34607d1c8be2215f891c34b55b0a5df24/images/cool-cat-pe-pipeline.jpeg)
 
 ## What you'll build
 

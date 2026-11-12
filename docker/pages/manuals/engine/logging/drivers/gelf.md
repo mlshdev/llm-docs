@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/logging/drivers/gelf.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/engine/logging/drivers/gelf.md)
+> Pinned source for Docker main: [content/manuals/engine/logging/drivers/gelf.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/engine/logging/drivers/gelf.md)
 
 # Graylog Extended Format logging driver
 

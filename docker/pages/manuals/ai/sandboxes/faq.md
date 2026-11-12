@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/faq.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/faq.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/faq.md)
 
 # FAQ
 
@@ -182,6 +182,9 @@ $ sbx settings set clipboard.imagePaste true
 `Ctrl+V` then pastes host images into agents that read the clipboard, including
 Claude Code and Codex. The setting takes effect within a few seconds, even for
 running sandboxes.
+
+Clipboard images larger than 64 MiB are ignored. The agent receives an empty
+clipboard instead.
 
 This is opt-in because it relaxes the sandbox's isolation: when enabled, a process
 inside the sandbox can read your host clipboard through the host-side proxy. The

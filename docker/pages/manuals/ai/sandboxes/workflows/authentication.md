@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/workflows/authentication.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/authentication.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/workflows/authentication.md)
 
 These workflows resolve credentials on the host for local sandboxes. For
 cloud secret setup, see [Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/).
@@ -88,6 +88,9 @@ $ sbx secret set anthropic \
     --refresh on-demand
 ```
 
+For provider installation and configuration requirements, see
+[Use a dynamic secret source](https://docs.docker.com/ai/sandboxes/configuration/credentials/#use-a-dynamic-secret-source).
+
 ## Source credentials from AWS Secrets Manager
 
 Install and authenticate the AWS CLI on the host, then register the secret's
@@ -99,5 +102,5 @@ $ sbx secret set anthropic \
 ```
 
 See [Use a dynamic secret source](https://docs.docker.com/ai/sandboxes/configuration/credentials/#use-a-dynamic-secret-source)
-for refresh policies, verification options, custom secrets, and provider
-account or profile selection.
+for provider installation and configuration requirements, refresh policies,
+verification options, custom secrets, and account or profile selection.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_inspect.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_mcp_inspect.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_inspect.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_mcp_inspect.yaml)
 
 # sbx mcp inspect
 
@@ -6,12 +6,17 @@ Show MCP server details
 
 **Usage:** `sbx mcp inspect NAME [flags]`
 
+## Description
+
+Show a unique MCP registration. Shared names require selecting the owning sandbox.
+
 ## Options
 
-| Option     | Default | Description                        |
-| ---------- | ------- | ---------------------------------- |
-| `--format` |         | Output format: table, json or yaml |
-| `--json`   |         | Output in JSON format              |
+| Option      | Default | Description                        |
+| ----------- | ------- | ---------------------------------- |
+| `--format`  |         | Output format: table, json or yaml |
+| `--json`    |         | Output in JSON format              |
+| `--sandbox` |         | Owning sandbox                     |
 
 ## Global options
 
@@ -25,6 +30,7 @@ Show MCP server details
 
 ```console
 sbx mcp inspect notion
+  sbx mcp inspect notion --sandbox my-sbx
 
   # Machine-readable output for scripting
   sbx mcp inspect notion --json

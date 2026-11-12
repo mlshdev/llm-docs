@@ -1,10 +1,91 @@
-> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/platform-release-notes.md)
+> Pinned source for Docker main: [content/manuals/platform-release-notes.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/platform-release-notes.md)
 
 # Accounts and admin release notes
 
 This page lists new features, enhancements, known issues, and bug fixes for
 Docker accounts and admin features, including Docker Home, billing, security,
 and subscriptions.
+
+## 2026-11-03
+
+### New
+
+- [Docker Offload](https://docs.docker.com/offload/) is now included with a
+  [Docker Agentic Platform](https://docs.docker.com/subscription-billing/plans/docker-agentic-platform/)
+  subscription for individual accounts. You pay for the time the cloud
+  sandbox runs. Organizations can still subscribe to
+  [Docker Offload v1](https://docs.docker.com/offload/v1/).
+
+## 2026-11-02
+
+### Bug fixes and enhancements
+
+- [Converting a user account into an organization](https://docs.docker.com/accounts/organization/setup/convert-account/)
+  emails the new owner.
+
+## 2026-10-29
+
+### Bug fixes and enhancements
+
+- Severity choices on the
+  [support request form](https://app.docker.com/support/contact) use longer
+  labels that describe the impact of each level.
+- The support request form **Legal** topic includes **DMCA takedown
+  requests**.
+
+## 2026-10-28
+
+### Bug fixes and enhancements
+
+- You can
+  [assign a license to a team](https://docs.docker.com/accounts/organization/manage/manage-licenses/#teams)
+  as long as you have sufficient licenses remaining for all team members who do not already hold a license. Docker only assigns a license to
+  members who don't already have one.
+- If you add seats without a street address on file, Docker opens the
+  address form and asks you to add it, instead of failing with a generic
+  error.
+- [Billing details](https://docs.docker.com/subscription-billing/manage/details/)
+  show addresses that have no city.
+
+## 2026-10-26
+
+### Bug fixes and enhancements
+
+- Support cases show **PENDING SUPPORT** and **PENDING CUSTOMER** instead
+  of **OPEN** and **ACTION REQUIRED**.
+
+## 2026-10-22
+
+### Bug fixes and enhancements
+
+- Access token revocation emails include the revocation date.
+  Organization access token emails also include the organization name.
+
+## 2026-10-16
+
+### Bug fixes and enhancements
+
+- Users with a custom role that includes the **Manage repositories** and
+  **Manage organization access tokens** permissions can
+  [create an organization access token](https://docs.docker.com/security/access-tokens/organization-access-tokens/#create-an-organization-access-token)
+  scoped to all repositories in the organization. A role with only **View
+  repositories** can't.
+
+## 2026-10-15
+
+### New
+
+- Custom roles now include the
+  [Manage licenses](https://docs.docker.com/security/roles-and-permissions/custom-roles/permissions-reference/#licensing)
+  permission, so owners can delegate assigning and revoking member
+  licenses and managing automatic assignment. The permission doesn't
+  include changing the organization's license count by buying more,
+  dropping some, or otherwise resizing the pool.
+- You can now create a
+  [personal access token](https://docs.docker.com/security/access-tokens/personal-access-tokens/#create)
+  with **Allow Cloud Sandboxes access** (`sandbox:use`) on its own, or
+  with one repository permission. Select **No repository access** when
+  the token should not access repositories.
 
 ## 2026-09-30
 
@@ -274,7 +355,7 @@ and subscriptions.
 - [Organization access tokens](https://docs.docker.com/security/access-tokens/organization-access-tokens/)
   are now generally available.
 - Single sign-on now supports the
-  [`dockerSessionMinutes` attribute](https://docs.docker.com/security/provisioning/#sso-attributes),
+  [`dockerSessionMinutes` attribute](https://docs.docker.com/security/authentication/single-sign-on/connect/#sso-attributes),
   so a session can follow the identity provider timeout.
 - Administrators can now
   [track whether users comply with Docker Desktop settings policies](https://docs.docker.com/desktop/enterprise/hardened-desktop/settings-management/compliance-reporting/)

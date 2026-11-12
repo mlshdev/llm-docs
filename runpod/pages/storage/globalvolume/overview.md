@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/globalvolume/overview.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/storage/globalvolume/overview.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/overview.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/storage/globalvolume/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/overview
 
 # Overview
@@ -60,7 +60,7 @@ There is no in-console conversion tool. Migration must be done manually.
 
 Global volumes work best for workloads that primarily read large files and do not require high-throughput concurrent writes.
 
-- **Model serving and inference:** Load model weights, tokenizer files, and configuration from a shared volume at startup, without baking large files into your Docker image.
+- **Inference (running a trained model to answer requests):** Load model weights, tokenizer files, and configuration from a shared volume at startup, without baking large files into your Docker image.
 - **Shared assets across Pods:** Serve LoRA adapters, embedding indices, or prompt templates that multiple Pods need to read from a central location.
 - **Read-only configuration:** Distribute scripts, config files, or small datasets consistently across a fleet of Pods or workers.
 
@@ -86,10 +86,10 @@ Global volumes use object-backed storage, not a fully POSIX compliant file syste
 - **No permission bits:** Global volumes cannot set file permission bits. This may produce warnings when downloading models from sources such as Hugging Face. It also means templates that install a Python environment into `/workspace`, such as the official ComfyUI template, don't work with a global volume as their primary volume: the deploy page shows an **Unsupported volume type** warning. For those templates, keep `/workspace` on the volume disk or a network volume, and mount the global volume at a second path, such as `/workspace-global`, for model files only.
 - **Concurrent writes to the same file:** Multiple Pods can write to a global volume concurrently, but when two Pods write to the same file at the same time, the last write wins. For workloads that require file locking or high-concurrency writes, use a network volume instead.
 - **Eventual consistency:** Global volumes use object storage, which means updates made to the volume after a Pod or worker starts may not be immediately visible inside the container. Plan your workload around the state of the volume at mount time.
+- **No S3-compatible API:** The [S3-compatible API](https://docs.runpod.io/storage/s3-api) works with network volumes only. To add or download files on a global volume, attach it to a Pod and transfer the files from there.
 
 ## Next steps
 
 - [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume/globalvolume-pods)
 - [Global volumes for Serverless](https://docs.runpod.io/storage/globalvolume/globalvolume-serverless)
 - [Manage network volumes](https://docs.runpod.io/storage/network-volumes)
-- [Use the S3-compatible API](https://docs.runpod.io/storage/s3-api)

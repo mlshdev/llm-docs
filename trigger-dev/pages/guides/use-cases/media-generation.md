@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.4: [docs/guides/use-cases/media-generation.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/use-cases/media-generation.mdx)
+> Pinned source for Trigger.dev v4.8.5: [docs/guides/use-cases/media-generation.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/use-cases/media-generation.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/use-cases/media-generation
 
 # AI media generation workflows

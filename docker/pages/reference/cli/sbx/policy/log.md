@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_log.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_policy_log.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_log.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_policy_log.yaml)
 
 # sbx policy log
 
@@ -20,7 +20,7 @@ issues or auditing network activity.
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------- |
 | `--format` |         | Output format: table, json or yaml                                                                            |
 | `--json`   |         | Output in JSON format                                                                                         |
-| `--limit`  |         | Maximum number of log entries to show                                                                         |
+| `--limit`  |         | Maximum number of entries to show in each category (allowed and blocked); 0 shows all                         |
 | `--type`   | `all`   | Filter logs by type: "all", "network", or "filesystem" (filesystem logs are not supported yet; default "all") |
 
 ## Global options
@@ -43,6 +43,6 @@ issues or auditing network activity.
   # Output in JSON format
   sbx policy log --json
 
-  # Show the last 20 entries
+  # Show up to 20 allowed and 20 blocked entries
   sbx policy log --limit 20
 ```

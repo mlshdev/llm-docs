@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/0f89d936b39e1cb438a874ecfccffe253be6b63b/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/02970f067cf06c5c23209d521575b1024898bb29/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1758,6 +1758,8 @@ This includes content selected by request options such as headers, cookies or
 credentials: data cached for one user is returned to every other user of the
 same cache directory.
 
+See also the `cache_key` option.
+
 The accepted options are:
 
 - cache\_dir
@@ -1769,6 +1771,11 @@ The accepted options are:
 - metadata\_dir
   Path to the directory where metadata files are stored. Optional. If not
   specified, metadata is stored in the same directory as the cache file.
+
+- cache\_key
+  Override the hash used to identify the cached content. Note that this is also
+  used verbatim as the base name of the cache and metadata files, so it must be
+  a valid file name.
 
 - block\_shift
   Shift factor (log2) of the block size used for internal reads/writes. Defaults

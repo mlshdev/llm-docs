@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/mcp-gateway.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/mcp-gateway.md)
 
 # MCP gateway
 
@@ -27,7 +27,7 @@ loading, live updates, and organization governance.
 
 - Sign in with `sbx login`.
 - Use an agent integration that configures MCP at startup: Claude Code, Codex,
-  Devin, Gemini, Kiro, or OpenCode.
+  Devin, Kiro, or OpenCode.
 - For remote servers that require OAuth without Dynamic Client Registration,
   register an OAuth client with the server provider.
 - For `--local --url` registrations that resolve to OCI packages, use a host
@@ -590,6 +590,17 @@ Inspect a registered server:
 ```console
 $ sbx mcp inspect notion
 ```
+
+When multiple registrations share a name, inspection requires `--sandbox` to
+select the owning sandbox:
+
+```console
+$ sbx mcp inspect filesystem --sandbox my-sandbox
+```
+
+For environment-owned registrations, inspection shows the owning sandbox and
+environment in text, JSON, and YAML output. If only one registration has the
+name, you can inspect it without `--sandbox`.
 
 Remove a registered server:
 

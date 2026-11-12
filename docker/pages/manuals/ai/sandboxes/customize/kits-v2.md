@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits-v2.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/customize/kits-v2.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/kits-v2.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/customize/kits-v2.md)
 
 # Kits v2
 
@@ -651,7 +651,6 @@ file removes. In this table, `~` is `/home/agent`.
 | `copilot`          | `~/.copilot/config.json`                                              |
 | `cursor`           | `~/.cursor/cli-config.json`                                           |
 | `devin`            | `~/.config/devin/config.json`, `~/.config/devin/mcp_config.json`      |
-| `gemini`           | `~/.gemini/settings.json`                                             |
 | `kiro`             | `~/.kiro/settings/mcp.json`                                           |
 | `opencode`         | `~/.config/opencode/opencode.json`                                    |
 

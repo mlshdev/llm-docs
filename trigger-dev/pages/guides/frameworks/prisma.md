@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.4: [docs/guides/frameworks/prisma.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/frameworks/prisma.mdx)
+> Pinned source for Trigger.dev v4.8.5: [docs/guides/frameworks/prisma.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/frameworks/prisma.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/prisma
 
 # Prisma setup guide
@@ -74,15 +74,15 @@ Follow these steps if you don't already have Trigger.dev set up in your project.
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/test-dashboard.png)
 
 1) Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/terminal-completed-run.png)
 
 ## Creating a task using Prisma and deploying it to production
 
@@ -185,7 +185,7 @@ Follow these steps if you don't already have Trigger.dev set up in your project.
    You can add values for your local dev environment, staging and prod. in this case we will add the `DATABASE_URL` for the production environment.
 
    ![Environment variables
-   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/images/environment-variables-panel.jpg)
+   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/environment-variables-panel.jpg)
 6. To test this task, go to the 'test' page in the Trigger.dev dashboard and run the task with the following payload:
 
    ```json

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_cp.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_cp.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_cp.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_cp.yaml)
 
 # sbx cp
 
@@ -19,6 +19,12 @@ directory are skipped unless --follow-link is set. On download, --follow-link
 follows SRC only when it names a symbolic link to a file. Downloads of directories
 skip symbolic links even with --follow-link.
 
+Cloud copies do not preserve permissions or timestamps. Set executable
+permissions after downloading a program.
+
+The sandbox path must be absolute, for example SANDBOX:/workspace/config.json.
+It is not relative to the sandbox's working directory.
+
 When copying a directory, the directory itself is placed at the destination.
 If the destination path does not exist it is created; if it already exists
 as a directory, the source is placed inside it.
@@ -27,6 +33,10 @@ For local paths inside workspace directories or other host directories mounted
 into the sandbox, sbx cp refuses symbolic links that escape those directories,
 even with --follow-link, including when a directory is reached through a
 symbolic link, junction or substituted drive.
+
+For local sandboxes, files copied into the sandbox from Linux or macOS retain
+their source numeric UID, GID, and permissions. Files copied from Windows are
+owned by root and marked executable.
 
 ## Options
 

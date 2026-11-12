@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/desktop/docker_desktop_disable_model_runner.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/cli/desktop/docker_desktop_disable_model_runner.yaml)
+> Pinned source for Docker main: [data/cli/desktop/docker_desktop_disable_model_runner.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/cli/desktop/docker_desktop_disable_model_runner.yaml)
 
 # docker desktop disable model-runner
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/setup/install/windows-install.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/desktop/setup/install/windows-install.md)
 
 > **Docker Desktop terms**
 >
@@ -24,7 +24,7 @@ Docker Desktop supports two installation modes. Per-user installation is recomme
 | Registry keys            | Current User (HKCU)                                            | Local Machine (HKLM)                                                 |
 | Admin rights to install  | Not required                                                   | Required                                                             |
 | Admin rights to update   | Not required                                                   | Required                                                             |
-| Linux containers backend | WSL 2 or Docker VMM                                            | WSL 2, Hyper-V, or Docker VMM                                        |
+| Linux containers backend | WSL 2 or Docker VMM (Beta)                                     | WSL 2, Hyper-V, or Docker VMM (Beta)                                 |
 | Windows containers       | Not supported                                                  | Supported                                                            |
 | Security                 | Smaller attack surface; no privileged system service installed | Requires privileged system service; broader access to host resources |
 
@@ -89,6 +89,20 @@ For more information on setting up WSL 2 with Docker Desktop, see [WSL](https://
 > To run [Windows containers](#windows-containers), you need Windows 10 or Windows 11 Professional or Enterprise edition.
 > Windows Home or Education editions only allow you to run Linux containers.
 
+**Docker VMM backend, x86\_64 (Beta)**
+
+- The same Windows versions as the WSL 2 backend.
+- The **Windows Hypervisor Platform** and **Virtual Machine Platform** Windows
+  features turned on. The all-users installer turns them on for you, and might
+  ask you to restart Windows. A per-user installation can't turn on Windows
+  Hypervisor Platform, so an administrator must turn it on first.
+- Hardware virtualization enabled in BIOS/UEFI. Inside a virtual machine, the
+  host must expose nested virtualization.
+- Docker VMM doesn't require the Hyper-V feature, and isn't supported on Arm. On
+  Arm, the installer uses WSL 2 instead.
+
+For more information, see [Virtual Machine Manager](https://docs.docker.com/desktop/features/vmm/).
+
 **WSL 2 backend, Arm (Early Access)**
 
 - WSL version 2.1.5 or later. To check your version, see [WSL: Verification and setup](#wsl-verification-and-setup)
@@ -130,7 +144,7 @@ For more information, see [Running Docker Desktop in a VM or VDI environment](ht
 
 3. When prompted, select your backend on the **Configuration page**: **Use WSL 2 instead of Hyper-V** for WSL 2, or leave it unselected for Hyper-V. You can switch to Docker VMM after installation from **Settings** > **General**.
 
-   With version 4.97 and later, the **Configuration** page lists the backends as options. Per-user installation offers WSL 2 and Docker VMM (Beta). All-users installation offers WSL 2 and Hyper-V.
+   With version 4.97 and later, the **Configuration** page lists the backends as options. Per-user installation offers WSL 2 and Docker VMM (Beta). All-users installation offers WSL 2, Hyper-V, and Docker VMM (Beta).
 
    On systems that support only one backend, Docker Desktop automatically selects the available option.
 
@@ -200,7 +214,7 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 1. Search for Docker, and select **Docker Desktop** in the search results.
 
-2. The Docker menu (![whale menu](https://raw.githubusercontent.com/docker/docs/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/setup/install/images/whale-x.svg)) displays the Docker Subscription Service Agreement.
+2. The Docker menu (![whale menu](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/desktop/setup/install/images/whale-x.svg)) displays the Docker Subscription Service Agreement.
 
    Here’s a summary of the key points:
 
@@ -275,7 +289,7 @@ If Microsoft Store access is blocked due to security policies:
 - `--quiet`: Suppresses information output when running the installer
 - `--accept-license`: Accepts the [Docker Subscription Service Agreement](https://www.docker.com/legal/docker-subscription-service-agreement) now, rather than requiring it to be accepted when the application is first run
 - `--installation-dir=<path>`: Changes the default installation location (`C:\Program Files\Docker\Docker`)
-- `--backend=<backend name>`: Selects the default backend to use for Docker Desktop: `wsl-2` (default), `hyper-v`, `windows`, or `docker-vmm`. With version 4.97 and later, `docker-vmm` can be combined with the `--user` flag. `hyper-v` and `windows` can't be combined with `--user`.
+- `--backend=<backend name>`: Selects the default backend to use for Docker Desktop: `wsl-2` (default), `hyper-v`, `windows`, or `docker-vmm` (Beta, x86\_64 only). With version 4.97 and later, `docker-vmm` can be combined with the `--user` flag. `hyper-v` and `windows` can't be combined with `--user`.
 - `--always-run-service`: After installation completes, starts `com.docker.service` and sets the service startup type to Automatic. This circumvents the need for administrator privileges, which are otherwise necessary to start `com.docker.service`. `com.docker.service` is required by Windows containers and Hyper-V backend.
 
 #### Security and access control

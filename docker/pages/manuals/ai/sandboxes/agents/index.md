@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/_index.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/agents/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/_index.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/agents/_index.md)
 
 # Supported agents
 
@@ -11,7 +11,6 @@ Docker Sandboxes runs the following agents in local sandboxes:
 - [Devin](https://docs.docker.com/ai/sandboxes/agents/devin/)
 - [Docker Agent](https://docs.docker.com/ai/sandboxes/agents/docker-agent/)
 - [Droid](https://docs.docker.com/ai/sandboxes/agents/droid/)
-- [Gemini](https://docs.docker.com/ai/sandboxes/agents/gemini/)
 - [Kiro](https://docs.docker.com/ai/sandboxes/agents/kiro/)
 - [OpenCode](https://docs.docker.com/ai/sandboxes/agents/opencode/)
 - [Shell](https://docs.docker.com/ai/sandboxes/agents/shell/) — agent-less sandbox for manual setup or testing

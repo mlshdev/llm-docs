@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_deny_network.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_policy_deny_network.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_deny_network.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_policy_deny_network.yaml)
 
 # sbx policy deny network
 
@@ -38,6 +38,10 @@ Use --method to add an HTTP rule. --method accepts comma-separated HTTP
 methods or ANY; --path defaults to /\*\*. Repeat --query name=value to require
 query parameters.
 
+HTTP paths, query parameter names, and query values match without regard to
+ASCII letter case. For example, /API/\*\* matches /api/items, and Tag=PROD
+matches tag=prod.
+
 With --cloud:
 Block cloud sandbox network access to the specified hosts.
 
@@ -56,7 +60,7 @@ to change one sandbox's policy. Use "sbx --cloud policy ls" to list the rules.
 | ------------ | ------- | --------------------------------------------------------------------------------------- |
 | `--method`   |         | Restrict the rule to these HTTP methods (comma-separated); use ANY to match all methods |
 | `--path`     |         | Restrict the rule to this HTTP path glob (e.g. /repos/**); defaults to /**              |
-| `--protocol` |         | Restrict the rule to one protocol: tcp or udp (default tcp,udp)                         |
+| `--protocol` |         | Network protocol: tcp or udp; repeat or comma-separate for both (default tcp,udp)       |
 | `--query`    |         | Require an HTTP query parameter (name=value pattern); repeatable                        |
 | `--sandbox`  |         | Scope the rule to a specific sandbox (default: all sandboxes)                           |
 

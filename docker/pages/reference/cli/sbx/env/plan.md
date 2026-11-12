@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env_plan.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_env_plan.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env_plan.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_env_plan.yaml)
 
 # sbx env plan
 
@@ -28,8 +28,12 @@ in order, matching the other "sbx env" subcommands.
 
 A directory PATH selects sbxenv.yaml; a file PATH selects that file.
 With no PATH, \~/.sbxenv.yaml supplies shared defaults when present.
-Explicit PATHs skip those defaults. Later files override earlier values;
-lists such as ports and mcp.servers are concatenated.
+Explicit PATHs skip those defaults. Later files override earlier values.
+Ports with the same sandbox port and effective protocol, MCP servers with the
+same name, and additional workspaces with the same container target use the
+later entry, including repeated entries in one file.
+Kit arguments merge by source. The entrypoint and cmd arrays replace earlier
+values; other lists concatenate.
 
 ## Options
 

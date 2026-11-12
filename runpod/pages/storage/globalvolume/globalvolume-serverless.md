@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/globalvolume/globalvolume-serverless.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/storage/globalvolume/globalvolume-serverless.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/globalvolume-serverless.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/storage/globalvolume/globalvolume-serverless.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/globalvolume-serverless
 
 # Global volumes for Serverless
@@ -72,4 +72,3 @@ For shared limitations that apply to both Pods and Serverless, see [Global volum
 
 - [Global volumes for Pods](https://docs.runpod.io/storage/globalvolume/globalvolume-pods)
 - [Serverless storage options](https://docs.runpod.io/serverless/storage/overview)
-- [Use the S3-compatible API](https://docs.runpod.io/storage/s3-api)

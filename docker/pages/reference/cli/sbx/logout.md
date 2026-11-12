@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_logout.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_logout.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_logout.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_logout.yaml)
 
 # sbx logout
 
@@ -8,9 +8,9 @@ Stop running local sandboxes and sign out of Docker
 
 ## Options
 
-| Option          | Default | Description              |
-| --------------- | ------- | ------------------------ |
-| `-f`, `--force` |         | Skip confirmation prompt |
+| Option        | Default | Description              |
+| ------------- | ------- | ------------------------ |
+| `-y`, `--yes` |         | Skip confirmation prompt |
 
 ## Global options
 
@@ -26,5 +26,5 @@ Stop running local sandboxes and sign out of Docker
 sbx logout
 
   # Skip the confirmation prompt
-  sbx logout --force
+  sbx logout --yes
 ```

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/_index.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/_vendor/github.com/docker/cli/docs/extend/_index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/_index.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/_vendor/github.com/docker/cli/docs/extend/_index.md)
 
 # Docker Engine managed plugin system
 

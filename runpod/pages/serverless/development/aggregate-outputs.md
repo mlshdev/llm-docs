@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/aggregate-outputs.mdx](https://github.com/runpod/docs/blob/03654ae6f119347890b8633ab8b2d72379866aef/serverless/development/aggregate-outputs.mdx)
+> Pinned source for Runpod main: [serverless/development/aggregate-outputs.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/serverless/development/aggregate-outputs.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/aggregate-outputs
 
 # Aggregate streaming outputs

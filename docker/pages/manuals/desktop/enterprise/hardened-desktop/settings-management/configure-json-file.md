@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/hardened-desktop/settings-management/configure-json-file.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/enterprise/hardened-desktop/settings-management/configure-json-file.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/hardened-desktop/settings-management/configure-json-file.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/desktop/enterprise/hardened-desktop/settings-management/configure-json-file.md)
 
 # Configure Settings Management with a JSON file
 
@@ -334,8 +334,34 @@ Docker Desktop has two distinct proxy settings with different scopes:
 | Parameter         | OS | Description                                                                                                                                                                                                                                                                            | Version |
 | :---------------- | -- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | `containersProxy` |    | Configures the proxy for `docker image pull` (always enforced) and running container outbound traffic (enforced when `transparentPorts` is set). For more information see [Air-Gapped Containers](https://docs.docker.com/desktop/enterprise/hardened-desktop/air-gapped-containers/). |         |
-| `pac`             |    | Specifies a PAC file URL. For example, `"pac": "http://containerproxy/proxy.pac"`.                                                                                                                                                                                                     |         |
-| `embeddedPac`     |    | Specifies an embedded PAC (Proxy Auto-config) script. For example, `"embeddedPac": "function FindProxyForURL(url, host) { return \"PROXY 192.168.92.1:2003\"; }"`. This setting takes precedence over HTTP, HTTPS, Proxy bypass and PAC server URL.                                    |         |
+
+The `containersProxy` setting accepts the following nested properties:
+
+| Property           | Description                                                                                                                                                                                                                                         |
+| :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `locked`           | When set to `true`, users cannot modify this setting.                                                                                                                                                                                               |
+| `mode`             | Proxy mode: `manual` or `system`.                                                                                                                                                                                                                   |
+| `http`             | HTTP proxy URL. For example, `"http": "http://proxy.example.com:8080"`.                                                                                                                                                                             |
+| `https`            | HTTPS proxy URL. For example, `"https": "https://proxy.example.com:8443"`.                                                                                                                                                                          |
+| `exclude`          | List of addresses to bypass the proxy. For example, `"exclude": ["localhost", "127.0.0.1"]`.                                                                                                                                                        |
+| `pac`              | Specifies a PAC file URL. For example, `"pac": "http://containerproxy/proxy.pac"`.                                                                                                                                                                  |
+| `embeddedPac`      | Specifies an embedded PAC (Proxy Auto-config) script. For example, `"embeddedPac": "function FindProxyForURL(url, host) { return \"PROXY 192.168.92.1:2003\"; }"`. This setting takes precedence over HTTP, HTTPS, Proxy bypass and PAC server URL. |
+| `transparentPorts` | Specifies which ports should use transparent proxy.                                                                                                                                                                                                 |
+
+Example configuration:
+
+```json
+"containersProxy": {
+  "locked": true,
+  "mode": "manual",
+  "http": "",
+  "https": "",
+  "exclude": [],
+  "pac": "",
+  "embeddedPac": "",
+  "transparentPorts": ""
+}
+```
 
 ### Linux VM settings
 

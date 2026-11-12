@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/base-images.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/customize/author/base-images.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/base-images.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/customize/author/base-images.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -40,7 +40,6 @@ templates also include a C/C++ compiler toolchain for building native code.
 | `devin`               | [Devin CLI](https://docs.devin.ai/work-with-devin/devin-cli)         |
 | `docker-agent`        | [Docker Agent](https://github.com/docker/docker-agent)               |
 | `droid`               | [Droid](https://www.factory.ai)                                      |
-| `gemini`              | [Gemini CLI](https://github.com/google-gemini/gemini-cli)            |
 | `kiro`                | [Kiro](https://kiro.dev)                                             |
 | `opencode`            | [OpenCode](https://opencode.ai)                                      |
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_allow_network.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_policy_allow_network.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_allow_network.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_policy_allow_network.yaml)
 
 # sbx policy allow network
 
@@ -37,6 +37,10 @@ instead.
 Use --method to add an HTTP rule. --method accepts comma-separated HTTP
 methods or ANY; --path defaults to /\*\*. Repeat --query name=value to require
 query parameters.
+
+HTTP paths, query parameter names, and query values match without regard to
+ASCII letter case. For example, /API/\*\* matches /api/items, and Tag=PROD
+matches tag=prod.
 
 With --cloud:
 Allow cloud sandbox network access to the specified hosts.

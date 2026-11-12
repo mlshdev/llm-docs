@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_exec.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_exec.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_exec.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_exec.yaml)
 
 # sbx exec
 
@@ -9,11 +9,7 @@ Execute a command inside a sandbox
 ## Description
 
 Execute a command in a sandbox. If the sandbox is stopped, it is started first. Or — with --cloud — the cloud sandbox
-ID (sbx\_\*) or name from "sbx --cloud ls".
-
-Flags match the behavior of "docker exec", except detached exec (-d/--detach)
-is not supported. Some flags (-d, --user, --privileged)
-are not supported with --cloud and are rejected rather than silently ignored.
+ID (sbx\_\*) or name from "sbx --cloud ls". --user is not supported with --cloud.
 \--detach-keys applies only to an interactive (-i/-t) cloud exec.
 
 Exit status is that of the command. sbx exits 125 if it could not run the command,
@@ -22,17 +18,15 @@ unless a cloud backend reports it as an error rather than a status, which exits 
 
 ## Options
 
-| Option                | Default | Description                                             |
-| --------------------- | ------- | ------------------------------------------------------- |
-| `-d`, `--detach`      |         | Detached mode (not supported)                           |
-| `--detach-keys`       |         | Override the key sequence for detaching a container     |
-| `-e`, `--env`         |         | Set environment variables                               |
-| `--env-file`          |         | Read in a file of environment variables                 |
-| `-i`, `--interactive` |         | Keep STDIN open even if not attached                    |
-| `--privileged`        |         | Give extended privileges to the command                 |
-| `-t`, `--tty`         |         | Allocate a pseudo-TTY                                   |
-| `-u`, `--user`        |         | Username or UID (format: \<name\|uid>\[:\<group\|gid>]) |
-| `-w`, `--workdir`     |         | Working directory inside the container                  |
+| Option                | Default | Description                                                                                              |
+| --------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| `--detach-keys`       |         | Override the key sequence for detaching an interactive cloud exec session (not supported for local exec) |
+| `-e`, `--env`         |         | Set environment variables                                                                                |
+| `--env-file`          |         | Read in a file of environment variables                                                                  |
+| `-i`, `--interactive` |         | Keep STDIN open even if not attached                                                                     |
+| `-t`, `--tty`         |         | Allocate a pseudo-TTY                                                                                    |
+| `-u`, `--user`        |         | Username or UID (format: \<name\|uid>\[:\<group\|gid>])                                                  |
+| `-w`, `--workdir`     |         | Working directory inside the container                                                                   |
 
 ## Global options
 

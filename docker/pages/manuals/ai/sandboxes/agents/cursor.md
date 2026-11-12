@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/cursor.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/agents/cursor.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/cursor.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/agents/cursor.md)
 
 # Cursor
 
@@ -69,8 +69,8 @@ itself a flag (begins with `-`), so `--yolo` is preserved:
 $ sbx run --name <sandbox-name> -- -p "refactor this"   # runs cursor-agent --yolo -p "refactor this"
 ```
 
-When the first argument is a bare word — a subcommand or prompt — it replaces
-the defaults instead.
+For prompts and subcommands, see
+[Pass arguments to an agent](https://docs.docker.com/ai/sandboxes/usage/#pass-arguments-to-an-agent).
 
 ## Base image
 

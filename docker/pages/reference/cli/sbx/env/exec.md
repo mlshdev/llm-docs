@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env_exec.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_env_exec.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env_exec.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_env_exec.yaml)
 
 # sbx env exec
 
@@ -24,8 +24,12 @@ directory.
 
 A directory PATH selects sbxenv.yaml; a file PATH selects that file.
 With no PATH, \~/.sbxenv.yaml supplies shared defaults when present.
-Explicit PATHs skip those defaults. Later files override earlier values;
-lists such as ports and mcp.servers are concatenated.
+Explicit PATHs skip those defaults. Later files override earlier values.
+Ports with the same sandbox port and effective protocol, MCP servers with the
+same name, and additional workspaces with the same container target use the
+later entry, including repeated entries in one file.
+Kit arguments merge by source. The entrypoint and cmd arrays replace earlier
+values; other lists concatenate.
 
 Flags match the behavior of "sbx exec".
 
@@ -37,15 +41,13 @@ unless a cloud backend reports it as an error rather than a status, which exits 
 
 | Option                | Default | Description                                                                                                                                                            |
 | --------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-d`, `--detach`      |         | Detached mode (not supported)                                                                                                                                          |
-| `--detach-keys`       |         | Override the key sequence for detaching a container                                                                                                                    |
+| `--detach-keys`       |         | Override the key sequence for detaching an interactive cloud exec session (not supported for local exec)                                                               |
 | `-e`, `--env`         |         | Set environment variables                                                                                                                                              |
 | `--env-arg`           |         | Value for an argument the environment file declares, as name=value (can be repeated) (Experimental)                                                                    |
 | `--env-args-file`     |         | File of name=value environment arguments, one per line (can be repeated); --env-arg overrides (Experimental)                                                           |
 | `--env-file`          |         | Read in a file of environment variables                                                                                                                                |
 | `-i`, `--interactive` |         | Keep STDIN open even if not attached                                                                                                                                   |
 | `--name`              |         | Name for the sandbox, overriding 'name:' in sbxenv.yaml and the derived <agent>-<directory> (every 'sbx env' command addressing this environment needs the same value) |
-| `--privileged`        |         | Give extended privileges to the command                                                                                                                                |
 | `-t`, `--tty`         |         | Allocate a pseudo-TTY                                                                                                                                                  |
 | `-u`, `--user`        |         | Username or UID (format: \<name\|uid>\[:\<group\|gid>])                                                                                                                |
 | `-w`, `--workdir`     |         | Working directory inside the container                                                                                                                                 |

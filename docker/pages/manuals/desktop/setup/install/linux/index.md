@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/linux/_index.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/setup/install/linux/_index.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/linux/_index.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/desktop/setup/install/linux/_index.md)
 
 # Install Docker Desktop on Linux
 
@@ -136,6 +136,15 @@ Docker Desktop for Linux runs a Virtual Machine (VM). For more information on wh
 > \[!NOTE]
 >
 > Docker does not provide support for running Docker Desktop for Linux in nested virtualization scenarios. We recommend that you run Docker Desktop for Linux natively on supported distributions.
+
+> \[!NOTE]
+>
+> With Docker Desktop 4.98 and later, you can use Docker VMM (Beta) instead of
+> QEMU. To switch, select **Docker VMM** under **Settings** > **General** >
+> **Virtual Machine Manager**. If the option is unavailable, turn on **Beta
+> features** in **Settings**. Docker VMM has the same KVM requirements as QEMU.
+> For more information, see
+> [Virtual Machine Manager](https://docs.docker.com/desktop/features/vmm/).
 
 ### KVM virtualization support
 

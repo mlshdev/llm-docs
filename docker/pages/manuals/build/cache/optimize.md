@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/cache/optimize.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/build/cache/optimize.md)
+> Pinned source for Docker main: [content/manuals/build/cache/optimize.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/build/cache/optimize.md)
 
 When building with Docker, a layer is reused from the build cache if the
 instruction and the files it depends on hasn't changed since it was previously

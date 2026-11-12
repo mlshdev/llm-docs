@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/dhi/docker_dhi_auth_deb.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/cli/dhi/docker_dhi_auth_deb.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_auth_deb.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/cli/dhi/docker_dhi_auth_deb.yaml)
 
 # docker dhi auth deb
 

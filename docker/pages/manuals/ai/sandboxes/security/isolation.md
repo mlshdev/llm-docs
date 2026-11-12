@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/isolation.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/security/isolation.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/security/isolation.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/security/isolation.md)
 
 # Isolation layers
 
@@ -161,7 +161,7 @@ can create, modify, or delete workspace files, including:
 - Git hooks (`.git/hooks/`)
 - CI configuration (`.github/workflows/`, `.gitlab-ci.yml`)
 - IDE configuration (`.vscode/tasks.json`, `.idea/` run configurations)
-- AI project configuration and settings (`.claude/`, `.codex/`, `.gemini/`)
+- AI project configuration and settings (`.claude/`, `.codex/`)
 - Hidden files, shell scripts, and executables
 
 Some of these files execute code when you trigger normal development
@@ -177,8 +177,8 @@ Review them after any agent session before performing those actions:
   during build or install steps.
 - IDE configuration (`.vscode/tasks.json`, `.idea/`) can run tasks
   when you open the project.
-- AI project configuration and settings (`.claude/settings.json`, `.codex/config.toml`,
-  `.gemini/settings.json`) can define hooks and startup commands that
+- AI project configuration and settings (`.claude/settings.json`,
+  `.codex/config.toml`) can define hooks and startup commands that
   execute automatically.
 
 #### Sandbox environment files

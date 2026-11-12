@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/codex.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/agents/codex.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/codex.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/agents/codex.md)
 
 # Codex
 
@@ -76,13 +76,14 @@ Without extra args, the sandbox runs:
 codex --dangerously-bypass-approvals-and-sandbox
 ```
 
-Arguments after `--` are added after the default flags when the first one is
-itself a flag (begins with `-`). A bare word — such as a prompt — replaces the
-defaults instead, so lead with the flag to keep bypass mode:
+To keep bypass mode when passing a prompt, lead with the flag:
 
 ```console
 $ sbx run --name <sandbox-name> -- --dangerously-bypass-approvals-and-sandbox "fix the build"
 ```
+
+For argument forwarding rules, see
+[Pass arguments to an agent](https://docs.docker.com/ai/sandboxes/usage/#pass-arguments-to-an-agent).
 
 ## Base image
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-licenses.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/accounts/organization/manage/manage-licenses.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-licenses.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/accounts/organization/manage/manage-licenses.md)
 
 # Manage licenses
 
@@ -50,8 +50,6 @@ Docker grants the license only to team members who don't already have it.
 
 - If a member already holds that license, they keep access and the extra
   assignment does not consume another license.
-- A product can be selected for the team only when enough licenses are
-  available for every member of the team.
 
 ### Members
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/go-prometheus-monitoring.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/go-prometheus-monitoring.md)
+> Pinned source for Docker main: [content/guides/go-prometheus-monitoring.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/go-prometheus-monitoring.md)
 
 The guide teaches you how to containerize a Golang application and monitor it with Prometheus and Grafana.
 

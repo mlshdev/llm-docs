@@ -1,12 +1,10 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/general-settings.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/accounts/organization/manage/general-settings.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/general-settings.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/accounts/organization/manage/general-settings.md)
 
-# Change general organization information
+# Update organization information
 
-Learn how to update your organization information.
+Update the details that appear on your organization landing page.
 
 ## Update organization information
-
-General organization information appears on your organization landing page.
 
 This information includes:
 
@@ -21,7 +19,7 @@ To edit this information:
 1. Sign in to [Docker Home](https://app.docker.com) and select your
    organization from the top-left account drop-down.
 2. Select **Organization settings**.
-3. Enter or update your organization’s details, then select **Save**.
+3. Enter or update your organization's details, then select **Save**.
 
 ## Next steps
 
@@ -30,4 +28,4 @@ After configuring your organization information, you can:
 - [Configure single sign-on (SSO)](https://docs.docker.com/security/authentication/single-sign-on/connect/)
 - [Set up SCIM provisioning](https://docs.docker.com/security/provisioning/scim/)
 - [Manage domains](https://docs.docker.com/security/provisioning/domain-management/)
-- [Create a company](https://docs.docker.com/accounts/company/new-company/)
+- [Set up a company](https://docs.docker.com/accounts/company/new-company/)

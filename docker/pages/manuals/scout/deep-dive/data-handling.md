@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/deep-dive/data-handling.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/scout/deep-dive/data-handling.md)
+> Pinned source for Docker main: [content/manuals/scout/deep-dive/data-handling.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/scout/deep-dive/data-handling.md)
 
 # Data collection and storage in Docker Scout
 

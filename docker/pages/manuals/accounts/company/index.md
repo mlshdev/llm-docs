@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/company/_index.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/accounts/company/_index.md)
+> Pinned source for Docker main: [content/manuals/accounts/company/_index.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/accounts/company/_index.md)
 
 # Company accounts
 
@@ -62,10 +62,10 @@ who is not an organization member does not occupy a seat.
 
 ## Next steps
 
-Learn how to create and manage a company in the following sections.
+Set up the company, then manage members and access from the pages below.
 
-- [Create a company](https://docs.docker.com/accounts/company/new-company/): Get started by learning how to create a company.
-- [Manage your company](https://docs.docker.com/accounts/company/manage/): Add organizations, manage company owners, and invite members.
+- [Set up a company](https://docs.docker.com/accounts/company/new-company/): Create a company, invite members, add organizations, and manage owners.
+- [Manage your company](https://docs.docker.com/accounts/company/manage/): Change roles, remove users, and export a member list.
 - [Configure SSO and SCIM](https://docs.docker.com/security/authentication/single-sign-on/): Set up single sign-on and SCIM provisioning for your company.
 - [Domain management](https://docs.docker.com/security/provisioning/domain-management/): Add and verify your company's domains.
 - [FAQs](https://docs.docker.com/faqs/accounts/): Explore frequently asked questions about companies.

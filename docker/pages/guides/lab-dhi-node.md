@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/lab-dhi-node.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/guides/lab-dhi-node.md)
+> Pinned source for Docker main: [content/guides/lab-dhi-node.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/lab-dhi-node.md)
 
 # Lab: Migrating a Node App to Docker Hardened Images
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_reset.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_policy_reset.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_reset.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_policy_reset.yaml)
 
 # sbx policy reset
 
@@ -10,9 +10,9 @@ Reset policies to defaults
 
 Remove all custom policies and restart the daemon to restore defaults.
 
-This deletes the local policy store and stops the daemon. The daemon restarts
-automatically on the next command, then prompts you to initialize the global
-network policy again.
+This deletes the local policy store and restarts the daemon immediately. You
+are then prompted to choose the global network policy; without an interactive
+terminal, initialize it after the reset by choosing a preset as shown below.
 
 If sandboxes are currently running, they will be stopped when the daemon
 shuts down. You will be prompted for confirmation unless --force is used.
@@ -43,4 +43,7 @@ leaves the local daemon alone. You will be prompted for confirmation unless
 
   # Reset policies without confirmation
   sbx policy reset --force
+
+  # Reset and initialize in a script; use balanced, allow-all, or deny-all
+  sbx --no-input policy reset --force && sbx policy init balanced
 ```

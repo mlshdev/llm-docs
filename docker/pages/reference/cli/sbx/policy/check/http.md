@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_check_http.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_policy_check_http.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_check_http.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_policy_check_http.yaml)
 
 # sbx policy check http
 
@@ -21,13 +21,13 @@ with --verbose, Resource shows the normalized host and port evaluated by policy.
 
 ## Options
 
-| Option      | Default | Description                                   |
-| ----------- | ------- | --------------------------------------------- |
-| `--format`  |         | Output format: table, json or yaml            |
-| `--json`    |         | Output in JSON format                         |
-| `--method`  | `GET`   | HTTP method to evaluate                       |
-| `--sandbox` |         | Evaluate in a specific sandbox policy context |
-| `--verbose` |         | Show the policy action and resource           |
+| Option            | Default | Description                                   |
+| ----------------- | ------- | --------------------------------------------- |
+| `--format`        |         | Output format: table, json or yaml            |
+| `--json`          |         | Output in JSON format                         |
+| `--method`        | `GET`   | HTTP method to evaluate                       |
+| `--sandbox`       |         | Evaluate in a specific sandbox policy context |
+| `-v`, `--verbose` |         | Show the policy action and resource           |
 
 ## Global options
 

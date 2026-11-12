@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-seats.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/accounts/organization/manage/manage-seats.md)
+> Pinned source for Docker main: [content/manuals/accounts/organization/manage/manage-seats.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/accounts/organization/manage/manage-seats.md)
 
 # Manage subscription seats
 

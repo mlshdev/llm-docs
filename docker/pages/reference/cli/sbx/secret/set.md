@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_secret_set.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_secret_set.yaml)
 
 # sbx secret set
 
@@ -48,6 +48,9 @@ service secrets, registry credentials are host-only by default:
   the proxy into every new sandbox's registry login. The credentials never
   enter the sandbox.
 - With --sandbox, credentials are injected into the specified sandbox only.
+
+Use --password-stdin to read the password or token. --token and --oauth are not
+supported with --registry.
 
 For a registry whose Bearer authentication endpoint uses a different hostname,
 use --registry-auth-endpoint to trust its exact HTTPS URL.

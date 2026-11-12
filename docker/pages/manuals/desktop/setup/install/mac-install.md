@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/desktop/setup/install/mac-install.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/mac-install.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/desktop/setup/install/mac-install.md)
 
 # Install Docker Desktop on Mac
 
@@ -26,6 +26,8 @@ This page provides download links, system requirements, and step-by-step install
   > Docker Desktop is supported on the current and two previous major macOS releases. As new major versions of macOS are made generally available, Docker stops supporting the oldest version and supports the newest version of macOS (in addition to the previous two releases).
 
 - At least 4 GB of RAM.
+
+- Optional: Docker VMM (Beta) is available on Apple silicon. For more information, see [Virtual Machine Manager](https://docs.docker.com/desktop/features/vmm/).
 
 - For the best experience, it's recommended that you install Rosetta 2. Rosetta 2 is no longer strictly required, however there are a few optional command line tools that still require Rosetta 2 when using Darwin/AMD64. To install Rosetta 2 manually from the command line, run the following command:
 
@@ -115,7 +117,7 @@ The `install` command accepts the following flags:
 
 - `--accept-license`: Accepts the [Docker Subscription Service Agreement](https://www.docker.com/legal/docker-subscription-service-agreement) now, rather than requiring it to be accepted when the application is first run.
 - `--user=<username>`: Performs the privileged configurations once during installation. This removes the need for the user to grant root privileges on first run. For more information, see [Privileged helper permission requirements](https://docs.docker.com/desktop/setup/install/mac-permission-requirements/#permission-requirements). To find the username, enter `ls /Users` in the CLI.
-- `--backend=docker-vmm`: Selects the Docker VMM engine at install time. `docker-vmm` is the only supported value on Mac; any other value fails the installation. For more information, see [Virtual Machine Manager](https://docs.docker.com/desktop/features/vmm/).
+- `--backend=docker-vmm`: Selects the Docker VMM (Beta) engine at install time. Requires Apple silicon. `docker-vmm` is the only supported value on Mac; any other value fails the installation. For more information, see [Virtual Machine Manager](https://docs.docker.com/desktop/features/vmm/).
 
 ##### Security and access
 

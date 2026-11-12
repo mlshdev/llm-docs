@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/governance/local/network-rules.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/governance/local/network-rules.md)
+> Pinned source for Docker main: [content/manuals/ai/governance/local/network-rules.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/governance/local/network-rules.md)
 
 # Manage local network rules
 
@@ -74,6 +74,10 @@ Write the host without a scheme, such as `api.github.com` rather than
 `https://api.github.com`. It follows the same patterns as network rules and can
 include a port, but it must be a hostname. To match an IP address or a CIDR
 range, use a network rule without `--method` or `--path`.
+
+Paths and query parameter names and values ignore ASCII letter case. For
+examples and wildcard behavior, see
+[HTTP rules](https://docs.docker.com/ai/governance/reference/network-rules/#http-method-and-path).
 
 ### Choose methods
 
@@ -187,6 +191,13 @@ To list UDP rules or check a destination:
 $ sbx policy ls --protocol udp
 $ sbx policy check network --protocol udp api.example.com:443
 ```
+
+When UDP egress is disabled, each sandbox network records the first 20 distinct
+refused external UDP destinations in individual log entries. Further destinations
+share the `<further blocked attempts>` entry. Repeated attempts to one of the
+first 20 destinations still update that destination's count. The limit applies
+for the network's lifetime, and each network has its own limit. All these UDP
+attempts remain blocked.
 
 ## Set or reset the preset
 

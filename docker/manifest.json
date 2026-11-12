@@ -8,38 +8,38 @@
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-11-10T17:48:17Z",
-  "documentationDigest": "16692b08d718b9ea2b3d33cce3d74e4f3e8459c80a4db4426965eda760fe55a0",
-  "sourceCommit": "75a95460ce3cc8db87a23893490ec331506d08fd",
-  "documentCount": 1698,
+  "sourceCommittedAt": "2026-11-11T21:46:39Z",
+  "documentationDigest": "e358233bb558c15bab77973d983f4e283572ca95c44699b759767b2c509b314c",
+  "sourceCommit": "61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80",
+  "documentCount": 1712,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 687,
       "documentCount": 0,
-      "sha256": "a5d04bb9238b7df8de54599a59ba14f605a3d8db9d74cea7b4dfd920fc38ec53"
+      "sha256": "d81d548c537e03431d544d6363ae5b099345c707f2efe23b0bc5fe96e9b5f5d2"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8321948,
-      "documentCount": 822,
-      "sha256": "18e07e17d8ad76fb859adbfc0a3eb423b2de086665f85258f8117f00d8c1588b"
+      "byteLength": 8353961,
+      "documentCount": 821,
+      "sha256": "528f613dcd80494c28306d85653892970e00435ed28c796f5564fad31248f31d"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 8172105,
+      "byteLength": 8176565,
       "documentCount": 215,
-      "sha256": "19093fba93951c131ce932c2690d8081d769e85b8fb0732fd81cf6005d430904"
+      "sha256": "b1d02de557221f61ce0bef1dd55825fbd28a4439d5a8ff897c6e0b4f7df7ff8d"
     },
     {
       "name": "llms-full.003.txt",
-      "byteLength": 7142015,
-      "documentCount": 661,
-      "sha256": "4d84062960330bbae34834acf4fbb444ef2627a8c43ce36b53a75c1458d4c09f"
+      "byteLength": 7182888,
+      "documentCount": 676,
+      "sha256": "d9a519058db3b5f25204bddbea1201c1be348fe674b2501fc8661ab16fefb650"
     }
   ],
-  "outputDigest": "2030bff7bc26c81c0a95f8caadb26d2c4afa3e37aa638c426bb3c3ec8d1b6070",
+  "outputDigest": "ddbcffd2ada33b41d8f84134d4312628b8fa7e0368ab0e29461861eae375e716",
   "quarantined": [
     {
       "sourcePath": "content/manuals/ai/sandboxes-api/cookbook/_index.md",

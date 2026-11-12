@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_skills_import.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_skills_import.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_skills_import.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_skills_import.yaml)
 
 # sbx skills import
 
@@ -27,10 +27,11 @@ Top-level directory symlinks are followed; symlinks within skills are skipped.
 
 ## Options
 
-| Option          | Default | Description                                                     |
-| --------------- | ------- | --------------------------------------------------------------- |
-| `--dry-run`     |         | Preview which skills would be imported without copying anything |
-| `-f`, `--force` |         | Overwrite existing skills without prompting                     |
+| Option            | Default | Description                                                     |
+| ----------------- | ------- | --------------------------------------------------------------- |
+| `--dry-run`       |         | Preview which skills would be imported without copying anything |
+| `-f`, `--force`   |         | Overwrite existing skills without prompting                     |
+| `-v`, `--verbose` |         | Also list the checked directories that do not exist             |
 
 ## Global options
 

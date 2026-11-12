@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.4: [docs/guides/ai-agents/generate-translate-copy.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/ai-agents/generate-translate-copy.mdx)
+> Pinned source for Trigger.dev v4.8.5: [docs/guides/ai-agents/generate-translate-copy.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/generate-translate-copy.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/generate-translate-copy
 
 # Generate and translate copy
@@ -9,7 +9,7 @@ Create an AI agent workflow that generates and translates copy
 
 **Prompt chaining** is an AI workflow pattern that decomposes a complex task into a sequence of steps, where each LLM call processes the output of the previous one. This approach trades off latency for higher accuracy by making each LLM call an easier, more focused task, with the ability to add programmatic checks between steps to ensure the process remains on track.
 
-![Generating and translating copy](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/ai-agents/prompt-chaining.png)
+![Generating and translating copy](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/prompt-chaining.png)
 
 ## Example task
 

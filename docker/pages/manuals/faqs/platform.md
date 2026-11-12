@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/faqs/platform.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/faqs/platform.md)
+> Pinned source for Docker main: [content/manuals/faqs/platform.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/faqs/platform.md)
 
 # Platform FAQs
 
@@ -23,7 +23,7 @@ Docker uses tokens to manage user sessions with different expiration periods:
 - Docker Desktop: Signs you out after 90 days, or 30 days of inactivity
 - Docker Hub and Docker Home: Sign you out after 24 hours
 
-Docker also supports your IdP's default session timeout through SAML attributes. For more information, see [SSO attributes](https://docs.docker.com/security/provisioning/#sso-attributes).
+Docker also supports your IdP's default session timeout through SAML attributes. For more information, see [SSO attributes](https://docs.docker.com/security/authentication/single-sign-on/connect/#sso-attributes).
 
 ### How does Docker distinguish between employee users and contractor users?
 

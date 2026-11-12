@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/cloud/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/usage.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/cloud/usage.md)
 
 # Use cloud sandboxes
 
@@ -43,9 +43,10 @@ The command prints the cloud sandbox ID. Attach by ID or name:
 $ sbx --cloud attach cloud-project
 ```
 
-Cloud sandbox names must have at least two characters, start with a letter or
-number, and contain only letters, numbers, and hyphens. The name `default` is
-reserved. Periods accepted in local sandbox names aren't accepted in the cloud.
+Cloud sandbox names must be 2–63 characters long, contain only ASCII letters,
+numbers, and hyphens, and start and end with a letter or number. The name
+`default` is reserved. Periods accepted in local sandbox names aren't accepted
+in the cloud.
 
 Cloud creation doesn't accept workspace paths. For example,
 `sbx --cloud run claude .` returns an error because `.` refers to the local
@@ -154,6 +155,9 @@ and a cloud sandbox. Use absolute sandbox paths:
 $ sbx --cloud cp ./src cloud-project:/home/agent/workspace/src
 $ sbx --cloud cp cloud-project:/home/agent/workspace/result.json ./result.json
 ```
+
+Cloud copies don't preserve permissions or timestamps. Set executable
+permissions after downloading a program.
 
 Cloud copies don't preserve empty directories or symbolic links themselves.
 Symbolic links are handled differently depending on the transfer:

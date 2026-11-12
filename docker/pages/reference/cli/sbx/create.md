@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_create.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_create.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_create.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_create.yaml)
 
 # sbx create
 
@@ -23,7 +23,7 @@ then works in the container's own filesystem instead of on your files.
 
 Use "sbx run --name SANDBOX" to attach to the agent after creation.
 
-Available agents: claude, codex, copilot, cursor, devin, docker-agent, droid, gemini, kiro, opencode, shell
+Available agents: claude, codex, copilot, cursor, devin, docker-agent, droid, kiro, opencode, shell
 
 With --cloud:
 Create a cloud sandbox for an agent.
@@ -56,7 +56,7 @@ creation: cloud needs the agent, since a name alone is not a unique handle.
 | `--kit-args-file`  |         | File of name=value kit arguments, one per line (can be repeated); --kit-arg overrides (Experimental)                                                                                                                                                                                                                                                                                                                                                                        |
 | `-m`, `--memory`   |         | Memory limit in binary units (e.g., 512m, 8g). Minimum: 512 MiB. Default: 50% of host memory, clamped to 512 MiB–32 GiB. Maximum: host memory. Warns above 75% of host memory                                                                                                                                                                                                                                                                                               |
 | `--mount`          |         | Bind a host directory to a kit host-mount\@1 path (can be repeated): HOST:SANDBOX\_PATH. Can only be used when creating a new sandbox.                                                                                                                                                                                                                                                                                                                                      |
-| `--name`           |         | Name for the sandbox (defaults to <agent>-<workdir>; at least two characters, starting with a letter or number, containing only letters, numbers, hyphens and periods (periods are rejected with --cloud); 'default' is reserved)                                                                                                                                                                                                                                           |
+| `--name`           |         | Name for the sandbox (default: <agent>-<workdir>; 2–63 ASCII letters, numbers, hyphens or periods; each dot-separated part must start and end with a letter or number; periods are rejected with --cloud; 'default' is reserved)                                                                                                                                                                                                                                            |
 | `--no-progress`    |         | Suppress progress output                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `--on-timeout`     |         | What happens when --ttl lapses: 'stop' stops the sandbox in place so it can be started again later, 'restart' keeps it running by stopping and immediately starting it, or 'delete' removes it. Omit the flag and the server stops the sandbox when it can be started again later, and deletes it otherwise. With 'restart' a supplied --ttl must be at least 1h (cloud only).                                                                                              |
 | `--platform`       |         | Target platform: linux/amd64 or linux/arm64 (cloud only). With --image-ref, omitting it lets the server resolve the platform from the image and the CLI sends the local CPU as a hint for multi-platform images. With --template, omitting it inherits the template platform. With a sandbox kit, the kit's template is built for this platform and cached apart from other platforms; omitting it keeps the server's choice.                                               |
@@ -97,8 +97,18 @@ creation: cloud needs the agent, since a name alone is not a unique handle.
   # Create from a local sandbox kit
   sbx create ../path/to/my-agent/
 
-  # Add a mixin to a built-in agent
+  # Add a mixin from a local directory or ZIP file
   sbx create claude --kit ./my-mixin/
+  sbx create claude --kit ./my-mixin.zip
+
+  # Add a mixin from Docker Hub
+  sbx create claude --kit org/my-mixin:latest
+
+  # Add a mixin from an OCI reference
+  sbx create claude --kit ghcr.io/org/my-mixin:latest
+
+  # Add a mixin from a git repository (git+https:// or git+ssh://, optionally pinned to a ref and/or subdirectory)
+  sbx create claude --kit "git+https://github.com/org/repo.git#ref=v1.0&dir=mixins/foo"
 
   # Run the agent on an in-container clone of the host repo, wired back via a git-daemon
   sbx create --clone claude .

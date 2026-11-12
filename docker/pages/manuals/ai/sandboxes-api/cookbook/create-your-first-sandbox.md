@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/create-your-first-sandbox.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes-api/cookbook/create-your-first-sandbox.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes-api/cookbook/create-your-first-sandbox.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes-api/cookbook/create-your-first-sandbox.md)
 
 # Create your first sandbox
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.4: [docs/webhooks/public-beta.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/webhooks/public-beta.mdx)
+> Pinned source for Trigger.dev v4.8.5: [docs/webhooks/public-beta.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/webhooks/public-beta.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/public-beta
 
 # Webhooks public beta

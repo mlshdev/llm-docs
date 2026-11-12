@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_template_ls.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_template_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_template_ls.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_template_ls.yaml)
 
 # sbx template ls
 
@@ -8,15 +8,21 @@ List template images
 
 ## Description
 
-List all template images stored in the sandbox runtime's image store.
+List tagged template images stored in the sandbox runtime's image store.
+
+With --cloud:
+List cloud sandbox templates.
 
 ## Options
 
-| Option          | Default | Description                        |
-| --------------- | ------- | ---------------------------------- |
-| `--format`      |         | Output format: table, json or yaml |
-| `--json`        |         | Output in JSON format              |
-| `-q`, `--quiet` |         | Only display template names        |
+| Option          | Default | Description                             |
+| --------------- | ------- | --------------------------------------- |
+| `-a`, `--all`   |         | Include digest-only and untagged images |
+| `--digests`     |         | Show image digests                      |
+| `--format`      |         | Output format: table, json or yaml      |
+| `--json`        |         | Output in JSON format                   |
+| `--no-trunc`    |         | Show full image IDs                     |
+| `-q`, `--quiet` |         | Only display template names             |
 
 ## Global options
 
@@ -29,9 +35,18 @@ List all template images stored in the sandbox runtime's image store.
 ## Examples
 
 ```console
-# List all template images
+# List tagged template images
   sbx template ls
+
+  # Include digest-only and untagged images with their digests and full IDs
+  sbx template ls --all --digests --no-trunc
 
   # Output in JSON format
   sbx template ls --json
+
+  # Cloud: list templates
+  sbx --cloud template ls
+
+  # Cloud: output in JSON format
+  sbx --cloud template ls --json
 ```

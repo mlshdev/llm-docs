@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.4: [docs/guides/ai-agents/translate-and-refine.mdx](https://github.com/triggerdotdev/trigger.dev/blob/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/ai-agents/translate-and-refine.mdx)
+> Pinned source for Trigger.dev v4.8.5: [docs/guides/ai-agents/translate-and-refine.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/translate-and-refine.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/translate-and-refine
 
 # Translate text and refine it based on feedback
@@ -9,7 +9,7 @@ This guide will show you how to create a task that translates text and refines i
 
 This example is based on the **evaluator-optimizer** pattern, where one LLM generates a response while another provides evaluation and feedback in a loop. This is particularly effective for tasks with clear evaluation criteria where iterative refinement provides better results.
 
-![Evaluator-optimizer](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/55a53ef23958db0ce59893d9d4486258e00433b1/docs/guides/ai-agents/evaluator-optimizer.png)
+![Evaluator-optimizer](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/evaluator-optimizer.png)
 
 ## Example task
 

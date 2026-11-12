@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/governance/local/test-monitor.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/governance/local/test-monitor.md)
+> Pinned source for Docker main: [content/manuals/ai/governance/local/test-monitor.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/governance/local/test-monitor.md)
 
 # Test and monitor network policy
 
@@ -77,6 +77,10 @@ For how the forward and transparent proxies handle sandbox traffic, see
 The log records network requests by host, without their HTTP methods and
 paths. Filesystem mount decisions aren't in the log.
 
+With UDP egress disabled, some blocked destinations share the
+`<further blocked attempts>` log entry. For details, see
+[Allow outbound UDP](https://docs.docker.com/ai/governance/local/network-rules/#allow-outbound-udp).
+
 ## Filter the log
 
 To see only one sandbox's requests, pass its name:
@@ -85,11 +89,13 @@ To see only one sandbox's requests, pass its name:
 $ sbx policy log my-sandbox
 ```
 
-To show only the most recent entries, pass `--limit`:
+Use `--limit N` to show up to N allowed and N blocked entries:
 
 ```console
 $ sbx policy log --limit 20
 ```
+
+Use `--limit 0` to show all entries.
 
 ## Get the log as JSON or YAML
 

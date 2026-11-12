@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/docker-agent.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/agents/docker-agent.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/docker-agent.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/agents/docker-agent.md)
 
 # Docker Agent
 
@@ -55,14 +55,8 @@ Without extra args, the sandbox runs:
 docker-agent run --yolo
 ```
 
-Arguments after `--` are added after the default flags when the first one is
-itself a flag (begins with `-`). When the first argument is a bare word — such
-as the `run` subcommand or a config file — it replaces the defaults, so include
-`run --yolo` yourself:
-
-```console
-$ sbx run --name <sandbox-name> -- run --yolo agent.yml
-```
+To pass flags, prompts, or configuration files, see
+[Pass arguments to an agent](https://docs.docker.com/ai/sandboxes/usage/#pass-arguments-to-an-agent).
 
 ## Base image
 

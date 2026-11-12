@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/build-an-agent.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/customize/author/build-an-agent.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/build-an-agent.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/customize/author/build-an-agent.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -368,10 +368,13 @@ Restarting an existing sandbox won't pick up your edits. To try another
 agent version locally, update `args.version.default` in the descriptor and
 create another sandbox.
 
-`sbx` reuses the local build when the source files and kit arguments are
-unchanged. Changing either can trigger a build, even for arguments such as
-`model` that only affect sandbox setup. BuildKit can still reuse unchanged
-image layers.
+`sbx` reuses the local build when it remains available and the source files
+and kit arguments are unchanged. Unused builds can be
+[cleaned up after seven days](https://docs.docker.com/ai/sandboxes/customize/use-kits/#choose-a-kit-source)
+and may need to be restored or rebuilt on later use.
+Changing the source files or kit arguments can trigger a build, even for
+arguments such as `model` that only affect sandbox setup. BuildKit can still
+reuse unchanged image layers.
 
 ### Publish the workload
 

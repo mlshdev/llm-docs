@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/kiro.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/agents/kiro.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/kiro.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/agents/kiro.md)
 
 # Kiro
 
@@ -48,10 +48,11 @@ repeated login unless you destroy and recreate the sandbox.
 
 ### Manual login
 
-You can trigger the login flow manually:
+To trigger the login flow manually in a running sandbox, use `sbx exec` to
+run Kiro directly:
 
 ```console
-$ sbx run kiro --name <sandbox-name> -- login --use-device-flow
+$ sbx exec -it <sandbox-name> kiro login --use-device-flow
 ```
 
 This command initiates device flow authentication without starting a coding
@@ -83,16 +84,19 @@ Without extra args, the sandbox runs:
 kiro chat --trust-all-tools
 ```
 
-When the first argument after `--` is a flag (begins with `-`), it's added
-after the defaults — for example, `sbx run kiro -- --resume` runs
-`kiro chat --trust-all-tools --resume`. When the first argument is a bare word,
-it replaces the defaults, which is why `sbx run kiro -- login --use-device-flow`
-runs the login subcommand on its own. To run `chat` with extra arguments of
-your own, include the subcommand:
+The Kiro image stores `chat --trust-all-tools` in its `ENTRYPOINT`, so
+forwarded arguments keep that prefix. Pass a prompt directly without repeating
+`chat`:
 
 ```console
-$ sbx run kiro -- chat --trust-all-tools --resume
+$ sbx run kiro -- "explain this project"
 ```
+
+This runs `kiro chat --trust-all-tools "explain this project"`. You can also
+pass flags, such as `sbx run kiro -- --resume`.
+
+To run a different Kiro subcommand, use `sbx exec` in a running sandbox, as
+shown in [Manual login](#manual-login).
 
 ## Base image
 

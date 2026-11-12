@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -24,6 +24,33 @@ The command prints a summary of checks that passed, warned, or failed, along
 with suggested fixes. Use `--json` or `--format yaml` for machine-readable
 output, or `--format github-issue` to generate a Markdown snippet suitable for pasting
 into a GitHub issue.
+
+## Check sandbox disk usage
+
+If you're running low on disk space, check how much storage your local
+sandbox images, containers, and managed volumes use:
+
+```console
+$ sbx df
+```
+
+The summary shows the size and estimated reclaimable space for each resource
+type. To identify individual images, containers, or volumes taking up space,
+run:
+
+```console
+$ sbx df --verbose
+```
+
+Image totals count shared layers once and include image data retained by
+containers after you remove the image's tags. Host bind mounts, logs, and caches
+are excluded, so the report doesn't account for all disk space used on your host.
+A measurement shown as `unknown` couldn't be determined.
+
+Before cleaning up, [preview which stopped sandboxes would be removed](https://docs.docker.com/ai/sandboxes/usage/#start-stop-and-remove)
+with `sbx prune --dry-run`. The reclaimable estimate covers unused resources of
+each type, so it isn't the amount that `sbx prune` alone removes. Shared storage
+and resources still in use can reduce or delay the space recovered.
 
 ## Image pulls fail on eCryptfs
 
@@ -96,6 +123,22 @@ $ sbx run --name <sandbox-name> <agent>
 
 See [Choose a workspace](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace) for mountless, direct,
 and clone-mode behavior.
+
+## Sandbox reports a mount state error
+
+If a sandbox reports `saved mount metadata does not match the container`,
+remove and recreate the affected sandbox. Before removing it,
+[copy out any files you want to keep](https://docs.docker.com/ai/sandboxes/usage/#copy-files-between-host-and-sandbox)
+if the sandbox is still accessible. Removing a sandbox deletes its sandbox data.
+
+If the error says `a recorded mount source now resolves to a different path`,
+restore the original host source path, or remove and recreate the sandbox.
+This can happen if you replace the source directory or one of its parent
+directories with a symlink to a different location.
+
+Changing a host symlink to point elsewhere doesn't move an existing static
+mount. The sandbox retains the original source, and filesystem policy checks
+when you reuse the sandbox include that source.
 
 ## Kiro, Copilot, or Droid shorthand fails
 

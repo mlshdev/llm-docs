@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_run.yaml](https://github.com/docker/docs/blob/75a95460ce3cc8db87a23893490ec331506d08fd/data/sbx_cli/sbx_run.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_run.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/sbx_cli/sbx_run.yaml)
 
 # sbx run
 
@@ -35,7 +35,7 @@ To create a sandbox without attaching, use "sbx create" instead, or
 pass --detach (-d) to print the sandbox ID and exit without opening an
 interactive session.
 
-Available agents: claude, codex, copilot, cursor, devin, docker-agent, droid, gemini, kiro, opencode, shell
+Available agents: claude, codex, copilot, cursor, devin, docker-agent, droid, kiro, opencode, shell
 
 With --cloud:
 Run an agent in a cloud sandbox, creating the sandbox if it does not already exist.
@@ -55,6 +55,8 @@ creates fresh, as does a launch that bakes a mixin with build content.
 exists, otherwise it creates a new one. A non-interactive run without
 \--detach is refused, so scripts pass --detach (e.g.
 sbx --cloud run -d claude && sbx --cloud exec ...).
+
+When the positional argument identifies an existing sandbox, omit --name.
 
 With --cloud, --env and --env-file only apply when creating a sandbox.
 Existing sandboxes keep their original environment; drop these flags to
@@ -83,7 +85,7 @@ must already exist in the cloud registry; the CLI does not upload it. See
 | `--kit-args-file`  |         | File of name=value kit arguments, one per line (can be repeated); --kit-arg overrides (Experimental)                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `-m`, `--memory`   |         | Memory limit in binary units (e.g., 512m, 8g). Minimum: 512 MiB. Default: 50% of host memory, clamped to 512 MiB–32 GiB. Maximum: host memory. Warns above 75% of host memory                                                                                                                                                                                                                                                                                                                                                              |
 | `--mount`          |         | Bind a host directory to a kit host-mount\@1 path (can be repeated): HOST:SANDBOX\_PATH. Can only be used when creating a new sandbox.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `--name`           |         | Name for the sandbox (default: <agent>-<workdir>)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `--name`           |         | Name for the sandbox (default: <agent>-<workdir>; 2–63 ASCII letters, numbers, hyphens or periods; each dot-separated part must start and end with a letter or number; periods are rejected with --cloud; 'default' is reserved)                                                                                                                                                                                                                                                                                                           |
 | `--new`            |         | Always create a new cloud sandbox instead of prompting to reuse an existing one (cloud only)                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `--no-progress`    |         | Suppress progress output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `--on-timeout`     |         | What happens when --ttl lapses: 'stop' stops the sandbox in place so it can be started again later, 'restart' keeps it running by stopping and immediately starting it, or 'delete' removes it. Omit the flag and the server stops the sandbox when it can be started again later, and deletes it otherwise. With 'restart' a supplied --ttl must be at least 1h (cloud only).                                                                                                                                                             |
@@ -118,8 +120,18 @@ must already exist in the cloud registry; the CLI does not upload it. See
   # Create and run from an OCI sandbox kit
   sbx run ghcr.io/foo/my-agent:latest
 
-  # Add a mixin to a built-in agent
+  # Add a mixin from a local directory or ZIP file
   sbx run claude --kit ./my-mixin/
+  sbx run claude --kit ./my-mixin.zip
+
+  # Add a mixin from Docker Hub
+  sbx run claude --kit org/my-mixin:latest
+
+  # Add a mixin from an OCI reference
+  sbx run claude --kit ghcr.io/org/my-mixin:latest
+
+  # Add a mixin from a git repository (git+https:// or git+ssh://, optionally pinned to a ref and/or subdirectory)
+  sbx run claude --kit "git+https://github.com/org/repo.git#ref=v1.0&dir=mixins/foo"
 
   # Create and run with additional workspaces (read-only)
   sbx run claude . /path/to/docs:ro
