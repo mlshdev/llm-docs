@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/sdk/defrag-machines.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/host/sdk/defrag-machines.mdx)
+> Pinned source for Vast.ai main: [host/sdk/defrag-machines.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/host/sdk/defrag-machines.mdx)
 > Canonical documentation: https://docs.vast.ai/host/sdk/defrag-machines
 
 # VastAI.defrag_machines

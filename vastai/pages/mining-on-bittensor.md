@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [mining-on-bittensor.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/mining-on-bittensor.mdx)
+> Pinned source for Vast.ai main: [mining-on-bittensor.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/mining-on-bittensor.mdx)
 > Canonical documentation: https://docs.vast.ai/mining-on-bittensor
 
 # Mining on Bittensor

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/pricing.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/serverless/pricing.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/pricing.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/serverless/pricing.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/pricing
 
 # Pricing
@@ -7,7 +7,7 @@ Learn how Vast.ai Serverless pricing works and when resources are billed
 
 Unlike other providers, Vast Serverless offers pay-per-second pricing for all workloads at the same price as Vast.ai’s non-Serverless GPU instances.
 
-As a Serverless endpoint takes requests, it will automatically scale its number of workers up or down depending on the incoming and forecasted demand. When scaling up, the engine recruits from the Vast.ai GPU marketplace to find the best price-performance worker available. Once identified, its cost is added to the running sum of all GPU instances running on your Serverless instance. As demand reduces, the engine will remove the GPU with the worst price-performance first.
+As a Serverless endpoint takes requests, it will automatically scale its number of workers up or down depending on the incoming and forecasted demand. When scaling up, the engine recruits from the Vast.ai GPU marketplace to find the best price-performance worker available. Once identified, its cost is added to the running sum of all GPU instances running on your Serverless instance. As demand reduces, the engine removes workers in this order: workers that need an update, workers that are still loading for the first time, [Unavailable or Offline](https://docs.vast.ai/guides/serverless/worker-states) workers, and then the workers with the worst price-performance.
 
 ## Billing for Workers
 
@@ -19,6 +19,10 @@ The following table breaks down the specific charges based on worker state:
 | Loading  | Model is loading  | Billed      | Billed  | Billed             |
 | Creating | Worker recruiting | Not billed  | Billed  | Billed             |
 | Inactive | A cold worker     | Not billed  | Billed  | Billed             |
+
+Workers are billed like regular instances, so Loading time is billed even for a worker that is removed before it becomes Ready.
+
+When a worker's rental contract is about to end, the engine prepares a replacement worker before the end date (see [Workers with a Contract End Date](https://docs.vast.ai/guides/serverless/managing-scale#workers-with-a-contract-end-date)). The replacement is billed by its state like any other worker, so you pay for both workers until the old one is removed. The engine starts a replacement at most one hour before the end date.
 
 ## Billing for Endpoints
 

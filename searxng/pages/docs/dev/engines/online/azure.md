@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/engines/online/azure.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/dev/engines/online/azure.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/azure.rst](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/docs/dev/engines/online/azure.rst)
 
 <a id="azure-engine"></a>
 

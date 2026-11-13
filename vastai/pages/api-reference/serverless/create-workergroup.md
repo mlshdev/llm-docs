@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/workergroups](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/api-reference/openapi.yaml%23post%20/api/v0/workergroups)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/workergroups](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/api-reference/openapi.yaml%23post%20/api/v0/workergroups)
 > Canonical documentation: https://docs.vast.ai/api-reference/serverless/create-workergroup
 
 # create workergroup
@@ -15,31 +15,19 @@ CLI Usage: `vastai create workergroup --template_hash <hash> --endpoint_name <na
 
 - Media type: `application/json`
   - Schema (object)
-    - `endpoint_name` (string): Name of the endpoint group
-      - Example: `vLLM-Qwen3-8B`
-    - `endpoint_id` (integer): ID of existing endpoint group (alternative to endpoint\_name)
+    - `endpoint_id` (integer): ID of the endpoint this workergroup belongs to. Either `endpoint_id` or `endpoint_name` is required.
       - Example: `123`
+    - `endpoint_name` (string): Name of the endpoint this workergroup belongs to. Either `endpoint_id` or `endpoint_name` is required. If you have no endpoint with this name, one is created with default parameters.
+      - Example: `vLLM-Qwen3-8B`
     - `template_hash` (string): Hash ID of template to use for worker instances
       - Example: `abc123def456`
     - `template_id` (integer): ID of template (alternative to template\_hash)
       - Example: `456`
-    - `search_params` (string; default: `verified=true rentable=true rented=false`): Search query for finding worker instances (alternative to template)
+    - `search_params` (required; string): Search filters for the offers that workers are recruited from, as a query string or JSON object. Combined with any search filters defined by the template; where both set the same filter, this value wins.
       - Example: `gpu_name=RTX_3090 rentable=true`
     - `launch_args` (string): Additional launch arguments for worker instances
       - Example: `--env VAR=value`
-    - `min_load` (number; default: `1`): Minimum load threshold for scaling
-      - Example: `1`
-    - `target_util` (number; default: `0.9`): Target GPU utilization
-      - Example: `0.9`
-    - `cold_mult` (number; default: `3`): Cold start multiplier
-      - Example: `3`
-    - `cold_workers` (integer; default: `3`): Number of cold workers to maintain
-      - Example: `3`
-    - `max_workers` (integer; default: `20`): Maximum number of worker instances
-      - Example: `20`
-    - `test_workers` (integer; default: `3`): Number of test workers
-      - Example: `3`
-    - `gpu_ram` (integer; default: `24`): Minimum GPU RAM in GB
+    - `gpu_ram` (number; default: `8`; exclusive minimum: `0`): Estimated GPU memory, in GB, that the model needs. Used to estimate worker load times; to filter offers by GPU memory, use `search_params`.
       - Example: `24`
 
 **Responses**

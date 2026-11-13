@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/dev/contribution_guide.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/dev/contribution_guide.rst)
+> Pinned source for SearXNG master: [docs/dev/contribution_guide.rst](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/docs/dev/contribution_guide.rst)
 
 <a id="how-to-contribute"></a>
 
@@ -69,7 +69,7 @@ In order to submit a patch, please follow the steps below:
 
 - If your code can be unit-tested, add unit tests.
 
-- Add yourself to the [AUTHORS.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/AUTHORS.rst) file.
+- Add yourself to the [AUTHORS.rst](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/AUTHORS.rst) file.
 
 - Choose meaningful commit messages, see [create commit](https://docs.searxng.org/dev/commits.html#create-commit)
 
@@ -89,7 +89,7 @@ Translation currently takes place on [weblate](https://docs.searxng.org/dev/tran
 
 ### The reST sources
 
-has been moved from `gh-branch` into `master` ([docs](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs)).
+has been moved from `gh-branch` into `master` ([docs](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/docs)).
 
 The documentation is built using Sphinx\_.  So in order to be able to generate
 the required files, you have to install it on your system.  Much easier, use

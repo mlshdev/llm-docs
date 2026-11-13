@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/cli/show-machine.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/host/cli/show-machine.mdx)
+> Pinned source for Vast.ai main: [host/cli/show-machine.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/host/cli/show-machine.mdx)
 > Canonical documentation: https://docs.vast.ai/host/cli/show-machine
 
 # vastai show machine

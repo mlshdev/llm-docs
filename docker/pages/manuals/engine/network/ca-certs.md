@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/network/ca-certs.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/engine/network/ca-certs.md)
+> Pinned source for Docker main: [content/manuals/engine/network/ca-certs.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/engine/network/ca-certs.md)
 
 > \[!CAUTION]
 > Best practices should be followed when using Man-in-the-Middle (MITM) CA

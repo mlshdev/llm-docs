@@ -1,10 +1,10 @@
-> Pinned source for SearXNG master: [docs/admin/settings/settings.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/admin/settings/settings.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings.rst](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/docs/admin/settings/settings.rst)
 
 <a id="settings-yml"></a>
 
 # `settings.yml`
 
-This page describe the options possibilities of the [searx/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/settings.yml)
+This page describe the options possibilities of the [searx/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/searx/settings.yml)
 file.
 
 ### Further reading ..
@@ -22,7 +22,7 @@ The initial `settings.yml` we be load from these locations:
 2. `/etc/searxng/settings.yml`
 
 If these files don't exist (or are empty or can't be read), SearXNG uses the
-[searx/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/settings.yml) file.  Read [settings use\_default\_settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings) to
+[searx/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/searx/settings.yml) file.  Read [settings use\_default\_settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings) to
 see how you can simplify your *user defined* `settings.yml`.
 
 <a id="settings-use-default-settings"></a>
@@ -33,17 +33,17 @@ see how you can simplify your *user defined* `settings.yml`.
 
 - [settings location](https://docs.searxng.org/admin/settings/settings.html#settings-location)
 - [use\_default\_settings.yml](https://docs.searxng.org/admin/installation-searxng.html#use-default-settings-yml)
-- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/utils/templates/etc/searxng/settings.yml)
+- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/utils/templates/etc/searxng/settings.yml)
 
 The user defined `settings.yml` is loaded from the [settings location](https://docs.searxng.org/admin/settings/settings.html#settings-location)
-**and can relied on the default configuration [searx/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/settings.yml) using:**
+**and can relied on the default configuration [searx/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/searx/settings.yml) using:**
 
 `use_default_settings: true`
 
 **`server:`**
 
 In the following example, the actual settings are the default settings defined
-in [searx/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/settings.yml) with the exception of the `secret_key` and
+in [searx/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/searx/settings.yml) with the exception of the `secret_key` and
 the `bind_address`:
 
 ```yaml

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/02970f067cf06c5c23209d521575b1024898bb29/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/4b0fad0c61a9ba93e7bc8a469dac8ff208a45d7b/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -80,9 +80,21 @@ Possible values for output files:
   It may be needed to increase max\_interleave\_delta to avoid flushing the longer
   streams before EOF.
 
+- seek\_flags *flags* (*input*)
+  Set flags added to every seek. Default is none.
+
+Possible values:
+
+- any
+  Allow seeking to non-keyframes on demuxer level when supported.
+
+- preroll
+  Move the target of a seek back by the audio pre-roll, for a caller that
+  decodes. The seek can then land on an earlier video keyframe.
+
 - seek2any *integer* (*input*)
   Allow seeking to non-keyframes on demuxer level when supported if set to 1.
-  Default is 0.
+  Default is 0. This option is deprecated, use `seek_flags any` instead.
 
 - analyzeduration *integer* (*input*)
   Specify how many microseconds are analyzed to probe the input. A

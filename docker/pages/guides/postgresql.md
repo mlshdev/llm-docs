@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/postgresql.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/postgresql.md)
+> Pinned source for Docker main: [content/guides/postgresql.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/guides/postgresql.md)
 
 ## Immediate setup & data persistence
 

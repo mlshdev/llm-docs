@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `b3d94eb34607d1c8be2215f891c34b55b0a5df24`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `fd5e157158fbbe848892a8a814aedd89266b05c1`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -285,7 +285,6 @@
 - [OhMyRunpod](pages/community-solutions/ohmyrunpod/overview.md): Community solution for easy (SFTP) setup on Runpod. Review installation, configuration, and usage guidance for this community solution on Runpod. (5108 bytes)
 - [SSH password setup & migration tools](pages/community-solutions/ssh-password-migration/overview.md): Simple tools for migrating data between Runpod instances. Review installation, configuration, and usage guidance for this community solution on Runpod. (3597 bytes)
 - [CopyParty file manager](pages/community-solutions/copyparty-file-manager/overview.md): Web-based GUI for easy file browsing, uploading, downloading, and media viewing on Runpod. Review setup and usage guidance for this Runpod community solution. (6943 bytes)
-- [Network volume storage tool](pages/community-solutions/runpod-network-volume-storage-tool.md): A command-line tool for managing Runpod network storage volumes and files. Review setup and usage guidance for this Runpod community solution. (2943 bytes)
 
 ## Tips and tricks
 

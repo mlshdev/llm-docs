@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/how-to/verify.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/dhi/how-to/verify.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/verify.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/dhi/how-to/verify.md)
 
 # Verify a Docker Hardened Image or chart
 
@@ -21,9 +21,9 @@ attestation infrastructure.
 > \[!IMPORTANT]
 >
 > You must authenticate to the Docker Hardened Images registry (`dhi.io`) to
-> pull images. Use your Docker ID credentials (the same username and password
-> you use for Docker Hub) when signing in. If you don't have a Docker account,
-> [create one](https://docs.docker.com/accounts/individual/create-account/) for free.
+> pull images. Use your Docker ID credentials, a personal access token, an
+> organization access token, or a Docker-issued OIDC access token. See
+> [DHI authentication options](https://docs.docker.com/dhi/how-to/use/).
 >
 > Run `docker login dhi.io` to authenticate.
 
@@ -61,6 +61,9 @@ pull access to the DHI repositories you want to verify. Only repositories in
 the token's scope are accessible. Alternatively, you can authenticate as a
 Docker Hub user with a [personal access token
 (PAT)](https://docs.docker.com/security/access-tokens/personal-access-tokens/) that has `read only` access.
+For organization-owned workflows in GitHub Actions, use the
+[OIDC workflow](https://docs.docker.com/dhi/how-to/use/#authenticate-with-oidc-in-github-actions) to authenticate
+with a short-lived Docker access token instead of storing an OAT.
 
 > \[!WARNING]
 >

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/disable-ssh-password-login.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/host/disable-ssh-password-login.mdx)
+> Pinned source for Vast.ai main: [host/disable-ssh-password-login.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/host/disable-ssh-password-login.mdx)
 > Canonical documentation: https://docs.vast.ai/host/disable-ssh-password-login
 
 # Disable SSH Password Login

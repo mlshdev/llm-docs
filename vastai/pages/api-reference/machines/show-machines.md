@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/machines](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/api-reference/openapi.yaml%23get%20/api/v0/machines)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/machines](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/api-reference/openapi.yaml%23get%20/api/v0/machines)
 > Canonical documentation: https://docs.vast.ai/api-reference/machines/show-machines
 
 # show machines

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/cache/backends/_index.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/build/cache/backends/_index.md)
+> Pinned source for Docker main: [content/manuals/build/cache/backends/_index.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/cache/backends/_index.md)
 
 # Cache storage backends
 
@@ -40,11 +40,11 @@ Buildx supports the following cache storage backends:
   [GitHub Actions cache](https://docs.github.com/en/rest/actions/cache) (beta).
 
 - `s3`: uploads the build cache to an
-  [AWS S3 bucket](https://aws.amazon.com/s3/) (unreleased).
+  [AWS S3 bucket](https://aws.amazon.com/s3/) (experimental).
 
 - `azblob`: uploads the build cache to
   [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
-  (unreleased).
+  (experimental).
 
 ## Command syntax
 

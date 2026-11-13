@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/optimization-guide.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/host/optimization-guide.mdx)
+> Pinned source for Vast.ai main: [host/optimization-guide.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/host/optimization-guide.mdx)
 > Canonical documentation: https://docs.vast.ai/host/optimization-guide
 
 # Optimize Your Earnings

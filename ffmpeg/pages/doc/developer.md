@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/developer.texi](https://github.com/FFmpeg/FFmpeg/blob/02970f067cf06c5c23209d521575b1024898bb29/doc/developer.texi)
+> Pinned source for FFmpeg master: [doc/developer.texi](https://github.com/FFmpeg/FFmpeg/blob/4b0fad0c61a9ba93e7bc8a469dac8ff208a45d7b/doc/developer.texi)
 
 # Introduction
 
@@ -383,6 +383,75 @@ Also avoid names starting with `__` or `_` followed by an uppercase
 letter as they are reserved by the C standard. Names starting with `_`
 are reserved at the file level and may not be used for externally visible
 symbols. If in doubt, just avoid names starting with `_` altogether.
+
+<a id="source-tree-layout"></a>
+
+## Source tree layout
+
+A file's path tells the reader what the file is.
+It also tells the reader which logical group the file belongs to.
+The rules below follow from this principle.
+
+### Directories
+
+A subsystem is the set of files implementing one format, codec or shared
+feature, for example Ogg or ID3v2.
+A subsystem made of more than one file lives in its own directory inside its
+library, for example `libavformat/ogg/`.
+A nested directory groups related files within a subsystem, for example the
+per-codec mappings (`struct ogg_codec`) in `libavformat/ogg/mapping/`.
+
+### File names
+
+Inside a subsystem directory, file names drop the subsystem prefix.
+The directory already carries it.
+
+A file name states the file's role in full words, for example
+`demuxer.c`, `muxer.c`, `decoder.c`, `encoder.c`,
+`parser.c`, `reader.c` or `writer.c`.
+Abbreviations would be ambiguous across libraries.
+For example, `dec` means a decoder in libavcodec and a demuxer in
+libavformat.
+
+A header shared by a subsystem is named after it.
+It sits next to the subsystem's directory, for example `libavformat/id3v2.h`
+next to `libavformat/id3v2/`.
+Its include path then reads as the subsystem's name.
+
+Files that predate these rules keep their names until a commit moves them.
+
+### Includes
+
+A file includes headers from its own directory by their bare name, for example
+`#include "mapping.h"`.
+It includes all other headers by their path from the source root, for example
+`#include "libavformat/ogg/mapping.h"`.
+The include path then names the group each header belongs to.
+
+### Build system
+
+Each subsystem directory has its own `Makefile`.
+It lists the objects of the components the subsystem implements, with paths
+relative to the library, for example
+`OBJS-$(CONFIG_OGG_DEMUXER) += ogg/demuxer.o`.
+It also has a `clean::` rule for each of its directories.
+The library `Makefile` includes it.
+Other components list the subsystem objects they use in their own
+`Makefile`.
+
+### Moving files
+
+A commit that moves files changes nothing else.
+It updates only what refers to the moved files: includes, Makefiles,
+`MAINTAINERS` and `.forgejo/CODEOWNERS`.
+This lets git's rename detection carry pending patches and backports across
+the move.
+Patches written against the old paths apply with `git am -3`.
+
+Renaming symbols to match the new layout happens in one commit after the move.
+That commit also realigns the lines the rename shifts.
+
+Each subsystem moves in its own commit.
 
 ## Miscellaneous conventions
 

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/architecture.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/serverless/architecture.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/architecture.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/serverless/architecture.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/architecture
 
 # Architecture
@@ -7,9 +7,9 @@ Learn how Vast Serverless operates and understand its major components.
 
 The Vast.ai Serverless architecture is a **multi-component system** that manages GPU-backed workers to efficiently serve applications. It automatically scales up or down based on **endpoint parameters**, **workergroup parameters**, and **measured load** reported by workers.
 
-![Serverless Architecture](https://raw.githubusercontent.com/vast-ai/docs/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/images/serverless-architecture-light.svg)
+![Serverless Architecture](https://raw.githubusercontent.com/vast-ai/docs/349512480817168ffb72a144bed96c2678228c5c/images/serverless-architecture-light.svg)
 
-![Serverless Architecture](https://raw.githubusercontent.com/vast-ai/docs/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/images/serverless-architecture-dark.svg)
+![Serverless Architecture](https://raw.githubusercontent.com/vast-ai/docs/349512480817168ffb72a144bed96c2678228c5c/images/serverless-architecture-dark.svg)
 
 ## Primary Components
 
@@ -21,7 +21,7 @@ An endpoint consists of:
 
 - A named endpoint identifier
 - Typically one workergroup
-- Endpoint parameters such as `max_workers`, `min_load`, `min_workers`, `cold_mult`, `min_cold_load`, `target_util`, `inactivity_timeout`, `max_queue_time`, and `target_queue_time`
+- Endpoint parameters such as `max_workers`, `min_load`, `cold_workers`, `cold_mult`, `min_cold_load`, `target_util`, `inactivity_timeout`, `max_queue_time`, and `target_queue_time`
 
 Users typically create one endpoint per **use case** (for example, text generation or image generation) and per **environment** (production, staging, development). Each endpoint acts as a router and load balances requests across its pool of managed workers based on worker queue time.
 

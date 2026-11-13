@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/understanding-image-layers.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/get-started/docker-concepts/building-images/understanding-image-layers.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/understanding-image-layers.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/get-started/docker-concepts/building-images/understanding-image-layers.md)
 
 # Understanding the image layers
 
@@ -20,11 +20,11 @@ Each layer in an image contains a set of filesystem changes - additions, deletio
 
 This example might look like:
 
-![screenshot of the flowchart showing the concept of the image layers](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/get-started/docker-concepts/building-images/images/container_image_layers.webp?border=true)
+![screenshot of the flowchart showing the concept of the image layers](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/get-started/docker-concepts/building-images/images/container_image_layers.webp?border=true)
 
 This is beneficial because it allows layers to be reused between images. For example, imagine you wanted to create another Python application. Due to layering, you can leverage the same Python base. This will make builds faster and reduce the amount of storage and bandwidth required to distribute the images. The image layering might look similar to the following:
 
-![screenshot of the flowchart showing the benefits of the image layering](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/get-started/docker-concepts/building-images/images/container_image_layer_reuse.webp?border=true)
+![screenshot of the flowchart showing the benefits of the image layering](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/get-started/docker-concepts/building-images/images/container_image_layer_reuse.webp?border=true)
 
 Layers let you extend images of others by reusing their base layers, allowing you to add only the data that your application needs.
 

@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/architecture.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/admin/architecture.rst)
+> Pinned source for SearXNG master: [docs/admin/architecture.rst](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/docs/admin/architecture.rst)
 
 <a id="architecture"></a>
 
@@ -22,11 +22,11 @@ up and maintained by the scripts from our [toolboxing](https://docs.searxng.org/
 
 <a id="arch-public"></a>
 
-![arch\_public.dot](https://raw.githubusercontent.com/searxng/searxng/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/admin/arch_public.dot)
+![arch\_public.dot](https://raw.githubusercontent.com/searxng/searxng/de722ab1bc957fd2e648bc2404b9155db69c617f/docs/admin/arch_public.dot)
 
 *Reference architecture of a public SearXNG setup.*
 
 The reference installation activates `server.limiter` and
-`server.image_proxy` ([/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/utils/templates/etc/searxng/settings.yml))
+`server.image_proxy` ([/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/utils/templates/etc/searxng/settings.yml))
 
 Build-time include: `../../utils/templates/etc/searxng/settings.yml`

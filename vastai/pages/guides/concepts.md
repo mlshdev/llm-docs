@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/concepts.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/concepts.mdx)
+> Pinned source for Vast.ai main: [guides/concepts.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/concepts.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/concepts
 
 # Concepts
@@ -70,7 +70,7 @@ Serverless is Vast's managed layer on top of instances. Instead of renting one i
 
 ### Endpoint
 
-An **endpoint** is the top-level construct in Serverless. It is the stable, named entry point that your client code calls. Endpoints own scaling policy, `max_workers`, `min_workers`, `target_util`, queue-time targets, and so on. You typically create one endpoint per use case (e.g. `text-generation-prod`).
+An **endpoint** is the top-level construct in Serverless. It is the stable, named entry point that your client code calls. Endpoints own scaling policy, `max_workers`, `cold_workers`, `target_util`, queue-time targets, and so on. You typically create one endpoint per use case (e.g. `text-generation-prod`).
 
 ### Worker group
 

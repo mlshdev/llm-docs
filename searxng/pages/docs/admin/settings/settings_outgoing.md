@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/settings/settings_outgoing.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/admin/settings/settings_outgoing.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_outgoing.rst](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/docs/admin/settings/settings_outgoing.rst)
 
 <a id="settings-outgoing"></a>
 
@@ -38,10 +38,14 @@ timeout will allow to wait for answers from slow engines, but in consequence
 will slow SearXNG reactivity (the result page may take the time specified in the
 timeout to load).  Can be override by `timeout` in the [settings engines](https://docs.searxng.org/admin/settings/settings_engines.html#settings-engines).
 
+<a id="settings-outgoing-useragent-suffix"></a>
+
 **`useragent_suffix` :**
 
-Suffix to add when an engine's User-Agent is set via searxng\_useragent().
-Contact info here may be useful to avoid an engine blocking you.
+Suffix to add when an engine's User-Agent is set via
+`searx.utils.searxng_useragent`.  Only adjust this value if you are
+sure of the consequences.  However, contact information should always be
+configured in the [settings general.contact\_url](https://docs.searxng.org/admin/settings/settings_general.html#settings-general-contact-url).
 
 <a id="pool-limit-configuration"></a>
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/configuration/connect-to-ide.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/pods/configuration/connect-to-ide.mdx)
+> Pinned source for Runpod main: [pods/configuration/connect-to-ide.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/pods/configuration/connect-to-ide.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/configuration/connect-to-ide
 
 # Connect to a Pod with VSCode or Cursor

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/comfyui-acestep.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/serverless/comfyui-acestep.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/comfyui-acestep.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/serverless/comfyui-acestep.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/comfyui-acestep
 
 # ComfyUI ACE Step

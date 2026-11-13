@@ -8,20 +8,20 @@
   "repository": "vast-ai/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-10-26T20:54:37Z",
-  "documentationDigest": "7fb04b21c06124f1391428dbbed78b6aab983a13d0a537a0aab59892930b184a",
-  "sourceCommit": "2b2d9a04e7cb542f3305c0c148c2395b0cfab86e",
-  "documentCount": 551,
+  "sourceCommittedAt": "2026-11-12T20:51:29Z",
+  "documentationDigest": "7ddad346ea4cbe9936fda3dc3f41684a76eb111fb8f232ef3a97f3ccd08402ba",
+  "sourceCommit": "349512480817168ffb72a144bed96c2678228c5c",
+  "documentCount": 552,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2042451,
-      "documentCount": 551,
-      "sha256": "e3be51b0deb5e74a9a89f1868eb8740ca11794d9adc1a8abe2f6e4e1ee17211f"
+      "byteLength": 2116276,
+      "documentCount": 552,
+      "sha256": "2d8d09d0ac0224b5bfdab330b4a947e5365ef276f8e2932364277cd8399af917"
     }
   ],
-  "outputDigest": "9155cdbefeb8f73b1fd412062b098de52d4de25a6c74aba5ae787e91d016701a",
+  "outputDigest": "34ec1748a29065c8d5b385cbd5734f1cc1dd65503e52e4a810baf198801324f6",
   "notes": [
     "Pages follow the navigation declared in docs.json at the pinned commit; snippets are inlined into the pages that import them rather than published separately.",
     "Endpoint pages are generated from api-reference/openapi.yaml, which is how the site itself publishes them: the navigation group naming the specification lists no pages.",

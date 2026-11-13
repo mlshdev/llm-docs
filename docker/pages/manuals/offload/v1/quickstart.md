@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/offload/v1/quickstart.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/offload/v1/quickstart.md)
+> Pinned source for Docker main: [content/manuals/offload/v1/quickstart.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/offload/v1/quickstart.md)
 
 # Docker Offload v1 quickstart
 
@@ -37,7 +37,7 @@ the Docker Offload toggle appears in the Docker Desktop Dashboard header.
 1. Start Docker Desktop and sign in.
 2. In the Docker Desktop Dashboard header, look for the Docker Offload toggle.
 
-![Offload toggle](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/offload/v1/images/offload-toggle.png)
+![Offload toggle](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/offload/v1/images/offload-toggle.png)
 
 If you see the Docker Offload toggle, you have access to Docker Offload v1 and can
 proceed to the next step. If you don't see the Docker Offload toggle, check if
@@ -69,7 +69,7 @@ CLI.
    Offload v1, you have the option to select a profile. Your usage is
    associated with the organization of the selected profile.
 
-When Docker Offload v1 is started, you'll see a cloud icon (![Offload mode icon](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/offload/v1/images/cloud-mode.png)) in the Docker Desktop
+When Docker Offload v1 is started, you'll see a cloud icon (![Offload mode icon](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/offload/v1/images/cloud-mode.png)) in the Docker Desktop
 Dashboard header, and the Docker Desktop Dashboard appears purple. You can run
 `docker offload status` in a terminal to check the status of Docker Offload v1.
 
@@ -91,7 +91,7 @@ If Docker Offload v1 is working, you'll see `Hello from Docker!` in the terminal
 
 When Docker Offload v1 is started and you have started session (for example, you've
 ran a container), then you can see current session duration estimate in the
-Docker Desktop Dashboard footer next to the hourglass icon (![Offload session duration](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/offload/v1/images/hourglass-icon.png)).
+Docker Desktop Dashboard footer next to the hourglass icon (![Offload session duration](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/offload/v1/images/hourglass-icon.png)).
 
 Also, when Docker Offload v1 is started, you can view detailed session information
 by selecting **Docker Offload** > **Insights** in the left navigation of the

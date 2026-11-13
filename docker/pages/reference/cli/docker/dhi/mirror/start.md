@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror_start.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/cli/dhi/docker_dhi_mirror_start.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror_start.yaml](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/data/cli/dhi/docker_dhi_mirror_start.yaml)
 
 # docker dhi mirror start
 
@@ -18,6 +18,10 @@ ns/source,ns/dest       Fully qualified source and destination
 
 The source namespace defaults to "dhi" when not specified.
 The destination namespace defaults to the configured organization (--org or config).
+
+Note: mirroring a repository does not automatically grant every organization member
+access to it. Members without access to the destination repository need appropriate
+team repository permissions, which can be set in Docker Hub.
 
 Examples:
 docker dhi mirror start --org myorg dhi/golang,myorg/dhi-golang dhi/node,myorg/dhi-node

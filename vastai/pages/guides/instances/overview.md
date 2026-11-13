@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/overview.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/instances/overview.mdx)
+> Pinned source for Vast.ai main: [guides/instances/overview.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/instances/overview.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/overview
 
 # Overview

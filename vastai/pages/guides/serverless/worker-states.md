@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/worker-states.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/serverless/worker-states.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/worker-states.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/serverless/worker-states.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/worker-states
 
 # Worker States
@@ -11,40 +11,57 @@ Worker states represent the current operational status of your serverless worker
 
 The following table describes all available worker states that are shown to users in the UI:
 
-| State Name | Description                                                              | Billing State            |
-| ---------- | ------------------------------------------------------------------------ | ------------------------ |
-| Ready      | Worker is fully initialized with model loaded and ready to process tasks | Ready                    |
-| Loading    | Worker is loading resources or configurations                            | Loading                  |
-| Inactive   | Worker is created but stopped, not currently processing                  | Inactive                 |
-| Destroying | Worker is being destroyed and resources are being released               | Not billed               |
-| Error      | Worker has encountered an error and requires attention                   | Not billed               |
-| Rebooting  | Worker is restarting to apply updates or recover from issues             | Billed by previous state |
-| Creating   | Worker is being created and initialized                                  | Creating                 |
-| Starting   | Worker is in the process of transitioning to Ready state                 | Ready                    |
-| Stopping   | Worker is in the process of transitioning to Inactive state              | Inactive                 |
-| Updating   | Worker is in the process of being updated and rebooted                   | Ready                    |
+| State Name  | Description                                                                                         | Billing State            |
+| ----------- | --------------------------------------------------------------------------------------------------- | ------------------------ |
+| Ready       | Worker is fully initialized with model loaded and ready to process tasks                            | Ready                    |
+| Loading     | Worker is loading resources or configurations                                                       | Loading                  |
+| Inactive    | Worker is created but stopped, not currently processing                                             | Inactive                 |
+| Destroying  | Worker is being destroyed and resources are being released                                          | Not billed               |
+| Error       | Worker has encountered an error. The serverless engine restarts or replaces it automatically        | Not billed               |
+| Rebooting   | Worker is restarting to apply updates or recover from issues                                        | Billed by previous state |
+| Creating    | Worker is being created and initialized                                                             | Creating                 |
+| Starting    | Worker is in the process of transitioning to Ready state                                            | Ready                    |
+| Stopping    | Worker is in the process of transitioning to Inactive state                                         | Inactive                 |
+| Updating    | Worker is in the process of being updated and rebooted                                              | Ready                    |
+| Unavailable | Inactive worker that cannot start right now because its machine's GPUs are in use by another rental | Inactive                 |
+| Offline     | Worker's machine has lost its connection to Vast                                                    | Not billed               |
 
 For more information on the specific breakdown of charges, please refer to [Serverless pricing](https://docs.vast.ai/guides/serverless/pricing)
 
 ## Worker States in the Vast CLI and logs
 
 The worker logs, accessible through the Vast CLI and UI, have more detailed descriptions of worker states to aid in debugging issues.
-These are described in the table below:
+These are described in the table below. The value in parentheses is the `status` string written to the logs and returned by the worker status APIs ([REST](https://docs.vast.ai/api-reference/serverless/get-endpoint-workers) and [WebSocket](https://docs.vast.ai/guides/serverless/worker-status-websocket)).
 
-| State Name                           | Description                                                              | Billing State            |
-| ------------------------------------ | ------------------------------------------------------------------------ | ------------------------ |
-| Ready (IDLE)                         | Worker is fully initialized with model loaded and ready to process tasks | Ready                    |
-| Loading (LOADING)                    | Worker is performing docker pull/run operations                          | Loading                  |
-| Model Loading (MODEL\_LOADING)       | Worker is loading the model for the first time in its lifetime           | Loading                  |
-| Inactive (STOPPED)                   | Worker is created but stopped, not currently processing                  | Inactive                 |
-| Destroying (DESTROYING)              | Worker is being destroyed and resources are being released               | Not Billed               |
-| Error (ERROR)                        | Worker has encountered an error (version mismatch, error message, etc.)  | Not Billed               |
-| Rebooting (REBOOTING)                | Worker is restarting to apply updates or recover from issues             | Billed by previous state |
-| Creating (CREATING)                  | Worker instance creation API call has succeeded                          | Creating                 |
-| Created (CREATED)                    | Worker is created but stopped in database                                | Creating                 |
-| Starting (STARTING)                  | Worker is starting up after initial boot (not first time)                | Ready                    |
-| Stopping (STOPPING)                  | Worker is in the process of transitioning to stopped state               | Inactive                 |
-| Pending (PENDING)                    | Rental offer has been accepted, worker setup is pending                  | Not Billed               |
-| Update Ready (UPDATE\_READY)         | Worker is prepared and ready for update reboot                           | Ready                    |
-| Update Rebooting (UPDATE\_REBOOTING) | Worker is rebooting after update (non-alive)                             | Ready                    |
-| Update Starting (UPDATE\_STARTING)   | Worker is starting up after update reboot                                | Ready                    |
+| State Name                            | Description                                                                                           | Billing State            |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------ |
+| Ready (`idle`)                        | Worker is fully initialized with model loaded and ready to process tasks                              | Ready                    |
+| Loading (`loading`)                   | Worker is performing docker pull/run operations                                                       | Loading                  |
+| Model Loading (`model_loading`)       | Worker is loading the model for the first time since it was created or since its last template update | Loading                  |
+| Inactive (`stopped`)                  | Worker is created but stopped, not currently processing                                               | Inactive                 |
+| Unavailable (`unavail`)               | Worker is stopped and cannot be started because its machine's GPUs are in use by another rental       | Inactive                 |
+| Offline (`offline`)                   | Worker's machine has lost its connection to Vast                                                      | Not Billed               |
+| Destroying (`destroying`)             | Worker is being destroyed and resources are being released                                            | Not Billed               |
+| Error (`error`)                       | Worker has encountered an error (version mismatch, error message, timeout, etc.)                      | Not Billed               |
+| Rebooting (`rebooting`)               | Worker is restarting to apply updates or recover from issues                                          | Billed by previous state |
+| Creating (`creating`)                 | Worker instance creation API call has succeeded                                                       | Creating                 |
+| Created (`created`)                   | Worker is created but stopped in database                                                             | Creating                 |
+| Starting (`starting`)                 | Worker is starting up after initial boot (not first time)                                             | Ready                    |
+| Stopping (`stopping`)                 | Worker is in the process of transitioning to stopped state                                            | Inactive                 |
+| Pending (`pending`)                   | Rental offer has been accepted, worker setup is pending                                               | Not Billed               |
+| Update Ready (`update_ready`)         | Worker is prepared and ready for update reboot                                                        | Ready                    |
+| Update Rebooting (`update_rebooting`) | Worker is rebooting after update (non-alive)                                                          | Ready                    |
+| Update Starting (`update_starting`)   | Worker is starting up after update reboot                                                             | Ready                    |
+
+Each state change is written to the endpoint and workergroup logs as `Worker <id>: <old state> -> <new state> (<reason>)`.
+
+## Automatic Recovery
+
+The serverless engine handles unhealthy workers without user action:
+
+- **Error:** Workers in the Error state are either restarted or destroyed and replaced. A Ready worker whose reliability (the share of routed requests it completes) falls below `0.5` is moved to Error.
+- **Timeouts:** A worker that stays in a transitional state for too long is moved to Error. For example, a worker that is still Creating 5 minutes after its creation request succeeded, or still Stopping after 2 minutes.
+- **Unavailable:** If the machine frees up, the worker returns to Inactive. When a start attempt fails because the GPUs are taken, the engine retries every 90 seconds. After 10 failed attempts the worker is destroyed, or sooner if the endpoint is at `max_workers` and has no other inactive workers to start. While a worker is Unavailable, the engine may recruit other workers to cover its capacity.
+- **Offline:** If the machine reconnects, the worker resumes. A worker that stays Offline for 5 minutes is destroyed.
+
+Unavailable and Offline workers are among the first workers removed when the endpoint scales down.

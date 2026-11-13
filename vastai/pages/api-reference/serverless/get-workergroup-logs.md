@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /get_workergroup_logs](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/api-reference/openapi.yaml%23post%20/get_workergroup_logs)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /get_workergroup_logs](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/api-reference/openapi.yaml%23post%20/get_workergroup_logs)
 > Canonical documentation: https://docs.vast.ai/api-reference/serverless/get-workergroup-logs
 
 # get workergroup logs
@@ -7,7 +7,9 @@
 
 Retrieves logs for a specific workergroup by ID.
 
-CLI Usage: `vastai get workergroup logs <id> [--tail <num_lines>]`
+The response contains one string per log level. Each level keeps up to about 16 MB of recent history; use `tail` to choose how much of it to return.
+
+CLI Usage: `vastai get wrkgrp-logs <id> [--level <0-3>] [--tail <bytes>]`
 
 **Authentication:** `BearerAuth`
 
@@ -15,10 +17,10 @@ CLI Usage: `vastai get workergroup logs <id> [--tail <num_lines>]`
 
 - Media type: `application/json`
   - Schema (object)
-    - `id` (required; integer; default: `12345`; minimum: `1`): ID of the worker group
+    - `id` (required; integer; default: `12345`; minimum: `1`): ID of the workergroup
       - Example: `12345`
-    - `tail` (integer; default: `10000`; minimum: `1`): Number of log lines to retrieve from the end
-      - Example: `1000`
+    - `tail` (integer; default: `10000`; minimum: `1`): Number of bytes to return from the end of each log
+      - Example: `100000`
 
 **Responses**
 
@@ -27,7 +29,11 @@ CLI Usage: `vastai get workergroup logs <id> [--tail <num_lines>]`
     - Schema
       - oneOf:
         - `variant 1` (object)
-          - `logs` (string): The workergroup logs
-            - Example: `2023-10-01 12:00:00 - Workergroup started 2023-10-01 12:01:00 - Instance scaled up`
-        - `variant 2` (string): Error message when workergroup not found or authentication fails
-          - Example: `authenticate_workergroup_apikey: invalid api_key or workergroup 12345 not found`
+          - `info0` (string): User log, shown as **User** in the console. Worker creation, starts, stops, state changes with their reasons, worker errors, and PyWorker stack traces.
+            - Example: `Worker 67890: model_loading -> idle (received loadtime)`
+          - `info1` (string): Info-level engine log, shown as **Info** in the console. Includes the user log plus additional scaling details.
+          - `debug` (string): Debug-level engine log
+          - `trace` (string): Trace-level engine log, the most detailed level
+        - `variant 2` (object)
+          - `error_msg` (string): Returned when the workergroup does not exist or the API key does not own it
+            - Example: `autogroup 12345 not found or unauthorized`

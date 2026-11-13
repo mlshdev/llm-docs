@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [hub/revenue-sharing.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/hub/revenue-sharing.mdx)
+> Pinned source for Runpod main: [hub/revenue-sharing.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/hub/revenue-sharing.mdx)
 > Canonical documentation: https://docs.runpod.io/hub/revenue-sharing
 
 # Revenue sharing

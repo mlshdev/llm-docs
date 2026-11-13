@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools_create.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/cli/buildx/docker_buildx_imagetools_create.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools_create.yaml](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/data/cli/buildx/docker_buildx_imagetools_create.yaml)
 
 # docker buildx imagetools create
 
@@ -44,8 +44,9 @@ format in the output.
 ````console
 ### Add annotations to an image (--annotation) {#annotation}
 
-The `--annotation` flag lets you add annotations the image index, manifest,
-and descriptors when creating a new image.
+The `--annotation` flag lets you add annotations to the image index and
+manifest descriptors when creating a new image. An annotation without a type
+prefix is added to the image index.
 
 The following command creates a `foo/bar:latest` image with the
 `org.opencontainers.image.authors` annotation on the image index.
@@ -64,7 +65,12 @@ $ docker buildx imagetools create \
 > - `index:`
 > - `manifest-descriptor:`
 >
-> It doesn't support annotating manifests or OCI layouts.
+> It doesn't support annotating manifests or OCI layouts. Annotations also
+> require the output to use the OCI image index media type; they aren't
+> supported when the sources produce a Docker manifest list. BuildKit v0.31
+> and later use OCI media types by default. Earlier versions use OCI media
+> types when exporting attestations and Docker media types otherwise. Use the
+> `oci-mediatypes=true` output option to produce OCI media types explicitly.
 
 For more information about annotations, see
 [Annotations](https://docs.docker.com/build/building/annotations/).

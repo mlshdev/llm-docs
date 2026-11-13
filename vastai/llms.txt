@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `2b2d9a04e7cb542f3305c0c148c2395b0cfab86e`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `349512480817168ffb72a144bed96c2678228c5c`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -13,7 +13,7 @@
 
 - [Welcome](pages/guides/get-started/index.md): Vast.ai is a marketplace for affordable GPU cloud computing. We make it easy for anyone to: (3338 bytes)
 - [Sign up and rent your first GPU](pages/guides/get-started/quickstart.md): This Quickstart will guide you through setting up your Vast.ai account and running your first instance in just a few steps.&#x20; (7137 bytes)
-- [Concepts](pages/guides/concepts.md): The core vocabulary of the Vast.ai platform, marketplace, offers, instances, templates, endpoints, workers. (5987 bytes)
+- [Concepts](pages/guides/concepts.md): The core vocabulary of the Vast.ai platform, marketplace, offers, instances, templates, endpoints, workers. (5988 bytes)
 - [Manage API keys](pages/guides/reference/api-keys.md): Create, scope, rotate, and revoke Vast.ai API keys for the CLI, SDK, and REST API. (6326 bytes)
 - [Quick Start](pages/guides/templates/quickstart.md): To jump right in and run a template, follow these steps. (2756 bytes)
 - [Using Vast.ai with Agents](pages/guides/get-started/agents.md): Manage Vast.ai GPU instances, serverless endpoints, volumes, and billing from coding agents like Claude Code, Codex, and Cursor. (8530 bytes)
@@ -46,9 +46,9 @@
 ## Serverless
 
 - [Serverless](pages/guides/serverless/index.md): An introduction to how Vast serverless compute works and how it's different from other serverless offerings. (1529 bytes)
-- [Quickstart](pages/guides/serverless/quickstart.md): Deploy your first vLLM endpoint in under a minute (7636 bytes)
-- [Setting Up Endpoints](pages/guides/serverless/setting-up-endpoints.md): Create and configure a serverless endpoint with full control over parameters and workergroup configuration (8592 bytes)
-- [Architecture](pages/guides/serverless/architecture.md): Learn how Vast Serverless operates and understand its major components. (4755 bytes)
+- [Quickstart](pages/guides/serverless/quickstart.md): Deploy your first vLLM endpoint in under a minute (7622 bytes)
+- [Setting Up Endpoints](pages/guides/serverless/setting-up-endpoints.md): Create and configure a serverless endpoint with full control over parameters and workergroup configuration (9020 bytes)
+- [Architecture](pages/guides/serverless/architecture.md): Learn how Vast Serverless operates and understand its major components. (4756 bytes)
 - [The PyWorker](pages/guides/serverless/overview.md): Learn about the Vast PyWorker and how it integrates with model instances. (4243 bytes)
 - [The SDK](pages/guides/serverless/sdk-overview.md): Learn about the Serverless SDK, the primary method of interacting with Vast Serverless. (1249 bytes)
 - [OpenAI API-compatible Interface](pages/guides/serverless/openai-compatible-api.md): Use Vast.ai Serverless endpoints with the standard OpenAI API client by swapping your API key and base URL. (6586 bytes)
@@ -58,16 +58,17 @@
 - [Configuring Deployments](pages/guides/serverless/deployments/configuration.md): How to configure your deployment's image, packages, GPU requirements, autoscaling, environment variables, and more. (10467 bytes)
 - [@remote Functions](pages/guides/serverless/deployments/remote-functions.md): Define, call, and benchmark async Python functions that execute on remote GPU workers. (4933 bytes)
 - [@context Classes](pages/guides/serverless/deployments/context.md): Load models and heavy resources once at worker startup and share them across all remote function calls. (3781 bytes)
-- [Endpoint Parameters](pages/guides/serverless/serverless-parameters.md): Learn about the parameters that control your scaling and best practices for setting them. (7089 bytes)
-- [Managing Scale](pages/guides/serverless/managing-scale.md): Learn how to configure your Serverless endpoint for different load scenarios (3177 bytes)
-- [Workergroup Parameters](pages/guides/serverless/workergroup-parameters.md): Learn about the parameters that control which workers get recruited. (2158 bytes)
+- [Endpoint Parameters](pages/guides/serverless/serverless-parameters.md): Learn about the parameters that control your scaling and best practices for setting them. (8259 bytes)
+- [Managing Scale](pages/guides/serverless/managing-scale.md): Learn how to configure your Serverless endpoint for different load scenarios (4339 bytes)
+- [Workergroup Parameters](pages/guides/serverless/workergroup-parameters.md): Learn about the parameters that control which workers get recruited. (2351 bytes)
 - [Choosing GPUs for Your Workload](pages/guides/serverless/choosing-gpus.md): Use the Vast CLI to compare measured performance and cost-efficiency across GPU classes. (8481 bytes)
 - [Creating Custom PyWorkers](pages/guides/serverless/creating-new-pyworkers.md): Learn how to implement worker.py for Vast.ai Serverless using the Worker / WorkerConfig interface, including handlers, benchmarks, and log-based readiness. (25867 bytes)
-- [Using Worker Sessions](pages/guides/serverless/sessions.md): Pin a series of requests to a single Serverless worker, run long asynchronous tasks on it, and release it automatically when the work is done. (26635 bytes)
-- [Worker States](pages/guides/serverless/worker-states.md): Learn about the different worker states (4578 bytes)
+- [Using Worker Sessions](pages/guides/serverless/sessions.md): Pin a series of requests to a single Serverless worker, run long asynchronous tasks on it, and release it automatically when the work is done. (26919 bytes)
+- [Worker States](pages/guides/serverless/worker-states.md): Learn about the different worker states (7582 bytes)
+- [Streaming Worker Status](pages/guides/serverless/worker-status-websocket.md): Subscribe to live worker status for a Serverless endpoint or workergroup over a WebSocket connection instead of polling. (6938 bytes)
 - [Zero Downtime Worker Update](pages/guides/serverless/zero-downtime-worker-update.md): Update your Serverless template or model without dropping in-flight requests. (3153 bytes)
-- [Endpoint and Worker Logs](pages/guides/serverless/logging.md): Learn how to access Vast serverless logs (2142 bytes)
-- [Pricing](pages/guides/serverless/pricing.md): Learn how Vast.ai Serverless pricing works and when resources are billed (3099 bytes)
+- [Endpoint and Worker Logs](pages/guides/serverless/logging.md): Learn how to access Vast serverless logs (3498 bytes)
+- [Pricing](pages/guides/serverless/pricing.md): Learn how Vast.ai Serverless pricing works and when resources are billed (3853 bytes)
 - [vLLM](pages/guides/serverless/vllm.md): Learn how to use vLLM with Vast.ai Serverless for large language model inference. (15959 bytes)
 - [Text Generation Inference (TGI)](pages/guides/serverless/text-generation-inference-tgi.md): Learn how to use Text Generation Inference (TGI) with Vast.ai Serverless for text generation models. (3688 bytes)
 - [Comfy UI](pages/guides/serverless/comfy-ui.md): Learn how to use Comfy UI with Vast.ai Serverless for image generation workflows. (10535 bytes)
@@ -98,13 +99,13 @@
 
 ## Account & billing
 
-- [Pricing overview](pages/guides/pricing.md): How Vast.ai pricing works across instances, reserved, interruptible, and serverless, and how to choose between them. (4619 bytes)
+- [Pricing overview](pages/guides/pricing.md): How Vast.ai pricing works across instances, reserved, interruptible, and serverless, and how to choose between them. (4620 bytes)
 - [Account Settings](pages/guides/reference/account-settings.md): On this page you can view and edit important information about your client account. (7259 bytes)
 - [Billing](pages/guides/reference/billing.md): Vast requires pre-payment of credits for GPU rentals. Once credits are purchased, they appear in your account balance. (10540 bytes)
 - [Notifications](pages/guides/reference/notifications.md): Choose which Vast.ai account, billing, and instance events reach you by email or through webhooks. (11872 bytes)
 - [Notification Webhooks](pages/guides/reference/notification-webhooks.md): Send Vast.ai notification events to your own HTTPS endpoint for automation, monitoring, and audit workflows. (12777 bytes)
 - [Keys](pages/guides/reference/keys.md): The Keys page helps you manage secure access to your Vast.ai account. Here, you'll find different types of keys used for authentication and connection. (3074 bytes)
-- [Two-Factor Authentication](pages/guides/reference/two-factor-authentication.md): Two-factor authentication (2FA) adds a second layer of security to your account. After entering your password, you verify your identity using a code from your phone or email. This means an attacker who obtains your pass… (8389 bytes)
+- [Two-Factor Authentication](pages/guides/reference/two-factor-authentication.md): Protect your Vast.ai account with an authenticator app or SMS code, save your recovery codes, and sign in or recover access when you cannot use your usual method. (8706 bytes)
 - [Referral Program](pages/guides/reference/referral-program.md): Turn your audience into earnings! Share your unique Vast.ai referral link (or a public template link), and when someone creates a new client account and buys credits, you get 3% of everything they spend, for the lifetim… (4518 bytes)
 - [Troubleshooting](pages/guides/reference/troubleshooting.md): When you stop an instance, the gpu(s) it was using may get reassigned. When you later then try to restart the instance, it tries to get those gpu(s) back - that is the "scheduling" phase. If another high priority job is… (2653 bytes)
 
@@ -477,7 +478,7 @@
 
 ## Migration guides
 
-- [Migrate from Runpod to Vast.ai](pages/examples/migrations/runpod-to-vast.md): A guide for users moving GPU workloads from Runpod to Vast.ai. Whether you use Runpod Pods for training and development or Runpod Serverless for inference, this guide maps every concept to its Vast.ai equivalent and wal… (31350 bytes)
+- [Migrate from Runpod to Vast.ai](pages/examples/migrations/runpod-to-vast.md): A guide for users moving GPU workloads from Runpod to Vast.ai. Whether you use Runpod Pods for training and development or Runpod Serverless for inference, this guide maps every concept to its Vast.ai equivalent and wal… (78593 bytes)
 - [Migrate from Salad Cloud to Vast.ai](pages/examples/migrations/salad-to-vast.md): A guide for users moving GPU workloads from Salad Cloud to Vast.ai. Whether you use Salad's Container Engine for long-running containers or Job Queues for autoscaling inference, this guide maps every concept to its Vast… (30892 bytes)
 
 ## AI agents
@@ -558,9 +559,9 @@
 - [show api keys](pages/api-reference/accounts/show-api-keys.md): GET /api/v0/auth/apikeys (1245 bytes)
 - [create api-key](pages/api-reference/accounts/create-api-key.md): POST /api/v0/auth/apikeys (1896 bytes)
 - [show workergroup](pages/api-reference/serverless/show-workergroup.md): GET /api/v0/workergroups (2039 bytes)
-- [create workergroup](pages/api-reference/serverless/create-workergroup.md): POST /api/v0/workergroups (2640 bytes)
+- [create workergroup](pages/api-reference/serverless/create-workergroup.md): POST /api/v0/workergroups (2499 bytes)
 - [show endpoints](pages/api-reference/serverless/show-endpoints.md): GET /api/v0/endptjobs (1762 bytes)
-- [create endpoint](pages/api-reference/serverless/create-endpoint.md): POST /api/v0/endptjobs (1885 bytes)
+- [create endpoint](pages/api-reference/serverless/create-endpoint.md): POST /api/v0/endptjobs (3526 bytes)
 - [show env vars](pages/api-reference/accounts/show-env-vars.md): GET /api/v0/secrets (1004 bytes)
 - [create env-var](pages/api-reference/accounts/create-env-var.md): POST /api/v0/secrets (1844 bytes)
 - [update env var](pages/api-reference/accounts/update-env-var.md): PUT /api/v0/secrets (1552 bytes)
@@ -577,9 +578,9 @@
 - [create template](pages/api-reference/templates/create-template.md): POST /api/v0/template (4151 bytes)
 - [delete template](pages/api-reference/templates/delete-template.md): DELETE /api/v0/template (836 bytes)
 - [delete api key](pages/api-reference/accounts/delete-api-key.md): DELETE /api/v0/auth/apikeys/{id} (1473 bytes)
-- [update workergroup](pages/api-reference/serverless/update-workergroup.md): PUT /api/v0/workergroups/{id} (2304 bytes)
+- [update workergroup](pages/api-reference/serverless/update-workergroup.md): PUT /api/v0/workergroups/{id} (2003 bytes)
 - [delete workergroup](pages/api-reference/serverless/delete-workergroup.md): DELETE /api/v0/workergroups/{id} (1774 bytes)
-- [update endpoint](pages/api-reference/serverless/update-endpoint.md): PUT /api/v0/endptjobs/{id} (1775 bytes)
+- [update endpoint](pages/api-reference/serverless/update-endpoint.md): PUT /api/v0/endptjobs/{id} (2950 bytes)
 - [delete endpoint](pages/api-reference/serverless/delete-endpoint.md): DELETE /api/v0/endptjobs/{id} (1505 bytes)
 - [update ssh key](pages/api-reference/accounts/update-ssh-key.md): PUT /api/v0/ssh/{id} (1048 bytes)
 - [delete ssh key](pages/api-reference/accounts/delete-ssh-key.md): DELETE /api/v0/ssh/{id} (991 bytes)
@@ -592,10 +593,10 @@
 - [detach ssh-key](pages/api-reference/instances/detach-ssh-key.md): DELETE /api/v0/instances/{id}/ssh/{sshkeyid} (1708 bytes)
 - [edit template](pages/api-reference/templates/edit-template.md): PUT /api/v1/template (4962 bytes)
 - [execute](pages/api-reference/instances/execute.md): PUT /api/v0/instances/command/{id} (2237 bytes)
-- [get workergroup logs](pages/api-reference/serverless/get-workergroup-logs.md): POST /getworkergrouplogs (1031 bytes)
-- [get workergroup workers](pages/api-reference/serverless/get-workergroup-workers.md): POST /getworkergroupworkers (1392 bytes)
-- [get endpoint logs](pages/api-reference/serverless/get-endpoint-logs.md): POST /getendpointlogs (996 bytes)
-- [get endpoint workers](pages/api-reference/serverless/get-endpoint-workers.md): POST /getendpointworkers (1358 bytes)
+- [get workergroup logs](pages/api-reference/serverless/get-workergroup-logs.md): POST /getworkergrouplogs (1581 bytes)
+- [get workergroup workers](pages/api-reference/serverless/get-workergroup-workers.md): POST /getworkergroupworkers (5015 bytes)
+- [get endpoint logs](pages/api-reference/serverless/get-endpoint-logs.md): POST /getendpointlogs (1734 bytes)
+- [get endpoint workers](pages/api-reference/serverless/get-endpoint-workers.md): POST /getendpointworkers (4660 bytes)
 - [invite team member](pages/api-reference/team/invite-team-member.md): POST /api/v0/team/invite (1596 bytes)
 - [list machine](pages/api-reference/machines/list-machine.md): PUT /api/v0/machines/createasks (1873 bytes)
 - [show logs](pages/api-reference/instances/show-logs.md): PUT /api/v0/instances/requestlogs/{id} (1574 bytes)

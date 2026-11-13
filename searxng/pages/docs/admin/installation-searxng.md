@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/admin/installation-searxng.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/admin/installation-searxng.rst)
+> Pinned source for SearXNG master: [docs/admin/installation-searxng.rst](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/docs/admin/installation-searxng.rst)
 
 <a id="installation-basic"></a>
 
@@ -53,12 +53,12 @@ Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 - [settings.yml](https://docs.searxng.org/admin/settings/settings.html#settings-yml)
 - [settings location](https://docs.searxng.org/admin/settings/settings.html#settings-location)
 - [settings use\_default\_settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings)
-- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/utils/templates/etc/searxng/settings.yml)
+- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/utils/templates/etc/searxng/settings.yml)
 
 To create a initial `/etc/searxng/settings.yml` we recommend to start with a
-copy of the file [utils/templates/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/utils/templates/etc/searxng/settings.yml).  This setup
+copy of the file [utils/templates/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/utils/templates/etc/searxng/settings.yml).  This setup
 [use default settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings) from
-[searx/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/settings.yml) and is shown in the tab *"Use default settings"*
+[searx/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/searx/settings.yml) and is shown in the tab *"Use default settings"*
 below. This setup:
 
 - enables [limiter](https://docs.searxng.org/admin/searx.limiter.html#limiter) to protect against bots
@@ -70,13 +70,13 @@ Modify the `/etc/searxng/settings.yml` to your needs:
 
 Build-time include: `../../utils/templates/etc/searxng/settings.yml`
 
-To see the entire file jump to [utils/templates/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/utils/templates/etc/searxng/settings.yml)
+To see the entire file jump to [utils/templates/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/utils/templates/etc/searxng/settings.yml)
 
 **searx/settings.yml**
 
 Build-time include: `../../searx/settings.yml`
 
-To see the entire file jump to [searx/settings.yml](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/settings.yml)
+To see the entire file jump to [searx/settings.yml](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/searx/settings.yml)
 
 For a *minimal setup* you need to set `server:secret_key`.
 

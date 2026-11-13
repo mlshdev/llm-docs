@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/vmm.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/desktop/features/vmm.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/vmm.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/desktop/features/vmm.md)
 
 # Virtual Machine Manager
 
@@ -26,7 +26,7 @@ Because Docker controls the virtualization layer, it can be monitored and govern
 - Mac: Apple silicon. For more information, see
   [Install Docker Desktop on Mac](https://docs.docker.com/desktop/setup/install/mac-install/).
 - Windows: x86\_64 (Arm isn't supported), with the Windows Hypervisor Platform
-  feature turned on. For more information, see
+  and Virtual Machine Platform features turned on. For more information, see
   [Install Docker Desktop on Windows](https://docs.docker.com/desktop/setup/install/windows-install/).
 - Linux: Docker Desktop 4.98 or later, and KVM access. For more information, see
   [Install Docker Desktop on Linux](https://docs.docker.com/desktop/setup/install/linux/).
@@ -56,8 +56,8 @@ If you're upgrading from version 4.35 onwards, your setting is preserved and Doc
 2. Select **Docker VMM**.
 3. Select **Apply & restart**.
 
-With Docker VMM, only the Docker CLI is available in your WSL 2 distributions.
-For more information, see
+With Docker VMM, the Docker CLI works from PowerShell. It also works from within
+your WSL distributions, with some limitations. For more information, see
 [Use Docker from WSL distributions with Docker VMM](https://docs.docker.com/desktop/features/wsl/#use-docker-from-wsl-distributions-with-docker-vmm).
 
 **Linux**

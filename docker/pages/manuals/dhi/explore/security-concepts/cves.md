@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/cves.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/dhi/explore/security-concepts/cves.md)
+> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/cves.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/dhi/explore/security-concepts/cves.md)
 
 # Common Vulnerabilities and Exposures (CVEs)
 

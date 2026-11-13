@@ -1,11 +1,11 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/workergroups/{id}](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/api-reference/openapi.yaml%23put%20/api/v0/workergroups/%7Bid%7D)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/workergroups/{id}](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/api-reference/openapi.yaml%23put%20/api/v0/workergroups/%7Bid%7D)
 > Canonical documentation: https://docs.vast.ai/api-reference/serverless/update-workergroup
 
 # update workergroup
 
 `PUT /api/v0/workergroups/{id}`
 
-Updates the properties of an existing workergroup based on the provided parameters.
+Updates the properties of an existing workergroup based on the provided parameters. Fields you omit are left unchanged.
 
 CLI Usage: `vastai update workergroup <id> [options]`
 
@@ -19,28 +19,18 @@ CLI Usage: `vastai update workergroup <id> [options]`
 
 - Media type: `application/json`
   - Schema (object)
-    - `min_load` (number): Minimum load for the workergroup.
-      - Example: `1`
-    - `target_util` (number): Target utilization for the workergroup.
-      - Example: `0.9`
-    - `cold_mult` (number): Cold multiplier for the workergroup.
-      - Example: `3`
-    - `test_workers` (integer; default: `3`): Number of test workers for performance estimation.
-      - Example: `3`
+    - `endpoint_id` (required; integer): ID of the endpoint the workergroup belongs to.
+      - Example: `123`
     - `template_hash` (string): Template hash for the workergroup.
       - Example: `abc123def456`
     - `template_id` (integer): Template ID for the workergroup.
       - Example: `456`
-    - `search_params` (string; default: `verified=true rentable=true rented=false`): Search parameters for offers (JSON object or query string).
+    - `search_params` (string): Search filters for offers, as a query string or JSON object. Merged into the workergroup's current filters; where both set the same filter, this value wins.
       - Example: `gpu_name=RTX_3090 rentable=true`
     - `launch_args` (string): Launch arguments for creating instances.
       - Example: `--env VAR=value`
-    - `gpu_ram` (number): Estimated GPU RAM requirement.
+    - `gpu_ram` (number): Estimated GPU memory, in GB, that the model needs. Used to estimate worker load times.
       - Example: `24`
-    - `endpoint_name` (string): Deployment endpoint name.
-      - Example: `vLLM-Qwen3-8B`
-    - `endpoint_id` (integer): Deployment endpoint ID.
-      - Example: `123`
 
 **Responses**
 

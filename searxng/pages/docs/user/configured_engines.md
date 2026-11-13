@@ -1,4 +1,4 @@
-> Pinned source for SearXNG master: [docs/user/configured_engines.rst](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/docs/user/configured_engines.rst)
+> Pinned source for SearXNG master: [docs/user/configured_engines.rst](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/docs/user/configured_engines.rst)
 
 <a id="configured-engines"></a>
 
@@ -42,7 +42,7 @@ belong to, by using a [!bing syntax](https://docs.searxng.org/user/search-syntax
     (available)
   - `!available`
     `searx.engines.available`
-    [available](https://github.com/searxng/searxng/blob/cccbc9e158b0ac3bb2158e9841a647a5bec57b57/searx/engines/available.py)
+    [available](https://github.com/searxng/searxng/blob/de722ab1bc957fd2e648bc2404b9155db69c617f/searx/engines/available.py)
   - available
   - available
   - available

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/tools/cli.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/dhi/tools/cli.md)
+> Pinned source for Docker main: [content/manuals/dhi/tools/cli.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/dhi/tools/cli.md)
 
 The `docker dhi` command-line interface (CLI) is a tool for managing Docker Hardened Images:
 
@@ -194,6 +194,8 @@ $ docker dhi customization delete <id> --org my-org --force
 
 For a complete reference of all YAML fields, see
 [Image customization YAML file](https://docs.docker.com/dhi/how-to/customize/#image-customization-yaml-file).
+For Helm charts, see
+[Helm chart customization YAML file](https://docs.docker.com/dhi/how-to/customize/#helm-chart-customization-yaml-file).
 
 ### Enterprise package authentication
 

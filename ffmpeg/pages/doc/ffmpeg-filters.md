@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/02970f067cf06c5c23209d521575b1024898bb29/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/4b0fad0c61a9ba93e7bc8a469dac8ff208a45d7b/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -26610,6 +26610,28 @@ The accepted values are:
 
 - bt2020
   BT.2020
+
+- acceleration
+
+Select the preference for the hardware acceleration between compute hardware
+path and Video Processing Engine (VPE) hardware path. The accepted values are:
+
+- compute
+  Explicitly use the compute path.
+
+- vpe
+  Use the Video Processing Engine (VPE) hardware path, falling back to the
+  compute path if VPE is unavailable or the configuration is unsupported.
+
+Note:
+
+## VPE 1.0/1.1 hardware supports a limited set of pixel formats:
+
+Supported input pixel formats: bgra, rgba, argb, nv12, p010
+
+-
+
+Supported output pixel formats: bgra, rgba, argb, rgbaf16
 
 - in\_trc
   Override input transfer characteristics.

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/pricing.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/guides/pricing.mdx)
+> Pinned source for Vast.ai main: [guides/pricing.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/pricing.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/pricing
 
 # Pricing overview
@@ -40,7 +40,7 @@ Serverless adds no surcharge on top of these, you pay the underlying worker cost
   Use **interruptible**. Checkpoint your work, save outputs to a volume or cloud storage, and set your bid based on how much priority you need.
 - **My traffic is bursty**
 
-  Use **serverless**. Define an endpoint with `min_workers: 0` and let the autoscaler recruit capacity only when requests arrive.
+  Use **serverless**. Define an endpoint with `cold_workers: 0` and let the autoscaler recruit capacity only when requests arrive.
 - **I want to benchmark first**
 
   Spin up a short on-demand rental, record your throughput, then decide between reserved (steady workload) or serverless (variable workload).

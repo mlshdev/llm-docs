@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/traefik.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/traefik.md)
+> Pinned source for Docker main: [content/guides/traefik.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/guides/traefik.md)
 
 # HTTP routing with Traefik
 
@@ -118,7 +118,7 @@ Now that you’ve experienced Traefik, it’s time to try using it in a developm
 2. All other requests to localhost go to the frontend client
 3. Since the app uses MySQL, db.localhost should provide phpMyAdmin to make it easy to access the database during development
 
-![Architecture diagram showing Traefik routing requests to other containers based on the path of the request](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/images/traefik-in-development.webp)
+![Architecture diagram showing Traefik routing requests to other containers based on the path of the request](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/guides/images/traefik-in-development.webp)
 
 The application can be accessed on GitHub at [dockersamples/easy-http-routing-with-traefik](https://github.com/dockersamples/easy-http-routing-with-traefik).
 
@@ -225,7 +225,7 @@ services:
 
 In some situations, you may want to forward requests to applications not running in containers. In the following architecture diagram, the same application from before is used, but the API and React apps are now running natively on the host machine.
 
-![An architecture diagram showing several components and the routing between them. Traefik is able to send requests to both non-containerized and containerized workloads](https://raw.githubusercontent.com/docker/docs/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/guides/images/traefik-non-containerized-workload-architecture.webp)
+![An architecture diagram showing several components and the routing between them. Traefik is able to send requests to both non-containerized and containerized workloads](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/guides/images/traefik-non-containerized-workload-architecture.webp)
 
 To accomplish this, Traefik will need to use another method to configure itself. The [File provider](https://doc.traefik.io/traefik/providers/file/) lets you define the routing rules in a YAML document. Here is an example file:
 

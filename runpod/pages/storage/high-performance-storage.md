@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/high-performance-storage.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/storage/high-performance-storage.mdx)
+> Pinned source for Runpod main: [storage/high-performance-storage.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/storage/high-performance-storage.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/high-performance-storage
 
 # High-performance storage

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/create-team-role.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/cli/reference/create-team-role.mdx)
+> Pinned source for Vast.ai main: [cli/reference/create-team-role.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/cli/reference/create-team-role.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/create-team-role
 
 # vastai create team-role

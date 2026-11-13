@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/search-benchmarks.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/cli/reference/search-benchmarks.mdx)
+> Pinned source for Vast.ai main: [cli/reference/search-benchmarks.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/cli/reference/search-benchmarks.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/search-benchmarks
 
 # vastai search benchmarks

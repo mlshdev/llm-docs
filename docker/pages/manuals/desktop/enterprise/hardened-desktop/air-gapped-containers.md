@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/enterprise/hardened-desktop/air-gapped-containers.md](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/content/manuals/desktop/enterprise/hardened-desktop/air-gapped-containers.md)
+> Pinned source for Docker main: [content/manuals/desktop/enterprise/hardened-desktop/air-gapped-containers.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/desktop/enterprise/hardened-desktop/air-gapped-containers.md)
 
 **Air-gapped containers requirements**
 
@@ -64,19 +64,20 @@ Add the container proxy to your [`admin-settings.json` file](https://docs.docker
 
 The `containersProxy` setting controls network policies applied to `docker image pull` and, when `transparentPorts` is configured, running container outbound traffic:
 
-| Parameter          | Description                                  | Value                                          |
-| ------------------ | -------------------------------------------- | ---------------------------------------------- |
-| `locked`           | Prevents developers from overriding settings | `true` (locked), `false` (default)             |
-| `mode`             | Proxy configuration method                   | `system` (use system proxy), `manual` (custom) |
-| `http`             | HTTP proxy server                            | URL (e.g., `"http://proxy.company.com:8080"`)  |
-| `https`            | HTTPS proxy server                           | URL (e.g., `"https://proxy.company.com:8080"`) |
-| `exclude`          | Bypass proxy for these addresses             | Array of hostnames/IPs                         |
-| `pac`              | Proxy Auto-Configuration file URL            | URL to PAC file                                |
-| `transparentPorts` | Ports subject to proxy rules                 | Comma-separated ports or wildcard (`"*"`)      |
+| Parameter          | Description                                                                | Value                                          |
+| ------------------ | -------------------------------------------------------------------------- | ---------------------------------------------- |
+| `locked`           | Prevents developers from overriding settings                               | `true` (locked), `false` (default)             |
+| `mode`             | Proxy configuration method                                                 | `system` (use system proxy), `manual` (custom) |
+| `http`             | HTTP proxy server                                                          | URL (e.g., `"http://proxy.company.com:8080"`)  |
+| `https`            | HTTPS proxy server                                                         | URL (e.g., `"https://proxy.company.com:8080"`) |
+| `exclude`          | Bypass proxy for these addresses                                           | Array of hostnames/IPs                         |
+| `pac`              | Proxy Auto-Configuration file URL                                          | URL to PAC file                                |
+| `embeddedPac`      | Proxy Auto-Configuration script written inline, with precedence over `pac` | PAC script content                             |
+| `transparentPorts` | Ports subject to proxy rules                                               | Comma-separated ports or wildcard (`"*"`)      |
 
 ### Configuration examples
 
-Block all external access:
+Block all external access, including image pulls:
 
 ```json
 "containersProxy": {
@@ -85,9 +86,12 @@ Block all external access:
   "http": "",
   "https": "",
   "exclude": [],
+  "embeddedPac": "function FindProxyForURL(url, host) { return \"PROXY reject.docker.internal:1234\"; }",
   "transparentPorts": "*"
 }
 ```
+
+With no PAC script and no proxy set, connections go straight out, so empty `http` and `https` values don't block anything. The PAC script in this example rejects every request.
 
 Allow specific internal services:
 
@@ -97,10 +101,13 @@ Allow specific internal services:
   "mode": "manual",
   "http": "",
   "https": "",
-  "exclude": ["internal.company.com", "10.0.0.0/8"],
+  "exclude": [],
+  "embeddedPac": "function FindProxyForURL(url, host) { if (dnsDomainIs(host, 'internal.company.com') || isInNet(host, '10.0.0.0', '255.0.0.0')) { return 'DIRECT'; } return 'PROXY reject.docker.internal:1234'; }",
   "transparentPorts": "80,443"
 }
 ```
+
+The PAC script allows the internal domain and the `10.0.0.0/8` addresses, and rejects everything else. Use `dnsDomainIs` to match host names and `isInNet` to match IP addresses. The `exclude` setting can't allow a request that the PAC script rejects, so leave it empty.
 
 Route through corporate proxy:
 

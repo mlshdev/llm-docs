@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/cost-centers/create-a-cost-center.mdx](https://github.com/runpod/docs/blob/b3d94eb34607d1c8be2215f891c34b55b0a5df24/api-reference-v2/cost-centers/create-a-cost-center.mdx)
+> Pinned source for Runpod main: [api-reference-v2/cost-centers/create-a-cost-center.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/api-reference-v2/cost-centers/create-a-cost-center.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/cost-centers/create-a-cost-center
 
 # Create A Cost Center

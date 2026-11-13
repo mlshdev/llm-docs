@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/market-metrics.mdx](https://github.com/vast-ai/docs/blob/2b2d9a04e7cb542f3305c0c148c2395b0cfab86e/host/market-metrics.mdx)
+> Pinned source for Vast.ai main: [host/market-metrics.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/host/market-metrics.mdx)
 > Canonical documentation: https://docs.vast.ai/host/market-metrics
 
 # GPU Market Metrics

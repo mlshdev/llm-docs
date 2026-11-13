@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_prepare.yaml](https://github.com/docker/docs/blob/61cbfdc1e72d0ac62dbac59ceaf7b94dcbe69c80/data/cli/dhi/docker_dhi_customization_prepare.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_prepare.yaml](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/data/cli/dhi/docker_dhi_customization_prepare.yaml)
 
 # docker dhi customization prepare
 
@@ -17,6 +17,20 @@ docker dhi customization prepare golang 1.24-dev --destination myorg/dhi-golang
 Bulk customization — pipe a JSON array of {destination, tag-definition-id} objects via stdin:
 echo '\[{"destination":"myorg/dhi-golang","tag-definition-id":"golang/alpine-3.23/1.24-dev"}]' \
 \| docker dhi customization prepare --name my-custo
+
+Values the customization inherits from the tag definition (environment variables, entrypoint, cmd,
+accounts and working directory) are listed commented out. Fields left out or commented out are inherited;
+uncommenting a field overrides the inherited value:
+
+- environment, labels and annotations override per key; keys you leave out are still inherited.
+- entrypoint and cmd are replaced entirely by the list you provide.
+- accounts override per sub-key; a users or groups list replaces the whole inherited list.
+  A bulk customization inherits the same way, with each target merged with its own tag definition.
+
+For a Helm chart, every reference of the chart is listed under variable\_mappings, pointing at dhi.io.
+To point a reference elsewhere, uncomment its repository and either tag\_definition\_id (another tag
+definition of a mirrored image) or customization\_id (a customization). Sub-charts can only point at a
+customization or dhi.io. Do not change the variable names.
 
 The scaffold is written to stdout; redirect to a file if needed:
 docker dhi customization prepare golang 1.24-dev > customization.yaml
