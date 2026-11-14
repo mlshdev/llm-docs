@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/mcp-servers.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/get-started/mcp-servers.mdx)
+> Pinned source for Runpod main: [get-started/mcp-servers.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/get-started/mcp-servers.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/mcp-servers
 
 # Use Runpod's MCP servers

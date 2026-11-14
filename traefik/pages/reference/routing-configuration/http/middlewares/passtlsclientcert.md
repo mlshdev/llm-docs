@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/passtlsclientcert.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/passtlsclientcert.md)
+> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/middlewares/passtlsclientcert.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/middlewares/passtlsclientcert.md)
 
 The `passTLSClientCert` middleware adds the selected data from the passed client TLS certificate to a header.
 

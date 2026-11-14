@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/optimization.txt](https://github.com/FFmpeg/FFmpeg/blob/4b0fad0c61a9ba93e7bc8a469dac8ff208a45d7b/doc/optimization.txt)
+> Pinned source for FFmpeg master: [doc/optimization.txt](https://github.com/FFmpeg/FFmpeg/blob/cf8e0c40b60b563ba2addf1dcb4fe3557143ab17/doc/optimization.txt)
 
 # optimization Tips (for libavcodec):
 

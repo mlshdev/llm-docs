@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/FAQ.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/FAQ.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/FAQ.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/FAQ.md)
 
 ## Is VictoriaLogs ready for production use?
 

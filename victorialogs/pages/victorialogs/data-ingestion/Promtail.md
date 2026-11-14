@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/data-ingestion/Promtail.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Promtail.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/data-ingestion/Promtail.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/data-ingestion/Promtail.md)
 
 [Promtail](https://grafana.com/docs/loki/latest/clients/promtail/), [Grafana Agent](https://grafana.com/docs/agent/latest/)
 and [Grafana Alloy](https://grafana.com/docs/alloy/latest/) are default log collectors for Grafana Loki.

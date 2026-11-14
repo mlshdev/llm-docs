@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/custom-docker-images.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/flash/custom-docker-images.mdx)
+> Pinned source for Runpod main: [flash/custom-docker-images.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/flash/custom-docker-images.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/custom-docker-images
 
 # Use custom containers with Flash

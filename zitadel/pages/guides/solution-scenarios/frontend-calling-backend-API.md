@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.2: [apps/docs/content/guides/solution-scenarios/frontend-calling-backend-API.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/guides/solution-scenarios/frontend-calling-backend-API.mdx)
+> Pinned source for ZITADEL v4.20.3: [apps/docs/content/guides/solution-scenarios/frontend-calling-backend-API.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/guides/solution-scenarios/frontend-calling-backend-API.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/solution-scenarios/frontend-calling-backend-API
 
 This guide contains a use case and ZITADEL integration.
@@ -35,7 +35,7 @@ All code and instructions to run the sample application can be found at <https:/
 
 You can create the front-end application (User Agent) and the API in the same project or in a different project. In this example, we have created both in one. Configure the applications with appropriate settings (as instructed).
 
-![User Agent and API applications in a single project](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/guides/solution-scenarios/frontend-calling-backend-API_1.png)
+![User Agent and API applications in a single project](https://raw.githubusercontent.com/zitadel/zitadel/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/public/img/guides/solution-scenarios/frontend-calling-backend-API_1.png)
 
 ### Front-end login with ZITADEL
 

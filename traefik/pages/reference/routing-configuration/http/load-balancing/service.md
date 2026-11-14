@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/load-balancing/service.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/load-balancing/service.md)
+> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/load-balancing/service.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/load-balancing/service.md)
 
 Traefik services define how to distribute incoming traffic across your backend servers.
 This page covers two main concepts:

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/4b0fad0c61a9ba93e7bc8a469dac8ff208a45d7b/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/cf8e0c40b60b563ba2addf1dcb4fe3557143ab17/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -5103,11 +5103,14 @@ ffmpeg -i INPUT -f_strict experimental -syncpoints none - | processor
 
 Ogg container muxer.
 
-A new link is started on new metadata or extradata of a single Vorbis, FLAC or
-Opus stream.
+A new link is started on new metadata or extradata of a single Vorbis, FLAC,
+Opus or Theora stream.
 Other outputs ignore new metadata.
-New extradata ends them at the current link, and the packets that follow are
-dropped.
+So does Theora on an inter frame.
+New extradata ends them at the current link.
+So does new Theora extradata that changes the frame rate.
+The packet carrying it and the ones that follow are dropped, and their writes
+still return success.
 New extradata on the first packet is ignored.
 
 - -page\_duration *duration*

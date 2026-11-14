@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [community-solutions/ohmyrunpod/overview.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/community-solutions/ohmyrunpod/overview.mdx)
+> Pinned source for Runpod main: [community-solutions/ohmyrunpod/overview.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/community-solutions/ohmyrunpod/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/community-solutions/ohmyrunpod/overview
 
 # OhMyRunpod
@@ -63,7 +63,7 @@ The most common use case for OhMyRunpod is transferring files between your local
    ```
 3. You'll be presented with transfer options:
 
-   ![File transfer selection menu showing Croc and SFTP options](https://raw.githubusercontent.com/runpod/docs/fd5e157158fbbe848892a8a814aedd89266b05c1/images/ohmyrunpod-file-transfer-selection.png)
+   ![File transfer selection menu showing Croc and SFTP options](https://raw.githubusercontent.com/runpod/docs/badc3b0885d17c76062faf033073f6d062af3aee/images/ohmyrunpod-file-transfer-selection.png)
 
    - **Croc**: Easy peer-to-peer file transfer (recommended for quick transfers)
    - **SFTP**: Traditional file transfer via SSH/SFTP clients (recommended for persistent connections)
@@ -76,7 +76,7 @@ The most common use case for OhMyRunpod is transferring files between your local
    - Generate a secure password
    - Create connection scripts for your operating system
 
-   ![SFTP setup confirmation showing connection details and instructions](https://raw.githubusercontent.com/runpod/docs/fd5e157158fbbe848892a8a814aedd89266b05c1/images/ohmyrunpod-sftp-confirm.png)
+   ![SFTP setup confirmation showing connection details and instructions](https://raw.githubusercontent.com/runpod/docs/badc3b0885d17c76062faf033073f6d062af3aee/images/ohmyrunpod-sftp-confirm.png)
 
    The tool provides:
 

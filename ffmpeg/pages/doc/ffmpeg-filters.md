@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/4b0fad0c61a9ba93e7bc8a469dac8ff208a45d7b/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/cf8e0c40b60b563ba2addf1dcb4fe3557143ab17/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -27901,6 +27901,19 @@ containing the following constants:
 - ovsub
   horizontal and vertical output chroma subsample values. For example for the
   pixel format "yuv422p" *hsub* is 2 and *vsub* is 1.
+
+### Examples
+
+Convert a full-range, 8-bit YCgCo input to RGB and extract its first frame as
+a PNG:
+
+```text
+ffmpeg -i input.mov -vf "zscale=matrixin=ycgco:rangein=full:matrix=gbr:range=full,format=gbrp" -frames:v 1 output.png
+```
+
+The planar RGB format `gbrp` makes zscale perform the color
+conversion before the automatic conversion to a pixel format supported by
+the PNG encoder. Set `rangein` to match the input's actual range.
 
 ### Commands
 

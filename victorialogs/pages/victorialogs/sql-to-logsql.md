@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/sql-to-logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/sql-to-logsql.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/sql-to-logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/sql-to-logsql.md)
 
 This is a tutorial for the migration from SQL to [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/).
 It is expected that you are familiar with SQL and know [how to execute queries at VictoriaLogs](https://docs.victoriametrics.com/victorialogs/querying/).

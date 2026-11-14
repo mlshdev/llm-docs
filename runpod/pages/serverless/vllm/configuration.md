@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/vllm/configuration.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/serverless/vllm/configuration.mdx)
+> Pinned source for Runpod main: [serverless/vllm/configuration.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/serverless/vllm/configuration.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/vllm/configuration
 
 # Configure vLLM to work with your model

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.2: [apps/docs/content/examples/identity-proxy/oauth2-proxy.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/examples/identity-proxy/oauth2-proxy.mdx)
+> Pinned source for ZITADEL v4.20.3: [apps/docs/content/examples/identity-proxy/oauth2-proxy.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/examples/identity-proxy/oauth2-proxy.mdx)
 > Canonical documentation: https://zitadel.com/docs/examples/identity-proxy/oauth2-proxy
 
 [OAuth2-proxy](https://github.com/oauth2-proxy/oauth2-proxy) is a project which allows services to delegate the authentication flow to a IDP, for example **ZITADEL**

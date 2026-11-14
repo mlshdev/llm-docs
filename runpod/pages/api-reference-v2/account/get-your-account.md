@@ -1,0 +1,67 @@
+> Pinned source for Runpod main: [api-reference-v2/account/get-your-account.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference-v2/account/get-your-account.mdx)
+> Canonical documentation: https://docs.runpod.io/api-reference-v2/account/get-your-account
+
+# Get Your Account
+
+Retrieve the ID and email of the Runpod account your API key belongs to.
+
+`GET /v2/account`
+
+**Get your account**
+
+Returns the account the API key belongs to.
+
+**Authentication:** `bearerAuth`
+
+**Responses**
+
+- `200`: OK
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
+  - Media type: `application/json`
+    - Schema (object): The account the API key belongs to.
+      - `id` (required; string): Account ID. For a request that acts for a team (a key created inside the team, or `X-Team-Id`) this is the team owner's account. For an organization member it is the member's own account; see `GET /v2/organization` for the organization.
+      - `email` (required; nullable): Email of the same account. Null when the account has no email on file.
+    - Example `account`: `{"id":"user_2abc123","email":"dev@example.com"}`
+- `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `missingBearerToken`: `{"title":"Unauthorized","status":401,"detail":"missing bearer token"}`
+- `403`: The bearer token is valid, but it does not grant access to the requested resource or action.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `insufficientAccess`: `{"title":"Forbidden","status":403,"detail":"access denied"}`
+- `429`: The caller exceeded its per-user rate limit. The response identifies the window that was exceeded and how long to wait. The `RateLimit` and `RateLimit-Policy` headers (per the IETF ratelimit-headers draft) also accompany successful responses, so clients can track quota before a 429.
+  - Header `Retry-After` (integer): Seconds to wait before retrying, per the exceeded window.
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
+    - Example `rateLimited`: `{"title":"Too Many Requests","status":429,"detail":"rate limit exceeded for the minute window"}`
+- `default`: Error
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)

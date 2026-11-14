@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.2: [apps/docs/content/examples/login/nextjs-b2b.mdx](https://github.com/zitadel/zitadel/blob/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/content/examples/login/nextjs-b2b.mdx)
+> Pinned source for ZITADEL v4.20.3: [apps/docs/content/examples/login/nextjs-b2b.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/examples/login/nextjs-b2b.mdx)
 > Canonical documentation: https://zitadel.com/docs/examples/login/nextjs-b2b
 
 # Next.js Web App with B2B Scenario
@@ -9,7 +9,7 @@ If you need more info on B2B use cases, consider reading our guide for the [B2B 
 
 > You can follow along with the template code in our [zitadel-nextjs-b2b](https://github.com/zitadel/zitadel-nextjs-b2b) repo.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/dce17d591309b1c0cdfb6c6718ec6cfada05eb7d/apps/docs/public/img/nextjs-b2b/home.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/public/img/nextjs-b2b/home.png)
 
 ## What does it do?
 

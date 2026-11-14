@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/github-builder/build.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/github-builder/build.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/build-workflow.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/build-workflow.md)
 
 # Build with Docker GitHub Builder
 
@@ -53,9 +53,9 @@ When you set `output: image`, `meta-images` is required because the workflow
 creates image names and [manifest tags](https://docs.docker.com/build/ci/github-actions/manage-tags-labels/) from that
 input. `distribute: true` is the default, so a multi-platform build can fan out
 across native GitHub-hosted runners instead of forcing the whole build onto one
-machine. The default `runner` mapping sends Linux Arm platforms to
-`ubuntu-24.04-arm` and uses `ubuntu-24.04` for other platforms. To change that
-mapping, see [runner selection](https://docs.docker.com/build/ci/github-actions/github-builder/architecture/#runner-selection). `sign: auto`
+machine. For the default `runner` mapping, see
+[Runner mapping](https://github.com/docker/github-builder#runner-mapping). To change
+that mapping, see [runner selection](https://docs.docker.com/build/ci/github-actions/github-builder-architecture/#runner-selection). `sign: auto`
 is also the default, which means the workflow signs
 [attestation manifests](https://docs.docker.com/build/ci/github-actions/attestations/) when the image is pushed.
 

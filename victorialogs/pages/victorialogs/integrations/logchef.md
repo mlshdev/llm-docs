@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/integrations/logchef.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/logchef.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/integrations/logchef.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/integrations/logchef.md)
 
 [Logchef](https://github.com/mr-karan/logchef) is a query and UI layer that connects directly to an existing VictoriaLogs deployment. It does not ingest, copy, or move logs. Your existing log shipper continues to send data to VictoriaLogs.
 
@@ -47,7 +47,7 @@ Logchef sends the selected time range to VictoriaLogs as `start` and `end` param
 
 With a VictoriaLogs source, Logchef provides field discovery, histograms, result views, saved queries and collections, dashboards, alerts, live tail, CLI/MCP access, and team access. Immutable scope and tenant settings continue to apply server-side for these source operations.
 
-![Logchef dashboard with log monitoring panels](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/integrations/logchef-dashboard.webp)
+![Logchef dashboard with log monitoring panels](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/integrations/logchef-dashboard.webp)
 
 For explorer histograms and dashboard stat, time-series, and breakdown panels, use filter expressions. Pipes are ignored for these histograms and panels, so their counts may differ from the results of the full query. Table queries can use full native LogsQL pipes.
 

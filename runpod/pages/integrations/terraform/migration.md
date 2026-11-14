@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [integrations/terraform/migration.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/integrations/terraform/migration.mdx)
+> Pinned source for Runpod main: [integrations/terraform/migration.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/integrations/terraform/migration.mdx)
 > Canonical documentation: https://docs.runpod.io/integrations/terraform/migration
 
 # Migrate Terraform provider to 2.0.0

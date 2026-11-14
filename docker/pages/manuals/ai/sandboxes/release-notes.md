@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/release-notes.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/ai/sandboxes/release-notes.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/release-notes.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/ai/sandboxes/release-notes.md)
 
 # Docker Sandboxes release notes
 
@@ -78,7 +78,8 @@ HTTP policy matching treats ASCII letters in URL paths and query parameter names
 - Stalled outbound connections close after about 30 seconds by default, allowing clients to reconnect after host network changes such as connecting a VPN. Tune the timeout with `egress.stalledConnectionTimeoutSeconds`, or set it to `0` to disable it. Restart the daemon to apply a changed value to existing sandboxes.
 - Fixed `EOF` errors during sign-in and other requests through TLS-inspecting proxies that reject handshakes offering ML-DSA certificate signatures, including some Zscaler, Palo Alto, and F5 configurations.
 - Published loopback ports work with WSL2 mirrored networking, restoring access to the clone-mode Git remote.
-- Unpublishing an automatically assigned port keeps it unpublished after a sandbox restart. Published-port endpoints bracket IPv6 host addresses in list and inspect output, including JSON and YAML.
+- Unpublishing an automatically assigned port keeps it unpublished after a sandbox restart. (CVE-2026-126330)
+- Published-port endpoints bracket IPv6 host addresses in list and inspect output, including JSON and YAML.
 - Kit pulls work with registries such as Artifactory and self-hosted GitLab whose token service uses a separate host with a private IP address. GitHub release-asset HEAD requests no longer fail with 401 when a GitHub secret is configured.
 - DNS answers include CNAME records for aliased hostnames, supporting tools such as Kerberos. HTTPS proxy connections preserve trailing dots in destination names.
 - With UDP egress disabled, the first 20 distinct refused external destinations per sandbox network get individual log entries. Further destinations share a `<further blocked attempts>` entry and remain blocked. Denied host UDP traffic is labeled `host.docker.internal`.
@@ -95,6 +96,7 @@ HTTP policy matching treats ASCII letters in URL paths and query parameter names
 
 #### Cloud sandboxes
 
+- Create and manage recurring cloud sandbox tasks with `sbx --cloud schedule`. Test tasks with manual runs, inspect run history, and pause or resume recurring runs.
 - Sandbox moves reject occupied explicit destination names before capturing or transferring the source. `--name` sets the exact destination name. Cloud-to-local moves derive the default destination name from the source sandbox name even when selected by ID.
 - Moving an already-cloud sandbox with `--to cloud` exits cleanly with an explanatory message. Resume recognizes running lifecycle states consistently, and sandboxes whose container creation fails can be deleted instead of remaining stuck.
 - Cloud sign-in failures produce warnings and suggest signing in again when appropriate. Invalid SSH certificate lifetimes are rejected even when a cached certificate is available.
@@ -279,11 +281,6 @@ Docker Sandboxes v0.50.0 adds configurable kit host mounts, preserves persistent
 
 - `sbx exec` returns exit status 125 when it cannot run the command, such as when the sandbox doesn't exist.
 - On macOS and Windows, `sbx diagnose` and daemon logs warn when `SSL_CERT_FILE` or `SSL_CERT_DIR` replaces the system trust store and can cause HTTPS certificate verification failures.
-
-#### Experimental Runtime backend
-
-- Workloads have network access.
-- Startup stops waiting and cleans up when a workload exits or fails before becoming ready.
 
 ## Earlier releases
 

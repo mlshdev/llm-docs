@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/laravel.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/guides/laravel.md)
+> Pinned source for Docker main: [content/guides/laravel.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/guides/laravel.md)
 
 Laravel is a popular PHP framework that allows developers to build web applications quickly and effectively. Docker Compose simplifies the management of development and production environments by defining essential services, like PHP, a web server, and a database, in a single YAML file. This guide provides a streamlined approach to setting up a robust Laravel environment using Docker Compose, focusing on simplicity and efficiency.
 

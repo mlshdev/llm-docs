@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/QuickStart.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/QuickStart.md)
 
 It is recommended to read [README](https://docs.victoriametrics.com/victorialogs/)
 and [Key Concepts](https://docs.victoriametrics.com/victorialogs/keyconcepts/)
@@ -40,8 +40,8 @@ and unpack it. It contains a single `victoria-logs-prod` binary.
 For example, on Linux with `amd64` architecture:
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.52.0/victoria-logs-linux-amd64-v1.52.0.tar.gz
-tar xzf victoria-logs-linux-amd64-v1.52.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.53.0/victoria-logs-linux-amd64-v1.53.0.tar.gz
+tar xzf victoria-logs-linux-amd64-v1.53.0.tar.gz
 ```
 
 The binary is self-contained and requires no installation - it is ready to run as is.
@@ -98,9 +98,9 @@ Enter a query in the input field and press `Enter`. For example:
 - `log.level:error` - only the logs with `error` level;
 - `hello` - the logs containing the word `hello` in their message.
 
-The `*` query should return the three log lines ingested at the previous step, grouped by log stream:
+The `*` query should return the three log lines ingested at the previous step:
 
-![vmui with query results](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/quick-start-vmui.webp)
+![vmui with query results](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/quick-start-vmui.webp)
 
 Queries are written in [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/) - a simple yet powerful
 query language for logs. The same queries can also be executed via the
@@ -163,8 +163,8 @@ Just download the archive for the needed operating system and architecture, unpa
 For example, the following commands download VictoriaLogs archive for Linux/amd64, unpack and run it:
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.52.0/victoria-logs-linux-amd64-v1.52.0.tar.gz
-tar xzf victoria-logs-linux-amd64-v1.52.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.53.0/victoria-logs-linux-amd64-v1.53.0.tar.gz
+tar xzf victoria-logs-linux-amd64-v1.53.0.tar.gz
 ./victoria-logs-prod -storageDataPath=victoria-logs-data
 ```
 
@@ -187,8 +187,21 @@ Here is the command to run VictoriaLogs in a Docker container:
 
 ```sh
 docker run --rm -it -p 9428:9428 -v ./victoria-logs-data:/victoria-logs-data \
-  docker.io/victoriametrics/victoria-logs:v1.52.0 -storageDataPath=victoria-logs-data
+  docker.io/victoriametrics/victoria-logs:v1.53.0 -storageDataPath=victoria-logs-data
 ```
+
+The Docker image doesn't contain `curl` or `wget`. Use the `-healthcheck` command-line flag *(available from v1.54.0)* for Docker `HEALTHCHECK` instead.
+It checks that the running VictoriaLogs accepts connections at `-httpListenAddr` and exits with non-zero code if the check fails.
+Pass the same `-httpListenAddr` as the checked process has. For example, in Docker Compose:
+
+```yaml
+healthcheck:
+  test: ["CMD", "/victoria-logs-prod", "-healthcheck"]
+```
+
+If VictoriaLogs is configured via [environment variables](https://docs.victoriametrics.com/victorialogs/#environment-variables),
+then add `-envflag.enable` to the healthcheck command, so it reads the same environment variables.
+The same flag is supported by [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/) at `/vlagent-prod`.
 
 See also:
 
@@ -259,6 +272,20 @@ make victoria-logs-prod
 ```
 
 This will build the `victoria-logs-prod` executable inside the `bin` folder.
+
+It is also possible to build a VictoriaLogs Docker image for the host architecture and run it locally with command:
+
+```sh
+make package-victoria-logs
+```
+
+This will build the `victoriametrics/victoria-logs:<tag>` image. Run `docker images victoriametrics/victoria-logs` to see the tag, then start it:
+
+```sh
+docker run --rm -it -p 9428:9428 victoriametrics/victoria-logs:<tag>
+```
+
+Additionally, you can run `make package` to build images for VictoriaLogs, `vlagent` and `vlogscli` at once.
 
 See also:
 

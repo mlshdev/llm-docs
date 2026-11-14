@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/create-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/api-reference-v2/serverless/create-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/create-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference-v2/serverless/create-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/create-a-serverless-endpoint
 
 # Create A Serverless Endpoint
@@ -14,6 +14,11 @@ Creates a serverless endpoint. Callers specify exactly one of `gpu` or
 body, from a serverless template referenced by `templateId` (body
 fields override the template's), or both; `image` is required unless
 `templateId` is set. See `CreateEndpointRequest` for the full body.
+An image in a private Amazon ECR registry with no `registry`
+credential must be covered by one of your ECR delegations (see
+`registry`); otherwise the create returns 400 here rather than
+workers failing their image pull. A caller whose organization role
+cannot use ECR delegations gets 403.
 
 The CUDA constraints live on `gpu` — `gpu.allowedCudaVersions` and
 `gpu.minCudaVersion` — so a CPU create cannot express them and the
@@ -62,9 +67,9 @@ rejected.
 - Media type: `application/json`
   - Schema
     - allOf:
-      - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
+      - `variant 1`: Reusable container configuration shared across templates, pods, serverless endpoints, and clusters. Adding a field here automatically propagates to all of them.
         - allOf:
-          - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+          - `variant 1` (object): Container configuration universal to every containerized resource. ContainerConfig composes it and adds `registry`; resources compose ContainerConfig.
             - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
             - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
               - `items` (string)
@@ -77,7 +82,7 @@ rejected.
             - `ports` (array): Exposed ports, formatted as port/protocol
               - `items` (string)
           - `variant 2` (object)
-            - `registry` (nullable): Container registry credential ID (for private images)
+            - `registry` (nullable): Container registry credential ID for a private image: one of your credentials from `/v2/registries`. Leave it unset for a private Amazon ECR image. Runpod pulls those with an ECR delegation (`/v2/registries/delegations`) matched to the image's account, region and repository at pull time, so there is no delegation ID to pass here (a delegation ID is not a credential ID). A credential set here is used instead of any delegation.
       - `variant 2`
       - `variant 3` (object)
         - `gpu`: GPU request for an endpoint create. Carries the CUDA constraints, which live here rather than at the body's top level so they are unrepresentable on a CPU endpoint.
@@ -146,9 +151,9 @@ rejected.
   - Media type: `application/json`
     - Schema
       - allOf:
-        - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
+        - `variant 1`: Reusable container configuration shared across templates, pods, serverless endpoints, and clusters. Adding a field here automatically propagates to all of them.
           - allOf:
-            - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+            - `variant 1` (object): Container configuration universal to every containerized resource. ContainerConfig composes it and adds `registry`; resources compose ContainerConfig.
               - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
               - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
                 - `items` (string)
@@ -161,7 +166,7 @@ rejected.
               - `ports` (array): Exposed ports, formatted as port/protocol
                 - `items` (string)
             - `variant 2` (object)
-              - `registry` (nullable): Container registry credential ID (for private images)
+              - `registry` (nullable): Container registry credential ID for a private image: one of your credentials from `/v2/registries`. Leave it unset for a private Amazon ECR image. Runpod pulls those with an ECR delegation (`/v2/registries/delegations`) matched to the image's account, region and repository at pull time, so there is no delegation ID to pass here (a delegation ID is not a credential ID). A credential set here is used instead of any delegation.
         - `variant 2` (object)
           - `costCenter`: Cost center this resource's spend is attributed to. Absent when the resource is not attributed to a cost center, or when the caller lacks permission to view cost centers. Managed through `/v2/cost-centers`.
             - allOf:

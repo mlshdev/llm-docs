@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/data-ingestion/opentelemetry.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/opentelemetry.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/data-ingestion/opentelemetry.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/data-ingestion/opentelemetry.md)
 
 VictoriaLogs supports both client open-telemetry [SDK](https://opentelemetry.io/docs/languages/) and [collector](https://opentelemetry.io/docs/collector/).
 
@@ -23,6 +23,19 @@ logExporter, err := otlploghttp.New(ctx,
   otlploghttp.WithEndpointURL("http://victorialogs:9428/insert/opentelemetry/v1/logs"),
   otlploghttp.WithHeaders(map[string]string{
     "VL-Stream-Fields": "host,app",
+  }),
+)
+```
+
+VictoriaLogs uses the log body as the [log message](https://docs.victoriametrics.com/victorialogs/keyconcepts/#message-field).
+The log message can be taken from other fields via `VL-Msg-Field` HTTP header if needed. In this case the log body is stored in the `body` field *(available from v1.54.0)*.
+For example, the following config uses the `msg` log record attribute as the log message, and falls back to the log body if the `msg` attribute is missing:
+
+```go
+logExporter, err := otlploghttp.New(ctx,
+  otlploghttp.WithEndpointURL("http://victorialogs:9428/insert/opentelemetry/v1/logs"),
+  otlploghttp.WithHeaders(map[string]string{
+    "VL-Msg-Field": "msg,body",
   }),
 )
 ```

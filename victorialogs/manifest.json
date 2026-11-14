@@ -6,21 +6,31 @@
   "title": "VictoriaLogs",
   "homepage": "https://docs.victoriametrics.com/victorialogs/",
   "repository": "VictoriaMetrics/VictoriaLogs",
-  "tag": "v1.53.0",
-  "releaseId": 400890976,
-  "releasePublishedAt": "2026-10-01T11:20:01Z",
-  "sourceCommit": "915d91904bf7f5be66ab00f88947ae7fc1431acc",
-  "documentCount": 39,
+  "tag": "v1.54.0",
+  "releaseId": 444136749,
+  "releasePublishedAt": "2026-11-13T11:28:59Z",
+  "sourceCommit": "6433dae586cc15921b4b9c50a805a49553c9d761",
+  "documentCount": 38,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 1352085,
-      "documentCount": 39,
-      "sha256": "93912d883a20b42014ca9a0bd7be9c90ef483ca3caa2242a3b062f4034642d95"
+      "byteLength": 1017588,
+      "documentCount": 38,
+      "sha256": "c5623325f50e619d832ac0203f08a46c94beb26224f8a294ca81e483ca4cf205"
     }
   ],
-  "outputDigest": "1b25a69a578d213c121bedcca1553c16348a41d72765c7ae75c014d993fff392",
+  "outputDigest": "4537944f1d62ca76bd15041d8aa295019a9c66cccc57089277cebf774d8afb04",
+  "quarantined": [
+    {
+      "sourcePath": "docs/victorialogs/CHANGELOG.md",
+      "reason": "Unresolved victorialogs source syntax \"{{< y\""
+    },
+    {
+      "sourcePath": "docs/victorialogs/keyConcepts.md",
+      "reason": "Unresolved victorialogs source syntax \"{{< y\""
+    }
+  ],
   "notes": [
     "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
     "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",

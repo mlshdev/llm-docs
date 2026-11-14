@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md)
+> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md)
 
 `ServersTransportTCP` is the CRD implementation of [ServersTransportTCP](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport).
 

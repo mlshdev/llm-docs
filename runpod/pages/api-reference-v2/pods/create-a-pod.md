@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/api-reference-v2/pods/create-a-pod.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/create-a-pod.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference-v2/pods/create-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/create-a-pod
 
 # Create A Pod
@@ -89,9 +89,9 @@ request rather than as absent capacity.
 - Media type: `application/json`
   - Schema
     - allOf:
-      - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
+      - `variant 1`: Reusable container configuration shared across templates, pods, serverless endpoints, and clusters. Adding a field here automatically propagates to all of them.
         - allOf:
-          - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+          - `variant 1` (object): Container configuration universal to every containerized resource. ContainerConfig composes it and adds `registry`; resources compose ContainerConfig.
             - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
             - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
               - `items` (string)
@@ -104,7 +104,7 @@ request rather than as absent capacity.
             - `ports` (array): Exposed ports, formatted as port/protocol
               - `items` (string)
           - `variant 2` (object)
-            - `registry` (nullable): Container registry credential ID (for private images)
+            - `registry` (nullable): Container registry credential ID for a private image: one of your credentials from `/v2/registries`. Leave it unset for a private Amazon ECR image. Runpod pulls those with an ECR delegation (`/v2/registries/delegations`) matched to the image's account, region and repository at pull time, so there is no delegation ID to pass here (a delegation ID is not a credential ID). A credential set here is used instead of any delegation.
       - `variant 2` (object): Request body for creating a pod. Exactly one of `gpu` or `cpu` must be set — enforced at the handler layer. For CPU pods, memory is derived by the API from the selected flavor's RAM multiplier; clients provide only CPU flavor and vCPU count. CPU pods support container disk, network volumes, and a global volume; `mounts.persistent` is invalid when `cpu` is set. `image` is required unless `templateId` is set.
         - `name` (required; string; minimum length: `1`)
         - `cloud` (default: `SECURE`): Cloud tier. Defaults to `SECURE` when omitted.
@@ -151,6 +151,25 @@ request rather than as absent capacity.
         - `startJupyter` (boolean; default: `false`): Create-time flag telling the provisioner to start JupyterLab: injects a generated `JUPYTER_PASSWORD` environment variable, unless the request already sets one. Only images that honor the convention start Jupyter from it (Runpod official images do); expose `8888/http` in `ports` to reach it. Not part of the pod's readable config — never returned by GET and not changeable by PATCH.
         - `startSsh` (boolean; default: `false`): Create-time flag telling the provisioner to set up SSH access: injects a `PUBLIC_KEY` environment variable carrying your account's registered SSH public keys, unless the request already sets one. **Requires registered keys** (`PUT /v2/account/ssh-keys`); with none registered the flag does nothing and the pod has no SSH access. Only images that honor the convention start sshd from it (all Runpod official images do). Connect using the pod's `ssh` block; the `ssh.direct` variant additionally needs a `22/tcp` entry in `ports`. Not part of the pod's readable config — never returned by GET and not changeable by PATCH.
         - `templateId` (string; minimum length: `1`): ID of a pod template to base this pod on. The template is resolved at create time into the same container settings you could otherwise spread into this body (image, args, disk, ports, env, registry, persistent mount, startSsh, startJupyter, allowedCudaVersions); explicit body fields override the template's, except `env`, which is merged per key with body values winning. Sending either CUDA field (`gpu.allowedCudaVersions` or `gpu.minCudaVersion`) replaces the template's CUDA constraint entirely, and CPU pods ignore it (like the persistent mount). The template is a one-time source of settings: later template edits do not affect the pod, and the created pod does not retain a link to the template (`template` stays null). The template may be one of your own or a public catalog template — see `GET /v2/catalog/templates` (unknown or inaccessible ID → 404) — and must not be a serverless template (→ 422). CPU pods do not inherit a template's persistent mount.
+        - `queue` (object): Queue the pod for deploy-when-available instead of failing when the requested GPU has no capacity. The create call still tries to deploy first; only a capacity failure queues the request, and any other failure is returned as it would be without `queue`. A queued pod is placed by a scheduler that retries about every five minutes, in plan priority order, during `allowedHours`, until `expiresAt`. An empty object queues with the defaults. GPU pods on the secure cloud only: `queue` with `cpu` or `globalNetworking` is rejected with `400`. A plan without deploy-when-available is refused with `403`, and one whose queue is full with `409`. A request that matches a pod still queued (same GPU type and count, same settings) returns that queued pod rather than a second one.
+          - `startsAt` (string; format: date-time): Begin waiting at this future time instead of now. The create call then does not try to deploy first; the pod is queued at once. A time already past is a `400`.
+          - `expiresAt` (string; format: date-time): Stop waiting at this time; the queued pod then reports `EXPIRED`. Defaults to, and is capped at, 30 days after `startsAt` (or after the request when `startsAt` is omitted). A time already past, or one not after `startsAt`, is a `400`.
+          - `allowedHours` (object): Hours of the day, in UTC, during which the queued pod may deploy, per weekday. Omit the object to allow any time. A weekday that is omitted is unrestricted; an empty array blocks that whole day. Each entry is an hour from 0 to 23 and allows deploys from that hour to the next.
+            - `monday` (array)
+              - `items` (integer; minimum: `0`; maximum: `23`)
+            - `tuesday` (array)
+              - `items` (integer; minimum: `0`; maximum: `23`)
+            - `wednesday` (array)
+              - `items` (integer; minimum: `0`; maximum: `23`)
+            - `thursday` (array)
+              - `items` (integer; minimum: `0`; maximum: `23`)
+            - `friday` (array)
+              - `items` (integer; minimum: `0`; maximum: `23`)
+            - `saturday` (array)
+              - `items` (integer; minimum: `0`; maximum: `23`)
+            - `sunday` (array)
+              - `items` (integer; minimum: `0`; maximum: `23`)
+          - `notifyEmail` (string; format: email): Also email this address when the pod deploys, or when the queued pod fails or expires. Must be an address on your account (`422` otherwise).
   - Example `gpuPod`: `{"name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","gpu":{"id":"NVIDIA GeForce RTX 4090","count":1,"minRamPerGpu":32,"minVcpuCountPerGpu":8},"disk":50}`
 
 **Responses**
@@ -161,9 +180,9 @@ request rather than as absent capacity.
   - Media type: `application/json`
     - Schema
       - allOf:
-        - `variant 1`: Reusable container configuration shared across templates, pods, and serverless endpoints. Adding a field here automatically propagates to all three resources.
+        - `variant 1`: Reusable container configuration shared across templates, pods, serverless endpoints, and clusters. Adding a field here automatically propagates to all of them.
           - allOf:
-            - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
+            - `variant 1` (object): Container configuration universal to every containerized resource. ContainerConfig composes it and adds `registry`; resources compose ContainerConfig.
               - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
               - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
                 - `items` (string)
@@ -176,7 +195,7 @@ request rather than as absent capacity.
               - `ports` (array): Exposed ports, formatted as port/protocol
                 - `items` (string)
             - `variant 2` (object)
-              - `registry` (nullable): Container registry credential ID (for private images)
+              - `registry` (nullable): Container registry credential ID for a private image: one of your credentials from `/v2/registries`. Leave it unset for a private Amazon ECR image. Runpod pulls those with an ECR delegation (`/v2/registries/delegations`) matched to the image's account, region and repository at pull time, so there is no delegation ID to pass here (a delegation ID is not a credential ID). A credential set here is used instead of any delegation.
         - `variant 2` (object)
           - `costCenter`: Cost center this resource's spend is attributed to. Absent when the resource is not attributed to a cost center, or when the caller lacks permission to view cost centers. Managed through `/v2/cost-centers`.
             - allOf:
@@ -291,6 +310,53 @@ request rather than as absent capacity.
           - `createdAt` (required; string; format: date-time)
           - `startedAt` (required; format: date-time; nullable)
     - Example `pod`: `{"id":"7h9k2m4n6p","name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":50,"ports":["8888/http","22/tcp"],"env":{"MODEL_NAME":"llama-3"},"registry":null,"status":"PROVISIONING","actions":["start","terminate"],"mounts":{"persistent":{"size":20,"path":"/workspace"}},"gpu":{"id":"NVIDIA GeForce RTX 4090","count":1,"vcpuCount":16,"memory":64},"cloud":"SECURE","dataCenterId":"US-KS-2","cudaVersion":"12.8","ssh":{"proxy":{"host":"ssh.runpod.io","port":22,"username":"7h9k2m4n6p-64411eb2","command":"ssh 7h9k2m4n6p-64411eb2@ssh.runpod.io"},"direct":null},"template":"9x4m2p7v","cost":0.44,"locked":false,"globalNetworking":{"enabled":false},"runtime":null,"createdAt":"2026-06-01T12:00:00Z","startedAt":null}`
+- `202`: Queued. The request carried `queue` and the GPU had no capacity (or `queue.startsAt` is in the future), so no pod exists yet. The body is the queued pod; poll `Location` until its `status` leaves `QUEUED`, or cancel it with `DELETE /v2/queued-pods/{id}`.
+  - Header `Location` (string): Where to read the queued pod (`GET /v2/queued-pods/{id}`).
+  - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
+  - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
+  - Media type: `application/json`
+    - Schema (object): A pod waiting for capacity, or the record of one that waited. It carries what identifies and schedules the request; the full container settings are not echoed back, keep your create request.
+      - `id` (required; string)
+      - `status` (required; string; enum: `QUEUED`, `DEPLOYED`, `FAILED`, `EXPIRED`, `CANCELLED`): Where a queued pod is in its life. - `QUEUED` — waiting for capacity (from `queue.startsAt` when set) - `DEPLOYED` — capacity came and a pod was created; `podId` names it - `FAILED` — capacity came but the deploy was refused for good; `failureReason` says why - `EXPIRED` — `queue.expiresAt` passed without capacity - `CANCELLED` — cancelled with `DELETE /v2/queued-pods/{id}`
+      - `podId` (required; nullable): The pod created once capacity came; null until then. Read it with `GET /v2/pods/{id}`.
+      - `failureReason` (required): Set only when `status` is `FAILED`.
+        - anyOf:
+          - `variant 1` (string; enum: `INSUFFICIENT_BALANCE`, `SPENDING_LIMIT`, `GPU_QUOTA_EXCEEDED`, `GPU_CONCURRENCY_EXCEEDED`, `ORG_RESTRICTED`, `UNKNOWN`): Why a `FAILED` queued pod could not deploy once capacity came. - `INSUFFICIENT_BALANCE` — the account balance was too low - `SPENDING_LIMIT` — the deploy would have passed the spending limit - `GPU_QUOTA_EXCEEDED` — the account's quota for this GPU type was reached - `GPU_CONCURRENCY_EXCEEDED` — the plan's concurrent GPU cap was reached - `ORG_RESTRICTED` — the account joined an organization, which cannot use queued deploys - `UNKNOWN` — anything else; contact support
+          - `variant 2` (null)
+      - `name` (required; string): The name the pod will carry.
+      - `image` (required; nullable): The image the pod will run. Null when it comes from `templateId` at deploy time.
+      - `templateId` (required; nullable): The template the scheduler resolves at deploy time. Null for queued pods from this API, which expands `templateId` into `image` when the request is made.
+      - `gpu` (required; object)
+        - `id` (required; string): GPU type identifier
+        - `count` (integer; default: `1`; minimum: `1`; maximum: `1024`): Number of GPUs
+      - `cloud` (required; string; enum: `SECURE`, `COMMUNITY`): Cloud tier. - `SECURE` — Runpod-owned datacenter hardware - `COMMUNITY` — community-hosted hardware
+      - `dataCenterIds` (required; array): The data centers the deploy is limited to; empty when any will do.
+        - `items` (string)
+      - `queue` (required; object): The `queue` options as stored, with the defaults applied.
+        - `startsAt` (required; format: date-time; nullable): When waiting begins. Null when it began with the request.
+        - `expiresAt` (required; string; format: date-time): When waiting ends.
+        - `allowedHours` (required): Null when any hour is allowed.
+          - anyOf:
+            - `variant 1` (object): Hours of the day, in UTC, during which the queued pod may deploy, per weekday. Omit the object to allow any time. A weekday that is omitted is unrestricted; an empty array blocks that whole day. Each entry is an hour from 0 to 23 and allows deploys from that hour to the next.
+              - `monday` (array)
+                - `items` (integer; minimum: `0`; maximum: `23`)
+              - `tuesday` (array)
+                - `items` (integer; minimum: `0`; maximum: `23`)
+              - `wednesday` (array)
+                - `items` (integer; minimum: `0`; maximum: `23`)
+              - `thursday` (array)
+                - `items` (integer; minimum: `0`; maximum: `23`)
+              - `friday` (array)
+                - `items` (integer; minimum: `0`; maximum: `23`)
+              - `saturday` (array)
+                - `items` (integer; minimum: `0`; maximum: `23`)
+              - `sunday` (array)
+                - `items` (integer; minimum: `0`; maximum: `23`)
+            - `variant 2` (null)
+        - `notifyEmail` (required; format: email; nullable): Null when no email was asked for.
+      - `createdAt` (required; string; format: date-time)
+      - `resolvedAt` (required; format: date-time; nullable): When the queued pod deployed, failed or expired. Null while it waits, and after a cancel.
+    - Example `queuedPod`: `{"id":"clz1x9k4a0000qw3h8s7d2f1g","status":"QUEUED","podId":null,"failureReason":null,"name":"pytorch-training","image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","templateId":null,"gpu":{"id":"NVIDIA GeForce RTX 4090","count":1},"cloud":"SECURE","dataCenterIds":["EU-RO-1"],"queue":{"startsAt":null,"expiresAt":"2026-07-01T12:00:00Z","allowedHours":null,"notifyEmail":null},"createdAt":"2026-06-01T12:00:00Z","resolvedAt":null}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
   - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
   - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
@@ -333,6 +399,14 @@ request rather than as absent capacity.
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
     - Example `notFound`: `{"title":"Not Found","status":404,"detail":"resource not found"}`
+- `409`: The request carried `queue`, but the account already has as many queued pods as its plan allows. Cancel a queued pod or upgrade the plan.
+  - Media type: `application/problem+json`
+    - Schema (object)
+      - `title` (required; string): Short human-readable summary
+      - `status` (required; integer): HTTP status code
+      - `detail` (required; string): Human-readable explanation
+      - `errors` (array): Individual request-validation failures.
+        - `items` (string)
 - `413`: The incoming request body, or the request it expands into, exceeds the 102400 byte limit or is rejected as too large.
   - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
   - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.

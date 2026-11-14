@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/cluster.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/cluster.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/cluster.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/cluster.md)
 
 Cluster mode in VictoriaLogs provides horizontal scaling to many nodes when [single-node VictoriaLogs](https://docs.victoriametrics.com/victorialogs/)
 reaches vertical scalability limits of a single host. If you have the ability to run a single-node VictoriaLogs on a host with more CPU / RAM / storage space / storage IO,
@@ -104,7 +104,7 @@ while queries return full responses from the remaining AZ. When the AZ becomes a
 can be used for querying full responses. This HA scheme can be built with the help of [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/)
 for data replication and buffering, and [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) for data querying:
 
-![cluster-ha.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/cluster-ha.webp)
+![cluster-ha.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/cluster-ha.webp)
 
 - [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/) receives and replicates logs to two VictoriaLogs clusters.
   If one cluster becomes unavailable, then the `vlagent` continues sending logs to the remaining healthy cluster. It also buffers logs that cannot be delivered to the unavailable cluster.
@@ -288,8 +288,8 @@ If you want running VictoriaLogs cluster in Kubernetes, then please read [these 
 Download and unpack the latest VictoriaLogs release:
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.52.0/victoria-logs-linux-amd64-v1.52.0.tar.gz
-tar xzf victoria-logs-linux-amd64-v1.52.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.53.0/victoria-logs-linux-amd64-v1.53.0.tar.gz
+tar xzf victoria-logs-linux-amd64-v1.53.0.tar.gz
 ```
 
 Start the first [`vlstorage` node](https://docs.victoriametrics.com/victorialogs/cluster/#architecture), which accepts incoming requests at the port `9491`

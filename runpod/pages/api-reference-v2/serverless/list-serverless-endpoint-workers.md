@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/list-serverless-endpoint-workers.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/api-reference-v2/serverless/list-serverless-endpoint-workers.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/list-serverless-endpoint-workers.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference-v2/serverless/list-serverless-endpoint-workers.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/list-serverless-endpoint-workers
 
 # List Serverless Endpoint Workers
@@ -40,7 +40,7 @@ counts fall back to pod lifecycle alone.
     - Schema (object)
       - `workers` (required; array)
         - `items` (object)
-          - `id` (required; string)
+          - `id` (required; string): Identifier of the pod backing this worker. Each worker is one pod, so there is no separate pod identifier.
           - `status` (required; string; enum: `RUNNING`, `IDLE`, `INITIALIZING`, `THROTTLED`, `UNHEALTHY`): Derived worker state, reconciled from the worker pod's lifecycle status and the live job-queue view. - `RUNNING` — actively processing a job - `IDLE` — ready and polling for jobs - `INITIALIZING` — starting up, not yet ready - `THROTTLED` — waiting on compute capacity - `UNHEALTHY` — failing health checks
           - `isStale` (required; boolean): True when the worker is running an older endpoint configuration than the current one (e.g. mid rolling-update). This is the authoritative flag: it is derived from `version` vs the response's `endpointVersion`, except on legacy endpoints (`endpointVersion` 1) where it falls back to a container-image comparison.
           - `version` (nullable): Endpoint configuration version this worker is running. Compare with the response's `endpointVersion`. Null if unknown.

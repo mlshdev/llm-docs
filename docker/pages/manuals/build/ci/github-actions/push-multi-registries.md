@@ -1,6 +1,49 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/push-multi-registries.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/push-multi-registries.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/push-multi-registries.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/push-multi-registries.md)
 
 # Push to multiple registries with GitHub Actions
+
+Use [Docker GitHub Builder](https://docs.docker.com/build/ci/github-actions/build-workflow/) to publish to multiple
+registries. List the image names in `meta-images` and credentials in the
+`registry-auths` secret. This example publishes `latest` and `1.0.0` tags to
+Docker Hub and GitHub Container Registry:
+
+```yaml
+name: ci
+
+on:
+  push:
+
+jobs:
+  build:
+    uses: docker/github-builder/.github/workflows/build.yml@v1
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
+    with:
+      output: image
+      push: true
+      platforms: linux/amd64,linux/arm64
+      meta-tags: |
+        type=raw,value=latest
+        type=raw,value=1.0.0
+      meta-images: |
+        user/app
+        ghcr.io/user/app
+    secrets:
+      registry-auths: |
+        - registry: docker.io
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        - registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+```
+
+Replace the image names with repositories you can push to. The
+`packages: write` permission authorizes publishing to GitHub Container Registry.
+
+## Push with individual actions
 
 The following workflow will connect you to Docker Hub and GitHub Container
 Registry, and push the image to both registries:
@@ -13,6 +56,9 @@ on:
 
 jobs:
   docker:
+    permissions:
+      contents: read
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Login to Docker Hub

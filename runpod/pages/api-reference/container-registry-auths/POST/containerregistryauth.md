@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference/container-registry-auths/POST/containerregistryauth.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/api-reference/container-registry-auths/POST/containerregistryauth.mdx)
+> Pinned source for Runpod main: [api-reference/container-registry-auths/POST/containerregistryauth.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference/container-registry-auths/POST/containerregistryauth.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference/container-registry-auths/POST/containerregistryauth
 
 # Create a new container registry auth

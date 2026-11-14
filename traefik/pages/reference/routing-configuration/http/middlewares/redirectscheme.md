@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md)
+> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md)
 
 The `RedirectScheme` middleware redirects the request if the request scheme is different from the configured scheme.
 

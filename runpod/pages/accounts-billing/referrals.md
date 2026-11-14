@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/referrals.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/accounts-billing/referrals.mdx)
+> Pinned source for Runpod main: [accounts-billing/referrals.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/accounts-billing/referrals.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/referrals
 
 # Referral, affiliate, and creator programs

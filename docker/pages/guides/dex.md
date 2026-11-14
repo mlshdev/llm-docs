@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/guides/dex.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/guides/dex.md)
+> Pinned source for Docker main: [content/guides/dex.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/guides/dex.md)
 
 Dex is an open-source OpenID Connect (OIDC) and OAuth 2.0 identity provider that can be configured to authenticate against various backend identity providers, such as LDAP, SAML, and OAuth. Running Dex in a Docker container allows developers to simulate an OAuth 2.0 server for testing and development purposes. This guide will walk you through setting up Dex as an OAuth mock server using Docker containers.
 

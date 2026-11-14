@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/pricing.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/pods/pricing.mdx)
+> Pinned source for Runpod main: [pods/pricing.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/pods/pricing.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/pricing
 
 # Pricing

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_convert.yaml](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_convert.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_convert.yaml](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_convert.yaml)
 
 # docker compose convert
 

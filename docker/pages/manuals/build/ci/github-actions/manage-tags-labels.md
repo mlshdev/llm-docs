@@ -1,6 +1,64 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/manage-tags-labels.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/manage-tags-labels.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/manage-tags-labels.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/manage-tags-labels.md)
 
 # Manage tags and labels with GitHub Actions
+
+Use [Docker GitHub Builder](https://docs.docker.com/build/ci/github-actions/build-workflow/) to generate tags and OCI
+labels from GitHub events. Set `meta-images` and `meta-tags` to configure the
+metadata action, and `set-meta-labels: true` to apply the generated labels.
+This workflow publishes to Docker Hub and GitHub Container Registry on push
+and scheduled events, and builds without publishing on pull requests:
+
+```yaml
+name: ci
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*.*.*"
+  pull_request:
+
+jobs:
+  build:
+    uses: docker/github-builder/.github/workflows/build.yml@v1
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
+    with:
+      output: image
+      push: ${{ github.event_name != 'pull_request' }}
+      set-meta-labels: true
+      meta-tags: |
+        type=schedule
+        type=ref,event=branch
+        type=ref,event=pr
+        type=semver,pattern={{version}}
+        type=semver,pattern={{major}}.{{minor}}
+        type=semver,pattern={{major}}
+        type=sha
+      meta-images: |
+        name/app
+        ghcr.io/username/app
+    secrets:
+      registry-auths: |
+        - registry: docker.io
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        - registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+```
+
+Replace the image names with repositories you can push to. The
+`packages: write` permission authorizes publishing to GitHub Container Registry.
+GitHub Builder skips registry login and signing when `push` is false, so fork pull
+requests don't need registry secrets.
+
+## Generate metadata with individual actions
 
 If you want an "automatic" tag management and [OCI Image Format Specification](https://github.com/opencontainers/image-spec/blob/master/annotations.md)
 for labels, you can do it in a dedicated setup step. The following workflow

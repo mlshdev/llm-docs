@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/organization/create-a-group-in-your-current-organization.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/api-reference-v2/organization/create-a-group-in-your-current-organization.mdx)
+> Pinned source for Runpod main: [api-reference-v2/organization/create-a-group-in-your-current-organization.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference-v2/organization/create-a-group-in-your-current-organization.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/organization/create-a-group-in-your-current-organization
 
 # Create A Group In Your Current Organization

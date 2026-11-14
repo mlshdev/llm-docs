@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/vmalert.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vmalert.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/vmalert.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/vmalert.md)
 
 [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/) integrates with VictoriaLogs via stats APIs [`/select/logsql/stats_query`](https://docs.victoriametrics.com/victorialogs/querying/#querying-log-stats)
 and [`/select/logsql/stats_query_range`](https://docs.victoriametrics.com/victorialogs/querying/#querying-log-range-stats).
@@ -28,7 +28,7 @@ Each `-rule` file may contain an arbitrary number of [groups](https://docs.victo
 See examples in the [Groups](https://docs.victoriametrics.com/victorialogs/vmalert/#groups) section. See the full list of configuration flags and their descriptions in the [Configuration](https://docs.victoriametrics.com/victorialogs/vmalert/#configuration) section.
 
 With the configuration example above, vmalert will perform the following interactions:
-![vmalert](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vmalert_victorialogs.webp)
+![vmalert](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/vmalert_victorialogs.webp)
 
 1. Rules listed in the `-rule` file are executed against the VictoriaLogs service configured via `-datasource.url`.
 2. Triggered alerting notifications are sent to the [Alertmanager](https://github.com/prometheus/alertmanager) service configured via `-notifier.url`.

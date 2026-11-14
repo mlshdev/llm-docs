@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/github-builder/bake.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/github-builder/bake.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/bake-workflow.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/bake-workflow.md)
 
 # Bake with Docker GitHub Builder
 
@@ -57,7 +57,7 @@ The workflow validates the definition before the build starts and resolves
 the target from the files you pass in `files`. Runner selection uses the same
 `runner` input as the Build workflow. Set a single GitHub-hosted Linux runner
 label or a platform mapping when the default mapping is not enough. For details,
-see [runner selection](https://docs.docker.com/build/ci/github-actions/github-builder/architecture/#runner-selection).
+see [runner selection](https://docs.docker.com/build/ci/github-actions/github-builder-architecture/#runner-selection).
 
 ## Override target values and variables
 
@@ -140,6 +140,6 @@ jobs:
 
 With `output: local`, the workflow injects the matching local output override
 into the Bake run and merges the uploaded artifacts after the per-platform
-builds finish. If you need a manual Bake pattern that stays in a normal job,
-see [Multi-platform image](https://docs.docker.com/build/ci/github-actions/multi-platform/). If your build does not need a
-Bake definition, use [build.yml](https://docs.docker.com/build/ci/github-actions/github-builder/build/) instead.
+builds finish. For a Bake pattern that stays in a normal job,
+see [Annotations with individual actions](https://docs.docker.com/build/ci/github-actions/annotations/#add-annotations-with-individual-actions). If your build does not need a
+Bake definition, use [build.yml](https://docs.docker.com/build/ci/github-actions/build-workflow/) instead.

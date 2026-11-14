@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/create-a-cluster.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/api-reference-v2/clusters/create-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/create-a-cluster.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference-v2/clusters/create-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/create-a-cluster
 
 # Create A Cluster
@@ -20,26 +20,30 @@ from a template response.
 - Media type: `application/json`
   - Schema
     - allOf:
-      - `variant 1` (object): Container configuration universal to every containerized resource. Compose ContainerConfig instead unless the resource cannot support a direct registry credential (clusters — there the registry credential arrives via a pod template, see CreateClusterRequest.templateId).
-        - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
-        - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
-          - `items` (string)
-        - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
-          - `items` (string)
-        - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
-        - `env` (object): Environment variables as key-value pairs
-          - `additional properties` (string)
-        - `image` (string): Docker image reference
-        - `ports` (array): Exposed ports, formatted as port/protocol
-          - `items` (string)
-      - `variant 2` (object): Request body for creating a cluster. `compute` defines the homogeneous pod shape; the container configuration (image, env, ports, …) applies to every pod. Pass `templateId` to provision every member pod from a pod template instead of inline container fields — the template also supplies the container registry credential, the only private-image path for clusters (a bare `registry` property on this body is rejected).
+      - `variant 1`: Reusable container configuration shared across templates, pods, serverless endpoints, and clusters. Adding a field here automatically propagates to all of them.
+        - allOf:
+          - `variant 1` (object): Container configuration universal to every containerized resource. ContainerConfig composes it and adds `registry`; resources compose ContainerConfig.
+            - `args` (string): The container's command, as a single raw string. This is the field `entrypoint` and `cmd` encode into, exposed in its stored form. Two shapes are accepted. A bare shell string is treated as CMD and split into arguments, which is what the console's "Container start command" field writes. A JSON object of the form `{"entrypoint":[...],"cmd":[...]}` sets either or both explicitly. Responses always return both representations: `args` exactly as stored, plus the deconstructed `entrypoint` and `cmd`. Supplying `args` together with `entrypoint` or `cmd` is allowed only when they describe the same command, so a read-modify-write client can send back everything it received. Send `""` to clear, omit to leave unchanged.
+            - `cmd` (array): Container CMD in exec form. When the image defines an ENTRYPOINT, this is the argument list passed to it. Encoded into the `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+              - `items` (string)
+            - `entrypoint` (array): Container ENTRYPOINT in exec form, overriding the image's own. Encoded into `args` field; supplying both is allowed only when they describe the same command. Send `[]` to clear, omit to leave unchanged.
+              - `items` (string)
+            - `disk` (integer; minimum: `1`): Container disk in GB (ephemeral, wiped on restart)
+            - `env` (object): Environment variables as key-value pairs
+              - `additional properties` (string)
+            - `image` (string): Docker image reference
+            - `ports` (array): Exposed ports, formatted as port/protocol
+              - `items` (string)
+          - `variant 2` (object)
+            - `registry` (nullable): Container registry credential ID for a private image: one of your credentials from `/v2/registries`. Leave it unset for a private Amazon ECR image. Runpod pulls those with an ECR delegation (`/v2/registries/delegations`) matched to the image's account, region and repository at pull time, so there is no delegation ID to pass here (a delegation ID is not a credential ID). A credential set here is used instead of any delegation.
+      - `variant 2` (object): Request body for creating a cluster. `compute` defines the homogeneous pod shape; the container configuration (image, env, ports, registry, …) applies to every pod. Pass `templateId` to provision every member pod from a pod template instead of inline container fields. For a private image, pass `registry` (one of your credentials from `/v2/registries`); it is attached to every member pod, and an ID that does not exist or is not yours is a 400.
         - `compute` (required; object): The homogeneous compute shape of a cluster. Every pod in the cluster is identical: `podCount` pods, each with `gpuCountPerPod` GPUs of type `gpuTypeId`. Total GPUs = `podCount` \* `gpuCountPerPod`.
           - `gpuTypeId` (required; string; minimum length: `1`): GPU type for every pod in the cluster, as returned by GET /v2/catalog/gpus.
           - `gpuCountPerPod` (required; integer; minimum: `1`): Number of GPUs on each pod. Bounded above by the GPU type's per-cloud maximum (GpuType.maxCount); values beyond it are rejected.
           - `podCount` (required; integer; minimum: `2`; maximum: `250`): Number of pods (nodes) in the cluster.
         - `name` (required; string; minimum length: `1`)
         - `type` (required; string; enum: `APPLICATION`, `TRAINING`, `SLURM`, `RAY`): Cluster type. TRAINING is the generic distributed-training cluster; SLURM provisions a managed Slurm controller/compute topology; RAY provisions a managed Ray head/worker topology; APPLICATION is a general multi-node application cluster.
-        - `templateId` (string; minimum length: `1`): ID of a pod template to provision every member pod from. The template supplies the container settings (image, args, disk, env, ports) and the container registry credential for private images — the only private-image path for clusters. Mutually exclusive with `image`, `args`, `entrypoint`, `cmd`, `disk`, `env`, and `ports` (rejected with 400). `mounts` combines with it: the volume in `mounts` is attached to every member pod, overriding the template's volume settings. The cluster retains the link: the `template` response field is set. Must be a non-serverless pod template accessible to the caller.
+        - `templateId` (string; minimum length: `1`): ID of a pod template to provision every member pod from. The template supplies the container settings (image, args, disk, env, ports) and the container registry credential for private images. Mutually exclusive with `image`, `args`, `entrypoint`, `cmd`, `disk`, `env`, and `ports` (rejected with 400). `registry` combines with it: an explicit `registry` overrides the template's credential; omit it (or send `null` or an empty string) to use the template's. `mounts` combines with it too: the volume in `mounts` is attached to every member pod, overriding the template's volume settings. The cluster retains the link: the `template` response field is set. Must be a non-serverless pod template accessible to the caller.
         - `dataCenterIds` (array): Preferred data centers for placement. Omit or pass an empty array to let the scheduler choose. A cluster is always placed within a single data center.
           - Example: `["US-TX-3"]`
           - `items` (string)

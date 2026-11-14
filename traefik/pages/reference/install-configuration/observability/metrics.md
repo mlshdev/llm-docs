@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/install-configuration/observability/metrics.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/install-configuration/observability/metrics.md)
+> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/observability/metrics.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/observability/metrics.md)
 
 # Metrics
 
@@ -193,7 +193,7 @@ metrics:
 ```toml
 [metrics]
   [metrics.influxDB2]
-    address: http://localhost:8086
+    address = "http://localhost:8086"
 ```
 
 **CLI**
@@ -240,11 +240,7 @@ metrics:
 ```toml
 [metrics]
   [metrics.prometheus]
-    [metrics.prometheus.buckets]
-      - 0.1
-      - 0.3
-      - 1.2
-      - 5.0
+    buckets = [0.1, 0.3, 1.2, 5.0]
 ```
 
 **CLI**
@@ -329,7 +325,7 @@ metrics:
 ```toml
 [metrics]
   [metrics.statsD]
-    address: localhost:8125
+    address = "localhost:8125"
 ```
 
 **CLI**
@@ -346,8 +342,8 @@ metrics:
 | <a id="opt-metrics-statsD-addEntryPointsLabels"></a>`metrics.statsD.addEntryPointsLabels` | Enable metrics on entry points.                                       | true             | No       |
 | <a id="opt-metrics-statsD-addRoutersLabels"></a>`metrics.statsD.addRoutersLabels`         | Enable metrics on routers.                                            | false            | No       |
 | <a id="opt-metrics-statsD-addServicesLabels"></a>`metrics.statsD.addServicesLabels`       | Enable metrics on services.                                           | true             | No       |
-| <a id="opt-metrics-statsD-pushInterval"></a>`metrics.statsD.pushInterval`                 | The interval used by the exporter to push metrics to DataDog server.  | 10s              | No       |
-| <a id="opt-metrics-statsD-address"></a>`metrics.statsD.address`                           | Address instructs exporter to send metrics to statsd at this address. | "127.0.0.1:8125" | Yes      |
+| <a id="opt-metrics-statsD-pushInterval"></a>`metrics.statsD.pushInterval`                 | The interval used by the exporter to push metrics to StatsD server.   | 10s              | No       |
+| <a id="opt-metrics-statsD-address"></a>`metrics.statsD.address`                           | Address instructs exporter to send metrics to statsd at this address. | "localhost:8125" | Yes      |
 | <a id="opt-metrics-statsD-prefix"></a>`metrics.statsD.prefix`                             | The prefix to use for metrics collection.                             | "traefik"        | No       |
 
 ## Metrics Provided

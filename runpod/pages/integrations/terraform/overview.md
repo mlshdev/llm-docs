@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [integrations/terraform/overview.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/integrations/terraform/overview.mdx)
+> Pinned source for Runpod main: [integrations/terraform/overview.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/integrations/terraform/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/integrations/terraform/overview
 
 # Manage Runpod infrastructure with Terraform
@@ -170,3 +170,11 @@ The `graphql_url` argument (fallback `RUNPOD_GRAPHQL_URL`) applies only to the G
 - Browse the [provider reference](https://registry.terraform.io/providers/runpod/runpod/latest/docs) for every resource and data source.
 - Learn about [Pod configuration options](https://docs.runpod.io/pods/overview) that map to `runpod_pod` arguments.
 - Deploy a [Serverless endpoint](https://docs.runpod.io/serverless/overview) and manage it with `runpod_serverless_endpoint`.
+
+## Share feedback
+
+Found a bug, a missing resource, or a mistake in these docs? Tell the team that builds the provider. It takes under a minute.
+
+Share Terraform feedback
+
+To discuss an issue in public, [open an issue on GitHub](https://github.com/runpod/terraform-provider-runpod/issues) instead.

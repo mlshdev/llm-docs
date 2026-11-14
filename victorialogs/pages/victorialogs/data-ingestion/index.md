@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/data-ingestion/_index.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/_index.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/data-ingestion/_index.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/data-ingestion/_index.md)
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) and [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/)
 can accept logs from the following log collectors:

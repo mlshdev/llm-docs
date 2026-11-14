@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/subscription-billing/manage/3d-secure.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/subscription-billing/manage/3d-secure.md)
+> Pinned source for Docker main: [content/manuals/subscription-billing/manage/3d-secure.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/subscription-billing/manage/3d-secure.md)
 
 # Use 3D Secure authentication for Docker billing
 

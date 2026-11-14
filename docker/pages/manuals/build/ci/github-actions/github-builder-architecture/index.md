@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/github-builder/architecture.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/github-builder/architecture.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/github-builder-architecture/index.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/github-builder-architecture/index.md)
 
 # Docker GitHub Builder architecture
 
@@ -10,13 +10,13 @@ owns the build implementation itself. That split keeps repository workflows
 short while centralizing BuildKit, caching, provenance, SBOM generation,
 signing, and multi-platform assembly in one Docker-maintained path.
 
-![GitHub Builder overview](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/github-builder/images/architecture-overview.png)
+![GitHub Builder overview](https://raw.githubusercontent.com/docker/docs/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/github-builder-architecture/images/architecture-overview.png)
 
 ## Core architecture
 
-A caller workflow invokes either [`build.yml`](https://docs.docker.com/build/ci/github-actions/github-builder/build/) or [`bake.yml`](https://docs.docker.com/build/ci/github-actions/github-builder/bake/).
-[`build.yml`](https://docs.docker.com/build/ci/github-actions/github-builder/build/) is the entrypoint for Dockerfile-oriented builds.
-[`bake.yml`](https://docs.docker.com/build/ci/github-actions/github-builder/bake/) is the entrypoint for Bake-oriented builds, where the
+A caller workflow invokes either [`build.yml`](https://docs.docker.com/build/ci/github-actions/build-workflow/) or [`bake.yml`](https://docs.docker.com/build/ci/github-actions/bake-workflow/).
+[`build.yml`](https://docs.docker.com/build/ci/github-actions/build-workflow/) is the entrypoint for Dockerfile-oriented builds.
+[`bake.yml`](https://docs.docker.com/build/ci/github-actions/bake-workflow/) is the entrypoint for Bake-oriented builds, where the
 Bake definition remains the source of truth for targets and overrides. In both
 cases the caller still owns repository policy, including triggers, branch
 conditions, permissions, secrets, target selection, metadata inputs, and the
@@ -43,14 +43,8 @@ conceptual platform jobs:
 The `runner` input accepts either a single GitHub-hosted Linux runner label or a
 newline-delimited platform mapping.
 
-The default value is a platform mapping that uses GitHub-hosted Ubuntu runners:
-
-```yaml
-runner: |
-  default=ubuntu-24.04
-  linux/arm=ubuntu-24.04-arm
-  linux/arm64=ubuntu-24.04-arm
-```
+For the default mapping, see
+[Runner mapping](https://github.com/docker/github-builder#runner-mapping).
 
 In the platform job, the runner label resolves to a single value:
 
@@ -80,7 +74,7 @@ deprecation warnings. Use an explicit runner label or platform mapping instead.
 
 ## Execution path
 
-![GitHub Builder execution flow](https://raw.githubusercontent.com/docker/docs/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/github-builder/images/execution-flow.png)
+![GitHub Builder execution flow](https://raw.githubusercontent.com/docker/docs/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/github-builder-architecture/images/execution-flow.png)
 
 The execution path stays short on purpose. The consuming repository calls the
 reusable workflow. The reusable workflow prepares the build, runs the
@@ -92,13 +86,13 @@ BuildKit, caching, or manifest assembly were wired together.
 
 ## The two reusable entrypoints
 
-[`build.yml`](https://docs.docker.com/build/ci/github-actions/github-builder/build/) is the better fit when the build is already expressed as
+[`build.yml`](https://docs.docker.com/build/ci/github-actions/build-workflow/) is the better fit when the build is already expressed as
 a Dockerfile-oriented workflow. It lines up naturally with concepts such as
 `context`, `file`, `target`, `build-args`, `labels`, `annotations`, and
 `platforms`. This is the entrypoint that feels closest to
 `docker/build-push-action`, except the workflow implementation is centralized.
 
-[`bake.yml`](https://docs.docker.com/build/ci/github-actions/github-builder/bake/) is the better fit when the repository already uses Bake
+[`bake.yml`](https://docs.docker.com/build/ci/github-actions/bake-workflow/) is the better fit when the repository already uses Bake
 as the build definition. It preserves the Bake model, including target
 resolution, `files`, `set`, and `vars`, while still routing execution through
 the same Docker-maintained build path. One important architectural detail is
@@ -120,7 +114,7 @@ selection and per-platform assembly.
 ### Dockerfile-oriented image build
 
 The following example shows the shape of a multi-platform image build driven
-by [`build.yml`](https://docs.docker.com/build/ci/github-actions/github-builder/build/).
+by [`build.yml`](https://docs.docker.com/build/ci/github-actions/build-workflow/).
 
 ```yaml
 name: ci

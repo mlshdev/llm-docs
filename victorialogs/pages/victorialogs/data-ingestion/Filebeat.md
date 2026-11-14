@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/data-ingestion/Filebeat.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/data-ingestion/Filebeat.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/data-ingestion/Filebeat.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/data-ingestion/Filebeat.md)
 
 *Tested with filebeat [8.15.1+](https://www.elastic.co/guide/en/beats/libbeat/8.17/release-notes-8.15.1.html).*
 

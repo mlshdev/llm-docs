@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [community-solutions/ssh-password-migration/overview.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/community-solutions/ssh-password-migration/overview.mdx)
+> Pinned source for Runpod main: [community-solutions/ssh-password-migration/overview.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/community-solutions/ssh-password-migration/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/community-solutions/ssh-password-migration/overview
 
 # SSH password setup & migration tools

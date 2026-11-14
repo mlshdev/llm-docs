@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.18: [docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md](https://github.com/traefik/traefik/blob/89e11274ead687094b871f8a4a75e90603773ef5/docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md)
+> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md)
 
 A `TraefikService` is a custom resource that sits on top of the Kubernetes Services. It enables advanced load-balancing features such as a [Weighted Round Robin](#weighted-round-robin) load balancing, a [Highest Random Weight](#highest-random-weight) load balancing, a [Mirroring](#mirroring), or a [Failover](#failover) between your Kubernetes Services.
 

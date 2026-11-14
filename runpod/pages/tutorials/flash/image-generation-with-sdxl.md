@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/flash/image-generation-with-sdxl.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/tutorials/flash/image-generation-with-sdxl.mdx)
+> Pinned source for Runpod main: [tutorials/flash/image-generation-with-sdxl.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/tutorials/flash/image-generation-with-sdxl.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/flash/image-generation-with-sdxl
 
 # Generate images with Flash and SDXL
@@ -11,7 +11,7 @@ Learn how to use Flash with Stable Diffusion XL to generate high-quality images 
 
 This tutorial shows you how to build an image generation script using Flash and Stable Diffusion XL (SDXL). You'll learn how to load a pretrained diffusion model on a GPU worker and generate images from text prompts.
 
-![](https://raw.githubusercontent.com/runpod/docs/fd5e157158fbbe848892a8a814aedd89266b05c1/images/flash_sdxl_output.png)
+![](https://raw.githubusercontent.com/runpod/docs/badc3b0885d17c76062faf033073f6d062af3aee/images/flash_sdxl_output.png)
 
 ## Requirements
 

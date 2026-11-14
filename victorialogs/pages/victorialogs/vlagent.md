@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.53.0: [docs/victorialogs/vlagent.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/915d91904bf7f5be66ab00f88947ae7fc1431acc/docs/victorialogs/vlagent.md)
+> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/vlagent.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/vlagent.md)
 
 `vlagent` is an agent for collecting logs from various sources and storing them in [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 
@@ -299,7 +299,7 @@ spec:
       serviceAccountName: vlagent
       containers:
         - name: vlagent
-          image: victoriametrics/vlagent:v1.52.0
+          image: victoriametrics/vlagent:v1.53.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -449,9 +449,11 @@ Use an empty string `''` as a placeholder when a specific position requires no e
 
 ### Log rotation
 
-`vlagent` fully supports the `create` log rotation strategy (the default in `logrotate`).
-When the active log file is renamed, `vlagent` finishes reading it before switching to the new file.
-Rotated files in the same directory are tracked automatically, even after `vlagent` restart.
+`vlagent` supports the `create` (default in `logrotate`) and `nocreate` log rotation strategies.
+When the log file is rotated, `vlagent` finishes reading the rotated file before switching to the new one.
+
+`vlagent` automatically tracks rotated files in the same directory and resumes reading them
+from the last saved position after a restart.
 
 Example `logrotate` config:
 
@@ -464,9 +466,12 @@ Example `logrotate` config:
 }
 ```
 
-Note that the application must handle the signal specified in `postrotate` and reopen its log file in response.
+The application must handle the signal sent in `postrotate` by reopening its log file.
+Until it does, it keeps writing to the renamed file, which `vlagent` continues to read.
 
-`vlagent` does not fully support the `copytruncate` rotation strategy and does not read compressed (`.gz`) files.
+The `copytruncate` strategy is also supported, but some log lines may be lost: lines written between copying
+and truncating the file, or not yet read by `vlagent` before truncation, are not collected.
+Use `create` or `nocreate` when possible. Compressed rotated files (for example, `.gz`) are not read.
 
 > Note: if you are collecting logs from a well-known application such as nginx, Apache, or PostgreSQL,
 > a `logrotate` config is most likely already preconfigured by the package and located in `/etc/logrotate.d/`.
@@ -1076,12 +1081,14 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
      Auth key for /flags endpoint. It must be passed via authKey query arg. It overrides -httpAuth.*
      Flag value can be read from the given file when using -flagsAuthKey=file:///abs/path/to/file or -flagsAuthKey=file://./relative/path/to/file.
      Flag value can be read from the given http/https url when using -flagsAuthKey=http://host/path or -flagsAuthKey=https://host/path
+  -fs.disableAdviseRandomRead
+     Whether to disable FADV_RANDOM and MADV_RANDOM hints for data part files. Typical queries with selectors access data part files at random offsets, so FADV_RANDOM is enforced to reduce excessive disk readahead.Use this flag if your query read pattern benefits from sequential read (e.g. query by metric name without selectors) to prefer FADV_NORMAL. (default true)
   -fs.disableMincore
      Whether to disable the mincore() syscall for checking mmap()ed files. By default, mincore() is used to detect whether mmap()ed file pages are resident in memory. Disabling mincore() may be needed on older ZFS filesystems (below 2.1.5), since it may trigger ZFS bug. See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/10327 for details.
   -fs.disableMmap
      Whether to use pread() instead of mmap() for reading data files. By default, mmap() is used for 64-bit arches and pread() is used for 32-bit arches, since they cannot read data files bigger than 2^32 bytes in memory. mmap() is usually faster for reading small data chunks than pread()
   -fs.maxConcurrency int
-     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default 16x CPU cores, default capped at 256)
+     The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default 16x CPU cores, capped at 256)
   -http.connTimeout duration
      Incoming connections to -httpListenAddr are closed after the configured timeout. This may help evenly spreading load among a cluster of services behind TCP-level load balancer. Zero value disables closing of incoming connections (default 2m0s)
   -http.disableCORS
@@ -1125,7 +1132,7 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
   -insert.maxFieldsPerLine int
      The maximum number of log fields per line, which can be read by /insert/* handlers; see https://docs.victoriametrics.com/victorialogs/faq/#how-many-fields-a-single-log-entry-may-contain (default 1000)
   -insert.maxLineSizeBytes size
-     The maximum size of a single line that can be read by /insert/* handlers. Regardless of this flag, entries above the 2 MB limit are ignored, see https://docs.victoriametrics.com/victorialogs/faq/#what-length-a-log-record-is-expected-to-have
+     The maximum size of a single line, including the trailing newline, that can be read by /insert/* handlers. Regardless of this flag, entries above the 2 MB limit are ignored, see https://docs.victoriametrics.com/victorialogs/faq/#what-length-a-log-record-is-expected-to-have
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 262144)
   -insert.maxQueueDuration duration
      The maximum duration to wait in the queue when -maxConcurrentInserts concurrent insert requests are executed (default 1m0s)

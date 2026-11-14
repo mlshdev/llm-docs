@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/configuration/best-practices.mdx](https://github.com/runpod/docs/blob/fd5e157158fbbe848892a8a814aedd89266b05c1/sdk/configuration/best-practices.mdx)
+> Pinned source for Runpod main: [sdk/configuration/best-practices.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/sdk/configuration/best-practices.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/configuration/best-practices
 
 # Configuration best practices

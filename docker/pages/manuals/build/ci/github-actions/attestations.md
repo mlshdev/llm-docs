@@ -1,10 +1,51 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/attestations.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/attestations.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/attestations.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/attestations.md)
 
 # Add SBOM and provenance attestations with GitHub Actions
 
 Software Bill of Material (SBOM) and provenance
 [attestations](https://docs.docker.com/build/metadata/attestations/) add metadata about the contents of
 your image, and how it was built.
+
+## Add attestations with GitHub Builder {#add-attestations-with-builder}
+
+[Docker GitHub Builder](https://docs.docker.com/build/ci/github-actions/build-workflow/) manages provenance and signing
+in the reusable workflow. It uses max-level provenance for public repositories
+and min-level provenance for private repositories. These levels aren't caller
+inputs. Use individual actions below if you need to override the provenance
+level for a private repository.
+
+Set `sbom: true` to add an SBOM. With the default `sign: auto`, GitHub Builder signs
+attestation manifests when pushing an image, using the job's `id-token: write`
+permission:
+
+```yaml
+name: ci
+
+on:
+  push:
+
+jobs:
+  build:
+    uses: docker/github-builder/.github/workflows/build.yml@v1
+    permissions:
+      contents: read
+      id-token: write
+    with:
+      output: image
+      push: true
+      sbom: true
+      meta-images: user/app
+    secrets:
+      registry-auths: |
+        - registry: docker.io
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+```
+
+Use [build secrets](https://docs.docker.com/build/ci/github-actions/secrets/) for credentials. Build argument values can
+appear in provenance, so don't pass secrets as build arguments.
+
+## Use individual actions
 
 Attestations are supported with version 4 and later of the
 `docker/build-push-action`.
@@ -64,7 +105,7 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 

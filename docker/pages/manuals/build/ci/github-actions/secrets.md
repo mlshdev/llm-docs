@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/secrets.md](https://github.com/docker/docs/blob/a0442378fca4987b1235614ec917b4138b5d5e5d/content/manuals/build/ci/github-actions/secrets.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/secrets.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/build/ci/github-actions/secrets.md)
 
 A build secret is sensitive information, such as a password or API token, consumed as part of the build process.
 Docker Build supports two forms of secrets:
@@ -22,6 +22,41 @@ First, create a `Dockerfile` that uses the secret:
 FROM alpine
 RUN --mount=type=secret,id=github_token,env=GITHUB_TOKEN ...
 ```
+
+### Pass secret values with GitHub Builder {#pass-secret-values-with-builder}
+
+Pass secret values to [Docker GitHub Builder](https://docs.docker.com/build/ci/github-actions/build-workflow/) using
+the `build-secrets` workflow secret. Its value is a YAML mapping from secret
+IDs to values, rather than the action's `id=value` list:
+
+```yaml
+name: ci
+
+on:
+  push:
+
+jobs:
+  build:
+    uses: docker/github-builder/.github/workflows/build.yml@v1
+    permissions:
+      contents: read
+      id-token: write
+    with:
+      output: image
+      platforms: linux/amd64,linux/arm64
+      meta-images: user/app
+    secrets:
+      build-secrets: |
+        github_token: ${{ toJSON(secrets.GITHUB_TOKEN) }}
+```
+
+The Dockerfile consumes the `github_token` secret in the same way with either
+workflow. `toJSON` quotes the value for the YAML mapping.
+For files, environment variables, or SSH agents prepared by earlier steps,
+use the individual-action examples below. The reusable build runs in separate
+jobs and doesn't share the caller's filesystem or SSH agent.
+
+### Pass secret values with individual actions
 
 In this example, the secret name is `github_token`. The following workflow
 exposes this secret using the `secrets` input:
@@ -251,8 +286,7 @@ RUN --mount=type=secret,id=aws,target=/root/.aws/credentials \
 ### Multi-line secrets
 
 If you're using [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
-and need to handle multi-line value, you will need to place the key-value pair
-between quotes:
+with individual actions, place multi-line key-value pairs between quotes:
 
 ```yaml
 secrets: |
