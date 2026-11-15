@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/faq.texi](https://github.com/FFmpeg/FFmpeg/blob/cf8e0c40b60b563ba2addf1dcb4fe3557143ab17/doc/faq.texi)
+> Pinned source for FFmpeg master: [doc/faq.texi](https://github.com/FFmpeg/FFmpeg/blob/b9dcde1f88bc636b8a4b372862a01a13b3003473/doc/faq.texi)
 
 # General Questions
 
@@ -272,7 +272,7 @@ DirectShowSource("C:\path to your file\yourfile.asf")
 ... and then feed that text file to ffmpeg:
 
 ```text
-ffmpeg -i input.avs
+ffmpeg -f avisynth -i input.avs
 ```
 
 For ANY other help on AviSynth, please visit the

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/cf8e0c40b60b563ba2addf1dcb4fe3557143ab17/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/b9dcde1f88bc636b8a4b372862a01a13b3003473/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -2103,7 +2103,9 @@ of the other conditions to apply.
     start a new fragment at each video keyframe
 
   - global\_sidx
-    write a global sidx index at the start of the file
+    write a global sidx index at the start of the file. For fragmented output
+    that would otherwise use absolute fragment offsets, this enables
+    `default_base_moof`.
 
   - isml
     create a live smooth streaming feed (for pushing to a publishing point)
